@@ -4,6 +4,7 @@
 *.glob
 *.aux
 .*.aux
+.lia.cache
 Makefile
 Makefile.conf
 .Makefile.d

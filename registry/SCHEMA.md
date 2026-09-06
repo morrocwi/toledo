@@ -76,12 +76,30 @@ be present, mapped to the code that equation resolved to (T5 dedup mapping).
   source later found non-MIT-compatible per the open licence-check item) — CI's `verify` job skips
   building/checking any code with this flag `false` (T10) so a public-only clone does not go red on a
   `Require` target it structurally cannot have.
+- `identifiers` (optional array, checker addendum 2026-09-06/N4): `[{"file": string, "identifier":
+  string}]` — every `coq_map.json` row whose own `codes[]` cites this entry's `code` or `root`, listed
+  by evidence (BBL-182 T10 `coq_map.json` is itself evidence-quoted per identifier). Present only when
+  at least one such mapped identifier exists; omitted otherwise. This is additional, non-authoritative
+  cross-reference data — it does not by itself change `coq_status`.
+- `coq_status` gains a seventh value, **`mapped_not_wrapped`** (checker addendum 2026-09-06/N4,
+  `scripts/n4_merge.py` step 4b): set when `identifiers` above is non-empty (a `coq_map.json` match
+  was found by evidence) but no Toledo-native wrapper file exists yet under `coq/canonical/` for this
+  code (i.e. `file` is still `null`) — an honest middle state between `not_yet_formalised` (no evidence
+  of any Coq development at all) and `closed`/`axioms` (a Toledo-native wrapper exists and has been
+  through `verify.sh`). Never asserted without a `coq_map.json` evidence row backing it; never used to
+  push `status` toward anything stronger than `current`/`unverified` per the existing rule above.
 
 ## Filesystem-safe mangling (Coq file names only, BBL-182)
 
-`code.replace('/', '__').replace('.', '_')` — e.g. `MQ.08/H.02.v1` → `MQ_08__H_02_v1.v`. This mangling
-is **Coq-filename-only**; the docs-site URL path (`site/<code>/index.html`) uses the code's own literal
-characters (`/` and `.` are both valid in a URL path segment) and is unrelated to this rule.
+`code.replace('/', '__').replace('.', '_').replace('-', '_')` — e.g. `MQ.08/H.02.v1` →
+`MQ_08__H_02_v1.v`; `EQ-015/M.01.v1` → `EQ_015__M_01_v1.v` (the `-` replacement, needed because a Coq
+module identifier cannot contain a hyphen and most `EQ-0nn` root codes carry one, was implemented
+consistently in every mangling script from the start — `scripts/bbl182_split_coq.py`,
+`scripts/n4_coq_split.py`, `scripts/n4_coq_verify_update.py`, `scripts/n4_merge.py` — but was missing
+from this line until the N4 checker (I2) caught the doc/implementation mismatch, 2026-09-06). This
+mangling is **Coq-filename-only**; the docs-site URL path (`site/<code>/index.html`) uses the code's
+own literal characters (`/`, `.` and `-` are all valid in a URL path segment) and is unrelated to this
+rule.
 
 ## Code grammar
 

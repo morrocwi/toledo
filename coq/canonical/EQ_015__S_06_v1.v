@@ -1,4 +1,7 @@
-(* EQ-015/S.06.v1 — CAN-132 — Definition — parents: EQ-015/M.03.v1 — occurrences 5 *)
+(* EQ-015/S.06.v1 — Definition — parents: EQ-015/M.03.v1 *)
+(* N4 split (2026-09-06): this bundle's own Coq apparatus has been
+   distributed to its child codes (registry/CANONICAL.json "split_children"); kept
+   as a thin re-export so existing `Require`s of this module keep resolving. *)
 
 From Coq Require Import QArith.
 From Coq Require Import Qminmax.
@@ -11,16 +14,4 @@ Import ListNotations.
 Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
-(* ==================================================================== *)
-(** ** CAN-132 — B-SOC-POTENTIAL
-
-    (* CAN-132 — root: p*_{A,g}(h,z;T,B,P)=max_{pi in Pi^wit} Pr^pi_P(...) — domain: social — tier: Th_coqc — occurrences: 5 *)
-
-    CANONICAL.json tier: "definition". [in_master_river]: eq.(25), already
-    formalised, axiom-free, in [../coq/MR_Live.v]
-    ([Section PotentialEnvelope], [p_star]/[p_star_upper_bound]).
-    Discharged here by aliasing. *)
-
-Definition CAN_132_p_star := @MR_Live.p_star.
-Definition CAN_132_p_star_upper_bound := @MR_Live.p_star_upper_bound.
-
+From MRC Require Export EQ_015__S_51_v1.

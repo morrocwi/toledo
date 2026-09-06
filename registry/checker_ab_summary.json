@@ -1,0 +1,12 @@
+{
+  "entries": 793,
+  "genesis_roots": 590,
+  "dup_codes": 0,
+  "orphans": 0,
+  "cycles": 0,
+  "missing_parents": 0,
+  "bad_grammar": 0,
+  "split_bad": 0,
+  "not_an_eq_bad": 0,
+  "fails": []
+}

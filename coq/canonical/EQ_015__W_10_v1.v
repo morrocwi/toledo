@@ -1,4 +1,7 @@
-(* EQ-015/W.10.v1 — CAN-151 — Definition — parents: EQ-015/M.03.v1 — occurrences 6 *)
+(* EQ-015/W.10.v1 — Definition — parents: EQ-015/M.03.v1 *)
+(* N4 split (2026-09-06): this bundle's own Coq apparatus has been
+   distributed to its child codes (registry/CANONICAL.json "split_children"); kept
+   as a thin re-export so existing `Require`s of this module keep resolving. *)
 
 From Coq Require Import QArith.
 From Coq Require Import Qminmax.
@@ -11,17 +14,5 @@ Import ListNotations.
 Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
-(* ==================================================================== *)
-(** ** CAN-151 — human-systemic-position
-
-    (* CAN-151 — root: P^H_t=(Gamma^eff)^tGamma(A^corr)^tA(Lambda^live)^tLambda(r^H)^tR(S^H)^tS(X^H)^tX/(1+D^H)^tD; Ydot>0 =/=> Pdot^H>0 — domain: world-system — tier: Th_coqc — occurrences: 6 *)
-
-    CANONICAL.json tier: "definition". Master River v1.4 eq.(58)-(59)
-    [after_labour]. Direct reuse of [MR_WorldSystem.v]'s [P_H_index]
-    (Definition, eq.58) and [eq59_output_rise_not_position_rise]
-    (Th_coqc, eq.59) — no redefinition. *)
-
-Definition CAN_151_P_H_index := MR_WorldSystem.P_H_index.
-Definition CAN_151_output_rise_not_position_rise :=
-  MR_WorldSystem.eq59_output_rise_not_position_rise.
-
+From MRC Require Export EQ_015__W_42_v1.
+From MRC Require Export EQ_015__W_45_v1.
