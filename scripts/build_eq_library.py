@@ -8,18 +8,10 @@ MAN = R / 'textbook_manifest.yaml'  # copy of the textbook manifest (record ids,
 man = yaml.safe_load(MAN.read_text()); meta = {c['record_id']: c for P in man['parts'] for c in P['chapters'] if c.get('record_id')}
 can = json.load(open(R / 'CANONICAL.json')) if (R / 'CANONICAL.json').exists() else None
 r2c = (can or {}).get('raw_to_canonical', {})
-# assign persistent codes HRP-EQ-<D>.<nnn> (EQ_CODE_SCHEME.md) once, in canonical (Genesis-first) order
+# T11 (design meeting): NO fallback code generator — codes come only from the relabel step per SCHEMA.md; a missing code is a build error.
 if can:
-    cls = {'root': 'R', 'epistemic': 'E', 'human–ai': 'H', 'human-ai': 'H', 'human–AI': 'H', 'social': 'S', 'world-system': 'W', 'method': 'M'}
-    counters = {}
-    changed = False
-    for c in can['canonical']:
-        if not c.get('code'):
-            d = cls.get(str(c.get('domain', '')).lower().replace('ai', 'ai'), None) or cls.get(str(c.get('domain','')), 'E')
-            counters[d] = counters.get(d, 0) + 1
-            c['code'] = f"HRP-EQ-{d}.{counters[d]:03d}.v1"; changed = True
-    if changed:
-        json.dump(can, open(R / 'CANONICAL.json', 'w'), ensure_ascii=False, indent=1)
+    missing=[c['id'] for c in can['canonical'] if not c.get('code')]
+    if missing: raise SystemExit(f'BUILD ERROR: {len(missing)} canonical entries have no code (first: {missing[:5]}) — run the relabel step')
 code_of = {c['id']: c.get('code', '') for c in (can or {}).get('canonical', [])}
 coq_ids = {}
 for led in list(glob.glob(str(R.parent / 'coq' / 'canonical' / 'LEDGER_*.md'))):
