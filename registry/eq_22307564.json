@@ -1,0 +1,14 @@
+{
+  "record_id": 22307564,
+  "title": "Before Evidence Can Decide: Candidate-Set Formation, Discovery Routing, and Unconceived Alternatives — Questions for a Pre-Evidential Epistemology of Science",
+  "doi": "10.5281/zenodo.22307564",
+  "equations": [
+    {"label": "(1)", "section": "2 A Minimal Cycle, Not a Solution", "text": "Psi_{E,t,Q} : H^disc_{E,t}(Q) -> C_{E,t}(Q)", "meaning": "Candidate-set operator mapping the readout-distinguishable hypothesis classes reachable by an epistemic system to the live candidate set actually entering comparison/pursuit/test planning.", "paper_tier": "definition", "in_master_river": null},
+    {"label": "(2)", "section": "2 A Minimal Cycle, Not a Solution", "text": "Appraise_t : ( C_{E,t}(Q), delta_{<=t}, Pi_t ) -> R_t", "meaning": "Comparative appraisal typed as a map from the live candidate set, declared records, and appraisal policy to a ranking/rejection/acceptance/pursuit/abstention/revision outcome.", "paper_tier": "definition", "in_master_river": null},
+    {"label": "(3)", "section": "2 A Minimal Cycle, Not a Solution", "text": "H not in C_{E,t}(Q)  =>  H receives no comparative appraisal at cycle t", "meaning": "Definitional consequence: a hypothesis outside the live candidate set is not evaluated at that cycle, without implying it is true, superior, or permanently unavailable.", "paper_tier": "identity (definitional consequence)", "in_master_river": null},
+    {"label": "(4)", "section": "2 A Minimal Cycle, Not a Solution", "text": "delta_{t+1} -> B_{t+1} -> C_{E,t+1}(Q')", "meaning": "Evidence can alter the next candidate set by changing the retained problem, question, reader, or access geometry.", "paper_tier": "definition", "in_master_river": null},
+    {"label": "(5)", "section": "2 A Minimal Cycle, Not a Solution", "text": "C_t -> Appraise_t -> delta_{t+1} -> B_{t+1} -> C_{t+1}", "meaning": "The full cycle is a loop, not a wall between discovery and justification.", "paper_tier": "definition", "in_master_river": null},
+    {"label": "(Q5, unlabeled)", "section": "4.5 Q5. What is the collective candidate set?", "text": "C_{G,t} = union_i C_{A_i,t}  ?", "meaning": "Posed and questioned candidate hypothesis that a group's live collective set is simply the union of members' private sets; the paper answers 'probably not in all cases' (communication, prestige, role assignment, shared instruments, and meeting structure can prevent or exceed simple union).", "paper_tier": "hypothesis (posed then rejected as insufficient) [Open]", "in_master_river": null},
+    {"label": "(6)", "section": "11 Conclusion", "text": "Question -> Candidate-set formation -> Appraisal -> Record -> Candidate-set revision", "meaning": "Restated research-agenda loop; the open problem is what determines the middle-left arrow (candidate-set formation).", "paper_tier": "definition (schematic)", "in_master_river": null}
+  ]
+}

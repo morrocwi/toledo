@@ -1,0 +1,455 @@
+{
+  "record_id": 22424434,
+  "title": "Before Meaning, Before Choice: A Readout-Native Derivation of Experience, Live Possibility, Agency, and Human-AI Return",
+  "doi": "10.5281/zenodo.22424434",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "2.5 Power, interpretive resources, and structural deprivation (intro to Readout constitution)",
+      "text": "Retention -> Structure -> Translation -> Readout -> Meaning -> Report",
+      "meaning": "The most compressed form of the readout-native admission order for semantic categories.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "2.5 Power, interpretive resources, and structural deprivation (intro to Readout constitution)",
+      "text": "Retention -> Structure -> Candidate State -> Sufficiency -> Quotient -> Domain Dynamics -> Readout -> Meaning -> Experience -> Memory -> Knowledge -> Checked Report",
+      "meaning": "The stronger MEMK extension of the compressed admission order; the MEMK specification's own mandatory order reads Retention->Structure->Translation->Meaning->Report.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "3.1 Root state and finite stepper",
+      "text": "S_n = (G_n, Lambda_n, T_n)",
+      "meaning": "Non-semantic retained root state: a retained relational carrier, retained labels/typed distinctions, and an append-only tape of lineage/residues/deviations.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "3.1 Root state and finite stepper",
+      "text": "S_(n+1) = F(S_n, u_n, c_n, T_n)",
+      "meaning": "The root transition interface.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "3.1 Root state and finite stepper",
+      "text": "S_n != Z_(MEMK,n) != D_(MEMK,n)",
+      "meaning": "Critical separation: retained root state, candidate semantic-cognitive representation, and discovered domain quotient are different objects.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "4. Domain Weld: How Human Vocabulary Is Admitted",
+      "text": "q_(D,n+1) o F_n = F^#_(D,n) o q_(D,n)",
+      "meaning": "Schematic domain-weld condition governing whether a domain-level statement may be emitted at all; structurally analogous to abstraction/homomorphism but epistemic as well as mathematical.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "4. Domain Weld: How Human Vocabulary Is Admitted",
+      "text": "epsilon_H = Def( q~_H o F, F^#_H o q~_H, O_H, Inv_H )",
+      "meaning": "Declared defect vector for a candidate human-domain translation, together with a preregistered acceptance rule ||epsilon_H|| <= tau_H if a quantitative gate is attempted.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "5. From Retained Record to Meaning and Experience",
+      "text": "A_n != r_n != x_n",
+      "meaning": "MEMK's non-collapse between event occurrence, retained event record before semantic naming, and MEMK-accessible trace.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "5. From Retained Record to Meaning and Experience",
+      "text": "rho^H_n = R_H(x_n | H_n, c_n, Q_n)",
+      "meaning": "A finite human readout of the accessible trace, conditioned on current human-domain state, context, and active question/criterion.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "5. From Retained Record to Meaning and Experience",
+      "text": "mu_n = Psi_H(rho^H_n, H_n, c_n, Q_n)",
+      "meaning": "Meaning as a significance relation, not a substance carried inside x_n.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "5. From Retained Record to Meaning and Experience",
+      "text": "mu_n = (mu_n^aff, mu_n^prag, mu_n^auto, mu_n^conc, mu_n^epi)",
+      "meaning": "Analytic decomposition of meaning into affective, pragmatic, autobiographical, conceptual, and epistemic modes, not treated as biological modules.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "5. From Retained Record to Meaning and Experience",
+      "text": "E_n = Phi_E(x_n, mu_n, gamma^mu_n, c_n)",
+      "meaning": "Experience as a configuration of trace, meaning, and the effective strength/control of active meaning over the current experience, under context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(13)",
+      "section": "5. From Retained Record to Meaning and Experience",
+      "text": "Experience = phenomenon-as-meaningfully-read",
+      "meaning": "Conceptual compression of the experience definition; not a claim that the reader makes the phenomenon true.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(14)",
+      "section": "5.1 Naming comes later, but can loop back",
+      "text": "l_n = L_H(E_n, mu_n | H_n, c_n);  E_n, mu_n may precede stable l_n",
+      "meaning": "Meaning Before Naming: lived significance can precede stable lexical articulation.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(15)",
+      "section": "5.1 Naming comes later, but can loop back",
+      "text": "mu_n -> E_n -> l_n -> mu_(n+1) -> E_(n+1)",
+      "meaning": "Correction of a one-way reading: naming can reorganise what it articulates, feeding back into subsequent meaning and experience.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(16)",
+      "section": "6. Retention: The Reader Can Change",
+      "text": "H_(n+1) = U_H( H_n, Retain(E_n, mu_n, rho^H_n), delta^world_(n:n+1), X^other_(n:n+1) )",
+      "meaning": "Generic dependency form for selective cross-time persistence: only selected residues carry forward, co-determined with world correction and other experience.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(17)",
+      "section": "6. Retention: The Reader Can Change",
+      "text": "Retain(E_n) > 0  ==>  H_(n+1) != H_n  (possible, not guaranteed)",
+      "meaning": "Central temporal asymmetry: a non-zero retained residue makes a different effective interpretive operator for the next situation possible but not guaranteed.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(18)",
+      "section": "7. History-Shaped Readout-Accessibility",
+      "text": "a_(Q,t)(e) = [ Phi_(Q,t)(s) - Phi_(Q,t)(s') ]_+",
+      "meaning": "Semantic attraction: destination-sensitive access-landscape gradient, not a physical potential.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(19)",
+      "section": "7. History-Shaped Readout-Accessibility",
+      "text": "m_(t+1)(e) = rho m_t(e) + 1[e_t = e],  0 <= rho < 1",
+      "meaning": "Recent-path momentum: a path-sensitive history descriptor, kept separate from destination-sensitive attraction.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(20)",
+      "section": "7. History-Shaped Readout-Accessibility",
+      "text": "kappa^sem_(t+1)(e|Q) proportional-to kappa^sem_t(e|Q) * exp[ beta a_(Q,t)(e) + mu_m m_t(e) - nu c_(A,t,Q)(e) + xi_t(e) ]",
+      "meaning": "Candidate history-shaped access law combining structural availability, attraction, recent traversal, and control cost; explicitly marked Open as a typed finite hypothesis, not a validated universal cognitive law.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(21)",
+      "section": "7. History-Shaped Readout-Accessibility / 8. Before Choice: The Live Possibility Field",
+      "text": "Pi^live_(A,t)(g) subseteq Pi^feas_(A,t)(g) subseteq Pi^phys_t(g)",
+      "meaning": "Nesting of physically possible, structurally feasible, and currently live policies for task g.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(22)",
+      "section": "8. Before Choice: The Live Possibility Field",
+      "text": "L_(A,t)(g) = { (pi, lambda^live_(A,t)(pi|g)) : pi in Pi^feas_(A,t)(g) }",
+      "meaning": "Practical accessibility profile over the feasible policy set.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(23)",
+      "section": "8. Before Choice: The Live Possibility Field",
+      "text": "Pi^live_(A,t)(g) = { pi : lambda^live_(A,t)(pi|g) >= tau_live }",
+      "meaning": "The current live set defined by an operational, study-specific threshold; the threshold is a measurement device, not a universal psychological constant.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(24)",
+      "section": "8. Before Choice: The Live Possibility Field",
+      "text": "pi^choice_(A,t) in Pi^live_(A,t)(g)",
+      "meaning": "Overt choice is downstream: selected only from the live possibility set.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(25)",
+      "section": "8. Before Choice: The Live Possibility Field",
+      "text": "pi^act_(A,t) != pi^choice_(A,t) is possible;  Y_obs = O_q(H_(0:T)),  Y_obs != H_(0:T)",
+      "meaning": "Enactment may diverge from the chosen policy, and evaluator-visible records need not reveal the underlying trajectory.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(26)",
+      "section": "8. Before Choice: The Live Possibility Field",
+      "text": "possible != feasible != live != chosen != enacted != observed",
+      "meaning": "The non-collapse chain sharpening the claim 'choice begins before choice': the architecture of deliberative choice has ancestral conditions in retention, discrimination, translation, and history-shaped accessibility.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(27)",
+      "section": "9. Effective, Corrigible Agency",
+      "text": "p*_(A,g)(h,z;T,B,P) = max_(pi in Pi^wit_A(g;h,z,T,B)) Pr^(pi_P)( Read_g cap D_g cap X_g cap F_g )",
+      "meaning": "Task-specific effective-agency potential read over the witnessed option set: the finite set of policies for which a retained record exists that a comparable agent executed within horizon T and budget B; the unread remainder is a non-readout, not a smaller number waiting to be found.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "(28)",
+      "section": "9.1 Power before prohibition",
+      "text": "Power may alter agency by altering meaning/accessibility before overt choice",
+      "meaning": "Narrower political thesis following from explicit live accessibility: social/institutional conditions can change whether refusal, appeal, delay, exit, or negotiation becomes practically live before any direct prohibition.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(29)",
+      "section": "10. Human-AI Mediation Begins Before the Prompt",
+      "text": "H_t --L_H--> Q_t,  Q_t != H_t",
+      "meaning": "A prompt is a bounded articulation of the human state, not the whole human state; the prompt is a readout of a readout.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(30)",
+      "section": "10. Human-AI Mediation Begins Before the Prompt",
+      "text": "Q_t -> AI_t -> Y_t",
+      "meaning": "The AI receives the prompt and returns output Y_t.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(31)",
+      "section": "10. Human-AI Mediation Begins Before the Prompt",
+      "text": "AI(Q_t) = K_like,  K_like != K_validated",
+      "meaning": "Candidate contract: AI output is knowledge-like, not certified knowledge; fluency, citations, or formal appearance do not upgrade status by themselves.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(32)",
+      "section": "10. Human-AI Mediation Begins Before the Prompt",
+      "text": "Y_t --R_H--> E^AI_(H,t)",
+      "meaning": "AI output re-enters the human domain as another mediated encounter.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(33)",
+      "section": "10. Human-AI Mediation Begins Before the Prompt",
+      "text": "H_(t+1) = U_H( H_t, E^AI_(H,t), delta^world, X^other )",
+      "meaning": "Update of the human state after the mediated AI encounter, folding in world correction and other experience.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(34)",
+      "section": "10. Human-AI Mediation Begins Before the Prompt",
+      "text": "L_(A,t+1) != L_(A,t)",
+      "meaning": "If a residue is retained, the accessibility profile before the next prompt may differ from the previous one; external evidence (Glickman and Sharot) supports the general history-sensitivity claim.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(35)",
+      "section": "10.1 Difference, resistance, and retained human agency",
+      "text": "D > 0,  Resist > 0,  A_H > 0",
+      "meaning": "Three non-substitutable constitutive necessities (Difference, Resistance, retained human Agency) for durable human epistemic expansion under Fusion/Tunnel's stipulated target.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(36)",
+      "section": "10.1 Difference, resistance, and retained human agency",
+      "text": "Delta Omega^(fH)_s = B_s A_s,  rank(B_s A_s) << d_H",
+      "meaning": "Programme-notation proposal (Master River audit) for a low-rank candidate update, functionally analogous to LoRA but not a claim that brains implement engineering LoRA.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(37)",
+      "section": "10.1 Difference, resistance, and retained human agency",
+      "text": "Omega^H_(s+1,0) = Omega^H_(s,0) + eta_s Delta Omega^(fH)_s,  0 <= eta_s <= 1",
+      "meaning": "Retention-gate update separated from the candidate update (36); the audit's proposal for writing Fusion/Tunnel's intent without a doubled gate.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(38)",
+      "section": "11. Human Return: The Upper Measurement Boundary",
+      "text": "H^return = < G_CTSA, L, M, P, W, Delta_dir >",
+      "meaning": "Compact Human Return record: demonstrated gain, loss, metacognitive regulation, provenance, warrant/effective resistance, and epistemic direction; bookkeeping architecture, not a universal scalar.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(39)",
+      "section": "11. Human Return: The Upper Measurement Boundary",
+      "text": "Exposure != Retention != Improvement",
+      "meaning": "Non-collapse law: a persistent misconception is still persistent; CTSA records it without granting knowledge status.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(40)",
+      "section": "11. Human Return: The Upper Measurement Boundary",
+      "text": "Assisted performance != Unaided Human Return",
+      "meaning": "Non-collapse law: gross gain cannot define net human expansion.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(41)",
+      "section": "13. Provenance and Claim Status Are Part of the Equation",
+      "text": "Lambda(e_i) = < Prov_i, Tier_i, Def_i, Reader_i, Falsifier_i >",
+      "meaning": "A ledger attached to each transition e_i in the river, recording provenance, claim tier, defects, reader, and falsifier; the river is not fully specified without this ledger.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(42)",
+      "section": "14. Why This Is Not Simply Active Inference",
+      "text": "root retention =/=|= belief state =/=|= meaning =/=|= experience =/=|= choice",
+      "meaning": "The distinction from active inference is one of derivation order and epistemic governance, not richer dynamics: root retention must not be identified with belief state, meaning, experience, or choice.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(43)",
+      "section": "15. Why This Is Not Simply Affordance or Capability Theory",
+      "text": "feasible for the agent != currently live for the agent",
+      "meaning": "The residual difference the Live Possibility Field must capture beyond affordance theory and the capability approach.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(44)",
+      "section": "17.1 Rival-model ladder",
+      "text": "M0 = formal option count + stated preference",
+      "meaning": "Rival model 0 in the pre-choice comparison ladder.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(45)",
+      "section": "17.1 Rival-model ladder",
+      "text": "M1 = affordance/capability + cost/resources",
+      "meaning": "Rival model 1 in the comparison ladder.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(46)",
+      "section": "17.1 Rival-model ladder",
+      "text": "M2 = constructed-preference / salience model",
+      "meaning": "Rival model 2 in the comparison ladder.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(47)",
+      "section": "17.1 Rival-model ladder",
+      "text": "M3 = predictive or active-inference implementation",
+      "meaning": "Rival model 3 in the comparison ladder.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(48)",
+      "section": "17.1 Rival-model ladder",
+      "text": "M4 = readout-native live-field model",
+      "meaning": "The paper's own candidate model, to be tested for held-out predictive value against M0-M3.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(49)",
+      "section": "18. Graceful Degradation",
+      "text": "retained distinction -> domain translation/readout -> meaning -> experience -> retained change -> graded accessibility -> live possibility -> choice/action -> feedback/new record",
+      "meaning": "The load-bearing core chain that survives deletion of the programme's more provocative metaphors (Human LoRA, resonance, rhythm, barrier language, CTSA's four-class taxonomy).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(50)",
+      "section": "20. Conclusion: Before Meaning, Before Choice",
+      "text": "Retained Difference -> Admissible Readout -> Meaning -> Experience -> History-Shaped Accessibility -> Live Possibility -> Choice -> Corrigible Agency -> World Consequence -> New Retained Difference",
+      "meaning": "The paper's final restated derivational-constraint river, from retained difference to a new retained difference.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "H1",
+      "section": "17.2 Minimal empirical predictions",
+      "text": "H1 - Live-field incremental value [Open]. Under matched feasible sets, L_(A,t) will explain reproducible variance in which alternatives enter spontaneous practical consideration beyond resources, preference ratings, and ordinary salience measures.",
+      "meaning": "Minimal empirical prediction testing the incremental value of the live-field accessibility profile.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H2",
+      "section": "17.2 Minimal empirical predictions",
+      "text": "H2 - History residual [Open]. Prior traversal history will predict later route accessibility after current semantic state, task, and control variables are matched. Failure removes the distinct momentum term.",
+      "meaning": "Minimal empirical prediction testing the history-momentum term (19)-(20).",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H3",
+      "section": "17.2 Minimal empirical predictions",
+      "text": "H3 - Pre-prompt carryover [externally constrained, mechanism Open]. Repeated Human-AI interaction can alter later human judgements before a new AI response is seen.",
+      "meaning": "Minimal empirical prediction on carryover from prior AI interaction into later judgement, externally supported by Glickman and Sharot but with the readout-native mechanism left open.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H4",
+      "section": "17.2 Minimal empirical predictions",
+      "text": "H4 - Human Return dissociation [Open]. Delayed unaided Concept, Tool, Skill, and Alternative Return will show partially dissociable profiles rather than collapse into one generic performance factor.",
+      "meaning": "Minimal empirical prediction testing dissociation among the four CTSA Human Return classes.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H5",
+      "section": "17.2 Minimal empirical predictions",
+      "text": "H5 - Gain/loss asymmetry [Open]. Positive gross return can coexist with reduced checking habits, uncertainty sensitivity, or alternative accessibility; net human expansion will therefore differ from gross retained gain.",
+      "meaning": "Minimal empirical prediction testing gain/loss asymmetry within Human Return.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H6",
+      "section": "17.2 Minimal empirical predictions",
+      "text": "H6 - Optional modifiers must earn survival [Open]. Resonance, rhythm, and barrier/transition variables remain only if they add held-out explanatory or predictive value beyond schema, familiarity, appraisal, retrieval, exposure count, event boundaries, and continuous accumulation models.",
+      "meaning": "Minimal empirical prediction/removal condition for the optional resonance/rhythm/barrier modifiers.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    }
+  ]
+}

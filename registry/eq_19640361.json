@@ -1,0 +1,151 @@
+{
+  "record_id": 19640361,
+  "title": "Mind as Information Horizon: From Primordial Difference to Expertise Formation on the Discrete Causal Graph",
+  "doi": "10.5281/zenodo.19640361",
+  "equations": [
+    {
+      "label": "P3",
+      "section": "2.2 The Three Postulates and the Telegraph Equation",
+      "text": "v = sqrt(D/τ_c) < ∞",
+      "meaning": "Postulate 3 (Finite Propagation Speed, Ax): influence propagates at a finite speed v derived from diffusion coefficient D and retained-efficacy timescale τ_c; no infinite-speed propagation is admitted.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "MQ.08",
+      "section": "2.2 The Three Postulates and the Telegraph Equation",
+      "text": "V[n+1] = V[n] + Δθ·(−γ·V[n] − D_s·L_R·X[n])",
+      "meaning": "The 'Mother Equation': from Postulates P1–P3 on a finite discrete graph with normalized restricted Laplacian L_R, this telegraph-like recurrence (damping coefficient γ, diffusion coefficient D_s, step size Δθ) is the unique minimal dynamics governing all structural persistence and decay; it is forced, not chosen (Th).",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "Th-5",
+      "section": "2.3 Eigenmodes, Decay, and the Emergence of Matter",
+      "text": "|a_k[n]| ≤ |a_k[0]| · e^(−γ_k · n · Δθ)",
+      "meaning": "Impermanence Theorem: every eigenmode of L_R decays; decay rates differ but decay is universal — no structure persists forever.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "(1)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "B[n] → H_body[n] → N[n] → S[n] ↔ A[n] → π[n] → U[n] → B[n+1]",
+      "meaning": "The Causal Body Framework (CBF): the complete causal chain through which a living agent (world-state B, body H_body, nervous system N, sensory interface S, internal agency state A, action policy π, executed output U) interacts with the world.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "H_body[n+1] = Φ_H(B[n], H_body[n])",
+      "meaning": "Discrete update of body state as a function of the world-state and prior body state.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "N[n+1] = Φ_N(B[n], H_body[n], N[n])",
+      "meaning": "Discrete update of nervous-system state.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "S[n+1] = Φ_S(S[n], N[n], H_body[n])",
+      "meaning": "Discrete update of the sensory interface.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "A[n+1] = Φ_A(S[n], A[n])  (brain-internal only)",
+      "meaning": "Discrete update of the internal agency state, occurring strictly brain-internally.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "π[n+1] ∈ arg min_{π∈Π_feas} L_sel(S, H_body, π)",
+      "meaning": "Action-policy selection minimizes a selection loss over the feasible policy set.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "U[n+1] = Exec(π[n+1])",
+      "meaning": "Executed output is the execution of the selected policy.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "3.1 The Causal Body Framework",
+      "text": "B[n+1] = Φ_B(B[n], U[n+1])",
+      "meaning": "World-state update as a function of prior world-state and the agent's executed output, closing the causal loop.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "4.1 The Coupling Model",
+      "text": "B[t+1] = F(B[t]) + C_H(H[t])",
+      "meaning": "Minimal coupling equation (Dr): brain-body dynamics F plus a coupling term from the mind-core H.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "4.1 The Coupling Model",
+      "text": "H[t+1] = G(H[t]) + C_B(B[t])",
+      "meaning": "Minimal coupling equation (Dr): mind-core persistence mechanics G plus a coupling term from the brain-body B.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "4.1 The Coupling Model",
+      "text": "E[t] = R(B[t], H[t])",
+      "meaning": "Experience E is the resultant function R generated by the active coupling of brain-body and mind-core — experience is not identical to either component alone (Core Result, Dr).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "5.2 World-Resistance and Structural Error",
+      "text": "ε_tot = ε_clock + ε_cross + ε_sel + ε_map + ε_self",
+      "meaning": "Structural Error (Th): total observation error decomposes into clock error, cross-event mismatch, selection error, mapping/translation error, and self-model error (Th-PSA); this decomposition is a structural theorem derived from P1–P3, not an engineering limitation.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "(13)",
+      "section": "5.3 The Knowledge Event",
+      "text": "Knowing = Coupled System + Selection + Retention + Model + Error + Correction",
+      "meaning": "Compressed formula for a knower: a coupled brain–mind-core system capable of stably sustaining model-comparison-correction loops under world-resistance.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(14)",
+      "section": "6.1 The Knowledge Triple",
+      "text": "K_S^A = (Tr_A, Str_A, Cap_A)",
+      "meaning": "Knowledge (Df) formalized as a triple: trace residue Tr_A, coherent usable structure Str_A, and generative capacity Cap_A.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(15)",
+      "section": "6.3 The Legitimacy Gate",
+      "text": "LegitKnow ⇔ Know_A ∧ Grounded ∧ Q_auth ≥ θ_Q ∧ N_know ≥ θ_N",
+      "meaning": "The Legitimacy Gate (Th): a knowledge event counts as legitimate knowledge only if it occurred, is grounded (answerable to world-resistance), meets a route-independent authentication threshold θ_Q, and meets a minimum count threshold θ_N of knowledge events for the domain — excluding echo-chamber and single-source outputs.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    }
+  ]
+}

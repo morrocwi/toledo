@@ -1,0 +1,87 @@
+{
+  "record_id": 18897585,
+  "title": "Causal Agency: A Persistence–Control Theory of Adaptive Systems",
+  "doi": "10.5281/zenodo.18897585",
+  "equations": [
+    {
+      "label": "Def-1",
+      "section": "6.1 Constrained Dynamical Systems",
+      "text": "x' = F(x, C)",
+      "meaning": "System state evolution: the state x evolves according to a dynamical rule F, and C denotes the constraint structure influencing that evolution. Basis of Definition 1 (a constrained dynamical system). Also introduced informally in 5.3 and restated in Appendix B.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-2",
+      "section": "6.2 Persistence and Viable Regions",
+      "text": "x(t) ∈ V,  where V ⊆ S is the viable region of the state space S, for all times in the interval of observation",
+      "meaning": "A system exhibits persistence over an interval if its trajectory remains within the viable region V of state space compatible with continued existence/functioning. Basis of Definition 2 (persistence). Also introduced in 5.2 and restated in Appendix B.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Persistence-Regulation-Condition",
+      "section": "6.4 Persistence Regulation",
+      "text": "d/dt [ d(x(t), V) ] < 0  (in expectation), where d(x,V) is the distance between state x and the viable region V",
+      "meaning": "Persistence regulation occurs when system dynamics tend to decrease, in expectation, the distance between the system state and the viable region — stabilizing trajectories without necessarily altering the constraint structure.",
+      "paper_tier": "definition (formalization of persistence regulation)",
+      "in_master_river": null
+    },
+    {
+      "label": "Constraint-Evolution",
+      "section": "5.5 / 6.3 Constraint Dynamics",
+      "text": "C_{t+1} = G(x_t, C_t)",
+      "meaning": "Base form of constraint dynamics: the future constraint structure depends on the current system state and the existing configuration of constraints, allowing the constraint structure itself to evolve as a function of system activity. Restated in 8.1 and Appendix B/C.",
+      "paper_tier": "definition (schematic representation, not yet the agency condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "State-Constraint-Coupling",
+      "section": "6.5 Agency as Constraint Regulation",
+      "text": "∂C/∂x ≠ 0",
+      "meaning": "State–constraint coupling: the constraint structure's evolution genuinely depends on system state. Necessary but explicitly stated as not sufficient for agency.",
+      "paper_tier": "definition (necessary condition, part of the agency criterion)",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-3 (Agency-Condition)",
+      "section": "6.5 Agency as Constraint Regulation",
+      "text": "∂Tp/∂C · ∂C/∂x > 0,  where Tp is the expected persistence time of the system within the viable region V",
+      "meaning": "A system exhibits agency when system-induced constraint changes increase the expected persistence duration of the system. Basis of Definition 3 (agency as constraint regulation oriented toward persistence). Restated in Appendix B and Appendix C (Causal Structure of Agency Emergence).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Proto-Agency-Condition",
+      "section": "8.2–8.3 Level 0 / Level 1; 9.2 Control Systems and Proto-Agency",
+      "text": "∂C/∂x = 0",
+      "meaning": "Systems with zero state-constraint coupling: Level 0 (passive persistence, no regulation at all) or Level 1/proto-agency (persistence regulation present via feedback/homeostasis, but no modification of the constraint structure itself). Also used in Appendix B to define proto-agency.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "L3-Constraint-Evolution-History",
+      "section": "8.5 Level 3: Adaptive Constraint Regulation / 9.3 Learning Systems and Adaptive Agency",
+      "text": "C_{t+1} = G(x_t, C_t, H_t),  where H_t is the system's interaction history",
+      "meaning": "Constraint evolution becomes history-dependent: learning mechanisms alter internal parameters/policies based on accumulated experience, making constraint modulation flexible and history-dependent (Level 3 of the agency hierarchy).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "L4-Constraint-Evolution-Predictive",
+      "section": "8.6 Level 4: Predictive Constraint Regulation / 9.4 Predictive Artificial Agents",
+      "text": "C_{t+1} = G(x_t, C_t, x̂_{t+k}),  where x̂_{t+k} represents predicted future states",
+      "meaning": "Constraint regulation becomes forward-looking: systems with predictive/internal models regulate constraints in anticipation of future states over longer temporal horizons (Level 4 of the agency hierarchy).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "L5-Meta-Regulation",
+      "section": "8.7 Level 5: Reflective Constraint Regulation / 9.6 Toward Strong Artificial Agency",
+      "text": "G_{t+1} = M(G_t)",
+      "meaning": "Meta-regulation: the system modifies the rule G governing its own constraint-modulation dynamics, i.e. it can revise the strategies/policies through which it regulates persistence (Level 5, reflective agency — the highest level of the hierarchy).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    }
+  ]
+}

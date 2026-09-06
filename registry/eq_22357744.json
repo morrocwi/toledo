@@ -1,0 +1,239 @@
+{
+  "record_id": 22357744,
+  "title": "Experience Is Meaning-Giving: A Strong-Form Readout-Retention Theory of Phenomena, Resonance, Rhythm, Accumulation, and Transformative Release",
+  "doi": "10.5281/zenodo.22357744",
+  "equations": [
+    {
+      "label": "EMG-01",
+      "section": "6. Readout-Native Formalization",
+      "text": "r_n = R_H(x_n | H_n, c_n)",
+      "meaning": "A finite human readout of a bounded event trace/encountered pattern x_n, conditioned on retained human organization H_n and context c_n; the readout is not the world event itself.",
+      "paper_tier": "definition",
+      "in_master_river": 1
+    },
+    {
+      "label": "EMG-02",
+      "section": "6. Readout-Native Formalization",
+      "text": "mu_n = Psi_H(r_n, H_n, c_n, Q_n)",
+      "meaning": "Meaning-giving represented schematically as a reader-conditioned significance relation under the criterion/question Q_n; meaning is not stored inside x_n nor produced independently of it.",
+      "paper_tier": "definition",
+      "in_master_river": 2
+    },
+    {
+      "label": "EMG-03",
+      "section": "5.1 Meaning plurality without dilution / 6. Readout-Native Formalization",
+      "text": "mu_n = (mu_n^aff, mu_n^prag, mu_n^auto, mu_n^conc, mu_n^epi)",
+      "meaning": "Analytic typing of the meaning-giving relation into affective, pragmatic, autobiographical, conceptual, and epistemic significance components; readout modes, not biological modules, not an exhaustive ontology.",
+      "paper_tier": "definition",
+      "in_master_river": 3
+    },
+    {
+      "label": "EMG-04",
+      "section": "6. Readout-Native Formalization",
+      "text": "E_n = Phi_E(x_n, mu_n, kappa_n, c_n)",
+      "meaning": "Experience as a non-additive event-trace-meaning configuration under context, reused from the MEMK domain of Readout Genesis (kappa_n = strength/control of meaning over the current experience).",
+      "paper_tier": "definition",
+      "in_master_river": 4
+    },
+    {
+      "label": "EMG-05",
+      "section": "6. Readout-Native Formalization",
+      "text": "Experience = phenomenon-as-meaningfully-read (within a declared human domain)",
+      "paper_tier": "identity",
+      "in_master_river": 5,
+      "meaning": "The defended compression/central identity thesis of the paper."
+    },
+    {
+      "label": "EMG-06",
+      "section": "6. Readout-Native Formalization",
+      "text": "ell_n = L_H(E_n, mu_n | H_n, c_n); permits E_n, mu_n before stable ell_n",
+      "meaning": "Naming as a further operator producing a word, description, metaphor, story, question, or formal concept from experience and meaning; explicit naming need not precede experiential significance.",
+      "paper_tier": "definition",
+      "in_master_river": 6
+    },
+    {
+      "label": "EMG-07",
+      "section": "10. Naming as a Recursive Operator",
+      "text": "mu_n -> E_n -> ell_n -> mu_{n+1} -> E_{n+1}",
+      "meaning": "The recursive architecture in which naming can feed back to reorganize later meaning and experience; hardens the point that naming is not passive final report.",
+      "paper_tier": "identity",
+      "in_master_river": 7
+    },
+    {
+      "label": "EMG-08",
+      "section": "6. Readout-Native Formalization",
+      "text": "H_{n+1} = U_H( H_n, Retain(E_n, mu_n, r_n), delta^world_{n:n+1} )",
+      "meaning": "Retention is selective: only a chosen residue of experience updates the retained human state/operator; experience is neither identical to memory nor automatically learning.",
+      "paper_tier": "definition",
+      "in_master_river": 8
+    },
+    {
+      "label": "EMG-09",
+      "section": "7. Resonance: External-Internal Experiential Congruence",
+      "text": "I_{H,n} = Retrieve(M_{H,n} | c_n, Q_n)",
+      "meaning": "A context-relevant retained experiential organization retrieved from human memory/history, used as the internal comparator for resonance.",
+      "paper_tier": "definition",
+      "in_master_river": 9
+    },
+    {
+      "label": "EMG-10",
+      "section": "7. Resonance: External-Internal Experiential Congruence",
+      "text": "C_H(E_n^cur, I_{H,n} | c_n, Q_n) in [0,1];  Res_H(n) = C_H(E_n^cur, I_{H,n} | c_n, Q_n)",
+      "meaning": "Experiential resonance is defined as a declared congruence diagnostic between the current meaning-given experiential configuration and the retrieved internal organization; a DR/Open domain diagnostic, not a validated psychometric scale.",
+      "paper_tier": "definition",
+      "in_master_river": 10
+    },
+    {
+      "label": "EMG-11",
+      "section": "7. Resonance: External-Internal Experiential Congruence",
+      "text": "Res != Identity,  Res != Truth,  Res != Retention,  Res != Improvement",
+      "meaning": "Four mandatory non-collapses guarding the resonance construct: congruence explains force for the reader, not warrant (e.g. a conspiracy narrative can resonate with retained fear).",
+      "paper_tier": "law",
+      "in_master_river": 11
+    },
+    {
+      "label": "EMG-12",
+      "section": "7. Resonance: External-Internal Experiential Congruence",
+      "text": "Delta_Res = P(Y | B, Res) - P(Y | B)",
+      "meaning": "Strong-form construct criterion: resonance is retained as a distinct technical object only if it contributes incremental held-out predictive value beyond a preregistered rival set B (schema congruence, self-reference, familiarity, fluency, appraisal, valence, autobiographical retrieval).",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-13",
+      "section": "8. Rhythm: Structured Recurrence Across Ordered History",
+      "text": "T_n = {(x_k, t_k, w_k)}_{k<=n};   R_n = Omega(T_n, B_n)",
+      "meaning": "Rhythm descriptor: the ordered encounter history (with time/order t_k and salience weight w_k) summarized by an operator Omega over a declared event-boundary sequence B_n, capturing recurrence intervals, returns, interruptions, and local regularity.",
+      "paper_tier": "definition",
+      "in_master_river": 12
+    },
+    {
+      "label": "EMG-14",
+      "section": "8. Rhythm: Structured Recurrence Across Ordered History",
+      "text": "m_{t+1}(e) = rho*m_t(e) + 1[e_t = e],  0 <= rho < 1",
+      "meaning": "Semantic-momentum object (from From Problem to Hypothesis) offered as one possible downstream effect of rhythm: recent repeated traversal makes the same semantic direction easier to re-enter for a limited history window.",
+      "paper_tier": "definition",
+      "in_master_river": 13
+    },
+    {
+      "label": "EMG-15",
+      "section": "8. Rhythm: Structured Recurrence Across Ordered History",
+      "text": "order != rhythm,  repetition != rhythm,  rhythm != meaning,  rhythm != retention",
+      "meaning": "Non-collapse laws separating rhythm from order, repetition, meaning, and retention.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-16",
+      "section": "9. Accumulation, Potential, Barrier Crossing, and Release",
+      "text": "Delta W_{j,N} = sum_{n=1}^{N} eta_n * eligibleGradient_n",
+      "meaning": "Repeated low-amplitude informational-work updates on the current semantic organization accumulate over N encounters (reused from MEMK v0.2).",
+      "paper_tier": "definition",
+      "in_master_river": 16
+    },
+    {
+      "label": "EMG-17",
+      "section": "9. Accumulation, Potential, Barrier Crossing, and Release",
+      "text": "W_n^eff = W_{info,n} * g( Res_H(n), eligibility, context ),  g left DR/Open",
+      "meaning": "A current encounter's effective informational work as a function of source strength, reader eligibility, context, and alignment; resonance treated as one possible alignment term, not energy itself.",
+      "paper_tier": "definition",
+      "in_master_river": 17
+    },
+    {
+      "label": "EMG-18",
+      "section": "9. Accumulation, Potential, Barrier Crossing, and Release",
+      "text": "sum_{k<=n} W_k^eff >= Delta V^dagger_{old->new}",
+      "meaning": "Transition candidate: a barrier-crossing condition once cumulative effective work exceeds a declared activation barrier separating an old stable meaning basin from a candidate new basin; a candidate transition topology, not a universal law.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": 18
+    },
+    {
+      "label": "EMG-19",
+      "section": "9. Accumulation, Potential, Barrier Crossing, and Release",
+      "text": "z_{n+1} = z_n + alpha*W_n^eff + epsilon_n",
+      "meaning": "The continuous rival model against which the transition/barrier topology is tested; the barrier claim gains force only if it predicts abrupt reorganization, hysteresis, or delayed settling that this continuous model misses.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-20",
+      "section": "9. Accumulation, Potential, Barrier Crossing, and Release",
+      "text": "release != transformation,  intensity != truth,  shock != insight,  barrier crossing != improvement",
+      "meaning": "Non-collapse laws guarding the transition/release construct from being read as certifying truth, healing, wisdom, or durable transformation.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-21",
+      "section": "11. Human-AI Coupling Begins Before the Prompt",
+      "text": "H_t --L_H--> Q_t",
+      "meaning": "Pre-Prompt Human State Principle: the human articulates only a partial readout of the retained state H_t (experiences, concepts, affective weights, values, unresolved differences, recent interaction history) as the prompt Q_t.",
+      "paper_tier": "law",
+      "in_master_river": 27
+    },
+    {
+      "label": "EMG-22",
+      "section": "11. Human-AI Coupling Begins Before the Prompt",
+      "text": "Y_t --R_H--> E^AI_{H,t}",
+      "meaning": "The AI's output Y_t is read by the human through the same embodied and retained organization, producing an experience of that output which can resonate, fail to resonate, create dissonance, or restructure future meaning-giving.",
+      "paper_tier": "definition",
+      "in_master_river": 28
+    },
+    {
+      "label": "EMG-23",
+      "section": "11. Human-AI Coupling Begins Before the Prompt",
+      "text": "H_{t+1} = U_H(H_t, E^AI_{H,t}, world correction, other experience)",
+      "meaning": "If the AI-mediated experience is retained, it updates the human state, from which the next question is produced (H_{t+1} -> Q_{t+1}).",
+      "paper_tier": "definition",
+      "in_master_river": 29
+    },
+    {
+      "label": "EMG-24",
+      "section": "11. Human-AI Coupling Begins Before the Prompt",
+      "text": "H_t -> Q_t -> AI_t -> Y_t -> E_{H,t} -> Retain? -> H_{t+1} -> Q_{t+1}",
+      "meaning": "The full pre-prompt/post-response architecture of Human-AI coupling, with resonance and rhythm as candidate domain-level modifiers of uptake and re-entry.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-25",
+      "section": "12. From Retained Experience to CTSA Human Return",
+      "text": "retained experiential reorganization -> possible later CTSA crystallization",
+      "meaning": "A lower layer inserted beneath CTSA Human Return: not every retained experiential change is immediately an explicit demonstrable capability.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-26",
+      "section": "12. From Retained Experience to CTSA Human Return",
+      "text": "retained sensitivity -> C_return;  retained reweighting -> A_return;  retained reorganization -> Q_next^better",
+      "meaning": "Possible (open, non-universal) developmental trajectories from retained experiential change to CTSA Conceptual/Alternative-Generation return classes or to a better next question.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-27",
+      "section": "13. Non-Collapse Laws",
+      "text": "phenomenon != experience; event trace != meaning; meaning-giving != truth-making; pre-explicit significance != fully formed proposition; naming != passive reporting; resonance != identity; resonance != truth; rhythm != repetition count; rhythm != meaning; accessibility != warrant; semantic attraction != evidence; informational work != physical energy; shock != coherent insight; release != durable transformation; retention != improvement; Human-AI amplification != synergy; coupled performance != Human Return",
+      "meaning": "The paper's constitutive non-collapse laws, summarizing every role-separation defended in the text; blocks the error of experiential force certifying truth or improvement.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-28",
+      "section": "14.10 Rival model ladder",
+      "text": "M0 = arousal/intensity only; M1 = familiarity/exposure; M2 = prediction/surprise; M3 = language/category construction; M4 = memory/schema retrieval; (M5 = the present readout-retention model)",
+      "meaning": "Preregistered rival-model ladder that every empirical test of the theory must beat; if M5 adds no held-out explanatory value over M0-M4, its extra variables should be deleted.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "EMG-29",
+      "section": "5.1 Meaning plurality without dilution",
+      "text": "mu^aff != mu^epi,  mu^auto != mu^epi,  mu^prag != truth",
+      "meaning": "Non-collapse guarding the plural typing of meaning-giving: a phenomenon can matter deeply (affectively/pragmatically) without thereby being correctly (epistemically) interpreted.",
+      "paper_tier": "law",
+      "in_master_river": null
+    }
+  ]
+}

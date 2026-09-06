@@ -1,0 +1,303 @@
+{
+  "record_id": 18444260,
+  "title": "Causal Ethics",
+  "doi": "10.5281/zenodo.18444260",
+  "equations": [
+    {
+      "label": "CE-01",
+      "section": "Ch.1 §1.1.1; Ch.2 §2.1 (Axiom I: Reality-as-Record); Equation Registry Part I",
+      "text": "M(t') ∈ M",
+      "meaning": "Manifested reality: there exists a manifested, admitted, and aggregatable record of the system at (dimensionless) update-time t'. CE reasons only over this record, not over an 'ontic' or 'complete' reality.",
+      "paper_tier": "axiom (Axiom I: Reality-as-Record)",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-02",
+      "section": "Ch.1 §1.1.2; Ch.2 §2.2 (Axiom II: Agency-as-Choice); Equation Registry Part I",
+      "text": "A_i(t') ⊆ M(t')",
+      "meaning": "Agency as a sub-structure of reality: an agency A_i is not an external soul-like entity but a sub-structure (subsystem/component/pattern) within the record M(t'). An entity qualifies as an agency iff it can instantiate a choice of regime.",
+      "paper_tier": "axiom (Axiom II: Agency-as-Choice)",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-03",
+      "section": "Ch.1 §1.1.3; Ch.2 §2.5 (Axiom IV: Collective as Coupled Agencies); Equation Registry Part I",
+      "text": "G(t') := {A_1(t'), …, A_N(t')} ⊆ M(t')",
+      "meaning": "A collective/group is a finite set of agencies sharing (at least partially) the same manifested record M(t'), such that their choices/actions interact in a coupled way.",
+      "paper_tier": "axiom (Axiom IV: Collective as Coupled Agencies)",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-04",
+      "section": "Ch.1 §1.1.4 (Admissible Regime Set); Equation Registry Part I",
+      "text": "R ∈ R_adm(t')",
+      "meaning": "A regime R is the formal object encoding how an agency translates and interacts with the record; R_adm(t') is the subset of regimes permitted for evaluation at time t' (CE's own constraints may shrink it further).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-05",
+      "section": "Ch.1 §1.1.5; Ch.2 §2.3 (Axiom III: Regime Structure); Equation Registry Part I",
+      "text": "R := (T_R, I_R)",
+      "meaning": "Regime structure: a regime is an ordered pair of operators acting on the manifested record and its agency sub-structures — a translation operator T_R (updates the record) and an interaction operator I_R (updates the agency sub-structure).",
+      "paper_tier": "axiom (Axiom III: Regime Structure)",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-06",
+      "section": "Ch.1 §1.1.6; Ch.2 §2.3.2 (Update Laws); Equation Registry Part I",
+      "text": "M(t' + Δt') = T_R(M(t'))",
+      "meaning": "Reality update law: once a regime is selected, the record updates deterministically at the abstract level via the translation operator.",
+      "paper_tier": "law (update law)",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-07",
+      "section": "Ch.1 §1.1.6; Ch.2 §2.3.2 (Update Laws); Equation Registry Part I",
+      "text": "A(t' + Δt') ⊆ I_R(A(t'), M(t'))",
+      "meaning": "Agency update law: the agency sub-structure updates via the interaction operator acting on the prior agency state and the record.",
+      "paper_tier": "law (update law)",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-08",
+      "section": "Ch.1 §1.2.3 (What 'Etic' Means Here); Ch.2 §2.4.2 (Ethical Asymmetry); Equation Registry Part II",
+      "text": "Etic(A; t') := ∃ R_A(t') ∈ R_adm(t') : A ⊆ M(t'), M(t'+Δt') = T_{R_A}(M(t')), A(t'+Δt') ⊆ I_{R_A}(A(t'), M(t'))",
+      "meaning": "The 'etic' layer: ethics is expressed purely as a choice of regime (translation + interaction) that couples an agency to the record — intentionally minimal, requiring no particular psychology, culture, or value system.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-09",
+      "section": "Ch.3 §3.2 (Ethical Load: the Lyapunov Potential); Equation Registry Part III",
+      "text": "V_{A,R}(M) ≥ 0",
+      "meaning": "Ethical load: for an agency A operating under regime R, a non-negative scalar functional measuring accumulated strain, tension, or instability relative to the record — not psychological suffering or moral guilt.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-10",
+      "section": "Ch.3 §3.3 (Causal Memory Constraint); Equation Registry Part III",
+      "text": "τ_c'(R) > 0",
+      "meaning": "Causal memory time: each regime R has an associated causal memory/response time, encoding that reality updates are not instantaneous and information propagation requires time. Regimes with τ_c'(R) ≈ 0 (impulsive/memoryless forcing) are inadmissible.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-11",
+      "section": "Ch.3 §3.4 (Spectral Stability Margin); Equation Registry Part III",
+      "text": "Δ_spec(R) > 0",
+      "meaning": "Spectral stability margin: a regime R admits a positive spectral margin, certifying that induced dynamics do not blow up and agency-supporting structures are not erased. If Δ_spec(R) ≤ 0 the regime is unstable.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-12",
+      "section": "Ch.3 §3.1.1 (Core Definition: Ethics as Admissible Regime-Choice, 'locked'); Ch.5 §5.3; Equation Registry Part III (Causal Ethics Inequality)",
+      "text": "Ethical(A) ⇔ ∃ Choice(A → R_A) : d/dt' V_{A,R_A}(M(t')) ≤ 0 ∧ τ_c'(R_A) > 0 ∧ Δ_spec(R_A) > 0",
+      "meaning": "The book's single locked core definition (the Causal Ethics Inequality): an agency is ethical iff it selects a regime that (i) does not increase ethical load, (ii) respects finite causal memory, and (iii) has positive spectral stability margin. 'This definition is final and will not be weakened or reinterpreted later in the book.'",
+      "paper_tier": "definition (author-labelled 'final' / locked)",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-13",
+      "section": "Ch.4/Ch.7 §4.1.2/§7.1.2 (Interpretation of Terms); Equation Registry Part III",
+      "text": "V̇⁺ := max(dV/dt', 0)",
+      "meaning": "Positive-part operator: ensures that only worsening dynamics generate moral cost; stabilizing actions do not accrue moral debt.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-14",
+      "section": "Ch.1 §1.3 (Symbol Dictionary — Spectrum and Survival); Equation Registry Part IV",
+      "text": "M(t') = M_0 φ_0 + Σ_k a_k(t') φ_k",
+      "meaning": "Abstract spectral decomposition of the manifested record over an abstract mode basis {φ_k}.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-15",
+      "section": "Ch.1 §1.3 (Symbol Dictionary); Equation Registry Part IV",
+      "text": "S_A(R) ⊆ span{φ_k}",
+      "meaning": "Agency-supporting subspace: the spectral subspace supporting the persistence of agency A under regime R.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-16",
+      "section": "Ch.1 §1.3 (Symbol Dictionary); Equation Registry Part IV",
+      "text": "P_{S_A(R)} : M → S_A(R)",
+      "meaning": "Projection operator onto the agency-supporting subspace S_A(R).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-17",
+      "section": "Ch.5 §5.6 (Individual Survival Link); Equation Registry Part IV",
+      "text": "limsup_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² > 0",
+      "meaning": "Spectral survival: the agency-supporting spectral subspace does not vanish in the long run — the survival certificate.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-18",
+      "section": "Ch.5 §5.6 (Individual Survival Link); Equation Registry Part IV",
+      "text": "lim_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² = 0",
+      "meaning": "Spectral disappearance / self-erasure: the agency-supporting spectral subspace vanishes in the long run.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-19",
+      "section": "Ch.5 §5.3 (Individual Admissibility Test / Definition (Individual Ethics Condition)); Equation Registry Part V",
+      "text": "Eth_ind(A) ⇔ d/dt' V_{A,R_A} ≤ 0 ∧ Δ_spec(R_A) > 0",
+      "meaning": "Individual ethics condition: an agency A is ethically admissible iff it instantiates choice to a regime with non-escalating load and positive spectral margin (registry's compact 2-clause form of the admissibility test).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-20",
+      "section": "Ch.6 §6.1 (From Individual Potentials to Collective Load); Equation Registry Part V",
+      "text": "V_G(M) := Σ_{i=1}^N w_i V_{A_i,R_i}(M),  w_i > 0",
+      "meaning": "Collective potential: a weighted aggregation of individual ethical loads across a collective; weights encode structural relevance (exposure, dependency, coupling), not moral worth.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-21",
+      "section": "Ch.6 §6.2 (Collective Admissibility and Stability Illusions); Equation Registry Part V",
+      "text": "Eth_col(G) ⇔ d/dt' V_G(M) ≤ 0 ∧ min_i Δ_spec(R_i) > 0",
+      "meaning": "Collective ethics: a collective is ethically admissible iff aggregate load is non-increasing AND every participating agency retains a positive spectral margin (blocks 'illusion of stability' via suppressed subgroups).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-22",
+      "section": "Ch.8 §8.2.1 (Individual-Admissible, Collective-Destabilizing); Equation Registry Part VI",
+      "text": "Conf_{ind→col} ⇔ d/dt' V_{A_i} ≤ 0 ∧ d/dt' V_G > 0",
+      "meaning": "Individual-to-collective conflict: an individual's regime stabilizes its own load while increasing aggregate collective load (free-riding / opportunistic extraction pattern).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-23",
+      "section": "Ch.8 §8.2.2 (Collective-Admissible, Individual-Destabilizing); Equation Registry Part VI",
+      "text": "Conf_{col→ind} ⇔ d/dt' V_G ≤ 0 ∧ ∃i: d/dt' V_{A_i} > 0",
+      "meaning": "Collective-to-individual conflict: collective stability is achieved by imposing increasing load on specific agencies/subgroups (forced assimilation, sacrificial labour, institutionalized exclusion) — 'illusion of collective stability.'",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-24",
+      "section": "Ch.8 §8.1 (Moral Conflict as a Mathematical Object); Equation Registry Part VI",
+      "text": "Δ_spec(R_i ∪ R_j) ≤ 0",
+      "meaning": "Regime incompatibility: two regimes may each be individually admissible yet fail jointly — conflict is detected when the coupled operator's spectral margin is non-positive.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-25",
+      "section": "Ch.4/Ch.7 §4.2.1/§7.2.1 (Definition (Causal Violation Indicator)); Equation Registry Part VII",
+      "text": "χ_causal(R) := 1[τ_c'(R) ≈ 0]",
+      "meaning": "Causal violation indicator: activates when a regime bypasses or collapses causal memory (impulsive exploitation, ultra-high-frequency control).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-26",
+      "section": "Ch.4/Ch.7 §4.2.2/§7.2.2 (Definition (Spectral Violation Indicator)); Equation Registry Part VII",
+      "text": "χ_spec(R) := 1[Δ_spec(R) ≤ 0]",
+      "meaning": "Spectral violation indicator: activates when a regime operates in a mode where perturbations amplify or agency-supporting structures are erased.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-27",
+      "section": "Ch.4/Ch.7 §4.1.1/§7.1.1 (Definition (Moral Cost Functional)); Equation Registry Part VII",
+      "text": "C_{A,R}[t1,t2] := ∫_{t1}^{t2} [ α V̇⁺_{A,R}(M(t')) + β χ_causal(R) + γ χ_spec(R) ] dt',  α,β,γ > 0",
+      "meaning": "Moral cost functional: the accumulated moral debt of agency A under regime R over an interval, combining worsening-load cost, causal-violation cost, and spectral-violation cost with fixed positive weights.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-28",
+      "section": "Ch.4/Ch.7 §4.3/§7.3 (Definition (Responsibility)); Ch.5 §5.5; Equation Registry Part VII",
+      "text": "Resp(A) ≡ C_{A,R_A}",
+      "meaning": "Responsibility as cost-bearing: an agency is responsible exactly to the extent that it accrues moral cost under its chosen regime — not intention, awareness, or blame. If a regime is forced, C_{A,R}=0 regardless of harm.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-29",
+      "section": "Ch.4/Ch.7 §4.4/§7.4 (Definition (Collective Moral Cost)); Equation Registry Part VII",
+      "text": "C_G[t1,t2] := Σ_{i=1}^N w_i C_{A_i,R_i}[t1,t2]",
+      "meaning": "Collective moral cost: the weighted sum of individual moral costs across a collective.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-30",
+      "section": "Ch.4/Ch.7 §4.4.2/§7.4.2 (Definition (Structural Injustice)); Equation Registry Part VII",
+      "text": "∃ i,j : C_{A_i,R_i} ≫ C_{A_j,R_j}",
+      "meaning": "Structural injustice as burden asymmetry: injustice is diagnosed when moral cost is persistently concentrated on a subset of agencies — no intent or malice required, only asymmetry.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-31",
+      "section": "Ch.4/Ch.7 §4.5/§7.5 (Definition (Karma as Cost Divergence)); Equation Registry Part VII",
+      "text": "lim_{T→∞} C_{A,R}[0,T] = ∞",
+      "meaning": "Karma as cost divergence: not metaphysical retribution but the mathematical fact that persistent regime violations accumulate moral cost without bound.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-32",
+      "section": "Ch.4/Ch.7 §4.5.2/§7.5.2 (Theorem (Cost–Survival Link)); Ch.5 §5.6; Equation Registry Part VII",
+      "text": "lim_{T→∞} C_{A,R}[0,T] = ∞ ⇒ lim_{n→∞} ‖P_{S_A} M(t'+n)‖² = 0",
+      "meaning": "Cost–Survival Link: unbounded moral cost implies eventual disappearance of the agency-supporting spectral subspace — structural extinction, not punishment.",
+      "paper_tier": "theorem (author-labelled 'Theorem (Cost–Survival Link)')",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-33",
+      "section": "Ch.4/Ch.7 §4.6.1/§7.6.1 (Definition (Zero-Cost Ethics)); Equation Registry Part VIII",
+      "text": "Eth(A) ⇔ C_{A,R_A}[t,∞) = 0",
+      "meaning": "Zero-cost ethical criterion: an ideal condition asserting the existence of regimes that stabilize without accumulating debt.",
+      "paper_tier": "definition (author-labelled 'ideal condition')",
+      "in_master_river": null
+    },
+    {
+      "label": "CE-34",
+      "section": "Ch.4/Ch.7 §4.6.2/§7.6.2 (Definition (Constitutional Regime Selection)); Equation Registry Part VIII",
+      "text": "R* ∈ argmin_{R∈R_adm} C_{system,R}  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0",
+      "meaning": "System-admissible regime selection: a constitutional optimum minimizes accumulated system-level cost while preserving causality and spectral stability.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(CE-choice gate)",
+      "section": "Ch.5 §5.3 (Hard rule: Choice gate)",
+      "text": "¬∃ Choice(A → R_A) ⇒ no ethics attribution, no responsibility attribution, and no moral cost attribution",
+      "meaning": "Choice-gate hard rule: if an agency does not instantiate choice of a regime, ethics, responsibility, and moral cost are all undefined/zero for it (restates the 'No Choice, No Ethics' principle of Ch.3 §3.5 formally).",
+      "paper_tier": "law (author-labelled 'Hard rule')",
+      "in_master_river": null
+    },
+    {
+      "label": "(Tragic)",
+      "section": "Ch.5 §5.4 (Definition (Tragic regime class))",
+      "text": "∀ R ∈ R_available(t') : ¬[τ_c'(R) > 0 ∧ Δ_spec(R) > 0] ∨ C_{A,R}[t',t'+T] > 0,  for all T > 0",
+      "meaning": "Tragic regime class: a decision context is tragic for agency A if every available regime either violates admissibility or incurs strictly positive unavoidable cost — the admissible set is non-empty but its zero-cost subset is empty.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(Tragic-min)",
+      "section": "Ch.5 §5.4 (Consequence, following Definition (Tragic regime class))",
+      "text": "R†_A ∈ argmin_{R∈R_available(t')} C_{A,R}[t',t'+T]  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0",
+      "meaning": "Under a tragic regime, CE outputs a cost-minimization with residue rather than a pure pass/fail: ethics reduces to constrained minimization, and responsibility remains even though zero-cost innocence is unattainable.",
+      "paper_tier": "proposition (derived consequence of the Tragic definition)",
+      "in_master_river": null
+    }
+  ]
+}

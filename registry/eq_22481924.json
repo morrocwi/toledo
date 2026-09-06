@@ -1,0 +1,471 @@
+{
+  "record_id": 22481924,
+  "title": "After Labour: Human Position in an AI-Robotic World System",
+  "doi": "10.5281/zenodo.22481924",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "1. The Question After Labour",
+      "text": "human labour -> production -> wage -> claim on output",
+      "meaning": "The industrial political-economy chain linking mass participation to a practical claim on output, which the paper argues is weakening as its universal bridge role.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "2.1 Readout in this paper",
+      "text": "Readout_(Q,O,c)(S) = z,  z != S",
+      "meaning": "A readout is a finite, declared representation of a system relative to a question, reader/measurement interface, and context; the representation is not the whole system.",
+      "paper_tier": "definition",
+      "in_master_river": 52
+    },
+    {
+      "label": "(3)",
+      "section": "5. Technology Block: Candidate Generation, Knowledge, and Embodiment",
+      "text": "Z_dot_t = v_t G_t - delta_Z Z_t,  0 <= v_t <= 1",
+      "meaning": "Minimal epistemic firewall: validated knowledge grows from machine candidate-generation capacity only through a domain-specific validation conversion rate, with decay.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "5. Technology Block: Candidate Generation, Knowledge, and Embodiment",
+      "text": "K_like != K_validated",
+      "meaning": "Non-collapse: knowledge growth is never inferred directly from compute or benchmark (candidate-generation) growth.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "5. Technology Block: Candidate Generation, Knowledge, and Embodiment",
+      "text": "B^RB_t = N^RB_t q^RB_t",
+      "meaning": "Embodied automation capacity as deployed robot stock times effective per-unit capability.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "5. Technology Block: Candidate Generation, Knowledge, and Embodiment",
+      "text": "B_dot^RB_t / B^RB_t = N_dot^RB_t / N^RB_t + q_dot^RB_t / q^RB_t",
+      "meaning": "Growth-rate decomposition of embodied automation capacity into stock growth and per-unit capability growth; the capability term (per-robot growth) remains open/unresolved.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "5. Technology Block: Candidate Generation, Knowledge, and Embodiment",
+      "text": "M_t = (K^M_t)^kappa (A^AI_t)^alpha (B^RB_t)^beta",
+      "meaning": "Machine productive-capacity index combining machine-specific capital, operational AI capability, and embodied automation capacity.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "6. Labour Centrality, Not Labour Disappearance",
+      "text": "L_t = < L^task_t, L^income_t, L^bottleneck_t, L^bargain_t >",
+      "meaning": "Four-dimensional labour centrality: task-execution reliance, income importance, non-substitutable bottleneck role, and worker bargaining leverage.",
+      "paper_tier": "definition",
+      "in_master_river": 53
+    },
+    {
+      "label": "Labour-Decentering Proposition",
+      "section": "6. Labour Centrality, Not Labour Disappearance",
+      "text": "Labour-Decentering Proposition [Open]. AI and robotics can reduce labour centrality without eliminating labour. Stable employment can coexist with falling bottleneck or bargaining centrality; high wages for some workers can coexist with a declining aggregate labour claim; and human-facing residual work can expand while scalable productive tasks migrate to machine systems.",
+      "meaning": "Boxed proposition separating labour centrality (task, income, bottleneck, bargaining) from raw employment counts.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "6. Labour Centrality, Not Labour Disappearance",
+      "text": "rho = (sigma - 1) / sigma",
+      "meaning": "CES elasticity-of-substitution parameter for the human/machine production block.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "6. Labour Centrality, Not Labour Disappearance",
+      "text": "s^L_t = (omega_H H_t^rho) / (omega_H H_t^rho + omega_M M_t^rho)",
+      "meaning": "Human labour-income share under the restrictive benchmark of competitive factor pricing.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "7. The Claim Constitution: From Wages to Citizen Claims",
+      "text": "q_t = o_t + tau_t(1 - o_t) = 1 - (1 - o_t)(1 - tau_t)",
+      "meaning": "Combined broad ownership share and redistribution rate applied to machine-capital income not already broadly owned.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "7. The Claim Constitution: From Wages to Citizen Claims",
+      "text": "Gamma_t = s^L_t + q_t(1 - s^L_t)",
+      "meaning": "Broad material claim on domestic output; a claim-accounting identity for the stylized model, not a welfare function.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(13)",
+      "section": "7. The Claim Constitution: From Wages to Citizen Claims",
+      "text": "q^min_t = (Gamma_bar - s^L_t) / (1 - s^L_t)",
+      "meaning": "Citizen Claim Threshold: minimum non-labour conversion required to hold a target material claim as the labour-income share falls.",
+      "paper_tier": "identity",
+      "in_master_river": 54
+    },
+    {
+      "label": "(14)",
+      "section": "7. The Claim Constitution: From Wages to Citizen Claims",
+      "text": "D^rent_(i,t) = (Rent^(AI,out)_(i,t) - Rent^(AI,in)_(i,t)) / Y_(i,t)",
+      "meaning": "Net cross-border machine-rent drain for country i.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(15)",
+      "section": "7. The Claim Constitution: From Wages to Citizen Claims",
+      "text": "Gamma^net_(i,t) = Gamma_(i,t) - D^rent_(i,t)",
+      "meaning": "Simple domestic effective claim after cross-border machine-rent drain: a country can automate locally while rents accrue abroad.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(16)",
+      "section": "8. Ownership Accumulation: The Stock That Reproduces the Next Claim",
+      "text": "W^M_(i,t+1) = (1 - delta_W) W^M_(i,t) + r^M_t W^M_(i,t) + s^(M,cap)_(i,t) + T^cap_(i,t) - Tax^cap_(i,t)",
+      "meaning": "Minimal stock-flow equation for actor i's beneficial claim on machine-productive wealth: return, new saving/acquisition, capital transfers/inheritance, and taxes/dilution.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(17)",
+      "section": "8. Ownership Accumulation: The Stock That Reproduces the Next Claim",
+      "text": "o_t = ( sum_(i in B) W^M_(i,t) ) / ( sum_i W^M_(i,t) )",
+      "meaning": "Broad-population ownership share used in (11), for a declared broad-population set B.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(18)",
+      "section": "8. Ownership Accumulation: The Stock That Reproduces the Next Claim",
+      "text": "current redistribution != future ownership reproduction",
+      "meaning": "Non-collapse: redistribution today does not by itself determine how the ownership stock evolves; social wealth funds, pensions, cooperatives, or public ownership can raise ownership share without dispersing operational control.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(19)",
+      "section": "9. Scarce Assets, Rent Burden, and Effective Material Claim",
+      "text": "B^scarce_(i,t) = (R^house_(i,t) + R^land_(i,t) + R^energy_(i,t) + DS_(i,t)) / Y_(i,t)",
+      "meaning": "Household/population rent-burden share from housing, land, energy, and required debt service.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(20)",
+      "section": "9. Scarce Assets, Rent Burden, and Effective Material Claim",
+      "text": "Gamma^eff_(i,t) = max{0, Gamma^net_(i,t) - B^scarce_(i,t)}",
+      "meaning": "Effective material claim after unavoidable scarce-asset rent burdens.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(21)",
+      "section": "9. Scarce Assets, Rent Burden, and Effective Material Claim",
+      "text": "machine abundance != low rent burden != effective material freedom",
+      "meaning": "Second non-collapse: gross transfers/dividends can rise while effective command over discretionary life stagnates if scarce-asset rents rise faster.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(22)",
+      "section": "10. Aggregate Demand and Realization: Who Can Buy the Automated Output?",
+      "text": "AD_t = C(Gamma^eff_t Y_t, m_t) + I_t + G_t + NX_t",
+      "meaning": "Aggregate demand as a function of the distribution of effective household claims and marginal propensities to consume, plus investment, government spending, and net exports.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(23)",
+      "section": "10. Aggregate Demand and Realization: Who Can Buy the Automated Output?",
+      "text": "chi^dem_t = min{1, AD_t / Y_t}",
+      "meaning": "Simple realization ratio of aggregate demand to output.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(24)",
+      "section": "10. Aggregate Demand and Realization: Who Can Buy the Automated Output?",
+      "text": "Pi^M_t = chi^dem_t Y_t - Cost^M_t",
+      "meaning": "Realized machine-capital profit depends on both productive capacity and demand realization.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(25)",
+      "section": "10. Aggregate Demand and Realization: Who Can Buy the Automated Output?",
+      "text": "Gamma^eff Y -> AD -> Pi^M -> W^M_(t+1) -> M_(t+1)",
+      "meaning": "Feedback chain: distribution affects realization, profit, wealth accumulation, and the next round of machine-capital accumulation.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(26)",
+      "section": "11. Ownership Is Not Transition Power: Conversion Gates",
+      "text": "G^conv_(j,t)(e) = 1 - [ V_t(e | -j) / V_t(e) ]_+",
+      "meaning": "Counterfactual conversion-gate control of actor/gatekeeper j over transition e, based on best viability with and without j.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(27)",
+      "section": "11. Ownership Is Not Transition Power: Conversion Gates",
+      "text": "X_(i,t)(e; j) = clip( V_(i,t)(e | -j) / V_(i,t)(e), 0, 1 )",
+      "meaning": "Credible exit of actor i from gatekeeper j: access and exit are not identical.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(28)",
+      "section": "11. Ownership Is Not Transition Power: Conversion Gates",
+      "text": "D_(i->j,t)(g) = sum_(e in E(g)) w_e(g) G^conv_(j,t)(e) [1 - X_(i,t)(e; j)]",
+      "meaning": "Actor-specific dependency exposure for goal g, differing from a concentration-only formulation by treating concentration as a possible upstream cause/proxy rather than the load-bearing variable.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(29)",
+      "section": "11. Ownership Is Not Transition Power: Conversion Gates",
+      "text": "Concentration != G^conv != D",
+      "meaning": "Non-collapse separating market concentration, counterfactual gate control, and dependency exposure.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(30)",
+      "section": "12. Relational Class Position in an AI-Robotic Economy",
+      "text": "C_(i,t) = < O_(i,t), G_(i,t), Gamma_(i,t), A^access_(i,t), X_(i,t), D_(i,t), R^rent_(i,t) >",
+      "meaning": "Relational class position vector: beneficial ownership, gate control, claim, productive access, credible exit, dependency, and net rent position; a stable class requires persistent clustering and institutional reproduction, not one observation.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(31)",
+      "section": "13. The Political-Economy-to-Human Bridge",
+      "text": "c^(PE->H)_(i,t) = B^(PE->H)(Z_t; i, g)",
+      "meaning": "A named bridge mechanism (price, time, language, information, credit, permission, legal standing, identity, sanction, switching cost, network access, or institutional recognition) required to upgrade a political-economic relation into a claim about human agency.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(32)",
+      "section": "13.1 Live possibility, defined here",
+      "text": "Pi^live_(i,t)(g) subseteq Pi^feas_(i,t)(g) subseteq Pi^phys_(i,t)(g)",
+      "meaning": "Nesting of physically possible, structurally feasible, and currently live options for person i and goal g; a live possibility is intelligible, discoverable, credible, and actionable, not merely legally present.",
+      "paper_tier": "definition",
+      "in_master_river": 55
+    },
+    {
+      "label": "(33)",
+      "section": "13.1 Live possibility, defined here",
+      "text": "Lambda_dot^live_(H,t) = lambda_1 B_t + lambda_2 X_t + lambda_3 P^plural_t + lambda_4 r^H_t - lambda_5 D_t - lambda_6 C^I_t - delta_Lambda Lambda^live_(H,t)",
+      "meaning": "Candidate dynamic for the macro-readout of breadth and corrigibility of live alternatives, driven by material security, exit, plural informational access, Human Return, dependency, and control cost; marked Open, to be removed if simpler measures explain the same outcomes.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(34)",
+      "section": "13.2 Corrigible human agency, defined here",
+      "text": "A^corr_(H,i,t)(g) = max_(pi in Pi^live_(i,t)(g)) Pr^pi( R_g cap D_g cap X_g cap F_g )",
+      "meaning": "Task-relative corrigible-agency envelope: probability of jointly reading relevant differences, retaining attributable acceptance/refusal, causal enactment, and feedback/revision, over the live option set. Not a metaphysical free-will score.",
+      "paper_tier": "definition",
+      "in_master_river": 56
+    },
+    {
+      "label": "(35)",
+      "section": "13.3 Human Return, defined here",
+      "text": "R^return_(H,t) = < C_t, T_t, S^skill_t, A^alt_t >",
+      "meaning": "Delayed unaided return profile: Conceptual reconstruction, Tool selection, Skill execution, and Alternative generation after decisive AI assistance is removed; a normalized readout may be constructed under frozen criteria, without requiring CTSA as a validated scale.",
+      "paper_tier": "definition",
+      "in_master_river": 57
+    },
+    {
+      "label": "(36)",
+      "section": "14. Social Role After Labour",
+      "text": "S_dot^H_t = s_1 W_t + s_2 N_t - delta_S S^H_t",
+      "meaning": "Minimal dynamic for recognized social role/standing, driven by employment-based role provision and non-work role infrastructure (care, family, religion, civic activity, learning, arts, chosen work).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(37)",
+      "section": "14. Social Role After Labour",
+      "text": "1 = l_wage + l_care + l_learn + l_civic + l_leisure",
+      "meaning": "Time-budget identity; a fall in wage-labour time share is not automatically liberation or deprivation, direction depends on voluntariness, claim, recognition, capability, and live alternatives.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(38)",
+      "section": "15. Social Reproduction: Productive Necessity Is Not Social Necessity",
+      "text": "H_dot^cap_t = f(Care_t, Health_t, Education_t, Nutrition_t, Community_t) - delta_H H^cap_t",
+      "meaning": "Candidate reproduction dynamic for a broad human-capability stock distinct from the productive labour input; machine systems may assist or intensify unpaid coordination burdens, sign left open.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(39)",
+      "section": "15. Social Reproduction: Productive Necessity Is Not Social Necessity",
+      "text": "productive necessity of humans != social necessity of human reproduction",
+      "meaning": "Central distinction: humans can become less necessary to scalable production while remaining indispensable to the reproduction of human life, relationships, legitimacy, and culture.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(40)",
+      "section": "16. The Human Systemic Position Equation",
+      "text": "P^H_t = [ (Gamma^eff_t)^theta_Gamma (A^corr_(H,t))^theta_A (Lambda^live_(H,t))^theta_Lambda (r^H_t)^theta_R (S^H_t)^theta_S (X^H_t)^theta_X ] / (1 + D^H_t)^theta_D",
+      "meaning": "Human Systemic Position: a typed audit index over effective material claim, corrigible agency, live possibility, Human Return, social standing, and credible exit, discounted by dependency; not a welfare utility function or validated cardinal scale.",
+      "paper_tier": "definition",
+      "in_master_river": 58
+    },
+    {
+      "label": "(41)",
+      "section": "16. The Human Systemic Position Equation",
+      "text": "P_dot^H_t / P^H_t = theta_Gamma (Gamma_dot^eff_t/Gamma^eff_t) + theta_A (A_dot^corr_(H,t)/A^corr_(H,t)) + theta_R (r_dot^H_t/r^H_t) + theta_Lambda (Lambda_dot^live_(H,t)/Lambda^live_(H,t))",
+      "meaning": "First part of the log-derivative decomposition of Human Systemic Position growth, into effective claim, corrigible agency, Human Return, and live-possibility growth terms.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(42)",
+      "section": "16. The Human Systemic Position Equation",
+      "text": "... + theta_S (S_dot^H_t/S^H_t) + theta_X (X_dot^H_t/X^H_t) - theta_D (D_dot^H_t/(1+D^H_t))",
+      "meaning": "Second part of the same log-derivative decomposition, adding social standing, credible exit, and dependency growth terms.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(43)",
+      "section": "16. The Human Systemic Position Equation",
+      "text": "Y_dot_t > 0  =/=>  P_dot^H_t > 0",
+      "meaning": "Primary non-collapse result: rising aggregate output does not entail rising Human Systemic Position.",
+      "paper_tier": "definition",
+      "in_master_river": 59
+    },
+    {
+      "label": "(44)",
+      "section": "17. Abundance Without Agency",
+      "text": "AWA_t = < Y(up), Gamma^eff adequate, O^H(down), X^H(down), D^H(up), Lambda^live_H(down), A^corr_H(down), r_H(down), S_H(down) >",
+      "meaning": "Candidate Abundance-Without-Agency diagnostic state, used as a cross-check on (40): material abundance can coexist with structural dependence, a richer world can contain weaker humans.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(45)",
+      "section": "18. Recursive Political Economy: Three Power Channels",
+      "text": "P_t = < P^econ_t, P^info_t, P^coerc_t >",
+      "meaning": "Typed power vector separating economic (ownership/rent/gate), informational (mediation/attention), and coercive (legally backed enforcement) power channels, which can align or diverge across actors.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(46)",
+      "section": "18. Recursive Political Economy: Three Power Channels",
+      "text": "P^B_t proportional-to Gamma^eff_t A^corr_(H,t) Lambda^live_(H,t) X^H_t r^H_t",
+      "meaning": "Broad political capacity as a function of effective material claim, corrigible agency, live possibility, credible exit, and Human Return.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(47)",
+      "section": "18. Recursive Political Economy: Three Power Channels",
+      "text": "P^E_t = P_E( P_t, G_dot^conv, D^H_t, 1 - Gamma^eff_t )",
+      "meaning": "Concentrated-system leverage as a function rather than a scalar identity, depending on the power vector, gate-power growth, dependency, and unmet claim.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(48)",
+      "section": "18. Recursive Political Economy: Three Power Channels",
+      "text": "I_dot_t = F_I( P^B_t, P^E_t, state capacity, rules, shocks )",
+      "meaning": "Evolution of the institutional variable collecting ownership, redistribution, exit, interoperability, competition, and social-reproduction provision; no universal sign is imposed, three recursive loops can coexist.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(49)",
+      "section": "18. Recursive Political Economy: Three Power Channels",
+      "text": "economic gate control -> rents -> political influence -> future gate control;  information control -> attention/interpretation -> rule legitimacy -> future information control;  productivity -> broad claim/exit -> agency -> collective rules -> broader ownership/exit",
+      "meaning": "Three recursive political-economy loops describing how technology alters rule-setting, which then alters the next ownership and gate structure.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(50)",
+      "section": "18. Recursive Political Economy: Three Power Channels",
+      "text": "ownership != informational power != coercive power",
+      "meaning": "Non-collapse: the future is institutionally path-dependent, not technologically predetermined, and the three power channels must not be conflated.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(51)",
+      "section": "21. What Humans May Actually Do",
+      "text": "labour-based claim -> human/citizen claim on social production",
+      "meaning": "The institutional transition required by a humane post-labour order: a new social constitution of contribution beyond scarce wage labour.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(52)",
+      "section": "23. What Can and Cannot Be Forecast Now",
+      "text": "Omega_t = w_M(g_M - g_H) + w_D g_D + w_G g_G - w_q g_q - w_Gamma g_(Gamma^eff) - w_X g_X - w_R g_(r^H) - w_Lambda g_Lambda - w_H g_(H^cap)",
+      "meaning": "Normalized early-warning decoupling-pressure diagnostic combining productive/dependency pressure against institutional and human counter-response terms; persistent Omega_t > 0 is an early-warning condition, not a deterministic forecast.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "(53)",
+      "section": "24. Claim Boundaries",
+      "text": "concentration =/=> dependency =/=> agency loss",
+      "meaning": "Conditional non-collapse: under a pattern of low switching cost, robust interoperability, broad citizen claims, strong bargaining, and stable/rising Human Return, concentration need not imply dependency or agency loss.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(54)",
+      "section": "25. Conclusion: From Productive Necessity to Human Membership",
+      "text": "candidate generation -> validated K/A^AI -> robotic embodiment -> M_t -> Y_t -> L_t -> s^L_t -> Gamma_t -> W^M_t -> o_(t+1) -> Gamma^eff_t -> AD_t -> Pi^M_t -> W^M_(t+1) -> {G^conv, X, D} -> human bridge -> {Pi^live, A^corr_H, r_H, S_H} -> H^cap_t -> P^H_t -> P_t -> collective rules -> next system state",
+      "meaning": "The standalone river developed by the paper, from candidate generation through to the next system state.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(55)",
+      "section": "25. Conclusion: From Productive Necessity to Human Membership",
+      "text": "Gamma^eff Y -> AD -> Pi^M -> W^M_(t+1) -> {o_(t+1), M_(t+1)}",
+      "meaning": "The ownership-demand-production feedback loop closing the river.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(56)",
+      "section": "25. Conclusion: From Productive Necessity to Human Membership",
+      "text": "{Care, Health, Education} -> H^cap -> {A^corr_H, r_H, S_H} -> P -> I_(t+1)",
+      "meaning": "The human-reproduction-political-rule feedback loop; a world-system regime is stable only if both feedback circuits reproduce themselves.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(57)",
+      "section": "25. Conclusion: From Productive Necessity to Human Membership",
+      "text": "growth of machine productive power  versus  growth of broad human claim, exit, agency, and Human Return",
+      "meaning": "The critical inequality of the AI age, framed as a race between two growth rates rather than 'AI versus humans'.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    }
+  ]
+}

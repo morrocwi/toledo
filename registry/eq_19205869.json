@@ -1,0 +1,55 @@
+{
+  "record_id": 19205869,
+  "title": "Genesis Constraint-First Alignment Epistemology: Reason, Error, and World-Tracking under Irreducible Mediation",
+  "doi": "10.5281/zenodo.19205869",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "4 Formal Core",
+      "text": "O_A[n] = Π_A(E[n])",
+      "meaning": "Observation is always filtered by an agent-relative projection function Π_A representing sensory limitation, instrumental bandwidth, sampling constraints, and selective exposure.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "4 Formal Core",
+      "text": "enc_A(O_A)[n] = T_A(O_A[n])",
+      "meaning": "Raw observation is encoded via T_A into a format metabolizable by the agent's conceptual, linguistic, or computational architecture (categorization, measurement conventions, theory-laden framing).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "4 Formal Core",
+      "text": "M_A[n+1] = U_A(M_A[n], enc_A(O_A)[n], C_A, Δ_A[n])",
+      "meaning": "Model revision (update U_A): the next representation depends on the prior model, newly encoded observation, background constraints C_A, and an anomaly-sensitive resistance term Δ_A[n].",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "4 Formal Core",
+      "text": "ε_tot > 0",
+      "meaning": "The central axiom of fallibilism: total epistemic error remains strictly greater than zero; perfect isomorphism between model and world is structurally unavailable to finite knowers.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "4 Formal Core",
+      "text": "V_A[n] = Align(M_A[n], θ_W | D)",
+      "meaning": "Epistemic alignment is defined as domain-indexed (D): a model can be highly aligned for one set of tasks and poorly aligned for another, blocking overstatement of local success as global adequacy.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "4 Formal Core",
+      "text": "E[V_A[n+1] | Rsn_A, D] > E[V_A[n] | D]",
+      "meaning": "The framework's main normative claim: under repeatable conditions, disciplined reasoning (Rsn_A) tends to produce better expected epistemic alignment than leaving models unrevised under the same domain conditions.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    }
+  ]
+}

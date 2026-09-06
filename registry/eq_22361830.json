@@ -1,0 +1,208 @@
+{
+  "record_id": 22361830,
+  "title": "Potential as a Readout: Witnessed Envelopes, Two-Layer Agency, and the Measurement of Pseudo-Peace",
+  "doi": "10.5281/zenodo.22361830",
+  "note": "K0 epistemic note, version 2 (tier-raising pass). Has seven explicit numbered display equations (1)-(7) plus one unnumbered chain-rule identity, four proved lemmas L1-L4 (Sec.5), seven non-collapse distinctions D1-D7 stated as X≠Y (Sec.3), four falsifiable propositions P-A..P-D (Sec.8), and an exact numeric identifiability certificate (Sec.4.5). Labels below use the author's own numbering/lettering where the paper gives one (eq.(N), D1-D7, L1-L4, P-A..P-D); items without an author label are marked 'unnumbered'.",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "Sec. 4.2, The joint event and the envelope",
+      "text": "p*_{A,g}(h,z;T,B,P) := max_{π∈Πwit_A(g;h,z,T,B)} Pr^π_P(Rg ∩ Dg ∩ Xg ∩ Fg), with p*_{A,g} := 0 when the set is empty",
+      "meaning": "Corrigible agency potential restated on the witnessed set: the maximum joint probability of reading, actor-directed deciding, causal enacting, and usable feedback, taken over the finite set of policies with an actual comparable-use record.",
+      "paper_tier": "definition",
+      "in_master_river": 25
+    },
+    {
+      "label": "(2)",
+      "section": "Sec. 4.2, The joint event and the envelope",
+      "text": "p*_A = (p*_{A,g})_{g∈G}, C^α_A = {g : p*_{A,g} ≥ α}",
+      "meaning": "The primary objects are a profile of potentials across tasks and a capability set of tasks clearing a declared threshold α.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "Sec. 4.2, The joint event and the envelope",
+      "text": "A^corr_A(h,z;T,B,P,w) := Σ_g w_g p*_{A,g} ∈ [0,1]",
+      "meaning": "A weighted scalar summary of the potential profile, valid only for comparing interventions under one declared weighting w.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "unnumbered",
+      "section": "Sec. 4.2, The joint event and the envelope",
+      "text": "p_{A,g}(π) = r·d·x·f, with r = Pr(Rg), d = Pr(Dg|Rg), x = Pr(Xg|Rg,Dg), f = Pr(Fg|Rg,Dg,Xg)",
+      "meaning": "Chain-rule factorization for one policy on one task; the maximum in (1) is taken of the product under one policy, never of the four factors separately.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "Sec. 4.3, Two layers",
+      "text": "p*(2)_{A,g} := max_{z∈Jfeas} p*_{A,g}(h,z;T,B,P)",
+      "meaning": "Layer-2 potential: the best achievable potential after also optimizing over feasible structural interventions z, as opposed to layer-1 potential at fixed z.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "Sec. 4.3, Two layers",
+      "text": "L^recoverable_A = max_{z∈Jfeas} A^corr_A(h,z) − A^corr_A(h,z0)",
+      "meaning": "The recoverable gap: the difference between the best achievable corrigible-agency envelope under feasible structural change and the envelope under present conditions z0; the part of Galtung's baseline gap a study can subtract with a record behind it.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "Sec. 4.4, Corrigibility and spectral support made readable",
+      "text": "Δspec(Ri) > 0 ⟺ channel_i = open ∧ Ṙ_i ≠ 0",
+      "meaning": "A readout-level sufficient condition for a subgroup retaining spectral support, built from two retained-record tests: an open correction channel and a nonzero repair rate.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "Sec. 6, Pseudo-peace: a gate collapse with a numerical signature",
+      "text": "Yobs = calm ∧ p*wit = low ∧ F = blocked",
+      "meaning": "Pseudo-peace defined as three readouts taken together: an evaluator reads calm, the witnessed potential is low, and the feedback/objection channel is blocked.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "PAR-stepper",
+      "section": "Sec. 5, Setting (forced Laplacian model)",
+      "text": "LR = DW − W (forced Laplacian); A := LR + Γ; s[n+1] = s[n] + dt(−A s[n] + J)",
+      "meaning": "The discrete linear spine the programme's core forces: a forced-Laplacian generator plus dissipation, driving a stepper equation under constant load J, on which the bounded-suppression lemmas are proved.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "L1",
+      "section": "Sec. 5, Lemmas (invariance and recurrence)",
+      "text": "s* = A^{-1}J is the unique fixed point independent of u; ∥s[n]−s*∥ ≤ ρ^{n−nB}∥s[nB]−s*∥ after the last nonzero tick of a bounded intervention; if s*_i > θ there is an explicit finite N* after which s_i[n] > θ for all n ≥ nB+N*",
+      "meaning": "A bounded amplitude-only intervention cannot move the fixed point; the state returns to threshold-crossing after a finite, computable number of ticks once the intervention ends — proved recurrence.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "L2",
+      "section": "Sec. 5, Lemmas (the bill)",
+      "text": "|u_i[n]| = dt[(γ_i+D_i)(s*_i−θ) − Σ_{k≠i} W_ik(s*_k−s_k[n])], converging to a rate F_i^∞ > 0 whenever s*_i ≥ θ, so cumulative force is F_i^∞·n + o(n)",
+      "meaning": "Holding the state at threshold from some point on requires a non-vanishing per-tick force whose cumulative cost grows at least linearly in time held — the amplitude-suppression 'bill'.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "L3",
+      "section": "Sec. 5, Lemmas (operator change)",
+      "text": "s*'_i = s*_i / (1+ΔB_ii) with B = A^{-1} (Sherman–Morrison); any θ < s*_i is reached below with Δ > Δ* = (s*_i/θ − 1)/B_ii, and zero ongoing force",
+      "meaning": "Unlike amplitude suppression, raising dissipation γ_i (an operator-level change) can push the fixed point permanently below threshold with zero ongoing force cost.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "L4",
+      "section": "Sec. 5, Lemmas (mutation)",
+      "text": "s_j ≳ (J_j + W_ij·s̄_i)/(γ_j+D_j), with s̄_i an explicit increasing function of node i's own inflow, under permanent periodic resets of node i",
+      "meaning": "Suppressing one node under permanent resets produces a strictly positive long-run floor in a coupled neighbour node, formalizing mutation/tunneling of instability to another channel.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "D1 (NC-78)",
+      "section": "Sec. 3, An anatomy of 'potential': seven distinctions",
+      "text": "Potential ≠ exercised ≠ observed",
+      "meaning": "The envelope p* of what an agent could do, the policy actually used, and the evaluator's instrument readout are three readouts of three different latents.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "D2",
+      "section": "Sec. 3, An anatomy of 'potential': seven distinctions",
+      "text": "Declared set ≠ witnessed set",
+      "meaning": "A feasible set someone writes down is a declaration; only the set of options with an actual comparable-use record is a readout, finite and enumerable in the required sense.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "D3",
+      "section": "Sec. 3, An anatomy of 'potential': seven distinctions",
+      "text": "Layer 1 ≠ layer 2",
+      "meaning": "Choosing within a constraint structure C is one capacity; changing C itself is another, carried as an open conjecture pending a named test (P-D).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "D4",
+      "section": "Sec. 3, An anatomy of 'potential': seven distinctions",
+      "text": "Task potential ≠ aggregate potential",
+      "meaning": "A profile over tasks p* = (p*_g)_g is the real object; a weighted scalar is only a summary that can hide compression in one task behind a rise in another.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "D5",
+      "section": "Sec. 3, An anatomy of 'potential': seven distinctions",
+      "text": "Feasible ≠ permitted",
+      "meaning": "What has a working path is not the same as what present power currently allows; the feasible set must never be defined by the permitting authority.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "D6 (NC-79)",
+      "section": "Sec. 3, An anatomy of 'potential': seven distinctions",
+      "text": "Diagnosis of compression ≠ attribution of responsibility",
+      "meaning": "That a capability set has shrunk is read from an obstruction ledger and cost asymmetry; who is responsible is answered only by a separate act naming a chooser.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "D7",
+      "section": "Sec. 3, An anatomy of 'potential': seven distinctions",
+      "text": "Recoverable gap ≠ accumulated loss",
+      "meaning": "A gap a feasible intervention within the study horizon can reopen is one quantity; damage already fixed into history is another; a recoverable gap of zero is not evidence that no violence occurred.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "P-A",
+      "section": "Sec. 8, Falsifiable propositions",
+      "text": "Pseudo-peace signature: amplitude-suppressing interventions raise the calm an evaluator reads while p*wit does not rise and F stays blocked. Defeated if p*wit rises consistently with observed calm under such interventions.",
+      "meaning": "First falsifiable proposition, tied to the pseudo-peace regime.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P-B",
+      "section": "Sec. 8, Falsifiable propositions",
+      "text": "Channel shift: when F is blocked and C^α shrinks in task g, load rises in a coupled task g' while the aggregate (3) stays flat. Defeated if profiles stay flat across tasks.",
+      "meaning": "Second falsifiable proposition, on load displacement between tasks.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P-C",
+      "section": "Sec. 8, Falsifiable propositions",
+      "text": "The excluded path: groups whose min_i |C^α_i| falls while the mean rises show persistent cost concentration (CE-30) and higher recurrence than groups whose minimum does not fall. Defeated if no difference is found.",
+      "meaning": "Third falsifiable proposition, on hidden cost concentration inside a rising mean.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P-D",
+      "section": "Sec. 8, Falsifiable propositions",
+      "text": "Layer 2 dominates the structural case: in cases classified as structural, the gap closable by layer-2 interventions exceeds the gap closable by layer-1 ones. Defeated if information-only or within-C interventions close as much.",
+      "meaning": "Fourth falsifiable proposition, the named test for the D3 layer-1/layer-2 conjecture.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "PAR-cert",
+      "section": "Sec. 4.5, Identifiability (an exact certificate)",
+      "text": "P1: r=d=x=9/10, channel always open, every reason voiced ⇒ f_P1=1, p*_P1=729/1000. P2: channel open w.p. 1/5, every open-channel reason voiced ⇒ f_P2=1/5, p*_P2=729/5000. Both induce the identical record Pr(complaint)=1/10.",
+      "meaning": "An exact worked example showing two declared models can agree on every observable record yet imply a five-fold difference in true potential, so the record alone supports only the interval [729/5000, 729/1000].",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    }
+  ]
+}

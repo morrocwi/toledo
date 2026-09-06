@@ -1,0 +1,479 @@
+{
+  "record_id": 22481928,
+  "title": "How Humans Should Converse with AI: A Problem-First Adaptive Dialogue Conversion Protocol for Durable Human Capability (v1.3 glosa-checked)",
+  "doi": "10.5281/zenodo.22481928",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "3. The Unit of Analysis",
+      "text": "H_{s,0} --L_H--> Q_{s,0}.",
+      "meaning": "Linguistic articulation exports only a bounded question from the full retained human state entering session s.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "3. The Unit of Analysis",
+      "text": "Q_{s,t} → AI_{s,t} → Y_{s,t} --R^AI_H--> E_{H,s,t}.",
+      "meaning": "AI responds to the exported question, and the response becomes part of the human's next interpretive environment.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "3. The Unit of Analysis",
+      "text": "H_{s+1,0} = U_H(H_{s,0}, E^AI_{H,s,*}, δ^world, X^other).",
+      "meaning": "The next session's human state is an update function of the prior state, retained AI-session residue, world feedback, and other factors.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "4. Topic Entry Condition",
+      "text": "P^live_{H,t} = a presently consequential unresolved difference in the person's life, work, understanding, relationship to evidence, or environment.",
+      "meaning": "Defines a live problem for human-development-oriented dialogue entry.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "4. Topic Entry Condition",
+      "text": "TopicEntry ∈ {LiveProblem, OpenExploration, RoutineDelegation}.",
+      "meaning": "The three legitimate topic-entry modes for a dialogue session.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "4. Topic Entry Condition",
+      "text": "Problem-First ⇒ (Human Agenda Ownership, Bounded Relevance, World-Side Testability, Observable Human Return).",
+      "meaning": "Four consequences claimed to follow from defaulting dialogue entry to a live problem.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "4. Topic Entry Condition",
+      "text": "Problem-First ≠ Problem-Only.",
+      "meaning": "Non-collapse law: preserving an explicit Open-Exploration gate alongside problem-first defaulting.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "PFDP",
+      "section": "5. Deployment Layer",
+      "text": "Problem-First Dialogue Principle [Open]: when AI is used for human development rather than entertainment or routine execution, the default topic should originate in a live human problem rather than an AI-supplied agenda.",
+      "meaning": "Named open hypothesis grounding the problem-first default.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "5. Deployment Layer",
+      "text": "π^deploy = f(Stakes, LearningNeed, Irreversibility, DependencyRisk, UserSkill).",
+      "meaning": "The deployment (triage) policy depends on these five factors.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "5. Deployment Layer - DCP-Lite",
+      "text": "State → Challenge → Check → Own.",
+      "meaning": "The four-stage low-stakes DCP-Lite protocol.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "AFP",
+      "section": "5. Deployment Layer",
+      "text": "Adaptive-friction proposition [Open]: the best real-world protocol will often be the least burdensome policy that preserves a predeclared minimum of task safety, human understanding, verification, and fallback competence.",
+      "meaning": "Named open proposition on minimum sufficient friction.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "5. Deployment Layer - DCP-Critical",
+      "text": "Topic Entry → Triage → Minimum Sufficient Dialogue → Escalate if Stakes Rise → Periodic Return.",
+      "meaning": "The deployment rule for consequential/hard-to-reverse use.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "6. The Dialogue Conversion Protocol",
+      "text": "Anchor → Expand → Oppose → Discriminate → Verify → Integrate → Remove → Return.",
+      "meaning": "The canonical eight-stage Dialogue Conversion Protocol.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "6.1 Anchor",
+      "text": "A0 = ⟨P0, M0, U0, E0, F0, S0⟩, where P0 = problem as understood, M0 = current model/tentative answer, U0 = important unknowns, E0 = available evidence, F0 = mind-changing condition, S0 = stakes/domain.",
+      "meaning": "Defines the minimal pre-AI anchor recorded by the human.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(13)",
+      "section": "6.1 Anchor - elicitation for novices",
+      "text": "AI_clarify → {Known, Unknown, Goal, Stakes} → Human Anchor.",
+      "meaning": "For users without a coherent M0, AI first elicits an anchor via clarification questions rather than requiring one.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(14)",
+      "section": "6.2 Expand",
+      "text": "Q_t --AI--> {Q_{i,t+1}, K_{i,t}}_{i=1}^n.",
+      "meaning": "AI used as a divergence engine, producing multiple candidate questions/knowledge-like items from the current question.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(15)",
+      "section": "6.3 Oppose or boundary-test",
+      "text": "Rival Generation: for genuinely open spaces.",
+      "meaning": "One of two opposition operations, used when evidence does not strongly favor one side.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(16)",
+      "section": "6.3 Oppose or boundary-test",
+      "text": "Boundary Test: for strongly asymmetric evidence.",
+      "meaning": "The paired opposition operation, used when evidence is strongly one-sided.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(17)",
+      "section": "6.3 Oppose or boundary-test",
+      "text": "Oppose a claim ≠ manufacture an opposite claim.",
+      "meaning": "Non-collapse law distinguishing genuine opposition/boundary-testing from manufactured false balance.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "(18)",
+      "section": "6.4 Discriminate",
+      "text": "N_distinct = |{C1, ..., Cn} / ∼_Q|.",
+      "meaning": "The useful candidate count is the number of readout-equivalence classes under the current question, not raw candidate count n.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "(19)",
+      "section": "6.5 Verify",
+      "text": "L(c) = {Decision, Risk, Money, Health, Legal, Publication, IrreversibleAction}.",
+      "meaning": "Defines when a claim c is load-bearing for the present task.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(20)",
+      "section": "6.5 Verify",
+      "text": "V = {primary source, data, experiment, calculation, expert, independent method, world outcome}.",
+      "meaning": "The set of partially independent verification routes to which a load-bearing claim should be exposed.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(21)",
+      "section": "6.5 Verify",
+      "text": "Source ≠ AI synthesis ≠ Human inference ≠ Unverified candidate.",
+      "meaning": "Provenance-typing non-collapse law.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "(22)",
+      "section": "6.6 Integrate",
+      "text": "I_s = ⟨ΔM_s, E^decisive_s, U^remain_s, Next_s⟩.",
+      "meaning": "Minimal integration record: what changed, the decisive evidence/distinction, what remains unresolved, and the next test/action.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(23)",
+      "section": "6.7 Remove",
+      "text": "Reset: fresh framing/session/source route.",
+      "meaning": "Defines reset as distinct from true removal of AI assistance.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(24)",
+      "section": "6.7 Remove",
+      "text": "Removal: absence of decisive AI assistance.",
+      "meaning": "Defines removal, paired with (23); a fresh chat reset is not necessarily strong removal.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(25)",
+      "section": "6.8 Return",
+      "text": "R^return_H = ⟨C, T, S, A⟩, where C = Conceptual reconstruction, T = Tool selection, S = Skill execution, A = Alternative generation, under unaided criteria.",
+      "meaning": "The terminal Human Return readout tuple, citing the CTSA framework.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(26)",
+      "section": "6.8 Return",
+      "text": "ΔH_s = ⟨ΔC_s, ΔT_s, ΔS_s, ΔA_s, ΔA^corr_{H,s}, ΔΛ^live_{H,s}⟩.",
+      "meaning": "A session-level conversion vector recording change across CTSA components plus corrigibility and live-possibility terms.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(27)",
+      "section": "6.8 Return",
+      "text": "ΔPerformance_AI > 0 ⇏ ΔH_s > 0.",
+      "meaning": "The central non-collapse: assisted-performance gain does not imply human-return gain.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "(28)",
+      "section": "6.8 Return",
+      "text": "F^return = f(Criticality, LearningNeed, FailureCost, DependencyRisk).",
+      "meaning": "Determines how often Human Return should be sampled/tested rather than tested after every interaction.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(29)",
+      "section": "7. Action and World Feedback",
+      "text": "I_s → a_s → δ^world_{s+1} → H_{s+1,0}.",
+      "meaning": "Chain from integration through the human-selected action, the world's returned record, to the next session's human state.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(30)",
+      "section": "7. Action and World Feedback",
+      "text": "Live Problem → Question → Dialogue → Human Return → Action → World Feedback → Revision or New Problem.",
+      "meaning": "The wider problem-conditioned cycle closing the loop after Human Return through action and world feedback.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "WCP",
+      "section": "7. Action and World Feedback",
+      "text": "World-closure proposition [Open]: for live problems with observable consequences, dialogue policies that include post-conversation action and feedback will produce better calibration and transferable Human Return than otherwise identical policies that terminate at AI-generated synthesis.",
+      "meaning": "Named open hypothesis on the value of closing the action/world-feedback loop.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(31)-(32)",
+      "section": "8. Expansion and Contraction Must Alternate",
+      "text": "Expansion := maximize candidate diversity and discriminability.",
+      "meaning": "Defines the Expansion mode of the alternating dialogue process (equation split across two lines in the source PDF, numbered (31) and (32)).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(33)-(34)",
+      "section": "8. Expansion and Contraction Must Alternate",
+      "text": "Contraction := prune by evidence, provenance, stakes, and action relevance.",
+      "meaning": "Defines the Contraction mode of the alternating dialogue process (equation split across two lines in the source PDF, numbered (33) and (34)).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(35)",
+      "section": "10. Dialogue Policy Must Depend on the Goal",
+      "text": "π^dialogue = f(TopicMode, Goal, Skill, Stakes, Domain, LearningNeed, Reversibility).",
+      "meaning": "Dialogue policy is a function of these seven factors; no single universal prompt policy is assumed optimal.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(36)",
+      "section": "10.1 Personal and relational dialogue",
+      "text": "Experience → Interpretations → Absent Perspective → Observable Evidence → Direct Human Conversation.",
+      "meaning": "Recommended route for interpersonal/relational dialogue where a primary source (the other person's mind) is unavailable to AI.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(37)",
+      "section": "11. Protocol Burden and Behavioral Adoption",
+      "text": "B^use = ⟨Time, CognitiveLoad, VerificationCost, Interruption, LiteracyDemand⟩.",
+      "meaning": "Defines the usability-burden vector of a protocol.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(38)",
+      "section": "11. Protocol Burden and Behavioral Adoption",
+      "text": "Epistemically optimal ≢ Behaviorally adoptable.",
+      "meaning": "Non-collapse law: protocol rigor and real-world adoption are not the same axis.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "(39)",
+      "section": "12. Provenance Ledger",
+      "text": "Status ∈ {Source, AI-Synthesis, Human-Inference, Candidate, Decision}.",
+      "meaning": "Defines the status categories each statement in a dialogue ledger can carry, operationalizing the claim-level non-collapse discipline.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(40)-(41)",
+      "section": "14. Formal Success Condition",
+      "text": "π* ∈ argmax_π E[ΔH_s | π, task, user], subject to minimum task-performance/safety constraints and B_use(π) ≤ B̄(task, user).",
+      "meaning": "Formal definition of a high-conversion dialogue policy: maximizes expected Human Return subject to a burden/adoption ceiling.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(42)",
+      "section": "14. Formal Success Condition",
+      "text": "π^perf ∈ argmax_π E[P^assist_s | π].",
+      "meaning": "The performance-maximizing policy, contrasted with the Human-Return-maximizing policy π*; the two need not coincide.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "DCPp",
+      "section": "14. Formal Success Condition",
+      "text": "Dialogue Conversion Proposition [Open]: for tasks in which learning, judgment transfer, or future unaided competence matters, the assistance policy that maximizes immediate performance will often differ from the policy that maximizes delayed Human Return.",
+      "meaning": "Named open proposition formalized by the divergence between π* and π^perf.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "DEPp",
+      "section": "14. Formal Success Condition",
+      "text": "Deployment Proposition [Open]: the full protocol will not maximize real-world adoption across all tasks; adaptive triage should achieve similar protection at lower burden for low- and medium-stakes use.",
+      "meaning": "Named open proposition motivating adaptive triage (Lite/Standard/Critical).",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "AgP",
+      "section": "14. Formal Success Condition",
+      "text": "Agenda Proposition [Open]: when the objective is human development, self-selected live-problem entry will often produce greater relevance, action transfer, and Human Return than an otherwise comparable AI-suggested agenda.",
+      "meaning": "Named open proposition on the value of self-selected topic entry.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H1",
+      "section": "15.2 Primary hypotheses",
+      "text": "Direct-answer AI will often maximize immediate performance but not delayed Human Return in learning-intensive tasks.",
+      "meaning": "Primary empirical hypothesis 1 of the proposed research programme.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H2",
+      "section": "15.2 Primary hypotheses",
+      "text": "DCP and cognitive-forcing conditions will reduce overreliance but may increase cognitive load.",
+      "meaning": "Primary empirical hypothesis 2.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H3",
+      "section": "15.2 Primary hypotheses",
+      "text": "DCP will produce more non-equivalent unaided alternatives at follow-up than direct-answer AI.",
+      "meaning": "Primary empirical hypothesis 3.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H4",
+      "section": "15.2 Primary hypotheses",
+      "text": "Provenance accuracy and error detection after AI removal will mediate the relationship between protocol and Human Return.",
+      "meaning": "Primary empirical hypothesis 4.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H5",
+      "section": "15.2 Primary hypotheses",
+      "text": "Effects will be heterogeneous by prior skill: novices may require more scaffolded opposition/verification than experts.",
+      "meaning": "Primary empirical hypothesis 5.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H6",
+      "section": "15.2 Primary hypotheses",
+      "text": "In creation tasks, aggressive expansion may improve coupled output without harming Return, whereas high-stakes decision tasks will benefit more from early anchoring and independent verification.",
+      "meaning": "Primary empirical hypothesis 6.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H7",
+      "section": "15.2 Primary hypotheses",
+      "text": "DCP-Lite will achieve higher adoption and lower burden than DCP-Standard in low-stakes tasks with little loss of safety or ownership.",
+      "meaning": "Primary empirical hypothesis 7.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H8",
+      "section": "15.2 Primary hypotheses",
+      "text": "In relational interpretation tasks, facts-versus-interpretation separation and absent-perspective prompts will reduce unwarranted certainty about another person's motives compared with direct-answer AI.",
+      "meaning": "Primary empirical hypothesis 8.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H9",
+      "section": "15.2 Primary hypotheses",
+      "text": "For capability-sensitive tasks, self-selected live-problem entry will increase perceived relevance, follow-through, and delayed Human Return relative to matched AI-suggested topics, while curiosity-led exploration will outperform problem-first on breadth and intrinsic exploration outcomes.",
+      "meaning": "Primary empirical hypothesis 9.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H10",
+      "section": "15.2 Primary hypotheses",
+      "text": "For action-relevant live problems, Action → World Feedback closure will improve calibration and transfer relative to otherwise identical dialogue that terminates at synthesis.",
+      "meaning": "Primary empirical hypothesis 10.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(43)",
+      "section": "18. Conclusion",
+      "text": "Problem-First ≠ Problem-Only.",
+      "meaning": "Restatement of the non-collapse law from (7) in the conclusion.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "(44)",
+      "section": "18. Conclusion",
+      "text": "Topic Entry → Triage → Minimum Sufficient Dialogue → Human Return → Action/World Feedback → Revision or New Problem.",
+      "meaning": "The complete adaptive architecture, restated as the paper's outer-loop summary (distinct framing from the cycle in (30)).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(45)",
+      "section": "18. Conclusion",
+      "text": "Anchor → Expand → Oppose/Boundary-Test → Discriminate → Verify → Integrate → Remove → Return.",
+      "meaning": "Restatement of the canonical eight-stage protocol from (11).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(46)",
+      "section": "18. Conclusion",
+      "text": "What unresolved difference deserves my attention? / How much AI/friction does this task require? / What remains with me after AI is removed? / What does the world return when I act?",
+      "meaning": "The four decisive practical questions closing the paper.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    }
+  ]
+}

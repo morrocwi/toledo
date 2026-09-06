@@ -1,0 +1,242 @@
+{
+  "record_id": 22357788,
+  "title": "Choice Begins Before Choice: Meaning-Shaped Accessibility, Live Possibility, and Effective Agency in Human-AI Systems",
+  "doi": "10.5281/zenodo.22357788",
+  "note": "K0 strong-form conceptual paper, Full Paper v1.0. The paper does not use numbered equation labels (no (1)(2)... or CE-01-style tags); its formal content is a set of unlabeled displayed relations, five propositions (P1-P5, Sec.5), eight open empirical hypotheses (H1-H8, Sec.16), and a bulleted 'Non-Collapse Laws' list (Sec.15). Labels below (CBC-01...) are assigned here for inventory purposes only, in reading order; they are not the author's own labels. paper_tier follows the paper's own wording (its Status line calls the whole paper conceptual/K0; individual objects are marked here per how the paper itself frames them: 'definition' for the six-level/live-field apparatus, 'proposition' for P1-P5, 'hypothesis/Open' for H1-H8, which the paper itself tags [Open]).",
+  "equations": [
+    {
+      "label": "CBC-01",
+      "section": "Sec. 6, Six Levels That Must Not Collapse",
+      "text": "Πlive_{A,t}(g) ⊆ Πfeas_{A,t}(g) ⊆ Πphys_t(g), π^choice ∈ Πlive_{A,t}(g)",
+      "meaning": "The intended nesting order of possibility: what is physically possible contains what is structurally feasible, which contains what is currently live; a realized choice must be drawn from the live subset.",
+      "paper_tier": "definition",
+      "in_master_river": 19
+    },
+    {
+      "label": "CBC-02",
+      "section": "Sec. 6, Six Levels That Must Not Collapse",
+      "text": "π^choice_{A,t} ∈ Πlive_{A,t}(g)",
+      "meaning": "A realized choice is selected from the live possibility set, not from the full feasible or physical set.",
+      "paper_tier": "definition",
+      "in_master_river": 22
+    },
+    {
+      "label": "CBC-03",
+      "section": "Sec. 6, Six Levels That Must Not Collapse",
+      "text": "π^act ≠ π^choice possible; Yobs = Oq(H0:T); Yobs ≠ H0:T",
+      "meaning": "Enactment may differ from the chosen policy, and the evaluator's observed record is a lossy instrument readout of the trajectory, not the trajectory itself.",
+      "paper_tier": "definition",
+      "in_master_river": 23
+    },
+    {
+      "label": "CBC-04",
+      "section": "Sec. 6, Six Levels That Must Not Collapse",
+      "text": "possible ≠ feasible ≠ live ≠ chosen ≠ enacted ≠ observed",
+      "meaning": "The six-level non-collapse chain that the whole architecture is built to prevent from being merged into one term.",
+      "paper_tier": "definition",
+      "in_master_river": 24
+    },
+    {
+      "label": "CBC-05",
+      "section": "Sec. 7, A Live Possibility Field",
+      "text": "L_{A,t}(g) = {(π, κ_{A,t}(π|g)) : π ∈ Πfeas_{A,t}(g)}",
+      "meaning": "The live possibility profile: a declared accessibility weight attached to every feasible policy, replacing a bare binary live/not-live set.",
+      "paper_tier": "definition",
+      "in_master_river": 20
+    },
+    {
+      "label": "CBC-06",
+      "section": "Sec. 7, A Live Possibility Field",
+      "text": "Πlive_{A,t}(g) = {π : κ_{A,t}(π|g) ≥ τlive}",
+      "meaning": "An operational threshold rule turning the accessibility profile into a live/not-live set for a particular study; the paper stresses the threshold is measurement-specific, not a universal psychological constant.",
+      "paper_tier": "definition",
+      "in_master_river": 21
+    },
+    {
+      "label": "CBC-07",
+      "section": "Sec. 8.1, Resonance: experiential fit",
+      "text": "Resonance ≠ Consent, Resonance ≠ Truth",
+      "meaning": "Experiential fit with a proposal explains uptake, not legitimacy or accuracy; a manipulative narrative can resonate and a liberating alternative can fail to resonate.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-08",
+      "section": "Sec. 9, Effective, Corrigible Agency Revisited",
+      "text": "p*_{A,g} = max_{π∈Πfeas_A(g)} Pr(Rg ∩ Dg ∩ Xg ∩ Fg)",
+      "meaning": "The earlier Agency Potential paper's task-specific potential over the feasible set (reused here, not replaced); joint conditions Rg/Dg/Xg/Fg are reading, actor-directed decision, causal translation into action, and usable feedback.",
+      "paper_tier": "definition",
+      "in_master_river": 25,
+      "meaning_note": "This is the older feasible-set form. Master River v1.4's eq:25 records the FixBox correction that v1.0 used exactly this Πfeas form (citing this paper's [1] reuse), since replaced in the canonical eq:25 by Potential as a Readout's witnessed-set Πwit form."
+    },
+    {
+      "label": "CBC-09",
+      "section": "Sec. 9, Effective, Corrigible Agency Revisited",
+      "text": "Πlive_{A,t}(g) ⊆ Πfeas_A(g; h, z, T, B)",
+      "meaning": "The pre-choice restriction this paper adds without replacing the potential equation: the policy actually under consideration at any instant must come from the current live subset.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-10",
+      "section": "Sec. 11, Structural Deprivation and Violence",
+      "text": "L^live_{A,g} = max_{z∈Jfeas} DL(L^z_A(g), L^{z0}_A(g))",
+      "meaning": "The recoverable live-field gap: how much a feasible structural intervention could alter the agent's practical option field under a declared distance metric; explicitly not a unit of violence by itself.",
+      "paper_tier": "definition",
+      "in_master_river": 26
+    },
+    {
+      "label": "CBC-11",
+      "section": "Sec. 13, Human-AI: The Pre-Prompt Live Possibility Field",
+      "text": "Ht —L_H→ Qt",
+      "meaning": "Pre-Prompt Human State Principle: the human exports only a bounded articulation Qt of the full retained state Ht to the AI.",
+      "paper_tier": "identity",
+      "in_master_river": 27
+    },
+    {
+      "label": "CBC-12",
+      "section": "Sec. 13, Human-AI: The Pre-Prompt Live Possibility Field",
+      "text": "Qt → AIt → Yt —R_H→ E^AI_{H,t}",
+      "meaning": "The AI's output is then experienced and interpreted by the human, producing an AI-conditioned experience.",
+      "paper_tier": "identity",
+      "in_master_river": 28
+    },
+    {
+      "label": "CBC-13",
+      "section": "Sec. 13, Human-AI: The Pre-Prompt Live Possibility Field",
+      "text": "Ht+1 = UH(Ht, E^AI_{H,t}, δ^world, X^other)",
+      "meaning": "State update: the human's next state is a function of prior state, the AI-conditioned experience, world change, and other causes.",
+      "paper_tier": "definition",
+      "in_master_river": 29
+    },
+    {
+      "label": "CBC-14",
+      "section": "Sec. 13, Human-AI: The Pre-Prompt Live Possibility Field",
+      "text": "L_{A,t+1} ≠ L_{A,t}",
+      "meaning": "If a residue from the Human-AI exchange persists, the live possibility field itself can change before the next prompt is generated.",
+      "paper_tier": "identity",
+      "in_master_river": 30
+    },
+    {
+      "label": "CBC-15",
+      "section": "Sec. 13, Human-AI: The Pre-Prompt Live Possibility Field",
+      "text": "more live accessibility ≠ better agency; more fluent choice ≠ better choice",
+      "meaning": "Amplification of the live field by AI is epistemically neutral: expanding or making options more fluent to consider is not automatically an improvement in agency or choice quality.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-16",
+      "section": "Sec. 15, Non-Collapse Laws",
+      "text": "objective possibility ≠ structural feasibility; feasibility ≠ live possibility; live possibility ≠ stated preference; stated preference ≠ free consent; choice ≠ enactment; enactment ≠ evaluator-visible agency; option count ≠ effective agency; accessibility ≠ warrant; resonance ≠ consent; repetition ≠ legitimacy; retention ≠ improvement; norm conformity ≠ absence of agency; resistance to norms ≠ agency by definition; meaning-shaping ≠ domination; live-field narrowing ≠ structural violence without causal and normative conditions; AI influence ≠ manipulation by definition; coupled performance ≠ Human Return",
+      "meaning": "The full constitutive list of role-separations the architecture depends on, stated as a single bulleted set of non-collapse rules in Section 15.",
+      "paper_tier": "definition",
+      "in_master_river": null,
+      "meaning_note": "Thematically overlaps the six-level chain already separately restated as Master River eq:24, but this fuller 17-item list is not itself one of the numbered master-river equations."
+    },
+    {
+      "label": "CBC-P1",
+      "section": "Sec. 5, The Core Thesis: Choice Begins Before Choice",
+      "text": "P1 — Objective possibility is not practical possibility. An action may be physically or legally available while remaining absent from the agent's practical field.",
+      "meaning": "First of five propositions supporting the core thesis.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-P2",
+      "section": "Sec. 5, The Core Thesis: Choice Begins Before Choice",
+      "text": "P2 — Practical possibility is meaning-shaped. An option becomes live only insofar as the agent can discriminate, interpret, imagine, value, fear, reject, desire, delegate, or otherwise relate to it as a candidate for action.",
+      "meaning": "Second proposition: liveness is conditioned on meaning-relation to the option.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-P3",
+      "section": "Sec. 5, The Core Thesis: Choice Begins Before Choice",
+      "text": "P3 — Meaning-shaping can alter agency. Changing how an option is named, framed, remembered, socially recognized, or connected to prior experience can alter whether it becomes live before any final preference or decision is expressed.",
+      "meaning": "Third proposition: meaning-shaping is causally prior to preference expression.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-P4",
+      "section": "Sec. 5, The Core Thesis: Choice Begins Before Choice",
+      "text": "P4 — Choice can be real within a narrowed field. A person may genuinely choose among the live options available while still having a smaller effective agency field than under a feasible counterfactual. Narrowing the field does not make every remaining choice fake.",
+      "meaning": "Fourth proposition: narrowing does not by itself void the reality of choice.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-P5",
+      "section": "Sec. 5, The Core Thesis: Choice Begins Before Choice",
+      "text": "P5 — Expansion can also be harmful. Increasing the number or salience of live options is not automatically emancipatory. Manipulative, dangerous, false, or overwhelming options can become more accessible.",
+      "meaning": "Fifth proposition: expansion of the live field is not automatically a good.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H1",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H1 [Open] — Live possibility beyond formal option count: the live-field model should predict which options enter deliberation and later action beyond the number of available options.",
+      "meaning": "First falsifiable empirical hypothesis of the programme.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H2",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H2 [Open] — Meaning access beyond resources: holding material resources constant, whether an option is intelligible/nameable/linked to the agent's problem representation should add predictive value beyond resource-only models.",
+      "meaning": "Second falsifiable hypothesis.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H3",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H3 [Open] — History-shaped re-entry: holding current option content fixed, prior traversal history should predict which alternatives are spontaneously generated or considered.",
+      "meaning": "Third falsifiable hypothesis.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H4",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H4 [Open] — Resonance without consent: high experiential congruence should predict felt fit or uptake but should not perfectly predict voluntary endorsement under coercion checks.",
+      "meaning": "Fourth falsifiable hypothesis.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H5",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H5 [Open] — Structural closure before overt prohibition: changing retaliation risk, complaint credibility, interpretive resources, or social recognition should alter practical option use even when formal permission is unchanged.",
+      "meaning": "Fifth falsifiable hypothesis.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H6",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H6 [Open] — Evaluator visibility: changing the assessment interface may change observed agency rankings without changing real-world readout-action capability.",
+      "meaning": "Sixth falsifiable hypothesis.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H7",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H7 [Open/externally allied] — Human-AI live-field carryover: randomizing AI dialogue histories and then removing AI should show measurable effects on which alternatives humans can independently generate, reject, or act upon.",
+      "meaning": "Seventh falsifiable hypothesis, on Human-AI carryover.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "CBC-H8",
+      "section": "Sec. 16, Empirical Programme: Try to Kill the Theory",
+      "text": "H8 [Open] — Corrigibility predicts durable agency: feedback/objection capacity should predict later error correction beyond productivity, confidence, and resource scores in tasks requiring repeated revision.",
+      "meaning": "Eighth falsifiable hypothesis.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    }
+  ]
+}

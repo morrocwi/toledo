@@ -1,0 +1,23 @@
+{
+  "record_id": 22456414,
+  "title": "AI–Cognitive Interaction: Activating Youth Potential through Reflective Dialogue and Linguistic Capital (Read Through Retention and the Live-Possibility Envelope) — 2026 Uplift Edition",
+  "doi": "10.5281/zenodo.22456414",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "2. Reading This Paper Through the Programme Spine",
+      "text": "Π^live_{A,t}(g) ⊆ Π^feas_{A,t}(g) ⊆ Π^phys_t(g)",
+      "meaning": "The nesting of possibility: for a task g available to learner A at time t, the physically possible policies, the feasible policies an agent could access or learn under declared resources/time, and the currently live policies actually entering practical consideration nest inside one another. Quoted unchanged from [Lahtee, 2026a, eq. 21] (the Master Equation River) to re-type the original's age-13 proposal.",
+      "paper_tier": "definition (quoted, not a new claim of this paper)",
+      "in_master_river": 21
+    },
+    {
+      "label": "(2)",
+      "section": "2. Reading This Paper Through the Programme Spine",
+      "text": "H_{n+1} = U_H( H_n, Retain(E_n, μ_n, ρ^H_n), δ^world_{n:n+1}, X^other_{n:n+1} )",
+      "meaning": "Selective retention: a learner's interpretive state H_n updates only through what is actually retained from an encounter, not through mere exposure to it; a retained residue makes a changed later state possible, not guaranteed. Quoted from [Lahtee, 2026a, eq. 16] to re-type the AI Value Reflection Hypothesis and the claimed dialogue-to-language effect.",
+      "paper_tier": "definition (quoted, not a new claim of this paper)",
+      "in_master_river": 8
+    }
+  ]
+}

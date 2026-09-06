@@ -1,0 +1,24 @@
+{
+  "record_id": 18711408,
+  "title": "Learning Under Generative Abundance: A Structural Law of Epistemic Stabilization",
+  "doi": null,
+  "note": "This is a short (3-page) prose paper with no LaTeX-style numbered equations and no algebraic formalism. It states its central claim as two displayed/boxed textual statements, both captured below. This chapter's DOI/Zenodo record is NOT present in Master Equation River v1.4's refs.bib (checked against the full bibliography: when_ai_expands, human_learning, human_lora, rg_synthesis, problem_to_hypothesis, fusion, meaning_before_naming, experience_meaning_giving, potential_readout, choice_before_choice, ctsa, after_labour, human_conversion_imperative, dialogue_conversion_protocol, rg_hca, glosa, mr_coq -- zenodo.18711408 is absent from this list and from every \\Src/citep tag in main.tex), so this paper is not cited by, and has no restated equation in, the river at all.",
+  "equations": [
+    {
+      "label": "L1",
+      "section": "A Structural Law of Epistemic Environments",
+      "text": "When the external generation of coherent structure increases without bound, observable production ceases to serve as a unique indicator of internal organization.",
+      "meaning": "The paper's central structural law: under unlimited generative availability, externally supplied structure becomes empirically equivalent to (observationally indistinguishable from) internally constructed structure, so production stops uniquely indexing understanding.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "L2",
+      "section": "The Regime Transition",
+      "text": "accumulation --> discrimination",
+      "meaning": "The structural regime shift: once generative availability exceeds a system's current discriminative capacity, accumulation collapses as a reliable path to competence and only selective retention/active stabilization (discrimination) preserves long-term coherence; the transition is environmentally driven, not ideologically chosen.",
+      "paper_tier": "law",
+      "in_master_river": null
+    }
+  ]
+}

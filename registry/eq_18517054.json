@@ -1,0 +1,167 @@
+{
+  "record_id": 18517054,
+  "title": "AI, Translation, and Access to Event-Specific Context: A Conceptual Review and Theory Proposal on Human Agency under AI Mediation",
+  "doi": "10.5281/zenodo.18517054",
+  "equations": [
+    {
+      "label": "Def-1",
+      "section": "3.1 Events and reality",
+      "text": "E := an event in the world (used as a separation device, not an ontological claim).",
+      "meaning": "E denotes an event, used only to separate events from translated outcomes.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-2",
+      "section": "3.2 Event-specific context",
+      "text": "C_e := (S_e, R_e, A_e, τ_e), where S_e = situational/environmental condition, R_e = relational/causal structure, A_e = set of involved agencies, τ_e = temporal ordering.",
+      "meaning": "Defines event-specific context as a tuple of situational, relational, agency, and temporal components.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-3",
+      "section": "3.3 Translation/interpretation and non-identity of translated outputs",
+      "text": "T̂ := I(E | C_acc), where I is the human interpreter (language + reasoning + experience) and C_acc is the context actually accessible at the moment of interpretation.",
+      "meaning": "Defines the translated output as the interpreter's rendering of the event given accessible context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-1",
+      "section": "3.3 Translation/interpretation and non-identity of translated outputs",
+      "text": "T̂ ≠ E",
+      "meaning": "A translated output is structurally not the same object as the event; fluency is not evidence of event-level access.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-4",
+      "section": "3.4 Human agency and self-context",
+      "text": "A := the capacity to decide under context while retaining accountability; agency is anchored by preservation of S.",
+      "meaning": "Defines human agency as accountable context-sensitive decision capacity.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-5",
+      "section": "3.4 Human agency and self-context",
+      "text": "S := (goals, constraints, stakes, role, local evidence, lived situation).",
+      "meaning": "Defines self-context as what makes an answer fit-for-me rather than merely generally plausible.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-6",
+      "section": "3.5 External context-frame",
+      "text": "F := a context-frame induced by external structures (ranking, engagement optimization, typicality pressures, standardization, institutional norms) that shapes salience/credibility/normalcy independently of the user's S.",
+      "meaning": "Defines the externally induced context-frame that can substitute for the user's own self-context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-2",
+      "section": "3.5 External context-frame",
+      "text": "When S is not preserved, the tendency for F to dominate interpretation increases, with a corresponding risk of agency degradation.",
+      "meaning": "Dominance-risk proposition linking loss of self-context to increased external-frame dominance and agency risk.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-7",
+      "section": "3.6 Grounding vs embodiment",
+      "text": "G (referential grounding) = ability to pick out referents/factual anchors; Ge (experiential grounding) = meaning anchored in lived experience and stake-bearing; Emb (embodiment) = bodily perception, sensorimotor coupling, situated action.",
+      "meaning": "Defines three distinct grounding-related constructs to be kept separate.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-3",
+      "section": "3.6 Grounding vs embodiment",
+      "text": "G ≠ Emb",
+      "meaning": "Certain forms of grounding may exist without embodiment (open debate), but experiential grounding tied to stake-bearing responsibility remains human-centered.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "(1)",
+      "section": "3.7 Interaction efficiency",
+      "text": "𝓔 := f(ConstraintPrecision, ContextRecall, SourceTraceability, ErrorRepair).",
+      "meaning": "Defines interaction efficiency as a qualitative, theoretical (non-numeric) construct built from four components.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Eq-unifying",
+      "section": "4.1 A unifying formalization",
+      "text": "T̂^(k) = I(E | C_acc^(k)), where k indexes the dominant mediation architecture (epoch).",
+      "meaning": "General formula for interpretation under a given socio-technical epoch's accessible context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Eq-epoch3",
+      "section": "4.5 Epoch 3: LLM-based AI mediation",
+      "text": "T̂^(3) = I(E | C_acc^(3)) + ΔC via dialogue(S, prompts, checks).",
+      "meaning": "Schematic expression for AI-mediated interpretation, adding a dialogic re-contextualization term.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-4",
+      "section": "4.6 The context-access chain",
+      "text": "E → C_acc^(0) → C_acc^(1) → C_acc^(2) → C_acc^(3).",
+      "meaning": "The context-access chain across epochs; increased convenience does not imply increased event-specificity.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "Finding-1 (H1)",
+      "section": "6.2 H1: Context-access amplification without event access",
+      "text": "AI does not directly increase access to event-specific context E; it increases access to, and reorganization of, human interpretive contexts, conditional on high interaction efficiency and containment of F.",
+      "meaning": "H1 hypothesis: AI amplifies interpretive re-contextualization, not event-level access.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "Finding-2 (H3)",
+      "section": "6.3 H3: Open-ended but bounded interpretive expansion",
+      "text": "When human–AI interaction achieves high 𝓔 and preserves S, individuals may tend toward open-ended cross-domain interpretive expansion, structurally bounded by available recorded context.",
+      "meaning": "H3 hypothesis: bounded interpretive expansion under high interaction efficiency and preserved self-context.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "Finding-3 (H4)",
+      "section": "6.4 H4: Architectural doorway through dialogic synthesis",
+      "text": "AI introduces an architectural doorway enabling access to diverse human-generated translations/interpretations via immediate dialogue, yielding case-usable reconstructed meanings.",
+      "meaning": "H4 hypothesis: AI functions as an architectural doorway to interpretive diversity.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-5 (B1)",
+      "section": "6.5 Boundary B1: External-context dominance",
+      "text": "AI-mediated empowerment tends to occur iff (i) 𝓔 is high and (ii) S is preserved; if S is displaced by language alone, F tends to dominate, increasing agency-degradation risk.",
+      "meaning": "Boundary condition B1 for empowerment vs. degradation.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "7. Boxed master equation and interpretive reading",
+      "text": "AI-Empowerment(H) ⇐⇒ S preserved ∧ high 𝓔.",
+      "meaning": "Boxed master equation: AI-mediated empowerment holds iff self-context is preserved and interaction efficiency is high.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "7. Boxed master equation and interpretive reading",
+      "text": "S replaced by language ⇒ F dominates ⇒ [agency] degrades.",
+      "meaning": "Boxed master equation: displacement of self-context by fluent language leads via frame dominance to agency degradation.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    }
+  ]
+}

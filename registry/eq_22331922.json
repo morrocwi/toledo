@@ -1,0 +1,239 @@
+{
+  "record_id": 22331922,
+  "title": "Epistemic Fusion or Epistemic Tunnel: A Phenomenology-Anchored, Global-Literature-Constrained, Problem-First Architecture of Human-AI Collaboration (Epistemic Note v8.1)",
+  "doi": "10.5281/zenodo.22331922",
+  "equations": [
+    {
+      "label": "CN-1",
+      "section": "1. Claim Types, Evidence, and Legitimate Defeaters",
+      "text": "D > 0, R > 0, A > 0 (constitutive necessities: Difference, Resistance, Agency).",
+      "meaning": "Constitutive-necessity claims required under the target concept of durable human epistemic expansion.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-01",
+      "section": "3. Problem 1 - entry state",
+      "text": "H0 = (P0, M0, U0, E0, Φ0), where the human declares the problem, current model, unknowns, independent evidence, and a change condition before AI exposure.",
+      "meaning": "Original pre-AI entry-state definition.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-02 (Repair 1)",
+      "section": "3. Problem 1 - Repair 1: Baseline without lock-in",
+      "text": "H0* = (P0, M0, U0, E0, Φ0, κ0), where κ0 is the human's declared confidence in the pre-AI model.",
+      "meaning": "Extends the entry state with declared pre-AI confidence κ0; also restated identically in Repair 5 (§7).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-03 (Repair 1)",
+      "section": "3. Problem 1 - Repair 1",
+      "text": "ENTRY_{H→AI} = H0* ∧ V0 ∧ C0 ∧ R*, where V0 is verification intent, C0 the candidate-status contract, R* a precommitted rejection route.",
+      "meaning": "Revised entry rule for beginning human-AI interaction.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-04",
+      "section": "4. Problem 2",
+      "text": "AI(Q) = K_like, K_like ≠ K_validated.",
+      "meaning": "Default transition: AI output acquires knowledge-like status that is not yet validated status.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-05",
+      "section": "4. Problem 2",
+      "text": "K_like → K_assumed.",
+      "meaning": "The dangerous shortcut: knowledge-like output silently treated as assumed/validated.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-06 (Repair 2)",
+      "section": "4. Problem 2 - Repair 2: status as state machine",
+      "text": "K_like --check--> K_checked --independent support--> K_supported --declared warrant criterion V*--> K_validated|V*.",
+      "meaning": "Proposed status state-machine: no linguistic property alone can perform these status transitions.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-07 (Repair 3)",
+      "section": "5. Problem 3 - Repair 3: count equivalence classes",
+      "text": "D_s^eff = |C_s / ∼_R|, d_s = D_s^eff / |C_s|.",
+      "meaning": "Diagnostic: effective difference is the count of readout-equivalence classes among candidates, not raw count.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-08 (Repair 4)",
+      "section": "6. Problem 4 - Repair 4: resistance quality vs accessibility",
+      "text": "R_s^ep = ρ(I_s, V_s, Q_s); U_s^R = u(C_s^v, T_s^v, A_s^v), where I_s = independence from generative loop, V_s = practical verifiability, Q_s = epistemic quality of checking route, C_s^v = verification cost, T_s^v = time cost, A_s^v = practical access.",
+      "meaning": "Structural decomposition separating epistemic resistance quality from its practical accessibility.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-09 (Repair 4)",
+      "section": "6. Problem 4 - Repair 4",
+      "text": "R_s^ex = ψ(R_s^ep, U_s^R).",
+      "meaning": "Exercised resistance represented as a dependency on resistance quality and accessibility, without assuming a calibrated universal product form.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-10",
+      "section": "6. Problem 4",
+      "text": "Resistance quality ≠ resistance accessibility.",
+      "meaning": "Non-collapse law: a costly test can be epistemically strong while a free check is weak, and vice versa for accessibility.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-11 (Repair 5)",
+      "section": "7. Problem 5 - Repair 5",
+      "text": "K_s = (κ0, κ1, W0, W1), where W_t is the best available task-relative warrant/readout of correctness.",
+      "meaning": "Minimum calibration audit tuple across pre/post confidence and warrant.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-12 (Repair 5)",
+      "section": "7. Problem 5",
+      "text": "Calibration error ≈ N^{-1} Σ_i (κ_i − y_i)^2, where y_i are repeated objective outcomes.",
+      "meaning": "Candidate calibration-error estimator when repeated objective outcomes exist.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-13",
+      "section": "8. Problem 6",
+      "text": "H_{s,t} → AI_{s,t} → H_{s,t+1} → AI_{s,t+1} → ⋯",
+      "meaning": "Session architecture modeling ordered reciprocal human-AI turns.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-14",
+      "section": "8. Problem 6 - finite history scores",
+      "text": "m^H_{s,n+1}(e) = λ_H m^H_{s,n}(e) + 1[e_{s,n}=e]; m^AI_{s,n+1}(e) = λ_AI m^AI_{s,n}(e) + 1[e_{s,n}=e].",
+      "meaning": "Finite (exponentially decayed) history scores tracking recurrence of elements e for human and AI.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-15 (Repair 6)",
+      "section": "8. Problem 6 - Repair 6",
+      "text": "P(e_{t+1} | X_t, H_{<t}) ≠ P(e_{t+1} | X_t).",
+      "meaning": "Open empirical proposition: prior dialogue path may carry predictive information beyond current-state observables.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-16",
+      "section": "8. Problem 6 - finite reciprocal amplification",
+      "text": "χ_recip[s,n,L] = |D_recip[s,n,L]| / |Σ[s,n]|.",
+      "meaning": "Diagnostic for finite reciprocal amplification in a dialogue session; not itself validated by the cited external work.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-17",
+      "section": "9. Problem 7",
+      "text": "Exposure ≠ Retention ≠ Improvement.",
+      "meaning": "Non-collapse law supported by the Bastani et al. finding that assisted practice performance and later unaided performance can diverge.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-18 (Repair 7)",
+      "section": "9. Problem 7 - Repair 7",
+      "text": "Y^return_{s+Δ} = (R_rec, R_disc, T_new, Q_next).",
+      "meaning": "Unaided return battery: reconstruction, discrimination, transfer, next-question quality.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-19 (Repair 7)",
+      "section": "9. Problem 7 - Repair 7",
+      "text": "RET = (P^post_{H,AI} − P^pre_{H,AI}) − (P^post_{H,C} − P^pre_{H,C}).",
+      "meaning": "Minimal difference-in-differences estimand for causally indexed Human Return.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-20",
+      "section": "10. Problem 8",
+      "text": "G_s = g(k_s, d_s, v_s, p_s, r_s, 1−f_s, a_s); T_s = h(c_s, f_s, b_s, o_s); Δ_s = G_s − T_s.",
+      "meaning": "Directional architecture: gain-side (G) and tunnel-side (T) functions and their difference Δ.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-21",
+      "section": "10. Problem 8",
+      "text": "G_s = g(· | Θ_s, Π_s); T_s = h(· | Θ_s, Π_s).",
+      "meaning": "G and T conditioned explicitly on task ecology Θ and interaction policy Π.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-22 (Repair 8)",
+      "section": "10. Problem 8 - Repair 8",
+      "text": "η_s > 0, Δ_s > 0 ⇒ durable expansion; η_s > 0, Δ_s < 0 ⇒ durable epistemic tunnel.",
+      "meaning": "Retention magnitude and retained direction are separated: sign of Δ, not magnitude of η, determines expansion vs. tunnel.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-23",
+      "section": "11. Problem 9",
+      "text": "AUG_s = P_s^joint − P_s^H; SYN_s = P_s^joint − max(P_s^H, P_s^AI); RET_s = ΔP^return_{H,s+Δ}.",
+      "meaning": "Separates augmentation, synergy, and return as distinct performance quantities.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-24 (Repair 9)",
+      "section": "11. Problem 9 - Repair 9",
+      "text": "J*_s = (AUG_s, SYN_s, RET_s).",
+      "meaning": "Three-axis Human-AI outcome vector that should not be collapsed into one universal score.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-25",
+      "section": "12. Problem 10",
+      "text": "Θ_s = (C_s, U_s, V_s, T_s, Δ^{AI−H}_s), where C_s = task complexity, U_s = uncertainty, V_s = practical verifiability, T_s = task type, Δ^{AI−H}_s = relative AI-vs-human baseline capability.",
+      "meaning": "Task-ecology vector conditioning the direction equations.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-26 (Repair 10)",
+      "section": "12. Problem 10 - Repair 10",
+      "text": "G_s = g(k,d,v,p,r,1−f,a | Θ_s, Π_s); T_s = h(c,f,b,o | Θ_s, Π_s).",
+      "meaning": "Gain/tunnel functions conditioned on task ecology and interaction policy; not a claim of a calibrated universal function.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "EF-27",
+      "section": "13. Revised Problem-First Architecture",
+      "text": "H0* → K_like → D^eff → R^eff → H↔AI → χ_recip → η → (G−T | Θ,Π) → Y^return → J*.",
+      "meaning": "The revised architecture as a sequence of ten answerable problems, each corresponding to a distinct failure mode.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "NCL-14",
+      "section": "14. Revised Non-Collapse Laws",
+      "text": "AI-first fluency ≠ human baseline; explanation ≠ verification; resistance quality ≠ resistance accessibility; uncertainty signal ≠ truth; output count ≠ epistemic diversity; trust ≠ appropriate reliance; self-confidence ≠ competence; amplification ≠ warrant; retention ≠ improvement; augmentation ≠ synergy; joint gain ≠ human return; user preference ≠ epistemic direction.",
+      "meaning": "The revised, externally strengthened set of twelve non-collapse separations; the paper explicitly notes not all are universal empirical laws — some are definitional non-collapses, others empirically motivated.",
+      "paper_tier": "law",
+      "in_master_river": null
+    }
+  ]
+}

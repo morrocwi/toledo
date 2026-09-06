@@ -1,0 +1,103 @@
+{
+  "record_id": 22339909,
+  "title": "CTSA Human-Return Readout: A Session-Boundary Measurement Architecture for Retained Human Capability After AI (Epistemic Note v9.1 FINAL)",
+  "doi": "10.5281/zenodo.22339909",
+  "equations": [
+    {
+      "label": "CTSA-01",
+      "section": "5.1 Retained difference before semantic label",
+      "text": "Δ^ret_H = R_Q(S^post_H) − R_Q(S^pre_H), where R_Q is a declared reader/question and S^pre_H, S^post_H are bounded task-relative descriptions of the human before AI exposure and after an unaided return interval.",
+      "meaning": "Architectural notation (not a validated psychological metric) for the task-relevant retained difference recoverable by a declared reader.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CTSA-02",
+      "section": "5.2 Meaning, persistence, and truth remain non-identical",
+      "text": "AI(Q) = K_like, K_like ≠ K_validated|V*.",
+      "meaning": "Restates the Epistemic Fusion/Tunnel non-collapse: retained CTSA items are knowledge-like candidates, not automatically validated knowledge.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "CTSA-03",
+      "section": "7.1 Where workflow belongs",
+      "text": "C → T → Workflow → S → A → C′.",
+      "meaning": "A useful but non-mandatory relation among CTSA classes and workflow, illustrating role separation, not a universal causal law.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "CTSA-04",
+      "section": "9. The Full Human-Return Audit",
+      "text": "R_H = ⟨G_CTSA, L, M, P, W, Δ_dir⟩.",
+      "meaning": "Bookkeeping tuple (not a calibrated universal score) combining Gain profile, Loss profile, Metacognitive regulation, Provenance, Warrant, and epistemic Direction.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "CTSA-05",
+      "section": "10. Session-Boundary Architecture",
+      "text": "Frozen Human baseline → K_like → Difference/Resistance → H↔AI → Retention gate → CTSA Return Profile → Unaided Return Test → Gain/Loss → Regulation → Provenance/Warrant → Epistemic direction.",
+      "meaning": "The full programme sequence placing CTSA at the boundary where conversational residue is claimed to become human capability.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "NCL-10",
+      "section": "10. Session-Boundary Architecture (preserved non-collapse laws)",
+      "text": "AI fluency ≠ human baseline; explanation ≠ verification; output count ≠ epistemic diversity; exposure ≠ retention ≠ improvement; trust in AI ≠ calibrated confidence in self; augmentation ≠ synergy ≠ Human Return; retained gain ≠ net expansion; provenance ≠ warrant; persistence ≠ truth.",
+      "meaning": "Nine non-collapse laws carried over and preserved from the programme's earlier work.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "H1",
+      "section": "12. Hypotheses and Legitimate Defeaters",
+      "text": "Incremental Readout Hypothesis [Open]: a CTSA Return Profile will explain reproducible variance in delayed unaided human capability beyond ordinary post-test performance, recall, confidence, and established concept/skill measures.",
+      "meaning": "Open hypothesis on incremental predictive validity of CTSA.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H2",
+      "section": "12. Hypotheses and Legitimate Defeaters",
+      "text": "Partial Dissociation Hypothesis [Open]: Conceptual, Tool-Selection, Skill-Execution, and Alternative-Generation returns will show partially dissociable profiles under matched interaction conditions rather than one interchangeable gain.",
+      "meaning": "Open hypothesis that the four CTSA classes are separable, not fungible.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H3",
+      "section": "12. Hypotheses and Legitimate Defeaters",
+      "text": "Return-vs-Exposure Prediction [Externally constrained]: items visible only while AI support is present will predict assisted performance more strongly than delayed unaided capability.",
+      "meaning": "Hypothesis externally supported in general form by Bastani et al., though not specifically for CTSA classes.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H4",
+      "section": "12. Hypotheses and Legitimate Defeaters",
+      "text": "Gain/Loss Asymmetry Hypothesis [Open]: positive CTSA gain can coexist with negative loss in previously accessible routes/checking habits; gross gain will overestimate net human expansion.",
+      "meaning": "Open hypothesis on gain/loss asymmetry.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H5",
+      "section": "12. Hypotheses and Legitimate Defeaters",
+      "text": "Recombination Hypothesis [Open]: CTSA gains will sometimes interact compositionally (new Concept improves Tool selection; Tool+Skill make an Alternative accessible; new Alternative triggers conceptual restructuring).",
+      "meaning": "Open hypothesis on compositional interaction among CTSA classes.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H6",
+      "section": "12. Hypotheses and Legitimate Defeaters",
+      "text": "Regulation/Direction Hypothesis [Open]: equal gross CTSA gains will yield different later corrigibility depending on metacognitive calibration, effective resistance, provenance visibility, and semantic-basin dynamics.",
+      "meaning": "Open hypothesis on the role of regulation/direction in interpreting gains.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    }
+  ]
+}

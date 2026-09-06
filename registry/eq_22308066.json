@@ -1,0 +1,63 @@
+{
+  "record_id": 22308066,
+  "title": "State of Evidence for the Readout Hypothesis-Generation Programme",
+  "doi": "10.5281/zenodo.22308066",
+  "equations": [
+    {
+      "label": "(unnumbered, Sec.1)",
+      "section": "1 Purpose and Evidence Coding (Non-collapse rule for the evidence registry)",
+      "text": "neighboring evidence != formal-variable validation != truth of the integrated theory",
+      "meaning": "A local empirical result cited as neighboring evidence is not the same as validating a Readout-programme variable, which is not the same as truth of the integrated theory.",
+      "paper_tier": "identity (non-collapse rule)",
+      "in_master_river": null
+    },
+    {
+      "label": "(1)",
+      "section": "4 What the Literature Jointly Supports",
+      "text": "reachability != accessibility",
+      "meaning": "Non-collapse: bare graph/logical reachability of a hypothesis is not the same as its structural accessibility.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "4 What the Literature Jointly Supports",
+      "text": "speed != quality/warrant",
+      "meaning": "Non-collapse: how fast a hypothesis is generated is not the same as its quality or epistemic warrant.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "4 What the Literature Jointly Supports",
+      "text": "AI output volume != epistemic diversity",
+      "meaning": "Non-collapse: a larger volume of AI-generated hypotheses is not the same as greater epistemic/readout-distinguishable diversity.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(unnumbered, Sec.4)",
+      "section": "4 What the Literature Jointly Supports (\"The stronger Readout chain\")",
+      "text": "Attraction != Accessibility != Warrant != Truth",
+      "meaning": "A chain of non-collapses proposed as a conceptual typing rule, not yet an experimentally established decomposition.",
+      "paper_tier": "identity (non-collapse) / conceptual typing rule, not yet decomposed",
+      "in_master_river": null
+    },
+    {
+      "label": "(unnumbered, Sec.3.4)",
+      "section": "3.4 Stage D: hypothesis timing, usability, and discrimination",
+      "text": "generation speed != hypothesis quality",
+      "meaning": "The VIADS study's direct evidence that faster hypothesis generation does not entail higher-quality hypotheses.",
+      "paper_tier": "identity (non-collapse), OBSERVED/MODERATE evidence support",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "3.6 Stage F / 5.2 Paper II: knowledge topology and first passage",
+      "text": "G1K != G2K => L(tau_U | G1K, Q) != L(tau_U | G2K, Q)",
+      "meaning": "Still-open directional claim: different knowledge topologies (G1K vs G2K) imply different distributions of first-passage time to a usable hypothesis, under the same question Q.",
+      "paper_tier": "hypothesis [Open] (Paper II H1-H2, requires randomized content-matched topology experiment)",
+      "in_master_river": null
+    }
+  ]
+}

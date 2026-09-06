@@ -1,0 +1,112 @@
+{
+  "record_id": 18383439,
+  "title": "Violence as a Special Case of Instability in Finite-Memory Causal Systems",
+  "doi": "10.5281/zenodo.18383439",
+  "note": "Preprint, 27 January 2026, 4 pages. Read in full via pdftotext (plain and -layout). Uses the paper's own numbered equations (1)-(12) plus one named, formally stated Theorem with a proof sketch. Cross-checked against Master Equation River v1.4/main.tex and refs.bib: this paper's title, DOI, and distinctive terms (violence, instability, telegraph, finite-memory) do not appear anywhere in main.tex or refs.bib. It is cited only indirectly, by title, inside a different chapter (Potential as a Readout, record 22361830), which is itself outside the four in-scope chapters of this task. Confirmed not restated in Master River v1.4.",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "Sec. 2, From Events to States: Ontological Reframing",
+      "text": "s(x,t) ∈ R^n",
+      "meaning": "A social system is described by a state field encoding cumulative tension, perceived injustice, trust density, and communicative load over social space x and time t.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "Sec. 2, From Events to States: Ontological Reframing",
+      "text": "V(x,t) = Φ(s(x,t))",
+      "meaning": "A violence potential: a nonlinear functional mapping latent stress state to overt instability. Observed violent events are threshold crossings of V, not primary ontological units.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "Sec. 3, Finite Causal Memory and Telegraph Dynamics",
+      "text": "τ ∂t j + j = −D∇s",
+      "meaning": "Causal (telegraph-type) constitutive relation for the flux of social tension, with causal memory time τ > 0 and effective coupling D.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "Sec. 3, Finite Causal Memory and Telegraph Dynamics",
+      "text": "∂t s = −∇·j − Γ(s) + Senv",
+      "meaning": "Continuity equation for state evolution, with Γ representing dissipation and Senv sustained environmental load (e.g. inequality, humiliation, communicative blockage).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "Sec. 4, Spectral Structure and Persistence",
+      "text": "∂t s = Lτ s",
+      "meaning": "Linearization around a metastable configuration, yielding a generator Lτ dependent on memory time.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "Sec. 4, Spectral Structure and Persistence",
+      "text": "s(t) = Σ_k c_k e^{−λ_k t} r_k",
+      "meaning": "Spectral decomposition of the solution; for τ > 0 the spectrum generically contains slow modes (Re(λ_k) ≈ 0+) encoding long-lived configurations of instability.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "Theorem (No-Go for Elimination by Suppression)",
+      "section": "Sec. 5, A Structural No-Go Result",
+      "text": "Given Lτ with τ > 0, assuming (i) at least one slow spectral mode exists, (ii) suppression acts only on state amplitudes, and (iii) environmental load has nonzero time-average, then no bounded force-based intervention can drive the system to a globally violence-free absorbing state. (Proof sketch: finite memory implies non-Markovian evolution; slow modes ensure metastability; suppression does not modify Lτ so the invariant spectral structure persists; sustained load re-populates slow modes with probability one.)",
+      "meaning": "A structural, not normative, no-go result: force-based/suppression-only elimination of violence is generically impossible in a finite-causal-memory system under sustained load.",
+      "paper_tier": "theorem",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "Sec. 8, Minimal Constructive Model",
+      "text": "L = [[−α, ε], [ε, −β]], α, β > 0",
+      "meaning": "Generator for a minimal two-coupled-subsystem model, s1 (physical) and s2 (digital/psychological).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "Sec. 8, Minimal Constructive Model",
+      "text": "λ± = −(α+β)/2 ± sqrt( ((α−β)/2)^2 + ε^2 )",
+      "meaning": "Eigenvalues of the two-subsystem generator; for small ε one mode becomes slow, and suppressing s1 transfers instability to s2, demonstrating recurrence and mutation without introducing new causes.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "Sec. 9, Ecosystem-Level Stabilization",
+      "text": "Γ ↑ (increase dissipation)",
+      "meaning": "One of four operator-level modifications for durable violence reduction, corresponding to restorative justice.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "Sec. 9, Ecosystem-Level Stabilization",
+      "text": "Senv ↓ (reduce load)",
+      "meaning": "Corresponds to inequality reduction.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "Sec. 9, Ecosystem-Level Stabilization",
+      "text": "Lij ↓ (limit propagation)",
+      "meaning": "Corresponds to community firewalls.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "Sec. 9, Ecosystem-Level Stabilization",
+      "text": "τ ↓ (shorten memory)",
+      "meaning": "Corresponds to truth-based reconciliation.",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    }
+  ]
+}

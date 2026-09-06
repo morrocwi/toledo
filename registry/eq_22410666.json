@@ -1,0 +1,127 @@
+{
+  "record_id": 22410666,
+  "title": "Meaning Before Naming: A Readout-Retention Architecture of Affective-Semantic Reorganization (Standalone Concept Note v1.0 FULL)",
+  "doi": "10.5281/zenodo.22410666",
+  "equations": [
+    {
+      "label": "MBN-readout",
+      "section": "5. The Core Readout-Retention Architecture",
+      "text": "r_n = R_H(x_n | H_n, c_n)",
+      "meaning": "A bounded readout: what becomes accessible to reader R_H from a finite externally available pattern x_n under current organization H_n and context c_n — not a copy of the source event.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "MBN-config",
+      "section": "5. The Core Readout-Retention Architecture",
+      "text": "μ_n = G(r_n, M_{n-1}, A_{n-1}, L_{n-1}, V_{n-1}, c_n)",
+      "meaning": "A context-sensitive affective-semantic configuration, written schematically as a function of the readout, retained memory M, affective weighting A, currently available linguistic/conceptual organization L, and value/action relevance V; the notation is architectural, not a claim about literal neural variables.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "MBN-experience",
+      "section": "5. The Core Readout-Retention Architecture",
+      "text": "E_n = Φ(r_n, μ_n, B_n, c_n)",
+      "meaning": "Lived experience represented at a higher descriptive level, with B_n marking embodiment; inherits the level separation in Human LoRA that the lived event cannot be identified with a parameter update or a bare signal.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "MBN-retention",
+      "section": "5. The Core Readout-Retention Architecture",
+      "text": "H_{n+1} = U(H_n, Retain(E_n, r_n, μ_n), δ^world_{n:n+1})",
+      "meaning": "Only some residue is retained: the reader's organization updates via U from prior organization, a Retain operator over experience/readout/configuration, and later correction or resistance δ^world; an intense moment may produce little durable change while a quieter event may reorganize later interpretation.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "MBN-naming",
+      "section": "5. The Core Readout-Retention Architecture",
+      "text": "ℓ_n = L_H(E_n, μ_n | H_n, c_n)",
+      "meaning": "Explicit naming is optional and temporally placed after the readout event: ℓ_n is a linguistic articulation, label, metaphor, description, or question generated from E_n and μ_n — the formal sense in which meaning may precede naming (E_n, μ_n before ℓ_n).",
+      "paper_tier": "definition",
+      "in_master_river": "6"
+    },
+    {
+      "label": "MBN-resonance-diagnostic",
+      "section": "6. Resonance Is Reorganization, Not Transmission",
+      "text": "ΔA_H(x,c) = A_H^post − A_H^pre",
+      "meaning": "A finite diagnostic for resonance: the change in a task- or experience-relative accessibility profile A_H before and after an encounter; a positive change in one region does not imply global improvement, only that some relation/memory/possibility became more accessible under the declared reader. (This original resonance definition is noted elsewhere in the programme as later superseded by Experience v2's external–internal congruence definition.)",
+      "paper_tier": "measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "MBN-articulation",
+      "section": "7. Language Is a Special Transport Layer, Not the Container of Meaning",
+      "text": "Z_{H,t} —L_H→ Q_{H,t}",
+      "meaning": "A human state Z_{H,t} is articulated through language L_H as a bounded question or expression Q_{H,t}; Q_{H,t} is not identical to the whole state — articulation exports only part of what is retained and available.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "§8-non-collapse-chain",
+      "section": "8. From Felt Change to Retained Human Change",
+      "text": "Exposure ≠ felt intensity ≠ retention ≠ improvement",
+      "meaning": "The architecture separates exposure to a pattern, the intensity with which it is felt, whether it is retained, and whether retention constitutes improvement — these four are not interchangeable.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "§11-non-collapse-laws",
+      "section": "11. Non-Collapse Laws",
+      "text": "external pattern ≠ meaning; meaning ≠ explicit naming; shared stimulus ≠ shared inner state; affective intensity ≠ epistemic warrant; accessibility ≠ truth; resonance ≠ understanding; retention ≠ benefit; verbalization ≠ lossless translation; same surface form ≠ same reader-relative meaning",
+      "meaning": "The nine load-bearing non-collapse distinctions of the extension, keeping affective-semantic reorganization revisable rather than allowing intensity, familiarity, or repetition to become self-certifying.",
+      "paper_tier": "law",
+      "in_master_river": null
+    },
+    {
+      "label": "H1",
+      "section": "13. Empirical Programme",
+      "text": "H1 — Pre-nominative reorganization [Open]",
+      "meaning": "For at least some classes of experience, task-relevant changes in affective or relational accessibility will be detectable before stable explicit naming.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H2",
+      "section": "13. Empirical Programme",
+      "text": "H2 — Reader dependence [Open]",
+      "meaning": "The same external pattern will produce systematically different readout profiles as reader history, context, or prior organization changes, even when the source pattern is held fixed.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H3",
+      "section": "13. Empirical Programme",
+      "text": "H3 — Translation loss [Open]",
+      "meaning": "Later verbal description will fail to preserve some distinctions present in immediate experience, while also adding distinctions that were not previously explicit.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H4",
+      "section": "13. Empirical Programme",
+      "text": "H4 — Retention selectivity [Open]",
+      "meaning": "Immediate intensity will not perfectly predict delayed retained reorganization.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H5",
+      "section": "13. Empirical Programme",
+      "text": "H5 — Recursive naming [Open]",
+      "meaning": "Naming after an initially difficult-to-articulate experience will sometimes reorganize subsequent readout of the same or related patterns rather than merely describe a fixed prior state.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "H6",
+      "section": "13. Empirical Programme",
+      "text": "H6 — No automatic improvement [Derived guardrail]",
+      "meaning": "Even when H1–H5 are supported, no inference to truth, wisdom, well-being, or ethical value follows without independent criteria.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    }
+  ]
+}

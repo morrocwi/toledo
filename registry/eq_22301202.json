@@ -1,0 +1,135 @@
+{
+  "record_id": 22301202,
+  "title": "Written by AI. Still True.",
+  "doi": "10.5281/zenodo.22301202",
+  "equations": [
+    {
+      "label": "SC",
+      "section": "3. The Possession-Constitution Collapse",
+      "text": "SC :  K(S, p) -> Subject(S)",
+      "meaning": "The minimal Subject Condition: if S knows p, some subject S occupies the knowing relation.",
+      "paper_tier": "definition (deliberately weak premise)",
+      "in_master_river": null
+    },
+    {
+      "label": "HSC",
+      "section": "3. The Possession-Constitution Collapse",
+      "text": "HSC :  Epi(X, p) -> Knower(X, p)",
+      "meaning": "The Knower-Constitution Condition (Human-Source Condition in its human form): if X plays an epistemically significant role in a route by which p becomes warranted, available, retained, or inferentially constrained, then X must be a knower. The paper argues nothing in SC entails this stronger condition.",
+      "paper_tier": "hypothesis (the collapse the paper rejects)",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-1",
+      "section": "3. The Possession-Constitution Collapse",
+      "text": "Pre-subjective constraint structure: a worldly state, relation, trace, record, or lawful dependence capable of constraining which later representations succeed or fail, independently of whether any actual subject has yet represented or interpreted it.",
+      "meaning": "Introduces a deliberately weaker-than-epistemic notion so that pre-human constraint can be discussed without presupposing a knower.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-2",
+      "section": "3. The Possession-Constitution Collapse",
+      "text": "Possession-Constitution Collapse: occurs when a condition on who can possess knowledge is treated as a condition on what can constitute, constrain, retain, transmit, or generate epistemically significant structure.",
+      "meaning": "Names the paper's central diagnosed error.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prin-1",
+      "section": "3. The Possession-Constitution Collapse",
+      "text": "Role Separation: generation, truth, evidential support, reliability, understanding, possession, endorsement, accountability, credibility, and institutional authorization are distinct epistemic roles. No pair may be identified merely because one human agent often occupies both.",
+      "meaning": "States that co-location of epistemic roles in one human body does not make the roles identical.",
+      "paper_tier": "law (non-collapse, named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-1",
+      "section": "3. The Possession-Constitution Collapse",
+      "text": "No transitivity of knowerhood: from the fact that knowledge has a subject it does not follow that every epistemically significant node in the route by which that subject comes to know must itself be a knower.",
+      "meaning": "A thermometer, telescope, calculator, or simulation need not be a knower for its role in a knowledge route to be epistemically productive.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(RA)",
+      "section": "3.1 The source label is a readout, not an oracle",
+      "text": "R_A = O_A(W; Pi_A)",
+      "meaning": "What an investigator receives is an operator-conditioned record of a worldly condition W under a selection policy Pi_A; this does not license identifying R_A with W.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(m-rho)",
+      "section": "3.1 The source label is a readout, not an oracle",
+      "text": "m(A) != rho(A)",
+      "meaning": "Non-collapse law: source metadata (e.g. 'senior professor', 'AI-generated') is not identical to the reliability estimate an evaluator extracts from it, and neither is identical to the epistemic standing of the claim p.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "Prin-2",
+      "section": "3.1 The source label is a readout, not an oracle",
+      "text": "Bridge Burden: any inference from source metadata to a change in epistemic standing must identify the mediating relation that does the work (e.g. reliability, independence, access, assurance, accountability, calibration, error correlation); where no such bridge is supplied, the inference is pedigree substitution rather than source-sensitive epistemology.",
+      "meaning": "Requires that any provenance-based credence shift name the mechanism doing the epistemic work.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "Prin-3",
+      "section": "3.1 (Table 1 discussion)",
+      "text": "No Bare Pedigree: a source label is epistemically incomplete reporting. The relevant object is not merely who or what produced the claim, but the tuple of production procedure, selection conditions, dependencies, checks, error model, inferential role, and answerability that makes the source cue evidentially useful.",
+      "meaning": "A source label by itself is an insufficient epistemic report; the underlying tuple of process facts is what matters.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "(dCr)",
+      "section": "7. The Epistemic Pedigree Paradox",
+      "text": "origin, procedure, dependence, checks, answerability  -->  Delta Cr(p)",
+      "meaning": "The epistemically relevant object behind a provenance label is a route of variables mapping to a credence change, not a badge.",
+      "paper_tier": "definition (functional diagram)",
+      "in_master_river": null
+    },
+    {
+      "label": "(RPE)",
+      "section": "7. The Epistemic Pedigree Paradox",
+      "text": "RPE = Cr(p | E, R, A, O1) - Cr(p | E, R, A, O2)",
+      "meaning": "The Residual Provenance Effect diagnostic: the credence difference attributable to two provenance descriptions O1, O2 once first-order evidence E, reliability/dependence R, and answerability A are held fixed.",
+      "paper_tier": "measurement (diagnostic, not a psychological law)",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-4",
+      "section": "7. The Epistemic Pedigree Paradox",
+      "text": "Residual Provenance Effect: occurs when epistemic assessment changes with provenance after the epistemically relevant pathways through which provenance could rationally matter have been held fixed or explicitly represented.",
+      "meaning": "Names the residual credence effect the RPE formula measures.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prin-4",
+      "section": "7. The Epistemic Pedigree Paradox",
+      "text": "Provenance Relevance Constraint: provenance may rationally alter epistemic standing insofar as it changes total evidence, reliability, dependence, assurance, accountability, or another specified epistemically relevant condition. Provenance has no additional free-standing force merely by redescribing the origin of an otherwise fixed epistemic route.",
+      "meaning": "Bounds when a provenance label may legitimately move credence.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-3",
+      "section": "6. Knower fetishism",
+      "text": "Knower fetishism: the treatment of the recognized identity, humanity, credentials, or social standing of a knower as though it possessed epistemic value in itself, after abstracting away the evidential and relational work through which that status earns epistemic relevance.",
+      "meaning": "Names the paper's central diagnosed social pathology (the social form of the Possession-Constitution Collapse).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prin-5",
+      "section": "10. Institutions after epistemic monarchy",
+      "text": "Friction, not magic: institutional certification has epistemic force insofar as institutions produce reliable epistemic friction (criticism, validation, replication, robustness testing, archival continuity, correction, and answerability). Certification does not create truth by status alone.",
+      "meaning": "Institutional authority is earned through epistemic friction-producing processes, not conferred by status/certification per se.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    }
+  ]
+}

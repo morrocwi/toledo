@@ -1,0 +1,23 @@
+{
+  "record_id": 19215748,
+  "title": "When AI Expands Human Potential",
+  "doi": "10.5281/zenodo.19215748",
+  "equations": [
+    {
+      "label": "unlabeled (§7, display 1)",
+      "section": "7 Context-Indexed Evaluation",
+      "text": "K_A(D, t) := V_A^D( M_A(t), θ_D )",
+      "meaning": "K_A(D,t) is the status of a knower A's inquiry in domain D at time t; M_A(t) is the agent's current model; θ_D denotes the world-side constraint structure relevant to that domain. Presented as a heuristic schematic, not an algorithmic decision procedure.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "unlabeled (§7, display 2)",
+      "section": "7 Context-Indexed Evaluation",
+      "text": "V_A^D = w_1^D P + w_2^D I + w_3^D S + w_4^D R + w_5^D L,  with Σ_i w_i^D = 1",
+      "meaning": "The alignment profile V_A^D modeled as a weighted ordering of predictive discrimination (P), intervention reliability (I), structural preservation (S), route-independence (R), and life-fit/situated answerability (L); intended to block the slide from local AI usefulness to claims of global epistemic gain, not as algorithmic decisionism.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    }
+  ]
+}

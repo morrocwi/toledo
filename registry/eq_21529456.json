@@ -1,0 +1,735 @@
+{
+  "record_id": 21529456,
+  "title": "Readout Genesis Standalone Synthesis",
+  "doi": "10.5281/zenodo.21529456",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "III.A Retained distinction and graph structure",
+      "text": "delta_R = (a # b);  delta_R => L_R = D_W - W;  S_{n+1} = F(S_n, u_n, c_n, T_n)",
+      "meaning": "States the root weld of Readout Genesis: a retained distinction forces a weighted-graph Laplacian form, and the root state evolves through a context-sensitive stepper.",
+      "paper_tier": "identity (root weld / architecture)",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "III.A Retained distinction and graph structure",
+      "text": "q_{D,n+1} o F_n = F^#_{D,n} o q_{D,n};  O_{D,n} = O^#_{D,n} o q_{D,n}",
+      "meaning": "An admissible domain translation must commute with the root dynamics and the root readout operator.",
+      "paper_tier": "definition (admissibility condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "III.A Retained distinction and graph structure",
+      "text": "delta_R = (a # b)",
+      "meaning": "The minimal root object is a retained distinction: a difference between two states not erased by the reader relevant to the current construction.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "III.A Retained distinction and graph structure",
+      "text": "L_R = D_W - W",
+      "meaning": "Weighted retained relations induce a graph-Laplacian-type operator, where W is the retained adjacency and D_W its weighted degree matrix.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "III.A Retained distinction and graph structure",
+      "text": "S_{n+1} = F(S_n, u_n, c_n, T_n)",
+      "meaning": "The root state evolves through a context-sensitive stepper, where u_n is an intervention/action, c_n is context, and T_n is the ordered/retained lineage tape.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "III.B Domain translation and reader equivalence",
+      "text": "q_D(F(z,u,c,T)) = F_D(q_D(z), u, c, T)",
+      "meaning": "An admissible domain quotient must preserve the root dynamics after translation.",
+      "paper_tier": "definition (admissibility)",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "III.B Domain translation and reader equivalence",
+      "text": "O_D(z; Q, c) = O^#_D(q_D(z); Q, c)",
+      "meaning": "An admissible domain quotient must preserve required readouts within a declared horizon.",
+      "paper_tier": "definition (admissibility)",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "III.B Domain translation and reader equivalence",
+      "text": "z ~_{Q,O,c,L} z'  <=>  O(F^k z) = O(F^k z')  for all k <= L",
+      "meaning": "Two internal descriptions are equivalent only relative to a question, reader, context, and horizon; this is a no-early-collapse rule preventing merger of states that could later be distinguished.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "III.C Constitutional ordering",
+      "text": "retention -> structure -> translation -> readout -> meaning -> experience -> memory -> belief -> claim -> checking -> status -> public report",
+      "meaning": "States the mandatory order in which epistemic terms may be introduced; the forbidden order starts from a familiar name and retrospectively presents the result as knowledge.",
+      "paper_tier": "law (constitutional ordering rule)",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "IV From occurrence to meaning, experience, and memory",
+      "text": "A != x != mu != E != M != Bel != p != sigma_K(p)",
+      "meaning": "Non-collapse law: occurrence, trace, meaning, experience, memory, belief, claim, and epistemic status of the claim are all typed-distinct objects.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "IV From occurrence to meaning, experience, and memory",
+      "text": "x_{i,n} = Access(A_n; O_i, L_i, T_i, R_i, C_i)",
+      "meaning": "An agency's accessible trace of an occurrence is mediated by reader, language, tool system, access rights, and context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "IV From occurrence to meaning, experience, and memory",
+      "text": "A_i = A_j  =/=>  x_i = x_j",
+      "meaning": "Non-identity of traces under a shared occurrence is an access statement, not relativism: the same event can leave unequal readers with unequal resolution/vocabulary/permission/instrument.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(13)",
+      "section": "IV From occurrence to meaning, experience, and memory",
+      "text": "mu_{i,n} = G_mu(x_{i,n}, M_{i,n-1}, K_{i,n-1}, Theta_{i,n-1}, I_{i,n-1}, S_{i,n}^active, c_n)",
+      "meaning": "Meaning is generated downstream of the trace, as a function of trace, prior memory, prior knowledge state, prior identity/state, prior information, active state, and context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(14)",
+      "section": "IV From occurrence to meaning, experience, and memory",
+      "text": "E_{i,n} = Phi_E(x_{i,n}, mu_{i,n}, kappa_{i,n}, c_n)",
+      "meaning": "Experience is a typed function of trace, meaning, an accessibility/control parameter kappa, and context (the MEMK-domain experience equation).",
+      "paper_tier": "definition",
+      "in_master_river": 4
+    },
+    {
+      "label": "(15)",
+      "section": "IV From occurrence to meaning, experience, and memory",
+      "text": "M_{i,n} = U_M(M_{i,n-1}, x_{i,n}, mu_{i,n}, E_{i,n}, c_n, Lineage_n, T_n)",
+      "meaning": "Memory updates as a function of prior memory, current trace, meaning, experience, context, and lineage.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(16)",
+      "section": "IV From occurrence to meaning, experience, and memory",
+      "text": "Delta A_past = 0",
+      "meaning": "Historical-invariant law: the historical occurrence is not rewritten by later interpretation; reinterpretation changes bindings among trace/meaning/experience/memory while preserving the past occurrence.",
+      "paper_tier": "law (invariant)",
+      "in_master_river": null
+    },
+    {
+      "label": "(17)",
+      "section": "V.A Relational and multidimensional belief",
+      "text": "Bel_{i,p,n} = Rel_B(a_i, p | x_i, mu_i, E_i, M_i, Theta_i, I_i, S_i^active, c_i)",
+      "meaning": "Belief is not identical to a proposition; it is a conditioned relation between an agency and a proposition, given trace, meaning, experience, memory, identity/state, information, and context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(18)",
+      "section": "V.A Relational and multidimensional belief",
+      "text": "b_{i,p,n} = (e_{i,p}, c_{i,p}, s_{i,p}, a_{i,p}, eta_{i,p}, g_{i,p}, r_{i,p})",
+      "meaning": "The canonical belief vector: endorsement, subjective confidence, salience, action readiness, identity binding, perceived social support, and resistance to revision.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(19)",
+      "section": "V.A Relational and multidimensional belief",
+      "text": "b_{i,p,n+1} = U_B(b_{i,p,n}, Ev_{i,p}, M_i, mu_i, E_i, Theta_i, I_i, Trust_i, Affect_i, Utility_i, Repetition_i, Auth_i, Pow_i, Access_i, Language_i, Algorithm_i, Obj_i, c_i)",
+      "meaning": "Belief formation combines epistemic and non-epistemic influences (descriptive, not justificatory): repetition, authority, power, incentives, identity, algorithms, and affect can strengthen a belief without increasing its epistemic validity.",
+      "paper_tier": "law (descriptive update rule)",
+      "in_master_river": null
+    },
+    {
+      "label": "(20)",
+      "section": "V.B Scale and stabilization",
+      "text": "Bel_{g,d,n}^{(l)}(p) = Stabilize_B({b_{i,p,n}}_{i in G}, C_B)",
+      "meaning": "A locally shared belief is a stabilization of individual belief vectors across a group under communication/trust/practice/authority/lineage conditions C_B.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(21)",
+      "section": "V.B Scale and stabilization",
+      "text": "Belief Strength(p), Belief Distribution(p), Auth(p), Pow(p), Val_E(p)",
+      "meaning": "Non-collapse separation: belief strength, belief distribution, authority, power, and epistemic validity of a claim are kept as distinct quantities (no truth ladder from scale).",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-1",
+      "section": "V.B Scale and stabilization",
+      "text": "Belief-scale nonpromotion: for any proposition p, increasing the distribution scale of Bel(p) does not, without additional gate information, increase sigma_K(p).",
+      "meaning": "Proved from Eq.(19): belief-update variables (repetition, visibility, sanctions, authority, algorithms) are not components of the knowledge-admission function, so distribution scale cannot be projected into epistemic status without a separate evidentiary bridge.",
+      "paper_tier": "proposition (with proof)",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-1",
+      "section": "VI.A Normative proposal",
+      "text": "Knowledge status: Knowledge is the bounded epistemic status granted to a claim about the world or a declared domain when the claim is produced and checked through an auditable process exposing agency, access, provenance, evidence, method, inference, assumptions, uncertainty, scope, objection, correction, independence, and lineage.",
+      "meaning": "Defines knowledge as an auditable status attached to a claim under stated conditions, not inherited from the speaker's identity or rank.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(22)",
+      "section": "VI.A Normative proposal",
+      "text": "sigma_K(p) = Admit_E(p | Agent, D, C, O, Access, Language, Tools, Rights, Prov, Ev, Method, Infer, Assumptions, Uncertainty, Scope, Obj, CorrCond, Independence, Lineage)",
+      "meaning": "Formal admission function producing the bounded epistemic status of a claim from the full set of typed gate inputs.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(23)",
+      "section": "VI.A Normative proposal",
+      "text": "K_p = <p, C_p, P_p, E_p, M_p, I_p, U_p, Omega_p, O_p, L_p, sigma_K(p)>",
+      "meaning": "The complete knowledge object is not merely the proposition p but a typed record grouping context/access, provenance, evidence, method, inference, uncertainty, scope, objections/correction, lineage, and status.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(24)",
+      "section": "VI.B Status of speaker and status of claim",
+      "text": "StatusOfSpeaker != StatusOfClaim;  Auth(p) != Val_E(p);  Pow(p) != Val_E(p)",
+      "meaning": "Non-collapse law: expertise, office, certification, citation count, or legal competence may affect priors/access/consequence but cannot close a claim's evidence and inference gates by themselves.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(25)",
+      "section": "VI.C Practical effectiveness as a separate axis",
+      "text": "Pi_prac(p) = TestPerformance(Y, Y_hat, intervention, C, O)",
+      "meaning": "Practical effectiveness of a claim is defined via outcome/prediction testing under intervention.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(26)",
+      "section": "VI.C Practical effectiveness as a separate axis",
+      "text": "sigma_K(p) != Pi_prac(p)",
+      "meaning": "Non-collapse law: epistemic status and practical/operational performance are distinct axes; a claim can have high status without being an effective intervention, and vice versa.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(27)",
+      "section": "VII.A The gate sequence",
+      "text": "chi_G in {1, 0, perp};  1 = ADMITTED, 0 = OBSTRUCTED, perp = UNRESOLVED",
+      "meaning": "Each of the thirteen admission gates (G0-G13) takes one of three values, preventing absence of evidence from being silently converted into success or failure.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(28)",
+      "section": "VII.B State sufficiency and invariant completion",
+      "text": "Suff_{E,L}(Z_E^cand; Q, O, c, T) in {1, 0, perp}",
+      "meaning": "A candidate domain state is audited for sufficiency (covering current readout, dynamics, intervention, delayed return, memory, coupling, geometry, basis, boundary) with a three-valued outcome.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(29)",
+      "section": "VII.B State sufficiency and invariant completion",
+      "text": "Inv_E(z) != Inv_E(z')  =>  q_E(z) != q_E(z')",
+      "meaning": "A quotient may not merge states that differ on a required future invariant; this is the epistemic form of candidate preservation.",
+      "paper_tier": "law (invariant preservation)",
+      "in_master_river": null
+    },
+    {
+      "label": "(30)",
+      "section": "VII.D Claim ceiling",
+      "text": "tau_public(p) <= inf_{g in G_p} tau(g)",
+      "meaning": "The strongest publicly assignable claim tier is bounded above by the weakest (infimum) tier licensed across all load-bearing gates for p.",
+      "paper_tier": "identity (claim-ceiling bound)",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-2",
+      "section": "VII.D Claim ceiling",
+      "text": "Weakest-link claim ceiling: if any load-bearing gate for p is unresolved or obstructed, a public claim that presupposes that gate may not be assigned a stronger status than that gate.",
+      "meaning": "Proved from claim-identity and lineage requirements: a stronger public status would encode information not licensed by the conjunction of gate records, so would not be reconstructible from the auditable inputs.",
+      "paper_tier": "proposition (with proof)",
+      "in_master_river": null
+    },
+    {
+      "label": "(31)",
+      "section": "VII.D Claim ceiling",
+      "text": "sigma_K(p) in {ADMITTED, LOCAL, TRANSPORTABLE, UNRESOLVED, OBSTRUCTED, RETRACTED, SUPERSEDED}",
+      "meaning": "The full status space for a claim's epistemic status, where retraction and supersession preserve lineage and reasons for change (not erasure).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(32)",
+      "section": "VIII Local, institutional, and global knowledge",
+      "text": "Omega(K) = {(g, d, l, P, O, c) : all required gates pass}",
+      "meaning": "Knowledge scope is defined as the set of gate/domain/local-scope/practice/observer/context tuples for which all required gates pass.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(33)",
+      "section": "VIII Local, institutional, and global knowledge",
+      "text": "K_local = K |_{Omega_local}",
+      "meaning": "Local knowledge is the restriction of the full knowledge object to the local scope.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(34)",
+      "section": "VIII Local, institutional, and global knowledge",
+      "text": "T^Y_{ij} o K_i ~= K_j o T^C_{ij};  epsilon_bridge = d(T^Y_{ij} o K_i, K_j o T^C_{ij})",
+      "meaning": "A global claim requires a declared, tolerance-bounded transport (commuting-square) relation between contexts i and j before local knowledge can be presented as global.",
+      "paper_tier": "definition (transport condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "(35)",
+      "section": "VIII Local, institutional, and global knowledge",
+      "text": "Bel_global(p) != K_global(p)",
+      "meaning": "Non-collapse law: a widely distributed/stabilized belief is not the same as globally transported knowledge, regardless of media selection, accreditation, political power, or algorithmic amplification behind the belief's scale.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(36)",
+      "section": "IX.A Agency as a process quotient",
+      "text": "A_{i,n} = q_A(Z_{i,n}; Q_A, O_A, c_n)",
+      "meaning": "The epistemic agent is a query-relative quotient of a retained state, not an indivisible substance.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(37)",
+      "section": "IX.A Agency as a process quotient",
+      "text": "Aut(F_A, O_A) = {h : O_A o h = O_A, h o F_A = F_A o h}",
+      "meaning": "Two internal self-descriptions count as the same operational agent when all required future readouts agree; this automorphism class formalizes that gauge-like redundancy.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(38)",
+      "section": "IX.A Agency as a process quotient",
+      "text": "I_n = q_comp(M_n (+) Bel_n (+) Theta_n (+) Roles_n (+) BodyTool_n (+) SocialLineage_n)",
+      "meaning": "Identity is compositional: a typed quotient over memory, belief, identity-state, roles, embodiment/tools, and social lineage (direct-sum notation is typed, not numeric addition).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(39)",
+      "section": "IX.B The conditional chain",
+      "text": "x_n -> zeta_n -> v_n -> rho_n -> U_n -> beta_n -> I_{n+1} -> a_n -> S_{n+1}",
+      "meaning": "The continuous chain between readout and renewed state: contact, valence, drive, identity binding, appropriated experience, action, and renewed state.",
+      "paper_tier": "definition (chain structure)",
+      "in_master_river": null
+    },
+    {
+      "label": "(40)",
+      "section": "IX.B The conditional chain",
+      "text": "zeta_n = Contact(x_n, O_n, BodyTool_n, Attention_n, c_n)",
+      "meaning": "Contact is a function of trace, reader, embodiment/tools, attention, and context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(41)",
+      "section": "IX.B The conditional chain",
+      "text": "v_n = V_valence(zeta_n, M_n, mu_n, BodyState_n, c_n)",
+      "meaning": "Valence is a function of contact, memory, meaning, body state, and context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(42)",
+      "section": "IX.B The conditional chain",
+      "text": "rho_n = R_drive(v_n, ExpectedRelief_n, ExpectedGain_n, Habit_n, c_n)",
+      "meaning": "Drive is a function of valence, expected relief, expected gain, habit, and context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(43)",
+      "section": "IX.B The conditional chain",
+      "text": "U_n = Bind_self(rho_n, Bel_n, Theta_n, I_n, S_n^active, c_n)",
+      "meaning": "Identity binding is a function of drive, belief, identity-state, identity, active state, and context.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(44)",
+      "section": "IX.C Distortion before knowledge",
+      "text": "xi_n = (xi_n^+, xi_n^-, xi_n^0)",
+      "meaning": "The distortion vector: approach amplification, aversive rejection, and model-blindness components.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(45)",
+      "section": "IX.C Distortion before knowledge",
+      "text": "Xi_n = alpha_n^+ P_n^+ + alpha_n^- P_n^- + alpha_n^0 P_n^0;  G~_{mu,n} = G_{mu,n} o (I + Xi_n)",
+      "meaning": "The meaning operator is distorted by a weighted combination of approach/aversion/blindness projections.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(46)",
+      "section": "IX.C Distortion before knowledge",
+      "text": "epsilon_{Xi,n} = d_O(G_{mu,n}(z_n), G~_{mu,n}(z_n))",
+      "meaning": "The distortion defect measures the readout-space distance between undistorted and distorted meaning; identity protection/attraction/aversion/ignorance can alter meaning without increasing epistemic status.",
+      "paper_tier": "definition (measurement)",
+      "in_master_river": null
+    },
+    {
+      "label": "(47)",
+      "section": "X.A Typed self readout",
+      "text": "S_A[n] = q_self(F^n[delta_R, T_A, c_{0:n}]) = <A_A[n], Delta_A[n], H_A[n], Phen_A^str[n], P_A^lived[n], Own_A[n], Coh_A[n], Val_A[n], Pi_A[n], Lambda_A[n]>_~self",
+      "meaning": "The complete self object is a typed quotient bundling agency, identity change, horizon state, structural phenomenality, lived phenomenality, ownership, coherence, valence, policy, and lineage.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(48)",
+      "section": "X.A Typed self readout",
+      "text": "A_A != I_A != Phen_A^str != P_A^lived != Own_A != Coh_A != Val_A",
+      "meaning": "Non-collapse law: agency, identity, structural phenomenality, lived phenomenality, ownership, coherence, and valence remain dissociable readout lanes of one root.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(49)",
+      "section": "X.A Typed self readout",
+      "text": "I_A[n+1] = q_id(I_A[n] (+) A_A[n] (+) P_A^lived[n] (+) Pi_A^star[n] (+) Res_A[n] (+) Delta T_A[n])",
+      "meaning": "Identity update: identity is agency continued through append-only typed lineage composition; a one-time action is not yet a self.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(50)",
+      "section": "X.B The horizon triad",
+      "text": "H_dyn: Delta_A(lambda) = D_A^2 - 4 M_A K_A lambda = 0",
+      "meaning": "The dynamical horizon is defined as the discriminant threshold of a characteristic quadratic form.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(51)",
+      "section": "X.B The horizon triad",
+      "text": "H_info(A) = {z in Z_A : Rec(z) => (E_b < infinity, R_p > 0)}",
+      "meaning": "The information horizon is the boundary beyond which no admissible external inverse path recovers the internal state without bounded emission.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(52)",
+      "section": "X.B The horizon triad",
+      "text": "H_phen(A) = {r = A_A^acc Pi_A T_A(delta_R) : PhenGate(r) = 1}",
+      "meaning": "The phenomenal horizon contains self-indexed, embodied, owned, coherent, and action-consequential records passing the phenomenal gate.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(53)",
+      "section": "X.B The horizon triad",
+      "text": "H_dyn --DI_K--> H_info --IP_K--> H_phen",
+      "meaning": "The proposed weld linking the dynamical, information, and phenomenal horizons; only the threshold and information-horizon structures are conditionally derived, the sufficiency bridge IP_K remains open.",
+      "paper_tier": "hypothesis/Open (weld, bridge open)",
+      "in_master_river": null
+    },
+    {
+      "label": "(54)",
+      "section": "X.B The horizon triad",
+      "text": "Phen_A^str[n] = A_A^acc Pi_A T_A^{<=n}(delta_R; T_A, c_n)",
+      "meaning": "Structural phenomenality is a bounded, accessible, projected transform of the retained-distinction history up to step n.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(55)",
+      "section": "X.B The horizon triad",
+      "text": "P_A^lived[n] = Phi_A^phen(M_A^rec[n], Omega_A[n], B_A[n], c_n)",
+      "meaning": "A lived event is a further bounded transformation of recorded memory, an omega-state, a body state, and context; the framework does not infer subjective consciousness from accessibility alone.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(56)",
+      "section": "XI.A Three levels of knowledge",
+      "text": "K_prop(p) = sigma_K(p)",
+      "meaning": "Ordinary propositional knowledge is identified with the bounded epistemic status of the claim.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(57)",
+      "section": "XI.A Three levels of knowledge",
+      "text": "K_op(p) = <K_prop(p), Task_p, Completion_p>",
+      "meaning": "Operational knowledge adds a task and an independent completion certificate to propositional knowledge.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(58)",
+      "section": "XI.A Three levels of knowledge",
+      "text": "K_trans(p) = <K_op(p), Delta Theta, Delta I, Delta U, Delta Action, Persistence, Transport, Viability>",
+      "meaning": "Transformative knowledge adds persistent changes in view, identity, binding, action, context transport, and viability; mandatory only when a claim asserts that a practice changes the knower.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(59)",
+      "section": "XI.A Three levels of knowledge",
+      "text": "sigma_K(p) = ADMITTED",
+      "meaning": "First required condition for an admitted transformation: the underlying claim must itself be admitted.",
+      "paper_tier": "definition (admission condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "(60)",
+      "section": "XI.A Three levels of knowledge",
+      "text": "Completion_p = PASS",
+      "meaning": "Second required condition for an admitted transformation: the task completion certificate must pass.",
+      "paper_tier": "definition (admission condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "(61)",
+      "section": "XI.A Three levels of knowledge",
+      "text": "z_post in V_A",
+      "meaning": "Third required condition: the post-transformation state must lie in the viability set.",
+      "paper_tier": "definition (admission condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "(62)",
+      "section": "XI.A Three levels of knowledge",
+      "text": "Defects_{persistence, transport, lineage} <= tau",
+      "meaning": "Fourth required condition: persistence, transport, and lineage defects must be bounded by a tolerance; intensity/conviction/surprise/life-change are not substitutes for these conditions.",
+      "paper_tier": "definition (admission condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "(63)",
+      "section": "XI.B Release without destruction",
+      "text": "U_{n+1} = Pi_{U>=0}[(I - D_U) U_n + J_{reinforce,n} - J_{release,n}]",
+      "meaning": "The identity-binding update under reinforcement and release forcing, projected onto nonnegative values.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(64)",
+      "section": "XI.B Release without destruction",
+      "text": "J_release - J_reinforce >= epsilon_release > 0",
+      "meaning": "A sufficient conditional release criterion: persistent dominance of release over reinforcement.",
+      "paper_tier": "definition (sufficient condition)",
+      "in_master_river": null
+    },
+    {
+      "label": "(65)",
+      "section": "XI.B Release without destruction",
+      "text": "z_n in V_A,  O_E(z_n) != 0,  ||U_n|| -> 0",
+      "meaning": "Release additionally requires viability and continuing nonzero readout while the binding norm decays to zero; release is not death, memory deletion, passivity, or loss of causal agency.",
+      "paper_tier": "definition (conditions)",
+      "in_master_river": null
+    },
+    {
+      "label": "(66)",
+      "section": "XI.B Release without destruction",
+      "text": "v_free in ker B_I,  B_I v_free = 0,  O_E(v_free) != 0",
+      "meaning": "A nonbinding mode: content in the kernel of the binding operator remains readable while no longer functioning as an identity necessity.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(67)",
+      "section": "XII.A From readout to readout-of-readout",
+      "text": "R_A^{(1)}[n] = O_A(q_A(Z_A[n]); c_n, T_n)",
+      "meaning": "Current-state readout: a first-order reader applied to the agency quotient of the retained state.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(68)",
+      "section": "XII.A From readout to readout-of-readout",
+      "text": "R_A^{(2)}[n] = O_A(R_A^{(1)}[n]; c_n, T_n)",
+      "meaning": "Meta-readout is reader composition: a readout of the current-state readout.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(69)",
+      "section": "XII.A From readout to readout-of-readout",
+      "text": "W_A^R[n] = R_{tau_g}(R_A^{(2)}[n]; T_n)",
+      "meaning": "The meta-readout is retained over a finite window (finite retention).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(70)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "R_A^{(1)} != Claim_A != Identity_A;  Identity_A != ActionCandidate_A != CommittedAction_A",
+      "meaning": "Non-collapse law (typed-state decoupling): current readout, claim, identity, action candidate, and committed action remain distinct, preventing a transient readout from becoming a claim/identity/command merely because it is salient.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(71)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "C_A^ret[n] = O_A^ctx(c_{n-h:n}, T_{n-h:n})",
+      "meaning": "Context access: a readout over a finite window of recent context and lineage.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(72)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "L_A^acc[n] = O_A^lin(Lambda_A[n], T_n)",
+      "meaning": "Lineage access: a readout over the lineage record.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(73)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "U_A[n] = {u : C_A(u | Z_A[n], c_n, T_n) = 1}",
+      "meaning": "The admissible candidate-action set given the current admissibility condition.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(74)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "F_A^act[n] = O_A^act(U_A[n], Pi_A[n])",
+      "meaning": "Action formation is exposed as a readout over the admissible candidate set and current policy.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(75)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "I_A^resp[n] = 1  <=>  exists u' != u*: u' in U_A[n], t < t_c, Repair(F(Z_A, u')) >= R_min",
+      "meaning": "Response interruptibility at commitment time t_c: an alternative action exists before commitment that would achieve sufficient repair.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(76)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "A_A^pol[n] = O_A^alt(U_A[n])",
+      "meaning": "Alternative-policy access: a readout exposing the alternative-action landscape.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(77)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "Pi_A^star[n] = arg min_{u in U_A[n]} J_A(u)",
+      "meaning": "Policy reconfiguration selects the admissible action minimizing the governance cost functional.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(78)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "J_A(u) = E||Res_{A,u}||^2 + lambda_C C(u) + rho R(u) + mu L_repair(u) - nu V(u)",
+      "meaning": "The governance cost functional combining expected residual, a constraint cost, a regularizer, a repair-loss term, and a viability reward; weights are target-domain parameters, not root constants.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(79)",
+      "section": "XII.B Interruptibility, alternatives, and policy revision",
+      "text": "u_A^repair = arg min_{u in U_A^repair} (||Res_A(F(Z_A,u))||^2 + Cost(u) + RepairLoss(u))",
+      "meaning": "Residual-guided repair in discrete form: the admissible action minimizing residual, cost, and repair loss; a gradient approximation requires an independently supplied differentiable local encoding.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(80)",
+      "section": "XII.C Governance state and operator",
+      "text": "G_A^MR[n] = <R_A^{(1)}, R_A^{(2)}, W_A^R, D_A^type, C_A^ret, L_A^acc, F_A^act, I_A^resp, A_A^pol, Pi_A^star, Delta Z_A^repair>_n",
+      "meaning": "The full governance state bundles current readout, meta-readout, finite retention, typed decoupling, context/lineage access, action formation, interruptibility, alternative-policy access, policy, and repair residual.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(81)",
+      "section": "XII.C Governance state and operator",
+      "text": "G_A^MR[n] = R_{tau_g}(O_A(O_A(q_A(Z_A[n]))), C_A^ret, L_A^acc, F_A, Pi_A)",
+      "meaning": "A compact operator computing the governance state from readout-of-readout composition, context/lineage access, action formation, and policy.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(82)",
+      "section": "XII.C Governance state and operator",
+      "text": "Delta_G Pi_A^star = d_Pi(Pi_A^star, Pi_{A,-G}^star) > tau_idle",
+      "meaning": "The operator is governance-relevant only when ablating a component G changes the resulting policy (or an analogous repair distance exceeds tolerance) beyond an idle threshold.",
+      "paper_tier": "definition (relevance criterion)",
+      "in_master_river": null
+    },
+    {
+      "label": "(83)",
+      "section": "XII.D Defect vector, capture, and finite self-readout",
+      "text": "epsilon_G = (epsilon_R1, epsilon_R2, epsilon_W, epsilon_D, epsilon_C, epsilon_L, epsilon_F, epsilon_I, epsilon_A, epsilon_Pi, epsilon_repair)",
+      "meaning": "The primary governance diagnostic is a typed defect vector; a summary norm may not replace it since different defects require different repairs.",
+      "paper_tier": "measurement (diagnostic)",
+      "in_master_river": null
+    },
+    {
+      "label": "(84)",
+      "section": "XII.D Defect vector, capture, and finite self-readout",
+      "text": "Gamma_A = Load_A - Capacity_A",
+      "meaning": "The conditional capture margin; if it exceeds a threshold, governance capture becomes a live diagnostic candidate (weights/threshold uncalibrated).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(85)",
+      "section": "XII.D Defect vector, capture, and finite self-readout",
+      "text": "CurrentReadout + SelectionPriority + SelectionStability + SelfReport  =/=>  G_A^MR",
+      "meaning": "The no-free-governance law: a stable selected channel, selection priority/stability, and self-report do not jointly imply full governance; lost context, missing alternatives, opaque action formation, and unavailable repair can still coexist.",
+      "paper_tier": "law (non-collapse / no-free-governance)",
+      "in_master_river": null
+    },
+    {
+      "label": "(86)",
+      "section": "XII.D Defect vector, capture, and finite self-readout",
+      "text": "B_G = I(R_A^{(2)}; Z_A) / tau_cA < infinity,  ker O_A^{(2)} != empty",
+      "meaning": "For a bounded agency with a sufficiently rich state, mutual information between meta-readout and retained state is bounded and the meta-readout operator has nontrivial kernel; the architecture rejects complete self-transparency and exact zero empirical governance defect.",
+      "paper_tier": "law / measurement",
+      "in_master_river": null
+    },
+    {
+      "label": "(87)",
+      "section": "XIII Human-AI relation and knowledge civilization",
+      "text": "AIOutput != ClaimIdentity != Evidence;  Evidence != Inference != KnowledgeStatus",
+      "meaning": "Non-collapse law: an AI output's generative capability does not by itself grant automatic knowledge status; the typed separations among output, claim identity, evidence, inference, and status must hold.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(88)",
+      "section": "XIII Human-AI relation and knowledge civilization",
+      "text": "T_{H<-AI} o K_AI ~= K_H o T_C",
+      "meaning": "A bounded transport relation is required between AI-produced and human-produced knowledge objects, with explicit defects for semantic loss, source omission, authority laundering, uncertainty compression, and context mismatch.",
+      "paper_tier": "definition (transport condition, Maker-Checker firewall)",
+      "in_master_river": null
+    }
+  ]
+}

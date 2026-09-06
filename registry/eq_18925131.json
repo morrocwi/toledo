@@ -1,0 +1,7 @@
+{
+  "record_id": 18925131,
+  "title": "The Causal Grammar of Structured Coexistence: Conflict, Violence, Repair, and Non-Suppressive Peace",
+  "doi": "10.5281/zenodo.18925131",
+  "note": "Preprint, 9 March 2026, 5 pages. Read in full via pdftotext (plain and -layout). This is a purely qualitative/sociological theory paper: it contains no numbered or boxed mathematical equations, no lettered propositions/lemmas (no CE-/P-/H-style labels), and no non-collapse 'X ≠ Y' formulas. Its only formal apparatus is prose definitions (structure as organized possibility; conflict as incompatible coexistence; violence as possibility compression; repair as protected reopening; peace as non-suppressive stability), one causal diagram (Figure 1: Structure -> Compatible/Incompatible Coexistence -> Violence -> Repair -> Peace), and one qualitative typology table (Table 1: Regimes of structured coexistence -- Tension/Conflict/Violence/Pseudo-peace/Peace by Compatibility x Possibility Space x Repair). Cross-checked against Master Equation River v1.4/main.tex and refs.bib: this paper is not cited there and has no restated equation among eq:1-79. Confirmed not restated in Master River v1.4 (record_id/title/'causal grammar'/'structured coexistence' do not appear in main.tex or refs.bib).",
+  "equations": []
+}

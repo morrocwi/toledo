@@ -1,0 +1,119 @@
+{
+  "record_id": 22456487,
+  "title": "Operational Linguistic Wisdom (uplift 2026)",
+  "doi": "10.5281/zenodo.22456487",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "5.1 Elective Connectivity",
+      "text": "H_org,t --consent, scope--> Q_org,t,   Q_org,t ≠ H_org,t",
+      "meaning": "The organizational analogue of the spine's prompt-construction step: a bounded query is drawn from a pre-existing organizational state under a declared scope rather than treated as an unconditioned starting point.",
+      "paper_tier": "definition",
+      "in_master_river": 27
+    },
+    {
+      "label": "(2)",
+      "section": "5 (Capability Activation stage)",
+      "text": "AI(Q_org,t) = K_like,   K_like ≠ K_validated",
+      "meaning": "Any LLM output re-entering an organizational dialogue is knowledge-like, not validated knowledge, regardless of fluency or citation; a dialogic prompting routine can surface a candidate insight but cannot, by fluency alone, certify it as organizational knowledge.",
+      "paper_tier": "definition",
+      "in_master_river": 38
+    },
+    {
+      "label": "unlabeled (5, Reflexive Reconfiguration stage)",
+      "section": "5 (Reflexive Reconfiguration stage)",
+      "text": "H_org,t+1 = U_Horg( H_org,t , ... )",
+      "meaning": "The organizational analogue of retention; a policy change earns the word \"learning\" only if it survives a Human-Return-style audit after LLM support is withdrawn, i.e. \"LLM-present policy behaviour ≠ demonstrated organizational retention\" (the organizational reading of the individual-scale non-collapse \"assisted performance ≠ unaided Human Return\").",
+      "paper_tier": "definition",
+      "in_master_river": 8
+    },
+    {
+      "label": "unlabeled (§2, falsifier condition)",
+      "section": "2 Introduction: From Communication Channel to an Organizational Readout Loop",
+      "text": "no H_org,n+1 ≠ H_org,n attributable to the processing",
+      "meaning": "Falsifier for the claim that LLM-mediated processing of organizational linguistic traces is a retention event: if no traceable residue appears in later organizational readout/policy/practice, the claim reduces to ordinary information throughput with no retention-level effect.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "unlabeled (§5.1, provenance ledger)",
+      "section": "5.1 Construct clarity",
+      "text": "Λ(e_i) = ⟨ Prov_i, Tier_i, Def_i, Reader_i, Falsifier_i ⟩",
+      "meaning": "The per-transition provenance ledger the programme requires of every load-bearing arrow; the original's \"access logs,\" \"rationale fields,\" and \"policy diffs\" indicators are read as partial, organization-scale analogues of this ledger, not yet the full ledger.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "unlabeled (§5.2, AVRH)",
+      "section": "5.2 OLW and AVRH (kept, reformulated)",
+      "text": "D > 0,   Resist > 0,   A_H > 0",
+      "meaning": "AVRH (tension between human values and AI outputs can stimulate value reflection and capability growth) reformulated against the spine's Difference-Resistance-Agency constitutive conditions: \"tension\" is read as Difference, \"guardrails\" as Resistance, and \"capability growth\" must be tested as retained organizational Agency rather than assumed from assisted performance.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "P1",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "Connectivity quality: Elective Connectivity quality predicts the breadth and safety of linguistic assets available for learning.",
+      "meaning": "Falsifier: a held-out organizational comparison shows no reproducible association between governance-quality measures and the breadth or safety of the resulting linguistic-asset corpus, beyond ordinary data-hygiene practice.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P2",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "Activation clarity: Capability Activation routines predict concept clarity and perceived value alignment.",
+      "meaning": "Falsifier: structured dialogic-prompting sessions show no incremental clarity or alignment effect beyond ordinary team meetings or documentation review.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P3",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "Reconfiguration cadence: Reflexive Reconfiguration cadence predicts policy-update rates and learning-KPI improvements.",
+      "meaning": "Falsifier: cadence of reflection sessions shows no relationship to policy-diff rate once leadership attention and resourcing are controlled for.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P4",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "Reviewer diversity: Reviewer diversity strengthens clarity and alignment (moderation).",
+      "meaning": "A loose analogy to, not an instance of, the programme's own Independence Ladder for AI-model checking, which governs model independence, not human reviewer diversity. Falsifier: diversity of reviewers shows no moderating effect once reviewer count and domain expertise are held constant.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P5",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "Over-reliance: Over-reliance on LLM outputs weakens the P2-P3 relationships (negative moderation), paralleling K_like ≠ K_validated at organizational scale.",
+      "meaning": "Falsifier: measured reliance on LLM output shows no negative moderation of the P2/P3 relationships.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P6",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "Minimization trade-off: Data minimization reduces decontextualization risk without lowering activation benefits.",
+      "meaning": "Falsifier: data minimization reduces measured activation benefit in proportion to, or more than, the risk reduction achieved.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P7",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "Dissent protocols: Formal dissent protocols reduce power-capture risk.",
+      "meaning": "Parallels the programme's own non-collapse that diagnosing a compression is not the same as attributing responsibility for it: a protocol's existence is not itself proof that capture has been diagnosed or resolved. Falsifier: organizations with formal dissent protocols show no reduction in power-capture indicators relative to matched organizations without them.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    },
+    {
+      "label": "P8",
+      "section": "7 Propositions for Future Testing (Open Tier)",
+      "text": "SECI complementarity: SECI-practicing organizations experience complementary gains from OLW routines.",
+      "meaning": "Falsifier: SECI-practicing and non-SECI-practicing organizations show no differential gain from adopting OLW routines.",
+      "paper_tier": "hypothesis/Open",
+      "in_master_river": null
+    }
+  ]
+}

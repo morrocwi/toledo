@@ -1,0 +1,383 @@
+{
+  "record_id": 22301318,
+  "title": "The Readout Condition",
+  "doi": "10.5281/zenodo.22301318",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "1. Introduction",
+      "text": "No epistemic discrimination without provenance.",
+      "meaning": "The paper's governing maxim, stated formally as a single-line principle to be unpacked by the rest of the paper.",
+      "paper_tier": "law (governing maxim)",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "2.5 Suhrawardi: selectivity without representation",
+      "text": "Representationality != Selectivity",
+      "meaning": "Non-collapse law: a readout need not be an internal representation to be epistemically relevant; it is relevant insofar as an access relation preserves/makes available distinctions, whether or not representation implements that relation.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "3.2 Units and roles",
+      "text": "D_Phi(x0) = { d0_x' = (x0, x') : Phi(x') != Phi(x0) }",
+      "meaning": "For an actual alternative x0, the set of contrasts the actual claim token resolves against rival alternatives.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "3.2 Units and roles",
+      "text": "P(d) = (V_d, E_d, tau_d)",
+      "meaning": "A provenance analysis assigns each claim distinction d a directed acyclic dependency graph, typed by the map tau_d (access source, access model, background-evidence claim, contrast/relevance operation, inferential commitment, decision policy).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "4.1 Local contrasts and claim discrimination",
+      "text": "Phi : X -> Z",
+      "meaning": "A claim structure represented, in the exact categorical case, as a function from the local contrast space to the distinctions Z the claim makes.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "4.2 Exact functional case",
+      "text": "R : X -> Y",
+      "meaning": "The exact deterministic readout: a function specifying what the relevant access relation preserves, without implying the target is metaphysically discrete or that the readout is a representation.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-1",
+      "section": "4.2 Exact functional case",
+      "text": "Readout-admissible discrimination: a categorical claim structure Phi: X->Z is readout-admissible relative to R: X->Y when it is constant on every fiber of R.",
+      "meaning": "Defines when a claim's distinctions can be legitimately credited to a given readout R.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "4.2 Exact functional case",
+      "text": "R(x) = R(x')  =>  Phi(x) = Phi(x')",
+      "meaning": "Fiber-constancy: the readout-admissibility condition of Definition 1 -- a categorical claim is admissible relative to R exactly when it does not distinguish within any fiber of R.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-1",
+      "section": "4.2 Exact functional case",
+      "text": "Factorization: for functions R: X->Y and Phi: X->Z, the following are equivalent: (i) Phi is constant on every fiber of R; (ii) ker R subset ker Phi; (iii) there exists g-bar: im(R)->Z such that Phi = g-bar o R.",
+      "meaning": "Proved by direct construction (g-bar(y)=Phi(x) for any x with R(x)=y, well-defined by fiber constancy); the philosophical claim is that factorization marks the boundary of legitimate source attribution, not that factorization itself is new mathematics.",
+      "paper_tier": "proposition (with proof)",
+      "in_master_river": null
+    },
+    {
+      "label": "Princ-4",
+      "section": "4.2 Exact functional case",
+      "text": "Exact Readout Condition: if a categorical distinction in Phi is licensed by R alone, then Phi must be readout-admissible relative to R.",
+      "meaning": "States the one-way sufficiency of factorization for formal admissibility (not for overall epistemic warrant).",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "4.3 Relational readouts: pointwise licensing",
+      "text": "N_R(x0) = { x' in X : (x0, x') in I_R }",
+      "meaning": "The local indiscriminability neighbourhood of an actual alternative x0 under a (possibly non-transitive) relational access structure I_R.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "4.3 Relational readouts: pointwise licensing",
+      "text": "N_R(x0) subseteq Phi^{-1}(z0)",
+      "meaning": "Principle 5 (Pointwise Relational Readout Condition): the claim token z0=Phi(x0) is licensed by relational access R alone only if its local indiscriminability neighbourhood lies inside the claim-value fiber -- a pointwise, non-transitively-closed licensing condition.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-2",
+      "section": "4.3 Relational readouts: pointwise licensing",
+      "text": "Reduction to the deterministic case: if I_R is induced by a deterministic readout R via x I_R x' <=> R(x)=R(x'), then requiring (9) for every x0 in X is equivalent to fiber constancy and hence to factorization Phi = g-bar o R on im(R).",
+      "meaning": "Shows the relational (pointwise) condition properly extends, rather than replaces, the exact deterministic factorization condition.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "4.4 Stochastic readouts: access audit, not assumption audit",
+      "text": "K* : Y | X",
+      "meaning": "The actual source relation represented as a Markov kernel (stochastic access experiment).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "4.4 Stochastic readouts: access audit, not assumption audit",
+      "text": "C = G o K*",
+      "meaning": "Principle 6 (Stochastic access admissibility): a downstream channel C uses no target-sensitive access beyond K* only if there exists a Markov kernel G such that C factors as G composed with K* -- an access audit, not a complete provenance audit, since G can absorb an undeclared prior or model.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "4.4 Stochastic readouts: access audit, not assumption audit",
+      "text": "K* != K~",
+      "meaning": "Non-collapse law: the actual access process K* is distinguished from the claimant's model K~ of it; likelihood ratios are ordinarily computed under K~, not read directly from K*.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(13)",
+      "section": "4.4 Stochastic readouts: access audit, not assumption audit",
+      "text": "Lambda_K~(y; x, x') = K~(y|x) / K~(y|x')",
+      "meaning": "The likelihood ratio computed under the claimant's access model K~ (not the actual kernel K*), used in Bayesian updating.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(14)",
+      "section": "4.4 Stochastic readouts: access audit, not assumption audit",
+      "text": "log[P(x|y)/P(x'|y)] = log[P(x)/P(x')] + log Lambda_K~(y; x, x')",
+      "meaning": "The Bayesian log-posterior-odds decomposition, showing that source model and prior occupy different, separable provenance roles.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(15)",
+      "section": "5.2 Identification ladder",
+      "text": "A0 subseteq A1 subseteq ... subseteq Am",
+      "meaning": "A nested sequence of increasingly strong declared augmentation-commitment sets (Manski-style partial-identification ladder).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(16)",
+      "section": "5.2 Identification ladder",
+      "text": "l(d0_x') = min{ j : x' not in Gamma_j }",
+      "meaning": "The first-identification level of a claim distinction: the weakest augmentation layer at which a rival alternative x' becomes excludable; if unidentified at every declared layer, the distinction remains unidentified.",
+      "paper_tier": "definition (identification-ladder audit)",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-2",
+      "section": "5.1 Typed augmentation grammar",
+      "text": "Access augmentation: a new target-sensitive route is added to the epistemic basis (e.g. a second measurement, testimony, retrieved record, sensor), formally the observation structure expands Y1 -> (Y1, Y2).",
+      "meaning": "One of four typed signatures of downstream 'assumption augmentation'.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-3",
+      "section": "5.1 Typed augmentation grammar",
+      "text": "Contrast or relevance operation: the contrast domain changes, X -> X' subseteq X; a restriction selected after inspecting the readout requires its own provenance.",
+      "meaning": "Second typed augmentation signature.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-4",
+      "section": "5.1 Typed augmentation grammar",
+      "text": "Inferential commitment: a model, prior, theory, bridge principle, calibration assumption, or other rule changes what can be inferred from an existing access basis without constituting new current access to the target.",
+      "meaning": "Third typed augmentation signature.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-5",
+      "section": "5.1 Typed augmentation grammar",
+      "text": "Decision-policy augmentation: a loss function, threshold, utility, or institutional rule maps an epistemic state into an action or classification; it can change the decision while leaving evidential discrimination unchanged.",
+      "meaning": "Fourth typed augmentation signature.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Princ-7",
+      "section": "5.3 The E-A-D form of the Readout Condition",
+      "text": "E: provenance existence -- for every epistemically load-bearing claim distinction d, P(d) is nonempty or the claim is explicitly marked provenance-indeterminate.",
+      "meaning": "First of the three E-A-D components of the mature Readout Condition.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "Princ-8",
+      "section": "5.3 The E-A-D form of the Readout Condition",
+      "text": "A: provenance attribution -- if the public or doxastic attribution map credits distinction d to source S, then S must pass the appropriate licensing test for d (fiber discrimination / pointwise neighbourhood exclusion / access admissibility-identification).",
+      "meaning": "Second E-A-D component.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "Princ-9",
+      "section": "5.3 The E-A-D form of the Readout Condition",
+      "text": "D: provenance disclosure -- every non-source node on an essential dependency path to d must remain declared or recoverable at the level relevant to the epistemic practice.",
+      "meaning": "Third E-A-D component; the Readout Condition is defined as E and A and D jointly.",
+      "paper_tier": "law (named principle)",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-6",
+      "section": "5.4 Epistemic overreach and silent lift",
+      "text": "Epistemic overreach: a claim-level distinction exhibits epistemic overreach when it lacks an adequate provenance path, is attributed to a node that does not license it, or depends on an essential augmentation concealed in the relevant epistemic representation.",
+      "meaning": "Names the general failure mode the E-A-D norms are designed to detect.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "Def-7",
+      "section": "5.4 Epistemic overreach and silent lift",
+      "text": "Silent lift: with lambda(d) the actual essential dependency set of distinction d and lambda-hat(d) the represented dependency set, a silent lift occurs when an essential node v is omitted, or a source S is credited with d despite failing its licensing condition.",
+      "meaning": "Names the specific mismatch between actual and represented provenance.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(17)",
+      "section": "5.5 Defeater routing on the provenance DAG",
+      "text": "Ess(d) = intersection over p in Pi(d) of V(p)",
+      "meaning": "The essential dependency set of a distinction d: a node is essential exactly when every currently adequate licensing path for d passes through it.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(18)",
+      "section": "5.5 Defeater routing on the provenance DAG",
+      "text": "Pi_{Delta v}(d) = { p in Pi(d) : v not in V(p) }",
+      "meaning": "Proposition 3 (Defeater Routing): after a node-specific defeater Delta_v, the surviving licensing paths for d are those not passing through v; d loses all provenance support iff v is in Ess(d).",
+      "paper_tier": "proposition (with proof)",
+      "in_master_river": null
+    },
+    {
+      "label": "Cor-1",
+      "section": "5.5 Defeater routing on the provenance DAG",
+      "text": "Misrouted defeat under silent lift: if the symmetric difference between the actual essential set Ess(d) and the represented one Ess-hat(d) is nonempty, then a node-specific defeater aimed at a node in that difference produces a represented vulnerability of d that differs from its actual dependency vulnerability (under-revision or over-revision).",
+      "meaning": "Shows that silent lift causes defeat to propagate incorrectly relative to the true dependency structure.",
+      "paper_tier": "corollary",
+      "in_master_river": null
+    },
+    {
+      "label": "(19)",
+      "section": "6.1 Deterministic composition",
+      "text": "X --R1--> Y1 --R2--> Y2 --...--> Yn",
+      "meaning": "A deterministic readout chain: a record produced, transformed, summarized, processed, and interpreted across successive stages.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(20)",
+      "section": "6.1 Deterministic composition",
+      "text": "ker R1 subseteq ker R1:n",
+      "meaning": "Corollary 2 (Upstream monotonicity): for a deterministic composed chain R1:n, distinctions collapsed by an early stage remain collapsed downstream unless additional access enters the chain.",
+      "paper_tier": "corollary",
+      "in_master_river": null
+    },
+    {
+      "label": "(21)",
+      "section": "6.2 Stochastic composition",
+      "text": "I(X; Y_{j+1}) <= I(X; Y_j)",
+      "meaning": "The data-processing inequality for mutual information in a Markov chain of stochastic readout stages; used only as one metric-specific consequence of the more general Blackwell ordering the paper relies on.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(22)",
+      "section": "6.3 Calibration and the model of the readout",
+      "text": "R* != R~,   K* != K~",
+      "meaning": "Non-collapse law: the actual source relation (deterministic or stochastic) is distinguished from the claimant's model of it, in both the deterministic and stochastic cases.",
+      "paper_tier": "law (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(23)",
+      "section": "8.1 Worked audit I: a positive diagnostic test",
+      "text": "P(D | +) = 0.90(0.01) / [0.90(0.01) + 0.09(0.99)] ~= 0.0917",
+      "meaning": "Worked Bayes'-rule example (sensitivity 0.90, specificity 0.91, prevalence 0.01): the positive-predictive-value computation used to show that posterior discrimination depends on the prevalence prior, not the test alone.",
+      "paper_tier": "measurement (worked example)",
+      "in_master_river": null
+    },
+    {
+      "label": "(24)",
+      "section": "8.1 Worked audit I: a positive diagnostic test",
+      "text": "(y, K~) + pi + L --> belief/action",
+      "meaning": "The sentence 'the test shows the patient has the disease' is shown to compress at least three typed provenance nodes: the readout+access-model, the prior, and the decision loss/threshold.",
+      "paper_tier": "definition (diagram)",
+      "in_master_river": null
+    },
+    {
+      "label": "(25)",
+      "section": "8.2 Worked audit II: AI-assisted inference and retained-record contamination",
+      "text": "C_D = G_D o K*",
+      "meaning": "A fixed trained model with a training corpus D fixed independently of the current case x can pass the stochastic access-admissibility test (Eq. 11) even though training-derived structure materially shapes the output -- illustrating why garbling alone cannot audit hidden assumptions.",
+      "paper_tier": "identity (worked example)",
+      "in_master_river": null
+    },
+    {
+      "label": "Prop-4",
+      "section": "8.2 Worked audit II: AI-assisted inference and retained-record contamination",
+      "text": "Retained-record route: if a supposedly fixed background corpus contains a current-case-specific retained record D(x) that varies with the target alternative and is available through a route not contained in the stated current source K*, then the effective architecture contains additional access (the output need not admit C = G o K* with G independent of that record).",
+      "meaning": "Distinguishes ordinary training-derived background structure from case-specific data contamination/retrieval as a genuinely additional access route.",
+      "paper_tier": "proposition",
+      "in_master_river": null
+    },
+    {
+      "label": "(26)",
+      "section": "9.1 What is actually new",
+      "text": "distinction-token audit + source licensing + identification layer + typed provenance DAG + E-A-D norms + defeater routing",
+      "meaning": "States the paper's novelty claim as the conjunction of these six components, none individually new but jointly forming a distinct architecture.",
+      "paper_tier": "definition (novelty claim)",
+      "in_master_river": null
+    },
+    {
+      "label": "(27)",
+      "section": "11. Conclusion",
+      "text": "What does the attributed source distinguish?",
+      "meaning": "First of the Readout Condition's three governing practical questions.",
+      "paper_tier": "law (governing questions)",
+      "in_master_river": null
+    },
+    {
+      "label": "(28)",
+      "section": "11. Conclusion",
+      "text": "Which distinction does the claim add?",
+      "meaning": "Second governing practical question.",
+      "paper_tier": "law (governing questions)",
+      "in_master_river": null
+    },
+    {
+      "label": "(29)",
+      "section": "11. Conclusion",
+      "text": "Which provenance path makes that addition licit?",
+      "meaning": "Third governing practical question.",
+      "paper_tier": "law (governing questions)",
+      "in_master_river": null
+    },
+    {
+      "label": "(30)",
+      "section": "11. Conclusion",
+      "text": "No epistemic discrimination without provenance.",
+      "meaning": "The governing maxim restated as the paper's final, unqualified conclusion (identical in content to Eq. 1).",
+      "paper_tier": "law (governing maxim)",
+      "in_master_river": null
+    },
+    {
+      "label": "(31)",
+      "section": "A.2 Pointwise relational reduction",
+      "text": "N_R(x0) = R^{-1}(R(x0))",
+      "meaning": "For a deterministic readout inducing the indiscriminability relation, the local indiscriminability neighbourhood equals the fiber of R over R(x0); shows the pointwise condition reduces exactly to fiber constancy.",
+      "paper_tier": "identity",
+      "in_master_river": null
+    },
+    {
+      "label": "(32)",
+      "section": "A.3 Distinction-level attribution map",
+      "text": "lambda-hat : D_Phi(x0) -> 2^V",
+      "meaning": "The attribution map recording, for each rival pair excluded by the actual claim token, which provenance nodes are represented as supporting that exclusion.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    }
+  ]
+}

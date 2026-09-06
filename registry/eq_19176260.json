@@ -1,0 +1,7 @@
+{
+  "record_id": 19176260,
+  "title": "The Architecture of Mediated Agency: Beyond the Misframing of Free Will and Truth",
+  "doi": "10.5281/zenodo.19176260",
+  "equations": [],
+  "note": "5-page prose article with no numbered, boxed, or otherwise displayed equations. It uses inline symbolic notation only within running prose — 'inherent errors (ε_tot > 0)' (abstract; §2.1 Theorem of Irreducible Error) and 'perfect self-knowledge (ε_self = 0)' (§5) — neither of which is set off as a formal displayed/numbered equation, definition box, or named proposition. Checked via both plain and -layout pdftotext extraction of the full 5 pages; no equation environment, numbered formula, or non-collapse (X ≠ Y) law block appears anywhere in the text."
+}

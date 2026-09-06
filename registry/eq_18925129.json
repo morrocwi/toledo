@@ -1,0 +1,23 @@
+{
+  "record_id": 18925129,
+  "title": "Knowledge as Stabilized Translation",
+  "doi": "10.5281/zenodo.18925129",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "6. The Observer as a Bounded System",
+      "text": "M_A(E) = (T_A o Pi_A)(S_A(E))",
+      "meaning": "The canonical observer-pipeline equation: a manifested model of event E is formed by selective uptake S_A, then encoding/reporting Pi_A, then translation T_A into a usable model; without selection, encoding, and translation, no well-defined observer is present.",
+      "paper_tier": "definition (source manuscripts' minimal observation pipeline)",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "6. The Observer as a Bounded System",
+      "text": "Know_A(W) = 1 iff Dist(R_A[n], R_A^nu[n]) <= epsilon_K for all admissible variations nu on the declared window W",
+      "meaning": "Defines knowledge as stabilized representation: a representation counts as known when its distance from the same representation under any admissible variation stays within a tolerance, over a declared window W.",
+      "paper_tier": "definition (knowledge as stability-achievement)",
+      "in_master_river": null
+    }
+  ]
+}

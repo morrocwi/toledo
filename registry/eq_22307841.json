@@ -1,0 +1,39 @@
+{
+  "record_id": 22307841,
+  "title": "Rigour Without Infrastructure: Three Propositions on Claim-Card Discipline as a Substitute for Institutional Certification",
+  "doi": "10.5281/zenodo.22307841",
+  "equations": [
+    {
+      "label": "(unnumbered, Sec.1)",
+      "section": "1 Problem Before Observation",
+      "text": "R_A = O_A(W; Pi_A) != W",
+      "meaning": "The lens never grants direct access to reality (W), only to what was read out; the reader's readout R_A under policy Pi_A is not identical to the world W.",
+      "paper_tier": "definition (readout-not-truth notation, inherited from Readout Universe/Readout Genesis)",
+      "in_master_river": null
+    },
+    {
+      "label": "(unnumbered, Sec.3.3)",
+      "section": "3.3 Existence-Attribution-Disclosure and the five questions",
+      "text": "mechanical validity != semantic validity",
+      "meaning": "A claim-card field that is mechanically presence-checkable (Q1-Q4) is not thereby correctness-checkable; only Q5 (independent check) can close that gap.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(unnumbered, Sec.8.1, disclaimer D-DVP-NOT-K2)",
+      "section": "8.1 Knowledge state / D-DVP-NOT-K2",
+      "text": "DVP != K2",
+      "meaning": "A decorrelated-vendor AI review pass (DVP) is at most an I3 route; no amount of AI-only cross-checking raises a claim to K2 (independent human-validated) status.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(unnumbered, Sec.9 / Appendix disclaimer D-AUTHORSHIP)",
+      "section": "9 AI-assistance disclosure / D-AUTHORSHIP",
+      "text": "AIContribution != EpistemicResponsibility",
+      "meaning": "AI drafting, retrieval, or analysis never substitutes for the human author's final judgment and responsibility for a claim.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    }
+  ]
+}

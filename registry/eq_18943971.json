@@ -1,0 +1,15 @@
+{
+  "record_id": 18943971,
+  "title": "The Civilization of Knowledge: Who Has the Authority to Interpret the World",
+  "doi": "10.5281/zenodo.18943971",
+  "equations": [
+    {
+      "label": "Canonical Formula",
+      "section": "Working Thesis and Governing Formula",
+      "text": "M_A(E) = (T_A ∘ Π_A)(S_A(E)),   S_A(E) ⊆ Δ(E)",
+      "meaning": "The article's single formalized 'governing formula': an agency A's mediated account M of an event/signal E is the composition of translation T_A and stabilization Π_A applied to A's selected/bounded signal S_A(E), where the selected signal is itself a bounded subset of the full space of possible signals Δ(E) about that event. Formalizes the analytical grammar signal → translation → stabilization → agency → conflict/reframing.",
+      "paper_tier": "definition (author-labelled 'Canonical Formula'; the paper explicitly states it does not claim all historical formations can be captured by one formula without remainder — it is an organizing heuristic, not a proven law)",
+      "in_master_river": null
+    }
+  ]
+}

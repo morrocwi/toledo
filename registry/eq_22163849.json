@@ -1,0 +1,983 @@
+{
+  "record_id": 22163849,
+  "title": "The Standalone Scholar: A Dual-Track Architecture for AI-Native Scholarship",
+  "doi": "10.5281/zenodo.22163849",
+  "equations": [
+    {
+      "label": "(1)",
+      "section": "2.1 Cumulative advantage without prestige essentialism",
+      "text": "Credit != EpistemicValue",
+      "meaning": "Credit is a receipt for epistemic work that survived a relevant exposure route, not a unit of truth.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(2)",
+      "section": "2.2 Conceptual research as disciplined theory design",
+      "text": "Phenomenon -> ExistingExplanations -> PreciseInadequacy -> Mechanism -> Boundary -> Propositions",
+      "meaning": "The paper's theorizing pipeline; rejects the shortcut Phenomenon -> NewWord.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(3)",
+      "section": "2.3 Social objectivity, distributed reasoning, and invisible colleges",
+      "text": "Friction != Fellowship",
+      "meaning": "Friction produces objections/counterexamples/correction; Fellowship produces continuity/trust; a healthy environment needs both, and they are not the same social function.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(4)",
+      "section": "3.1 Standalone is an infrastructural condition",
+      "text": "K0_start = I0 + R0 + N0 + P0",
+      "meaning": "Institutional starting capital as a bookkeeping identity: institutional (I0) + recognition (R0) + network (N0) + accumulated publication (P0) capital.",
+      "paper_tier": "definition (bookkeeping identity, not a psychometric scale)",
+      "in_master_river": null
+    },
+    {
+      "label": "(5)",
+      "section": "3.1 Standalone is an infrastructural condition",
+      "text": "E_t = f(Q_t, C_t, V_t, U_t, X_t, T_t)",
+      "meaning": "Earned scholarly credit as a conceptual (directional, not estimated) function of contribution quality Q, programme coherence C, external validation V, uptake U, scholarly exposure X, and traceability T.",
+      "paper_tier": "definition (conceptual/Dr, directional claim only)",
+      "in_master_river": null
+    },
+    {
+      "label": "(6)",
+      "section": "3.2 Two engines and one bridge",
+      "text": "Phenomenon -> TheoreticalInadequacy -> Mechanism -> ConceptualContribution",
+      "meaning": "Engine A's canonical transformation: an independent theory-programme engine oriented toward sociology/politics of knowledge.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(7)",
+      "section": "3.2 Two engines and one bridge",
+      "text": "Practice -> Observation -> Intervention -> Evidence -> Implementation",
+      "meaning": "Engine B's canonical transformation: a practice-research engine oriented toward intervention and empirically constrained practice.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(8)",
+      "section": "3.2 Two engines and one bridge",
+      "text": "Bridge = 1  <=>  Practice Delta Theory",
+      "meaning": "A bridge between the two engines is justified only when practice produces a substantive change (Delta) in what the theory must explain; a firewall against silently generalizing practice experience into population evidence.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(9)",
+      "section": "3.3 The lived and positional bridge: context of discovery without evidential privilege",
+      "text": "SelfExperience != GeneralEvidence",
+      "meaning": "Situated/self experience can detect a mechanism or generate a question but cannot by itself prove a theory or establish representativeness.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(10)",
+      "section": "3.3 The lived and positional bridge",
+      "text": "PosCap = Access x Language x SituatedObservation x TranslationCapacity x Trust",
+      "meaning": "Positional capital defined as a channel specification (multiplicative bottleneck), not an authority score.",
+      "paper_tier": "definition/Dr (not a psychometric construct)",
+      "in_master_river": null
+    },
+    {
+      "label": "(11)",
+      "section": "3.3 The lived and positional bridge",
+      "text": "PositionalAccess != PopulationAuthority",
+      "meaning": "Safeguard on positional capital: local/situated access does not confer authority over a population-level claim.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(12)",
+      "section": "3.3 The lived and positional bridge",
+      "text": "CommunityTrust != Representativeness",
+      "meaning": "Safeguard on positional capital: trust within a local community does not entail statistical representativeness.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(13)-(16)",
+      "section": "4 Knowledge states: synthetic formation is not independent validation",
+      "text": "K0: private candidate;  K1: public, timestamped, citable, explicitly provisional;  K2: K1 + independent external friction;  K3: K2 + review or independent empirical constraint",
+      "meaning": "The four knowledge states of the model; the hierarchy is not a truth ladder, only a record of what kinds of exposure have occurred.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(17)",
+      "section": "4 Knowledge states",
+      "text": "K0 -> K1 -> K2 -> K3",
+      "meaning": "The staging layer through which a candidate asset moves.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(18)",
+      "section": "4 Knowledge states",
+      "text": "DVP =/=> K2",
+      "meaning": "No amount of same-ancestry AI (Decorrelated Verification Protocol) criticism is relabeled as independent human validation.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(19)",
+      "section": "5.1 The Epistemic Isolation Constraint",
+      "text": "mu_H,f approx 0,   mu_A >> mu_H,f",
+      "meaning": "A common starting condition for an unaffiliated scholar: human formation-friction throughput near zero while AI exploration throughput vastly exceeds it.",
+      "paper_tier": "finite_diagnostic / definitional starting condition",
+      "in_master_river": null
+    },
+    {
+      "label": "(20)",
+      "section": "5.1 The Epistemic Isolation Constraint",
+      "text": "EIC => BuildSyntheticFormationInfrastructure",
+      "meaning": "The Epistemic Isolation Constraint does not imply research must stop; it implies synthetic (AI-based) formation infrastructure must be built.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(21)",
+      "section": "5.1 The Epistemic Isolation Constraint",
+      "text": "AI speed -> synthetic criticism -> K1 -> human correction",
+      "meaning": "The intended sequence preserving the asymmetry between synthetic and independent routes.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(22)",
+      "section": "5.2 Bottleneck inversion",
+      "text": "Lambda = min(mu_L, mu_H, mu_E, mu_P, mu_C)",
+      "meaning": "Effective public throughput approximated by the minimum of five slower human/institutional stage rates: literature verification, human mastery, external friction, publication/certification, credit conversion.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(23)",
+      "section": "5.2 Bottleneck inversion",
+      "text": "V_c = (H * L * T)^(1/3)",
+      "meaning": "Verification capacity as a geometric combination of normalized human mastery H, literature verification L, and traceability T.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(24)",
+      "section": "5.2 Bottleneck inversion",
+      "text": "D_e = A * (1 - V_c)",
+      "meaning": "Epistemic debt as AI intensity A times the shortfall in verification capacity; a governance definition motivated by the epistemic-debt concept, not an estimated cognitive law.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(25)",
+      "section": "5.2 Bottleneck inversion",
+      "text": "PublicOutputVelocity <= VerificationCapacity",
+      "meaning": "The bottleneck-inversion rule made practical: public output cannot outpace verification capacity without accruing debt/fragmentation.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(26)",
+      "section": "6.1 Route diversity, not model voting",
+      "text": "ManyModels =/=> Independence",
+      "meaning": "Nominal multiplicity of AI models does not by itself establish independence of checking routes.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(27)",
+      "section": "6.1 Route diversity, not model voting",
+      "text": "DVP* = ReduceCorrelatedError + ExposeResidualDependence + BottomOutWherePossible",
+      "meaning": "The objective function of the Decorrelated Verification Protocol.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(28)",
+      "section": "6.2 Frame break, recovery, and anchored checks",
+      "text": "MechanicalValidity != SemanticValidity",
+      "meaning": "A mechanically executed check (test suite, type checker, proof kernel) passing does not entail the semantic claim is correct.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(29)",
+      "section": "6.2 Frame break, recovery, and anchored checks",
+      "text": "SourceExistence != ClaimSupport",
+      "meaning": "A cited source existing does not entail that it supports the claim it is cited for.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(30)",
+      "section": "6.3 Disagreement as information",
+      "text": "Disagreement => Resolve v Declare",
+      "meaning": "DVP reverses the intuition that consensus is most valuable: a disagreement must be resolved or explicitly declared, not averaged away.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(31)",
+      "section": "7 From friction to fellowship",
+      "text": "Friendship != IndependentEvidence",
+      "meaning": "Fellowship remains epistemically bounded: a friendly relationship is not independent evidence.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(32)",
+      "section": "7 From friction to fellowship",
+      "text": "Correspondence != PeerReview",
+      "meaning": "Ongoing correspondence with a reflector node is not equivalent to formal peer review.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(33)",
+      "section": "7 From friction to fellowship",
+      "text": "IntellectualAffinity != Truth",
+      "meaning": "Shared intellectual affinity with a correspondent is not truth.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(34)",
+      "section": "8 Programme legibility: coherence that cannot be seen cannot convert",
+      "text": "Coh_effective = Coh_latent x L_g",
+      "meaning": "Effective programme coherence as latent coherence multiplied by programme legibility L_g.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(35)",
+      "section": "8 Programme legibility",
+      "text": "L_g^proxy = (public assets with a one-click programme path) / (public assets)",
+      "meaning": "A simple proxy for programme legibility; measures path availability, not actual reader comprehension.",
+      "paper_tier": "definition (proxy measure)",
+      "in_master_river": null
+    },
+    {
+      "label": "(36)",
+      "section": "8 Programme legibility",
+      "text": "K1 -> RelatedAssetDiscovery -> LongerExposure -> K2 opportunity",
+      "meaning": "How legibility changes the probability that one public asset leads to another and eventually to a K2 opportunity.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(37)",
+      "section": "8.1 Association stability and recognition conversion",
+      "text": "A_s = AssociationStrength(Author, Problem)",
+      "meaning": "Repeated association strength between an author and a recognizable problem family.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(38)",
+      "section": "8.1 Association stability and recognition conversion",
+      "text": "A_s(t+1) > A_s(t)",
+      "meaning": "The directional governance target: association strength should grow over time, lowering the cost for readers to locate new work in an existing argumentative history.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(39)",
+      "section": "8.1 Association stability and recognition conversion",
+      "text": "Paper1 -> Theme;  Paper2 -> SameTheme + NewMechanism;  Paper3 -> EmpiricalTest;  Paper4 -> BoundaryExtension",
+      "meaning": "The source mechanism preserved for recognition conversion: a concept cluster should deepen a recognizable problem family rather than reset field identity each paper.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(40)",
+      "section": "9.1 Production criticality is not scholarly-credit criticality",
+      "text": "chi_t = lambda_mint / (lambda_conv + epsilon)",
+      "meaning": "Stock Pressure Ratio: rate of K1 production over rate of qualified conversion actions (plus a small epsilon to avoid division by zero).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(41)",
+      "section": "9.1 Production criticality is not scholarly-credit criticality",
+      "text": "B_t+1 = B_t + M_t - omega * X_t",
+      "meaning": "Backlog evolution: new provisional assets M_t accumulate, offset by qualified conversion actions X_t weighted by average stock activated per action, omega.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(42)",
+      "section": "9.2 Mint-convert coupling",
+      "text": "M_t <= lambda * X_t",
+      "meaning": "During high-stock/low-conversion regimes, new minting should be coupled to (bounded by) conversion work, with lambda calibrated from the scholar's own ledger.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(43)",
+      "section": "9.3 Back-catalog activation",
+      "text": "C_t+1 = (1 - delta) * C_t + G_t + Phi_t(Stock) * I_t * P_t^(r) * S_t",
+      "meaning": "Conversion-first credit-stock equation: current activity credit G_t plus realized credit from activating pre-existing stock Phi_t(Stock), moderated by integrity retention I_t, priority retention P_t^(r), survival S_t, and decay delta.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(44)",
+      "section": "9.3 Back-catalog activation",
+      "text": "ActivationAction != CreditEvent",
+      "meaning": "An activation action (e.g. an email) is not itself a credit event; only a substantive independent reply/review/citation/reuse/invitation/extension may be.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(45)",
+      "section": "9.3 Back-catalog activation",
+      "text": "d^2 E[C] / dt^2 > 0   can occur while   dM/dt <= 0",
+      "meaning": "Credit acceleration without faster new-asset production is mathematically possible under the stock model.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(46)",
+      "section": "9.3 Back-catalog activation",
+      "text": "dPhi(Stock)/dt > 0",
+      "meaning": "The condition (rising back-catalog activation rate) under which credit acceleration without faster production can occur.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(47)",
+      "section": "9.4 Concept-cluster compounding",
+      "text": "FlagshipConcept -> Preprint -> Conference -> Journal -> EmpiricalTest -> ComparativeExtension -> Grant",
+      "meaning": "The unit of strategic accumulation: one intellectual investment exposed repeatedly through non-duplicative scholarly objects.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(48)",
+      "section": "9.4 Concept-cluster compounding",
+      "text": "CreditLeverage_i = ( sum_{j=1}^{n} CreditEvent_ij ) / (CoreIntellectualInvestment_i + epsilon)",
+      "meaning": "Leverage of concept cluster i: total credit events generated per unit of core intellectual investment, subject to non-duplication and venue rules.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(49)",
+      "section": "10 Credit, provenance, and Goodhart control",
+      "text": "PRC(e_i) in {0, 1}",
+      "meaning": "The Provenance Relevance Constraint: a binary gate on whether candidate event e_i has traceable provenance, programme relevance, non-manipulation, external exposure, and integrity preservation.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(50)",
+      "section": "10 Credit, provenance, and Goodhart control",
+      "text": "C_t^valid = sum_i w_i * e_i * PRC(e_i)",
+      "meaning": "Valid credit as a PRC-gated, governance-weighted sum of credit events; weights w_i are not units of truth.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(51)",
+      "section": "11 Scholarly Credit Velocity and Gradient Discipline",
+      "text": "V_C = dE[C]/dt ~= (CreditCreation x Retention x Conversion) / H_critical",
+      "meaning": "Credible credit velocity per scarce critical human time H_critical, as the real optimization target instead of paper count.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(52)",
+      "section": "11 Scholarly Credit Velocity and Gradient Discipline",
+      "text": "AIAcceleration -> HumanTimeReallocation",
+      "meaning": "AI acceleration should reallocate protected human functions (conceptual commitment, verification, falsifier design, etc.) rather than merely multiply public outputs.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(53)",
+      "section": "11 Scholarly Credit Velocity and Gradient Discipline",
+      "text": "V proportional-to  product_j x_j",
+      "meaning": "If the velocity architecture is approximately multiplicative across factors x_j.",
+      "paper_tier": "definition/Dr (heuristic functional form)",
+      "in_master_river": null
+    },
+    {
+      "label": "(54)",
+      "section": "11 Scholarly Credit Velocity and Gradient Discipline",
+      "text": "dV/dx_j = V / x_j",
+      "meaning": "Marginal derivative of a multiplicative velocity function with respect to one factor.",
+      "paper_tier": "definition (algebraic consequence of eq.53)",
+      "in_master_river": null
+    },
+    {
+      "label": "(55)",
+      "section": "11 Scholarly Credit Velocity and Gradient Discipline",
+      "text": "Priority_j = (dV/dx_j) / (MarginalHumanCost_j + epsilon)",
+      "meaning": "Cost-adjusted priority used for Gradient Discipline: focus each quarter's growth KPIs on the bottom one or two controllable, cost-adjusted factors.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(56)",
+      "section": "12 Criticality as a control mapping",
+      "text": "k_t = nu_t * f_coh,t * L_g,t * p_int,t * m_leg,t * u_conv,t * P_NL,t",
+      "meaning": "Diagnostic scholarly multiplication factor (reactor-control analogy) combining opportunity reproduction, latent coherence, legibility, integrity survival, field legibility, conversion utilization, and non-leakage; diagnostic only, never optimized directly.",
+      "paper_tier": "definition (diagnostic; explicitly disclaimed as a structural analogy, not a physical law)",
+      "in_master_river": null
+    },
+    {
+      "label": "(57)",
+      "section": "12.1 Prompt versus delayed channels",
+      "text": "beta_D = ( sum_d w_d E_d ) / ( sum_d w_d E_d + sum_p w_p E_p + epsilon )",
+      "meaning": "Preweighted delayed-channel index: the share of weighted engagement coming from delayed/independent channels versus prompt channels.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(58)",
+      "section": "12.1 Prompt versus delayed channels",
+      "text": "IncreaseMintRate => beta_D >= beta_min  AND  IntegrityClean  AND  XenonLow  AND  ConversionLogOn",
+      "meaning": "The reactivity license governing when production expansion is permitted.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(59)",
+      "section": "12.2 Reflectors, moderators, xenon, and breeders",
+      "text": "rho_R = N^ind_{<=6m} / N^cit_{>6m}",
+      "meaning": "Scholarly albedo: citable assets receiving independent engagement within six months over eligible older citable assets.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(60)",
+      "section": "12.2 Reflectors, moderators, xenon, and breeders",
+      "text": "RawSpeed (down-arrow) =/=> V_C (down-arrow)",
+      "meaning": "The Moderator Principle: slowing raw production through verification/translation/differentiation does not entail lower credit velocity; some friction is an accelerator.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(61)",
+      "section": "12.2 Reflectors, moderators, xenon, and breeders",
+      "text": "X_t = 1*(O_sub) + 2*(E_known) + 3*(C_stale)",
+      "meaning": "The Xenon Ledger: a weighted count of unresolved substantive objections (O_sub), known citation/metadata errors (E_known), and known stale public claims (C_stale) that can trigger portfolio freeze or shutdown.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(62)",
+      "section": "12.2 Reflectors, moderators, xenon, and breeders",
+      "text": "BR_t = N^{ind-reuse}_t / N^{terminal}_t",
+      "meaning": "Breeder Layer diagnostic ratio: newly independently-reused/extended assets over public terminal outputs.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(63)",
+      "section": "13 Legitimacy without truth laundering",
+      "text": "L_H != Truth,   L_V != Truth",
+      "meaning": "Neither horizontal legitimacy (peer-to-peer scrutiny) nor vertical legitimacy (institutional review/certification) is truth.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(64)",
+      "section": "13 Legitimacy without truth laundering",
+      "text": "HorizontalGeneration -> EpistemicFriction -> VerticalStrengthening -> ResourceReturn -> HorizontalGrowth",
+      "meaning": "The Legitimacy Circulation Loop, treating institutions as amplifiers/filters rather than truth oracles.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(65)",
+      "section": "14 Readout Universe as meta-governance",
+      "text": "M_A[n] = K_A * theta(E[n]) + eta_sel + eta_map + eta_self",
+      "meaning": "Generic representation of a readout from agent/institution A, adopted from the author's Readout Universe programme.",
+      "paper_tier": "definition (inherited from Readout Universe/Lahtee 2026a)",
+      "in_master_river": null
+    },
+    {
+      "label": "(66)",
+      "section": "14 Readout Universe as meta-governance",
+      "text": "M_A[n] != theta(E)",
+      "meaning": "Non-collapse: an AI synthesis, reviewer judgment, conference reaction, citation count, or institutional prestige is not the state of the literature/intrinsic quality/final value/truth itself.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(67)",
+      "section": "14 Readout Universe as meta-governance",
+      "text": "r = A*epsilon - delta,   V = (1/2) * r^T * W * r",
+      "meaning": "A simple residual model: unresolved tension r between the scholar's model and returned records, and a weighted residual magnitude V used to reduce (not eliminate) the residual without erasing the core contribution.",
+      "paper_tier": "definition/Dr",
+      "in_master_river": null
+    },
+    {
+      "label": "(68)",
+      "section": "14 Readout Universe as meta-governance",
+      "text": "ClaimStrength <= EvidenceStrength",
+      "meaning": "The invariant governing every claim's tier (definition/Dr/Open/finite_diagnostic/fit_calibrated/machine-checked).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(69)",
+      "section": "15.1 Why one global route is insufficient",
+      "text": "P_local (not subset of) D_AI",
+      "meaning": "If the set of situated local records/languages/communities is not a subset of the AI/search-accessible distribution.",
+      "paper_tier": "definition/Dr (conditional premise)",
+      "in_master_river": null
+    },
+    {
+      "label": "(70)",
+      "section": "15.1 Why one global route is insufficient",
+      "text": "MultiAIConsensus =/=> GeographicCompleteness",
+      "meaning": "Agreement among multiple AI/search systems does not entail geographic completeness of coverage; a claim about correlated coverage, not unique AI bias.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(71)",
+      "section": "15.2 Geographic Distribution Audit",
+      "text": "DVP* = DVP + GDA",
+      "meaning": "The verification packet extended with the Geographic Distribution Audit (five questions about local/Global-South blind spots).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(72)",
+      "section": "15.3 Global strength without identity dependence",
+      "text": "S_G = L x G x M x B x F",
+      "meaning": "Governance score for the blind-name test: literature embeddedness L, gap/inadequacy precision G, mechanism clarity M, boundary conditions B, field fit F; multiplicative so any near-zero factor collapses global manuscript strength.",
+      "paper_tier": "definition/Dr (not a psychometric scale)",
+      "in_master_river": null
+    },
+    {
+      "label": "(73)-(74)",
+      "section": "15.3 Global strength without identity dependence",
+      "text": "DoubleBlind = Bonus;   DoubleBlind != Requirement",
+      "meaning": "The preserved decision rule: double-blind review is treated as a bonus, not a hard requirement, since the architecture does not make anonymity a prerequisite.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(75)",
+      "section": "15.3 Global strength without identity dependence",
+      "text": "ManuscriptStrength > IdentityDependence",
+      "meaning": "The governing priority: manuscript strength should exceed reliance on author identity/affiliation for evaluation.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(76)",
+      "section": "15.4 Global and Thai tracks",
+      "text": "ConversionPlan_i = {Global_i, Thai_i}",
+      "meaning": "Each socially relevant flagship is assigned both a global and a Thai conversion route.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(77)",
+      "section": "15.4 Global and Thai tracks",
+      "text": "K2,Global != K2,Thai",
+      "meaning": "A global K2 (independent friction) event is not the same as a Thai-track K2 event; the Thai track is not a lower-status version of the global track.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(78)",
+      "section": "15.4 Global and Thai tracks",
+      "text": "K2,Global + K2,Thai => RouteDiversity (up-arrow)",
+      "meaning": "Combining global and Thai routes raises route diversity.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(79)",
+      "section": "16 Thailand as an operational epistemic counter-map",
+      "text": "FrictionValue_e = (F_e * O_e * D_e * R_e) / (T_e + C_e + P_e + epsilon)",
+      "meaning": "Friction value of local event e: fit, openness, expected depth, and repeat-node potential in the numerator; travel, cash, and preparation costs in the denominator.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(80)",
+      "section": "16 Thailand as an operational epistemic counter-map",
+      "text": "GlobalAsset -> ThaiLegibility -> ThaiFriction",
+      "meaning": "The function of a Thai companion artifact for a global flagship: not duplicate publication, but a legibility/friction bridge.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(81)",
+      "section": "17 Open research toolchain as epistemic division of labour",
+      "text": "a*_f = argmax_a  FaceIndependence_f(a)",
+      "meaning": "The preferred entry artifact for a discipline f is the one maximizing field-legible inspectability while minimizing dependence on face or status.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(82)",
+      "section": "18.1 Integrity firewall",
+      "text": "AI candidate -> OriginalSource -> ClaimMatch -> VerifiedCitation",
+      "meaning": "The non-negotiable citation path: AI output never goes directly into a citation ledger.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(83)",
+      "section": "18.3 Survival buffer",
+      "text": "Reject -> Objection -> Revision -> Delta Q",
+      "meaning": "Every flagship's rejection budget must produce diagnostic information (a quality delta), not repeated resubmission without learning.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(84)",
+      "section": "18.4 Attention-credit separation",
+      "text": "A_t != C_t^scholarly",
+      "meaning": "Public attention A_t at time t is not the same as scholarly credit C_t; attention contributes only when converted into an asset, discussion, reuse, or independent opportunity.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(85)",
+      "section": "19 Human Mastery, ethics, and creator-evaluator separation",
+      "text": "H_g = (questions defended without AI) / 10",
+      "meaning": "A governance heuristic for the Human Mastery Gate: fraction of ten defense questions the author can answer without AI assistance; a local threshold such as H_g >= 0.8 is a heuristic, not a universal standard.",
+      "paper_tier": "definition (governance heuristic)",
+      "in_master_river": null
+    },
+    {
+      "label": "(86)",
+      "section": "19 Human Mastery, ethics, and creator-evaluator separation",
+      "text": "InterventionCreator != SoleEvaluator",
+      "meaning": "For practice and human-subject research, the creator of an intervention cannot be its sole evaluator.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(87)",
+      "section": "19 Human Mastery, ethics, and creator-evaluator separation",
+      "text": "PracticeExperience != PopulationEvidence",
+      "meaning": "High-resolution practice access does not by itself constitute population-level evidence.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(88)",
+      "section": "20 Portfolio control and defeat conditions",
+      "text": "SCRAM = FreezeNewRelease + Correction + ReAudit",
+      "meaning": "The emergency-shutdown response triggered by fabricated/unverified citations, uncorrected known errors, undisclosed conflicts, coercion risk, mastery-gate failure, or claim scope exceeding evidence scope.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(89)",
+      "section": "21 An integrated architecture",
+      "text": "Phenomenon -> AIExploration -> DVP -> HumanMastery -> Integrity -> K1 -> {Global, Local Friction} -> K2 -> Revision -> K3",
+      "meaning": "The full directed sequence with feedback representing the integrated architecture.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(90)",
+      "section": "21 An integrated architecture",
+      "text": "E[C_{t+k}] > C_t",
+      "meaning": "The appropriate momentum horizon: expected credit at a meaningful medium-term horizon k should exceed current credit, subject to integrity/survival constraints (not requiring monotone period-over-period growth).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(91)",
+      "section": "21 An integrated architecture",
+      "text": "V_C* = (C_Y * Coh_latent * L_g * Conv * Net * I * R * P * S * Ver) / (H_critical * (Debt + Frag + Bias + COI + epsilon))",
+      "meaning": "A compact maximum-velocity heuristic: numerator terms are defensible conversion assets, denominator terms are human-time or epistemic liabilities; deliberately heuristic, meant to point the gradient toward the bottleneck.",
+      "paper_tier": "definition (deliberately heuristic, not a precision instrument)",
+      "in_master_river": null
+    },
+    {
+      "label": "(92)",
+      "section": "22 Research propositions and empirical agenda",
+      "text": "P* = argmax_{P_i} [ TheoreticalImportance_i x DiscriminatingPower_i ]",
+      "meaning": "Critical empirical test selection: the candidate proposition with the highest joint theoretical importance and discriminating power.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(93)",
+      "section": "22 Research propositions and empirical agenda",
+      "text": "ConceptualPaper -> CriticalEmpiricalTest -> TheoryRevision",
+      "meaning": "The intended sequence for the preferred empirical project: the one whose adverse result would most force revision.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(94)",
+      "section": "24 Conclusion: from epistemic isolation to epistemic position",
+      "text": "EpistemicPosition = RecognizableProblem + RepeatHumanNodes + CitableAssets + CorrectionHistory",
+      "meaning": "Compact definition of the paper's endpoint construct, epistemic position.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(95)",
+      "section": "24 Conclusion: from epistemic isolation to epistemic position",
+      "text": "CrediblePath = EarlyTimestamp + ExplicitProvisionality + RapidRevision + ExternalFriction + EventualCertification",
+      "meaning": "Compact definition of the fastest credible pathway (not maximum production).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(96)",
+      "section": "Appendix A: Finite diagnostic that motivated the conversion pivot",
+      "text": "M_attention != M_truth,   M_attention != M_K2",
+      "meaning": "Attention-based metrics are not truth metrics and are not K2 (independent-validation) metrics.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(97)-(100)",
+      "section": "Appendix B.1 Knowledge-state boundary",
+      "text": "K0: private candidate;  K1: K0 + public timestamp, provenance, provisionality;  K2: K1 + substantive external friction;  K3: K2 + review/certification/empirical constraint",
+      "meaning": "Appendix restatement of the four knowledge states (operational state ladder).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(101)",
+      "section": "Appendix B.1 Knowledge-state boundary",
+      "text": "DVP =/=> K2",
+      "meaning": "The non-laundering invariant restated in the appendix: DVP alone never yields K2.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(102)",
+      "section": "Appendix B.2 DVP route packet",
+      "text": "MechanicalValidity != SemanticValidity",
+      "meaning": "Restated boundary for anchored checks in the DVP route packet.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(103)",
+      "section": "Appendix B.2 DVP route packet",
+      "text": "SourceExistence != ClaimSupport",
+      "meaning": "Restated boundary for anchored checks in the DVP route packet.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(104)",
+      "section": "Appendix B.4 Preprint-to-human conversion",
+      "text": "NoHumanAvailable =/=> ResearchStop",
+      "meaning": "Absence of an available human interlocutor is not a rule to stop research.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(105)",
+      "section": "Appendix B.4 Preprint-to-human conversion",
+      "text": "NoHumanAvailable => DVP -> K1 -> HumanAcquisition",
+      "meaning": "Instead, absence of a human triggers the DVP-to-K1-to-acquisition sequence.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(106)",
+      "section": "Appendix C Material feasibility and publication-cost boundary",
+      "text": "B_year = B_conference + B_ethics + B_software + B_data + B_publication + B_travel",
+      "meaning": "Annual research resources treated as required inputs, not model outputs.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(107)-(108)",
+      "section": "Appendix C Material feasibility and publication-cost boundary",
+      "text": "Prestige =/=> APCApproval;   APCApproval => FieldFit + CreditYield + BudgetFit",
+      "meaning": "Governing boundaries on article-processing-charge (APC) approval: prestige alone never authorizes an APC payment, which instead requires field fit, credit yield, and budget fit jointly.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(109)",
+      "section": "Appendix C Material feasibility and publication-cost boundary",
+      "text": "MissingResource => ProjectHold",
+      "meaning": "A feasibility gate: a missing load-bearing resource holds the project rather than proceeding on assumed future funding.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(110)",
+      "section": "Appendix C.1 Superseded publication-credit multiplier",
+      "text": "PC_i = JournalQuality_i x ProgrammeFit_i x ContributionStrength_i x UptakePotential_i",
+      "meaning": "The source architecture's original publication-credit multiplier; explicitly superseded by the K2/journal-friction selection architecture (eqs. 111-113) but its ordering function is preserved.",
+      "paper_tier": "definition (superseded)",
+      "in_master_river": null
+    },
+    {
+      "label": "(111)",
+      "section": "Appendix D K2 procurement",
+      "text": "Cost_{K2,r} = (Cash_r + lambda_H*H_r + lambda_L*L_r) / (D_r * R_r * I_r + epsilon)",
+      "meaning": "Cost of pursuing K2 via route r, combining cash, human-hour, and latency costs against expected depth, relevance, and independence.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(112)",
+      "section": "Appendix D K2 procurement",
+      "text": "ExpectedK2Yield_j = ( P(Review_j) * Depth_j * Fit_j ) / (Cash_j + Prep_j + Latency_j + epsilon)",
+      "meaning": "A journal-routing heuristic estimating expected K2 yield from submitting to venue j.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(113)",
+      "section": "Appendix D K2 procurement",
+      "text": "EffectiveK2 = Depth x Relevance x Independence",
+      "meaning": "Effective friction value of a K2 event; global and Thai/local friction are complementary rather than substitutable.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(114)",
+      "section": "Appendix E.1 Stock pressure and mint-convert coupling",
+      "text": "chi_t = lambda_mint,t / (lambda_conv,t + epsilon)",
+      "meaning": "Appendix restatement of the Stock Pressure Ratio (eq. 40).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(115)",
+      "section": "Appendix E.1 Stock pressure and mint-convert coupling",
+      "text": "B_t+1 = B_t + M_t - omega * X_t",
+      "meaning": "Appendix restatement of backlog evolution (eq. 41).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(116)",
+      "section": "Appendix E.1 Stock pressure and mint-convert coupling",
+      "text": "M_t <= lambda * X_t",
+      "meaning": "Appendix restatement of the mint-convert coupling rule (eq. 42).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(117)",
+      "section": "Appendix E.1 Stock pressure and mint-convert coupling",
+      "text": "C_t+1 = (1 - delta) * C_t + G_t + Phi_t(Stock) * I_t * P_t^(r) * S_t",
+      "meaning": "Appendix restatement of the conversion-first credit-stock equation (eq. 43).",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(118)",
+      "section": "Appendix E.2 Critical human time and WIP",
+      "text": "H_planned > H_sustainable => PortfolioShrink",
+      "meaning": "General rule: if planned critical-human-time demand exceeds sustainable capacity, the portfolio must shrink.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(119)",
+      "section": "Appendix E.2 Critical human time and WIP",
+      "text": "PublicWIP <= 3",
+      "meaning": "The local guardrail on work-in-progress assets in active external process.",
+      "paper_tier": "definition (local heuristic guardrail)",
+      "in_master_river": null
+    },
+    {
+      "label": "(120)",
+      "section": "Appendix E.3 Portfolio and project priority",
+      "text": "Priority_i = (I_i * N_i * E_i * F_i * Y_i * S_i) / (D_i + C_i + Frag_i + COI_i + epsilon)",
+      "meaning": "Multiplicative project-priority score combining importance, novelty, explanatory leverage, programme fit, credit yield, and priority security against epistemic debt, execution cost, fragmentation, and conflict-of-interest risk.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(121)-(122)",
+      "section": "Appendix F AI disclosure and provenance protocol",
+      "text": "DisclosurePenalty =/=> Concealment;   DisclosurePenalty => BetterProvenance + BetterHumanDefence + VenueFit",
+      "meaning": "Evidence that AI disclosure can reduce perceived trust does not license concealment; the correct operational response is stronger provenance, disclosure, and venue fit.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(123)",
+      "section": "Appendix F.2 Route-level disclosure",
+      "text": "AIContribution != EpistemicResponsibility",
+      "meaning": "Restated invariant governing route-level AI disclosure: contribution disclosure never transfers epistemic responsibility.",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(124)",
+      "section": "Appendix H Embedded-practice and positionality firewall",
+      "text": "NetPractice = P_A - (Co + Bi)",
+      "meaning": "A bookkeeping heuristic weighing practice capital P_A against conflict risk Co and insider bias Bi; not a numerical estimate, but a decision-forcing frame.",
+      "paper_tier": "definition (bookkeeping heuristic)",
+      "in_master_river": null
+    },
+    {
+      "label": "(125)",
+      "section": "Appendix H.1 Discovery-justification separation",
+      "text": "PracticeObservation -> Hypothesis",
+      "meaning": "Practice observation can generate a hypothesis, but substantive public claims require the following (eq. 126).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(126)",
+      "section": "Appendix H.1 Discovery-justification separation",
+      "text": "Claim <- Literature + ExternalEvidence + ComparativeEvidence",
+      "meaning": "A public claim must be grounded in literature, external evidence, and comparative evidence, not practice observation alone.",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(127)",
+      "section": "Appendix H.1 Discovery-justification separation",
+      "text": "InterventionCreator != SoleEvaluator",
+      "meaning": "Restated invariant for outcome claims from embedded practice (same as eq. 86).",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(128)",
+      "section": "Appendix H.1 Discovery-justification separation",
+      "text": "ClaimScope <= SamplingScope",
+      "meaning": "A claim cannot be generalized beyond the population identified by the sampling design.",
+      "paper_tier": "governance definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(129)",
+      "section": "Appendix I.1 Dual-track invariant",
+      "text": "ConversionPlan_i = {Global_i, Thai_i}",
+      "meaning": "Appendix restatement of the dual-track assignment (same as eq. 76).",
+      "paper_tier": "definition",
+      "in_master_river": null
+    },
+    {
+      "label": "(130)",
+      "section": "Appendix I.1 Dual-track invariant",
+      "text": "K2,Global != K2,Thai",
+      "meaning": "Appendix restatement of the global/Thai K2 non-collapse (same as eq. 77).",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    },
+    {
+      "label": "(131)",
+      "section": "Appendix I.2 Geographic Distribution Audit",
+      "text": "MultiAIConsensus =/=> GeographicCompleteness",
+      "meaning": "Appendix restatement of the multi-AI-consensus non-collapse (same as eq. 70).",
+      "paper_tier": "identity (non-collapse)",
+      "in_master_river": null
+    }
+  ]
+}
