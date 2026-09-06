@@ -34,3 +34,8 @@ RAM: ≤3–4 sonnet workers; coqc strictly sequential; check `free -g` (stop if
 - [ ] N6 EQ_LIBRARY + docs site + catalogue PDF; tests; independent checker; v1.0.0 release; Zenodo version
 - [ ] N7 Master River v1.5; book Appendix F; refetch; rebuild; final checker; publish 22520849; back-links; hubs/KG; memory
 - Founder decisions still open: excerpt page ranges (Causal Ethics/Causal Agency), reading-paths page, accessibility, BBL-id↔part mapping, whether other repos get GitHub remotes.
+
+## Addendum (BBL-192/193, 2026-09-06 late)
+- Root ancestry: MQ.08 and every Genesis result carry `parents[]` from Genesis's own derivation order (E00.1–E00.7 root axioms → δ_R → L_R → F/MQ.08 → trunk → faces …); the Forced Set I–XXIV is the forcing chain.
+- Ordering backbone = "Genesis of the Universe, Step by Step" (CORE v3.1). Every code gets `step` (position in that sequence; readings inherit their root's step + a sub-index). Validation: no code positioned before any of its parents; the solver arc, Genesis and readout_universe entries must agree on step order (conflict = BLOCK, recorded, not silently resolved).
+- Running: Toledo design meeting wf_065ffe73-039 (toledo-design-meeting-wf_065ffe73-039.js); canonicalisation wf_ff807258-9ae (merge phase).
