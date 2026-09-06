@@ -19,7 +19,7 @@ Scope: equations and Th_coqc only (registries, codes, lineage, Coq sources, veri
     Domain Registration Standard).
 - **Tiers:** `Th_coqc` (lemma closed under the global context on a stated finite model — internal consistency, never empirical
   truth) · `Definition` · `Open` (stated as a Prop, not proved). Nothing here raises a paper's own tier.
-- **Releases:** each tagged release is deposited as a version under one Zenodo concept DOI (see `CITATION.cff`).
+- **Releases:** each tagged release is deposited as a version under one Zenodo concept DOI **10.5281/zenodo.22537318** (v0.1.0 = 10.5281/zenodo.22537319). Source: https://github.com/morrocwi/toledo
 - **Discipline:** finite/discrete models only; no `Coq.Reals`, no classical axioms, no `Admitted`, no top-level `Axiom`/`Parameter`.
 
 Author: Yaoharee Lahtee (Open Civil Science Initiative). Licence: CC BY 4.0 (registries, docs) and MIT (Coq sources, scripts).
