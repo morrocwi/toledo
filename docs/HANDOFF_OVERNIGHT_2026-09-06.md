@@ -42,3 +42,10 @@ RAM: ≤3–4 sonnet workers; coqc strictly sequential; check `free -g` (stop if
 
 ## Licence authorisation (BBL-198, DEC-toledo-solver-arc-copy-2026-0906)
 The owner authorises copying the private solver arc's Coq sources (canonical files incl. the health stream) into Toledo under MIT, with provenance "solver arc (private)" + commit + blob. T9 is resolved: copy is permitted; the private repository's name still never appears in public files.
+
+## Running now (late evening 2026-09-06)
+- S1 canonicalisation wf_ff807258-9ae — registry phase (200 canonical from 946 raw; dedup review result pending in the run record).
+- S3-fix agent: recompute global `step` from Genesis document order; break the two cycles forward-in-document; reconcile L5/Re_ep; report remaining violations with quoted source.
+- S7 wf_dade1d64-efa (toledo-s7-coq-import-wf_dade1d64-efa.js): copy 6 Coq sources into coq/<source>/ with PROVENANCE.json, build one at a time (2 sources concurrently max), Print Assumptions on all 3,289 theorems, verify_report.json per source, then registry/coq_map.json (theorem→code with evidence).
+- Generators agent: scripts/toledo_build.py (entries JSON-LD, TOLEDO.json, graph json/graphml/ttl, MathML, vault, site index), scripts/toledo CLI, site/build_site.py, latex/toledo.sty + catalogue skeleton, tests/test_build.py, Makefile targets.
+- Next after these: N3 relabel workflow (codes ← Genesis ids; readings <root>/<D>.<nn>.v1 with parents/origin/status/step per SCHEMA.md; LINEAGE seeded; φ re-check; orphan check) → build → checker → v1.0.0.
