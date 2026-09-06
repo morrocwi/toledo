@@ -19,7 +19,7 @@ Synthesis 10.5281/zenodo.21529456).
 
 ## Layer 1 — readings (domain translations)
 `<root code>/<D>.<nn>.v<k>` — the same root equation read through a domain readout q_D (Domain Registration Standard):
-`<D>` ∈ E epistemic · H human–AI · S social · W world-system · M method; `<nn>` sequence under that root (assigned once, never
+`<D>` ∈ E epistemic · H human–AI · S social · W world-system · M method · P physics · C chemistry · B biology/health (BIRCA health equations are B readings of the root); `<nn>` sequence under that root (assigned once, never
 reused); `.v<k>` revision of the canonical statement. Example `MQ.08/H.02`. A reading of a composite names the primary root and
 lists `reads_also`. Genuinely rootless objects: `HRP-X.<nnn>` + drift note (target: none).
 
