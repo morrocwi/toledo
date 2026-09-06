@@ -141,8 +141,7 @@ neither of which this checker pass performs.
 ## Addendum 2026-09-06 — BBL-193 global step recompute + BBL-192 root-ancestry fixes
 
 Performed against the anchors named in the task: `READOUT_GENESIS_CORE.md` at commit
-`082dde893b70c7500c13d463239909c99cf17f0a` (private clone `~/ANSE.ASIA/readout_genesis`,
-public mirror `github.com/morrocwi/readout_genesis`) followed by
+`082dde893b70c7500c13d463239909c99cf17f0a` (`github.com/morrocwi/readout_genesis`) followed by
 `READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md`. Every number below is a direct
 count over `registry/genesis_root.json` after the edits described here, re-derived by
 re-running the same checks, not restated from the earlier pass.

@@ -1,3 +1,6 @@
-Registries and documentation: Creative Commons Attribution 4.0 International (CC BY 4.0).
-Coq sources (coq/) and scripts (scripts/): MIT License. Copyright (c) 2026 Yaoharee Lahtee.
+Registries, docs, generated views (registry/, docs/, graph/, vault/, registry/EQ_LIBRARY.md): Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Coq canonical sources (coq/canonical/) and scripts (scripts/): MIT License. Copyright (c) 2026 Yaoharee Lahtee.
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, subject to the MIT License conditions (https://opensource.org/license/mit).
+
+Imported Coq developments under coq/<source>/ keep their own upstream licence — see each source's LICENSE.upstream and PROVENANCE.json (coq/readout_genesis/LICENSE.upstream records that its upstream carries no licence file — same-author import, stated there); the solver-arc import is copied under a narrow founder-authorised MIT grant for the specific files listed in coq/solver-arc/PROVENANCE.json only (coq/solver-arc/LICENSE_NOTE.md), not a blanket relicense.

@@ -1,0 +1,22 @@
+{
+  "title": "Toledo — Equation Library of the Human–AI Readout Programme",
+  "description": "The permanent, coded registry of every equation in the Human–AI Readout Programme together with its Coq (Th_coqc) formalisation. Th_coqc certifies that a lemma is closed under a stated finite model's global context — an internal-consistency check, never an empirical or physical truth claim. Scope: equations and Th_coqc only; papers, books and prose live in their own records and cite Toledo codes.",
+  "creators": [
+    {
+      "name": "Lahtee, Yaoharee",
+      "affiliation": "Open Civil Science Initiative",
+      "orcid": "0009-0005-3861-0626"
+    }
+  ],
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "upload_type": "dataset",
+  "keywords": [
+    "equation library",
+    "formal verification",
+    "Coq",
+    "readout genesis",
+    "knowledge graph",
+    "open data"
+  ]
+}

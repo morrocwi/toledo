@@ -1,12 +1,12 @@
 # Equation Library — Human–AI Readout Programme
 
-Generated 2026-09-06 by `registry/build_eq_library.py`. One file for the state of every equation: raw inventory per chapter → canonical id (Genesis-first: one root equation read per domain; latest formulation wins; occurrences mapped, sources never edited) → Coq identifier and tier.
+Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state of every equation: raw inventory per chapter → canonical id (Genesis-first: one root equation read per domain; latest formulation wins; occurrences mapped, sources never edited) → Coq identifier and tier.
 
 ## Status
 - Chapters inventoried: 40
 - Raw equations: 946
-- Canonical objects: 255
-- Raw→canonical mapped: 946
+- Canonical objects: 793
+- Raw→canonical mapped: 1069
 - Coq identifiers (canonical set): 0
 - Master River v1.4 (22519148) equations 1–79: Coq set 22518450, 45 lemmas closed (coq/MR_Ledger.md)
 - Founder rulings: BBL-165 (Th_coqc for every equation), 170 (all chapters, one file), 171 (canonicalise first), 172 (latest formulation), 173 (map only), 174 (one master equation along the line), 175/176 (Readout Genesis first: same equation read per domain), 177 (collapse until one reader reads the whole line)
@@ -270,6 +270,544 @@ Generated 2026-09-06 by `registry/build_eq_library.py`. One file for the state o
 | A.5/M.32.v1 | CAN-256 |  | M |  | untagged |   | 2 |
 | EQ-015/H.36.v1 | CAN-257 |  | H |  | Open |   | 6 |
 | EQ-015/H.37.v1 | CAN-258 |  | H |  | Definition |   | 2 |
+| weld/S.10.v1 | CAN-115-SPLIT-01 |  | S |  | Definition |   | 1 |
+| weld/S.11.v1 | CAN-115-SPLIT-02 |  | S |  | Definition |   | 1 |
+| weld/S.12.v1 | CAN-115-SPLIT-03 |  | S |  | Definition |   | 1 |
+| weld/S.13.v1 | CAN-115-SPLIT-04 |  | S |  | Definition |   | 1 |
+| weld/S.14.v1 | CAN-115-SPLIT-05 |  | S |  | Definition |   | 1 |
+| weld/S.15.v1 | CAN-115-SPLIT-06 |  | S |  | Definition |   | 1 |
+| weld/S.16.v1 | CAN-115-SPLIT-07 |  | S |  | Dr |   | 1 |
+| weld/S.17.v1 | CAN-115-SPLIT-08 |  | S |  | Dr |   | 1 |
+| weld/S.18.v1 | CAN-115-SPLIT-09 |  | S |  | Dr |   | 1 |
+| weld/S.19.v1 | CAN-115-SPLIT-10 |  | S |  | Dr |   | 1 |
+| weld/S.20.v1 | CAN-115-SPLIT-11 |  | S |  | Dr |   | 1 |
+| weld/S.21.v1 | CAN-115-SPLIT-12 |  | S |  | Dr |   | 1 |
+| weld/S.22.v1 | CAN-115-SPLIT-13 |  | S |  | Definition |   | 1 |
+| weld/S.23.v1 | CAN-115-SPLIT-14 |  | S |  | Dr |   | 1 |
+| weld/S.24.v1 | CAN-115-SPLIT-15 |  | S |  | Dr |   | 1 |
+| weld/S.25.v1 | CAN-115-SPLIT-16 |  | S |  | Dr |   | 1 |
+| weld/S.26.v1 | CAN-115-SPLIT-17 |  | S |  | Dr |   | 1 |
+| weld/S.27.v1 | CAN-116-SPLIT-01 |  | S |  | Ax |   | 1 |
+| weld/S.28.v1 | CAN-116-SPLIT-02 |  | S |  | Ax |   | 1 |
+| weld/S.29.v1 | CAN-116-SPLIT-03 |  | S |  | Ax |   | 1 |
+| weld/S.30.v1 | CAN-116-SPLIT-04 |  | S |  | Ax |   | 1 |
+| EQ-015/S.13.v1 | CAN-117-SPLIT-01 |  | S |  | Ax |   | 1 |
+| EQ-015/S.14.v1 | CAN-117-SPLIT-02 |  | S |  | Definition |   | 1 |
+| EQ-015/S.15.v1 | CAN-117-SPLIT-03 |  | S |  | Definition |   | 1 |
+| EQ-015/S.16.v1 | CAN-117-SPLIT-04 |  | S |  | Definition |   | 1 |
+| EQ-015/S.17.v1 | CAN-118-SPLIT-01 |  | S |  | Definition |   | 1 |
+| EQ-015/S.18.v1 | CAN-118-SPLIT-02 |  | S |  | Definition |   | 1 |
+| EQ-015/S.19.v1 | CAN-118-SPLIT-03 |  | S |  | Definition |   | 1 |
+| EQ-015/S.20.v1 | CAN-118-SPLIT-04 |  | S |  | Definition |   | 1 |
+| EQ-015/S.21.v1 | CAN-118-SPLIT-05 |  | S |  | Definition |   | 1 |
+| EQ-015/S.22.v1 | CAN-118-SPLIT-06 |  | S |  | Definition |   | 1 |
+| EQ-015/S.23.v1 | CAN-119-SPLIT-01 |  | S |  | Definition |   | 1 |
+| EQ-015/S.24.v1 | CAN-119-SPLIT-02 |  | S |  | Definition |   | 1 |
+| EQ-015/S.25.v1 | CAN-119-SPLIT-03 |  | S |  | Definition |   | 1 |
+| EQ-015/S.26.v1 | CAN-119-SPLIT-04 |  | S |  | Definition |   | 1 |
+| EQ-015/S.27.v1 | CAN-119-SPLIT-05 |  | S |  | Definition |   | 1 |
+| EQ-015/S.28.v1 | CAN-119-SPLIT-06 |  | S |  | Definition |   | 1 |
+| EQ-015/S.29.v1 | CAN-119-SPLIT-07 |  | S |  | Definition |   | 1 |
+| EQ-015/S.30.v1 | CAN-119-SPLIT-08 |  | S |  | Definition |   | 1 |
+| EQ-015/S.31.v1 | CAN-119-SPLIT-09 |  | S |  | Definition |   | 1 |
+| EQ-015/S.32.v1 | CAN-119-SPLIT-10 |  | S |  | Definition |   | 1 |
+| EQ-015/S.33.v1 | CAN-119-SPLIT-11 |  | S |  | Definition |   | 1 |
+| weld/S.31.v1 | CAN-120-SPLIT-01 |  | S |  | Definition |   | 1 |
+| weld/S.32.v1 | CAN-120-SPLIT-02 |  | S |  | Definition |   | 1 |
+| weld/S.33.v1 | CAN-120-SPLIT-03 |  | S |  | Definition |   | 1 |
+| weld/S.34.v1 | CAN-120-SPLIT-04 |  | S |  | Definition |   | 1 |
+| weld/S.35.v1 | CAN-120-SPLIT-05 |  | S |  | Definition |   | 1 |
+| weld/S.36.v1 | CAN-120-SPLIT-06 |  | S |  | Definition |   | 1 |
+| weld/S.37.v1 | CAN-120-SPLIT-07 |  | S |  | Dr |   | 1 |
+| weld/S.38.v1 | CAN-120-SPLIT-08 |  | S |  | Definition |   | 1 |
+| weld/S.39.v1 | CAN-120-SPLIT-09 |  | S |  | Definition |   | 1 |
+| weld/S.40.v1 | CAN-120-SPLIT-10 |  | S |  | Definition |   | 1 |
+| weld/S.41.v1 | CAN-120-SPLIT-11 |  | S |  | Definition |   | 1 |
+| weld/S.42.v1 | CAN-120-SPLIT-12 |  | S |  | Definition |   | 1 |
+| A.5/S.04.v1 | CAN-121-SPLIT-01 |  | S |  | Definition |   | 1 |
+| A.5/S.05.v1 | CAN-121-SPLIT-02 |  | S |  | Definition |   | 1 |
+| A.5/S.06.v1 | CAN-121-SPLIT-03 |  | S |  | Definition |   | 1 |
+| A.5/S.07.v1 | CAN-121-SPLIT-04 |  | S |  | Definition |   | 1 |
+| A.5/S.08.v1 | CAN-121-SPLIT-05 |  | S |  | Definition |   | 1 |
+| A.5/S.09.v1 | CAN-121-SPLIT-06 |  | S |  | Definition |   | 1 |
+| A.5/S.10.v1 | CAN-121-SPLIT-07 |  | S |  | Definition |   | 1 |
+| A.5/S.11.v1 | CAN-121-SPLIT-08 |  | S |  | Definition |   | 1 |
+| A.5/S.12.v1 | CAN-121-SPLIT-09 |  | S |  | Definition |   | 1 |
+| A.5/S.13.v1 | CAN-121-SPLIT-10 |  | S |  | Definition |   | 1 |
+| weld/S.43.v1 | CAN-122-SPLIT-01 |  | S |  | Definition |   | 1 |
+| weld/S.44.v1 | CAN-122-SPLIT-02 |  | S |  | Definition |   | 1 |
+| weld/S.45.v1 | CAN-122-SPLIT-03 |  | S |  | Definition |   | 1 |
+| weld/S.46.v1 | CAN-122-SPLIT-04 |  | S |  | Definition |   | 1 |
+| weld/S.47.v1 | CAN-123-SPLIT-01 |  | S |  | Definition |   | 1 |
+| weld/S.48.v1 | CAN-123-SPLIT-02 |  | S |  | Definition |   | 1 |
+| weld/S.49.v1 | CAN-123-SPLIT-03 |  | S |  | Definition |   | 1 |
+| weld/S.50.v1 | CAN-123-SPLIT-04 |  | S |  | Definition |   | 1 |
+| A.5/S.14.v1 | CAN-128-SPLIT-01 |  | S |  | Definition |   | 1 |
+| A.5/S.15.v1 | CAN-128-SPLIT-02 |  | S |  | Definition |   | 1 |
+| A.5/S.16.v1 | CAN-128-SPLIT-03 |  | S |  | Definition |   | 1 |
+| A.5/S.17.v1 | CAN-128-SPLIT-04 |  | S |  | Definition |   | 1 |
+| A.5/S.18.v1 | CAN-128-SPLIT-05 |  | S |  | Definition |   | 1 |
+| A.5/S.19.v1 | CAN-128-SPLIT-06 |  | S |  | Definition |   | 1 |
+| A.5/S.20.v1 | CAN-128-SPLIT-07 |  | S |  | Definition |   | 1 |
+| EQ-015/S.34.v1 | CAN-129-SPLIT-01 |  | S |  | Definition |   | 1 |
+| EQ-015/S.35.v1 | CAN-129-SPLIT-02 |  | S |  | Definition |   | 1 |
+| EQ-015/S.36.v1 | CAN-129-SPLIT-03 |  | S |  | Definition |   | 1 |
+| EQ-015/S.37.v1 | CAN-129-SPLIT-04 |  | S |  | Definition |   | 1 |
+| EQ-015/S.38.v1 | CAN-129-SPLIT-05 |  | S |  | Definition |   | 1 |
+| EQ-015/S.39.v1 | CAN-129-SPLIT-06 |  | S |  | Definition |   | 1 |
+| EQ-015/S.40.v1 | CAN-129-SPLIT-07 |  | S |  | Definition |   | 1 |
+| EQ-015/S.41.v1 | CAN-129-SPLIT-08 |  | S |  | Definition |   | 1 |
+| EQ-015/S.42.v1 | CAN-129-SPLIT-09 |  | S |  | Definition |   | 1 |
+| EQ-015/S.43.v1 | CAN-129-SPLIT-10 |  | S |  | Definition |   | 1 |
+| EQ-015/S.44.v1 | CAN-129-SPLIT-11 |  | S |  | Definition |   | 1 |
+| EQ-015/S.45.v1 | CAN-129-SPLIT-12 |  | S |  | Definition |   | 1 |
+| EQ-015/S.46.v1 | CAN-129-SPLIT-13 |  | S |  | Definition |   | 1 |
+| EQ-015/S.47.v1 | CAN-129-SPLIT-14 |  | S |  | Definition |   | 1 |
+| EQ-015/S.48.v1 | CAN-129-SPLIT-15 |  | S |  | Definition |   | 1 |
+| EQ-015/S.49.v1 | CAN-129-SPLIT-16 |  | S |  | Definition |   | 1 |
+| EQ-015/S.50.v1 | CAN-129-SPLIT-17 |  | S |  | Definition |   | 1 |
+| EQ-015/S.51.v1 | CAN-132-SPLIT-01 |  | S |  | Definition |   | 1 |
+| EQ-015/S.52.v1 | CAN-132-SPLIT-02 |  | S |  | Definition |   | 1 |
+| EQ-015/S.53.v1 | CAN-132-SPLIT-03 |  | S |  | Definition |   | 1 |
+| EQ-015/S.54.v1 | CAN-132-SPLIT-04 |  | S |  | Definition |   | 1 |
+| EQ-015/S.55.v1 | CAN-132-SPLIT-05 |  | S |  | Definition |   | 1 |
+| EQ-015/S.56.v1 | CAN-133-SPLIT-01 |  | S |  | Definition |   | 1 |
+| EQ-015/S.57.v1 | CAN-133-SPLIT-02 |  | S |  | Definition |   | 1 |
+| EQ-015/S.58.v1 | CAN-136-SPLIT-01 |  | S |  | Definition |   | 1 |
+| EQ-015/S.59.v1 | CAN-137-SPLIT-01 |  | S |  | Definition |   | 1 |
+| EQ-015/S.60.v1 | CAN-137-SPLIT-02 |  | S |  | Definition |   | 1 |
+| EQ-015/S.61.v1 | CAN-137-SPLIT-03 |  | S |  | Definition |   | 1 |
+| EQ-015/S.62.v1 | CAN-137-SPLIT-04 |  | S |  | Definition |   | 1 |
+| EQ-015/S.63.v1 | CAN-137-SPLIT-05 |  | S |  | Definition |   | 1 |
+| EQ-015/S.64.v1 | CAN-137-SPLIT-06 |  | S |  | Definition |   | 1 |
+| EQ-015/S.65.v1 | CAN-137-SPLIT-07 |  | S |  | Definition |   | 1 |
+| EQ-015/W.20.v1 | CAN-142-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.21.v1 | CAN-142-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.22.v1 | CAN-142-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.23.v1 | CAN-142-SPLIT-04 |  | W |  | Definition |   | 1 |
+| EQ-015/W.24.v1 | CAN-142-SPLIT-05 |  | W |  | Definition |   | 1 |
+| EQ-015/W.25.v1 | CAN-143-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.26.v1 | CAN-144-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.27.v1 | CAN-144-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.28.v1 | CAN-144-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.29.v1 | CAN-144-SPLIT-04 |  | W |  | Definition |   | 1 |
+| EQ-015/W.30.v1 | CAN-144-SPLIT-05 |  | W |  | Definition |   | 1 |
+| EQ-015/W.31.v1 | CAN-145-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.32.v1 | CAN-145-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.33.v1 | CAN-145-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.34.v1 | CAN-146-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.35.v1 | CAN-146-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.36.v1 | CAN-146-SPLIT-03 |  | W |  | Definition |   | 1 |
+| A.5/W.04.v1 | CAN-147-SPLIT-01 |  | W |  | Definition |   | 1 |
+| A.5/W.05.v1 | CAN-147-SPLIT-02 |  | W |  | Definition |   | 1 |
+| A.5/W.06.v1 | CAN-147-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.37.v1 | CAN-148-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.38.v1 | CAN-148-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.39.v1 | CAN-148-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.40.v1 | CAN-148-SPLIT-04 |  | W |  | Definition |   | 1 |
+| EQ-015/W.41.v1 | CAN-148-SPLIT-05 |  | W |  | Definition |   | 1 |
+| EQ-015/W.42.v1 | CAN-151-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.43.v1 | CAN-151-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.44.v1 | CAN-151-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.45.v1 | CAN-151-SPLIT-04 |  | W |  | Definition |   | 1 |
+| EQ-015/W.46.v1 | CAN-151-SPLIT-05 |  | W |  | Definition |   | 1 |
+| EQ-015/W.47.v1 | CAN-152-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.48.v1 | CAN-152-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.49.v1 | CAN-153-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.50.v1 | CAN-153-SPLIT-02 |  | W |  | Definition |   | 1 |
+| A.5/W.07.v1 | CAN-154-SPLIT-01 |  | W |  | Definition |   | 1 |
+| A.5/W.08.v1 | CAN-154-SPLIT-02 |  | W |  | Definition |   | 1 |
+| A.5/W.09.v1 | CAN-154-SPLIT-03 |  | W |  | Definition |   | 1 |
+| A.5/W.10.v1 | CAN-154-SPLIT-04 |  | W |  | Definition |   | 1 |
+| A.5/W.11.v1 | CAN-154-SPLIT-05 |  | W |  | Definition |   | 1 |
+| EQ-015/W.51.v1 | CAN-159-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.52.v1 | CAN-159-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.53.v1 | CAN-159-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.54.v1 | CAN-159-SPLIT-04 |  | W |  | Definition |   | 1 |
+| A.5/W.12.v1 | CAN-160-SPLIT-01 |  | W |  | Definition |   | 1 |
+| A.5/W.13.v1 | CAN-160-SPLIT-02 |  | W |  | Definition |   | 1 |
+| A.5/W.14.v1 | CAN-160-SPLIT-03 |  | W |  | Definition |   | 1 |
+| A.5/W.15.v1 | CAN-160-SPLIT-04 |  | W |  | Definition |   | 1 |
+| A.5/W.16.v1 | CAN-160-SPLIT-05 |  | W |  | Definition |   | 1 |
+| A.5/W.17.v1 | CAN-160-SPLIT-06 |  | W |  | Definition |   | 1 |
+| A.5/W.18.v1 | CAN-160-SPLIT-07 |  | W |  | Definition |   | 1 |
+| A.5/W.19.v1 | CAN-160-SPLIT-08 |  | W |  | Definition |   | 1 |
+| A.5/W.20.v1 | CAN-160-SPLIT-09 |  | W |  | Definition |   | 1 |
+| EQ-015/W.55.v1 | CAN-163-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-015/W.56.v1 | CAN-163-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-015/W.57.v1 | CAN-163-SPLIT-03 |  | W |  | Definition |   | 1 |
+| EQ-015/W.58.v1 | CAN-163-SPLIT-04 |  | W |  | Definition |   | 1 |
+| EQ-015/W.59.v1 | CAN-163-SPLIT-05 |  | W |  | Definition |   | 1 |
+| EQ-002/W.02.v1 | CAN-164-SPLIT-01 |  | W |  | Definition |   | 1 |
+| EQ-002/W.03.v1 | CAN-164-SPLIT-02 |  | W |  | Definition |   | 1 |
+| EQ-001/C.01.v1 | RGD-CHEM-001 |  | C |  | untagged |   | 0 |
+| EQ-001/C.02.v1 | RGD-CHEM-002 |  | C |  | untagged |   | 0 |
+| EQ-001/C.03.v1 | RGD-CHEM-003 |  | C |  | untagged |   | 0 |
+| EQ-001/C.04.v1 | RGD-CHEM-004 |  | C |  | untagged |   | 0 |
+| EQ-001/C.05.v1 | RGD-CHEM-005 |  | C |  | untagged |   | 0 |
+| EQ-001/C.06.v1 | RGD-CHEM-006 |  | C |  | untagged |   | 0 |
+| EQ-001/C.07.v1 | RGD-CHEM-007 |  | C |  | untagged |   | 0 |
+| EQ-001/C.08.v1 | RGD-CHEM-008 |  | C |  | untagged |   | 0 |
+| EQ-001/C.09.v1 | RGD-CHEM-009 |  | C |  | untagged |   | 0 |
+| EQ-001/C.10.v1 | RGD-CHEM-010 |  | C |  | untagged |   | 0 |
+| EQ-001/C.11.v1 | RGD-CHEM-011 |  | C |  | untagged |   | 0 |
+| EQ-001/C.12.v1 | RGD-CHEM-012 |  | C |  | untagged |   | 0 |
+| EQ-001/C.13.v1 | RGD-CHEM-013 |  | C |  | untagged |   | 0 |
+| EQ-001/C.14.v1 | RGD-CHEM-014 |  | C |  | untagged |   | 0 |
+| EQ-001/C.15.v1 | RGD-CHEM-015 |  | C |  | untagged |   | 0 |
+| EQ-001/C.16.v1 | RGD-CHEM-016 |  | C |  | untagged |   | 0 |
+| EQ-001/C.17.v1 | RGD-CHEM-017 |  | C |  | untagged |   | 0 |
+| EQ-001/P.01.v1 | RGD-QUANTUM-001 |  | P |  | untagged |   | 0 |
+| EQ-001/P.02.v1 | RGD-QUANTUM-002 |  | P |  | untagged |   | 0 |
+| EQ-001/P.03.v1 | RGD-QUANTUM-003 |  | P |  | untagged |   | 0 |
+| EQ-001/P.04.v1 | RGD-QUANTUM-004 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.05.v1 | RGD-QUANTUM-005 |  | P |  | untagged |   | 0 |
+| EQ-001/P.06.v1 | RGD-QUANTUM-006 |  | P |  | untagged |   | 0 |
+| EQ-001/P.07.v1 | RGD-QUANTUM-007 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.08.v1 | RGD-QUANTUM-008 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.09.v1 | RGD-QUANTUM-009 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.10.v1 | RGD-QUANTUM-010 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.11.v1 | RGD-QUANTUM-011 |  | P |  | untagged |   | 0 |
+| EQ-001/P.12.v1 | RGD-QUANTUM-012 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.13.v1 | RGD-QUANTUM-013 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.14.v1 | RGD-QUANTUM-014 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.15.v1 | RGD-QUANTUM-015 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.16.v1 | RGD-QUANTUM-016 |  | P |  | untagged |   | 0 |
+| EQ-001/P.17.v1 | RGD-QUANTUM-017 |  | P |  | untagged |   | 0 |
+| EQ-001/P.18.v1 | RGD-QUANTUM-018 |  | P |  | untagged |   | 0 |
+| EQ-001/P.19.v1 | RGD-QUANTUM-019 |  | P |  | untagged |   | 0 |
+| EQ-001/P.20.v1 | RGD-QUANTUM-020 |  | P |  | untagged |   | 0 |
+| EQ-001/P.21.v1 | RGD-QUANTUM-021 |  | P |  | untagged |   | 0 |
+| EQ-001/P.22.v1 | RGD-QUANTUM-022 |  | P |  | Open |   | 0 |
+| EQ-001/P.23.v1 | RGD-QUANTUM-023 |  | P |  | Open |   | 0 |
+| EQ-001/P.24.v1 | RGD-QUANTUM-024 |  | P |  | Open |   | 0 |
+| EQ-001/P.25.v1 | RGD-QUANTUM-025 |  | P |  | Open |   | 0 |
+| EQ-001/P.26.v1 | RGD-QUANTUM-026 |  | P |  | Open |   | 0 |
+| EQ-001/P.27.v1 | RGD-QUANTUM-027 |  | P |  | Open |   | 0 |
+| EQ-001/P.28.v1 | RGD-QUANTUM-028 |  | P |  | Open |   | 0 |
+| EQ-001/P.29.v1 | RGD-QUANTUM-029 |  | P |  | Open |   | 0 |
+| EQ-001/P.30.v1 | RGD-QUANTUM-030 |  | P |  | Open |   | 0 |
+| EQ-001/P.31.v1 | RGD-QUANTUM-031 |  | P |  | Open |   | 0 |
+| EQ-001/P.32.v1 | RGD-QUANTUM-032 |  | P |  | Open |   | 0 |
+| EQ-001/P.33.v1 | RGD-QUANTUM-033 |  | P |  | Open |   | 0 |
+| EQ-001/P.34.v1 | RGD-RELATIVITY-001 |  | P |  | untagged |   | 0 |
+| EQ-001/P.35.v1 | RGD-RELATIVITY-004 |  | P |  | untagged |   | 0 |
+| EQ-001/P.36.v1 | RGD-RELATIVITY-005 |  | P |  | untagged |   | 0 |
+| EQ-001/P.37.v1 | RGD-RELATIVITY-006 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.38.v1 | RGD-RELATIVITY-007 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.39.v1 | RGD-RELATIVITY-008 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.40.v1 | RGD-RELATIVITY-009 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.41.v1 | RGD-RELATIVITY-010 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.42.v1 | RGD-RELATIVITY-011 |  | P |  | untagged |   | 0 |
+| EQ-001/P.43.v1 | RGD-RELATIVITY-012 |  | P |  | untagged |   | 0 |
+| EQ-001/P.44.v1 | RGD-RELATIVITY-013 |  | P |  | untagged |   | 0 |
+| EQ-001/P.45.v1 | RGD-RELATIVITY-014 |  | P |  | untagged |   | 0 |
+| EQ-001/P.46.v1 | RGD-RELATIVITY-015 |  | P |  | untagged |   | 0 |
+| EQ-001/P.47.v1 | RGD-RELATIVITY-016 |  | P |  | untagged |   | 0 |
+| EQ-001/P.48.v1 | RGD-RELATIVITY-017 |  | P |  | untagged |   | 0 |
+| EQ-001/P.49.v1 | RGD-RELATIVITY-018 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.50.v1 | RGD-RELATIVITY-019 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.51.v1 | RGD-RELATIVITY-020 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.52.v1 | RGD-RELATIVITY-021 |  | P |  | Th_coqc |   | 0 |
+| EQ-001/P.53.v1 | RGD-RELATIVITY-022 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.54.v1 | RGD-RELATIVITY-023 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.55.v1 | RGD-RELATIVITY-024 |  | P |  | untagged |   | 0 |
+| EQ-001/P.56.v1 | RGD-RELATIVITY-025 |  | P |  | untagged |   | 0 |
+| EQ-001/P.57.v1 | RGD-RELATIVITY-026 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.58.v1 | RGD-RELATIVITY-027 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.59.v1 | RGD-RELATIVITY-028 |  | P |  | untagged |   | 0 |
+| EQ-001/P.60.v1 | RGD-RELATIVITY-029 |  | P |  | untagged |   | 0 |
+| EQ-001/P.61.v1 | RGD-RELATIVITY-030 |  | P |  | untagged |   | 0 |
+| EQ-001/P.62.v1 | RGD-RELATIVITY-031 |  | P |  | untagged |   | 0 |
+| EQ-001/P.63.v1 | RGD-RELATIVITY-032 |  | P |  | untagged |   | 0 |
+| EQ-001/P.64.v1 | RGD-RELATIVITY-033 |  | P |  | untagged |   | 0 |
+| EQ-001/P.65.v1 | RGD-RELATIVITY-034 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.66.v1 | RGD-RELATIVITY-035 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.67.v1 | RGD-RELATIVITY-036 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.68.v1 | RGD-RELATIVITY-037 |  | P |  | finite_diagnostic |   | 0 |
+| EQ-001/P.69.v1 | RGD-RELATIVITY-038 |  | P |  | finite_diagnostic |   | 0 |
+| MQ08-stepper/P.01.v1 | RGD-RELATIVITY-003 |  | P |  | untagged |   | 0 |
+| EQ-001/B.01.v1 | RGD-BIOLOGY-001 |  | B |  | untagged |   | 0 |
+| EQ-001/B.02.v1 | RGD-BIOLOGY-002 |  | B |  | untagged |   | 0 |
+| EQ-001/B.03.v1 | RGD-BIOLOGY-003 |  | B |  | untagged |   | 0 |
+| EQ-001/B.04.v1 | RGD-BIOLOGY-004 |  | B |  | finite_diagnostic |   | 0 |
+| EQ-001/B.05.v1 | RGD-BIOLOGY-005 |  | B |  | untagged |   | 0 |
+| EQ-001/B.06.v1 | RGD-BIOLOGY-006 |  | B |  | untagged |   | 0 |
+| EQ-001/B.07.v1 | RGD-BIOLOGY-007 |  | B |  | untagged |   | 0 |
+| EQ-001/B.08.v1 | RGD-BIOLOGY-008 |  | B |  | untagged |   | 0 |
+| EQ-001/B.09.v1 | RGD-BIOLOGY-009 |  | B |  | finite_diagnostic |   | 0 |
+| EQ-001/B.10.v1 | RGD-BIOLOGY-010 |  | B |  | untagged |   | 0 |
+| EQ-001/B.11.v1 | RGD-BIOLOGY-011 |  | B |  | finite_diagnostic |   | 0 |
+| EQ-001/B.12.v1 | RGD-BIOLOGY-012 |  | B |  | untagged |   | 0 |
+| EQ-001/B.13.v1 | RGD-BIOLOGY-013 |  | B |  | finite_diagnostic |   | 0 |
+| EQ-001/B.14.v1 | RGD-BIOLOGY-014 |  | B |  | Th_coqc |   | 0 |
+| EQ-001/B.15.v1 | RGD-BIOLOGY-015 |  | B |  | Th_coqc |   | 0 |
+| EQ-001/B.16.v1 | RGD-BIOLOGY-016 |  | B |  | Th_coqc |   | 0 |
+| EQ-001/B.17.v1 | RGD-BIOLOGY-017 |  | B |  | Th_coqc |   | 0 |
+| EQ-001/B.18.v1 | RGD-BIOLOGY-018 |  | B |  | untagged |   | 0 |
+| EQ-001/B.19.v1 | RGD-BIOLOGY-019 |  | B |  | untagged |   | 0 |
+| EQ-001/B.20.v1 | RGD-BIOLOGY-020 |  | B |  | untagged |   | 0 |
+| EQ-001/B.21.v1 | RGD-BIOLOGY-021 |  | B |  | untagged |   | 0 |
+| EQ-001/B.22.v1 | RGD-BIOLOGY-022 |  | B |  | untagged |   | 0 |
+| EQ-001/B.23.v1 | RGD-BIOLOGY-023 |  | B |  | untagged |   | 0 |
+| EQ-001/B.24.v1 | RGD-BIOLOGY-024 |  | B |  | untagged |   | 0 |
+| EQ-001/B.25.v1 | RGD-BIOLOGY-025 |  | B |  | untagged |   | 0 |
+| EQ-001/B.26.v1 | RGD-BIOLOGY-026 |  | B |  | untagged |   | 0 |
+| EQ-001/B.27.v1 | RGD-BIOLOGY-027 |  | B |  | untagged |   | 0 |
+| EQ-001/B.28.v1 | RGD-BIOLOGY-028 |  | B |  | untagged |   | 0 |
+| EQ-001/B.29.v1 | RGD-BIOLOGY-029 |  | B |  | Open |   | 0 |
+| EQ-001/B.30.v1 | RGD-BIOLOGY-030 |  | B |  | Open |   | 0 |
+| EQ-001/B.31.v1 | RGD-BIOLOGY-031 |  | B |  | Open |   | 0 |
+| EQ-001/B.32.v1 | RGD-BIOLOGY-032 |  | B |  | Open |   | 0 |
+| EQ-001/B.33.v1 | RGD-BIOLOGY-033 |  | B |  | Open |   | 0 |
+| EQ-001/B.34.v1 | RGD-BIOLOGY-034 |  | B |  | Open |   | 0 |
+| EQ-001/B.35.v1 | RGD-BIOLOGY-035 |  | B |  | Open |   | 0 |
+| EQ-001/B.36.v1 | RGD-BIOLOGY-036 |  | B |  | Open |   | 0 |
+| Face.10.IdentifiabilityGate/E.01.v1 | RUS-0001 |  | E |  | Definition |   | 0 |
+| EQ-015/M.13.v1 | RUS-0002 |  | M |  | finite_diagnostic |   | 1 |
+| EQ-015/M.14.v1 | RUS-0003 |  | M |  | finite_diagnostic |   | 0 |
+| EQ-015/M.15.v1 | RUS-0004 |  | M |  | finite_diagnostic |   | 0 |
+| EQ-009/E.01.v1 | RUS-0005 |  | E |  | Definition |   | 0 |
+| EQ-009/E.02.v1 | RUS-0006 |  | E |  | finite_diagnostic |   | 0 |
+| EQ-009/E.03.v1 | RUS-0007 |  | E |  | untagged |   | 0 |
+| BridgeCommute/H.01.v1 | RUS-0008 |  | H |  | untagged |   | 0 |
+| EQ-015/P.01.v1 | RUS-0009 |  | P |  | untagged |   | 1 |
+| EQ-015/P.02.v1 | RUS-0010 |  | P |  | untagged |   | 1 |
+| EQ-015/P.03.v1 | RUS-0011 |  | P |  | untagged |   | 1 |
+| EQ-015/P.04.v1 | RUS-0012 |  | P |  | untagged |   | 1 |
+| EQ-015/P.05.v1 | RUS-0013 |  | P |  | untagged |   | 1 |
+| EQ-015/P.06.v1 | RUS-0014 |  | P |  | untagged |   | 2 |
+| EQ-015/P.07.v1 | RUS-0015 |  | P |  | untagged |   | 1 |
+| EQ-015/P.08.v1 | RUS-0016 |  | P |  | untagged |   | 1 |
+| EQ-015/P.09.v1 | RUS-0017 |  | P |  | untagged |   | 1 |
+| EQ-015/P.10.v1 | RUS-0018 |  | P |  | untagged |   | 1 |
+| EQ-015/P.11.v1 | RUS-0019 |  | P |  | untagged |   | 1 |
+| EQ-015/P.12.v1 | RUS-0020 |  | P |  | untagged |   | 1 |
+| EQ-015/P.13.v1 | RUS-0021 |  | P |  | untagged |   | 1 |
+| EQ-015/P.14.v1 | RUS-0022 |  | P |  | untagged |   | 1 |
+| EQ-015/P.15.v1 | RUS-0023 |  | P |  | untagged |   | 1 |
+| EQ-015/P.16.v1 | RUS-0024 |  | P |  | untagged |   | 1 |
+| EQ-015/P.17.v1 | RUS-0025 |  | P |  | untagged |   | 1 |
+| EQ-015/P.18.v1 | RUS-0026 |  | P |  | untagged |   | 1 |
+| EQ-015/P.19.v1 | RUS-0027 |  | P |  | untagged |   | 1 |
+| EQ-015/P.20.v1 | RUS-0028 |  | P |  | finite_diagnostic |   | 1 |
+| EQ-015/P.21.v1 | RUS-0029 |  | P |  | untagged |   | 1 |
+| EQ-015/P.22.v1 | RUS-0030 |  | P |  | untagged |   | 1 |
+| EQ-015/P.23.v1 | RUS-0031 |  | P |  | untagged |   | 1 |
+| EQ-015/P.24.v1 | RUS-0032 |  | P |  | Open |   | 1 |
+| EQ-015/P.25.v1 | RUS-0033 |  | P |  | untagged |   | 1 |
+| EQ-015/P.26.v1 | RUS-0034 |  | P |  | untagged |   | 1 |
+| EQ-015/P.27.v1 | RUS-0035 |  | P |  | untagged |   | 1 |
+| EQ-015/P.28.v1 | RUS-0036 |  | P |  | untagged |   | 1 |
+| EQ-015/P.29.v1 | RUS-0037 |  | P |  | untagged |   | 1 |
+| EQ-015/P.30.v1 | RUS-0038 |  | P |  | untagged |   | 1 |
+| EQ-015/P.31.v1 | RUS-0039 |  | P |  | untagged |   | 1 |
+| EQ-015/P.32.v1 | RUS-0040 |  | P |  | untagged |   | 1 |
+| EQ-015/P.33.v1 | RUS-0041 |  | P |  | untagged |   | 1 |
+| EQ-015/P.34.v1 | RUS-0042 |  | P |  | untagged |   | 1 |
+| EQ-015/P.35.v1 | RUS-0043 |  | P |  | finite_diagnostic |   | 1 |
+| EQ-015/P.36.v1 | RUS-0044 |  | P |  | untagged |   | 1 |
+| EQ-015/P.37.v1 | RUS-0045 |  | P |  | untagged |   | 1 |
+| EQ-015/P.38.v1 | RUS-0046 |  | P |  | untagged |   | 1 |
+| EQ-015/P.39.v1 | RUS-0047 |  | P |  | untagged |   | 1 |
+| EQ-015/P.40.v1 | RUS-0048 |  | P |  | untagged |   | 1 |
+| EQ-015/P.41.v1 | RUS-0049 |  | P |  | untagged |   | 1 |
+| EQ-015/P.42.v1 | RUS-0050 |  | P |  | untagged |   | 1 |
+| EQ-015/P.43.v1 | RUS-0051 |  | P |  | untagged |   | 1 |
+| EQ-015/P.44.v1 | RUS-0052 |  | P |  | untagged |   | 1 |
+| EQ-015/P.45.v1 | RUS-0053 |  | P |  | untagged |   | 1 |
+| EQ-015/P.46.v1 | RUS-0054 |  | P |  | untagged |   | 1 |
+| EQ-015/P.47.v1 | RUS-0055 |  | P |  | untagged |   | 1 |
+| EQ-015/P.48.v1 | RUS-0056 |  | P |  | untagged |   | 1 |
+| EQ-015/P.49.v1 | RUS-0057 |  | P |  | untagged |   | 1 |
+| EQ-015/P.50.v1 | RUS-0058 |  | P |  | untagged |   | 1 |
+| EQ-015/P.51.v1 | RUS-0059 |  | P |  | untagged |   | 1 |
+| EQ-015/P.52.v1 | RUS-0060 |  | P |  | untagged |   | 1 |
+| EQ-015/P.53.v1 | RUS-0061 |  | P |  | untagged |   | 1 |
+| EQ-015/P.54.v1 | RUS-0062 |  | P |  | untagged |   | 1 |
+| q_formal/M.01.v1 | RUS-0063 |  | M |  | untagged |   | 1 |
+| q_formal/M.02.v1 | RUS-0064 |  | M |  | untagged |   | 1 |
+| q_formal/M.03.v1 | RUS-0065 |  | M |  | untagged |   | 1 |
+| q_formal/M.04.v1 | RUS-0066 |  | M |  | untagged |   | 1 |
+| q_formal/M.05.v1 | RUS-0067 |  | M |  | untagged |   | 1 |
+| q_formal/M.06.v1 | RUS-0068 |  | M |  | untagged |   | 1 |
+| q_formal/M.07.v1 | RUS-0069 |  | M |  | untagged |   | 1 |
+| q_formal/M.08.v1 | RUS-0070 |  | M |  | untagged |   | 1 |
+| q_formal/M.09.v1 | RUS-0071 |  | M |  | untagged |   | 1 |
+| q_formal/M.10.v1 | RUS-0072 |  | M |  | untagged |   | 1 |
+| q_formal/M.11.v1 | RUS-0073 |  | M |  | untagged |   | 1 |
+| q_formal/M.12.v1 | RUS-0074 |  | M |  | untagged |   | 1 |
+| q_formal/M.13.v1 | RUS-0075 |  | M |  | untagged |   | 1 |
+| q_formal/M.14.v1 | RUS-0076 |  | M |  | untagged |   | 1 |
+| q_formal/M.15.v1 | RUS-0077 |  | M |  | untagged |   | 1 |
+| q_formal/M.16.v1 | RUS-0078 |  | M |  | untagged |   | 1 |
+| q_formal/M.17.v1 | RUS-0079 |  | M |  | untagged |   | 1 |
+| q_formal/M.18.v1 | RUS-0080 |  | M |  | untagged |   | 1 |
+| q_formal/M.19.v1 | RUS-0081 |  | M |  | untagged |   | 1 |
+| q_formal/M.20.v1 | RUS-0082 |  | M |  | untagged |   | 1 |
+| q_formal/M.21.v1 | RUS-0083 |  | M |  | untagged |   | 1 |
+| q_formal/M.22.v1 | RUS-0084 |  | M |  | untagged |   | 1 |
+| q_formal/M.23.v1 | RUS-0085 |  | M |  | untagged |   | 1 |
+| q_formal/M.24.v1 | RUS-0086 |  | M |  | untagged |   | 1 |
+| q_formal/M.25.v1 | RUS-0087 |  | M |  | untagged |   | 1 |
+| q_formal/M.26.v1 | RUS-0088 |  | M |  | untagged |   | 1 |
+| q_formal/M.27.v1 | RUS-0089 |  | M |  | untagged |   | 1 |
+| q_formal/M.28.v1 | RUS-0090 |  | M |  | untagged |   | 1 |
+| q_formal/M.29.v1 | RUS-0091 |  | M |  | untagged |   | 1 |
+| q_formal/M.30.v1 | RUS-0092 |  | M |  | untagged |   | 1 |
+| q_formal/M.31.v1 | RUS-0093 |  | M |  | untagged |   | 1 |
+| q_formal/M.32.v1 | RUS-0094 |  | M |  | untagged |   | 1 |
+| EQ-015/P.55.v1 | RUS-0096 |  | P |  | untagged |   | 1 |
+| EQ-015/P.56.v1 | RUS-0097 |  | P |  | untagged |   | 1 |
+| EQ-015/P.57.v1 | RUS-0098 |  | P |  | untagged |   | 1 |
+| EQ-015/P.58.v1 | RUS-0099 |  | P |  | untagged |   | 1 |
+| EQ-001/E.01.v1 | RUS-0100 |  | E |  | untagged |   | 1 |
+| EQ-001/E.02.v1 | RUS-0101 |  | E |  | untagged |   | 1 |
+| EQ-001/E.03.v1 | RUS-0102 |  | E |  | untagged |   | 1 |
+| EQ-001/E.04.v1 | RUS-0103 |  | E |  | untagged |   | 1 |
+| EQ-001/E.05.v1 | RUS-0104 |  | E |  | untagged |   | 1 |
+| EQ-001/E.06.v1 | RUS-0105 |  | E |  | untagged |   | 1 |
+| EQ-001/E.07.v1 | RUS-0106 |  | E |  | untagged |   | 1 |
+| EQ-015/P.59.v1 | RUS-0107 |  | P |  | untagged |   | 1 |
+| EQ-015/P.60.v1 | RUS-0108 |  | P |  | untagged |   | 1 |
+| EQ-015/P.61.v1 | RUS-0109 |  | P |  | untagged |   | 1 |
+| EQ-015/P.62.v1 | RUS-0110 |  | P |  | untagged |   | 1 |
+| EQ-015/P.63.v1 | RUS-0111 |  | P |  | untagged |   | 1 |
+| EQ-015/P.64.v1 | RUS-0112 |  | P |  | untagged |   | 1 |
+| EQ-015/P.65.v1 | RUS-0113 |  | P |  | untagged |   | 1 |
+| EQ-015/P.66.v1 | RUS-0114 |  | P |  | untagged |   | 1 |
+| EQ-015/P.67.v1 | RUS-0115 |  | P |  | untagged |   | 1 |
+| EQ-015/P.68.v1 | RUS-0116 |  | P |  | untagged |   | 1 |
+| EQ-015/P.69.v1 | RUS-0117 |  | P |  | untagged |   | 1 |
+| EQ-015/P.70.v1 | RUS-0118 |  | P |  | untagged |   | 1 |
+| EQ-015/P.71.v1 | RUS-0119 |  | P |  | untagged |   | 1 |
+| EQ-015/P.72.v1 | RUS-0120 |  | P |  | untagged |   | 1 |
+| EQ-015/P.73.v1 | RUS-0121 |  | P |  | untagged |   | 1 |
+| EQ-015/P.74.v1 | RUS-0122 |  | P |  | untagged |   | 1 |
+| EQ-015/P.75.v1 | RUS-0123 |  | P |  | untagged |   | 1 |
+| EQ-015/P.76.v1 | RUS-0124 |  | P |  | untagged |   | 1 |
+| EQ-015/P.77.v1 | RUS-0125 |  | P |  | untagged |   | 1 |
+| EQ-015/P.78.v1 | RUS-0126 |  | P |  | untagged |   | 1 |
+| EQ-015/P.79.v1 | RUS-0127 |  | P |  | untagged |   | 1 |
+| EQ-015/P.80.v1 | RUS-0128 |  | P |  | untagged |   | 1 |
+| EQ-015/P.81.v1 | RUS-0129 |  | P |  | untagged |   | 1 |
+| EQ-015/P.82.v1 | RUS-0130 |  | P |  | untagged |   | 1 |
+| EQ-015/P.83.v1 | RUS-0131 |  | P |  | untagged |   | 1 |
+| EQ-015/P.84.v1 | RUS-0132 |  | P |  | untagged |   | 1 |
+| EQ-015/P.85.v1 | RUS-0133 |  | P |  | untagged |   | 1 |
+| EQ-015/P.86.v1 | RUS-0134 |  | P |  | untagged |   | 1 |
+| EQ-015/P.87.v1 | RUS-0135 |  | P |  | untagged |   | 1 |
+| EQ-015/P.88.v1 | RUS-0136 |  | P |  | untagged |   | 1 |
+| EQ-015/P.89.v1 | RUS-0137 |  | P |  | untagged |   | 1 |
+| EQ-015/P.90.v1 | RUS-0138 |  | P |  | untagged |   | 1 |
+| EQ-015/P.91.v1 | RUS-0139 |  | P |  | untagged |   | 1 |
+| EQ-015/P.92.v1 | RUS-0140 |  | P |  | untagged |   | 1 |
+| EQ-015/P.93.v1 | RUS-0141 |  | P |  | untagged |   | 1 |
+| EQ-015/P.94.v1 | RUS-0142 |  | P |  | untagged |   | 1 |
+| EQ-015/P.95.v1 | RUS-0143 |  | P |  | untagged |   | 1 |
+| EQ-015/P.96.v1 | RUS-0144 |  | P |  | untagged |   | 1 |
+| EQ-015/P.97.v1 | RUS-0145 |  | P |  | untagged |   | 1 |
+| EQ-015/P.98.v1 | RUS-0146 |  | P |  | untagged |   | 1 |
+| EQ-015/P.99.v1 | RUS-0147 |  | P |  | untagged |   | 1 |
+| EQ-015/P.100.v1 | RUS-0148 |  | P |  | untagged |   | 1 |
+| EQ-015/P.101.v1 | RUS-0149 |  | P |  | untagged |   | 1 |
+| EQ-015/P.102.v1 | RUS-0150 |  | P |  | untagged |   | 1 |
+| EQ-015/P.103.v1 | RUS-0151 |  | P |  | untagged |   | 1 |
+| EQ-015/P.104.v1 | RUS-0152 |  | P |  | untagged |   | 1 |
+| EQ-015/P.105.v1 | RUS-0153 |  | P |  | untagged |   | 1 |
+| EQ-015/P.106.v1 | RUS-0154 |  | P |  | untagged |   | 1 |
+| EQ-015/P.107.v1 | RUS-0155 |  | P |  | untagged |   | 1 |
+| EQ-015/P.108.v1 | RUS-0156 |  | P |  | untagged |   | 1 |
+| EQ-015/P.109.v1 | RUS-0157 |  | P |  | untagged |   | 1 |
+| EQ-015/P.110.v1 | RUS-0158 |  | P |  | untagged |   | 1 |
+| EQ-015/P.111.v1 | RUS-0159 |  | P |  | untagged |   | 1 |
+| EQ-015/P.112.v1 | RUS-0160 |  | P |  | untagged |   | 1 |
+| EQ-015/P.113.v1 | RUS-0161 |  | P |  | untagged |   | 1 |
+| EQ-015/P.114.v1 | RUS-0162 |  | P |  | untagged |   | 1 |
+| EQ-015/P.115.v1 | RUS-0163 |  | P |  | untagged |   | 1 |
+| EQ-015/P.116.v1 | RUS-0164 |  | P |  | untagged |   | 1 |
+| EQ-015/P.117.v1 | RUS-0165 |  | P |  | untagged |   | 1 |
+| ChemDomain_ledger/C.01.v1 | RUS-0166 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.02.v1 | RUS-0167 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.03.v1 | RUS-0168 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.04.v1 | RUS-0169 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.05.v1 | RUS-0170 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.06.v1 | RUS-0171 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.07.v1 | RUS-0172 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.08.v1 | RUS-0173 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.09.v1 | RUS-0174 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.10.v1 | RUS-0175 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.11.v1 | RUS-0176 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.12.v1 | RUS-0177 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.13.v1 | RUS-0178 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.14.v1 | RUS-0179 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.15.v1 | RUS-0180 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.16.v1 | RUS-0181 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.17.v1 | RUS-0182 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.18.v1 | RUS-0183 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.19.v1 | RUS-0184 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.20.v1 | RUS-0185 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.21.v1 | RUS-0186 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.22.v1 | RUS-0187 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.23.v1 | RUS-0188 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.24.v1 | RUS-0189 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.25.v1 | RUS-0190 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.26.v1 | RUS-0191 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.27.v1 | RUS-0192 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.28.v1 | RUS-0193 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.29.v1 | RUS-0194 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.30.v1 | RUS-0195 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.31.v1 | RUS-0196 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.32.v1 | RUS-0197 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.33.v1 | RUS-0198 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.34.v1 | RUS-0199 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.35.v1 | RUS-0200 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.36.v1 | RUS-0201 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.37.v1 | RUS-0202 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.38.v1 | RUS-0203 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.39.v1 | RUS-0204 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.40.v1 | RUS-0205 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.41.v1 | RUS-0206 |  | C |  | untagged |   | 1 |
+| ChemDomain_ledger/C.42.v1 | RUS-0207 |  | C |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.01.v1 | RUS-0208 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.02.v1 | RUS-0209 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.03.v1 | RUS-0210 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.04.v1 | RUS-0211 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.05.v1 | RUS-0212 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.06.v1 | RUS-0213 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.07.v1 | RUS-0214 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.08.v1 | RUS-0215 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.09.v1 | RUS-0216 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.10.v1 | RUS-0217 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.11.v1 | RUS-0218 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.12.v1 | RUS-0219 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.13.v1 | RUS-0220 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.14.v1 | RUS-0221 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.15.v1 | RUS-0222 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.16.v1 | RUS-0223 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.17.v1 | RUS-0224 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.18.v1 | RUS-0225 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.19.v1 | RUS-0226 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.20.v1 | RUS-0227 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.21.v1 | RUS-0228 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.22.v1 | RUS-0229 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.23.v1 | RUS-0230 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.24.v1 | RUS-0231 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.25.v1 | RUS-0232 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.26.v1 | RUS-0233 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.27.v1 | RUS-0234 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.28.v1 | RUS-0235 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.29.v1 | RUS-0236 |  | B |  | untagged |   | 1 |
+| BiologyDomain_living_unit/B.30.v1 | RUS-0237 |  | B |  | untagged |   | 1 |
+| EQ-015/B.01.v1 | RUS-0238 |  | B |  | untagged |   | 1 |
+| EQ-015/B.02.v1 | RUS-0239 |  | B |  | untagged |   | 1 |
+| EQ-015/B.03.v1 | RUS-0240 |  | B |  | untagged |   | 1 |
+| EQ-015/B.04.v1 | RUS-0241 |  | B |  | untagged |   | 1 |
+| EQ-015/B.05.v1 | RUS-0242 |  | B |  | untagged |   | 1 |
+| EQ-015/B.06.v1 | RUS-0243 |  | B |  | untagged |   | 1 |
+| EQ-015/B.07.v1 | RUS-0244 |  | B |  | untagged |   | 1 |
+| EQ-015/B.08.v1 | RUS-0245 |  | B |  | untagged |   | 1 |
+| EQ-015/B.09.v1 | RUS-0246 |  | B |  | untagged |   | 1 |
 
 ## Raw inventory by chapter (every numbered equation, with its canonical id when assigned)
 
@@ -281,61 +819,61 @@ _No numbered equations (One-page reflective conceptual abstract, pure prose (no 
 
 | Label | Section | Statement | Paper tier | In MR 1–79 | Canonical |
 |---|---|---|---|---|---|
-| (1) | Sec. 2, From Events to States: Ontologic | s(x,t) ∈ R^n | definition |  | weld/S.01.v1 |
-| (2) | Sec. 2, From Events to States: Ontologic | V(x,t) = Φ(s(x,t)) | definition |  | weld/S.01.v1 |
-| (3) | Sec. 3, Finite Causal Memory and Telegra | τ ∂t j + j = −D∇s | definition |  | weld/S.01.v1 |
-| (4) | Sec. 3, Finite Causal Memory and Telegra | ∂t s = −∇·j − Γ(s) + Senv | definition |  | weld/S.01.v1 |
-| (5) | Sec. 4, Spectral Structure and Persisten | ∂t s = Lτ s | identity |  | weld/S.01.v1 |
-| (6) | Sec. 4, Spectral Structure and Persisten | s(t) = Σ_k c_k e^{−λ_k t} r_k | identity |  | weld/S.01.v1 |
+| (1) | Sec. 2, From Events to States: Ontologic | s(x,t) ∈ R^n | definition |  | weld/S.10.v1 |
+| (2) | Sec. 2, From Events to States: Ontologic | V(x,t) = Φ(s(x,t)) | definition |  | weld/S.11.v1 |
+| (3) | Sec. 3, Finite Causal Memory and Telegra | τ ∂t j + j = −D∇s | definition |  | weld/S.12.v1 |
+| (4) | Sec. 3, Finite Causal Memory and Telegra | ∂t s = −∇·j − Γ(s) + Senv | definition |  | weld/S.13.v1 |
+| (5) | Sec. 4, Spectral Structure and Persisten | ∂t s = Lτ s | identity |  | weld/S.14.v1 |
+| (6) | Sec. 4, Spectral Structure and Persisten | s(t) = Σ_k c_k e^{−λ_k t} r_k | identity |  | weld/S.15.v1 |
 | Theorem (No-Go for Elimination by Suppression) | Sec. 5, A Structural No-Go Result | Given Lτ with τ > 0, assuming (i) at least one slow spectral mode exists, (ii) suppression acts only on state amplitudes | theorem |  | weld/S.01.v1 |
-| (7) | Sec. 8, Minimal Constructive Model | L = [[−α, ε], [ε, −β]], α, β > 0 | definition |  | weld/S.01.v1 |
-| (8) | Sec. 8, Minimal Constructive Model | λ± = −(α+β)/2 ± sqrt( ((α−β)/2)^2 + ε^2 ) | identity |  | weld/S.01.v1 |
-| (9) | Sec. 9, Ecosystem-Level Stabilization | Γ ↑ (increase dissipation) | measurement |  | weld/S.01.v1 |
-| (10) | Sec. 9, Ecosystem-Level Stabilization | Senv ↓ (reduce load) | measurement |  | weld/S.01.v1 |
-| (11) | Sec. 9, Ecosystem-Level Stabilization | Lij ↓ (limit propagation) | measurement |  | weld/S.01.v1 |
-| (12) | Sec. 9, Ecosystem-Level Stabilization | τ ↓ (shorten memory) | measurement |  | weld/S.01.v1 |
+| (7) | Sec. 8, Minimal Constructive Model | L = [[−α, ε], [ε, −β]], α, β > 0 | definition |  | weld/S.16.v1 |
+| (8) | Sec. 8, Minimal Constructive Model | λ± = −(α+β)/2 ± sqrt( ((α−β)/2)^2 + ε^2 ) | identity |  | weld/S.17.v1 |
+| (9) | Sec. 9, Ecosystem-Level Stabilization | Γ ↑ (increase dissipation) | measurement |  | weld/S.18.v1 |
+| (10) | Sec. 9, Ecosystem-Level Stabilization | Senv ↓ (reduce load) | measurement |  | weld/S.19.v1 |
+| (11) | Sec. 9, Ecosystem-Level Stabilization | Lij ↓ (limit propagation) | measurement |  | weld/S.20.v1 |
+| (12) | Sec. 9, Ecosystem-Level Stabilization | τ ↓ (shorten memory) | measurement |  | weld/S.21.v1 |
 
 ### CAUSAL ETHICS : The Mathematics of Regime Choice and Survival — 10.5281/zenodo.18444260 (37 equations)
 
 | Label | Section | Statement | Paper tier | In MR 1–79 | Canonical |
 |---|---|---|---|---|---|
-| CE-01 | Ch.1 §1.1.1; Ch.2 §2.1 (Axiom I: Reality | M(t') ∈ M | axiom (Axiom I: Reality-as-Record) |  | weld/S.02.v1 |
-| CE-02 | Ch.1 §1.1.2; Ch.2 §2.2 (Axiom II: Agency | A_i(t') ⊆ M(t') | axiom (Axiom II: Agency-as-Choice) |  | weld/S.02.v1 |
-| CE-03 | Ch.1 §1.1.3; Ch.2 §2.5 (Axiom IV: Collec | G(t') := {A_1(t'), …, A_N(t')} ⊆ M(t') | axiom (Axiom IV: Collective as Coupled Agencies) |  | weld/S.02.v1 |
-| CE-04 | Ch.1 §1.1.4 (Admissible Regime Set); Equ | R ∈ R_adm(t') | definition |  | weld/S.02.v1 |
-| CE-05 | Ch.1 §1.1.5; Ch.2 §2.3 (Axiom III: Regim | R := (T_R, I_R) | axiom (Axiom III: Regime Structure) |  | EQ-015/S.01.v1 |
-| CE-06 | Ch.1 §1.1.6; Ch.2 §2.3.2 (Update Laws);  | M(t' + Δt') = T_R(M(t')) | law (update law) |  | EQ-015/S.01.v1 |
-| CE-07 | Ch.1 §1.1.6; Ch.2 §2.3.2 (Update Laws);  | A(t' + Δt') ⊆ I_R(A(t'), M(t')) | law (update law) |  | EQ-015/S.01.v1 |
-| CE-08 | Ch.1 §1.2.3 (What 'Etic' Means Here); Ch | Etic(A; t') := ∃ R_A(t') ∈ R_adm(t') : A ⊆ M(t'), M(t'+Δt') = T_{R_A}(M(t')), A(t'+Δt') ⊆ I_{R_A}(A(t'), M(t')) | definition |  | EQ-015/S.01.v1 |
-| CE-09 | Ch.3 §3.2 (Ethical Load: the Lyapunov Po | V_{A,R}(M) ≥ 0 | definition |  | EQ-015/S.02.v1 |
-| CE-10 | Ch.3 §3.3 (Causal Memory Constraint); Eq | τ_c'(R) > 0 | definition |  | EQ-015/S.02.v1 |
-| CE-11 | Ch.3 §3.4 (Spectral Stability Margin); E | Δ_spec(R) > 0 | definition |  | EQ-015/S.02.v1 |
-| CE-12 | Ch.3 §3.1.1 (Core Definition: Ethics as  | Ethical(A) ⇔ ∃ Choice(A → R_A) : d/dt' V_{A,R_A}(M(t')) ≤ 0 ∧ τ_c'(R_A) > 0 ∧ Δ_spec(R_A) > 0 | definition (author-labelled 'final' / locked) |  | EQ-015/S.02.v1 |
-| CE-13 | Ch.4/Ch.7 §4.1.2/§7.1.2 (Interpretation  | V̇⁺ := max(dV/dt', 0) | definition |  | EQ-015/S.02.v1 |
-| CE-14 | Ch.1 §1.3 (Symbol Dictionary — Spectrum  | M(t') = M_0 φ_0 + Σ_k a_k(t') φ_k | definition |  | EQ-015/S.03.v1 |
-| CE-15 | Ch.1 §1.3 (Symbol Dictionary); Equation  | S_A(R) ⊆ span{φ_k} | definition |  | EQ-015/S.03.v1 |
-| CE-16 | Ch.1 §1.3 (Symbol Dictionary); Equation  | P_{S_A(R)} : M → S_A(R) | definition |  | EQ-015/S.03.v1 |
-| CE-17 | Ch.5 §5.6 (Individual Survival Link); Eq | limsup_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² > 0 | definition |  | EQ-015/S.03.v1 |
-| CE-18 | Ch.5 §5.6 (Individual Survival Link); Eq | lim_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² = 0 | definition |  | EQ-015/S.03.v1 |
-| CE-19 | Ch.5 §5.3 (Individual Admissibility Test | Eth_ind(A) ⇔ d/dt' V_{A,R_A} ≤ 0 ∧ Δ_spec(R_A) > 0 | definition |  | EQ-015/S.02.v1 |
-| CE-20 | Ch.6 §6.1 (From Individual Potentials to | V_G(M) := Σ_{i=1}^N w_i V_{A_i,R_i}(M),  w_i > 0 | definition |  | EQ-015/S.03.v1 |
-| CE-21 | Ch.6 §6.2 (Collective Admissibility and  | Eth_col(G) ⇔ d/dt' V_G(M) ≤ 0 ∧ min_i Δ_spec(R_i) > 0 | definition |  | EQ-015/S.03.v1 |
-| CE-22 | Ch.8 §8.2.1 (Individual-Admissible, Coll | Conf_{ind→col} ⇔ d/dt' V_{A_i} ≤ 0 ∧ d/dt' V_G > 0 | definition |  | EQ-015/S.03.v1 |
-| CE-23 | Ch.8 §8.2.2 (Collective-Admissible, Indi | Conf_{col→ind} ⇔ d/dt' V_G ≤ 0 ∧ ∃i: d/dt' V_{A_i} > 0 | definition |  | EQ-015/S.03.v1 |
-| CE-24 | Ch.8 §8.1 (Moral Conflict as a Mathemati | Δ_spec(R_i ∪ R_j) ≤ 0 | definition |  | EQ-015/S.03.v1 |
-| CE-25 | Ch.4/Ch.7 §4.2.1/§7.2.1 (Definition (Cau | χ_causal(R) := 1[τ_c'(R) ≈ 0] | definition |  | weld/S.03.v1 |
-| CE-26 | Ch.4/Ch.7 §4.2.2/§7.2.2 (Definition (Spe | χ_spec(R) := 1[Δ_spec(R) ≤ 0] | definition |  | weld/S.03.v1 |
-| CE-27 | Ch.4/Ch.7 §4.1.1/§7.1.1 (Definition (Mor | C_{A,R}[t1,t2] := ∫_{t1}^{t2} [ α V̇⁺_{A,R}(M(t')) + β χ_causal(R) + γ χ_spec(R) ] dt',  α,β,γ > 0 | definition |  | weld/S.03.v1 |
-| CE-28 | Ch.4/Ch.7 §4.3/§7.3 (Definition (Respons | Resp(A) ≡ C_{A,R_A} | definition |  | weld/S.03.v1 |
-| CE-29 | Ch.4/Ch.7 §4.4/§7.4 (Definition (Collect | C_G[t1,t2] := Σ_{i=1}^N w_i C_{A_i,R_i}[t1,t2] | definition |  | weld/S.03.v1 |
-| CE-30 | Ch.4/Ch.7 §4.4.2/§7.4.2 (Definition (Str | ∃ i,j : C_{A_i,R_i} ≫ C_{A_j,R_j} | definition |  | EQ-015/S.03.v1 |
-| CE-31 | Ch.4/Ch.7 §4.5/§7.5 (Definition (Karma a | lim_{T→∞} C_{A,R}[0,T] = ∞ | definition |  | weld/S.03.v1 |
-| CE-32 | Ch.4/Ch.7 §4.5.2/§7.5.2 (Theorem (Cost–S | lim_{T→∞} C_{A,R}[0,T] = ∞ ⇒ lim_{n→∞} ‖P_{S_A} M(t'+n)‖² = 0 | theorem (author-labelled 'Theorem (Cost–Survival Link)') |  | weld/S.03.v1 |
-| CE-33 | Ch.4/Ch.7 §4.6.1/§7.6.1 (Definition (Zer | Eth(A) ⇔ C_{A,R_A}[t,∞) = 0 | definition (author-labelled 'ideal condition') |  | weld/S.03.v1 |
-| CE-34 | Ch.4/Ch.7 §4.6.2/§7.6.2 (Definition (Con | R* ∈ argmin_{R∈R_adm} C_{system,R}  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0 | definition |  | weld/S.03.v1 |
-| (CE-choice gate) | Ch.5 §5.3 (Hard rule: Choice gate) | ¬∃ Choice(A → R_A) ⇒ no ethics attribution, no responsibility attribution, and no moral cost attribution | law (author-labelled 'Hard rule') |  | weld/S.03.v1 |
-| (Tragic) | Ch.5 §5.4 (Definition (Tragic regime cla | ∀ R ∈ R_available(t') : ¬[τ_c'(R) > 0 ∧ Δ_spec(R) > 0] ∨ C_{A,R}[t',t'+T] > 0,  for all T > 0 | definition |  | weld/S.03.v1 |
-| (Tragic-min) | Ch.5 §5.4 (Consequence, following Defini | R†_A ∈ argmin_{R∈R_available(t')} C_{A,R}[t',t'+T]  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0 | proposition (derived consequence of the Tragic definition) |  | weld/S.03.v1 |
+| CE-01 | Ch.1 §1.1.1; Ch.2 §2.1 (Axiom I: Reality | M(t') ∈ M | axiom (Axiom I: Reality-as-Record) |  | weld/S.27.v1 |
+| CE-02 | Ch.1 §1.1.2; Ch.2 §2.2 (Axiom II: Agency | A_i(t') ⊆ M(t') | axiom (Axiom II: Agency-as-Choice) |  | weld/S.28.v1 |
+| CE-03 | Ch.1 §1.1.3; Ch.2 §2.5 (Axiom IV: Collec | G(t') := {A_1(t'), …, A_N(t')} ⊆ M(t') | axiom (Axiom IV: Collective as Coupled Agencies) |  | weld/S.29.v1 |
+| CE-04 | Ch.1 §1.1.4 (Admissible Regime Set); Equ | R ∈ R_adm(t') | definition |  | weld/S.30.v1 |
+| CE-05 | Ch.1 §1.1.5; Ch.2 §2.3 (Axiom III: Regim | R := (T_R, I_R) | axiom (Axiom III: Regime Structure) |  | EQ-015/S.13.v1 |
+| CE-06 | Ch.1 §1.1.6; Ch.2 §2.3.2 (Update Laws);  | M(t' + Δt') = T_R(M(t')) | law (update law) |  | EQ-015/S.14.v1 |
+| CE-07 | Ch.1 §1.1.6; Ch.2 §2.3.2 (Update Laws);  | A(t' + Δt') ⊆ I_R(A(t'), M(t')) | law (update law) |  | EQ-015/S.15.v1 |
+| CE-08 | Ch.1 §1.2.3 (What 'Etic' Means Here); Ch | Etic(A; t') := ∃ R_A(t') ∈ R_adm(t') : A ⊆ M(t'), M(t'+Δt') = T_{R_A}(M(t')), A(t'+Δt') ⊆ I_{R_A}(A(t'), M(t')) | definition |  | EQ-015/S.16.v1 |
+| CE-09 | Ch.3 §3.2 (Ethical Load: the Lyapunov Po | V_{A,R}(M) ≥ 0 | definition |  | EQ-015/S.17.v1 |
+| CE-10 | Ch.3 §3.3 (Causal Memory Constraint); Eq | τ_c'(R) > 0 | definition |  | EQ-015/S.18.v1 |
+| CE-11 | Ch.3 §3.4 (Spectral Stability Margin); E | Δ_spec(R) > 0 | definition |  | EQ-015/S.19.v1 |
+| CE-12 | Ch.3 §3.1.1 (Core Definition: Ethics as  | Ethical(A) ⇔ ∃ Choice(A → R_A) : d/dt' V_{A,R_A}(M(t')) ≤ 0 ∧ τ_c'(R_A) > 0 ∧ Δ_spec(R_A) > 0 | definition (author-labelled 'final' / locked) |  | EQ-015/S.20.v1 |
+| CE-13 | Ch.4/Ch.7 §4.1.2/§7.1.2 (Interpretation  | V̇⁺ := max(dV/dt', 0) | definition |  | EQ-015/S.21.v1 |
+| CE-14 | Ch.1 §1.3 (Symbol Dictionary — Spectrum  | M(t') = M_0 φ_0 + Σ_k a_k(t') φ_k | definition |  | EQ-015/S.23.v1 |
+| CE-15 | Ch.1 §1.3 (Symbol Dictionary); Equation  | S_A(R) ⊆ span{φ_k} | definition |  | EQ-015/S.24.v1 |
+| CE-16 | Ch.1 §1.3 (Symbol Dictionary); Equation  | P_{S_A(R)} : M → S_A(R) | definition |  | EQ-015/S.25.v1 |
+| CE-17 | Ch.5 §5.6 (Individual Survival Link); Eq | limsup_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² > 0 | definition |  | EQ-015/S.26.v1 |
+| CE-18 | Ch.5 §5.6 (Individual Survival Link); Eq | lim_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² = 0 | definition |  | EQ-015/S.27.v1 |
+| CE-19 | Ch.5 §5.3 (Individual Admissibility Test | Eth_ind(A) ⇔ d/dt' V_{A,R_A} ≤ 0 ∧ Δ_spec(R_A) > 0 | definition |  | EQ-015/S.22.v1 |
+| CE-20 | Ch.6 §6.1 (From Individual Potentials to | V_G(M) := Σ_{i=1}^N w_i V_{A_i,R_i}(M),  w_i > 0 | definition |  | EQ-015/S.28.v1 |
+| CE-21 | Ch.6 §6.2 (Collective Admissibility and  | Eth_col(G) ⇔ d/dt' V_G(M) ≤ 0 ∧ min_i Δ_spec(R_i) > 0 | definition |  | EQ-015/S.29.v1 |
+| CE-22 | Ch.8 §8.2.1 (Individual-Admissible, Coll | Conf_{ind→col} ⇔ d/dt' V_{A_i} ≤ 0 ∧ d/dt' V_G > 0 | definition |  | EQ-015/S.30.v1 |
+| CE-23 | Ch.8 §8.2.2 (Collective-Admissible, Indi | Conf_{col→ind} ⇔ d/dt' V_G ≤ 0 ∧ ∃i: d/dt' V_{A_i} > 0 | definition |  | EQ-015/S.31.v1 |
+| CE-24 | Ch.8 §8.1 (Moral Conflict as a Mathemati | Δ_spec(R_i ∪ R_j) ≤ 0 | definition |  | EQ-015/S.32.v1 |
+| CE-25 | Ch.4/Ch.7 §4.2.1/§7.2.1 (Definition (Cau | χ_causal(R) := 1[τ_c'(R) ≈ 0] | definition |  | weld/S.31.v1 |
+| CE-26 | Ch.4/Ch.7 §4.2.2/§7.2.2 (Definition (Spe | χ_spec(R) := 1[Δ_spec(R) ≤ 0] | definition |  | weld/S.32.v1 |
+| CE-27 | Ch.4/Ch.7 §4.1.1/§7.1.1 (Definition (Mor | C_{A,R}[t1,t2] := ∫_{t1}^{t2} [ α V̇⁺_{A,R}(M(t')) + β χ_causal(R) + γ χ_spec(R) ] dt',  α,β,γ > 0 | definition |  | weld/S.33.v1 |
+| CE-28 | Ch.4/Ch.7 §4.3/§7.3 (Definition (Respons | Resp(A) ≡ C_{A,R_A} | definition |  | weld/S.34.v1 |
+| CE-29 | Ch.4/Ch.7 §4.4/§7.4 (Definition (Collect | C_G[t1,t2] := Σ_{i=1}^N w_i C_{A_i,R_i}[t1,t2] | definition |  | weld/S.35.v1 |
+| CE-30 | Ch.4/Ch.7 §4.4.2/§7.4.2 (Definition (Str | ∃ i,j : C_{A_i,R_i} ≫ C_{A_j,R_j} | definition |  | EQ-015/S.33.v1 |
+| CE-31 | Ch.4/Ch.7 §4.5/§7.5 (Definition (Karma a | lim_{T→∞} C_{A,R}[0,T] = ∞ | definition |  | weld/S.36.v1 |
+| CE-32 | Ch.4/Ch.7 §4.5.2/§7.5.2 (Theorem (Cost–S | lim_{T→∞} C_{A,R}[0,T] = ∞ ⇒ lim_{n→∞} ‖P_{S_A} M(t'+n)‖² = 0 | theorem (author-labelled 'Theorem (Cost–Survival Link)') |  | weld/S.37.v1 |
+| CE-33 | Ch.4/Ch.7 §4.6.1/§7.6.1 (Definition (Zer | Eth(A) ⇔ C_{A,R_A}[t,∞) = 0 | definition (author-labelled 'ideal condition') |  | weld/S.38.v1 |
+| CE-34 | Ch.4/Ch.7 §4.6.2/§7.6.2 (Definition (Con | R* ∈ argmin_{R∈R_adm} C_{system,R}  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0 | definition |  | weld/S.39.v1 |
+| (CE-choice gate) | Ch.5 §5.3 (Hard rule: Choice gate) | ¬∃ Choice(A → R_A) ⇒ no ethics attribution, no responsibility attribution, and no moral cost attribution | law (author-labelled 'Hard rule') |  | weld/S.40.v1 |
+| (Tragic) | Ch.5 §5.4 (Definition (Tragic regime cla | ∀ R ∈ R_available(t') : ¬[τ_c'(R) > 0 ∧ Δ_spec(R) > 0] ∨ C_{A,R}[t',t'+T] > 0,  for all T > 0 | definition |  | weld/S.41.v1 |
+| (Tragic-min) | Ch.5 §5.4 (Consequence, following Defini | R†_A ∈ argmin_{R∈R_available(t')} C_{A,R}[t',t'+T]  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0 | proposition (derived consequence of the Tragic definition) |  | weld/S.42.v1 |
 
 ### AI, Translation, and Access to Event-Specific Contex — 10.5281/zenodo.18517054 (20 equations)
 
@@ -373,16 +911,16 @@ _No numbered equations (One-page reflective conceptual abstract, pure prose (no 
 
 | Label | Section | Statement | Paper tier | In MR 1–79 | Canonical |
 |---|---|---|---|---|---|
-| Def-1 | 6.1 Constrained Dynamical Systems | x' = F(x, C) | definition |  | A.5/S.01.v1 |
-| Def-2 | 6.2 Persistence and Viable Regions | x(t) ∈ V,  where V ⊆ S is the viable region of the state space S, for all times in the interval of observation | definition |  | A.5/S.01.v1 |
-| Persistence-Regulation-Condition | 6.4 Persistence Regulation | d/dt [ d(x(t), V) ] < 0  (in expectation), where d(x,V) is the distance between state x and the viable region V | definition (formalization of persistence regulation) |  | A.5/S.01.v1 |
-| Constraint-Evolution | 5.5 / 6.3 Constraint Dynamics | C_{t+1} = G(x_t, C_t) | definition (schematic representation, not yet the agency condition) |  | A.5/S.01.v1 |
-| State-Constraint-Coupling | 6.5 Agency as Constraint Regulation | ∂C/∂x ≠ 0 | definition (necessary condition, part of the agency criterion) |  | A.5/S.01.v1 |
-| Def-3 (Agency-Condition) | 6.5 Agency as Constraint Regulation | ∂Tp/∂C · ∂C/∂x > 0,  where Tp is the expected persistence time of the system within the viable region V | definition |  | A.5/S.01.v1 |
-| Proto-Agency-Condition | 8.2–8.3 Level 0 / Level 1; 9.2 Control S | ∂C/∂x = 0 | definition |  | A.5/S.01.v1 |
-| L3-Constraint-Evolution-History | 8.5 Level 3: Adaptive Constraint Regulat | C_{t+1} = G(x_t, C_t, H_t),  where H_t is the system's interaction history | definition |  | A.5/S.01.v1 |
-| L4-Constraint-Evolution-Predictive | 8.6 Level 4: Predictive Constraint Regul | C_{t+1} = G(x_t, C_t, x̂_{t+k}),  where x̂_{t+k} represents predicted future states | definition |  | A.5/S.01.v1 |
-| L5-Meta-Regulation | 8.7 Level 5: Reflective Constraint Regul | G_{t+1} = M(G_t) | definition |  | A.5/S.01.v1 |
+| Def-1 | 6.1 Constrained Dynamical Systems | x' = F(x, C) | definition |  | A.5/S.04.v1 |
+| Def-2 | 6.2 Persistence and Viable Regions | x(t) ∈ V,  where V ⊆ S is the viable region of the state space S, for all times in the interval of observation | definition |  | A.5/S.05.v1 |
+| Persistence-Regulation-Condition | 6.4 Persistence Regulation | d/dt [ d(x(t), V) ] < 0  (in expectation), where d(x,V) is the distance between state x and the viable region V | definition (formalization of persistence regulation) |  | A.5/S.06.v1 |
+| Constraint-Evolution | 5.5 / 6.3 Constraint Dynamics | C_{t+1} = G(x_t, C_t) | definition (schematic representation, not yet the agency condition) |  | A.5/S.07.v1 |
+| State-Constraint-Coupling | 6.5 Agency as Constraint Regulation | ∂C/∂x ≠ 0 | definition (necessary condition, part of the agency criterion) |  | A.5/S.08.v1 |
+| Def-3 (Agency-Condition) | 6.5 Agency as Constraint Regulation | ∂Tp/∂C · ∂C/∂x > 0,  where Tp is the expected persistence time of the system within the viable region V | definition |  | A.5/S.09.v1 |
+| Proto-Agency-Condition | 8.2–8.3 Level 0 / Level 1; 9.2 Control S | ∂C/∂x = 0 | definition |  | A.5/S.10.v1 |
+| L3-Constraint-Evolution-History | 8.5 Level 3: Adaptive Constraint Regulat | C_{t+1} = G(x_t, C_t, H_t),  where H_t is the system's interaction history | definition |  | A.5/S.11.v1 |
+| L4-Constraint-Evolution-Predictive | 8.6 Level 4: Predictive Constraint Regul | C_{t+1} = G(x_t, C_t, x̂_{t+k}),  where x̂_{t+k} represents predicted future states | definition |  | A.5/S.12.v1 |
+| L5-Meta-Regulation | 8.7 Level 5: Reflective Constraint Regul | G_{t+1} = M(G_t) | definition |  | A.5/S.13.v1 |
 
 ### Knowledge as Stabilized Translation: Toward an Observer-Constrained Epistemology — 10.5281/zenodo.18925129 (2 equations)
 
@@ -518,10 +1056,10 @@ _No numbered equations (5-page prose article with no numbered, boxed, or otherwi
 | (14) | IV From occurrence to meaning, experienc | E_{i,n} = Phi_E(x_{i,n}, mu_{i,n}, kappa_{i,n}, c_n) | definition | 4 | EQ-015/E.04.v1 |
 | (15) | IV From occurrence to meaning, experienc | M_{i,n} = U_M(M_{i,n-1}, x_{i,n}, mu_{i,n}, E_{i,n}, c_n, Lineage_n, T_n) | definition |  | EQ-015/E.08.v1 |
 | (16) | IV From occurrence to meaning, experienc | Delta A_past = 0 | law (invariant) |  | A.8/M.01.v1 |
-| (17) | V.A Relational and multidimensional beli | Bel_{i,p,n} = Rel_B(a_i, p \| x_i, mu_i, E_i, M_i, Theta_i, I_i, S_i^active, c_i) | definition |  | weld/S.04.v1 |
-| (18) | V.A Relational and multidimensional beli | b_{i,p,n} = (e_{i,p}, c_{i,p}, s_{i,p}, a_{i,p}, eta_{i,p}, g_{i,p}, r_{i,p}) | definition |  | weld/S.04.v1 |
-| (19) | V.A Relational and multidimensional beli | b_{i,p,n+1} = U_B(b_{i,p,n}, Ev_{i,p}, M_i, mu_i, E_i, Theta_i, I_i, Trust_i, Affect_i, Utility_i, Repetition_i, Auth_i, | law (descriptive update rule) |  | weld/S.04.v1 |
-| (20) | V.B Scale and stabilization | Bel_{g,d,n}^{(l)}(p) = Stabilize_B({b_{i,p,n}}_{i in G}, C_B) | definition |  | weld/S.04.v1 |
+| (17) | V.A Relational and multidimensional beli | Bel_{i,p,n} = Rel_B(a_i, p \| x_i, mu_i, E_i, M_i, Theta_i, I_i, S_i^active, c_i) | definition |  | weld/S.43.v1 |
+| (18) | V.A Relational and multidimensional beli | b_{i,p,n} = (e_{i,p}, c_{i,p}, s_{i,p}, a_{i,p}, eta_{i,p}, g_{i,p}, r_{i,p}) | definition |  | weld/S.44.v1 |
+| (19) | V.A Relational and multidimensional beli | b_{i,p,n+1} = U_B(b_{i,p,n}, Ev_{i,p}, M_i, mu_i, E_i, Theta_i, I_i, Trust_i, Affect_i, Utility_i, Repetition_i, Auth_i, | law (descriptive update rule) |  | weld/S.45.v1 |
+| (20) | V.B Scale and stabilization | Bel_{g,d,n}^{(l)}(p) = Stabilize_B({b_{i,p,n}}_{i in G}, C_B) | definition |  | weld/S.46.v1 |
 | (21) | V.B Scale and stabilization | Belief Strength(p), Belief Distribution(p), Auth(p), Pow(p), Val_E(p) | law (non-collapse) |  | A.5/M.06.v1 |
 | Prop-1 | V.B Scale and stabilization | Belief-scale nonpromotion: for any proposition p, increasing the distribution scale of Bel(p) does not, without addition | proposition (with proof) |  | weld/S.04.v1 |
 | Def-1 | VI.A Normative proposal | Knowledge status: Knowledge is the bounded epistemic status granted to a claim about the world or a declared domain when | definition |  | weld/E.03.v1 |
@@ -836,10 +1374,10 @@ _No numbered equations (5-page prose article with no numbered, boxed, or otherwi
 | (40) | 7 Bounded Knower: Epistemic Standing Is  | K_{A,t}(Q1,D1;...) =/=> K_{A,t}(Q2,D2;...) | identity (non-collapse) |  | weld/E.03.v1 |
 | (41) | 7 Bounded Knower: Epistemic Standing Is  | K_{A,t}(Q,D;...) =/=> K_{A,t+1}(Q,D;...) | identity (non-collapse) |  | weld/E.03.v1 |
 | (42) | 7 Bounded Knower: Epistemic Standing Is  | social/epistemic label  =/=>  unconditional standing across Q, D, t | proposition [Dr] (corollary) |  | weld/E.03.v1 |
-| (43) | 8 Collective Epistemic Systems Without a | Z_{G,t} := < {Z_{A_i,t}}_{i=1}^n, T_{G,t}, A_{G,t}, C_{G,t} > | definition |  | weld/S.05.v1 |
-| (44) | 8 Collective Epistemic Systems Without a | S_{G,t} := q_{sem,G,Omega_{G,t}}(Z_{G,t}) | definition |  | weld/S.05.v1 |
-| (45) | 8 Collective Epistemic Systems Without a | m^G_{t+1}(e) = rho_G * m^G_t(e) + sigma_{G,t}(e) | definition |  | weld/S.05.v1 |
-| (46) | 8 Collective Epistemic Systems Without a | W_{G,t}(H) = W_G(R_{G,<=t}, independence, defects, calibration, objection channels) | definition |  | weld/S.05.v1 |
+| (43) | 8 Collective Epistemic Systems Without a | Z_{G,t} := < {Z_{A_i,t}}_{i=1}^n, T_{G,t}, A_{G,t}, C_{G,t} > | definition |  | weld/S.47.v1 |
+| (44) | 8 Collective Epistemic Systems Without a | S_{G,t} := q_{sem,G,Omega_{G,t}}(Z_{G,t}) | definition |  | weld/S.48.v1 |
+| (45) | 8 Collective Epistemic Systems Without a | m^G_{t+1}(e) = rho_G * m^G_t(e) + sigma_{G,t}(e) | definition |  | weld/S.49.v1 |
+| (46) | 8 Collective Epistemic Systems Without a | W_{G,t}(H) = W_G(R_{G,<=t}, independence, defects, calibration, objection channels) | definition |  | weld/S.50.v1 |
 | (47) | 8 Collective Epistemic Systems Without a | a_G up  =/=>  W_G(H) up;   m_G up  =/=>  truth | identity (non-collapse) |  | EQ-015/E.15.v1 |
 | (48) | 9 Discrimination, Record, and Revision | delta-hat_i(u*) != delta-hat_j(u*) | definition |  | weld/M.08.v1 |
 | (49) | 9 Discrimination, Record, and Revision | delta*_{t+1} = O_D(Z_{t+1}; u*) | definition |  | weld/M.08.v1 |
@@ -1028,15 +1566,15 @@ _No numbered equations (Checked exhaustively (full pdftotext, both plain and -la
 
 | Label | Section | Statement | Paper tier | In MR 1–79 | Canonical |
 |---|---|---|---|---|---|
-| CBC-01 | Sec. 6, Six Levels That Must Not Collaps | Πlive_{A,t}(g) ⊆ Πfeas_{A,t}(g) ⊆ Πphys_t(g), π^choice ∈ Πlive_{A,t}(g) | definition | 19 | A.5/S.03.v1 |
-| CBC-02 | Sec. 6, Six Levels That Must Not Collaps | π^choice_{A,t} ∈ Πlive_{A,t}(g) | definition | 22 | A.5/S.03.v1 |
-| CBC-03 | Sec. 6, Six Levels That Must Not Collaps | π^act ≠ π^choice possible; Yobs = Oq(H0:T); Yobs ≠ H0:T | definition | 23 | A.5/S.03.v1 |
-| CBC-04 | Sec. 6, Six Levels That Must Not Collaps | possible ≠ feasible ≠ live ≠ chosen ≠ enacted ≠ observed | definition | 24 | A.5/S.03.v1 |
-| CBC-05 | Sec. 7, A Live Possibility Field | L_{A,t}(g) = {(π, κ_{A,t}(π\|g)) : π ∈ Πfeas_{A,t}(g)} | definition | 20 | A.5/S.03.v1 |
-| CBC-06 | Sec. 7, A Live Possibility Field | Πlive_{A,t}(g) = {π : κ_{A,t}(π\|g) ≥ τlive} | definition | 21 | A.5/S.03.v1 |
+| CBC-01 | Sec. 6, Six Levels That Must Not Collaps | Πlive_{A,t}(g) ⊆ Πfeas_{A,t}(g) ⊆ Πphys_t(g), π^choice ∈ Πlive_{A,t}(g) | definition | 19 | A.5/S.14.v1 |
+| CBC-02 | Sec. 6, Six Levels That Must Not Collaps | π^choice_{A,t} ∈ Πlive_{A,t}(g) | definition | 22 | A.5/S.17.v1 |
+| CBC-03 | Sec. 6, Six Levels That Must Not Collaps | π^act ≠ π^choice possible; Yobs = Oq(H0:T); Yobs ≠ H0:T | definition | 23 | A.5/S.18.v1 |
+| CBC-04 | Sec. 6, Six Levels That Must Not Collaps | possible ≠ feasible ≠ live ≠ chosen ≠ enacted ≠ observed | definition | 24 | A.5/S.19.v1 |
+| CBC-05 | Sec. 7, A Live Possibility Field | L_{A,t}(g) = {(π, κ_{A,t}(π\|g)) : π ∈ Πfeas_{A,t}(g)} | definition | 20 | A.5/S.15.v1 |
+| CBC-06 | Sec. 7, A Live Possibility Field | Πlive_{A,t}(g) = {π : κ_{A,t}(π\|g) ≥ τlive} | definition | 21 | A.5/S.16.v1 |
 | CBC-07 | Sec. 8.1, Resonance: experiential fit | Resonance ≠ Consent, Resonance ≠ Truth | definition |  | EQ-015/S.04.v1 |
-| CBC-08 | Sec. 9, Effective, Corrigible Agency Rev | p*_{A,g} = max_{π∈Πfeas_A(g)} Pr(Rg ∩ Dg ∩ Xg ∩ Fg) | definition | 25 | EQ-015/S.06.v1 |
-| CBC-09 | Sec. 9, Effective, Corrigible Agency Rev | Πlive_{A,t}(g) ⊆ Πfeas_A(g; h, z, T, B) | definition |  | A.5/S.03.v1 |
+| CBC-08 | Sec. 9, Effective, Corrigible Agency Rev | p*_{A,g} = max_{π∈Πfeas_A(g)} Pr(Rg ∩ Dg ∩ Xg ∩ Fg) | definition | 25 | EQ-015/S.51.v1 |
+| CBC-09 | Sec. 9, Effective, Corrigible Agency Rev | Πlive_{A,t}(g) ⊆ Πfeas_A(g; h, z, T, B) | definition |  | A.5/S.20.v1 |
 | CBC-10 | Sec. 11, Structural Deprivation and Viol | L^live_{A,g} = max_{z∈Jfeas} DL(L^z_A(g), L^{z0}_A(g)) | definition | 26 | EQ-015/S.08.v1 |
 | CBC-11 | Sec. 13, Human-AI: The Pre-Prompt Live P | Ht —L_H→ Qt | identity | 27 | EQ-015/H.03.v1 |
 | CBC-12 | Sec. 13, Human-AI: The Pre-Prompt Live P | Qt → AIt → Yt —R_H→ E^AI_{H,t} | identity | 28 | EQ-015/H.03.v1 |
@@ -1062,26 +1600,26 @@ _No numbered equations (Checked exhaustively (full pdftotext, both plain and -la
 
 | Label | Section | Statement | Paper tier | In MR 1–79 | Canonical |
 |---|---|---|---|---|---|
-| (1) | Sec. 4.2, The joint event and the envelo | p*_{A,g}(h,z;T,B,P) := max_{π∈Πwit_A(g;h,z,T,B)} Pr^π_P(Rg ∩ Dg ∩ Xg ∩ Fg), with p*_{A,g} := 0 when the set is empty | definition | 25 | EQ-015/S.06.v1 |
-| (2) | Sec. 4.2, The joint event and the envelo | p*_A = (p*_{A,g})_{g∈G}, C^α_A = {g : p*_{A,g} ≥ α} | definition |  | EQ-015/S.06.v1 |
-| (3) | Sec. 4.2, The joint event and the envelo | A^corr_A(h,z;T,B,P,w) := Σ_g w_g p*_{A,g} ∈ [0,1] | definition |  | EQ-015/S.06.v1 |
-| unnumbered | Sec. 4.2, The joint event and the envelo | p_{A,g}(π) = r·d·x·f, with r = Pr(Rg), d = Pr(Dg\|Rg), x = Pr(Xg\|Rg,Dg), f = Pr(Fg\|Rg,Dg,Xg) | identity |  | EQ-015/S.06.v1 |
-| (4) | Sec. 4.3, Two layers | p*(2)_{A,g} := max_{z∈Jfeas} p*_{A,g}(h,z;T,B,P) | definition |  | EQ-015/S.07.v1 |
-| (5) | Sec. 4.3, Two layers | L^recoverable_A = max_{z∈Jfeas} A^corr_A(h,z) − A^corr_A(h,z0) | definition |  | EQ-015/S.07.v1 |
+| (1) | Sec. 4.2, The joint event and the envelo | p*_{A,g}(h,z;T,B,P) := max_{π∈Πwit_A(g;h,z,T,B)} Pr^π_P(Rg ∩ Dg ∩ Xg ∩ Fg), with p*_{A,g} := 0 when the set is empty | definition | 25 | EQ-015/S.52.v1 |
+| (2) | Sec. 4.2, The joint event and the envelo | p*_A = (p*_{A,g})_{g∈G}, C^α_A = {g : p*_{A,g} ≥ α} | definition |  | EQ-015/S.53.v1 |
+| (3) | Sec. 4.2, The joint event and the envelo | A^corr_A(h,z;T,B,P,w) := Σ_g w_g p*_{A,g} ∈ [0,1] | definition |  | EQ-015/S.54.v1 |
+| unnumbered | Sec. 4.2, The joint event and the envelo | p_{A,g}(π) = r·d·x·f, with r = Pr(Rg), d = Pr(Dg\|Rg), x = Pr(Xg\|Rg,Dg), f = Pr(Fg\|Rg,Dg,Xg) | identity |  | EQ-015/S.55.v1 |
+| (4) | Sec. 4.3, Two layers | p*(2)_{A,g} := max_{z∈Jfeas} p*_{A,g}(h,z;T,B,P) | definition |  | EQ-015/S.56.v1 |
+| (5) | Sec. 4.3, Two layers | L^recoverable_A = max_{z∈Jfeas} A^corr_A(h,z) − A^corr_A(h,z0) | definition |  | EQ-015/S.57.v1 |
 | (6) | Sec. 4.4, Corrigibility and spectral sup | Δspec(Ri) > 0 ⟺ channel_i = open ∧ Ṙ_i ≠ 0 | definition |  | EQ-015/S.09.v1 |
-| (7) | Sec. 6, Pseudo-peace: a gate collapse wi | Yobs = calm ∧ p*wit = low ∧ F = blocked | definition |  | EQ-015/S.10.v1 |
-| PAR-stepper | Sec. 5, Setting (forced Laplacian model) | LR = DW − W (forced Laplacian); A := LR + Γ; s[n+1] = s[n] + dt(−A s[n] + J) | definition |  | weld/S.01.v1 |
-| L1 | Sec. 5, Lemmas (invariance and recurrenc | s* = A^{-1}J is the unique fixed point independent of u; ∥s[n]−s*∥ ≤ ρ^{n−nB}∥s[nB]−s*∥ after the last nonzero tick of a | theorem |  | weld/S.01.v1 |
-| L2 | Sec. 5, Lemmas (the bill) | \|u_i[n]\| = dt[(γ_i+D_i)(s*_i−θ) − Σ_{k≠i} W_ik(s*_k−s_k[n])], converging to a rate F_i^∞ > 0 whenever s*_i ≥ θ, so cumul | theorem |  | weld/S.01.v1 |
-| L3 | Sec. 5, Lemmas (operator change) | s*'_i = s*_i / (1+ΔB_ii) with B = A^{-1} (Sherman–Morrison); any θ < s*_i is reached below with Δ > Δ* = (s*_i/θ − 1)/B_ | theorem |  | weld/S.01.v1 |
-| L4 | Sec. 5, Lemmas (mutation) | s_j ≳ (J_j + W_ij·s̄_i)/(γ_j+D_j), with s̄_i an explicit increasing function of node i's own inflow, under permanent per | theorem |  | weld/S.01.v1 |
-| D1 (NC-78) | Sec. 3, An anatomy of 'potential': seven | Potential ≠ exercised ≠ observed | definition |  | EQ-015/S.11.v1 |
-| D2 | Sec. 3, An anatomy of 'potential': seven | Declared set ≠ witnessed set | definition |  | EQ-015/S.11.v1 |
-| D3 | Sec. 3, An anatomy of 'potential': seven | Layer 1 ≠ layer 2 | definition |  | EQ-015/S.11.v1 |
-| D4 | Sec. 3, An anatomy of 'potential': seven | Task potential ≠ aggregate potential | definition |  | EQ-015/S.11.v1 |
-| D5 | Sec. 3, An anatomy of 'potential': seven | Feasible ≠ permitted | definition |  | EQ-015/S.11.v1 |
-| D6 (NC-79) | Sec. 3, An anatomy of 'potential': seven | Diagnosis of compression ≠ attribution of responsibility | definition |  | EQ-015/S.11.v1 |
-| D7 | Sec. 3, An anatomy of 'potential': seven | Recoverable gap ≠ accumulated loss | definition |  | EQ-015/S.11.v1 |
+| (7) | Sec. 6, Pseudo-peace: a gate collapse wi | Yobs = calm ∧ p*wit = low ∧ F = blocked | definition |  | EQ-015/S.58.v1 |
+| PAR-stepper | Sec. 5, Setting (forced Laplacian model) | LR = DW − W (forced Laplacian); A := LR + Γ; s[n+1] = s[n] + dt(−A s[n] + J) | definition |  | weld/S.22.v1 |
+| L1 | Sec. 5, Lemmas (invariance and recurrenc | s* = A^{-1}J is the unique fixed point independent of u; ∥s[n]−s*∥ ≤ ρ^{n−nB}∥s[nB]−s*∥ after the last nonzero tick of a | theorem |  | weld/S.23.v1 |
+| L2 | Sec. 5, Lemmas (the bill) | \|u_i[n]\| = dt[(γ_i+D_i)(s*_i−θ) − Σ_{k≠i} W_ik(s*_k−s_k[n])], converging to a rate F_i^∞ > 0 whenever s*_i ≥ θ, so cumul | theorem |  | weld/S.24.v1 |
+| L3 | Sec. 5, Lemmas (operator change) | s*'_i = s*_i / (1+ΔB_ii) with B = A^{-1} (Sherman–Morrison); any θ < s*_i is reached below with Δ > Δ* = (s*_i/θ − 1)/B_ | theorem |  | weld/S.25.v1 |
+| L4 | Sec. 5, Lemmas (mutation) | s_j ≳ (J_j + W_ij·s̄_i)/(γ_j+D_j), with s̄_i an explicit increasing function of node i's own inflow, under permanent per | theorem |  | weld/S.26.v1 |
+| D1 (NC-78) | Sec. 3, An anatomy of 'potential': seven | Potential ≠ exercised ≠ observed | definition |  | EQ-015/S.59.v1 |
+| D2 | Sec. 3, An anatomy of 'potential': seven | Declared set ≠ witnessed set | definition |  | EQ-015/S.60.v1 |
+| D3 | Sec. 3, An anatomy of 'potential': seven | Layer 1 ≠ layer 2 | definition |  | EQ-015/S.61.v1 |
+| D4 | Sec. 3, An anatomy of 'potential': seven | Task potential ≠ aggregate potential | definition |  | EQ-015/S.62.v1 |
+| D5 | Sec. 3, An anatomy of 'potential': seven | Feasible ≠ permitted | definition |  | EQ-015/S.63.v1 |
+| D6 (NC-79) | Sec. 3, An anatomy of 'potential': seven | Diagnosis of compression ≠ attribution of responsibility | definition |  | EQ-015/S.64.v1 |
+| D7 | Sec. 3, An anatomy of 'potential': seven | Recoverable gap ≠ accumulated loss | definition |  | EQ-015/S.65.v1 |
 | P-A | Sec. 8, Falsifiable propositions | Pseudo-peace signature: amplitude-suppressing interventions raise the calm an evaluator reads while p*wit does not rise  | hypothesis/Open |  | EQ-015/S.10.v1 |
 | P-B | Sec. 8, Falsifiable propositions | Channel shift: when F is blocked and C^α shrinks in task g, load rises in a coupled task g' while the aggregate (3) stay | hypothesis/Open |  | EQ-015/S.12.v1 |
 | P-C | Sec. 8, Falsifiable propositions | The excluded path: groups whose min_i \|C^α_i\| falls while the mean rises show persistent cost concentration (CE-30) and  | hypothesis/Open |  | EQ-015/S.12.v1 |
@@ -1217,56 +1755,56 @@ _No numbered equations (Checked exhaustively (full pdftotext, both plain and -la
 | (2) | 2.1 Readout in this paper | Readout_(Q,O,c)(S) = z,  z != S | definition | 52 | EQ-002/M.03.v1 |
 | (3) | 5. Technology Block: Candidate Generatio | Z_dot_t = v_t G_t - delta_Z Z_t,  0 <= v_t <= 1 | definition |  | EQ-015/W.02.v1 |
 | (4) | 5. Technology Block: Candidate Generatio | K_like != K_validated | definition |  | EQ-015/H.10.v1 |
-| (5) | 5. Technology Block: Candidate Generatio | B^RB_t = N^RB_t q^RB_t | definition |  | EQ-015/W.03.v1 |
-| (6) | 5. Technology Block: Candidate Generatio | B_dot^RB_t / B^RB_t = N_dot^RB_t / N^RB_t + q_dot^RB_t / q^RB_t | identity |  | EQ-015/W.03.v1 |
-| (7) | 5. Technology Block: Candidate Generatio | M_t = (K^M_t)^kappa (A^AI_t)^alpha (B^RB_t)^beta | definition |  | EQ-015/W.03.v1 |
-| (8) | 6. Labour Centrality, Not Labour Disappe | L_t = < L^task_t, L^income_t, L^bottleneck_t, L^bargain_t > | definition | 53 | EQ-015/W.04.v1 |
+| (5) | 5. Technology Block: Candidate Generatio | B^RB_t = N^RB_t q^RB_t | definition |  | EQ-015/W.20.v1 |
+| (6) | 5. Technology Block: Candidate Generatio | B_dot^RB_t / B^RB_t = N_dot^RB_t / N^RB_t + q_dot^RB_t / q^RB_t | identity |  | EQ-015/W.21.v1 |
+| (7) | 5. Technology Block: Candidate Generatio | M_t = (K^M_t)^kappa (A^AI_t)^alpha (B^RB_t)^beta | definition |  | EQ-015/W.22.v1 |
+| (8) | 6. Labour Centrality, Not Labour Disappe | L_t = < L^task_t, L^income_t, L^bottleneck_t, L^bargain_t > | definition | 53 | EQ-015/W.25.v1 |
 | Labour-Decentering Proposition | 6. Labour Centrality, Not Labour Disappe | Labour-Decentering Proposition [Open]. AI and robotics can reduce labour centrality without eliminating labour. Stable e | hypothesis/Open |  | EQ-015/W.04.v1 |
-| (9) | 6. Labour Centrality, Not Labour Disappe | rho = (sigma - 1) / sigma | definition |  | EQ-015/W.03.v1 |
-| (10) | 6. Labour Centrality, Not Labour Disappe | s^L_t = (omega_H H_t^rho) / (omega_H H_t^rho + omega_M M_t^rho) | identity |  | EQ-015/W.03.v1 |
-| (11) | 7. The Claim Constitution: From Wages to | q_t = o_t + tau_t(1 - o_t) = 1 - (1 - o_t)(1 - tau_t) | definition |  | EQ-015/W.05.v1 |
-| (12) | 7. The Claim Constitution: From Wages to | Gamma_t = s^L_t + q_t(1 - s^L_t) | identity |  | EQ-015/W.05.v1 |
-| (13) | 7. The Claim Constitution: From Wages to | q^min_t = (Gamma_bar - s^L_t) / (1 - s^L_t) | identity | 54 | EQ-015/W.05.v1 |
-| (14) | 7. The Claim Constitution: From Wages to | D^rent_(i,t) = (Rent^(AI,out)_(i,t) - Rent^(AI,in)_(i,t)) / Y_(i,t) | definition |  | EQ-015/W.05.v1 |
-| (15) | 7. The Claim Constitution: From Wages to | Gamma^net_(i,t) = Gamma_(i,t) - D^rent_(i,t) | identity |  | EQ-015/W.05.v1 |
-| (16) | 8. Ownership Accumulation: The Stock Tha | W^M_(i,t+1) = (1 - delta_W) W^M_(i,t) + r^M_t W^M_(i,t) + s^(M,cap)_(i,t) + T^cap_(i,t) - Tax^cap_(i,t) | definition |  | EQ-015/W.07.v1 |
-| (17) | 8. Ownership Accumulation: The Stock Tha | o_t = ( sum_(i in B) W^M_(i,t) ) / ( sum_i W^M_(i,t) ) | definition |  | EQ-015/W.07.v1 |
-| (18) | 8. Ownership Accumulation: The Stock Tha | current redistribution != future ownership reproduction | definition |  | EQ-015/W.07.v1 |
-| (19) | 9. Scarce Assets, Rent Burden, and Effec | B^scarce_(i,t) = (R^house_(i,t) + R^land_(i,t) + R^energy_(i,t) + DS_(i,t)) / Y_(i,t) | definition |  | A.5/W.01.v1 |
-| (20) | 9. Scarce Assets, Rent Burden, and Effec | Gamma^eff_(i,t) = max{0, Gamma^net_(i,t) - B^scarce_(i,t)} | identity |  | A.5/W.01.v1 |
-| (21) | 9. Scarce Assets, Rent Burden, and Effec | machine abundance != low rent burden != effective material freedom | definition |  | A.5/W.01.v1 |
-| (22) | 10. Aggregate Demand and Realization: Wh | AD_t = C(Gamma^eff_t Y_t, m_t) + I_t + G_t + NX_t | definition |  | EQ-015/W.06.v1 |
-| (23) | 10. Aggregate Demand and Realization: Wh | chi^dem_t = min{1, AD_t / Y_t} | definition |  | EQ-015/W.06.v1 |
-| (24) | 10. Aggregate Demand and Realization: Wh | Pi^M_t = chi^dem_t Y_t - Cost^M_t | identity |  | EQ-015/W.06.v1 |
+| (9) | 6. Labour Centrality, Not Labour Disappe | rho = (sigma - 1) / sigma | definition |  | EQ-015/W.23.v1 |
+| (10) | 6. Labour Centrality, Not Labour Disappe | s^L_t = (omega_H H_t^rho) / (omega_H H_t^rho + omega_M M_t^rho) | identity |  | EQ-015/W.24.v1 |
+| (11) | 7. The Claim Constitution: From Wages to | q_t = o_t + tau_t(1 - o_t) = 1 - (1 - o_t)(1 - tau_t) | definition |  | EQ-015/W.26.v1 |
+| (12) | 7. The Claim Constitution: From Wages to | Gamma_t = s^L_t + q_t(1 - s^L_t) | identity |  | EQ-015/W.27.v1 |
+| (13) | 7. The Claim Constitution: From Wages to | q^min_t = (Gamma_bar - s^L_t) / (1 - s^L_t) | identity | 54 | EQ-015/W.28.v1 |
+| (14) | 7. The Claim Constitution: From Wages to | D^rent_(i,t) = (Rent^(AI,out)_(i,t) - Rent^(AI,in)_(i,t)) / Y_(i,t) | definition |  | EQ-015/W.29.v1 |
+| (15) | 7. The Claim Constitution: From Wages to | Gamma^net_(i,t) = Gamma_(i,t) - D^rent_(i,t) | identity |  | EQ-015/W.30.v1 |
+| (16) | 8. Ownership Accumulation: The Stock Tha | W^M_(i,t+1) = (1 - delta_W) W^M_(i,t) + r^M_t W^M_(i,t) + s^(M,cap)_(i,t) + T^cap_(i,t) - Tax^cap_(i,t) | definition |  | EQ-015/W.34.v1 |
+| (17) | 8. Ownership Accumulation: The Stock Tha | o_t = ( sum_(i in B) W^M_(i,t) ) / ( sum_i W^M_(i,t) ) | definition |  | EQ-015/W.35.v1 |
+| (18) | 8. Ownership Accumulation: The Stock Tha | current redistribution != future ownership reproduction | definition |  | EQ-015/W.36.v1 |
+| (19) | 9. Scarce Assets, Rent Burden, and Effec | B^scarce_(i,t) = (R^house_(i,t) + R^land_(i,t) + R^energy_(i,t) + DS_(i,t)) / Y_(i,t) | definition |  | A.5/W.04.v1 |
+| (20) | 9. Scarce Assets, Rent Burden, and Effec | Gamma^eff_(i,t) = max{0, Gamma^net_(i,t) - B^scarce_(i,t)} | identity |  | A.5/W.05.v1 |
+| (21) | 9. Scarce Assets, Rent Burden, and Effec | machine abundance != low rent burden != effective material freedom | definition |  | A.5/W.06.v1 |
+| (22) | 10. Aggregate Demand and Realization: Wh | AD_t = C(Gamma^eff_t Y_t, m_t) + I_t + G_t + NX_t | definition |  | EQ-015/W.31.v1 |
+| (23) | 10. Aggregate Demand and Realization: Wh | chi^dem_t = min{1, AD_t / Y_t} | definition |  | EQ-015/W.32.v1 |
+| (24) | 10. Aggregate Demand and Realization: Wh | Pi^M_t = chi^dem_t Y_t - Cost^M_t | identity |  | EQ-015/W.33.v1 |
 | (25) | 10. Aggregate Demand and Realization: Wh | Gamma^eff Y -> AD -> Pi^M -> W^M_(t+1) -> M_(t+1) | definition |  | EQ-015/W.06.v1 |
-| (26) | 11. Ownership Is Not Transition Power: C | G^conv_(j,t)(e) = 1 - [ V_t(e \| -j) / V_t(e) ]_+ | definition |  | EQ-015/W.08.v1 |
-| (27) | 11. Ownership Is Not Transition Power: C | X_(i,t)(e; j) = clip( V_(i,t)(e \| -j) / V_(i,t)(e), 0, 1 ) | definition |  | EQ-015/W.08.v1 |
-| (28) | 11. Ownership Is Not Transition Power: C | D_(i->j,t)(g) = sum_(e in E(g)) w_e(g) G^conv_(j,t)(e) [1 - X_(i,t)(e; j)] | definition |  | EQ-015/W.08.v1 |
-| (29) | 11. Ownership Is Not Transition Power: C | Concentration != G^conv != D | definition |  | EQ-015/W.08.v1 |
+| (26) | 11. Ownership Is Not Transition Power: C | G^conv_(j,t)(e) = 1 - [ V_t(e \| -j) / V_t(e) ]_+ | definition |  | EQ-015/W.37.v1 |
+| (27) | 11. Ownership Is Not Transition Power: C | X_(i,t)(e; j) = clip( V_(i,t)(e \| -j) / V_(i,t)(e), 0, 1 ) | definition |  | EQ-015/W.38.v1 |
+| (28) | 11. Ownership Is Not Transition Power: C | D_(i->j,t)(g) = sum_(e in E(g)) w_e(g) G^conv_(j,t)(e) [1 - X_(i,t)(e; j)] | definition |  | EQ-015/W.39.v1 |
+| (29) | 11. Ownership Is Not Transition Power: C | Concentration != G^conv != D | definition |  | EQ-015/W.40.v1 |
 | (30) | 12. Relational Class Position in an AI-R | C_(i,t) = < O_(i,t), G_(i,t), Gamma_(i,t), A^access_(i,t), X_(i,t), D_(i,t), R^rent_(i,t) > | definition |  | EQ-015/W.09.v1 |
 | (31) | 13. The Political-Economy-to-Human Bridg | c^(PE->H)_(i,t) = B^(PE->H)(Z_t; i, g) | definition |  | weld/W.01.v1 |
 | (32) | 13.1 Live possibility, defined here | Pi^live_(i,t)(g) subseteq Pi^feas_(i,t)(g) subseteq Pi^phys_(i,t)(g) | definition | 55 | EQ-015/H.07.v1 |
 | (33) | 13.1 Live possibility, defined here | Lambda_dot^live_(H,t) = lambda_1 B_t + lambda_2 X_t + lambda_3 P^plural_t + lambda_4 r^H_t - lambda_5 D_t - lambda_6 C^I | hypothesis/Open |  | A.5/H.06.v1 |
 | (34) | 13.2 Corrigible human agency, defined he | A^corr_(H,i,t)(g) = max_(pi in Pi^live_(i,t)(g)) Pr^pi( R_g cap D_g cap X_g cap F_g ) | definition | 56 | EQ-015/W.14.v1 |
 | (35) | 13.3 Human Return, defined here | R^return_(H,t) = < C_t, T_t, S^skill_t, A^alt_t > | definition | 57 | EQ-015/W.15.v1 |
-| (36) | 14. Social Role After Labour | S_dot^H_t = s_1 W_t + s_2 N_t - delta_S S^H_t | definition |  | EQ-015/W.11.v1 |
-| (37) | 14. Social Role After Labour | 1 = l_wage + l_care + l_learn + l_civic + l_leisure | identity |  | EQ-015/W.11.v1 |
-| (38) | 15. Social Reproduction: Productive Nece | H_dot^cap_t = f(Care_t, Health_t, Education_t, Nutrition_t, Community_t) - delta_H H^cap_t | hypothesis/Open |  | EQ-015/W.12.v1 |
-| (39) | 15. Social Reproduction: Productive Nece | productive necessity of humans != social necessity of human reproduction | definition |  | EQ-015/W.12.v1 |
-| (40) | 16. The Human Systemic Position Equation | P^H_t = [ (Gamma^eff_t)^theta_Gamma (A^corr_(H,t))^theta_A (Lambda^live_(H,t))^theta_Lambda (r^H_t)^theta_R (S^H_t)^thet | definition | 58 | EQ-015/W.10.v1 |
-| (41) | 16. The Human Systemic Position Equation | P_dot^H_t / P^H_t = theta_Gamma (Gamma_dot^eff_t/Gamma^eff_t) + theta_A (A_dot^corr_(H,t)/A^corr_(H,t)) + theta_R (r_dot | identity |  | EQ-015/W.10.v1 |
-| (42) | 16. The Human Systemic Position Equation | ... + theta_S (S_dot^H_t/S^H_t) + theta_X (X_dot^H_t/X^H_t) - theta_D (D_dot^H_t/(1+D^H_t)) | identity |  | EQ-015/W.10.v1 |
-| (43) | 16. The Human Systemic Position Equation | Y_dot_t > 0  =/=>  P_dot^H_t > 0 | definition | 59 | EQ-015/W.10.v1 |
-| (44) | 17. Abundance Without Agency | AWA_t = < Y(up), Gamma^eff adequate, O^H(down), X^H(down), D^H(up), Lambda^live_H(down), A^corr_H(down), r_H(down), S_H( | definition |  | EQ-015/W.10.v1 |
-| (45) | 18. Recursive Political Economy: Three P | P_t = < P^econ_t, P^info_t, P^coerc_t > | definition |  | A.5/W.02.v1 |
-| (46) | 18. Recursive Political Economy: Three P | P^B_t proportional-to Gamma^eff_t A^corr_(H,t) Lambda^live_(H,t) X^H_t r^H_t | definition |  | A.5/W.02.v1 |
-| (47) | 18. Recursive Political Economy: Three P | P^E_t = P_E( P_t, G_dot^conv, D^H_t, 1 - Gamma^eff_t ) | definition |  | A.5/W.02.v1 |
-| (48) | 18. Recursive Political Economy: Three P | I_dot_t = F_I( P^B_t, P^E_t, state capacity, rules, shocks ) | hypothesis/Open |  | A.5/W.02.v1 |
+| (36) | 14. Social Role After Labour | S_dot^H_t = s_1 W_t + s_2 N_t - delta_S S^H_t | definition |  | EQ-015/W.47.v1 |
+| (37) | 14. Social Role After Labour | 1 = l_wage + l_care + l_learn + l_civic + l_leisure | identity |  | EQ-015/W.48.v1 |
+| (38) | 15. Social Reproduction: Productive Nece | H_dot^cap_t = f(Care_t, Health_t, Education_t, Nutrition_t, Community_t) - delta_H H^cap_t | hypothesis/Open |  | EQ-015/W.49.v1 |
+| (39) | 15. Social Reproduction: Productive Nece | productive necessity of humans != social necessity of human reproduction | definition |  | EQ-015/W.50.v1 |
+| (40) | 16. The Human Systemic Position Equation | P^H_t = [ (Gamma^eff_t)^theta_Gamma (A^corr_(H,t))^theta_A (Lambda^live_(H,t))^theta_Lambda (r^H_t)^theta_R (S^H_t)^thet | definition | 58 | EQ-015/W.42.v1 |
+| (41) | 16. The Human Systemic Position Equation | P_dot^H_t / P^H_t = theta_Gamma (Gamma_dot^eff_t/Gamma^eff_t) + theta_A (A_dot^corr_(H,t)/A^corr_(H,t)) + theta_R (r_dot | identity |  | EQ-015/W.43.v1 |
+| (42) | 16. The Human Systemic Position Equation | ... + theta_S (S_dot^H_t/S^H_t) + theta_X (X_dot^H_t/X^H_t) - theta_D (D_dot^H_t/(1+D^H_t)) | identity |  | EQ-015/W.44.v1 |
+| (43) | 16. The Human Systemic Position Equation | Y_dot_t > 0  =/=>  P_dot^H_t > 0 | definition | 59 | EQ-015/W.45.v1 |
+| (44) | 17. Abundance Without Agency | AWA_t = < Y(up), Gamma^eff adequate, O^H(down), X^H(down), D^H(up), Lambda^live_H(down), A^corr_H(down), r_H(down), S_H( | definition |  | EQ-015/W.46.v1 |
+| (45) | 18. Recursive Political Economy: Three P | P_t = < P^econ_t, P^info_t, P^coerc_t > | definition |  | A.5/W.07.v1 |
+| (46) | 18. Recursive Political Economy: Three P | P^B_t proportional-to Gamma^eff_t A^corr_(H,t) Lambda^live_(H,t) X^H_t r^H_t | definition |  | A.5/W.08.v1 |
+| (47) | 18. Recursive Political Economy: Three P | P^E_t = P_E( P_t, G_dot^conv, D^H_t, 1 - Gamma^eff_t ) | definition |  | A.5/W.09.v1 |
+| (48) | 18. Recursive Political Economy: Three P | I_dot_t = F_I( P^B_t, P^E_t, state capacity, rules, shocks ) | hypothesis/Open |  | A.5/W.10.v1 |
 | (49) | 18. Recursive Political Economy: Three P | economic gate control -> rents -> political influence -> future gate control;  information control -> attention/interpre | definition |  | A.5/W.02.v1 |
-| (50) | 18. Recursive Political Economy: Three P | ownership != informational power != coercive power | definition |  | A.5/W.02.v1 |
+| (50) | 18. Recursive Political Economy: Three P | ownership != informational power != coercive power | definition |  | A.5/W.11.v1 |
 | (51) | 21. What Humans May Actually Do | labour-based claim -> human/citizen claim on social production | definition |  | EQ-015/W.01.v1 |
 | (52) | 23. What Can and Cannot Be Forecast Now | Omega_t = w_M(g_M - g_H) + w_D g_D + w_G g_G - w_q g_q - w_Gamma g_(Gamma^eff) - w_X g_X - w_R g_(r^H) - w_Lambda g_Lamb | measurement |  | EQ-015/W.13.v1 |
-| (53) | 24. Claim Boundaries | concentration =/=> dependency =/=> agency loss | definition |  | EQ-015/W.08.v1 |
+| (53) | 24. Claim Boundaries | concentration =/=> dependency =/=> agency loss | definition |  | EQ-015/W.41.v1 |
 | (54) | 25. Conclusion: From Productive Necessit | candidate generation -> validated K/A^AI -> robotic embodiment -> M_t -> Y_t -> L_t -> s^L_t -> Gamma_t -> W^M_t -> o_(t | definition |  | weld/W.02.v1 |
 | (55) | 25. Conclusion: From Productive Necessit | Gamma^eff Y -> AD -> Pi^M -> W^M_(t+1) -> {o_(t+1), M_(t+1)} | definition |  | EQ-015/W.06.v1 |
 | (56) | 25. Conclusion: From Productive Necessit | {Care, Health, Education} -> H^cap -> {A^corr_H, r_H, S_H} -> P -> I_(t+1) | definition |  | EQ-015/W.12.v1 |
@@ -1276,32 +1814,32 @@ _No numbered equations (Checked exhaustively (full pdftotext, both plain and -la
 
 | Label | Section | Statement | Paper tier | In MR 1–79 | Canonical |
 |---|---|---|---|---|---|
-| (1) | 1. The Missing Dependent Variable | Machine expansion  =/=>  Human expansion | definition | 60 | EQ-015/W.16.v1 |
-| (2) | 4. Non-Collapse Discipline | AI capability != validated knowledge | definition |  | A.5/W.03.v1 |
-| (3) | 4. Non-Collapse Discipline | assisted performance != human learning | definition |  | A.5/W.03.v1 |
-| (4) | 4. Non-Collapse Discipline | augmentation != synergy | definition |  | A.5/W.03.v1 |
-| (5) | 4. Non-Collapse Discipline | formal options != live possibilities | definition |  | A.5/W.03.v1 |
-| (6) | 4. Non-Collapse Discipline | access != credible exit | definition |  | A.5/W.03.v1 |
-| (7) | 4. Non-Collapse Discipline | income transfer != future ownership | definition |  | A.5/W.03.v1 |
-| (8) | 4. Non-Collapse Discipline | material security != agency | definition |  | A.5/W.03.v1 |
-| (9) | 4. Non-Collapse Discipline | market concentration != domination | definition |  | A.5/W.03.v1 |
-| (10) | 4. Non-Collapse Discipline | productive necessity != social necessity | definition |  | A.5/W.03.v1 |
-| (11) | 5. Human Conversion as a Vector, Not a S | C^H_t = < Gamma^eff_t, X^H_t, Lambda^live_(H,t), A^corr_(H,t), R^route_(H,t), W^world_(H,t), r_(H,t), H^cap_t, S_(H,t) > | definition | 61 | EQ-015/W.16.v1 |
-| (12) | 5. Human Conversion as a Vector, Not a S | eta^HC_(j,t) = d(ln C^H_(j,t)) / d(ln M_t) | definition | 62 | EQ-015/W.16.v1 |
-| (13) | 5. Human Conversion as a Vector, Not a S | eta^HC_Gamma > 0,  eta^HC_(rH) < 0,  eta^HC_X < 0 | definition |  | EQ-015/W.16.v1 |
+| (1) | 1. The Missing Dependent Variable | Machine expansion  =/=>  Human expansion | definition | 60 | EQ-015/W.51.v1 |
+| (2) | 4. Non-Collapse Discipline | AI capability != validated knowledge | definition |  | A.5/W.12.v1 |
+| (3) | 4. Non-Collapse Discipline | assisted performance != human learning | definition |  | A.5/W.13.v1 |
+| (4) | 4. Non-Collapse Discipline | augmentation != synergy | definition |  | A.5/W.14.v1 |
+| (5) | 4. Non-Collapse Discipline | formal options != live possibilities | definition |  | A.5/W.15.v1 |
+| (6) | 4. Non-Collapse Discipline | access != credible exit | definition |  | A.5/W.16.v1 |
+| (7) | 4. Non-Collapse Discipline | income transfer != future ownership | definition |  | A.5/W.17.v1 |
+| (8) | 4. Non-Collapse Discipline | material security != agency | definition |  | A.5/W.18.v1 |
+| (9) | 4. Non-Collapse Discipline | market concentration != domination | definition |  | A.5/W.19.v1 |
+| (10) | 4. Non-Collapse Discipline | productive necessity != social necessity | definition |  | A.5/W.20.v1 |
+| (11) | 5. Human Conversion as a Vector, Not a S | C^H_t = < Gamma^eff_t, X^H_t, Lambda^live_(H,t), A^corr_(H,t), R^route_(H,t), W^world_(H,t), r_(H,t), H^cap_t, S_(H,t) > | definition | 61 | EQ-015/W.52.v1 |
+| (12) | 5. Human Conversion as a Vector, Not a S | eta^HC_(j,t) = d(ln C^H_(j,t)) / d(ln M_t) | definition | 62 | EQ-015/W.53.v1 |
+| (13) | 5. Human Conversion as a Vector, Not a S | eta^HC_Gamma > 0,  eta^HC_(rH) < 0,  eta^HC_X < 0 | definition |  | EQ-015/W.54.v1 |
 | Proposition 1 | 5. Human Conversion as a Vector, Not a S | Proposition 1 (Conversion non-identity) [Open]. An increase in M_t or current human-AI performance is insufficient to es | hypothesis/Open |  | EQ-015/W.16.v1 |
 | (14) | 6. The Epistemic Conversion Mechanism | H problem -> AI divergence -> H resistance -> World test -> H integration -> AI removal -> H return | definition |  | EQ-015/W.17.v1 |
 | (15) | 6. The Epistemic Conversion Mechanism | H problem -> AI answer -> use -> dependence | definition |  | EQ-015/W.17.v1 |
 | Proposition 2 | 6. The Epistemic Conversion Mechanism | Proposition 2 (Assistance-conversion divergence) [Open]. The AI assistance intensity that maximizes current performance  | hypothesis/Open |  | EQ-015/W.17.v1 |
 | (16) | 7. Bad Mode Is a State Space, Not a Stai | B_t = < D_t, G_dot^conv_t, C^info_t, 1 - X^H_t, 1 - r_(H,t), 1 - Lambda^live_(H,t), 1 - A^corr_(H,t), 1 - Gamma^eff_t, 1 | definition |  | EQ-015/W.18.v1 |
-| (17) | 8. Reversibility, Hysteresis, and the In | W_j = { t : C^rec_(j,t) <= C_bar_j  AND  tau^rec_(j,t) <= tau_bar_j } | definition | 63 | EQ-015/W.19.v1 |
+| (17) | 8. Reversibility, Hysteresis, and the In | W_j = { t : C^rec_(j,t) <= C_bar_j  AND  tau^rec_(j,t) <= tau_bar_j } | definition | 63 | EQ-015/W.55.v1 |
 | Proposition 3 | 8. Reversibility, Hysteresis, and the In | Proposition 3 (Reversibility Principle) [Open]. The faster machine capability grows relative to human conversion, the mo | hypothesis/Open |  | EQ-015/W.19.v1 |
-| (18) | 9. An Urgency Vector Instead of a Panic  | Delta g_(j,t) = [ g~_(M,t) - g~_(Cj,t) ]_+ | definition |  | EQ-015/W.19.v1 |
-| (19) | 9. An Urgency Vector Instead of a Panic  | U_(j,t) = Delta g_(j,t) * L_(j,t) * S_(j,t) * tau^rec_(j,t) | definition | 64 | EQ-015/W.19.v1 |
-| (20) | 9. An Urgency Vector Instead of a Panic  | U_t = < U_(1,t), ..., U_(J,t) > | definition |  | EQ-015/W.19.v1 |
-| (21) | 9. An Urgency Vector Instead of a Panic  | U^max_t = max_j U_(j,t) | definition |  | EQ-015/W.19.v1 |
-| (22) | 10. Distribution: Whose Potential Expand | C^10_(j,t), C^50_(j,t), C^90_(j,t) | definition |  | EQ-002/W.01.v1 |
-| (23) | 10. Distribution: Whose Potential Expand | I^H_(j,t) = C^90_(j,t) - C^10_(j,t) | definition |  | EQ-002/W.01.v1 |
+| (18) | 9. An Urgency Vector Instead of a Panic  | Delta g_(j,t) = [ g~_(M,t) - g~_(Cj,t) ]_+ | definition |  | EQ-015/W.56.v1 |
+| (19) | 9. An Urgency Vector Instead of a Panic  | U_(j,t) = Delta g_(j,t) * L_(j,t) * S_(j,t) * tau^rec_(j,t) | definition | 64 | EQ-015/W.57.v1 |
+| (20) | 9. An Urgency Vector Instead of a Panic  | U_t = < U_(1,t), ..., U_(J,t) > | definition |  | EQ-015/W.58.v1 |
+| (21) | 9. An Urgency Vector Instead of a Panic  | U^max_t = max_j U_(j,t) | definition |  | EQ-015/W.59.v1 |
+| (22) | 10. Distribution: Whose Potential Expand | C^10_(j,t), C^50_(j,t), C^90_(j,t) | definition |  | EQ-002/W.02.v1 |
+| (23) | 10. Distribution: Whose Potential Expand | I^H_(j,t) = C^90_(j,t) - C^10_(j,t) | definition |  | EQ-002/W.03.v1 |
 | Proposition 4 | 10. Distribution: Whose Potential Expand | Proposition 4 (Distributional conversion) [Open]. Broad human expansion requires that conversion gains reach a declared  | hypothesis/Open |  | EQ-002/W.01.v1 |
 | (24) | 15. Discussion: From Maximum Assistance  | Maximum AI assistance -> Maximum durable human conversion | definition |  | EQ-015/W.17.v1 |
 | (25) | 16. Conclusion | rate of machine capability growth  versus  rate of human conversion and institutional adaptation | definition |  | EQ-015/W.16.v1 |

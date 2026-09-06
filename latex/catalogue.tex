@@ -2,11 +2,29 @@
 % \input{}s the GENERATED body (latex/catalogue_body.tex, written by
 % scripts/toledo_build.py) — never hand-edit catalogue_body.tex.
 \documentclass[10pt]{article}
+% Statements are copied verbatim from their sources (BBL-172, latest
+% formulation wins) and carry literal Unicode this machine's pdflatex cannot
+% typeset natively (math alphanumerics, arrows/relations, Thai, Cyrillic).
+% latex/unicode_pdf_fallback.sty maps every such character this corpus uses
+% to a standard LaTeX construct (\mathfrak, \mathbb, \mathcal, textcomp,
+% pifont, ...) via newunicodechar; scripts/latex_pdf_safe.py replaces
+% contiguous Thai/Cyrillic runs (natural-language quotes, not notation, and
+% unrenderable without a shaped Thai/Cyrillic font on this machine) with a
+% disclosed placeholder pointing at the digital entry -- the registries,
+% JSON entries and docs site carry the exact source text unmodified; only
+% this print artifact substitutes.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{amsfonts}
+\usepackage{pifont}
+\usepackage{newunicodechar}
 \usepackage[margin=2cm]{geometry}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{hyperref}
 \usepackage{toledo}
+\usepackage{unicode_pdf_fallback}
 
 \title{Toledo --- Equation Library Catalogue}
 \author{}
@@ -16,6 +34,6 @@
 \maketitle
 \tableofcontents
 
-\input{catalogue_body.tex}
+\input{catalogue_body.pdf.tex}
 
 \end{document}

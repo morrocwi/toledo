@@ -41,3 +41,49 @@ File name = code: `EQ-012.v`, `MQ.08.v` → for filesystem safety dots and slash
 Source of truth: `genesis_root.json`, `CANONICAL.json` (`code`), `LINEAGE.jsonl`, `CANONICAL_REGISTRY.json` (Coq ids). Generated
 views: `EQ_LIBRARY.md`, Master Equation River Appendix C, textbook Appendix F. Deposit: the library's own Zenodo dataset record
 (versioned; BBL-178), linked to Master River and the Coq record.
+
+## Addendum, 2026-09-07 (v1.0.0 release) — domain letters, two more statuses, mangling fix
+
+**1. The 8-letter domain set is final for v1.0.0.** Ruled same-day as the skeleton, commit
+`7c2c1c1` ("scheme: 8 domain letters incl. B = biology/health"): `<D>` ∈ `{E, H, S, W, M, P, C,
+B}` — epistemic, human–AI, social, world-system, method, physics, chemistry, biology/health.
+`B` carries the BIRCA health-stream equations as `B` readings of their root; no ninth letter is
+open. `registry/CANONICAL.json`'s `domain` enum and `registry/SCHEMA.md`'s code grammar already
+state this set; this addendum is the dated record that it is a settled ruling, not a draft.
+
+**2. Two additional `status` values, introduced at N4 (commit `988141d`, founder ruling
+2026-09-06 22:20, `registry/split_proposal_SW.json`).** `registry/SCHEMA.md`'s original T1 status
+enum (`current | superseded_by | historical | unverified | imprecise_as_stated`) did not yet
+carry these; both are now live in `registry/CANONICAL.json` and must be read as part of the T2
+status vocabulary:
+
+- **`split`** — a raw record that bundled more than one distinct mathematical object under one
+  code (found by re-reading the source quote, not merged under the φ-criterion). Retired with
+  `status_note` quoting the distinct objects found and `children[]` listing the codes each
+  member was split into. Example: `weld/S.01.v1` was split into 17 children after its source was
+  found to state a continuum PDE model and a discrete PAR-stepper model as two different objects
+  under one label.
+- **`not_an_equation`** (T2) — a raw record whose only occurrence is prose (a claim, a
+  definition, a proposition) with no operator at all. Kept as a coded pointer to its source
+  (never presented as a formula), with `status_note` quoting the prose and, where relevant, the
+  finding that a prior build had misattributed a formula to it. Example: `weld/S.06.v1`.
+
+Both statuses inherit the same rule as every other non-`current` status: `status_note` is
+required and non-empty. `registry/SCHEMA.md`'s `status` enum should read
+`current | superseded_by | split | not_an_equation | historical | unverified |
+imprecise_as_stated` from this date forward.
+
+**3. Coq mangling rule, corrected.** The mangling line above (`/`→`__`, `.`→`_`) was written
+before most `EQ-0nn` root codes existed in the registry and predates the hyphen they carry. The
+rule actually implemented from the start in every mangling script
+(`scripts/bbl182_split_coq.py`, `scripts/n4_coq_split.py`, `scripts/n4_coq_verify_update.py`,
+`scripts/n4_merge.py`) — and now stated here to match — also maps `-`→`_`, because a Coq module
+identifier cannot contain a hyphen:
+
+```
+code.replace('/', '__').replace('.', '_').replace('-', '_')
+```
+
+`EQ-015/M.01.v1` → `EQ_015__M_01_v1.v`. This mangling is Coq-filename-only; the docs-site URL
+path (`site/<code>/index.html`) keeps the code's own literal characters (`/`, `.`, `-` are all
+valid URL path-segment characters) and is unaffected.

@@ -4,7 +4,8 @@ Source: `registry/CANONICAL.json` (253 canonical ids, deduplicated from 946 raw 
 across 40 chapters; `registry/eq_<record_id>.json` per chapter). Notation reference:
 `v1_4/main.tex` (Master River v1.4, eq. 1–79 + glossary). Chapter dates:
 `textbook-written-by-ai-still-true/manifest.yaml`. Root reference:
-`~/ANSE.ASIA/readout_genesis/READOUT_GENESIS_CORE.md`.
+`github.com/morrocwi/readout_genesis/READOUT_GENESIS_CORE.md` (anchored at commit
+`082dde893b70c7500c13d463239909c99cf17f0a`, per `registry/genesis_root.json`'s `anchor` field).
 
 This is a **mapping**, not an edit: no source file, no CANONICAL.json entry, and no raw
 `eq_<record_id>.json` record is changed by this document. Every canonical id keeps the
