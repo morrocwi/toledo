@@ -70,3 +70,8 @@ Imports verified fresh on this machine: readout_genesis 356/356 Closed; informat
   finding: weld ≠ EQ-008 under φ (weld is a 3-clause composite), so CAN-001 is a reading of weld, no merge. Second-stage agent running (Coq rename/checker).
 - NEXT after N3 notification: merge order = (1) split_proposal_SW (retire→split, LINEAGE events) → (2) readings_* with final nn assigned per (root,domain) →
   (3) tier sidecar into genesis_root rows → (4) coq_map.N3 → then N5 sequential verify, N6 build/tests/checker/v1.0.0, N7.
+
+## Update 22:50 — N3 committed (559788c), N4 merge launched
+- N3 result: 255 coded objects, roots weld / EQ-015 / EQ-002 / A.5 / A.8; CAN-054 split into EQ-015/H.06, H.36, H.37; Coq 255 files named by code, sequential build 255/255, verify 161/161 closed; checker PASS (2 disclosed xfails). weld ≠ EQ-008 under φ (composite vs middle clause) — no merge.
+- N4 merge run: wf_13b05a40-9c2, script toledo-n4-merge-wf_13b05a40-9c2.js. Stages: registrar (scripts/n4_merge.py: S/W split → readings with final nn → tier sidecar → coq_map) → Coq splitter (bundle .v → per-child files, sequential build+verify) → independent checker (+1 fix round).
+  Resume: Workflow({scriptPath, resumeFromRunId:'wf_13b05a40-9c2'}). On PASS: commit, then N5/N6 (build all outputs, catalogue PDF, tag v1.0.0, GitHub release, Zenodo version under concept 22537318), then N7.
