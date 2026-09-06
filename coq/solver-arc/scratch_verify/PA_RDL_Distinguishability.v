@@ -1,0 +1,10 @@
+From RDL Require Import RDL_Distinguishability.
+Print Assumptions primordial_difference_exists.
+Print Assumptions distinguishable_implies_asymmetry.
+Print Assumptions temporal_ordering_well_founded.
+Print Assumptions nonzero_seed_exists.
+Print Assumptions no_self_precedence.
+Print Assumptions discrete_clock_tick.
+Print Assumptions causal_interval_bounded.
+Print Assumptions atomicity.
+Print Assumptions discrete_floor.

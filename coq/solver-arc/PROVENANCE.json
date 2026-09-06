@@ -1,0 +1,503 @@
+{
+  "source": "solver arc (private)",
+  "note": "The private repository's own name is withheld throughout this file and every other Toledo file, per BBL-195/198 and DEC-toledo-solver-arc-copy-2026-0906. Anchored by commit + git blob hash only.",
+  "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+  "scope": "canonical (non-*_attempt.v) files under formal/ only, as listed in registry/coq_imports.json's S5 manifest for this source: 50 files. 284 files matching *_attempt.v are excluded from import and listed in EXCLUDED_ATTEMPTS.md (counted, not imported, per the task rule and per T9's 'source project's own promotion convention' principle).",
+  "licence": {
+    "upstream": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED (Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.)",
+    "toledo": "MIT, per founder authorisation DEC-toledo-solver-arc-copy-2026-0906 (see LICENSE_NOTE.md). This authorisation covers exactly the files listed below, at the commit above -- it is not a blanket relicense of the private repository's entire tree.",
+    "decision_ref": "DEC-toledo-solver-arc-copy-2026-0906"
+  },
+  "copied_at": "2026-09-06",
+  "files": [
+    {
+      "path": "formal/CMC_Bridge_Decomposition.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "d85d41e525f419f62fa4c77344f9a837999d1178",
+      "sha256_as_committed": "82c490a15fb6f11652ac893a6a3992532119fedd3151c03eff2b8d0c5ed59f52",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 2
+    },
+    {
+      "path": "formal/CMC_ClosureFree_Exhaustive.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "1c9ea43bf3ade13aef4a857f0e364fd0ef7d61a0",
+      "sha256_as_committed": "ff5ccd19f0151bb12603b6d8e5bcb98ed6ef20c3529730d238307d2cb8e1a749",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 4
+    },
+    {
+      "path": "formal/CMC_Independent_Definitions.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "c3a55ff196d8ff26785f85561324fc6cc951f0ac",
+      "sha256_as_committed": "4d804552ac25295b3dd4f3ddf7e8fb420eb6079ca643054ed9e81f010afb77db",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 5
+    },
+    {
+      "path": "formal/CMC_ModelClass_Witnesses.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "b81a2074271f107eedd10afc3e9fe4caa6479334",
+      "sha256_as_committed": "76131a5a076655807596a58e853cd5f6ae815d32612cdb7f3c05dfe9641774aa",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 4
+    },
+    {
+      "path": "formal/CMC_PhysicsClass_Instances.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "de60e3d8f5316475e9e51be308eb8cc945db0e2a",
+      "sha256_as_committed": "d86d5319405d718e6ae675807657a48a763f4c47be75a5b1cd246666f0034af9",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 15
+    },
+    {
+      "path": "formal/CMC_TargetClass_Definitions.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "974548ed89895d64c5c44eeef5f69531f5d7d72d",
+      "sha256_as_committed": "af7a98db339665ad591c502fc866c076b487bf1774e16fc832c3b8467d1c88f4",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/Genesis_PhysicsDAG_Canon_v2_4_0.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "29ee06ccd98a180e9e03b2e376fd8ae6dc4ee90c",
+      "sha256_as_committed": "65087124c3a049df4bf3cce965309cdeca9255cc80a9c2fe7b2ba7a93d75c116",
+      "redacted": true,
+      "build_status": "ok",
+      "theorems_in_manifest": 86
+    },
+    {
+      "path": "formal/InfoAnalysisLift.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "03e8b74ece64842cee384b49c8202e5ba1d81092",
+      "sha256_as_committed": "086b2c48d0dd3fef055d3a96e6c25a04f4afbf6c402dede07812b2707dad360b",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 16
+    },
+    {
+      "path": "formal/InfoBinaryVacua.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "fbe5771dd06a3eade9ac58601ece3ec3fab9ef57",
+      "sha256_as_committed": "41604cf1607a4b170b9b95bb28ff2a13fc5be21d1644d5f0c2a4abc7dd0c2e36",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 2
+    },
+    {
+      "path": "formal/InfoEuler.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "31db5dc147c3481ea90fb9789a133fe691f3410d",
+      "sha256_as_committed": "6c42433fc2b17cde506d9d7571562d4bddb98bd5cbc97fc9a4e05b1d790d09c5",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 5
+    },
+    {
+      "path": "formal/InfoSolidAngle.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "e73805bb30b804a643a4846cfb6acc51fa9fec8d",
+      "sha256_as_committed": "d86087e7ab461bb5c0c0fac37ae4df1b0fed3027e8ee0a8ebc608d729e324f94",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 4
+    },
+    {
+      "path": "formal/MURG_Completeness.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "657414793bc22f0037c77afb4224f0ebe610b228",
+      "sha256_as_committed": "b60ebe380809ab41f716f5b79a01f2c5efed2b2b7d7e3baf5f42a8723bc820d7",
+      "redacted": true,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/OperatorExtract.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "74cd6ea24cfe512244cacfbc15e66fc6a75ada9a",
+      "sha256_as_committed": "b253a76a2326d1d00871a8380b41cb93d3685dae21a2cd0d025f3552f7276b85",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 0
+    },
+    {
+      "path": "formal/RD.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "4ffb990a6f9c79a6f21521c2cc59af117ffad4c1",
+      "sha256_as_committed": "aceaa41437d4b13ab82df4aa0a7737fede86d55221961b49664a243498795db5",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 184
+    },
+    {
+      "path": "formal/RDL.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "0839e5c6ea97ffcad1eb3c54247509624b17e37c",
+      "sha256_as_committed": "80070859d5c3d8972c49057c9a74beccbe6c111f5d7476fda536460dca6da8ad",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 9
+    },
+    {
+      "path": "formal/RDL_All.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "af3b605c8a9f6b79ac6efe04f19198e17fc7c087",
+      "sha256_as_committed": "1c8f62d6bae38556838954ba3cc4170ff5955a9b26caca4cebc6557cab9ba4e6",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 235
+    },
+    {
+      "path": "formal/RDL_CausalOrder.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "7806c292419ba672890170b7e20c803354d27c49",
+      "sha256_as_committed": "2876a9106eada476a63b0d5f8f4431224d0c689ace43260f8c17ebb80227d28e",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 10
+    },
+    {
+      "path": "formal/RDL_ContinuumLimit.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "755de565372c7651edfd4ceed76bbb098169063f",
+      "sha256_as_committed": "05241de2be0d54ee48c71e26c7f319ab41298b15ca3d563673c277dfe574f1b0",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 4
+    },
+    {
+      "path": "formal/RDL_Distinguishability.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "f6a80a1655d14fe2d472f0bc91560757cfad2a59",
+      "sha256_as_committed": "b3b2973e809fb8f21169ec57d2909971ce0323effbf01b897dcbe89ecb74649a",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 9
+    },
+    {
+      "path": "formal/RDL_DtN.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "5eea012448fad4a7a230033d01a498889d6cfbf8",
+      "sha256_as_committed": "876f12331484639461ae5d3d845c3e5ff9c85fd1eb5a13c2c9241616a51e408a",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 5
+    },
+    {
+      "path": "formal/RDL_GammaSpectral.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "76cc8016fbb1204f6a564048df1a6a19042dfc55",
+      "sha256_as_committed": "1309a1fb625a06351835ceca24bc0ae2600c9b276dd4c11140ff90b48d33b979",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 9
+    },
+    {
+      "path": "formal/RDL_GenesisLink.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "75693bc35286284164f8a211af5ccfe7c7cbc098",
+      "sha256_as_committed": "adc50b853c8999e1bece902adec4487e26b4d57fe1f81c46e2bb1a8aaf5d2cc6",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/RDL_InvolutiveOrthoCore.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "ac1168e2d5219dfc4c3eaf9986a658d3ff511591",
+      "sha256_as_committed": "56d3a20b901ecaadbc421a08818f2c68023681b382ccc151e9ecdbfb10096e9f",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 9
+    },
+    {
+      "path": "formal/RDL_LaplaceBeltrami.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "449e3517cb67a6aab8fc9710c1a84ca767af9b40",
+      "sha256_as_committed": "ca11cc3a3eeebd51020927ad357c009bbb37b17343b8243dc287323e39aab18d",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 25
+    },
+    {
+      "path": "formal/RDL_MetricReadout.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "c7dcda220103846161f44ff546337581a2fcf819",
+      "sha256_as_committed": "16fdc39cf8b7d8ce4924a4fd311cc97601117a1566b38164ec15705deb6c4144",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 18
+    },
+    {
+      "path": "formal/RDL_MetricReadoutLimit.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "79b36a287db4fde4f5be7d6e90f7d232ad3c8ff1",
+      "sha256_as_committed": "70ebe58c16b925df1815057d7d55874c33c6eca14454551ed743070842fd52b5",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/RDL_MetricReadoutRate.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "4391cb46ba7ca3c7e6fa8797e11eb46ca140d99e",
+      "sha256_as_committed": "77179aeff5d898ec072f5b95d04f827b62bfe49153d080ad446e6b731a148857",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/RDL_PhaseSound.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "ab9ecb26da467f25613abe289a3ebbd1d46e9998",
+      "sha256_as_committed": "6d116a3cbd3f798515f5882eb1fa32f5c40fe3e1208fadf30c56a365c6748046",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 46
+    },
+    {
+      "path": "formal/RDL_RetentionCenter.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "bb5321007f93778f019e856eedf86b7acabbb59b",
+      "sha256_as_committed": "3dad28399f86cd517ece33a5c66feacd2d84f36d8661f7aeb03e36962058fd6b",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 14
+    },
+    {
+      "path": "formal/RDL_SingleHopHierarchy.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "82c994d45092d1e777c47ec716c7b186820f53e5",
+      "sha256_as_committed": "671f64df249ae3d22e22ee33b62a6c38afc0ffbcbfee6878f434995966559b7c",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/RDL_SpineGraphCoupled.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "6c23bb7127251c496aa9fd456e46f80ebc02bf84",
+      "sha256_as_committed": "69dfc1f09eafc6d97d8a52be2a321b8657c684a381e465f0d4cb8bb7cabc1567",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 23
+    },
+    {
+      "path": "formal/RDL_SpineGraphEnergy.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "595eb25c0a8a00015f107f5a2aad0f7b15da40ac",
+      "sha256_as_committed": "275d2ecb7b8fef1a47716feed43777a08cfc3e66411a1788f10e4a26181fb295",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 8
+    },
+    {
+      "path": "formal/RDL_SpineStability.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "a8f1e10521ff7595db999c62098efdc41942905f",
+      "sha256_as_committed": "c2dd7046e1c9bb9975487751e4585d83da41e1fd1170291ba6f9d42f2155740a",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 7
+    },
+    {
+      "path": "formal/RDL_StarRig.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "060fc3da382e48ec1a58186acb17497aa7322438",
+      "sha256_as_committed": "8ee982136eb871a5395ea2fad09781428edafd8fe01c28a36bee595eae546af9",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 4
+    },
+    {
+      "path": "formal/RDL_StarRigCPTP_General.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "894fb7c636c1b9235c35765cf0d43e577f3149ef",
+      "sha256_as_committed": "31e0013dc44f4352d447c82219610406e740d4c83084738f8e066f53533e0e38",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 7
+    },
+    {
+      "path": "formal/RDL_StarRigGeneral.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "ebfa4d692e79c74ddd6e4c22635d34e839c603e0",
+      "sha256_as_committed": "7337187ec9b379974b178bf392186e65d6140d2436778abfe2563745066c4416",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 13
+    },
+    {
+      "path": "formal/RDL_StarRigMatrix.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "5073f28056b7554c54d25f9a07c54873a7d8b92a",
+      "sha256_as_committed": "3d1093e9aeb34eaf088fc81bada6ab46dde5c7fe24328cfbbfbe56e6d7bbcb2f",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 17
+    },
+    {
+      "path": "formal/RDL_StarRigMatrix3.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "1cdaa57ca9ee05a5c89339272ff6036e594cd243",
+      "sha256_as_committed": "2cfe2082cc6a122a573f9ab72d27e19a706e5524567d3dac9b92b759b91a6575",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 20
+    },
+    {
+      "path": "formal/RDL_StarRigMatrixN.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "a0c005038626ac562b6f486873453e0c54dda714",
+      "sha256_as_committed": "4bba2debb1ca0221e0e24c3377d7857b24211f1da18cf1a6b7342dbcf022859e",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 18
+    },
+    {
+      "path": "formal/RDL_StarRigMatrixN_Step2.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "488cd273003f245f05ca3e3b5cd512504ca0489f",
+      "sha256_as_committed": "57c58a7daaa7a234c29b56305a050f4a5f113bf0e77fcf27dbed3799ddf35d74",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 13
+    },
+    {
+      "path": "formal/RDL_StarRigMatrixN_Step3.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "9cd7d40c8279d9984d1c901e430116c6ee30c7c5",
+      "sha256_as_committed": "93e0574628a6318afa3b1a3825e68455ac27ea3c97641678398e644726ce3ac6",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 20
+    },
+    {
+      "path": "formal/RDL_TaylorLimit.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "c058db3b1d62a61861bdcae492cb05cb1cabf2f0",
+      "sha256_as_committed": "20eeb17cd418ac05c1f144ab6d009162dd18ec60c8b2f59c8a29c0c1c259bdf8",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 11
+    },
+    {
+      "path": "formal/RDL_TelescopeCore.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "f0f9fed3d6b8e98af2724a18d380fe7e19167044",
+      "sha256_as_committed": "0f14260c98fe231142aa7a314fe8a5f29789b61f42a7e859e5d5b9ce37f5e3e0",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 5
+    },
+    {
+      "path": "formal/RDL_TemplatedSkeleton.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "102173c4383b390fce726f09b25ff0872d81db3c",
+      "sha256_as_committed": "4d16156a74550b41554ec24a50f73f86cc5e022c8884efc28d05129cef4a97f7",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/RDL_UnitDistance.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "4749771ef655fdba00b800e02f37a0c2444bea01",
+      "sha256_as_committed": "0837c5f4b93dd066f034e48a9a1a8887799eff6d2fdd13baab27b3cb63f23af5",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 2
+    },
+    {
+      "path": "formal/RDU_NativeInformationUnits.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "365148a8a01ad68151bc70a0c0f56247f3d508c1",
+      "sha256_as_committed": "fcf752e11a4eaf364e7b49a6786819405f784ee028f56dd0c1f7fbad67e4807e",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 4
+    },
+    {
+      "path": "formal/RD_ConPA_ReadoutBivalence.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "39a9c9491b7562c93dd44a553a347b83d52a064b",
+      "sha256_as_committed": "b1a8aff6ce1364f2a0b0e388edfb09314984aed25f7e61f8efe7a34e787b7604",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 3
+    },
+    {
+      "path": "formal/RD_NegTranslation_Core.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "39ee0ac041a3cbcfb51635c6cff9f722f1a0c300",
+      "sha256_as_committed": "bc7dc1c6222406ce8535d39fea89b5025f70a23b4f38cc83c31685d06b02485e",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 10
+    },
+    {
+      "path": "formal/Scratch_ShipOfTheseus_RD4.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "8caf4e56ab6b9c994cc3a10c99e5b860b3d95612",
+      "sha256_as_committed": "c226e7e2aa4f9f40ef137ca515037ff4e06d642db62e124752cbaa137d1d495a",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 1
+    },
+    {
+      "path": "formal/URCF_RD_All.v",
+      "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
+      "upstream_blob": "d64dccb5906c5505c275b141f6c78e27b9d4018f",
+      "sha256_as_committed": "0e50bc15a16db385be80ae90cf6c9fc3ec68af7bf770ea5aae15fe212216e5cf",
+      "redacted": false,
+      "build_status": "ok",
+      "theorems_in_manifest": 687
+    }
+  ],
+  "excluded_attempt_files_count": 284,
+  "excluded_attempt_files_list_ref": "EXCLUDED_ATTEMPTS.md",
+  "flagged_manifest_caveat": "docs/root/FORMAL_MANIFEST.yaml (upstream, not copied) categorises 2 of the excluded *_attempt.v files (InfoContinuumLimit_nD_attempt.v, InfoQuantumGravityRootBridge_attempt.v) as category='core'/status='closed' despite the *_attempt.v filename -- this import follows the literal filename rule from the S5 manifest (exclude every *_attempt.v) and excludes both; flagged here rather than silently resolved either way, per T9.",
+  "source_own_disclosed_axioms_AXIOM_STATUS_md": [
+    "Classical_Prop.classic",
+    "ClassicalDedekindReals.sig_forall_dec",
+    "ClassicalDedekindReals.sig_not_dec",
+    "FunctionalExtensionality.functional_extensionality_dep"
+  ],
+  "redactions": [
+    {
+      "path": "formal/MURG_Completeness.v",
+      "original_text": "(* Author: ANSE.ASIA \u00abPRIVATE-REPO-NAME-REDACTED\u00bb formal layer          *)",
+      "replaced_text": "(* Author: ANSE.ASIA solver arc (private) formal layer                *)",
+      "reason": "verbatim source comment named the private repository; replaced per BBL-195/198 (private repo name must never appear in a public Toledo file)."
+    },
+    {
+      "path": "formal/Genesis_PhysicsDAG_Canon_v2_4_0.v",
+      "original_text": "(* This module mirrors the \u00abPRIVATE-REPO-NAME-REDACTED\u00bb boundary: one spine       *)",
+      "replaced_text": "(* This module mirrors the solver arc (private) boundary: one spine            *)",
+      "reason": "verbatim source comment named the private repository; replaced per BBL-195/198 (private repo name must never appear in a public Toledo file)."
+    }
+  ],
+  "toledo_side_additions": [
+    {
+      "path": "formal/_CoqProject",
+      "reason": "Toledo-side build wrapper containing only the -R path/logical-root flag (matches the upstream repo's own _CoqProject convention, -R . RDL, re-verified independently via coqdep with zero module-not-found warnings across all 50 files); no upstream file content or proof text.",
+      "content": "-R . RDL"
+    }
+  ],
+  "build": {
+    "method": "coq_makefile-style dependency order computed via `coqdep -R . RDL *.v`, then `coqc -R . RDL <file>.v` run ONE FILE AT A TIME (no `make -j`), gated on docs/RAM_LOW absence and `free -g` MemAvailable >= 2GB before each invocation.",
+    "coqc_version": "8.20.1",
+    "files_built": 50,
+    "files_failed": 0,
+    "note": "All 50 files, including OperatorExtract.v (Coq Extraction to OCaml) and MURG_Completeness.v (contains one Admitted proof, disclosed as an axiom below), compiled successfully."
+  },
+  "verify_report_ref": "VERIFY_REPORT.md",
+  "verify_report_json_ref": "verify_report.json"
+}

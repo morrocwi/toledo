@@ -1,0 +1,392 @@
+{
+  "source": "zero-readout-certifies",
+  "upstream_commit": "adfd25a26f78d0568739c364ef2fa416dab881de",
+  "generated_at": "2026-09-06T13:18:00Z",
+  "files_total": 4,
+  "files_build_ok": 4,
+  "files_build_failed": 0,
+  "theorems_total": 42,
+  "theorems_closed": 42,
+  "theorems_with_axioms": 0,
+  "theorems_build_failed": 0,
+  "results": [
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "Qsq_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "Qadd_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "Qsq_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "Qplus_nonneg_eq0",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "I_edge_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "I_edge_zero_iff",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "I_form_zero_forall",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "keystone_zero_iff_edge",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "edge_gives_reach",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "keystone_zero_iff_component",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "I_form_ext",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "kernel_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "kernel_add",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "kernel_scale",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "indist_refl",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "indist_sym",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "module": "IDM_KeystoneKernel",
+      "theorem": "indist_trans",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "rr_identity_and_absorbing_collapses",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "boundary_acc_left_unit",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "boundary_acc_right_unit",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "boundary_seq_left_absorbing",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "boundary_seq_right_absorbing",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "boundary_seq_associative",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "boundary_two_roles_no_collapse",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "recorded_zero_differs_from_boundary",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "recorded_zero_allows_next_stage",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "boundary_blocks_next_stage",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "init_left_unit",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "init_right_unit",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "accumulator_failure_left_absorbing",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "accumulator_failure_right_absorbing",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "accumulator_states_are_distinct",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "pipeline_unresolved_left_absorbing",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "pipeline_unresolved_right_absorbing",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "pipeline_seq_associative",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "resolved_zero_is_not_unresolved",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "resolved_zero_continues_pipeline",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "unresolved_stops_pipeline",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "total_contract_empty_is_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "strict_contract_empty_is_unresolved",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "empty_case_depends_on_contract",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "module": "ReaderTwoLevels",
+      "theorem": "failed_accumulator_finalizes_unresolved",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    }
+  ]
+}

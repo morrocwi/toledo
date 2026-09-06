@@ -1,0 +1,19 @@
+From RDL Require Import RDL_StarRigMatrixN.
+Print Assumptions sumZ_ext.
+Print Assumptions sumZ_zero.
+Print Assumptions sumZ_add.
+Print Assumptions sumZ_nonneg.
+Print Assumptions sumZ_swap.
+Print Assumptions meq_refl.
+Print Assumptions meq_sym.
+Print Assumptions meq_trans.
+Print Assumptions mmul_unfold.
+Print Assumptions madd_unfold.
+Print Assumptions adj_unfold.
+Print Assumptions trace_unfold.
+Print Assumptions adj_invol.
+Print Assumptions adj_mmul.
+Print Assumptions mmul_zero_l.
+Print Assumptions mmul_distrib_l.
+Print Assumptions trace_madd.
+Print Assumptions trace_mmul_comm.

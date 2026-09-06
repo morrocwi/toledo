@@ -1,0 +1,24 @@
+From RDL Require Import RDL_SpineGraphCoupled.
+Print Assumptions inner_sym.
+Print Assumptions inner_self_nonneg.
+Print Assumptions B_sym.
+Print Assumptions B_self_nonneg.
+Print Assumptions diff_length.
+Print Assumptions inner_cons.
+Print Assumptions diff_cons.
+Print Assumptions codiff_aux_cons.
+Print Assumptions codiff_cons.
+Print Assumptions aux_law.
+Print Assumptions diff_adjoint.
+Print Assumptions sbp.
+Print Assumptions coupled_energy_rate.
+Print Assumptions coupled_energy_nonincreasing.
+Print Assumptions strong_energy_rate.
+Print Assumptions strong_energy_nonincreasing.
+Print Assumptions vscale_cons.
+Print Assumptions vsub_cons.
+Print Assumptions inner_linear_combo.
+Print Assumptions codiff_aux_length.
+Print Assumptions codiff_length.
+Print Assumptions lap_length_cons.
+Print Assumptions list_energy_nonincreasing.

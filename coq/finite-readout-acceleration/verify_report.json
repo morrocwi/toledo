@@ -1,0 +1,34 @@
+{
+  "source": "finite-readout-acceleration",
+  "upstream_repo": "https://github.com/morrocwi/finite-readout-acceleration (public)",
+  "upstream_commit": "f7fbc318eb104314cbc81d9f718a9a03abaadc05",
+  "coqc_version": "8.20.1",
+  "build_mode": "sequential (make, no -j), one coqc process at a time",
+  "ram_gate": "docs/RAM_LOW checked absent before build and before the independent Print Assumptions scratch-file pass; ~7 GB MemAvailable at time of run",
+  "files": [
+    {
+      "path": "formal/FRA_Closures.v",
+      "blob": "225a889a8ea0fa3bdfac4b0ce7cf14cbbe1ed280",
+      "build_status": "PASS",
+      "error": null
+    }
+  ],
+  "theorems": [
+    {"code": null, "identifier": "Qdiv_cross_lt", "kind": "Lemma", "source_file": "formal/FRA_Closures.v", "status": "closed", "axioms": []},
+    {"code": null, "identifier": "break_even_iff", "kind": "Theorem", "source_file": "formal/FRA_Closures.v", "status": "closed", "axioms": []},
+    {"code": null, "identifier": "ceiling_strict", "kind": "Theorem", "source_file": "formal/FRA_Closures.v", "status": "closed", "axioms": []},
+    {"code": null, "identifier": "injective_key_slowdown", "kind": "Theorem", "source_file": "formal/FRA_Closures.v", "status": "closed", "axioms": []},
+    {"code": null, "identifier": "hit_rate_bounds", "kind": "Theorem", "source_file": "formal/FRA_Closures.v", "status": "closed", "axioms": []},
+    {"code": null, "identifier": "bottleneck_ceiling", "kind": "Theorem", "source_file": "formal/FRA_Closures.v", "status": "closed", "axioms": []}
+  ],
+  "totals": {
+    "files_total": 1,
+    "files_built_ok": 1,
+    "files_build_failed": 0,
+    "theorems_total": 6,
+    "theorems_closed": 6,
+    "theorems_with_axioms": 0,
+    "theorems_build_failed": 0
+  },
+  "reconciliation_note": "Upstream README.md claims '5 theorems axiom-free' (Theorem-keyword results only); manifest registry/coq_imports.json extracts 6 names for this file (adds the Qdiv_cross_lt Lemma). This report independently verified the full 6-name manifest list, a strict superset of upstream's own claim, and found all 6 closed."
+}

@@ -1,0 +1,6 @@
+From RDL Require Import CMC_Independent_Definitions.
+Print Assumptions independent_exhaustion_blocks_refuter.
+Print Assumptions retained_definition_not_closure_definition.
+Print Assumptions finite_speed_definition_not_closure_definition.
+Print Assumptions cattaneo_independent_target_has_closure.
+Print Assumptions fourier_independent_is_not_target_class.

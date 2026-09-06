@@ -1,0 +1,3 @@
+From RDL Require Import InfoBinaryVacua.
+Print Assumptions InfoBinaryVacua.two_distinct_vacua.
+Print Assumptions InfoBinaryVacua.binary_root_realized_in_potential.

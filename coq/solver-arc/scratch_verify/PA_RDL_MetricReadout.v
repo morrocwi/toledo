@@ -1,0 +1,19 @@
+From RDL Require Import RDL_MetricReadout.
+Print Assumptions Sum_ext.
+Print Assumptions Sum_plus.
+Print Assumptions Sum_scal_l.
+Print Assumptions row_add.
+Print Assumptions row_scale.
+Print Assumptions bil_add_l.
+Print Assumptions bil_scale_l.
+Print Assumptions bil_add_r.
+Print Assumptions bil_scale_r.
+Print Assumptions lin_shift.
+Print Assumptions qform_shift.
+Print Assumptions qform_shift_pair.
+Print Assumptions metric_form_readout.
+Print Assumptions metric_readout_invariant.
+Print Assumptions metric_readout_location_invariant.
+Print Assumptions metric_form_is_quadratic.
+Print Assumptions SumL_perm.
+Print Assumptions metric_readout_graph_gauge.

@@ -1,0 +1,2 @@
+From RDL Require Import Scratch_ShipOfTheseus_RD4.
+Print Assumptions distinct_histories_never_merge.

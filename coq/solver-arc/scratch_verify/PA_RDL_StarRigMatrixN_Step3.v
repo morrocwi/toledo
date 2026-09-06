@@ -1,0 +1,21 @@
+From RDL Require Import RDL_StarRigMatrixN_Step3.
+Print Assumptions sumZ_ext.
+Print Assumptions sumZ_zero.
+Print Assumptions sumZ_add.
+Print Assumptions sumZ_mul_l.
+Print Assumptions sumZ_mul_r.
+Print Assumptions sumZ_swap.
+Print Assumptions mmul_unfold.
+Print Assumptions madd_unfold.
+Print Assumptions adj_unfold.
+Print Assumptions dot_ext_r.
+Print Assumptions dot_zero_r.
+Print Assumptions mv_mmul.
+Print Assumptions dot_adj.
+Print Assumptions mv_madd.
+Print Assumptions mv_zero.
+Print Assumptions quadform_conj.
+Print Assumptions quadform_madd.
+Print Assumptions psd_zero.
+Print Assumptions psd_add.
+Print Assumptions psd_conj.

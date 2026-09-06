@@ -1,0 +1,3 @@
+From RDL Require Import CMC_Bridge_Decomposition.
+Print Assumptions decomposed_bridge_obligation.
+Print Assumptions decomposed_no_refuter.

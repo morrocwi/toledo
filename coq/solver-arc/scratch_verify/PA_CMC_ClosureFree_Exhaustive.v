@@ -1,0 +1,5 @@
+From RDL Require Import CMC_ClosureFree_Exhaustive.
+Print Assumptions closure_free_implies_no_named_closure.
+Print Assumptions no_named_closure_implies_closure_free.
+Print Assumptions closure_free_iff_no_named_closure.
+Print Assumptions refuter_burden_expands_to_named_absence.

@@ -1,0 +1,9 @@
+From RDL Require Import RDL_SpineGraphEnergy.
+Print Assumptions lapQ_is_div_grad.
+Print Assumptions dirichletQ_density_nonneg.
+Print Assumptions graph_mode_energy_rate.
+Print Assumptions graph_mode_energy_nonincreasing.
+Print Assumptions graph_mode_energy_strict_decay.
+Print Assumptions sumQ_nonneg.
+Print Assumptions total_Edot_factor.
+Print Assumptions total_energy_nonincreasing.

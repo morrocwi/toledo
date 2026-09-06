@@ -1,0 +1,4 @@
+From RDL Require Import CMC_TargetClass_Definitions.
+Print Assumptions nonzero_closure_not_closure_free.
+Print Assumptions bridge_obligation_blocks_refuter.
+Print Assumptions cmc_no_refuter_under_axioms.

@@ -1,0 +1,37 @@
+{
+  "source": "zero-readout-certifies",
+  "upstream_repo": "https://github.com/morrocwi/zero-readout-certifies (public)",
+  "upstream_commit": "adfd25a26f78d0568739c364ef2fa416dab881de",
+  "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+  "licence_note": "Public MIT-licensed repository. Copied verbatim (byte-for-byte diff against the upstream commit above is empty; git hash-object on each copied file matches the manifest's recorded blob exactly) under its own MIT terms -- no additional authorisation needed beyond the licence itself. Toledo's coq/ tree is also MIT-licensed, so this import is licence-compatible. Only the coq/ subtree's 4 .v files (the manifest's declared scope for this source) were copied; paper/, docs/, scripts/, and the repo's other CC-BY-licensed text were not imported.",
+  "files": [
+    {
+      "path": "coq/CheckAssumptions.v",
+      "blob": "20a69eb428557edea4a2aa37d5c660865ea11f49",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 0
+    },
+    {
+      "path": "coq/Examples.v",
+      "blob": "1b93d9254437d82105027f87edeb5ae3cf0815b2",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 0
+    },
+    {
+      "path": "coq/IDM_KeystoneKernel.v",
+      "blob": "87d55a241596d3a631973f1ca9e5fcd53a1b28b0",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 17
+    },
+    {
+      "path": "coq/ReaderTwoLevels.v",
+      "blob": "4f5d1f42cc6e00e372f2eb14d4aa2c17e9602a48",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 25
+    }
+  ],
+  "copied_at": "2026-09-06T13:17:00Z",
+  "build_note": "coq/*.v compiled sequentially (one coqc at a time, no make -j), in dependency order matching upstream's own scripts/check_assumptions.sh: IDM_KeystoneKernel.v, Examples.v, ReaderTwoLevels.v, CheckAssumptions.v. All 4 compiled cleanly with `coqc -q`. No -Q logical qualification is used anywhere in these files (every Require Import is unqualified, e.g. `Require Import IDM_KeystoneKernel.`), so no _CoqProject/Makefile was needed on the Toledo side -- coqc's default current-directory module search resolves each dependency once its .vo exists from the prior sequential step, exactly mirroring how upstream's own scripts/check_assumptions.sh runs coqc directly (no coq_makefile step) against these same 4 files in this same order. Upstream's own coq/_CoqProject (a bare file list, no -Q flag, present at the source repo root) and scripts/check_repo.sh/check_assumptions.sh were read to confirm the build order and the forbidden-Axiom/Admitted repo-wide grep upstream itself runs (re-confirmed independently here: `grep -RInE '^[[:space:]]*(Axiom|Axioms|Parameter|Parameters|Conjecture|Conjectures|Admitted|admit)' coq/*.v` on the copied tree returns no match) -- neither script itself was copied into Toledo (out of the manifest's declared file scope), only followed as build-order evidence.",
+  "verification_note": "Every Theorem/Lemma/Corollary/Proposition listed in registry/coq_imports.json for this source (42 total, across the 2 theorem-bearing files IDM_KeystoneKernel.v and ReaderTwoLevels.v; CheckAssumptions.v and Examples.v declare 0 Theorem/Lemma/Corollary/Proposition each in the manifest -- CheckAssumptions.v is the audit harness itself and Examples.v's 5 results are declared with the `Example` keyword, outside the manifest's Theorem/Lemma/Corollary/Proposition scope) was independently checked via one scratch file (`Require Import IDM_KeystoneKernel. Require Import ReaderTwoLevels. Print Assumptions <name>.` for all 42 names, run once, one coqc process) -- not merely upstream's own scripts/check_assumptions.sh, which itself calls Print Assumptions on only 38 of these 42 (it omits 9 IDM_KeystoneKernel.v lemmas -- Qsq_nonneg, Qadd_nonneg, Qsq_zero, Qplus_nonneg_eq0, I_edge_nonneg, I_edge_zero_iff, I_form_zero_forall, edge_gives_reach, I_form_ext -- and separately checks 5 further identifiers that are Examples.v's `Example`-keyword results, not in this source's manifest scope). Result: all 42 manifest-listed identifiers independently print exactly 'Closed under the global context' -- axiom-free, verified on this machine at build time, not merely claimed by upstream. Upstream's own repo-level claim (README.md) is '38 audited results, axiom-free' over its own narrower, hand-picked 38-identifier audit list in CheckAssumptions.v; this Toledo verification pass independently confirms all 42 manifest theorem/lemma names axiom-free, a strict superset of upstream's own 38.",
+  "redactions": []
+}

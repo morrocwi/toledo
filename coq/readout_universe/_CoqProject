@@ -1,0 +1,16 @@
+-Q evidence URR
+
+code/UPL_Sorites.v
+code/UPL_Sorites_OneReversal.v
+evidence/RD.v
+evidence/DRL_Discrete.v
+evidence/DRL_General_Legendre.v
+evidence/URR_C_Foundational_Chain.v
+evidence/DRL_Finite_Cut_Balance.v
+evidence/DRL_Forced_Master.v
+evidence/DRL_General_EL.v
+evidence/DRL_Hidden_Elimination_Convolution.v
+evidence/DRL_NoGo_Single_Field.v
+evidence/RD_Chance_Presupposes_Distinguishability.v
+evidence/RetentionLoopClosureMonotone.v
+evidence/URCF_RD_All.v

@@ -1,0 +1,4 @@
+From RDL Require Import RDL_MetricReadoutLimit.
+Print Assumptions D2dir_expand.
+Print Assumptions directional_second_difference_limit.
+Print Assumptions directional_quadratic_limit.

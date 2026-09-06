@@ -1,0 +1,5 @@
+From RDL Require Import CMC_ModelClass_Witnesses.
+Print Assumptions class_witness_has_nonzero_closure.
+Print Assumptions class_witness_not_closure_free.
+Print Assumptions class_witness_blocks_refuter.
+Print Assumptions fourier_memoryless_face_not_target.

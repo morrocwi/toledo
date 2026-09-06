@@ -1,0 +1,5 @@
+From RDL Require Import RDU_NativeInformationUnits.
+Print Assumptions RDU_NativeInformationUnits.constants_unimodular.
+Print Assumptions RDU_NativeInformationUnits.dimension_spanned.
+Print Assumptions RDU_NativeInformationUnits.every_dimension_collapses.
+Print Assumptions RDU_NativeInformationUnits.spine_parameters_are_information.

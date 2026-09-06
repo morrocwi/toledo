@@ -1,0 +1,90 @@
+{
+ "source": "readout_universe",
+ "repo_note": "public GitHub repository github.com/morrocwi/readout_universe (not the private solver arc). The local clone's git remotes at read time were a private-network mirror remote (internal, not public) and `origin` -> https://github.com/morrocwi/readout_universe.git; both verified present via `git remote -v` at import time.",
+ "upstream_commit": "960165f13ced6e3f2bfd433928733a35be8283e6",
+ "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative",
+ "licence_note": "Full upstream LICENSE text copied verbatim to LICENSE.upstream in this directory. Imported under the MIT terms already granted by the upstream repository -- no additional founder authorisation needed (this is not the private solver-arc source, so the T9/DEC-toledo-solver-arc-copy-2026-0906 'solver arc (private)' provenance rule does not apply here).",
+ "files": [
+  {
+   "path": "code/UPL_Sorites.v",
+   "blob": "a2fbc8a6891312f0b188e88c4d388194f8187c00",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "code/UPL_Sorites_OneReversal.v",
+   "blob": "cf7ca6a34786f8527e43d3d4316259bb981877c2",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/DRL_Discrete.v",
+   "blob": "aee5e2f60e84e09bf607b020f3a1da1e30539eaa",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/DRL_Finite_Cut_Balance.v",
+   "blob": "cb845bf35ab0e7e2aafd4cc93db06ada881f6212",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/DRL_Forced_Master.v",
+   "blob": "038d076d1604b0f049b243a4cd0058e7e3b97ba0",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/DRL_General_EL.v",
+   "blob": "60ffb8a015fb311bbacadc83017826dc9da57cb8",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/DRL_General_Legendre.v",
+   "blob": "761d1e4567a787cd74f5aefcb3d16f0979eb6bcb",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/DRL_Hidden_Elimination_Convolution.v",
+   "blob": "c3b0e49b8ecc25dcf9693f8d0fb40411abc21131",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/DRL_NoGo_Single_Field.v",
+   "blob": "d43acfef56264fec8b3d3062856b09bd183b2009",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/RD.v",
+   "blob": "4ffb990a6f9c79a6f21521c2cc59af117ffad4c1",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/RD_Chance_Presupposes_Distinguishability.v",
+   "blob": "379e7e9f705bd07cab61e22bac8a843316f101e7",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/RetentionLoopClosureMonotone.v",
+   "blob": "e62082ac4513c88649504bd507be68a1490cbae4",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/URCF_RD_All.v",
+   "blob": "8ba8028b1cf41192b385bc6904ba24d893782101",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  },
+  {
+   "path": "evidence/URR_C_Foundational_Chain.v",
+   "blob": "2b0ee26078e93fe4b24261527b39317da88d2408",
+   "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative"
+  }
+ ],
+ "copied_at": "2026-09-06",
+ "redactions": [
+  {
+   "file": "PROVENANCE.json",
+   "field": "repo_note",
+   "reason": "leak scan (PUB-ADVERSARIAL-REVIEW privacy/security dimension): the first-drafted repo_note quoted the local clone's internal LAN mirror remote URL (a private-network host:port) alongside the public GitHub origin; replaced with a non-identifying description ('a private-network mirror remote (internal, not public)') before this file was finalised. No private repository name was ever written here -- this source is the public readout_universe repo, distinct from the private solver arc."
+  }
+ ],
+ "notes": [
+  "Verbatim upstream text in this public source mentions the name of a sibling private repository; kept unmodified because the upstream file is already public and mirrors must stay byte-identical (blob-verified)."
+ ]
+}

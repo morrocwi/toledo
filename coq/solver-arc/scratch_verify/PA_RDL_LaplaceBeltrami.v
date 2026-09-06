@@ -1,0 +1,26 @@
+From RDL Require Import RDL_LaplaceBeltrami.
+Print Assumptions sumZ_ext.
+Print Assumptions sumZ_zero.
+Print Assumptions sumZ_add.
+Print Assumptions sumZ_sub.
+Print Assumptions sumZ_mul_l.
+Print Assumptions sumZ_nonneg.
+Print Assumptions sumZ_swap.
+Print Assumptions dsum_ext.
+Print Assumptions dsum_add.
+Print Assumptions dsum_sub.
+Print Assumptions dsum_scale.
+Print Assumptions dsum_swap.
+Print Assumptions dsum_zero.
+Print Assumptions lap_sum.
+Print Assumptions lap_is_D_minus_W.
+Print Assumptions quadform_dsum.
+Print Assumptions laplacian_energy_identity.
+Print Assumptions energy_nonneg.
+Print Assumptions laplacian_psd.
+Print Assumptions lap_const.
+Print Assumptions energy_const.
+Print Assumptions quadform_const.
+Print Assumptions wpath_sym.
+Print Assumptions wpath_nonneg.
+Print Assumptions path_laplacian_psd.
