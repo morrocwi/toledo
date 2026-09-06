@@ -75,3 +75,10 @@ Imports verified fresh on this machine: readout_genesis 356/356 Closed; informat
 - N3 result: 255 coded objects, roots weld / EQ-015 / EQ-002 / A.5 / A.8; CAN-054 split into EQ-015/H.06, H.36, H.37; Coq 255 files named by code, sequential build 255/255, verify 161/161 closed; checker PASS (2 disclosed xfails). weld ≠ EQ-008 under φ (composite vs middle clause) — no merge.
 - N4 merge run: wf_13b05a40-9c2, script toledo-n4-merge-wf_13b05a40-9c2.js. Stages: registrar (scripts/n4_merge.py: S/W split → readings with final nn → tier sidecar → coq_map) → Coq splitter (bundle .v → per-child files, sequential build+verify) → independent checker (+1 fix round).
   Resume: Workflow({scriptPath, resumeFromRunId:'wf_13b05a40-9c2'}). On PASS: commit, then N5/N6 (build all outputs, catalogue PDF, tag v1.0.0, GitHub release, Zenodo version under concept 22537318), then N7.
+
+## Update 2026-09-07 00:05 — N4 committed (988141d); N6 release-prep launched
+- Registry now 793 canonical entries (current 697 / unverified 57 / split 30 / not_an_equation 9); domains P187 S136 M115 W84 H77 B75 E60 C59;
+  Coq: closed 337 / mapped_not_wrapped 210 / not_yet_formalised 246; tiers untagged 332 / Definition 314 / finite_diagnostic 47 / Dr 41 / Open 37 / Th_coqc 14 / Ax 8.
+  Coq canonical 339 files, sequential build 339/339, verify 162/162 closed.
+- N6 run (release prep): docs/README/CITATION/CHANGELOG/EQ_CODE_SCHEME addendum, EQ_LIBRARY regen, site, catalogue PDF, adversarial pre-publish checker. Chair then: tag v1.0.0 → push (timeout) → GitHub release → dist zip → Zenodo new version under concept 22537318 (zenodo_new_version.py, spec_equation_library.json updated) → N7.
+- Honest carry-overs for v1.1 (not blockers): wrap the 210 mapped_not_wrapped into Toledo-named files; 246 not_yet_formalised; RD1–RD9 / Theta / CMC roots absent from genesis_root (no code invented); 332 untagged tiers.
