@@ -15,7 +15,7 @@ Scope: equations and Th_coqc only (registries, codes, lineage, Coq sources, veri
   - `registry/EQ_LIBRARY.md` — generated status view (`scripts/build_eq_library.py`).
   - `coq/` — Coq 8.20 modules; file name = code (`MQ_08.v`, `MQ_08__H_02.v`); `verify.sh` runs `Print Assumptions` on every lemma.
   - `docs/EQ_CODE_SCHEME.md` — the code scheme and merge rule (builds on existing systems: Genesis Appendix C, the
-    `research_universal_solver` Equation Registry (owner/year at first use) and Equivalence Registry φ-criterion, the Genesis
+    the programme's solver-arc Equation Registry (private repo) (owner/year at first use) and Equivalence Registry φ-criterion, the Genesis
     Domain Registration Standard).
 - **Tiers:** `Th_coqc` (lemma closed under the global context on a stated finite model — internal consistency, never empirical
   truth) · `Definition` · `Open` (stated as a Prop, not proved). Nothing here raises a paper's own tier.

@@ -5,10 +5,10 @@
 ## Existing systems reused
 | System | Where | What it gives us |
 |---|---|---|
-| Readout Genesis Appendix C "SM domain equation stream" | `readout_genesis/READOUT_GENESIS_CORE.md` (SOT), mirrored in `research_universal_solver/EQUATION_LIBRARY_ROOT_TO_SM_STREAM.md` | root codes `EQ-001 … EQ-071` with tier tags |
+| Readout Genesis Appendix C "SM domain equation stream" | `readout_genesis/READOUT_GENESIS_CORE.md` (SOT), mirrored in the solver arc's root→SM equation stream file (private) | root codes `EQ-001 … EQ-071` with tier tags |
 | Readout Genesis named results | same file | ids `weld`, `MQ.08`, `Forced.I…XXIV`, `Face.1…12`, `N1…N5`, `VI.1…VI.8`, `T0…T2`, `RD1…RD9` |
-| Equation Registry (owner/year at first use) | `research_universal_solver/docs/root/EQUATION_REGISTRY.md` | rule: any imported equation is registered with owner + year at first use — the library carries `external_owner_year` and cites that registry |
-| Equivalence Registry design | `research_universal_solver/docs/design/EQUIVALENCE_REGISTRY_DESIGN.md`, `data/equivalence_registry.yaml` | the merge criterion: A ≡ B iff a documented bijective φ of (i) renaming, (ii) fixed positive scale, (iii) fixed constant substitution gives A(x)=B(φ(x)) on the shared domain — no limits, no approximations; otherwise `same_form_different_theory`, `special_case_of`, or (ours) `reads` |
+| Equation Registry (owner/year at first use) | `solver arc: docs/root/EQUATION_REGISTRY.md (private)` | rule: any imported equation is registered with owner + year at first use — the library carries `external_owner_year` and cites that registry |
+| Equivalence Registry design | `solver arc: docs/design/EQUIVALENCE_REGISTRY_DESIGN.md, data/equivalence_registry.yaml (private) | the merge criterion: A ≡ B iff a documented bijective φ of (i) renaming, (ii) fixed positive scale, (iii) fixed constant substitution gives A(x)=B(φ(x)) on the shared domain — no limits, no approximations; otherwise `same_form_different_theory`, `special_case_of`, or (ours) `reads` |
 | Domain Registration Standard | `readout_genesis/domains/DOMAIN_REGISTRATION_STANDARD.md` | a domain is a quotient/readout `q_D` of the one root, never a new root; claim boundary per domain |
 
 ## Layer 0 — root codes (Readout Genesis, verbatim)

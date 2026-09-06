@@ -1,0 +1,1044 @@
+title: Written by AI. Still True.
+subtitle: 'When AI Expands Human Potential: A Systematic Epistemology of Human–AI
+  Knowledge'
+author: Yaoharee Lahtee
+licence: CC BY 4.0
+edition: Edition 1 (2026)
+parts:
+- n: 1
+  title: 'Root: Before Meaning'
+  chapters:
+  - order: 1
+    seed_record: 22301202
+    record_id: 22301202
+    concept_id: '22301201'
+    doi: 10.5281/zenodo.22301202
+    version: v6
+    date: '2026-08-31'
+    title: Written by AI. Still True. Knower Fetishism, Epistemic Pedigree, and the
+      Human Face as a Bad Theory of Truth
+    licence: cc-by-4.0
+    include: full
+    file: Written_by_AI_Still_True_v6.pdf
+    file_url: https://zenodo.org/api/records/22301202/files/Written_by_AI_Still_True_v6.pdf/content
+    zenodo_checksum: md5:bc5a53013e995c606a1e95db4882e70d
+    sha256: a667747a2b4998759064dcd0e9499000c2a33f364c8574baf730677b5523138d
+    local: 01_22301202.pdf
+    md5_match: true
+    pages: 11
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 18
+  - order: 2
+    seed_record: 22301318
+    record_id: 22301318
+    concept_id: '22301317'
+    doi: 10.5281/zenodo.22301318
+    version: elevated full paper (Aug 2026)
+    date: '2026-08-31'
+    title: 'The Readout Condition: Distinguishability, Access, and Epistemic Warrant'
+    licence: cc-by-4.0
+    include: full
+    file: The_Readout_Condition_Full_Paper.pdf
+    file_url: https://zenodo.org/api/records/22301318/files/The_Readout_Condition_Full_Paper.pdf/content
+    zenodo_checksum: md5:2ede405ef646df363500b00700f6f2a8
+    sha256: c45f46597a5587aefb150270a884232d9de957e1c9b20943f98182b56559acdb
+    local: 02_22301318.pdf
+    md5_match: true
+    pages: 15
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 24
+  - order: 3
+    seed_record: 21529456
+    record_id: 21529456
+    concept_id: '21529455'
+    doi: 10.5281/zenodo.21529456
+    version: null
+    date: '2026-07-24'
+    title: 'Readout Genesis Standalone Synthesis: Information Epistemic Foundation,
+      Conditioned Agency, and Meta-Readout Governance'
+    licence: cc-by-4.0
+    include: full
+    file: Readout_Genesis_Information_Epistemic_Foundation_Journal.pdf
+    file_url: https://zenodo.org/api/records/21529456/files/Readout_Genesis_Information_Epistemic_Foundation_Journal.pdf/content
+    zenodo_checksum: md5:fd84b17fcc1878a2db96869e9e03a56b
+    sha256: 1d9db074ad3da3b8ad900526b5d9372beac3d4523419125833e7a457037613a5
+    local: 03_21529456.pdf
+    md5_match: true
+    pages: 14
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 29
+  - order: 4
+    seed_record: 18925129
+    record_id: 18925129
+    concept_id: '18925128'
+    doi: 10.5281/zenodo.18925129
+    version: null
+    date: '2026-03-09'
+    title: 'Knowledge as Stabilized Translation: Toward an Observer-Constrained Epistemology'
+    licence: cc-by-4.0
+    include: full
+    file: Knowledge as Stabilized Translation Toward.pdf
+    file_url: https://zenodo.org/api/records/18925129/files/Knowledge%20as%20Stabilized%20Translation%20Toward.pdf/content
+    zenodo_checksum: md5:4bb4ecd9450c000a8c5fdf0eddb6624f
+    sha256: b0619a22f30e9d7fbaf111ece4cb08f0b1b39efeeff444e42adace27e0472998
+    local: 04_18925129.pdf
+    md5_match: true
+    pages: 10
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 10
+  - order: 5
+    seed_record: 19205869
+    record_id: 19205869
+    concept_id: '19185224'
+    doi: 10.5281/zenodo.19205869
+    version: null
+    date: '2026-03-23'
+    title: 'Constraint-First Epistemology: Normativity, Conditioned Agency, and the
+      Non-Zero Kantian Floor'
+    licence: cc-by-4.0
+    include: full
+    file: constraint_first_part3.pdf
+    file_url: https://zenodo.org/api/records/19205869/files/constraint_first_part3.pdf/content
+    zenodo_checksum: md5:66623061e0b867f1a8844d34dfa9bb1a
+    sha256: d230d18aba12532b84abb5f5ec6115b0f70027af15d926c8575d646d274cf07e
+    local: 05_19205869.pdf
+    md5_match: true
+    pages: 18
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 13
+  - order: 6
+    seed_record: 19640361
+    record_id: 19640361
+    concept_id: '19640360'
+    doi: 10.5281/zenodo.19640361
+    version: null
+    date: '2026-04-18'
+    title: 'Mind as Information Horizon: From Primordial Difference to Expertise Formation
+      on the Discrete Causal Graph'
+    licence: cc-by-4.0
+    include: full
+    file: Mind_as_Information_Horizon_Lahtee_2026.pdf
+    file_url: https://zenodo.org/api/records/19640361/files/Mind_as_Information_Horizon_Lahtee_2026.pdf/content
+    zenodo_checksum: md5:193db6794492a536cc33594ca6223159
+    sha256: a321ab62888db942492a48a8adac90e19b7fa0830a1488660c85a54356b64c91
+    local: 06_19640361.pdf
+    md5_match: true
+    pages: 19
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 22
+  - order: 7
+    seed_record: 19176260
+    record_id: 19176260
+    concept_id: '19176259'
+    doi: 10.5281/zenodo.19176260
+    version: null
+    date: '2026-03-23'
+    title: 'The Architecture of Mediated Agency: Beyond the Misframing of Free Will
+      and Truth'
+    licence: cc-by-4.0
+    include: full
+    file: agency_journal.pdf
+    file_url: https://zenodo.org/api/records/19176260/files/agency_journal.pdf/content
+    zenodo_checksum: md5:de5c436001522c8c04eac604837d6b8c
+    sha256: 5b851956c4dbb4f427c5b4d1de4e470fa58353fd7b53d32017ef1a4dd21e2d55
+    local: 07_19176260.pdf
+    md5_match: true
+    pages: 5
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 11
+- n: 2
+  title: Meaning, Experience, Retention
+  chapters:
+  - order: 8
+    seed_record: 22410666
+    record_id: 22410666
+    concept_id: '22410665'
+    doi: 10.5281/zenodo.22410666
+    version: v1.0-FULL-2026-09-05
+    date: '2026-09-05'
+    title: 'Meaning Before Naming: A Readout-Retention Architecture of Affective-Semantic
+      Reorganization (Standalone Concept Note v1.0 FULL)'
+    licence: cc-by-4.0
+    include: full
+    file: Meaning_Before_Naming_v1_0_FULL.pdf
+    file_url: https://zenodo.org/api/records/22410666/files/Meaning_Before_Naming_v1_0_FULL.pdf/content
+    zenodo_checksum: md5:850eb4d2b73b1ba9efa2175d082ee879
+    sha256: 6549311876df109112fce6efaa730d257aef9f4d878e37ea20152d4296708c35
+    local: 08_22410666.pdf
+    md5_match: true
+    pages: 7
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 12
+  - order: 9
+    seed_record: 22357744
+    record_id: 22357744
+    concept_id: '22357743'
+    doi: 10.5281/zenodo.22357744
+    version: v2.0-strong-claim-2026-09-05
+    date: '2026-09-05'
+    title: 'Experience Is Meaning-Giving: A Strong-Form Readout-Retention Theory of
+      Phenomena, Resonance, Rhythm, Accumulation, and Transformative Release (Full
+      Paper v2.0, strong-claim / reviewer-hardened edition)'
+    licence: cc-by-4.0
+    include: full
+    file: Experience_Is_Meaning_Giving_v2_0_STRONG_CLAIM.pdf
+    file_url: https://zenodo.org/api/records/22357744/files/Experience_Is_Meaning_Giving_v2_0_STRONG_CLAIM.pdf/content
+    zenodo_checksum: md5:d886f9d2d33b3bb4fd4a1b8f75b73370
+    sha256: 016efb4e4177705d517ac28f87160c497a3ba215850ff12ac14e02d3d165edc4
+    local: 09_22357744.pdf
+    md5_match: true
+    pages: 13
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 17
+  - order: 10
+    seed_record: 21425420
+    record_id: 21425420
+    concept_id: '21425419'
+    doi: 10.5281/zenodo.21425420
+    version: null
+    date: '2026-07-18'
+    title: 'Experience Is the Human LoRA: A Readout–Retention Theory of Selective
+      Model Change'
+    licence: cc-by-4.0
+    include: full
+    file: EXPERIENCE_IS_HUMAN_LORA_DISCRETE_FINAL_PREPRINT.pdf
+    file_url: https://zenodo.org/api/records/21425420/files/EXPERIENCE_IS_HUMAN_LORA_DISCRETE_FINAL_PREPRINT.pdf/content
+    zenodo_checksum: md5:dec19d36db7ac3cc8d4f0d7313390f99
+    sha256: 5f4a8dac0846ab154dc5931d78f58c70a76ce3d61de1be94f68e2712b5190288
+    local: 10_21425420.pdf
+    md5_match: true
+    pages: 26
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 21
+  - order: 11
+    seed_record: 22341297
+    record_id: 22341297
+    concept_id: '22341296'
+    doi: 10.5281/zenodo.22341297
+    version: v4-revised-2026-06-28
+    date: '2026-06-28'
+    title: 'Human Learning as Epistemic Architecture: A Method for Word Mapping, Life-Concept
+      Graphs, Constraint Testing, and Corrigible Agency in the AI Age (revised v4
+      preprint, 28 June 2026)'
+    licence: cc-by-4.0
+    include: full
+    file: Human_Learning_as_Epistemic_Architecture_v4_2026-06-28.pdf
+    file_url: https://zenodo.org/api/records/22341297/files/Human_Learning_as_Epistemic_Architecture_v4_2026-06-28.pdf/content
+    zenodo_checksum: md5:00701dcb1a6b85a9c07d5415029a4ae8
+    sha256: abbb4c416db6f486e0f291168f0156a693cf8573fd8f4a15b98ea4526d942c72
+    local: 11_22341297.pdf
+    md5_match: true
+    pages: 51
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 10
+  - order: 12
+    seed_record: 18711408
+    record_id: 18711408
+    concept_id: '18711407'
+    doi: 10.5281/zenodo.18711408
+    version: null
+    date: '2026-02-20'
+    title: 'Learning Under Generative Abundance: A Structural Law of Epistemic Stabilization'
+    licence: cc-by-4.0
+    include: full
+    file: Learning Under Generative Abundance.pdf
+    file_url: https://zenodo.org/api/records/18711408/files/Learning%20Under%20Generative%20Abundance.pdf/content
+    zenodo_checksum: md5:ca5757d8930ccde2a658d97a5743c730
+    sha256: 92afe9673434ddbc2063da211e8aa84e4f1b82bad0fd279c82834bfcead170a7
+    local: 12_18711408.pdf
+    md5_match: true
+    pages: 3
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 8
+- n: 3
+  title: Possibility, Choice, Potential
+  chapters:
+  - order: 13
+    seed_record: 22307148
+    record_id: 22307148
+    concept_id: '22307147'
+    doi: 10.5281/zenodo.22307148
+    version: K0-final-2026-09-04
+    date: '2026-09-04'
+    title: 'From Problem to Hypothesis: Dynamic Semantic Mobility, Bounded Knowers,
+      and the Readout-Discriminable Hypothesis Space'
+    licence: cc-by-4.0
+    include: full
+    file: From_Problem_to_Hypothesis_BOUNDED_KNOWER_FINAL_ArXiv_TwoColumn_K0.pdf
+    file_url: https://zenodo.org/api/records/22307148/files/From_Problem_to_Hypothesis_BOUNDED_KNOWER_FINAL_ArXiv_TwoColumn_K0.pdf/content
+    zenodo_checksum: md5:ef813f2099297af465fef42be35819bd
+    sha256: 6038b23f396434df7064e0d41f25e9cec7a672d271ab657bae108eeb933f0265
+    local: 13_22307148.pdf
+    md5_match: true
+    pages: 9
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 16
+  - order: 14
+    seed_record: 22307561
+    record_id: 22307561
+    concept_id: '22307560'
+    doi: 10.5281/zenodo.22307561
+    version: K0-2026-09-04
+    date: '2026-09-04'
+    title: 'Knowledge Topology and the First Passage to Usable Hypotheses: A Readout
+      Theory of Discovery Time and Direction'
+    licence: cc-by-4.0
+    include: full
+    file: Knowledge_Topology_First_Passage_Usable_Hypotheses_K0.pdf
+    file_url: https://zenodo.org/api/records/22307561/files/Knowledge_Topology_First_Passage_Usable_Hypotheses_K0.pdf/content
+    zenodo_checksum: md5:9c721d12399aebfe144385f9b89f1ce8
+    sha256: 6e3bb41e10e5895d6f4e13798334da41c939f45ba106b4ba09a7c8c922186eb0
+    local: 14_22307561.pdf
+    md5_match: true
+    pages: 7
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 16
+  - order: 15
+    seed_record: 22307564
+    record_id: 22307564
+    concept_id: '22307563'
+    doi: 10.5281/zenodo.22307564
+    version: K0-2026-09-04
+    date: '2026-09-04'
+    title: 'Before Evidence Can Decide: Candidate-Set Formation, Discovery Routing,
+      and Unconceived Alternatives — Questions for a Pre-Evidential Epistemology of
+      Science'
+    licence: cc-by-4.0
+    include: full
+    file: Before_Evidence_Can_Decide_Paper_III_K0.pdf
+    file_url: https://zenodo.org/api/records/22307564/files/Before_Evidence_Can_Decide_Paper_III_K0.pdf/content
+    zenodo_checksum: md5:62866f5d5240df5fd06cccff5ae9c104
+    sha256: 30f6a2da435e87bcbd2dee0ead44781aadae8a5b8835adbf982d271209e15e28
+    local: 15_22307564.pdf
+    md5_match: true
+    pages: 6
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 14
+  - order: 16
+    seed_record: 22308072
+    record_id: 22308072
+    concept_id: '22307750'
+    doi: 10.5281/zenodo.22308072
+    version: K0-2026-09-04-v3
+    date: '2026-09-04'
+    title: 'The Epistemic Chain Reaction: Human-AI Multiplication from Questions to
+      Readout-Distinguishable Hypotheses — A Controlled Amplification Architecture
+      for Scientific Discovery'
+    licence: cc-by-4.0
+    include: full
+    file: Epistemic_Chain_Reaction_Paper_IV_K0.pdf
+    file_url: https://zenodo.org/api/records/22308072/files/Epistemic_Chain_Reaction_Paper_IV_K0.pdf/content
+    zenodo_checksum: md5:46b376be65110e9e4d46138f5dd12ca1
+    sha256: 7737a0073d95f752e30de33b8fd9956106d90e54248117ffa0833e4700cc28ad
+    local: 16_22308072.pdf
+    md5_match: true
+    pages: 6
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 18
+  - order: 17
+    seed_record: 22357788
+    record_id: 22357788
+    concept_id: '22357787'
+    doi: 10.5281/zenodo.22357788
+    version: v1.0-strong-claim-2026-09-05
+    date: '2026-09-05'
+    title: 'Choice Begins Before Choice: Meaning-Shaped Accessibility, Live Possibility,
+      and Effective Agency in Human-AI Systems (Full Paper v1.0, strong-claim synthesis)'
+    licence: cc-by-4.0
+    include: full
+    file: Choice_Begins_Before_Choice_v1_0_STRONG_CLAIM.pdf
+    file_url: https://zenodo.org/api/records/22357788/files/Choice_Begins_Before_Choice_v1_0_STRONG_CLAIM.pdf/content
+    zenodo_checksum: md5:4a2f8776dbe881c12516881e66f93764
+    sha256: bf9219fb2441e4ee8e48d0e2cf8f551b899940fc0b21d3af1e765ffaf6792d05
+    local: 17_22357788.pdf
+    md5_match: true
+    pages: 9
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 19
+  - order: 18
+    seed_record: 22361830
+    record_id: 22361830
+    concept_id: '22345708'
+    doi: 10.5281/zenodo.22361830
+    version: K0-v2-2026-09-05
+    date: '2026-09-05'
+    title: 'Potential as a Readout: Witnessed Envelopes, Two-Layer Agency, and the
+      Measurement of Pseudo-Peace (Epistemic Note, K0, version 2 — tier-raising pass,
+      5 September 2026)'
+    licence: cc-by-4.0
+    include: full
+    file: Potential_as_a_Readout_v2_K0_2026-09-05.pdf
+    file_url: https://zenodo.org/api/records/22361830/files/Potential_as_a_Readout_v2_K0_2026-09-05.pdf/content
+    zenodo_checksum: md5:1d0fd3476a3498f3f41982c711d2a89b
+    sha256: 8dee77a7559719bbd03da58ec96ee9333ef65692b39cde4f4cd5cfde2da8281f
+    local: 18_22361830.pdf
+    md5_match: true
+    pages: 11
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 15
+- n: 4
+  title: 'Society, Power, Justice: Potential Under Compression'
+  chapters:
+  - order: 19
+    seed_record: 18925131
+    record_id: 18925131
+    concept_id: '18925130'
+    doi: 10.5281/zenodo.18925131
+    version: null
+    date: '2026-03-09'
+    title: 'The Causal Grammar of Structured Coexistence: Conflict, Violence, Repair,
+      and Non-Suppressive Peace'
+    licence: cc-by-4.0
+    include: full
+    file: The Causal Grammar of Structured.pdf
+    file_url: https://zenodo.org/api/records/18925131/files/The%20Causal%20Grammar%20of%20Structured.pdf/content
+    zenodo_checksum: md5:447e9c9c672e16e693589641ec73357f
+    sha256: 9000ef675caff4c41ba691f1c3b47f9107ae0c83cd3b7ebe365c306044e349e1
+    local: 19_18925131.pdf
+    md5_match: true
+    pages: 5
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 5
+  - order: 20
+    seed_record: 18383439
+    record_id: 18383439
+    concept_id: '18383438'
+    doi: 10.5281/zenodo.18383439
+    version: null
+    date: '2026-01-27'
+    title: Violence as a Special Case of Instability in Finite–Memory Causal Systems
+    licence: cc-by-4.0
+    include: full
+    file: Violence as a Special Case of Instability.pdf
+    file_url: https://zenodo.org/api/records/18383439/files/Violence%20as%20a%20Special%20Case%20of%20Instability.pdf/content
+    zenodo_checksum: md5:9bc93312bf25f9020b562d10aa597b21
+    sha256: 1f4617fef4e5b88c1cafbbb120d4569e0831aff687ec0b53770b484b07c40fb2
+    local: 20_18383439.pdf
+    md5_match: true
+    pages: 4
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 16
+  - order: 21
+    seed_record: 18444260
+    record_id: 18444260
+    concept_id: '18444259'
+    doi: 10.5281/zenodo.18444260
+    version: null
+    date: '2026-01-31'
+    title: 'CAUSAL ETHICS : The Mathematics of Regime Choice and Survival'
+    licence: cc-by-4.0
+    include: excerpt:pages 13-34,73-77
+    note: 'chair proposal from the PDF outline: Primitives & Axioms, Core Definition,
+      Moral Cost, Individual Ethics, Collective Ethics (pp 13-34) + AI Ethics: Human–AI
+      as a Hybrid Multi-Agency System (pp 73-77); founder to confirm'
+    file: Causal Ethics.pdf
+    file_url: https://zenodo.org/api/records/18444260/files/Causal%20Ethics.pdf/content
+    zenodo_checksum: md5:7f968595e76964905c44f4880df3a4b5
+    sha256: 9c284ce192263824f8e436fe3888d7778ca2c1b37377030b521a65c4115438d7
+    local: 21_18444260.pdf
+    md5_match: true
+    pages: 99
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 28
+  - order: 22
+    seed_record: 18897585
+    record_id: 18897585
+    concept_id: '18897584'
+    doi: 10.5281/zenodo.18897585
+    version: null
+    date: '2026-03-07'
+    title: Causal Agency  A Persistence Control Theory of Adaptive Systems
+    licence: cc-by-4.0
+    include: excerpt:pages 13-20,23-29
+    note: 'chair proposal from the PDF outline: Persistence-Control Framework + Formal
+      Structure (pp 13-20) + Structural Hierarchy + Implications for AI (pp 23-29);
+      founder to confirm'
+    file: Causal Agency_A Persistence Control Theory of Adaptive.pdf
+    file_url: https://zenodo.org/api/records/18897585/files/Causal%20Agency_A%20Persistence%20Control%20Theory%20of%20Adaptive.pdf/content
+    zenodo_checksum: md5:625ea44641b7573eebba85bcad31bf54
+    sha256: 291aae38c686044605b7d916e3ce6719e9e37485b9a369f27d4a66e9387aee64
+    local: 22_18897585.pdf
+    md5_match: true
+    pages: 42
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 13
+  - order: 23
+    seed_record: 18943971
+    record_id: 18943971
+    concept_id: '18943970'
+    doi: 10.5281/zenodo.18943971
+    version: null
+    date: '2026-03-10'
+    title: 'The Civilization of Knowledge: Who Has the Authority to Interpret the
+      World'
+    licence: cc-by-4.0
+    include: full
+    file: main_knowing_civil.pdf
+    file_url: https://zenodo.org/api/records/18943971/files/main_knowing_civil.pdf/content
+    zenodo_checksum: md5:5fdf85878baab19a4e46aca95fdcfe27
+    sha256: be184e37c2eb3ba6925d92412cd73615a4124471322c9512b8d2f2285f0c5a29
+    local: 23_18943971.pdf
+    md5_match: true
+    pages: 63
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 9
+- n: 5
+  title: Human–AI Coupling and Return
+  chapters:
+  - order: 24
+    seed_record: 22456414
+    record_id: 22456414
+    concept_id: '22308447'
+    doi: 10.5281/zenodo.22456414
+    version: uplift-edition-2026
+    date: '2026-09-06'
+    title: 'AI–Cognitive Interaction: Activating Youth Potential through Reflective
+      Dialogue and Linguistic Capital'
+    licence: cc-by-4.0
+    include: full
+    note: uplift edition 2026 (BBL-157)
+    file: ai-cognitive-interaction_uplift_2026.pdf
+    file_url: https://zenodo.org/api/records/22456414/files/ai-cognitive-interaction_uplift_2026.pdf/content
+    zenodo_checksum: md5:7b48723314526e218f622cb9989dfc3d
+    sha256: 50396b66055fafb65d12fdb6a7f74c5dc29d85b09e476fcc9e4e7f1809fc73e5
+    local: 24_22456414.pdf
+    md5_match: true
+    pages: 7
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 9
+  - order: 25
+    seed_record: 22456487
+    record_id: 22456487
+    concept_id: '22308445'
+    doi: 10.5281/zenodo.22456487
+    version: uplift-edition-2026
+    date: '2026-09-06'
+    title: 'Operational Linguistic Wisdom: Elective Connectivity and Linguistic Capital
+      Activation in the Age of LLMs'
+    licence: cc-by-4.0
+    include: full
+    note: uplift edition 2026 (BBL-157)
+    file: operational-linguistic-wisdom_uplift_2026.pdf
+    file_url: https://zenodo.org/api/records/22456487/files/operational-linguistic-wisdom_uplift_2026.pdf/content
+    zenodo_checksum: md5:d9e1a7820d55251e65a579923377ae14
+    sha256: 02780cbb3093cd22681d1d1df76f51279a7cb562accc0824a1bee0cf1a6e26e0
+    local: 25_22456487.pdf
+    md5_match: true
+    pages: 8
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 9
+  - order: 26
+    seed_record: 22456564
+    record_id: 22456564
+    concept_id: '22308450'
+    doi: 10.5281/zenodo.22456564
+    version: uplift-edition-2026
+    date: '2026-09-06'
+    title: 'The Dialogue as the Ground of Enlightenment: Religious and Cognitive Frameworks
+      for Understanding Wisdom through Human-AI Conversations'
+    licence: cc-by-4.0
+    include: full
+    note: uplift edition 2026 (BBL-157)
+    file: dialogue-ground-of-enlightenment_uplift_2026.pdf
+    file_url: https://zenodo.org/api/records/22456564/files/dialogue-ground-of-enlightenment_uplift_2026.pdf/content
+    zenodo_checksum: md5:01a3be56237cbd5ff9986270f7695eea
+    sha256: 6574d36f8fa323808c27dc9a21d5d6aa15e74509795d329fedd7fc0624b4c8f1
+    local: 26_22456564.pdf
+    md5_match: true
+    pages: 9
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 10
+  - order: 27
+    seed_record: 19215748
+    record_id: 19215748
+    concept_id: '19215747'
+    doi: 10.5281/zenodo.19215748
+    version: null
+    date: '2026-03-25'
+    title: 'When AI Expands Human Potential: Reflective Dissonance, Epistemic Agency,
+      and Constraint'
+    licence: cc-by-4.0
+    include: full
+    file: When AI Expands Human Potential.pdf
+    file_url: https://zenodo.org/api/records/19215748/files/When%20AI%20Expands%20Human%20Potential.pdf/content
+    zenodo_checksum: md5:d894a2b59a2b586cd57d1f95bd208d07
+    sha256: 860cb3b620509f4890fbf36c58d6babc0204b59d5894fb7116e239203f089a1b
+    local: 27_19215748.pdf
+    md5_match: true
+    pages: 12
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 10
+  - order: 28
+    seed_record: 17280546
+    record_id: 17280546
+    concept_id: '17280545'
+    doi: 10.5281/zenodo.17280546
+    version: null
+    date: '2025-10-06'
+    title: 'The Language Bridge: Expanding Human Potential in the Age of AI'
+    licence: cc-by-4.0
+    include: full
+    note: 1-page reflective abstract (origin of the series subtitle); fonts not embedded
+      → re-embed with gs at build; page itself says CC BY-NC-SA 4.0 while the Zenodo
+      record says CC BY 4.0 (author-owned; record licence governs)
+    file: The_Language_Bridge_Conceptual_Abstract_Yaoharee_Lahtee.pdf
+    file_url: https://zenodo.org/api/records/17280546/files/The_Language_Bridge_Conceptual_Abstract_Yaoharee_Lahtee.pdf/content
+    zenodo_checksum: md5:aa34a1b2711aa18296c022a8002d866a
+    sha256: 7821e19f0f77affd9c0daffe94103d90ff4b17efa027997812089ae0137acf6d
+    local: 28_17280546.pdf
+    md5_match: true
+    pages: 1
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: false
+    font_count: 3
+  - order: 29
+    seed_record: 18517054
+    record_id: 18517054
+    concept_id: '18517053'
+    doi: 10.5281/zenodo.18517054
+    version: null
+    date: '2026-02-07'
+    title: AI, Translation, and Access to Event-Specific Contex
+    licence: cc-by-4.0
+    include: full
+    file: AI, Translation, and Access to Event-Specific Contex.pdf
+    file_url: https://zenodo.org/api/records/18517054/files/AI,%20Translation,%20and%20Access%20to%20Event-Specific%20Contex.pdf/content
+    zenodo_checksum: md5:e55b8275892daa23e634654ec84a2984
+    sha256: f1425d824f6c20cb9e0daca2c7ac40b0982827a04eb9a2ff7b5d30d7e4daf955
+    local: 29_18517054.pdf
+    md5_match: true
+    pages: 18
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 23
+  - order: 30
+    seed_record: 22331922
+    record_id: 22331922
+    concept_id: '22318039'
+    doi: 10.5281/zenodo.22331922
+    version: v8.1-strong-claim+uplift-note-r2
+    date: '2026-09-05'
+    title: 'Epistemic Fusion or Epistemic Tunnel: A Phenomenology-Anchored, Global-Literature-Constrained,
+      Problem-First Architecture of Human-AI Collaboration (Epistemic Note v8.1 —
+      strong-claim / legitimate-defeater edition)'
+    licence: cc-by-4.0
+    include: full
+    file: UPLIFT_NOTE_2026-09-05_glosa_25_proposals.pdf
+    file_url: https://zenodo.org/api/records/22331922/files/UPLIFT_NOTE_2026-09-05_glosa_25_proposals.pdf/content
+    zenodo_checksum: md5:517afe5990c0806986f9ee2f9d942e31
+    sha256: 0b0edc4c148c6d116269b35c21824cef334c889e6de9c6031c00803484766ab7
+    local: 30_22331922.pdf
+    md5_match: false
+    pages: 8
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 15
+  - order: 31
+    seed_record: 22339909
+    record_id: 22339909
+    concept_id: '22339908'
+    doi: 10.5281/zenodo.22339909
+    version: v9.1-FINAL-2026-09-05
+    date: '2026-09-05'
+    title: 'CTSA Human-Return Readout: A Session-Boundary Measurement Architecture
+      for Retained Human Capability After AI (Epistemic Note v9.1 FINAL — global-literature-constrained
+      edition)'
+    licence: cc-by-4.0
+    include: full
+    file: CTSA_Human_Return_Readout_v9_1_FINAL_Global_Constrained.pdf
+    file_url: https://zenodo.org/api/records/22339909/files/CTSA_Human_Return_Readout_v9_1_FINAL_Global_Constrained.pdf/content
+    zenodo_checksum: md5:04fe1935003ee3ee984d7b5cb060717a
+    sha256: 275b68d4e24370ffc6dc3b3230847175c0b030e306b226235a5ce0525f616d6c
+    local: 31_22339909.pdf
+    md5_match: true
+    pages: 9
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 12
+  - order: 32
+    seed_record: 22481928
+    record_id: 22481928
+    concept_id: '22481927'
+    doi: 10.5281/zenodo.22481928
+    version: v1.3-glosa-checked-2026-09-06
+    date: '2026-09-06'
+    title: 'How Humans Should Converse with AI: A Problem-First Adaptive Dialogue
+      Conversion Protocol for Durable Human Capability (v1.3 glosa-checked edition)'
+    licence: cc-by-4.0
+    include: full
+    note: Dialogue Conversion Protocol v1.3 glosa-checked edition (BBL-161)
+    file: Dialogue_Conversion_Protocol_v1_3.pdf
+    file_url: https://zenodo.org/api/records/22481928/files/Dialogue_Conversion_Protocol_v1_3.pdf/content
+    zenodo_checksum: md5:f924073bce70169f6c84142e3604b83f
+    sha256: 91c29d8df66e7666939ed31193875b574979b5b2e4e1cd8c9fc1881aa22843fb
+    local: 32_22481928.pdf
+    md5_match: true
+    pages: 12
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 11
+  - order: 33
+    seed_record: 22498047
+    record_id: 22498047
+    concept_id: '22498046'
+    doi: 10.5281/zenodo.22498047
+    version: v1.1-glosa-checked-2026-09-06
+    date: '2026-09-06'
+    title: 'From Assistance to Human Capability: A Readout-Genesis Architecture for
+      Proactive AI, Unequal Life Conditions, and Opportunity Conversion (RG-HCA v1.1
+      glosa-checked edition)'
+    licence: cc-by-4.0
+    include: full
+    note: 'RG-HCA v1.1 glosa-checked edition (BBL-164/166): the proactive capability
+      layer over DCP; placement confirmed (meeting 2, D11)'
+    file: From_Assistance_to_Human_Capability_RG_HCA_v1_1.pdf
+    file_url: https://zenodo.org/api/records/22498047/files/From_Assistance_to_Human_Capability_RG_HCA_v1_1.pdf/content
+    zenodo_checksum: md5:59251592bf6481000cf9f30730b90035
+    sha256: fc99be280fbe77778334477b24f19fbbf94f2b124a69a27261f9aab448200bc9
+    local: 33_22498047.pdf
+    md5_match: true
+    pages: 12
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 11
+  - planned: Paper C — The Prompt Is Not the Beginning
+    include: planned
+- n: 6
+  title: Human Position After Labour
+  chapters:
+  - order: 34
+    seed_record: 22481924
+    record_id: 22481924
+    concept_id: '22481923'
+    doi: 10.5281/zenodo.22481924
+    version: v1.2-glosa-checked-2026-09-06
+    date: '2026-09-06'
+    title: 'After Labour: Human Position in an AI-Robotic World System (full world-system
+      standalone, v1.2 glosa-checked edition)'
+    licence: cc-by-4.0
+    include: full
+    note: After Labour v1.2 glosa-checked edition (BBL-161)
+    file: After_Labour_Human_Position_v1_2.pdf
+    file_url: https://zenodo.org/api/records/22481924/files/After_Labour_Human_Position_v1_2.pdf/content
+    zenodo_checksum: md5:82ebed9f5c6ebbe0b3b21bc7ec862ec7
+    sha256: be6057364134054d3c402b6ffc355fce8d189af89e5feb3c09afe174e738b50d
+    local: 34_22481924.pdf
+    md5_match: true
+    pages: 11
+    page_size_pt:
+    - 595.276
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 9
+  - order: 35
+    seed_record: 22481926
+    record_id: 22481926
+    concept_id: '22481925'
+    doi: 10.5281/zenodo.22481926
+    version: v1.1-glosa-checked-2026-09-06
+    date: '2026-09-06'
+    title: 'The Human Conversion Imperative: Machine Acceleration, Human Potential,
+      and the Reversibility Window in an AI-Robotic World (theory and research agenda,
+      v1.1 glosa-checked edition)'
+    licence: cc-by-4.0
+    include: full
+    note: Human Conversion Imperative v1.1 glosa-checked edition (BBL-161)
+    file: Human_Conversion_Imperative_v1_1.pdf
+    file_url: https://zenodo.org/api/records/22481926/files/Human_Conversion_Imperative_v1_1.pdf/content
+    zenodo_checksum: md5:b125fc99db1578e51e28f3e65411ecde
+    sha256: 292a9b84c8037f6a015eb6e76c30ce0febf29e91c2d6710841e67a777a179f59
+    local: 35_22481926.pdf
+    md5_match: true
+    pages: 8
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 10
+- n: 7
+  title: The River and Its Tests
+  chapters:
+  - order: 36
+    seed_record: 22414412
+    record_id: 22519148
+    concept_id: '22414411'
+    doi: 10.5281/zenodo.22519148
+    version: v1.4-english-2026-09-06
+    date: '2026-09-06'
+    title: 'Master Equation River: A Provenance Audit Across the Human–AI Readout
+      Programme (Internal Programme Synthesis v1.1, glosa-checked) — การทวนสายธารสมการ
+      เทียบกับวรรณกรรมภายใน และการชี้ที่มาของแต่ละส่วน'
+    licence: cc-by-4.0
+    include: full
+    note: Master Equation River v1.4 (English; eq 1–79; Th_coqc ledger) — opens Part
+      7 (meeting 2, D12)
+    file: Master_Equation_River_Provenance_Audit_v1_4.pdf
+    file_url: https://zenodo.org/api/records/22519148/files/Master_Equation_River_Provenance_Audit_v1_4.pdf/content
+    zenodo_checksum: md5:b43cbf0bd9348ee38a071efcc7ac84d0
+    sha256: 46ad9b82bd0180febefbe04ef9774d06f08f32fb931368a7a6d669bf5ea06803
+    local: 36_22519148.pdf
+    md5_match: true
+    pages: 20
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 13
+  - order: 37
+    seed_record: 22424434
+    record_id: 22424434
+    concept_id: '22424433'
+    doi: 10.5281/zenodo.22424434
+    version: v1.1-2026-09-06
+    date: '2026-09-06'
+    title: 'Before Meaning, Before Choice: A Readout-Native Derivation of Experience,
+      Live Possibility, Agency, and Human-AI Return (Full Paper v1.1, glosa-checked)'
+    licence: cc-by-4.0
+    include: full
+    file: Before_Meaning_Before_Choice_FULL_v1_1.pdf
+    file_url: https://zenodo.org/api/records/22424434/files/Before_Meaning_Before_Choice_FULL_v1_1.pdf/content
+    zenodo_checksum: md5:9160c3e6173e0fc1d259f8812ef95d1e
+    sha256: 8b9a65ab5da009654a51c34d93d49823d481d5162a4fefa8d29abe63eafed7e9
+    local: 37_22424434.pdf
+    md5_match: true
+    pages: 12
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 12
+  - planned: Paper B — Testing the Master Equation River
+    include: planned
+  - order: 38
+    seed_record: 22308066
+    record_id: 22308066
+    concept_id: '22308065'
+    doi: 10.5281/zenodo.22308066
+    version: K0-2026-09-04
+    date: '2026-09-04'
+    title: 'State of Evidence for the Readout Hypothesis-Generation Programme: A Shared
+      Evidence Registry for Papers I–IV (with Claim Registry E01–E25)'
+    licence: cc-by-4.0
+    include: full
+    file: State_of_Evidence_Readout_Hypothesis_Programme_K0.pdf
+    file_url: https://zenodo.org/api/records/22308066/files/State_of_Evidence_Readout_Hypothesis_Programme_K0.pdf/content
+    zenodo_checksum: md5:f87792c40f1f9df0f86983c2a8008f96
+    sha256: c5bd047ec7adfec907785f4c0c86ef231a5141bb72db27324b930b3421ff90bf
+    local: 38_22308066.pdf
+    md5_match: true
+    pages: 6
+    page_size_pt:
+    - 595.28
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 13
+- n: 8
+  title: 'Method: Rigour Without Infrastructure'
+  chapters:
+  - order: 39
+    seed_record: 22163849
+    record_id: 22163849
+    concept_id: '22163848'
+    doi: 10.5281/zenodo.22163849
+    version: null
+    date: '2026-08-29'
+    title: 'The Standalone Scholar: A Dual-Track Architecture for AI-Native Scholarship'
+    licence: cc-by-4.0
+    include: full
+    file: The_Standalone_Scholar_Anchor_Preserved_Standalone_v3.pdf
+    file_url: https://zenodo.org/api/records/22163849/files/The_Standalone_Scholar_Anchor_Preserved_Standalone_v3.pdf/content
+    zenodo_checksum: md5:e66bb846c968f17dbc9aafeec80f37ff
+    sha256: 2ef3c4e4f4a4ea1be18b20846f3c39edcc678148932cfe8833475c70f8a82827
+    local: 39_22163849.pdf
+    md5_match: true
+    pages: 26
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 14
+  - order: 40
+    seed_record: 22307841
+    record_id: 22307841
+    concept_id: '22307840'
+    doi: 10.5281/zenodo.22307841
+    version: 0.2.0
+    date: '2026-09-05'
+    title: 'Rigour Without Infrastructure: Three Propositions on Claim-Card Discipline
+      as a Substitute for Institutional Certification (glosa concept paper, v0.2.0)'
+    licence: cc-by-4.0
+    include: full
+    file: glosa-concept-paper-0.2.0-draft.pdf
+    file_url: https://zenodo.org/api/records/22307841/files/glosa-concept-paper-0.2.0-draft.pdf/content
+    zenodo_checksum: md5:8d6b6a8bdec65f7ba071900de6f09a65
+    sha256: c7b8d91112164a45d3b677dda49dd3eed2f6e10a5f4a25cbcfe5b007f870ddfa
+    local: 40_22307841.pdf
+    md5_match: true
+    pages: 17
+    page_size_pt:
+    - 612.0
+    - 792.0
+    scale_to_a4: 0.9727
+    fonts_embedded: true
+    font_count: 11
+  - order: 41
+    seed_record: 22340255
+    record_id: 22340255
+    concept_id: '22301059'
+    doi: 10.5281/zenodo.22340255
+    version: 0.4.1
+    date: '2026-09-05'
+    title: 'glosa — Rigour Without Infrastructure: A Standalone Scholar Methodology
+      for Human–AI Knowledge Co-Production'
+    licence: cc-by-4.0
+    include: excerpt:typeset(FOUNDATION_v0.6.md §2, §3.1, §4.2)
+    file: UPLIFT_NOTE_2026-09-05.pdf
+    file_url: https://zenodo.org/api/records/22340255/files/UPLIFT_NOTE_2026-09-05.pdf/content
+    zenodo_checksum: md5:517afe5990c0806986f9ee2f9d942e31
+    sha256: ee775bf20037e5f020b6ab9e02e2697cd9b0e2c1e010802b9570f5ccf609bbef
+    local: 41_22340255.pdf
+    md5_match: true
+    pages: 15
+    page_size_pt:
+    - 595.304
+    - 841.89
+    scale_to_a4: 1.0
+    fonts_embedded: true
+    font_count: 10
+appendix:
+- record: 22341671
+  include: appendix
+  note: library knowledge graph
+measured_total_chapter_pages: 664

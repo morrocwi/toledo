@@ -4,7 +4,7 @@ Sources: registry/eq_<record_id>.json (raw inventory, 40 chapters), registry/CAN
 coq/MR_Ledger.md and coq_canon/LEDGER_*.md (when present). Readout, not truth: every number is counted from files."""
 import json, glob, pathlib, re, datetime, yaml
 R = pathlib.Path(__file__).resolve().parent
-MAN = pathlib.Path('/home/yaoharee-lt/ANSE.ASIA/cpg_research_journal/research/textbook-written-by-ai-still-true/manifest.yaml')
+MAN = R / 'textbook_manifest.yaml'  # copy of the textbook manifest (record ids, DOIs, titles); refreshed at each release
 man = yaml.safe_load(MAN.read_text()); meta = {c['record_id']: c for P in man['parts'] for c in P['chapters'] if c.get('record_id')}
 can = json.load(open(R / 'CANONICAL.json')) if (R / 'CANONICAL.json').exists() else None
 r2c = (can or {}).get('raw_to_canonical', {})
