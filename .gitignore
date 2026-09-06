@@ -8,3 +8,5 @@ Makefile
 Makefile.conf
 .Makefile.d
 __pycache__/
+docs/ram_watchdog.log
+docs/RAM_LOW
