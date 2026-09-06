@@ -1,0 +1,135 @@
+# Genesis Root Equation Registry — Code Scheme
+
+**Corrected per founder ruling (relayed 2026-09-06): do not invent a new numbering
+on top of an identifier scheme Readout Genesis already carries.** The `code`
+field in `genesis_root.json` is the equation's OWN identifier, verbatim, never
+a re-prefixed or re-sequenced one:
+
+- **If the equation is part of Appendix C's "SM DOMAIN EQUATION STREAM — INFO
+  CORE UNIFICATION" (`READOUT_GENESIS_CORE.md`, lines ~7233–7597, `EQ-001` …
+  `EQ-071`), the code is that `EQ-0nn` id.** This is the founder-designated
+  Source of Truth for that stream's numbering/tiers/text (stated explicitly in
+  the Appendix C preamble: "THIS Appendix is now the primary Source of Truth
+  for this equation stream's numbering/tiers/text" — the synced mirrors at
+  `research_universal_solver/EQUATION_LIBRARY_ROOT_TO_SM_STREAM.md` and
+  `readout_universe/EQUATION_LIBRARY_ROOT_TO_SM_STREAM_research_universal_solver.md`
+  must match it, not the reverse). `EQ-001`–`EQ-014` restate ROOT-0's own
+  `E00.1`–`E00.7` and the I.1a resource-logic-floor equations; `EQ-015`–`EQ-017`
+  restate the Part II spine/`λ_c` equations; the rest carry the Part V.13a /
+  V.20–V.22 Standard-Model-domain stream. `EQ-069`–`EQ-071` are RETRACTED
+  (2026-07-26, continuum contamination) — kept in the registry with
+  `tier_in_genesis: "RETRACTED"`, never deleted, per the source's own
+  instruction that the numbers stay reserved so the correction is visible.
+- **Otherwise, the code is the Genesis document's own other identifier, exactly
+  as written** — `weld`, `Forced.I`…`Forced.XXIV`, `Face.1`…`Face.12`, `MQ.08`,
+  `N1`…`N5`, `VI.1`…`VI.8`, `T0`/`T1`/`T1b`/`T2`, a Gate name (`Gate.4`), a
+  whitepaper section anchor (`WP.S4.3` for whitepaper §4.3), etc. No `RG-`
+  prefix, no Part-tag prefix, no invented sequence number. Where the source
+  names an item only by an unlabeled bullet or heading (no numeral/tag of its
+  own), the code is a short slug drawn from that heading (e.g. `RD-unit`,
+  `CopyLicence`, `ExactDomainGate`) — still not a sequence number.
+
+## `aliases`
+
+Every other identifier the SAME equation carries anywhere in the two source
+documents (or in the founder-cited RD1–RD9 / root-axiom naming, where it
+differs from the `E00.x` labels actually printed in `READOUT_GENESIS_CORE.md`)
+goes in an `aliases` array on that one row — the object gets ONE row in this
+registry, not a duplicate row per place it is reprinted. Example: the object
+whose Appendix C code is `EQ-008` (`L_R := D_W − W`) carries `aliases:
+["E00.7", "weld"]` because the same line is Part I's `E00.7` and a component of
+the one-line master weld. Where the founder's own shorthand `RD1`–`RD9` cannot
+be matched to a specific printed root-axiom line with confidence, that
+uncertainty is recorded in the registry-build report rather than guessed into
+an alias.
+
+## `section`
+
+The markdown heading path where the equation is presented in its primary
+(most complete) location — e.g. `"PART I — ROOT AXIOMS > I.1 The Primordial
+Root > E00.7"`, or `"APPENDIX C (SM DOMAIN EQUATION STREAM) > EQ-021"`.
+
+## `tier_in_genesis`
+
+Copied **verbatim** from whatever bracketed/inline tag the source attaches
+(`[Ax]`, `[Th]`, `[Ax→Th]`, `[Ax/Th]`, `Th_coqc`, `finite_diagnostic`, `Dr`,
+`Open`/`[Open]`, `PROPOSED`, `fit_calibrated`, `declared_finite_architecture`,
+`RETRACTED`, a Type-P/Type-U gate-law tag) — never normalized into a smaller
+fixed enum. `"untagged"` when the source states the item with no tier marker
+at all (most whitepaper architecture/interface equations carry no Genesis tier
+tag, since the whitepaper is the universal-architecture layer, not the physics
+claim layer).
+
+## `external_owner_year` (optional field)
+
+Present only when Genesis's own text marks the equation as importing a named
+result from outside the project (a physics law, a classical theorem). Value
+is the owner(s) and year exactly as `research_universal_solver/docs/root/
+EQUATION_REGISTRY.md` records them for that same result (e.g. `"E. Schrödinger,
+1926"`, `"A. Einstein, 1915"`). Omitted (not `null`) when the equation is the
+project's own content or when no matching registry row was found with
+confidence — a missing field means "not checked/not found," never "confirmed
+native."
+
+## `.v` (optional field, keyed `coq_file`)
+
+Present only when Genesis's own text names a specific Coq artifact
+(`formal/*.v`) as already proving the equation (e.g.
+`InfoRetentionMetricSkewDecomposition_attempt.v` for T1,
+`InfoTrueRecordUnreadable_attempt.v` for the two Appendix-C entries it names).
+Omitted when no `.v` file is named in the text at that equation's location.
+
+## Build notes (as actually applied, 2026-09-06)
+
+The registry was built by parallel section-by-section extraction (one pass per
+Part of `READOUT_GENESIS_CORE.md`, one pass per half of the whitepaper), then
+merged by hand with the following curated, content-verified folds (not a blind
+string match — each fold below was checked against the actual quoted text
+before merging):
+
+- Root axioms `E00.1`–`E00.7`, the I.1a resource-logic-floor equations
+  (`RD-unit`, `Enc_Ω`, `Dec_Ω`, the resource-logic judgment, the copy licence),
+  the II.3 spine PDE, the II.7 `λ_c` discriminant, the II.8 RTPE reduced form,
+  and the II.8a DRL two-field apparatus's four core equations — all of which
+  Appendix C's own preamble states are "already stated earlier in this file;
+  repeated here only as the entry point of the continuous numbered stream" —
+  were folded into their `EQ-0nn` row as verified-identical restatements, with
+  every other location they appear (Part VI's `N1`, `N2`, `N4`; the "Three
+  Stacked Layers" repeated near-verbatim in Parts II/III/IV/VI; Face 10's
+  record-genesis and canon-record lines; the bR-ledger conservation identity)
+  recorded in that `EQ-0nn` row's `aliases` array with its own location noted.
+- `N3` and `N5` (of the Five Irreducible Equations) are **not** in the
+  Appendix-C stream and keep their own bare codes (`N3`, `N5`).
+- A handful of items that are genuinely the SAME content in two different
+  Parts but NOT part of the `EQ-0nn` stream (e.g. the LP-NS-audit "Layer 3"
+  checker description repeated in Part III and Part IV) were folded into one
+  row with an `aliases` note the same way.
+- Four accidental code collisions after prefix-stripping (`Layer.3` doubled —
+  folded per above; `FailAbleGateLaw` doubled, from V.14 and VI.7, genuinely
+  two separate statements of the law in two Parts — disambiguated as
+  `V.14.FailAbleGateLaw` / `VI.7.FailAbleGateLaw`; `B.1`/`B.3` doubled, from
+  Part VI-A's own B.1–B.8 numbering versus Appendix B's own unrelated B.1–B.3
+  numbering — the Appendix B ones were disambiguated as `APP-B.1`/`APP-B.3`
+  matching how the source itself labels them, "APP-B.1", "APP-B.3").
+- **Open item, flagged rather than guessed:** the founder's shorthand
+  `RD1`–`RD9` for the root axioms does not appear verbatim anywhere in either
+  source file (confirmed by direct grep of both files) — the text's own root-
+  axiom tags are `E00.1`–`E00.7` (`ROOT-0`). This registry uses `E00.1`–`E00.7`
+  as the codes (the actual verbatim text) rather than guessing an `RD1`–`RD9`
+  mapping that cannot be confirmed against the source; if `RD1`–`RD9` is a
+  live external naming convention (e.g. from `research_universal_solver`),
+  reconciling it against `E00.1`–`E00.7` is a follow-up, not something this
+  build invented a mapping for.
+- Sub-equations within one named unit that carries only ONE tag in the source
+  (a Face, a `B.x` process step) but states several distinct equations use a
+  slug appended to that unit's own tag (e.g. `Face.10.StrictGap`,
+  `Face.10.bRLedger` — both genuinely under Face 10, genuinely different
+  equations) — this is the scheme's own documented fallback ("a short slug
+  drawn from the item's own heading"), not an invented sequence number.
+
+## Anchor
+
+See `genesis_root.json["anchor"]` for the exact commit and blob hashes this
+registry was built from (`readout_genesis` repo, files
+`READOUT_GENESIS_CORE.md` and
+`READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md`).
