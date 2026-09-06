@@ -1,0 +1,65 @@
+% Root Master Equation — Collapse Architect output
+% Generated from CANONICAL.json (253 canonical ids / 946 raw equations, 40 chapters)
+% against READOUT_GENESIS_CORE.md (root) and Master River v1.4 main.tex (human--AI river,
+% eq. 44/65/66/79) per BBL-170--177.
+%
+% Reading order of the root spine (top block): CAN-002 -> CAN-201 -> CAN-001 -> CAN-003
+% -> CAN-006 -> CAN-007 -> CAN-008 -> CAN-004 -> CAN-009, then back to CAN-002 (next tick).
+% Each arrow/step is tagged with the canonical id it is drawn from. The three lower blocks
+% are domain readings of the SAME stepper through a declared q_D -- not new equations.
+\begingroup\footnotesize
+\begin{equation}\label{eq:root-master}
+\begin{aligned}
+%%% ROOT SPINE: Genesis stepper with its readout, retention, and domain weld %%%
+x_t\ \big(\text{world}\big)
+ \ \xrightarrow[\text{retain}]{\;\texttt{[CAN-002]}\;}\
+ S_n=(G_n,\Lambda_n,T_n)
+ \ \xrightarrow[\;R_{Q,O,c}(S_n)=z_n,\ z_n\neq S_n\;]{\;\texttt{[CAN-201]}\;}\
+ z_n\\[4pt]
+ \ \xrightarrow[\;\delta_R=(a\sharp b)\ \vdash\ L_R=D_W-W\;]{\;\texttt{[CAN-001]}\;}\
+ L_R\,z_n
+ \ \xrightarrow[\;S_{n+1}=F(S_n,u_n,c_n,T_n)\;]{\;\texttt{[CAN-003]}\;}\
+ S_{n+1}\\[4pt]
+ \ \xrightarrow[\;q_{D,n+1}\!\circ\!F_n=F^{\#}_{D,n}\!\circ\!q_{D,n}\;]{\;\texttt{[CAN-006]}\;}\
+ q_D(S_{n+1})
+ \ \xrightarrow[\;z\sim_{Q,O,c,L}z'\iff O(F^kz){=}O(F^kz')\ \forall k\le L\;]{\;\texttt{[CAN-007]}\;}\
+ [\,q_D(S_{n+1})\,]_{\sim}\\[4pt]
+ \ \xrightarrow[\;S_n\neq Z_{D,n}\neq D_{D,n}\;]{\;\texttt{[CAN-008]}\;}\
+ \big(\text{admitted domain reading, not the root state itself}\big)
+ \ \xrightarrow[\;\text{Retention}\to\text{Structure}\to\cdots\to\text{Report}\;]{\;\texttt{[CAN-004]}\;}\
+ \big(\text{ordered semantic admission}\big)\\[4pt]
+ \ \xrightarrow[\;\Delta A_{\mathrm{past}}=0\;]{\;\texttt{[CAN-009]}\;}\
+ S_{n+1}\ \big(\text{next tick, occurrence not rewritten}\big)
+ \ \longrightarrow\ x_{t+1}\ \big(\text{world}\big)\\[10pt]
+%%% SUB-CHAIN 1: human--AI river, reading the same F through q_HAI %%%
+\big[\,q_{\mathrm{HAI}}\ \text{reading of the spine above, Master River v1.4 eq.\,(44)/(65)/(66)/(79)}\,\big]:\\[2pt]
+H_t\ \xrightarrow[\text{Genesis}]{R_H}\ r_t\ \xrightarrow[\text{Experience}]{\Psi_H}\ \mu_t\ \xrightarrow[\text{MEMK}]{\Phi_E}\ E_t
+ \ \xrightarrow[\text{Human LoRA}]{\mathrm{Retain}/U_H}\ H_{t+1}\ \xrightarrow{\;\cdots\;}\ H_{t+2}
+ \ \xrightarrow[\text{Pre-Prompt}]{L_H}\ Q_{t+2}\to\mathrm{AI}\to K_{\mathrm{like}}\\[2pt]
+ \xrightarrow[\text{Fusion/Tunnel}]{\text{Diff.}+\text{Resist.},\ \eta_s}\ \text{dialogue}
+ \to H_{\mathrm{return}}\ \xrightarrow[\text{CTSA}]{\text{AI removed}}\ H_{t+3}
+ \quad\texttt{[v1.4 eq.(44),(65); reads CAN-004\,\&\,CAN-003 -- CAN-045,CAN-047,CAN-054,CAN-055]}\\[4pt]
+\big(H_t\xrightarrow[\text{one full pass of the block above}]{}H_{t+3}\big)
+ \ \xrightarrow[\;\mathrm{Readout}_{Q,O,c}\;]{}\ C^H_{t+3}\to P^H_{t+3}
+ \ \xrightarrow[\;\Gamma^{\mathrm{eff}},\Pi^{\mathrm{live}},A^{\mathrm{corr}},R^{\mathrm{return}}\;]{}\
+ \big(H_{t+3}\to H_{t+6}\big)
+ \quad\texttt{[v1.4 eq.(66); reads CAN-006\,\&\,CAN-002 -- CAN-150,CAN-158]}\\[4pt]
+H_{t+3}\ \xrightarrow[\text{Barrier, Endorsement}]{}\ Z_{\mathrm{HCA},t+3}\ \xrightarrow[\Omega^{\mathrm{real}}]{}\ \big(C^H_{t+3}\to P^H_{t+3}\big)
+ \quad\texttt{[v1.4 eq.(79); reads CAN-006\,\&\,CAN-008 -- CAN-150,CAN-105]}\\[10pt]
+%%% SUB-CHAIN 2: social river, reading the same F through q_social %%%
+\big[\,q_{\mathrm{social}}\ \text{reading}\,\big]:\quad
+ A:=L_R+\Gamma\ \xrightarrow[\;s[n{+}1]=s[n]+dt(-As[n]+J)\;]{\;\texttt{CAN-115}\;}\ s[n{+}1]
+ \ \xrightarrow[\;M(t'{+}\Delta t')=T_R(M(t'))\;]{\;\texttt{CAN-117}\;}\ (\text{regime } R)
+ \quad\texttt{[reads CAN-001\,\&\,CAN-003]}\\[10pt]
+%%% SUB-CHAIN 3: world-system river, reading the same F through q_worldsys %%%
+\big[\,q_{\mathrm{world\text{-}system}}\ \text{reading}\,\big]:\quad
+ Z_t\ \xrightarrow[\;c^{(PE\to H)}_{i,t}=B^{(PE\to H)}(Z_t;i,g)\;]{\;\texttt{CAN-150}\;}\ c^{(PE\to H)}_{i,t}
+ \ \xrightarrow[\;\text{typed audit}\;]{\;\texttt{CAN-151}\;}\ P^H_t
+ \quad\texttt{[reads CAN-006\,\&\,CAN-004]}
+\end{aligned}
+\end{equation}
+\endgroup
+% Every [CAN-nnn] tag names the canonical id in CANONICAL.json that states the arrow it
+% labels; the equation number above is the single number this whole reading carries.
+% This is one equation read four ways (root, human--AI, social, world-system), not four
+% equations -- per BBL-170 rule 1.

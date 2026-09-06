@@ -1,0 +1,12 @@
+-Q . MRC
+-Q ../master-river MR
+
+MRC_root_spine.v
+MRC_master.v
+MRC_epistemic_reading.v
+MRC_method_reading_a.v
+MRC_method_reading_b.v
+MRC_social_reading.v
+MRC_world_system_reading.v
+MRC_human_ai_reading_a.v
+MRC_human_ai_reading_b.v
