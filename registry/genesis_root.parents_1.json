@@ -1,0 +1,2492 @@
+{
+ "L5": {
+  "parents": [
+   "L4"
+  ],
+  "derived_via": "composition",
+  "step": 1000,
+  "step_label": "VI.2"
+ },
+ "Re_ep": {
+  "parents": [
+   "SpinePDE",
+   "RTPEOperatorSplit"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1001,
+  "step_label": "VI.3"
+ },
+ "F_ep": {
+  "parents": [
+   "N3"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1002,
+  "step_label": "VI.3"
+ },
+ "k_ep": {
+  "parents": [
+   "EQ-027"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1003,
+  "step_label": "VI.3"
+ },
+ "VerdictGate": {
+  "parents": [
+   "Re_ep",
+   "F_ep",
+   "k_ep"
+  ],
+  "derived_via": "composition",
+  "step": 1074,
+  "step_label": "VI.3"
+ },
+ "B1": {
+  "parents": [
+   "N3"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1004,
+  "step_label": "VI.4"
+ },
+ "B2": {
+  "parents": [
+   "VerdictGate"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1119,
+  "step_label": "VI.4"
+ },
+ "B3": {
+  "parents": [
+   "SpinePDE"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1005,
+  "step_label": "VI.4"
+ },
+ "B4": {
+  "parents": [
+   "L4"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1006,
+  "step_label": "VI.4"
+ },
+ "DomainDiscoveryEngine": {
+  "parents": [
+   "L3"
+  ],
+  "derived_via": "specialisation",
+  "step": 1007,
+  "step_label": "VI.5"
+ },
+ "BridgeCommute": {
+  "parents": [
+   "EQ-063"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1008,
+  "step_label": "VI.6"
+ },
+ "AdmissibilitySquare": {
+  "parents": [
+   "BridgeCommute"
+  ],
+  "derived_via": "specialisation",
+  "step": 1075,
+  "step_label": "VI.6"
+ },
+ "bRLedger": {
+  "parents": [
+   "AdmissibilitySquare",
+   "N3"
+  ],
+  "derived_via": "specialisation",
+  "step": 1120,
+  "step_label": "VI.6"
+ },
+ "ObstructionCertificate": {
+  "parents": [
+   "bRLedger",
+   "N3"
+  ],
+  "derived_via": "specialisation",
+  "step": 1146,
+  "step_label": "VI.6"
+ },
+ "VI.7.FailAbleGateLaw": {
+  "parents": [
+   "AdmissibilitySquare",
+   "VerdictGate"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1121,
+  "step_label": "VI.7"
+ },
+ "SI7Vectors": {
+  "parents": [
+   "EQ-063"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1009,
+  "step_label": "VII.1"
+ },
+ "RDU-tau_c": {
+  "parents": [
+   "EQ-063"
+  ],
+  "derived_via": "restatement",
+  "step": 1010,
+  "step_label": "VII.2"
+ },
+ "RDU-ell_c": {
+  "parents": [
+   "RDU-tau_c"
+  ],
+  "derived_via": "composition",
+  "step": 1076,
+  "step_label": "VII.2"
+ },
+ "RDU-f_c": {
+  "parents": [
+   "RDU-tau_c"
+  ],
+  "derived_via": "composition",
+  "step": 1077,
+  "step_label": "VII.2"
+ },
+ "RDU-E_c": {
+  "parents": [
+   "RDU-tau_c"
+  ],
+  "derived_via": "composition",
+  "step": 1078,
+  "step_label": "VII.2"
+ },
+ "RDU-m_c": {
+  "parents": [
+   "EQ-063"
+  ],
+  "derived_via": "restatement",
+  "step": 1011,
+  "step_label": "VII.2"
+ },
+ "RDU-eps_L": {
+  "parents": [
+   "B1"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1079,
+  "step_label": "VII.2"
+ },
+ "NewtonGate": {
+  "parents": [
+   "VI.7.FailAbleGateLaw",
+   "RDU-tau_c"
+  ],
+  "derived_via": "specialisation",
+  "step": 1147,
+  "step_label": "VII.2"
+ },
+ "SemanticLanes": {
+  "parents": [
+   "SI7Vectors"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1080,
+  "step_label": "VII.3"
+ },
+ "CompatibilityRule": {
+  "parents": [
+   "SemanticLanes",
+   "VI.7.FailAbleGateLaw"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1148,
+  "step_label": "VII.3"
+ },
+ "PythonAPI": {
+  "parents": [
+   "SI7Vectors",
+   "NewtonGate",
+   "CompatibilityRule"
+  ],
+  "derived_via": "composition",
+  "step": 1175,
+  "step_label": "VII.4"
+ },
+ "LayerStack": {
+  "parents": [
+   "SpinePDE",
+   "RTPEOperatorSplit"
+  ],
+  "derived_via": "restatement",
+  "step": 1012,
+  "step_label": "VIII.0"
+ },
+ "HumanAgencyTuple": {
+  "parents": [
+   "EQ-063",
+   "EQ-027"
+  ],
+  "derived_via": "composition",
+  "step": 1013,
+  "step_label": "VIII.1"
+ },
+ "ConnectionRootStream": {
+  "parents": [
+   "EQ-063",
+   "EQ-027"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1014,
+  "step_label": "VIII.2"
+ },
+ "Step2Record": {
+  "parents": [
+   "EQ-027"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1015,
+  "step_label": "VIII.3"
+ },
+ "Step3Phenomenalize": {
+  "parents": [
+   "Step2Record"
+  ],
+  "derived_via": "composition",
+  "step": 1081,
+  "step_label": "VIII.3"
+ },
+ "Step4Resonance": {
+  "parents": [
+   "ConnectionRootStream"
+  ],
+  "derived_via": "restatement",
+  "step": 1082,
+  "step_label": "VIII.3"
+ },
+ "Step5Policy": {
+  "parents": [
+   "Step4Resonance",
+   "L4"
+  ],
+  "derived_via": "composition",
+  "step": 1122,
+  "step_label": "VIII.3"
+ },
+ "Step6ActRepair": {
+  "parents": [
+   "Step5Policy"
+  ],
+  "derived_via": "composition",
+  "step": 1149,
+  "step_label": "VIII.3"
+ },
+ "MeasuringAgency": {
+  "parents": [
+   "Step2Record",
+   "Step5Policy",
+   "Step6ActRepair"
+  ],
+  "derived_via": "composition",
+  "step": 1176,
+  "step_label": "VIII.4"
+ },
+ "OmegaH": {
+  "parents": [
+   "Step4Resonance",
+   "AdmissibilitySquare"
+  ],
+  "derived_via": "specialisation",
+  "step": 1123,
+  "step_label": "VIII.5"
+ },
+ "SelfClosure": {
+  "parents": [
+   "OmegaH",
+   "Step6ActRepair"
+  ],
+  "derived_via": "definition",
+  "step": 1177,
+  "step_label": "VIII.6"
+ },
+ "ImaginationTransport": {
+  "parents": [
+   "LR_skew_split"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1016,
+  "step_label": "VIII.6a"
+ },
+ "CrossDomainLineage": {
+  "parents": [
+   "bRLedger",
+   "Step2Record"
+  ],
+  "derived_via": "specialisation",
+  "step": 1150,
+  "step_label": "VIII.7"
+ },
+ "FalsifierFhuman": {
+  "parents": [
+   "VI.7.FailAbleGateLaw",
+   "OmegaH",
+   "Step5Policy"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1151,
+  "step_label": "VIII.8"
+ },
+ "step1": {
+  "parents": [
+   "EQ-001"
+  ],
+  "derived_via": "restatement",
+  "step": 1017,
+  "step_label": "IX.1"
+ },
+ "step2": {
+  "parents": [
+   "EQ-002",
+   "step1"
+  ],
+  "derived_via": "restatement",
+  "step": 1083,
+  "step_label": "IX.2"
+ },
+ "step3": {
+  "parents": [
+   "EQ-003",
+   "step2"
+  ],
+  "derived_via": "restatement",
+  "step": 1124,
+  "step_label": "IX.3"
+ },
+ "step4": {
+  "parents": [
+   "EQ-004",
+   "step3"
+  ],
+  "derived_via": "restatement",
+  "step": 1152,
+  "step_label": "IX.4"
+ },
+ "step5": {
+  "parents": [
+   "EQ-005",
+   "step4"
+  ],
+  "derived_via": "restatement",
+  "step": 1178,
+  "step_label": "IX.5"
+ },
+ "step6": {
+  "parents": [
+   "EQ-006",
+   "step5"
+  ],
+  "derived_via": "restatement",
+  "step": 1196,
+  "step_label": "IX.6"
+ },
+ "step7": {
+  "parents": [
+   "EQ-008",
+   "step6"
+  ],
+  "derived_via": "restatement",
+  "step": 1206,
+  "step_label": "IX.7"
+ },
+ "step8": {
+  "parents": [
+   "EQ-007",
+   "step5",
+   "step7"
+  ],
+  "derived_via": "restatement",
+  "step": 1214,
+  "step_label": "IX.8"
+ },
+ "step9": {
+  "parents": [
+   "step5",
+   "step8"
+  ],
+  "derived_via": "specialisation",
+  "step": 1221,
+  "step_label": "IX.9"
+ },
+ "step10": {
+  "parents": [
+   "step9"
+  ],
+  "derived_via": "specialisation",
+  "step": 1230,
+  "step_label": "IX.10"
+ },
+ "step11": {
+  "parents": [
+   "step9",
+   "step10",
+   "MQ08-stepper"
+  ],
+  "derived_via": "restatement",
+  "step": 1237,
+  "step_label": "IX.11"
+ },
+ "step12": {
+  "parents": [
+   "step11"
+  ],
+  "derived_via": "composition",
+  "step": 1242,
+  "step_label": "IX.12"
+ },
+ "step13": {
+  "parents": [
+   "step12",
+   "MQ08-CFL"
+  ],
+  "derived_via": "restatement",
+  "step": 1246,
+  "step_label": "IX.13"
+ },
+ "step14": {
+  "parents": [
+   "step13",
+   "Telegraph"
+  ],
+  "derived_via": "restatement",
+  "step": 1250,
+  "step_label": "IX.14"
+ },
+ "step15": {
+  "parents": [
+   "step14",
+   "MemoryKernel"
+  ],
+  "derived_via": "restatement",
+  "step": 1256,
+  "step_label": "IX.15"
+ },
+ "step16": {
+  "parents": [
+   "step15",
+   "SpinePDE"
+  ],
+  "derived_via": "restatement",
+  "step": 1263,
+  "step_label": "IX.16"
+ },
+ "step17": {
+  "parents": [
+   "step16",
+   "GaugeFaces"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1267,
+  "step_label": "IX.17"
+ },
+ "step18": {
+  "parents": [
+   "step17",
+   "Face.1.Eigenmode"
+  ],
+  "derived_via": "restatement",
+  "step": 1269,
+  "step_label": "IX.18"
+ },
+ "step19": {
+  "parents": [
+   "step18",
+   "Face.2"
+  ],
+  "derived_via": "restatement",
+  "step": 1272,
+  "step_label": "IX.19"
+ },
+ "step20": {
+  "parents": [
+   "step19",
+   "Face.3.CriticalSplit"
+  ],
+  "derived_via": "restatement",
+  "step": 1273,
+  "step_label": "IX.20"
+ },
+ "step21": {
+  "parents": [
+   "step20",
+   "Face.4"
+  ],
+  "derived_via": "restatement",
+  "step": 1274,
+  "step_label": "IX.21"
+ },
+ "step22": {
+  "parents": [
+   "step21",
+   "Face.5.LightCone",
+   "step8"
+  ],
+  "derived_via": "restatement",
+  "step": 1275,
+  "step_label": "IX.22"
+ },
+ "step23": {
+  "parents": [
+   "step22",
+   "Face.6.MassMemory",
+   "EQ-063"
+  ],
+  "derived_via": "restatement",
+  "step": 1276,
+  "step_label": "IX.23"
+ },
+ "step24": {
+  "parents": [
+   "step23",
+   "Face.7.RootForce"
+  ],
+  "derived_via": "restatement",
+  "step": 1277,
+  "step_label": "IX.24"
+ },
+ "step25": {
+  "parents": [
+   "step24",
+   "Face.7.SINewtonGate"
+  ],
+  "derived_via": "restatement",
+  "step": 1278,
+  "step_label": "IX.25"
+ },
+ "step26": {
+  "parents": [
+   "step25",
+   "Face.8.MetricReadout"
+  ],
+  "derived_via": "restatement",
+  "step": 1279,
+  "step_label": "IX.26"
+ },
+ "step27": {
+  "parents": [
+   "step26",
+   "Face.9"
+  ],
+  "derived_via": "restatement",
+  "step": 1280,
+  "step_label": "IX.27"
+ },
+ "step28": {
+  "parents": [
+   "step27",
+   "EQ-027"
+  ],
+  "derived_via": "restatement",
+  "step": 1281,
+  "step_label": "IX.28"
+ },
+ "step29": {
+  "parents": [
+   "step28",
+   "Face.11.SolveTarget"
+  ],
+  "derived_via": "restatement",
+  "step": 1282,
+  "step_label": "IX.29"
+ },
+ "step30": {
+  "parents": [
+   "step29",
+   "Face.12"
+  ],
+  "derived_via": "restatement",
+  "step": 1283,
+  "step_label": "IX.30"
+ },
+ "step31": {
+  "parents": [
+   "step30",
+   "EQ-063"
+  ],
+  "derived_via": "restatement",
+  "step": 1284,
+  "step_label": "IX.31"
+ },
+ "step32": {
+  "parents": [
+   "step31",
+   "DomainDiscoveryEngine"
+  ],
+  "derived_via": "specialisation",
+  "step": 1285,
+  "step_label": "IX.32"
+ },
+ "step33": {
+  "parents": [
+   "step32"
+  ],
+  "derived_via": "specialisation",
+  "step": 1286,
+  "step_label": "IX.33"
+ },
+ "step34": {
+  "parents": [
+   "step33",
+   "Step2Record"
+  ],
+  "derived_via": "restatement",
+  "step": 1287,
+  "step_label": "IX.34"
+ },
+ "step35": {
+  "parents": [
+   "step34",
+   "Step5Policy"
+  ],
+  "derived_via": "restatement",
+  "step": 1288,
+  "step_label": "IX.35"
+ },
+ "step36": {
+  "parents": [
+   "step35",
+   "Re_ep",
+   "F_ep",
+   "k_ep"
+  ],
+  "derived_via": "restatement",
+  "step": 1289,
+  "step_label": "IX.36"
+ },
+ "step37": {
+  "parents": [
+   "step36",
+   "VerdictGate"
+  ],
+  "derived_via": "restatement",
+  "step": 1290,
+  "step_label": "IX.37"
+ },
+ "step38": {
+  "parents": [
+   "step37",
+   "step1"
+  ],
+  "derived_via": "restatement",
+  "step": 1291,
+  "step_label": "IX.38"
+ },
+ "step39": {
+  "parents": [
+   "step38",
+   "step28"
+  ],
+  "derived_via": "restatement",
+  "step": 1292,
+  "step_label": "IX.39"
+ },
+ "step40": {
+  "parents": [
+   "step39",
+   "step27"
+  ],
+  "derived_via": "restatement",
+  "step": 1293,
+  "step_label": "IX.40"
+ },
+ "step41": {
+  "parents": [
+   "step40",
+   "step26"
+  ],
+  "derived_via": "restatement",
+  "step": 1294,
+  "step_label": "IX.41"
+ },
+ "step42": {
+  "parents": [
+   "step41",
+   "step30"
+  ],
+  "derived_via": "restatement",
+  "step": 1295,
+  "step_label": "IX.42"
+ },
+ "X.1": {
+  "parents": [
+   "N3",
+   "Face.8.MetricReadout",
+   "Face.9"
+  ],
+  "derived_via": "composition",
+  "step": 1018,
+  "step_label": "X.1"
+ },
+ "X.2": {
+  "parents": [
+   "X.1"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1084,
+  "step_label": "X.2"
+ },
+ "X.3": {
+  "parents": [
+   "X.2"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1125,
+  "step_label": "X.3"
+ },
+ "X.4a": {
+  "parents": [
+   "AdmissibilitySquare"
+  ],
+  "derived_via": "restatement",
+  "step": 1126,
+  "step_label": "X.4"
+ },
+ "X.4b": {
+  "parents": [
+   "X.4a"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1153,
+  "step_label": "X.4"
+ },
+ "XI.1a": {
+  "parents": [
+   "N3",
+   "Face.8.MetricReadout"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1019,
+  "step_label": "XI.1"
+ },
+ "XI.1b": {
+  "parents": [
+   "XI.1a"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1085,
+  "step_label": "XI.1"
+ },
+ "XI.2a": {
+  "parents": [
+   "N5"
+  ],
+  "derived_via": "restatement",
+  "step": 1020,
+  "step_label": "XI.2"
+ },
+ "XI.2b": {
+  "parents": [
+   "X.4a"
+  ],
+  "derived_via": "restatement",
+  "step": 1154,
+  "step_label": "XI.2"
+ },
+ "XI.3a": {
+  "parents": [
+   "N3",
+   "Face.9",
+   "Face.8.MetricReadout",
+   "EQ-027"
+  ],
+  "derived_via": "composition",
+  "step": 1021,
+  "step_label": "XI.3"
+ },
+ "XI.3b": {
+  "parents": [
+   "DomainDiscoveryEngine",
+   "bRLedger",
+   "VI.7.FailAbleGateLaw"
+  ],
+  "derived_via": "composition",
+  "step": 1155,
+  "step_label": "XI.3"
+ },
+ "XI.4a": {
+  "parents": [
+   "XI.3a"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1086,
+  "step_label": "XI.4"
+ },
+ "XI.4b": {
+  "parents": [
+   "XI.3b",
+   "A13.SummaryBox"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1179,
+  "step_label": "XI.4"
+ },
+ "XI.5-F1": {
+  "parents": [
+   "EQ-005"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1022,
+  "step_label": "XI.5"
+ },
+ "XI.5-F2": {
+  "parents": [
+   "EQ-008"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1023,
+  "step_label": "XI.5"
+ },
+ "XI.5-F3": {
+  "parents": [
+   "Face.9"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1024,
+  "step_label": "XI.5"
+ },
+ "XI.5-F4": {
+  "parents": [
+   "Face.4"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1025,
+  "step_label": "XI.5"
+ },
+ "XI.5-F5": {
+  "parents": [
+   "Face.8.MetricReadout"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1026,
+  "step_label": "XI.5"
+ },
+ "XI.5-Fhuman": {
+  "parents": [
+   "FalsifierFhuman"
+  ],
+  "derived_via": "restatement",
+  "step": 1180,
+  "step_label": "XI.5"
+ },
+ "XI.5-FT1": {
+  "parents": [
+   "T1"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1027,
+  "step_label": "XI.5"
+ },
+ "XI.5-FT2": {
+  "parents": [
+   "T2"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1028,
+  "step_label": "XI.5"
+ },
+ "XI.6": {
+  "parents": [
+   "VI.7.FailAbleGateLaw"
+  ],
+  "derived_via": "restatement",
+  "step": 1156,
+  "step_label": "XI.6"
+ },
+ "Guard1": {
+  "parents": [
+   "SpinePDE"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1029,
+  "step_label": "XII.1"
+ },
+ "Guard2": {
+  "parents": [
+   "SpinePDE"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1030,
+  "step_label": "XII.1"
+ },
+ "Guard3": {
+  "parents": [
+   "RDU-tau_c"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1087,
+  "step_label": "XII.1"
+ },
+ "Guard4": {
+  "parents": [
+   "SpinePDE"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1031,
+  "step_label": "XII.1"
+ },
+ "Guard5": {
+  "parents": [
+   "OmegaH"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1157,
+  "step_label": "XII.1"
+ },
+ "Guard6": {
+  "parents": [
+   "SpinePDE"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1032,
+  "step_label": "XII.1"
+ },
+ "Guard7": {
+  "parents": [
+   "XI.1b"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1127,
+  "step_label": "XII.4"
+ },
+ "Guard8": {
+  "parents": [
+   "DomainDiscoveryEngine"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1088,
+  "step_label": "XII.4"
+ },
+ "Guard9": {
+  "parents": [
+   "bRLedger"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1158,
+  "step_label": "XII.4"
+ },
+ "Guard10": {
+  "parents": [
+   "LR_skew_split"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1033,
+  "step_label": "XII.4"
+ },
+ "Guard11": {
+  "parents": [
+   "VI.7.FailAbleGateLaw"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1159,
+  "step_label": "XII.4"
+ },
+ "Guard12": {
+  "parents": [
+   "step13"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1251,
+  "step_label": "XII.4"
+ },
+ "Guard13": {
+  "parents": [
+   "Gateway.SchwarzschildIdentity",
+   "Gateway.UnruhIdentity"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1034,
+  "step_label": "XII.4"
+ },
+ "Guard14": {
+  "parents": [
+   "DomainDiscoveryEngine",
+   "A13.SummaryBox"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1089,
+  "step_label": "XII.4"
+ },
+ "Guard15": {
+  "parents": [
+   "Rgeo"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1035,
+  "step_label": "XII.4"
+ },
+ "XIII.1": {
+  "parents": [
+   "Face.8.MetricReadout"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1036,
+  "step_label": "XIII.1"
+ },
+ "XIII.2": {
+  "parents": [
+   "MQ08-stepper"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1037,
+  "step_label": "XIII.2"
+ },
+ "XIII.3": {
+  "parents": [
+   "EQ-008",
+   "Face.4"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1038,
+  "step_label": "XIII.3"
+ },
+ "XIII.4": {
+  "parents": [
+   "Face.5.LightCone",
+   "OmegaH"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1160,
+  "step_label": "XIII.4"
+ },
+ "XIII.5": {
+  "parents": [
+   "XIII.3",
+   "SpinePDE"
+  ],
+  "derived_via": "specialisation",
+  "step": 1090,
+  "step_label": "XIII.5"
+ },
+ "XIV.1": {
+  "parents": [
+   "LayerStack"
+  ],
+  "derived_via": "restatement",
+  "step": 1091,
+  "step_label": "XIV.1"
+ },
+ "XIV.2": {
+  "parents": [
+   "XIII.5"
+  ],
+  "derived_via": "specialisation",
+  "step": 1128,
+  "step_label": "XIV.2"
+ },
+ "XIV.3": {
+  "parents": [
+   "EQ-063"
+  ],
+  "derived_via": "restatement",
+  "step": 1039,
+  "step_label": "XIV.3"
+ },
+ "XIV.4": {
+  "parents": [
+   "LR_skew_split",
+   "T1"
+  ],
+  "derived_via": "restatement",
+  "step": 1040,
+  "step_label": "XIV.4"
+ },
+ "XIV.5": {
+  "parents": [
+   "T2",
+   "A.10"
+  ],
+  "derived_via": "restatement",
+  "step": 1041,
+  "step_label": "XIV.5"
+ },
+ "XIV.6": {
+  "parents": [
+   "DomainDiscoveryEngine"
+  ],
+  "derived_via": "restatement",
+  "step": 1092,
+  "step_label": "XIV.6"
+ },
+ "XIV.7": {
+  "parents": [
+   "bRLedger"
+  ],
+  "derived_via": "restatement",
+  "step": 1161,
+  "step_label": "XIV.7"
+ },
+ "XIV.8": {
+  "parents": [
+   "XIV.6",
+   "XIV.7",
+   "VI.7.FailAbleGateLaw"
+  ],
+  "derived_via": "composition",
+  "step": 1181,
+  "step_label": "XIV.8"
+ },
+ "v011.1": {
+  "parents": [
+   "CutCurrent"
+  ],
+  "derived_via": "specialisation",
+  "step": 1042,
+  "step_label": "AppA.1"
+ },
+ "v011.2": {
+  "parents": [
+   "v011.1"
+  ],
+  "derived_via": "definition",
+  "step": 1093,
+  "step_label": "AppA.2"
+ },
+ "v011.3": {
+  "parents": [
+   "CommutingSquare.Bridge"
+  ],
+  "derived_via": "specialisation",
+  "step": 1043,
+  "step_label": "AppA.3"
+ },
+ "v011.4": {
+  "parents": [
+   "v011.3"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1094,
+  "step_label": "AppA.4"
+ },
+ "v011.5": {
+  "parents": [
+   "Face.10.StrictGap"
+  ],
+  "derived_via": "specialisation",
+  "step": 1044,
+  "step_label": "AppA.5"
+ },
+ "v011.6": {
+  "parents": [
+   "XIV.4"
+  ],
+  "derived_via": "specialisation",
+  "step": 1095,
+  "step_label": "AppA.6"
+ },
+ "v011.7": {
+  "parents": [
+   "B.2a.SynthesisComplexity"
+  ],
+  "derived_via": "specialisation",
+  "step": 1045,
+  "step_label": "AppA.7"
+ },
+ "v011.8": {
+  "parents": [
+   "XIV.5"
+  ],
+  "derived_via": "specialisation",
+  "step": 1096,
+  "step_label": "AppA.8"
+ },
+ "v011.9": {
+  "parents": [
+   "v011.1",
+   "v011.6"
+  ],
+  "derived_via": "composition",
+  "step": 1129,
+  "step_label": "AppA.9"
+ },
+ "v011.10": {
+  "parents": [
+   "step14"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1257,
+  "step_label": "AppA.10"
+ },
+ "v011.11": {
+  "parents": [
+   "XIV.4"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1097,
+  "step_label": "AppA.11"
+ },
+ "v011.12": {
+  "parents": [
+   "B.2.Step1",
+   "step1"
+  ],
+  "derived_via": "composition",
+  "step": 1098,
+  "step_label": "AppA.12"
+ },
+ "v011.13": {
+  "parents": [
+   "XIV.5"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1099,
+  "step_label": "AppA.13"
+ },
+ "APP-B.1": {
+  "parents": [
+   "EtaOmegaMatrices"
+  ],
+  "derived_via": "composition",
+  "step": 1046,
+  "step_label": "AppB.1"
+ },
+ "B.2": {
+  "parents": [
+   "APP-B.1"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1100,
+  "step_label": "AppB.2"
+ },
+ "APP-B.3": {
+  "parents": [
+   "APP-B.1"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1101,
+  "step_label": "AppB.3"
+ },
+ "WP.S1.MandatoryDerivationOrder": {
+  "parents": [
+   "WP.S1.InformationPhilosophyConstitution"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1102,
+  "step_label": "WP.S1"
+ },
+ "WP.S1.ForbiddenOrder": {
+  "parents": [
+   "WP.S1.MandatoryDerivationOrder"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1130,
+  "step_label": "WP.S1"
+ },
+ "WP.S1.InformationPhilosophyConstitution": {
+  "parents": [
+   "EQ-001"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1047,
+  "step_label": "WP.S1"
+ },
+ "WP.S2.ArchitectureLayers": {
+  "parents": [
+   "WP.S1.InformationPhilosophyConstitution"
+  ],
+  "derived_via": "composition",
+  "step": 1103,
+  "step_label": "WP.S2"
+ },
+ "WP.S2.LayerNonBorrowingRules": {
+  "parents": [
+   "WP.S2.ArchitectureLayers"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1131,
+  "step_label": "WP.S2"
+ },
+ "WP.S3.RootPrimitives": {
+  "parents": [
+   "WP.S1.InformationPhilosophyConstitution",
+   "EQ-005"
+  ],
+  "derived_via": "restatement",
+  "step": 1104,
+  "step_label": "WP.S3"
+ },
+ "WP.S3.NotRootByDefault": {
+  "parents": [
+   "WP.S3.RootPrimitives"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1132,
+  "step_label": "WP.S3"
+ },
+ "WP.S3.CanonicalState": {
+  "parents": [
+   "WP.S3.RootPrimitives"
+  ],
+  "derived_via": "definition",
+  "step": 1133,
+  "step_label": "WP.S3"
+ },
+ "WP.S3.PositiveMetricPositivity": {
+  "parents": [
+   "WP.S3.CanonicalState"
+  ],
+  "derived_via": "definition",
+  "step": 1162,
+  "step_label": "WP.S3"
+ },
+ "WP.S3.PositiveMetricNorm": {
+  "parents": [
+   "WP.S3.PositiveMetricPositivity"
+  ],
+  "derived_via": "definition",
+  "step": 1182,
+  "step_label": "WP.S3"
+ },
+ "WP.S4.ReaderFamily": {
+  "parents": [
+   "WP.S3.RootPrimitives"
+  ],
+  "derived_via": "restatement",
+  "step": 1134,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.LocalReaderEquivalence": {
+  "parents": [
+   "WP.S4.ReaderFamily"
+  ],
+  "derived_via": "definition",
+  "step": 1163,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.StrongReaderEquivalence": {
+  "parents": [
+   "WP.S4.LocalReaderEquivalence"
+  ],
+  "derived_via": "definition",
+  "step": 1183,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.DomainReadableState": {
+  "parents": [
+   "WP.S4.StrongReaderEquivalence",
+   "WP.S4.LocalReaderEquivalence"
+  ],
+  "derived_via": "definition",
+  "step": 1197,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.DomainDefinition": {
+  "parents": [
+   "WP.S4.DomainReadableState"
+  ],
+  "derived_via": "definition",
+  "step": 1207,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.DomainRequiredProperties": {
+  "parents": [
+   "WP.S4.DomainDefinition"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1215,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.ExactDomainGate": {
+  "parents": [
+   "AdmissibilitySquare",
+   "WP.S4.DomainDefinition"
+  ],
+  "derived_via": "restatement",
+  "step": 1216,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.ReadoutFactorization": {
+  "parents": [
+   "WP.S4.ExactDomainGate"
+  ],
+  "derived_via": "definition",
+  "step": 1222,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.InvariantFactorization": {
+  "parents": [
+   "WP.S4.ExactDomainGate"
+  ],
+  "derived_via": "definition",
+  "step": 1223,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.DomainGateDefects": {
+  "parents": [
+   "WP.S4.ExactDomainGate",
+   "WP.S4.ReadoutFactorization",
+   "WP.S4.InvariantFactorization"
+  ],
+  "derived_via": "composition",
+  "step": 1231,
+  "step_label": "WP.S4"
+ },
+ "WP.S4.TranslationFailureTaxonomy": {
+  "parents": [
+   "WP.S4.DomainGateDefects",
+   "X.4b"
+  ],
+  "derived_via": "restatement",
+  "step": 1238,
+  "step_label": "WP.S4"
+ },
+ "WP.S5.AutomorphismGroup": {
+  "parents": [
+   "WP.S4.ReaderFamily"
+  ],
+  "derived_via": "definition",
+  "step": 1164,
+  "step_label": "WP.S5"
+ },
+ "WP.S5.Transport": {
+  "parents": [
+   "WP.S5.AutomorphismGroup"
+  ],
+  "derived_via": "definition",
+  "step": 1184,
+  "step_label": "WP.S5"
+ },
+ "WP.S5.TransportGaugeTransform": {
+  "parents": [
+   "WP.S5.Transport"
+  ],
+  "derived_via": "definition",
+  "step": 1198,
+  "step_label": "WP.S5"
+ },
+ "WP.S5.TransportMetricCompatibility": {
+  "parents": [
+   "WP.S5.Transport",
+   "WP.S3.PositiveMetricPositivity"
+  ],
+  "derived_via": "definition",
+  "step": 1199,
+  "step_label": "WP.S5"
+ },
+ "WP.S5.TransportMetricDefect": {
+  "parents": [
+   "WP.S5.TransportMetricCompatibility"
+  ],
+  "derived_via": "definition",
+  "step": 1208,
+  "step_label": "WP.S5"
+ },
+ "WP.S5.Holonomy": {
+  "parents": [
+   "WP.S5.Transport"
+  ],
+  "derived_via": "definition",
+  "step": 1200,
+  "step_label": "WP.S5"
+ },
+ "WP.S5.CurvatureDefect": {
+  "parents": [
+   "WP.S5.Holonomy"
+  ],
+  "derived_via": "definition",
+  "step": 1209,
+  "step_label": "WP.S5"
+ },
+ "WP.S5.HolonomyInvariants": {
+  "parents": [
+   "WP.S5.CurvatureDefect"
+  ],
+  "derived_via": "definition",
+  "step": 1217,
+  "step_label": "WP.S5"
+ },
+ "WP.S6.InvariantClosureMap": {
+  "parents": [
+   "WP.S5.AutomorphismGroup"
+  ],
+  "derived_via": "composition",
+  "step": 1185,
+  "step_label": "WP.S6"
+ },
+ "WP.S6.ClosureMultiplicity": {
+  "parents": [
+   "WP.S6.InvariantClosureMap"
+  ],
+  "derived_via": "definition",
+  "step": 1201,
+  "step_label": "WP.S6"
+ },
+ "WP.S6.MultiplicityLedger": {
+  "parents": [
+   "WP.S6.ClosureMultiplicity"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1210,
+  "step_label": "WP.S6"
+ },
+ "WP.S6.ThreeValuedAdmissibility": {
+  "parents": [
+   "Gate2"
+  ],
+  "derived_via": "restatement",
+  "step": 1048,
+  "step_label": "WP.S6"
+ },
+ "WP.S7.ModularAction": {
+  "parents": [
+   "WP.S3.CanonicalState"
+  ],
+  "derived_via": "composition",
+  "step": 1165,
+  "step_label": "WP.S7"
+ },
+ "WP.S7.ActionContracts": {
+  "parents": [
+   "WP.S7.ModularAction"
+  ],
+  "derived_via": "definition",
+  "step": 1186,
+  "step_label": "WP.S7"
+ },
+ "WP.S7.ConstrainedEquation": {
+  "parents": [
+   "WP.S7.ModularAction"
+  ],
+  "derived_via": "definition",
+  "step": 1187,
+  "step_label": "WP.S7"
+ },
+ "WP.S7.KKTConditions": {
+  "parents": [
+   "WP.S7.ConstrainedEquation"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1202,
+  "step_label": "WP.S7"
+ },
+ "WP.S7.VariableEquationCoverageGate": {
+  "parents": [
+   "WP.S7.ConstrainedEquation"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1203,
+  "step_label": "WP.S7"
+ },
+ "WP.S8.FullOperator": {
+  "parents": [
+   "LR_skew_split"
+  ],
+  "derived_via": "restatement",
+  "step": 1049,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.MetricAdjoint": {
+  "parents": [
+   "WP.S8.FullOperator"
+  ],
+  "derived_via": "definition",
+  "step": 1105,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.OperatorSplit": {
+  "parents": [
+   "WP.S8.FullOperator"
+  ],
+  "derived_via": "definition",
+  "step": 1106,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.OperatorSplitChecks": {
+  "parents": [
+   "WP.S8.OperatorSplit"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1135,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.SkewNearZero": {
+  "parents": [
+   "WP.S8.OperatorSplit"
+  ],
+  "derived_via": "definition",
+  "step": 1136,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.LivingGeometry": {
+  "parents": [
+   "LivingGeometry"
+  ],
+  "derived_via": "restatement",
+  "step": 1050,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.OperatorGeometryDependence": {
+  "parents": [
+   "WP.S8.LivingGeometry"
+  ],
+  "derived_via": "definition",
+  "step": 1107,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.MovingBasis": {
+  "parents": [
+   "WP.S8.LivingGeometry"
+  ],
+  "derived_via": "definition",
+  "step": 1108,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.MovingBasisDelta": {
+  "parents": [
+   "WP.S8.MovingBasis"
+  ],
+  "derived_via": "definition",
+  "step": 1137,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.GeometryDominanceRatio": {
+  "parents": [
+   "Rgeo"
+  ],
+  "derived_via": "restatement",
+  "step": 1051,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.SecondDifference": {
+  "parents": [
+   "MQ08-stepper"
+  ],
+  "derived_via": "specialisation",
+  "step": 1052,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.CentralDifference": {
+  "parents": [
+   "WP.S8.SecondDifference"
+  ],
+  "derived_via": "definition",
+  "step": 1109,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.DiscreteAction": {
+  "parents": [
+   "DRLAction"
+  ],
+  "derived_via": "restatement",
+  "step": 1053,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.ReaderEquation": {
+  "parents": [
+   "ReaderRecordEqs"
+  ],
+  "derived_via": "restatement",
+  "step": 1054,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.RecordEquation": {
+  "parents": [
+   "ReaderRecordEqs"
+  ],
+  "derived_via": "restatement",
+  "step": 1055,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.ResidualChannels": {
+  "parents": [
+   "ResidualsAndPotential",
+   "CutCurrent"
+  ],
+  "derived_via": "restatement",
+  "step": 1056,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.PhiOneStepSolve": {
+  "parents": [
+   "GaussJordanStepper"
+  ],
+  "derived_via": "restatement",
+  "step": 1057,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.PsiOneStepSolve": {
+  "parents": [
+   "GaussJordanStepper"
+  ],
+  "derived_via": "restatement",
+  "step": 1058,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.LinearSolveGate": {
+  "parents": [
+   "WP.S8.PhiOneStepSolve",
+   "WP.S8.PsiOneStepSolve"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1110,
+  "step_label": "WP.S8"
+ },
+ "WP.S8.DRLStepAlgorithm": {
+  "parents": [
+   "WP.S8.LinearSolveGate",
+   "WP.S8.GeometryDominanceRatio"
+  ],
+  "derived_via": "composition",
+  "step": 1138,
+  "step_label": "WP.S8"
+ },
+ "WP.S9.LegacyStepper": {
+  "parents": [
+   "MQ08-stepper"
+  ],
+  "derived_via": "restatement",
+  "step": 1059,
+  "step_label": "WP.S9"
+ },
+ "WP.S9.StabilityBound": {
+  "parents": [
+   "step13"
+  ],
+  "derived_via": "restatement",
+  "step": 1252,
+  "step_label": "WP.S9"
+ },
+ "WP.S9.LegacyStepperRules": {
+  "parents": [
+   "WP.S9.LegacyStepper",
+   "WP.S9.StabilityBound"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1258,
+  "step_label": "WP.S9"
+ },
+ "WP.S10.PhysicalProjector": {
+  "parents": [
+   "EQ-050"
+  ],
+  "derived_via": "specialisation",
+  "step": 1060,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.PhysicalProjectorGate": {
+  "parents": [
+   "WP.S10.PhysicalProjector"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1111,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.PositiveKernelDefinition": {
+  "parents": [
+   "WP.S10.PhysicalProjector"
+  ],
+  "derived_via": "definition",
+  "step": 1112,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.PositiveKernelPositivity": {
+  "parents": [
+   "WP.S10.PositiveKernelDefinition"
+  ],
+  "derived_via": "definition",
+  "step": 1139,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.PositiveTransferOperator": {
+  "parents": [
+   "WP.S10.PositiveKernelPositivity"
+  ],
+  "derived_via": "definition",
+  "step": 1166,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.ReflectionPositiveTerminology": {
+  "parents": [
+   "WP.S10.PositiveTransferOperator"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1188,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.ContractionBound": {
+  "parents": [
+   "WP.S10.PositiveTransferOperator"
+  ],
+  "derived_via": "definition",
+  "step": 1189,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.NormalizedTransfer": {
+  "parents": [
+   "WP.S10.ContractionBound"
+  ],
+  "derived_via": "definition",
+  "step": 1204,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.SpectralEquation": {
+  "parents": [
+   "WP.S10.NormalizedTransfer"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1211,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.SpectralGapFormula": {
+  "parents": [
+   "WP.S10.SpectralEquation"
+  ],
+  "derived_via": "definition",
+  "step": 1218,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.SpectralClassification": {
+  "parents": [
+   "WP.S10.SpectralEquation"
+  ],
+  "derived_via": "definition",
+  "step": 1219,
+  "step_label": "WP.S10"
+ },
+ "WP.S10.ResonanceExtension": {
+  "parents": [
+   "WP.S10.SpectralClassification"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1224,
+  "step_label": "WP.S10"
+ },
+ "WP.S11.OrderParameter": {
+  "parents": [
+   "OrderHiggsClosure_v1.12"
+  ],
+  "derived_via": "restatement",
+  "step": 1061,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.BarePotential": {
+  "parents": [
+   "WP.S11.OrderParameter"
+  ],
+  "derived_via": "definition",
+  "step": 1113,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.FluctuationKernel": {
+  "parents": [
+   "WP.S11.BarePotential"
+  ],
+  "derived_via": "definition",
+  "step": 1140,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.FluctuationDeterminant": {
+  "parents": [
+   "WP.S11.FluctuationKernel"
+  ],
+  "derived_via": "definition",
+  "step": 1167,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.EffectivePotential": {
+  "parents": [
+   "WP.S11.FluctuationDeterminant",
+   "WP.S11.BarePotential"
+  ],
+  "derived_via": "composition",
+  "step": 1190,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.EffectivePotentialDiagonal": {
+  "parents": [
+   "WP.S11.EffectivePotential"
+  ],
+  "derived_via": "definition",
+  "step": 1205,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.EffectivePotentialSlope": {
+  "parents": [
+   "WP.S11.EffectivePotentialDiagonal"
+  ],
+  "derived_via": "definition",
+  "step": 1212,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.OrderOnsetCriterion": {
+  "parents": [
+   "WP.S11.EffectivePotentialSlope"
+  ],
+  "derived_via": "definition",
+  "step": 1220,
+  "step_label": "WP.S11"
+ },
+ "WP.S11.OrderSelectionClaimScope": {
+  "parents": [
+   "WP.S11.OrderOnsetCriterion"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1225,
+  "step_label": "WP.S11"
+ },
+ "WP.S12.CoarseGrainingMap": {
+  "parents": [
+   "AdmissibilitySquare"
+  ],
+  "derived_via": "restatement",
+  "step": 1141,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.ReadoutPreservingCoarseGraining": {
+  "parents": [
+   "WP.S12.CoarseGrainingMap"
+  ],
+  "derived_via": "definition",
+  "step": 1168,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.CoarseGrainingDefect": {
+  "parents": [
+   "WP.S12.ReadoutPreservingCoarseGraining"
+  ],
+  "derived_via": "definition",
+  "step": 1191,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.EffectiveAction": {
+  "parents": [
+   "WP.S12.CoarseGrainingMap"
+  ],
+  "derived_via": "definition",
+  "step": 1169,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.FixedPoint": {
+  "parents": [
+   "WP.S12.CoarseGrainingMap"
+  ],
+  "derived_via": "definition",
+  "step": 1170,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.IrrelevantDistinctionCertificate": {
+  "parents": [
+   "WP.S12.FixedPoint"
+  ],
+  "derived_via": "definition",
+  "step": 1192,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.NoEarlyCollapseLaw": {
+  "parents": [
+   "A.7"
+  ],
+  "derived_via": "restatement",
+  "step": 1062,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.ModalReductionDefect": {
+  "parents": [
+   "v011.6"
+  ],
+  "derived_via": "restatement",
+  "step": 1142,
+  "step_label": "WP.S12"
+ },
+ "WP.S12.ModalReductionGate": {
+  "parents": [
+   "WP.S12.ModalReductionDefect",
+   "v011.11"
+  ],
+  "derived_via": "restatement",
+  "step": 1171,
+  "step_label": "WP.S12"
+ },
+ "WP.S13.DomainCard": {
+  "parents": [
+   "WP.S4.DomainDefinition",
+   "WP.S4.ExactDomainGate"
+  ],
+  "derived_via": "composition",
+  "step": 1226,
+  "step_label": "WP.S13"
+ },
+ "WP.S14.Gate1": {
+  "parents": [
+   "Gate1"
+  ],
+  "derived_via": "restatement",
+  "step": 1063,
+  "step_label": "WP.S14"
+ },
+ "WP.S14.Gate2": {
+  "parents": [
+   "Gate2"
+  ],
+  "derived_via": "restatement",
+  "step": 1064,
+  "step_label": "WP.S14"
+ },
+ "WP.S14.Gate3": {
+  "parents": [
+   "Gate3"
+  ],
+  "derived_via": "restatement",
+  "step": 1065,
+  "step_label": "WP.S14"
+ },
+ "WP.S14.Gate4": {
+  "parents": [
+   "Gate4"
+  ],
+  "derived_via": "restatement",
+  "step": 1066,
+  "step_label": "WP.S14"
+ },
+ "WP.S14.Gate5": {
+  "parents": [
+   "Gate5"
+  ],
+  "derived_via": "restatement",
+  "step": 1067,
+  "step_label": "WP.S14"
+ },
+ "WP.S14.Gate6": {
+  "parents": [
+   "Gate6"
+  ],
+  "derived_via": "restatement",
+  "step": 1068,
+  "step_label": "WP.S14"
+ },
+ "WP.S14.Gate7": {
+  "parents": [
+   "Gate7"
+  ],
+  "derived_via": "restatement",
+  "step": 1069,
+  "step_label": "WP.S14"
+ },
+ "WP.S15.CompileDomainAlgorithm": {
+  "parents": [
+   "WP.S13.DomainCard",
+   "WP.S14.Gate4"
+  ],
+  "derived_via": "composition",
+  "step": 1232,
+  "step_label": "WP.S15"
+ },
+ "WP.S15.FieldCountRule": {
+  "parents": [
+   "A.10"
+  ],
+  "derived_via": "restatement",
+  "step": 1070,
+  "step_label": "WP.S15"
+ },
+ "WP.S16.BridgeMap": {
+  "parents": [
+   "CommutingSquare.Bridge"
+  ],
+  "derived_via": "restatement",
+  "step": 1071,
+  "step_label": "WP.S16"
+ },
+ "WP.S16.ExactBridgeDynamics": {
+  "parents": [
+   "WP.S16.BridgeMap"
+  ],
+  "derived_via": "definition",
+  "step": 1114,
+  "step_label": "WP.S16"
+ },
+ "WP.S16.BridgeReadout": {
+  "parents": [
+   "WP.S16.BridgeMap"
+  ],
+  "derived_via": "definition",
+  "step": 1115,
+  "step_label": "WP.S16"
+ },
+ "WP.S16.BridgeError": {
+  "parents": [
+   "WP.S16.ExactBridgeDynamics",
+   "WP.S16.BridgeReadout"
+  ],
+  "derived_via": "definition",
+  "step": 1143,
+  "step_label": "WP.S16"
+ },
+ "WP.S16.BridgeLevels": {
+  "parents": [
+   "WP.S16.BridgeError"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1172,
+  "step_label": "WP.S16"
+ },
+ "WP.S17.DefectVector": {
+  "parents": [
+   "WP.S4.ExactDomainGate",
+   "WP.S12.ModalReductionDefect"
+  ],
+  "derived_via": "composition",
+  "step": 1227,
+  "step_label": "WP.S17"
+ },
+ "WP.S17.DefectRules": {
+  "parents": [
+   "WP.S17.DefectVector"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1233,
+  "step_label": "WP.S17"
+ },
+ "WP.S18.MakerCheckerRoles": {
+  "parents": [
+   "B.5.Maker",
+   "B.5.Checker"
+  ],
+  "derived_via": "restatement",
+  "step": 1072,
+  "step_label": "WP.S18"
+ },
+ "WP.S18.MakerCheckerInfoZero": {
+  "parents": [
+   "WP.S18.MakerCheckerRoles"
+  ],
+  "derived_via": "definition",
+  "step": 1116,
+  "step_label": "WP.S18"
+ },
+ "WP.S18.FailAbleGateLaw": {
+  "parents": [
+   "XI.6"
+  ],
+  "derived_via": "restatement",
+  "step": 1193,
+  "step_label": "WP.S18"
+ },
+ "WP.S18.ProtocolDeviation": {
+  "parents": [
+   "B.5.ProtocolDeviation"
+  ],
+  "derived_via": "restatement",
+  "step": 1073,
+  "step_label": "WP.S18"
+ },
+ "WP.S19.ClaimLedger": {
+  "parents": [
+   "XI.1a"
+  ],
+  "derived_via": "restatement",
+  "step": 1117,
+  "step_label": "WP.S19"
+ },
+ "WP.S19.LegacyTierMapping": {
+  "parents": [
+   "WP.S19.ClaimLedger",
+   "XI.1a"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1144,
+  "step_label": "WP.S19"
+ },
+ "WP.S20.DomainRunReport": {
+  "parents": [
+   "WP.S13.DomainCard",
+   "WP.S17.DefectVector"
+  ],
+  "derived_via": "composition",
+  "step": 1234,
+  "step_label": "WP.S20"
+ },
+ "WP.S21.GlobalRuntimeDAG": {
+  "parents": [
+   "WP.S1.InformationPhilosophyConstitution",
+   "WP.S3.RootPrimitives"
+  ],
+  "derived_via": "composition",
+  "step": 1145,
+  "step_label": "WP.S21"
+ },
+ "WP.S22.RG_EXECUTE": {
+  "parents": [
+   "WP.S15.CompileDomainAlgorithm",
+   "WP.S21.GlobalRuntimeDAG"
+  ],
+  "derived_via": "composition",
+  "step": 1239,
+  "step_label": "WP.S22"
+ },
+ "WP.S23.FixtureA": {
+  "parents": [
+   "WP.S4.ExactDomainGate"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1228,
+  "step_label": "WP.S23"
+ },
+ "WP.S23.FixtureB": {
+  "parents": [
+   "WP.S4.ExactDomainGate",
+   "XI.6"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1229,
+  "step_label": "WP.S23"
+ },
+ "WP.S23.FixtureC": {
+  "parents": [
+   "WP.S5.Holonomy"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1213,
+  "step_label": "WP.S23"
+ },
+ "WP.S23.FixtureD": {
+  "parents": [
+   "WP.S10.PositiveTransferOperator"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1194,
+  "step_label": "WP.S23"
+ },
+ "WP.S23.FixtureE": {
+  "parents": [
+   "WP.S8.DRLStepAlgorithm"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1173,
+  "step_label": "WP.S23"
+ },
+ "WP.S23.FixtureF": {
+  "parents": [
+   "WP.S12.ModalReductionGate"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1195,
+  "step_label": "WP.S23"
+ },
+ "WP.S23.FixtureG": {
+  "parents": [
+   "WP.S8.GeometryDominanceRatio"
+  ],
+  "derived_via": "domain_reading",
+  "step": 1118,
+  "step_label": "WP.S23"
+ },
+ "WP.S24.ConcreteReferenceStatus": {
+  "parents": [
+   "WP.S13.DomainCard",
+   "WP.S17.DefectVector"
+  ],
+  "derived_via": "composition",
+  "step": 1235,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.DomainCard": {
+  "parents": [
+   "WP.S13.DomainCard",
+   "WP.S24.ConcreteReferenceStatus"
+  ],
+  "derived_via": "specialisation",
+  "step": 1240,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.RawObservation": {
+  "parents": [
+   "WP.S24.DomainCard"
+  ],
+  "derived_via": "specialisation",
+  "step": 1243,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.AffineDecoder": {
+  "parents": [
+   "WP.S24.RawObservation"
+  ],
+  "derived_via": "definition",
+  "step": 1247,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.MetricAndLaplacian": {
+  "parents": [
+   "WP.S24.DomainCard"
+  ],
+  "derived_via": "specialisation",
+  "step": 1244,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.ConcreteReaderRecurrence": {
+  "parents": [
+   "WP.S24.AffineDecoder",
+   "WP.S24.MetricAndLaplacian",
+   "WP.S8.ReaderEquation"
+  ],
+  "derived_via": "specialisation",
+  "step": 1253,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.ConcreteOperatorChecks": {
+  "parents": [
+   "WP.S24.ConcreteReaderRecurrence"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1259,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.CanonicalDataHash": {
+  "parents": [
+   "WP.S24.RawObservation"
+  ],
+  "derived_via": "definition",
+  "step": 1248,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.CalibrationDesign": {
+  "parents": [
+   "WP.S24.ConcreteReaderRecurrence"
+  ],
+  "derived_via": "specialisation",
+  "step": 1260,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.CalibrationProtocol": {
+  "parents": [
+   "WP.S24.CalibrationDesign",
+   "WP.S18.MakerCheckerRoles"
+  ],
+  "derived_via": "composition",
+  "step": 1264,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.HeldOutCheckerReport": {
+  "parents": [
+   "WP.S24.CalibrationProtocol",
+   "WP.S18.FailAbleGateLaw"
+  ],
+  "derived_via": "composition",
+  "step": 1268,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.ArchivalDisclosureRule": {
+  "parents": [
+   "WP.S24.HeldOutCheckerReport"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1270,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.ExternalEvidenceBundle": {
+  "parents": [
+   "WP.S24.HeldOutCheckerReport"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1271,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.ConcreteExecutionDAG": {
+  "parents": [
+   "WP.S21.GlobalRuntimeDAG",
+   "WP.S24.ConcreteReaderRecurrence"
+  ],
+  "derived_via": "specialisation",
+  "step": 1261,
+  "step_label": "WP.S24"
+ },
+ "WP.S24.ConcreteDomainRunReport": {
+  "parents": [
+   "WP.S20.DomainRunReport",
+   "WP.S24.ConcreteExecutionDAG"
+  ],
+  "derived_via": "specialisation",
+  "step": 1265,
+  "step_label": "WP.S24"
+ },
+ "WP.S25.PassFailUnresolvedTable": {
+  "parents": [
+   "WP.S17.DefectVector",
+   "WP.S18.FailAbleGateLaw"
+  ],
+  "derived_via": "composition",
+  "step": 1236,
+  "step_label": "WP.S25"
+ },
+ "WP.S26.AntiDriftRules": {
+  "parents": [
+   "WP.S1.ForbiddenOrder",
+   "WP.S25.PassFailUnresolvedTable"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1241,
+  "step_label": "WP.S26"
+ },
+ "WP.S27.LegacyMigration": {
+  "parents": [
+   "WP.S19.LegacyTierMapping"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1174,
+  "step_label": "WP.S27"
+ },
+ "WP.S28.ReferenceAPI": {
+  "parents": [
+   "WP.S22.RG_EXECUTE"
+  ],
+  "derived_via": "composition",
+  "step": 1245,
+  "step_label": "WP.S28"
+ },
+ "WP.S29.AIContract": {
+  "parents": [
+   "WP.S1.InformationPhilosophyConstitution",
+   "WP.S28.ReferenceAPI"
+  ],
+  "derived_via": "tier_rule",
+  "step": 1249,
+  "step_label": "WP.S29"
+ },
+ "WP.S29.AIResult": {
+  "parents": [
+   "WP.S29.AIContract",
+   "WP.S19.ClaimLedger"
+  ],
+  "derived_via": "composition",
+  "step": 1254,
+  "step_label": "WP.S29"
+ },
+ "WP.S30.HumanChecklist": {
+  "parents": [
+   "WP.S29.AIContract"
+  ],
+  "derived_via": "restatement",
+  "step": 1255,
+  "step_label": "WP.S30"
+ },
+ "WP.S31.OfficialStatus": {
+  "parents": [
+   "WP.S29.AIContract",
+   "WP.S30.HumanChecklist"
+  ],
+  "derived_via": "composition",
+  "step": 1262,
+  "step_label": "WP.S31"
+ },
+ "WP.S32.OneBoxSummary": {
+  "parents": [
+   "WP.S31.OfficialStatus",
+   "WP.S1.InformationPhilosophyConstitution"
+  ],
+  "derived_via": "composition",
+  "step": 1266,
+  "step_label": "WP.S32"
+ }
+}

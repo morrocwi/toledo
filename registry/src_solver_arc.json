@@ -1,0 +1,3127 @@
+{
+  "_provenance_note": "Toledo BBL-195/198 source inventory. Source repo referred to only as 'solver arc (private)' per standing rule; never write its name. All counts are direct reads from files at the commit below (readout-not-truth); no coqc/pdflatex run in this pass.",
+  "source": "solver arc (private)",
+  "anchor": {
+    "commit": "961151db33b0491cba8fabade69f594238d33f84",
+    "commit_date": "2026-08-29 23:13:03 +0700",
+    "working_tree_status_at_read_time": "clean (matches HEAD)"
+  },
+  "sm_stream": {
+    "_description": "EQUATION_LIBRARY_ROOT_TO_SM_STREAM.md — mirror of readout_genesis Appendix C (SM domain equation stream). File's own header states the sibling repo's READOUT_GENESIS_CORE.md Appendix C is the primary Source of Truth; this file must be corrected to match it, never the reverse.",
+    "file": "EQUATION_LIBRARY_ROOT_TO_SM_STREAM.md",
+    "blob": "fb40935bdccd737720ca8b4152590b12749a202d",
+    "line_count": 390,
+    "eq_id_range": "EQ-001..EQ-071",
+    "eq_count": 71,
+    "retracted_ids": [
+      "EQ-069",
+      "EQ-070",
+      "EQ-071"
+    ],
+    "retracted_count": 3,
+    "retracted_reason_as_written": "continuum contamination, founder ruling 2026-07-26; numbers kept reserved, not deleted",
+    "eq_ids_naming_a_v_file_in_this_document": 5,
+    "entries": [
+      {
+        "code": "EQ-001",
+        "tier_tag_as_written": "`Ax`         ∃ a,b : a ≠ b",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-002",
+        "tier_tag_as_written": "`Ax→Th`      ∃ A : A discriminates E₁ ≠ E₂",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-003",
+        "tier_tag_as_written": "`Th`         A→B ≠ B→A",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-004",
+        "tier_tag_as_written": "`Th`         t(s) := min #steps(s₀ → s) ∈ ℕ",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-005",
+        "tier_tag_as_written": "`Ax`         τ_c > 0",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-006",
+        "tier_tag_as_written": "`Ax`         t = nΔθ,  n∈ℕ,  Δθ>0",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-007",
+        "tier_tag_as_written": "`Ax/Th`      v = √(D/τ_c) < ∞",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-008",
+        "tier_tag_as_written": "`Ax/Th`      L_R := D_W − W",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-009",
+        "tier_tag_as_written": "`Ax`         1 RD := one retained-distinction record",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-010",
+        "tier_tag_as_written": "`Ax`         x_domain --[Enc_Ω]--> x_RD",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-011",
+        "tier_tag_as_written": "`Ax`         y_RD --[Dec_Ω]--> y_domain",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-012",
+        "tier_tag_as_written": "`Ax`         Γ ⊢_{α,ρ,κ} φ",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-013",
+        "tier_tag_as_written": "`Ax`         A ⇏ A⊗A",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-014",
+        "tier_tag_as_written": "`Ax`         !_κA ⊢ A^⊗m,  m ≤ κ",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-015",
+        "tier_tag_as_written": "`mixed`      M ∂²_t Φ + D ∂_t Φ + K·L_R Φ + ∇V(Φ) = J − η",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-016",
+        "tier_tag_as_written": "`Dr`         λ_c = D²/(4MK)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-017",
+        "tier_tag_as_written": "`finite_diagnostic` (PASS_WITH_LIMITS)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-018",
+        "tier_tag_as_written": "`Dr`         𝔖_n = (G_n, Λ_n, 𝒯_n, Θ_n)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-019",
+        "tier_tag_as_written": "`Dr`         X_n^A = (Φ_n^I, Ψ_n^I)^T",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-020",
+        "tier_tag_as_written": "`Dr`         𝔾_n = L_{G_n}⊗I_ℱ + I_{G_n}⊗C_ℱ + C_int,n",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-021",
+        "tier_tag_as_written": "`Th_coqc` (abstract) / `Open` (concrete instantiation)",
+        "named_v_file": [
+          "InfoRetentionMetricSkewDecomposition_attempt.v"
+        ],
+        "retracted": false
+      },
+      {
+        "code": "EQ-022",
+        "tier_tag_as_written": "`Dr`/`finite_diagnostic` (executable)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-023",
+        "tier_tag_as_written": "`finite_diagnostic`",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-024",
+        "tier_tag_as_written": "`finite_diagnostic`",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-025",
+        "tier_tag_as_written": "`finite_diagnostic`",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-026",
+        "tier_tag_as_written": "`Th_coqc` (2026-07-25 grounding)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-027",
+        "tier_tag_as_written": "`Th_coqc` (2026-07-25 grounding)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-028",
+        "tier_tag_as_written": "`Th_coqc` (2026-07-25 grounding)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-029",
+        "tier_tag_as_written": "`Dr`         I_Q = I_B + O_C + O_P + O_B",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-030",
+        "tier_tag_as_written": "`Dr`         Z_n = (Φ_n, Ψ_n, Θ_n, U_n, Σ_n, 𝒯_n, Λ_n)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-031",
+        "tier_tag_as_written": "`Dr`         r = O(X)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-032",
+        "tier_tag_as_written": "`Th_coqc`    ∀X,R,O,x1,x2 : x1≠x2 → O(x1)=O(x2) →",
+        "named_v_file": [
+          "InfoTrueRecordUnreadable_attempt.v"
+        ],
+        "retracted": false
+      },
+      {
+        "code": "EQ-033",
+        "tier_tag_as_written": "`Th_coqc`    ∀X,R,O,h,x : h(x)≠x → O(h(x))=O(x) →",
+        "named_v_file": [
+          "InfoTrueRecordUnreadable_attempt.v"
+        ],
+        "retracted": false
+      },
+      {
+        "code": "EQ-034",
+        "tier_tag_as_written": "`Th_coqc`    x1≠x2 → O(x1)=O(x2) →",
+        "named_v_file": [
+          "InfoTrueRecordUnreadable_attempt.v"
+        ],
+        "retracted": false
+      },
+      {
+        "code": "EQ-035",
+        "tier_tag_as_written": "`Dr`         ⟨x,y⟩_G = x†Gy,  G>0",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-036",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-037",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-038",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-039",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-040",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-041",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-042",
+        "tier_tag_as_written": "`Dr`         𝒜 = { h : Oh=O, hF=Fh, h†Gh=G }",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-043",
+        "tier_tag_as_written": "`Dr`         H_C = ∏_{e∈C} U_e",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-044",
+        "tier_tag_as_written": "`Dr`         𝓕_all = 𝓕_G+𝓕_EM+𝓕_W+𝓕_S+𝓕_res",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-045",
+        "tier_tag_as_written": "`finite_diagnostic` (blind pipeline)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-046",
+        "tier_tag_as_written": "`Dr`         x ↦ e^{iα}x",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-047",
+        "tier_tag_as_written": "`Dr`         x ↦ ρ_R(g)x",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-048",
+        "tier_tag_as_written": "`Dr`         3⊗3̄ → 1+…",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-049",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-050",
+        "tier_tag_as_written": "`Dr`         ℋ_physical ⊆ ℋ_{τ=0}",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-051",
+        "tier_tag_as_written": "`finite_diagnostic` (exact pass, Z₃/2D case only)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-052",
+        "tier_tag_as_written": "`Dr`/`finite_diagnostic`",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-053",
+        "tier_tag_as_written": "`Th_coqc`-adjacent (§21 closure)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-054",
+        "tier_tag_as_written": "`Th_coqc`    c_0'(κ) = 2c_3(κ)",
+        "named_v_file": [
+          "InfoAllOrderCharacter.v"
+        ],
+        "retracted": false
+      },
+      {
+        "code": "EQ-055",
+        "tier_tag_as_written": "internal exact (§12)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-056",
+        "tier_tag_as_written": "`finite_diagnostic`",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-057",
+        "tier_tag_as_written": "`Dr`/`finite_diagnostic` (dissolves I1-injection)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-058",
+        "tier_tag_as_written": "(three distinct fit values, not one shared equality), EQ-054 (correct file provenance",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-059",
+        "tier_tag_as_written": "`Th_coqc` (identity itself) — proposed use as item-1's r: `Open`/REJECTED, not adopted",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-060",
+        "tier_tag_as_written": "`finite_diagnostic`",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-061",
+        "tier_tag_as_written": "`finite_diagnostic`",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-062",
+        "tier_tag_as_written": "`finite_diagnostic` (NEGATIVE finding — refutes its own opening hypothesis)",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-063",
+        "tier_tag_as_written": "added 2026-07-25 (self-caught gap during the bottleneck survey below).",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-064",
+        "tier_tag_as_written": "`fit_calibrated` (M_joint) / `finite_diagnostic` (accuracy check) — 2026-07-25 RTM",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-065",
+        "tier_tag_as_written": "`declared_finite_architecture` — primitive U/D/E branch tapes for v1.13's Π₀ (EQ-053's",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-066",
+        "tier_tag_as_written": "`declared_finite_architecture`/`exact_bridge` — order-vacuum threshold closure. α_ord=a/2,",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-067",
+        "tier_tag_as_written": "`declared_finite_architecture` — native vacuum amplitude, r=v²/2 convention applied to",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-068",
+        "tier_tag_as_written": "`finite_diagnostic` (THREE NEGATIVE FINDINGS, all disclosed, none hidden) — 2026-07-25",
+        "named_v_file": null,
+        "retracted": false
+      },
+      {
+        "code": "EQ-069",
+        "tier_tag_as_written": "RETRACTED 2026-07-26 (continuum contamination — founder ruling; number kept so the",
+        "named_v_file": null,
+        "retracted": true
+      },
+      {
+        "code": "EQ-070",
+        "tier_tag_as_written": "RETRACTED 2026-07-26 (continuum contamination — founder ruling; number kept so the",
+        "named_v_file": null,
+        "retracted": true
+      },
+      {
+        "code": "EQ-071",
+        "tier_tag_as_written": "RETRACTED 2026-07-26 (continuum contamination — founder ruling; number kept so the",
+        "named_v_file": null,
+        "retracted": true
+      }
+    ]
+  },
+  "imported_equations": {
+    "_description": "docs/root/EQUATION_REGISTRY.md — every external equation/result the source repo imports, with owner+year at first use (its own standing rule, 2026-07-05). use_tier_tags are only the backtick-marked tier tokens (Dr/Th_coqc/finite_diagnostic/Open/fit_calibrated/textbook_closure/textbook_system/declared_finite_architecture/exact_bridge) found verbatim in the 'use' prose; most rows carry free prose instead of a clean tag, kept verbatim in use_text rather than forced into an enum.",
+    "file": "docs/root/EQUATION_REGISTRY.md",
+    "blob": "20c44b4a8530759dca472d9aa8fa91830ca85e24",
+    "line_count": 342,
+    "row_count": 229,
+    "sections": [
+      "Physics — quantum mechanics, relativity, gravity",
+      "Thermodynamics / horizons / holography",
+      "Discrete curvature / spectral graph theory",
+      "Variational structure / numerical methods",
+      "Statistics / estimation theory",
+      "Black-hole perturbation theory / numerics",
+      "Information theory / it-from-bit lineage",
+      "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+      "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+      "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+      "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+      "Psychophysics / perception (structural cross-references, NOT physics claims)"
+    ],
+    "rows": [
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Planck–Einstein relation `E=ħω`",
+        "owner": "M. Planck; A. Einstein",
+        "year": "1900 (Planck); 1905 (Einstein)",
+        "first_used_file": "`formal/URCF_RD_All.v`, `InfoSchrodinger`",
+        "use_text": "imported constant relation, cited",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Schrödinger equation / eigenvalue problem",
+        "owner": "E. Schrödinger",
+        "year": "1926",
+        "first_used_file": "`InfoSchrodinger`",
+        "use_text": "dispersion form compared, not re-derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Special relativity / Lorentz invariance",
+        "owner": "A. Einstein",
+        "year": "1905",
+        "first_used_file": "`InfoLorentzInvariance.v`",
+        "use_text": "boost formula imported; causal structure mechanized independently",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "General relativity field equations `G_μν+Λg_μν=8πGT_μν`",
+        "owner": "A. Einstein",
+        "year": "1915",
+        "first_used_file": "`InfoQuantumGravityRootBridge_attempt.v`, `mass_note.tex` §holo",
+        "use_text": "imported conclusion only (`[Dr]`/`[AX/import]`); never derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Schwarzschild metric",
+        "owner": "K. Schwarzschild",
+        "year": "1916",
+        "first_used_file": "`InfoAnalysisLift.v`",
+        "use_text": "imported as a `Definition`, not derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Regge-Wheeler equation",
+        "owner": "T. Regge, J. A. Wheeler",
+        "year": "1957",
+        "first_used_file": "`InfoQuantumGravityRootBridge_attempt.v`",
+        "use_text": "potential imported, mechanized as a coefficient field on this project's own graph-Laplacian evolution law",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Electroweak mixing: `A=sinθW·W³+cosθW·B`, `Z=cosθW·W³−sinθW·B`, `m_W²=g²v²/4`, `m_Z²=(v²/4)(g²+g'²)`, `sin²θW=g'²/(g²+g'²)`",
+        "owner": "S. Glashow; S. Weinberg; A. Salam",
+        "year": "1961 (Glashow); 1967 (Weinberg); 1968 (Salam)",
+        "first_used_file": "`domains/standard_model/electroweak_decoder_v0_3.py`; `formal/InfoElectroweakNullDirection_attempt.v`",
+        "use_text": "the mixing/mass relations are the PHYSICAL TARGET the decoder's rank-1 obstruction must reproduce (photon masslessness proved to EMERGE from det=0, not imported); real values fixed by calibration, NOT a derivation of the electroweak theory — `[CALIBRATED ELECTROWEAK DECODER]`, gauge algebra/chirality/θW-value/radiative corrections OPEN",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Fermi coupling `G_F` and `v=(√2 G_F)^{-1/2}` (Higgs vev)",
+        "owner": "E. Fermi",
+        "year": "1934 (four-fermion); vev relation via GWS",
+        "first_used_file": "`domains/standard_model/electroweak_decoder_v0_3.py`",
+        "use_text": "`G_F=1.1663787e-5 GeV⁻²` (CODATA 2022) plugged in to fix the scale `v`; calibration input, not derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Gauge-anomaly cancellation conditions `[SU(3)]²U(1)`, `[SU(2)]²U(1)`, `[grav]²U(1)`, `[U(1)]³` fixing the SM hypercharges",
+        "owner": "S. Adler; J. Bell, R. Jackiw (anomaly, 1969); Geng–Marshak / Minahan–Ramond–Warner (hypercharge quantization, 1989–90)",
+        "year": "1969; 1989–90",
+        "first_used_file": "`domains/standard_model/sm_discovery_pipeline_v0_4.py`; `formal/InfoHyperchargeAnomalyClosure_attempt.v`",
+        "use_text": "the anomaly-cancellation LINEAR SYSTEM is solved on the SM one-generation rep content (a finite BLIND fixture — reps discovered, not fed) to FORCE `q=1/6,ℓ=−1/2,u=2/3,d=−1/3,e=−1`; the cubic `[U(1)]³` anomaly `=0` is mechanized exact. That anomaly cancellation fixes hypercharges is the classical result; here it is re-derived from the discovered rep/coupling graph, not with a fed-in charge list. `[FINITE BLIND]`, not a root derivation of the rep content",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Peter–Weyl theorem / character convolution (class-function convolution multiplies representation coefficients)",
+        "owner": "H. Weyl, F. Peter",
+        "year": "1927",
+        "first_used_file": "`domains/standard_model/triality_spectral_flow_v0_6.py`; `formal/InfoTrialitySpectralFlow_attempt.v`",
+        "use_text": "used as the EXACT serial-blocking law `a_R^{(m)}=a_R^m` (⇒ `ρ_t(b)=ρ_t^{b²}`); standard harmonic analysis on compact groups, read here as retained-triality contraction under block-merging, not a coupling β-flow",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Wilson-loop area-law criterion for confinement `−log⟨W(C)⟩ = σ·A(C)`, and the center (`Z_N`) role in confinement|K. Wilson (1974); center-symmetry / center-vortex work (’t Hooft 1978; Greensite)|1974; 1978+",
+        "owner": "`domains/standard_model/center_confinement_v0_3.py`; `formal/InfoCenterConfinement_attempt.v`",
+        "year": "the area-law criterion and the center's role are used as the STANDARD confinement test (explicitly not claimed as new); here `⟨W⟩=q(κ)^{A}` with `σ=−log q>0` is DERIVED in a `Z_3`/2D center-restricted model from the in-framework retained-curvature action `κΣ",
+        "first_used_file": "u_p−1",
+        "use_text": "²` (no QCD potential fed in). `[EXACT, Z_3/2D ONLY]` — not full SU(3) confinement in 3+1D",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Ginsparg–Wilson relation `{Γ,D}=a D Γ D` (lattice chirality without naïve anticommutation) and the overlap/sign-operator realization `D=(1/ā)(I−V)`, `V=Γε`",
+        "owner": "P. Ginsparg & K. Wilson (1982); H. Neuberger overlap (1998)",
+        "year": "1982; 1998",
+        "first_used_file": "`domains/standard_model/tape_kinetic_operator_v1_8.py`; `formal/InfoTapeKineticGW_attempt.v`",
+        "use_text": "the GW/overlap MECHANISM is used (explicitly not claimed as new) to give exact modified chirality + no doubling at finite spacing; here `Γ_T`, `V` (rational unitary) and `D_T` are built from this framework's own orientation⊗incidence carrier, and the division-free identity `Γ(I−V)+(I−V)Γ=(I−V)Γ(I−V)` is mechanized over ℚ. `[GW EXACT, FREE FIXTURE]` — interacting gauge measure/positivity/anomaly OPEN",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Nielsen–Ninomiya fermion-doubling no-go (locality + translation invariance + Hermiticity + exact naïve chiral anticommutation ⟹ `2^d` species)",
+        "owner": "H. B. Nielsen & M. Ninomiya",
+        "year": "1981",
+        "first_used_file": "`domains/standard_model/tape_kinetic_operator_v1_8.py`; `domains/standard_model/relation_channel_dimension_v1_9.py`",
+        "use_text": "cited as the OBSTRUCTION the GW construction evades (we do NOT keep exact naïve `{D,Γ}=0`); the `2^d` corner count and its `16→1+15` lifting at d=4 are mechanized as arithmetic, not a re-derivation of the no-go",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Clifford algebra `{A_μ,A_ν}=2δ_μν I` / irreducible Dirac-matrix dimension (2×2 Pauli, mutually-orthogonal directions in ℝ³)",
+        "owner": "classical (Clifford 1878; standard representation theory)",
+        "year": "1878 / classical",
+        "first_used_file": "`domains/standard_model/relation_channel_dimension_v1_9.py`; `formal/InfoDimensionFourClosure_attempt.v`",
+        "use_text": "the standard Clifford-module dimension bound is used; here it is DERIVED as forced by \"first-order + isotropic retention\", and the `d≤4` count (≤3 orthogonal directions in ℝ³ after `B₀=I`) is mechanized over ℚ — the *meaning* (relation channels, not spacetime axes) is this framework's own. `[EXACT IN ARCHITECTURE]` — isotropic fixed point/Lorentz OPEN",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Unitary `N×N` quark-mixing-matrix physical-parameter counting (`N²` real params, `2N−1` removable by phase redefinition ⇒ `(N−1)²` physical, split into `N(N−1)/2` mixing angles + `(N−1)(N−2)/2` CP-violating phases; nonzero phase count requires `N≥3`)",
+        "owner": "N. Cabibbo (2-generation case, 1963); M. Kobayashi & T. Maskawa (N-generation, CP-phase existence)",
+        "year": "1963 (Cabibbo); 1973 (Kobayashi–Maskawa)",
+        "first_used_file": "`domains/standard_model/item2_exploration/item2_family_index_v2_fit.py`",
+        "use_text": "the standard parameter-counting identity is used, exactly computed over the integers (plain Python `int`, no fractional values arise) for `N=0..6`, to show `phase_count(N)=0` for `N<3` and `≥1` for `N≥3`; combined (fit_calibrated, per `DRIFT_CONTRACT.json` DEV-SM-002) with the externally-OBSERVED fact that CP violation exists and this framework's own minimality-selection STYLE to select `N=3` as the smallest count consistent with observation — explicitly NOT a re-derivation of the KM mechanism itself, and explicitly NOT the same strength of \"minimal\" as `SM_INFORMATION_PHILOSOPHY_MASTER.md` §2.2/§3.1 (there, smaller values are mathematically impossible; here, smaller `N` is merely inconsistent with an observation)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Gatto–Sartori–Tonin relation `sin θ_C ≈ √(m_d/m_s)` (Cabibbo angle from the down-type quark mass ratio)|R. Gatto, G. Sartori, M. Tonin|1968",
+        "owner": "`domains/standard_model/item22_exploration/cabibbo_angle_gst_v1.py`",
+        "year": "the standard phenomenological mass-ratio relation is used, exactly computed from already-fit_calibrated PDG masses (`fit_calibrated_registry.py`'s `m_d,m_s`) — no new fit parameter beyond the masses already in the registry. `sin θ_C(pred)=0.223607` vs PDG 2024 `",
+        "first_used_file": "Vus",
+        "use_text": "=0.2250±0.0004` (0.62% relative error). Tier `fit_calibrated` per `DRIFT_CONTRACT.json` DEV-SM-003 — FITTED (borrowed 1968 formula + real PDG masses), not derived from the root; consistent-with, not forced-by. Citation verified via primary-source search 2026-07-24: *Phys. Lett.* 28B, 128–130, DOI `10.1016/0370-2693(68)90150-0`",
+        "use_tier_tags": [
+          "fit_calibrated"
+        ]
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Group-averaging / Reynolds (\"twirl\") projection onto the invariant subspace `Π(X)=(1/|G|)Σ_{R∈G} RᵀXR`, here for the signed-permutation (hyperoctahedral) group `B₄=(ℤ₂)⁴⋊S₄` ⇒ `Π₄(X)=(Tr X/4)I`",
+        "owner": "classical (Reynolds operator / representation-theory averaging; Weyl-lineage)",
+        "year": "classical",
+        "first_used_file": "`domains/standard_model/isotropic_fixed_point_v1_10.py`; `formal/InfoIsotropicFixedPoint_attempt.v`",
+        "use_text": "standard invariant-averaging used as the coarse frame twirl; here the *meaning* (finite local relation-frame relabelings, not spacetime rotations) and the `ρ_frame=0.858010754588` five-move contraction rate are this framework's own — `[EXACT FOR DECLARED MAP]`, mixing weights from the action OPEN",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Osterwalder–Schrader reflection positivity via the Gram / transfer-matrix construction (a half-slab amplitude `B` gives a positive kernel `K=B†B⪰0`, i.e. reflection positivity by construction; hidden-midpoint reconstruction)",
+        "owner": "K. Osterwalder & R. Schrader",
+        "year": "1973",
+        "first_used_file": "`domains/standard_model/frame_mixing_from_action_v1_11.py`; `formal/InfoFrameMixingAction_attempt.v` (also used in `universal_rp_slab_v1_4.py`)",
+        "use_text": "the OS `K=B†B` mechanism is used to make the derived frame-transfer reflection-positive *by construction*; here the half-step amplitudes `b_m=e^{−ε(m)/2}` and the relative-frame weights `p(h)` are this framework's own outputs from `S_UF`, and `ρ_aniso=0.7361824549886` is mechanized (rational root bracket) — `[EXACT FOR DERIVED WEIGHTS]`, uniform gap / interacting-Gram audit OPEN",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Perron–Frobenius / doubly-stochastic consensus (a primitive doubly-stochastic `P` has a simple eigenvalue 1 with `P|_{1^⊥}` spectral radius `<1` ⇒ convergence to the mean)",
+        "owner": "O. Perron (1907); G. Frobenius (1912); consensus-dynamics lineage",
+        "year": "1907/1912",
+        "first_used_file": "`domains/standard_model/isotropic_fixed_point_v1_10.py`; `formal/InfoIsotropicFixedPoint_attempt.v`",
+        "use_text": "standard averaging/consensus theorem used to drive per-sector limiting speeds to a common `c_*`; cited for position, the sector-graph reading is this project's own — equality of speeds derived, the value `c_*` NOT predicted",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Quasinormal-mode late-time power-law (\"Price\") tail",
+        "owner": "R. H. Price",
+        "year": "1972",
+        "first_used_file": "`causal-quantum-gravity/scripts/price_tail.py`",
+        "use_text": "cited target phenomenon; time-domain evolution + exponent measurement is this project's own `finite_diagnostic` script, not a re-derivation of Price's analytic argument",
+        "use_tier_tags": [
+          "finite_diagnostic"
+        ]
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Late-time tail dependence on initial data",
+        "owner": "C. Gundlach, R. H. Price, J. Pullin",
+        "year": "1994",
+        "first_used_file": "`causal-quantum-gravity/scripts/price_tail.py` (T1 control, momentum-type vs. time-symmetric data)",
+        "use_text": "cited as the reason two initial-data families were tested separately; not re-derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Late-time tails, further numerical study",
+        "owner": "E. S. C. Ching, P. T. Leung, W. M. Suen, K. Young",
+        "year": "1995",
+        "first_used_file": "`causal-quantum-gravity/scripts/price_tail.py`",
+        "use_text": "cited lineage for the numerical late-time-tail methodology",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Quasinormal mode spectrum (continued-fraction method)",
+        "owner": "E. W. Leaver",
+        "year": "1985",
+        "first_used_file": "`scripts/verify_quantum_gravity_root_bridge.py`",
+        "use_text": "literature target value cited for comparison, not re-derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Raychaudhuri equation",
+        "owner": "A. K. Raychaudhuri",
+        "year": "1955",
+        "first_used_file": "`InfoCutGrowth_attempt.v`",
+        "use_text": "named as the target continuum engine only; this file mechanizes the STATIC half (exact cut bookkeeping and its price), explicitly not the rate/focusing law, which stays `Open`",
+        "use_tier_tags": [
+          "Open"
+        ]
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "de Broglie's internal clock",
+        "owner": "L. de Broglie",
+        "year": "1925",
+        "first_used_file": "`mass_note.tex` §mass (\"Mass and the internal clock\")",
+        "use_text": "interpretive anchor, `[Dr]`",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Dirac equation",
+        "owner": "P. A. M. Dirac",
+        "year": "1928",
+        "first_used_file": "`mass_note.tex` §mass",
+        "use_text": "cited lineage only",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Zitterbewegung (relativistic)",
+        "owner": "E. Schrödinger",
+        "year": "1930",
+        "first_used_file": "`mass_note.tex` §mass, Reading 4",
+        "use_text": "cited lineage only",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Zitterbewegung interpretation",
+        "owner": "D. Hestenes",
+        "year": "1990",
+        "first_used_file": "`mass_note.tex` §mass",
+        "use_text": "cited lineage only",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Higgs mechanism",
+        "owner": "P. W. Higgs",
+        "year": "1964",
+        "first_used_file": "`mass_note.tex` §mass (scope-boundary note)",
+        "use_text": "explicitly NOT engaged — cited only to mark a boundary",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Electroweak Higgs mechanism / one-doublet EWSB: residual `Q=T₃+Y` stabilizer, `m_W²=g²v²/4`, `m_Z²=(g²+g'²)v²/4`, `m_W=m_Z cosθ`, and tree-level custodial `ρ=1`",
+        "owner": "F. Englert & R. Brout; P. Higgs (mechanism 1964); S. Weinberg (electroweak application 1967)",
+        "year": "1964; 1967",
+        "first_used_file": "`domains/standard_model/order_higgs_closure_v1_12.py`; `formal/InfoOrderHiggsClosure_attempt.v`",
+        "use_text": "the Weinberg–Salam EWSB structure is used as the PHYSICAL TARGET; here the order rep `H=(1,2)_{1/2}` is DERIVED from the matter skeleton (color-singlet, `2⊗2⊃1`, `y_H=3`), then the stabilizer/rank-1 mass pattern (`det=0` photon, `ρ=1`) is mechanized over ℚ — `[EXACT PATTERN, GIVEN NONZERO ORDER]`; the scale `v`, couplings, and physical masses are NOT predicted",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Elitzur's theorem (a local gauge symmetry cannot break spontaneously; only gauge-invariant order parameters like `⟨H†H⟩` are physical)",
+        "owner": "S. Elitzur",
+        "year": "1975",
+        "first_used_file": "`domains/standard_model/order_vacuum_selection_v1_13.py`; `formal/InfoOrderVacuumSelection_attempt.v`",
+        "use_text": "cited to state the vacuum result gauge-invariantly (`⟨H†H⟩>0`, not `⟨H⟩≠0`); the closure-pressure selection `Π_cl>α ⇒ r*>0` and its convexity/positivity are this framework's own, mechanized over ℚ",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Robb's causal-order axiomatization",
+        "owner": "A. A. Robb",
+        "year": "1914",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Zeeman: causality determines Lorentz group",
+        "owner": "E. C. Zeeman",
+        "year": "1964",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Malament: causal order fixes topology",
+        "owner": "D. B. Malament",
+        "year": "1977",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "One-loop non-abelian gauge β-function with matter, `b_a = (11/3)C₂(G_a) − (2/3)ΣT_a(R_fermion) − (1/3)ΣT_a(R_scalar)` (the `11/3, 2/3, 1/3` kinematic weights are the gauge-boson+ghost, Weyl-fermion, and complex-scalar one-loop vacuum-polarization contributions)",
+        "owner": "D. J. Gross & F. Wilczek; H. D. Politzer (asymptotic freedom, SU(N) pure/QCD case, 1973); general multi-representation form: D. R. T. Jones (1974); M. E. Machacek & M. T. Vaughn (1983)",
+        "year": "1973; 1974; 1983",
+        "first_used_file": "`domains/standard_model/item25_exploration/beta_function_coefficients_v1.py`",
+        "use_text": "the three kinematic weights (`11/3,2/3,1/3`) are used as an EXPLICITLY EXTERNAL, NOT-derived input (item 25/26's still-open \"gauge-orbit fluctuation Hessian\" machinery would be needed to derive them); this project's own contribution is recomputing the GROUP-THEORY half (`C₂(G_a)`, `ΣT_a(R)`) exactly from this repo's own already-fixed SU(3)×SU(2)×U(1) matter content and confirming the combination reproduces the real SM values `b3=7, b2=19/6, b1=−41/10` — `finite_diagnostic`, not a derivation of the weights themselves",
+        "use_tier_tags": [
+          "finite_diagnostic"
+        ]
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "GUT hypercharge normalization `T₁(R) = (3/5)Y²` (SU(5) embedding factor needed to compare U(1)_Y on the same Dynkin-index footing as SU(2)/SU(3))",
+        "owner": "H. Georgi & S. L. Glashow (SU(5) grand unification)",
+        "year": "1974",
+        "first_used_file": "`domains/standard_model/item25_exploration/beta_function_coefficients_v1.py`",
+        "use_text": "imported external normalization convention, plugged in directly, not derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Schutz's independent Minkowski axioms",
+        "owner": "J. W. Schutz",
+        "year": "1997",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Regge calculus",
+        "owner": "T. Regge",
+        "year": "1961",
+        "first_used_file": "`SUPPLEMENT.md` §novelty, `mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Causal set theory",
+        "owner": "L. Bombelli, J. Lee, D. Meyer, R. Sorkin",
+        "year": "1987",
+        "first_used_file": "`SUPPLEMENT.md` §novelty",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Wolfram hypergraph rewriting project",
+        "owner": "S. Wolfram",
+        "year": "2020",
+        "first_used_file": "`SUPPLEMENT.md` §novelty, `mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Tree-level Higgs quartic self-coupling relation `lambda = m_H^2/(2 v^2)` (from `V(H)=-mu^2 H^dag H + lambda (H^dag H)^2` minimized at `v`)",
+        "owner": "P. W. Higgs (mechanism, 1964); standard SM textbook identity (e.g. Peskin & Schroeder)",
+        "year": "1964",
+        "first_used_file": "`domains/standard_model/item18_exploration/higgs_quartic_DOCUMENTED_NON_RESULT_v1.py` (proven circular as a derivation of `m_H`); `domains/standard_model/item18_exploration/higgs_quartic_fit_calibrated_v1.py` (registered as an explicit `fit_calibrated` value, computed FROM measured `m_H=125.25` GeV, per `DRIFT_CONTRACT.json` DEV-SM-004)",
+        "use_text": "standard tree-level identity, cited not derived; used TWICE for two DIFFERENT, non-conflicting purposes — as the subject of a proven-tautology non-result, and separately as a legitimate open fit (same shape as item 21's Yukawa registration)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "QCD running coupling `alpha_s(M_Z)` (asymptotic freedom / one-loop-and-beyond running of the SU(3) gauge coupling)",
+        "owner": "D. Gross & F. Wilczek; H. D. Politzer (asymptotic freedom, 1973); PDG world-average measurement",
+        "year": "1973 (asymptotic freedom); PDG 2024 (measured value)",
+        "first_used_file": "`domains/standard_model/fit_calibrated_registry.py` (`ALPHA_S_MZ`); `domains/standard_model/item_gauge_couplings_fit_calibrated_v1.py`",
+        "use_text": "real measured PDG 2024 central value `alpha_s(M_Z)=0.1180` registered `fit_calibrated` (DRIFT_CONTRACT.json DEV-SM-004); no running/beta-function machinery is implemented, the value is used only as a point registration",
+        "use_tier_tags": [
+          "fit_calibrated"
+        ]
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "QCD vacuum angle `theta_QCD` and the strong CP problem (CP-violating term `theta (g^2/32 pi^2) G G-tilde` in the QCD Lagrangian; neutron EDM as the experimental probe)|G. 't Hooft (theta-vacuum structure, 1976); neutron EDM experimental collaborations (bound)|1976 (theta-vacuum); ongoing (EDM bound)",
+        "owner": "`domains/standard_model/fit_calibrated_registry.py` (`THETA_QCD_UPPER_BOUND`); `domains/standard_model/item_gauge_couplings_fit_calibrated_v1.py`",
+        "year": "registered as an experimental UPPER BOUND (`\\",
+        "first_used_file": "theta_QCD\\",
+        "use_text": "<~ 1e-10`, neutron EDM non-observation), explicitly NOT a central value; `fit_calibrated` per DRIFT_CONTRACT.json DEV-SM-004; the strong CP problem (why theta_QCD is this small) is stated as genuinely OPEN in real physics, not addressed by this repo",
+        "use_tier_tags": [
+          "fit_calibrated"
+        ]
+      },
+      {
+        "section": "Physics — quantum mechanics, relativity, gravity",
+        "equation": "Neutrino oscillation mass-squared splittings `Delta m^2_21`, `Delta m^2_31` (PMNS-driven flavor oscillation probability depends only on these differences, not absolute masses)",
+        "owner": "B. Pontecorvo (oscillation concept, 1957/1967); Z. Maki, M. Nakagawa, S. Sakata (mixing formalism, 1962); PDG/NuFIT global-fit collaborations (measured central values)",
+        "year": "1957/1962 (formalism); PDG/NuFIT 2024 (measured values)",
+        "first_used_file": "`domains/standard_model/fit_calibrated_registry.py` (`DELTA_M2_21_EV2`, `DELTA_M2_31_EV2`); `domains/standard_model/item23_exploration/neutrino_mass_fit_calibrated_v1.py`",
+        "use_text": "real measured global-fit central values registered `fit_calibrated` (DRIFT_CONTRACT.json DEV-SM-004), normal-ordering convention for `Delta m^2_31`; explicitly NOT an absolute mass value (none exists in real oscillation data) and NOT a seesaw-mechanism connection to `item23_majorana_lift_v1.py`'s Majorana-branch finding, which this file does not attempt",
+        "use_tier_tags": [
+          "fit_calibrated"
+        ]
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Clausius relation `δQ=TδS`",
+        "owner": "R. Clausius",
+        "year": "1865",
+        "first_used_file": "`InfoStrainTensorBridge_attempt.v` (`clausius_form`), `mass_note.tex` §holo",
+        "use_text": "mechanized as an iff, form of the relation only; T imported as a lens",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Bekenstein–Hawking area-entropy law",
+        "owner": "J. D. Bekenstein; S. W. Hawking",
+        "year": "1973 (Bekenstein); 1975 (Hawking)",
+        "first_used_file": "`InfoStrainTensorBridge_attempt.v` Ansatz H, `causal-quantum-gravity/paper/main.tex` §arealaw",
+        "use_text": "motivation for a disclosed ansatz; NOT mechanized as the physical bound itself",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Unruh temperature",
+        "owner": "W. G. Unruh",
+        "year": "1976",
+        "first_used_file": "`mass_note.tex` §holo (Tolman-Unruh-Hawking direction, unchecked)",
+        "use_text": "cited, direction-check explicitly NOT performed",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Jacobson's thermodynamic derivation of Einstein's equation",
+        "owner": "T. Jacobson",
+        "year": "1995",
+        "first_used_file": "`InfoStrainTensorBridge_attempt.v` header, `SUPPLEMENT.md` §5",
+        "use_text": "imported argument/conclusion, `[AX/import]`; this project supplies the premises as theorems, not his conclusion",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Verlinde's entropic gravity",
+        "owner": "E. Verlinde",
+        "year": "2011",
+        "first_used_file": "`SUPPLEMENT.md` §novelty, `mass_note.tex` §lit",
+        "use_text": "position/adjacent-work citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Sakharov induced gravity",
+        "owner": "A. D. Sakharov",
+        "year": "1968",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Susskind holographic principle",
+        "owner": "L. Susskind",
+        "year": "1995",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Maldacena AdS/CFT",
+        "owner": "J. Maldacena",
+        "year": "1997",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Ryu–Takayanagi entanglement=area",
+        "owner": "S. Ryu, T. Takayanagi",
+        "year": "2006",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Thermodynamics / horizons / holography",
+        "equation": "Van Raamsdonk: spacetime from entanglement",
+        "owner": "M. Van Raamsdonk",
+        "year": "2010",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Forman(-Ricci) combinatorial curvature",
+        "owner": "R. Forman",
+        "year": "2003",
+        "first_used_file": "`InfoDiscreteGraphCurvature.v`",
+        "use_text": "mechanized directly (this project's own `forman` definition follows Forman's formula)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Ollivier-Ricci curvature",
+        "owner": "Y. Ollivier",
+        "year": "2009",
+        "first_used_file": "`SUPPLEMENT.md` §open, `causal-quantum-gravity` Open Problem 3",
+        "use_text": "cited as the named open alternative; not mechanized",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Ricci curvature of graphs (Forman/Ollivier relation)",
+        "owner": "Y. Lin, L. Lu, S.-T. Yau",
+        "year": "2011",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "cited re: the Forman-Ollivier relationship",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Rayleigh quotient / theory of sound",
+        "owner": "Lord Rayleigh (J. W. Strutt)",
+        "year": "1877",
+        "first_used_file": "`InfoSpectralCeiling_attempt.v`",
+        "use_text": "mechanized (the ceiling theorems are a discrete, Q-only Rayleigh-quotient argument)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Anderson–Morley eigenvalue bound `λ_max≤max(deg u+deg v)`",
+        "owner": "W. N. Anderson, T. D. Morley",
+        "year": "1985",
+        "first_used_file": "planned: `InfoAndersonMorleyCeiling_attempt.v` (not yet written as of this entry)",
+        "use_text": "to be mechanized (sharp ceiling upgrade)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Algebraic connectivity / Fiedler value",
+        "owner": "M. Fiedler",
+        "year": "1973",
+        "first_used_file": "`mass_note.tex` §lit (cited only, not yet mechanized)",
+        "use_text": "cited; a mechanization was debated (advocate/skeptic review, 2026-07-05) and the physics-naming framing (\"mass gap\") was rejected — see `LOGBOOK.md`",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Diameter-based algebraic-connectivity floor `λ₂≥4/(nD)`",
+        "owner": "B. Mohar",
+        "year": "1991",
+        "first_used_file": "(debated, not yet used in any file)",
+        "use_text": "identified as the Q-only route to a genuine Fiedler floor, if pursued — needs a new path-system primitive not yet built",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Spectral graph theory (survey)",
+        "owner": "F. R. K. Chung",
+        "year": "1997",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Can one hear the shape of a drum?",
+        "owner": "M. Kac",
+        "year": "1966",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Graph Laplacian → Laplace–Beltrami convergence",
+        "owner": "D. Burago, S. Ivanov, Y. Kurylev",
+        "year": "2014",
+        "first_used_file": "`causal-quantum-gravity/paper/main.tex` §nd, Open Problem 1",
+        "use_text": "cited as the imported general-metric case, not mechanized here",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Discrete curvature / spectral graph theory",
+        "equation": "Crystallographic restriction theorem (only n-fold rotational symmetries with n in {1,2,3,4,6} are compatible with a lattice; equivalently trace = 2cos(2πk/n) ∈ Q ⟹ n ∈ {1,2,3,4,6})",
+        "owner": "classical (long history in crystallography/group theory; no single named inventor — Coxeter-groups lineage)",
+        "year": "classical",
+        "first_used_file": "`InfoModeRotation_attempt.v` (cited only); `InfoReadabilityBoundary_attempt.v` (period-5 non-example mechanized as one instance)",
+        "use_text": "cited PT(lit), NOT mechanized in general form; `InfoReadabilityBoundary_attempt.v` mechanizes ONE consequence (no rational stepper parameter satisfies the period-5 5th-iterate condition) as a Q-only, axiom-free Th_coqc instance, not the general theorem",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Euler–Lagrange first variation",
+        "owner": "L. Euler; J.-L. Lagrange",
+        "year": "1744 (Euler); 1788 (Lagrange)",
+        "first_used_file": "`InfoActionStationarity.v` (`mother_step_stationary`)",
+        "use_text": "mechanized instance (this project's own double-stationarity theorem is in this lineage)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Noether's theorem",
+        "owner": "E. Noether",
+        "year": "1918",
+        "first_used_file": "`InfoGraphNoether.v`",
+        "use_text": "mechanized instance (discrete automorphism → conserved quantity)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Courant–Friedrichs–Lewy stability condition",
+        "owner": "R. Courant, K. Friedrichs, H. Lewy",
+        "year": "1928",
+        "first_used_file": "`InfoSpectralCeiling_attempt.v` (`step_ratio_window`)",
+        "use_text": "mechanized as the discrete stability window",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Green's identity",
+        "owner": "G. Green",
+        "year": "1828",
+        "first_used_file": "`InfoGraphFluxBalance.v`",
+        "use_text": "mechanized discrete analogue",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Gauss–Ostrogradsky divergence theorem",
+        "owner": "M. Ostrogradsky",
+        "year": "1831",
+        "first_used_file": "`InfoGraphFluxBalance.v`",
+        "use_text": "mechanized discrete analogue",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Störmer–Verlet leapfrog integrator",
+        "owner": "C. Störmer; L. Verlet",
+        "year": "1907 (Störmer); 1967 (Verlet)",
+        "first_used_file": "`InfoActionStationarity.v` (the mother-step recurrence)",
+        "use_text": "this project's own recurrence is proved to be exactly this integrator, mechanized",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Marsden–West discrete mechanics",
+        "owner": "J. E. Marsden, M. West",
+        "year": "2001",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation (closest classical ancestor of the double-stationarity file)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Lax–Richtmyer stability equivalence",
+        "owner": "P. D. Lax, R. D. Richtmyer",
+        "year": "1956",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Polyak's heavy-ball momentum method",
+        "owner": "B. T. Polyak",
+        "year": "1964",
+        "first_used_file": "`InfoOptimizerWindow_attempt.v`; also `InfoAgencyOptimizationRootCoupling_attempt.v` (PR #48)",
+        "use_text": "mechanized identity (exact reparametrization to the mother recurrence)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Nesterov's accelerated gradient method",
+        "owner": "Y. Nesterov",
+        "year": "1983",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "ODE model of Nesterov's method",
+        "owner": "W. Su, S. Boyd, E. J. Candès",
+        "year": "2014",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Integral quadratic constraints for optimizer analysis",
+        "owner": "L. Lessard, B. Recht, A. Packard",
+        "year": "2016",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Onsager reciprocity relations (symmetric linear-response/susceptibility when circulation vanishes)",
+        "owner": "L. Onsager",
+        "year": "1931",
+        "first_used_file": "`domains/standard_model/four_force_circulation_v0_2.py`; `formal/InfoFourForceCirculationRecovery_attempt.v`",
+        "use_text": "baseline/lineage: the `Ω=0` failing control recovers the symmetric (reciprocal) susceptibility `χ=χᵀ` = Onsager's relations; the nonreciprocal identity `χ−χᵀ=−2χᵀΩχ` and the exact circulation-recovery scheme are this project's own finite construction on a `[SimulatedData]` fixture (decoder labels, not calibrated forces)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Discrete cosine transform (DCT-II) diagonalization of the free/Neumann path-graph Laplacian",
+        "owner": "G. Strang",
+        "year": "1999 (\"The Discrete Cosine Transform\", SIAM Review)",
+        "first_used_file": "`engine/graph_structure.py` (`path_heat_apply`)",
+        "use_text": "mechanized-numeric route: exact fast-transform diagonalization of exp(-tL), no eigensolve",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Discrete sine transform (DST) diagonalization of the pinned/Dirichlet path-graph Laplacian",
+        "owner": "G. Strang",
+        "year": "1999 (\"The Discrete Cosine Transform\", SIAM Review)",
+        "first_used_file": "`engine/graph_structure.py` (registered here; Dirichlet/pinned-boundary route out of scope for this branch — no `pins` support)",
+        "use_text": "registered for future use, not yet implemented in this branch",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Chebyshev polynomial expansion of a matrix exponential (modified-Bessel coefficients)",
+        "owner": "H. Tal-Ezer, R. Kosloff",
+        "year": "1984",
+        "first_used_file": "`engine/spectral_routes.py` (`ChebyshevHeatCache`)",
+        "use_text": "mechanized-numeric route: cached-spectral-interval Chebyshev/Bessel expansion of exp(-tL)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Lanczos/Krylov-subspace approximation of matrix functions",
+        "owner": "Y. Saad",
+        "year": "1992",
+        "first_used_file": "`engine/spectral_routes.py` (`lanczos_expm_action`)",
+        "use_text": "mechanized-numeric route: adaptive-dimension Krylov approximation of exp(-tL)x",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "`expm_multiply` scaling-and-squaring / Krylov baseline algorithm",
+        "owner": "A. H. Al-Mohy, N. J. Higham",
+        "year": "2011",
+        "first_used_file": "`engine/router.py` (baseline route, `scipy.sparse.linalg.expm_multiply`)",
+        "use_text": "external baseline, cited/compared against, not re-derived",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Variational structure / numerical methods",
+        "equation": "Regular-polygon planar central configuration (equal masses, rigid rotation)",
+        "owner": "J. C. Maxwell; F. R. Moulton",
+        "year": "1859 (Maxwell); 1910 (Moulton)",
+        "first_used_file": "`engine/router.py` (`_regular_polygon_central_configuration`)",
+        "use_text": "closed-form exact dispatch, force-balance residual verified at runtime",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Statistics / estimation theory",
+        "equation": "Errors-in-variables (EIV) attenuation: `M_hat_OLS/M_true ≈ Var(a_true)/(Var(a_true)+Var(noise))`, method-of-moments correction by subtracting known noise variance from the observed regressor second moment",
+        "owner": "C. Spearman (1904 attenuation correction); classical measurement-error-model lineage (W. A. Fuller, *Measurement Error Models*, 1987)",
+        "year": "1904 / 1987",
+        "first_used_file": "`domains/standard_model/item1_exploration/retained_transition_meter/bias_diagnosis_v1.py`; `eiv_corrected_fit_v1.py`; `retained_transition_operational_closure/operational_exchange_estimator_v0_1.py` (`fit_moment_corrected`)",
+        "use_text": "diagnosed and confirmed (not assumed) as the real bias mechanism behind naive scalar-OLS fits of the DRL exchange coefficient `M_n` on a noisy synthetic Reader/Record tape; the correction formula is the standard textbook fix, applied here with a project-specific fail-closed noise-floor gate (own construction)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Statistics / estimation theory",
+        "equation": "Instrumental-variable (IV) estimation via two independent noisy replicate measurements of the same latent regressor, `M_hat = (a1·y2+a2·y1)/(2·a1·a2)`",
+        "owner": "classical IV lineage (P. G. Wright, 1928, path-analysis/IV origin; O. Reiersøl, 1950, IV for errors-in-variables specifically)",
+        "year": "1928 / 1950",
+        "first_used_file": "`domains/standard_model/item1_exploration/retained_transition_operational_closure/operational_exchange_estimator_v0_1.py` (`fit_replicate_iv`)",
+        "use_text": "standard replicate-IV consistency argument (cross-products cancel additive regressor noise in expectation, verified independently re-derived from first principles in adversarial review, 2026-07-25); combined with this project's own Reader/Record cross-channel agreement gate (own construction, not from the cited lineage) to decide `CALIBRATED_READY` vs `UNRESOLVED`",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Black-hole perturbation theory / numerics",
+        "equation": "Regge–Wheeler equation",
+        "owner": "T. Regge, J. A. Wheeler",
+        "year": "1957",
+        "first_used_file": "`InfoQuantumGravityRootBridge_attempt.v`, `scripts/verify_quantum_gravity_root_bridge.py`",
+        "use_text": "imported potential, discretized with this project's own `L_R` machinery",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Black-hole perturbation theory / numerics",
+        "equation": "Quasinormal-mode analytic representation",
+        "owner": "E. Leaver",
+        "year": "1985",
+        "first_used_file": "`SUPPLEMENT.md` §6",
+        "use_text": "literature target value, comparison only",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Black-hole perturbation theory / numerics",
+        "equation": "QNM review (literature target values)",
+        "owner": "E. Berti, V. Cardoso, A. O. Starinets",
+        "year": "2009",
+        "first_used_file": "`SUPPLEMENT.md` §6",
+        "use_text": "literature target value, comparison only",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Black-hole perturbation theory / numerics",
+        "equation": "Hyperboloidal-slicing method",
+        "owner": "A. Zenginoğlu",
+        "year": "2011",
+        "first_used_file": "`SUPPLEMENT.md` §5.2 (attempt 6-7)",
+        "use_text": "method attempted (partially, per the negative-results log)",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Black-hole perturbation theory / numerics",
+        "equation": "Perfectly Matched Layer absorbing boundary",
+        "owner": "J.-P. Berenger",
+        "year": "1994",
+        "first_used_file": "`SUPPLEMENT.md` §5.2 (attempt 8), `scripts/verify_quantum_gravity_root_bridge.py`",
+        "use_text": "method used, genuine convergence achieved",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Information theory / it-from-bit lineage",
+        "equation": "A mathematical theory of communication",
+        "owner": "C. E. Shannon",
+        "year": "1948",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Information theory / it-from-bit lineage",
+        "equation": "Szilárd's information-work engine",
+        "owner": "L. Szilárd",
+        "year": "1929",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Information theory / it-from-bit lineage",
+        "equation": "Landauer's erasure principle",
+        "owner": "R. Landauer",
+        "year": "1961",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Information theory / it-from-bit lineage",
+        "equation": "It from bit",
+        "owner": "J. A. Wheeler",
+        "year": "1990",
+        "first_used_file": "`mass_note.tex` §reading (Reading 1-4); proposed staircase \"step 0\" (2026-07-05, not yet mechanized)",
+        "use_text": "interpretive identification, `[Dr]`",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Information theory / it-from-bit lineage",
+        "equation": "Stinespring dilation",
+        "owner": "W. F. Stinespring",
+        "year": "1955",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Information theory / it-from-bit lineage",
+        "equation": "Completely positive maps",
+        "owner": "M.-D. Choi",
+        "year": "1975",
+        "first_used_file": "`mass_note.tex` §lit",
+        "use_text": "position/lineage citation",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Information theory / it-from-bit lineage",
+        "equation": "States, Effects, and Operations (Kraus)",
+        "owner": "K. Kraus",
+        "year": "1983",
+        "first_used_file": "`mass_note.tex` §lit, `URCF_RD_All.v` (`kraus_completeness`)",
+        "use_text": "mechanized at the Tier-0 root of the companion kernel",
+        "use_tier_tags": []
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Kepler's third law `T^2 = 4 pi^2 a^3/(G M)`",
+        "owner": "J. Kepler (harmonic law); I. Newton (dynamical `GM` form)",
+        "year": "1619 (Kepler); 1687 (Newton)",
+        "first_used_file": "`engine/formulas.py` (`kepler_third_law`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Bernoulli's equation (steady incompressible streamline energy balance)",
+        "owner": "D. Bernoulli",
+        "year": "1738",
+        "first_used_file": "`engine/formulas.py` (`bernoulli_pressure`)",
+        "use_text": "numeric closure solved for `p2`, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Continuity equation `A1 v1 = A2 v2` (incompressible 1D duct form)",
+        "owner": "standard fluid mechanics (mass-conservation kinematics; textbook form, no single owner)",
+        "year": "18th c. onward",
+        "first_used_file": "`engine/formulas.py` (`continuity_flow`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "2D truss method of joints (joint-equilibrium linear system, `m+r=2j` determinacy count)",
+        "owner": "classical statics (textbook method, no single owner; standard refs e.g. Hibbeler, *Engineering Mechanics: Statics*)",
+        "year": "19th c. onward",
+        "first_used_file": "`engine/systems.py` (`solve_truss`)",
+        "use_text": "assembled + solved numerically, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Euler–Bernoulli beam theory",
+        "owner": "L. Euler; Jacob & Daniel Bernoulli",
+        "year": "18th c. (c. 1750)",
+        "first_used_file": "`engine/systems.py` (`solve_beam_fem`)",
+        "use_text": "governing model for the beam element, numeric FEM solve, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Cubic-Hermite beam FEM element (4-DOF stiffness matrix, consistent UDL fixed-end forces; exact nodal values for point/uniform loads)",
+        "owner": "standard FEM texts (element form per Timoshenko & Gere lineage; e.g. Cook et al., *Concepts and Applications of Finite Element Analysis*)",
+        "year": "20th c. (1950s-60s FEM)",
+        "first_used_file": "`engine/systems.py` (`_beam_element_k`)",
+        "use_text": "imported element matrices, assembled + solved numerically, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "1D axial-bar FEM element (`k_e = EA/L` two-node element)",
+        "owner": "standard FEM texts (same lineage as above)",
+        "year": "20th c.",
+        "first_used_file": "`engine/systems.py` (`solve_bar_fem`)",
+        "use_text": "imported element form, assembled + solved numerically, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Modal analysis closed forms for uniform spring-mass chains, `omega_n^2 = (2k/m)(1-cos(n pi/(N+1)))`, and the generalized eigenproblem `K phi = omega^2 M phi`",
+        "owner": "S. S. Rao, *Mechanical Vibrations* (textbook closed form; eigenproblem is classical structural dynamics)",
+        "year": "textbook (Rao 1st ed. 1986)",
+        "first_used_file": "`engine/systems.py` (`solve_modal`), `tests/test_systems.py` (chain closed form as test oracle)",
+        "use_text": "eigenproblem solved numerically via `scipy.linalg.eigh(K,M)`, closed form used only as an independent test oracle, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "1D Ising model + transfer-matrix exact solution (`f = -kT ln lambda_+`, `xi = -1/ln tanh(beta J)` at `h=0`)",
+        "owner": "E. Ising (model, 1D solution); H. A. Kramers & G. H. Wannier (transfer matrix)",
+        "year": "1925 (Ising); 1941 (Kramers–Wannier)",
+        "first_used_file": "`engine/systems.py` (`solve_ising_1d`)",
+        "use_text": "exact closed forms evaluated numerically, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "2D square-lattice Ising critical temperature `T_c = 2J/(k_B ln(1+sqrt 2))`",
+        "owner": "L. Onsager",
+        "year": "1944",
+        "first_used_file": "`engine/systems.py` (`ising_2d_onsager_Tc`)",
+        "use_text": "closed-form constant evaluated numerically, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "1D Ising real-space decimation RG, `K' = (1/2) ln cosh(2K)` (b=2 block-spin)",
+        "owner": "L. P. Kadanoff (block-spin RG); textbook form per N. Goldenfeld, *Lectures on Phase Transitions and the Renormalization Group*, Ch. 5.2",
+        "year": "1966 (Kadanoff); 1992 (Goldenfeld)",
+        "first_used_file": "`engine/systems.py` (`solve_ising_rg`)",
+        "use_text": "exact recursion iterated numerically, fixed points reported, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "SUVAT kinematics equations (`v=u+at`, `s=ut+½at²`, `v²=u²+2as`)",
+        "owner": "classical (Galileo's uniformly-accelerated-motion kinematics; textbook form, no single owner)",
+        "year": "17th c. onward",
+        "first_used_file": "`engine/formulas.py` (`suvat_final_velocity`, `suvat_displacement`, `suvat_velocity_from_displacement`, `suvat_average_velocity`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Hooke's law `F=kx` and spring elastic PE `½kx²`",
+        "owner": "R. Hooke",
+        "year": "1678",
+        "first_used_file": "`engine/formulas.py` (`hooke_spring_force`, `spring_elastic_pe`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Simple-pendulum and mass-spring SHM period (`T=2π√(L/g)`, `T=2π√(m/k)`) and closed-form SHM motion (`x=A cos(ωt+φ)`)",
+        "owner": "C. Huygens (pendulum period); classical SHM (textbook form)",
+        "year": "1673 (Huygens)",
+        "first_used_file": "`engine/formulas.py` (`shm_period_pendulum`, `shm_period_spring`, `shm_position`, `shm_max_velocity`, `shm_max_acceleration`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Snell's law of refraction `n1 sin θ1 = n2 sin θ2` and total-internal-reflection critical angle",
+        "owner": "W. Snell (attrib.; also Ibn Sahl, R. Descartes)",
+        "year": "c. 984 (Ibn Sahl); c. 1621 (Snell)",
+        "first_used_file": "`engine/formulas.py` (`snell_refraction_angle`, `critical_angle`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Young's double-slit interference fringe spacing `Δy=λL/d`",
+        "owner": "T. Young",
+        "year": "1801",
+        "first_used_file": "`engine/formulas.py` (`double_slit_fringe_spacing`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Diffraction grating equation `d sinθ = mλ`",
+        "owner": "J. Fraunhofer",
+        "year": "1821",
+        "first_used_file": "`engine/formulas.py` (`diffraction_grating_angle`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Malus's law `I=I0 cos²θ`",
+        "owner": "É.-L. Malus",
+        "year": "1809",
+        "first_used_file": "`engine/formulas.py` (`malus_law`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Radioactive decay law `N=N0 e^{-λt}` and half-life `t½=ln2/λ`",
+        "owner": "E. Rutherford, F. Soddy",
+        "year": "1902",
+        "first_used_file": "`engine/formulas.py` (`radioactive_decay_N`, `half_life_from_decay_constant`, `decay_constant_from_half_life`, `activity`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Bohr model hydrogen energy levels `E_n=-13.6056931/n² eV` (full-precision CODATA 2018 Rydberg energy)",
+        "owner": "N. Bohr",
+        "year": "1913",
+        "first_used_file": "`engine/formulas.py` (`bohr_energy_level`, `bohr_transition_wavelength`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Planck-Einstein photon energy relation `E=hf=hc/λ`",
+        "owner": "M. Planck; A. Einstein",
+        "year": "1900 (Planck); 1905 (Einstein)",
+        "first_used_file": "`engine/formulas.py` (`photon_energy_freq`, `photon_energy_wavelength`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Mass-energy equivalence `E=mc²`",
+        "owner": "A. Einstein",
+        "year": "1905",
+        "first_used_file": "`engine/formulas.py` (`rest_mass_energy`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Fourier's law of heat conduction `Q/t=kAΔT/L`",
+        "owner": "J. B. J. Fourier",
+        "year": "1822",
+        "first_used_file": "`engine/formulas.py` (`conduction_heat_rate`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Newton's law of cooling (convective form) `Q/t=hAΔT`",
+        "owner": "I. Newton",
+        "year": "1701",
+        "first_used_file": "`engine/formulas.py` (`convection_heat_rate`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Stefan-Boltzmann law `P=εσAT⁴`",
+        "owner": "J. Stefan (empirical law); L. Boltzmann (thermodynamic derivation)",
+        "year": "1879 (Stefan); 1884 (Boltzmann)",
+        "first_used_file": "`engine/formulas.py` (`radiation_heat_rate`)",
+        "use_text": "numeric closure, `textbook_closure` (σ already registered in `CONSTANTS`)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Carnot heat-engine efficiency `η=1-Tc/Th`",
+        "owner": "S. Carnot",
+        "year": "1824",
+        "first_used_file": "`engine/formulas.py` (`carnot_efficiency`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Linear thermal expansion `ΔL=αL0ΔT`",
+        "owner": "classical (empirical materials relation, no single owner)",
+        "year": "18th c. onward",
+        "first_used_file": "`engine/formulas.py` (`thermal_expansion`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Force on a current-carrying wire `F=BIL`",
+        "owner": "A.-M. Ampère; H. A. Lorentz (general force law)",
+        "year": "1820 (Ampère)",
+        "first_used_file": "`engine/formulas.py` (`force_on_wire`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Solenoid magnetic field `B=μ0nI` and straight-wire field `B=μ0I/(2πr)` (Ampère's law special cases)",
+        "owner": "A.-M. Ampère",
+        "year": "1826",
+        "first_used_file": "`engine/formulas.py` (`solenoid_field`, `straight_wire_field`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Faraday's law of induction `EMF=-NΔΦ/Δt` and the motional-EMF special case `EMF=BLv`",
+        "owner": "M. Faraday",
+        "year": "1831",
+        "first_used_file": "`engine/formulas.py` (`faraday_emf`, `motional_emf`)",
+        "use_text": "numeric closures, `textbook_closure` (finite-difference form)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Coulomb's law potential of a point charge `V=kq/r`, uniform-field relation `E=V/d`, and capacitor relations (`Q=CV`, `C=ε0A/d`, `E=½CV²`, series/parallel capacitance)",
+        "owner": "C.-A. de Coulomb; A. Volta (capacitance concept)",
+        "year": "1785 (Coulomb)",
+        "first_used_file": "`engine/formulas.py` (`electric_potential_point_charge`, `parallel_plate_field`, `capacitor_charge`, `parallel_plate_capacitance`, `capacitor_energy`, `series_capacitance`, `parallel_capacitance`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Real-source terminal voltage with internal resistance `V=ε-Ir`",
+        "owner": "G. S. Ohm (Ohm's law lineage)",
+        "year": "1827",
+        "first_used_file": "`engine/formulas.py` (`terminal_voltage_internal_resistance`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Rotational dynamics: `τ=Iα`, `L=Iω`, `KE=½Iω²`, and standard moment-of-inertia forms (rod, disc, sphere, hoop)",
+        "owner": "I. Newton (rotational analogue); L. Euler (rigid-body dynamics)",
+        "year": "1687 (Newton); 18th c. (Euler)",
+        "first_used_file": "`engine/formulas.py` (`torque_inertia`, `angular_momentum`, `rotational_ke`, `moi_rod_center`, `moi_disc`, `moi_sphere_solid`, `moi_hoop`, `rolling_no_slip_velocity`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Coulomb friction model `f=μN`, incline force components, Atwood machine acceleration, Pascal's principle hydraulic press",
+        "owner": "C.-A. de Coulomb (friction); B. Pascal (hydrostatic pressure principle)",
+        "year": "1785 (Coulomb friction); 1653 (Pascal)",
+        "first_used_file": "`engine/formulas.py` (`friction_force`, `incline_gravity_component`, `incline_normal_force`, `atwood_acceleration`, `pascal_hydraulic_press`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Torsion of circular shafts: shear stress `τ=Tr/J`, angle of twist `θ=TL/GJ`, polar moment of a solid/hollow circular section",
+        "owner": "classical mechanics of materials (Coulomb's torsion theory; textbook form, no single owner; standard refs e.g. Gere & Goodno, *Mechanics of Materials*)",
+        "year": "1784 (Coulomb's torsion balance) onward",
+        "first_used_file": "`engine/formulas.py` (`shear_stress_torsion`, `twist_angle_torsion`, `polar_moment_solid_shaft`, `polar_moment_hollow_shaft`)",
+        "use_text": "numeric closures, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Fast Fourier Transform (Cooley–Tukey algorithm; used here via `numpy.fft.rfft`)",
+        "owner": "J. W. Cooley & J. W. Tukey (algorithm; Gauss 1805 unpublished precedent)",
+        "year": "1965",
+        "first_used_file": "`engine/systems.py` (`signal_spectrum`)",
+        "use_text": "user-supplied signal's DFT computed numerically (`numpy.fft.rfft`), one-sided amplitude/PSD derived from it, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Periodogram / power spectral density estimation (one-sided PSD scaling used here follows the periodogram lineage; Hann window per J. von Hann, popularized by Blackman & Tukey)",
+        "owner": "A. Schuster (periodogram); P. Welch (averaged/windowed periodogram formalization); J. von Hann (window)",
+        "year": "1898 (Schuster); 1967 (Welch); 19th c. (Hann window)",
+        "first_used_file": "`engine/systems.py` (`signal_spectrum`)",
+        "use_text": "one-sided PSD computed numerically from the FFT with standard periodogram scaling; optional periodic-Hann taper, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Total harmonic distortion (THD, ratio of harmonic to fundamental amplitude)",
+        "owner": "standard electrical engineering / signal processing definition, no single owner",
+        "year": "20th c.",
+        "first_used_file": "`engine/systems.py` (`signal_spectrum`)",
+        "use_text": "numeric ratio computed from the amplitude spectrum, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Fokker–Planck equation (and its overdamped/Smoluchowski stationary limit `p(x) ∝ exp(-V(x)/D)`)",
+        "owner": "A. D. Fokker; M. Planck",
+        "year": "1914 (Fokker); 1917 (Planck)",
+        "first_used_file": "`engine/systems.py` (`fokker_planck_1d`)",
+        "use_text": "stationary solution evaluated numerically on a grid, normalized by trapezoidal integration, with a finite-difference (operator-aware) residual check, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Boltzmann distribution `p ∝ exp(-E/k_B T)`",
+        "owner": "L. Boltzmann",
+        "year": "1868 (H-theorem precursor); 1877 (combinatorial entropy form)",
+        "first_used_file": "`engine/systems.py` (`fokker_planck_1d`)",
+        "use_text": "the stationary-distribution closed form this solver evaluates numerically, `textbook_system`",
+        "use_tier_tags": [
+          "textbook_system"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Hydrogen fine-structure energy shift `dE_fs = -(Ry alpha^2/n^4)(n/(j+1/2) - 3/4)` (relativistic kinetic + spin-orbit, combined first-order result)",
+        "owner": "P. A. M. Dirac (relativistic origin); textbook form per D. J. Griffiths, *Introduction to Quantum Mechanics*",
+        "year": "1928 (Dirac); textbook (Griffiths 2nd/3rd ed., §6.3-6.4)",
+        "first_used_file": "`engine/formulas.py` (`hydrogen_fine_structure_shift`, PhD curriculum audit 2026-07-10)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Normal Zeeman effect `dE = m_l mu_B B`",
+        "owner": "P. Zeeman (effect, 1896); H. A. Lorentz (classical theory)",
+        "year": "1896 (Zeeman); 1897 (Lorentz theory)",
+        "first_used_file": "`engine/formulas.py` (`zeeman_splitting_normal`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Rutherford differential scattering cross section `dsigma/dOmega = (Z1 Z2 k_e e^2/4E)^2 / sin^4(theta/2)`",
+        "owner": "E. Rutherford",
+        "year": "1911",
+        "first_used_file": "`engine/formulas.py` (`rutherford_cross_section`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Fermi-Dirac distribution",
+        "owner": "E. Fermi; P. A. M. Dirac",
+        "year": "1926",
+        "first_used_file": "`engine/formulas.py` (`fermi_dirac_occupation`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Bose-Einstein distribution",
+        "owner": "S. N. Bose; A. Einstein",
+        "year": "1924 (Bose); 1924-25 (Einstein)",
+        "first_used_file": "`engine/formulas.py` (`bose_einstein_occupation`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Quantum harmonic oscillator canonical partition function `Z = 1/(2 sinh(hbar omega/2 k_B T))`",
+        "owner": "textbook statistical mechanics (e.g. K. Huang, *Statistical Mechanics*, or C. Kittel, *Thermal Physics*)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`qho_partition_function`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Planck's law of blackbody spectral radiance `B(lambda,T)`",
+        "owner": "M. Planck",
+        "year": "1900",
+        "first_used_file": "`engine/formulas.py` (`planck_spectral_radiance`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Rectangular waveguide TE_mn cutoff frequency",
+        "owner": "Lord Rayleigh (waveguide theory origin); textbook form per D. M. Pozar, *Microwave Engineering*",
+        "year": "1897 (Rayleigh); textbook (Pozar)",
+        "first_used_file": "`engine/formulas.py` (`waveguide_te_cutoff_frequency`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Oscillating electric dipole radiated power `P = p0^2 omega^4/(12 pi eps0 c^3)`",
+        "owner": "textbook electrodynamics (e.g. D. J. Griffiths, *Introduction to Electrodynamics*, eq. 11.22)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`dipole_radiation_power`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Relativistic Doppler shift (radial) `f_obs = f_source sqrt((1-beta)/(1+beta))`",
+        "owner": "A. Einstein",
+        "year": "1905",
+        "first_used_file": "`engine/formulas.py` (`relativistic_doppler_shift`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Vis-viva equation `v^2 = GM(2/r - 1/a)`",
+        "owner": "I. Newton (gravitation); textbook orbital mechanics (e.g. D. A. Vallado, *Fundamentals of Astrodynamics and Applications*)",
+        "year": "1687 (Newton); textbook (Vallado)",
+        "first_used_file": "`engine/formulas.py` (`vis_viva_orbital_speed`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "General-relativistic perihelion/apsidal precession `d_phi = 6 pi G M/(c^2 a (1-e^2))`",
+        "owner": "A. Einstein",
+        "year": "1915",
+        "first_used_file": "`engine/formulas.py` (`gr_perihelion_precession`)",
+        "use_text": "numeric closure, `textbook_closure`; cross-checked against the historically famous Mercury value 42.98 arcsec/century (`docs/audit/PHD_CURRICULUM_AUDIT.md`)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Schwarzschild radius `r_s = 2GM/c^2`",
+        "owner": "K. Schwarzschild",
+        "year": "1916",
+        "first_used_file": "`engine/formulas.py` (`schwarzschild_radius`)",
+        "use_text": "numeric closure, `textbook_closure` (note: `InfoAnalysisLift.v` already imports the Schwarzschild metric itself as a `Definition`; this is an independent, undecorated numeric evaluation of the horizon-radius formula, same source equation)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Schwarzschild static-observer gravitational time dilation `d_tau/dt = sqrt(1-r_s/r)`",
+        "owner": "K. Schwarzschild",
+        "year": "1916",
+        "first_used_file": "`engine/formulas.py` (`gravitational_time_dilation`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Debye model heat capacity, low-temperature `T^3` limit `C_V = (12 pi^4/5) N k_B (T/theta_D)^3`",
+        "owner": "P. Debye",
+        "year": "1912",
+        "first_used_file": "`engine/formulas.py` (`debye_heat_capacity_low_T`)",
+        "use_text": "numeric closure, `textbook_closure`; test uses silver's tabulated Debye temperature theta_D=225 K (C. Kittel, *Introduction to Solid State Physics*, Table 1)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Resonance quality factor from damping ratio `Q = 1/(2 zeta)`",
+        "owner": "classical vibration theory (textbook form, e.g. J. P. Den Hartog, *Mechanical Vibrations*)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`quality_factor_from_zeta`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Ziegler-Nichols closed-loop PID tuning rule (`Kp=0.6 K_u`, `Ti=0.5 P_u`, `Td=0.125 P_u`)",
+        "owner": "J. G. Ziegler, N. B. Nichols",
+        "year": "1942",
+        "first_used_file": "`engine/formulas.py` (`ziegler_nichols_pid`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Hagen-Poiseuille equation `Q = pi r^4 dP/(8 mu L)`",
+        "owner": "G. Hagen; J. L. M. Poiseuille",
+        "year": "1839 (Hagen); 1840-41 (Poiseuille)",
+        "first_used_file": "`engine/formulas.py` (`hagen_poiseuille_flow`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Textbook calculator layers (`engine.formulas` / `engine.systems` — tier `textbook_closure` / `textbook_system`)",
+        "equation": "Blasius laminar flat-plate boundary layer similarity solution (`delta_99≈5.0x/sqrt(Re_x)`, `Cf_x=0.664/sqrt(Re_x)`)",
+        "owner": "H. Blasius",
+        "year": "1908",
+        "first_used_file": "`engine/formulas.py` (`blasius_boundary_layer`)",
+        "use_text": "numeric closure using the standard tabulated similarity-solution constants (e.g. F. M. White, *Viscous Fluid Flow*), `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Amount of substance `n = m/M` (using IUPAC atomic-weight molar masses)",
+        "owner": "IUPAC Commission on Isotopic Abundances and Atomic Weights (atomic-weight table); stoichiometric definition",
+        "year": "2021 (IUPAC table edition)",
+        "first_used_file": "`engine/formulas.py` (`moles_from_mass`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Percent composition by mass `%X = n_X M_X/M_compound * 100`",
+        "owner": "stoichiometric definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`percent_composition_by_mass`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Mass-mass stoichiometry from a balanced equation",
+        "owner": "balanced-equation stoichiometry (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`stoichiometry_mass_mass`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Molarity `c = n/V`",
+        "owner": "definitional (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`molarity`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Dilution `C1 V1 = C2 V2`",
+        "owner": "definitional (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`dilution`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "pH scale `pH = -log10([H+])`",
+        "owner": "S. P. L. Sørensen",
+        "year": "1909",
+        "first_used_file": "`engine/formulas.py` (`ph_strong_acid`, `ph_weak_acid`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Limiting-reagent product yield (compare `n_i/coeff_i`, take the minimum)",
+        "owner": "stoichiometric definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`limiting_reagent_product_moles`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Empirical-formula mole ratio from percent composition",
+        "owner": "stoichiometric definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`empirical_formula_ratio`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Molecular-formula multiplier `k = M_molecular/M_empirical`",
+        "owner": "stoichiometric definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`molecular_formula_multiplier`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Graham's law of effusion `rate1/rate2 = sqrt(M2/M1)`",
+        "owner": "T. Graham",
+        "year": "1848",
+        "first_used_file": "`engine/formulas.py` (`grahams_law_effusion_ratio`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Hess's law of constant heat summation",
+        "owner": "G. H. Hess",
+        "year": "1840",
+        "first_used_file": "`engine/formulas.py` (`hess_law_sum`)",
+        "use_text": "numeric closure, `textbook_closure`; list-valued single closure (signed step enthalpies), bespoke dispatch in `solve()`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Reaction enthalpy from average bond dissociation energies `dH = sum(broken) - sum(formed)`",
+        "owner": "textbook bond-energy tabulation (e.g. P. Atkins, *Physical Chemistry*)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`bond_energy_reaction_enthalpy`)",
+        "use_text": "numeric closure, `textbook_closure`; list-valued (two lists), bespoke dispatch in `solve()`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Law of mass action / equilibrium constant `Kc = [B]/[A]`, ICE-table solution",
+        "owner": "C. M. Guldberg, P. Waage",
+        "year": "1864",
+        "first_used_file": "`engine/formulas.py` (`equilibrium_kc_ice`, `le_chatelier_new_equilibrium`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Le Chatelier's principle (quantitative re-equilibration)",
+        "owner": "H. Le Chatelier",
+        "year": "1884",
+        "first_used_file": "`engine/formulas.py` (`le_chatelier_new_equilibrium`)",
+        "use_text": "numeric closure, `textbook_closure`; reuses the `equilibrium_kc_ice` closed form on the perturbed total",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Henderson-Hasselbalch equation `pH = pKa + log10([A-]/[HA])`",
+        "owner": "L. J. Henderson (1908, empirical buffer relation); K. A. Hasselbalch (1917, log form)",
+        "year": "1908 (Henderson); 1917 (Hasselbalch)",
+        "first_used_file": "`engine/formulas.py` (`henderson_hasselbalch`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Acid-base titration equivalence-point stoichiometry `C_acid V_acid = C_base V_base`",
+        "owner": "acid-base stoichiometry (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`titration_equivalence_volume`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Solubility product `Ksp`, molar solubility of a 1:1 salt `s = sqrt(Ksp)`",
+        "owner": "solubility-product definition; tabulated `Ksp` values per CRC Handbook",
+        "year": "textbook (definition); CRC Handbook (data)",
+        "first_used_file": "`engine/formulas.py` (`solubility_from_ksp`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Standard electrochemical cell potential `E_cell = E_cathode - E_anode`, standard reduction potentials",
+        "owner": "electrochemistry definition; tabulated standard reduction potentials per CRC Handbook",
+        "year": "textbook (definition); CRC Handbook (data)",
+        "first_used_file": "`engine/formulas.py` (`standard_cell_potential`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Faraday's laws of electrolysis `m = I t M/(n F)`",
+        "owner": "M. Faraday",
+        "year": "1834",
+        "first_used_file": "`engine/formulas.py` (`faraday_electrolysis_mass`); Faraday constant `F = N_A e` added to `CONSTANTS`",
+        "use_text": "numeric closure, `textbook_closure`; `F` is a derived-exact SI quantity from the already-registered `N_A`/`e`, not an independent constant",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Bimolecular (mixed second-order) rate law `rate = k[A][B]`",
+        "owner": "reaction-kinetics definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`rate_law_second_order_mixed`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Raoult's law `P = x_solvent P0`",
+        "owner": "F.-M. Raoult",
+        "year": "1887",
+        "first_used_file": "`engine/formulas.py` (`raoults_law_vapor_pressure`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Colligative property closed form `dT = i K m` (boiling-point elevation / freezing-point depression, one closed form for both via `K=Kb` or `K=Kf`)",
+        "owner": "classical colligative-property theory (textbook form)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`colligative_dT`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Van der Waals real-gas equation of state `P = nRT/(V-nb) - a n^2/V^2`",
+        "owner": "J. D. van der Waals",
+        "year": "1873",
+        "first_used_file": "`engine/formulas.py` (`van_der_waals_pressure`)",
+        "use_text": "numeric closure, `textbook_closure`; pure-SI args, caller converts tabulated L^2*atm/mol^2 constants",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Clausius-Clapeyron equation `ln(P2/P1) = -(dHvap/R)(1/T2-1/T1)`",
+        "owner": "R. Clausius; B. P. E. Clapeyron",
+        "year": "1850 (Clausius); 1834 (Clapeyron)",
+        "first_used_file": "`engine/formulas.py` (`clausius_clapeyron`)",
+        "use_text": "numeric closure, `textbook_closure`; constant-dHvap approximation",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Gibbs free energy `dG = dH - T dS`",
+        "owner": "J. W. Gibbs",
+        "year": "1876",
+        "first_used_file": "`engine/formulas.py` (`gibbs_free_energy`, `gibbs_to_equilibrium_constant`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Van 't Hoff equation `ln(K2/K1) = -(dH/R)(1/T2-1/T1)`",
+        "owner": "J. H. van 't Hoff",
+        "year": "1884",
+        "first_used_file": "`engine/formulas.py` (`van_t_hoff_equation`)",
+        "use_text": "numeric closure, `textbook_closure`; constant-dH approximation",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Nernst equation `E = E0 - (RT/nF) ln Q`",
+        "owner": "W. Nernst",
+        "year": "1889",
+        "first_used_file": "`engine/formulas.py` (`nernst_equation`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Arrhenius equation, two-temperature activation energy `Ea = -R ln(k2/k1)/(1/T2-1/T1)`",
+        "owner": "S. Arrhenius",
+        "year": "1889",
+        "first_used_file": "`engine/formulas.py` (`arrhenius_activation_energy`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Zero-order integrated rate law `[A] = [A]0 - k t`",
+        "owner": "reaction-kinetics definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`integrated_rate_law_zero_order`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded to refuse a predicted-negative concentration",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Second-order integrated rate law `1/[A] = 1/[A]0 + k t`",
+        "owner": "reaction-kinetics definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`integrated_rate_law_second_order`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Beer-Lambert law `A = epsilon b c`",
+        "owner": "A. Beer; J. H. Lambert",
+        "year": "1852 (Beer); 1760 (Lambert)",
+        "first_used_file": "`engine/formulas.py` (`beer_lambert_absorbance`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Bragg's law `n lambda = 2 d sin(theta)`",
+        "owner": "W. H. Bragg; W. L. Bragg",
+        "year": "1913",
+        "first_used_file": "`engine/formulas.py` (`bragg_diffraction_angle`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded to refuse a geometrically-impossible order",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Born-Landé lattice energy `U = -(N_A M z1 z2 e^2)/(4 pi eps0 r0)(1-1/n)`",
+        "owner": "M. Born; A. Landé",
+        "year": "1918",
+        "first_used_file": "`engine/formulas.py` (`born_lande_lattice_energy`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Rigid-rotor rotational constant `B = h/(8 pi^2 mu r^2)`",
+        "owner": "rigid-rotor diatomic model (textbook, standard)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`rigid_rotor_rotational_constant`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Debye-Hückel limiting law `log10(gamma) = -A z^2 sqrt(I)`",
+        "owner": "P. Debye; E. Hückel",
+        "year": "1923",
+        "first_used_file": "`engine/formulas.py` (`debye_huckel_limiting_law`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded to refuse above I=0.01 mol/L (leading-term low-ionic-strength approximation ceiling)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Michaelis-Menten enzyme kinetics `v = Vmax [S]/(Km+[S])`",
+        "owner": "L. Michaelis; M. L. Menten",
+        "year": "1913",
+        "first_used_file": "`engine/formulas.py` (`michaelis_menten_rate`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Eyring transition-state theory `k = (kB T/h) exp(-dG_ddagger/(R T))`",
+        "owner": "H. Eyring",
+        "year": "1935",
+        "first_used_file": "`engine/formulas.py` (`eyring_rate_constant`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Marcus electron-transfer theory `k = A exp(-(dG0+lambda)^2/(4 lambda kB T))`",
+        "owner": "R. A. Marcus",
+        "year": "1956",
+        "first_used_file": "`engine/formulas.py` (`marcus_electron_transfer_rate`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Langmuir adsorption isotherm `theta = K P/(1+K P)`",
+        "owner": "I. Langmuir",
+        "year": "1918",
+        "first_used_file": "`engine/formulas.py` (`langmuir_isotherm`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Brunauer-Emmett-Teller (BET) multilayer adsorption isotherm `V/Vm = C x/((1-x)(1-x+Cx))`",
+        "owner": "S. Brunauer; P. H. Emmett; E. Teller",
+        "year": "1938",
+        "first_used_file": "`engine/formulas.py` (`bet_isotherm`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded to refuse x outside (0,1)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Zero-point-energy model of the primary kinetic isotope effect `k_H/k_D = exp(hc(w_H-w_D)/(2 kB T))`",
+        "owner": "zero-point-energy KIE model (textbook, standard)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`kinetic_isotope_effect_zpe`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Chemistry — JHS + HS curriculum closures (second domain, `docs/audit/CHEM_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Stokes-Einstein diffusion coefficient `D = kB T/(6 pi eta r)`",
+        "owner": "A. Einstein; G. G. Stokes",
+        "year": "1905 (Einstein); 1851 (Stokes)",
+        "first_used_file": "`engine/formulas.py` (`stokes_einstein_diffusion`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Compound microscope total magnification `M = M_objective * M_eyepiece`",
+        "owner": "standard optics/microscopy definition (textbook, e.g. Campbell Biology)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`microscope_total_magnification`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Surface-area-to-volume ratio of a cube `SA/V = 6/side`",
+        "owner": "geometric definition (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`surface_area_to_volume_ratio_cube`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Population density `density = count/area`",
+        "owner": "definitional (textbook, population ecology)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`population_density`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Body mass index `BMI = mass_kg/height_m^2`",
+        "owner": "A. Quetelet (definition); WHO (adopted clinical standard)",
+        "year": "1832 (Quetelet)",
+        "first_used_file": "`engine/formulas.py` (`body_mass_index`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Mendelian monohybrid cross recessive-phenotype probability `P(aa) = p_maternal * p_paternal`",
+        "owner": "G. Mendel (Punnett-square independent-transmission probability)",
+        "year": "1866",
+        "first_used_file": "`engine/formulas.py` (`monohybrid_cross_recessive_probability`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Cardiac output `CO = HR * SV`",
+        "owner": "standard human physiology (textbook, e.g. Guyton & Hall)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`cardiac_output`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Hardy-Weinberg equilibrium, homozygous-recessive genotype frequency `q^2`",
+        "owner": "G. H. Hardy; W. Weinberg",
+        "year": "1908",
+        "first_used_file": "`engine/formulas.py` (`hardy_weinberg_genotype_freq`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded 0 <= q <= 1",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Allele frequency from genotype counts `q = (2 n_aa + n_Aa)/(2(n_AA+n_Aa+n_aa))`",
+        "owner": "standard population-genetics allele-counting method (textbook)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`allele_frequency_from_genotype_counts`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Chi-square goodness-of-fit statistic `chi2 = sum((O_i-E_i)^2/E_i)`",
+        "owner": "K. Pearson",
+        "year": "1900",
+        "first_used_file": "`engine/formulas.py` (`chi_square_goodness_of_fit`)",
+        "use_text": "numeric closure, `textbook_closure`; list-valued (two lists), bespoke dispatch in `solve()`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Exponential (Malthusian) population growth `N = N0 exp(r t)`",
+        "owner": "T. Malthus",
+        "year": "1798",
+        "first_used_file": "`engine/formulas.py` (`exponential_population_growth`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Logistic population growth with carrying capacity `N = K/(1+((K-N0)/N0) exp(-r t))`",
+        "owner": "P. F. Verhulst",
+        "year": "1838",
+        "first_used_file": "`engine/formulas.py` (`logistic_population_growth`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded 0 < N0, 0 < K (both are degenerate fixed points/denominators otherwise)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Lincoln-Petersen mark-recapture population estimator `N = M C/R`",
+        "owner": "F. C. Lincoln; C. G. J. Petersen",
+        "year": "1930 (Lincoln); 1896 (Petersen)",
+        "first_used_file": "`engine/formulas.py` (`lincoln_petersen_population_estimate`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded R > 0 (a zero-recapture sample gives no information)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Plant/cell water potential `Psi = Psi_s + Psi_p`",
+        "owner": "standard plant physiology (textbook, e.g. Taiz & Zeiger)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`water_potential`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded psi_s <= 0 (solute potential is never physically positive)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Fick's first law of diffusion `rate = D A (dC/dx)`",
+        "owner": "A. Fick",
+        "year": "1855",
+        "first_used_file": "`engine/formulas.py` (`ficks_law_diffusion_rate`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — JHS + HS curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 1)",
+        "equation": "Respiratory quotient `RQ = CO2_produced/O2_consumed`",
+        "owner": "standard human physiology/metabolism (textbook, e.g. Guyton & Hall)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`respiratory_quotient`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Goldman-Hodgkin-Katz multi-ion membrane potential `Vm = (RT/F) ln((P_K K_out+P_Na Na_out+P_Cl Cl_in)/(P_K K_in+P_Na Na_in+P_Cl Cl_out))`",
+        "owner": "D. E. Goldman; A. L. Hodgkin & B. Katz",
+        "year": "1943 (Goldman); 1949 (Hodgkin & Katz)",
+        "first_used_file": "`engine/formulas.py` (`goldman_hodgkin_katz_potential`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded P_K+P_Na+P_Cl > 0",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Hill equation cooperative ligand binding `Y = S^n/(S05^n+S^n)` (Vmax-scaled variant also serves the PhD allosteric-enzyme row)",
+        "owner": "A. V. Hill",
+        "year": "1910",
+        "first_used_file": "`engine/formulas.py` (`hill_equation_cooperative_binding`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded n > 0, S05 > 0, S >= 0",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Lotka-Volterra predator-prey interior equilibrium `(x*, y*) = (gamma/delta, alpha/beta)`",
+        "owner": "A. J. Lotka; V. Volterra",
+        "year": "1925 (Lotka); 1926 (Volterra)",
+        "first_used_file": "`engine/formulas.py` (`lotka_volterra_equilibrium`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "One-compartment pharmacokinetic clearance `CL = k Vd`",
+        "owner": "standard pharmacokinetics (textbook, Rowland & Tozer)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`pharmacokinetic_clearance`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "One-compartment IV-bolus area under the curve `AUC = C0/k`",
+        "owner": "standard pharmacokinetics (textbook, Rowland & Tozer)",
+        "year": "textbook",
+        "first_used_file": "`engine/formulas.py` (`pharmacokinetic_auc_iv_bolus`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Mutation-selection balance, recessive allele `q_hat = sqrt(mu/s)`",
+        "owner": "J. B. S. Haldane",
+        "year": "1927",
+        "first_used_file": "`engine/formulas.py` (`mutation_selection_balance_recessive`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded 0 < s <= 1",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Kleiber's law, 3/4-power metabolic scaling `BMR = a M^0.75`",
+        "owner": "M. Kleiber",
+        "year": "1932",
+        "first_used_file": "`engine/formulas.py` (`kleibers_law_metabolic_rate`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Jukes-Cantor phylogenetic distance `d = -3/4 ln(1-4p/3)`",
+        "owner": "T. H. Jukes & C. R. Cantor",
+        "year": "1969",
+        "first_used_file": "`engine/formulas.py` (`jukes_cantor_distance`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded 0 <= p < 0.75 (log-domain saturation limit)",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Moran/Wright-Fisher genic-selection fixation probability `p_fix = (1-exp(-2 Ne s p0))/(1-exp(-2 Ne s))`",
+        "owner": "M. Kimura (diffusion approximation); S. Wright; R. A. Fisher / P. A. P. Moran (model)",
+        "year": "1962 (Kimura); 1931 (Wright); 1958 (Moran)",
+        "first_used_file": "`engine/formulas.py` (`moran_fixation_probability`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded s != 0",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Kingman coalescent expected TMRCA `E[TMRCA] = 2(1-1/n) Ne`",
+        "owner": "J. F. C. Kingman",
+        "year": "1982",
+        "first_used_file": "`engine/formulas.py` (`coalescent_expected_tmrca`)",
+        "use_text": "numeric closure, `textbook_closure`; guarded n >= 2",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Price equation, selection-only term `Delta_zbar = Cov(w,z)/wbar`",
+        "owner": "G. R. Price",
+        "year": "1970",
+        "first_used_file": "`engine/formulas.py` (`price_equation_selection_differential`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Lotka-Volterra interior-equilibrium Jacobian eigenvalue magnitude `\\|Im(lambda)\\|= sqrt(alpha gamma)`",
+        "owner": "derived from Lotka 1925 / Volterra 1926 (standard linear-stability result, e.g. Murray, Mathematical Biology I)",
+        "year": "1925/1926",
+        "first_used_file": "`engine/formulas.py` (`lotka_volterra_interior_stability`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Luria-Delbrück fluctuation-test expected mutant number `m = N mu`",
+        "owner": "S. E. Luria & M. Delbrück",
+        "year": "1943",
+        "first_used_file": "`engine/formulas.py` (`luria_delbruck_expected_mutants`)",
+        "use_text": "numeric closure, `textbook_closure`; closed-form MEAN only, distribution variance out of scope",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Biology — University + PhD curriculum closures (third domain, `docs/audit/BIO_CURRICULUM_AUDIT.md` gap-list wave 2)",
+        "equation": "Karlin-Altschul local-alignment E-value `E = K m n exp(-lam S)`",
+        "owner": "S. Karlin & S. F. Altschul",
+        "year": "1990",
+        "first_used_file": "`engine/formulas.py` (`karlin_altschul_evalue`)",
+        "use_text": "numeric closure, `textbook_closure`",
+        "use_tier_tags": [
+          "textbook_closure"
+        ]
+      },
+      {
+        "section": "Psychophysics / perception (structural cross-references, NOT physics claims)",
+        "equation": "Approaching-sound auditory time-dilation effect sizes (+15% approach / -6% recede)",
+        "owner": "A. Pasqualotto & H. Kawarada",
+        "year": "2026",
+        "first_used_file": "`InfoApproachingWaveLocalTimeDilation_attempt.v`",
+        "use_text": "external empirical effect sizes plugged in as posited constants (`kappa_plus`, `kappa_minus`) into a two-branch equation using this project's own `ord` sign convention as a labeling device; explicitly NOT a physics derivation, structural/analogical only (same status as the Axiom-12 cross-reference)",
+        "use_tier_tags": []
+      }
+    ]
+  },
+  "canonical_v_files": {
+    "_description": "formal/*.v files NOT matching the *_attempt.v exploratory-arc naming (confirmed by the repo's own Makefile: 'verify-attempts' targets exactly 'the exploratory formal/Info*_attempt.v files'; AXIOM_STATUS.md audits a 35-file subset of this same non-attempt set — 28 core + 6 CMC + 1 RDU — as its 'COMPLETE' Coq-kernel axiom audit). RELEASE_MANIFEST.yaml itself carries no per-file list (only release/version/gate metadata); the canonical/attempt split is read directly off the formal/ directory naming convention, cross-checked against the Makefile comment and AXIOM_STATUS.md.",
+    "count": 50,
+    "files": [
+      {
+        "path": "formal/CMC_Bridge_Decomposition.v",
+        "blob": "d85d41e525f419f62fa4c77344f9a837999d1178"
+      },
+      {
+        "path": "formal/CMC_ClosureFree_Exhaustive.v",
+        "blob": "1c9ea43bf3ade13aef4a857f0e364fd0ef7d61a0"
+      },
+      {
+        "path": "formal/CMC_Independent_Definitions.v",
+        "blob": "c3a55ff196d8ff26785f85561324fc6cc951f0ac"
+      },
+      {
+        "path": "formal/CMC_ModelClass_Witnesses.v",
+        "blob": "b81a2074271f107eedd10afc3e9fe4caa6479334"
+      },
+      {
+        "path": "formal/CMC_PhysicsClass_Instances.v",
+        "blob": "de60e3d8f5316475e9e51be308eb8cc945db0e2a"
+      },
+      {
+        "path": "formal/CMC_TargetClass_Definitions.v",
+        "blob": "974548ed89895d64c5c44eeef5f69531f5d7d72d"
+      },
+      {
+        "path": "formal/Genesis_PhysicsDAG_Canon_v2_4_0.v",
+        "blob": "29ee06ccd98a180e9e03b2e376fd8ae6dc4ee90c"
+      },
+      {
+        "path": "formal/InfoAnalysisLift.v",
+        "blob": "03e8b74ece64842cee384b49c8202e5ba1d81092"
+      },
+      {
+        "path": "formal/InfoBinaryVacua.v",
+        "blob": "fbe5771dd06a3eade9ac58601ece3ec3fab9ef57"
+      },
+      {
+        "path": "formal/InfoEuler.v",
+        "blob": "31db5dc147c3481ea90fb9789a133fe691f3410d"
+      },
+      {
+        "path": "formal/InfoSolidAngle.v",
+        "blob": "e73805bb30b804a643a4846cfb6acc51fa9fec8d"
+      },
+      {
+        "path": "formal/MURG_Completeness.v",
+        "blob": "657414793bc22f0037c77afb4224f0ebe610b228"
+      },
+      {
+        "path": "formal/OperatorExtract.v",
+        "blob": "74cd6ea24cfe512244cacfbc15e66fc6a75ada9a"
+      },
+      {
+        "path": "formal/RD.v",
+        "blob": "4ffb990a6f9c79a6f21521c2cc59af117ffad4c1"
+      },
+      {
+        "path": "formal/RDL.v",
+        "blob": "0839e5c6ea97ffcad1eb3c54247509624b17e37c"
+      },
+      {
+        "path": "formal/RDL_All.v",
+        "blob": "af3b605c8a9f6b79ac6efe04f19198e17fc7c087"
+      },
+      {
+        "path": "formal/RDL_CausalOrder.v",
+        "blob": "7806c292419ba672890170b7e20c803354d27c49"
+      },
+      {
+        "path": "formal/RDL_ContinuumLimit.v",
+        "blob": "755de565372c7651edfd4ceed76bbb098169063f"
+      },
+      {
+        "path": "formal/RDL_Distinguishability.v",
+        "blob": "f6a80a1655d14fe2d472f0bc91560757cfad2a59"
+      },
+      {
+        "path": "formal/RDL_DtN.v",
+        "blob": "5eea012448fad4a7a230033d01a498889d6cfbf8"
+      },
+      {
+        "path": "formal/RDL_GammaSpectral.v",
+        "blob": "76cc8016fbb1204f6a564048df1a6a19042dfc55"
+      },
+      {
+        "path": "formal/RDL_GenesisLink.v",
+        "blob": "75693bc35286284164f8a211af5ccfe7c7cbc098"
+      },
+      {
+        "path": "formal/RDL_InvolutiveOrthoCore.v",
+        "blob": "ac1168e2d5219dfc4c3eaf9986a658d3ff511591"
+      },
+      {
+        "path": "formal/RDL_LaplaceBeltrami.v",
+        "blob": "449e3517cb67a6aab8fc9710c1a84ca767af9b40"
+      },
+      {
+        "path": "formal/RDL_MetricReadout.v",
+        "blob": "c7dcda220103846161f44ff546337581a2fcf819"
+      },
+      {
+        "path": "formal/RDL_MetricReadoutLimit.v",
+        "blob": "79b36a287db4fde4f5be7d6e90f7d232ad3c8ff1"
+      },
+      {
+        "path": "formal/RDL_MetricReadoutRate.v",
+        "blob": "4391cb46ba7ca3c7e6fa8797e11eb46ca140d99e"
+      },
+      {
+        "path": "formal/RDL_PhaseSound.v",
+        "blob": "ab9ecb26da467f25613abe289a3ebbd1d46e9998"
+      },
+      {
+        "path": "formal/RDL_RetentionCenter.v",
+        "blob": "bb5321007f93778f019e856eedf86b7acabbb59b"
+      },
+      {
+        "path": "formal/RDL_SingleHopHierarchy.v",
+        "blob": "82c994d45092d1e777c47ec716c7b186820f53e5"
+      },
+      {
+        "path": "formal/RDL_SpineGraphCoupled.v",
+        "blob": "6c23bb7127251c496aa9fd456e46f80ebc02bf84"
+      },
+      {
+        "path": "formal/RDL_SpineGraphEnergy.v",
+        "blob": "595eb25c0a8a00015f107f5a2aad0f7b15da40ac"
+      },
+      {
+        "path": "formal/RDL_SpineStability.v",
+        "blob": "a8f1e10521ff7595db999c62098efdc41942905f"
+      },
+      {
+        "path": "formal/RDL_StarRig.v",
+        "blob": "060fc3da382e48ec1a58186acb17497aa7322438"
+      },
+      {
+        "path": "formal/RDL_StarRigCPTP_General.v",
+        "blob": "894fb7c636c1b9235c35765cf0d43e577f3149ef"
+      },
+      {
+        "path": "formal/RDL_StarRigGeneral.v",
+        "blob": "ebfa4d692e79c74ddd6e4c22635d34e839c603e0"
+      },
+      {
+        "path": "formal/RDL_StarRigMatrix.v",
+        "blob": "5073f28056b7554c54d25f9a07c54873a7d8b92a"
+      },
+      {
+        "path": "formal/RDL_StarRigMatrix3.v",
+        "blob": "1cdaa57ca9ee05a5c89339272ff6036e594cd243"
+      },
+      {
+        "path": "formal/RDL_StarRigMatrixN.v",
+        "blob": "a0c005038626ac562b6f486873453e0c54dda714"
+      },
+      {
+        "path": "formal/RDL_StarRigMatrixN_Step2.v",
+        "blob": "488cd273003f245f05ca3e3b5cd512504ca0489f"
+      },
+      {
+        "path": "formal/RDL_StarRigMatrixN_Step3.v",
+        "blob": "9cd7d40c8279d9984d1c901e430116c6ee30c7c5"
+      },
+      {
+        "path": "formal/RDL_TaylorLimit.v",
+        "blob": "c058db3b1d62a61861bdcae492cb05cb1cabf2f0"
+      },
+      {
+        "path": "formal/RDL_TelescopeCore.v",
+        "blob": "f0f9fed3d6b8e98af2724a18d380fe7e19167044"
+      },
+      {
+        "path": "formal/RDL_TemplatedSkeleton.v",
+        "blob": "102173c4383b390fce726f09b25ff0872d81db3c"
+      },
+      {
+        "path": "formal/RDL_UnitDistance.v",
+        "blob": "4749771ef655fdba00b800e02f37a0c2444bea01"
+      },
+      {
+        "path": "formal/RDU_NativeInformationUnits.v",
+        "blob": "365148a8a01ad68151bc70a0c0f56247f3d508c1"
+      },
+      {
+        "path": "formal/RD_ConPA_ReadoutBivalence.v",
+        "blob": "39a9c9491b7562c93dd44a553a347b83d52a064b"
+      },
+      {
+        "path": "formal/RD_NegTranslation_Core.v",
+        "blob": "39ee0ac041a3cbcfb51635c6cff9f722f1a0c300"
+      },
+      {
+        "path": "formal/Scratch_ShipOfTheseus_RD4.v",
+        "blob": "8caf4e56ab6b9c994cc3a10c99e5b860b3d95612"
+      },
+      {
+        "path": "formal/URCF_RD_All.v",
+        "blob": "d64dccb5906c5505c275b141f6c78e27b9d4018f"
+      }
+    ]
+  },
+  "attempt_v_files_count": 284,
+  "attempt_v_files_note": "formal/*_attempt.v — the exploratory readout-physics arc, CI-guarded by scripts/ci_attempts_audit.py (make verify-attempts). Full per-file list not enumerated here (284 files); see FORMAL_MANIFEST.yaml (blob below) for the per-file category/tier/status/theorems table.",
+  "formal_manifest_yaml_ref": {
+    "path": "docs/root/FORMAL_MANIFEST.yaml",
+    "blob": "8f8a9ad9418ff2932265c0d3bb7a07ec0aca1913",
+    "note": "auto-generated merged manifest covering 222 of the formal/ files (per its own header) with category/tier/status/theorems/requires/equation_link/one_line per file; not fully re-parsed into this JSON (out of BBL-195 scope: metadata pointer only, avoids duplicating what the source file already carries)"
+  },
+  "release_manifest_yaml": {
+    "path": "RELEASE_MANIFEST.yaml",
+    "blob": "82bcb9b2abab96a7c6b5a11efa066a41cb327041",
+    "package": "anse-spine",
+    "current_version": "2.2.1",
+    "gate": "GATE_A1_SOLVER_RELEASE",
+    "releases": [
+      {
+        "version": "2.2.1",
+        "date": "2026-06-24",
+        "tag": "v2.2.1",
+        "gate_passed": true,
+        "artifacts": [
+          "solver_kernel_release",
+          "equation_card_release"
+        ],
+        "note": "Rename Python module src/spine→src/anse_spine. Import: from anse_spine import NuclearCore. Resolves PyPI collision fully."
+      },
+      {
+        "version": "2.2.0",
+        "date": "2026-06-24",
+        "tag": "v2.2.0",
+        "gate_passed": true,
+        "artifacts": [
+          "solver_kernel_release",
+          "equation_card_release"
+        ],
+        "note": "SUPERSEDED by v2.2.1. Renamed pip package but left module path as spine/ — still collided."
+      },
+      {
+        "version": "2.1.0",
+        "date": "2026-06-24",
+        "tag": "v2.1.0",
+        "gate_passed": true,
+        "artifacts": [
+          "solver_kernel_release",
+          "equation_card_release"
+        ],
+        "note": "SUPERSEDED by v2.2.0 (package rename only). API identical."
+      }
+    ],
+    "note": "This manifest is release/version/gate bookkeeping only — it does NOT enumerate canonical vs attempt file paths; that split (see canonical_v_files above) was read from the formal/ directory naming convention instead."
+  },
+  "health_stream": {
+    "info_health_v_files": [
+      {
+        "path": "formal/InfoHealthCausalRelax_attempt.v",
+        "blob": "61a9f5e26a15d296da8ffaa57b313ffac106bad1",
+        "theorems": [
+          "setpoint_is_fixed",
+          "one_step_error",
+          "n_step_error"
+        ]
+      },
+      {
+        "path": "formal/InfoHealthCuspFold_attempt.v",
+        "blob": "2646d859cbe9265961f2ba313d3c3d5ba4cb2e1c",
+        "theorems": [
+          "disc_even",
+          "cusp_factor (Lemma)",
+          "fold_from_double_root",
+          "bistable_window_dec",
+          "critical_slowing_marginal",
+          "rest_iff_critical"
+        ]
+      }
+    ],
+    "health_docs": [
+      {
+        "path": "docs/root/HEALTH_ATLAS_REDUCTION.md",
+        "blob": "249879fcf41db55ee9b26aec547f849e89ad8ad8"
+      },
+      {
+        "path": "docs/root/READOUT_HEALTH_SYNTHESIS.md",
+        "blob": "068a4949c7804c9949d4565f41c582e871b31d76"
+      }
+    ],
+    "note_broader_stream_K_referenced_not_named_InfoHealth": {
+      "description": "HEALTH_ATLAS_REDUCTION.md and READOUT_HEALTH_SYNTHESIS.md wikilink additional formal/Info*_attempt.v files under the same health/cognitive stream (arc 'stream K') that do NOT match the InfoHealth*.v filename pattern given in this task's scope; listed here for completeness, not expanded into full entries",
+      "referenced_files_not_matching_InfoHealth_pattern": [
+        "InfoMemoryBeforeMass_attempt.v",
+        "InfoEpidemicThreshold_attempt.v",
+        "InfoCoupledCuspEP3_attempt.v",
+        "InfoEP3Directionality_attempt.v",
+        "InfoEP3LagGranger_attempt.v",
+        "InfoBioHomeostasis_attempt.v",
+        "InfoAtlasStructures_attempt.v",
+        "InfoDecisionAgency_attempt.v",
+        "InfoRootMemoryReadout_attempt.v",
+        "InfoIrrationalNonReadout_attempt.v"
+      ]
+    }
+  }
+}

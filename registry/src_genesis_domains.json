@@ -1,0 +1,2180 @@
+{
+  "source": "readout_genesis domain rule registries (chem, quantum, relativity, biology)",
+  "anchor": {
+    "repo": "readout_genesis",
+    "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+    "note": "per-file blob anchors are on each rule entry and in domain_meta; this top-level anchor is the repo commit shared by all four domain files (working tree clean vs HEAD for domains/{chem,quantum,relativity,biology} at build time)"
+  },
+  "domain_registration_standard": {
+    "path": "domains/DOMAIN_REGISTRATION_STANDARD.md",
+    "blob": "fdfe53cc52abc516266d89255d2130872c6183d1",
+    "note": "defines class enum {ROOT_THEOREM, PROTOCOL, EMPIRICAL_TAPE, DISCOVERED_DOMAIN_LAW, CALIBRATED_READOUT, NUMERICAL_PROCEDURE, UNRESOLVED, OBSTRUCTED}; a domain is a quotient q_D of the one root, never a new axiom (verbatim: 'A domain is a translation, not a new root... it declares a quotient q_D of the one retained structure')"
+  },
+  "domain_meta": {
+    "chem": {
+      "rule_registry_path": "domains/chem/RULE_REGISTRY_v0_910.json",
+      "rule_registry_blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+      "claim_boundary_path": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+      "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a",
+      "claim_boundary_tier": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "claim_boundary_public_label": "[FiniteFormalWitnesses] root-native abstract composition layer",
+      "readme_path": "domains/chem/README.md",
+      "readme_blob": "370fcd683602556cb0bfbd6313b1dc01dec821a0",
+      "n_rules": 17
+    },
+    "quantum": {
+      "rule_registry_path": "domains/quantum/RULE_REGISTRY.json",
+      "rule_registry_blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+      "claim_boundary_path": "domains/quantum/CLAIM_BOUNDARY.json",
+      "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2",
+      "claim_boundary_tier": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "claim_boundary_public_label": "[FiniteRootWitnesses] root-native quantum readout — GREEN structural only, not real QM",
+      "readme_path": "domains/quantum/README.md",
+      "readme_blob": "81a44b0e38b2c1c396248fe2ec959f709db2d4e2",
+      "n_rules": 33
+    },
+    "relativity": {
+      "rule_registry_path": "domains/relativity/RULE_REGISTRY.json",
+      "rule_registry_blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+      "claim_boundary_path": "domains/relativity/CLAIM_BOUNDARY.json",
+      "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43",
+      "claim_boundary_tier": "FINITE_INTERNAL_CLOSURE",
+      "claim_boundary_public_label": "[FiniteInternalWitnesses] root-native relativity readout (algebraic closure, not physics)",
+      "readme_path": "domains/relativity/README.md",
+      "readme_blob": "1af3a60d6e8bf7cbf49f3f3fe0bf9d28f4393c41",
+      "n_rules": 38
+    },
+    "biology": {
+      "rule_registry_path": "domains/biology/RULE_REGISTRY.json",
+      "rule_registry_blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+      "claim_boundary_path": "domains/biology/CLAIM_BOUNDARY.json",
+      "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18",
+      "claim_boundary_tier": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "claim_boundary_public_label": "[FiniteRootWitnesses] root-native biology readout — 5 structural closures, real biology stays OPEN",
+      "readme_path": "domains/biology/README.md",
+      "readme_blob": "3c9c96fe856cb175a863aac609bc3446592feb0c",
+      "n_rules": 36
+    }
+  },
+  "n_rules_total": 124,
+  "rules": [
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-LEDGER-001",
+      "statement": "If the declared closed boundary preserves ledger L(n)=A n, then A(n1-n0)=0.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-KERNEL-002",
+      "statement": "A change delta preserves the ledger iff delta is in ker(A).",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-EXTENT-003",
+      "statement": "If columns of N form a basis for the admitted kernel subspace, every admitted change has coordinates xi with delta=N xi.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-ADMISSIBLE-004",
+      "statement": "Admitted coordinates satisfy n0+N xi >= 0 and all declared capacity/boundary inequalities.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-REFINE-005",
+      "statement": "For a finite state set, repeatedly splitting cells by declared readout and successor-cell signatures terminates in an exact closed refinement.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-ADD-COND-006",
+      "statement": "If composition is a free commutative monoid and R is a monoid homomorphism, then R(c)=sum_i c_i R(e_i).",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-STATIONARY-007",
+      "statement": "A quotient fixed point can hide source-state cycles or currents; therefore fixed quotient readout alone establishes only observational stationarity.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "PR-GRAMMAR-001",
+      "statement": "Candidate mathematical languages must be frozen and reported before held-out evidence is opened.",
+      "class": "PROTOCOL",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "NP-EXACT-001",
+      "statement": "Use integer/Fraction arithmetic for the finite proof witnesses in v0.901.",
+      "class": "NUMERICAL_PROCEDURE",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "PR-GENERATOR-002",
+      "statement": "Freeze generator identities, aliases, source profiles, contexts, and permitted transformations before quotient admission.",
+      "class": "PROTOCOL",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-FCM-008",
+      "statement": "For a frozen finite generator registry G, N^G with coordinatewise addition and zero is a free commutative monoid.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-COUNT-HOM-009",
+      "statement": "Counting registered generators maps empty source word to zero and concatenation to coordinatewise addition.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-PERM-GATE-010",
+      "statement": "If equal occupation vectors imply equal registered readout and successor signatures in every frozen profile, the count quotient exactly factors those profiles.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-DECOMP-011",
+      "statement": "Within N^G and a frozen independent generator basis, occupation coordinates uniquely specify structural decomposition.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-REFINE-COMP-012",
+      "statement": "A declared nonnegative-integer coarsening map P commutes with composition: P(c+d)=Pc+Pd.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "RT-LINEAGE-013",
+      "statement": "The marked quotient stores structural occupation separately from an append-only lineage sidecar; equal structural projections need not identify marked histories.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "chem",
+      "rule_id": "NP-FINITE-GATE-002",
+      "statement": "Enumerate all registered same-count pairs and compare exact frozen signatures.",
+      "class": "NUMERICAL_PROCEDURE",
+      "tier_or_claim_boundary": "FORMAL_COMPOSITION_QUOTIENT_ONLY",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/chem/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/chem/RULE_REGISTRY_v0_910.json",
+        "blob": "d9dcfb2c43da63f5a187b292c75fa3543a5a6394",
+        "claim_boundary_file": "domains/chem/CLAIM_BOUNDARY_v0_910.json",
+        "claim_boundary_blob": "0d70720f3eed450a4377dd16dd1e8f989e363f4a"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-R0",
+      "statement": "a!=b is retained as a distinction; the distinction is asymmetric, giving an ordering direction. Identical to relativity's RB-P0 -- this is the one shared root, not a new axiom.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-R1",
+      "statement": "The asymmetric ordering yields ordered transitions with a positive retention time tau_c>0.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-R2",
+      "statement": "Retention discretizes into ticks t=n*Delta_theta; a finite causal graph is built on those ticks.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-R3",
+      "statement": "The retained-distinction axioms FORCE the finite retention operator L_R's form -- not merely posit it. Machine-checked, axiom-free, re-compiled 2026-07-21 (coqc -q -R . DQG).",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-R4",
+      "statement": "Coarse-graining L_R over the ticks gives the spine second-order stepper M*d2 + D*d + K, shared verbatim with the relativity domain's RB-P2/RB-P3.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-R5",
+      "statement": "The spine stepper's characteristic equation is M*s^2 + D*s + K*lambda = 0, exact-rational, parametrized by a mode label lambda.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-OS1",
+      "statement": "lambda_c = D^2/(4*M*K). The discriminant disc(lambda) = D^2 - 4*M*K*lambda is negative (complex-conjugate root pair, oscillatory) for lambda>lambda_c, positive (overdamped) for lambda<lambda_c, and exactly zero at lambda=lambda_c (critical). Exact rational witness: M=D=K=1 -> lambda_c=1/4; lambda=1 gives disc=-3<0 (oscillatory); lambda=1/8 gives disc=1/2>0 (overdamped); lambda=lambda_c gives disc=0 (critical).",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-S1",
+      "statement": "Any asymmetric seed matrix R0 decomposes uniquely as R0 = DiagPart + SymOff + SkewOff. Exact rational witness with a 3x3 R0 reproduces R0 exactly from the three parts; SkewOff is genuinely nonzero (torsion/circulation branch).",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-S2",
+      "statement": "The seed torsion/circulation branch is exactly SkewOff; the set of admissible SkewOff parts forms a group and the construction extends to rank N, axiom-free.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-S3",
+      "statement": "The torsion/circulation branch produces genuine (non-trivial, non-decomposable-further) mixing among retained components -- a finite, exact-rational witness with a nonzero SkewOff block.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-C1",
+      "statement": "An orientation J on a closed real oriented mode-pair with J^2=-I and G-adjoint J^{dagger_G}=-J (G-skew under the positive retention metric G) EARNS the complex coordinate psi=u+J*v as a READOUT -- i is a consequence of a closed real structure, never a premise. Exact rational witness: J=[[0,-1],[1,0]], G=I2, J^2=-I2, J^T=-J. FAILING control: J_bad=I2 (identity) has J_bad^2=+I2 != -I2, and is correctly REFUSED the complex coordinate (NO_COMPLEX_QUANTUM_COORDINATE).",
+      "class": "PROPOSED_INTERNAL_GATE",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-N1",
+      "statement": "N_Q(psi) = <psi, G psi> is >= 0 for all psi and =0 iff psi=0, on the exact rational witness (G=I2, psi=(3,4) gives N_Q=25; psi=0 gives N_Q=0).",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-N2",
+      "statement": "An evolution operator U satisfying U^{dagger_G} G U = G preserves N_Q exactly. Exact witness: U=J (the complexification-gate orientation itself, reused as a rotation), N_Q(U*psi)=N_Q(psi)=25.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-M1",
+      "statement": "Retained memory (discrete algebra on the retention operator) FORCES a mass-like readout, axiom-free, machine-checked. This rule establishes the formal/algebraic claim only; whether this readout IS physical mass is a separate, explicitly YELLOW bridge (see Q-Y5). NOT counted as an independent node in the 32-node Quantum DAG closure audit -- it is the supporting formal citation folded into Q-Y5's yellow accounting (matching the verifier's own 'memory-before-mass' yellow-list item).",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-G1",
+      "statement": "The discrete connection U_{j<-i}=V_j^-1*V_i, the curvature certificate K_C=U_C-I (two finite transports failing to commute, nonzero exact witness), and the supporting discrete-geometry chain (metric-compatible curvature, 2nd Bianchi, Gauss-Bonnet, Riemann pair symmetry, rational SO(3) curvature) are folded in here from the relativity domain's OB-03/OB-04 as shared root-native structure, deduplicated (same underlying L_R operator, not re-derived).",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-Y1",
+      "statement": "InfoQuantumRelativityUnification.v (box_quad_is_spine_residual, spine_dispersion_iff_box_quad_vanishes) and InfoSeedFeedsQuantumRelativity_attempt.v compile axiom-free, BUT box_quad INHERITS the imported Minkowski signature from InfoLorentzInvariance.box_quad. This is therefore a bounded ALGEBRAIC IDENTITY between two independently-posited constructions, never a root-native derivation of QM/SR unification.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-Y2",
+      "statement": "InfoTelegraphHorizonUnification_attempt.v / InfoTelegraphCrossover_attempt.v prove disc_is_spine_discr, lam_c_is_spine_lambda_c, quantum_iff_above_horizon -- the spine's OWN classical/quantum crossover discriminant lambda_c=D^2/4MK, axiom-free. This is a real, machine-checked result, but the BRIDGE from 'above/below this discriminant threshold' to 'this regime IS quantum' is not established -- the theorem names a threshold, not a semantic identification.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-Y3",
+      "statement": "Under the DECLARED (not derived) identification of the spine's own front-speed-squared with K/M, the oscillatory-regime split of Q-OS1 can be read as an oscillator-parameter statement. This identification is conditional and declared, exactly parallel to relativity's OC-01 (graph front-speed vs measured-speed) -- it is NOT derived from the root.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-Y4",
+      "statement": "Q-G1's discrete metric/curvature chain is root-native and Coq-green as GEOMETRY, but its bridge toward a quantum-regime interpretation (e.g. curvature as any kind of quantum-gravitational coupling) is not established -- naming it here only as a formal-closed / bridge-partial connective, matching relativity's own OB-01 caveat (operator-to-metric direction only, reverse forbidden).",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-Y5",
+      "statement": "Q-M1 establishes the FORMAL algebraic claim (retained memory forces a mass-like readout) as Coq-green. Whether that readout IS real physical mass/inertia is a DECLARED, not derived, correspondence -- exactly parallel to relativity's OC-02 (mass-memory declared correspondence).",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-Y6",
+      "statement": "A formal CPTP (completely-positive, trace-preserving) channel CARD exists as a target definition (the abstract shape a quantum channel would need to satisfy), but the bridge FROM the root's own reversible G-orthogonal evolution (Q-N2) TO a general CPTP map (which must also cover irreversible/open-system dynamics) is OPEN -- not yet constructed or gated.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X1",
+      "statement": "Q-C1 establishes complexification for ONE closed real oriented mode-pair, exact witness. General existence and uniqueness of a root-derived complex psi across all admissible retained states is OPEN.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X2",
+      "statement": "A candidate architecture for a quantum quotient q_Q (mirroring relativity's q_g / chem's q_D pattern) is sketched, but the commuting-square condition q_Q o F_full = F_Q o q_Q has NOT been proven or even witnessed on a finite fixture. This is the central open bottleneck for the whole domain.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X3",
+      "statement": "Whether a mixed-state description (density-matrix-shaped object) arises from tracing out a hidden lineage of the retained-distinction root is OPEN -- no finite witness exists.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X4",
+      "statement": "Whether a composition operation (x)_kappa on retained subsystems, derived from the no-free-copy law, reproduces tensor-product-shaped behavior is OPEN. No finite witness exists; this is distinct from and does not assume any imported tensor product.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X6",
+      "statement": "TARGET, not established: uniqueness of the Born weight p=|psi|^2 across ALL admissible refinements. quantum_closure_v0_1.py section E is FINITE_DIAGNOSTIC evidence FOR the quadratic form only: on one exact refinement (25=9+16), the quadratic weight (p=2) is refinement-invariant while a linear weight (p=1) is not (5 != 7, correctly failing). This is evidence, not a uniqueness proof across all refinements/bases.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X7",
+      "statement": "Whether a root-native conditional-update rule (projection-postulate-shaped) exists is OPEN -- no finite witness, no gate constructed.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X8",
+      "statement": "An RDL_Heisenberg-shaped formal guard exists and SURVIVED the hollow-card audit (it correctly refuses to fire on non-quantum inputs), but it is a boundary/consistency check, not a root-derivation of an uncertainty principle. Kept OPEN pending a root-native construction.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X9",
+      "statement": "A CHSH/Tsirelson-shaped formal guard exists as a boundary check (it can flag classical-vs-quantum-shaped correlation bounds), but it is not a root derivation of quantum correlation, entanglement, or the Tsirelson bound. Kept OPEN, depends on the still-open Q-X4 composition.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X10",
+      "statement": "A particle ontology (localized, countable excitations with mass) is OPEN -- Q-M1/Q-Y5 establish only a formal mass-like readout from memory algebra, declared not derived as physical mass.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X11",
+      "statement": "Spin and the spin-statistics theorem are fully OPEN. Q-S1's SkewOff torsion branch is NOT spin -- no rotation-group representation, half-integer quantization, or statistics connection has been constructed.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X12",
+      "statement": "A full QFT / effective-field-theory closure requires the JOINT construction of the quantum quotient q_Q, the relativity domain's quotient q_g, and a geometry quotient q_geometry -- none of which are individually complete, let alone jointly commuting. Fully OPEN.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "quantum",
+      "rule_id": "Q-X13",
+      "statement": "A conditional superposition gate exists ONLY for a fixed, pre-specified pair of orthogonal readout operators on the single closed-pair witness of Q-C1 -- linear combinations of the two witness components stay in the closed pair and N_Q is additive on them (Pythagorean, exact rational). This is NOT a general superposition principle: it does not extend to arbitrary bases, arbitrary numbers of components, or non-fixed operators without further construction.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "QUANTUM_ROOT_CLOSURE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/quantum/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/quantum/RULE_REGISTRY.json",
+        "blob": "0527acb48498f418b9d974edbadf78ac50c2f05a",
+        "claim_boundary_file": "domains/quantum/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "b7e27b4364ef79d25c779397ef75515871a776e2"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "RB-P0",
+      "statement": "a!=b is retained as a distinction; the distinction is asymmetric, giving an ordering direction.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "RB-P1",
+      "statement": "The asymmetric ordering yields ordered transitions with a positive retention time tau_c>0.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "RB-P2",
+      "statement": "Retention discretizes into ticks t=n*Delta_theta; the finite causal graph and retention operator L_R are built on those ticks, stepped by MQ.08.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": "MQ.08",
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "RB-P3",
+      "statement": "Coarse-graining the stepper gives a telegraph process with finite front speed v=sqrt(D/tau_c), derived from finite retention, not inserted.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "RB-P4",
+      "statement": "The finite front speed bounds a causal cone |x|<=v*t.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-01",
+      "statement": "Define null coordinates n_+ = v*t+x, n_- = v*t-x from the cone's own two edges.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-02",
+      "statement": "Q_v = n_+ * n_- = v^2 t^2 - x^2, composed from the cone's own null edges, not an imported interval.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-03",
+      "statement": "B(delta1+delta2)=B(delta1)+B(delta2) is imposed and forces linearity of B over Q (derived, not separately assumed).",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-04",
+      "statement": "The observer map B must send the cone to itself (preserve |x|<=v*t under the map).",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-05",
+      "statement": "The observer map B preserves the forward/backward orientation of the cone.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-06",
+      "statement": "A pure observer change preserves the RD causal-cell count n_+ * n_- (Q_v). This is the one new internal gate added by this closure; it is proposed, not derived from the root backbone.",
+      "class": "PROPOSED_INTERNAL_GATE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-07",
+      "statement": "O4 forces n_+' = kappa^-1 * n_+, n_-' = kappa * n_-, kappa>0, so that Q_v'=Q_v automatically.",
+      "class": "PROPOSED_INTERNAL_BRIDGE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-08",
+      "statement": "Relative velocity beta=u/v; kappa^2=(1+beta)/(1-beta); Gamma_R=(kappa+1/kappa)/2=1/sqrt(1-beta^2). Exact witness: v=5/4,u=3/4 -> beta=3/5, kappa=2, Gamma_R=5/4.",
+      "class": "PROPOSED_INTERNAL_BRIDGE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-09",
+      "statement": "x'=Gamma_R*(x-u*t), t'=Gamma_R*(t-u*x/v^2). Exact witness: event (t=8,x=5) -> (t'=7,x'=-5/4); Q_v=Q_v'=75.",
+      "class": "PROPOSED_INTERNAL_BRIDGE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-10",
+      "statement": "t'/t=1/Gamma_R and L=L_0/Gamma_R follow from OA-09 with no new law inserted.",
+      "class": "PROPOSED_INTERNAL_BRIDGE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-11",
+      "statement": "Delta t' = -Gamma_R * u * Delta x / v^2 follows from OA-09 with no new law inserted.",
+      "class": "PROPOSED_INTERNAL_BRIDGE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OA-12",
+      "statement": "u_21=(u1+u2)/(1+u1*u2/v^2) follows from OA-09; exact witness stays sub-cone (|u21|<v).",
+      "class": "PROPOSED_INTERNAL_BRIDGE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OB-01",
+      "statement": "g^ij ~= 1/2 * Hess(sigma_LR), the retention operator's principal symbol read as a metric. This direction carries the master core's [Th_coqc] base tier (Face 8). The reverse direction (spectrum-alone -> metric) is explicitly forbidden.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OB-02",
+      "statement": "The geometry-only quotient Theta lacks the variables to close on its own (Theta_{n+1} depends on Phi,Psi, not Theta alone); the minimal closed state is Z_n=(Phi_n,Phi_{n-1},Psi_n,Psi_{n-1},Theta_n). Basis covariance under this minimal state is only PARTIALLY closed.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OB-03",
+      "statement": "U_{j<-i} = V_j^-1 * V_i from the basis-change identity; transport defect o_{i->j} = phi_j - U_{j<-i}*phi_i.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OB-04",
+      "statement": "Loop transport U_C = U_C(loop) - I defines curvature K_C: local transports failing to commute (finite witness: U_x=[[1,1],[0,1]], U_y=[[1,0],[1,1]] => U_C=[[0,1],[-1,3]], K_C=[[-1,1],[-1,2]] != 0).",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OB-05",
+      "statement": "Free path selects O(P)=sum_e o_e^T G_j o_e minimal; witness phi_i=[1,0], phi_f=[1,1]: path x->y obstruction 0, path y->x obstruction 1, minimizer selects x->y.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OB-06",
+      "statement": "The geometry-field feedback loop closes as a time-unrolled DAG (not circular), satisfying q_LG o F_full = F_LG o q_LG, with a shared singular fail-state perp_singular.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OB-07",
+      "statement": "CLOSED in v0.2 by the Null-Transport Factorization Gate: the local causal-cell rate relates to a remote record rate via the internal lapse N=sqrt(det B) (dtheta_i = N dtheta_o, nu_o = N nu_i), with no named metric inserted as a premise.",
+      "class": "PROPOSED_INTERNAL_GATE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GC-01",
+      "statement": "The diagonal cone map B=diag(a,b) factors uniquely as B=N*diag(chi^-1,chi), with N=sqrt(ab)=sqrt(det B) (the internal LAPSE) and chi=sqrt(b/a) (relative-observer factor). Pure observer change => det B=1 => N=1; geometry-dependent readout => N=sqrt(det B). Exact witness: a=2,b=8 => det B=16, N=4, chi=2.",
+      "class": "PROPOSED_INTERNAL_GATE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GC-02",
+      "statement": "On a stationary path, dtheta_i = N_{i|o} dtheta_o (theta = retained transition count), so nu_o = N nu_i and dtheta_o = dtheta_i / N. No external light/gravity/metric law is used; 'frequency shift' here means relative retained-step rate only.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GC-03",
+      "statement": "Determinants multiply under composition of diagonal observer maps, so N_{j|o}=N_{j|i}*N_{i|o}, and N_P=product of N_e along a path P. Around a loop C, the normalization holonomy H_N(C)=product of N_e over the loop is the scalar side of curvature. Exact witness: B_{i|o}=diag(2,8) (N=4), B_{j|i}=diag(3,27) (N=9), composed B_{j|o}=diag(6,216) (det=1296, N=36=9*4).",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GC-04",
+      "statement": "N=0 iff det B=0, a finite rank-loss boundary of the observer map (not a statement involving infinity). At N=0 the translation B has no inverse; the exterior cannot reconstruct the interior. Clone/agency-horizon connects here as a READOUT equivalence only. Exact witness: B_h=diag(0,5), det=0, N=0, singular (no inverse).",
+      "class": "PROPOSED_INTERNAL_GATE",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GC-05",
+      "statement": "From the DeclaredFormula tau_c^(U)=pi*c/a_local, a_local=pi*c/tau_c^(U). The observer reads a_o = N_{i|o} * a_local; at the horizon, kappa_R := lim_{i->H} N_{i|o} a_local(i), if finite. CORRECT STATUS: a_local != kappa_R directly, but kappa_R = Normalize_N(a_local); 'surface gravity' requires EXTERNAL semantic calibration -- only the INTERNAL bridge (kappa_R as a normalized readout of a_local) is repaired here, not the physical identification. Exact witness: a_local=7/2, N=4 => kappa_R=14, finite, kappa_R != a_local.",
+      "class": "DECLARED_FORMULA",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OC-01",
+      "statement": "The graph front-speed v is declared (not derived) as playing the role a measured propagation speed would play; the identification with any specific physical speed is not established.",
+      "class": "DECLARED_FORMULA",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OC-02",
+      "statement": "Retention memory is declared (not derived) as playing a mass-like role; no mass-energy law is derived from the root.",
+      "class": "DECLARED_FORMULA",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OC-03",
+      "statement": "r_s = 2*G*E/c^4, admitted only as a declared calculator identity, not a derived theorem of this domain.",
+      "class": "DECLARED_FORMULA",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OC-04",
+      "statement": "tau_c = pi*c/a, admitted only as a declared calculator identity, not a derived theorem of this domain.",
+      "class": "DECLARED_FORMULA",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "OC-05",
+      "statement": "CLOSED in v0.2: the horizon half by GC-04 (N=0 <=> det B=0, finite rank-loss boundary) plus GC-05 (Unruh-fix internal bridge kappa_R=Normalize_N(a_local)); the metric-source half by the Geometry Stationarity Gate (GD-01..GD-04), a source/record field Psi driving a Theta-evolution that passes a commuting square AND has a failing control case (exact fixture Theta_{n+1}=3/8, R_Theta=0; failing control Theta_wrong=7/8, R_Theta=1 != 0).",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GD-01",
+      "statement": "Since G[Theta]=G_0+sum_a Theta^a G_a, dG/dTheta^a=G_a. The geometry source is S_Theta,n^a = Phi_n^T G_a Psi_n -- reader x record changing the operator geometry reads. This is NOT posited as energy/mass/stress. Exact witness: G_1=[[0,1],[1,0]], Phi_n=[1,0], Psi_n=[0,1] => S_Theta=1.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GD-02",
+      "statement": "The living-geometry state Theta obeys the same retained-action grammar as the rest of the root: S_closed = S_DRL + sum_n [(1/2 dt) dTheta_n^T M_Theta dTheta_n - dt U_Theta(Theta_n)]. Stationarity in Theta gives M_Theta d^2_t Theta_n + grad U_Theta(Theta_n) + K S_Theta,n = 0, with explicit stepper Theta_{n+1}=2 Theta_n - Theta_{n-1} - dt^2 M_Theta^-1 [grad U_Theta(Theta_n) + K S_Theta,n]. Exact fixture (Theta_{n-1}=0, Theta_n=1/2, M_Theta=2, K=1, dt=1, U_Theta=Theta^2/4) with S_Theta=1 gives Theta_{n+1}=3/8 and action residual R_Theta=0. Then G_{n+1}=G[Theta_{n+1}] and g_{n+1}^ij=(1/2) Hess sigma_{G[Theta_{n+1}]} -- operator->metric only, spectrum-alone still forbidden.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GD-03",
+      "statement": "The minimal closed state is Z_n=(Phi_n,Phi_{n-1},Psi_n,Psi_{n-1},Theta_n,Theta_{n-1}); Z_{n+1}=F_MSG(Z_n). The commuting square q_MSG o F_full = F_MSG o q_MSG holds, but the metric-only quotient q_g LACKS the variables to close alone -- two states with equal metric but different Phi, Psi, Theta_{n-1} give different next metrics. Time-unrolled, this is a DAG, not circular.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "relativity",
+      "rule_id": "GD-04",
+      "statement": "Four named fail states for the geometry stationarity gate: FAIL_GEOMETRY_PIVOT (det M_Theta=0 / low pivot), FAIL_METRIC_ADMISSIBILITY (bad-signature/degenerate metric), FAIL_NULL_MIXING (null edges mixed into a stationary claim), HORIZON_BOUNDARY (lapse=0, ties to GC-04). No silent regularization; no inverse computed across a horizon.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "FINITE_INTERNAL_CLOSURE",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/relativity/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/relativity/RULE_REGISTRY.json",
+        "blob": "19fbad0b8c7eb02a3be01fd1bd48c7408b872d57",
+        "claim_boundary_file": "domains/relativity/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "0fcec5d8e34a2d5e4da866153b6e5f614834da43"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-R0",
+      "statement": "a!=b is retained as a distinction; the distinction is asymmetric, giving an ordering direction. The same shared root as relativity/ and quantum/, not a new axiom.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-R1",
+      "statement": "The asymmetric ordering yields ordered transitions with a positive retention time tau_c>0.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-R2",
+      "statement": "Retention discretizes into ticks; the ordered-tape carrier G* keeps order (ab != ba), giving the finite carrier the BIO-G1 gate operates on.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-R3",
+      "statement": "The count carrier N^G (multiset/count quotient of G*) FAILS to keep dynamics well-defined: nu(ab)=nu(ba)=(1,1) but nu(F(ab))=(2,0) != nu(F(ba))=(0,2) under the future-response signature F. Exact witness in biology_closure_v0_1.py section BIO-G1.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "BIO-G1",
+      "statement": "Because the count carrier N^G loses the distinction the future-response signature F needs, the ORDERED quotient q_seq (which keeps ab != ba) closes exact: dynamics are unambiguous under q_seq where they are ambiguous under N^G. STRUCTURALLY_CLOSED. 'sequence' is a carrier property, not yet a real amino-acid or nucleotide chain.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "BIO-G2",
+      "statement": "The intervention-response equivalence class q_F(w) = O(w) (order-of-positions readout) is invariant under the swap intervention for the passing case, while the coarser keep-first-letter quotient q_first breaks output factorization (a failing control). q_F CLOSES as function; order and function are demonstrably distinct quotients.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Z",
+      "statement": "A two-component state (integrity x, reserve e) updates under a no-free-repair ledger x'+e'=x+e+j-d for contract (d,j) and repair policy a, setting up the fixed-point search for BIO-G3.",
+      "class": "ROOT_BACKBONE",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "BIO-G3",
+      "statement": "A self-maintaining fixed point V_A=Gamma(V_A) exists under the no-free-repair ledger: exact witness (1,1) with contract {(0,0),(1,1)}, policy a=d, stays (1,1) and remains in V_A (PASSING); a sustained deficit contract (d,j)=(1,0) drives integrity to 0, exiting V_A (FAILING). CONDITIONALLY_CLOSED on the boundary contract.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-MORT",
+      "statement": "The failing control of BIO-G3 (sustained (d,j)=(1,0)) exhibits integrity x -> 0 with no return path in the finite fixture, licensing 'mortality' as a structural READOUT: irreversible exit from V_A. Exact witness x2==0.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "BIO-G4",
+      "statement": "A heredity quotient q_H (descendant-signature equivalence) closes structurally: a coarse parent-quotient that merges classes with different licensed replication counts breaks the successor-count function (FAILING control, 2 != 1), while descendant-signature q_H keeps successor counts well-defined (PASSING). NO fitness term is introduced as a root variable anywhere in this rule.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-LIN",
+      "statement": "From licensed replication-count matrix B and initial counts N0, N1=B*N0 gives a frequency readout p1=N1/sum(N1) purely from lineage counts. Exact witness B=diag(2,1), N0=(1,1) -> N1=(2,1) -> p1=(2/3,1/3). No external evolution law used.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "T2",
+      "statement": "The I-only quotient q_I fails to distinguish z1=(1,1,0) and z2=(1,1,1) BEFORE the endogenous step (q_I identical), but their images differ AFTER (z1'=(1,1,0), z2'=(2,0,1)) -- q_I loses a distinction the dynamics needs. The augmented quotient q_aug=(I,Theta) distinguishes z1,z2 exactly and CLOSES. CLOSED_BY_AUGMENTATION.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-IONLY",
+      "statement": "Exact witness: tstep(1,1,0)=(1,1,0), tstep(1,1,1)=(2,0,1); q_I(z1)=q_I(z2)=(1,1) before, but (1,1,0)_{1:2} != (2,0,1)_{1:2} after -- the I-only quotient loses the distinction that forces the T2 augmentation.",
+      "class": "FINITE_DIAGNOSTIC",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-SUB1",
+      "statement": "Geometric decay, turnover-is-production, and homeostasis-balance theorems compile axiom-clean and root-native, backing the BIO-G3 living-unit substrate with a discrete-algebra homeostasis model.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-SUB2",
+      "statement": "Setpoint relaxation (one-step and n-step error decay toward a fixed setpoint) theorems compile axiom-clean and root-native, backing the BIO-G3 living-unit substrate's dynamic-response quality.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-SUB3",
+      "statement": "A bistable window and critical-slowing-down theorem compile axiom-clean and root-native, backing the BIO-G3 living-unit substrate's stability-boundary quality.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-SUB4",
+      "statement": "Coupling-energy, locked-iff-energy-zero, and one-way-coupling-breaks-conservation theorems compile axiom-clean and root-native, backing the T2 endogenous-operator substrate's coupling quality.",
+      "class": "ROOT_THEOREM",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y1",
+      "statement": "BIO-G2 closes q_F as an abstract functional quotient; whether q_F corresponds to a real protein, enzyme, or catalytic function requires a calibrated encoding from retained state to biochemical observables. No such encoding exists yet.",
+      "class": "PARTIAL_UNCALIBRATED",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y2",
+      "statement": "BIO-G3 closes V_A as an abstract self-maintaining fixed point; whether V_A corresponds to a real cell or organism requires a calibrated encoding. No such encoding exists yet.",
+      "class": "PARTIAL_UNCALIBRATED",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y3",
+      "statement": "A reproduction operator R_kappa is architecturally sketched as a branch off the living-unit fixed point V_A (a self-maintaining unit producing a new self-maintaining unit), but its construction and closure are declared, not derived or witnessed in biology_closure_v0_1.py.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y4",
+      "statement": "BIO-G4 closes q_H and the frequency readout p_{j,n+1} structurally; whether this frequency change corresponds to real biological selection or fitness requires a calibrated encoding. No fitness variable is ever introduced as a root quantity.",
+      "class": "PARTIAL_UNCALIBRATED",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y5",
+      "statement": "The lineage-frequency trend (B-LIN) can be READ as an 'evolution' trajectory, but this reading is a declared interpretation, not a derived biological-evolution law -- 'evolution' here is a structural count trend, not natural selection.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y6",
+      "statement": "B-SUB1's discrete-algebra homeostasis theorems are Coq-green as FORMAL claims; whether they describe real physiological homeostasis is a declared clinical reading (Dr, not root-derived), open pending calibration.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y7",
+      "statement": "B-SUB2's setpoint-relaxation theorems are Coq-green as FORMAL claims; whether they describe real clinical recovery/relapse dynamics is a declared reading (Dr), open pending calibration.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y8",
+      "statement": "B-SUB3's bistable-window theorem is Coq-green as a FORMAL claim; whether it describes a real bistable disease state is a declared reading (Dr), open pending calibration.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y9",
+      "statement": "B-SUB4's coupling-energy theorems are Coq-green as FORMAL claims; whether they describe real physiological coupling (hormonal, neural, etc.) is a declared reading (Dr), open pending calibration.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y10",
+      "statement": "The domain-discovery battery is real and runnable (PASS), but has been run only on SYNTHETIC tapes -- no real event-resolved biological data has been passed through it. The bridge to real data is open.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-Y11",
+      "statement": "The bacteriorhodopsin (bR) lineage ledger and its CLI are narrated and architected in the core, but NO real event-resolved run has ever been executed. This is architecture-only, not evidence.",
+      "class": "YELLOW_BRIDGE_PARTIAL",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X1",
+      "statement": "TARGET, not established: a calibrated encoding mapping retained root state to real biological observables (sequence identity, functional identity, unit identity, heredity identity). This is the single central open bottleneck licensing all real-domain semantics; none of BIO-G1..G4/T2 supply it.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X2",
+      "statement": "TARGET, not established: derivation of any real biological result from the root through real (measured, event-resolved) data. End-to-end root -> real-biology through event-resolved data = 0%.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X3",
+      "statement": "DNA/genome as a real molecular carrier is a destination the ordered-sequence carrier (BIO-G1) might eventually be calibrated to reach -- never a premise anywhere in this registry.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X4",
+      "statement": "A real cell or organelle is a destination the living-unit closure (BIO-G3) might eventually be calibrated to reach -- never a premise anywhere in this registry.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X5",
+      "statement": "Real enzyme kinetics (e.g. Michaelis-Menten-shaped catalysis) is a destination the functional quotient (BIO-G2) might eventually be calibrated to reach -- never a premise. Michaelis-Menten remains a prohibited active token (see DRIFT_CONTRACT.json).",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X6",
+      "statement": "Fitness / natural selection is explicitly FORBIDDEN as a root variable anywhere in BIO-G4/B-LIN; it remains a destination requiring a calibrated encoding, fully open.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X7",
+      "statement": "Real population-level ecological dynamics beyond the abstract lineage-count trend (B-LIN/B-Y5) are fully open -- no root-native construction exists. Lotka-Volterra remains a prohibited active token.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    },
+    {
+      "source_domain": "biology",
+      "rule_id": "B-X8",
+      "statement": "The LINE-2 textbook curriculum solver (45/45 checklist, tier textbook_closure/finite_diagnostic, no Th_coqc) sits outside this DAG entirely as a CHECKER. This node exists ONLY to make the boundary explicit and permanently red -- it must never be promoted, folded in, or counted toward the 47.2%/62.5% LINE-1 score.",
+      "class": "OPEN",
+      "tier_or_claim_boundary": "BIOLOGY_ROOT_NATIVE_PARTIAL",
+      "root_code_candidate": null,
+      "q_D_note": "domain folder is declared a readout/quotient q_D of the master retained-distinction root per domains/biology/README.md (\"a readout of the master retained-distinction root (source_root/READOUT_GENESIS_CORE_SNAPSHOT.md)\"), not a per-rule mapping to a specific Genesis code unless stated in this rule's own text",
+      "anchor": {
+        "repo": "readout_genesis",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+        "file": "domains/biology/RULE_REGISTRY.json",
+        "blob": "03acb6c05f07c333fb941c68674dc49f4a99a189",
+        "claim_boundary_file": "domains/biology/CLAIM_BOUNDARY.json",
+        "claim_boundary_blob": "1385eef2d45cf2e3f2b393062f78c540c8412e18"
+      }
+    }
+  ],
+  "notes": [
+    "Counts from files: chem 17 + quantum 33 + relativity 38 + biology 36 = 124 rules, matching the BBL-195 task figure.",
+    "quantum RULE_REGISTRY.json and biology RULE_REGISTRY.json also carry a separate 'gates' array (quantum 14 gates QG-1..QG-14, biology 6 gates) that is NOT counted here — the task scope is rules, not gates; gates are pass/fail diagnostics attached to rules, not additional equations/rules themselves.",
+    "No per-rule tier field exists in any of the four RULE_REGISTRY files (schema per rule: rule_id, name, class, assumptions, parents, statement, forbidden_claims, optional coq_backing). Per-rule 'tier_or_claim_boundary' here is therefore the domain-wide tier stated in that domain's own CLAIM_BOUNDARY*.json ('tier' field) -- chem=FORMAL_COMPOSITION_QUOTIENT_ONLY, quantum=QUANTUM_ROOT_CLOSURE_PARTIAL, relativity=FINITE_INTERNAL_CLOSURE, biology=BIOLOGY_ROOT_NATIVE_PARTIAL -- not a per-rule distinction found in the source.",
+    "'parents' in each rule is an in-domain DAG edge (another rule_id in the SAME domain's own registry, e.g. chem RT-LEDGER-001 parents=[R1,R2,R4]), never a Genesis root code -- not reproduced as root_code_candidate to avoid conflating domain-internal DAG structure with root ancestry.",
+    "root_code_candidate is non-null for exactly one rule out of 124: relativity/RB-P2, whose own statement text names 'MQ.08' verbatim ('stepped by MQ.08'). No other rule among the 124 names a Genesis root identifier (EQ-0nn, E00.x, Forced.*, Face.*, weld, MQ.08) inside its own rule_id/name/statement/assumptions/forbidden_claims -- confirmed by direct grep of all four RULE_REGISTRY files. All other domain-root framing (e.g. relativity/README.md's chain diagram naming 'MQ.08 stepper', quantum/biology README's 'readout of the master retained-distinction root') is domain-level narrative in the README, not a per-rule statement in the registry, and BBL-195 rules out inventing per-rule mappings the source does not itself state -- recorded as q_D_note instead of guessed into root_code_candidate.",
+    "genesis_root.json's EQ-001 (aliases E00.1, P0) states the same 'a != b is retained' primordial distinction that each domain's own R0/P0 rule (chem has none at that granularity; quantum Q-R0; relativity RB-P0; biology B-R0) restates as its own master-root assumption -- but since no domain rule cites 'EQ-001' or 'E00.1' by that code verbatim, this correspondence is recorded here as an observation, not written into root_code_candidate (BBL-195: do not invent roots).",
+    "The four domains are read from readout_genesis at a single commit (082dde893b70c7500c13d463239909c99cf17f0a); git status confirmed clean for domains/{chem,quantum,relativity,biology} at build time (only an unrelated untracked domains/standard_model/.lia.cache present, outside BBL-195 scope).",
+    "No AI/vendor names, no priority words, no theory prose beyond quoting the domains' own stated tier/quotient framing verbatim or near-verbatim with citation."
+  ]
+}
