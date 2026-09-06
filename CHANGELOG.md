@@ -5,6 +5,8 @@ counts are computed from the files at that point, never carried over from a prio
 
 ## v1.0.0 — 2026-09-07
 
+Deposited as Zenodo version DOI 10.5281/zenodo.22548770 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.0.0.
+
 Full equation library: root layer, canonicalised readings, imported and native Coq, generated
 views, and a printable catalogue.
 
