@@ -1,0 +1,2416 @@
+{
+  "EQ-001": {
+    "parents": [],
+    "derived_via": "definition",
+    "step": 1,
+    "step_label": "I.1"
+  },
+  "EQ-002": {
+    "parents": [
+      "EQ-001"
+    ],
+    "derived_via": "forcing",
+    "step": 2,
+    "step_label": "I.1"
+  },
+  "EQ-003": {
+    "parents": [
+      "EQ-001",
+      "EQ-002"
+    ],
+    "derived_via": "forcing",
+    "step": 3,
+    "step_label": "I.1"
+  },
+  "EQ-004": {
+    "parents": [
+      "EQ-003"
+    ],
+    "derived_via": "forcing",
+    "step": 4,
+    "step_label": "I.1"
+  },
+  "EQ-005": {
+    "parents": [],
+    "derived_via": "definition",
+    "step": 5,
+    "step_label": "I.1"
+  },
+  "EQ-006": {
+    "parents": [],
+    "derived_via": "definition",
+    "step": 6,
+    "step_label": "I.1"
+  },
+  "EQ-007": {
+    "parents": [
+      "EQ-005",
+      "EQ-006"
+    ],
+    "derived_via": "forcing",
+    "step": 7,
+    "step_label": "I.1"
+  },
+  "EQ-008": {
+    "parents": [
+      "EQ-005",
+      "EQ-006",
+      "EQ-007"
+    ],
+    "derived_via": "forcing",
+    "step": 8,
+    "step_label": "I.1"
+  },
+  "EQ-009": {
+    "parents": [
+      "EQ-001"
+    ],
+    "derived_via": "definition",
+    "step": 9,
+    "step_label": "I.1a"
+  },
+  "EQ-010": {
+    "parents": [
+      "EQ-009"
+    ],
+    "derived_via": "definition",
+    "step": 10,
+    "step_label": "I.1a"
+  },
+  "EQ-011": {
+    "parents": [
+      "EQ-009"
+    ],
+    "derived_via": "definition",
+    "step": 11,
+    "step_label": "I.1a"
+  },
+  "EQ-012": {
+    "parents": [
+      "EQ-009"
+    ],
+    "derived_via": "definition",
+    "step": 12,
+    "step_label": "I.1a"
+  },
+  "EQ-013": {
+    "parents": [
+      "EQ-012"
+    ],
+    "derived_via": "tier_rule",
+    "step": 13,
+    "step_label": "I.1a"
+  },
+  "EQ-014": {
+    "parents": [
+      "EQ-012",
+      "EQ-013"
+    ],
+    "derived_via": "tier_rule",
+    "step": 14,
+    "step_label": "I.1a"
+  },
+  "EQ-015": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "restatement",
+    "step": 15,
+    "step_label": "II.3"
+  },
+  "EQ-016": {
+    "parents": [
+      "ModeEquation"
+    ],
+    "derived_via": "restatement",
+    "step": 16,
+    "step_label": "II.7"
+  },
+  "EQ-017": {
+    "parents": [
+      "SpinePDE",
+      "Telegraph"
+    ],
+    "derived_via": "coarse_grain",
+    "step": 17,
+    "step_label": "II.8"
+  },
+  "EQ-018": {
+    "parents": [
+      "LivingGeometry"
+    ],
+    "derived_via": "restatement",
+    "step": 18,
+    "step_label": "II.8a"
+  },
+  "EQ-019": {
+    "parents": [
+      "EQ-018"
+    ],
+    "derived_via": "definition",
+    "step": 19,
+    "step_label": "II.8a"
+  },
+  "EQ-020": {
+    "parents": [
+      "EQ-019"
+    ],
+    "derived_via": "definition",
+    "step": 20,
+    "step_label": "II.8a"
+  },
+  "EQ-021": {
+    "parents": [
+      "T1"
+    ],
+    "derived_via": "restatement",
+    "step": 21,
+    "step_label": "V.13a"
+  },
+  "EQ-022": {
+    "parents": [
+      "ReaderRecordEqs"
+    ],
+    "derived_via": "restatement",
+    "step": 22,
+    "step_label": "II.8a"
+  },
+  "EQ-023": {
+    "parents": [
+      "ResidualsAndPotential"
+    ],
+    "derived_via": "restatement",
+    "step": 23,
+    "step_label": "II.8a"
+  },
+  "EQ-024": {
+    "parents": [
+      "GaussJordanStepper"
+    ],
+    "derived_via": "restatement",
+    "step": 24,
+    "step_label": "II.8a"
+  },
+  "EQ-025": {
+    "parents": [
+      "GaussJordanStepper"
+    ],
+    "derived_via": "restatement",
+    "step": 25,
+    "step_label": "II.8a"
+  },
+  "EQ-026": {
+    "parents": [
+      "Face.10.StrictGap"
+    ],
+    "derived_via": "restatement",
+    "step": 26,
+    "step_label": "II.8a"
+  },
+  "EQ-027": {
+    "parents": [
+      "EQ-026"
+    ],
+    "derived_via": "restatement",
+    "step": 27,
+    "step_label": "III.Face10"
+  },
+  "EQ-028": {
+    "parents": [
+      "EQ-027"
+    ],
+    "derived_via": "tier_rule",
+    "step": 28,
+    "step_label": "III.Face10"
+  },
+  "EQ-029": {
+    "parents": [
+      "bR_Ledger_r_B"
+    ],
+    "derived_via": "restatement",
+    "step": 29,
+    "step_label": "V.13"
+  },
+  "EQ-030": {
+    "parents": [
+      "SM_DAG"
+    ],
+    "derived_via": "restatement",
+    "step": 30,
+    "step_label": "V.21"
+  },
+  "EQ-031": {
+    "parents": [
+      "EQ-030"
+    ],
+    "derived_via": "readout",
+    "step": 31,
+    "step_label": "V.21"
+  },
+  "EQ-032": {
+    "parents": [
+      "EQ-031"
+    ],
+    "derived_via": "tier_rule",
+    "step": 32,
+    "step_label": "V.21"
+  },
+  "EQ-033": {
+    "parents": [
+      "EQ-032"
+    ],
+    "derived_via": "forcing",
+    "step": 33,
+    "step_label": "V.21"
+  },
+  "EQ-034": {
+    "parents": [
+      "EQ-032",
+      "EQ-033"
+    ],
+    "derived_via": "tier_rule",
+    "step": 34,
+    "step_label": "V.21"
+  },
+  "EQ-035": {
+    "parents": [
+      "EQ-021"
+    ],
+    "derived_via": "definition",
+    "step": 35,
+    "step_label": "V.13a"
+  },
+  "EQ-036": {
+    "parents": [
+      "EQ-030"
+    ],
+    "derived_via": "specialisation",
+    "step": 36,
+    "step_label": "V.21"
+  },
+  "EQ-037": {
+    "parents": [
+      "EQ-036"
+    ],
+    "derived_via": "specialisation",
+    "step": 37,
+    "step_label": "V.21"
+  },
+  "EQ-038": {
+    "parents": [
+      "EQ-037"
+    ],
+    "derived_via": "specialisation",
+    "step": 38,
+    "step_label": "V.21"
+  },
+  "EQ-039": {
+    "parents": [
+      "EQ-038"
+    ],
+    "derived_via": "specialisation",
+    "step": 39,
+    "step_label": "V.21"
+  },
+  "EQ-040": {
+    "parents": [
+      "EQ-039"
+    ],
+    "derived_via": "specialisation",
+    "step": 40,
+    "step_label": "V.21"
+  },
+  "EQ-041": {
+    "parents": [
+      "EQ-040"
+    ],
+    "derived_via": "specialisation",
+    "step": 41,
+    "step_label": "V.21"
+  },
+  "EQ-042": {
+    "parents": [
+      "EQ-041"
+    ],
+    "derived_via": "definition",
+    "step": 42,
+    "step_label": "V.21"
+  },
+  "EQ-043": {
+    "parents": [
+      "EQ-042"
+    ],
+    "derived_via": "definition",
+    "step": 43,
+    "step_label": "V.21"
+  },
+  "EQ-044": {
+    "parents": [
+      "UnifiedForce_action"
+    ],
+    "derived_via": "composition",
+    "step": 44,
+    "step_label": "V.22"
+  },
+  "EQ-045": {
+    "parents": [
+      "EQ-041"
+    ],
+    "derived_via": "readout",
+    "step": 45,
+    "step_label": "V.21"
+  },
+  "EQ-046": {
+    "parents": [
+      "EQ-042"
+    ],
+    "derived_via": "specialisation",
+    "step": 46,
+    "step_label": "V.21"
+  },
+  "EQ-047": {
+    "parents": [
+      "EQ-042"
+    ],
+    "derived_via": "specialisation",
+    "step": 47,
+    "step_label": "V.21"
+  },
+  "EQ-048": {
+    "parents": [
+      "EQ-047"
+    ],
+    "derived_via": "specialisation",
+    "step": 48,
+    "step_label": "V.21"
+  },
+  "EQ-049": {
+    "parents": [
+      "EQ-041"
+    ],
+    "derived_via": "specialisation",
+    "step": 49,
+    "step_label": "V.21"
+  },
+  "EQ-050": {
+    "parents": [
+      "EQ-042"
+    ],
+    "derived_via": "specialisation",
+    "step": 50,
+    "step_label": "V.21"
+  },
+  "EQ-051": {
+    "parents": [
+      "EQ-049"
+    ],
+    "derived_via": "domain_reading",
+    "step": 51,
+    "step_label": "V.21"
+  },
+  "EQ-052": {
+    "parents": [
+      "EQ-051"
+    ],
+    "derived_via": "tier_rule",
+    "step": 52,
+    "step_label": "V.21"
+  },
+  "EQ-053": {
+    "parents": [
+      "EQ-051"
+    ],
+    "derived_via": "composition",
+    "step": 53,
+    "step_label": "V.21"
+  },
+  "EQ-054": {
+    "parents": [
+      "EQ-053"
+    ],
+    "derived_via": "composition",
+    "step": 54,
+    "step_label": "V.21"
+  },
+  "EQ-055": {
+    "parents": [
+      "EQ-042"
+    ],
+    "derived_via": "definition",
+    "step": 55,
+    "step_label": "V.21"
+  },
+  "EQ-056": {
+    "parents": [
+      "EQ-022"
+    ],
+    "derived_via": "readout",
+    "step": 56,
+    "step_label": "V.21"
+  },
+  "EQ-057": {
+    "parents": [
+      "EQ-056"
+    ],
+    "derived_via": "tier_rule",
+    "step": 57,
+    "step_label": "V.21"
+  },
+  "EQ-058": {
+    "parents": [
+      "EQ-041"
+    ],
+    "derived_via": "domain_reading",
+    "step": 58,
+    "step_label": "V.21"
+  },
+  "EQ-059": {
+    "parents": [
+      "EQ-058"
+    ],
+    "derived_via": "domain_reading",
+    "step": 59,
+    "step_label": "V.21"
+  },
+  "EQ-060": {
+    "parents": [
+      "ModeEquation"
+    ],
+    "derived_via": "specialisation",
+    "step": 60,
+    "step_label": "V.21"
+  },
+  "EQ-061": {
+    "parents": [
+      "GaussJordanStepper"
+    ],
+    "derived_via": "restatement",
+    "step": 61,
+    "step_label": "V.21"
+  },
+  "EQ-062": {
+    "parents": [
+      "EQ-061"
+    ],
+    "derived_via": "tier_rule",
+    "step": 62,
+    "step_label": "V.21"
+  },
+  "EQ-063": {
+    "parents": [
+      "EQ-005",
+      "BridgeFormula.MassReadout"
+    ],
+    "derived_via": "readout",
+    "step": 63,
+    "step_label": "IV.1"
+  },
+  "EQ-064": {
+    "parents": [
+      "EQ-063"
+    ],
+    "derived_via": "domain_reading",
+    "step": 64,
+    "step_label": "IV.1"
+  },
+  "EQ-065": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "definition",
+    "step": 65,
+    "step_label": "V.22"
+  },
+  "EQ-066": {
+    "parents": [
+      "EQ-065"
+    ],
+    "derived_via": "domain_reading",
+    "step": 66,
+    "step_label": "V.22"
+  },
+  "EQ-067": {
+    "parents": [
+      "EQ-066"
+    ],
+    "derived_via": "domain_reading",
+    "step": 67,
+    "step_label": "V.22"
+  },
+  "EQ-068": {
+    "parents": [
+      "EQ-067"
+    ],
+    "derived_via": "tier_rule",
+    "step": 68,
+    "step_label": "V.22"
+  },
+  "EQ-069": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "domain_reading",
+    "step": 69,
+    "step_label": "V.22"
+  },
+  "EQ-070": {
+    "parents": [
+      "EQ-069"
+    ],
+    "derived_via": "restatement",
+    "step": 70,
+    "step_label": "V.22"
+  },
+  "EQ-071": {
+    "parents": [
+      "EQ-069"
+    ],
+    "derived_via": "restatement",
+    "step": 71,
+    "step_label": "V.22"
+  },
+  "weld": {
+    "parents": [
+      "EQ-008",
+      "MQ08-stepper"
+    ],
+    "derived_via": "composition",
+    "step": 72,
+    "step_label": "weld"
+  },
+  "I": {
+    "parents": [
+      "EQ-001"
+    ],
+    "derived_via": "forcing",
+    "step": 73,
+    "step_label": "Forced.I"
+  },
+  "II": {
+    "parents": [
+      "I"
+    ],
+    "derived_via": "forcing",
+    "step": 74,
+    "step_label": "Forced.II"
+  },
+  "III": {
+    "parents": [
+      "I"
+    ],
+    "derived_via": "forcing",
+    "step": 75,
+    "step_label": "Forced.III"
+  },
+  "IV": {
+    "parents": [
+      "MQ08-stepper"
+    ],
+    "derived_via": "forcing",
+    "step": 76,
+    "step_label": "Forced.IV"
+  },
+  "V": {
+    "parents": [
+      "LivingGeometry"
+    ],
+    "derived_via": "forcing",
+    "step": 77,
+    "step_label": "Forced.V"
+  },
+  "VI": {
+    "parents": [
+      "ResidualsAndPotential"
+    ],
+    "derived_via": "forcing",
+    "step": 78,
+    "step_label": "Forced.VI"
+  },
+  "VII": {
+    "parents": [
+      "I"
+    ],
+    "derived_via": "forcing",
+    "step": 79,
+    "step_label": "Forced.VII"
+  },
+  "VIII": {
+    "parents": [
+      "I"
+    ],
+    "derived_via": "forcing",
+    "step": 80,
+    "step_label": "Forced.VIII"
+  },
+  "IX": {
+    "parents": [
+      "EQ-007"
+    ],
+    "derived_via": "forcing",
+    "step": 81,
+    "step_label": "Forced.IX"
+  },
+  "X": {
+    "parents": [
+      "IX"
+    ],
+    "derived_via": "forcing",
+    "step": 82,
+    "step_label": "Forced.X"
+  },
+  "XI": {
+    "parents": [
+      "EQ-005",
+      "BridgeFormula.MassReadout"
+    ],
+    "derived_via": "forcing",
+    "step": 83,
+    "step_label": "Forced.XI"
+  },
+  "XII": {
+    "parents": [
+      "Face.8.MetricReadout"
+    ],
+    "derived_via": "forcing",
+    "step": 84,
+    "step_label": "Forced.XII"
+  },
+  "XIII": {
+    "parents": [
+      "Face.3.Dispersion",
+      "X"
+    ],
+    "derived_via": "forcing",
+    "step": 85,
+    "step_label": "Forced.XIII"
+  },
+  "XIV": {
+    "parents": [
+      "GaugeFaces"
+    ],
+    "derived_via": "forcing",
+    "step": 86,
+    "step_label": "Forced.XIV"
+  },
+  "XV": {
+    "parents": [
+      "TermTier-gradV"
+    ],
+    "derived_via": "forcing",
+    "step": 87,
+    "step_label": "Forced.XV"
+  },
+  "XVI": {
+    "parents": [
+      "Face.8.MetricReadout"
+    ],
+    "derived_via": "forcing",
+    "step": 88,
+    "step_label": "Forced.XVI"
+  },
+  "XVII": {
+    "parents": [
+      "ResidualsAndPotential"
+    ],
+    "derived_via": "forcing",
+    "step": 89,
+    "step_label": "Forced.XVII"
+  },
+  "XVIII": {
+    "parents": [
+      "Face.3.Dispersion"
+    ],
+    "derived_via": "forcing",
+    "step": 90,
+    "step_label": "Forced.XVIII"
+  },
+  "XIX": {
+    "parents": [
+      "DRLAction"
+    ],
+    "derived_via": "forcing",
+    "step": 91,
+    "step_label": "Forced.XIX"
+  },
+  "XX": {
+    "parents": [
+      "GaugeFaces"
+    ],
+    "derived_via": "forcing",
+    "step": 92,
+    "step_label": "Forced.XX"
+  },
+  "XXI": {
+    "parents": [
+      "XX"
+    ],
+    "derived_via": "forcing",
+    "step": 93,
+    "step_label": "Forced.XXI"
+  },
+  "XXII": {
+    "parents": [
+      "XXI"
+    ],
+    "derived_via": "forcing",
+    "step": 94,
+    "step_label": "Forced.XXII"
+  },
+  "XXIII": {
+    "parents": [
+      "ModeEquation"
+    ],
+    "derived_via": "forcing",
+    "step": 95,
+    "step_label": "Forced.XXIII"
+  },
+  "XXIV": {
+    "parents": [
+      "EQ-042"
+    ],
+    "derived_via": "forcing",
+    "step": 96,
+    "step_label": "Forced.XXIV"
+  },
+  "RootToTrunk": {
+    "parents": [
+      "EQ-004",
+      "EQ-005",
+      "EQ-006",
+      "EQ-007",
+      "EQ-008"
+    ],
+    "derived_via": "composition",
+    "step": 97,
+    "step_label": "I.2"
+  },
+  "InverseArrow": {
+    "parents": [
+      "RootToTrunk"
+    ],
+    "derived_via": "readout",
+    "step": 98,
+    "step_label": "I.2a"
+  },
+  "MQ08-stepper": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "forcing",
+    "step": 99,
+    "step_label": "II.1"
+  },
+  "MQ08-CFL": {
+    "parents": [
+      "MQ08-stepper"
+    ],
+    "derived_via": "tier_rule",
+    "step": 100,
+    "step_label": "II.1"
+  },
+  "Telegraph": {
+    "parents": [
+      "MQ08-stepper"
+    ],
+    "derived_via": "coarse_grain",
+    "step": 101,
+    "step_label": "II.2"
+  },
+  "MemoryKernel": {
+    "parents": [
+      "Telegraph"
+    ],
+    "derived_via": "readout",
+    "step": 102,
+    "step_label": "II.2"
+  },
+  "SpinePDE": {
+    "parents": [
+      "Telegraph"
+    ],
+    "derived_via": "coarse_grain",
+    "step": 103,
+    "step_label": "II.3"
+  },
+  "GaugeFaces": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "domain_reading",
+    "step": 104,
+    "step_label": "II.4"
+  },
+  "MasterEqCanon": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "restatement",
+    "step": 105,
+    "step_label": "II.5"
+  },
+  "SignBridge": {
+    "parents": [
+      "MasterEqCanon"
+    ],
+    "derived_via": "readout",
+    "step": 106,
+    "step_label": "II.5"
+  },
+  "TermTier-M": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 107,
+    "step_label": "II.6"
+  },
+  "TermTier-D": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 108,
+    "step_label": "II.6"
+  },
+  "TermTier-KLR": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 109,
+    "step_label": "II.6"
+  },
+  "TermTier-gradV": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 110,
+    "step_label": "II.6"
+  },
+  "TermTier-J": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 111,
+    "step_label": "II.6"
+  },
+  "TermTier-eta": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 112,
+    "step_label": "II.6"
+  },
+  "ModeEquation": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "specialisation",
+    "step": 113,
+    "step_label": "II.7"
+  },
+  "Layer3": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 114,
+    "step_label": "II.8"
+  },
+  "LivingGeometry": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "specialisation",
+    "step": 115,
+    "step_label": "II.8a"
+  },
+  "MixingCurrent": {
+    "parents": [
+      "LivingGeometry"
+    ],
+    "derived_via": "definition",
+    "step": 116,
+    "step_label": "II.8a"
+  },
+  "Rgeo": {
+    "parents": [
+      "LivingGeometry"
+    ],
+    "derived_via": "tier_rule",
+    "step": 117,
+    "step_label": "II.8a"
+  },
+  "DRLAction": {
+    "parents": [
+      "LivingGeometry"
+    ],
+    "derived_via": "definition",
+    "step": 118,
+    "step_label": "II.8a"
+  },
+  "EtaOmegaMatrices": {
+    "parents": [
+      "DRLAction"
+    ],
+    "derived_via": "definition",
+    "step": 119,
+    "step_label": "II.8a"
+  },
+  "ReaderRecordEqs": {
+    "parents": [
+      "EtaOmegaMatrices"
+    ],
+    "derived_via": "composition",
+    "step": 120,
+    "step_label": "II.8a"
+  },
+  "ResidualsAndPotential": {
+    "parents": [
+      "ReaderRecordEqs"
+    ],
+    "derived_via": "definition",
+    "step": 121,
+    "step_label": "II.8a"
+  },
+  "GaussJordanStepper": {
+    "parents": [
+      "ReaderRecordEqs"
+    ],
+    "derived_via": "composition",
+    "step": 122,
+    "step_label": "II.8a"
+  },
+  "CutCurrent": {
+    "parents": [
+      "GaussJordanStepper"
+    ],
+    "derived_via": "readout",
+    "step": 123,
+    "step_label": "II.8a"
+  },
+  "RTPEOperatorSplit": {
+    "parents": [
+      "ResidualsAndPotential"
+    ],
+    "derived_via": "composition",
+    "step": 124,
+    "step_label": "II.8a"
+  },
+  "Layer.3": {
+    "parents": [
+      "Layer3"
+    ],
+    "derived_via": "restatement",
+    "step": 125,
+    "step_label": "III.pre"
+  },
+  "Face.1.Eigenmode": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "specialisation",
+    "step": 126,
+    "step_label": "III.Face1"
+  },
+  "Face.1.CharEq": {
+    "parents": [
+      "Face.1.Eigenmode"
+    ],
+    "derived_via": "specialisation",
+    "step": 127,
+    "step_label": "III.Face1"
+  },
+  "Face.1.Decomposition": {
+    "parents": [
+      "Face.1.Eigenmode",
+      "T1"
+    ],
+    "derived_via": "composition",
+    "step": 128,
+    "step_label": "III.Face1"
+  },
+  "Face.2": {
+    "parents": [
+      "Face.1.Eigenmode"
+    ],
+    "derived_via": "specialisation",
+    "step": 129,
+    "step_label": "III.Face2"
+  },
+  "Face.3.CharEq": {
+    "parents": [
+      "Face.1.CharEq"
+    ],
+    "derived_via": "specialisation",
+    "step": 130,
+    "step_label": "III.Face3"
+  },
+  "Face.3.CriticalSplit": {
+    "parents": [
+      "Face.3.CharEq"
+    ],
+    "derived_via": "specialisation",
+    "step": 131,
+    "step_label": "III.Face3"
+  },
+  "Face.3.Dispersion": {
+    "parents": [
+      "Face.3.CriticalSplit"
+    ],
+    "derived_via": "composition",
+    "step": 132,
+    "step_label": "III.Face3"
+  },
+  "Face.4": {
+    "parents": [
+      "Face.2"
+    ],
+    "derived_via": "specialisation",
+    "step": 133,
+    "step_label": "III.Face4"
+  },
+  "Face.5.LightCone": {
+    "parents": [
+      "EQ-007"
+    ],
+    "derived_via": "readout",
+    "step": 134,
+    "step_label": "III.Face5"
+  },
+  "Face.5.GraphSpeed": {
+    "parents": [
+      "Face.5.LightCone"
+    ],
+    "derived_via": "readout",
+    "step": 135,
+    "step_label": "III.Face5"
+  },
+  "Face.6.MassMemory": {
+    "parents": [
+      "EQ-005"
+    ],
+    "derived_via": "readout",
+    "step": 136,
+    "step_label": "III.Face6"
+  },
+  "Face.6.ModeMass": {
+    "parents": [
+      "Face.6.MassMemory",
+      "Face.1.Eigenmode"
+    ],
+    "derived_via": "specialisation",
+    "step": 137,
+    "step_label": "III.Face6"
+  },
+  "Face.7.RootForce": {
+    "parents": [
+      "TermTier-gradV"
+    ],
+    "derived_via": "readout",
+    "step": 138,
+    "step_label": "III.Face7"
+  },
+  "Face.7.Residual": {
+    "parents": [
+      "Face.7.RootForce"
+    ],
+    "derived_via": "tier_rule",
+    "step": 139,
+    "step_label": "III.Face7"
+  },
+  "Face.7.SINewtonGate": {
+    "parents": [
+      "Face.7.RootForce"
+    ],
+    "derived_via": "domain_reading",
+    "step": 140,
+    "step_label": "III.Face7"
+  },
+  "Face.7.Landauer": {
+    "parents": [
+      "Face.7.RootForce"
+    ],
+    "derived_via": "domain_reading",
+    "step": 141,
+    "step_label": "III.Face7"
+  },
+  "Face.8.MetricReadout": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "readout",
+    "step": 142,
+    "step_label": "III.Face8"
+  },
+  "Face.8.Guardrail": {
+    "parents": [
+      "Face.8.MetricReadout"
+    ],
+    "derived_via": "tier_rule",
+    "step": 143,
+    "step_label": "III.Face8"
+  },
+  "Face.8.CurvatureForce": {
+    "parents": [
+      "Face.8.MetricReadout"
+    ],
+    "derived_via": "composition",
+    "step": 144,
+    "step_label": "III.Face8"
+  },
+  "Face.9": {
+    "parents": [
+      "MQ08-stepper"
+    ],
+    "derived_via": "domain_reading",
+    "step": 145,
+    "step_label": "III.Face9"
+  },
+  "Face.10.StrictGap": {
+    "parents": [
+      "EQ-002"
+    ],
+    "derived_via": "readout",
+    "step": 146,
+    "step_label": "III.Face10"
+  },
+  "Face.10.IdentifiabilityGate": {
+    "parents": [
+      "Face.10.StrictGap"
+    ],
+    "derived_via": "tier_rule",
+    "step": 147,
+    "step_label": "III.Face10"
+  },
+  "Face.10.bRLedger": {
+    "parents": [
+      "EQ-029"
+    ],
+    "derived_via": "restatement",
+    "step": 148,
+    "step_label": "III.Face10"
+  },
+  "Face.11.SolveTarget": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "domain_reading",
+    "step": 149,
+    "step_label": "III.Face11"
+  },
+  "Face.11.FailAbleGate": {
+    "parents": [
+      "Face.11.SolveTarget"
+    ],
+    "derived_via": "tier_rule",
+    "step": 150,
+    "step_label": "III.Face11"
+  },
+  "Face.12": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "domain_reading",
+    "step": 151,
+    "step_label": "III.Face12"
+  },
+  "BridgeFormula.TauC": {
+    "parents": [
+      "EQ-005"
+    ],
+    "derived_via": "readout",
+    "step": 152,
+    "step_label": "IV.1"
+  },
+  "BridgeFormula.MassReadout": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "readout",
+    "step": 153,
+    "step_label": "IV.1"
+  },
+  "BridgeFormula.MPositedFinding": {
+    "parents": [
+      "BridgeFormula.MassReadout"
+    ],
+    "derived_via": "tier_rule",
+    "step": 154,
+    "step_label": "IV.1"
+  },
+  "Atlas.AlphaQG": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "domain_reading",
+    "step": 155,
+    "step_label": "IV.2"
+  },
+  "Atlas.ScaleTable": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "domain_reading",
+    "step": 156,
+    "step_label": "IV.2"
+  },
+  "CommutingSquare.Bridge": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "tier_rule",
+    "step": 157,
+    "step_label": "IV.5"
+  },
+  "CommutingSquare.Quotient": {
+    "parents": [
+      "CommutingSquare.Bridge"
+    ],
+    "derived_via": "tier_rule",
+    "step": 158,
+    "step_label": "IV.5"
+  },
+  "Gateway.PrimitiveTuple": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "definition",
+    "step": 159,
+    "step_label": "IV.6"
+  },
+  "Gateway.NativeMasterPDE": {
+    "parents": [
+      "Gateway.PrimitiveTuple",
+      "SpinePDE"
+    ],
+    "derived_via": "readout",
+    "step": 160,
+    "step_label": "IV.6"
+  },
+  "Gateway.GatewayPDE": {
+    "parents": [
+      "Gateway.NativeMasterPDE"
+    ],
+    "derived_via": "composition",
+    "step": 161,
+    "step_label": "IV.6"
+  },
+  "Gateway.InputAdapter": {
+    "parents": [
+      "Gateway.GatewayPDE"
+    ],
+    "derived_via": "definition",
+    "step": 162,
+    "step_label": "IV.6"
+  },
+  "Gateway.OutputAdapters": {
+    "parents": [
+      "Gateway.GatewayPDE"
+    ],
+    "derived_via": "definition",
+    "step": 163,
+    "step_label": "IV.6"
+  },
+  "Gateway.SchwarzschildIdentity": {
+    "parents": [
+      "Gateway.OutputAdapters"
+    ],
+    "derived_via": "domain_reading",
+    "step": 164,
+    "step_label": "IV.6"
+  },
+  "Gateway.UnruhIdentity": {
+    "parents": [
+      "Gateway.OutputAdapters"
+    ],
+    "derived_via": "domain_reading",
+    "step": 165,
+    "step_label": "IV.6"
+  },
+  "Gateway.SemanticLanes": {
+    "parents": [
+      "Gateway.PrimitiveTuple"
+    ],
+    "derived_via": "definition",
+    "step": 166,
+    "step_label": "IV.6"
+  },
+  "Gateway.OpenBridgeGuard": {
+    "parents": [
+      "Gateway.SchwarzschildIdentity",
+      "Gateway.UnruhIdentity"
+    ],
+    "derived_via": "tier_rule",
+    "step": 167,
+    "step_label": "IV.6"
+  },
+  "V0_DomainDiscoveryEngine": {
+    "parents": [
+      "InverseArrow"
+    ],
+    "derived_via": "readout",
+    "step": 168,
+    "step_label": "V.0"
+  },
+  "q_quantum_osc": {
+    "parents": [
+      "V0_DomainDiscoveryEngine",
+      "Face.1.Eigenmode"
+    ],
+    "derived_via": "domain_reading",
+    "step": 169,
+    "step_label": "V.1"
+  },
+  "q_quantum_lambda_c": {
+    "parents": [
+      "Face.3.CriticalSplit"
+    ],
+    "derived_via": "domain_reading",
+    "step": 170,
+    "step_label": "V.1"
+  },
+  "q_quantum_CPTP": {
+    "parents": [
+      "Face.9"
+    ],
+    "derived_via": "domain_reading",
+    "step": 171,
+    "step_label": "V.1"
+  },
+  "q_quantum_Heisenberg": {
+    "parents": [
+      "q_quantum_CPTP"
+    ],
+    "derived_via": "tier_rule",
+    "step": 172,
+    "step_label": "V.1"
+  },
+  "q_quantum_CHSH": {
+    "parents": [
+      "q_quantum_CPTP"
+    ],
+    "derived_via": "tier_rule",
+    "step": 173,
+    "step_label": "V.1"
+  },
+  "q1_hollow_card_downgrade": {
+    "parents": [
+      "q_quantum_osc",
+      "q_quantum_lambda_c",
+      "q_quantum_CPTP",
+      "q_quantum_Heisenberg",
+      "q_quantum_CHSH"
+    ],
+    "derived_via": "tier_rule",
+    "step": 174,
+    "step_label": "V.1"
+  },
+  "q_relativity_cone": {
+    "parents": [
+      "Face.5.LightCone"
+    ],
+    "derived_via": "domain_reading",
+    "step": 175,
+    "step_label": "V.2"
+  },
+  "q_relativity_metric": {
+    "parents": [
+      "Face.8.MetricReadout"
+    ],
+    "derived_via": "domain_reading",
+    "step": 176,
+    "step_label": "V.2"
+  },
+  "q_geometry_LR_Laplacian": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "domain_reading",
+    "step": 177,
+    "step_label": "V.3"
+  },
+  "q_turbulence_fullPDE": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "domain_reading",
+    "step": 178,
+    "step_label": "V.4"
+  },
+  "q_complex_fiedler": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "domain_reading",
+    "step": 179,
+    "step_label": "V.5"
+  },
+  "lambda0_collapse": {
+    "parents": [
+      "q_complex_fiedler"
+    ],
+    "derived_via": "tier_rule",
+    "step": 180,
+    "step_label": "V.5"
+  },
+  "q_biology_eigenmode": {
+    "parents": [
+      "Face.1.Eigenmode"
+    ],
+    "derived_via": "domain_reading",
+    "step": 181,
+    "step_label": "V.6"
+  },
+  "q_biology_engine_home_leaf": {
+    "parents": [
+      "V0_DomainDiscoveryEngine",
+      "q_biology_eigenmode"
+    ],
+    "derived_via": "domain_reading",
+    "step": 182,
+    "step_label": "V.6"
+  },
+  "q_chemistry_RD": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "domain_reading",
+    "step": 183,
+    "step_label": "V.7"
+  },
+  "q_cognitive_recordlaw": {
+    "parents": [
+      "Face.10.StrictGap"
+    ],
+    "derived_via": "domain_reading",
+    "step": 184,
+    "step_label": "V.8"
+  },
+  "q_social": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "domain_reading",
+    "step": 185,
+    "step_label": "V.9"
+  },
+  "AI_ethics_special_case": {
+    "parents": [
+      "q_social"
+    ],
+    "derived_via": "specialisation",
+    "step": 186,
+    "step_label": "V.9"
+  },
+  "q_finance_RTPE": {
+    "parents": [
+      "RTPEOperatorSplit"
+    ],
+    "derived_via": "domain_reading",
+    "step": 187,
+    "step_label": "V.10"
+  },
+  "q_cosmology": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "domain_reading",
+    "step": 188,
+    "step_label": "V.11"
+  },
+  "q_formal": {
+    "parents": [
+      "V0_DomainDiscoveryEngine"
+    ],
+    "derived_via": "domain_reading",
+    "step": 189,
+    "step_label": "V.12"
+  },
+  "q_formal_commuting_square": {
+    "parents": [
+      "CommutingSquare.Quotient",
+      "q_formal"
+    ],
+    "derived_via": "tier_rule",
+    "step": 190,
+    "step_label": "V.12"
+  },
+  "bR_Ledger_r_B": {
+    "parents": [
+      "EQ-029"
+    ],
+    "derived_via": "definition",
+    "step": 191,
+    "step_label": "V.13"
+  },
+  "bR_Ledger_qQ_negative_result": {
+    "parents": [
+      "bR_Ledger_r_B"
+    ],
+    "derived_via": "tier_rule",
+    "step": 192,
+    "step_label": "V.13"
+  },
+  "LR_skew_split": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "readout",
+    "step": 193,
+    "step_label": "V.13a"
+  },
+  "T1": {
+    "parents": [
+      "LR_skew_split"
+    ],
+    "derived_via": "forcing",
+    "step": 194,
+    "step_label": "V.13a"
+  },
+  "T1b": {
+    "parents": [
+      "T1"
+    ],
+    "derived_via": "specialisation",
+    "step": 195,
+    "step_label": "V.13a"
+  },
+  "T2": {
+    "parents": [
+      "T1b"
+    ],
+    "derived_via": "tier_rule",
+    "step": 196,
+    "step_label": "V.13a"
+  },
+  "V.14.FailAbleGateLaw": {
+    "parents": [
+      "Face.11.FailAbleGate"
+    ],
+    "derived_via": "restatement",
+    "step": 197,
+    "step_label": "V.14"
+  },
+  "pi_phi_page_curve": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "domain_reading",
+    "step": 198,
+    "step_label": "V.15"
+  },
+  "ChemDomain_ledger": {
+    "parents": [
+      "q_chemistry_RD"
+    ],
+    "derived_via": "domain_reading",
+    "step": 199,
+    "step_label": "V.16"
+  },
+  "RelativityDomain_Qv": {
+    "parents": [
+      "q_relativity_cone"
+    ],
+    "derived_via": "domain_reading",
+    "step": 200,
+    "step_label": "V.17"
+  },
+  "RelativityDomain_lapse_Lorentz": {
+    "parents": [
+      "RelativityDomain_Qv"
+    ],
+    "derived_via": "domain_reading",
+    "step": 201,
+    "step_label": "V.17"
+  },
+  "RelativityDomain_dynamic_metric_source": {
+    "parents": [
+      "RelativityDomain_lapse_Lorentz"
+    ],
+    "derived_via": "domain_reading",
+    "step": 202,
+    "step_label": "V.17"
+  },
+  "RelativityDomain_calculator_identities": {
+    "parents": [
+      "RelativityDomain_dynamic_metric_source",
+      "Gateway.SchwarzschildIdentity"
+    ],
+    "derived_via": "tier_rule",
+    "step": 203,
+    "step_label": "V.17"
+  },
+  "QuantumDomain_osc_split": {
+    "parents": [
+      "q_quantum_osc"
+    ],
+    "derived_via": "domain_reading",
+    "step": 204,
+    "step_label": "V.18"
+  },
+  "QuantumDomain_complexification": {
+    "parents": [
+      "QuantumDomain_osc_split"
+    ],
+    "derived_via": "domain_reading",
+    "step": 205,
+    "step_label": "V.18"
+  },
+  "QuantumDomain_norm_reversibility": {
+    "parents": [
+      "QuantumDomain_complexification"
+    ],
+    "derived_via": "domain_reading",
+    "step": 206,
+    "step_label": "V.18"
+  },
+  "QuantumDomain_Born_target": {
+    "parents": [
+      "QuantumDomain_norm_reversibility"
+    ],
+    "derived_via": "tier_rule",
+    "step": 207,
+    "step_label": "V.18"
+  },
+  "BiologyDomain_living_unit": {
+    "parents": [
+      "q_biology_eigenmode"
+    ],
+    "derived_via": "domain_reading",
+    "step": 208,
+    "step_label": "V.19"
+  },
+  "BiologyDomain_heredity": {
+    "parents": [
+      "BiologyDomain_living_unit"
+    ],
+    "derived_via": "domain_reading",
+    "step": 209,
+    "step_label": "V.19"
+  },
+  "BiologyDomain_T2_closed": {
+    "parents": [
+      "T2",
+      "BiologyDomain_living_unit"
+    ],
+    "derived_via": "specialisation",
+    "step": 210,
+    "step_label": "V.19"
+  },
+  "WeldDSL": {
+    "parents": [
+      "weld",
+      "V0_DomainDiscoveryEngine"
+    ],
+    "derived_via": "composition",
+    "step": 211,
+    "step_label": "V.20"
+  },
+  "SM_DAG": {
+    "parents": [
+      "GaugeFaces",
+      "EQ-042"
+    ],
+    "derived_via": "composition",
+    "step": 212,
+    "step_label": "V.21"
+  },
+  "UnifiedForce_action": {
+    "parents": [
+      "SM_DAG"
+    ],
+    "derived_via": "composition",
+    "step": 213,
+    "step_label": "V.22"
+  },
+  "UnifiedForceClosure_v0.1": {
+    "parents": [
+      "UnifiedForce_action"
+    ],
+    "derived_via": "tier_rule",
+    "step": 214,
+    "step_label": "V.22"
+  },
+  "SM_G0_order_defect": {
+    "parents": [
+      "EQ-042",
+      "UnifiedForceClosure_v0.1"
+    ],
+    "derived_via": "readout",
+    "step": 215,
+    "step_label": "V.22"
+  },
+  "FourForceCirculation_v0.2": {
+    "parents": [
+      "UnifiedForceClosure_v0.1"
+    ],
+    "derived_via": "composition",
+    "step": 216,
+    "step_label": "V.22"
+  },
+  "ElectroweakDecoder_v0.3": {
+    "parents": [
+      "FourForceCirculation_v0.2"
+    ],
+    "derived_via": "specialisation",
+    "step": 217,
+    "step_label": "V.22"
+  },
+  "SM_Discovery_Pipeline_v0.4": {
+    "parents": [
+      "ElectroweakDecoder_v0.3"
+    ],
+    "derived_via": "domain_reading",
+    "step": 218,
+    "step_label": "V.22"
+  },
+  "ColorSU3_v0.2": {
+    "parents": [
+      "EQ-041"
+    ],
+    "derived_via": "specialisation",
+    "step": 219,
+    "step_label": "V.22"
+  },
+  "CenterConfinement_v0.3": {
+    "parents": [
+      "ColorSU3_v0.2",
+      "EQ-051"
+    ],
+    "derived_via": "specialisation",
+    "step": 220,
+    "step_label": "V.22"
+  },
+  "ConfinementCertificate_v0.5": {
+    "parents": [
+      "CenterConfinement_v0.3"
+    ],
+    "derived_via": "composition",
+    "step": 221,
+    "step_label": "V.22"
+  },
+  "TrialitySpectralFlow_v0.6": {
+    "parents": [
+      "ConfinementCertificate_v0.5"
+    ],
+    "derived_via": "composition",
+    "step": 222,
+    "step_label": "V.22"
+  },
+  "BlockClosure_v0.7": {
+    "parents": [
+      "TrialitySpectralFlow_v0.6"
+    ],
+    "derived_via": "composition",
+    "step": 223,
+    "step_label": "V.22"
+  },
+  "CorrectedCertificate_v0.9": {
+    "parents": [
+      "BlockClosure_v0.7"
+    ],
+    "derived_via": "composition",
+    "step": 224,
+    "step_label": "V.22"
+  },
+  "AllOrderCharacter_v1.0": {
+    "parents": [
+      "CorrectedCertificate_v0.9",
+      "EQ-054"
+    ],
+    "derived_via": "composition",
+    "step": 225,
+    "step_label": "V.22"
+  },
+  "SurfaceAutomaton_v1.1": {
+    "parents": [
+      "AllOrderCharacter_v1.0"
+    ],
+    "derived_via": "composition",
+    "step": 226,
+    "step_label": "V.22"
+  },
+  "UpperAutomaton_v1.2": {
+    "parents": [
+      "SurfaceAutomaton_v1.1"
+    ],
+    "derived_via": "composition",
+    "step": 227,
+    "step_label": "V.22"
+  },
+  "MassGap_v1.3_v1.4": {
+    "parents": [
+      "UpperAutomaton_v1.2"
+    ],
+    "derived_via": "composition",
+    "step": 228,
+    "step_label": "V.22"
+  },
+  "Hypercharge_Z6_v1.5": {
+    "parents": [
+      "SM_Discovery_Pipeline_v0.4"
+    ],
+    "derived_via": "composition",
+    "step": 229,
+    "step_label": "V.22"
+  },
+  "BlindMatterSearch_v1.6": {
+    "parents": [
+      "Hypercharge_Z6_v1.5"
+    ],
+    "derived_via": "composition",
+    "step": 230,
+    "step_label": "V.22"
+  },
+  "RootNativeChirality_v1.7": {
+    "parents": [
+      "BlindMatterSearch_v1.6"
+    ],
+    "derived_via": "composition",
+    "step": 231,
+    "step_label": "V.22"
+  },
+  "TapeKineticOperator_v1.8": {
+    "parents": [
+      "RootNativeChirality_v1.7"
+    ],
+    "derived_via": "composition",
+    "step": 232,
+    "step_label": "V.22"
+  },
+  "WhyD4_v1.9": {
+    "parents": [
+      "TapeKineticOperator_v1.8"
+    ],
+    "derived_via": "composition",
+    "step": 233,
+    "step_label": "V.22"
+  },
+  "IsotropicFixedPoint_v1.10": {
+    "parents": [
+      "WhyD4_v1.9"
+    ],
+    "derived_via": "composition",
+    "step": 234,
+    "step_label": "V.22"
+  },
+  "FrameMixingFromAction_v1.11": {
+    "parents": [
+      "IsotropicFixedPoint_v1.10"
+    ],
+    "derived_via": "composition",
+    "step": 235,
+    "step_label": "V.22"
+  },
+  "OrderHiggsClosure_v1.12": {
+    "parents": [
+      "FrameMixingFromAction_v1.11"
+    ],
+    "derived_via": "composition",
+    "step": 236,
+    "step_label": "V.22"
+  },
+  "IntertwinerOrderVacuum_v1.13": {
+    "parents": [
+      "OrderHiggsClosure_v1.12"
+    ],
+    "derived_via": "composition",
+    "step": 237,
+    "step_label": "V.22"
+  },
+  "A.1": {
+    "parents": [
+      "EQ-001"
+    ],
+    "derived_via": "tier_rule",
+    "step": 238,
+    "step_label": "V-A.1"
+  },
+  "A.2": {
+    "parents": [
+      "A.1",
+      "V0_DomainDiscoveryEngine"
+    ],
+    "derived_via": "definition",
+    "step": 239,
+    "step_label": "V-A.2"
+  },
+  "A.3": {
+    "parents": [
+      "A.2"
+    ],
+    "derived_via": "tier_rule",
+    "step": 240,
+    "step_label": "V-A.3"
+  },
+  "A.4": {
+    "parents": [
+      "A.3"
+    ],
+    "derived_via": "tier_rule",
+    "step": 241,
+    "step_label": "V-A.4"
+  },
+  "A.5": {
+    "parents": [
+      "A.2"
+    ],
+    "derived_via": "tier_rule",
+    "step": 242,
+    "step_label": "V-A.5"
+  },
+  "A.6": {
+    "parents": [
+      "A.4"
+    ],
+    "derived_via": "tier_rule",
+    "step": 243,
+    "step_label": "V-A.6"
+  },
+  "A.7": {
+    "parents": [
+      "A.6"
+    ],
+    "derived_via": "tier_rule",
+    "step": 244,
+    "step_label": "V-A.7"
+  },
+  "A.8": {
+    "parents": [
+      "A.7"
+    ],
+    "derived_via": "tier_rule",
+    "step": 245,
+    "step_label": "V-A.8"
+  },
+  "A.9": {
+    "parents": [
+      "A.5"
+    ],
+    "derived_via": "tier_rule",
+    "step": 246,
+    "step_label": "V-A.9"
+  },
+  "A.10": {
+    "parents": [
+      "A.2"
+    ],
+    "derived_via": "tier_rule",
+    "step": 247,
+    "step_label": "V-A.10"
+  },
+  "A.11": {
+    "parents": [
+      "A.2"
+    ],
+    "derived_via": "tier_rule",
+    "step": 248,
+    "step_label": "V-A.11"
+  },
+  "A.12": {
+    "parents": [
+      "A.11"
+    ],
+    "derived_via": "tier_rule",
+    "step": 249,
+    "step_label": "V-A.12"
+  },
+  "Gate1": {
+    "parents": [
+      "A.4"
+    ],
+    "derived_via": "tier_rule",
+    "step": 250,
+    "step_label": "V-A.13"
+  },
+  "Gate2": {
+    "parents": [
+      "Gate1"
+    ],
+    "derived_via": "tier_rule",
+    "step": 251,
+    "step_label": "V-A.13"
+  },
+  "Gate3": {
+    "parents": [
+      "Gate2"
+    ],
+    "derived_via": "tier_rule",
+    "step": 252,
+    "step_label": "V-A.13"
+  },
+  "Gate4": {
+    "parents": [
+      "Gate3",
+      "A.6"
+    ],
+    "derived_via": "tier_rule",
+    "step": 253,
+    "step_label": "V-A.13"
+  },
+  "Gate5": {
+    "parents": [
+      "Gate4"
+    ],
+    "derived_via": "tier_rule",
+    "step": 254,
+    "step_label": "V-A.13"
+  },
+  "Gate6": {
+    "parents": [
+      "Gate5"
+    ],
+    "derived_via": "tier_rule",
+    "step": 255,
+    "step_label": "V-A.13"
+  },
+  "Gate7": {
+    "parents": [
+      "Gate6",
+      "EQ-009"
+    ],
+    "derived_via": "tier_rule",
+    "step": 256,
+    "step_label": "V-A.13"
+  },
+  "A13.DefectVector": {
+    "parents": [
+      "Gate5"
+    ],
+    "derived_via": "definition",
+    "step": 257,
+    "step_label": "V-A.13"
+  },
+  "A13.ArchitectureBox": {
+    "parents": [
+      "Gate1",
+      "Gate2",
+      "Gate3",
+      "Gate4",
+      "Gate5",
+      "Gate6",
+      "Gate7"
+    ],
+    "derived_via": "composition",
+    "step": 258,
+    "step_label": "V-A.13"
+  },
+  "A13.SummaryBox": {
+    "parents": [
+      "A13.ArchitectureBox"
+    ],
+    "derived_via": "restatement",
+    "step": 259,
+    "step_label": "V-A.13"
+  },
+  "B.1": {
+    "parents": [
+      "A.2"
+    ],
+    "derived_via": "definition",
+    "step": 260,
+    "step_label": "VI-A.B1"
+  },
+  "B.2.Step1": {
+    "parents": [
+      "B.1"
+    ],
+    "derived_via": "definition",
+    "step": 261,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step2": {
+    "parents": [
+      "B.2.Step1"
+    ],
+    "derived_via": "definition",
+    "step": 262,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step3": {
+    "parents": [
+      "B.2.Step2"
+    ],
+    "derived_via": "definition",
+    "step": 263,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step4": {
+    "parents": [
+      "B.2.Step3"
+    ],
+    "derived_via": "definition",
+    "step": 264,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step5": {
+    "parents": [
+      "B.2.Step4",
+      "A.6"
+    ],
+    "derived_via": "tier_rule",
+    "step": 265,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step6": {
+    "parents": [
+      "B.2.Step5"
+    ],
+    "derived_via": "definition",
+    "step": 266,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step7": {
+    "parents": [
+      "B.2.Step6"
+    ],
+    "derived_via": "definition",
+    "step": 267,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step8": {
+    "parents": [
+      "B.2.Step7"
+    ],
+    "derived_via": "tier_rule",
+    "step": 268,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step9": {
+    "parents": [
+      "B.2.Step8"
+    ],
+    "derived_via": "tier_rule",
+    "step": 269,
+    "step_label": "VI-A.B2"
+  },
+  "B.2.Step10": {
+    "parents": [
+      "B.2.Step9"
+    ],
+    "derived_via": "readout",
+    "step": 270,
+    "step_label": "VI-A.B2"
+  },
+  "B.2a.NormalFormLineage": {
+    "parents": [
+      "B.2.Step10"
+    ],
+    "derived_via": "definition",
+    "step": 271,
+    "step_label": "VI-A.B2a"
+  },
+  "B.2a.ConservationLedger": {
+    "parents": [
+      "B.2a.NormalFormLineage",
+      "EQ-029"
+    ],
+    "derived_via": "definition",
+    "step": 272,
+    "step_label": "VI-A.B2a"
+  },
+  "B.2a.SynthesisComplexity": {
+    "parents": [
+      "B.2a.NormalFormLineage"
+    ],
+    "derived_via": "tier_rule",
+    "step": 273,
+    "step_label": "VI-A.B2a"
+  },
+  "B.3": {
+    "parents": [
+      "B.2.Step10"
+    ],
+    "derived_via": "tier_rule",
+    "step": 274,
+    "step_label": "VI-A.B3"
+  },
+  "B.4": {
+    "parents": [
+      "EQ-009",
+      "EQ-010",
+      "EQ-011"
+    ],
+    "derived_via": "definition",
+    "step": 275,
+    "step_label": "VI-A.B4"
+  },
+  "B.5": {
+    "parents": [
+      "B.3",
+      "B.4"
+    ],
+    "derived_via": "tier_rule",
+    "step": 276,
+    "step_label": "VI-A.B5"
+  },
+  "B.5.Registrar": {
+    "parents": [
+      "B.5"
+    ],
+    "derived_via": "definition",
+    "step": 277,
+    "step_label": "VI-A.B5"
+  },
+  "B.5.Maker": {
+    "parents": [
+      "B.5"
+    ],
+    "derived_via": "definition",
+    "step": 278,
+    "step_label": "VI-A.B5"
+  },
+  "B.5.PredictionFreeze": {
+    "parents": [
+      "B.5.Maker"
+    ],
+    "derived_via": "tier_rule",
+    "step": 279,
+    "step_label": "VI-A.B5"
+  },
+  "B.5.Checker": {
+    "parents": [
+      "B.5.PredictionFreeze"
+    ],
+    "derived_via": "tier_rule",
+    "step": 280,
+    "step_label": "VI-A.B5"
+  },
+  "B.5.Auditor": {
+    "parents": [
+      "B.5.Checker"
+    ],
+    "derived_via": "definition",
+    "step": 281,
+    "step_label": "VI-A.B5"
+  },
+  "B.5.ProtocolDeviation": {
+    "parents": [
+      "B.5.Auditor"
+    ],
+    "derived_via": "tier_rule",
+    "step": 282,
+    "step_label": "VI-A.B5"
+  },
+  "B.6": {
+    "parents": [
+      "B.5.ProtocolDeviation"
+    ],
+    "derived_via": "composition",
+    "step": 283,
+    "step_label": "VI-A.B6"
+  },
+  "B.7": {
+    "parents": [
+      "B.2.Step10",
+      "B.6"
+    ],
+    "derived_via": "composition",
+    "step": 284,
+    "step_label": "VI-A.B7"
+  },
+  "B.8": {
+    "parents": [
+      "B.7",
+      "Gate7"
+    ],
+    "derived_via": "restatement",
+    "step": 285,
+    "step_label": "VI-A.B8"
+  },
+  "N3": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 286,
+    "step_label": "VI.1"
+  },
+  "N5": {
+    "parents": [
+      "SpinePDE"
+    ],
+    "derived_via": "tier_rule",
+    "step": 287,
+    "step_label": "VI.1"
+  },
+  "N1-Layer3": {
+    "parents": [
+      "Layer3"
+    ],
+    "derived_via": "restatement",
+    "step": 288,
+    "step_label": "VI.1"
+  },
+  "N2-ScalarEigenmode": {
+    "parents": [
+      "LR_skew_split",
+      "T1"
+    ],
+    "derived_via": "composition",
+    "step": 289,
+    "step_label": "VI.1"
+  },
+  "L0": {
+    "parents": [
+      "EQ-008"
+    ],
+    "derived_via": "definition",
+    "step": 290,
+    "step_label": "VI.2"
+  },
+  "L1": {
+    "parents": [
+      "BridgeFormula.TauC"
+    ],
+    "derived_via": "definition",
+    "step": 291,
+    "step_label": "VI.2"
+  },
+  "L2": {
+    "parents": [
+      "Face.10.StrictGap"
+    ],
+    "derived_via": "definition",
+    "step": 292,
+    "step_label": "VI.2"
+  },
+  "L3": {
+    "parents": [
+      "V0_DomainDiscoveryEngine"
+    ],
+    "derived_via": "definition",
+    "step": 293,
+    "step_label": "VI.2"
+  },
+  "L4": {
+    "parents": [
+      "L3"
+    ],
+    "derived_via": "definition",
+    "step": 294,
+    "step_label": "VI.2"
+  },
+  "L5": {
+    "parents": [
+      "L4",
+      "B.5"
+    ],
+    "derived_via": "definition",
+    "step": 295,
+    "step_label": "VI.2"
+  },
+  "Re_ep": {
+    "parents": [
+      "N3",
+      "N5"
+    ],
+    "derived_via": "composition",
+    "step": 296,
+    "step_label": "VI.3"
+  }
+}

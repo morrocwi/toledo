@@ -21,3 +21,9 @@
 
 ## Chair loop
 On every notification: read result → update handoff (run ids, counts) → regenerate EQ_LIBRARY → commit/push (public repo: leak scan first) → launch the next unblocked stream(s) up to the budget.
+
+## Retrieval + graph (BBL-196) — added to S8
+- Storage: one JSON per code in `registry/entries/<code>.json` (LaTeX statement + metadata; Coq linked, not embedded); `TOLEDO.json` and `graph/toledo_graph.json` (nodes = codes; typed edges: parent, reads, refines, supersedes, same_form_different_theory, special_case_of, occurrence→record) are GENERATED at build; also `graph/toledo.graphml` for graph tools.
+- CLI `scripts/toledo` (python, no deps): `find <text|regex>` (statement/plain/object/occurrence), `show <code>`, `ancestry <code>` (chain to the Genesis root), `descendants <code>`, `neighbours <code> [--type]`, `by-root <root>`, `by-domain <D>`, `by-record <zenodo id>`, `export --format json|graphml|md`.
+- Obsidian vault export `vault/<code>.md` with `[[wikilinks]]` for every edge (the founder's research vault convention) so relations are clickable; static site = the same pages rendered.
+- Search index: `docs/site/index.json` (code, statement_plain, object, root, domain, tier, occurrences) + one-file client-side search.
