@@ -1,0 +1,175 @@
+{
+  "source": "information-discrete-math",
+  "upstream_repo": "https://github.com/morrocwi/information-discrete-math (public)",
+  "upstream_commit": "147fc92671f35eb102405fec913eb361dc41f966",
+  "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+  "licence_note": "Public MIT-licensed repository. Copied verbatim (byte-for-byte diff against the upstream commit above is empty) under its own MIT terms -- no additional authorisation needed beyond the licence itself. Toledo's coq/ tree is also MIT-licensed, so this import is licence-compatible.",
+  "files": [
+    {
+      "path": "case_studies/double_pendulum_readout/ShakeIrrational.v",
+      "blob": "ab56876a09242995743ef700a4d1ee838338cce0",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 3
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "blob": "8fdff68d7425ebd5f4df6d2556b373cd45b56964",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 13
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "blob": "6741cff81825457676a2b20cf603d83883809758",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 8
+    },
+    {
+      "path": "formal/IDM_Bridge.v",
+      "blob": "c46f70fd31d919ff633c306327707124ab4a12a0",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 3
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "blob": "1dec5ca6486ecaa5f02c8e781639faaf2a3d0172",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 9
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "blob": "0019ce3acd745968cb24349aa5699a41f9164003",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 21
+    },
+    {
+      "path": "formal/IDM_Continuum.v",
+      "blob": "0eb55e7fab3e241cbe2a0c3459511c56e410bbfb",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 5
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "blob": "de31698e36a17aac9b443487a28868917211dab9",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 21
+    },
+    {
+      "path": "formal/IDM_EquivariantReadout.v",
+      "blob": "04a77f4e0814555e3b8a6f7cd117c1ada231df8c",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 4
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses.v",
+      "blob": "7ce295476ba92f6e2aed42ddacb5acec144b529b",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 6
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses2.v",
+      "blob": "5cec867aeb8d892504bd0b90ac5805db36a94017",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 5
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "blob": "32b8aa03cc7cdcae330125f90aff3f8d9aba9a1a",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 10
+    },
+    {
+      "path": "formal/IDM_FirstOrder.v",
+      "blob": "ff055d7d711953d0394c6c52ad2af08c8a2cb7da",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 3
+    },
+    {
+      "path": "formal/IDM_Genesis.v",
+      "blob": "7e03390a90736bd18d34a6a6b3e881d6f4f4deec",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 4
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "blob": "ef47df3a91d1cadb83bad600430229d82f447b97",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 10
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "blob": "833bb75cc9867ecd0b95d669bbae61ba7c80c699",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 7
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "blob": "43a7fc6d626be2cf0a4746ea019047986d0559e2",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 15
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "blob": "423496d7f618277ce2ad038c7dabb88559070a2f",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 7
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "blob": "005c0db90bb371ab205efe892458c9d3a2311b7e",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 7
+    },
+    {
+      "path": "formal/IDM_Logic.v",
+      "blob": "d58051b60867588381e88326990d1bc201c300e4",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 4
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "blob": "623ba695a72f86d820cc27d27156b090663fc6ff",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 21
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "blob": "2492006b25cc0b0afe69b1b6b65151b6ecd8e56f",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 12
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "blob": "3ecfc14fb889940b26a9387873819e339a14dbd6",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 42
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "blob": "c62924128c203d4d965283799e292d7e2d3163fd",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 10
+    },
+    {
+      "path": "formal/IDM_Schur.v",
+      "blob": "542a1333a4e5c84001e85cc06dcafe6eb21dcb15",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 6
+    },
+    {
+      "path": "formal/IDM_SetsFunctions.v",
+      "blob": "094cde2169da49685aa0c8096049a4e00635cc66",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 6
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "blob": "0e8eb9e84747d35e29a2a547f57441d2243c23c9",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 12
+    }
+  ],
+  "copied_at": "2026-09-06T13:08:15Z",
+  "build_note": "formal/*.v compiled sequentially (one coqc at a time, dependency order: IDM_Keystone, IDM_Bridge, IDM_FiniteWitnesses, IDM_FiniteWitnesses2, IDM_Logic, IDM_FiniteWitnesses3, IDM_Matrix, IDM_Harvest, IDM_Calculus, IDM_Certified, IDM_Tropical, IDM_Geometry, IDM_Reduction, IDM_Hilbert, IDM_DeclarationBound, IDM_ApproxCount, IDM_Genesis, IDM_ReadoutMinimality, IDM_ResolvedCount, IDM_EquivariantReadout, IDM_Apriori, IDM_SetsFunctions, IDM_FirstOrder, IDM_Schur, IDM_HilbertReadout, IDM_Continuum -- matching the upstream formal/verify.sh's own compile order (its own build tool, per the copy-don't-guess rule); case_studies/double_pendulum_readout/ShakeIrrational.v compiled standalone (no internal Requires beyond stdlib ZArith/Lia). No _CoqProject existed upstream; none was needed here either -- each Require Import resolves via coqc's default current-directory search once the dependency's own .vo exists from the prior sequential step, mirroring exactly how upstream's own verify.sh runs.",
+  "verification_note": "Every Theorem/Lemma/Corollary/Proposition listed in registry/coq_imports.json for this source (274 total, across all 27 files including the case study) was independently checked via a scratch `Require Import <module>. Print Assumptions <name>.` file -- not just the 194 named in upstream's own formal/verify.sh. Result: all 274 print exactly 'Closed under the global context' -- axiom-free, verified on this machine at build time, not merely claimed by upstream.",
+  "redactions": []
+}

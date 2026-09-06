@@ -1,0 +1,21 @@
+% latex/catalogue.tex — printable catalogue skeleton.
+% \input{}s the GENERATED body (latex/catalogue_body.tex, written by
+% scripts/toledo_build.py) — never hand-edit catalogue_body.tex.
+\documentclass[10pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{toledo}
+
+\title{Toledo --- Equation Library Catalogue}
+\author{}
+\date{Generated \today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{catalogue_body.tex}
+
+\end{document}

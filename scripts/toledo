@@ -1,0 +1,229 @@
+#!/usr/bin/env python3
+"""
+toledo — CLI over the generated Toledo equation library (registry/TOLEDO.json +
+graph/toledo_graph.json). Pure Python 3 stdlib, no network.
+
+Reads GENERATED artifacts only — never registry/CANONICAL.json directly — so it
+always reflects exactly what scripts/toledo_build.py last wrote.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import pathlib
+import re
+import sys
+
+REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+
+def default_toledo_path(out_root: pathlib.Path) -> pathlib.Path:
+    return out_root / "registry" / "TOLEDO.json"
+
+
+def load_toledo(out_root: pathlib.Path) -> dict:
+    path = default_toledo_path(out_root)
+    if not path.exists():
+        sys.stderr.write(
+            f"error: {path} not found — run scripts/toledo_build.py first "
+            "(or --sample for a demo build in sample_output/)\n"
+        )
+        raise SystemExit(2)
+    with open(path, encoding="utf-8") as fh:
+        doc = json.load(fh)
+    return doc
+
+
+def code_safe(code: str) -> str:
+    return code.replace("/", "__").replace(".", "_")
+
+
+def by_code(doc: dict) -> dict:
+    return {e["code"]: e for e in doc["canonical"]}
+
+
+def cmd_find(doc, args):
+    pattern = re.compile(args.regex, re.IGNORECASE) if args.regex_mode else None
+    needle = args.query.lower()
+    hits = []
+    for e in doc["canonical"]:
+        haystack = " ".join([
+            e.get("code", ""), e.get("name", ""),
+            (e.get("statement") or {}).get("latest", ""),
+            " ".join(o.get("label") or "" for o in e.get("occurrences", [])),
+        ])
+        matched = pattern.search(haystack) if pattern else needle in haystack.lower()
+        if matched:
+            hits.append(e)
+    _print_rows(hits)
+
+
+def cmd_show(doc, args):
+    idx = by_code(doc)
+    e = idx.get(args.code)
+    if not e:
+        sys.stderr.write(f"error: code not found: {args.code}\n")
+        raise SystemExit(1)
+    print(json.dumps(e, indent=2, ensure_ascii=False))
+
+
+def cmd_ancestry(doc, args):
+    idx = by_code(doc)
+    if args.code not in idx:
+        sys.stderr.write(f"error: code not found: {args.code}\n")
+        raise SystemExit(1)
+    chain = [args.code]
+    seen = {args.code}
+    cur = args.code
+    while True:
+        e = idx.get(cur)
+        if not e or not e.get("parents"):
+            break
+        nxt = e["parents"][0]["code"]
+        if nxt in seen:
+            print(f"# cycle detected: {nxt} already visited", file=sys.stderr)
+            break
+        chain.append(nxt)
+        seen.add(nxt)
+        cur = nxt
+    print(" -> ".join(reversed(chain)))
+
+
+def cmd_descendants(doc, args):
+    idx = by_code(doc)
+    if args.code not in idx:
+        sys.stderr.write(f"error: code not found: {args.code}\n")
+        raise SystemExit(1)
+    out = []
+    frontier = [args.code]
+    seen = {args.code}
+    while frontier:
+        cur = frontier.pop(0)
+        for child in idx[cur].get("children", []):
+            if child not in seen:
+                seen.add(child)
+                out.append(child)
+                frontier.append(child)
+    _print_rows([idx[c] for c in out if c in idx])
+
+
+def cmd_neighbours(doc, args):
+    idx = by_code(doc)
+    e = idx.get(args.code)
+    if not e:
+        sys.stderr.write(f"error: code not found: {args.code}\n")
+        raise SystemExit(1)
+    neigh = []
+    for p in e.get("parents", []):
+        if not args.type or args.type == "parent":
+            neigh.append((p["code"], "parent", p.get("derived_via", "")))
+    for c in e.get("children", []):
+        if not args.type or args.type == "child":
+            neigh.append((c, "child", ""))
+    for r in e.get("relations", []):
+        if not args.type or args.type == r["type"]:
+            neigh.append((r["target"], r["type"], r.get("note", "")))
+    for code, rel, note in neigh:
+        print(f"{rel}\t{code}\t{note}")
+
+
+def cmd_by_root(doc, args):
+    hits = [e for e in doc["canonical"] if e.get("root") == args.root]
+    _print_rows(hits)
+
+
+def cmd_by_domain(doc, args):
+    hits = [e for e in doc["canonical"] if e.get("domain") == args.domain]
+    _print_rows(hits)
+
+
+def cmd_by_record(doc, args):
+    rid = args.record_id
+    hits = []
+    for e in doc["canonical"]:
+        for occ in e.get("occurrences", []):
+            if str(occ.get("record_id")) == str(rid) or str(occ.get("doi")) == str(rid):
+                hits.append(e)
+                break
+    _print_rows(hits)
+
+
+def cmd_export(doc, args):
+    if args.format == "json":
+        print(json.dumps(doc, indent=2, ensure_ascii=False))
+    elif args.format == "graphml":
+        graph_path = args.out_root / "graph" / "toledo.graphml"
+        if not graph_path.exists():
+            sys.stderr.write(f"error: {graph_path} not found — run scripts/toledo_build.py first\n")
+            raise SystemExit(2)
+        print(graph_path.read_text(encoding="utf-8"))
+    elif args.format == "md":
+        for e in doc["canonical"]:
+            print(f"## {e['code']} — {e.get('name', '')}")
+            print()
+            print((e.get("statement") or {}).get("latest", ""))
+            print()
+
+
+def _print_rows(entries):
+    for e in entries:
+        stmt = (e.get("statement") or {}).get("latest", "")
+        if len(stmt) > 60:
+            stmt = stmt[:57] + "..."
+        print(f"{e['code']}\t{e.get('tier', '')}\t{e.get('status', '')}\t{stmt}")
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(prog="toledo", description=__doc__)
+    ap.add_argument("--out-root", type=pathlib.Path, default=REPO_ROOT,
+                     help="root directory holding registry/TOLEDO.json (default: repo root)")
+    sub = ap.add_subparsers(dest="command", required=True)
+
+    p = sub.add_parser("find", help="find <text|regex> over statement/name/object/occurrence")
+    p.add_argument("query", help="plain substring, or a regex if --regex is given")
+    p.add_argument("--regex", dest="regex_mode", action="store_true", help="treat query as a regex")
+    p.set_defaults(func=lambda doc, a: cmd_find(doc, argparse.Namespace(
+        query=a.query, regex_mode=a.regex_mode, regex=a.query)))
+
+    p = sub.add_parser("show", help="show a code's full generated entry")
+    p.add_argument("code")
+    p.set_defaults(func=cmd_show)
+
+    p = sub.add_parser("ancestry", help="chain from a code to the Genesis root")
+    p.add_argument("code")
+    p.set_defaults(func=cmd_ancestry)
+
+    p = sub.add_parser("descendants", help="all codes reachable via children edges")
+    p.add_argument("code")
+    p.set_defaults(func=cmd_descendants)
+
+    p = sub.add_parser("neighbours", help="direct parent/child/relation neighbours")
+    p.add_argument("code")
+    p.add_argument("--type", default=None)
+    p.set_defaults(func=cmd_neighbours)
+
+    p = sub.add_parser("by-root", help="every code under a given root")
+    p.add_argument("root")
+    p.set_defaults(func=cmd_by_root)
+
+    p = sub.add_parser("by-domain", help="every code in a given domain letter")
+    p.add_argument("domain")
+    p.set_defaults(func=cmd_by_domain)
+
+    p = sub.add_parser("by-record", help="every code occurring in a given Zenodo record id/doi")
+    p.add_argument("record_id")
+    p.set_defaults(func=cmd_by_record)
+
+    p = sub.add_parser("export", help="export the generated library")
+    p.add_argument("--format", choices=["json", "graphml", "md"], required=True)
+    p.set_defaults(func=cmd_export)
+
+    args = ap.parse_args(argv)
+    doc = load_toledo(args.out_root)
+    args.out_root = args.out_root
+    args.func(doc, args)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

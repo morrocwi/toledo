@@ -1,0 +1,2480 @@
+{
+  "source": "information-discrete-math",
+  "upstream_commit": "147fc92671f35eb102405fec913eb361dc41f966",
+  "generated_at": "2026-09-06T13:08:15Z",
+  "files_total": 27,
+  "files_build_ok": 27,
+  "files_build_failed": 0,
+  "theorems_total": 274,
+  "theorems_closed": 274,
+  "theorems_with_axioms": 0,
+  "theorems_build_failed": 0,
+  "results": [
+    {
+      "path": "case_studies/double_pendulum_readout/ShakeIrrational.v",
+      "module": "ShakeIrrational",
+      "theorem": "s_val",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "case_studies/double_pendulum_readout/ShakeIrrational.v",
+      "module": "ShakeIrrational",
+      "theorem": "squeeze",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "case_studies/double_pendulum_readout/ShakeIrrational.v",
+      "module": "ShakeIrrational",
+      "theorem": "delta_num_not_perfect_square",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "pigeonhole_bits_needed",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "weight_cons",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "weight_app",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "weight_repeat_true",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "weight_repeat_false",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "fam_elem_weight",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "k_bound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "fam_elem_length",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "fam_length",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "fam_in",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "fam_nodup",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "r_correct_far_apart_False",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ApproxCount.v",
+      "module": "IDM_ApproxCount",
+      "theorem": "approx_count_deferred_lower_bound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "apriori_multiplicative_contracts",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "apriori_geometric_contracts",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "apriori_stable",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "half_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "richardson_ratio_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "richardson_ratio_le_one",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "richardson_apriori_contracts",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Apriori.v",
+      "module": "IDM_Apriori",
+      "theorem": "richardson_apriori_stable",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Bridge.v",
+      "module": "IDM_Bridge",
+      "theorem": "FTCC_exact",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Bridge.v",
+      "module": "IDM_Bridge",
+      "theorem": "FTCC_eps_exact",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Bridge.v",
+      "module": "IDM_Bridge",
+      "theorem": "bridge_faithful_exact_core",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "delta_sum",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "delta_scalar",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "delta_product",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "Deps_sum",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "Deps_product",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "FTCC_telescope",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "PSum_ext",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "PSum_delta_telescope",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Calculus.v",
+      "module": "IDM_Calculus",
+      "theorem": "summation_by_parts",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "geom_certified_identity",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "geom_certified_defect",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "geom_majorant_tail",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "one_le_Sk",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "q01",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "q01_le",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "pos_Sk",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "div_le_self",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "exp_term_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "exp_term_ratio",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "exp_tail_certified",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "two_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "sq_error_propagation",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "mono_step",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "valbound_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "errbound_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "iter_sq_valbound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "iter_sq_certified",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "Qmult_le_l_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "abs_tailsum_le",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Certified.v",
+      "module": "IDM_Certified",
+      "theorem": "refine_stable",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Continuum.v",
+      "module": "IDM_Continuum",
+      "theorem": "radd_at",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Continuum.v",
+      "module": "IDM_Continuum",
+      "theorem": "rmul_at",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Continuum.v",
+      "module": "IDM_Continuum",
+      "theorem": "radd_comm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Continuum.v",
+      "module": "IDM_Continuum",
+      "theorem": "const_gap_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Continuum.v",
+      "module": "IDM_Continuum",
+      "theorem": "gap_subadditive",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "b2n_inj",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "bit_extraction_exact",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "profile_injective",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "bcube_length",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "two_pow_pos",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "bcube_all_len",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "bcube_complete",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "bcube_halves_disjoint",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "NoDup_app_disjoint",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "NoDup_map_cons",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "bcube_nodup",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "short_records_length",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "short_records_complete",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "NoDup_map_inj_on",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "deferred_record_bits",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "declared_forgets_tail",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "declaration_separation",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "qary_symbol_injective",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "flat_map_cons_length",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "qcube_length",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_DeclarationBound.v",
+      "module": "IDM_DeclarationBound",
+      "theorem": "qcube_all_len",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_EquivariantReadout.v",
+      "module": "IDM_EquivariantReadout",
+      "theorem": "equivariant_stabilizer_containment",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_EquivariantReadout.v",
+      "module": "IDM_EquivariantReadout",
+      "theorem": "faithful_stabilizer_equality",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_EquivariantReadout.v",
+      "module": "IDM_EquivariantReadout",
+      "theorem": "fixed_value_reads_equal",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_EquivariantReadout.v",
+      "module": "IDM_EquivariantReadout",
+      "theorem": "nondegenerate_value_moves",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses.v",
+      "module": "IDM_FiniteWitnesses",
+      "theorem": "handshake_lemma",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses.v",
+      "module": "IDM_FiniteWitnesses",
+      "theorem": "finite_yoneda",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses.v",
+      "module": "IDM_FiniteWitnesses",
+      "theorem": "sing_eq_iff",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses.v",
+      "module": "IDM_FiniteWitnesses",
+      "theorem": "kuratowski_pair_inj",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses.v",
+      "module": "IDM_FiniteWitnesses",
+      "theorem": "pigeonhole",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses.v",
+      "module": "IDM_FiniteWitnesses",
+      "theorem": "semiring_distrib",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses2.v",
+      "module": "IDM_FiniteWitnesses2",
+      "theorem": "no_infinite_readout",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses2.v",
+      "module": "IDM_FiniteWitnesses2",
+      "theorem": "tape_count_succ",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses2.v",
+      "module": "IDM_FiniteWitnesses2",
+      "theorem": "tape_no_terminal",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses2.v",
+      "module": "IDM_FiniteWitnesses2",
+      "theorem": "same_set_same_size",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses2.v",
+      "module": "IDM_FiniteWitnesses2",
+      "theorem": "lagrange_order_div",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "no_fibonacci_integer_dim",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "ring_distrib_Z",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "Qsq_nonneg3",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "cauchy_schwarz_2",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "measure_additive",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "aut_assoc",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "aut_id_left",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "aut_id_right",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "aut_inv_left",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FiniteWitnesses3.v",
+      "module": "IDM_FiniteWitnesses3",
+      "theorem": "aut_inv_right",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FirstOrder.v",
+      "module": "IDM_FirstOrder",
+      "theorem": "eval_correct",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FirstOrder.v",
+      "module": "IDM_FirstOrder",
+      "theorem": "sat_fo_decidable",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_FirstOrder.v",
+      "module": "IDM_FirstOrder",
+      "theorem": "models_decidable",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Genesis.v",
+      "module": "IDM_Genesis",
+      "theorem": "primordial_difference_exists",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Genesis.v",
+      "module": "IDM_Genesis",
+      "theorem": "succ_ground_distinct",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Genesis.v",
+      "module": "IDM_Genesis",
+      "theorem": "discrete_floor",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Genesis.v",
+      "module": "IDM_Genesis",
+      "theorem": "no_density_at_root",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_swap_bc",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_swap_ab",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_cyclic",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_coincident_ab",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_coincident_ac",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_coincident_bc",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_translation",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_scale",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_collinear_mid",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Geometry.v",
+      "module": "IDM_Geometry",
+      "theorem": "orient_collinear_aff",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "module": "IDM_Harvest",
+      "theorem": "repeated_event_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "module": "IDM_Harvest",
+      "theorem": "odd_from_cyclic_closure",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "module": "IDM_Harvest",
+      "theorem": "least_nontrivial_odd_is_three",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "module": "IDM_Harvest",
+      "theorem": "sym_skew_reconstruct",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "module": "IDM_Harvest",
+      "theorem": "sympart_self_adjoint",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "module": "IDM_Harvest",
+      "theorem": "skew_antisym",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Harvest.v",
+      "module": "IDM_Harvest",
+      "theorem": "skew_diag_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "Qsq_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "Sum_scale",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "Sum_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "inner_sym",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "inner_linear_l",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "inner_pos",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "parallelogram_law",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "pythagoras_orthogonal",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "cauchy_schwarz_2",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "adjoint_involutive",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "adjoint_of_product",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "hermitian_2x2_discriminant_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "hermitian_2x2_gap_is_discriminant",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "projection_idempotent",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Hilbert.v",
+      "module": "IDM_Hilbert",
+      "theorem": "projection_self_adjoint",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "module": "IDM_HilbertReadout",
+      "theorem": "Qsq_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "module": "IDM_HilbertReadout",
+      "theorem": "Qadd_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "module": "IDM_HilbertReadout",
+      "theorem": "partial_energy_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "module": "IDM_HilbertReadout",
+      "theorem": "partial_energy_app",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "module": "IDM_HilbertReadout",
+      "theorem": "partial_energy_monotone",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "module": "IDM_HilbertReadout",
+      "theorem": "weighted_energy_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_HilbertReadout.v",
+      "module": "IDM_HilbertReadout",
+      "theorem": "weighted_energy_app",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "module": "IDM_Keystone",
+      "theorem": "keystone_edge",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "module": "IDM_Keystone",
+      "theorem": "keystone_B_eq_I",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "module": "IDM_Keystone",
+      "theorem": "Qsq_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "module": "IDM_Keystone",
+      "theorem": "Qadd_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "module": "IDM_Keystone",
+      "theorem": "I_edge_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "module": "IDM_Keystone",
+      "theorem": "keystone_nonneg",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Keystone.v",
+      "module": "IDM_Keystone",
+      "theorem": "relaxation_dissipation",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Logic.v",
+      "module": "IDM_Logic",
+      "theorem": "sat_dec",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Logic.v",
+      "module": "IDM_Logic",
+      "theorem": "finite_satisfaction_dec",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Logic.v",
+      "module": "IDM_Logic",
+      "theorem": "rdl_non_explosion",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Logic.v",
+      "module": "IDM_Logic",
+      "theorem": "classical_would_explode",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "Sum_plus",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "Sum_opp",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "Sum_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "Sum_ext",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "Sum_ext_lt",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "Sum_delta",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "madd_comm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "madd_assoc",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "transpose_involutive",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "transpose_mmul",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "mid_left",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "laplacian_symmetric",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "laplacian_rowsum_zero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "laplacian_ones_in_kernel",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "twirl_image_scalar",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "Sum_const",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "trace_scalarM",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "inject_nat_nonzero",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "trace_twirl",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "twirl_idempotent",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Matrix.v",
+      "module": "IDM_Matrix",
+      "theorem": "scalar_line_one_dim",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "neg_involution",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "neg_fixed_iff",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "neg_moves_iff",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "readout_of_selfneg_is_neutral",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "minimal_three_values",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "third_value_is_neutral",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "neutral_distinct_from_bottom",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "two_distinct_neutrals",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "bottom_is_least",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "bottom_unique",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "neutral_is_not_below_sign",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReadoutMinimality.v",
+      "module": "IDM_ReadoutMinimality",
+      "theorem": "neutral_is_not_bottom",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "op_swap",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "fold_right_perm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "ftcc_Z",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "foldmin_le_init",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "foldmin_le_elem",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "sum_is_fold",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "path_is_fold",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "pivot_preserves",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "fold_ext",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "fold_linear",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "fold_add_split",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "foldmax_ge_init",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "foldmax_ge_elem",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "foldmax_in",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "sum_list_perm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "prod_list_perm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "dot_is_fold",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "dot_scale",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "horner_scaled",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "horner_is_poly",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "foldmin_in",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "fold_add_app",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "factorial_is_fold",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "relax_nonincreasing",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "relax_idempotent",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "weak_duality_2",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "fold_split_even_odd",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "witness_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "witness_complete",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "decide_dec",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "witness_composite_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "composite_has_factor",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "decide_reflect",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "witness_power_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "witness_qr_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "witness_dlog_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "sat_reduces_to_decision",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "sat_model_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "modpow_is_fold",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "tautology_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "cnf_tautology_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Reduction.v",
+      "module": "IDM_Reduction",
+      "theorem": "witness_crt_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "classify_bot_iff",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "bot_needs_positive_resolution",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "classify_zero_iff",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "classify_plus_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "classify_minus_sound",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "classify_not_bot_is_determinate",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "bot_monotone_in_floor",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "count_if_split",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "signedfloor_is_certain_plus_unresolved",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ResolvedCount.v",
+      "module": "IDM_ResolvedCount",
+      "theorem": "certain_le_signedfloor",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Schur.v",
+      "module": "IDM_Schur",
+      "theorem": "schur_congruence_00",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Schur.v",
+      "module": "IDM_Schur",
+      "theorem": "schur_congruence_01",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Schur.v",
+      "module": "IDM_Schur",
+      "theorem": "schur_congruence_10",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Schur.v",
+      "module": "IDM_Schur",
+      "theorem": "schur_congruence_11",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Schur.v",
+      "module": "IDM_Schur",
+      "theorem": "diag_inertia_additive",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Schur.v",
+      "module": "IDM_Schur",
+      "theorem": "schur_pivots_are_boundary_and_complement",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_SetsFunctions.v",
+      "module": "IDM_SetsFunctions",
+      "theorem": "lookup_graph_in",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_SetsFunctions.v",
+      "module": "IDM_SetsFunctions",
+      "theorem": "graph_total",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_SetsFunctions.v",
+      "module": "IDM_SetsFunctions",
+      "theorem": "graph_single_valued",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_SetsFunctions.v",
+      "module": "IDM_SetsFunctions",
+      "theorem": "graph_faithful",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_SetsFunctions.v",
+      "module": "IDM_SetsFunctions",
+      "theorem": "graph_faithful_converse",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_SetsFunctions.v",
+      "module": "IDM_SetsFunctions",
+      "theorem": "functional_relation_has_map",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tmin_assoc",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tmin_comm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tmin_idem",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tmax_assoc",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tmax_comm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tmax_idem",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tadd_assoc",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tadd_comm",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "tadd_0_l",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "minplus_distrib",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "maxplus_distrib",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_Tropical.v",
+      "module": "IDM_Tropical",
+      "theorem": "bottleneck_distrib",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    }
+  ]
+}

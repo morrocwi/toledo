@@ -1,0 +1,28 @@
+Upstream licence note — readout_genesis import (Toledo, 2026-09-06)
+====================================================================
+
+Source: public repository at commit 082dde893b70c7500c13d463239909c99cf17f0a
+(anchored in registry/coq_imports.json and coq/readout_genesis/PROVENANCE.json;
+this repository is one of the five public Coq import sources per the Toledo
+design meeting, T8, docs/MEETING_2026-09-06_toledo_design.md).
+
+Readout-not-truth check performed at import time (2026-09-06), directly
+against the checked-out working tree at the anchored commit:
+
+  - No `LICENSE` / `LICENSE.md` / `LICENCE*` file exists anywhere in the
+    repository (checked with `find . -iname 'LICENSE*'`, excluding `.git/`).
+  - `README.md` and `CITATION.cff` were grepped for the words
+    "license"/"licence" (case-insensitive): no match in either file.
+
+There is therefore no upstream licence text to reproduce verbatim here.
+This file records that finding rather than fabricating a licence. The
+39 `.v` files copied into this directory (`coq/readout_genesis/formal/` and
+`coq/readout_genesis/domains/standard_model/`) are imported under the
+Toledo project's own general public-source import policy (T8): they are
+public GitHub source, copied byte-for-byte (verified: zero diff against
+the upstream working tree at the anchored commit), with provenance
+(commit + blob per file) recorded in `PROVENANCE.json`.
+
+If the source repository's owner (Yaoharee Lahtee / ANSE.ASIA) later adds
+an explicit licence file upstream, this note should be revisited and, if
+appropriate, replaced with the actual licence text at that time.

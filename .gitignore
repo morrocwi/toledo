@@ -10,3 +10,16 @@ Makefile.conf
 __pycache__/
 docs/ram_watchdog.log
 docs/RAM_LOW
+sample_output/
+latex/catalogue_body.tex
+latex/*.aux
+latex/*.pdf
+latex/*.fls
+latex/*.fdb_latexmk
+latex/*.log
+latex/*.toc
+site/*.html
+site/index.json
+registry/entries/
+registry/TOLEDO.json
+graph/

@@ -1,0 +1,42 @@
+% latex/toledo.sty — semantic macros for the Toledo programme symbols.
+% Each macro expands to its plain LaTeX form; an optional argument names the
+% Toledo root code the symbol traces back to (also left as a trailing comment
+% so a plain grep over .tex source still finds the root, no macro expansion
+% needed). Generated catalogue bodies (latex/catalogue_body.tex) and any hand-
+% written paper in this programme may \usepackage{toledo} and use these.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{toledo}[2026/09/06 v1.0.0 Toledo semantic macros]
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+% \Readout[<root code>]{<argument>} — a finite retained readout of its argument.
+% Root: EQ-001 family (E00.1, the primordial-difference readout chain).
+\newcommand{\ToledoRoot}[1]{} % no-op hook; the optional arg below is the real carrier
+\newcommand{\Readout}[2][EQ-001]{\ensuremath{\mathcal{R}\!\left(#2\right)}\ToledoRoot{#1}} % root: #1
+
+% \Retain[<root code>]{<argument>} — the retained (non-discarded) part of a readout.
+% Root: EQ-005..EQ-007 family (weighted adjacency / retained state).
+\newcommand{\Retain}[2][EQ-006]{\ensuremath{\operatorname{Ret}\!\left(#2\right)}\ToledoRoot{#1}} % root: #1
+
+% \Weld[<root code>] — the one-line master equation, delta_R |- L_R |- F.
+% Root: weld (EQ-008 candidate merge, T3.3 pending-merge).
+\newcommand{\Weld}[1][weld]{\ensuremath{\delta_R \;\vdash\; L_R \;\vdash\; F}\ToledoRoot{#1}} % root: #1
+
+% \Live[<root code>]{<argument>} — the live (not-yet-retained) complement of a readout.
+% Root: EQ-007 (weighted degree / live boundary term).
+\newcommand{\Live}[2][EQ-007]{\ensuremath{\operatorname{Liv}\!\left(#2\right)}\ToledoRoot{#1}} % root: #1
+
+% \HumanReturn[<root code>]{<argument>} — the human-return term in a Human-AI (H) reading.
+% Root: MQ.08 alias, i.e. EQ-015 (Universal spine PDE), H-domain readings.
+\newcommand{\HumanReturn}[2][EQ-015]{\ensuremath{\Psi_{H}\!\left(#2\right)}\ToledoRoot{#1}} % root: #1
+
+% \Stepper[<root code>]{<n>} — the n-th forcing step in the Forced.I..XXIV chain.
+% Root: EQ-015 (Universal spine PDE / MQ.08 stepper F).
+\newcommand{\Stepper}[2][EQ-015]{\ensuremath{F_{#2}}\ToledoRoot{#1}} % root: #1
+
+% \LR[<root code>] — the retained graph-Laplacian operator L_R := D_W - W.
+% Root: EQ-008 (E00.7-operator).
+\newcommand{\LR}[1][EQ-008]{\ensuremath{L_R}\ToledoRoot{#1}} % root: #1
+
+\endinput
