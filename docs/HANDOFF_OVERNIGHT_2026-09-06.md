@@ -55,3 +55,18 @@ Imports verified fresh on this machine: readout_genesis 356/356 Closed; informat
 
 ## Canonicalisation done (wf_ff807258-9ae) → N3 running (wf_76de0086-c80, toledo-n3-relabel-wf_76de0086-c80.js)
 946 raw → 253 canonical (dedup review: one remaining over-merge CAN-054 to split in N3); COLLAPSE.md: 9-element root spine + single master equation + reading table (44 placeholder placements listed); coq_canon: 9 modules, 161 lemmas Closed, 253/253 covered, master_equation composition theorem Closed. Copied into toledo/registry and toledo/coq/canonical (pre-N3 state). N3 = registrar (codes/parents/origin/status/step/φ relations/LINEAGE) → Coq rename to code files → independent checker (fix loop ≤2).
+
+## Update 22:30 — swarm-2 done, N3 in its second stage
+- swarm-2 (run wf_444db7c2-921, 4 streams + checker, sonnet) wrote proposal files that must be MERGED into CANONICAL only after N3 finishes:
+  `registry/coq_map.N3.json` (999/3,452 identifiers mapped by quoted evidence; MR.N labels dropped from `codes` to avoid fake roots),
+  `registry/readings_genesis_domains.json` (124 domain rules as C/P/B readings of EQ-001, nn="??" + proposed_after chain),
+  `registry/readings_universe_solver.json` (246 entries + mirrors[] for the Appendix C copies),
+  `registry/genesis_tiers.sidecar.json` (282 untagged root rows: Definition 101 / untagged 95 / finite_diagnostic 41 / Th_coqc 26 / Dr 16 / Ax 2 / Open 1, each with quote+line, anchored to a readout_genesis commit).
+  Checker verdict was FAIL on 5 mechanical blocks (B1–B5); all five fixed in place, leak scan 0. Commit b29753f.
+- Founder ruling 22:20 (Thai chat): bundled social/world rows are to be SPLIT, but only formula members get codes; prose propositions become pointers
+  (status not_an_equation). Proposal: `registry/split_proposal_SW.json` — 11 single / 19 bundle / 11 mixed / 9 prose; 170 proposed children, 49 excluded
+  members; data-integrity flags: weld/S.06.v1 statement duplicates EQ-015/S.08.v1's formula; A.5/W.03.v1 says ten separations but maps 9.
+- N3 (wf_76de0086-c80): registrar stage finished (scripts/n3_relabel.py, CANONICAL.json relabelled, CANONICAL.pre-N3.json kept, LINEAGE.jsonl);
+  finding: weld ≠ EQ-008 under φ (weld is a 3-clause composite), so CAN-001 is a reading of weld, no merge. Second-stage agent running (Coq rename/checker).
+- NEXT after N3 notification: merge order = (1) split_proposal_SW (retire→split, LINEAGE events) → (2) readings_* with final nn assigned per (root,domain) →
+  (3) tier sidecar into genesis_root rows → (4) coq_map.N3 → then N5 sequential verify, N6 build/tests/checker/v1.0.0, N7.
