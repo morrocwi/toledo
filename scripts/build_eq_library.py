@@ -3,7 +3,7 @@
 Sources: registry/eq_<record_id>.json (raw inventory, 40 chapters), registry/CANONICAL.json (when present),
 coq/MR_Ledger.md and coq_canon/LEDGER_*.md (when present). Readout, not truth: every number is counted from files."""
 import json, glob, pathlib, re, datetime, yaml
-R = pathlib.Path(__file__).resolve().parent
+R = pathlib.Path(__file__).resolve().parent.parent / 'registry'
 MAN = R / 'textbook_manifest.yaml'  # copy of the textbook manifest (record ids, DOIs, titles); refreshed at each release
 man = yaml.safe_load(MAN.read_text()); meta = {c['record_id']: c for P in man['parts'] for c in P['chapters'] if c.get('record_id')}
 can = json.load(open(R / 'CANONICAL.json')) if (R / 'CANONICAL.json').exists() else None
@@ -22,7 +22,7 @@ if can:
         json.dump(can, open(R / 'CANONICAL.json', 'w'), ensure_ascii=False, indent=1)
 code_of = {c['id']: c.get('code', '') for c in (can or {}).get('canonical', [])}
 coq_ids = {}
-for led in list(glob.glob(str(R.parent / 'coq_canon' / 'LEDGER_*.md'))):
+for led in list(glob.glob(str(R.parent / 'coq' / 'canonical' / 'LEDGER_*.md'))):
     for l in open(led):
         m = re.match(r'^\|\s*(CAN-\d+)\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)\|', l)
         if m: coq_ids[m.group(1)] = (m.group(2).strip(), m.group(3).strip(), m.group(4).strip())
