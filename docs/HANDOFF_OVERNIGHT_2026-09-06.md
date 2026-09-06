@@ -39,3 +39,6 @@ RAM: ≤3–4 sonnet workers; coqc strictly sequential; check `free -g` (stop if
 - Root ancestry: MQ.08 and every Genesis result carry `parents[]` from Genesis's own derivation order (E00.1–E00.7 root axioms → δ_R → L_R → F/MQ.08 → trunk → faces …); the Forced Set I–XXIV is the forcing chain.
 - Ordering backbone = "Genesis of the Universe, Step by Step" (CORE v3.1). Every code gets `step` (position in that sequence; readings inherit their root's step + a sub-index). Validation: no code positioned before any of its parents; the solver arc, Genesis and readout_universe entries must agree on step order (conflict = BLOCK, recorded, not silently resolved).
 - Running: Toledo design meeting wf_065ffe73-039 (toledo-design-meeting-wf_065ffe73-039.js); canonicalisation wf_ff807258-9ae (merge phase).
+
+## Licence authorisation (BBL-198, DEC-toledo-solver-arc-copy-2026-0906)
+The owner authorises copying the private solver arc's Coq sources (canonical files incl. the health stream) into Toledo under MIT, with provenance "solver arc (private)" + commit + blob. T9 is resolved: copy is permitted; the private repository's name still never appears in public files.
