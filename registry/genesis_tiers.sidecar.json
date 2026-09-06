@@ -1,0 +1,1533 @@
+{
+ "schema_version": "1.0",
+ "generated_by": "toledo swarm-2 genesis-tiers stream + checker fixes (B3,B5)",
+ "generated_from": {
+  "readout_genesis_commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+  "READOUT_GENESIS_CORE.md_blob": "53fd76591f7ced4a998c42d13f6cfa0a8bec094c"
+ },
+ "counts_by_tier": {
+  "Definition": 101,
+  "finite_diagnostic": 41,
+  "untagged": 95,
+  "Dr": 16,
+  "Ax": 2,
+  "Th_coqc": 26,
+  "Open": 1
+ },
+ "entries": {
+  "A.1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.10": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.11": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.12": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.5": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.6": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.7": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.8": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A.9": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "A13.ArchitectureBox": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "A13.DefectVector": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "A13.SummaryBox": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3570",
+   "evidence_quote": "\"Every clause below is a principle governing the translational layer introduced above; none of it is an empirical finding, and none of it should ever be cited with an empirical tier tag. Where a statement is definitional/methodological rather than a claim about the world, it carries no tier at all — that is itself the honest tier.\"",
+   "tier_normalised": "Definition"
+  },
+  "Atlas.AlphaQG": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2138",
+   "evidence_quote": "\"a standing quantum-gravity **diagnostic** (a calculator, not a solved bridge): α_QG = G·E²/(ħc⁵)...It flags *when* quantum-gravity effects become non-negligible; it does not, by itself, derive or solve quantum gravity.\"",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Atlas.ScaleTable": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2129",
+   "evidence_quote": "\"The atlas contains **37 disciplines, 220 entries** (see `src/anse_spine/tau_c/tau_c_master.py`).\" — a computed/tabulated finite dataset, not a machine-checked theorem.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "B.1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3931",
+   "evidence_quote": "B.1 states the domain-neutral problem object purely as a typed tuple definition: \"Before anything is called physics, chemistry, biology, or anything else, a problem can be stated entirely in translation-neutral terms: 𝔓_RD = (Γ_0, δ_R, ...)\" — a definitional object, not an empirical claim.",
+   "tier_normalised": "Definition"
+  },
+  "B.2.Step1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step10": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step5": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step6": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step7": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step8": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.2.Step9": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4048",
+   "evidence_quote": "\"### B.3 Cross-Domain Equivalence Levels\" defines the L0–L5 equivalence scale (\"L0 surface analogy ... L5 recoverable bidirectional equivalence\") — a classification schema, not itself a claim.",
+   "tier_normalised": "Definition"
+  },
+  "B.4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.5": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.5.Auditor": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.5.Checker": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.5.Maker": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.5.PredictionFreeze": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.5.ProtocolDeviation": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.5.Registrar": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.6": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.7": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B.8": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3925",
+   "evidence_quote": "\"It is an **epistemic firewall, not a testing technique**, and that is exactly why it belongs in this standalone rather than in an empirical results ledger: it is a principle about *who may see what and when*\" (line 3925-3927); B.2a explicitly: \"This ledger is architecture, not a physics claim\" (line 4022).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "B1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4456",
+   "evidence_quote": "\"Each of these four bounds ties back to a specific nuclear equation, and it is worth making the tie explicit rather than leaving B1–B4 as a free-standing list\" — a narrated argument connecting a cost claim to the nuclear equations, not itself a machine-checked or measured result; matches XI.1's `Dr` definition (\"design-analogy / derived reading needing bridge assumptions\").",
+   "tier_normalised": "Dr"
+  },
+  "B2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4456",
+   "evidence_quote": "\"Each of these four bounds ties back to a specific nuclear equation, and it is worth making the tie explicit rather than leaving B1–B4 as a free-standing list\" — a narrated argument connecting a cost claim to the nuclear equations, not itself a machine-checked or measured result; matches XI.1's `Dr` definition (\"design-analogy / derived reading needing bridge assumptions\").",
+   "tier_normalised": "Dr"
+  },
+  "B3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4456",
+   "evidence_quote": "\"Each of these four bounds ties back to a specific nuclear equation, and it is worth making the tie explicit rather than leaving B1–B4 as a free-standing list\" — a narrated argument connecting a cost claim to the nuclear equations, not itself a machine-checked or measured result; matches XI.1's `Dr` definition (\"design-analogy / derived reading needing bridge assumptions\").",
+   "tier_normalised": "Dr"
+  },
+  "B4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4456",
+   "evidence_quote": "\"Each of these four bounds ties back to a specific nuclear equation, and it is worth making the tie explicit rather than leaving B1–B4 as a free-standing list\" — a narrated argument connecting a cost claim to the nuclear equations, not itself a machine-checked or measured result; matches XI.1's `Dr` definition (\"design-analogy / derived reading needing bridge assumptions\").",
+   "tier_normalised": "Dr"
+  },
+  "BridgeFormula.MPositedFinding": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2098",
+   "evidence_quote": "\"M is POSITED, not derived — eight independent attempts to force M out of a deeper generator failed — and the *only* place M's presence is actually exercised...is the quantum leaf (V.1), where a discretized `D/M` comparison against a QuTiP reference gave a residual around 7.6×10⁻⁴.\" Matches genesis_root.json EQ-063's own note: \"related check finite_diagnostic, D/M vs QuTiP residual 7.6×10⁻⁴\".",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "BridgeFormula.MassReadout": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2088",
+   "evidence_quote": "This equation is the Genesis object aliased `N4` in genesis_root.json's own EQ-063 row (alias list includes \"N4\", \"RG-VI.N4=N4\"), whose tier_in_genesis reads \"Dr (bridge/definitional, founder-locked; related check finite_diagnostic, D/M vs QuTiP residual 7.6×10⁻⁴)\"; CORE itself: \"τ_c is discrete and prior to mass — founder-locked, 2026-07-21...Three separate claims, three separate tiers\" (lines 2088-2104).",
+   "tier_normalised": "Dr"
+  },
+  "BridgeFormula.TauC": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2088",
+   "evidence_quote": "This equation is the Genesis object aliased `N4` in genesis_root.json's own EQ-063 row (alias list includes \"N4\", \"RG-VI.N4=N4\"), whose tier_in_genesis reads \"Dr (bridge/definitional, founder-locked; related check finite_diagnostic, D/M vs QuTiP residual 7.6×10⁻⁴)\"; CORE itself: \"τ_c is discrete and prior to mass — founder-locked, 2026-07-21...Three separate claims, three separate tiers\" (lines 2088-2104).",
+   "tier_normalised": "Dr"
+  },
+  "F_ep": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4404",
+   "evidence_quote": "\"Any reasoning step reduces to **three CPU-computable scalars**...\" \"Implemented in `core/nuclear_core.py` and `solvers/reasoning_min_cost.py`.\" (lines 4404-4421) — an implemented, computed diagnostic, matching Part III's own `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Face.1.CharEq": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1536",
+   "evidence_quote": "\"Mode amplitude `a_k` satisfies the per-mode characteristic equation `M s² + D s + K λ_k = 0`.\" (definitional restatement; the same polynomial's classical/quantum split is what Face 3 machine-checks, not the bare defining equation itself, so the equation form here stays a definition.)",
+   "tier_normalised": "Definition"
+  },
+  "Face.1.Eigenmode": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1538",
+   "evidence_quote": "\"This is the face where 'a thing' is defined at all... What exists, structurally, is whatever `L_R` retains as an eigenmode.\"",
+   "tier_normalised": "Definition"
+  },
+  "Face.11.FailAbleGate": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:2270",
+   "evidence_quote": "CORE XI.3's own claim list tags this object \"(Th, the FAIL-ABLE gate law — see XI.6)\" (CORE line 6201); the whitepaper's own legacy-tier rule states \"A legacy `Th` without a proof artifact is not promoted automatically. Map it to `CONDITIONAL` or `DERIVED_EXACT`...\" (WP line 2270) and 19.1's table maps `Dr: CONDITIONAL` (WP line 2266) — so a bare `Th` without a cited proof artifact normalises to `Dr`, never upgraded to `Th_coqc`.",
+   "tier_normalised": "Dr"
+  },
+  "Face.11.SolveTarget": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1988",
+   "evidence_quote": "\"This is the face where 'solving' the spine is defined precisely, and precisely *not* as making some scalar quantity equal to zero.\"",
+   "tier_normalised": "Definition"
+  },
+  "Face.12": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2019",
+   "evidence_quote": "\"Absolute constants = boundary data / Structure can constrain relations / roles / ratios / Numbers are measured, not derived from zero\" — boundary data function as primitive external inputs, matching the Ax sense (root axiom / primitive stance) used throughout this book.",
+   "tier_normalised": "Ax"
+  },
+  "Face.2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1584",
+   "evidence_quote": "\"...the relaxation is real and finite_diagnostic-verified, but it does not claim to eliminate decay, only to characterize its rate under forcing.\"",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Face.5.LightCone": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1670",
+   "evidence_quote": "Face 5's text is entirely narrated corollary prose (\"'nothing travels faster than light' stops being an axiom...and becomes a direct corollary\") with no machine-check citation of its own — matches the Part III preamble's own definition of `[Dr]` as \"a narrated design-reading of the equations\" (line 1482).",
+   "tier_normalised": "Dr"
+  },
+  "Face.7.Residual": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1745",
+   "evidence_quote": "\"Verified by: `formal/Quantum_Relativity_Formal_DAG_*.v` + `scripts/stress_master_equations.py`\" — the script-checked-on-finite-input signature Part III's own preamble (line 1481) defines as `finite_diagnostic`.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Face.7.RootForce": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1745",
+   "evidence_quote": "\"Verified by: `formal/Quantum_Relativity_Formal_DAG_*.v` + `scripts/stress_master_equations.py`\" — the script-checked-on-finite-input signature Part III's own preamble (line 1481) defines as `finite_diagnostic`.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Face.7.SINewtonGate": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1731",
+   "evidence_quote": "\"SI Newton readback: force_to_SI_newton(F_root) iff all of: [six named conditions]...SI is an adapter, never the substrate, and an adapter is only trustworthy when every certificate it depends on is actually present\" (lines 1731-1769) — an admission-gate specification, not a measured result.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Gate1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Gate2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Gate3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Gate4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Gate5": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Gate6": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Gate7": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:3730",
+   "evidence_quote": "\"these seven gates are **more general than any single leaf**...and they upgrade the **architecture that surrounds the DRL recurrence**...Every clause here is definitional/methodological, the same way A.1–A.12 are: none carries an empirical tier, and none should ever be cited alongside `Th_coqc`.\" (lines 3729-3735).",
+   "tier_normalised": "Definition",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Guard1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard11": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard13": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard15": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard5": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard6": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "Guard9": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6403",
+   "evidence_quote": "\"Every guard below exists because a specific failure was caught this session. Each has, per the FAIL-ABLE gate law (XI.6), a passing and a failing control where applicable.\" — executable scripts with concrete PASS/FAIL numeric controls (e.g. guard 12: \"PASSING control Δθ=0.55 ...FAILING control Δθ=0.75...blows up\", lines 6444-6449), matching the `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "II": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "III": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "IV": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "IX": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "L1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4333",
+   "evidence_quote": "\"### VI.2 The Layered Architecture (L0–L5)\" — the section's own heading names it architecture; L1/L3/L4 are per-rung descriptions of that same explicitly-named architecture.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "L3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4333",
+   "evidence_quote": "\"### VI.2 The Layered Architecture (L0–L5)\" — the section's own heading names it architecture; L1/L3/L4 are per-rung descriptions of that same explicitly-named architecture.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "L4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4333",
+   "evidence_quote": "\"### VI.2 The Layered Architecture (L0–L5)\" — the section's own heading names it architecture; L1/L3/L4 are per-rung descriptions of that same explicitly-named architecture.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "Layer.3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1205",
+   "evidence_quote": "\"Layer 3 — LP-NS audit (nonlinear paraproduct diagnostic). `[finite_diagnostic]`, explicitly a checker, not a native generator.\"",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "N5": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4202",
+   "evidence_quote": "\"N5 INVARIANTS: anomaly ratios, 2/α², π, φ / the dimensionless readouts that DO close (readout-invariants)\" (line 4202-4203); \"not every readout is domain-relative — some are structural facts about ratios that any sufficiently expressive domain will rediscover\" (lines 4328-4329) — boundary/structural constants treated as primitive, matching the Ax (root axiom/primitive stance) sense used throughout this book (cf. Face 12).",
+   "tier_normalised": "Ax"
+  },
+  "PythonAPI": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4757",
+   "evidence_quote": "\"The API is deliberately small — five functions, no more — and the smallness is itself doing disciplinary work worth naming\" — an implementation/interface surface (architecture), not a physics claim.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "RDU-E_c": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4610",
+   "evidence_quote": "PART VII §VII.1/VII.2 define the SI seven-dimension vector and the RDU unit-node table as typed objects (\"Dimension vector: [L, M, T, I, Θ, N, J]\" line 4610; \"The RDU grammar gives physically meaningful names to the τ_c-derived units\" line 4641) — definitional apparatus, not a measured or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "RDU-ell_c": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4610",
+   "evidence_quote": "PART VII §VII.1/VII.2 define the SI seven-dimension vector and the RDU unit-node table as typed objects (\"Dimension vector: [L, M, T, I, Θ, N, J]\" line 4610; \"The RDU grammar gives physically meaningful names to the τ_c-derived units\" line 4641) — definitional apparatus, not a measured or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "RDU-f_c": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4610",
+   "evidence_quote": "PART VII §VII.1/VII.2 define the SI seven-dimension vector and the RDU unit-node table as typed objects (\"Dimension vector: [L, M, T, I, Θ, N, J]\" line 4610; \"The RDU grammar gives physically meaningful names to the τ_c-derived units\" line 4641) — definitional apparatus, not a measured or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "RDU-m_c": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4610",
+   "evidence_quote": "PART VII §VII.1/VII.2 define the SI seven-dimension vector and the RDU unit-node table as typed objects (\"Dimension vector: [L, M, T, I, Θ, N, J]\" line 4610; \"The RDU grammar gives physically meaningful names to the τ_c-derived units\" line 4641) — definitional apparatus, not a measured or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "RDU-tau_c": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4610",
+   "evidence_quote": "PART VII §VII.1/VII.2 define the SI seven-dimension vector and the RDU unit-node table as typed objects (\"Dimension vector: [L, M, T, I, Θ, N, J]\" line 4610; \"The RDU grammar gives physically meaningful names to the τ_c-derived units\" line 4641) — definitional apparatus, not a measured or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "SI7Vectors": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4610",
+   "evidence_quote": "PART VII §VII.1/VII.2 define the SI seven-dimension vector and the RDU unit-node table as typed objects (\"Dimension vector: [L, M, T, I, Θ, N, J]\" line 4610; \"The RDU grammar gives physically meaningful names to the τ_c-derived units\" line 4641) — definitional apparatus, not a measured or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "SemanticLanes": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4610",
+   "evidence_quote": "PART VII §VII.1/VII.2 define the SI seven-dimension vector and the RDU unit-node table as typed objects (\"Dimension vector: [L, M, T, I, Θ, N, J]\" line 4610; \"The RDU grammar gives physically meaningful names to the τ_c-derived units\" line 4641) — definitional apparatus, not a measured or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "Step6ActRepair": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6101",
+   "evidence_quote": "CORE's own XI.1 Claim-Tier Table gives \"human agency\" as the worked example of the `Dr` tier (\"Design-analogy / derived reading needing bridge assumptions | Mass-memory, human agency\"); VIII.3 Step 6 is exactly this narrated human-agency loop step, with no machine-check citation of its own.",
+   "tier_normalised": "Dr"
+  },
+  "V": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "VI": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "VII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "VIII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "VerdictGate": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4404",
+   "evidence_quote": "\"Any reasoning step reduces to **three CPU-computable scalars**...\" \"Implemented in `core/nuclear_core.py` and `solvers/reasoning_min_cost.py`.\" (lines 4404-4421) — an implemented, computed diagnostic, matching Part III's own `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S1.ForbiddenOrder": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S1.InformationPhilosophyConstitution": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S1.MandatoryDerivationOrder": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S10.ContractionBound": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.NormalizedTransfer": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.PhysicalProjector": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.PhysicalProjectorGate": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S10.PositiveKernelDefinition": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.PositiveKernelPositivity": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.PositiveTransferOperator": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.ReflectionPositiveTerminology": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S10.ResonanceExtension": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.SpectralClassification": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.SpectralEquation": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S10.SpectralGapFormula": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.BarePotential": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.EffectivePotential": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.EffectivePotentialDiagonal": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.EffectivePotentialSlope": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.FluctuationDeterminant": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.FluctuationKernel": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.OrderOnsetCriterion": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.OrderParameter": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S11.OrderSelectionClaimScope": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1623",
+   "evidence_quote": "\"OrderSelectionClaim: exact_scope: [declared_effective_potential, local_slope_at_origin] / not_implied: [global_uniqueness, empirical_phase_identity, physical_energy_interpretation]\" (WP lines 1623-1630) — an explicit claim-scope/architecture boundary statement.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S12.CoarseGrainingDefect": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S12.CoarseGrainingMap": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S12.EffectiveAction": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S12.FixedPoint": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S12.IrrelevantDistinctionCertificate": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S12.ModalReductionDefect": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S12.ModalReductionGate": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S12.NoEarlyCollapseLaw": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S12.ReadoutPreservingCoarseGraining": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S13.DomainCard": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S14.Gate1": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S14.Gate2": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S14.Gate3": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S14.Gate4": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S14.Gate5": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S14.Gate6": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S14.Gate7": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S15.CompileDomainAlgorithm": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S15.FieldCountRule": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S16.BridgeError": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S16.BridgeLevels": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S16.BridgeMap": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S16.BridgeReadout": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S16.ExactBridgeDynamics": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S17.DefectRules": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S17.DefectVector": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S18.FailAbleGateLaw": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:2175",
+   "evidence_quote": "\"FailAbleGateLaw: ... tier_consequence: Type_P_pass: 'may support finite or machine-checked status within scope' / Type_U_pass: 'supports at most **architecture**/conditional wording'\" (WP lines 2173-2176) — the whitepaper's own text names this tier \"architecture\" directly.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S18.MakerCheckerInfoZero": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:2175",
+   "evidence_quote": "\"FailAbleGateLaw: ... tier_consequence: Type_P_pass: 'may support finite or machine-checked status within scope' / Type_U_pass: 'supports at most **architecture**/conditional wording'\" (WP lines 2173-2176) — the whitepaper's own text names this tier \"architecture\" directly.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S18.MakerCheckerRoles": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:2175",
+   "evidence_quote": "\"FailAbleGateLaw: ... tier_consequence: Type_P_pass: 'may support finite or machine-checked status within scope' / Type_U_pass: 'supports at most **architecture**/conditional wording'\" (WP lines 2173-2176) — the whitepaper's own text names this tier \"architecture\" directly.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S18.ProtocolDeviation": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:2175",
+   "evidence_quote": "\"FailAbleGateLaw: ... tier_consequence: Type_P_pass: 'may support finite or machine-checked status within scope' / Type_U_pass: 'supports at most **architecture**/conditional wording'\" (WP lines 2173-2176) — the whitepaper's own text names this tier \"architecture\" directly.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S19.ClaimLedger": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:2196",
+   "evidence_quote": "The Claim ledger schema itself (§19) and its Legacy tier mapping (§19.1, \"Ax: ROOT_AXIOM / Df: DEFINITION / Th_coqc: MACHINE_CHECKED_SCOPE / finite_diagnostic: FINITE_FIXTURE / Dr: CONDITIONAL / Open: OPEN\", WP lines 2261-2267) is the ledger/protocol apparatus itself, not a tiered claim within it.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S19.LegacyTierMapping": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:2196",
+   "evidence_quote": "The Claim ledger schema itself (§19) and its Legacy tier mapping (§19.1, \"Ax: ROOT_AXIOM / Df: DEFINITION / Th_coqc: MACHINE_CHECKED_SCOPE / finite_diagnostic: FINITE_FIXTURE / Dr: CONDITIONAL / Open: OPEN\", WP lines 2261-2267) is the ledger/protocol apparatus itself, not a tiered claim within it.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S2.ArchitectureLayers": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:267",
+   "evidence_quote": "The section's own YAML key names it: \"ArchitectureLayers: L0_ontology: ...L5_report: ...\" (WP line 267) and \"LayerNonBorrowingRules: - 'L0 axiom does not prove L3 domain semantics'...\" (WP line 325).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S2.LayerNonBorrowingRules": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:267",
+   "evidence_quote": "The section's own YAML key names it: \"ArchitectureLayers: L0_ontology: ...L5_report: ...\" (WP line 267) and \"LayerNonBorrowingRules: - 'L0 axiom does not prove L3 domain semantics'...\" (WP line 325).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S20.DomainRunReport": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S21.GlobalRuntimeDAG": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S22.RG_EXECUTE": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S23.FixtureA": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S23.FixtureB": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S23.FixtureC": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S23.FixtureD": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S23.FixtureE": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S23.FixtureF": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S23.FixtureG": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.AffineDecoder": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.ArchivalDisclosureRule": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.CalibrationDesign": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.CalibrationProtocol": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.CanonicalDataHash": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.ConcreteExecutionDAG": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.ConcreteOperatorChecks": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.ConcreteReaderRecurrence": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.ConcreteReferenceStatus": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.DomainCard": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.ExternalEvidenceBundle": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.MetricAndLaplacian": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S24.RawObservation": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+   "evidence_quote": "\"claim_status: finite_diagnostic\" (WP line 3440, §24.4 Held-Out and Control Evidence) and \"claim: tier: finite_diagnostic\" (WP line 3636, §24.6 Concrete Execution DAG) — the whitepaper's own explicit tag for this entire concrete-reference-domain section.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "WP.S25.PassFailUnresolvedTable": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S26.AntiDriftRules": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3691",
+   "evidence_quote": "\"DRIFT_05_EXACT_SCOPE: rule: 'Exact must name axioms, **architecture**, arithmetic and domain scope.'\" (WP line 3691) — the whitepaper's own text uses the word architecture directly.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S27.LegacyMigration": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3732",
+   "evidence_quote": "\"Legacy CORE material is retained when it makes the **architecture** executable or testable; claims exceeding the newer root are downgraded.\" (WP line 3732).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S28.ReferenceAPI": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S29.AIContract": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S29.AIResult": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S3.CanonicalState": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S3.NotRootByDefault": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S3.PositiveMetricNorm": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S3.PositiveMetricPositivity": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S3.RootPrimitives": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S30.HumanChecklist": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S31.OfficialStatus": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "\"final_boundary: valid_description: ['Universal Research and Derivation Architecture', ...]\" (WP lines 4002-4010) — the whitepaper's own official status/boundary statement about itself.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S32.OneBoxSummary": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S4.DomainDefinition": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S4.DomainGateDefects": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S4.DomainReadableState": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S4.DomainRequiredProperties": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S4.ExactDomainGate": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S4.InvariantFactorization": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S4.LocalReaderEquivalence": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S4.ReaderFamily": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S4.ReadoutFactorization": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:4002",
+   "evidence_quote": "WP §31 \"Official status\" states the whitepaper's own final claim boundary: \"final_boundary: valid_description: ['Universal Research and Derivation Architecture', 'Philosophy-Governed Human–AI Executable Specification', 'Finite Reference Kernel with Fail-Closed Verification'], invalid_description: ['Complete Final Law of Nature', 'Empirically Proven Theory of Every Domain']\" (WP lines 4002-4010); §0 also states: \"This single file is a **technical whitepaper**, **reference specification**, **runtime protocol**, and **anti-drift constitution**.\" (WP line 84).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S4.StrongReaderEquivalence": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S4.TranslationFailureTaxonomy": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.AutomorphismGroup": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.CurvatureDefect": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.Holonomy": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.HolonomyInvariants": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.Transport": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.TransportGaugeTransform": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.TransportMetricCompatibility": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S5.TransportMetricDefect": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S6.ClosureMultiplicity": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S6.InvariantClosureMap": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S6.MultiplicityLedger": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S6.ThreeValuedAdmissibility": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:84",
+   "evidence_quote": "The cited subsection defines a typed object/schema (root primitives, state variables, gate criteria as objects, etc.) rather than asserting an empirical or machine-checked claim; per WP §0, \"This single file is a **technical whitepaper**, **reference specification**...\" (line 84) and §31's own boundary \"Universal Research and Derivation Architecture\" (lines 4002-4010) — the whole document sits at the architecture/definition layer, never the physics-claim layer.",
+   "tier_normalised": "Definition"
+  },
+  "WP.S7.ActionContracts": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:954",
+   "evidence_quote": "\"ActionStatus: universal_modular_interface: EXACT_WITHIN_ARCHITECTURE\" (WP line 954) — the whitepaper's own claim-ledger status for this exact object literally names it architecture-tier.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S7.ConstrainedEquation": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:954",
+   "evidence_quote": "\"ActionStatus: universal_modular_interface: EXACT_WITHIN_ARCHITECTURE\" (WP line 954) — the whitepaper's own claim-ledger status for this exact object literally names it architecture-tier.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S7.KKTConditions": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:954",
+   "evidence_quote": "\"ActionStatus: universal_modular_interface: EXACT_WITHIN_ARCHITECTURE\" (WP line 954) — the whitepaper's own claim-ledger status for this exact object literally names it architecture-tier.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S7.ModularAction": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:954",
+   "evidence_quote": "\"ActionStatus: universal_modular_interface: EXACT_WITHIN_ARCHITECTURE\" (WP line 954) — the whitepaper's own claim-ledger status for this exact object literally names it architecture-tier.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S7.VariableEquationCoverageGate": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:954",
+   "evidence_quote": "\"ActionStatus: universal_modular_interface: EXACT_WITHIN_ARCHITECTURE\" (WP line 954) — the whitepaper's own claim-ledger status for this exact object literally names it architecture-tier.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.CentralDifference": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.DRLStepAlgorithm": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.DiscreteAction": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.FullOperator": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.GeometryDominanceRatio": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.LinearSolveGate": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.LivingGeometry": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.MetricAdjoint": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.MovingBasis": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.MovingBasisDelta": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.OperatorGeometryDependence": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.OperatorSplit": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.OperatorSplitChecks": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.PhiOneStepSolve": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.PsiOneStepSolve": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.ReaderEquation": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.RecordEquation": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.ResidualChannels": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.SecondDifference": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S8.SkewNearZero": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1006",
+   "evidence_quote": "\"This section defines an immediately implementable and fixture-testable reference realization. It is not claimed to be the unique law of every domain.\" (WP line 1006).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S9.LegacyStepper": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1429",
+   "evidence_quote": "\"LegacyStepperRules: status: REDUCED_REFERENCE\" (WP line 1429) plus \"must_not_claim: - 'exceeding the bound implies unconditional instability' ...\" (lines 1432-1435).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S9.LegacyStepperRules": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1429",
+   "evidence_quote": "\"LegacyStepperRules: status: REDUCED_REFERENCE\" (WP line 1429) plus \"must_not_claim: - 'exceeding the bound implies unconditional instability' ...\" (lines 1432-1435).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "WP.S9.StabilityBound": {
+   "evidence_line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:1429",
+   "evidence_quote": "\"LegacyStepperRules: status: REDUCED_REFERENCE\" (WP line 1429) plus \"must_not_claim: - 'exceeding the bound implies unconditional instability' ...\" (lines 1432-1435).",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "X": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "X.2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:5984",
+   "evidence_quote": "\"Machine-checked structure ≠ empirical physics truth / ...The Coq floor closes STRUCTURE. Measurement closes NUMBERS.\" — \"This boundary is the single most load-bearing sentence in the whole book\" (line 5993): a defining claim-boundary distinction, not itself an empirical or machine-checked claim.",
+   "tier_normalised": "Definition"
+  },
+  "X.4b": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6018",
+   "evidence_quote": "\"The founder's base ontology: the universe carries no built-in labels of physics, chemistry, biology, or mind...Domains and meaning are not discovered lying around in the world; they **arise** when a system *translates* retained structure...\" — a definitional/ontological stance, parallel to Part V-A's A.1-A.12 (\"definitional/methodological...carries no tier at all\").",
+   "tier_normalised": "Definition"
+  },
+  "XI": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XI.1a": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6094",
+   "evidence_quote": "XI.1's Claim-Tier Table itself: the table defining what `Ax`/`Df`/`Th`/`Th_coqc`/`finite_diagnostic`/`Dr`/`Open` each mean is a definitional apparatus, not itself a tiered claim.",
+   "tier_normalised": "Definition"
+  },
+  "XI.2a": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6150",
+   "evidence_quote": "\"This tier is `[Dr]` capstone — a stance the rest of the book's `Th_coqc` and `finite_diagnostic` results are read *through*, not itself a new machine-checked theorem\" (explicit bracket tag on this exact passage, \"Quantity is not a pre-existing ℝ\").",
+   "tier_normalised": "Dr"
+  },
+  "XI.4a": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6207",
+   "evidence_quote": "The NON-CLAIMS list (\"✗ derives G, ħ, c, k_B, α from first principles...✗ proves a new physics theory...\") is a claim-boundary declaration bounding the architecture's scope, the same discipline the whitepaper's own DRIFT rules and `cannot_claim` fields (WP §26) name architecture.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "XI.4b": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6207",
+   "evidence_quote": "The NON-CLAIMS list (\"✗ derives G, ħ, c, k_B, α from first principles...✗ proves a new physics theory...\") is a claim-boundary declaration bounding the architecture's scope, the same discipline the whitepaper's own DRIFT rules and `cannot_claim` fields (WP §26) name architecture.",
+   "tier_normalised": "untagged",
+   "note": "architecture item: no Genesis tier tag → untagged per GENESIS_CODE_SCHEME (or Definition where the source says definitional)."
+  },
+  "XI.5-F1": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6249",
+   "evidence_quote": "\"Binding falsifiers — any one of these would break the framework\" (line 6249); F3/F4/F5 explicitly note \"Coq refutation would close this\" / \"Coq would catch this\" — these are falsifiability criteria (a methodological/definitional specification of what would count as evidence against the framework), not machine-checked or measured results themselves.",
+   "tier_normalised": "Definition"
+  },
+  "XI.5-F2": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6249",
+   "evidence_quote": "\"Binding falsifiers — any one of these would break the framework\" (line 6249); F3/F4/F5 explicitly note \"Coq refutation would close this\" / \"Coq would catch this\" — these are falsifiability criteria (a methodological/definitional specification of what would count as evidence against the framework), not machine-checked or measured results themselves.",
+   "tier_normalised": "Definition"
+  },
+  "XI.5-F3": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6249",
+   "evidence_quote": "\"Binding falsifiers — any one of these would break the framework\" (line 6249); F3/F4/F5 explicitly note \"Coq refutation would close this\" / \"Coq would catch this\" — these are falsifiability criteria (a methodological/definitional specification of what would count as evidence against the framework), not machine-checked or measured results themselves.",
+   "tier_normalised": "Definition"
+  },
+  "XI.5-F4": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6249",
+   "evidence_quote": "\"Binding falsifiers — any one of these would break the framework\" (line 6249); F3/F4/F5 explicitly note \"Coq refutation would close this\" / \"Coq would catch this\" — these are falsifiability criteria (a methodological/definitional specification of what would count as evidence against the framework), not machine-checked or measured results themselves.",
+   "tier_normalised": "Definition"
+  },
+  "XI.5-F5": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6249",
+   "evidence_quote": "\"Binding falsifiers — any one of these would break the framework\" (line 6249); F3/F4/F5 explicitly note \"Coq refutation would close this\" / \"Coq would catch this\" — these are falsifiability criteria (a methodological/definitional specification of what would count as evidence against the framework), not machine-checked or measured results themselves.",
+   "tier_normalised": "Definition"
+  },
+  "XII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XIII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XIV": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XIX": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XV": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XVI": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XVII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XVIII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XX": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XXI": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XXII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XXIII": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "XXIV": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:110",
+   "evidence_quote": "\"Every result below is **necessity-tier**...\" (line 112) confirmed by the 2026-07-23 verification addenda: \"...all returned `Closed under the global context` / `Modules were successfully checked`, no `Axiom`, no `Admitted`.\" (line 248) and round 2: \"8 more Face-of-`F` witnesses independently re-compiled and confirmed necessity-tier...independently coqchk'd clean here, no `Axiom`, no `Admitted`.\" (lines 267-280); round 3 (2026-08-29) adds InfoSharedReadoutForcesSharedMemory, \"Closed under the global context\" (line 318).",
+   "tier_normalised": "Th_coqc"
+  },
+  "k_ep": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:4404",
+   "evidence_quote": "\"Any reasoning step reduces to **three CPU-computable scalars**...\" \"Implemented in `core/nuclear_core.py` and `solvers/reasoning_min_cost.py`.\" (lines 4404-4421) — an implemented, computed diagnostic, matching Part III's own `finite_diagnostic` definition (\"a script has measured it on a real finite input\").",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "q_biology_eigenmode": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6101",
+   "evidence_quote": "CORE's own XI.1 Claim-Tier Table defines `Dr` as \"Design-analogy / derived reading needing bridge assumptions\" (example given: \"Mass-memory, human agency\"); each PART V domain leaf opens with exactly this kind of narrated translation (\"the translation of retained structure into...\") with no machine-check citation of its own base equation, matching the Dr definition directly.",
+   "tier_normalised": "Dr"
+  },
+  "q_chemistry_RD": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6101",
+   "evidence_quote": "CORE's own XI.1 Claim-Tier Table defines `Dr` as \"Design-analogy / derived reading needing bridge assumptions\" (example given: \"Mass-memory, human agency\"); each PART V domain leaf opens with exactly this kind of narrated translation (\"the translation of retained structure into...\") with no machine-check citation of its own base equation, matching the Dr definition directly.",
+   "tier_normalised": "Dr"
+  },
+  "q_cognitive_recordlaw": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6101",
+   "evidence_quote": "CORE's own XI.1 Claim-Tier Table defines `Dr` as \"Design-analogy / derived reading needing bridge assumptions\" (example given: \"Mass-memory, human agency\"); each PART V domain leaf opens with exactly this kind of narrated translation (\"the translation of retained structure into...\") with no machine-check citation of its own base equation, matching the Dr definition directly.",
+   "tier_normalised": "Dr"
+  },
+  "q_complex_fiedler": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6101",
+   "evidence_quote": "CORE's own XI.1 Claim-Tier Table defines `Dr` as \"Design-analogy / derived reading needing bridge assumptions\" (example given: \"Mass-memory, human agency\"); each PART V domain leaf opens with exactly this kind of narrated translation (\"the translation of retained structure into...\") with no machine-check citation of its own base equation, matching the Dr definition directly.",
+   "tier_normalised": "Dr"
+  },
+  "q_cosmology": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6101",
+   "evidence_quote": "CORE's own XI.1 Claim-Tier Table defines `Dr` as \"Design-analogy / derived reading needing bridge assumptions\" (example given: \"Mass-memory, human agency\"); each PART V domain leaf opens with exactly this kind of narrated translation (\"the translation of retained structure into...\") with no machine-check citation of its own base equation, matching the Dr definition directly.",
+   "tier_normalised": "Dr"
+  },
+  "q_finance_RTPE": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2181",
+   "evidence_quote": "\"This limit is graded **PASS_WITH_LIMITS**: it is a genuine, checked reduction of Layer 1...\" (CORE IV.4, line 2181); the same RTPE equation carries the explicit tag \"[finite_diagnostic, PASS_WITH_LIMITS]\" at line 1497.",
+   "tier_normalised": "finite_diagnostic"
+  },
+  "q_quantum_CPTP": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1849",
+   "evidence_quote": "Same completeness relation as Face 9: \"Machine-checked in `RDL_StarRig*` C34–C39 ✅\" (line 1849); \"Six theorems, C34 through C39...machine-check this axiom-free, which is what lets this face claim its `[Th_coqc]` tag\" (line 1858).",
+   "tier_normalised": "Th_coqc"
+  },
+  "q_quantum_lambda_c": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1604",
+   "evidence_quote": "Same object as Face 3's machine-checked split: \"Machine-checked axiom-free: `RDL_SpineStability.split_classical/quantum` ✅\" (line 1604) / \"this face's classical/quantum split lives entirely inside Layer 1\" (line 1622).",
+   "tier_normalised": "Th_coqc"
+  },
+  "q_quantum_osc": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:1604",
+   "evidence_quote": "Same object as Face 3's machine-checked split: \"Machine-checked axiom-free: `RDL_SpineStability.split_classical/quantum` ✅\" (line 1604) / \"this face's classical/quantum split lives entirely inside Layer 1\" (line 1622).",
+   "tier_normalised": "Th_coqc"
+  },
+  "q_relativity_cone": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:2518",
+   "evidence_quote": "\"Same 2026-07-21 hollow-card caution as V.1 applies to any GR interpretation card swept up in the 6-of-8 audit; treat any specific GR card as `[Open]` unless it was one of the 2 that survived, and check before quoting.\"",
+   "tier_normalised": "Open"
+  },
+  "q_social": {
+   "evidence_line": "READOUT_GENESIS_CORE.md:6101",
+   "evidence_quote": "CORE's own XI.1 Claim-Tier Table defines `Dr` as \"Design-analogy / derived reading needing bridge assumptions\" (example given: \"Mass-memory, human agency\"); each PART V domain leaf opens with exactly this kind of narrated translation (\"the translation of retained structure into...\") with no machine-check citation of its own base equation, matching the Dr definition directly.",
+   "tier_normalised": "Dr"
+  }
+ }
+}

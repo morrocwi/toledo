@@ -1,0 +1,3784 @@
+{
+ "generated_from": "CANONICAL.json schema_version=1.0.0, canonical count=255, S/W rows audited=50",
+ "rows": [
+  {
+   "code": "weld/S.01.v1",
+   "name": "Finite-Memory Laplacian/Telegraph Generator as the Social-Instability/Peace Spine",
+   "classification": "mixed",
+   "evidence_quote": "occurrences (1)-(12) [record 18383439] state a continuum PDE model ('s(x,t) ∈ R^n', 'V(x,t)=Φ(s(x,t))', 'τ∂t j+j=−D∇s', ...) that is a DIFFERENT mathematical object from PAR-stepper/L1-L4 [record 22361830] ('LR = DW − W (forced Laplacian); A := LR + Γ; s[n+1]=...') -- two distinct models bundled under one code; the Theorem (No-Go) is a prose theorem statement with proof sketch, not itself an equation.",
+   "members": [
+    "18383439:(1)",
+    "18383439:(2)",
+    "18383439:(3)",
+    "18383439:(4)",
+    "18383439:(5)",
+    "18383439:(6)",
+    "18383439:Theorem (No-Go for Elimination by Suppression)",
+    "18383439:(7)",
+    "18383439:(8)",
+    "18383439:(9)",
+    "18383439:(10)",
+    "18383439:(11)",
+    "18383439:(12)",
+    "22361830:PAR-stepper",
+    "22361830:L1",
+    "22361830:L2",
+    "22361830:L3",
+    "22361830:L4"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "18383439:Theorem (No-Go for Elimination by Suppression)",
+     "text_verbatim": "Given Lτ with τ > 0, assuming (i) at least one slow spectral mode exists, (ii) suppression acts only on state amplitudes, and (iii) environmental load has nonzero time-average, then no bounded force-based intervention can drive the system to a globally violence-free absorbing state. (Proof sketch: finite memory implies non-Markovian evolution; slow modes ensure metastability; suppression does not modify Lτ so the invariant spectral structure persists; sustained load re-populates slow modes with probability one.)",
+     "reason": "prose theorem statement + proof sketch in natural language, no standalone equation"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "state field definition",
+     "statement_latex_verbatim": "s(x,t) ∈ R^n",
+     "tier": "Definition",
+     "source_occurrences": "18383439:(1)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "violence-potential definition",
+     "statement_latex_verbatim": "V(x,t) = Φ(s(x,t))",
+     "tier": "Definition",
+     "source_occurrences": "18383439:(2)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "telegraph flux constitutive relation",
+     "statement_latex_verbatim": "τ ∂t j + j = −D∇s",
+     "tier": "Definition",
+     "source_occurrences": "18383439:(3)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "continuity equation",
+     "statement_latex_verbatim": "∂t s = −∇·j − Γ(s) + Senv",
+     "tier": "Definition",
+     "source_occurrences": "18383439:(4)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "linearized generator",
+     "statement_latex_verbatim": "∂t s = Lτ s",
+     "tier": "Definition",
+     "source_occurrences": "18383439:(5)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "spectral decomposition",
+     "statement_latex_verbatim": "s(t) = Σ_k c_k e^{−λ_k t} r_k",
+     "tier": "Definition",
+     "source_occurrences": "18383439:(6)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "minimal 2-node matrix model",
+     "statement_latex_verbatim": "L = [[−α, ε], [ε, −β]], α, β > 0",
+     "tier": "Dr",
+     "source_occurrences": "18383439:(7)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "eigenvalues of minimal model",
+     "statement_latex_verbatim": "λ± = −(α+β)/2 ± sqrt( ((α−β)/2)^2 + ε^2 )",
+     "tier": "Dr",
+     "source_occurrences": "18383439:(8)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "control lever: increase dissipation",
+     "statement_latex_verbatim": "Γ ↑ (increase dissipation)",
+     "tier": "Dr",
+     "source_occurrences": "18383439:(9)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "control lever: reduce environmental load",
+     "statement_latex_verbatim": "Senv ↓ (reduce load)",
+     "tier": "Dr",
+     "source_occurrences": "18383439:(10)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "control lever: limit propagation",
+     "statement_latex_verbatim": "Lij ↓ (limit propagation)",
+     "tier": "Dr",
+     "source_occurrences": "18383439:(11)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "control lever: shorten memory",
+     "statement_latex_verbatim": "τ ↓ (shorten memory)",
+     "tier": "Dr",
+     "source_occurrences": "18383439:(12)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "discrete forced-Laplacian stepper generator",
+     "statement_latex_verbatim": "LR = DW − W (forced Laplacian); A := LR + Γ; s[n+1] = s[n] + dt(−A s[n] + J)",
+     "tier": "Definition",
+     "source_occurrences": "22361830:PAR-stepper",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "invariance/recurrence lemma",
+     "statement_latex_verbatim": "s* = A^{-1}J is the unique fixed point independent of u; ∥s[n]−s*∥ ≤ ρ^{n−nB}∥s[nB]−s*∥ after the last nonzero tick of a bounded intervention; if s*_i > θ there is an explicit finite N* after which s_i[n] > θ for all n ≥ nB+N*",
+     "tier": "Dr",
+     "source_occurrences": "22361830:L1",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "force-cost (the bill) lemma",
+     "statement_latex_verbatim": "|u_i[n]| = dt[(γ_i+D_i)(s*_i−θ) − Σ_{k≠i} W_ik(s*_k−s_k[n])], converging to a rate F_i^∞ > 0 whenever s*_i ≥ θ, so cumulative force is F_i^∞·n + o(n)",
+     "tier": "Dr",
+     "source_occurrences": "22361830:L2",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "operator-change lemma",
+     "statement_latex_verbatim": "s*'_i = s*_i / (1+ΔB_ii) with B = A^{-1} (Sherman–Morrison); any θ < s*_i is reached below with Δ > Δ* = (s*_i/θ − 1)/B_ii, and zero ongoing force",
+     "tier": "Dr",
+     "source_occurrences": "22361830:L3",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "mutation lemma",
+     "statement_latex_verbatim": "s_j ≳ (J_j + W_ij·s̄_i)/(γ_j+D_j), with s̄_i an explicit increasing function of node i's own inflow, under permanent periodic resets of node i",
+     "tier": "Dr",
+     "source_occurrences": "22361830:L4",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.01.v1",
+     "event": "split",
+     "to": "[16 child codes, see proposed_children]",
+     "reason": "bundle of two distinct models + lemmas glued under one code"
+    }
+   ],
+   "flags": [
+    "statement.latest paraphrases L1-L4 in narrative English ('cannot move the fixed point', 'holding the state at threshold requires...', 'can push the fixed point permanently below threshold') rather than quoting the source's symbolic form verbatim"
+   ]
+  },
+  {
+   "code": "weld/S.02.v1",
+   "name": "Manifested-Record & Agency-as-Substructure Axioms (Reality-as-Record, Agency-as-Choice, Collective)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CE-01 'M(t') ∈ M' (Axiom I), CE-02 'A_i(t') ⊆ M(t')' (Axiom II), CE-03 'G(t'):={A_1(t'),...,A_N(t')}⊆M(t'' (Axiom IV), CE-04 'R ∈ R_adm(t'')' (Admissible Regime Set) are four textually and logically distinct axioms -- none is a phi-transform of another -- bundled under one code.",
+   "members": [
+    "18444260:CE-01",
+    "18444260:CE-02",
+    "18444260:CE-03",
+    "18444260:CE-04"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Axiom I: Reality-as-Record",
+     "statement_latex_verbatim": "M(t') ∈ M",
+     "tier": "Ax",
+     "source_occurrences": "18444260:CE-01",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Axiom II: Agency-as-Choice",
+     "statement_latex_verbatim": "A_i(t') ⊆ M(t')",
+     "tier": "Ax",
+     "source_occurrences": "18444260:CE-02",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Axiom IV: Collective as Coupled Agencies",
+     "statement_latex_verbatim": "G(t') := {A_1(t'), …, A_N(t')} ⊆ M(t')",
+     "tier": "Ax",
+     "source_occurrences": "18444260:CE-03",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Admissible Regime Set",
+     "statement_latex_verbatim": "R ∈ R_adm(t')",
+     "tier": "Ax",
+     "source_occurrences": "18444260:CE-04",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.02.v1",
+     "event": "split",
+     "to": "[4 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.01.v1",
+   "name": "Regime Structure & Update Laws (translation operator T_R, interaction operator I_R)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CE-05 'R:=(T_R,I_R)' (Axiom III, regime structure), CE-06/CE-07 (the two update laws for M and A), and CE-08 'Etic(A;t'):=...' (a derived definition) are four distinct formal objects, not restatements of one equation.",
+   "members": [
+    "18444260:CE-05",
+    "18444260:CE-06",
+    "18444260:CE-07",
+    "18444260:CE-08"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Axiom III: Regime Structure",
+     "statement_latex_verbatim": "R := (T_R, I_R)",
+     "tier": "Ax",
+     "source_occurrences": "18444260:CE-05",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Update Law (state M)",
+     "statement_latex_verbatim": "M(t' + Δt') = T_R(M(t'))",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-06",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Update Law (agent A)",
+     "statement_latex_verbatim": "A(t' + Δt') ⊆ I_R(A(t'), M(t'))",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-07",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Definition: Etic",
+     "statement_latex_verbatim": "Etic(A; t') := ∃ R_A(t') ∈ R_adm(t') : A ⊆ M(t'), M(t'+Δt') = T_{R_A}(M(t')), A(t'+Δt') ⊆ I_{R_A}(A(t'), M(t'))",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-08",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.01.v1",
+     "event": "split",
+     "to": "[4 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.02.v1",
+   "name": "Ethical Load, Causal Memory & Spectral Margin — the Causal Ethics Inequality (locked core definition)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CE-09 (V>=0 Lyapunov potential), CE-10 (causal-memory positivity), CE-11 (spectral-margin positivity), CE-12 (Ethical(A) biconditional, 'locked'), CE-13 (V-dot-plus notation), CE-19 (Eth_ind biconditional) are six distinct definitions/conditions.",
+   "members": [
+    "18444260:CE-09",
+    "18444260:CE-10",
+    "18444260:CE-11",
+    "18444260:CE-12",
+    "18444260:CE-13",
+    "18444260:CE-19"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Ethical Load (Lyapunov potential)",
+     "statement_latex_verbatim": "V_{A,R}(M) ≥ 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-09",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Causal Memory Constraint",
+     "statement_latex_verbatim": "τ_c'(R) > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-10",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Spectral Stability Margin",
+     "statement_latex_verbatim": "Δ_spec(R) > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-11",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Causal Ethics Inequality (locked)",
+     "statement_latex_verbatim": "Ethical(A) ⇔ ∃ Choice(A → R_A) : d/dt' V_{A,R_A}(M(t')) ≤ 0 ∧ τ_c'(R_A) > 0 ∧ Δ_spec(R_A) > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-12",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Notation: positive-part derivative",
+     "statement_latex_verbatim": "V̇⁺ := max(dV/dt', 0)",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-13",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Individual Ethics Condition",
+     "statement_latex_verbatim": "Eth_ind(A) ⇔ d/dt' V_{A,R_A} ≤ 0 ∧ Δ_spec(R_A) > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-19",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.02.v1",
+     "event": "split",
+     "to": "[6 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.03.v1",
+   "name": "Collective/Individual Conflict, Spectral Survival, and Structural Injustice",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CE-14 (spectral decomposition of M), CE-15 (survival subspace), CE-16 (projection operator), CE-17/CE-18 (individual survival limsup/lim conditions), CE-20 (collective potential V_G), CE-21 (Eth_col), CE-22/CE-23 (the two conflict directions), CE-24 (regime incompatibility), CE-30 (structural injustice) are eleven distinct definitions.",
+   "members": [
+    "18444260:CE-14",
+    "18444260:CE-15",
+    "18444260:CE-16",
+    "18444260:CE-17",
+    "18444260:CE-18",
+    "18444260:CE-20",
+    "18444260:CE-21",
+    "18444260:CE-22",
+    "18444260:CE-23",
+    "18444260:CE-24",
+    "18444260:CE-30"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Spectral decomposition of M",
+     "statement_latex_verbatim": "M(t') = M_0 φ_0 + Σ_k a_k(t') φ_k",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-14",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Survival subspace S_A(R)",
+     "statement_latex_verbatim": "S_A(R) ⊆ span{φ_k}",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-15",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Survival projection operator",
+     "statement_latex_verbatim": "P_{S_A(R)} : M → S_A(R)",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-16",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Individual survival (limsup>0)",
+     "statement_latex_verbatim": "limsup_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-17",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Individual non-survival (lim=0)",
+     "statement_latex_verbatim": "lim_{n→∞} ‖P_{S_A(R_A)} M(t'+n)‖² = 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-18",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Collective potential V_G",
+     "statement_latex_verbatim": "V_G(M) := Σ_{i=1}^N w_i V_{A_i,R_i}(M),  w_i > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-20",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Collective ethics condition Eth_col",
+     "statement_latex_verbatim": "Eth_col(G) ⇔ d/dt' V_G(M) ≤ 0 ∧ min_i Δ_spec(R_i) > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-21",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Conflict: individual-admissible/collective-destabilizing",
+     "statement_latex_verbatim": "Conf_{ind→col} ⇔ d/dt' V_{A_i} ≤ 0 ∧ d/dt' V_G > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-22",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Conflict: collective-admissible/individual-destabilizing",
+     "statement_latex_verbatim": "Conf_{col→ind} ⇔ d/dt' V_G ≤ 0 ∧ ∃i: d/dt' V_{A_i} > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-23",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Regime incompatibility",
+     "statement_latex_verbatim": "Δ_spec(R_i ∪ R_j) ≤ 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-24",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Structural injustice",
+     "statement_latex_verbatim": "∃ i,j : C_{A_i,R_i} ≫ C_{A_j,R_j}",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-30",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.03.v1",
+     "event": "split",
+     "to": "[11 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "weld/S.03.v1",
+   "name": "Moral Cost Functional, Responsibility, Karma, Cost–Survival Link, and Tragic Regimes",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CE-25/CE-26 (violation indicators), CE-27 (moral cost functional), CE-28 (responsibility), CE-29 (collective moral cost), CE-31 (karma-as-divergence), CE-32 (cost-survival theorem), CE-33 (zero-cost ethics), CE-34 (constitutional regime selection), plus the choice-gate rule and the Tragic/Tragic-min definitions -- twelve distinct formal objects.",
+   "members": [
+    "18444260:CE-25",
+    "18444260:CE-26",
+    "18444260:CE-27",
+    "18444260:CE-28",
+    "18444260:CE-29",
+    "18444260:CE-31",
+    "18444260:CE-32",
+    "18444260:CE-33",
+    "18444260:CE-34",
+    "18444260:(CE-choice gate)",
+    "18444260:(Tragic)",
+    "18444260:(Tragic-min)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Causal violation indicator",
+     "statement_latex_verbatim": "χ_causal(R) := 1[τ_c'(R) ≈ 0]",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-25",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Spectral violation indicator",
+     "statement_latex_verbatim": "χ_spec(R) := 1[Δ_spec(R) ≤ 0]",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-26",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Moral cost functional",
+     "statement_latex_verbatim": "C_{A,R}[t1,t2] := ∫_{t1}^{t2} [ α V̇⁺_{A,R}(M(t')) + β χ_causal(R) + γ χ_spec(R) ] dt',  α,β,γ > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-27",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Responsibility definition",
+     "statement_latex_verbatim": "Resp(A) ≡ C_{A,R_A}",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-28",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Collective moral cost",
+     "statement_latex_verbatim": "C_G[t1,t2] := Σ_{i=1}^N w_i C_{A_i,R_i}[t1,t2]",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-29",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Karma as cost divergence",
+     "statement_latex_verbatim": "lim_{T→∞} C_{A,R}[0,T] = ∞",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-31",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Theorem: Cost-Survival Link",
+     "statement_latex_verbatim": "lim_{T→∞} C_{A,R}[0,T] = ∞ ⇒ lim_{n→∞} ‖P_{S_A} M(t'+n)‖² = 0",
+     "tier": "Dr",
+     "source_occurrences": "18444260:CE-32",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Zero-cost ethics",
+     "statement_latex_verbatim": "Eth(A) ⇔ C_{A,R_A}[t,∞) = 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-33",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Constitutional regime selection",
+     "statement_latex_verbatim": "R* ∈ argmin_{R∈R_adm} C_{system,R}  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:CE-34",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Choice-gate rule",
+     "statement_latex_verbatim": "¬∃ Choice(A → R_A) ⇒ no ethics attribution, no responsibility attribution, and no moral cost attribution",
+     "tier": "Definition",
+     "source_occurrences": "18444260:(CE-choice gate)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Tragic regime class definition",
+     "statement_latex_verbatim": "∀ R ∈ R_available(t') : ¬[τ_c'(R) > 0 ∧ Δ_spec(R) > 0] ∨ C_{A,R}[t',t'+T] > 0,  for all T > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:(Tragic)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Tragic-min consequence",
+     "statement_latex_verbatim": "R†_A ∈ argmin_{R∈R_available(t')} C_{A,R}[t',t'+T]  s.t.  τ_c'(R) > 0, Δ_spec(R) > 0",
+     "tier": "Definition",
+     "source_occurrences": "18444260:(Tragic-min)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.03.v1",
+     "event": "split",
+     "to": "[12 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "A.5/S.01.v1",
+   "name": "Persistence-Control Agency Hierarchy (constrained dynamical system through reflective meta-regulation)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "Def-1 (x'=F(x,C)), Def-2 (viable region membership), Persistence-Regulation-Condition, Constraint-Evolution, State-Constraint-Coupling, Def-3 Agency-Condition, Proto-Agency-Condition, and the L3/L4/L5 constraint-evolution variants are ten distinct definitions forming a level-by-level hierarchy -- none is a phi-transform of another.",
+   "members": [
+    "18897585:Def-1",
+    "18897585:Def-2",
+    "18897585:Persistence-Regulation-Condition",
+    "18897585:Constraint-Evolution",
+    "18897585:State-Constraint-Coupling",
+    "18897585:Def-3 (Agency-Condition)",
+    "18897585:Proto-Agency-Condition",
+    "18897585:L3-Constraint-Evolution-History",
+    "18897585:L4-Constraint-Evolution-Predictive",
+    "18897585:L5-Meta-Regulation"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Constrained dynamical system",
+     "statement_latex_verbatim": "x' = F(x, C)",
+     "tier": "Definition",
+     "source_occurrences": "18897585:Def-1",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Viable region membership",
+     "statement_latex_verbatim": "x(t) ∈ V,  where V ⊆ S is the viable region of the state space S, for all times in the interval of observation",
+     "tier": "Definition",
+     "source_occurrences": "18897585:Def-2",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Persistence regulation condition",
+     "statement_latex_verbatim": "d/dt [ d(x(t), V) ] < 0  (in expectation), where d(x,V) is the distance between state x and the viable region V",
+     "tier": "Definition",
+     "source_occurrences": "18897585:Persistence-Regulation-Condition",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Constraint evolution law",
+     "statement_latex_verbatim": "C_{t+1} = G(x_t, C_t)",
+     "tier": "Definition",
+     "source_occurrences": "18897585:Constraint-Evolution",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "State-constraint coupling (necessary condition)",
+     "statement_latex_verbatim": "∂C/∂x ≠ 0",
+     "tier": "Definition",
+     "source_occurrences": "18897585:State-Constraint-Coupling",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Agency condition",
+     "statement_latex_verbatim": "∂Tp/∂C · ∂C/∂x > 0,  where Tp is the expected persistence time of the system within the viable region V",
+     "tier": "Definition",
+     "source_occurrences": "18897585:Def-3 (Agency-Condition)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Proto-agency condition",
+     "statement_latex_verbatim": "∂C/∂x = 0",
+     "tier": "Definition",
+     "source_occurrences": "18897585:Proto-Agency-Condition",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Level 3: history-dependent constraint evolution",
+     "statement_latex_verbatim": "C_{t+1} = G(x_t, C_t, H_t),  where H_t is the system's interaction history",
+     "tier": "Definition",
+     "source_occurrences": "18897585:L3-Constraint-Evolution-History",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Level 4: predictive constraint evolution",
+     "statement_latex_verbatim": "C_{t+1} = G(x_t, C_t, x̂_{t+k}),  where x̂_{t+k} represents predicted future states",
+     "tier": "Definition",
+     "source_occurrences": "18897585:L4-Constraint-Evolution-Predictive",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Level 5: meta-regulation",
+     "statement_latex_verbatim": "G_{t+1} = M(G_t)",
+     "tier": "Definition",
+     "source_occurrences": "18897585:L5-Meta-Regulation",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "A.5/S.01.v1",
+     "event": "split",
+     "to": "[10 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "weld/S.04.v1",
+   "name": "Belief is a conditioned relation between an agent and a proposition, not the proposition itself; belief scale never self-promotes to epistemic status",
+   "classification": "mixed",
+   "evidence_quote": "(17) belief relation, (18) belief-vector definition, (19) update rule, (20) group-stabilization definition are four distinct formulas; Prop-1 ('increasing distribution scale of Bel(p) does not... increase sigma_K(p)') is a proved narrative proposition about them, stated in prose with no standalone relational operator.",
+   "members": [
+    "21529456:(17)",
+    "21529456:(18)",
+    "21529456:(19)",
+    "21529456:(20)",
+    "21529456:Prop-1"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "21529456:Prop-1",
+     "text_verbatim": "Belief-scale nonpromotion: for any proposition p, increasing the distribution scale of Bel(p) does not, without additional gate information, increase sigma_K(p).",
+     "reason": "proved proposition stated in narrative English, no standalone equation"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Belief relation (relational, multidimensional)",
+     "statement_latex_verbatim": "Bel_{i,p,n} = Rel_B(a_i, p | x_i, mu_i, E_i, M_i, Theta_i, I_i, S_i^active, c_i)",
+     "tier": "Definition",
+     "source_occurrences": "21529456:(17)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Canonical belief vector",
+     "statement_latex_verbatim": "b_{i,p,n} = (e_{i,p}, c_{i,p}, s_{i,p}, a_{i,p}, eta_{i,p}, g_{i,p}, r_{i,p})",
+     "tier": "Definition",
+     "source_occurrences": "21529456:(18)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Belief update rule",
+     "statement_latex_verbatim": "b_{i,p,n+1} = U_B(b_{i,p,n}, Ev_{i,p}, M_i, mu_i, E_i, Theta_i, I_i, Trust_i, Affect_i, Utility_i, Repetition_i, Auth_i, Pow_i, Access_i, Language_i, Algorithm_i, Obj_i, c_i)",
+     "tier": "Definition",
+     "source_occurrences": "21529456:(19)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Group belief stabilization",
+     "statement_latex_verbatim": "Bel_{g,d,n}^{(l)}(p) = Stabilize_B({b_{i,p,n}}_{i in G}, C_B)",
+     "tier": "Definition",
+     "source_occurrences": "21529456:(20)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.04.v1",
+     "event": "split",
+     "to": "[4 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "weld/S.05.v1",
+   "name": "A group's retained state and semantic readout, without positing a group mind",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(43) group retained-state tuple, (44) group semantic readout, (45) group memory update recursion, (46) group warrant function are four distinct definitions (different LHS quantities: Z_G,t / S_G,t / m^G / W_G,t).",
+   "members": [
+    "22307148:(43)",
+    "22307148:(44)",
+    "22307148:(45)",
+    "22307148:(46)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Group retained-state tuple Z_G,t",
+     "statement_latex_verbatim": "Z_{G,t} := < {Z_{A_i,t}}_{i=1}^n, T_{G,t}, A_{G,t}, C_{G,t} >",
+     "tier": "Definition",
+     "source_occurrences": "22307148:(43)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Group semantic readout S_G,t",
+     "statement_latex_verbatim": "S_{G,t} := q_{sem,G,Omega_{G,t}}(Z_{G,t})",
+     "tier": "Definition",
+     "source_occurrences": "22307148:(44)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Group memory update m^G",
+     "statement_latex_verbatim": "m^G_{t+1}(e) = rho_G * m^G_t(e) + sigma_{G,t}(e)",
+     "tier": "Definition",
+     "source_occurrences": "22307148:(45)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "weld/S.??.v1",
+     "label": "Group warrant function W_G,t",
+     "statement_latex_verbatim": "W_{G,t}(H) = W_G(R_{G,<=t}, independence, defects, calibration, objection channels)",
+     "tier": "Definition",
+     "source_occurrences": "22307148:(46)",
+     "parents": [
+      {
+       "code": "weld",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.05.v1",
+     "event": "split",
+     "to": "[4 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "weld/S.06.v1",
+   "name": "recoverable live-field gap / power before choice",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "The only occurrence, 22424434:(28) sec. 9.1 'Power before prohibition', reads verbatim: 'Power may alter agency by altering meaning/accessibility before overt choice' -- pure prose, no operator. The CANONICAL.json statement.latest for this code instead reads 'L^live_{A,g}=max_{z∈J_feas} D_L(L^z_A(g), L^{z_0}_A(g))', which is verbatim the formula backing EQ-015/S.08.v1 (occurrence 22357788:CBC-10, 'Recoverable Live-Field Gap'). The statement does not derive from this row's own cited occurrence at all.",
+   "members": [
+    "22424434:(28)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22424434:(28)",
+     "text_verbatim": "Power may alter agency by altering meaning/accessibility before overt choice",
+     "reason": "prose sentence, no formula; CANONICAL statement text appears misattributed from EQ-015/S.08.v1"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.06.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation (source is prose) AND statement.latest is mismatched/misattributed content -- needs owning-run correction, not just a split"
+    }
+   ],
+   "flags": [
+    "statement.latest does not match its own occurrence text; duplicates EQ-015/S.08.v1's formula verbatim -- likely a copy/merge error in CANONICAL.json, flagged for the CANONICAL-owning run to fix"
+   ]
+  },
+  {
+   "code": "weld/S.07.v1",
+   "name": "recommended route for personal/relational dialogue",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "The single occurrence 22481928:(36) sec. 10.1 reads: 'Experience → Interpretations → Absent Perspective → Observable Evidence → Direct Human Conversation.' -- a recommended procedural route (arrow chain of stages), no relational operator (=, ≤, ∈, ...).",
+   "members": [
+    "22481928:(36)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481928:(36)",
+     "text_verbatim": "Experience → Interpretations → Absent Perspective → Observable Evidence → Direct Human Conversation.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.07.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "A.5/S.02.v1",
+   "name": "organizational retention falsifier condition",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22456487:'unlabeled (§2, falsifier condition)': 'no H_org,n+1 ≠ H_org,n attributable to the processing' -- one condition, one occurrence, uses the ≠ operator.",
+   "members": [
+    "22456487:unlabeled (§2, falsifier condition)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "weld/S.08.v1",
+   "name": "Operational Linguistic Wisdom's eight Open propositions",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "P1..P8 (22456487) are eight distinct narrative propositions for future empirical testing, e.g. P1: 'Connectivity quality: Elective Connectivity quality predicts the breadth and safety of linguistic assets available for learning.' -- none contains a relational/mathematical operator; this is the paper's own 'Propositions for Future Testing (Open Tier)' list, explicitly named 'eight Open propositions'.",
+   "members": [
+    "22456487:P1",
+    "22456487:P2",
+    "22456487:P3",
+    "22456487:P4",
+    "22456487:P5",
+    "22456487:P6",
+    "22456487:P7",
+    "22456487:P8"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22456487:P1",
+     "text_verbatim": "Connectivity quality: Elective Connectivity quality predicts the breadth and safety of linguistic assets available for learning.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22456487:P2",
+     "text_verbatim": "Activation clarity: Capability Activation routines predict concept clarity and perceived value alignment.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22456487:P3",
+     "text_verbatim": "Reconfiguration cadence: Reflexive Reconfiguration cadence predicts policy-update rates and learning-KPI improvements.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22456487:P4",
+     "text_verbatim": "Reviewer diversity: Reviewer diversity strengthens clarity and alignment (moderation).",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22456487:P5",
+     "text_verbatim": "Over-reliance: Over-reliance on LLM outputs weakens the P2-P3 relationships (negative moderation), paralleling K_like ≠ K_validated at organizational scale.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22456487:P6",
+     "text_verbatim": "Minimization trade-off: Data minimization reduces decontextualization risk without lowering activation benefits.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22456487:P7",
+     "text_verbatim": "Dissent protocols: Formal dissent protocols reduce power-capture risk.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22456487:P8",
+     "text_verbatim": "SECI complementarity: SECI-practicing organizations experience complementary gains from OLW routines.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.08.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "A.5/S.03.v1",
+   "name": "Six-Level Live-Possibility Non-Collapse Chain (possible⊇feasible⊇live⊇chosen⊇enacted⊇observed)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CBC-01 (containment law + choice membership), CBC-05 (live possibility field definition), CBC-06 (live-set threshold definition), CBC-03 (chosen-vs-enacted-vs-observed distinction), CBC-04 (the six-level non-collapse law itself), CBC-09 (witnessed refinement of the containment) are six distinct formulas; CBC-02 restates part of CBC-01 verbatim (π^choice ∈ Π^live) and is folded into that same child as a duplicate occurrence.",
+   "members": [
+    "22357788:CBC-01",
+    "22357788:CBC-05",
+    "22357788:CBC-06",
+    "22357788:CBC-02",
+    "22357788:CBC-03",
+    "22357788:CBC-04",
+    "22357788:CBC-09"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Six-level containment + choice membership",
+     "statement_latex_verbatim": "Πlive_{A,t}(g) ⊆ Πfeas_{A,t}(g) ⊆ Πphys_t(g), π^choice ∈ Πlive_{A,t}(g)",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-01",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Live possibility field L_A,t(g)",
+     "statement_latex_verbatim": "L_{A,t}(g) = {(π, κ_{A,t}(π|g)) : π ∈ Πfeas_{A,t}(g)}",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-05",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Live-set threshold definition",
+     "statement_latex_verbatim": "Πlive_{A,t}(g) = {π : κ_{A,t}(π|g) ≥ τlive}",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-06",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "[duplicate of CBC-01: choice membership]",
+     "statement_latex_verbatim": "π^choice_{A,t} ∈ Πlive_{A,t}(g)",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-02",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Chosen vs enacted vs observed distinction",
+     "statement_latex_verbatim": "π^act ≠ π^choice possible; Yobs = Oq(H0:T); Yobs ≠ H0:T",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-03",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Six-level non-collapse law",
+     "statement_latex_verbatim": "possible ≠ feasible ≠ live ≠ chosen ≠ enacted ≠ observed",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-04",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/S.??.v1",
+     "label": "Witnessed-set refinement of containment",
+     "statement_latex_verbatim": "Πlive_{A,t}(g) ⊆ Πfeas_A(g; h, z, T, B)",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-09",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "A.5/S.03.v1",
+     "event": "split",
+     "to": "[7 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.04.v1",
+   "name": "Non-Collapse Constitutive List (the 17 role-separations the live-possibility architecture depends on)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CBC-16 (sec. 15, 'Non-Collapse Laws') states verbatim a semicolon-separated list of 17 distinct non-identity claims ('objective possibility ≠ structural feasibility; feasibility ≠ live possibility; ...; coupled performance ≠ Human Return') -- each is its own claim (none derivable from another by renaming/scaling), i.e. 17 non-equivalent members bundled as one code; CBC-07 and CBC-15 restate/extend two more instances of the same non-collapse pattern from elsewhere in the paper.",
+   "members": [
+    "22357788:CBC-16",
+    "22357788:CBC-07",
+    "22357788:CBC-15"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22357788:CBC-07",
+     "text_verbatim": "Resonance ≠ Consent, Resonance ≠ Truth",
+     "reason": "restates/overlaps individual items already listed among the 17 members of CBC-16; not new members, kept as occurrence evidence only"
+    },
+    {
+     "occurrence": "22357788:CBC-15",
+     "text_verbatim": "more live accessibility ≠ better agency; more fluent choice ≠ better choice",
+     "reason": "restates/overlaps individual items already listed among the 17 members of CBC-16; not new members, kept as occurrence evidence only"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 1: objective possibility ≠ structural feasibility",
+     "statement_latex_verbatim": "objective possibility ≠ structural feasibility",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 1 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 2: feasibility ≠ live possibility",
+     "statement_latex_verbatim": "feasibility ≠ live possibility",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 2 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 3: live possibility ≠ stated preference",
+     "statement_latex_verbatim": "live possibility ≠ stated preference",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 3 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 4: stated preference ≠ free consent",
+     "statement_latex_verbatim": "stated preference ≠ free consent",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 4 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 5: choice ≠ enactment",
+     "statement_latex_verbatim": "choice ≠ enactment",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 5 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 6: enactment ≠ evaluator-visible agency",
+     "statement_latex_verbatim": "enactment ≠ evaluator-visible agency",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 6 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 7: option count ≠ effective agency",
+     "statement_latex_verbatim": "option count ≠ effective agency",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 7 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 8: accessibility ≠ warrant",
+     "statement_latex_verbatim": "accessibility ≠ warrant",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 8 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 9: resonance ≠ consent",
+     "statement_latex_verbatim": "resonance ≠ consent",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 9 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 10: repetition ≠ legitimacy",
+     "statement_latex_verbatim": "repetition ≠ legitimacy",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 10 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 11: retention ≠ improvement",
+     "statement_latex_verbatim": "retention ≠ improvement",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 11 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 12: norm conformity ≠ absence of agency",
+     "statement_latex_verbatim": "norm conformity ≠ absence of agency",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 12 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 13: resistance to norms ≠ agency by definition",
+     "statement_latex_verbatim": "resistance to norms ≠ agency by definition",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 13 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 14: meaning-shaping ≠ domination",
+     "statement_latex_verbatim": "meaning-shaping ≠ domination",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 14 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 15: live-field narrowing ≠ structural violence without causal and normative conditions",
+     "statement_latex_verbatim": "live-field narrowing ≠ structural violence without causal and normative conditions",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 15 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 16: AI influence ≠ manipulation by definition",
+     "statement_latex_verbatim": "AI influence ≠ manipulation by definition",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 16 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Non-collapse law 17: coupled performance ≠ Human Return",
+     "statement_latex_verbatim": "coupled performance ≠ Human Return",
+     "tier": "Definition",
+     "source_occurrences": "18444260 n/a; 22357788:CBC-16 (list item 17 of 17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.04.v1",
+     "event": "split",
+     "to": "[17 child codes, one per non-collapse law]",
+     "reason": "17 distinct non-identity claims bundled under one code, matches the row's own name '17 role-separations'"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.05.v1",
+   "name": "Meaning-Shaped Practical Possibility: five core propositions (P1-P5)",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "CBC-P1..CBC-P5 (sec. 5, 'The Core Thesis: Choice Begins Before Choice') are five narrative propositions, e.g. CBC-P1: 'Objective possibility is not practical possibility. An action may be physically or legally available while remaining absent from the agent's practical field.' -- none contains a relational operator; the row's own CANONICAL statement.latest ('P1 objective≠practical possibility; ...') is itself a compressed paraphrase, not a quote of an equation.",
+   "members": [
+    "22357788:CBC-P1",
+    "22357788:CBC-P2",
+    "22357788:CBC-P3",
+    "22357788:CBC-P4",
+    "22357788:CBC-P5"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22357788:CBC-P1",
+     "text_verbatim": "P1 — Objective possibility is not practical possibility. An action may be physically or legally available while remaining absent from the agent's practical field.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-P2",
+     "text_verbatim": "P2 — Practical possibility is meaning-shaped. An option becomes live only insofar as the agent can discriminate, interpret, imagine, value, fear, reject, desire, delegate, or otherwise relate to it as a candidate for action.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-P3",
+     "text_verbatim": "P3 — Meaning-shaping can alter agency. Changing how an option is named, framed, remembered, socially recognized, or connected to prior experience can alter whether it becomes live before any final preference or decision is expressed.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-P4",
+     "text_verbatim": "P4 — Choice can be real within a narrowed field. A person may genuinely choose among the live options available while still having a smaller effective agency field than under a feasible counterfactual. Narrowing the field does not make every remaining choice fake.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-P5",
+     "text_verbatim": "P5 — Expansion can also be harmful. Increasing the number or salience of live options is not automatically emancipatory. Manipulative, dangerous, false, or overwhelming options can become more accessible.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.05.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "weld/S.09.v1",
+   "name": "Live-Field Empirical Programme: eight falsifiable hypotheses (H1-H8)",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "CBC-H1..CBC-H8 (sec. 16, 'Empirical Programme: Try to Kill the Theory') are eight falsifiable hypotheses in prose, e.g. CBC-H1: 'Live possibility beyond formal option count: the live-field model should predict which options enter deliberation and later action beyond the number of available options.' -- no relational operator in any of the eight; the paper's own section explicitly frames these as hypotheses to falsify, not equations.",
+   "members": [
+    "22357788:CBC-H1",
+    "22357788:CBC-H2",
+    "22357788:CBC-H3",
+    "22357788:CBC-H4",
+    "22357788:CBC-H5",
+    "22357788:CBC-H6",
+    "22357788:CBC-H7",
+    "22357788:CBC-H8"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22357788:CBC-H1",
+     "text_verbatim": "H1 [Open] — Live possibility beyond formal option count: the live-field model should predict which options enter deliberation and later action beyond the number of available options.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-H2",
+     "text_verbatim": "H2 [Open] — Meaning access beyond resources: holding material resources constant, whether an option is intelligible/nameable/linked to the agent's problem representation should add predictive value beyond resource-only models.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-H3",
+     "text_verbatim": "H3 [Open] — History-shaped re-entry: holding current option content fixed, prior traversal history should predict which alternatives are spontaneously generated or considered.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-H4",
+     "text_verbatim": "H4 [Open] — Resonance without consent: high experiential congruence should predict felt fit or uptake but should not perfectly predict voluntary endorsement under coercion checks.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-H5",
+     "text_verbatim": "H5 [Open] — Structural closure before overt prohibition: changing retaliation risk, complaint credibility, interpretive resources, or social recognition should alter practical option use even when formal permission is unchanged.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-H6",
+     "text_verbatim": "H6 [Open] — Evaluator visibility: changing the assessment interface may change observed agency rankings without changing real-world readout-action capability.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-H7",
+     "text_verbatim": "H7 [Open/externally allied] — Human-AI live-field carryover: randomizing AI dialogue histories and then removing AI should show measurable effects on which alternatives humans can independently generate, reject, or act upon.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22357788:CBC-H8",
+     "text_verbatim": "H8 [Open] — Corrigibility predicts durable agency: feedback/objection capacity should predict later error correction beyond productivity, confidence, and resource scores in tasks requiring repeated revision.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/S.09.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.06.v1",
+   "name": "Potential as a Witnessed Readout (corrigible agency potential p*, over the witnessed set)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "CBC-08/(1) (p*_{A,g} witnessed-readout definition, restated near-identically in both papers), (2) (p*_A vector and threshold-set C^alpha_A definition), (3) (A^corr_A aggregate definition), and 'unnumbered' (the r*d*x*f chain-rule decomposition) are four distinct formal objects.",
+   "members": [
+    "22357788:CBC-08",
+    "22361830:(1)",
+    "22361830:(2)",
+    "22361830:(3)",
+    "22361830:unnumbered"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Witnessed-readout potential p*_{A,g}",
+     "statement_latex_verbatim": "p*_{A,g} = max_{π∈Πfeas_A(g)} Pr(Rg ∩ Dg ∩ Xg ∩ Fg)",
+     "tier": "Definition",
+     "source_occurrences": "22357788:CBC-08",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "[restatement of p*_{A,g}]",
+     "statement_latex_verbatim": "p*_{A,g}(h,z;T,B,P) := max_{π∈Πwit_A(g;h,z,T,B)} Pr^π_P(Rg ∩ Dg ∩ Xg ∩ Fg), with p*_{A,g} := 0 when the set is empty",
+     "tier": "Definition",
+     "source_occurrences": "22361830:(1)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "p*_A vector and threshold set C^alpha_A",
+     "statement_latex_verbatim": "p*_A = (p*_{A,g})_{g∈G}, C^α_A = {g : p*_{A,g} ≥ α}",
+     "tier": "Definition",
+     "source_occurrences": "22361830:(2)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Aggregate corrigible-agency A^corr_A",
+     "statement_latex_verbatim": "A^corr_A(h,z;T,B,P,w) := Σ_g w_g p*_{A,g} ∈ [0,1]",
+     "tier": "Definition",
+     "source_occurrences": "22361830:(3)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Chain-rule decomposition p_{A,g}(pi)=r*d*x*f",
+     "statement_latex_verbatim": "p_{A,g}(π) = r·d·x·f, with r = Pr(Rg), d = Pr(Dg|Rg), x = Pr(Xg|Rg,Dg), f = Pr(Fg|Rg,Dg,Xg)",
+     "tier": "Definition",
+     "source_occurrences": "22361830:unnumbered",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.06.v1",
+     "event": "split",
+     "to": "[5 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.07.v1",
+   "name": "Recoverable Envelope Gap (Layer-2 potential minus Layer-1, on the probability envelope)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(4) defines the Layer-2 potential p*(2)_{A,g}; (5) defines the recoverable envelope gap L^recoverable_A as a difference of A^corr_A values -- two distinct quantities, the second built from but not equal to the first.",
+   "members": [
+    "22361830:(4)",
+    "22361830:(5)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Layer-2 potential p*(2)_{A,g}",
+     "statement_latex_verbatim": "p*(2)_{A,g} := max_{z∈Jfeas} p*_{A,g}(h,z;T,B,P)",
+     "tier": "Definition",
+     "source_occurrences": "22361830:(4)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Recoverable envelope gap L^recoverable_A",
+     "statement_latex_verbatim": "L^recoverable_A = max_{z∈Jfeas} A^corr_A(h,z) − A^corr_A(h,z0)",
+     "tier": "Definition",
+     "source_occurrences": "22361830:(5)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.07.v1",
+     "event": "split",
+     "to": "[2 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.08.v1",
+   "name": "Recoverable Live-Field Gap (distance-based, on the possibility field)",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22357788:CBC-10: 'L^live_{A,g} = max_{z∈Jfeas} DL(L^z_A(g), L^{z0}_A(g))' -- one formula, one occurrence.",
+   "members": [
+    "22357788:CBC-10"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.09.v1",
+   "name": "Corrigibility / Spectral-Support Readout Condition",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22361830:(6): 'Δspec(Ri) > 0 ⟺ channel_i = open ∧ Ṙ_i ≠ 0' -- one formula, one occurrence.",
+   "members": [
+    "22361830:(6)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.10.v1",
+   "name": "Pseudo-Peace Gate-Collapse Signature",
+   "classification": "mixed",
+   "evidence_quote": "(7) 'Yobs = calm ∧ p*wit = low ∧ F = blocked' is the pseudo-peace signature definition (a formula); P-A ('Pseudo-peace signature: amplitude-suppressing interventions raise the calm an evaluator reads while p*wit does not rise and F stays blocked. Defeated if...') is a falsifiable proposition stated in prose that TESTS the definition -- not itself an equation.",
+   "members": [
+    "22361830:(7)",
+    "22361830:P-A"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22361830:P-A",
+     "text_verbatim": "Pseudo-peace signature: amplitude-suppressing interventions raise the calm an evaluator reads while p*wit does not rise and F stays blocked. Defeated if p*wit rises consistently with observed calm under such interventions.",
+     "reason": "falsifiable proposition stated in narrative prose testing the (7) definition, no standalone equation"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "Pseudo-peace gate-collapse signature",
+     "statement_latex_verbatim": "Yobs = calm ∧ p*wit = low ∧ F = blocked",
+     "tier": "Definition",
+     "source_occurrences": "22361830:(7)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.10.v1",
+     "event": "split",
+     "to": "[1 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.11.v1",
+   "name": "Seven Distinctions Anatomy of 'Potential' (D1-D7)",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "D1..D7 (sec. 3, 'An anatomy of potential: seven distinctions') are seven distinct ≠ claims, e.g. D1 'Potential ≠ exercised ≠ observed', D2 'Declared set ≠ witnessed set' -- seven non-equivalent members under one code, matching the row's own name 'Seven Distinctions D1-D7'.",
+   "members": [
+    "22361830:D1 (NC-78)",
+    "22361830:D2",
+    "22361830:D3",
+    "22361830:D4",
+    "22361830:D5",
+    "22361830:D6 (NC-79)",
+    "22361830:D7"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "D1: potential vs exercised vs observed",
+     "statement_latex_verbatim": "Potential ≠ exercised ≠ observed",
+     "tier": "Definition",
+     "source_occurrences": "22361830:D1 (NC-78)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "D2: declared set vs witnessed set",
+     "statement_latex_verbatim": "Declared set ≠ witnessed set",
+     "tier": "Definition",
+     "source_occurrences": "22361830:D2",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "D3: layer 1 vs layer 2",
+     "statement_latex_verbatim": "Layer 1 ≠ layer 2",
+     "tier": "Definition",
+     "source_occurrences": "22361830:D3",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "D4: task potential vs aggregate potential",
+     "statement_latex_verbatim": "Task potential ≠ aggregate potential",
+     "tier": "Definition",
+     "source_occurrences": "22361830:D4",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "D5: feasible vs permitted",
+     "statement_latex_verbatim": "Feasible ≠ permitted",
+     "tier": "Definition",
+     "source_occurrences": "22361830:D5",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "D6: diagnosis vs attribution of responsibility",
+     "statement_latex_verbatim": "Diagnosis of compression ≠ attribution of responsibility",
+     "tier": "Definition",
+     "source_occurrences": "22361830:D6 (NC-79)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/S.??.v1",
+     "label": "D7: recoverable gap vs accumulated loss",
+     "statement_latex_verbatim": "Recoverable gap ≠ accumulated loss",
+     "tier": "Definition",
+     "source_occurrences": "22361830:D7",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.11.v1",
+     "event": "split",
+     "to": "[7 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/S.12.v1",
+   "name": "Falsifiable Propositions Testing the Potential-Readout Architecture (P-B, P-C, P-D)",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "P-B, P-C, P-D (sec. 8, 'Falsifiable propositions') are narrative falsifiable propositions, e.g. P-B: 'Channel shift: when F is blocked and C^alpha shrinks in task g, load rises in a coupled task g' while the aggregate (3) stays flat. Defeated if profiles stay flat across tasks.' -- descriptive hypotheses with a defeat condition, not standalone equations.",
+   "members": [
+    "22361830:P-B",
+    "22361830:P-C",
+    "22361830:P-D"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22361830:P-B",
+     "text_verbatim": "Channel shift: when F is blocked and C^α shrinks in task g, load rises in a coupled task g' while the aggregate (3) stays flat. Defeated if profiles stay flat across tasks.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22361830:P-C",
+     "text_verbatim": "The excluded path: groups whose min_i |C^α_i| falls while the mean rises show persistent cost concentration (CE-30) and higher recurrence than groups whose minimum does not fall. Defeated if no difference is found.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22361830:P-D",
+     "text_verbatim": "Layer 2 dominates the structural case: in cases classified as structural, the gap closable by layer-2 interventions exceeds the gap closable by layer-1 ones. Defeated if information-only or within-C interventions close as much.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/S.12.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "A.8/S.01.v1",
+   "name": "Identifiability Certificate (exact non-identifiability worked example)",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22361830:PAR-cert, a fully worked numeric identifiability example with computed values (f_P1=1, p*_P1=729/1000, f_P2=1/5, p*_P2=729/5000, Pr(complaint)=1/10) -- one certificate, one occurrence.",
+   "members": [
+    "22361830:PAR-cert"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.01.v1",
+   "name": "industrial and post-labour claim chains",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "(1) 'human labour -> production -> wage -> claim on output' and (51) 'labour-based claim -> human/citizen claim on social production' are two distinct causal/conceptual arrow-chains (not equal to one another) with no relational operator (=, ≤, ∈, ...) -- diagrams of a claim chain, not equations; matches the task's own example 'industrial and post-labour claim chains'.",
+   "members": [
+    "22481924:(1)",
+    "22481924:(51)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481924:(1)",
+     "text_verbatim": "human labour -> production -> wage -> claim on output",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22481924:(51)",
+     "text_verbatim": "labour-based claim -> human/citizen claim on social production",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.01.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.02.v1",
+   "name": "minimal epistemic firewall for machine candidate generation",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22481924:(3): 'Z_dot_t = v_t G_t - delta_Z Z_t, 0 <= v_t <= 1' -- one formula, one occurrence.",
+   "members": [
+    "22481924:(3)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.03.v1",
+   "name": "embodied automation and machine productive-capacity block",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(5) B^RB_t=N^RB_t q^RB_t, (6) the growth-decomposition identity, (7) the Cobb-Douglas-like M_t definition, (9) rho=(sigma-1)/sigma, (10) the labour-share s^L_t definition are five distinct quantities/definitions.",
+   "members": [
+    "22481924:(5)",
+    "22481924:(6)",
+    "22481924:(7)",
+    "22481924:(9)",
+    "22481924:(10)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Robotic-block output B^RB_t",
+     "statement_latex_verbatim": "B^RB_t = N^RB_t q^RB_t",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(5)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Growth decomposition of B^RB_t",
+     "statement_latex_verbatim": "B_dot^RB_t / B^RB_t = N_dot^RB_t / N^RB_t + q_dot^RB_t / q^RB_t",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(6)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Machine output M_t (nested CES/Cobb-Douglas)",
+     "statement_latex_verbatim": "M_t = (K^M_t)^kappa (A^AI_t)^alpha (B^RB_t)^beta",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(7)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Elasticity parameter rho",
+     "statement_latex_verbatim": "rho = (sigma - 1) / sigma",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(9)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Labour income share s^L_t",
+     "statement_latex_verbatim": "s^L_t = (omega_H H_t^rho) / (omega_H H_t^rho + omega_M M_t^rho)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(10)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.03.v1",
+     "event": "split",
+     "to": "[5 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.04.v1",
+   "name": "four-dimensional labour centrality",
+   "classification": "mixed",
+   "evidence_quote": "(8) 'L_t = <L^task_t, L^income_t, L^bottleneck_t, L^bargain_t>' is the four-dimensional labour-centrality tuple definition; 'Labour-Decentering Proposition [Open]' ('AI and robotics can reduce labour centrality without eliminating labour...') is a narrative Open-tier proposition, not an equation.",
+   "members": [
+    "22481924:(8)",
+    "22481924:Labour-Decentering Proposition"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481924:Labour-Decentering Proposition",
+     "text_verbatim": "Labour-Decentering Proposition [Open]. AI and robotics can reduce labour centrality without eliminating labour. Stable employment can coexist with falling bottleneck or bargaining centrality; high wages for some workers can coexist with a declining aggregate labour claim; and human-facing residual work can expand while scalable productive tasks migrate to machine systems.",
+     "reason": "Open-tier narrative proposition, no relational operator"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Four-dimensional labour centrality tuple",
+     "statement_latex_verbatim": "L_t = < L^task_t, L^income_t, L^bottleneck_t, L^bargain_t >",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(8)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.04.v1",
+     "event": "split",
+     "to": "[1 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.05.v1",
+   "name": "the claim constitution: from wages to citizen claims",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(11) q_t definition, (12) Gamma_t definition, (13) q^min_t definition, (14) D^rent definition, (15) Gamma^net definition are five distinct quantities chained together in one code.",
+   "members": [
+    "22481924:(11)",
+    "22481924:(12)",
+    "22481924:(13)",
+    "22481924:(14)",
+    "22481924:(15)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Claim-conversion rate q_t",
+     "statement_latex_verbatim": "q_t = o_t + tau_t(1 - o_t) = 1 - (1 - o_t)(1 - tau_t)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(11)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Effective claim Gamma_t",
+     "statement_latex_verbatim": "Gamma_t = s^L_t + q_t(1 - s^L_t)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(12)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Minimum sufficient q^min_t",
+     "statement_latex_verbatim": "q^min_t = (Gamma_bar - s^L_t) / (1 - s^L_t)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(13)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "AI-rent differential D^rent",
+     "statement_latex_verbatim": "D^rent_(i,t) = (Rent^(AI,out)_(i,t) - Rent^(AI,in)_(i,t)) / Y_(i,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(14)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Net effective claim Gamma^net",
+     "statement_latex_verbatim": "Gamma^net_(i,t) = Gamma_(i,t) - D^rent_(i,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(15)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.05.v1",
+     "event": "split",
+     "to": "[5 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.06.v1",
+   "name": "aggregate demand, realization, and profit-wealth feedback",
+   "classification": "mixed",
+   "evidence_quote": "(22) AD_t aggregate-demand definition, (23) chi^dem_t realization-rate definition, (24) Pi^M_t profit definition are three distinct formulas; (25) and (55) are arrow-chain feedback-loop summaries ('Gamma^eff Y -> AD -> Pi^M -> W^M_(t+1) -> M_(t+1)') with no relational operator, restating the loop in prose diagram form rather than as an equation.",
+   "members": [
+    "22481924:(22)",
+    "22481924:(23)",
+    "22481924:(24)",
+    "22481924:(25)",
+    "22481924:(55)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481924:(25)",
+     "text_verbatim": "Gamma^eff Y -> AD -> Pi^M -> W^M_(t+1) -> M_(t+1)",
+     "reason": "arrow-chain narrative summary of the feedback loop, no relational operator, not an equation"
+    },
+    {
+     "occurrence": "22481924:(55)",
+     "text_verbatim": "Gamma^eff Y -> AD -> Pi^M -> W^M_(t+1) -> {o_(t+1), M_(t+1)}",
+     "reason": "arrow-chain narrative summary of the feedback loop, no relational operator, not an equation"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Aggregate demand AD_t",
+     "statement_latex_verbatim": "AD_t = C(Gamma^eff_t Y_t, m_t) + I_t + G_t + NX_t",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(22)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Demand-realization rate chi^dem_t",
+     "statement_latex_verbatim": "chi^dem_t = min{1, AD_t / Y_t}",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(23)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Machine-sector profit Pi^M_t",
+     "statement_latex_verbatim": "Pi^M_t = chi^dem_t Y_t - Cost^M_t",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(24)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.06.v1",
+     "event": "split",
+     "to": "[3 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.07.v1",
+   "name": "ownership stock accumulation and its non-collapse from redistribution",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(16) ownership-stock recursion W^M_(i,t+1), (17) ownership-share o_t definition, (18) 'current redistribution != future ownership reproduction' (a non-collapse claim) are three distinct formal objects.",
+   "members": [
+    "22481924:(16)",
+    "22481924:(17)",
+    "22481924:(18)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Ownership-stock accumulation recursion",
+     "statement_latex_verbatim": "W^M_(i,t+1) = (1 - delta_W) W^M_(i,t) + r^M_t W^M_(i,t) + s^(M,cap)_(i,t) + T^cap_(i,t) - Tax^cap_(i,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(16)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Ownership share o_t",
+     "statement_latex_verbatim": "o_t = ( sum_(i in B) W^M_(i,t) ) / ( sum_i W^M_(i,t) )",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Non-collapse: redistribution vs ownership reproduction",
+     "statement_latex_verbatim": "current redistribution != future ownership reproduction",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(18)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.07.v1",
+     "event": "split",
+     "to": "[3 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "A.5/W.01.v1",
+   "name": "scarce-asset rent burden and effective material claim",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(19) B^scarce_(i,t) rent-burden definition, (20) Gamma^eff_(i,t) effective-claim definition, (21) 'machine abundance != low rent burden != effective material freedom' (a non-collapse claim) are three distinct formal objects.",
+   "members": [
+    "22481924:(19)",
+    "22481924:(20)",
+    "22481924:(21)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Scarce-asset rent burden B^scarce",
+     "statement_latex_verbatim": "B^scarce_(i,t) = (R^house_(i,t) + R^land_(i,t) + R^energy_(i,t) + DS_(i,t)) / Y_(i,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(19)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Effective material claim Gamma^eff",
+     "statement_latex_verbatim": "Gamma^eff_(i,t) = max{0, Gamma^net_(i,t) - B^scarce_(i,t)}",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(20)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse: abundance vs rent burden vs material freedom",
+     "statement_latex_verbatim": "machine abundance != low rent burden != effective material freedom",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(21)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "A.5/W.01.v1",
+     "event": "split",
+     "to": "[3 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.08.v1",
+   "name": "conversion-gate control, credible exit, and dependency exposure",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(26) conversion-gate G^conv definition, (27) credible-exit X definition, (28) dependency-exposure D definition, (29) 'Concentration != G^conv != D' non-collapse claim, (53) 'concentration =/=> dependency =/=> agency loss' conditional non-collapse claim -- five distinct formal objects.",
+   "members": [
+    "22481924:(26)",
+    "22481924:(27)",
+    "22481924:(28)",
+    "22481924:(29)",
+    "22481924:(53)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Conversion-gate control G^conv",
+     "statement_latex_verbatim": "G^conv_(j,t)(e) = 1 - [ V_t(e | -j) / V_t(e) ]_+",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(26)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Credible-exit index X",
+     "statement_latex_verbatim": "X_(i,t)(e; j) = clip( V_(i,t)(e | -j) / V_(i,t)(e), 0, 1 )",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(27)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Dependency exposure D",
+     "statement_latex_verbatim": "D_(i->j,t)(g) = sum_(e in E(g)) w_e(g) G^conv_(j,t)(e) [1 - X_(i,t)(e; j)]",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(28)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Non-collapse: concentration vs gate vs dependency",
+     "statement_latex_verbatim": "Concentration != G^conv != D",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(29)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Conditional non-collapse: concentration/dependency/agency loss",
+     "statement_latex_verbatim": "concentration =/=> dependency =/=> agency loss",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(53)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.08.v1",
+     "event": "split",
+     "to": "[5 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.09.v1",
+   "name": "relational class position vector",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22481924:(30): 'C_(i,t) = <O,G,Gamma,A^access,X,D,R^rent>_(i,t)' -- one tuple definition, one occurrence.",
+   "members": [
+    "22481924:(30)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "weld/W.01.v1",
+   "name": "the political-economy-to-human bridge mechanism",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22481924:(31): 'c^(PE->H)_(i,t) = B^(PE->H)(Z_t; i, g)' -- one formula, one occurrence.",
+   "members": [
+    "22481924:(31)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.10.v1",
+   "name": "Human Systemic Position typed audit index",
+   "classification": "mixed",
+   "evidence_quote": "(40) P^H_t index definition, (41)+(42) its growth-rate decomposition (one continued equation split across two raw labels), (43) 'Y_dot_t > 0 =/=> P_dot^H_t > 0' non-collapse claim, (44) AWA_t 'Abundance Without Agency' tuple definition are four distinct formal objects; (57) 'growth of machine productive power versus growth of broad human claim, exit, agency, and Human Return' is a narrative comparison with no relational operator.",
+   "members": [
+    "22481924:(40)",
+    "22481924:(41)",
+    "22481924:(42)",
+    "22481924:(43)",
+    "22481924:(44)",
+    "22481924:(57)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481924:(57)",
+     "text_verbatim": "growth of machine productive power  versus  growth of broad human claim, exit, agency, and Human Return",
+     "reason": "narrative comparison ('X versus Y'), no relational operator, not an equation"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Human Systemic Position index P^H_t",
+     "statement_latex_verbatim": "P^H_t = [ (Gamma^eff_t)^theta_Gamma (A^corr_(H,t))^theta_A (Lambda^live_(H,t))^theta_Lambda (r^H_t)^theta_R (S^H_t)^theta_S (X^H_t)^theta_X ] / (1 + D^H_t)^theta_D",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(40)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Growth-rate decomposition of P^H_t (part 1)",
+     "statement_latex_verbatim": "P_dot^H_t / P^H_t = theta_Gamma (Gamma_dot^eff_t/Gamma^eff_t) + theta_A (A_dot^corr_(H,t)/A^corr_(H,t)) + theta_R (r_dot^H_t/r^H_t) + theta_Lambda (Lambda_dot^live_(H,t)/Lambda^live_(H,t))",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(41)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Growth-rate decomposition of P^H_t (part 2)",
+     "statement_latex_verbatim": "... + theta_S (S_dot^H_t/S^H_t) + theta_X (X_dot^H_t/X^H_t) - theta_D (D_dot^H_t/(1+D^H_t))",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(42)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Non-collapse: output growth vs P^H_t growth",
+     "statement_latex_verbatim": "Y_dot_t > 0  =/=>  P_dot^H_t > 0",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(43)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Abundance-Without-Agency (AWA_t) tuple",
+     "statement_latex_verbatim": "AWA_t = < Y(up), Gamma^eff adequate, O^H(down), X^H(down), D^H(up), Lambda^live_H(down), A^corr_H(down), r_H(down), S_H(down) >",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(44)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.10.v1",
+     "event": "split",
+     "to": "[5 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.11.v1",
+   "name": "recognized social role/standing dynamic and time-budget identity",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(36) 'S_dot^H_t = s_1 W_t + s_2 N_t - delta_S S^H_t' (social-standing dynamic) and (37) '1 = l_wage+l_care+l_learn+l_civic+l_leisure' (a time-budget identity) are two distinct equations with different LHS quantities.",
+   "members": [
+    "22481924:(36)",
+    "22481924:(37)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Social-standing dynamic S^H_t",
+     "statement_latex_verbatim": "S_dot^H_t = s_1 W_t + s_2 N_t - delta_S S^H_t",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(36)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Time-budget identity",
+     "statement_latex_verbatim": "1 = l_wage + l_care + l_learn + l_civic + l_leisure",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(37)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.11.v1",
+     "event": "split",
+     "to": "[2 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.12.v1",
+   "name": "social reproduction dynamic and its non-collapse from productive necessity",
+   "classification": "mixed",
+   "evidence_quote": "(38) H^cap_t human-capability-stock dynamic and (39) 'productive necessity of humans != social necessity of human reproduction' non-collapse claim are two distinct formulas; (56) '{Care,Health,Education} -> H^cap -> {A^corr_H,r_H,S_H} -> P -> I_(t+1)' is an arrow-chain narrative summary, no relational operator.",
+   "members": [
+    "22481924:(38)",
+    "22481924:(39)",
+    "22481924:(56)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481924:(56)",
+     "text_verbatim": "{Care, Health, Education} -> H^cap -> {A^corr_H, r_H, S_H} -> P -> I_(t+1)",
+     "reason": "arrow-chain narrative summary, no relational operator, not an equation"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Human-capability-stock dynamic H^cap_t",
+     "statement_latex_verbatim": "H_dot^cap_t = f(Care_t, Health_t, Education_t, Nutrition_t, Community_t) - delta_H H^cap_t",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(38)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Non-collapse: productive vs social necessity",
+     "statement_latex_verbatim": "productive necessity of humans != social necessity of human reproduction",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(39)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.12.v1",
+     "event": "split",
+     "to": "[2 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "A.5/W.02.v1",
+   "name": "three-channel power vector and recursive political-economy loops",
+   "classification": "mixed",
+   "evidence_quote": "(45) P_t three-channel power vector, (46) P^B_t (bargaining power) proportionality, (47) P^E_t (epistemic power) definition, (48) I_dot_t (institutional-change) definition, (50) 'ownership != informational power != coercive power' non-collapse claim are five distinct formal objects; (49) is a three-strand arrow-chain narrative of the recursive loops with no relational operator.",
+   "members": [
+    "22481924:(45)",
+    "22481924:(46)",
+    "22481924:(47)",
+    "22481924:(48)",
+    "22481924:(49)",
+    "22481924:(50)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481924:(49)",
+     "text_verbatim": "economic gate control -> rents -> political influence -> future gate control;  information control -> attention/interpretation -> rule legitimacy -> future information control;  productivity -> broad claim/exit -> agency -> collective rules -> broader ownership/exit",
+     "reason": "arrow-chain narrative summary of the three recursive loops, no relational operator, not an equation"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Three-channel power vector P_t",
+     "statement_latex_verbatim": "P_t = < P^econ_t, P^info_t, P^coerc_t >",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(45)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Bargaining power P^B_t (proportionality)",
+     "statement_latex_verbatim": "P^B_t proportional-to Gamma^eff_t A^corr_(H,t) Lambda^live_(H,t) X^H_t r^H_t",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(46)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Epistemic power P^E_t",
+     "statement_latex_verbatim": "P^E_t = P_E( P_t, G_dot^conv, D^H_t, 1 - Gamma^eff_t )",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(47)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Institutional-change rate I_dot_t",
+     "statement_latex_verbatim": "I_dot_t = F_I( P^B_t, P^E_t, state capacity, rules, shocks )",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(48)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse: ownership vs informational vs coercive power",
+     "statement_latex_verbatim": "ownership != informational power != coercive power",
+     "tier": "Definition",
+     "source_occurrences": "22481924:(50)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "A.5/W.02.v1",
+     "event": "split",
+     "to": "[5 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.13.v1",
+   "name": "normalized decoupling-pressure early-warning diagnostic",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22481924:(52): the Omega_t normalized decoupling-pressure diagnostic -- one formula, one occurrence.",
+   "members": [
+    "22481924:(52)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "weld/W.02.v1",
+   "name": "After Labour's own standalone river summary",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "The single occurrence 22481924:(54) is one long arrow chain restating the whole paper's causal graph ('candidate generation -> validated K/A^AI -> robotic embodiment -> M_t -> Y_t -> ... -> next system state') with no relational operator anywhere -- a narrative summary diagram, matches the task's own example 'standalone river summary'; it is not itself an equation and should point to the paper's own conclusion section rather than hold a Toledo equation code.",
+   "members": [
+    "22481924:(54)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481924:(54)",
+     "text_verbatim": "candidate generation -> validated K/A^AI -> robotic embodiment -> M_t -> Y_t -> L_t -> s^L_t -> Gamma_t -> W^M_t -> o_(t+1) -> Gamma^eff_t -> AD_t -> Pi^M_t -> W^M_(t+1) -> {G^conv, X, D} -> human bridge -> {Pi^live, A^corr_H, r_H, S_H} -> H^cap_t -> P^H_t -> P_t -> collective rules -> next system state",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "weld/W.02.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.14.v1",
+   "name": "corrigible agency envelope at world-system scale",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22481924:(34): 'A^corr_(H,i,t)(g) = max_(pi in Pi^live_(i,t)(g)) Pr^pi(...)' -- one formula, one occurrence.",
+   "members": [
+    "22481924:(34)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.15.v1",
+   "name": "Human Return tuple at world-system scale",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22481924:(35): 'R^return_(H,t) = <C_t, T_t, S^skill_t, A^alt_t>' -- one tuple definition, one occurrence.",
+   "members": [
+    "22481924:(35)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.16.v1",
+   "name": "Human Conversion Vector and elasticity",
+   "classification": "mixed",
+   "evidence_quote": "(1) 'Machine expansion =/=> Human expansion' non-collapse claim, (11) C^H_t Human-Conversion-Vector definition, (12) eta^HC_(j,t) elasticity definition, (13) sign-constraints on three elasticities are four distinct formulas; 'Proposition 1 [Open]' ('An increase in M_t ... is insufficient to establish human expansion...') and (25)/(26) (a 'versus' comparison and an arrow-chain summary) are narrative, no operator.",
+   "members": [
+    "22481926:(1)",
+    "22481926:(11)",
+    "22481926:(12)",
+    "22481926:(13)",
+    "22481926:Proposition 1",
+    "22481926:(25)",
+    "22481926:(26)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481926:Proposition 1",
+     "text_verbatim": "Proposition 1 (Conversion non-identity) [Open]. An increase in M_t or current human-AI performance is insufficient to establish human expansion unless at least one predeclared Human Conversion dimension improves without unacceptable deterioration in another load-bearing dimension.",
+     "reason": "Open-tier narrative proposition / 'X versus Y' comparison / arrow-chain summary, no relational operator"
+    },
+    {
+     "occurrence": "22481926:(25)",
+     "text_verbatim": "rate of machine capability growth  versus  rate of human conversion and institutional adaptation",
+     "reason": "Open-tier narrative proposition / 'X versus Y' comparison / arrow-chain summary, no relational operator"
+    },
+    {
+     "occurrence": "22481926:(26)",
+     "text_verbatim": "Machine Capability -> Human Conversion Vector -> Human Return/Agency/Exit -> Reversibility or Lock-in -> Next Institutional State",
+     "reason": "Open-tier narrative proposition / 'X versus Y' comparison / arrow-chain summary, no relational operator"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Non-collapse: machine expansion vs human expansion",
+     "statement_latex_verbatim": "Machine expansion  =/=>  Human expansion",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(1)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Human Conversion Vector C^H_t",
+     "statement_latex_verbatim": "C^H_t = < Gamma^eff_t, X^H_t, Lambda^live_(H,t), A^corr_(H,t), R^route_(H,t), W^world_(H,t), r_(H,t), H^cap_t, S_(H,t) >",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(11)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Conversion elasticity eta^HC_(j,t)",
+     "statement_latex_verbatim": "eta^HC_(j,t) = d(ln C^H_(j,t)) / d(ln M_t)",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(12)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Elasticity sign constraints",
+     "statement_latex_verbatim": "eta^HC_Gamma > 0,  eta^HC_(rH) < 0,  eta^HC_X < 0",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(13)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.16.v1",
+     "event": "split",
+     "to": "[4 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "A.5/W.03.v1",
+   "name": "Human Conversion Imperative's ten non-collapse separations",
+   "classification": "bundle_of_equations",
+   "evidence_quote": "(2)..(10) are nine distinct 'X != Y' non-collapse claims (AI capability!=validated knowledge; assisted performance!=human learning; augmentation!=synergy; formal options!=live possibilities; access!=credible exit; income transfer!=future ownership; material security!=agency; market concentration!=domination; productive necessity!=social necessity) -- nine non-equivalent members bundled as one code.",
+   "members": [
+    "22481926:(2)",
+    "22481926:(3)",
+    "22481926:(4)",
+    "22481926:(5)",
+    "22481926:(6)",
+    "22481926:(7)",
+    "22481926:(8)",
+    "22481926:(9)",
+    "22481926:(10)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 1: AI capability vs validated knowledge",
+     "statement_latex_verbatim": "AI capability != validated knowledge",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(2)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 2: assisted performance vs human learning",
+     "statement_latex_verbatim": "assisted performance != human learning",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(3)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 3: augmentation vs synergy",
+     "statement_latex_verbatim": "augmentation != synergy",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(4)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 4: formal options vs live possibilities",
+     "statement_latex_verbatim": "formal options != live possibilities",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(5)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 5: access vs credible exit",
+     "statement_latex_verbatim": "access != credible exit",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(6)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 6: income transfer vs future ownership",
+     "statement_latex_verbatim": "income transfer != future ownership",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(7)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 7: material security vs agency",
+     "statement_latex_verbatim": "material security != agency",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(8)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 8: market concentration vs domination",
+     "statement_latex_verbatim": "market concentration != domination",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(9)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "A.5/W.??.v1",
+     "label": "Non-collapse 9: productive necessity vs social necessity",
+     "statement_latex_verbatim": "productive necessity != social necessity",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(10)",
+     "parents": [
+      {
+       "code": "A.5",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "A.5/W.03.v1",
+     "event": "split",
+     "to": "[9 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": [
+    "row name says 'ten non-collapse separations' but only 9 occurrences/members are mapped in CANONICAL.json -- one separation appears to be missing from the occurrence list"
+   ]
+  },
+  {
+   "code": "EQ-015/W.17.v1",
+   "name": "high- vs low-conversion interaction forms",
+   "classification": "prose_propositions_not_equations",
+   "evidence_quote": "(14) 'H problem -> AI divergence -> H resistance -> World test -> H integration -> AI removal -> H return', (15) 'H problem -> AI answer -> use -> dependence', and (24) 'Maximum AI assistance -> Maximum durable human conversion' are three arrow-chain narratives with no relational operator; 'Proposition 2 [Open]' ('The AI assistance intensity that maximizes current performance need not maximize delayed Human Return...') is a narrative Open-tier proposition -- none of the four members is an equation.",
+   "members": [
+    "22481926:(14)",
+    "22481926:(15)",
+    "22481926:Proposition 2",
+    "22481926:(24)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481926:(14)",
+     "text_verbatim": "H problem -> AI divergence -> H resistance -> World test -> H integration -> AI removal -> H return",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22481926:(15)",
+     "text_verbatim": "H problem -> AI answer -> use -> dependence",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22481926:Proposition 2",
+     "text_verbatim": "Proposition 2 (Assistance-conversion divergence) [Open]. The AI assistance intensity that maximizes current performance need not maximize delayed Human Return or corrigible agency.",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    },
+    {
+     "occurrence": "22481926:(24)",
+     "text_verbatim": "Maximum AI assistance -> Maximum durable human conversion",
+     "reason": "no equation/operator in the source text; pure narrative proposition/hypothesis/summary"
+    }
+   ],
+   "proposed_children": [],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.17.v1",
+     "event": "retired",
+     "to": null,
+     "reason": "not_an_equation: no formula backs this code; action=move_to_pointer to the source section"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.18.v1",
+   "name": "Bad-Mode State Vector",
+   "classification": "single_equation",
+   "evidence_quote": "Single occurrence 22481926:(16): the Bad-Mode State Vector B_t tuple definition -- one formula, one occurrence.",
+   "members": [
+    "22481926:(16)"
+   ],
+   "excluded_members": [],
+   "proposed_children": [],
+   "proposed_lineage_events": [],
+   "flags": []
+  },
+  {
+   "code": "EQ-015/W.19.v1",
+   "name": "Reversibility Window and Urgency Vector",
+   "classification": "mixed",
+   "evidence_quote": "(17) reversibility-window W_j definition, (18) Delta g_(j,t) definition, (19) urgency U_(j,t) definition, (20) urgency vector U_t definition, (21) U^max_t definition are five distinct formulas; 'Proposition 3 [Open]' ('the Reversibility Principle') is a narrative Open-tier proposition, no relational operator.",
+   "members": [
+    "22481926:(17)",
+    "22481926:Proposition 3",
+    "22481926:(18)",
+    "22481926:(19)",
+    "22481926:(20)",
+    "22481926:(21)"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481926:Proposition 3",
+     "text_verbatim": "Proposition 3 (Reversibility Principle) [Open]. The faster machine capability grows relative to human conversion, the more valuable it becomes to preserve reversible human and institutional alternatives before the recovery cost of lost routes rises.",
+     "reason": "Open-tier narrative proposition (Reversibility Principle), no relational operator"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Reversibility window W_j",
+     "statement_latex_verbatim": "W_j = { t : C^rec_(j,t) <= C_bar_j  AND  tau^rec_(j,t) <= tau_bar_j }",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(17)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Capability-conversion gap Delta g_(j,t)",
+     "statement_latex_verbatim": "Delta g_(j,t) = [ g~_(M,t) - g~_(Cj,t) ]_+",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(18)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Urgency index U_(j,t)",
+     "statement_latex_verbatim": "U_(j,t) = Delta g_(j,t) * L_(j,t) * S_(j,t) * tau^rec_(j,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(19)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Urgency vector U_t",
+     "statement_latex_verbatim": "U_t = < U_(1,t), ..., U_(J,t) >",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(20)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-015/W.??.v1",
+     "label": "Maximum urgency U^max_t",
+     "statement_latex_verbatim": "U^max_t = max_j U_(j,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(21)",
+     "parents": [
+      {
+       "code": "EQ-015",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-015/W.19.v1",
+     "event": "split",
+     "to": "[5 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  },
+  {
+   "code": "EQ-002/W.01.v1",
+   "name": "distributional readouts of conversion",
+   "classification": "mixed",
+   "evidence_quote": "(22) C^10/C^50/C^90 percentile-readout definition and (23) I^H_(j,t) inequality-index definition are two distinct formulas; 'Proposition 4 [Open]' ('Broad human expansion requires that conversion gains reach a declared population distribution...') is a narrative Open-tier proposition, no relational operator.",
+   "members": [
+    "22481926:(22)",
+    "22481926:(23)",
+    "22481926:Proposition 4"
+   ],
+   "excluded_members": [
+    {
+     "occurrence": "22481926:Proposition 4",
+     "text_verbatim": "Proposition 4 (Distributional conversion) [Open]. Broad human expansion requires that conversion gains reach a declared population distribution; aggregate productivity or mean capability gains are insufficient.",
+     "reason": "Open-tier narrative proposition, no relational operator"
+    }
+   ],
+   "proposed_children": [
+    {
+     "proposed_code": "EQ-002/W.??.v1",
+     "label": "Conversion percentile readouts C^10/C^50/C^90",
+     "statement_latex_verbatim": "C^10_(j,t), C^50_(j,t), C^90_(j,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(22)",
+     "parents": [
+      {
+       "code": "EQ-002",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    },
+    {
+     "proposed_code": "EQ-002/W.??.v1",
+     "label": "Conversion inequality index I^H_(j,t)",
+     "statement_latex_verbatim": "I^H_(j,t) = C^90_(j,t) - C^10_(j,t)",
+     "tier": "Definition",
+     "source_occurrences": "22481926:(23)",
+     "parents": [
+      {
+       "code": "EQ-002",
+       "derived_via": "split"
+      }
+     ],
+     "derived_via": "split"
+    }
+   ],
+   "proposed_lineage_events": [
+    {
+     "code": "EQ-002/W.01.v1",
+     "event": "split",
+     "to": "[2 child codes, see proposed_children]",
+     "reason": "multiple non-equivalent formulas/definitions bundled under one code"
+    }
+   ],
+   "flags": []
+  }
+ ],
+ "counts": {
+  "mixed": 11,
+  "bundle_of_equations": 19,
+  "prose_propositions_not_equations": 9,
+  "single_equation": 11,
+  "total_SW_rows": 50,
+  "total_proposed_children": 170,
+  "total_excluded_members": 49,
+  "rows_with_flags": 3
+ }
+}
