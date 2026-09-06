@@ -486,7 +486,7 @@
   {
    "file": "formal/URCF_RD_All.v",
    "line": 8751,
-   "from": "(3-Opus panel conclusion)",
+   "from": "(a three-member panel named by an AI model name)",
    "to": "(three-reviewer panel conclusion)",
    "reason": "AI model name removed from a comment (no AI vendor/model name in public files; disclosure by role only); proof content unchanged",
    "date": "2026-09-07"
