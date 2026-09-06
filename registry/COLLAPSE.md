@@ -509,6 +509,25 @@ placement at all.
    CAN-144, CAN-145, CAN-152, CAN-155, CAN-157, CAN-161, CAN-175, CAN-180, CAN-181,
    CAN-184, CAN-187, CAN-189, CAN-192, CAN-194, CAN-195, CAN-215, CAN-221.
 
+   **Re-checked 2026-09-06 (REGISTRAR checker, block `44-domain-default-ids-not-resolved`).**
+   All 44 were re-tested against this section's own keyword list (non-collapse, weld,
+   readout, retention, record/provenance, stepper/chain, ordering, state/tuple,
+   equivalence, gate) with word-boundary matching over each id's own name+statement text:
+   **0 genuine matches** — the domain-default convention above was already the honest
+   answer, not an unchecked shortcut. Each of the 44 now carries a `drift_note` field in
+   `CANONICAL.json` (registry/SCHEMA.md) recording that this check was run and its negative
+   result, so the weakness is disclosed per-entry, not only in this shared paragraph. Two
+   of the 44 that already carried a (previously blank) `relations[]` entry were filled with
+   real, quoted evidence rather than left silent: **CAN-157** got a structural match
+   (its "corrigible agency envelope" is the same construct as `EQ-015/H.09.v1`'s
+   "corrigible/effective agency potential," read at world-system vs. individual scale —
+   same `max_pi Pr(...)` shape over the same four conjuncts); **CAN-040** got a weaker,
+   honestly-flagged thematic match only (both are threshold/Gate-based regime
+   classifiers), explicitly marked lower-confidence than CAN-157's. None of the 44 was
+   recoded `HRP-X`: none is rootless (each already has a known, cited root/parent), so
+   `HRP-X` — reserved for genuinely rootless Layer-0 objects — would misstate their status;
+   see `registry/LINEAGE.jsonl` for the full reasoning.
+
 3. **Blank cells in the reading table are real, not oversights.** CAN-002 and CAN-201 have
    no social reading, and CAN-001, CAN-007, and CAN-009 have no world-system reading. The
    social chapters bundle state+readout+weld into one object (CAN-115's PAR-stepper) rather

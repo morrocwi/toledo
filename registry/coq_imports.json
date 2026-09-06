@@ -19,7 +19,7 @@
       "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626), Open Civil Science Initiative",
       "files_included": 14,
       "files_excluded_but_counted": 0,
-      "note": "local clone's only configured remote is the local Forgejo mirror (192.168.1.120:3000/yaoharee/readout_universe.git); no origin=GitHub remote is configured on this clone at read time, unlike the other four public repos -- recorded as read, not corrected."
+      "note": "local clone's only configured remote is a local mirror only; no public origin=GitHub remote is configured on this clone at read time, unlike the other four public repos -- recorded as read, not corrected."
     },
     {
       "source": "information-discrete-math",

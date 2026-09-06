@@ -30,7 +30,7 @@
       "role": "root-axiom",
       "parents": [],
       "derived_via": "definition",
-      "step": 10.0,
+      "step": 1,
       "step_label": "I.1"
     },
     {
@@ -50,7 +50,7 @@
         "EQ-001"
       ],
       "derived_via": "forcing",
-      "step": 10.001,
+      "step": 2,
       "step_label": "I.1"
     },
     {
@@ -71,7 +71,7 @@
         "EQ-002"
       ],
       "derived_via": "forcing",
-      "step": 10.002,
+      "step": 3,
       "step_label": "I.1"
     },
     {
@@ -91,7 +91,7 @@
         "EQ-003"
       ],
       "derived_via": "forcing",
-      "step": 10.003,
+      "step": 4,
       "step_label": "I.1"
     },
     {
@@ -107,9 +107,12 @@
       "tier_in_genesis": "Ax",
       "synthesis_occurrences": [],
       "role": "root-axiom",
-      "parents": [],
+      "parents": [
+        "EQ-001",
+        "EQ-004"
+      ],
       "derived_via": "definition",
-      "step": 10.004,
+      "step": 5,
       "step_label": "I.1"
     },
     {
@@ -125,9 +128,11 @@
       "tier_in_genesis": "Ax",
       "synthesis_occurrences": [],
       "role": "root-axiom",
-      "parents": [],
+      "parents": [
+        "EQ-005"
+      ],
       "derived_via": "definition",
-      "step": 10.005,
+      "step": 6,
       "step_label": "I.1"
     },
     {
@@ -148,7 +153,7 @@
         "EQ-006"
       ],
       "derived_via": "forcing",
-      "step": 10.006,
+      "step": 7,
       "step_label": "I.1"
     },
     {
@@ -156,7 +161,6 @@
       "genesis_id": "EQ-008",
       "aliases": [
         "E00.7-operator",
-        "weld",
         "RG-I.E00.7=E00.7 (CA.json, PART I — ROOT AXIOMS: WHAT IS FIRST? > I)"
       ],
       "name": "Retained graph-Laplacian operator L_R",
@@ -173,7 +177,7 @@
         "EQ-007"
       ],
       "derived_via": "forcing",
-      "step": 4.5,
+      "step": 8,
       "step_label": "I.1"
     },
     {
@@ -193,7 +197,7 @@
         "EQ-001"
       ],
       "derived_via": "definition",
-      "step": 11.0,
+      "step": 9,
       "step_label": "I.1a"
     },
     {
@@ -213,7 +217,7 @@
         "EQ-009"
       ],
       "derived_via": "definition",
-      "step": 11.001,
+      "step": 10,
       "step_label": "I.1a"
     },
     {
@@ -233,7 +237,7 @@
         "EQ-009"
       ],
       "derived_via": "definition",
-      "step": 11.002,
+      "step": 11,
       "step_label": "I.1a"
     },
     {
@@ -253,7 +257,7 @@
         "EQ-009"
       ],
       "derived_via": "definition",
-      "step": 11.003,
+      "step": 12,
       "step_label": "I.1a"
     },
     {
@@ -273,7 +277,7 @@
         "EQ-012"
       ],
       "derived_via": "tier_rule",
-      "step": 11.004,
+      "step": 13,
       "step_label": "I.1a"
     },
     {
@@ -294,7 +298,7 @@
         "EQ-013"
       ],
       "derived_via": "tier_rule",
-      "step": 11.005,
+      "step": 14,
       "step_label": "I.1a"
     },
     {
@@ -321,7 +325,7 @@
         "SpinePDE"
       ],
       "derived_via": "restatement",
-      "step": 19.001,
+      "step": 15,
       "step_label": "II.3"
     },
     {
@@ -341,7 +345,7 @@
         "ModeEquation"
       ],
       "derived_via": "restatement",
-      "step": 23.001,
+      "step": 16,
       "step_label": "II.7"
     },
     {
@@ -365,7 +369,7 @@
         "Telegraph"
       ],
       "derived_via": "coarse_grain",
-      "step": 24.0,
+      "step": 17,
       "step_label": "II.8"
     },
     {
@@ -385,7 +389,7 @@
         "LivingGeometry"
       ],
       "derived_via": "restatement",
-      "step": 25.002,
+      "step": 18,
       "step_label": "II.8a"
     },
     {
@@ -405,7 +409,7 @@
         "EQ-018"
       ],
       "derived_via": "definition",
-      "step": 25.003,
+      "step": 19,
       "step_label": "II.8a"
     },
     {
@@ -425,7 +429,7 @@
         "EQ-019"
       ],
       "derived_via": "definition",
-      "step": 25.004,
+      "step": 20,
       "step_label": "II.8a"
     },
     {
@@ -433,7 +437,6 @@
       "genesis_id": "EQ-021",
       "aliases": [
         "MetricGSkewDecomposition",
-        "T1",
         "RG-II.SymSkewSplit=SymSkewSplit (CA.json, PART II — THE UNIVERSAL EQUATION > II.8a)"
       ],
       "name": "Metric-G skew/symmetric decomposition of 𝔾_n",
@@ -447,7 +450,7 @@
         "T1"
       ],
       "derived_via": "restatement",
-      "step": 62.503,
+      "step": 21,
       "step_label": "V.13a"
     },
     {
@@ -466,7 +469,7 @@
         "ReaderRecordEqs"
       ],
       "derived_via": "restatement",
-      "step": 25.01,
+      "step": 22,
       "step_label": "II.8a"
     },
     {
@@ -485,7 +488,7 @@
         "ResidualsAndPotential"
       ],
       "derived_via": "restatement",
-      "step": 25.012,
+      "step": 23,
       "step_label": "II.8a"
     },
     {
@@ -504,7 +507,7 @@
         "GaussJordanStepper"
       ],
       "derived_via": "restatement",
-      "step": 25.014,
+      "step": 24,
       "step_label": "II.8a"
     },
     {
@@ -523,7 +526,7 @@
         "GaussJordanStepper"
       ],
       "derived_via": "restatement",
-      "step": 25.015,
+      "step": 25,
       "step_label": "II.8a"
     },
     {
@@ -543,7 +546,7 @@
         "Face.10.StrictGap"
       ],
       "derived_via": "restatement",
-      "step": 25.0,
+      "step": 26,
       "step_label": "II.8a"
     },
     {
@@ -564,7 +567,7 @@
         "EQ-026"
       ],
       "derived_via": "restatement",
-      "step": 37.0,
+      "step": 27,
       "step_label": "III.Face10"
     },
     {
@@ -586,7 +589,7 @@
         "EQ-027"
       ],
       "derived_via": "tier_rule",
-      "step": 37.001,
+      "step": 28,
       "step_label": "III.Face10"
     },
     {
@@ -602,9 +605,11 @@
       "tier_in_genesis": "Dr",
       "synthesis_occurrences": [],
       "role": "other — a conservation/bookkeeping identity along the quantum→chemical→protein→biological-transport chain",
-      "parents": [],
-      "derived_via": "restatement",
-      "step": 61.0,
+      "parents": [
+        "EQ-008"
+      ],
+      "derived_via": "domain_reading",
+      "step": 29,
       "step_label": "V.13"
     },
     {
@@ -619,9 +624,11 @@
       "tier_in_genesis": "Dr",
       "synthesis_occurrences": [],
       "role": "other — domain-leaf state definition",
-      "parents": [],
-      "derived_via": "restatement",
-      "step": 70.0,
+      "parents": [
+        "EQ-008"
+      ],
+      "derived_via": "domain_reading",
+      "step": 30,
       "step_label": "V.21"
     },
     {
@@ -640,7 +647,7 @@
         "EQ-030"
       ],
       "derived_via": "readout",
-      "step": 70.001,
+      "step": 31,
       "step_label": "V.21"
     },
     {
@@ -660,7 +667,7 @@
         "EQ-031"
       ],
       "derived_via": "tier_rule",
-      "step": 70.002,
+      "step": 32,
       "step_label": "V.21"
     },
     {
@@ -680,7 +687,7 @@
         "EQ-032"
       ],
       "derived_via": "forcing",
-      "step": 70.003,
+      "step": 33,
       "step_label": "V.21"
     },
     {
@@ -701,7 +708,7 @@
         "EQ-033"
       ],
       "derived_via": "tier_rule",
-      "step": 70.004,
+      "step": 34,
       "step_label": "V.21"
     },
     {
@@ -720,7 +727,7 @@
         "EQ-021"
       ],
       "derived_via": "definition",
-      "step": 62.0,
+      "step": 35,
       "step_label": "V.13a"
     },
     {
@@ -739,7 +746,7 @@
         "EQ-030"
       ],
       "derived_via": "specialisation",
-      "step": 70.005,
+      "step": 36,
       "step_label": "V.21"
     },
     {
@@ -758,7 +765,7 @@
         "EQ-036"
       ],
       "derived_via": "specialisation",
-      "step": 70.006,
+      "step": 37,
       "step_label": "V.21"
     },
     {
@@ -777,7 +784,7 @@
         "EQ-037"
       ],
       "derived_via": "specialisation",
-      "step": 70.007,
+      "step": 38,
       "step_label": "V.21"
     },
     {
@@ -796,7 +803,7 @@
         "EQ-038"
       ],
       "derived_via": "specialisation",
-      "step": 70.008,
+      "step": 39,
       "step_label": "V.21"
     },
     {
@@ -815,7 +822,7 @@
         "EQ-039"
       ],
       "derived_via": "specialisation",
-      "step": 70.009,
+      "step": 40,
       "step_label": "V.21"
     },
     {
@@ -834,7 +841,7 @@
         "EQ-040"
       ],
       "derived_via": "specialisation",
-      "step": 70.01,
+      "step": 41,
       "step_label": "V.21"
     },
     {
@@ -853,7 +860,7 @@
         "EQ-041"
       ],
       "derived_via": "definition",
-      "step": 70.011,
+      "step": 42,
       "step_label": "V.21"
     },
     {
@@ -872,7 +879,7 @@
         "EQ-042"
       ],
       "derived_via": "definition",
-      "step": 70.012,
+      "step": 43,
       "step_label": "V.21"
     },
     {
@@ -891,7 +898,7 @@
         "UnifiedForce_action"
       ],
       "derived_via": "composition",
-      "step": 71.008,
+      "step": 44,
       "step_label": "V.22"
     },
     {
@@ -910,7 +917,7 @@
         "EQ-041"
       ],
       "derived_via": "readout",
-      "step": 70.013,
+      "step": 45,
       "step_label": "V.21"
     },
     {
@@ -929,7 +936,7 @@
         "EQ-042"
       ],
       "derived_via": "specialisation",
-      "step": 70.014,
+      "step": 46,
       "step_label": "V.21"
     },
     {
@@ -948,7 +955,7 @@
         "EQ-042"
       ],
       "derived_via": "specialisation",
-      "step": 70.015,
+      "step": 47,
       "step_label": "V.21"
     },
     {
@@ -967,7 +974,7 @@
         "EQ-047"
       ],
       "derived_via": "specialisation",
-      "step": 70.016,
+      "step": 48,
       "step_label": "V.21"
     },
     {
@@ -986,7 +993,7 @@
         "EQ-041"
       ],
       "derived_via": "specialisation",
-      "step": 70.017,
+      "step": 49,
       "step_label": "V.21"
     },
     {
@@ -1005,7 +1012,7 @@
         "EQ-042"
       ],
       "derived_via": "specialisation",
-      "step": 70.018,
+      "step": 50,
       "step_label": "V.21"
     },
     {
@@ -1025,7 +1032,7 @@
         "EQ-049"
       ],
       "derived_via": "domain_reading",
-      "step": 70.019,
+      "step": 51,
       "step_label": "V.21"
     },
     {
@@ -1044,7 +1051,7 @@
         "EQ-051"
       ],
       "derived_via": "tier_rule",
-      "step": 70.02,
+      "step": 52,
       "step_label": "V.21"
     },
     {
@@ -1063,7 +1070,7 @@
         "EQ-051"
       ],
       "derived_via": "composition",
-      "step": 70.021,
+      "step": 53,
       "step_label": "V.21"
     },
     {
@@ -1083,7 +1090,7 @@
         "EQ-053"
       ],
       "derived_via": "composition",
-      "step": 70.022,
+      "step": 54,
       "step_label": "V.21"
     },
     {
@@ -1102,7 +1109,7 @@
         "EQ-042"
       ],
       "derived_via": "definition",
-      "step": 70.023,
+      "step": 55,
       "step_label": "V.21"
     },
     {
@@ -1121,7 +1128,7 @@
         "EQ-022"
       ],
       "derived_via": "readout",
-      "step": 70.024,
+      "step": 56,
       "step_label": "V.21"
     },
     {
@@ -1140,7 +1147,7 @@
         "EQ-056"
       ],
       "derived_via": "tier_rule",
-      "step": 70.025,
+      "step": 57,
       "step_label": "V.21"
     },
     {
@@ -1159,7 +1166,7 @@
         "EQ-041"
       ],
       "derived_via": "domain_reading",
-      "step": 70.026,
+      "step": 58,
       "step_label": "V.21"
     },
     {
@@ -1178,7 +1185,7 @@
         "EQ-058"
       ],
       "derived_via": "domain_reading",
-      "step": 70.027,
+      "step": 59,
       "step_label": "V.21"
     },
     {
@@ -1197,7 +1204,7 @@
         "ModeEquation"
       ],
       "derived_via": "specialisation",
-      "step": 70.028,
+      "step": 60,
       "step_label": "V.21"
     },
     {
@@ -1216,7 +1223,7 @@
         "GaussJordanStepper"
       ],
       "derived_via": "restatement",
-      "step": 70.029,
+      "step": 61,
       "step_label": "V.21"
     },
     {
@@ -1235,7 +1242,7 @@
         "EQ-061"
       ],
       "derived_via": "tier_rule",
-      "step": 70.03,
+      "step": 62,
       "step_label": "V.21"
     },
     {
@@ -1257,7 +1264,7 @@
         "BridgeFormula.MassReadout"
       ],
       "derived_via": "readout",
-      "step": 41.002,
+      "step": 63,
       "step_label": "IV.1"
     },
     {
@@ -1276,7 +1283,7 @@
         "EQ-063"
       ],
       "derived_via": "domain_reading",
-      "step": 41.003,
+      "step": 64,
       "step_label": "IV.1"
     },
     {
@@ -1295,7 +1302,7 @@
         "EQ-008"
       ],
       "derived_via": "definition",
-      "step": 71.0,
+      "step": 65,
       "step_label": "V.22"
     },
     {
@@ -1314,7 +1321,7 @@
         "EQ-065"
       ],
       "derived_via": "domain_reading",
-      "step": 71.001,
+      "step": 66,
       "step_label": "V.22"
     },
     {
@@ -1333,7 +1340,7 @@
         "EQ-066"
       ],
       "derived_via": "domain_reading",
-      "step": 71.002,
+      "step": 67,
       "step_label": "V.22"
     },
     {
@@ -1352,7 +1359,7 @@
         "EQ-067"
       ],
       "derived_via": "tier_rule",
-      "step": 71.003,
+      "step": 68,
       "step_label": "V.22"
     },
     {
@@ -1371,7 +1378,7 @@
         "EQ-008"
       ],
       "derived_via": "domain_reading",
-      "step": 71.004,
+      "step": 69,
       "step_label": "V.22"
     },
     {
@@ -1390,7 +1397,7 @@
         "EQ-069"
       ],
       "derived_via": "restatement",
-      "step": 71.005,
+      "step": 70,
       "step_label": "V.22"
     },
     {
@@ -1409,7 +1416,7 @@
         "EQ-069"
       ],
       "derived_via": "restatement",
-      "step": 71.006,
+      "step": 71,
       "step_label": "V.22"
     },
     {
@@ -1428,10 +1435,11 @@
       ],
       "role": "other",
       "parents": [
+        "EQ-008",
         "MQ08-stepper"
       ],
       "derived_via": "composition",
-      "step": 4.0,
+      "step": 72,
       "step_label": "weld"
     },
     {
@@ -1450,7 +1458,7 @@
         "EQ-001"
       ],
       "derived_via": "forcing",
-      "step": 5.01,
+      "step": 73,
       "step_label": "Forced.I"
     },
     {
@@ -1467,7 +1475,7 @@
         "I"
       ],
       "derived_via": "forcing",
-      "step": 5.02,
+      "step": 74,
       "step_label": "Forced.II"
     },
     {
@@ -1484,7 +1492,7 @@
         "I"
       ],
       "derived_via": "forcing",
-      "step": 5.03,
+      "step": 75,
       "step_label": "Forced.III"
     },
     {
@@ -1501,7 +1509,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "forcing",
-      "step": 5.04,
+      "step": 76,
       "step_label": "Forced.IV"
     },
     {
@@ -1518,7 +1526,7 @@
         "LivingGeometry"
       ],
       "derived_via": "forcing",
-      "step": 5.05,
+      "step": 77,
       "step_label": "Forced.V"
     },
     {
@@ -1535,7 +1543,7 @@
         "ResidualsAndPotential"
       ],
       "derived_via": "forcing",
-      "step": 5.06,
+      "step": 78,
       "step_label": "Forced.VI"
     },
     {
@@ -1552,7 +1560,7 @@
         "I"
       ],
       "derived_via": "forcing",
-      "step": 5.07,
+      "step": 79,
       "step_label": "Forced.VII"
     },
     {
@@ -1569,7 +1577,7 @@
         "I"
       ],
       "derived_via": "forcing",
-      "step": 5.08,
+      "step": 80,
       "step_label": "Forced.VIII"
     },
     {
@@ -1586,7 +1594,7 @@
         "EQ-007"
       ],
       "derived_via": "forcing",
-      "step": 5.09,
+      "step": 81,
       "step_label": "Forced.IX"
     },
     {
@@ -1603,7 +1611,7 @@
         "IX"
       ],
       "derived_via": "forcing",
-      "step": 5.1,
+      "step": 82,
       "step_label": "Forced.X"
     },
     {
@@ -1621,7 +1629,7 @@
         "BridgeFormula.MassReadout"
       ],
       "derived_via": "forcing",
-      "step": 5.11,
+      "step": 83,
       "step_label": "Forced.XI"
     },
     {
@@ -1638,7 +1646,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "forcing",
-      "step": 5.12,
+      "step": 84,
       "step_label": "Forced.XII"
     },
     {
@@ -1656,7 +1664,7 @@
         "X"
       ],
       "derived_via": "forcing",
-      "step": 5.13,
+      "step": 85,
       "step_label": "Forced.XIII"
     },
     {
@@ -1673,7 +1681,7 @@
         "GaugeFaces"
       ],
       "derived_via": "forcing",
-      "step": 5.14,
+      "step": 86,
       "step_label": "Forced.XIV"
     },
     {
@@ -1690,7 +1698,7 @@
         "TermTier-gradV"
       ],
       "derived_via": "forcing",
-      "step": 5.15,
+      "step": 87,
       "step_label": "Forced.XV"
     },
     {
@@ -1707,7 +1715,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "forcing",
-      "step": 5.16,
+      "step": 88,
       "step_label": "Forced.XVI"
     },
     {
@@ -1724,7 +1732,7 @@
         "ResidualsAndPotential"
       ],
       "derived_via": "forcing",
-      "step": 5.17,
+      "step": 89,
       "step_label": "Forced.XVII"
     },
     {
@@ -1741,7 +1749,7 @@
         "Face.3.Dispersion"
       ],
       "derived_via": "forcing",
-      "step": 5.18,
+      "step": 90,
       "step_label": "Forced.XVIII"
     },
     {
@@ -1758,7 +1766,7 @@
         "DRLAction"
       ],
       "derived_via": "forcing",
-      "step": 5.19,
+      "step": 91,
       "step_label": "Forced.XIX"
     },
     {
@@ -1775,7 +1783,7 @@
         "GaugeFaces"
       ],
       "derived_via": "forcing",
-      "step": 5.2,
+      "step": 92,
       "step_label": "Forced.XX"
     },
     {
@@ -1792,7 +1800,7 @@
         "XX"
       ],
       "derived_via": "forcing",
-      "step": 5.21,
+      "step": 93,
       "step_label": "Forced.XXI"
     },
     {
@@ -1809,7 +1817,7 @@
         "XXI"
       ],
       "derived_via": "forcing",
-      "step": 5.22,
+      "step": 94,
       "step_label": "Forced.XXII"
     },
     {
@@ -1826,7 +1834,7 @@
         "ModeEquation"
       ],
       "derived_via": "forcing",
-      "step": 5.23,
+      "step": 95,
       "step_label": "Forced.XXIII"
     },
     {
@@ -1843,7 +1851,7 @@
         "EQ-042"
       ],
       "derived_via": "forcing",
-      "step": 5.24,
+      "step": 96,
       "step_label": "Forced.XXIV"
     },
     {
@@ -1864,7 +1872,7 @@
         "EQ-008"
       ],
       "derived_via": "composition",
-      "step": 12.0,
+      "step": 97,
       "step_label": "I.2"
     },
     {
@@ -1881,7 +1889,7 @@
         "RootToTrunk"
       ],
       "derived_via": "readout",
-      "step": 13.0,
+      "step": 98,
       "step_label": "I.2a"
     },
     {
@@ -1900,7 +1908,7 @@
         "EQ-008"
       ],
       "derived_via": "forcing",
-      "step": 17.0,
+      "step": 99,
       "step_label": "II.1"
     },
     {
@@ -1917,7 +1925,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "tier_rule",
-      "step": 17.001,
+      "step": 100,
       "step_label": "II.1"
     },
     {
@@ -1934,7 +1942,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "coarse_grain",
-      "step": 18.0,
+      "step": 101,
       "step_label": "II.2"
     },
     {
@@ -1951,7 +1959,7 @@
         "Telegraph"
       ],
       "derived_via": "readout",
-      "step": 18.001,
+      "step": 102,
       "step_label": "II.2"
     },
     {
@@ -1968,7 +1976,7 @@
         "Telegraph"
       ],
       "derived_via": "coarse_grain",
-      "step": 19.0,
+      "step": 103,
       "step_label": "II.3"
     },
     {
@@ -1985,7 +1993,7 @@
         "SpinePDE"
       ],
       "derived_via": "domain_reading",
-      "step": 20.0,
+      "step": 104,
       "step_label": "II.4"
     },
     {
@@ -2002,7 +2010,7 @@
         "SpinePDE"
       ],
       "derived_via": "restatement",
-      "step": 21.0,
+      "step": 105,
       "step_label": "II.5"
     },
     {
@@ -2019,7 +2027,7 @@
         "MasterEqCanon"
       ],
       "derived_via": "readout",
-      "step": 21.001,
+      "step": 106,
       "step_label": "II.5"
     },
     {
@@ -2036,7 +2044,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 22.0,
+      "step": 107,
       "step_label": "II.6"
     },
     {
@@ -2053,7 +2061,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 22.001,
+      "step": 108,
       "step_label": "II.6"
     },
     {
@@ -2070,7 +2078,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 22.002,
+      "step": 109,
       "step_label": "II.6"
     },
     {
@@ -2087,7 +2095,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 22.003,
+      "step": 110,
       "step_label": "II.6"
     },
     {
@@ -2104,7 +2112,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 22.004,
+      "step": 111,
       "step_label": "II.6"
     },
     {
@@ -2121,7 +2129,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 22.005,
+      "step": 112,
       "step_label": "II.6"
     },
     {
@@ -2138,7 +2146,7 @@
         "SpinePDE"
       ],
       "derived_via": "specialisation",
-      "step": 23.0,
+      "step": 113,
       "step_label": "II.7"
     },
     {
@@ -2155,7 +2163,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 24.001,
+      "step": 114,
       "step_label": "II.8"
     },
     {
@@ -2172,7 +2180,7 @@
         "SpinePDE"
       ],
       "derived_via": "specialisation",
-      "step": 25.001,
+      "step": 115,
       "step_label": "II.8a"
     },
     {
@@ -2189,7 +2197,7 @@
         "LivingGeometry"
       ],
       "derived_via": "definition",
-      "step": 25.005,
+      "step": 116,
       "step_label": "II.8a"
     },
     {
@@ -2206,7 +2214,7 @@
         "LivingGeometry"
       ],
       "derived_via": "tier_rule",
-      "step": 25.006,
+      "step": 117,
       "step_label": "II.8a"
     },
     {
@@ -2223,7 +2231,7 @@
         "LivingGeometry"
       ],
       "derived_via": "definition",
-      "step": 25.007,
+      "step": 118,
       "step_label": "II.8a"
     },
     {
@@ -2240,7 +2248,7 @@
         "DRLAction"
       ],
       "derived_via": "definition",
-      "step": 25.008,
+      "step": 119,
       "step_label": "II.8a"
     },
     {
@@ -2257,7 +2265,7 @@
         "EtaOmegaMatrices"
       ],
       "derived_via": "composition",
-      "step": 25.009,
+      "step": 120,
       "step_label": "II.8a"
     },
     {
@@ -2274,7 +2282,7 @@
         "ReaderRecordEqs"
       ],
       "derived_via": "definition",
-      "step": 25.011,
+      "step": 121,
       "step_label": "II.8a"
     },
     {
@@ -2291,7 +2299,7 @@
         "ReaderRecordEqs"
       ],
       "derived_via": "composition",
-      "step": 25.013,
+      "step": 122,
       "step_label": "II.8a"
     },
     {
@@ -2308,7 +2316,7 @@
         "GaussJordanStepper"
       ],
       "derived_via": "readout",
-      "step": 25.016,
+      "step": 123,
       "step_label": "II.8a"
     },
     {
@@ -2325,7 +2333,7 @@
         "ResidualsAndPotential"
       ],
       "derived_via": "composition",
-      "step": 25.017,
+      "step": 124,
       "step_label": "II.8a"
     },
     {
@@ -2344,7 +2352,7 @@
         "Layer3"
       ],
       "derived_via": "restatement",
-      "step": 27.0,
+      "step": 125,
       "step_label": "III.pre"
     },
     {
@@ -2361,7 +2369,7 @@
         "SpinePDE"
       ],
       "derived_via": "specialisation",
-      "step": 28.0,
+      "step": 126,
       "step_label": "III.Face1"
     },
     {
@@ -2378,7 +2386,7 @@
         "Face.1.Eigenmode"
       ],
       "derived_via": "specialisation",
-      "step": 28.001,
+      "step": 127,
       "step_label": "III.Face1"
     },
     {
@@ -2396,7 +2404,7 @@
         "T1"
       ],
       "derived_via": "composition",
-      "step": 28.002,
+      "step": 128,
       "step_label": "III.Face1"
     },
     {
@@ -2413,7 +2421,7 @@
         "Face.1.Eigenmode"
       ],
       "derived_via": "specialisation",
-      "step": 29.0,
+      "step": 129,
       "step_label": "III.Face2"
     },
     {
@@ -2430,7 +2438,7 @@
         "Face.1.CharEq"
       ],
       "derived_via": "specialisation",
-      "step": 30.0,
+      "step": 130,
       "step_label": "III.Face3"
     },
     {
@@ -2447,7 +2455,7 @@
         "Face.3.CharEq"
       ],
       "derived_via": "specialisation",
-      "step": 30.001,
+      "step": 131,
       "step_label": "III.Face3"
     },
     {
@@ -2464,7 +2472,7 @@
         "Face.3.CriticalSplit"
       ],
       "derived_via": "composition",
-      "step": 30.002,
+      "step": 132,
       "step_label": "III.Face3"
     },
     {
@@ -2481,7 +2489,7 @@
         "Face.2"
       ],
       "derived_via": "specialisation",
-      "step": 31.0,
+      "step": 133,
       "step_label": "III.Face4"
     },
     {
@@ -2498,7 +2506,7 @@
         "EQ-007"
       ],
       "derived_via": "readout",
-      "step": 32.0,
+      "step": 134,
       "step_label": "III.Face5"
     },
     {
@@ -2515,7 +2523,7 @@
         "Face.5.LightCone"
       ],
       "derived_via": "readout",
-      "step": 32.001,
+      "step": 135,
       "step_label": "III.Face5"
     },
     {
@@ -2532,7 +2540,7 @@
         "EQ-005"
       ],
       "derived_via": "readout",
-      "step": 33.0,
+      "step": 136,
       "step_label": "III.Face6"
     },
     {
@@ -2550,7 +2558,7 @@
         "Face.1.Eigenmode"
       ],
       "derived_via": "specialisation",
-      "step": 33.001,
+      "step": 137,
       "step_label": "III.Face6"
     },
     {
@@ -2567,7 +2575,7 @@
         "TermTier-gradV"
       ],
       "derived_via": "readout",
-      "step": 34.0,
+      "step": 138,
       "step_label": "III.Face7"
     },
     {
@@ -2584,7 +2592,7 @@
         "Face.7.RootForce"
       ],
       "derived_via": "tier_rule",
-      "step": 34.001,
+      "step": 139,
       "step_label": "III.Face7"
     },
     {
@@ -2601,7 +2609,7 @@
         "Face.7.RootForce"
       ],
       "derived_via": "domain_reading",
-      "step": 34.002,
+      "step": 140,
       "step_label": "III.Face7"
     },
     {
@@ -2618,7 +2626,7 @@
         "Face.7.RootForce"
       ],
       "derived_via": "domain_reading",
-      "step": 34.003,
+      "step": 141,
       "step_label": "III.Face7"
     },
     {
@@ -2635,7 +2643,7 @@
         "EQ-008"
       ],
       "derived_via": "readout",
-      "step": 35.0,
+      "step": 142,
       "step_label": "III.Face8"
     },
     {
@@ -2652,7 +2660,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "tier_rule",
-      "step": 35.001,
+      "step": 143,
       "step_label": "III.Face8"
     },
     {
@@ -2669,7 +2677,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "composition",
-      "step": 35.002,
+      "step": 144,
       "step_label": "III.Face8"
     },
     {
@@ -2686,7 +2694,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "domain_reading",
-      "step": 36.0,
+      "step": 145,
       "step_label": "III.Face9"
     },
     {
@@ -2703,7 +2711,7 @@
         "EQ-002"
       ],
       "derived_via": "readout",
-      "step": 37.002,
+      "step": 146,
       "step_label": "III.Face10"
     },
     {
@@ -2720,7 +2728,7 @@
         "Face.10.StrictGap"
       ],
       "derived_via": "tier_rule",
-      "step": 37.003,
+      "step": 147,
       "step_label": "III.Face10"
     },
     {
@@ -2737,7 +2745,7 @@
         "EQ-029"
       ],
       "derived_via": "restatement",
-      "step": 37.004,
+      "step": 148,
       "step_label": "III.Face10"
     },
     {
@@ -2754,7 +2762,7 @@
         "SpinePDE"
       ],
       "derived_via": "domain_reading",
-      "step": 38.0,
+      "step": 149,
       "step_label": "III.Face11"
     },
     {
@@ -2771,7 +2779,7 @@
         "Face.11.SolveTarget"
       ],
       "derived_via": "tier_rule",
-      "step": 38.001,
+      "step": 150,
       "step_label": "III.Face11"
     },
     {
@@ -2788,7 +2796,7 @@
         "SpinePDE"
       ],
       "derived_via": "domain_reading",
-      "step": 39.0,
+      "step": 151,
       "step_label": "III.Face12"
     },
     {
@@ -2805,7 +2813,7 @@
         "EQ-005"
       ],
       "derived_via": "readout",
-      "step": 41.0,
+      "step": 152,
       "step_label": "IV.1"
     },
     {
@@ -2822,7 +2830,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "readout",
-      "step": 41.001,
+      "step": 153,
       "step_label": "IV.1"
     },
     {
@@ -2839,7 +2847,7 @@
         "BridgeFormula.MassReadout"
       ],
       "derived_via": "tier_rule",
-      "step": 41.004,
+      "step": 154,
       "step_label": "IV.1"
     },
     {
@@ -2856,7 +2864,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "domain_reading",
-      "step": 42.0,
+      "step": 155,
       "step_label": "IV.2"
     },
     {
@@ -2873,7 +2881,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "domain_reading",
-      "step": 42.001,
+      "step": 156,
       "step_label": "IV.2"
     },
     {
@@ -2890,7 +2898,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "tier_rule",
-      "step": 45.0,
+      "step": 157,
       "step_label": "IV.5"
     },
     {
@@ -2907,7 +2915,7 @@
         "CommutingSquare.Bridge"
       ],
       "derived_via": "tier_rule",
-      "step": 45.001,
+      "step": 158,
       "step_label": "IV.5"
     },
     {
@@ -2924,7 +2932,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "definition",
-      "step": 46.0,
+      "step": 159,
       "step_label": "IV.6"
     },
     {
@@ -2942,7 +2950,7 @@
         "SpinePDE"
       ],
       "derived_via": "readout",
-      "step": 46.001,
+      "step": 160,
       "step_label": "IV.6"
     },
     {
@@ -2959,7 +2967,7 @@
         "Gateway.NativeMasterPDE"
       ],
       "derived_via": "composition",
-      "step": 46.002,
+      "step": 161,
       "step_label": "IV.6"
     },
     {
@@ -2976,7 +2984,7 @@
         "Gateway.GatewayPDE"
       ],
       "derived_via": "definition",
-      "step": 46.003,
+      "step": 162,
       "step_label": "IV.6"
     },
     {
@@ -2993,7 +3001,7 @@
         "Gateway.GatewayPDE"
       ],
       "derived_via": "definition",
-      "step": 46.004,
+      "step": 163,
       "step_label": "IV.6"
     },
     {
@@ -3010,7 +3018,7 @@
         "Gateway.OutputAdapters"
       ],
       "derived_via": "domain_reading",
-      "step": 46.005,
+      "step": 164,
       "step_label": "IV.6"
     },
     {
@@ -3027,7 +3035,7 @@
         "Gateway.OutputAdapters"
       ],
       "derived_via": "domain_reading",
-      "step": 46.006,
+      "step": 165,
       "step_label": "IV.6"
     },
     {
@@ -3044,7 +3052,7 @@
         "Gateway.PrimitiveTuple"
       ],
       "derived_via": "definition",
-      "step": 46.007,
+      "step": 166,
       "step_label": "IV.6"
     },
     {
@@ -3062,7 +3070,7 @@
         "Gateway.UnruhIdentity"
       ],
       "derived_via": "tier_rule",
-      "step": 46.008,
+      "step": 167,
       "step_label": "IV.6"
     },
     {
@@ -3079,7 +3087,7 @@
         "InverseArrow"
       ],
       "derived_via": "readout",
-      "step": 48.0,
+      "step": 168,
       "step_label": "V.0"
     },
     {
@@ -3097,7 +3105,7 @@
         "Face.1.Eigenmode"
       ],
       "derived_via": "domain_reading",
-      "step": 49.0,
+      "step": 169,
       "step_label": "V.1"
     },
     {
@@ -3114,7 +3122,7 @@
         "Face.3.CriticalSplit"
       ],
       "derived_via": "domain_reading",
-      "step": 49.001,
+      "step": 170,
       "step_label": "V.1"
     },
     {
@@ -3131,7 +3139,7 @@
         "Face.9"
       ],
       "derived_via": "domain_reading",
-      "step": 49.002,
+      "step": 171,
       "step_label": "V.1"
     },
     {
@@ -3148,7 +3156,7 @@
         "q_quantum_CPTP"
       ],
       "derived_via": "tier_rule",
-      "step": 49.003,
+      "step": 172,
       "step_label": "V.1"
     },
     {
@@ -3165,7 +3173,7 @@
         "q_quantum_CPTP"
       ],
       "derived_via": "tier_rule",
-      "step": 49.004,
+      "step": 173,
       "step_label": "V.1"
     },
     {
@@ -3186,7 +3194,7 @@
         "q_quantum_CHSH"
       ],
       "derived_via": "tier_rule",
-      "step": 49.005,
+      "step": 174,
       "step_label": "V.1"
     },
     {
@@ -3203,7 +3211,7 @@
         "Face.5.LightCone"
       ],
       "derived_via": "domain_reading",
-      "step": 50.0,
+      "step": 175,
       "step_label": "V.2"
     },
     {
@@ -3220,7 +3228,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "domain_reading",
-      "step": 50.001,
+      "step": 176,
       "step_label": "V.2"
     },
     {
@@ -3237,7 +3245,7 @@
         "EQ-008"
       ],
       "derived_via": "domain_reading",
-      "step": 51.0,
+      "step": 177,
       "step_label": "V.3"
     },
     {
@@ -3254,7 +3262,7 @@
         "SpinePDE"
       ],
       "derived_via": "domain_reading",
-      "step": 52.0,
+      "step": 178,
       "step_label": "V.4"
     },
     {
@@ -3271,7 +3279,7 @@
         "EQ-008"
       ],
       "derived_via": "domain_reading",
-      "step": 53.0,
+      "step": 179,
       "step_label": "V.5"
     },
     {
@@ -3288,7 +3296,7 @@
         "q_complex_fiedler"
       ],
       "derived_via": "tier_rule",
-      "step": 53.001,
+      "step": 180,
       "step_label": "V.5"
     },
     {
@@ -3305,7 +3313,7 @@
         "Face.1.Eigenmode"
       ],
       "derived_via": "domain_reading",
-      "step": 54.0,
+      "step": 181,
       "step_label": "V.6"
     },
     {
@@ -3323,7 +3331,7 @@
         "q_biology_eigenmode"
       ],
       "derived_via": "domain_reading",
-      "step": 54.001,
+      "step": 182,
       "step_label": "V.6"
     },
     {
@@ -3340,7 +3348,7 @@
         "SpinePDE"
       ],
       "derived_via": "domain_reading",
-      "step": 55.0,
+      "step": 183,
       "step_label": "V.7"
     },
     {
@@ -3357,7 +3365,7 @@
         "Face.10.StrictGap"
       ],
       "derived_via": "domain_reading",
-      "step": 56.0,
+      "step": 184,
       "step_label": "V.8"
     },
     {
@@ -3374,7 +3382,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "domain_reading",
-      "step": 57.0,
+      "step": 185,
       "step_label": "V.9"
     },
     {
@@ -3391,7 +3399,7 @@
         "q_social"
       ],
       "derived_via": "specialisation",
-      "step": 57.001,
+      "step": 186,
       "step_label": "V.9"
     },
     {
@@ -3408,7 +3416,7 @@
         "RTPEOperatorSplit"
       ],
       "derived_via": "domain_reading",
-      "step": 58.0,
+      "step": 187,
       "step_label": "V.10"
     },
     {
@@ -3425,7 +3433,7 @@
         "EQ-008"
       ],
       "derived_via": "domain_reading",
-      "step": 59.0,
+      "step": 188,
       "step_label": "V.11"
     },
     {
@@ -3442,7 +3450,7 @@
         "V0_DomainDiscoveryEngine"
       ],
       "derived_via": "domain_reading",
-      "step": 60.0,
+      "step": 189,
       "step_label": "V.12"
     },
     {
@@ -3462,7 +3470,7 @@
         "q_formal"
       ],
       "derived_via": "tier_rule",
-      "step": 60.001,
+      "step": 190,
       "step_label": "V.12"
     },
     {
@@ -3479,7 +3487,7 @@
         "EQ-029"
       ],
       "derived_via": "definition",
-      "step": 61.001,
+      "step": 191,
       "step_label": "V.13"
     },
     {
@@ -3496,7 +3504,7 @@
         "bR_Ledger_r_B"
       ],
       "derived_via": "tier_rule",
-      "step": 61.002,
+      "step": 192,
       "step_label": "V.13"
     },
     {
@@ -3513,7 +3521,7 @@
         "EQ-008"
       ],
       "derived_via": "readout",
-      "step": 62.001,
+      "step": 193,
       "step_label": "V.13a"
     },
     {
@@ -3530,7 +3538,7 @@
         "LR_skew_split"
       ],
       "derived_via": "forcing",
-      "step": 62.002,
+      "step": 194,
       "step_label": "V.13a"
     },
     {
@@ -3547,7 +3555,7 @@
         "T1"
       ],
       "derived_via": "specialisation",
-      "step": 62.003,
+      "step": 195,
       "step_label": "V.13a"
     },
     {
@@ -3564,7 +3572,7 @@
         "T1b"
       ],
       "derived_via": "tier_rule",
-      "step": 62.004,
+      "step": 196,
       "step_label": "V.13a"
     },
     {
@@ -3581,7 +3589,7 @@
         "Face.11.FailAbleGate"
       ],
       "derived_via": "restatement",
-      "step": 63.0,
+      "step": 197,
       "step_label": "V.14"
     },
     {
@@ -3598,7 +3606,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "domain_reading",
-      "step": 64.0,
+      "step": 198,
       "step_label": "V.15"
     },
     {
@@ -3615,7 +3623,7 @@
         "q_chemistry_RD"
       ],
       "derived_via": "domain_reading",
-      "step": 65.0,
+      "step": 199,
       "step_label": "V.16"
     },
     {
@@ -3632,7 +3640,7 @@
         "q_relativity_cone"
       ],
       "derived_via": "domain_reading",
-      "step": 66.0,
+      "step": 200,
       "step_label": "V.17"
     },
     {
@@ -3649,7 +3657,7 @@
         "RelativityDomain_Qv"
       ],
       "derived_via": "domain_reading",
-      "step": 66.001,
+      "step": 201,
       "step_label": "V.17"
     },
     {
@@ -3666,7 +3674,7 @@
         "RelativityDomain_lapse_Lorentz"
       ],
       "derived_via": "domain_reading",
-      "step": 66.002,
+      "step": 202,
       "step_label": "V.17"
     },
     {
@@ -3684,7 +3692,7 @@
         "Gateway.SchwarzschildIdentity"
       ],
       "derived_via": "tier_rule",
-      "step": 66.003,
+      "step": 203,
       "step_label": "V.17"
     },
     {
@@ -3701,7 +3709,7 @@
         "q_quantum_osc"
       ],
       "derived_via": "domain_reading",
-      "step": 67.0,
+      "step": 204,
       "step_label": "V.18"
     },
     {
@@ -3718,7 +3726,7 @@
         "QuantumDomain_osc_split"
       ],
       "derived_via": "domain_reading",
-      "step": 67.001,
+      "step": 205,
       "step_label": "V.18"
     },
     {
@@ -3735,7 +3743,7 @@
         "QuantumDomain_complexification"
       ],
       "derived_via": "domain_reading",
-      "step": 67.002,
+      "step": 206,
       "step_label": "V.18"
     },
     {
@@ -3752,7 +3760,7 @@
         "QuantumDomain_norm_reversibility"
       ],
       "derived_via": "tier_rule",
-      "step": 67.003,
+      "step": 207,
       "step_label": "V.18"
     },
     {
@@ -3769,7 +3777,7 @@
         "q_biology_eigenmode"
       ],
       "derived_via": "domain_reading",
-      "step": 68.0,
+      "step": 208,
       "step_label": "V.19"
     },
     {
@@ -3786,7 +3794,7 @@
         "BiologyDomain_living_unit"
       ],
       "derived_via": "domain_reading",
-      "step": 68.001,
+      "step": 209,
       "step_label": "V.19"
     },
     {
@@ -3804,7 +3812,7 @@
         "BiologyDomain_living_unit"
       ],
       "derived_via": "specialisation",
-      "step": 68.002,
+      "step": 210,
       "step_label": "V.19"
     },
     {
@@ -3824,7 +3832,7 @@
         "V0_DomainDiscoveryEngine"
       ],
       "derived_via": "composition",
-      "step": 69.0,
+      "step": 211,
       "step_label": "V.20"
     },
     {
@@ -3842,7 +3850,7 @@
         "EQ-042"
       ],
       "derived_via": "composition",
-      "step": 70.031,
+      "step": 212,
       "step_label": "V.21"
     },
     {
@@ -3859,7 +3867,7 @@
         "SM_DAG"
       ],
       "derived_via": "composition",
-      "step": 71.007,
+      "step": 213,
       "step_label": "V.22"
     },
     {
@@ -3876,7 +3884,7 @@
         "UnifiedForce_action"
       ],
       "derived_via": "tier_rule",
-      "step": 71.009,
+      "step": 214,
       "step_label": "V.22"
     },
     {
@@ -3894,7 +3902,7 @@
         "UnifiedForceClosure_v0.1"
       ],
       "derived_via": "readout",
-      "step": 71.01,
+      "step": 215,
       "step_label": "V.22"
     },
     {
@@ -3911,7 +3919,7 @@
         "UnifiedForceClosure_v0.1"
       ],
       "derived_via": "composition",
-      "step": 71.011,
+      "step": 216,
       "step_label": "V.22"
     },
     {
@@ -3928,7 +3936,7 @@
         "FourForceCirculation_v0.2"
       ],
       "derived_via": "specialisation",
-      "step": 71.012,
+      "step": 217,
       "step_label": "V.22"
     },
     {
@@ -3945,7 +3953,7 @@
         "ElectroweakDecoder_v0.3"
       ],
       "derived_via": "domain_reading",
-      "step": 71.013,
+      "step": 218,
       "step_label": "V.22"
     },
     {
@@ -3962,7 +3970,7 @@
         "EQ-041"
       ],
       "derived_via": "specialisation",
-      "step": 71.014,
+      "step": 219,
       "step_label": "V.22"
     },
     {
@@ -3980,7 +3988,7 @@
         "EQ-051"
       ],
       "derived_via": "specialisation",
-      "step": 71.015,
+      "step": 220,
       "step_label": "V.22"
     },
     {
@@ -3997,7 +4005,7 @@
         "CenterConfinement_v0.3"
       ],
       "derived_via": "composition",
-      "step": 71.016,
+      "step": 221,
       "step_label": "V.22"
     },
     {
@@ -4014,7 +4022,7 @@
         "ConfinementCertificate_v0.5"
       ],
       "derived_via": "composition",
-      "step": 71.017,
+      "step": 222,
       "step_label": "V.22"
     },
     {
@@ -4031,7 +4039,7 @@
         "TrialitySpectralFlow_v0.6"
       ],
       "derived_via": "composition",
-      "step": 71.018,
+      "step": 223,
       "step_label": "V.22"
     },
     {
@@ -4048,7 +4056,7 @@
         "BlockClosure_v0.7"
       ],
       "derived_via": "composition",
-      "step": 71.019,
+      "step": 224,
       "step_label": "V.22"
     },
     {
@@ -4066,7 +4074,7 @@
         "EQ-054"
       ],
       "derived_via": "composition",
-      "step": 71.02,
+      "step": 225,
       "step_label": "V.22"
     },
     {
@@ -4083,7 +4091,7 @@
         "AllOrderCharacter_v1.0"
       ],
       "derived_via": "composition",
-      "step": 71.021,
+      "step": 226,
       "step_label": "V.22"
     },
     {
@@ -4100,7 +4108,7 @@
         "SurfaceAutomaton_v1.1"
       ],
       "derived_via": "composition",
-      "step": 71.022,
+      "step": 227,
       "step_label": "V.22"
     },
     {
@@ -4117,7 +4125,7 @@
         "UpperAutomaton_v1.2"
       ],
       "derived_via": "composition",
-      "step": 71.023,
+      "step": 228,
       "step_label": "V.22"
     },
     {
@@ -4134,7 +4142,7 @@
         "SM_Discovery_Pipeline_v0.4"
       ],
       "derived_via": "composition",
-      "step": 71.024,
+      "step": 229,
       "step_label": "V.22"
     },
     {
@@ -4151,7 +4159,7 @@
         "Hypercharge_Z6_v1.5"
       ],
       "derived_via": "composition",
-      "step": 71.025,
+      "step": 230,
       "step_label": "V.22"
     },
     {
@@ -4168,7 +4176,7 @@
         "BlindMatterSearch_v1.6"
       ],
       "derived_via": "composition",
-      "step": 71.026,
+      "step": 231,
       "step_label": "V.22"
     },
     {
@@ -4185,7 +4193,7 @@
         "RootNativeChirality_v1.7"
       ],
       "derived_via": "composition",
-      "step": 71.027,
+      "step": 232,
       "step_label": "V.22"
     },
     {
@@ -4202,7 +4210,7 @@
         "TapeKineticOperator_v1.8"
       ],
       "derived_via": "composition",
-      "step": 71.028,
+      "step": 233,
       "step_label": "V.22"
     },
     {
@@ -4219,7 +4227,7 @@
         "WhyD4_v1.9"
       ],
       "derived_via": "composition",
-      "step": 71.029,
+      "step": 234,
       "step_label": "V.22"
     },
     {
@@ -4236,7 +4244,7 @@
         "IsotropicFixedPoint_v1.10"
       ],
       "derived_via": "composition",
-      "step": 71.03,
+      "step": 235,
       "step_label": "V.22"
     },
     {
@@ -4253,7 +4261,7 @@
         "FrameMixingFromAction_v1.11"
       ],
       "derived_via": "composition",
-      "step": 71.031,
+      "step": 236,
       "step_label": "V.22"
     },
     {
@@ -4270,7 +4278,7 @@
         "OrderHiggsClosure_v1.12"
       ],
       "derived_via": "composition",
-      "step": 71.032,
+      "step": 237,
       "step_label": "V.22"
     },
     {
@@ -4290,7 +4298,7 @@
         "EQ-001"
       ],
       "derived_via": "tier_rule",
-      "step": 73.0,
+      "step": 238,
       "step_label": "V-A.1"
     },
     {
@@ -4308,7 +4316,7 @@
         "V0_DomainDiscoveryEngine"
       ],
       "derived_via": "definition",
-      "step": 74.0,
+      "step": 239,
       "step_label": "V-A.2"
     },
     {
@@ -4325,7 +4333,7 @@
         "A.2"
       ],
       "derived_via": "tier_rule",
-      "step": 75.0,
+      "step": 240,
       "step_label": "V-A.3"
     },
     {
@@ -4344,7 +4352,7 @@
         "A.3"
       ],
       "derived_via": "tier_rule",
-      "step": 76.0,
+      "step": 241,
       "step_label": "V-A.4"
     },
     {
@@ -4361,7 +4369,7 @@
         "A.2"
       ],
       "derived_via": "tier_rule",
-      "step": 77.0,
+      "step": 242,
       "step_label": "V-A.5"
     },
     {
@@ -4378,7 +4386,7 @@
         "A.4"
       ],
       "derived_via": "tier_rule",
-      "step": 78.0,
+      "step": 243,
       "step_label": "V-A.6"
     },
     {
@@ -4395,7 +4403,7 @@
         "A.6"
       ],
       "derived_via": "tier_rule",
-      "step": 79.0,
+      "step": 244,
       "step_label": "V-A.7"
     },
     {
@@ -4412,7 +4420,7 @@
         "A.7"
       ],
       "derived_via": "tier_rule",
-      "step": 80.0,
+      "step": 245,
       "step_label": "V-A.8"
     },
     {
@@ -4429,7 +4437,7 @@
         "A.5"
       ],
       "derived_via": "tier_rule",
-      "step": 81.0,
+      "step": 246,
       "step_label": "V-A.9"
     },
     {
@@ -4446,7 +4454,7 @@
         "A.2"
       ],
       "derived_via": "tier_rule",
-      "step": 82.0,
+      "step": 247,
       "step_label": "V-A.10"
     },
     {
@@ -4463,7 +4471,7 @@
         "A.2"
       ],
       "derived_via": "tier_rule",
-      "step": 83.0,
+      "step": 248,
       "step_label": "V-A.11"
     },
     {
@@ -4480,7 +4488,7 @@
         "A.11"
       ],
       "derived_via": "tier_rule",
-      "step": 84.0,
+      "step": 249,
       "step_label": "V-A.12"
     },
     {
@@ -4497,7 +4505,7 @@
         "A.4"
       ],
       "derived_via": "tier_rule",
-      "step": 85.0,
+      "step": 250,
       "step_label": "V-A.13"
     },
     {
@@ -4516,7 +4524,7 @@
         "Gate1"
       ],
       "derived_via": "tier_rule",
-      "step": 85.001,
+      "step": 251,
       "step_label": "V-A.13"
     },
     {
@@ -4533,7 +4541,7 @@
         "Gate2"
       ],
       "derived_via": "tier_rule",
-      "step": 85.002,
+      "step": 252,
       "step_label": "V-A.13"
     },
     {
@@ -4553,7 +4561,7 @@
         "A.6"
       ],
       "derived_via": "tier_rule",
-      "step": 85.003,
+      "step": 253,
       "step_label": "V-A.13"
     },
     {
@@ -4572,7 +4580,7 @@
         "Gate4"
       ],
       "derived_via": "tier_rule",
-      "step": 85.004,
+      "step": 254,
       "step_label": "V-A.13"
     },
     {
@@ -4589,7 +4597,7 @@
         "Gate5"
       ],
       "derived_via": "tier_rule",
-      "step": 85.005,
+      "step": 255,
       "step_label": "V-A.13"
     },
     {
@@ -4607,7 +4615,7 @@
         "EQ-009"
       ],
       "derived_via": "tier_rule",
-      "step": 85.006,
+      "step": 256,
       "step_label": "V-A.13"
     },
     {
@@ -4624,7 +4632,7 @@
         "Gate5"
       ],
       "derived_via": "definition",
-      "step": 85.007,
+      "step": 257,
       "step_label": "V-A.13"
     },
     {
@@ -4647,7 +4655,7 @@
         "Gate7"
       ],
       "derived_via": "composition",
-      "step": 85.008,
+      "step": 258,
       "step_label": "V-A.13"
     },
     {
@@ -4664,7 +4672,7 @@
         "A13.ArchitectureBox"
       ],
       "derived_via": "restatement",
-      "step": 85.009,
+      "step": 259,
       "step_label": "V-A.13"
     },
     {
@@ -4681,7 +4689,7 @@
         "A.2"
       ],
       "derived_via": "definition",
-      "step": 89.0,
+      "step": 260,
       "step_label": "VI-A.B1"
     },
     {
@@ -4698,7 +4706,7 @@
         "B.1"
       ],
       "derived_via": "definition",
-      "step": 90.0,
+      "step": 261,
       "step_label": "VI-A.B2"
     },
     {
@@ -4715,7 +4723,7 @@
         "B.2.Step1"
       ],
       "derived_via": "definition",
-      "step": 90.001,
+      "step": 262,
       "step_label": "VI-A.B2"
     },
     {
@@ -4732,7 +4740,7 @@
         "B.2.Step2"
       ],
       "derived_via": "definition",
-      "step": 90.002,
+      "step": 263,
       "step_label": "VI-A.B2"
     },
     {
@@ -4749,7 +4757,7 @@
         "B.2.Step3"
       ],
       "derived_via": "definition",
-      "step": 90.003,
+      "step": 264,
       "step_label": "VI-A.B2"
     },
     {
@@ -4767,7 +4775,7 @@
         "A.6"
       ],
       "derived_via": "tier_rule",
-      "step": 90.004,
+      "step": 265,
       "step_label": "VI-A.B2"
     },
     {
@@ -4784,7 +4792,7 @@
         "B.2.Step5"
       ],
       "derived_via": "definition",
-      "step": 90.005,
+      "step": 266,
       "step_label": "VI-A.B2"
     },
     {
@@ -4801,7 +4809,7 @@
         "B.2.Step6"
       ],
       "derived_via": "definition",
-      "step": 90.006,
+      "step": 267,
       "step_label": "VI-A.B2"
     },
     {
@@ -4820,7 +4828,7 @@
         "B.2.Step7"
       ],
       "derived_via": "tier_rule",
-      "step": 90.007,
+      "step": 268,
       "step_label": "VI-A.B2"
     },
     {
@@ -4837,7 +4845,7 @@
         "B.2.Step8"
       ],
       "derived_via": "tier_rule",
-      "step": 90.008,
+      "step": 269,
       "step_label": "VI-A.B2"
     },
     {
@@ -4854,7 +4862,7 @@
         "B.2.Step9"
       ],
       "derived_via": "readout",
-      "step": 90.009,
+      "step": 270,
       "step_label": "VI-A.B2"
     },
     {
@@ -4871,7 +4879,7 @@
         "B.2.Step10"
       ],
       "derived_via": "definition",
-      "step": 91.0,
+      "step": 271,
       "step_label": "VI-A.B2a"
     },
     {
@@ -4889,7 +4897,7 @@
         "EQ-029"
       ],
       "derived_via": "definition",
-      "step": 91.001,
+      "step": 272,
       "step_label": "VI-A.B2a"
     },
     {
@@ -4906,7 +4914,7 @@
         "B.2a.NormalFormLineage"
       ],
       "derived_via": "tier_rule",
-      "step": 91.002,
+      "step": 273,
       "step_label": "VI-A.B2a"
     },
     {
@@ -4923,7 +4931,7 @@
         "B.2.Step10"
       ],
       "derived_via": "tier_rule",
-      "step": 92.0,
+      "step": 274,
       "step_label": "VI-A.B3"
     },
     {
@@ -4942,7 +4950,7 @@
         "EQ-011"
       ],
       "derived_via": "definition",
-      "step": 93.0,
+      "step": 275,
       "step_label": "VI-A.B4"
     },
     {
@@ -4962,7 +4970,7 @@
         "B.4"
       ],
       "derived_via": "tier_rule",
-      "step": 94.0,
+      "step": 276,
       "step_label": "VI-A.B5"
     },
     {
@@ -4979,7 +4987,7 @@
         "B.5"
       ],
       "derived_via": "definition",
-      "step": 94.001,
+      "step": 277,
       "step_label": "VI-A.B5"
     },
     {
@@ -4996,7 +5004,7 @@
         "B.5"
       ],
       "derived_via": "definition",
-      "step": 94.002,
+      "step": 278,
       "step_label": "VI-A.B5"
     },
     {
@@ -5013,7 +5021,7 @@
         "B.5.Maker"
       ],
       "derived_via": "tier_rule",
-      "step": 94.003,
+      "step": 279,
       "step_label": "VI-A.B5"
     },
     {
@@ -5030,7 +5038,7 @@
         "B.5.PredictionFreeze"
       ],
       "derived_via": "tier_rule",
-      "step": 94.004,
+      "step": 280,
       "step_label": "VI-A.B5"
     },
     {
@@ -5047,7 +5055,7 @@
         "B.5.Checker"
       ],
       "derived_via": "definition",
-      "step": 94.005,
+      "step": 281,
       "step_label": "VI-A.B5"
     },
     {
@@ -5064,7 +5072,7 @@
         "B.5.Auditor"
       ],
       "derived_via": "tier_rule",
-      "step": 94.006,
+      "step": 282,
       "step_label": "VI-A.B5"
     },
     {
@@ -5081,7 +5089,7 @@
         "B.5.ProtocolDeviation"
       ],
       "derived_via": "composition",
-      "step": 95.0,
+      "step": 283,
       "step_label": "VI-A.B6"
     },
     {
@@ -5099,7 +5107,7 @@
         "B.6"
       ],
       "derived_via": "composition",
-      "step": 96.0,
+      "step": 284,
       "step_label": "VI-A.B7"
     },
     {
@@ -5117,7 +5125,7 @@
         "Gate7"
       ],
       "derived_via": "restatement",
-      "step": 99.0,
+      "step": 285,
       "step_label": "VI-A.B8"
     },
     {
@@ -5134,7 +5142,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 101.0,
+      "step": 286,
       "step_label": "VI.1"
     },
     {
@@ -5151,7 +5159,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 101.001,
+      "step": 287,
       "step_label": "VI.1"
     },
     {
@@ -5168,7 +5176,7 @@
         "Layer3"
       ],
       "derived_via": "restatement",
-      "step": 101.002,
+      "step": 288,
       "step_label": "VI.1"
     },
     {
@@ -5186,7 +5194,7 @@
         "T1"
       ],
       "derived_via": "composition",
-      "step": 101.003,
+      "step": 289,
       "step_label": "VI.1"
     },
     {
@@ -5203,7 +5211,7 @@
         "EQ-008"
       ],
       "derived_via": "definition",
-      "step": 102.0,
+      "step": 290,
       "step_label": "VI.2"
     },
     {
@@ -5220,7 +5228,7 @@
         "BridgeFormula.TauC"
       ],
       "derived_via": "definition",
-      "step": 102.001,
+      "step": 291,
       "step_label": "VI.2"
     },
     {
@@ -5237,7 +5245,7 @@
         "Face.10.StrictGap"
       ],
       "derived_via": "definition",
-      "step": 102.002,
+      "step": 292,
       "step_label": "VI.2"
     },
     {
@@ -5254,7 +5262,7 @@
         "V0_DomainDiscoveryEngine"
       ],
       "derived_via": "definition",
-      "step": 102.003,
+      "step": 293,
       "step_label": "VI.2"
     },
     {
@@ -5271,7 +5279,7 @@
         "L3"
       ],
       "derived_via": "definition",
-      "step": 102.004,
+      "step": 294,
       "step_label": "VI.2"
     },
     {
@@ -5285,11 +5293,10 @@
       "synthesis_occurrences": [],
       "role": "tier-rule",
       "parents": [
-        "L4",
-        "B.5"
+        "L4"
       ],
-      "derived_via": "definition",
-      "step": 102.005,
+      "derived_via": "composition",
+      "step": 1000,
       "step_label": "VI.2",
       "merge_conflict_unresolved": {
         "chosen_source": "genesis_root.parents_0.json",
@@ -5320,7 +5327,7 @@
         "RTPEOperatorSplit"
       ],
       "derived_via": "domain_reading",
-      "step": 103.0,
+      "step": 1001,
       "step_label": "VI.3",
       "merge_conflict_unresolved": {
         "chosen_source": "genesis_root.parents_0.json",
@@ -5351,7 +5358,7 @@
         "N3"
       ],
       "derived_via": "domain_reading",
-      "step": 103.001,
+      "step": 1002,
       "step_label": "VI.3"
     },
     {
@@ -5368,7 +5375,7 @@
         "EQ-027"
       ],
       "derived_via": "domain_reading",
-      "step": 103.002,
+      "step": 1003,
       "step_label": "VI.3"
     },
     {
@@ -5387,7 +5394,7 @@
         "k_ep"
       ],
       "derived_via": "composition",
-      "step": 103.003,
+      "step": 1074,
       "step_label": "VI.3"
     },
     {
@@ -5404,7 +5411,7 @@
         "N3"
       ],
       "derived_via": "domain_reading",
-      "step": 104.0,
+      "step": 1004,
       "step_label": "VI.4"
     },
     {
@@ -5421,7 +5428,7 @@
         "VerdictGate"
       ],
       "derived_via": "domain_reading",
-      "step": 104.001,
+      "step": 1119,
       "step_label": "VI.4"
     },
     {
@@ -5438,7 +5445,7 @@
         "SpinePDE"
       ],
       "derived_via": "domain_reading",
-      "step": 104.002,
+      "step": 1005,
       "step_label": "VI.4"
     },
     {
@@ -5455,7 +5462,7 @@
         "L4"
       ],
       "derived_via": "domain_reading",
-      "step": 104.003,
+      "step": 1006,
       "step_label": "VI.4"
     },
     {
@@ -5472,7 +5479,7 @@
         "L3"
       ],
       "derived_via": "specialisation",
-      "step": 105.0,
+      "step": 1007,
       "step_label": "VI.5"
     },
     {
@@ -5489,7 +5496,7 @@
         "EQ-063"
       ],
       "derived_via": "domain_reading",
-      "step": 106.0,
+      "step": 1008,
       "step_label": "VI.6"
     },
     {
@@ -5506,7 +5513,7 @@
         "BridgeCommute"
       ],
       "derived_via": "specialisation",
-      "step": 106.001,
+      "step": 1075,
       "step_label": "VI.6"
     },
     {
@@ -5524,7 +5531,7 @@
         "N3"
       ],
       "derived_via": "specialisation",
-      "step": 106.002,
+      "step": 1120,
       "step_label": "VI.6"
     },
     {
@@ -5542,7 +5549,7 @@
         "N3"
       ],
       "derived_via": "specialisation",
-      "step": 106.003,
+      "step": 1146,
       "step_label": "VI.6"
     },
     {
@@ -5560,7 +5567,7 @@
         "VerdictGate"
       ],
       "derived_via": "tier_rule",
-      "step": 107.0,
+      "step": 1121,
       "step_label": "VI.7"
     },
     {
@@ -5577,7 +5584,7 @@
         "EQ-063"
       ],
       "derived_via": "tier_rule",
-      "step": 110.0,
+      "step": 1009,
       "step_label": "VII.1"
     },
     {
@@ -5594,7 +5601,7 @@
         "EQ-063"
       ],
       "derived_via": "restatement",
-      "step": 111.0,
+      "step": 1010,
       "step_label": "VII.2"
     },
     {
@@ -5611,7 +5618,7 @@
         "RDU-tau_c"
       ],
       "derived_via": "composition",
-      "step": 111.001,
+      "step": 1076,
       "step_label": "VII.2"
     },
     {
@@ -5628,7 +5635,7 @@
         "RDU-tau_c"
       ],
       "derived_via": "composition",
-      "step": 111.002,
+      "step": 1077,
       "step_label": "VII.2"
     },
     {
@@ -5645,7 +5652,7 @@
         "RDU-tau_c"
       ],
       "derived_via": "composition",
-      "step": 111.003,
+      "step": 1078,
       "step_label": "VII.2"
     },
     {
@@ -5662,7 +5669,7 @@
         "EQ-063"
       ],
       "derived_via": "restatement",
-      "step": 111.004,
+      "step": 1011,
       "step_label": "VII.2"
     },
     {
@@ -5679,7 +5686,7 @@
         "B1"
       ],
       "derived_via": "domain_reading",
-      "step": 111.005,
+      "step": 1079,
       "step_label": "VII.2"
     },
     {
@@ -5697,7 +5704,7 @@
         "RDU-tau_c"
       ],
       "derived_via": "specialisation",
-      "step": 111.006,
+      "step": 1147,
       "step_label": "VII.2"
     },
     {
@@ -5714,7 +5721,7 @@
         "SI7Vectors"
       ],
       "derived_via": "tier_rule",
-      "step": 112.0,
+      "step": 1080,
       "step_label": "VII.3"
     },
     {
@@ -5732,7 +5739,7 @@
         "VI.7.FailAbleGateLaw"
       ],
       "derived_via": "tier_rule",
-      "step": 112.001,
+      "step": 1148,
       "step_label": "VII.3"
     },
     {
@@ -5751,7 +5758,7 @@
         "CompatibilityRule"
       ],
       "derived_via": "composition",
-      "step": 113.0,
+      "step": 1175,
       "step_label": "VII.4"
     },
     {
@@ -5769,7 +5776,7 @@
         "RTPEOperatorSplit"
       ],
       "derived_via": "restatement",
-      "step": 115.0,
+      "step": 1012,
       "step_label": "VIII.0"
     },
     {
@@ -5787,7 +5794,7 @@
         "EQ-027"
       ],
       "derived_via": "composition",
-      "step": 116.0,
+      "step": 1013,
       "step_label": "VIII.1"
     },
     {
@@ -5805,7 +5812,7 @@
         "EQ-027"
       ],
       "derived_via": "domain_reading",
-      "step": 117.0,
+      "step": 1014,
       "step_label": "VIII.2"
     },
     {
@@ -5826,7 +5833,7 @@
         "EQ-027"
       ],
       "derived_via": "domain_reading",
-      "step": 118.0,
+      "step": 1015,
       "step_label": "VIII.3"
     },
     {
@@ -5845,7 +5852,7 @@
         "Step2Record"
       ],
       "derived_via": "composition",
-      "step": 118.001,
+      "step": 1081,
       "step_label": "VIII.3"
     },
     {
@@ -5862,7 +5869,7 @@
         "ConnectionRootStream"
       ],
       "derived_via": "restatement",
-      "step": 118.002,
+      "step": 1082,
       "step_label": "VIII.3"
     },
     {
@@ -5883,7 +5890,7 @@
         "L4"
       ],
       "derived_via": "composition",
-      "step": 118.003,
+      "step": 1122,
       "step_label": "VIII.3"
     },
     {
@@ -5902,7 +5909,7 @@
         "Step5Policy"
       ],
       "derived_via": "composition",
-      "step": 118.004,
+      "step": 1149,
       "step_label": "VIII.3"
     },
     {
@@ -5924,7 +5931,7 @@
         "Step6ActRepair"
       ],
       "derived_via": "composition",
-      "step": 119.0,
+      "step": 1176,
       "step_label": "VIII.4"
     },
     {
@@ -5947,7 +5954,7 @@
         "AdmissibilitySquare"
       ],
       "derived_via": "specialisation",
-      "step": 120.0,
+      "step": 1123,
       "step_label": "VIII.5"
     },
     {
@@ -5968,7 +5975,7 @@
         "Step6ActRepair"
       ],
       "derived_via": "definition",
-      "step": 121.0,
+      "step": 1177,
       "step_label": "VIII.6"
     },
     {
@@ -5985,7 +5992,7 @@
         "LR_skew_split"
       ],
       "derived_via": "domain_reading",
-      "step": 122.0,
+      "step": 1016,
       "step_label": "VIII.6a"
     },
     {
@@ -6003,7 +6010,7 @@
         "Step2Record"
       ],
       "derived_via": "specialisation",
-      "step": 123.0,
+      "step": 1150,
       "step_label": "VIII.7"
     },
     {
@@ -6022,7 +6029,7 @@
         "Step5Policy"
       ],
       "derived_via": "tier_rule",
-      "step": 124.0,
+      "step": 1151,
       "step_label": "VIII.8"
     },
     {
@@ -6039,7 +6046,7 @@
         "EQ-001"
       ],
       "derived_via": "restatement",
-      "step": 126.01,
+      "step": 1017,
       "step_label": "IX.1"
     },
     {
@@ -6057,7 +6064,7 @@
         "step1"
       ],
       "derived_via": "restatement",
-      "step": 126.02,
+      "step": 1083,
       "step_label": "IX.2"
     },
     {
@@ -6075,7 +6082,7 @@
         "step2"
       ],
       "derived_via": "restatement",
-      "step": 126.03,
+      "step": 1124,
       "step_label": "IX.3"
     },
     {
@@ -6093,7 +6100,7 @@
         "step3"
       ],
       "derived_via": "restatement",
-      "step": 126.04,
+      "step": 1152,
       "step_label": "IX.4"
     },
     {
@@ -6111,7 +6118,7 @@
         "step4"
       ],
       "derived_via": "restatement",
-      "step": 126.05,
+      "step": 1178,
       "step_label": "IX.5"
     },
     {
@@ -6129,7 +6136,7 @@
         "step5"
       ],
       "derived_via": "restatement",
-      "step": 126.06,
+      "step": 1196,
       "step_label": "IX.6"
     },
     {
@@ -6147,7 +6154,7 @@
         "step6"
       ],
       "derived_via": "restatement",
-      "step": 126.07,
+      "step": 1206,
       "step_label": "IX.7"
     },
     {
@@ -6166,7 +6173,7 @@
         "step7"
       ],
       "derived_via": "restatement",
-      "step": 126.08,
+      "step": 1214,
       "step_label": "IX.8"
     },
     {
@@ -6184,7 +6191,7 @@
         "step8"
       ],
       "derived_via": "specialisation",
-      "step": 126.09,
+      "step": 1221,
       "step_label": "IX.9"
     },
     {
@@ -6201,7 +6208,7 @@
         "step9"
       ],
       "derived_via": "specialisation",
-      "step": 126.1,
+      "step": 1230,
       "step_label": "IX.10"
     },
     {
@@ -6222,7 +6229,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "restatement",
-      "step": 126.11,
+      "step": 1237,
       "step_label": "IX.11"
     },
     {
@@ -6241,7 +6248,7 @@
         "step11"
       ],
       "derived_via": "composition",
-      "step": 126.12,
+      "step": 1242,
       "step_label": "IX.12"
     },
     {
@@ -6259,7 +6266,7 @@
         "MQ08-CFL"
       ],
       "derived_via": "restatement",
-      "step": 126.13,
+      "step": 1246,
       "step_label": "IX.13"
     },
     {
@@ -6277,7 +6284,7 @@
         "Telegraph"
       ],
       "derived_via": "restatement",
-      "step": 126.14,
+      "step": 1250,
       "step_label": "IX.14"
     },
     {
@@ -6295,7 +6302,7 @@
         "MemoryKernel"
       ],
       "derived_via": "restatement",
-      "step": 126.15,
+      "step": 1256,
       "step_label": "IX.15"
     },
     {
@@ -6313,7 +6320,7 @@
         "SpinePDE"
       ],
       "derived_via": "restatement",
-      "step": 126.16,
+      "step": 1263,
       "step_label": "IX.16"
     },
     {
@@ -6331,7 +6338,7 @@
         "GaugeFaces"
       ],
       "derived_via": "domain_reading",
-      "step": 126.17,
+      "step": 1267,
       "step_label": "IX.17"
     },
     {
@@ -6349,7 +6356,7 @@
         "Face.1.Eigenmode"
       ],
       "derived_via": "restatement",
-      "step": 126.18,
+      "step": 1269,
       "step_label": "IX.18"
     },
     {
@@ -6367,7 +6374,7 @@
         "Face.2"
       ],
       "derived_via": "restatement",
-      "step": 126.19,
+      "step": 1272,
       "step_label": "IX.19"
     },
     {
@@ -6385,7 +6392,7 @@
         "Face.3.CriticalSplit"
       ],
       "derived_via": "restatement",
-      "step": 126.2,
+      "step": 1273,
       "step_label": "IX.20"
     },
     {
@@ -6403,7 +6410,7 @@
         "Face.4"
       ],
       "derived_via": "restatement",
-      "step": 126.21,
+      "step": 1274,
       "step_label": "IX.21"
     },
     {
@@ -6422,7 +6429,7 @@
         "step8"
       ],
       "derived_via": "restatement",
-      "step": 126.22,
+      "step": 1275,
       "step_label": "IX.22"
     },
     {
@@ -6441,7 +6448,7 @@
         "EQ-063"
       ],
       "derived_via": "restatement",
-      "step": 126.23,
+      "step": 1276,
       "step_label": "IX.23"
     },
     {
@@ -6459,7 +6466,7 @@
         "Face.7.RootForce"
       ],
       "derived_via": "restatement",
-      "step": 126.24,
+      "step": 1277,
       "step_label": "IX.24"
     },
     {
@@ -6477,7 +6484,7 @@
         "Face.7.SINewtonGate"
       ],
       "derived_via": "restatement",
-      "step": 126.25,
+      "step": 1278,
       "step_label": "IX.25"
     },
     {
@@ -6495,7 +6502,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "restatement",
-      "step": 126.26,
+      "step": 1279,
       "step_label": "IX.26"
     },
     {
@@ -6513,7 +6520,7 @@
         "Face.9"
       ],
       "derived_via": "restatement",
-      "step": 126.27,
+      "step": 1280,
       "step_label": "IX.27"
     },
     {
@@ -6531,7 +6538,7 @@
         "EQ-027"
       ],
       "derived_via": "restatement",
-      "step": 126.28,
+      "step": 1281,
       "step_label": "IX.28"
     },
     {
@@ -6549,7 +6556,7 @@
         "Face.11.SolveTarget"
       ],
       "derived_via": "restatement",
-      "step": 126.29,
+      "step": 1282,
       "step_label": "IX.29"
     },
     {
@@ -6567,7 +6574,7 @@
         "Face.12"
       ],
       "derived_via": "restatement",
-      "step": 126.3,
+      "step": 1283,
       "step_label": "IX.30"
     },
     {
@@ -6585,7 +6592,7 @@
         "EQ-063"
       ],
       "derived_via": "restatement",
-      "step": 126.31,
+      "step": 1284,
       "step_label": "IX.31"
     },
     {
@@ -6603,7 +6610,7 @@
         "DomainDiscoveryEngine"
       ],
       "derived_via": "specialisation",
-      "step": 126.32,
+      "step": 1285,
       "step_label": "IX.32"
     },
     {
@@ -6622,7 +6629,7 @@
         "step32"
       ],
       "derived_via": "specialisation",
-      "step": 126.33,
+      "step": 1286,
       "step_label": "IX.33"
     },
     {
@@ -6640,7 +6647,7 @@
         "Step2Record"
       ],
       "derived_via": "restatement",
-      "step": 126.34,
+      "step": 1287,
       "step_label": "IX.34"
     },
     {
@@ -6661,7 +6668,7 @@
         "Step5Policy"
       ],
       "derived_via": "restatement",
-      "step": 126.35,
+      "step": 1288,
       "step_label": "IX.35"
     },
     {
@@ -6681,7 +6688,7 @@
         "k_ep"
       ],
       "derived_via": "restatement",
-      "step": 126.36,
+      "step": 1289,
       "step_label": "IX.36"
     },
     {
@@ -6701,7 +6708,7 @@
         "VerdictGate"
       ],
       "derived_via": "restatement",
-      "step": 126.37,
+      "step": 1290,
       "step_label": "IX.37"
     },
     {
@@ -6719,7 +6726,7 @@
         "step1"
       ],
       "derived_via": "restatement",
-      "step": 126.38,
+      "step": 1291,
       "step_label": "IX.38"
     },
     {
@@ -6737,7 +6744,7 @@
         "step28"
       ],
       "derived_via": "restatement",
-      "step": 126.39,
+      "step": 1292,
       "step_label": "IX.39"
     },
     {
@@ -6755,7 +6762,7 @@
         "step27"
       ],
       "derived_via": "restatement",
-      "step": 126.4,
+      "step": 1293,
       "step_label": "IX.40"
     },
     {
@@ -6773,7 +6780,7 @@
         "step26"
       ],
       "derived_via": "restatement",
-      "step": 126.41,
+      "step": 1294,
       "step_label": "IX.41"
     },
     {
@@ -6791,7 +6798,7 @@
         "step30"
       ],
       "derived_via": "restatement",
-      "step": 126.42,
+      "step": 1295,
       "step_label": "IX.42"
     },
     {
@@ -6810,7 +6817,7 @@
         "Face.9"
       ],
       "derived_via": "composition",
-      "step": 128.0,
+      "step": 1018,
       "step_label": "X.1"
     },
     {
@@ -6827,7 +6834,7 @@
         "X.1"
       ],
       "derived_via": "tier_rule",
-      "step": 129.0,
+      "step": 1084,
       "step_label": "X.2"
     },
     {
@@ -6844,7 +6851,7 @@
         "X.2"
       ],
       "derived_via": "tier_rule",
-      "step": 130.0,
+      "step": 1125,
       "step_label": "X.3"
     },
     {
@@ -6863,7 +6870,7 @@
         "AdmissibilitySquare"
       ],
       "derived_via": "restatement",
-      "step": 131.0,
+      "step": 1126,
       "step_label": "X.4"
     },
     {
@@ -6880,7 +6887,7 @@
         "X.4a"
       ],
       "derived_via": "tier_rule",
-      "step": 131.001,
+      "step": 1153,
       "step_label": "X.4"
     },
     {
@@ -6898,7 +6905,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "tier_rule",
-      "step": 133.0,
+      "step": 1019,
       "step_label": "XI.1"
     },
     {
@@ -6915,7 +6922,7 @@
         "XI.1a"
       ],
       "derived_via": "tier_rule",
-      "step": 133.001,
+      "step": 1085,
       "step_label": "XI.1"
     },
     {
@@ -6932,7 +6939,7 @@
         "N5"
       ],
       "derived_via": "restatement",
-      "step": 134.0,
+      "step": 1020,
       "step_label": "XI.2"
     },
     {
@@ -6949,7 +6956,7 @@
         "X.4a"
       ],
       "derived_via": "restatement",
-      "step": 134.001,
+      "step": 1154,
       "step_label": "XI.2"
     },
     {
@@ -6969,7 +6976,7 @@
         "EQ-027"
       ],
       "derived_via": "composition",
-      "step": 135.0,
+      "step": 1021,
       "step_label": "XI.3"
     },
     {
@@ -6988,7 +6995,7 @@
         "VI.7.FailAbleGateLaw"
       ],
       "derived_via": "composition",
-      "step": 135.001,
+      "step": 1155,
       "step_label": "XI.3"
     },
     {
@@ -7005,7 +7012,7 @@
         "XI.3a"
       ],
       "derived_via": "tier_rule",
-      "step": 136.0,
+      "step": 1086,
       "step_label": "XI.4"
     },
     {
@@ -7023,7 +7030,7 @@
         "A13.SummaryBox"
       ],
       "derived_via": "tier_rule",
-      "step": 136.001,
+      "step": 1179,
       "step_label": "XI.4"
     },
     {
@@ -7040,7 +7047,7 @@
         "EQ-005"
       ],
       "derived_via": "tier_rule",
-      "step": 137.0,
+      "step": 1022,
       "step_label": "XI.5"
     },
     {
@@ -7057,7 +7064,7 @@
         "EQ-008"
       ],
       "derived_via": "tier_rule",
-      "step": 137.001,
+      "step": 1023,
       "step_label": "XI.5"
     },
     {
@@ -7074,7 +7081,7 @@
         "Face.9"
       ],
       "derived_via": "tier_rule",
-      "step": 137.002,
+      "step": 1024,
       "step_label": "XI.5"
     },
     {
@@ -7091,7 +7098,7 @@
         "Face.4"
       ],
       "derived_via": "tier_rule",
-      "step": 137.003,
+      "step": 1025,
       "step_label": "XI.5"
     },
     {
@@ -7108,7 +7115,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "tier_rule",
-      "step": 137.004,
+      "step": 1026,
       "step_label": "XI.5"
     },
     {
@@ -7125,7 +7132,7 @@
         "FalsifierFhuman"
       ],
       "derived_via": "restatement",
-      "step": 137.005,
+      "step": 1180,
       "step_label": "XI.5"
     },
     {
@@ -7142,7 +7149,7 @@
         "T1"
       ],
       "derived_via": "tier_rule",
-      "step": 137.006,
+      "step": 1027,
       "step_label": "XI.5"
     },
     {
@@ -7159,7 +7166,7 @@
         "T2"
       ],
       "derived_via": "tier_rule",
-      "step": 137.007,
+      "step": 1028,
       "step_label": "XI.5"
     },
     {
@@ -7176,7 +7183,7 @@
         "VI.7.FailAbleGateLaw"
       ],
       "derived_via": "restatement",
-      "step": 138.0,
+      "step": 1156,
       "step_label": "XI.6"
     },
     {
@@ -7193,7 +7200,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 140.0,
+      "step": 1029,
       "step_label": "XII.1"
     },
     {
@@ -7210,7 +7217,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 140.001,
+      "step": 1030,
       "step_label": "XII.1"
     },
     {
@@ -7227,7 +7234,7 @@
         "RDU-tau_c"
       ],
       "derived_via": "tier_rule",
-      "step": 140.002,
+      "step": 1087,
       "step_label": "XII.1"
     },
     {
@@ -7244,7 +7251,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 140.003,
+      "step": 1031,
       "step_label": "XII.1"
     },
     {
@@ -7261,7 +7268,7 @@
         "OmegaH"
       ],
       "derived_via": "tier_rule",
-      "step": 140.004,
+      "step": 1157,
       "step_label": "XII.1"
     },
     {
@@ -7278,7 +7285,7 @@
         "SpinePDE"
       ],
       "derived_via": "tier_rule",
-      "step": 140.005,
+      "step": 1032,
       "step_label": "XII.1"
     },
     {
@@ -7295,7 +7302,7 @@
         "XI.1b"
       ],
       "derived_via": "tier_rule",
-      "step": 143.0,
+      "step": 1127,
       "step_label": "XII.4"
     },
     {
@@ -7312,7 +7319,7 @@
         "DomainDiscoveryEngine"
       ],
       "derived_via": "tier_rule",
-      "step": 143.001,
+      "step": 1088,
       "step_label": "XII.4"
     },
     {
@@ -7329,7 +7336,7 @@
         "bRLedger"
       ],
       "derived_via": "tier_rule",
-      "step": 143.002,
+      "step": 1158,
       "step_label": "XII.4"
     },
     {
@@ -7346,7 +7353,7 @@
         "LR_skew_split"
       ],
       "derived_via": "tier_rule",
-      "step": 143.003,
+      "step": 1033,
       "step_label": "XII.4"
     },
     {
@@ -7363,7 +7370,7 @@
         "VI.7.FailAbleGateLaw"
       ],
       "derived_via": "tier_rule",
-      "step": 143.004,
+      "step": 1159,
       "step_label": "XII.4"
     },
     {
@@ -7382,7 +7389,7 @@
         "step13"
       ],
       "derived_via": "tier_rule",
-      "step": 143.005,
+      "step": 1251,
       "step_label": "XII.4"
     },
     {
@@ -7400,7 +7407,7 @@
         "Gateway.UnruhIdentity"
       ],
       "derived_via": "tier_rule",
-      "step": 143.006,
+      "step": 1034,
       "step_label": "XII.4"
     },
     {
@@ -7418,7 +7425,7 @@
         "A13.SummaryBox"
       ],
       "derived_via": "tier_rule",
-      "step": 143.007,
+      "step": 1089,
       "step_label": "XII.4"
     },
     {
@@ -7435,7 +7442,7 @@
         "Rgeo"
       ],
       "derived_via": "tier_rule",
-      "step": 143.008,
+      "step": 1035,
       "step_label": "XII.4"
     },
     {
@@ -7452,7 +7459,7 @@
         "Face.8.MetricReadout"
       ],
       "derived_via": "domain_reading",
-      "step": 145.0,
+      "step": 1036,
       "step_label": "XIII.1"
     },
     {
@@ -7469,7 +7476,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "domain_reading",
-      "step": 146.0,
+      "step": 1037,
       "step_label": "XIII.2"
     },
     {
@@ -7487,7 +7494,7 @@
         "Face.4"
       ],
       "derived_via": "domain_reading",
-      "step": 147.0,
+      "step": 1038,
       "step_label": "XIII.3"
     },
     {
@@ -7505,7 +7512,7 @@
         "OmegaH"
       ],
       "derived_via": "domain_reading",
-      "step": 148.0,
+      "step": 1160,
       "step_label": "XIII.4"
     },
     {
@@ -7523,7 +7530,7 @@
         "SpinePDE"
       ],
       "derived_via": "specialisation",
-      "step": 149.0,
+      "step": 1090,
       "step_label": "XIII.5"
     },
     {
@@ -7540,7 +7547,7 @@
         "LayerStack"
       ],
       "derived_via": "restatement",
-      "step": 151.0,
+      "step": 1091,
       "step_label": "XIV.1"
     },
     {
@@ -7557,7 +7564,7 @@
         "XIII.5"
       ],
       "derived_via": "specialisation",
-      "step": 152.0,
+      "step": 1128,
       "step_label": "XIV.2"
     },
     {
@@ -7574,7 +7581,7 @@
         "EQ-063"
       ],
       "derived_via": "restatement",
-      "step": 153.0,
+      "step": 1039,
       "step_label": "XIV.3"
     },
     {
@@ -7592,7 +7599,7 @@
         "T1"
       ],
       "derived_via": "restatement",
-      "step": 154.0,
+      "step": 1040,
       "step_label": "XIV.4"
     },
     {
@@ -7610,7 +7617,7 @@
         "A.10"
       ],
       "derived_via": "restatement",
-      "step": 155.0,
+      "step": 1041,
       "step_label": "XIV.5"
     },
     {
@@ -7627,7 +7634,7 @@
         "DomainDiscoveryEngine"
       ],
       "derived_via": "restatement",
-      "step": 156.0,
+      "step": 1092,
       "step_label": "XIV.6"
     },
     {
@@ -7644,7 +7651,7 @@
         "bRLedger"
       ],
       "derived_via": "restatement",
-      "step": 157.0,
+      "step": 1161,
       "step_label": "XIV.7"
     },
     {
@@ -7663,7 +7670,7 @@
         "VI.7.FailAbleGateLaw"
       ],
       "derived_via": "composition",
-      "step": 158.0,
+      "step": 1181,
       "step_label": "XIV.8"
     },
     {
@@ -7680,7 +7687,7 @@
         "CutCurrent"
       ],
       "derived_via": "specialisation",
-      "step": 164.0,
+      "step": 1042,
       "step_label": "AppA.1"
     },
     {
@@ -7697,7 +7704,7 @@
         "v011.1"
       ],
       "derived_via": "definition",
-      "step": 165.0,
+      "step": 1093,
       "step_label": "AppA.2"
     },
     {
@@ -7714,7 +7721,7 @@
         "CommutingSquare.Bridge"
       ],
       "derived_via": "specialisation",
-      "step": 166.0,
+      "step": 1043,
       "step_label": "AppA.3"
     },
     {
@@ -7731,7 +7738,7 @@
         "v011.3"
       ],
       "derived_via": "domain_reading",
-      "step": 167.0,
+      "step": 1094,
       "step_label": "AppA.4"
     },
     {
@@ -7748,7 +7755,7 @@
         "Face.10.StrictGap"
       ],
       "derived_via": "specialisation",
-      "step": 168.0,
+      "step": 1044,
       "step_label": "AppA.5"
     },
     {
@@ -7765,7 +7772,7 @@
         "XIV.4"
       ],
       "derived_via": "specialisation",
-      "step": 169.0,
+      "step": 1095,
       "step_label": "AppA.6"
     },
     {
@@ -7782,7 +7789,7 @@
         "B.2a.SynthesisComplexity"
       ],
       "derived_via": "specialisation",
-      "step": 170.0,
+      "step": 1045,
       "step_label": "AppA.7"
     },
     {
@@ -7799,7 +7806,7 @@
         "XIV.5"
       ],
       "derived_via": "specialisation",
-      "step": 171.0,
+      "step": 1096,
       "step_label": "AppA.8"
     },
     {
@@ -7819,7 +7826,7 @@
         "v011.6"
       ],
       "derived_via": "composition",
-      "step": 172.0,
+      "step": 1129,
       "step_label": "AppA.9"
     },
     {
@@ -7836,7 +7843,7 @@
         "step14"
       ],
       "derived_via": "domain_reading",
-      "step": 173.0,
+      "step": 1257,
       "step_label": "AppA.10"
     },
     {
@@ -7853,7 +7860,7 @@
         "XIV.4"
       ],
       "derived_via": "tier_rule",
-      "step": 174.0,
+      "step": 1097,
       "step_label": "AppA.11"
     },
     {
@@ -7871,7 +7878,7 @@
         "step1"
       ],
       "derived_via": "composition",
-      "step": 175.0,
+      "step": 1098,
       "step_label": "AppA.12"
     },
     {
@@ -7888,7 +7895,7 @@
         "XIV.5"
       ],
       "derived_via": "tier_rule",
-      "step": 176.0,
+      "step": 1099,
       "step_label": "AppA.13"
     },
     {
@@ -7905,7 +7912,7 @@
         "EtaOmegaMatrices"
       ],
       "derived_via": "composition",
-      "step": 178.0,
+      "step": 1046,
       "step_label": "AppB.1"
     },
     {
@@ -7922,7 +7929,7 @@
         "APP-B.1"
       ],
       "derived_via": "tier_rule",
-      "step": 179.0,
+      "step": 1100,
       "step_label": "AppB.2"
     },
     {
@@ -7939,7 +7946,7 @@
         "APP-B.1"
       ],
       "derived_via": "domain_reading",
-      "step": 180.0,
+      "step": 1101,
       "step_label": "AppB.3"
     },
     {
@@ -7956,7 +7963,7 @@
         "WP.S1.InformationPhilosophyConstitution"
       ],
       "derived_via": "tier_rule",
-      "step": 187.001,
+      "step": 1102,
       "step_label": "WP.S1"
     },
     {
@@ -7973,7 +7980,7 @@
         "WP.S1.MandatoryDerivationOrder"
       ],
       "derived_via": "tier_rule",
-      "step": 187.002,
+      "step": 1130,
       "step_label": "WP.S1"
     },
     {
@@ -7990,7 +7997,7 @@
         "EQ-001"
       ],
       "derived_via": "tier_rule",
-      "step": 187.0,
+      "step": 1047,
       "step_label": "WP.S1"
     },
     {
@@ -8007,7 +8014,7 @@
         "WP.S1.InformationPhilosophyConstitution"
       ],
       "derived_via": "composition",
-      "step": 189.0,
+      "step": 1103,
       "step_label": "WP.S2"
     },
     {
@@ -8024,7 +8031,7 @@
         "WP.S2.ArchitectureLayers"
       ],
       "derived_via": "tier_rule",
-      "step": 189.001,
+      "step": 1131,
       "step_label": "WP.S2"
     },
     {
@@ -8042,7 +8049,7 @@
         "EQ-005"
       ],
       "derived_via": "restatement",
-      "step": 191.0,
+      "step": 1104,
       "step_label": "WP.S3"
     },
     {
@@ -8059,7 +8066,7 @@
         "WP.S3.RootPrimitives"
       ],
       "derived_via": "tier_rule",
-      "step": 191.001,
+      "step": 1132,
       "step_label": "WP.S3"
     },
     {
@@ -8076,7 +8083,7 @@
         "WP.S3.RootPrimitives"
       ],
       "derived_via": "definition",
-      "step": 191.002,
+      "step": 1133,
       "step_label": "WP.S3"
     },
     {
@@ -8093,7 +8100,7 @@
         "WP.S3.CanonicalState"
       ],
       "derived_via": "definition",
-      "step": 191.003,
+      "step": 1162,
       "step_label": "WP.S3"
     },
     {
@@ -8110,7 +8117,7 @@
         "WP.S3.PositiveMetricPositivity"
       ],
       "derived_via": "definition",
-      "step": 191.004,
+      "step": 1182,
       "step_label": "WP.S3"
     },
     {
@@ -8127,7 +8134,7 @@
         "WP.S3.RootPrimitives"
       ],
       "derived_via": "restatement",
-      "step": 195.0,
+      "step": 1134,
       "step_label": "WP.S4"
     },
     {
@@ -8144,7 +8151,7 @@
         "WP.S4.ReaderFamily"
       ],
       "derived_via": "definition",
-      "step": 195.001,
+      "step": 1163,
       "step_label": "WP.S4"
     },
     {
@@ -8163,7 +8170,7 @@
         "WP.S4.LocalReaderEquivalence"
       ],
       "derived_via": "definition",
-      "step": 195.002,
+      "step": 1183,
       "step_label": "WP.S4"
     },
     {
@@ -8181,7 +8188,7 @@
         "WP.S4.LocalReaderEquivalence"
       ],
       "derived_via": "definition",
-      "step": 195.003,
+      "step": 1197,
       "step_label": "WP.S4"
     },
     {
@@ -8198,7 +8205,7 @@
         "WP.S4.DomainReadableState"
       ],
       "derived_via": "definition",
-      "step": 195.004,
+      "step": 1207,
       "step_label": "WP.S4"
     },
     {
@@ -8215,7 +8222,7 @@
         "WP.S4.DomainDefinition"
       ],
       "derived_via": "tier_rule",
-      "step": 195.005,
+      "step": 1215,
       "step_label": "WP.S4"
     },
     {
@@ -8235,7 +8242,7 @@
         "WP.S4.DomainDefinition"
       ],
       "derived_via": "restatement",
-      "step": 195.006,
+      "step": 1216,
       "step_label": "WP.S4"
     },
     {
@@ -8254,7 +8261,7 @@
         "WP.S4.ExactDomainGate"
       ],
       "derived_via": "definition",
-      "step": 195.007,
+      "step": 1222,
       "step_label": "WP.S4"
     },
     {
@@ -8271,7 +8278,7 @@
         "WP.S4.ExactDomainGate"
       ],
       "derived_via": "definition",
-      "step": 195.008,
+      "step": 1223,
       "step_label": "WP.S4"
     },
     {
@@ -8290,7 +8297,7 @@
         "WP.S4.InvariantFactorization"
       ],
       "derived_via": "composition",
-      "step": 195.009,
+      "step": 1231,
       "step_label": "WP.S4"
     },
     {
@@ -8308,7 +8315,7 @@
         "X.4b"
       ],
       "derived_via": "restatement",
-      "step": 195.01,
+      "step": 1238,
       "step_label": "WP.S4"
     },
     {
@@ -8325,7 +8332,7 @@
         "WP.S4.ReaderFamily"
       ],
       "derived_via": "definition",
-      "step": 200.0,
+      "step": 1164,
       "step_label": "WP.S5"
     },
     {
@@ -8342,7 +8349,7 @@
         "WP.S5.AutomorphismGroup"
       ],
       "derived_via": "definition",
-      "step": 200.001,
+      "step": 1184,
       "step_label": "WP.S5"
     },
     {
@@ -8359,7 +8366,7 @@
         "WP.S5.Transport"
       ],
       "derived_via": "definition",
-      "step": 200.002,
+      "step": 1198,
       "step_label": "WP.S5"
     },
     {
@@ -8377,7 +8384,7 @@
         "WP.S3.PositiveMetricPositivity"
       ],
       "derived_via": "definition",
-      "step": 200.003,
+      "step": 1199,
       "step_label": "WP.S5"
     },
     {
@@ -8394,7 +8401,7 @@
         "WP.S5.TransportMetricCompatibility"
       ],
       "derived_via": "definition",
-      "step": 200.004,
+      "step": 1208,
       "step_label": "WP.S5"
     },
     {
@@ -8411,7 +8418,7 @@
         "WP.S5.Transport"
       ],
       "derived_via": "definition",
-      "step": 200.005,
+      "step": 1200,
       "step_label": "WP.S5"
     },
     {
@@ -8428,7 +8435,7 @@
         "WP.S5.Holonomy"
       ],
       "derived_via": "definition",
-      "step": 200.006,
+      "step": 1209,
       "step_label": "WP.S5"
     },
     {
@@ -8445,7 +8452,7 @@
         "WP.S5.CurvatureDefect"
       ],
       "derived_via": "definition",
-      "step": 200.007,
+      "step": 1217,
       "step_label": "WP.S5"
     },
     {
@@ -8462,7 +8469,7 @@
         "WP.S5.AutomorphismGroup"
       ],
       "derived_via": "composition",
-      "step": 204.0,
+      "step": 1185,
       "step_label": "WP.S6"
     },
     {
@@ -8479,7 +8486,7 @@
         "WP.S6.InvariantClosureMap"
       ],
       "derived_via": "definition",
-      "step": 204.001,
+      "step": 1201,
       "step_label": "WP.S6"
     },
     {
@@ -8496,7 +8503,7 @@
         "WP.S6.ClosureMultiplicity"
       ],
       "derived_via": "tier_rule",
-      "step": 204.002,
+      "step": 1210,
       "step_label": "WP.S6"
     },
     {
@@ -8515,7 +8522,7 @@
         "Gate2"
       ],
       "derived_via": "restatement",
-      "step": 204.003,
+      "step": 1048,
       "step_label": "WP.S6"
     },
     {
@@ -8532,7 +8539,7 @@
         "WP.S3.CanonicalState"
       ],
       "derived_via": "composition",
-      "step": 208.0,
+      "step": 1165,
       "step_label": "WP.S7"
     },
     {
@@ -8549,7 +8556,7 @@
         "WP.S7.ModularAction"
       ],
       "derived_via": "definition",
-      "step": 208.001,
+      "step": 1186,
       "step_label": "WP.S7"
     },
     {
@@ -8566,7 +8573,7 @@
         "WP.S7.ModularAction"
       ],
       "derived_via": "definition",
-      "step": 208.002,
+      "step": 1187,
       "step_label": "WP.S7"
     },
     {
@@ -8583,7 +8590,7 @@
         "WP.S7.ConstrainedEquation"
       ],
       "derived_via": "tier_rule",
-      "step": 208.003,
+      "step": 1202,
       "step_label": "WP.S7"
     },
     {
@@ -8600,7 +8607,7 @@
         "WP.S7.ConstrainedEquation"
       ],
       "derived_via": "tier_rule",
-      "step": 208.004,
+      "step": 1203,
       "step_label": "WP.S7"
     },
     {
@@ -8617,7 +8624,7 @@
         "LR_skew_split"
       ],
       "derived_via": "restatement",
-      "step": 211.0,
+      "step": 1049,
       "step_label": "WP.S8"
     },
     {
@@ -8634,7 +8641,7 @@
         "WP.S8.FullOperator"
       ],
       "derived_via": "definition",
-      "step": 211.001,
+      "step": 1105,
       "step_label": "WP.S8"
     },
     {
@@ -8651,7 +8658,7 @@
         "WP.S8.FullOperator"
       ],
       "derived_via": "definition",
-      "step": 211.002,
+      "step": 1106,
       "step_label": "WP.S8"
     },
     {
@@ -8668,7 +8675,7 @@
         "WP.S8.OperatorSplit"
       ],
       "derived_via": "tier_rule",
-      "step": 211.003,
+      "step": 1135,
       "step_label": "WP.S8"
     },
     {
@@ -8685,7 +8692,7 @@
         "WP.S8.OperatorSplit"
       ],
       "derived_via": "definition",
-      "step": 211.004,
+      "step": 1136,
       "step_label": "WP.S8"
     },
     {
@@ -8702,7 +8709,7 @@
         "LivingGeometry"
       ],
       "derived_via": "restatement",
-      "step": 211.005,
+      "step": 1050,
       "step_label": "WP.S8"
     },
     {
@@ -8719,7 +8726,7 @@
         "WP.S8.LivingGeometry"
       ],
       "derived_via": "definition",
-      "step": 211.006,
+      "step": 1107,
       "step_label": "WP.S8"
     },
     {
@@ -8736,7 +8743,7 @@
         "WP.S8.LivingGeometry"
       ],
       "derived_via": "definition",
-      "step": 211.007,
+      "step": 1108,
       "step_label": "WP.S8"
     },
     {
@@ -8753,7 +8760,7 @@
         "WP.S8.MovingBasis"
       ],
       "derived_via": "definition",
-      "step": 211.008,
+      "step": 1137,
       "step_label": "WP.S8"
     },
     {
@@ -8770,7 +8777,7 @@
         "Rgeo"
       ],
       "derived_via": "restatement",
-      "step": 211.009,
+      "step": 1051,
       "step_label": "WP.S8"
     },
     {
@@ -8787,7 +8794,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "specialisation",
-      "step": 211.01,
+      "step": 1052,
       "step_label": "WP.S8"
     },
     {
@@ -8804,7 +8811,7 @@
         "WP.S8.SecondDifference"
       ],
       "derived_via": "definition",
-      "step": 211.011,
+      "step": 1109,
       "step_label": "WP.S8"
     },
     {
@@ -8821,7 +8828,7 @@
         "DRLAction"
       ],
       "derived_via": "restatement",
-      "step": 211.012,
+      "step": 1053,
       "step_label": "WP.S8"
     },
     {
@@ -8838,7 +8845,7 @@
         "ReaderRecordEqs"
       ],
       "derived_via": "restatement",
-      "step": 211.013,
+      "step": 1054,
       "step_label": "WP.S8"
     },
     {
@@ -8855,7 +8862,7 @@
         "ReaderRecordEqs"
       ],
       "derived_via": "restatement",
-      "step": 211.014,
+      "step": 1055,
       "step_label": "WP.S8"
     },
     {
@@ -8873,7 +8880,7 @@
         "CutCurrent"
       ],
       "derived_via": "restatement",
-      "step": 211.015,
+      "step": 1056,
       "step_label": "WP.S8"
     },
     {
@@ -8890,7 +8897,7 @@
         "GaussJordanStepper"
       ],
       "derived_via": "restatement",
-      "step": 211.016,
+      "step": 1057,
       "step_label": "WP.S8"
     },
     {
@@ -8907,7 +8914,7 @@
         "GaussJordanStepper"
       ],
       "derived_via": "restatement",
-      "step": 211.017,
+      "step": 1058,
       "step_label": "WP.S8"
     },
     {
@@ -8925,7 +8932,7 @@
         "WP.S8.PsiOneStepSolve"
       ],
       "derived_via": "tier_rule",
-      "step": 211.018,
+      "step": 1110,
       "step_label": "WP.S8"
     },
     {
@@ -8943,7 +8950,7 @@
         "WP.S8.GeometryDominanceRatio"
       ],
       "derived_via": "composition",
-      "step": 211.019,
+      "step": 1138,
       "step_label": "WP.S8"
     },
     {
@@ -8960,7 +8967,7 @@
         "MQ08-stepper"
       ],
       "derived_via": "restatement",
-      "step": 217.0,
+      "step": 1059,
       "step_label": "WP.S9"
     },
     {
@@ -8977,7 +8984,7 @@
         "step13"
       ],
       "derived_via": "restatement",
-      "step": 217.001,
+      "step": 1252,
       "step_label": "WP.S9"
     },
     {
@@ -8995,7 +9002,7 @@
         "WP.S9.StabilityBound"
       ],
       "derived_via": "tier_rule",
-      "step": 217.002,
+      "step": 1258,
       "step_label": "WP.S9"
     },
     {
@@ -9012,7 +9019,7 @@
         "EQ-050"
       ],
       "derived_via": "specialisation",
-      "step": 219.0,
+      "step": 1060,
       "step_label": "WP.S10"
     },
     {
@@ -9029,7 +9036,7 @@
         "WP.S10.PhysicalProjector"
       ],
       "derived_via": "tier_rule",
-      "step": 219.001,
+      "step": 1111,
       "step_label": "WP.S10"
     },
     {
@@ -9046,7 +9053,7 @@
         "WP.S10.PhysicalProjector"
       ],
       "derived_via": "definition",
-      "step": 219.002,
+      "step": 1112,
       "step_label": "WP.S10"
     },
     {
@@ -9063,7 +9070,7 @@
         "WP.S10.PositiveKernelDefinition"
       ],
       "derived_via": "definition",
-      "step": 219.003,
+      "step": 1139,
       "step_label": "WP.S10"
     },
     {
@@ -9080,7 +9087,7 @@
         "WP.S10.PositiveKernelPositivity"
       ],
       "derived_via": "definition",
-      "step": 219.004,
+      "step": 1166,
       "step_label": "WP.S10"
     },
     {
@@ -9097,7 +9104,7 @@
         "WP.S10.PositiveTransferOperator"
       ],
       "derived_via": "tier_rule",
-      "step": 219.005,
+      "step": 1188,
       "step_label": "WP.S10"
     },
     {
@@ -9114,7 +9121,7 @@
         "WP.S10.PositiveTransferOperator"
       ],
       "derived_via": "definition",
-      "step": 219.006,
+      "step": 1189,
       "step_label": "WP.S10"
     },
     {
@@ -9131,7 +9138,7 @@
         "WP.S10.ContractionBound"
       ],
       "derived_via": "definition",
-      "step": 219.007,
+      "step": 1204,
       "step_label": "WP.S10"
     },
     {
@@ -9148,7 +9155,7 @@
         "WP.S10.NormalizedTransfer"
       ],
       "derived_via": "domain_reading",
-      "step": 219.008,
+      "step": 1211,
       "step_label": "WP.S10"
     },
     {
@@ -9165,7 +9172,7 @@
         "WP.S10.SpectralEquation"
       ],
       "derived_via": "definition",
-      "step": 219.009,
+      "step": 1218,
       "step_label": "WP.S10"
     },
     {
@@ -9182,7 +9189,7 @@
         "WP.S10.SpectralEquation"
       ],
       "derived_via": "definition",
-      "step": 219.01,
+      "step": 1219,
       "step_label": "WP.S10"
     },
     {
@@ -9199,7 +9206,7 @@
         "WP.S10.SpectralClassification"
       ],
       "derived_via": "tier_rule",
-      "step": 219.011,
+      "step": 1224,
       "step_label": "WP.S10"
     },
     {
@@ -9216,7 +9223,7 @@
         "OrderHiggsClosure_v1.12"
       ],
       "derived_via": "restatement",
-      "step": 223.0,
+      "step": 1061,
       "step_label": "WP.S11"
     },
     {
@@ -9233,7 +9240,7 @@
         "WP.S11.OrderParameter"
       ],
       "derived_via": "definition",
-      "step": 223.001,
+      "step": 1113,
       "step_label": "WP.S11"
     },
     {
@@ -9250,7 +9257,7 @@
         "WP.S11.BarePotential"
       ],
       "derived_via": "definition",
-      "step": 223.002,
+      "step": 1140,
       "step_label": "WP.S11"
     },
     {
@@ -9267,7 +9274,7 @@
         "WP.S11.FluctuationKernel"
       ],
       "derived_via": "definition",
-      "step": 223.003,
+      "step": 1167,
       "step_label": "WP.S11"
     },
     {
@@ -9285,7 +9292,7 @@
         "WP.S11.BarePotential"
       ],
       "derived_via": "composition",
-      "step": 223.004,
+      "step": 1190,
       "step_label": "WP.S11"
     },
     {
@@ -9302,7 +9309,7 @@
         "WP.S11.EffectivePotential"
       ],
       "derived_via": "definition",
-      "step": 223.005,
+      "step": 1205,
       "step_label": "WP.S11"
     },
     {
@@ -9319,7 +9326,7 @@
         "WP.S11.EffectivePotentialDiagonal"
       ],
       "derived_via": "definition",
-      "step": 223.006,
+      "step": 1212,
       "step_label": "WP.S11"
     },
     {
@@ -9336,7 +9343,7 @@
         "WP.S11.EffectivePotentialSlope"
       ],
       "derived_via": "definition",
-      "step": 223.007,
+      "step": 1220,
       "step_label": "WP.S11"
     },
     {
@@ -9353,7 +9360,7 @@
         "WP.S11.OrderOnsetCriterion"
       ],
       "derived_via": "tier_rule",
-      "step": 223.008,
+      "step": 1225,
       "step_label": "WP.S11"
     },
     {
@@ -9370,7 +9377,7 @@
         "AdmissibilitySquare"
       ],
       "derived_via": "restatement",
-      "step": 225.0,
+      "step": 1141,
       "step_label": "WP.S12"
     },
     {
@@ -9387,7 +9394,7 @@
         "WP.S12.CoarseGrainingMap"
       ],
       "derived_via": "definition",
-      "step": 225.001,
+      "step": 1168,
       "step_label": "WP.S12"
     },
     {
@@ -9404,7 +9411,7 @@
         "WP.S12.ReadoutPreservingCoarseGraining"
       ],
       "derived_via": "definition",
-      "step": 225.002,
+      "step": 1191,
       "step_label": "WP.S12"
     },
     {
@@ -9421,7 +9428,7 @@
         "WP.S12.CoarseGrainingMap"
       ],
       "derived_via": "definition",
-      "step": 225.003,
+      "step": 1169,
       "step_label": "WP.S12"
     },
     {
@@ -9438,7 +9445,7 @@
         "WP.S12.CoarseGrainingMap"
       ],
       "derived_via": "definition",
-      "step": 225.004,
+      "step": 1170,
       "step_label": "WP.S12"
     },
     {
@@ -9455,7 +9462,7 @@
         "WP.S12.FixedPoint"
       ],
       "derived_via": "definition",
-      "step": 225.005,
+      "step": 1192,
       "step_label": "WP.S12"
     },
     {
@@ -9472,7 +9479,7 @@
         "A.7"
       ],
       "derived_via": "restatement",
-      "step": 225.006,
+      "step": 1062,
       "step_label": "WP.S12"
     },
     {
@@ -9489,7 +9496,7 @@
         "v011.6"
       ],
       "derived_via": "restatement",
-      "step": 225.007,
+      "step": 1142,
       "step_label": "WP.S12"
     },
     {
@@ -9507,7 +9514,7 @@
         "v011.11"
       ],
       "derived_via": "restatement",
-      "step": 225.008,
+      "step": 1171,
       "step_label": "WP.S12"
     },
     {
@@ -9525,7 +9532,7 @@
         "WP.S4.ExactDomainGate"
       ],
       "derived_via": "composition",
-      "step": 228.0,
+      "step": 1226,
       "step_label": "WP.S13"
     },
     {
@@ -9542,7 +9549,7 @@
         "Gate1"
       ],
       "derived_via": "restatement",
-      "step": 229.0,
+      "step": 1063,
       "step_label": "WP.S14"
     },
     {
@@ -9561,7 +9568,7 @@
         "Gate2"
       ],
       "derived_via": "restatement",
-      "step": 229.001,
+      "step": 1064,
       "step_label": "WP.S14"
     },
     {
@@ -9578,7 +9585,7 @@
         "Gate3"
       ],
       "derived_via": "restatement",
-      "step": 229.002,
+      "step": 1065,
       "step_label": "WP.S14"
     },
     {
@@ -9597,7 +9604,7 @@
         "Gate4"
       ],
       "derived_via": "restatement",
-      "step": 229.003,
+      "step": 1066,
       "step_label": "WP.S14"
     },
     {
@@ -9614,7 +9621,7 @@
         "Gate5"
       ],
       "derived_via": "restatement",
-      "step": 229.004,
+      "step": 1067,
       "step_label": "WP.S14"
     },
     {
@@ -9631,7 +9638,7 @@
         "Gate6"
       ],
       "derived_via": "restatement",
-      "step": 229.005,
+      "step": 1068,
       "step_label": "WP.S14"
     },
     {
@@ -9648,7 +9655,7 @@
         "Gate7"
       ],
       "derived_via": "restatement",
-      "step": 229.006,
+      "step": 1069,
       "step_label": "WP.S14"
     },
     {
@@ -9666,7 +9673,7 @@
         "WP.S14.Gate4"
       ],
       "derived_via": "composition",
-      "step": 237.0,
+      "step": 1232,
       "step_label": "WP.S15"
     },
     {
@@ -9683,7 +9690,7 @@
         "A.10"
       ],
       "derived_via": "restatement",
-      "step": 237.001,
+      "step": 1070,
       "step_label": "WP.S15"
     },
     {
@@ -9700,7 +9707,7 @@
         "CommutingSquare.Bridge"
       ],
       "derived_via": "restatement",
-      "step": 238.0,
+      "step": 1071,
       "step_label": "WP.S16"
     },
     {
@@ -9717,7 +9724,7 @@
         "WP.S16.BridgeMap"
       ],
       "derived_via": "definition",
-      "step": 238.001,
+      "step": 1114,
       "step_label": "WP.S16"
     },
     {
@@ -9734,7 +9741,7 @@
         "WP.S16.BridgeMap"
       ],
       "derived_via": "definition",
-      "step": 238.002,
+      "step": 1115,
       "step_label": "WP.S16"
     },
     {
@@ -9754,7 +9761,7 @@
         "WP.S16.BridgeReadout"
       ],
       "derived_via": "definition",
-      "step": 238.003,
+      "step": 1143,
       "step_label": "WP.S16"
     },
     {
@@ -9771,7 +9778,7 @@
         "WP.S16.BridgeError"
       ],
       "derived_via": "tier_rule",
-      "step": 238.004,
+      "step": 1172,
       "step_label": "WP.S16"
     },
     {
@@ -9789,7 +9796,7 @@
         "WP.S12.ModalReductionDefect"
       ],
       "derived_via": "composition",
-      "step": 239.0,
+      "step": 1227,
       "step_label": "WP.S17"
     },
     {
@@ -9806,7 +9813,7 @@
         "WP.S17.DefectVector"
       ],
       "derived_via": "tier_rule",
-      "step": 239.001,
+      "step": 1233,
       "step_label": "WP.S17"
     },
     {
@@ -9824,7 +9831,7 @@
         "B.5.Checker"
       ],
       "derived_via": "restatement",
-      "step": 241.0,
+      "step": 1072,
       "step_label": "WP.S18"
     },
     {
@@ -9841,7 +9848,7 @@
         "WP.S18.MakerCheckerRoles"
       ],
       "derived_via": "definition",
-      "step": 241.001,
+      "step": 1116,
       "step_label": "WP.S18"
     },
     {
@@ -9858,7 +9865,7 @@
         "XI.6"
       ],
       "derived_via": "restatement",
-      "step": 241.002,
+      "step": 1193,
       "step_label": "WP.S18"
     },
     {
@@ -9875,7 +9882,7 @@
         "B.5.ProtocolDeviation"
       ],
       "derived_via": "restatement",
-      "step": 241.003,
+      "step": 1073,
       "step_label": "WP.S18"
     },
     {
@@ -9892,7 +9899,7 @@
         "XI.1a"
       ],
       "derived_via": "restatement",
-      "step": 244.0,
+      "step": 1117,
       "step_label": "WP.S19"
     },
     {
@@ -9910,7 +9917,7 @@
         "XI.1a"
       ],
       "derived_via": "tier_rule",
-      "step": 244.001,
+      "step": 1144,
       "step_label": "WP.S19"
     },
     {
@@ -9928,7 +9935,7 @@
         "WP.S17.DefectVector"
       ],
       "derived_via": "composition",
-      "step": 246.0,
+      "step": 1234,
       "step_label": "WP.S20"
     },
     {
@@ -9946,7 +9953,7 @@
         "WP.S3.RootPrimitives"
       ],
       "derived_via": "composition",
-      "step": 247.0,
+      "step": 1145,
       "step_label": "WP.S21"
     },
     {
@@ -9964,7 +9971,7 @@
         "WP.S21.GlobalRuntimeDAG"
       ],
       "derived_via": "composition",
-      "step": 249.0,
+      "step": 1239,
       "step_label": "WP.S22"
     },
     {
@@ -9981,7 +9988,7 @@
         "WP.S4.ExactDomainGate"
       ],
       "derived_via": "domain_reading",
-      "step": 251.0,
+      "step": 1228,
       "step_label": "WP.S23"
     },
     {
@@ -9999,7 +10006,7 @@
         "XI.6"
       ],
       "derived_via": "domain_reading",
-      "step": 251.001,
+      "step": 1229,
       "step_label": "WP.S23"
     },
     {
@@ -10016,7 +10023,7 @@
         "WP.S5.Holonomy"
       ],
       "derived_via": "domain_reading",
-      "step": 251.002,
+      "step": 1213,
       "step_label": "WP.S23"
     },
     {
@@ -10033,7 +10040,7 @@
         "WP.S10.PositiveTransferOperator"
       ],
       "derived_via": "domain_reading",
-      "step": 251.003,
+      "step": 1194,
       "step_label": "WP.S23"
     },
     {
@@ -10050,7 +10057,7 @@
         "WP.S8.DRLStepAlgorithm"
       ],
       "derived_via": "domain_reading",
-      "step": 251.004,
+      "step": 1173,
       "step_label": "WP.S23"
     },
     {
@@ -10067,7 +10074,7 @@
         "WP.S12.ModalReductionGate"
       ],
       "derived_via": "domain_reading",
-      "step": 251.005,
+      "step": 1195,
       "step_label": "WP.S23"
     },
     {
@@ -10084,7 +10091,7 @@
         "WP.S8.GeometryDominanceRatio"
       ],
       "derived_via": "domain_reading",
-      "step": 251.006,
+      "step": 1118,
       "step_label": "WP.S23"
     },
     {
@@ -10102,7 +10109,7 @@
         "WP.S17.DefectVector"
       ],
       "derived_via": "composition",
-      "step": 258.0,
+      "step": 1235,
       "step_label": "WP.S24"
     },
     {
@@ -10120,7 +10127,7 @@
         "WP.S24.ConcreteReferenceStatus"
       ],
       "derived_via": "specialisation",
-      "step": 258.001,
+      "step": 1240,
       "step_label": "WP.S24"
     },
     {
@@ -10137,7 +10144,7 @@
         "WP.S24.DomainCard"
       ],
       "derived_via": "specialisation",
-      "step": 258.002,
+      "step": 1243,
       "step_label": "WP.S24"
     },
     {
@@ -10154,7 +10161,7 @@
         "WP.S24.RawObservation"
       ],
       "derived_via": "definition",
-      "step": 258.003,
+      "step": 1247,
       "step_label": "WP.S24"
     },
     {
@@ -10171,7 +10178,7 @@
         "WP.S24.DomainCard"
       ],
       "derived_via": "specialisation",
-      "step": 258.004,
+      "step": 1244,
       "step_label": "WP.S24"
     },
     {
@@ -10190,7 +10197,7 @@
         "WP.S8.ReaderEquation"
       ],
       "derived_via": "specialisation",
-      "step": 258.005,
+      "step": 1253,
       "step_label": "WP.S24"
     },
     {
@@ -10207,7 +10214,7 @@
         "WP.S24.ConcreteReaderRecurrence"
       ],
       "derived_via": "tier_rule",
-      "step": 258.006,
+      "step": 1259,
       "step_label": "WP.S24"
     },
     {
@@ -10224,7 +10231,7 @@
         "WP.S24.RawObservation"
       ],
       "derived_via": "definition",
-      "step": 258.007,
+      "step": 1248,
       "step_label": "WP.S24"
     },
     {
@@ -10241,7 +10248,7 @@
         "WP.S24.ConcreteReaderRecurrence"
       ],
       "derived_via": "specialisation",
-      "step": 258.008,
+      "step": 1260,
       "step_label": "WP.S24"
     },
     {
@@ -10259,7 +10266,7 @@
         "WP.S18.MakerCheckerRoles"
       ],
       "derived_via": "composition",
-      "step": 258.009,
+      "step": 1264,
       "step_label": "WP.S24"
     },
     {
@@ -10277,7 +10284,7 @@
         "WP.S18.FailAbleGateLaw"
       ],
       "derived_via": "composition",
-      "step": 258.01,
+      "step": 1268,
       "step_label": "WP.S24"
     },
     {
@@ -10294,7 +10301,7 @@
         "WP.S24.HeldOutCheckerReport"
       ],
       "derived_via": "tier_rule",
-      "step": 258.011,
+      "step": 1270,
       "step_label": "WP.S24"
     },
     {
@@ -10311,7 +10318,7 @@
         "WP.S24.HeldOutCheckerReport"
       ],
       "derived_via": "tier_rule",
-      "step": 258.012,
+      "step": 1271,
       "step_label": "WP.S24"
     },
     {
@@ -10329,7 +10336,7 @@
         "WP.S24.ConcreteReaderRecurrence"
       ],
       "derived_via": "specialisation",
-      "step": 258.013,
+      "step": 1261,
       "step_label": "WP.S24"
     },
     {
@@ -10347,7 +10354,7 @@
         "WP.S24.ConcreteExecutionDAG"
       ],
       "derived_via": "specialisation",
-      "step": 258.014,
+      "step": 1265,
       "step_label": "WP.S24"
     },
     {
@@ -10365,7 +10372,7 @@
         "WP.S18.FailAbleGateLaw"
       ],
       "derived_via": "composition",
-      "step": 265.0,
+      "step": 1236,
       "step_label": "WP.S25"
     },
     {
@@ -10383,7 +10390,7 @@
         "WP.S25.PassFailUnresolvedTable"
       ],
       "derived_via": "tier_rule",
-      "step": 266.0,
+      "step": 1241,
       "step_label": "WP.S26"
     },
     {
@@ -10400,7 +10407,7 @@
         "WP.S19.LegacyTierMapping"
       ],
       "derived_via": "tier_rule",
-      "step": 267.0,
+      "step": 1174,
       "step_label": "WP.S27"
     },
     {
@@ -10417,7 +10424,7 @@
         "WP.S22.RG_EXECUTE"
       ],
       "derived_via": "composition",
-      "step": 268.0,
+      "step": 1245,
       "step_label": "WP.S28"
     },
     {
@@ -10435,7 +10442,7 @@
         "WP.S28.ReferenceAPI"
       ],
       "derived_via": "tier_rule",
-      "step": 269.0,
+      "step": 1249,
       "step_label": "WP.S29"
     },
     {
@@ -10453,7 +10460,7 @@
         "WP.S19.ClaimLedger"
       ],
       "derived_via": "composition",
-      "step": 269.001,
+      "step": 1254,
       "step_label": "WP.S29"
     },
     {
@@ -10470,7 +10477,7 @@
         "WP.S29.AIContract"
       ],
       "derived_via": "restatement",
-      "step": 270.0,
+      "step": 1255,
       "step_label": "WP.S30"
     },
     {
@@ -10488,7 +10495,7 @@
         "WP.S30.HumanChecklist"
       ],
       "derived_via": "composition",
-      "step": 271.0,
+      "step": 1262,
       "step_label": "WP.S31"
     },
     {
@@ -10506,7 +10513,7 @@
         "WP.S1.InformationPhilosophyConstitution"
       ],
       "derived_via": "composition",
-      "step": 272.0,
+      "step": 1266,
       "step_label": "WP.S32"
     }
   ]

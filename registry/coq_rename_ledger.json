@@ -1,0 +1,4879 @@
+{
+  "generated_by": "scripts/bbl182_split_coq.py",
+  "rule": "code.replace('/','__').replace('.','_').replace('-','_') + '.v'",
+  "source_files_preserved_at": "coq/canonical/_mrc_pre_split/",
+  "entries": [
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_001_degree",
+      "can_id": "CAN-001",
+      "code": "weld/M.01.v1",
+      "new_file": "coq/canonical/weld__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_001_laplacian",
+      "can_id": "CAN-001",
+      "code": "weld/M.01.v1",
+      "new_file": "coq/canonical/weld__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_001_sum_neg_distributes",
+      "can_id": "CAN-001",
+      "code": "weld/M.01.v1",
+      "new_file": "coq/canonical/weld__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_001_laplacian_row_sums_to_neg_degree",
+      "can_id": "CAN-001",
+      "code": "weld/M.01.v1",
+      "new_file": "coq/canonical/weld__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_001_laplacian_stepper_can_move_state",
+      "can_id": "CAN-001",
+      "code": "weld/M.01.v1",
+      "new_file": "coq/canonical/weld__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "RootState",
+      "can_id": "CAN-002",
+      "code": "EQ-015/M.01.v1",
+      "new_file": "coq/canonical/EQ_015__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_002_root_state_tuple_faithful",
+      "can_id": "CAN-002",
+      "code": "EQ-015/M.01.v1",
+      "new_file": "coq/canonical/EQ_015__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_003_trajectory",
+      "can_id": "CAN-003",
+      "code": "EQ-015/M.02.v1",
+      "new_file": "coq/canonical/EQ_015__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_003_stepper_can_move_state",
+      "can_id": "CAN-003",
+      "code": "EQ-015/M.02.v1",
+      "new_file": "coq/canonical/EQ_015__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_003_trajectory_zero",
+      "can_id": "CAN-003",
+      "code": "EQ-015/M.02.v1",
+      "new_file": "coq/canonical/EQ_015__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_004_Stage",
+      "can_id": "CAN-004",
+      "code": "EQ-015/M.03.v1",
+      "new_file": "coq/canonical/EQ_015__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_004_index",
+      "can_id": "CAN-004",
+      "code": "EQ-015/M.03.v1",
+      "new_file": "coq/canonical/EQ_015__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_004_forbidden_order",
+      "can_id": "CAN-004",
+      "code": "EQ-015/M.03.v1",
+      "new_file": "coq/canonical/EQ_015__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_004_index_injective",
+      "can_id": "CAN-004",
+      "code": "EQ-015/M.03.v1",
+      "new_file": "coq/canonical/EQ_015__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_004_checking_before_status_before_report",
+      "can_id": "CAN-004",
+      "code": "EQ-015/M.03.v1",
+      "new_file": "coq/canonical/EQ_015__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_005_readout_admission_order",
+      "can_id": "CAN-005",
+      "code": "EQ-015/M.04.v1",
+      "new_file": "coq/canonical/EQ_015__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_005_readout_admission_order_stage",
+      "can_id": "CAN-005",
+      "code": "EQ-015/M.04.v1",
+      "new_file": "coq/canonical/EQ_015__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_006_domain_admissible",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_006_domain_weld_satisfiable_on_pair_projection",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "DomainReading",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "weld_holds",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "Epistemic_State",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "epistemic_F",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "epistemic_q",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "epistemic_F_D",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "CAN_006_epistemic_weld_witness",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "HAI_State",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "hai_F",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "hai_q",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "hai_F_D",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "CAN_006_human_ai_weld_witness",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "Social_State",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "social_F",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "social_q",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "social_F_D",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "CAN_006_social_weld_witness",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "WorldSystem_State",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "worldsystem_F",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "worldsystem_q",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "worldsystem_F_D",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "CAN_006_world_system_weld_witness",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "Method_State",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "method_F",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "method_q",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "method_F_D",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "CAN_006_method_weld_witness",
+      "can_id": "CAN-006",
+      "code": "weld/M.02.v1",
+      "new_file": "coq/canonical/weld__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_007_reader_equiv",
+      "can_id": "CAN-007",
+      "code": "weld/M.03.v1",
+      "new_file": "coq/canonical/weld__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_007_reader_equiv_is_equivalence",
+      "can_id": "CAN-007",
+      "code": "weld/M.03.v1",
+      "new_file": "coq/canonical/weld__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_008_noncollapse",
+      "can_id": "CAN-008",
+      "code": "A.5/M.01.v1",
+      "new_file": "coq/canonical/A_5__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_008_root_candidate_quotient_are_three_things",
+      "can_id": "CAN-008",
+      "code": "A.5/M.01.v1",
+      "new_file": "coq/canonical/A_5__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_009_extends",
+      "can_id": "CAN-009",
+      "code": "A.8/M.01.v1",
+      "new_file": "coq/canonical/A_8__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_009_extension_preserves_past",
+      "can_id": "CAN-009",
+      "code": "A.8/M.01.v1",
+      "new_file": "coq/canonical/A_8__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_009_witness_append_preserves_first_event",
+      "can_id": "CAN-009",
+      "code": "A.8/M.01.v1",
+      "new_file": "coq/canonical/A_8__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN010_human_readout",
+      "can_id": "CAN-010",
+      "code": "EQ-002/E.01.v1",
+      "new_file": "coq/canonical/EQ_002__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN010_H2_reader_dependence_Open",
+      "can_id": "CAN-010",
+      "code": "EQ-002/E.01.v1",
+      "new_file": "coq/canonical/EQ_002__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN011_R_A",
+      "can_id": "CAN-011",
+      "code": "EQ-002/E.02.v1",
+      "new_file": "coq/canonical/EQ_002__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN011_readout_not_world_witness",
+      "can_id": "CAN-011",
+      "code": "EQ-002/E.02.v1",
+      "new_file": "coq/canonical/EQ_002__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN011_Notion",
+      "can_id": "CAN-011",
+      "code": "EQ-002/E.02.v1",
+      "new_file": "coq/canonical/EQ_002__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN011_code",
+      "can_id": "CAN-011",
+      "code": "EQ-002/E.02.v1",
+      "new_file": "coq/canonical/EQ_002__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN011_non_collapse",
+      "can_id": "CAN-011",
+      "code": "EQ-002/E.02.v1",
+      "new_file": "coq/canonical/EQ_002__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN012_M_A",
+      "can_id": "CAN-012",
+      "code": "EQ-002/E.03.v1",
+      "new_file": "coq/canonical/EQ_002__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN013_meaning_giving",
+      "can_id": "CAN-013",
+      "code": "EQ-015/E.01.v1",
+      "new_file": "coq/canonical/EQ_015__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN014_distort",
+      "can_id": "CAN-014",
+      "code": "EQ-015/E.02.v1",
+      "new_file": "coq/canonical/EQ_015__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN014_distortion_can_change_meaning",
+      "can_id": "CAN-014",
+      "code": "EQ-015/E.02.v1",
+      "new_file": "coq/canonical/EQ_015__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN014_distortion_preserves_epistemic_mode",
+      "can_id": "CAN-014",
+      "code": "EQ-015/E.02.v1",
+      "new_file": "coq/canonical/EQ_015__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN015_meaning",
+      "can_id": "CAN-015",
+      "code": "EQ-015/E.03.v1",
+      "new_file": "coq/canonical/EQ_015__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN016_MeaningModes",
+      "can_id": "CAN-016",
+      "code": "EQ-002/E.04.v1",
+      "new_file": "coq/canonical/EQ_002__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN016_decomposition_faithful",
+      "can_id": "CAN-016",
+      "code": "EQ-002/E.04.v1",
+      "new_file": "coq/canonical/EQ_002__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN017_experience_joint_witness",
+      "can_id": "CAN-017",
+      "code": "EQ-015/E.04.v1",
+      "new_file": "coq/canonical/EQ_015__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN017_experience_joint_witness_on_bool",
+      "can_id": "CAN-017",
+      "code": "EQ-015/E.04.v1",
+      "new_file": "coq/canonical/EQ_015__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN019_naming_operator",
+      "can_id": "CAN-019",
+      "code": "EQ-015/E.05.v1",
+      "new_file": "coq/canonical/EQ_015__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN020_NamingChainStep",
+      "can_id": "CAN-020",
+      "code": "EQ-002/E.05.v1",
+      "new_file": "coq/canonical/EQ_002__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN020_naming_chain",
+      "can_id": "CAN-020",
+      "code": "EQ-002/E.05.v1",
+      "new_file": "coq/canonical/EQ_002__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN021_ResonanceNotion",
+      "can_id": "CAN-021",
+      "code": "EQ-015/E.06.v1",
+      "new_file": "coq/canonical/EQ_015__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN021_resonance_non_collapse",
+      "can_id": "CAN-021",
+      "code": "EQ-015/E.06.v1",
+      "new_file": "coq/canonical/EQ_015__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN022_accum_work",
+      "can_id": "CAN-022",
+      "code": "EQ-015/E.07.v1",
+      "new_file": "coq/canonical/EQ_015__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN022_threshold_crossed",
+      "can_id": "CAN-022",
+      "code": "EQ-015/E.07.v1",
+      "new_file": "coq/canonical/EQ_015__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN022_Open_transition",
+      "can_id": "CAN-022",
+      "code": "EQ-015/E.07.v1",
+      "new_file": "coq/canonical/EQ_015__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN023_retention_can_change_reader",
+      "can_id": "CAN-023",
+      "code": "EQ-015/E.08.v1",
+      "new_file": "coq/canonical/EQ_015__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN024_momentum",
+      "can_id": "CAN-024",
+      "code": "EQ-002/E.06.v1",
+      "new_file": "coq/canonical/EQ_002__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN024_Open_momentum_eases_reentry",
+      "can_id": "CAN-024",
+      "code": "EQ-002/E.06.v1",
+      "new_file": "coq/canonical/EQ_002__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN024_accessibility_score",
+      "can_id": "CAN-024",
+      "code": "EQ-002/E.06.v1",
+      "new_file": "coq/canonical/EQ_002__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN024_Open_accessibility_predicts",
+      "can_id": "CAN-024",
+      "code": "EQ-002/E.06.v1",
+      "new_file": "coq/canonical/EQ_002__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN024_rhythm_does_not_determine_accessibility",
+      "can_id": "CAN-024",
+      "code": "EQ-002/E.06.v1",
+      "new_file": "coq/canonical/EQ_002__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN025_stable_under",
+      "can_id": "CAN-025",
+      "code": "weld/E.01.v1",
+      "new_file": "coq/canonical/weld__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN025_stable_under_dec",
+      "can_id": "CAN-025",
+      "code": "weld/E.01.v1",
+      "new_file": "coq/canonical/weld__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN026_eps_tot",
+      "can_id": "CAN-026",
+      "code": "EQ-002/E.07.v1",
+      "new_file": "coq/canonical/EQ_002__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN026_decomposition_identity",
+      "can_id": "CAN-026",
+      "code": "EQ-002/E.07.v1",
+      "new_file": "coq/canonical/EQ_002__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN026_fallibilism_Open",
+      "can_id": "CAN-026",
+      "code": "EQ-002/E.07.v1",
+      "new_file": "coq/canonical/EQ_002__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN027_V_A",
+      "can_id": "CAN-027",
+      "code": "EQ-015/E.09.v1",
+      "new_file": "coq/canonical/EQ_015__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN027_expected_improvement_Open",
+      "can_id": "CAN-027",
+      "code": "EQ-015/E.09.v1",
+      "new_file": "coq/canonical/EQ_015__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN028_Regime",
+      "can_id": "CAN-028",
+      "code": "EQ-015/E.10.v1",
+      "new_file": "coq/canonical/EQ_015__E_10_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN028_regime_transition_Open",
+      "can_id": "CAN-028",
+      "code": "EQ-015/E.10.v1",
+      "new_file": "coq/canonical/EQ_015__E_10_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN029_possession_constitution_non_collapse",
+      "can_id": "CAN-029",
+      "code": "weld/E.02.v1",
+      "new_file": "coq/canonical/weld__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN030_Profile",
+      "can_id": "CAN-030",
+      "code": "EQ-015/E.11.v1",
+      "new_file": "coq/canonical/EQ_015__E_11_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN030_weights_normalized",
+      "can_id": "CAN-030",
+      "code": "EQ-015/E.11.v1",
+      "new_file": "coq/canonical/EQ_015__E_11_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN030_V_A_D",
+      "can_id": "CAN-030",
+      "code": "EQ-015/E.11.v1",
+      "new_file": "coq/canonical/EQ_015__E_11_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN031_Status",
+      "can_id": "CAN-031",
+      "code": "weld/E.03.v1",
+      "new_file": "coq/canonical/weld__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN031_status_eq_dec",
+      "can_id": "CAN-031",
+      "code": "weld/E.03.v1",
+      "new_file": "coq/canonical/weld__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN031_Admission",
+      "can_id": "CAN-031",
+      "code": "weld/E.03.v1",
+      "new_file": "coq/canonical/weld__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN032_Notion",
+      "can_id": "CAN-032",
+      "code": "weld/E.04.v1",
+      "new_file": "coq/canonical/weld__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN032_code",
+      "can_id": "CAN-032",
+      "code": "weld/E.04.v1",
+      "new_file": "coq/canonical/weld__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN032_non_collapse",
+      "can_id": "CAN-032",
+      "code": "weld/E.04.v1",
+      "new_file": "coq/canonical/weld__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN032_status_and_performance_can_diverge",
+      "can_id": "CAN-032",
+      "code": "weld/E.04.v1",
+      "new_file": "coq/canonical/weld__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN033_GateOutcome",
+      "can_id": "CAN-033",
+      "code": "weld/E.05.v1",
+      "new_file": "coq/canonical/weld__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN033_Provenance",
+      "can_id": "CAN-033",
+      "code": "weld/E.05.v1",
+      "new_file": "coq/canonical/weld__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN033_gate_eq_dec",
+      "can_id": "CAN-033",
+      "code": "weld/E.05.v1",
+      "new_file": "coq/canonical/weld__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN033_prov_eq_dec",
+      "can_id": "CAN-033",
+      "code": "weld/E.05.v1",
+      "new_file": "coq/canonical/weld__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN033_Ledger",
+      "can_id": "CAN-033",
+      "code": "weld/E.05.v1",
+      "new_file": "coq/canonical/weld__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN034_Sufficiency",
+      "can_id": "CAN-034",
+      "code": "weld/E.06.v1",
+      "new_file": "coq/canonical/weld__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN034_invariant_preserving",
+      "can_id": "CAN-034",
+      "code": "weld/E.06.v1",
+      "new_file": "coq/canonical/weld__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN034_invariant_functional_implies_preserving",
+      "can_id": "CAN-034",
+      "code": "weld/E.06.v1",
+      "new_file": "coq/canonical/weld__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN035_claim_ceiling",
+      "can_id": "CAN-035",
+      "code": "weld/E.07.v1",
+      "new_file": "coq/canonical/weld__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN035_claim_ceiling_bound",
+      "can_id": "CAN-035",
+      "code": "weld/E.07.v1",
+      "new_file": "coq/canonical/weld__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN036_bridge_error",
+      "can_id": "CAN-036",
+      "code": "weld/E.08.v1",
+      "new_file": "coq/canonical/weld__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN036_transports_within",
+      "can_id": "CAN-036",
+      "code": "weld/E.08.v1",
+      "new_file": "coq/canonical/weld__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN036_identity_transport_zero_error",
+      "can_id": "CAN-036",
+      "code": "weld/E.08.v1",
+      "new_file": "coq/canonical/weld__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN037_Notion",
+      "can_id": "CAN-037",
+      "code": "A.5/E.01.v1",
+      "new_file": "coq/canonical/A_5__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN037_code",
+      "can_id": "CAN-037",
+      "code": "A.5/E.01.v1",
+      "new_file": "coq/canonical/A_5__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN037_non_collapse",
+      "can_id": "CAN-037",
+      "code": "A.5/E.01.v1",
+      "new_file": "coq/canonical/A_5__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN039_CandidateSet",
+      "can_id": "CAN-039",
+      "code": "A.5/E.02.v1",
+      "new_file": "coq/canonical/A_5__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN039_comparable",
+      "can_id": "CAN-039",
+      "code": "A.5/E.02.v1",
+      "new_file": "coq/canonical/A_5__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN039_not_in_implies_not_comparable",
+      "can_id": "CAN-039",
+      "code": "A.5/E.02.v1",
+      "new_file": "coq/canonical/A_5__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN039_Notion",
+      "can_id": "CAN-039",
+      "code": "A.5/E.02.v1",
+      "new_file": "coq/canonical/A_5__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN039_code",
+      "can_id": "CAN-039",
+      "code": "A.5/E.02.v1",
+      "new_file": "coq/canonical/A_5__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN039_usable_ne_true",
+      "can_id": "CAN-039",
+      "code": "A.5/E.02.v1",
+      "new_file": "coq/canonical/A_5__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN040_Regime",
+      "can_id": "CAN-040",
+      "code": "EQ-002/E.08.v1",
+      "new_file": "coq/canonical/EQ_002__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN040_k_epi",
+      "can_id": "CAN-040",
+      "code": "EQ-002/E.08.v1",
+      "new_file": "coq/canonical/EQ_002__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN040_classify",
+      "can_id": "CAN-040",
+      "code": "EQ-002/E.08.v1",
+      "new_file": "coq/canonical/EQ_002__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN040_classify_contractive_correct",
+      "can_id": "CAN-040",
+      "code": "EQ-002/E.08.v1",
+      "new_file": "coq/canonical/EQ_002__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_041_pre_prompt_human_state_transport",
+      "can_id": "CAN-041",
+      "code": "EQ-015/H.01.v1",
+      "new_file": "coq/canonical/EQ_015__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_042_bounded_transport",
+      "can_id": "CAN-042",
+      "code": "A.5/H.01.v1",
+      "new_file": "coq/canonical/A_5__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_042_bounded_transport_satisfiable_on_nat",
+      "can_id": "CAN-042",
+      "code": "A.5/H.01.v1",
+      "new_file": "coq/canonical/A_5__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "EntryStateAnchor",
+      "can_id": "CAN-043",
+      "code": "EQ-015/H.02.v1",
+      "new_file": "coq/canonical/EQ_015__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_043_entry_state_anchor",
+      "can_id": "CAN-043",
+      "code": "EQ-015/H.02.v1",
+      "new_file": "coq/canonical/EQ_015__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_043_mk_entry_state_anchor",
+      "can_id": "CAN-043",
+      "code": "EQ-015/H.02.v1",
+      "new_file": "coq/canonical/EQ_015__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_044_TopicEntry",
+      "can_id": "CAN-044",
+      "code": "A.5/H.02.v1",
+      "new_file": "coq/canonical/A_5__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_044_Legitimate",
+      "can_id": "CAN-044",
+      "code": "A.5/H.02.v1",
+      "new_file": "coq/canonical/A_5__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_044_Open_ProblemFirst_implication",
+      "can_id": "CAN-044",
+      "code": "A.5/H.02.v1",
+      "new_file": "coq/canonical/A_5__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_044_ProblemOnlyPolicy",
+      "can_id": "CAN-044",
+      "code": "A.5/H.02.v1",
+      "new_file": "coq/canonical/A_5__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_044_Open_ProblemFirst_ne_ProblemOnly",
+      "can_id": "CAN-044",
+      "code": "A.5/H.02.v1",
+      "new_file": "coq/canonical/A_5__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_045_prompt_coupling_and_update",
+      "can_id": "CAN-045",
+      "code": "EQ-015/H.03.v1",
+      "new_file": "coq/canonical/EQ_015__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_045_live_weight_may_change_witness",
+      "can_id": "CAN-045",
+      "code": "EQ-015/H.03.v1",
+      "new_file": "coq/canonical/EQ_015__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_046_ai_response_chain",
+      "can_id": "CAN-046",
+      "code": "EQ-015/H.04.v1",
+      "new_file": "coq/canonical/EQ_015__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_047_dialogue_session_stepper",
+      "can_id": "CAN-047",
+      "code": "EQ-015/H.05.v1",
+      "new_file": "coq/canonical/EQ_015__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_047_chi_recip",
+      "can_id": "CAN-047",
+      "code": "EQ-015/H.05.v1",
+      "new_file": "coq/canonical/EQ_015__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_047_chi_recip_bounds_witness",
+      "can_id": "CAN-047",
+      "code": "EQ-015/H.05.v1",
+      "new_file": "coq/canonical/EQ_015__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_048_agency_conditional_chain",
+      "can_id": "CAN-048",
+      "code": "EQ-002/H.01.v1",
+      "new_file": "coq/canonical/EQ_002__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_049_agency_readout",
+      "can_id": "CAN-049",
+      "code": "EQ-002/H.02.v1",
+      "new_file": "coq/canonical/EQ_002__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_049_is_automorphism",
+      "can_id": "CAN-049",
+      "code": "EQ-002/H.02.v1",
+      "new_file": "coq/canonical/EQ_002__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_049_Aut",
+      "can_id": "CAN-049",
+      "code": "EQ-002/H.02.v1",
+      "new_file": "coq/canonical/EQ_002__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "SelfState",
+      "can_id": "CAN-050",
+      "code": "weld/H.01.v1",
+      "new_file": "coq/canonical/weld__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_050_self_readout",
+      "can_id": "CAN-050",
+      "code": "weld/H.01.v1",
+      "new_file": "coq/canonical/weld__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_050_mk_self_readout",
+      "can_id": "CAN-050",
+      "code": "weld/H.01.v1",
+      "new_file": "coq/canonical/weld__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_051_horizon_triad",
+      "can_id": "CAN-051",
+      "code": "weld/H.02.v1",
+      "new_file": "coq/canonical/weld__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_051_Open_dynamic_to_information_bridge",
+      "can_id": "CAN-051",
+      "code": "weld/H.02.v1",
+      "new_file": "coq/canonical/weld__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_051_Open_information_to_phenomenal_bridge",
+      "can_id": "CAN-051",
+      "code": "weld/H.02.v1",
+      "new_file": "coq/canonical/weld__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_052_release_step",
+      "can_id": "CAN-052",
+      "code": "A.5/H.03.v1",
+      "new_file": "coq/canonical/A_5__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_052_sufficient_release_condition",
+      "can_id": "CAN-052",
+      "code": "A.5/H.03.v1",
+      "new_file": "coq/canonical/A_5__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_053_second_order_readout",
+      "can_id": "CAN-053",
+      "code": "weld/H.03.v1",
+      "new_file": "coq/canonical/weld__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_053_governance_bundle",
+      "can_id": "CAN-053",
+      "code": "weld/H.03.v1",
+      "new_file": "coq/canonical/weld__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_053_Open_no_free_governance",
+      "can_id": "CAN-053",
+      "code": "weld/H.03.v1",
+      "new_file": "coq/canonical/weld__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_054_gate_weight_valid",
+      "can_id": "CAN-054",
+      "code": "EQ-015/H.06.v1",
+      "new_file": "coq/canonical/EQ_015__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_054_retained_update",
+      "can_id": "CAN-054",
+      "code": "EQ-015/H.06.v1",
+      "new_file": "coq/canonical/EQ_015__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_054_finite_bottleneck",
+      "can_id": "CAN-054",
+      "code": "EQ-015/H.06.v1",
+      "new_file": "coq/canonical/EQ_015__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_054_finite_bottleneck_satisfiable",
+      "can_id": "CAN-054",
+      "code": "EQ-015/H.06.v1",
+      "new_file": "coq/canonical/EQ_015__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_054_Open_empirical_programme",
+      "can_id": "CAN-054",
+      "code": "EQ-015/H.06.v1",
+      "new_file": "coq/canonical/EQ_015__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "HumanRetainedGraph",
+      "can_id": "CAN-055",
+      "code": "weld/H.04.v1",
+      "new_file": "coq/canonical/weld__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_055_human_domain_state_graph",
+      "can_id": "CAN-055",
+      "code": "weld/H.04.v1",
+      "new_file": "coq/canonical/weld__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_055_Dr_spine_equation",
+      "can_id": "CAN-055",
+      "code": "weld/H.04.v1",
+      "new_file": "coq/canonical/weld__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_056_synergy_ratio",
+      "can_id": "CAN-056",
+      "code": "A.5/H.04.v1",
+      "new_file": "coq/canonical/A_5__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_056_more_output_ne_more_diversity",
+      "can_id": "CAN-056",
+      "code": "A.5/H.04.v1",
+      "new_file": "coq/canonical/A_5__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_056_Open_H1_H2",
+      "can_id": "CAN-056",
+      "code": "A.5/H.04.v1",
+      "new_file": "coq/canonical/A_5__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_057_Pi_live",
+      "can_id": "CAN-057",
+      "code": "EQ-015/H.07.v1",
+      "new_file": "coq/canonical/EQ_015__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_057_full_nesting_witness",
+      "can_id": "CAN-057",
+      "code": "EQ-015/H.07.v1",
+      "new_file": "coq/canonical/EQ_015__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_057_full_nesting_worldsystem_witness",
+      "can_id": "CAN-057",
+      "code": "EQ-015/H.07.v1",
+      "new_file": "coq/canonical/EQ_015__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_058_live_field",
+      "can_id": "CAN-058",
+      "code": "EQ-015/H.08.v1",
+      "new_file": "coq/canonical/EQ_015__H_08_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_058_live_ge_threshold",
+      "can_id": "CAN-058",
+      "code": "EQ-015/H.08.v1",
+      "new_file": "coq/canonical/EQ_015__H_08_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_059_is_valid_choice",
+      "can_id": "CAN-059",
+      "code": "A.5/H.05.v1",
+      "new_file": "coq/canonical/A_5__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_059_enactment_may_differ_witness",
+      "can_id": "CAN-059",
+      "code": "A.5/H.05.v1",
+      "new_file": "coq/canonical/A_5__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_059_observation_loses_information_witness",
+      "can_id": "CAN-059",
+      "code": "A.5/H.05.v1",
+      "new_file": "coq/canonical/A_5__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_059_stage_chain_non_collapse_witness",
+      "can_id": "CAN-059",
+      "code": "A.5/H.05.v1",
+      "new_file": "coq/canonical/A_5__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_060_p_star",
+      "can_id": "CAN-060",
+      "code": "EQ-015/H.09.v1",
+      "new_file": "coq/canonical/EQ_015__H_09_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_060_p_star_upper_bound_witness",
+      "can_id": "CAN-060",
+      "code": "EQ-015/H.09.v1",
+      "new_file": "coq/canonical/EQ_015__H_09_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_061_live_weight_may_change_witness",
+      "can_id": "CAN-061",
+      "code": "A.5/H.06.v1",
+      "new_file": "coq/canonical/A_5__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_061_Open_live_field_dynamic",
+      "can_id": "CAN-061",
+      "code": "A.5/H.06.v1",
+      "new_file": "coq/canonical/A_5__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_062_KnowledgeStatus",
+      "can_id": "CAN-062",
+      "code": "EQ-015/H.10.v1",
+      "new_file": "coq/canonical/EQ_015__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_062_status_value",
+      "can_id": "CAN-062",
+      "code": "EQ-015/H.10.v1",
+      "new_file": "coq/canonical/EQ_015__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_062_non_collapse_witness",
+      "can_id": "CAN-062",
+      "code": "EQ-015/H.10.v1",
+      "new_file": "coq/canonical/EQ_015__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "RepairedStatus",
+      "can_id": "CAN-063",
+      "code": "EQ-015/H.11.v1",
+      "new_file": "coq/canonical/EQ_015__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_063_next_status",
+      "can_id": "CAN-063",
+      "code": "EQ-015/H.11.v1",
+      "new_file": "coq/canonical/EQ_015__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_063_dangerous_shortcut",
+      "can_id": "CAN-063",
+      "code": "EQ-015/H.11.v1",
+      "new_file": "coq/canonical/EQ_015__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "TransportDefect",
+      "can_id": "CAN-064",
+      "code": "weld/H.05.v1",
+      "new_file": "coq/canonical/weld__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_064_transport_condition",
+      "can_id": "CAN-064",
+      "code": "weld/H.05.v1",
+      "new_file": "coq/canonical/weld__H_05_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_065_domain_weld_defect",
+      "can_id": "CAN-065",
+      "code": "weld/H.06.v1",
+      "new_file": "coq/canonical/weld__H_06_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_066_candidate_update",
+      "can_id": "CAN-066",
+      "code": "weld/H.07.v1",
+      "new_file": "coq/canonical/weld__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_066_is_low_rank",
+      "can_id": "CAN-066",
+      "code": "weld/H.07.v1",
+      "new_file": "coq/canonical/weld__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_066_retention_gate_update",
+      "can_id": "CAN-066",
+      "code": "weld/H.07.v1",
+      "new_file": "coq/canonical/weld__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_066_gate_weight_valid",
+      "can_id": "CAN-066",
+      "code": "weld/H.07.v1",
+      "new_file": "coq/canonical/weld__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_066_gate_avoids_doubling_witness",
+      "can_id": "CAN-066",
+      "code": "weld/H.07.v1",
+      "new_file": "coq/canonical/weld__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_066_RET",
+      "can_id": "CAN-066",
+      "code": "weld/H.07.v1",
+      "new_file": "coq/canonical/weld__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_066_RET_rearrangement_witness",
+      "can_id": "CAN-066",
+      "code": "weld/H.07.v1",
+      "new_file": "coq/canonical/weld__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_067_Delta_s",
+      "can_id": "CAN-067",
+      "code": "EQ-015/H.12.v1",
+      "new_file": "coq/canonical/EQ_015__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_067_is_expansion",
+      "can_id": "CAN-067",
+      "code": "EQ-015/H.12.v1",
+      "new_file": "coq/canonical/EQ_015__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_067_is_tunnel",
+      "can_id": "CAN-067",
+      "code": "EQ-015/H.12.v1",
+      "new_file": "coq/canonical/EQ_015__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_068_epistemic_fusion_sequence",
+      "can_id": "CAN-068",
+      "code": "EQ-015/H.13.v1",
+      "new_file": "coq/canonical/EQ_015__H_13_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_069_fluency_ne_baseline",
+      "can_id": "CAN-069",
+      "code": "A.5/H.07.v1",
+      "new_file": "coq/canonical/A_5__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_069_explanation_ne_verification",
+      "can_id": "CAN-069",
+      "code": "A.5/H.07.v1",
+      "new_file": "coq/canonical/A_5__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_069_resistance_quality_ne_accessibility",
+      "can_id": "CAN-069",
+      "code": "A.5/H.07.v1",
+      "new_file": "coq/canonical/A_5__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_069_uncertainty_signal_ne_truth",
+      "can_id": "CAN-069",
+      "code": "A.5/H.07.v1",
+      "new_file": "coq/canonical/A_5__H_07_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_070_D_eff",
+      "can_id": "CAN-070",
+      "code": "weld/H.08.v1",
+      "new_file": "coq/canonical/weld__H_08_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_070_d_s",
+      "can_id": "CAN-070",
+      "code": "weld/H.08.v1",
+      "new_file": "coq/canonical/weld__H_08_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_071_R_ep",
+      "can_id": "CAN-071",
+      "code": "EQ-015/H.14.v1",
+      "new_file": "coq/canonical/EQ_015__H_14_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_071_U_R",
+      "can_id": "CAN-071",
+      "code": "EQ-015/H.14.v1",
+      "new_file": "coq/canonical/EQ_015__H_14_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_071_R_ex",
+      "can_id": "CAN-071",
+      "code": "EQ-015/H.14.v1",
+      "new_file": "coq/canonical/EQ_015__H_14_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_071_quality_ne_accessibility",
+      "can_id": "CAN-071",
+      "code": "EQ-015/H.14.v1",
+      "new_file": "coq/canonical/EQ_015__H_14_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CalibrationRecord",
+      "can_id": "CAN-072",
+      "code": "EQ-015/H.15.v1",
+      "new_file": "coq/canonical/EQ_015__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_072_calibration_record",
+      "can_id": "CAN-072",
+      "code": "EQ-015/H.15.v1",
+      "new_file": "coq/canonical/EQ_015__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_072_mk_calibration_record",
+      "can_id": "CAN-072",
+      "code": "EQ-015/H.15.v1",
+      "new_file": "coq/canonical/EQ_015__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_072_calibration_error",
+      "can_id": "CAN-072",
+      "code": "EQ-015/H.15.v1",
+      "new_file": "coq/canonical/EQ_015__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_073_Open_ctsa_bridge",
+      "can_id": "CAN-073",
+      "code": "weld/H.09.v1",
+      "new_file": "coq/canonical/weld__H_09_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_074_assisted_gain_does_not_imply_return_gain",
+      "can_id": "CAN-074",
+      "code": "A.5/H.08.v1",
+      "new_file": "coq/canonical/A_5__H_08_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_075_EndChainNotion",
+      "can_id": "CAN-075",
+      "code": "A.5/H.09.v1",
+      "new_file": "coq/canonical/A_5__H_09_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_075_end_chain_value",
+      "can_id": "CAN-075",
+      "code": "A.5/H.09.v1",
+      "new_file": "coq/canonical/A_5__H_09_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_075_exposure_retention_improvement_non_collapse",
+      "can_id": "CAN-075",
+      "code": "A.5/H.09.v1",
+      "new_file": "coq/canonical/A_5__H_09_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_076_HReturn",
+      "can_id": "CAN-076",
+      "code": "EQ-015/H.16.v1",
+      "new_file": "coq/canonical/EQ_015__H_16_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_076_mk_h_return",
+      "can_id": "CAN-076",
+      "code": "EQ-015/H.16.v1",
+      "new_file": "coq/canonical/EQ_015__H_16_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "ReturnCTSA4",
+      "can_id": "CAN-077",
+      "code": "EQ-015/H.17.v1",
+      "new_file": "coq/canonical/EQ_015__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_077_human_return_ctsa4",
+      "can_id": "CAN-077",
+      "code": "EQ-015/H.17.v1",
+      "new_file": "coq/canonical/EQ_015__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_a",
+      "old_identifier": "CAN_077_mk_human_return_ctsa4",
+      "can_id": "CAN-077",
+      "code": "EQ-015/H.17.v1",
+      "new_file": "coq/canonical/EQ_015__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_078_Open_dra_constitutive",
+      "can_id": "CAN-078",
+      "code": "EQ-015/H.18.v1",
+      "new_file": "coq/canonical/EQ_015__H_18_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_079_AUG",
+      "can_id": "CAN-079",
+      "code": "EQ-015/H.19.v1",
+      "new_file": "coq/canonical/EQ_015__H_19_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_079_SYN",
+      "can_id": "CAN-079",
+      "code": "EQ-015/H.19.v1",
+      "new_file": "coq/canonical/EQ_015__H_19_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_079_aug_syn_non_collapse_witness",
+      "can_id": "CAN-079",
+      "code": "EQ-015/H.19.v1",
+      "new_file": "coq/canonical/EQ_015__H_19_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_080_fluency_ne_baseline",
+      "can_id": "CAN-080",
+      "code": "A.5/H.10.v1",
+      "new_file": "coq/canonical/A_5__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_080_explanation_ne_verification",
+      "can_id": "CAN-080",
+      "code": "A.5/H.10.v1",
+      "new_file": "coq/canonical/A_5__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_080_output_count_ne_epistemic_diversity",
+      "can_id": "CAN-080",
+      "code": "A.5/H.10.v1",
+      "new_file": "coq/canonical/A_5__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_080_exposure_ne_retention_ne_improvement",
+      "can_id": "CAN-080",
+      "code": "A.5/H.10.v1",
+      "new_file": "coq/canonical/A_5__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_080_trust_ne_calibrated_trust",
+      "can_id": "CAN-080",
+      "code": "A.5/H.10.v1",
+      "new_file": "coq/canonical/A_5__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_081_Open_hypotheses",
+      "can_id": "CAN-081",
+      "code": "EQ-015/H.20.v1",
+      "new_file": "coq/canonical/EQ_015__H_20_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_082_deployment_policy",
+      "can_id": "CAN-082",
+      "code": "EQ-015/H.21.v1",
+      "new_file": "coq/canonical/EQ_015__H_21_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "DCPLiteStage",
+      "can_id": "CAN-082",
+      "code": "EQ-015/H.21.v1",
+      "new_file": "coq/canonical/EQ_015__H_21_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_082_lite_next",
+      "can_id": "CAN-082",
+      "code": "EQ-015/H.21.v1",
+      "new_file": "coq/canonical/EQ_015__H_21_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "DCPStage",
+      "can_id": "CAN-083",
+      "code": "A.5/H.11.v1",
+      "new_file": "coq/canonical/A_5__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_083_stage_next",
+      "can_id": "CAN-083",
+      "code": "A.5/H.11.v1",
+      "new_file": "coq/canonical/A_5__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_083_oppose_ne_manufacture",
+      "can_id": "CAN-083",
+      "code": "A.5/H.11.v1",
+      "new_file": "coq/canonical/A_5__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "StakesKind",
+      "can_id": "CAN-084",
+      "code": "A.5/H.12.v1",
+      "new_file": "coq/canonical/A_5__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "VerifyMethod",
+      "can_id": "CAN-084",
+      "code": "A.5/H.12.v1",
+      "new_file": "coq/canonical/A_5__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_084_high_stakes",
+      "can_id": "CAN-084",
+      "code": "A.5/H.12.v1",
+      "new_file": "coq/canonical/A_5__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "IntegrationRec",
+      "can_id": "CAN-085",
+      "code": "A.8/H.01.v1",
+      "new_file": "coq/canonical/A_8__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_085_integration_record",
+      "can_id": "CAN-085",
+      "code": "A.8/H.01.v1",
+      "new_file": "coq/canonical/A_8__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_085_mk_integration_record",
+      "can_id": "CAN-085",
+      "code": "A.8/H.01.v1",
+      "new_file": "coq/canonical/A_8__H_01_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_086_is_reset",
+      "can_id": "CAN-086",
+      "code": "EQ-015/H.22.v1",
+      "new_file": "coq/canonical/EQ_015__H_22_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_086_is_removal",
+      "can_id": "CAN-086",
+      "code": "EQ-015/H.22.v1",
+      "new_file": "coq/canonical/EQ_015__H_22_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "ReturnConversionVector",
+      "can_id": "CAN-087",
+      "code": "EQ-015/H.23.v1",
+      "new_file": "coq/canonical/EQ_015__H_23_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_087_return_conversion_vector",
+      "can_id": "CAN-087",
+      "code": "EQ-015/H.23.v1",
+      "new_file": "coq/canonical/EQ_015__H_23_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_087_mk_return_conversion_vector",
+      "can_id": "CAN-087",
+      "code": "EQ-015/H.23.v1",
+      "new_file": "coq/canonical/EQ_015__H_23_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_087_F_return",
+      "can_id": "CAN-087",
+      "code": "EQ-015/H.23.v1",
+      "new_file": "coq/canonical/EQ_015__H_23_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_088_world_closure",
+      "can_id": "CAN-088",
+      "code": "EQ-015/H.24.v1",
+      "new_file": "coq/canonical/EQ_015__H_24_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_088_CycleStage",
+      "can_id": "CAN-088",
+      "code": "EQ-015/H.24.v1",
+      "new_file": "coq/canonical/EQ_015__H_24_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_088_cycle_next",
+      "can_id": "CAN-088",
+      "code": "EQ-015/H.24.v1",
+      "new_file": "coq/canonical/EQ_015__H_24_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_089_is_expansion",
+      "can_id": "CAN-089",
+      "code": "A.8/H.02.v1",
+      "new_file": "coq/canonical/A_8__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_089_is_contraction",
+      "can_id": "CAN-089",
+      "code": "A.8/H.02.v1",
+      "new_file": "coq/canonical/A_8__H_02_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_090_Open_dcp_propositions",
+      "can_id": "CAN-090",
+      "code": "EQ-015/H.25.v1",
+      "new_file": "coq/canonical/EQ_015__H_25_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_091_Open_hypotheses",
+      "can_id": "CAN-091",
+      "code": "EQ-015/H.26.v1",
+      "new_file": "coq/canonical/EQ_015__H_26_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "ClosingQuestion",
+      "can_id": "CAN-092",
+      "code": "EQ-015/H.27.v1",
+      "new_file": "coq/canonical/EQ_015__H_27_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_092_closing_questions",
+      "can_id": "CAN-092",
+      "code": "EQ-015/H.27.v1",
+      "new_file": "coq/canonical/EQ_015__H_27_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "EventContext",
+      "can_id": "CAN-093",
+      "code": "A.5/H.13.v1",
+      "new_file": "coq/canonical/A_5__H_13_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_093_interpretation",
+      "can_id": "CAN-093",
+      "code": "A.5/H.13.v1",
+      "new_file": "coq/canonical/A_5__H_13_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_093_interpretation_ne_event_witness",
+      "can_id": "CAN-093",
+      "code": "A.5/H.13.v1",
+      "new_file": "coq/canonical/A_5__H_13_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "ContextS",
+      "can_id": "CAN-094",
+      "code": "weld/H.10.v1",
+      "new_file": "coq/canonical/weld__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_094_is_agency",
+      "can_id": "CAN-094",
+      "code": "weld/H.10.v1",
+      "new_file": "coq/canonical/weld__H_10_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_095_referential_ne_embodiment",
+      "can_id": "CAN-095",
+      "code": "A.5/H.14.v1",
+      "new_file": "coq/canonical/A_5__H_14_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_095_experiential_grounding",
+      "can_id": "CAN-095",
+      "code": "A.5/H.14.v1",
+      "new_file": "coq/canonical/A_5__H_14_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_096_interaction_efficiency",
+      "can_id": "CAN-096",
+      "code": "EQ-015/H.28.v1",
+      "new_file": "coq/canonical/EQ_015__H_28_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_097_Open_hypotheses",
+      "can_id": "CAN-097",
+      "code": "EQ-015/H.29.v1",
+      "new_file": "coq/canonical/EQ_015__H_29_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_098_hca_native_river",
+      "can_id": "CAN-098",
+      "code": "EQ-002/H.03.v1",
+      "new_file": "coq/canonical/EQ_002__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "HCACandidateState",
+      "can_id": "CAN-099",
+      "code": "EQ-015/H.30.v1",
+      "new_file": "coq/canonical/EQ_015__H_30_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_099_hca_candidate_state",
+      "can_id": "CAN-099",
+      "code": "EQ-015/H.30.v1",
+      "new_file": "coq/canonical/EQ_015__H_30_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_099_mk_hca_candidate_state",
+      "can_id": "CAN-099",
+      "code": "EQ-015/H.30.v1",
+      "new_file": "coq/canonical/EQ_015__H_30_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_100_LifeCapitalContext",
+      "can_id": "CAN-100",
+      "code": "EQ-015/H.31.v1",
+      "new_file": "coq/canonical/EQ_015__H_31_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_100_mk_life_capital_context",
+      "can_id": "CAN-100",
+      "code": "EQ-015/H.31.v1",
+      "new_file": "coq/canonical/EQ_015__H_31_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_101_resources_ne_access",
+      "can_id": "CAN-101",
+      "code": "A.5/H.15.v1",
+      "new_file": "coq/canonical/A_5__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_101_access_ne_capability",
+      "can_id": "CAN-101",
+      "code": "A.5/H.15.v1",
+      "new_file": "coq/canonical/A_5__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_101_capability_ne_realized_opportunity",
+      "can_id": "CAN-101",
+      "code": "A.5/H.15.v1",
+      "new_file": "coq/canonical/A_5__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_101_access_ne_control",
+      "can_id": "CAN-101",
+      "code": "A.5/H.15.v1",
+      "new_file": "coq/canonical/A_5__H_15_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_102_BarrierType",
+      "can_id": "CAN-102",
+      "code": "A.5/H.16.v1",
+      "new_file": "coq/canonical/A_5__H_16_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_102_BarrierLedger",
+      "can_id": "CAN-102",
+      "code": "A.5/H.16.v1",
+      "new_file": "coq/canonical/A_5__H_16_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_102_observed_difficulty_ne_skill_deficit_witness",
+      "can_id": "CAN-102",
+      "code": "A.5/H.16.v1",
+      "new_file": "coq/canonical/A_5__H_16_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_103_C_live",
+      "can_id": "CAN-103",
+      "code": "A.5/H.17.v1",
+      "new_file": "coq/canonical/A_5__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_103_C_live_subset_witness",
+      "can_id": "CAN-103",
+      "code": "A.5/H.17.v1",
+      "new_file": "coq/canonical/A_5__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_103_proactive_ne_ownership_witness",
+      "can_id": "CAN-103",
+      "code": "A.5/H.17.v1",
+      "new_file": "coq/canonical/A_5__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_103_capability_ne_ai_authority_witness",
+      "can_id": "CAN-103",
+      "code": "A.5/H.17.v1",
+      "new_file": "coq/canonical/A_5__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_103_scaffolding_ne_control_witness",
+      "can_id": "CAN-103",
+      "code": "A.5/H.17.v1",
+      "new_file": "coq/canonical/A_5__H_17_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_104_hca_ddiff",
+      "can_id": "CAN-104",
+      "code": "EQ-015/H.32.v1",
+      "new_file": "coq/canonical/EQ_015__H_32_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_104_Open_scaffold_fading",
+      "can_id": "CAN-104",
+      "code": "EQ-015/H.32.v1",
+      "new_file": "coq/canonical/EQ_015__H_32_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_105_omega_real",
+      "can_id": "CAN-105",
+      "code": "A.5/H.18.v1",
+      "new_file": "coq/canonical/A_5__H_18_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_105_credential_ne_capability_witness",
+      "can_id": "CAN-105",
+      "code": "A.5/H.18.v1",
+      "new_file": "coq/canonical/A_5__H_18_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_105_legibility_ne_worth_witness",
+      "can_id": "CAN-105",
+      "code": "A.5/H.18.v1",
+      "new_file": "coq/canonical/A_5__H_18_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_106_NetAdvancementRecord",
+      "can_id": "CAN-106",
+      "code": "A.8/H.03.v1",
+      "new_file": "coq/canonical/A_8__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_106_mk_net_advancement_record",
+      "can_id": "CAN-106",
+      "code": "A.8/H.03.v1",
+      "new_file": "coq/canonical/A_8__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_106_ATE_HCA",
+      "can_id": "CAN-106",
+      "code": "A.8/H.03.v1",
+      "new_file": "coq/canonical/A_8__H_03_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_107_raw_difference_ne_effect_hca",
+      "can_id": "CAN-107",
+      "code": "A.5/H.19.v1",
+      "new_file": "coq/canonical/A_5__H_19_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_108_adult_governance",
+      "can_id": "CAN-108",
+      "code": "EQ-015/H.33.v1",
+      "new_file": "coq/canonical/EQ_015__H_33_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_108_child_governance",
+      "can_id": "CAN-108",
+      "code": "EQ-015/H.33.v1",
+      "new_file": "coq/canonical/EQ_015__H_33_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_109_Open_hypotheses",
+      "can_id": "CAN-109",
+      "code": "EQ-015/H.34.v1",
+      "new_file": "coq/canonical/EQ_015__H_34_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "RivalModel",
+      "can_id": "CAN-110",
+      "code": "weld/H.11.v1",
+      "new_file": "coq/canonical/weld__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_110_ladder_index",
+      "can_id": "CAN-110",
+      "code": "weld/H.11.v1",
+      "new_file": "coq/canonical/weld__H_11_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "AttributionLabel",
+      "can_id": "CAN-111",
+      "code": "EQ-002/H.04.v1",
+      "new_file": "coq/canonical/EQ_002__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "OriginObject",
+      "can_id": "CAN-111",
+      "code": "EQ-002/H.04.v1",
+      "new_file": "coq/canonical/EQ_002__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_111_attribution",
+      "can_id": "CAN-111",
+      "code": "EQ-002/H.04.v1",
+      "new_file": "coq/canonical/EQ_002__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_112_is_argmax",
+      "can_id": "CAN-112",
+      "code": "A.8/H.04.v1",
+      "new_file": "coq/canonical/A_8__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_112_Open_is_argmin",
+      "can_id": "CAN-112",
+      "code": "A.8/H.04.v1",
+      "new_file": "coq/canonical/A_8__H_04_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CTSAStage",
+      "can_id": "CAN-113",
+      "code": "weld/H.12.v1",
+      "new_file": "coq/canonical/weld__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_113_stage_next",
+      "can_id": "CAN-113",
+      "code": "weld/H.12.v1",
+      "new_file": "coq/canonical/weld__H_12_v1.v"
+    },
+    {
+      "old_module": "MRC_human_ai_reading_b",
+      "old_identifier": "CAN_114_Open_predictions",
+      "can_id": "CAN-114",
+      "code": "EQ-015/H.35.v1",
+      "new_file": "coq/canonical/EQ_015__H_35_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_115_degree",
+      "can_id": "CAN-115",
+      "code": "weld/S.01.v1",
+      "new_file": "coq/canonical/weld__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_115_L_R",
+      "can_id": "CAN-115",
+      "code": "weld/S.01.v1",
+      "new_file": "coq/canonical/weld__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_115_A",
+      "can_id": "CAN-115",
+      "code": "weld/S.01.v1",
+      "new_file": "coq/canonical/weld__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_115_step",
+      "can_id": "CAN-115",
+      "code": "weld/S.01.v1",
+      "new_file": "coq/canonical/weld__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_115_par_stepper_moves_state",
+      "can_id": "CAN-115",
+      "code": "weld/S.01.v1",
+      "new_file": "coq/canonical/weld__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_116_ManifestedRecord",
+      "can_id": "CAN-116",
+      "code": "weld/S.02.v1",
+      "new_file": "coq/canonical/weld__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_116_is_agency",
+      "can_id": "CAN-116",
+      "code": "weld/S.02.v1",
+      "new_file": "coq/canonical/weld__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_116_is_collective",
+      "can_id": "CAN-116",
+      "code": "weld/S.02.v1",
+      "new_file": "coq/canonical/weld__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_116_axioms_satisfiable",
+      "can_id": "CAN-116",
+      "code": "weld/S.02.v1",
+      "new_file": "coq/canonical/weld__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_117_Record",
+      "can_id": "CAN-117",
+      "code": "EQ-015/S.01.v1",
+      "new_file": "coq/canonical/EQ_015__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_117_Regime",
+      "can_id": "CAN-117",
+      "code": "EQ-015/S.01.v1",
+      "new_file": "coq/canonical/EQ_015__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_117_record_updates",
+      "can_id": "CAN-117",
+      "code": "EQ-015/S.01.v1",
+      "new_file": "coq/canonical/EQ_015__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_117_agency_updates",
+      "can_id": "CAN-117",
+      "code": "EQ-015/S.01.v1",
+      "new_file": "coq/canonical/EQ_015__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_117_Etic",
+      "can_id": "CAN-117",
+      "code": "EQ-015/S.01.v1",
+      "new_file": "coq/canonical/EQ_015__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_117_etic_satisfiable",
+      "can_id": "CAN-117",
+      "code": "EQ-015/S.01.v1",
+      "new_file": "coq/canonical/EQ_015__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_118_non_increasing",
+      "can_id": "CAN-118",
+      "code": "EQ-015/S.02.v1",
+      "new_file": "coq/canonical/EQ_015__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_118_Ethical",
+      "can_id": "CAN-118",
+      "code": "EQ-015/S.02.v1",
+      "new_file": "coq/canonical/EQ_015__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_118_ethical_satisfiable",
+      "can_id": "CAN-118",
+      "code": "EQ-015/S.02.v1",
+      "new_file": "coq/canonical/EQ_015__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_119_min_margin",
+      "can_id": "CAN-119",
+      "code": "EQ-015/S.03.v1",
+      "new_file": "coq/canonical/EQ_015__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_119_Eth_col",
+      "can_id": "CAN-119",
+      "code": "EQ-015/S.03.v1",
+      "new_file": "coq/canonical/EQ_015__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_119_Conf_ind_to_col",
+      "can_id": "CAN-119",
+      "code": "EQ-015/S.03.v1",
+      "new_file": "coq/canonical/EQ_015__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_119_Conf_col_to_ind",
+      "can_id": "CAN-119",
+      "code": "EQ-015/S.03.v1",
+      "new_file": "coq/canonical/EQ_015__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_119_structural_injustice",
+      "can_id": "CAN-119",
+      "code": "EQ-015/S.03.v1",
+      "new_file": "coq/canonical/EQ_015__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_119_structural_injustice_satisfiable",
+      "can_id": "CAN-119",
+      "code": "EQ-015/S.03.v1",
+      "new_file": "coq/canonical/EQ_015__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_120_moral_cost",
+      "can_id": "CAN-120",
+      "code": "weld/S.03.v1",
+      "new_file": "coq/canonical/weld__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_120_Responsibility",
+      "can_id": "CAN-120",
+      "code": "weld/S.03.v1",
+      "new_file": "coq/canonical/weld__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_120_choice_gate",
+      "can_id": "CAN-120",
+      "code": "weld/S.03.v1",
+      "new_file": "coq/canonical/weld__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_120_choice_gate_satisfiable",
+      "can_id": "CAN-120",
+      "code": "weld/S.03.v1",
+      "new_file": "coq/canonical/weld__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_120_Tragic",
+      "can_id": "CAN-120",
+      "code": "weld/S.03.v1",
+      "new_file": "coq/canonical/weld__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_120_tragic_satisfiable",
+      "can_id": "CAN-120",
+      "code": "weld/S.03.v1",
+      "new_file": "coq/canonical/weld__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_121_ProtoAgency",
+      "can_id": "CAN-121",
+      "code": "A.5/S.01.v1",
+      "new_file": "coq/canonical/A_5__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_121_StateConstraintCoupling",
+      "can_id": "CAN-121",
+      "code": "A.5/S.01.v1",
+      "new_file": "coq/canonical/A_5__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_121_L3_history",
+      "can_id": "CAN-121",
+      "code": "A.5/S.01.v1",
+      "new_file": "coq/canonical/A_5__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_121_L4_predictive",
+      "can_id": "CAN-121",
+      "code": "A.5/S.01.v1",
+      "new_file": "coq/canonical/A_5__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_121_L5_meta",
+      "can_id": "CAN-121",
+      "code": "A.5/S.01.v1",
+      "new_file": "coq/canonical/A_5__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_121_hierarchy_levels_satisfiable",
+      "can_id": "CAN-121",
+      "code": "A.5/S.01.v1",
+      "new_file": "coq/canonical/A_5__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_122_BeliefVector",
+      "can_id": "CAN-122",
+      "code": "weld/S.04.v1",
+      "new_file": "coq/canonical/weld__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_122_Bel",
+      "can_id": "CAN-122",
+      "code": "weld/S.04.v1",
+      "new_file": "coq/canonical/weld__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_122_update",
+      "can_id": "CAN-122",
+      "code": "weld/S.04.v1",
+      "new_file": "coq/canonical/weld__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_122_group_belief",
+      "can_id": "CAN-122",
+      "code": "weld/S.04.v1",
+      "new_file": "coq/canonical/weld__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_122_sigma_K",
+      "can_id": "CAN-122",
+      "code": "weld/S.04.v1",
+      "new_file": "coq/canonical/weld__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_122_belief_scale_nonpromotion",
+      "can_id": "CAN-122",
+      "code": "weld/S.04.v1",
+      "new_file": "coq/canonical/weld__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_123_GroupState",
+      "can_id": "CAN-123",
+      "code": "weld/S.05.v1",
+      "new_file": "coq/canonical/weld__S_05_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_123_group_readout",
+      "can_id": "CAN-123",
+      "code": "weld/S.05.v1",
+      "new_file": "coq/canonical/weld__S_05_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_123_memory_update",
+      "can_id": "CAN-123",
+      "code": "weld/S.05.v1",
+      "new_file": "coq/canonical/weld__S_05_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_123_memory_update_zero_signal",
+      "can_id": "CAN-123",
+      "code": "weld/S.05.v1",
+      "new_file": "coq/canonical/weld__S_05_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_124_power_live_gap",
+      "can_id": "CAN-124",
+      "code": "weld/S.06.v1",
+      "new_file": "coq/canonical/weld__S_06_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_125_DCPStage",
+      "can_id": "CAN-125",
+      "code": "weld/S.07.v1",
+      "new_file": "coq/canonical/weld__S_07_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_125_index",
+      "can_id": "CAN-125",
+      "code": "weld/S.07.v1",
+      "new_file": "coq/canonical/weld__S_07_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_125_index_injective",
+      "can_id": "CAN-125",
+      "code": "weld/S.07.v1",
+      "new_file": "coq/canonical/weld__S_07_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_125_route_is_strictly_ordered",
+      "can_id": "CAN-125",
+      "code": "weld/S.07.v1",
+      "new_file": "coq/canonical/weld__S_07_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_126_falsifier_condition",
+      "can_id": "CAN-126",
+      "code": "A.5/S.02.v1",
+      "new_file": "coq/canonical/A_5__S_02_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_127_OLWProposition",
+      "can_id": "CAN-127",
+      "code": "weld/S.08.v1",
+      "new_file": "coq/canonical/weld__S_08_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_128_Pi_live",
+      "can_id": "CAN-128",
+      "code": "A.5/S.03.v1",
+      "new_file": "coq/canonical/A_5__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_128_live_field",
+      "can_id": "CAN-128",
+      "code": "A.5/S.03.v1",
+      "new_file": "coq/canonical/A_5__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_128_is_valid_choice",
+      "can_id": "CAN-128",
+      "code": "A.5/S.03.v1",
+      "new_file": "coq/canonical/A_5__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_128_live_full_nesting",
+      "can_id": "CAN-128",
+      "code": "A.5/S.03.v1",
+      "new_file": "coq/canonical/A_5__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_128_enactment_may_differ_from_choice",
+      "can_id": "CAN-128",
+      "code": "A.5/S.03.v1",
+      "new_file": "coq/canonical/A_5__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_128_observation_loses_information",
+      "can_id": "CAN-128",
+      "code": "A.5/S.03.v1",
+      "new_file": "coq/canonical/A_5__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_128_six_level_non_collapse",
+      "can_id": "CAN-128",
+      "code": "A.5/S.03.v1",
+      "new_file": "coq/canonical/A_5__S_03_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_129_NCItem",
+      "can_id": "CAN-129",
+      "code": "EQ-015/S.04.v1",
+      "new_file": "coq/canonical/EQ_015__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_129_index",
+      "can_id": "CAN-129",
+      "code": "EQ-015/S.04.v1",
+      "new_file": "coq/canonical/EQ_015__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_129_index_injective",
+      "can_id": "CAN-129",
+      "code": "EQ-015/S.04.v1",
+      "new_file": "coq/canonical/EQ_015__S_04_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_130_MeanPropItem",
+      "can_id": "CAN-130",
+      "code": "EQ-015/S.05.v1",
+      "new_file": "coq/canonical/EQ_015__S_05_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_131_LiveHyp",
+      "can_id": "CAN-131",
+      "code": "weld/S.09.v1",
+      "new_file": "coq/canonical/weld__S_09_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_132_p_star",
+      "can_id": "CAN-132",
+      "code": "EQ-015/S.06.v1",
+      "new_file": "coq/canonical/EQ_015__S_06_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_132_p_star_upper_bound",
+      "can_id": "CAN-132",
+      "code": "EQ-015/S.06.v1",
+      "new_file": "coq/canonical/EQ_015__S_06_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_133_p_star2",
+      "can_id": "CAN-133",
+      "code": "EQ-015/S.07.v1",
+      "new_file": "coq/canonical/EQ_015__S_07_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_133_recoverable_gap",
+      "can_id": "CAN-133",
+      "code": "EQ-015/S.07.v1",
+      "new_file": "coq/canonical/EQ_015__S_07_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_133_recoverable_gap_nonneg",
+      "can_id": "CAN-133",
+      "code": "EQ-015/S.07.v1",
+      "new_file": "coq/canonical/EQ_015__S_07_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_134_live_field_gap",
+      "can_id": "CAN-134",
+      "code": "EQ-015/S.08.v1",
+      "new_file": "coq/canonical/EQ_015__S_08_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_134_gap_nonneg",
+      "can_id": "CAN-134",
+      "code": "EQ-015/S.08.v1",
+      "new_file": "coq/canonical/EQ_015__S_08_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_135_Channel",
+      "can_id": "CAN-135",
+      "code": "EQ-015/S.09.v1",
+      "new_file": "coq/canonical/EQ_015__S_09_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_135_corrigible",
+      "can_id": "CAN-135",
+      "code": "EQ-015/S.09.v1",
+      "new_file": "coq/canonical/EQ_015__S_09_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_135_corrigible_satisfiable",
+      "can_id": "CAN-135",
+      "code": "EQ-015/S.09.v1",
+      "new_file": "coq/canonical/EQ_015__S_09_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_136_Observation",
+      "can_id": "CAN-136",
+      "code": "EQ-015/S.10.v1",
+      "new_file": "coq/canonical/EQ_015__S_10_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_136_ChannelStatus",
+      "can_id": "CAN-136",
+      "code": "EQ-015/S.10.v1",
+      "new_file": "coq/canonical/EQ_015__S_10_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_136_pseudo_peace_signature",
+      "can_id": "CAN-136",
+      "code": "EQ-015/S.10.v1",
+      "new_file": "coq/canonical/EQ_015__S_10_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_136_pseudo_peace_satisfiable",
+      "can_id": "CAN-136",
+      "code": "EQ-015/S.10.v1",
+      "new_file": "coq/canonical/EQ_015__S_10_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_137_Distinction",
+      "can_id": "CAN-137",
+      "code": "EQ-015/S.11.v1",
+      "new_file": "coq/canonical/EQ_015__S_11_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_137_index",
+      "can_id": "CAN-137",
+      "code": "EQ-015/S.11.v1",
+      "new_file": "coq/canonical/EQ_015__S_11_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_137_index_injective",
+      "can_id": "CAN-137",
+      "code": "EQ-015/S.11.v1",
+      "new_file": "coq/canonical/EQ_015__S_11_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_138_Falsif",
+      "can_id": "CAN-138",
+      "code": "EQ-015/S.12.v1",
+      "new_file": "coq/canonical/EQ_015__S_12_v1.v"
+    },
+    {
+      "old_module": "MRC_social_reading",
+      "old_identifier": "CAN_139_identifiability_certificate",
+      "can_id": "CAN-139",
+      "code": "A.8/S.01.v1",
+      "new_file": "coq/canonical/A_8__S_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "LabourClaimStage",
+      "can_id": "CAN-140",
+      "code": "EQ-015/W.01.v1",
+      "new_file": "coq/canonical/EQ_015__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_140_labour_claim_next",
+      "can_id": "CAN-140",
+      "code": "EQ-015/W.01.v1",
+      "new_file": "coq/canonical/EQ_015__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_141_Z_next",
+      "can_id": "CAN-141",
+      "code": "EQ-015/W.02.v1",
+      "new_file": "coq/canonical/EQ_015__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_141_valid_validation_rate",
+      "can_id": "CAN-141",
+      "code": "EQ-015/W.02.v1",
+      "new_file": "coq/canonical/EQ_015__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_142_B_RB",
+      "can_id": "CAN-142",
+      "code": "EQ-015/W.03.v1",
+      "new_file": "coq/canonical/EQ_015__W_03_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_142_B_RB_identity",
+      "can_id": "CAN-142",
+      "code": "EQ-015/W.03.v1",
+      "new_file": "coq/canonical/EQ_015__W_03_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_142_M_index",
+      "can_id": "CAN-142",
+      "code": "EQ-015/W.03.v1",
+      "new_file": "coq/canonical/EQ_015__W_03_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_142_rho_CES",
+      "can_id": "CAN-142",
+      "code": "EQ-015/W.03.v1",
+      "new_file": "coq/canonical/EQ_015__W_03_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_142_labour_share",
+      "can_id": "CAN-142",
+      "code": "EQ-015/W.03.v1",
+      "new_file": "coq/canonical/EQ_015__W_03_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_143_LabourCentrality",
+      "can_id": "CAN-143",
+      "code": "EQ-015/W.04.v1",
+      "new_file": "coq/canonical/EQ_015__W_04_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_143_mk_labour_centrality",
+      "can_id": "CAN-143",
+      "code": "EQ-015/W.04.v1",
+      "new_file": "coq/canonical/EQ_015__W_04_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_144_q_min",
+      "can_id": "CAN-144",
+      "code": "EQ-015/W.05.v1",
+      "new_file": "coq/canonical/EQ_015__W_05_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_144_citizen_claim_threshold_identity",
+      "can_id": "CAN-144",
+      "code": "EQ-015/W.05.v1",
+      "new_file": "coq/canonical/EQ_015__W_05_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_144_convex_combine",
+      "can_id": "CAN-144",
+      "code": "EQ-015/W.05.v1",
+      "new_file": "coq/canonical/EQ_015__W_05_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_144_convex_combine_identity",
+      "can_id": "CAN-144",
+      "code": "EQ-015/W.05.v1",
+      "new_file": "coq/canonical/EQ_015__W_05_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_144_q_t",
+      "can_id": "CAN-144",
+      "code": "EQ-015/W.05.v1",
+      "new_file": "coq/canonical/EQ_015__W_05_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_144_Gamma_t",
+      "can_id": "CAN-144",
+      "code": "EQ-015/W.05.v1",
+      "new_file": "coq/canonical/EQ_015__W_05_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_145_AD",
+      "can_id": "CAN-145",
+      "code": "EQ-015/W.06.v1",
+      "new_file": "coq/canonical/EQ_015__W_06_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_145_chi_dem",
+      "can_id": "CAN-145",
+      "code": "EQ-015/W.06.v1",
+      "new_file": "coq/canonical/EQ_015__W_06_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_145_chi_dem_le_one",
+      "can_id": "CAN-145",
+      "code": "EQ-015/W.06.v1",
+      "new_file": "coq/canonical/EQ_015__W_06_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_145_Pi_M",
+      "can_id": "CAN-145",
+      "code": "EQ-015/W.06.v1",
+      "new_file": "coq/canonical/EQ_015__W_06_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_146_ownership_accumulate",
+      "can_id": "CAN-146",
+      "code": "EQ-015/W.07.v1",
+      "new_file": "coq/canonical/EQ_015__W_07_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_146_ownership_share",
+      "can_id": "CAN-146",
+      "code": "EQ-015/W.07.v1",
+      "new_file": "coq/canonical/EQ_015__W_07_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_146_redistribution_not_ownership_reproduction",
+      "can_id": "CAN-146",
+      "code": "EQ-015/W.07.v1",
+      "new_file": "coq/canonical/EQ_015__W_07_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_147_B_scarce",
+      "can_id": "CAN-147",
+      "code": "A.5/W.01.v1",
+      "new_file": "coq/canonical/A_5__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_147_Gamma_eff",
+      "can_id": "CAN-147",
+      "code": "A.5/W.01.v1",
+      "new_file": "coq/canonical/A_5__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_147_abundance_not_low_burden_not_freedom",
+      "can_id": "CAN-147",
+      "code": "A.5/W.01.v1",
+      "new_file": "coq/canonical/A_5__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_148_G_conv",
+      "can_id": "CAN-148",
+      "code": "EQ-015/W.08.v1",
+      "new_file": "coq/canonical/EQ_015__W_08_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_148_Dependency",
+      "can_id": "CAN-148",
+      "code": "EQ-015/W.08.v1",
+      "new_file": "coq/canonical/EQ_015__W_08_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_148_concentration_not_dependency",
+      "can_id": "CAN-148",
+      "code": "EQ-015/W.08.v1",
+      "new_file": "coq/canonical/EQ_015__W_08_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "RelationalClassPosition",
+      "can_id": "CAN-149",
+      "code": "EQ-015/W.09.v1",
+      "new_file": "coq/canonical/EQ_015__W_09_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_149_RelationalClassPosition",
+      "can_id": "CAN-149",
+      "code": "EQ-015/W.09.v1",
+      "new_file": "coq/canonical/EQ_015__W_09_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_149_mk_relational_class_position",
+      "can_id": "CAN-149",
+      "code": "EQ-015/W.09.v1",
+      "new_file": "coq/canonical/EQ_015__W_09_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_150_pe_to_human_bridge",
+      "can_id": "CAN-150",
+      "code": "weld/W.01.v1",
+      "new_file": "coq/canonical/weld__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_151_P_H_index",
+      "can_id": "CAN-151",
+      "code": "EQ-015/W.10.v1",
+      "new_file": "coq/canonical/EQ_015__W_10_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_151_output_rise_not_position_rise",
+      "can_id": "CAN-151",
+      "code": "EQ-015/W.10.v1",
+      "new_file": "coq/canonical/EQ_015__W_10_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_152_S_H_next",
+      "can_id": "CAN-152",
+      "code": "EQ-015/W.11.v1",
+      "new_file": "coq/canonical/EQ_015__W_11_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_152_time_budget_valid",
+      "can_id": "CAN-152",
+      "code": "EQ-015/W.11.v1",
+      "new_file": "coq/canonical/EQ_015__W_11_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_152_time_budget_satisfiable",
+      "can_id": "CAN-152",
+      "code": "EQ-015/W.11.v1",
+      "new_file": "coq/canonical/EQ_015__W_11_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_153_H_cap_next",
+      "can_id": "CAN-153",
+      "code": "EQ-015/W.12.v1",
+      "new_file": "coq/canonical/EQ_015__W_12_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_153_Open_dynamic_sign",
+      "can_id": "CAN-153",
+      "code": "EQ-015/W.12.v1",
+      "new_file": "coq/canonical/EQ_015__W_12_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_153_productive_not_social_necessity_witness",
+      "can_id": "CAN-153",
+      "code": "EQ-015/W.12.v1",
+      "new_file": "coq/canonical/EQ_015__W_12_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "PowerVector",
+      "can_id": "CAN-154",
+      "code": "A.5/W.02.v1",
+      "new_file": "coq/canonical/A_5__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_154_mk_power_vector",
+      "can_id": "CAN-154",
+      "code": "A.5/W.02.v1",
+      "new_file": "coq/canonical/A_5__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_154_Open_not_predetermined",
+      "can_id": "CAN-154",
+      "code": "A.5/W.02.v1",
+      "new_file": "coq/canonical/A_5__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_154_channel_noncollapse_witness",
+      "can_id": "CAN-154",
+      "code": "A.5/W.02.v1",
+      "new_file": "coq/canonical/A_5__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_155_Omega",
+      "can_id": "CAN-155",
+      "code": "EQ-015/W.13.v1",
+      "new_file": "coq/canonical/EQ_015__W_13_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "AfterLabourRiverStage",
+      "can_id": "CAN-156",
+      "code": "weld/W.02.v1",
+      "new_file": "coq/canonical/weld__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_156_after_labour_river_next",
+      "can_id": "CAN-156",
+      "code": "weld/W.02.v1",
+      "new_file": "coq/canonical/weld__W_02_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_157_corrigible_agency_ws",
+      "can_id": "CAN-157",
+      "code": "EQ-015/W.14.v1",
+      "new_file": "coq/canonical/EQ_015__W_14_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_157_corrigible_agency_ws_upper_bound",
+      "can_id": "CAN-157",
+      "code": "EQ-015/W.14.v1",
+      "new_file": "coq/canonical/EQ_015__W_14_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_158_ReturnProfileWS",
+      "can_id": "CAN-158",
+      "code": "EQ-015/W.15.v1",
+      "new_file": "coq/canonical/EQ_015__W_15_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_158_mk_return_profile_ws",
+      "can_id": "CAN-158",
+      "code": "EQ-015/W.15.v1",
+      "new_file": "coq/canonical/EQ_015__W_15_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_159_machine_expansion_not_human_expansion",
+      "can_id": "CAN-159",
+      "code": "EQ-015/W.16.v1",
+      "new_file": "coq/canonical/EQ_015__W_16_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_159_HumanConversionVector",
+      "can_id": "CAN-159",
+      "code": "EQ-015/W.16.v1",
+      "new_file": "coq/canonical/EQ_015__W_16_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_159_mk_human_conversion_vector",
+      "can_id": "CAN-159",
+      "code": "EQ-015/W.16.v1",
+      "new_file": "coq/canonical/EQ_015__W_16_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_159_eta_HC",
+      "can_id": "CAN-159",
+      "code": "EQ-015/W.16.v1",
+      "new_file": "coq/canonical/EQ_015__W_16_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_160_separation",
+      "can_id": "CAN-160",
+      "code": "A.5/W.03.v1",
+      "new_file": "coq/canonical/A_5__W_03_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_160_all_separations_satisfiable",
+      "can_id": "CAN-160",
+      "code": "A.5/W.03.v1",
+      "new_file": "coq/canonical/A_5__W_03_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "HighConversionStage",
+      "can_id": "CAN-161",
+      "code": "EQ-015/W.17.v1",
+      "new_file": "coq/canonical/EQ_015__W_17_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_161_high_conversion_next",
+      "can_id": "CAN-161",
+      "code": "EQ-015/W.17.v1",
+      "new_file": "coq/canonical/EQ_015__W_17_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "LowConversionStage",
+      "can_id": "CAN-161",
+      "code": "EQ-015/W.17.v1",
+      "new_file": "coq/canonical/EQ_015__W_17_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_161_low_conversion_next",
+      "can_id": "CAN-161",
+      "code": "EQ-015/W.17.v1",
+      "new_file": "coq/canonical/EQ_015__W_17_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_161_Open_proposition2_max_assistance_max_conversion",
+      "can_id": "CAN-161",
+      "code": "EQ-015/W.17.v1",
+      "new_file": "coq/canonical/EQ_015__W_17_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "BadModeState",
+      "can_id": "CAN-162",
+      "code": "EQ-015/W.18.v1",
+      "new_file": "coq/canonical/EQ_015__W_18_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_162_BadModeState",
+      "can_id": "CAN-162",
+      "code": "EQ-015/W.18.v1",
+      "new_file": "coq/canonical/EQ_015__W_18_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_162_mk_bad_mode_state",
+      "can_id": "CAN-162",
+      "code": "EQ-015/W.18.v1",
+      "new_file": "coq/canonical/EQ_015__W_18_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_163_reversibility_window",
+      "can_id": "CAN-163",
+      "code": "EQ-015/W.19.v1",
+      "new_file": "coq/canonical/EQ_015__W_19_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_163_in_reversibility_window",
+      "can_id": "CAN-163",
+      "code": "EQ-015/W.19.v1",
+      "new_file": "coq/canonical/EQ_015__W_19_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_163_urgency_term",
+      "can_id": "CAN-163",
+      "code": "EQ-015/W.19.v1",
+      "new_file": "coq/canonical/EQ_015__W_19_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_163_Open_reversibility_principle",
+      "can_id": "CAN-163",
+      "code": "EQ-015/W.19.v1",
+      "new_file": "coq/canonical/EQ_015__W_19_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "over",
+      "can_id": "CAN-164",
+      "code": "EQ-002/W.01.v1",
+      "new_file": "coq/canonical/EQ_002__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_164_I_H",
+      "can_id": "CAN-164",
+      "code": "EQ-002/W.01.v1",
+      "new_file": "coq/canonical/EQ_002__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_world_system_reading",
+      "old_identifier": "CAN_164_Open_proposition4_broad_expansion",
+      "can_id": "CAN-164",
+      "code": "EQ-002/W.01.v1",
+      "new_file": "coq/canonical/EQ_002__W_01_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN165_admissible",
+      "can_id": "CAN-165",
+      "code": "EQ-002/M.01.v1",
+      "new_file": "coq/canonical/EQ_002__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN165_g_of",
+      "can_id": "CAN-165",
+      "code": "EQ-002/M.01.v1",
+      "new_file": "coq/canonical/EQ_002__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN165_factorization_thm",
+      "can_id": "CAN-165",
+      "code": "EQ-002/M.01.v1",
+      "new_file": "coq/canonical/EQ_002__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN165_data_processing_inequality_Open",
+      "can_id": "CAN-165",
+      "code": "EQ-002/M.01.v1",
+      "new_file": "coq/canonical/EQ_002__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN165_source_relation_may_differ_from_model",
+      "can_id": "CAN-165",
+      "code": "EQ-002/M.01.v1",
+      "new_file": "coq/canonical/EQ_002__M_01_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN166_RivalModel",
+      "can_id": "CAN-166",
+      "code": "weld/M.04.v1",
+      "new_file": "coq/canonical/weld__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN166_must_beat_ladder_Open",
+      "can_id": "CAN-166",
+      "code": "weld/M.04.v1",
+      "new_file": "coq/canonical/weld__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN167_residual",
+      "can_id": "CAN-167",
+      "code": "weld/M.05.v1",
+      "new_file": "coq/canonical/weld__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN167_cost",
+      "can_id": "CAN-167",
+      "code": "weld/M.05.v1",
+      "new_file": "coq/canonical/weld__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN167_problem",
+      "can_id": "CAN-167",
+      "code": "weld/M.05.v1",
+      "new_file": "coq/canonical/weld__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN167_question_selects",
+      "can_id": "CAN-167",
+      "code": "weld/M.05.v1",
+      "new_file": "coq/canonical/weld__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN168_path_prob",
+      "can_id": "CAN-168",
+      "code": "weld/M.06.v1",
+      "new_file": "coq/canonical/weld__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN168_reachable",
+      "can_id": "CAN-168",
+      "code": "weld/M.06.v1",
+      "new_file": "coq/canonical/weld__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN168_high",
+      "can_id": "CAN-168",
+      "code": "weld/M.06.v1",
+      "new_file": "coq/canonical/weld__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN168_positive_but_not_high",
+      "can_id": "CAN-168",
+      "code": "weld/M.06.v1",
+      "new_file": "coq/canonical/weld__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN169_first_hit",
+      "can_id": "CAN-169",
+      "code": "weld/M.07.v1",
+      "new_file": "coq/canonical/weld__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN169_tau_U_bounded",
+      "can_id": "CAN-169",
+      "code": "weld/M.07.v1",
+      "new_file": "coq/canonical/weld__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN169_tau_U_unbounded_Open",
+      "can_id": "CAN-169",
+      "code": "weld/M.07.v1",
+      "new_file": "coq/canonical/weld__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN169_usable_ne_actually_true",
+      "can_id": "CAN-169",
+      "code": "weld/M.07.v1",
+      "new_file": "coq/canonical/weld__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN170_discriminating",
+      "can_id": "CAN-170",
+      "code": "weld/M.08.v1",
+      "new_file": "coq/canonical/weld__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN170_local_residual",
+      "can_id": "CAN-170",
+      "code": "weld/M.08.v1",
+      "new_file": "coq/canonical/weld__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN171_LedgerEntry",
+      "can_id": "CAN-171",
+      "code": "A.8/M.02.v1",
+      "new_file": "coq/canonical/A_8__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN172_Status",
+      "can_id": "CAN-172",
+      "code": "A.8/M.03.v1",
+      "new_file": "coq/canonical/A_8__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN173_valid_term",
+      "can_id": "CAN-173",
+      "code": "A.8/M.04.v1",
+      "new_file": "coq/canonical/A_8__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN173_C_valid",
+      "can_id": "CAN-173",
+      "code": "A.8/M.04.v1",
+      "new_file": "coq/canonical/A_8__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN173_C_raw",
+      "can_id": "CAN-173",
+      "code": "A.8/M.04.v1",
+      "new_file": "coq/canonical/A_8__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN173_term_le",
+      "can_id": "CAN-173",
+      "code": "A.8/M.04.v1",
+      "new_file": "coq/canonical/A_8__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN173_valid_le_raw",
+      "can_id": "CAN-173",
+      "code": "A.8/M.04.v1",
+      "new_file": "coq/canonical/A_8__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "is",
+      "can_id": "CAN-174",
+      "code": "weld/M.09.v1",
+      "new_file": "coq/canonical/weld__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN174_invariant",
+      "can_id": "CAN-174",
+      "code": "weld/M.09.v1",
+      "new_file": "coq/canonical/weld__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN174_invariant_refl",
+      "can_id": "CAN-174",
+      "code": "weld/M.09.v1",
+      "new_file": "coq/canonical/weld__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN175_cost_k2",
+      "can_id": "CAN-175",
+      "code": "A.8/M.05.v1",
+      "new_file": "coq/canonical/A_8__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN175_expected_yield",
+      "can_id": "CAN-175",
+      "code": "A.8/M.05.v1",
+      "new_file": "coq/canonical/A_8__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN175_effective_k2",
+      "can_id": "CAN-175",
+      "code": "A.8/M.05.v1",
+      "new_file": "coq/canonical/A_8__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN177_TheoryStage",
+      "can_id": "CAN-177",
+      "code": "weld/M.10.v1",
+      "new_file": "coq/canonical/weld__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN177_EngineAStage",
+      "can_id": "CAN-177",
+      "code": "weld/M.10.v1",
+      "new_file": "coq/canonical/weld__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN177_EngineBStage",
+      "can_id": "CAN-177",
+      "code": "weld/M.10.v1",
+      "new_file": "coq/canonical/weld__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN177_bridge",
+      "can_id": "CAN-177",
+      "code": "weld/M.10.v1",
+      "new_file": "coq/canonical/weld__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN177_bridge_iff",
+      "can_id": "CAN-177",
+      "code": "weld/M.10.v1",
+      "new_file": "coq/canonical/weld__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN178_K0_start",
+      "can_id": "CAN-178",
+      "code": "A.8/M.06.v1",
+      "new_file": "coq/canonical/A_8__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN178_E_t",
+      "can_id": "CAN-178",
+      "code": "A.8/M.06.v1",
+      "new_file": "coq/canonical/A_8__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN178_PosCap",
+      "can_id": "CAN-178",
+      "code": "A.8/M.06.v1",
+      "new_file": "coq/canonical/A_8__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN178_NetPractice",
+      "can_id": "CAN-178",
+      "code": "A.8/M.06.v1",
+      "new_file": "coq/canonical/A_8__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN179_KState",
+      "can_id": "CAN-179",
+      "code": "weld/M.11.v1",
+      "new_file": "coq/canonical/weld__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN179_code",
+      "can_id": "CAN-179",
+      "code": "weld/M.11.v1",
+      "new_file": "coq/canonical/weld__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN179_lt",
+      "can_id": "CAN-179",
+      "code": "weld/M.11.v1",
+      "new_file": "coq/canonical/weld__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN179_ladder_strictly_increasing",
+      "can_id": "CAN-179",
+      "code": "weld/M.11.v1",
+      "new_file": "coq/canonical/weld__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN180_EIC",
+      "can_id": "CAN-180",
+      "code": "A.8/M.07.v1",
+      "new_file": "coq/canonical/A_8__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN180_EIC_implies_Open",
+      "can_id": "CAN-180",
+      "code": "A.8/M.07.v1",
+      "new_file": "coq/canonical/A_8__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN181_Lambda",
+      "can_id": "CAN-181",
+      "code": "A.8/M.08.v1",
+      "new_file": "coq/canonical/A_8__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN181_Lambda_le_each",
+      "can_id": "CAN-181",
+      "code": "A.8/M.08.v1",
+      "new_file": "coq/canonical/A_8__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN181_Vc",
+      "can_id": "CAN-181",
+      "code": "A.8/M.08.v1",
+      "new_file": "coq/canonical/A_8__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN181_De",
+      "can_id": "CAN-181",
+      "code": "A.8/M.08.v1",
+      "new_file": "coq/canonical/A_8__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN181_velocity_constraint",
+      "can_id": "CAN-181",
+      "code": "A.8/M.08.v1",
+      "new_file": "coq/canonical/A_8__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN182_Outcome",
+      "can_id": "CAN-182",
+      "code": "EQ-015/M.05.v1",
+      "new_file": "coq/canonical/EQ_015__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN182_decision",
+      "can_id": "CAN-182",
+      "code": "EQ-015/M.05.v1",
+      "new_file": "coq/canonical/EQ_015__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN183_Coh_effective",
+      "can_id": "CAN-183",
+      "code": "EQ-002/M.02.v1",
+      "new_file": "coq/canonical/EQ_002__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN183_effective_le_latent",
+      "can_id": "CAN-183",
+      "code": "EQ-002/M.02.v1",
+      "new_file": "coq/canonical/EQ_002__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN184_monotone_increase_Open",
+      "can_id": "CAN-184",
+      "code": "A.8/M.09.v1",
+      "new_file": "coq/canonical/A_8__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN184_PaperRole",
+      "can_id": "CAN-184",
+      "code": "A.8/M.09.v1",
+      "new_file": "coq/canonical/A_8__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN185_chi",
+      "can_id": "CAN-185",
+      "code": "weld/M.12.v1",
+      "new_file": "coq/canonical/weld__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN185_B",
+      "can_id": "CAN-185",
+      "code": "weld/M.12.v1",
+      "new_file": "coq/canonical/weld__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN185_B_bounded_by_mint",
+      "can_id": "CAN-185",
+      "code": "weld/M.12.v1",
+      "new_file": "coq/canonical/weld__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN185_VC",
+      "can_id": "CAN-185",
+      "code": "weld/M.12.v1",
+      "new_file": "coq/canonical/weld__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN185_priority",
+      "can_id": "CAN-185",
+      "code": "weld/M.12.v1",
+      "new_file": "coq/canonical/weld__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN186_CompoundingStage",
+      "can_id": "CAN-186",
+      "code": "A.8/M.10.v1",
+      "new_file": "coq/canonical/A_8__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN186_credit_leverage",
+      "can_id": "CAN-186",
+      "code": "A.8/M.10.v1",
+      "new_file": "coq/canonical/A_8__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN186_PC_superseded",
+      "can_id": "CAN-186",
+      "code": "A.8/M.10.v1",
+      "new_file": "coq/canonical/A_8__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN187_k_t",
+      "can_id": "CAN-187",
+      "code": "A.8/M.11.v1",
+      "new_file": "coq/canonical/A_8__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN187_beta_D",
+      "can_id": "CAN-187",
+      "code": "A.8/M.11.v1",
+      "new_file": "coq/canonical/A_8__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN187_increase_mint_rate",
+      "can_id": "CAN-187",
+      "code": "A.8/M.11.v1",
+      "new_file": "coq/canonical/A_8__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN187_rho_R",
+      "can_id": "CAN-187",
+      "code": "A.8/M.11.v1",
+      "new_file": "coq/canonical/A_8__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN187_X_t",
+      "can_id": "CAN-187",
+      "code": "A.8/M.11.v1",
+      "new_file": "coq/canonical/A_8__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN187_BR_t",
+      "can_id": "CAN-187",
+      "code": "A.8/M.11.v1",
+      "new_file": "coq/canonical/A_8__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN188_LoopStage",
+      "can_id": "CAN-188",
+      "code": "EQ-015/M.06.v1",
+      "new_file": "coq/canonical/EQ_015__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN188_step",
+      "can_id": "CAN-188",
+      "code": "EQ-015/M.06.v1",
+      "new_file": "coq/canonical/EQ_015__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN188_iter",
+      "can_id": "CAN-188",
+      "code": "EQ-015/M.06.v1",
+      "new_file": "coq/canonical/EQ_015__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN188_loop_returns",
+      "can_id": "CAN-188",
+      "code": "EQ-015/M.06.v1",
+      "new_file": "coq/canonical/EQ_015__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN189_r",
+      "can_id": "CAN-189",
+      "code": "A.8/M.12.v1",
+      "new_file": "coq/canonical/A_8__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN189_V",
+      "can_id": "CAN-189",
+      "code": "A.8/M.12.v1",
+      "new_file": "coq/canonical/A_8__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "mr_list_non_containment_witness",
+      "can_id": "CAN-190",
+      "code": "A.5/M.02.v1",
+      "new_file": "coq/canonical/A_5__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN190_not_subset",
+      "can_id": "CAN-190",
+      "code": "A.5/M.02.v1",
+      "new_file": "coq/canonical/A_5__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN190_not_subset_witness",
+      "can_id": "CAN-190",
+      "code": "A.5/M.02.v1",
+      "new_file": "coq/canonical/A_5__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN190_S_G",
+      "can_id": "CAN-190",
+      "code": "A.5/M.02.v1",
+      "new_file": "coq/canonical/A_5__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN190_ConversionPlan",
+      "can_id": "CAN-190",
+      "code": "A.5/M.02.v1",
+      "new_file": "coq/canonical/A_5__M_02_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN191_FirewallStage",
+      "can_id": "CAN-191",
+      "code": "A.8/M.13.v1",
+      "new_file": "coq/canonical/A_8__M_13_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN191_scram",
+      "can_id": "CAN-191",
+      "code": "A.8/M.13.v1",
+      "new_file": "coq/canonical/A_8__M_13_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN192_H_g",
+      "can_id": "CAN-192",
+      "code": "A.8/M.14.v1",
+      "new_file": "coq/canonical/A_8__M_14_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN193_ArchStage",
+      "can_id": "CAN-193",
+      "code": "EQ-015/M.07.v1",
+      "new_file": "coq/canonical/EQ_015__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN193_EpistemicPosition",
+      "can_id": "CAN-193",
+      "code": "EQ-015/M.07.v1",
+      "new_file": "coq/canonical/EQ_015__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN193_CrediblePath",
+      "can_id": "CAN-193",
+      "code": "EQ-015/M.07.v1",
+      "new_file": "coq/canonical/EQ_015__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN194_B_year",
+      "can_id": "CAN-194",
+      "code": "A.8/M.15.v1",
+      "new_file": "coq/canonical/A_8__M_15_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN194_B_year_total",
+      "can_id": "CAN-194",
+      "code": "A.8/M.15.v1",
+      "new_file": "coq/canonical/A_8__M_15_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN194_component_le_total",
+      "can_id": "CAN-194",
+      "code": "A.8/M.15.v1",
+      "new_file": "coq/canonical/A_8__M_15_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN194_portfolio_shrink",
+      "can_id": "CAN-194",
+      "code": "A.8/M.15.v1",
+      "new_file": "coq/canonical/A_8__M_15_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN194_wip_bound",
+      "can_id": "CAN-194",
+      "code": "A.8/M.15.v1",
+      "new_file": "coq/canonical/A_8__M_15_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN194_priority",
+      "can_id": "CAN-194",
+      "code": "A.8/M.15.v1",
+      "new_file": "coq/canonical/A_8__M_15_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN195_scope_constraint",
+      "can_id": "CAN-195",
+      "code": "A.8/M.16.v1",
+      "new_file": "coq/canonical/A_8__M_16_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN195_Pipeline",
+      "can_id": "CAN-195",
+      "code": "A.8/M.16.v1",
+      "new_file": "coq/canonical/A_8__M_16_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN196_EvidenceNotion",
+      "can_id": "CAN-196",
+      "code": "A.5/M.03.v1",
+      "new_file": "coq/canonical/A_5__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN196_neighboring_ne_formal",
+      "can_id": "CAN-196",
+      "code": "A.5/M.03.v1",
+      "new_file": "coq/canonical/A_5__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN196_formal_ne_truth",
+      "can_id": "CAN-196",
+      "code": "A.5/M.03.v1",
+      "new_file": "coq/canonical/A_5__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN196_reachability_ne_accessibility",
+      "can_id": "CAN-196",
+      "code": "A.5/M.03.v1",
+      "new_file": "coq/canonical/A_5__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN196_speed_ne_quality",
+      "can_id": "CAN-196",
+      "code": "A.5/M.03.v1",
+      "new_file": "coq/canonical/A_5__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN196_volume_ne_diversity",
+      "can_id": "CAN-196",
+      "code": "A.5/M.03.v1",
+      "new_file": "coq/canonical/A_5__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN196_attraction_chain",
+      "can_id": "CAN-196",
+      "code": "A.5/M.03.v1",
+      "new_file": "coq/canonical/A_5__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN197_topology_sensitivity_Open",
+      "can_id": "CAN-197",
+      "code": "A.5/M.04.v1",
+      "new_file": "coq/canonical/A_5__M_04_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN198_momentum",
+      "can_id": "CAN-198",
+      "code": "EQ-015/M.08.v1",
+      "new_file": "coq/canonical/EQ_015__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN198_Open_momentum",
+      "can_id": "CAN-198",
+      "code": "EQ-015/M.08.v1",
+      "new_file": "coq/canonical/EQ_015__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN198_accessibility_score",
+      "can_id": "CAN-198",
+      "code": "EQ-015/M.08.v1",
+      "new_file": "coq/canonical/EQ_015__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN198_Open_accessibility",
+      "can_id": "CAN-198",
+      "code": "EQ-015/M.08.v1",
+      "new_file": "coq/canonical/EQ_015__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN198_rhythm_does_not_determine_accessibility",
+      "can_id": "CAN-198",
+      "code": "EQ-015/M.08.v1",
+      "new_file": "coq/canonical/EQ_015__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN198_kappa_genuinely_varies",
+      "can_id": "CAN-198",
+      "code": "EQ-015/M.08.v1",
+      "new_file": "coq/canonical/EQ_015__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN199_B",
+      "can_id": "CAN-199",
+      "code": "EQ-015/M.09.v1",
+      "new_file": "coq/canonical/EQ_015__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN199_E",
+      "can_id": "CAN-199",
+      "code": "EQ-015/M.09.v1",
+      "new_file": "coq/canonical/EQ_015__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN200_Burden",
+      "can_id": "CAN-200",
+      "code": "EQ-015/M.10.v1",
+      "new_file": "coq/canonical/EQ_015__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN200_OptimalOrAdoptable",
+      "can_id": "CAN-200",
+      "code": "EQ-015/M.10.v1",
+      "new_file": "coq/canonical/EQ_015__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_a",
+      "old_identifier": "CAN200_optimal_ne_adoptable",
+      "can_id": "CAN-200",
+      "code": "EQ-015/M.10.v1",
+      "new_file": "coq/canonical/EQ_015__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_201_hypothesis_satisfiable_on_bool",
+      "can_id": "CAN-201",
+      "code": "EQ-002/M.03.v1",
+      "new_file": "coq/canonical/EQ_002__M_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN202_M_A",
+      "can_id": "CAN-202",
+      "code": "EQ-015/E.12.v1",
+      "new_file": "coq/canonical/EQ_015__E_12_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN202_decomposition",
+      "can_id": "CAN-202",
+      "code": "EQ-015/E.12.v1",
+      "new_file": "coq/canonical/EQ_015__E_12_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN203_x",
+      "can_id": "CAN-203",
+      "code": "EQ-002/E.09.v1",
+      "new_file": "coq/canonical/EQ_002__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN204_O_A",
+      "can_id": "CAN-204",
+      "code": "EQ-002/E.10.v1",
+      "new_file": "coq/canonical/EQ_002__E_10_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN204_enc_A",
+      "can_id": "CAN-204",
+      "code": "EQ-002/E.10.v1",
+      "new_file": "coq/canonical/EQ_002__E_10_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN205_windowed_avg",
+      "can_id": "CAN-205",
+      "code": "weld/E.09.v1",
+      "new_file": "coq/canonical/weld__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN205_window_of_one_exact",
+      "can_id": "CAN-205",
+      "code": "weld/E.09.v1",
+      "new_file": "coq/canonical/weld__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN206_DomainSource",
+      "can_id": "CAN-206",
+      "code": "EQ-002/E.11.v1",
+      "new_file": "coq/canonical/EQ_002__E_11_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN206_source_eq_dec",
+      "can_id": "CAN-206",
+      "code": "EQ-002/E.11.v1",
+      "new_file": "coq/canonical/EQ_002__E_11_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN207_S_A",
+      "can_id": "CAN-207",
+      "code": "EQ-015/E.13.v1",
+      "new_file": "coq/canonical/EQ_015__E_13_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN208_governing_maxim",
+      "can_id": "CAN-208",
+      "code": "A.8/E.01.v1",
+      "new_file": "coq/canonical/A_8__E_01_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN209_distinguishes",
+      "can_id": "CAN-209",
+      "code": "A.5/E.03.v1",
+      "new_file": "coq/canonical/A_5__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN209_D_Phi",
+      "can_id": "CAN-209",
+      "code": "A.5/E.03.v1",
+      "new_file": "coq/canonical/A_5__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN209_D_Phi_sound",
+      "can_id": "CAN-209",
+      "code": "A.5/E.03.v1",
+      "new_file": "coq/canonical/A_5__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN209_Path",
+      "can_id": "CAN-209",
+      "code": "A.5/E.03.v1",
+      "new_file": "coq/canonical/A_5__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN210_first_false",
+      "can_id": "CAN-210",
+      "code": "weld/M.13.v1",
+      "new_file": "coq/canonical/weld__M_13_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN210_level",
+      "can_id": "CAN-210",
+      "code": "weld/M.13.v1",
+      "new_file": "coq/canonical/weld__M_13_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN210_level_correct",
+      "can_id": "CAN-210",
+      "code": "weld/M.13.v1",
+      "new_file": "coq/canonical/weld__M_13_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN211_AugmentationKind",
+      "can_id": "CAN-211",
+      "code": "EQ-015/M.11.v1",
+      "new_file": "coq/canonical/EQ_015__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN211_kinds_pairwise_distinct",
+      "can_id": "CAN-211",
+      "code": "EQ-015/M.11.v1",
+      "new_file": "coq/canonical/EQ_015__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN211_access_aug",
+      "can_id": "CAN-211",
+      "code": "EQ-015/M.11.v1",
+      "new_file": "coq/canonical/EQ_015__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN211_contrast_aug",
+      "can_id": "CAN-211",
+      "code": "EQ-015/M.11.v1",
+      "new_file": "coq/canonical/EQ_015__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN211_decision_policy_aug",
+      "can_id": "CAN-211",
+      "code": "EQ-015/M.11.v1",
+      "new_file": "coq/canonical/EQ_015__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN212_adequate",
+      "can_id": "CAN-212",
+      "code": "A.8/M.17.v1",
+      "new_file": "coq/canonical/A_8__M_17_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN212_adequate_intro",
+      "can_id": "CAN-212",
+      "code": "A.8/M.17.v1",
+      "new_file": "coq/canonical/A_8__M_17_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN213_overreach",
+      "can_id": "CAN-213",
+      "code": "A.8/M.18.v1",
+      "new_file": "coq/canonical/A_8__M_18_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN213_silent_lift",
+      "can_id": "CAN-213",
+      "code": "A.8/M.18.v1",
+      "new_file": "coq/canonical/A_8__M_18_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN213_silent_lift_is_overreach",
+      "can_id": "CAN-213",
+      "code": "A.8/M.18.v1",
+      "new_file": "coq/canonical/A_8__M_18_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN214_intersect",
+      "can_id": "CAN-214",
+      "code": "A.5/M.05.v1",
+      "new_file": "coq/canonical/A_5__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN214_Ess",
+      "can_id": "CAN-214",
+      "code": "A.5/M.05.v1",
+      "new_file": "coq/canonical/A_5__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN214_misrouted_defeat",
+      "can_id": "CAN-214",
+      "code": "A.5/M.05.v1",
+      "new_file": "coq/canonical/A_5__M_05_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN215_p_D_given_pos",
+      "can_id": "CAN-215",
+      "code": "A.8/M.19.v1",
+      "new_file": "coq/canonical/A_8__M_19_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN215_bayes_value",
+      "can_id": "CAN-215",
+      "code": "A.8/M.19.v1",
+      "new_file": "coq/canonical/A_8__M_19_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "mrb_no_factorization_when_fiber_varies",
+      "can_id": "CAN-216",
+      "code": "weld/M.14.v1",
+      "new_file": "coq/canonical/weld__M_14_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN216_worked_no_factorization",
+      "can_id": "CAN-216",
+      "code": "weld/M.14.v1",
+      "new_file": "coq/canonical/weld__M_14_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN2xx_MethodNotion",
+      "can_id": "CAN-216",
+      "code": "weld/M.14.v1",
+      "new_file": "coq/canonical/weld__M_14_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN217_RPE",
+      "can_id": "CAN-217",
+      "code": "A.8/E.02.v1",
+      "new_file": "coq/canonical/A_8__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN217_RPE_can_be_nonzero",
+      "can_id": "CAN-217",
+      "code": "A.8/E.02.v1",
+      "new_file": "coq/canonical/A_8__E_02_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN218_pedigree_substitution",
+      "can_id": "CAN-218",
+      "code": "weld/E.10.v1",
+      "new_file": "coq/canonical/weld__E_10_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN218_no_relation_is_substitution",
+      "can_id": "CAN-218",
+      "code": "weld/E.10.v1",
+      "new_file": "coq/canonical/weld__E_10_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN219_SourceReport",
+      "can_id": "CAN-219",
+      "code": "EQ-015/E.14.v1",
+      "new_file": "coq/canonical/EQ_015__E_14_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN219_label_underdetermines_report",
+      "can_id": "CAN-219",
+      "code": "EQ-015/E.14.v1",
+      "new_file": "coq/canonical/EQ_015__E_14_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN220_redescription_alone_cannot_change_standing",
+      "can_id": "CAN-220",
+      "code": "A.8/E.03.v1",
+      "new_file": "coq/canonical/A_8__E_03_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN221_Friction",
+      "can_id": "CAN-221",
+      "code": "EQ-002/E.12.v1",
+      "new_file": "coq/canonical/EQ_002__E_12_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN221_all_false",
+      "can_id": "CAN-221",
+      "code": "EQ-002/E.12.v1",
+      "new_file": "coq/canonical/EQ_002__E_12_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN221_has_force",
+      "can_id": "CAN-221",
+      "code": "EQ-002/E.12.v1",
+      "new_file": "coq/canonical/EQ_002__E_12_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN221_certified_without_force",
+      "can_id": "CAN-221",
+      "code": "EQ-002/E.12.v1",
+      "new_file": "coq/canonical/EQ_002__E_12_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_222_root_non_collapse_chain",
+      "can_id": "CAN-222",
+      "code": "A.5/M.06.v1",
+      "new_file": "coq/canonical/A_5__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_root_spine",
+      "old_identifier": "CAN_222_root_non_collapse_chain_witness",
+      "can_id": "CAN-222",
+      "code": "A.5/M.06.v1",
+      "new_file": "coq/canonical/A_5__M_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN223_Role",
+      "can_id": "CAN-223",
+      "code": "A.5/E.04.v1",
+      "new_file": "coq/canonical/A_5__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN223_code",
+      "can_id": "CAN-223",
+      "code": "A.5/E.04.v1",
+      "new_file": "coq/canonical/A_5__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN223_role_separation",
+      "can_id": "CAN-223",
+      "code": "A.5/E.04.v1",
+      "new_file": "coq/canonical/A_5__E_04_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN224_Notion",
+      "can_id": "CAN-224",
+      "code": "A.5/E.05.v1",
+      "new_file": "coq/canonical/A_5__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN224_code",
+      "can_id": "CAN-224",
+      "code": "A.5/E.05.v1",
+      "new_file": "coq/canonical/A_5__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN224_non_collapse",
+      "can_id": "CAN-224",
+      "code": "A.5/E.05.v1",
+      "new_file": "coq/canonical/A_5__E_05_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN225_Notion",
+      "can_id": "CAN-225",
+      "code": "A.5/E.06.v1",
+      "new_file": "coq/canonical/A_5__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN225_code",
+      "can_id": "CAN-225",
+      "code": "A.5/E.06.v1",
+      "new_file": "coq/canonical/A_5__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN225_non_collapse",
+      "can_id": "CAN-225",
+      "code": "A.5/E.06.v1",
+      "new_file": "coq/canonical/A_5__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN225_H6_no_automatic_improvement_Open",
+      "can_id": "CAN-225",
+      "code": "A.5/E.06.v1",
+      "new_file": "coq/canonical/A_5__E_06_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN226_Notion",
+      "can_id": "CAN-226",
+      "code": "A.5/E.07.v1",
+      "new_file": "coq/canonical/A_5__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN226_code",
+      "can_id": "CAN-226",
+      "code": "A.5/E.07.v1",
+      "new_file": "coq/canonical/A_5__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN226_non_collapse",
+      "can_id": "CAN-226",
+      "code": "A.5/E.07.v1",
+      "new_file": "coq/canonical/A_5__E_07_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN227_Notion",
+      "can_id": "CAN-227",
+      "code": "A.5/E.08.v1",
+      "new_file": "coq/canonical/A_5__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN227_code",
+      "can_id": "CAN-227",
+      "code": "A.5/E.08.v1",
+      "new_file": "coq/canonical/A_5__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN227_non_collapse",
+      "can_id": "CAN-227",
+      "code": "A.5/E.08.v1",
+      "new_file": "coq/canonical/A_5__E_08_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN228_Notion",
+      "can_id": "CAN-228",
+      "code": "EQ-015/E.15.v1",
+      "new_file": "coq/canonical/EQ_015__E_15_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN228_code",
+      "can_id": "CAN-228",
+      "code": "EQ-015/E.15.v1",
+      "new_file": "coq/canonical/EQ_015__E_15_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN228_non_collapse",
+      "can_id": "CAN-228",
+      "code": "EQ-015/E.15.v1",
+      "new_file": "coq/canonical/EQ_015__E_15_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN229_Notion",
+      "can_id": "CAN-229",
+      "code": "A.5/E.09.v1",
+      "new_file": "coq/canonical/A_5__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN229_code",
+      "can_id": "CAN-229",
+      "code": "A.5/E.09.v1",
+      "new_file": "coq/canonical/A_5__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN229_usable_ne_true",
+      "can_id": "CAN-229",
+      "code": "A.5/E.09.v1",
+      "new_file": "coq/canonical/A_5__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_epistemic_reading",
+      "old_identifier": "CAN229_falling_TU_does_not_force_rising_warrant",
+      "can_id": "CAN-229",
+      "code": "A.5/E.09.v1",
+      "new_file": "coq/canonical/A_5__E_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN230_credit_not_epistemic_value",
+      "can_id": "CAN-230",
+      "code": "A.5/M.07.v1",
+      "new_file": "coq/canonical/A_5__M_07_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN231_friction_not_fellowship",
+      "can_id": "CAN-231",
+      "code": "A.5/M.08.v1",
+      "new_file": "coq/canonical/A_5__M_08_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN232_self_experience_not_general_evidence",
+      "can_id": "CAN-232",
+      "code": "A.5/M.09.v1",
+      "new_file": "coq/canonical/A_5__M_09_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN233_positional_access_not_population_authority",
+      "can_id": "CAN-233",
+      "code": "A.5/M.10.v1",
+      "new_file": "coq/canonical/A_5__M_10_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN234_community_trust_not_representativeness",
+      "can_id": "CAN-234",
+      "code": "A.5/M.11.v1",
+      "new_file": "coq/canonical/A_5__M_11_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN235_dvp_not_k2",
+      "can_id": "CAN-235",
+      "code": "A.5/M.12.v1",
+      "new_file": "coq/canonical/A_5__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN236_many_models_not_independence",
+      "can_id": "CAN-236",
+      "code": "A.5/M.13.v1",
+      "new_file": "coq/canonical/A_5__M_13_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN237_mechanical_not_semantic_validity",
+      "can_id": "CAN-237",
+      "code": "A.5/M.14.v1",
+      "new_file": "coq/canonical/A_5__M_14_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN238_source_existence_not_claim_support",
+      "can_id": "CAN-238",
+      "code": "A.5/M.15.v1",
+      "new_file": "coq/canonical/A_5__M_15_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN239_friendship_not_independent_evidence",
+      "can_id": "CAN-239",
+      "code": "A.5/M.16.v1",
+      "new_file": "coq/canonical/A_5__M_16_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN240_correspondence_not_peer_review",
+      "can_id": "CAN-240",
+      "code": "A.5/M.17.v1",
+      "new_file": "coq/canonical/A_5__M_17_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN241_intellectual_affinity_not_truth",
+      "can_id": "CAN-241",
+      "code": "A.5/M.18.v1",
+      "new_file": "coq/canonical/A_5__M_18_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN242_activation_action_not_credit_event",
+      "can_id": "CAN-242",
+      "code": "A.5/M.19.v1",
+      "new_file": "coq/canonical/A_5__M_19_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN243_rawspeed_not_vc",
+      "can_id": "CAN-243",
+      "code": "A.5/M.20.v1",
+      "new_file": "coq/canonical/A_5__M_20_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN244_lh_lv_not_truth",
+      "can_id": "CAN-244",
+      "code": "A.5/M.21.v1",
+      "new_file": "coq/canonical/A_5__M_21_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN245_mission_stepper_not_theta",
+      "can_id": "CAN-245",
+      "code": "EQ-015/M.12.v1",
+      "new_file": "coq/canonical/EQ_015__M_12_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN246_multiai_consensus_not_geographic_completeness",
+      "can_id": "CAN-246",
+      "code": "A.5/M.22.v1",
+      "new_file": "coq/canonical/A_5__M_22_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN247_doubleblind_bonus_not_requirement",
+      "can_id": "CAN-247",
+      "code": "A.5/M.23.v1",
+      "new_file": "coq/canonical/A_5__M_23_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN248_k2global_not_k2thai",
+      "can_id": "CAN-248",
+      "code": "A.5/M.24.v1",
+      "new_file": "coq/canonical/A_5__M_24_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN249_interventioncreator_not_soleevaluator",
+      "can_id": "CAN-249",
+      "code": "A.5/M.25.v1",
+      "new_file": "coq/canonical/A_5__M_25_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN250_practiceexperience_not_populationevidence",
+      "can_id": "CAN-250",
+      "code": "A.5/M.26.v1",
+      "new_file": "coq/canonical/A_5__M_26_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN251_at_not_ctscholarly",
+      "can_id": "CAN-251",
+      "code": "A.5/M.27.v1",
+      "new_file": "coq/canonical/A_5__M_27_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN252_mattention_not_mtruth_mk2",
+      "can_id": "CAN-252",
+      "code": "A.5/M.28.v1",
+      "new_file": "coq/canonical/A_5__M_28_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN253_nohuman_not_researchstop",
+      "can_id": "CAN-253",
+      "code": "A.5/M.29.v1",
+      "new_file": "coq/canonical/A_5__M_29_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN254_prestige_not_apc_approval",
+      "can_id": "CAN-254",
+      "code": "A.5/M.30.v1",
+      "new_file": "coq/canonical/A_5__M_30_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN254_approval_requires",
+      "can_id": "CAN-254",
+      "code": "A.5/M.30.v1",
+      "new_file": "coq/canonical/A_5__M_30_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN255_disclosurepenalty_not_concealment",
+      "can_id": "CAN-255",
+      "code": "A.5/M.31.v1",
+      "new_file": "coq/canonical/A_5__M_31_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN255_penalty_requires",
+      "can_id": "CAN-255",
+      "code": "A.5/M.31.v1",
+      "new_file": "coq/canonical/A_5__M_31_v1.v"
+    },
+    {
+      "old_module": "MRC_method_reading_b",
+      "old_identifier": "CAN256_aicontribution_not_epistemicresponsibility",
+      "can_id": "CAN-256",
+      "code": "A.5/M.32.v1",
+      "new_file": "coq/canonical/A_5__M_32_v1.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "master_equation",
+      "can_id": "(root: weld)",
+      "code": "weld",
+      "new_file": "coq/canonical/weld.v"
+    },
+    {
+      "old_module": "MRC_master",
+      "old_identifier": "master_equation_is_segment_composition",
+      "can_id": "(root: weld)",
+      "code": "weld",
+      "new_file": "coq/canonical/weld.v"
+    }
+  ]
+}

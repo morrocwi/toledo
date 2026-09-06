@@ -46,6 +46,7 @@ be present, mapped to the code that equation resolved to (T5 dedup mapping).
 | `occurrences` | array | yes | `[{"record_id": int, "doi": string, "label": string, "section": string, "raw_key": string}]`; `raw_key` matches the corresponding `eq_<record_id>.json` label exactly |
 | `role` | enum | yes | `root-axiom` \| `domain-gate` \| `tier-rule` \| `other` — **descriptive only**; never a licence to skip the `parents` requirement above |
 | `first_assigned` | string | yes | `"YYYY-MM-DD"` |
+| `drift_note` | string | **key omitted when not applicable** | added 2026-09-06 (checker fix `44-domain-default-ids-not-resolved`), same three-state convention as `owner_year`: **present** = this entry's placement (parent/relation) is disclosed as weaker than a demonstrated reading — quotes what was checked and why no stronger evidence was found; **absent** = no disclosed weakness. Never write `null`. `HRP-X.<nnn>` rootless codes (T2) additionally **require** this field non-empty (their own drift reason); a non-rootless entry may also carry one when its parent/relation is a disclosed convention rather than a demonstrated reading (see `registry/COLLAPSE.md` sec.5 drift note #2 for the 44 ids that first used this field). |
 
 ### `coq` object
 
