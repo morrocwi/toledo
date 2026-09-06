@@ -1,6 +1,8 @@
-# HRP Equation Library — Human–AI Readout Programme
+# Toledo — Equation Library of the Human–AI Readout Programme
 
-The permanent, coded registry of every equation in the programme, with its Coq formalisation, in one place.
+**Toledo** — after the Toledo School of Translators, where one text was read across languages — is the permanent, coded registry of every equation in the programme together with its Coq (Th_coqc) formalisation. Everything about equations and their machine checks lives here and nowhere else; papers cite Toledo codes.
+
+Scope: equations and Th_coqc only (registries, codes, lineage, Coq sources, verification). Papers, books and prose live in their own records.
 
 - **Principle (Readout Genesis):** there is one equation; each domain is the same equation read through that domain's
   readout `q_D`. Root codes are Readout Genesis's own identifiers (Appendix C `EQ-001…` and named ids `MQ.08`, `Forced.XII`,
