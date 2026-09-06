@@ -1,0 +1,12 @@
+# Coq build artifacts (compiled locally; contain absolute local paths via
+# COQAUX1 hashes -- never commit, per the leak-scan discipline)
+*.vo
+*.vok
+*.vos
+*.glob
+.*.aux
+*.aux
+.lia.cache
+.nra.cache
+Makefile.conf
+.*.d

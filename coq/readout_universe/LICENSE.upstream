@@ -1,0 +1,73 @@
+Readout Universe — Philosophy and Logic (v1.0)
+Copyright (c) 2026 Yaoharee Lahtee (ORCID 0009-0005-3861-0626),
+Open Civil Science Initiative.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this repository and associated documentation files (the "Work"), to deal
+in the Work without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Work, and to permit persons to whom the Work is furnished to
+do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Work.
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE WORK OR THE USE OR OTHER DEALINGS IN
+THE WORK.
+
+HISTORICAL NOTE: ap/ap0_lens_gates.py, lens/, and skill/ (a vendored snapshot
+of a sibling private repository's engine source, plus the operator skill
+built on top of it) were proprietary, all-rights-reserved third-party
+material that was never eligible for public redistribution under this
+license. All three were permanently removed from this repository ahead of
+publication, in 2026. They are confirmed absent from both the filesystem
+and git history at HEAD; this removal is final.
+
+PROPRIETARY EXCEPTIONS (added 2026-08-03, correcting a pre-existing
+inconsistency found by an internal adversarial review): the following
+twelve files under ap/ each carry, and have always carried, their own
+in-file header declaring them "PRIVATE / PROPRIETARY (LICENSE
+EXCEPTIONS) -- do not publish." That in-file declaration was the author's
+actual, standing intent for these specific files; the Coverage rule
+below previously and incorrectly stated no such exception existed, which
+was a drafting error in this LICENSE file, not a change in intent. These
+files remain visible in this public repository for provenance/context
+only and are NOT licensed under the MIT terms above: all rights to them
+are reserved by the copyright holder, and no permission to use, copy,
+modify, merge, publish, distribute, sublicense, or sell them, or works
+derived from them, is granted by this repository's presence on a public
+host. Reuse of any of these twelve files requires separate, explicit
+permission from the copyright holder.
+
+  ap/ap3_desi_mirage.py
+  ap/ap4_phi_fi.py
+  ap/ap5_drl.py
+  ap/ap6_drl_general.py
+  ap/ap7_tape_record.py
+  ap/ap8_h_quartic.py
+  ap/ap9_coupling_channels.py
+  ap/ap10_b_decomposition.py
+  ap/ap11_spin_atoms.py
+  ap/ap12_dimension_readout.py
+  ap/ap20_retention_self_interaction.py
+  ap/ap21_spin1_weizenbock.py
+
+Coverage rule: the entire repository, as it exists today, is licensed under
+the MIT License above — this includes, without limitation, the v1.0 book
+(main.tex, main.pdf, claims.md), philosophy.md, logic.md, paradoxes.md, the
+code/ directory (all file types), the entire v2/ directory (all file types,
+including non-.md code/data files such as v2/urr/*.py and v2/urr/*.yaml),
+the ap/ directory except the twelve files named above under PROPRIETARY
+EXCEPTIONS, the docs/ directory, the evidence/ directory, the gates/
+directory, the scripts/ directory, and root-level documents such as
+scope_correction.md, urr_native_system.md, and
+EQUATION_LIBRARY_ROOT_TO_SM_STREAM_research_universal_solver.md. Other than
+the twelve named exceptions, there is no further carved-out exception; no
+other file in this repository is excluded from the MIT License.

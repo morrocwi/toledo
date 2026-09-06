@@ -135,3 +135,220 @@ neither of which this checker pass performs.
 | cycles | **2 — BLOCK** |
 | step-order violations (same-batch, real) | 33 — recorded, BLOCK-worthy per BBL-193 |
 | step-order violations (cross-batch) | 0 reported, but check is not meaningful (scale mismatch) — flagged |
+
+---
+
+## Addendum 2026-09-06 — BBL-193 global step recompute + BBL-192 root-ancestry fixes
+
+Performed against the anchors named in the task: `READOUT_GENESIS_CORE.md` at commit
+`082dde893b70c7500c13d463239909c99cf17f0a` (private clone `~/ANSE.ASIA/readout_genesis`,
+public mirror `github.com/morrocwi/readout_genesis`) followed by
+`READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md`. Every number below is a direct
+count over `registry/genesis_root.json` after the edits described here, re-derived by
+re-running the same checks, not restated from the earlier pass.
+
+### What was wrong (confirmed by direct inspection, not by re-trusting the earlier claim)
+
+`step` in the pre-existing file was literally the row's array index (1–296 for the
+`parents_0`-derived rows — verified: `step == index+1` for all 296) or `1000 + a
+batch-local counter` for the `parents_1`-derived rows (verified: not a fixed offset of the
+array index, i.e. genuinely a separate, uncalibrated local counter) — neither is a position
+in `READOUT_GENESIS_CORE.md`'s own heading order. This is why 33 "parent step > child
+step" conflicts were artefacts of two disjoint arbitrary numberings, not real ordering
+violations, exactly as flagged in the task.
+
+### Method
+
+1. Extracted the full `## `/`### ` heading sequence of `READOUT_GENESIS_CORE.md` at the
+   anchor commit (`grep -n '^## \|^### '`, 181 headings, Part I → Appendix C in document
+   order) and the full `# `/`## ` heading sequence of the whitepaper v1.2.0 (92 real
+   headings after dropping 2 non-heading `# canonical_data_sha256` / `# hash_scope` comment
+   lines that matched the same grep pattern), and concatenated them into one global ordered
+   position list (CORE positions 1–181, whitepaper positions 182–272).
+2. Mapped every row's existing `step_label` (already a clean section token — `I.1`, `II.8a`,
+   `V.13a`, `VI.1`, `Forced.IV`, `IX.7`, `V-A.3`, `VI-A.B5`, `AppA.9`, `AppB.2`, `weld`,
+   `III.Face8`, `III.pre`, …) onto the matching CORE heading's global position, resolving
+   every one of the 237 distinct labels used across the 590 rows (0 unresolved). For the
+   148 whitepaper-labeled rows (`step_label` only as coarse as `WP.S<n>`), used the row's own
+   `section` field instead — which already carries the finer whitepaper subsection number
+   (e.g. `8.3 Discrete action`, `18. Maker–Checker epistemic firewall > 18.1 Roles`,
+   `23. Reference fixtures > Fixture C — Holonomy`) — matched against the same whitepaper
+   heading list; this is a *sharper* read of "section field mapped to the heading sequence"
+   than `step_label` alone would give for the whitepaper rows.
+3. `Forced.I..XXIV` (all 24 sit under the single `### ⬛ THE FORCED SET — I through XXIV`
+   heading, position 5) and `IX.1..IX.42` (all 42 sit under the single `### Walking the
+   stream…` heading, position 126) are internally ordered by their own Roman numeral / step
+   number as a sub-rank at that position (`position + n/100`), since the heading grep
+   cannot see a step-by-step subheading for either list.
+4. Within every other shared heading position (e.g. the 33 `V.21`-labeled rows under one
+   Standard-Model-DAG heading), rows are ordered by a **stable topological sort restricted
+   to parent/child edges inside that same group**, falling back to the row's original
+   position in `root_equations` only where no such local edge exists — this is the "ties
+   broken by order within the section" rule read as: respect an already-known local
+   dependency first, fall back to existing file order only when nothing else is known.
+   `step` is then `heading_position + rank/max(1000, 2·group_size)` so ties never cross a
+   heading boundary.
+5. **Appendix C reprints.** Checked every one of the 71 `EQ-001..EQ-071` rows (all carry
+   `section` starting `APPENDIX C (SM DOMAIN EQUATION STREAM)`) against the full 590-code
+   set for an alias that is *itself* a separate code elsewhere in the registry (not merely an
+   `RG-*.json` cross-reference into Genesis's own internal working files, which are not
+   codes in this registry). Only **2 of the 71** qualify: `EQ-008` (aliases include `weld`,
+   which is a separate code) and `EQ-021` (aliases include `T1`, a separate code). For both,
+   `step := primary.step + 0.5` and `derived_via := "restatement"`; `EQ-021` already carried
+   `parents = ["T1"]` (no change needed there). The other 69 Appendix-C rows have no
+   separate primary row elsewhere in the 590 — they *are* the sole registry entry for that
+   object even though the source text physically reprints them in Appendix C — so their step
+   correctly uses their `step_label`'s real Part-I/II/III/V position, unchanged by this rule.
+
+### Cycle breaks (BBL-193: "conflict = BLOCK, recorded, not silently resolved")
+
+Edge direction convention used below: `X.parents` containing `Y` is written `X → Y` (the
+direction the JSON field itself stores, child listing parent). A derivation runs forward in
+the document, so a valid `X → Y` edge should point from a **later** document position `X`
+back to an **earlier** one `Y` (a later-appearing object citing an earlier-established one).
+An edge that instead points from an **earlier** position to a **later** one is backward and
+is the artefact to delete.
+
+1. **`EQ-029 ↔ bR_Ledger_r_B`** (mutual, direct 2-cycle). `EQ-029` (array position 28) →
+   `bR_Ledger_r_B` (array position 190): earlier → later, backward, **removed**.
+   `bR_Ledger_r_B → EQ-029`: later → earlier, valid, **kept**. Reason: `EQ-029` had exactly
+   one parent (`bR_Ledger_r_B`); removing it makes `EQ-029` a new orphan (recorded below,
+   not silently re-parented — no replacement edge is fabricated).
+2. **`EQ-030 → SM_DAG → EQ-042 → EQ-041 → EQ-040 → EQ-039 → EQ-038 → EQ-037 → EQ-036 →
+   EQ-030`** (9-node cycle). Every link `EQ-036→EQ-030`, `EQ-037→EQ-036`, …, `EQ-042→EQ-041`,
+   `SM_DAG→…,EQ-042` is later → earlier (valid, kept). Only `EQ-030 → SM_DAG` (array
+   position 29 → 211, earlier → later) is backward, **removed**. `EQ-030` had exactly one
+   parent (`SM_DAG`); removing it makes `EQ-030` a new orphan (recorded below).
+3. **New cycle avoided (`EQ-008 ↔ weld`), induced by rule 5 above, caught before writing the
+   final file.** `weld` already carried `parents = ["EQ-008", "MQ08-stepper"]` (a pre-existing,
+   undated edge). Applying rule 5's Appendix-C restatement mechanically to `EQ-008` (whose
+   alias names `weld`) would add `EQ-008 → weld`, which together with the pre-existing
+   `weld → EQ-008` is a direct 2-cycle, and combined with `MQ08-stepper.parents = ["EQ-008"]`
+   also closes the 3-cycle `EQ-008 → weld → MQ08-stepper → EQ-008`. Resolution: `weld`
+   (document position 4) cannot legitimately have `EQ-008` (document position ~10, the
+   root-axiom reprint block) as a forward-pointing-then-reversed parent once `EQ-008` is
+   correctly understood as textually *after* `weld` (`weld` is `## ⬛ THE ONE-LINE MASTER
+   EQUATION`, the book's own front-matter identity that Appendix C's `EQ-008` explicitly
+   reprints — the `section` field literally says "also THE ONE-LINE MASTER EQUATION — the
+   weld"). So `EQ-008` was removed from `weld.parents` (`weld.parents` is now
+   `["MQ08-stepper"]` only), and the new `EQ-008 → weld` restatement edge from rule 5 was
+   **not added** for this one pair (`EQ-008` keeps only its real forcing parents `EQ-005`,
+   `EQ-006`, `EQ-007`; `derived_via` stays `"forcing"`, not `"restatement"`, for this row).
+   `EQ-008.step` is still set to `weld.step + 0.5` per rule 5, so the ordering guarantee the
+   rule exists for (the reprint never precedes its origin) holds without the extra edge.
+   This is flagged here explicitly as a documented exception to rule 5, not a silent
+   deviation.
+
+Verified after all three fixes: 0 cycles (full DFS over all 590 nodes; a Kahn's-algorithm
+topological sort also visits all 590 nodes, confirming a DAG).
+
+### L5 / Re_ep reconciliation (quoted-source evidence, per the task's instruction)
+
+- **`L5`** — kept the `parents_0` record `parents = ["L4", "B.5"]`, `derived_via =
+  "definition"`. Evidence: `READOUT_GENESIS_CORE.md` VI.2 defines `L5 GOVERNANCE` as
+  `readout-not-truth · bounded-judge · machinic_core`, and its own prose gloss says "L5 —
+  governance. `readout-not-truth · bounded-judge · machinic_core`. This is the top rung…".
+  "bounded-judge" textually corresponds to Part VI-A's `### B.5 The Maker–Checker Epistemic
+  Firewall` — the book's only defined "bounded", role-separated judging mechanism (`B.2`'s
+  discussion explicitly frames Maker–Checker as asking "was the party running the gate…"
+  i.e. a bounded judge). No text was found tying `L5` to `B.5`'s absence; the `parents_1`
+  alternate `[L4]` (`derived_via: "composition"`) simply drops `B.5` with no textual
+  counter-evidence located against including it. `B.5` is therefore the better-quoted
+  candidate and is kept alongside `L4`.
+- **`Re_ep`** — switched to the `parents_1` record `parents = ["SpinePDE",
+  "RTPEOperatorSplit"]`, `derived_via = "domain_reading"` (was `parents_0`'s `["N3", "N5"]`,
+  `"composition"`). Evidence: `READOUT_GENESIS_CORE.md` VI.3 defines `Re_ep = epistemic
+  Reynolds (spread = contestedness / turbulence)` and its own prose says: "`Re_ep` is the
+  diagnostic number that flags this condition cheaply, on CPU, before any large model is
+  invoked — precisely the way the RTPE layer flags physical turbulence via `τ_R` without
+  needing to resolve the full nonlinear cascade." RTPE is VI.1's Layer 2
+  (`τ_R İ_R + L_R I_R = S_R + η_R`, the `M→0, V→0` limit of the spine PDE / `SpinePDE`) — i.e.
+  `Re_ep` is explicitly analogised to, and reads off, the `SpinePDE`/`RTPEOperatorSplit`
+  turbulence-relaxation split. The same passage instead ties the *other two* scalars
+  explicitly elsewhere — "`F_ep` (obstruction depth) is the epistemic reading of `N3`" and
+  "`k_ep` (consistency coupling) is the epistemic reading of `N2`" — never citing `N3` or
+  `N5` for `Re_ep` itself. `N5` ("invariants … anomaly ratios, `2/α²`, `π`, `φ`") is not
+  mentioned anywhere near `Re_ep`. So `parents_0`'s `["N3", "N5"]` has no direct textual
+  support for `Re_ep` specifically, while `["SpinePDE", "RTPEOperatorSplit"]` does.
+
+### Remaining `step ≥ max(parent step)` violations (recorded, not silently resolved)
+
+After the fixes above, 26 violations remain (down from the 33 pre-existing artefacts, which
+are void under the corrected numbering, and down from an interim 35–36 seen mid-recompute
+before the intra-section topological tie-break pass below). Every one of the 26 is a
+genuine cross-section forward reference — the parent's heading sits at a strictly later
+global document position than the child's — not a same-section tie-break artefact (those
+were eliminated by ordering same-heading rows via a local topological sort over any
+in-group parent/child edges before falling back to file order). Grouped by root cause, with
+quoted source lines:
+
+**(a) `THE FORCED SET` (position 5) is a compiled results-summary that predates its own
+detailed derivations later in the book — 19 violations, all `Forced.*` rows citing parents
+in Part II/III/IV/V (positions 17–71):**
+`Forced.I→EQ-001`, `Forced.IV→MQ08-stepper`, `Forced.V→LivingGeometry`,
+`Forced.VI→ResidualsAndPotential`, `Forced.IX→EQ-007`, `Forced.XI→EQ-005`,
+`Forced.XI→BridgeFormula.MassReadout`, `Forced.XII→Face.8.MetricReadout`,
+`Forced.XIII→Face.3.Dispersion`, `Forced.XIV→GaugeFaces`, `Forced.XV→TermTier-gradV`,
+`Forced.XVI→Face.8.MetricReadout`, `Forced.XVII→ResidualsAndPotential`,
+`Forced.XVIII→Face.3.Dispersion`, `Forced.XIX→DRLAction`, `Forced.XX→GaugeFaces`,
+`Forced.XXIII→ModeEquation`, `Forced.XXIV→EQ-042`. Quoted source (CORE.md, immediately under
+the Forced Set heading): *"Every result below is necessity-tier: general facts about `F`/the
+spine itself… **I** is the original Forcing Ledger citation (predates both verification
+rounds); **II–XVI** are round 1's 15 independently re-compiled/coqchk'd confirmations,
+2026-07-23; **XVII–XXIV** are round 2's 8 new confirmations…"* — the section is explicitly a
+retrospective compilation citing results whose full derivation lives later in the document;
+by document *position* the citation necessarily precedes the cited material even though the
+logical (forcing) direction is sound.
+
+**(b) `weld` (position 4, the book's own front-matter one-line master equation) forward-cites
+`MQ08-stepper`/`τ_c = M/D` at II.1 (position 17) inside its own forcing-ledger table — 1
+violation:** `weld→MQ08-stepper`. Quoted source (CORE.md, the weld section's own forcing
+ledger table): *"`τ_c = M/D` | forced relation (a readout, not a dial) | ratio fixed by the
+two forced coefficients | **II.1**; value is a measured memory time"* and *"The spine PDE …
+(Part II) is a coarse-grain readout of `F`, not the root."* — `weld` is deliberately written
+as the book's compressed opening statement and cites Part II material by section number
+before Part II is formally reached.
+
+**(c) Part III (`Twelve Faces`, positions 28–39) threads forward to Part V material
+(`V.13`/`V.13a`, positions 61–62) — 2 violations:** `Face.1.Decomposition→T1`,
+`Face.10.bRLedger→EQ-029`. Quoted source (CORE.md, Face 1): *"Threading the 2026-07-21
+correction — the Scalar-Eigenmode Reduction Error… The 2026-07-21 finding proposes — `[Dr]`,
+**pending test T1, not yet proven** — that this coupling decomposes cleanly as `L_R = L_R^(+)
++ L_R^(−)`…"* — Face 1 explicitly names and forward-references `T1` (formalised in V.13a) as
+an open, pending item; the book's own "Threading the 2026-07-21 …" subheadings recur across
+multiple Faces precisely to carry a cross-Part finding back and forth, by design.
+
+**(d) `EQ-018/EQ-022/EQ-023/EQ-024/EQ-025/EQ-026` (Appendix C, `II.8a`) → objects the local
+topological tie-break could not resolve because the cited object is not itself `II.8a`-labeled
+— 1 violation survives after the tie-break pass:** `EQ-026→Face.10.StrictGap` (`III.Face10`,
+position 37, later than `II.8a`'s position 25). `EQ-026`'s own alias is
+`FaceTenReadoutChain`, i.e. it is Appendix C's reprint of material whose primary home is Face
+10, not II.8a — its `step_label` reflects the wrong home section (an artefact this pass did
+not correct, since fixing it would mean re-deriving a `step_label`, out of scope: "do not
+touch statements or codes" and the task names only the `EQ-008`/`EQ-021` fix pattern for
+Appendix C rows with a *coded-elsewhere* alias, and `Face.10.StrictGap`/`FaceTenReadoutChain`
+are two different codes, not a duplicate pair).
+
+**(e) Manual-override side effects of rule 5 (Appendix-C restatement `step = primary + 0.5`)
+— 4 violations, unavoidable given the rule as specified:**
+`EQ-008→EQ-005`, `EQ-008→EQ-006`, `EQ-008→EQ-007` (all `I.1`): `EQ-008` was pulled forward to
+`weld.step + 0.5 = 4.5`, ahead of its *other*, real forcing parents `EQ-005/006/007` which
+remain at their natural `I.1` position (~10.0). `EQ-008` genuinely has two roles — Appendix-C
+reprint of `weld` **and** a forced child of `EQ-005/006/007` — and rule 5 only lets it satisfy
+one of the two ordering constraints; both parents were kept (no edge deleted here, since
+neither is a cycle), the resulting violation is recorded rather than silently fixed by
+inventing a third step value. `EQ-035→EQ-021` (`V.13a`): `EQ-021` was pulled forward to
+`T1.step + 0.5 = 62.5`, ahead of its sibling `EQ-035` which cites it as a parent and remains
+at the group's natural position (~62.0).
+
+### Summary (this addendum)
+
+| check | result |
+|---|---|
+| rows | 590 |
+| rows with ≥1 parent | 585 |
+| primitives / orphans (0 parents) | 5 total — `EQ-001` (T3.4's sole legal root axiom), `EQ-005`/`EQ-006` (Genesis's own declared independent root axioms, unchanged from the pre-existing pass), plus `EQ-029` and `EQ-030` (newly orphaned by the two cycle-break edge removals above — not re-parented, no edge fabricated) |
+| dangling parent refs | 0 |
+| cycles | 0 (2 pre-existing cycles broken by removing 1 edge each; 1 further cycle that mechanical rule application would have introduced was caught before being written and avoided by skipping that one restatement edge, §"Cycle breaks" item 3) |
+| topological sort | visits all 590 nodes — confirmed DAG |
+| step ≥ max(parent step) violations | 26 remaining, all genuine cross-section forward references quoted above (down from 33 artefacts under the old row-index numbering, which are void) |

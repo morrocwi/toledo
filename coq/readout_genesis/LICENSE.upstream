@@ -23,6 +23,7 @@ public GitHub source, copied byte-for-byte (verified: zero diff against
 the upstream working tree at the anchored commit), with provenance
 (commit + blob per file) recorded in `PROVENANCE.json`.
 
-If the source repository's owner (Yaoharee Lahtee / ANSE.ASIA) later adds
-an explicit licence file upstream, this note should be revisited and, if
-appropriate, replaced with the actual licence text at that time.
+If the source repository's owner (Yaoharee Lahtee, per the MIT copyright
+line already public in the sibling import sources' own LICENSE files) later
+adds an explicit licence file upstream, this note should be revisited and,
+if appropriate, replaced with the actual licence text at that time.

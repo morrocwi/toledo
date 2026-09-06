@@ -1,0 +1,224 @@
+{
+  "source": "readout_genesis",
+  "repo_note": "public GitHub repository github.com/morrocwi/readout_genesis (not the private solver arc)",
+  "upstream_commit": "082dde893b70c7500c13d463239909c99cf17f0a",
+  "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis",
+  "licence_note": "No LICENSE/LICENCE file, and no licence text in README.md or CITATION.cff, exists anywhere in the upstream repository at this commit (verified 2026-09-06 by direct find/grep against the checked-out tree -- see LICENSE.upstream in this directory for the full readout). Files are imported as public GitHub source per the Toledo design meeting's public-source import policy (docs/MEETING_2026-09-06_toledo_design.md, decision T8); this is NOT the private solver-arc source, so the T9 'solver arc (private)' provenance rule does not apply here.",
+  "files": [
+    {
+      "path": "formal/InfoCPEquivariantGenerationBound_attempt.v",
+      "blob": "525fe0910d74ac8f7e7b04a1cb1d9378ca0abec6",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoRetentionMetricSkewDecomposition_attempt.v",
+      "blob": "7d7942eff7652ab795ff1c2aa5333e8052d5e0dc",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoSharedReadoutForcesSharedMemory_attempt.v",
+      "blob": "d145f65ad3c9392d090c9a02eb1164ae82a3dae5",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaCPSquareObstruction_attempt.v",
+      "blob": "4b10820fa48b8058808238579201b8799f2be6b3",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaEdgeCensus_attempt.v",
+      "blob": "36b4d3b91f25d47066a4447fc400bda16b19d920",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaFixedPointBalance_attempt.v",
+      "blob": "e4fb865e9c5349facbad12c3db373236b3c8fa70",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaLivingOrientationSign_attempt.v",
+      "blob": "320ff5965852de013ef70f8fba007e9fd947d0bf",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaMinimalLiving_attempt.v",
+      "blob": "aa88c70bf6b32686dd43ccb20dcac815d2edf789",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
+      "blob": "7a9dc8353aa29f50271a3484350a573c9351e5e8",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
+      "blob": "a1fa6a4bd1f851a30dd7d55c8f65badd9e737de4",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaSectorSpectrum_attempt.v",
+      "blob": "b232397e7e6934acf2f114c53e7cc88c2880e15d",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoThetaTopologyReadout_attempt.v",
+      "blob": "70df536d6dab1b34b76ade2bb1339fc649083313",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "formal/InfoTrueRecordUnreadable_attempt.v",
+      "blob": "695b5a00a0eb8c46eb8a31bed1abc1dcd7e26d4d",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoAllOrderCharacter.v",
+      "blob": "076b8133638de2c885c635333d81348ce5f74122",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoBlindMatterSearch.v",
+      "blob": "8e488c1ab700e0f5b7e65b95e34720238b87eba3",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoBlockCorrelation.v",
+      "blob": "e1e8f0d403e63742f8feb6e05d909fb42f17a2c3",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoCenterConfinement.v",
+      "blob": "616a906c49bee174a4ef1504891c06b6116c5a36",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoConfinementCertificate.v",
+      "blob": "fa68d49646da56ae7dfad0efcc8d4e3034268cc7",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoDimensionFourClosure.v",
+      "blob": "ca3a1002dc60561671c198fc6d9aebb33f0464d1",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoElectroweakNullDirection.v",
+      "blob": "31b55f8ab7be9abf9804c122695ce04255f0d604",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoFiniteTransferGap.v",
+      "blob": "8d00e4268f88276e37ca106315e49e20b0511564",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoFourForceCirculationRecovery.v",
+      "blob": "165edce613088ad1bf59189fda81d20183b9dc17",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoFrameMixingAction.v",
+      "blob": "9b35d528727010d3cbe89c99155d8d1be06bf250",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoGaugeAutomorphismGroup.v",
+      "blob": "b9933306a158a69447b9d1ac69d5837d7e23b6bc",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoGaugeLocalizationConnectionHolonomy.v",
+      "blob": "86d6db90833ec172887f68a91a00c7cb939f3a1f",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoHyperchargeAnomalyClosure.v",
+      "blob": "1fffa966785b733f6fd1d0bd39226275b0309c8f",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoHyperchargeGlobalQuotient.v",
+      "blob": "395b6b23c11a98910c3a696eda7efd74818e807b",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoIntertwinerOrderVacuum.v",
+      "blob": "072f60cf06b2dec8bc6a6b54e6c4567d42219d10",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoIsotropicFixedPoint.v",
+      "blob": "575d01d08f7b0dd443549e2febdbf0e2ab88195d",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoOrderDefectFromComposition.v",
+      "blob": "a3e6fbcb59e6d2ec07251a2945ef6140200e7b44",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoOrderHiggsClosure.v",
+      "blob": "e1401e026aa5adf4de0efcfad778e69afbbfd95c",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoOrderedTapeClosure.v",
+      "blob": "dab1575c9eee4b321b8eb5d728d66ac7426baf64",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoRetainedIntertwiner.v",
+      "blob": "99c14d073e27af50cd4c549b88050346328f500f",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoRootChirality.v",
+      "blob": "60986af6a07660dd5dddf1f0a8ecad597e82d30c",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoSurfaceAutomaton.v",
+      "blob": "967fa18992cc1e23f0b73b888ffd50ba699c10a5",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoSurfaceUpperAutomaton.v",
+      "blob": "10957443f31323c93255a47c6c2ea3afc455e05c",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoTapeKineticGW.v",
+      "blob": "0083af11fec0d3be38110c3757360ab6d37e0e94",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoTrialitySpectralFlow.v",
+      "blob": "9f784f3d5c33de400d01b4ca88d9dd0ce93f89f5",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    },
+    {
+      "path": "domains/standard_model/InfoUniversalRPSlab.v",
+      "blob": "cb1f62e7bc6d2209fbe57d70567cce6c6b020fd4",
+      "licence": "none found in repo (no LICENSE file, no licence text in README.md, no CITATION.cff); public GitHub repo github.com/morrocwi/readout_genesis"
+    }
+  ],
+  "files_included_count": 39,
+  "theorem_identifier_count": 356,
+  "copied_at": "2026-09-06T13:11:19Z",
+  "copy_method": "byte-for-byte verbatim copy (cp -p), verified with `diff -q` against the upstream working tree at the anchored commit -- zero mismatches",
+  "build": {
+    "generated_CoqProject": true,
+    "note": "No _CoqProject/Makefile/verify.sh exists anywhere in the upstream repo (verified 2026-09-06). Toledo-side _CoqProject and coq_makefile-generated Makefile were added here (path/-Q flags only, per the importer's mandate) -- upstream .v files themselves were never edited. No cross-file Require dependencies exist among these 39 files (all Requires are to the Coq standard library only), so build order was not constrained.",
+    "logical_paths": {
+      "formal/": "ReadoutGenesis.Formal",
+      "domains/standard_model/": "ReadoutGenesis.Domains.StandardModel"
+    }
+  },
+  "redactions": [
+    {
+      "field": "upstream_path",
+      "reason": "removed an absolute local filesystem path (including the operator's system username) that this draft initially wrote into this file -- caught by the mandatory leak scan (grep for /home/ paths and local usernames) before this import was finished; not the private-solver-arc-name redaction rule (this source is a public repo, not the solver arc), but the same local-path/privacy discipline applies to every Toledo file",
+      "original_value_pattern": "/home/<local-username>/ANSE.ASIA/readout_genesis",
+      "replaced_with": "(field removed -- the public GitHub remote is the citable location; a local checkout path is not a fact about the source)"
+    }
+  ]
+}

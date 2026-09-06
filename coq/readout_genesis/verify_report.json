@@ -1,9 +1,9 @@
 {
   "source": "readout_genesis",
   "total_identifiers": 356,
-  "closed": 95,
+  "closed": 356,
   "with_axioms": 0,
-  "build_failed": 261,
+  "build_failed": 0,
   "files": [
     {
       "path": "formal/InfoCPEquivariantGenerationBound_attempt.v",
@@ -158,51 +158,59 @@
       "theorems": [
         {
           "identifier": "rate_times_tau",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpkgrckgr1.v\", line 2, characters 18-32:\nError: The reference rate_times_tau was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.rate_times_tau"
         },
         {
           "identifier": "rate_nonzero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp3ltswa8f.v\", line 2, characters 18-30:\nError: The reference rate_nonzero was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.rate_nonzero"
         },
         {
           "identifier": "tau_eq_of_rate_eq",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxnta935_.v\", line 2, characters 18-35:\nError: The reference tau_eq_of_rate_eq was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.tau_eq_of_rate_eq"
         },
         {
           "identifier": "rate_eq_of_ratio_eq",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpiai36hxu.v\", line 2, characters 18-37:\nError: The reference rate_eq_of_ratio_eq was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.rate_eq_of_ratio_eq"
         },
         {
           "identifier": "shared_readout_forces_shared_memory",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmprn_fq1sx.v\", line 2, characters 18-53:\nError: The reference shared_readout_forces_shared_memory was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.shared_readout_forces_shared_memory"
         },
         {
           "identifier": "ratio_eq_of_tau_eq",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7pfkwi9v.v\", line 2, characters 18-36:\nError: The reference ratio_eq_of_tau_eq was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.ratio_eq_of_tau_eq"
         },
         {
           "identifier": "memory_iff_readout",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpzhsy2zqs.v\", line 2, characters 18-36:\nError: The reference memory_iff_readout was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.memory_iff_readout"
         },
         {
           "identifier": "readout_cannot_split_mass",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpo3l4ypb_.v\", line 2, characters 18-43:\nError: The reference readout_cannot_split_mass was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSharedReadoutForcesSharedMemory.readout_cannot_split_mass"
         }
       ]
     },
@@ -714,21 +722,24 @@
       "theorems": [
         {
           "identifier": "no_decoder_recovers_state",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmplhzbg6ps.v\", line 2, characters 18-43:\nError: The reference no_decoder_recovers_state was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "TrueRecordUnreadable.no_decoder_recovers_state"
         },
         {
           "identifier": "gauge_redundancy_forces_undecodability",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp96wzmmgq.v\", line 2, characters 18-56:\nError: The reference gauge_redundancy_forces_undecodability was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "TrueRecordUnreadable.gauge_redundancy_forces_undecodability"
         },
         {
           "identifier": "true_state_exists_but_no_total_decoder",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4j2s52rv.v\", line 2, characters 18-56:\nError: The reference true_state_exists_but_no_total_decoder was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "TrueRecordUnreadable.true_state_exists_but_no_total_decoder"
         }
       ]
     },
@@ -739,39 +750,45 @@
       "theorems": [
         {
           "identifier": "fusion_3_3bar_dim",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpmx33gr3l.v\", line 2, characters 18-35:\nError: The reference fusion_3_3bar_dim was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoAllOrderCharacter.fusion_3_3bar_dim"
         },
         {
           "identifier": "chi8_at_identity",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp740hayhc.v\", line 2, characters 18-34:\nError: The reference chi8_at_identity was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoAllOrderCharacter.chi8_at_identity"
         },
         {
           "identifier": "adjoint_tail_bound_N8",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmptuse6lfu.v\", line 2, characters 18-39:\nError: The reference adjoint_tail_bound_N8 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoAllOrderCharacter.adjoint_tail_bound_N8"
         },
         {
           "identifier": "c0_prime_coefficient",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4cujabvy.v\", line 2, characters 18-38:\nError: The reference c0_prime_coefficient was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoAllOrderCharacter.c0_prime_coefficient"
         },
         {
           "identifier": "c0_prime_is_two_c3",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpt2snw079.v\", line 2, characters 18-36:\nError: The reference c0_prime_is_two_c3 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoAllOrderCharacter.c0_prime_is_two_c3"
         },
         {
           "identifier": "certificate_ratio_linear",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpnidm0k8p.v\", line 2, characters 18-42:\nError: The reference certificate_ratio_linear was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoAllOrderCharacter.certificate_ratio_linear"
         }
       ]
     },
@@ -782,63 +799,73 @@
       "theorems": [
         {
           "identifier": "min_components",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp3trotgp3.v\", line 2, characters 18-32:\nError: The reference min_components was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.min_components"
         },
         {
           "identifier": "min_multiplets",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpcg4yvxb6.v\", line 2, characters 18-32:\nError: The reference min_multiplets was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.min_multiplets"
         },
         {
           "identifier": "witness_minimum",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpn2_y2x3l.v\", line 2, characters 18-33:\nError: The reference witness_minimum was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.witness_minimum"
         },
         {
           "identifier": "witness_gates",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpp5ryt5kv.v\", line 2, characters 18-31:\nError: The reference witness_gates was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.witness_gates"
         },
         {
           "identifier": "conjugate_minimum",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpiu7_yvju.v\", line 2, characters 18-35:\nError: The reference conjugate_minimum was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.conjugate_minimum"
         },
         {
           "identifier": "Z6_center_lock",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp1dnhsqxs.v\", line 2, characters 18-32:\nError: The reference Z6_center_lock was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.Z6_center_lock"
         },
         {
           "identifier": "A_grav_lock",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7yqxf2kq.v\", line 2, characters 18-29:\nError: The reference A_grav_lock was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.A_grav_lock"
         },
         {
           "identifier": "A111_factorizes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpthk75r95.v\", line 2, characters 18-33:\nError: The reference A111_factorizes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.A111_factorizes"
         },
         {
           "identifier": "derived_charges",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7j_rxzk6.v\", line 2, characters 18-33:\nError: The reference derived_charges was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.derived_charges"
         },
         {
           "identifier": "nu_grav_vanishes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp0yijupd8.v\", line 2, characters 18-34:\nError: The reference nu_grav_vanishes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlindMatterSearch.nu_grav_vanishes"
         }
       ]
     },
@@ -849,57 +876,66 @@
       "theorems": [
         {
           "identifier": "transverse_axes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp2jbrvjst.v\", line 2, characters 18-33:\nError: The reference transverse_axes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.transverse_axes"
         },
         {
           "identifier": "bump_dirs_per_plaq",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6da_dl95.v\", line 2, characters 18-36:\nError: The reference bump_dirs_per_plaq was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.bump_dirs_per_plaq"
         },
         {
           "identifier": "single_bump_count",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpkpylf0nh.v\", line 2, characters 18-35:\nError: The reference single_bump_count was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.single_bump_count"
         },
         {
           "identifier": "bump_area",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmprrxdvyx6.v\", line 2, characters 18-27:\nError: The reference bump_area was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.bump_area"
         },
         {
           "identifier": "planar_control_D2",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpsxfh88e5.v\", line 2, characters 18-35:\nError: The reference planar_control_D2 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.planar_control_D2"
         },
         {
           "identifier": "rho_geom_expand",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6m8cdn73.v\", line 2, characters 18-33:\nError: The reference rho_geom_expand was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.rho_geom_expand"
         },
         {
           "identifier": "correlations_increase_survival",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpqe2sn9k6.v\", line 2, characters 18-48:\nError: The reference correlations_increase_survival was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.correlations_increase_survival"
         },
         {
           "identifier": "planar_recovers_serial",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpopji0shy.v\", line 2, characters 18-40:\nError: The reference planar_recovers_serial was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.planar_recovers_serial"
         },
         {
           "identifier": "first_shell_cert_witness",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpy9i3tox3.v\", line 2, characters 18-42:\nError: The reference first_shell_cert_witness was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoBlockCorrelation.first_shell_cert_witness"
         }
       ]
     },
@@ -910,57 +946,66 @@
       "theorems": [
         {
           "identifier": "omega_sq",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpjvaxh40b.v\", line 2, characters 18-26:\nError: The reference omega_sq was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.omega_sq"
         },
         {
           "identifier": "omega_cubed_is_one",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpaolx988x.v\", line 2, characters 18-36:\nError: The reference omega_cubed_is_one was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.omega_cubed_is_one"
         },
         {
           "identifier": "one_plus_w_plus_w2_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpfz42qq3k.v\", line 2, characters 18-41:\nError: The reference one_plus_w_plus_w2_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.one_plus_w_plus_w2_zero"
         },
         {
           "identifier": "abs_omega_minus_one_sq_is_three",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpvfydl77i.v\", line 2, characters 18-49:\nError: The reference abs_omega_minus_one_sq_is_three was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.abs_omega_minus_one_sq_is_three"
         },
         {
           "identifier": "numerator_is_one_minus_r",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp5ff0352d.v\", line 2, characters 18-42:\nError: The reference numerator_is_one_minus_r was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.numerator_is_one_minus_r"
         },
         {
           "identifier": "q_flat_is_one",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpdwxdjvdo.v\", line 2, characters 18-31:\nError: The reference q_flat_is_one was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.q_flat_is_one"
         },
         {
           "identifier": "q_disorder_is_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpwmboqag5.v\", line 2, characters 18-36:\nError: The reference q_disorder_is_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.q_disorder_is_zero"
         },
         {
           "identifier": "wilson_area_multiplicative",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp8xdo84h5.v\", line 2, characters 18-44:\nError: The reference wilson_area_multiplicative was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.wilson_area_multiplicative"
         },
         {
           "identifier": "area_beats_perimeter",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpuwd8jkjs.v\", line 2, characters 18-38:\nError: The reference area_beats_perimeter was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoCenterConfinement.area_beats_perimeter"
         }
       ]
     },
@@ -971,57 +1016,66 @@
       "theorems": [
         {
           "identifier": "plaquette_max_degree_4D",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp5ps3t3a0.v\", line 2, characters 18-41:\nError: The reference plaquette_max_degree_4D was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.plaquette_max_degree_4D"
         },
         {
           "identifier": "frobenius_identity_R",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7xulvqct.v\", line 2, characters 18-38:\nError: The reference frobenius_identity_R was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.frobenius_identity_R"
         },
         {
           "identifier": "center_max_is_nine",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6e9mf1y6.v\", line 2, characters 18-36:\nError: The reference center_max_is_nine was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.center_max_is_nine"
         },
         {
           "identifier": "identity_min_is_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpeetauij5.v\", line 2, characters 18-38:\nError: The reference identity_min_is_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.identity_min_is_zero"
         },
         {
           "identifier": "c3_factors_out_k",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmplpvmr_1s.v\", line 2, characters 18-34:\nError: The reference c3_factors_out_k was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.c3_factors_out_k"
         },
         {
           "identifier": "c0_at_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxaqqe3zn.v\", line 2, characters 18-28:\nError: The reference c0_at_zero was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.c0_at_zero"
         },
         {
           "identifier": "c3_at_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpbcyv08_y.v\", line 2, characters 18-28:\nError: The reference c3_at_zero was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.c3_at_zero"
         },
         {
           "identifier": "retained_suppression",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp2ectlpbh.v\", line 2, characters 18-38:\nError: The reference retained_suppression was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.retained_suppression"
         },
         {
           "identifier": "finite_surface_sum",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxjz4hj14.v\", line 2, characters 18-36:\nError: The reference finite_surface_sum was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoConfinementCertificate.finite_surface_sum"
         }
       ]
     },
@@ -1032,63 +1086,73 @@
       "theorems": [
         {
           "identifier": "carrier_dim",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpkzi4ty89.v\", line 2, characters 18-29:\nError: The reference carrier_dim was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.carrier_dim"
         },
         {
           "identifier": "parity_d4",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpvx8spivg.v\", line 2, characters 18-27:\nError: The reference parity_d4 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.parity_d4"
         },
         {
           "identifier": "parity_d2",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp1rpdqrt4.v\", line 2, characters 18-27:\nError: The reference parity_d2 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.parity_d2"
         },
         {
           "identifier": "parity_d3",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp5z32qgip.v\", line 2, characters 18-27:\nError: The reference parity_d3 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.parity_d3"
         },
         {
           "identifier": "parity_d1",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpr81hvw02.v\", line 2, characters 18-27:\nError: The reference parity_d1 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.parity_d1"
         },
         {
           "identifier": "even_grading",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpy208th6_.v\", line 2, characters 18-30:\nError: The reference even_grading was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.even_grading"
         },
         {
           "identifier": "odd_grading_fails",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp3h5h88ks.v\", line 2, characters 18-35:\nError: The reference odd_grading_fails was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.odd_grading_fails"
         },
         {
           "identifier": "e_orthonormal",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpbtqont6t.v\", line 2, characters 18-31:\nError: The reference e_orthonormal was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.e_orthonormal"
         },
         {
           "identifier": "no_fourth_orthogonal",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmplf866ktw.v\", line 2, characters 18-38:\nError: The reference no_fourth_orthogonal was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.no_fourth_orthogonal"
         },
         {
           "identifier": "clifford_reduces_to_dot",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6pd_bntz.v\", line 2, characters 18-41:\nError: The reference clifford_reduces_to_dot was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoDimensionFourClosure.clifford_reduces_to_dot"
         }
       ]
     },
@@ -1099,45 +1163,52 @@
       "theorems": [
         {
           "identifier": "det_neutral_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpsmwf58hw.v\", line 2, characters 18-34:\nError: The reference det_neutral_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoElectroweakNullDirection.det_neutral_zero"
         },
         {
           "identifier": "photon_null_direction",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpwlv__7m2.v\", line 2, characters 18-39:\nError: The reference photon_null_direction was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoElectroweakNullDirection.photon_null_direction"
         },
         {
           "identifier": "Z_massive_eigenvector",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7jffv4je.v\", line 2, characters 18-39:\nError: The reference Z_massive_eigenvector was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoElectroweakNullDirection.Z_massive_eigenvector"
         },
         {
           "identifier": "mZ2_is_trace",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxllboe1v.v\", line 2, characters 18-30:\nError: The reference mZ2_is_trace was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoElectroweakNullDirection.mZ2_is_trace"
         },
         {
           "identifier": "photon_orthogonal_Z",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpiqift4yy.v\", line 2, characters 18-37:\nError: The reference photon_orthogonal_Z was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoElectroweakNullDirection.photon_orthogonal_Z"
         },
         {
           "identifier": "generic_rank2_det_is_one",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmplkxp5or1.v\", line 2, characters 18-42:\nError: The reference generic_rank2_det_is_one was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoElectroweakNullDirection.generic_rank2_det_is_one"
         },
         {
           "identifier": "generic_rank2_no_massless",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7bl8x87v.v\", line 2, characters 18-43:\nError: The reference generic_rank2_no_massless was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoElectroweakNullDirection.generic_rank2_no_massless"
         }
       ]
     },
@@ -1148,51 +1219,59 @@
       "theorems": [
         {
           "identifier": "strict_contraction_gives_gap",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpswzs0drm.v\", line 2, characters 18-46:\nError: The reference strict_contraction_gives_gap was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.strict_contraction_gives_gap"
         },
         {
           "identifier": "fixture_gap",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpa_pf4v70.v\", line 2, characters 18-29:\nError: The reference fixture_gap was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.fixture_gap"
         },
         {
           "identifier": "positive_control",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpfaqs2pi2.v\", line 2, characters 18-34:\nError: The reference positive_control was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.positive_control"
         },
         {
           "identifier": "e0_e1_orthogonal",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxsui5uvw.v\", line 2, characters 18-34:\nError: The reference e0_e1_orthogonal was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.e0_e1_orthogonal"
         },
         {
           "identifier": "contraction_on_perp",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpadtblgil.v\", line 2, characters 18-37:\nError: The reference contraction_on_perp was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.contraction_on_perp"
         },
         {
           "identifier": "degeneracy_no_gap",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmphpr99m09.v\", line 2, characters 18-35:\nError: The reference degeneracy_no_gap was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.degeneracy_no_gap"
         },
         {
           "identifier": "diffusion_gap_positive",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp5f7nk_x5.v\", line 2, characters 18-40:\nError: The reference diffusion_gap_positive was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.diffusion_gap_positive"
         },
         {
           "identifier": "diffusion_gap_closes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpkyzlywm2.v\", line 2, characters 18-38:\nError: The reference diffusion_gap_closes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFiniteTransferGap.diffusion_gap_closes"
         }
       ]
     },
@@ -1203,39 +1282,45 @@
       "theorems": [
         {
           "identifier": "A_times_X_is_204I",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp311qs81p.v\", line 2, characters 18-35:\nError: The reference A_times_X_is_204I was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFourForceCirculationRecovery.A_times_X_is_204I"
         },
         {
           "identifier": "directed_response_identity",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmplpcvuedr.v\", line 2, characters 18-44:\nError: The reference directed_response_identity was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFourForceCirculationRecovery.directed_response_identity"
         },
         {
           "identifier": "circulation_recovery",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpo7u61slb.v\", line 2, characters 18-38:\nError: The reference circulation_recovery was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFourForceCirculationRecovery.circulation_recovery"
         },
         {
           "identifier": "reciprocal_control_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpkj_btoyn.v\", line 2, characters 18-41:\nError: The reference reciprocal_control_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFourForceCirculationRecovery.reciprocal_control_zero"
         },
         {
           "identifier": "omega_antisym",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7tuqkctc.v\", line 2, characters 18-31:\nError: The reference omega_antisym was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFourForceCirculationRecovery.omega_antisym"
         },
         {
           "identifier": "omega_nonzero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp883pmrws.v\", line 2, characters 18-31:\nError: The reference omega_nonzero was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFourForceCirculationRecovery.omega_nonzero"
         }
       ]
     },
@@ -1246,69 +1331,80 @@
       "theorems": [
         {
           "identifier": "weight_term_nonneg",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmph_bd85h4.v\", line 2, characters 18-36:\nError: The reference weight_term_nonneg was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.weight_term_nonneg"
         },
         {
           "identifier": "weight_reversal_symmetric",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7b4f3xpc.v\", line 2, characters 18-43:\nError: The reference weight_reversal_symmetric was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.weight_reversal_symmetric"
         },
         {
           "identifier": "weights_sum_to_one",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpd5u3txoo.v\", line 2, characters 18-36:\nError: The reference weights_sum_to_one was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.weights_sum_to_one"
         },
         {
           "identifier": "identity_self_loop_positive",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpj72yoo7_.v\", line 2, characters 18-45:\nError: The reference identity_self_loop_positive was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.identity_self_loop_positive"
         },
         {
           "identifier": "sextic_leading_is_25pow6",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_6l0qqay.v\", line 2, characters 18-42:\nError: The reference sextic_leading_is_25pow6 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.sextic_leading_is_25pow6"
         },
         {
           "identifier": "rho_bracket_low",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpca9a5z1m.v\", line 2, characters 18-33:\nError: The reference rho_bracket_low was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.rho_bracket_low"
         },
         {
           "identifier": "rho_bracket_high",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpknt9laal.v\", line 2, characters 18-34:\nError: The reference rho_bracket_high was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.rho_bracket_high"
         },
         {
           "identifier": "rho_at_one_pos",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6_qm8lqo.v\", line 2, characters 18-32:\nError: The reference rho_at_one_pos was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.rho_at_one_pos"
         },
         {
           "identifier": "rho_bracket_in_unit",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpegsx8v05.v\", line 2, characters 18-37:\nError: The reference rho_bracket_in_unit was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.rho_bracket_in_unit"
         },
         {
           "identifier": "stronger_than_v1_10",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmppdjx1qol.v\", line 2, characters 18-37:\nError: The reference stronger_than_v1_10 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.stronger_than_v1_10"
         },
         {
           "identifier": "scale_preserved",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpixcsrqot.v\", line 2, characters 18-33:\nError: The reference scale_preserved was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoFrameMixingAction.scale_preserved"
         }
       ]
     },
@@ -1319,51 +1415,59 @@
       "theorems": [
         {
           "identifier": "pathcomp_nil",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmppas86iup.v\", line 2, characters 18-30:\nError: The reference pathcomp_nil was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.pathcomp_nil"
         },
         {
           "identifier": "pathcomp_app",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpp677r49t.v\", line 2, characters 18-30:\nError: The reference pathcomp_app was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.pathcomp_app"
         },
         {
           "identifier": "pathcomp_single",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmppm49i9y1.v\", line 2, characters 18-33:\nError: The reference pathcomp_single was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.pathcomp_single"
         },
         {
           "identifier": "pathcomp_app_assoc",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp8x7aziim.v\", line 2, characters 18-36:\nError: The reference pathcomp_app_assoc was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.pathcomp_app_assoc"
         },
         {
           "identifier": "id_is_aut",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmppqqzwnek.v\", line 2, characters 18-27:\nError: The reference id_is_aut was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.id_is_aut"
         },
         {
           "identifier": "aut_closed_under_compose",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpjodcqlx4.v\", line 2, characters 18-42:\nError: The reference aut_closed_under_compose was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.aut_closed_under_compose"
         },
         {
           "identifier": "aut_closed_under_inverse",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmps0bretlr.v\", line 2, characters 18-42:\nError: The reference aut_closed_under_inverse was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.aut_closed_under_inverse"
         },
         {
           "identifier": "aut_is_a_group",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpb4hzae2n.v\", line 2, characters 18-32:\nError: The reference aut_is_a_group was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeAutomorphismGroup.aut_is_a_group"
         }
       ]
     },
@@ -1374,63 +1478,73 @@
       "theorems": [
         {
           "identifier": "group_cancel_left",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_47ugrhu.v\", line 2, characters 18-35:\nError: The reference group_cancel_left was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.group_cancel_left"
         },
         {
           "identifier": "group_cancel_middle",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmptfbqzz45.v\", line 2, characters 18-37:\nError: The reference group_cancel_middle was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.group_cancel_middle"
         },
         {
           "identifier": "pathprod_O",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpwse72ac2.v\", line 2, characters 18-28:\nError: The reference pathprod_O was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.pathprod_O"
         },
         {
           "identifier": "coboundary_telescopes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_0cki1_0.v\", line 2, characters 18-39:\nError: The reference coboundary_telescopes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.coboundary_telescopes"
         },
         {
           "identifier": "closed_loop_pure_gauge_flat",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpv8y0vr3g.v\", line 2, characters 18-45:\nError: The reference closed_loop_pure_gauge_flat was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.closed_loop_pure_gauge_flat"
         },
         {
           "identifier": "connection_law_exists",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpn77qh1vx.v\", line 2, characters 18-39:\nError: The reference connection_law_exists was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.connection_law_exists"
         },
         {
           "identifier": "connection_law_unique",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp13bs0q9u.v\", line 2, characters 18-39:\nError: The reference connection_law_unique was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.connection_law_unique"
         },
         {
           "identifier": "conj_preserves_identity",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxri5tx2d.v\", line 2, characters 18-41:\nError: The reference conj_preserves_identity was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.conj_preserves_identity"
         },
         {
           "identifier": "conj_trivial_iff",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp61im1j66.v\", line 2, characters 18-34:\nError: The reference conj_trivial_iff was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.conj_trivial_iff"
         },
         {
           "identifier": "conj_composes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpuuwmrss0.v\", line 2, characters 18-31:\nError: The reference conj_composes was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoGaugeLocalizationConnectionHolonomy.conj_composes"
         }
       ]
     },
@@ -1441,45 +1555,52 @@
       "theorems": [
         {
           "identifier": "coupling_invariance",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpqwsegy5x.v\", line 2, characters 18-37:\nError: The reference coupling_invariance was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeAnomalyClosure.coupling_invariance"
         },
         {
           "identifier": "mixed_SU2_U1",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpvd_kzhmr.v\", line 2, characters 18-30:\nError: The reference mixed_SU2_U1 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeAnomalyClosure.mixed_SU2_U1"
         },
         {
           "identifier": "mixed_grav_U1",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6wwmqqtk.v\", line 2, characters 18-31:\nError: The reference mixed_grav_U1 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeAnomalyClosure.mixed_grav_U1"
         },
         {
           "identifier": "cubic_anomaly_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp1px49sho.v\", line 2, characters 18-36:\nError: The reference cubic_anomaly_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeAnomalyClosure.cubic_anomaly_zero"
         },
         {
           "identifier": "are_SM_hypercharges",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp0qqbs426.v\", line 2, characters 18-37:\nError: The reference are_SM_hypercharges was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeAnomalyClosure.are_SM_hypercharges"
         },
         {
           "identifier": "TrK0inv_is_27_10",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpx4vz_4wt.v\", line 2, characters 18-34:\nError: The reference TrK0inv_is_27_10 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeAnomalyClosure.TrK0inv_is_27_10"
         },
         {
           "identifier": "r1_raw_response",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpf58t7iy5.v\", line 2, characters 18-33:\nError: The reference r1_raw_response was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeAnomalyClosure.r1_raw_response"
         }
       ]
     },
@@ -1490,87 +1611,101 @@
       "theorems": [
         {
           "identifier": "center_lock_Q",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpqal5sszr.v\", line 2, characters 18-31:\nError: The reference center_lock_Q was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.center_lock_Q"
         },
         {
           "identifier": "center_lock_uc",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpbrzjoyjj.v\", line 2, characters 18-32:\nError: The reference center_lock_uc was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.center_lock_uc"
         },
         {
           "identifier": "center_lock_dc",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxv2iyc1w.v\", line 2, characters 18-32:\nError: The reference center_lock_dc was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.center_lock_dc"
         },
         {
           "identifier": "center_lock_L",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpa4bhtz9d.v\", line 2, characters 18-31:\nError: The reference center_lock_L was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.center_lock_L"
         },
         {
           "identifier": "center_lock_ec",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp1xmojn69.v\", line 2, characters 18-32:\nError: The reference center_lock_ec was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.center_lock_ec"
         },
         {
           "identifier": "center_lock_H",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp5udgr9qs.v\", line 2, characters 18-31:\nError: The reference center_lock_H was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.center_lock_H"
         },
         {
           "identifier": "global_su2_even",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp3q55refq.v\", line 2, characters 18-33:\nError: The reference global_su2_even was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.global_su2_even"
         },
         {
           "identifier": "A_grav_is_h_minus_3q",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_yhgpv88.v\", line 2, characters 18-38:\nError: The reference A_grav_is_h_minus_3q was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.A_grav_is_h_minus_3q"
         },
         {
           "identifier": "A111_factorizes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpz0_jncm4.v\", line 2, characters 18-33:\nError: The reference A111_factorizes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.A111_factorizes"
         },
         {
           "identifier": "sm_hypercharges",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmphlbzav5i.v\", line 2, characters 18-33:\nError: The reference sm_hypercharges was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.sm_hypercharges"
         },
         {
           "identifier": "Y_values",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpu5yo0sjk.v\", line 2, characters 18-26:\nError: The reference Y_values was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.Y_values"
         },
         {
           "identifier": "Q_em_pattern",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpt5kleap8.v\", line 2, characters 18-30:\nError: The reference Q_em_pattern was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.Q_em_pattern"
         },
         {
           "identifier": "nu_grav_vanishes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp2ehzcrlc.v\", line 2, characters 18-34:\nError: The reference nu_grav_vanishes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.nu_grav_vanishes"
         },
         {
           "identifier": "nu_cubic_vanishes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp60x0ihm5.v\", line 2, characters 18-35:\nError: The reference nu_cubic_vanishes was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoHyperchargeGlobalQuotient.nu_cubic_vanishes"
         }
       ]
     },
@@ -1581,69 +1716,80 @@
       "theorems": [
         {
           "identifier": "nu_U1_closures",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpcqjuvrox.v\", line 2, characters 18-32:\nError: The reference nu_U1_closures was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.nu_U1_closures"
         },
         {
           "identifier": "closure_mode_count",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp30rnhj4s.v\", line 2, characters 18-36:\nError: The reference closure_mode_count was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.closure_mode_count"
         },
         {
           "identifier": "tape_quotient",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_t83wu2s.v\", line 2, characters 18-31:\nError: The reference tape_quotient was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.tape_quotient"
         },
         {
           "identifier": "fock_vanishes_at_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpkilduupg.v\", line 2, characters 18-39:\nError: The reference fock_vanishes_at_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.fock_vanishes_at_zero"
         },
         {
           "identifier": "origin_slope",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpgnwt76n6.v\", line 2, characters 18-30:\nError: The reference origin_slope was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.origin_slope"
         },
         {
           "identifier": "fraction_term_nonneg",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpuyf4kdla.v\", line 2, characters 18-38:\nError: The reference fraction_term_nonneg was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.fraction_term_nonneg"
         },
         {
           "identifier": "convexity_automatic",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpypuf44wx.v\", line 2, characters 18-37:\nError: The reference convexity_automatic was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.convexity_automatic"
         },
         {
           "identifier": "pressure_max_seven",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpld6ps3gk.v\", line 2, characters 18-36:\nError: The reference pressure_max_seven was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.pressure_max_seven"
         },
         {
           "identifier": "no_go_alpha_seven",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpaz0au7ya.v\", line 2, characters 18-35:\nError: The reference no_go_alpha_seven was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.no_go_alpha_seven"
         },
         {
           "identifier": "scale_lower_bound",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpx_zs6d0y.v\", line 2, characters 18-35:\nError: The reference scale_lower_bound was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.scale_lower_bound"
         },
         {
           "identifier": "scale_upper_bound",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpr47mt8td.v\", line 2, characters 18-35:\nError: The reference scale_upper_bound was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIntertwinerOrderVacuum.scale_upper_bound"
         }
       ]
     },
@@ -1654,69 +1800,80 @@
       "theorems": [
         {
           "identifier": "contraction_factor",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpaoa5r3_9.v\", line 2, characters 18-36:\nError: The reference contraction_factor was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.contraction_factor"
         },
         {
           "identifier": "one_step",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpn797lcac.v\", line 2, characters 18-26:\nError: The reference one_step was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.one_step"
         },
         {
           "identifier": "trace_preserved",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpn9473mmi.v\", line 2, characters 18-33:\nError: The reference trace_preserved was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.trace_preserved"
         },
         {
           "identifier": "sextic_bracket_low",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpsrj9v007.v\", line 2, characters 18-36:\nError: The reference sextic_bracket_low was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.sextic_bracket_low"
         },
         {
           "identifier": "sextic_bracket_high",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpjd8d3n9l.v\", line 2, characters 18-37:\nError: The reference sextic_bracket_high was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.sextic_bracket_high"
         },
         {
           "identifier": "sextic_at_one",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpjpro0m7r.v\", line 2, characters 18-31:\nError: The reference sextic_at_one was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.sextic_at_one"
         },
         {
           "identifier": "rho_bracket_in_unit",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpqoztm1it.v\", line 2, characters 18-37:\nError: The reference rho_bracket_in_unit was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.rho_bracket_in_unit"
         },
         {
           "identifier": "P_stochastic",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4d9vd2nu.v\", line 2, characters 18-30:\nError: The reference P_stochastic was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.P_stochastic"
         },
         {
           "identifier": "average_conserved",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpikd32csw.v\", line 2, characters 18-35:\nError: The reference average_conserved was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.average_conserved"
         },
         {
           "identifier": "consensus_gap",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmphnecy4hj.v\", line 2, characters 18-31:\nError: The reference consensus_gap was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.consensus_gap"
         },
         {
           "identifier": "deviation_update",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxm30hl0k.v\", line 2, characters 18-34:\nError: The reference deviation_update was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoIsotropicFixedPoint.deviation_update"
         }
       ]
     },
@@ -1727,75 +1884,87 @@
       "theorems": [
         {
           "identifier": "mmul_assoc",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpuuvryq9m.v\", line 2, characters 18-28:\nError: The reference mmul_assoc was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.mmul_assoc"
         },
         {
           "identifier": "mmul_id_l",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpvqmmoh_6.v\", line 2, characters 18-27:\nError: The reference mmul_id_l was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.mmul_id_l"
         },
         {
           "identifier": "mmul_id_r",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpn_1nysn9.v\", line 2, characters 18-27:\nError: The reference mmul_id_r was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.mmul_id_r"
         },
         {
           "identifier": "K_is_ordered_defect",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmph4ypia1b.v\", line 2, characters 18-37:\nError: The reference K_is_ordered_defect was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.K_is_ordered_defect"
         },
         {
           "identifier": "K_antisym",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpqtzk118s.v\", line 2, characters 18-27:\nError: The reference K_antisym was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.K_antisym"
         },
         {
           "identifier": "K_bilinear_left",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpa2s3d19q.v\", line 2, characters 18-33:\nError: The reference K_bilinear_left was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.K_bilinear_left"
         },
         {
           "identifier": "K_bilinear_right",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpy4nf185x.v\", line 2, characters 18-34:\nError: The reference K_bilinear_right was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.K_bilinear_right"
         },
         {
           "identifier": "jacobi",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpez8ktund.v\", line 2, characters 18-24:\nError: The reference jacobi was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.jacobi"
         },
         {
           "identifier": "nonabelian_witness_a11",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpe8o_y2h2.v\", line 2, characters 18-40:\nError: The reference nonabelian_witness_a11 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.nonabelian_witness_a11"
         },
         {
           "identifier": "nonabelian_witness",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpnnc7abov.v\", line 2, characters 18-36:\nError: The reference nonabelian_witness was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.nonabelian_witness"
         },
         {
           "identifier": "abelian_no_selfforce",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpeyi0vdie.v\", line 2, characters 18-38:\nError: The reference abelian_no_selfforce was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.abelian_no_selfforce"
         },
         {
           "identifier": "diagonal_commute_zero_defect",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp5jiz2nj8.v\", line 2, characters 18-46:\nError: The reference diagonal_commute_zero_defect was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderDefectFromComposition.diagonal_commute_zero_defect"
         }
       ]
     },
@@ -1806,93 +1975,108 @@
       "theorems": [
         {
           "identifier": "yH_from_QHU",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_i15vkkc.v\", line 2, characters 18-29:\nError: The reference yH_from_QHU was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.yH_from_QHU"
         },
         {
           "identifier": "yH_from_QHdD",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6h6mcb6q.v\", line 2, characters 18-30:\nError: The reference yH_from_QHdD was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.yH_from_QHdD"
         },
         {
           "identifier": "yH_from_LHdE",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpco_flt4a.v\", line 2, characters 18-30:\nError: The reference yH_from_LHdE was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.yH_from_LHdE"
         },
         {
           "identifier": "yH_unique",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmplf3u0cvp.v\", line 2, characters 18-27:\nError: The reference yH_unique was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.yH_unique"
         },
         {
           "identifier": "su2_doublet_has_singlet",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmppmx2r_4r.v\", line 2, characters 18-41:\nError: The reference su2_doublet_has_singlet was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.su2_doublet_has_singlet"
         },
         {
           "identifier": "su2_singlet_no_singlet",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpzp1aesp8.v\", line 2, characters 18-40:\nError: The reference su2_singlet_no_singlet was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.su2_singlet_no_singlet"
         },
         {
           "identifier": "su2_triplet_no_singlet",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpx5cwtypy.v\", line 2, characters 18-40:\nError: The reference su2_triplet_no_singlet was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.su2_triplet_no_singlet"
         },
         {
           "identifier": "broken_count",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmputgdo2su.v\", line 2, characters 18-30:\nError: The reference broken_count was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.broken_count"
         },
         {
           "identifier": "dof_balance",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpm2vfqkft.v\", line 2, characters 18-29:\nError: The reference dof_balance was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.dof_balance"
         },
         {
           "identifier": "residual_annihilates_vacuum",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpyvm5u_q1.v\", line 2, characters 18-45:\nError: The reference residual_annihilates_vacuum was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.residual_annihilates_vacuum"
         },
         {
           "identifier": "broken_diagonal_nonzero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp8a6q9r_e.v\", line 2, characters 18-41:\nError: The reference broken_diagonal_nonzero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.broken_diagonal_nonzero"
         },
         {
           "identifier": "neutral_det_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpfsyjrzzm.v\", line 2, characters 18-34:\nError: The reference neutral_det_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.neutral_det_zero"
         },
         {
           "identifier": "mW_mZ_relation",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp2o7xzed8.v\", line 2, characters 18-32:\nError: The reference mW_mZ_relation was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.mW_mZ_relation"
         },
         {
           "identifier": "mZ2_is_trace",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp56vpklhd.v\", line 2, characters 18-30:\nError: The reference mZ2_is_trace was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.mZ2_is_trace"
         },
         {
           "identifier": "photon_zero_mode",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4_paqm5t.v\", line 2, characters 18-34:\nError: The reference photon_zero_mode was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderHiggsClosure.photon_zero_mode"
         }
       ]
     },
@@ -1903,57 +2087,66 @@
       "theorems": [
         {
           "identifier": "oddness_from_cyclic_closure",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpyz99v6ad.v\", line 2, characters 18-45:\nError: The reference oddness_from_cyclic_closure was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.oddness_from_cyclic_closure"
         },
         {
           "identifier": "two_is_not_odd",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpdoh6qas9.v\", line 2, characters 18-32:\nError: The reference two_is_not_odd was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.two_is_not_odd"
         },
         {
           "identifier": "three_is_odd",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpofmriq0m.v\", line 2, characters 18-30:\nError: The reference three_is_odd was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.three_is_odd"
         },
         {
           "identifier": "k_min_is_three",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpd1kzuiib.v\", line 2, characters 18-32:\nError: The reference k_min_is_three was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.k_min_is_three"
         },
         {
           "identifier": "repeated_event_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp11z3bp3k.v\", line 2, characters 18-37:\nError: The reference repeated_event_zero was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.repeated_event_zero"
         },
         {
           "identifier": "R_preserves_load",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpsra4t6ky.v\", line 2, characters 18-34:\nError: The reference R_preserves_load was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.R_preserves_load"
         },
         {
           "identifier": "R_preserves_triple",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4sscp5ta.v\", line 2, characters 18-36:\nError: The reference R_preserves_triple was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.R_preserves_triple"
         },
         {
           "identifier": "det_common_phase_is_cube",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpgswvieqc.v\", line 2, characters 18-42:\nError: The reference det_common_phase_is_cube was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.det_common_phase_is_cube"
         },
         {
           "identifier": "wilson_trace_invariant",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6cfdyi6q.v\", line 2, characters 18-40:\nError: The reference wilson_trace_invariant was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoOrderedTapeClosure.wilson_trace_invariant"
         }
       ]
     },
@@ -1964,45 +2157,52 @@
       "theorems": [
         {
           "identifier": "G_orthogonal_preserves_load",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpqnk8ze5w.v\", line 2, characters 18-45:\nError: The reference G_orthogonal_preserves_load was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRetainedIntertwiner.G_orthogonal_preserves_load"
         },
         {
           "identifier": "intertwiner_idempotent",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp2k5jajgz.v\", line 2, characters 18-40:\nError: The reference intertwiner_idempotent was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRetainedIntertwiner.intertwiner_idempotent"
         },
         {
           "identifier": "intertwiner_contraction",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpeh661f9t.v\", line 2, characters 18-41:\nError: The reference intertwiner_contraction was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRetainedIntertwiner.intertwiner_contraction"
         },
         {
           "identifier": "finite_geometric",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7dycil5a.v\", line 2, characters 18-34:\nError: The reference finite_geometric was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRetainedIntertwiner.finite_geometric"
         },
         {
           "identifier": "ratio_is_linear",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpkvtfdz17.v\", line 2, characters 18-33:\nError: The reference ratio_is_linear was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRetainedIntertwiner.ratio_is_linear"
         },
         {
           "identifier": "tail_resummation",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpoz9sxu3a.v\", line 2, characters 18-34:\nError: The reference tail_resummation was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRetainedIntertwiner.tail_resummation"
         },
         {
           "identifier": "eight_v_series",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpu931vbfl.v\", line 2, characters 18-32:\nError: The reference eight_v_series was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRetainedIntertwiner.eight_v_series"
         }
       ]
     },
@@ -2013,105 +2213,122 @@
       "theorems": [
         {
           "identifier": "gamma_involution",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp3zraoc93.v\", line 2, characters 18-34:\nError: The reference gamma_involution was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.gamma_involution"
         },
         {
           "identifier": "gamma_selfadjoint",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmporzdcn75.v\", line 2, characters 18-35:\nError: The reference gamma_selfadjoint was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.gamma_selfadjoint"
         },
         {
           "identifier": "reversal_involution",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp5iuh4sxd.v\", line 2, characters 18-37:\nError: The reference reversal_involution was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.reversal_involution"
         },
         {
           "identifier": "reversal_flips_gamma",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpw93fbv9s.v\", line 2, characters 18-38:\nError: The reference reversal_flips_gamma was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.reversal_flips_gamma"
         },
         {
           "identifier": "Pp_idem",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpt_z_2xoo.v\", line 2, characters 18-25:\nError: The reference Pp_idem was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.Pp_idem"
         },
         {
           "identifier": "Pm_idem",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpamk_w7f4.v\", line 2, characters 18-25:\nError: The reference Pm_idem was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.Pm_idem"
         },
         {
           "identifier": "P_orth",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp8slj81ds.v\", line 2, characters 18-24:\nError: The reference P_orth was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.P_orth"
         },
         {
           "identifier": "P_complete",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_rwxn0yk.v\", line 2, characters 18-28:\nError: The reference P_complete was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.P_complete"
         },
         {
           "identifier": "nogo_reversal_symmetric",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp0y86gmfl.v\", line 2, characters 18-41:\nError: The reference nogo_reversal_symmetric was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.nogo_reversal_symmetric"
         },
         {
           "identifier": "nogo_commutes",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_pid09pj.v\", line 2, characters 18-31:\nError: The reference nogo_commutes was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.nogo_commutes"
         },
         {
           "identifier": "Pw_idem_plus",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpo0mgvf7v.v\", line 2, characters 18-30:\nError: The reference Pw_idem_plus was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.Pw_idem_plus"
         },
         {
           "identifier": "Pw_idem_minus",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpjnjfa54s.v\", line 2, characters 18-31:\nError: The reference Pw_idem_minus was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.Pw_idem_minus"
         },
         {
           "identifier": "Pw_Ps_orth",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpavihlebx.v\", line 2, characters 18-28:\nError: The reference Pw_Ps_orth was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.Pw_Ps_orth"
         },
         {
           "identifier": "Pw_selects_minus",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp_e6dr86r.v\", line 2, characters 18-34:\nError: The reference Pw_selects_minus was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.Pw_selects_minus"
         },
         {
           "identifier": "Pw_flip",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpciezdvgi.v\", line 2, characters 18-25:\nError: The reference Pw_flip was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.Pw_flip"
         },
         {
           "identifier": "KXi_psd_det",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp3y8irmtu.v\", line 2, characters 18-29:\nError: The reference KXi_psd_det was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.KXi_psd_det"
         },
         {
           "identifier": "KXi_psd_diag",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmphtkxacg8.v\", line 2, characters 18-30:\nError: The reference KXi_psd_diag was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoRootChirality.KXi_psd_diag"
         }
       ]
     },
@@ -2122,57 +2339,66 @@
       "theorems": [
         {
           "identifier": "canonical_critical_polynomial",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpzgr5dlxw.v\", line 2, characters 18-47:\nError: The reference canonical_critical_polynomial was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.canonical_critical_polynomial"
         },
         {
           "identifier": "shortest_bracket_simplifies",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmprouecrr8.v\", line 2, characters 18-45:\nError: The reference shortest_bracket_simplifies was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.shortest_bracket_simplifies"
         },
         {
           "identifier": "shortest_critical_polynomial",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4zzmo0dz.v\", line 2, characters 18-46:\nError: The reference shortest_critical_polynomial was not found\nin the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.shortest_critical_polynomial"
         },
         {
           "identifier": "pcan_neg_at_29",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpgydpgfs3.v\", line 2, characters 18-32:\nError: The reference pcan_neg_at_29 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.pcan_neg_at_29"
         },
         {
           "identifier": "pcan_pos_at_30",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpep0w_ekz.v\", line 2, characters 18-32:\nError: The reference pcan_pos_at_30 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.pcan_pos_at_30"
         },
         {
           "identifier": "pshort_neg_at_25",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpn_5kennv.v\", line 2, characters 18-34:\nError: The reference pshort_neg_at_25 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.pshort_neg_at_25"
         },
         {
           "identifier": "pshort_pos_at_26",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpcoqkvp3m.v\", line 2, characters 18-34:\nError: The reference pshort_pos_at_26 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.pshort_pos_at_26"
         },
         {
           "identifier": "mu_short_lower",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpoji424y9.v\", line 2, characters 18-32:\nError: The reference mu_short_lower was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.mu_short_lower"
         },
         {
           "identifier": "lower_below_upper",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpbgid579j.v\", line 2, characters 18-35:\nError: The reference lower_below_upper was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceAutomaton.lower_below_upper"
         }
       ]
     },
@@ -2183,57 +2409,66 @@
       "theorems": [
         {
           "identifier": "branching_coeff_sum",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmprcadwpf3.v\", line 2, characters 18-37:\nError: The reference branching_coeff_sum was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.branching_coeff_sum"
         },
         {
           "identifier": "eightyone_is_3_to_4",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp77d2cc1z.v\", line 2, characters 18-37:\nError: The reference eightyone_is_3_to_4 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.eightyone_is_3_to_4"
         },
         {
           "identifier": "pB_neg_at_14",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp879ugj02.v\", line 2, characters 18-30:\nError: The reference pB_neg_at_14 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.pB_neg_at_14"
         },
         {
           "identifier": "pB_pos_at_15",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpnfhku8tr.v\", line 2, characters 18-30:\nError: The reference pB_pos_at_15 was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.pB_pos_at_15"
         },
         {
           "identifier": "pB_pos_at_fifth",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp9tenvqts.v\", line 2, characters 18-33:\nError: The reference pB_pos_at_fifth was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.pB_pos_at_fifth"
         },
         {
           "identifier": "mu_upper_lower_side",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpdtb2ychl.v\", line 2, characters 18-37:\nError: The reference mu_upper_lower_side was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.mu_upper_lower_side"
         },
         {
           "identifier": "mu_upper_upper_side",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpl4aki6ez.v\", line 2, characters 18-37:\nError: The reference mu_upper_upper_side was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.mu_upper_upper_side"
         },
         {
           "identifier": "new_below_old",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpp87bpair.v\", line 2, characters 18-31:\nError: The reference new_below_old was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.new_below_old"
         },
         {
           "identifier": "new_above_lower",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp8vhf567t.v\", line 2, characters 18-33:\nError: The reference new_above_lower was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoSurfaceUpperAutomaton.new_above_lower"
         }
       ]
     },
@@ -2244,81 +2479,94 @@
       "theorems": [
         {
           "identifier": "clifford_Ax_sq",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpflspbcld.v\", line 2, characters 18-32:\nError: The reference clifford_Ax_sq was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.clifford_Ax_sq"
         },
         {
           "identifier": "clifford_Az_sq",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpf5rdiqjo.v\", line 2, characters 18-32:\nError: The reference clifford_Az_sq was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.clifford_Az_sq"
         },
         {
           "identifier": "clifford_anticommute",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpn3hm9xos.v\", line 2, characters 18-38:\nError: The reference clifford_anticommute was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.clifford_anticommute"
         },
         {
           "identifier": "V_unitary",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpf5u43tdw.v\", line 2, characters 18-27:\nError: The reference V_unitary was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.V_unitary"
         },
         {
           "identifier": "V_gamma_relation",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp3m6uwfk9.v\", line 2, characters 18-34:\nError: The reference V_gamma_relation was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.V_gamma_relation"
         },
         {
           "identifier": "Gamma_V_Gamma_is_Vdag",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpegdvddrn.v\", line 2, characters 18-39:\nError: The reference Gamma_V_Gamma_is_Vdag was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.Gamma_V_Gamma_is_Vdag"
         },
         {
           "identifier": "ginsparg_wilson",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpg81pk9nf.v\", line 2, characters 18-33:\nError: The reference ginsparg_wilson was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.ginsparg_wilson"
         },
         {
           "identifier": "ghat_involution",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpxbch2za4.v\", line 2, characters 18-33:\nError: The reference ghat_involution was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.ghat_involution"
         },
         {
           "identifier": "ghat_neq_gamma",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmphy6iciqq.v\", line 2, characters 18-32:\nError: The reference ghat_neq_gamma was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.ghat_neq_gamma"
         },
         {
           "identifier": "physical_zero",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpejupk125.v\", line 2, characters 18-31:\nError: The reference physical_zero was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.physical_zero"
         },
         {
           "identifier": "corners_lifted",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4_azjgpb.v\", line 2, characters 18-32:\nError: The reference corners_lifted was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.corners_lifted"
         },
         {
           "identifier": "corner_count_d4",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp2umx1cyr.v\", line 2, characters 18-33:\nError: The reference corner_count_d4 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.corner_count_d4"
         },
         {
           "identifier": "corner_count_general",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpvjg_mp35.v\", line 2, characters 18-38:\nError: The reference corner_count_general was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTapeKineticGW.corner_count_general"
         }
       ]
     },
@@ -2329,33 +2577,38 @@
       "theorems": [
         {
           "identifier": "serial_blocking_law",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpfmg91t4y.v\", line 2, characters 18-37:\nError: The reference serial_blocking_law was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTrialitySpectralFlow.serial_blocking_law"
         },
         {
           "identifier": "qpow_pos",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpzvp0__6u.v\", line 2, characters 18-26:\nError: The reference qpow_pos was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTrialitySpectralFlow.qpow_pos"
         },
         {
           "identifier": "block_contraction",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpll5v9e96.v\", line 2, characters 18-35:\nError: The reference block_contraction was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTrialitySpectralFlow.block_contraction"
         },
         {
           "identifier": "block_scale_exists_witness",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp73xdrog6.v\", line 2, characters 18-44:\nError: The reference block_scale_exists_witness was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTrialitySpectralFlow.block_scale_exists_witness"
         },
         {
           "identifier": "no_contraction_if_rho_one",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpk03qw3rv.v\", line 2, characters 18-43:\nError: The reference no_contraction_if_rho_one was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoTrialitySpectralFlow.no_contraction_if_rho_one"
         }
       ]
     },
@@ -2366,53 +2619,65 @@
       "theorems": [
         {
           "identifier": "gram_form_psd",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpnaj2s4z0.v\", line 2, characters 18-31:\nError: The reference gram_form_psd was not found in the current environment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.gram_form_psd"
         },
         {
           "identifier": "negative_weight_breaks_psd",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp7sdjh8_3.v\", line 2, characters 18-44:\nError: The reference negative_weight_breaks_psd was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.negative_weight_breaks_psd"
         },
         {
           "identifier": "product_weight_nonneg",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp0okolrbw.v\", line 2, characters 18-39:\nError: The reference product_weight_nonneg was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.product_weight_nonneg"
         },
         {
           "identifier": "gauge_c3_leading_positive",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp6259s3fu.v\", line 2, characters 18-43:\nError: The reference gauge_c3_leading_positive was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.gauge_c3_leading_positive"
         },
         {
           "identifier": "massless_sector_zeros_total",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp57lx70xo.v\", line 2, characters 18-45:\nError: The reference massless_sector_zeros_total was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.massless_sector_zeros_total"
         },
         {
           "identifier": "massive_sector_gap_positive",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpemu7kk6m.v\", line 2, characters 18-45:\nError: The reference massive_sector_gap_positive was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.massive_sector_gap_positive"
         },
         {
           "identifier": "fock_lift_eigenvalue_in_01",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmp4qv1bubi.v\", line 2, characters 18-44:\nError: The reference fock_lift_eigenvalue_in_01 was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.fock_lift_eigenvalue_in_01"
         },
         {
           "identifier": "mass_ratio_a_independent",
-          "status": "build_failed",
+          "status": "closed",
           "axioms": [],
-          "raw_tail": "File \"/tmp/tmpfhcjhr2a.v\", line 2, characters 18-42:\nError: The reference mass_ratio_a_independent was not found in the current\nenvironment.\n\n"
+          "raw_tail": null,
+          "qualified_identifier": "InfoUniversalRPSlab.mass_ratio_a_independent"
         }
       ]
     }
-  ]
+  ],
+  "pass2_reverified": 261,
+  "pass2_now_closed": 261,
+  "pass2_now_axioms": 0,
+  "pass2_still_failed": 0
 }
