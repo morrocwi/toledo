@@ -11,9 +11,12 @@ a re-prefixed or re-sequenced one:
   Source of Truth for that stream's numbering/tiers/text (stated explicitly in
   the Appendix C preamble: "THIS Appendix is now the primary Source of Truth
   for this equation stream's numbering/tiers/text" — the synced mirrors at
-  `research_universal_solver/EQUATION_LIBRARY_ROOT_TO_SM_STREAM.md` and
-  `readout_universe/EQUATION_LIBRARY_ROOT_TO_SM_STREAM_research_universal_solver.md`
-  must match it, not the reverse). `EQ-001`–`EQ-014` restate ROOT-0's own
+  solver arc (private)'s `EQUATION_LIBRARY_ROOT_TO_SM_STREAM.md` and a
+  same-purpose file in the public `readout_universe` repo (that second file's
+  own name embeds the solver arc's real repo name — a pre-existing leak in
+  that public repo, out of this registry's scope to reproduce or fix, so not
+  repeated here) must match it, not the reverse). `EQ-001`–`EQ-014` restate
+  ROOT-0's own
   `E00.1`–`E00.7` and the I.1a resource-logic-floor equations; `EQ-015`–`EQ-017`
   restate the Part II spine/`λ_c` equations; the rest carry the Part V.13a /
   V.20–V.22 Standard-Model-domain stream. `EQ-069`–`EQ-071` are RETRACTED
@@ -64,7 +67,7 @@ claim layer).
 
 Present only when Genesis's own text marks the equation as importing a named
 result from outside the project (a physics law, a classical theorem). Value
-is the owner(s) and year exactly as `research_universal_solver/docs/root/
+is the owner(s) and year exactly as solver arc (private)'s `docs/root/
 EQUATION_REGISTRY.md` records them for that same result (e.g. `"E. Schrödinger,
 1926"`, `"A. Einstein, 1915"`). Omitted (not `null`) when the equation is the
 project's own content or when no matching registry row was found with
@@ -117,7 +120,7 @@ before merging):
   axiom tags are `E00.1`–`E00.7` (`ROOT-0`). This registry uses `E00.1`–`E00.7`
   as the codes (the actual verbatim text) rather than guessing an `RD1`–`RD9`
   mapping that cannot be confirmed against the source; if `RD1`–`RD9` is a
-  live external naming convention (e.g. from `research_universal_solver`),
+  live external naming convention (e.g. from the solver arc, private),
   reconciling it against `E00.1`–`E00.7` is a follow-up, not something this
   build invented a mapping for.
 - Sub-equations within one named unit that carries only ONE tag in the source
