@@ -157504,7 +157504,46 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Master River v1.5 itself frames this as a scope-bound modelling condition, not a constitutive or universal law; tier set to Definition (a stated model convention) rather than Dr or Open, following v1.5's own framing rather than upgrading it. Domain letter H (human-AI) chosen to match the parent weld/H.07.v1's own domain, since this is a companion condition inside the same Fusion/Tunnel session-boundary reading, not a method-level (M) object.",
-      "provenance_note_verbatim": "\"Within the scope of Fusion/Tunnel, AI-side semantic momentum is reset across sessions, [eq.37], but this line is a scope condition of the model, not a universal fact about AI with persistent memory.\""
+      "provenance_note_verbatim": "\"Within the scope of Fusion/Tunnel, AI-side semantic momentum is reset across sessions, [eq.37], but this line is a scope condition of the model, not a universal fact about AI with persistent memory.\"",
+      "resistance": {
+        "computed_at": "2026-09-07",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'definition' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "id": "MR16-02",
@@ -157573,7 +157612,46 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Domain E (epistemic) chosen because the object is a notation-disambiguation across meaning/accessibility constructs already read into EQ-015's E domain (E.04, and the accessibility constructs feeding M.08/H.08); it is not itself a method-level (M) construction, so is not filed as EQ-015/M.16.v1 despite reading M.08.v1 as its nearest parent.",
-      "provenance_note_verbatim": "\"The programme previously used kappa for three different things ... Master should use one consistent rename, [eq.43]\""
+      "provenance_note_verbatim": "\"The programme previously used kappa for three different things ... Master should use one consistent rename, [eq.43]\"",
+      "resistance": {
+        "computed_at": "2026-09-07",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'definition' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "id": "MR16-03",
@@ -157642,7 +157720,46 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "This is a prose (non-symbolic) restatement of the root stepper's own recursive readout/meaning/experience/agency chain rather than an equation in the algebraic sense; filed at Definition tier, no tier raised, and no independent verification of the narrative claim is asserted beyond what v1.5's own Section 9 ledger already states about the root.",
-      "provenance_note_verbatim": "\"Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.\""
+      "provenance_note_verbatim": "\"Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.\"",
+      "resistance": {
+        "computed_at": "2026-09-07",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'definition' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     }
   ],
   "raw_to_canonical": {
