@@ -5,6 +5,8 @@ counts are computed from the files at that point, never carried over from a prio
 
 ## v1.5.0 — 2026-09-08
 
+Deposited as Zenodo version DOI 10.5281/zenodo.22642109 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.5.0.
+
 Deposited as a Zenodo version (DOI recorded once minted; concept DOI 10.5281/zenodo.22537318);
 GitHub release tag v1.5.0.
 
