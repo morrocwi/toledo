@@ -112,6 +112,7 @@ jobs:
       # checkout's site/build_site.py silently writes a near-empty skeleton
       # site (0 registry entries) instead of failing loud, and
       # tests/test_site.py errors on a missing registry/TOLEDO.json fixture.
+      - run: pip install -e "mcp/[test]" latex2mathml sympy pyyaml
       - run: python3 scripts/toledo_build.py
       - run: python3 site/build_site.py --out site/dist
       - run: python3 -m toledo_mcp.export_static --out mcp/dist/static-api   # so test_entry_page_api_link_is_correctly_mangled (tests/test_site.py) gets real inputs instead of skipping
