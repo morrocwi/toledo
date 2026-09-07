@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0-proposal",
+  "generated_from_commit": "d03e6c62cb8f072d2bfba1782a80ff96a71724b0",
+  "proposal_source": "Blackbox Log BBL-2026-09-07-217 (founder ruling, Blackbox Log record 10.5281/zenodo.22302518) -- Core Epistemic Structure of a project, applied first in The Economics of Expertise in the Age of Generative AI v1.0.1 (Zenodo record 22636999, DOI 10.5281/zenodo.22636999)",
+  "extraction_date": "2026-09-07",
+  "extractor_note": "TOLEDO REGISTRAR pass over founder ruling Blackbox Log BBL-2026-09-07-217, which defines the Core Epistemic Structure of a project p as [New Definition / Proposal]: (i) E_p = <X_p^exp, X_p^int, M_p^AI>; (ii) M_p^AI = {M_1,...,M_k}; (iii) X_p^int = empty-set when no interactional expert holds the role (an unheld role, not a zero score); (iv) the non-collapse rule Experience-Based Expertise != Interactional Expertise != AI Model; (v) the experience-holder decomposition X_p^exp = <Exp, Sel, Int> (lived experience, selection, interpretation), from BBL-2026-09-07 rulings the same day. Five distinct CANONICAL objects are proposed, one per sub-definition (aliases CES:E_p, CES:M_AI, CES:X_int_empty, CES:non-collapse, CES:X_exp), because (iv) is tiered Dr (an asserted non-collapse rule, not a bare typed definition) while (i),(ii),(iii),(v) are tiered Definition -- a single CANONICAL entry carries exactly one tier field, so the five cannot be merged into one object. All five read/refine the two Task-1-assigned Economics-of-Expertise readings that state the same registration architecture in the manuscript's own numbering (weld/H.22.v1 Eq.4 'credential != expertise', weld/H.23.v1 Eq.5 'project role != expertise type != AI system') and the registration object itself (weld/H.28.v1, Eq.11-13, the Core Epistemic Registration object R_p = <E_p^exp, E_p^int, M_p^AI>) -- this ruling's E_p/X_p^exp/X_p^int/M_p^AI notation refines that same registration architecture into its own named structure and decomposition. This file is NEW ORIGINAL CONTENT transcribed from the cited Blackbox Log ruling -- none of it is copied from CANONICAL.json, genesis_root.json, LINEAGE.jsonl, coq/, latex/, or mcp/, and none of those were edited.",
+  "proposals": [
+    {
+      "id": "PROP-CES-2026-09-07-01",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": ["CES:E_p"],
+      "name": "Core Epistemic Structure of a project",
+      "statement": {
+        "latest": "E_p = \\left\\langle X_p^{exp}, X_p^{int}, \\mathcal{M}_p^{AI} \\right\\rangle",
+        "format": "latex"
+      },
+      "parents": [
+        {"code": "weld/H.22.v1", "derived_via": "reads", "evidence": "Eq.(4) 'credential != expertise' is the load-bearing non-collapse the Core Epistemic Structure keeps distinct across its three components."},
+        {"code": "weld/H.23.v1", "derived_via": "refines", "evidence": "Eq.(5) 'project role != expertise type != AI system' is the exact three-way non-collapse E_p's three components (X_p^exp, X_p^int, M_p^AI) formalize as a named structure."},
+        {"code": "weld/H.28.v1", "derived_via": "refines", "evidence": "Refines the Core Epistemic Registration object R_p = <E_p^exp, E_p^int, M_p^AI> (Eq.11-13) into the founder-ruled Core Epistemic Structure notation E_p = <X_p^exp, X_p^int, M_p^AI> of BBL-2026-09-07-217."}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(i)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217)",
+      "coq": {
+        "file": null, "identifier": null, "assumptions": null, "imported_from": null,
+        "coq_status": "not_yet_formalised", "coq_axioms": [], "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "provenance_note_verbatim": "Core Epistemic Structure of a project p: E_p = <X_p^exp, X_p^int, M_p^AI> -- the experience-based expertise slot, the interactional-expertise slot, and the AI-model set of that project, kept as three non-collapsing components. Founder ruling, Blackbox Log BBL-2026-09-07-217.",
+      "drift_note": "This ruling states E_p's own structure without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13) that state the same non-collapsing-categories architecture, rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement."
+    },
+    {
+      "id": "PROP-CES-2026-09-07-02",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": ["CES:M_AI"],
+      "name": "AI model set of a project",
+      "statement": {
+        "latest": "\\mathcal{M}_p^{AI} = \\{M_1, M_2, \\ldots, M_k\\}",
+        "format": "latex"
+      },
+      "parents": [
+        {"code": "weld/H.22.v1", "derived_via": "reads", "evidence": "Eq.(4) 'credential != expertise' is the load-bearing non-collapse that keeps an AI model out of the credential/expertise pair M_p^AI names as its own third component."},
+        {"code": "weld/H.23.v1", "derived_via": "refines", "evidence": "Eq.(5) 'project role != expertise type != AI system' names the AI-system category M_p^AI formalizes as a set."},
+        {"code": "weld/H.28.v1", "derived_via": "refines", "evidence": "Refines the M_p^AI component already present in the Core Epistemic Registration object R_p (Eq.11-13, itself Eq.13) into its own standalone CANONICAL reading."}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(ii)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217)",
+      "coq": {
+        "file": null, "identifier": null, "assumptions": null, "imported_from": null,
+        "coq_status": "not_yet_formalised", "coq_axioms": [], "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "provenance_note_verbatim": "M_p^AI = {M_1,...,M_k}: the AI models materially used on project p, recorded as a set -- membership only, no ranking or weighting implied. Founder ruling, Blackbox Log BBL-2026-09-07-217.",
+      "drift_note": "This ruling states M_p^AI's own structure without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13, whose own Eq.13 already states M_p^AI as a set), rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement."
+    },
+    {
+      "id": "PROP-CES-2026-09-07-03",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": ["CES:X_int_empty"],
+      "name": "Interactional-expert slot empty when the role is unheld",
+      "statement": {
+        "latest": "X_p^{int} = \\varnothing \\quad \\text{(role unheld, not a zero score)}",
+        "format": "latex"
+      },
+      "parents": [
+        {"code": "weld/H.22.v1", "derived_via": "reads", "evidence": "Eq.(4) 'credential != expertise' underlies why an unheld interactional-expert role must be recorded as an empty slot rather than credentialed-but-scored-zero."},
+        {"code": "weld/H.23.v1", "derived_via": "refines", "evidence": "Eq.(5) 'project role != expertise type != AI system' licenses a role (interactional expert) being genuinely absent from a project without that absence collapsing into another category."},
+        {"code": "weld/H.28.v1", "derived_via": "refines", "evidence": "Refines the E_p^int component of the Core Epistemic Registration object R_p (Eq.11-13, itself Eq.12: 'empty set if none present') into its own standalone CANONICAL reading, naming explicitly that an unheld role is not a zero score."}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(iii)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217)",
+      "coq": {
+        "file": null, "identifier": null, "assumptions": null, "imported_from": null,
+        "coq_status": "not_yet_formalised", "coq_axioms": [], "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "provenance_note_verbatim": "X_p^int = the empty set when no interactional expert holds the role on project p -- an unheld role, not a zero score against some scale. Founder ruling, Blackbox Log BBL-2026-09-07-217.",
+      "drift_note": "This ruling states X_p^int's empty-role convention without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13, whose own Eq.12 already states the empty-set convention), rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement."
+    },
+    {
+      "id": "PROP-CES-2026-09-07-04",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": ["CES:non-collapse"],
+      "name": "Non-collapse: experience-based expertise, interactional expertise, and AI model are distinct",
+      "statement": {
+        "latest": "\\text{Experience-Based Expertise} \\neq \\text{Interactional Expertise} \\neq \\text{AI Model}",
+        "format": "latex"
+      },
+      "parents": [
+        {"code": "weld/H.22.v1", "derived_via": "reads", "evidence": "Eq.(4) 'credential != expertise' is the same-shaped non-collapse this rule generalizes from a two-term to a three-term chain."},
+        {"code": "weld/H.23.v1", "derived_via": "refines", "evidence": "Eq.(5) 'project role != expertise type != AI system' is the three-way non-collapse this rule restates in the Core Epistemic Structure's own vocabulary (Experience-Based Expertise, Interactional Expertise, AI Model in place of project role, expertise type, AI system)."},
+        {"code": "weld/H.28.v1", "derived_via": "refines", "evidence": "Refines the three non-collapsing components of the Core Epistemic Registration object R_p (Eq.11-13) into an explicit asserted non-collapse rule over those same three components."}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(iv)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Dr",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217) -- non-collapse rule",
+      "coq": {
+        "file": null, "identifier": null, "assumptions": null, "imported_from": null,
+        "coq_status": "not_yet_formalised", "coq_axioms": [], "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "provenance_note_verbatim": "Non-collapse rule: Experience-Based Expertise != Interactional Expertise != AI Model -- none of the three Core Epistemic Structure components may be treated as reducible to, or substitutable for, another. Founder ruling, Blackbox Log BBL-2026-09-07-217.",
+      "drift_note": "This ruling states the non-collapse rule without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5, both already stated as non-collapses) and the registration object they license (weld/H.28.v1, Eq.11-13), rather than left as an HRP-X rootless placeholder. Tiered Dr, not Definition, because this is an asserted non-collapse rule over the Core Epistemic Structure's components, not itself a bare typed definition. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement."
+    },
+    {
+      "id": "PROP-CES-2026-09-07-05",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": ["CES:X_exp"],
+      "name": "Experience-holder decomposition (lived experience, selection, interpretation)",
+      "statement": {
+        "latest": "X_p^{exp} = \\left\\langle \\text{Exp}, \\text{Sel}, \\text{Int} \\right\\rangle",
+        "format": "latex"
+      },
+      "parents": [
+        {"code": "weld/H.22.v1", "derived_via": "reads", "evidence": "Eq.(4) 'credential != expertise' underlies why the experience-based expertise slot X_p^exp is decomposed by its own lived-experience/selection/interpretation structure rather than by credential."},
+        {"code": "weld/H.23.v1", "derived_via": "refines", "evidence": "Eq.(5) 'project role != expertise type != AI system' names the expertise-type category whose experience-based instance X_p^exp is decomposed here."},
+        {"code": "weld/H.28.v1", "derived_via": "refines", "evidence": "Refines the E_p^exp / Core Respondent component of the Core Epistemic Registration object R_p (Eq.11-13) into its own three-part decomposition, from the same-day BBL-2026-09-07 rulings."}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(v)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07 rulings)",
+      "coq": {
+        "file": null, "identifier": null, "assumptions": null, "imported_from": null,
+        "coq_status": "not_yet_formalised", "coq_axioms": [], "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "provenance_note_verbatim": "Experience-holder decomposition: X_p^exp = <Exp, Sel, Int> -- lived experience, selection, and interpretation as the three components of an experience-based expert's contribution. From BBL-2026-09-07 rulings the same day as BBL-2026-09-07-217.",
+      "drift_note": "This ruling states X_p^exp's own decomposition without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13, whose own E_p^exp component is decomposed here), rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement."
+    }
+  ],
+  "phi_check": {
+    "method": "Manual read of the five closest thematically-related CANONICAL.json entries under weld/H.* (weld/H.22.v1 through weld/H.29.v1, all six Task-1 readings) and of weld/M.02.v1's own commuting-domain statement, for a structurally-equivalent tuple/set/non-collapse/decomposition object under the phi-criterion (renaming / fixed positive scale / fixed constant substitution, exact).",
+    "result": "No existing CANONICAL.json entry found structurally equivalent to any of the 5 Core Epistemic Structure proposals -- the closest object, weld/H.28.v1's Core Epistemic Registration object R_p = <E_p^exp, E_p^int, M_p^AI>, is a distinct tuple (project-role registry, not this ruling's own named structure/decomposition/non-collapse-rule vocabulary) and is recorded as a parent (refines), not a phi-equivalent duplicate.",
+    "caveat": "This is a manual screen over the six Task-1 weld/H.* readings plus weld/M.02.v1, not an exhaustive machine-checked equivalence search over all 946+16 entries -- treat 'no match found' as a Dr-tier readout of this screen, not a proof of non-existence."
+  },
+  "counts": {
+    "new_equation_proposals": 5,
+    "existing_equation_occurrences": 0
+  }
+}

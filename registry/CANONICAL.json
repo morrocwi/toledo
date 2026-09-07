@@ -846,6 +846,11 @@
         "weld/H.06.v1",
         "weld/H.09.v1",
         "weld/H.14.v1",
+        "weld/H.22.v1",
+        "weld/H.23.v1",
+        "weld/H.24.v1",
+        "weld/H.28.v1",
+        "weld/H.29.v1",
         "weld/M.10.v1",
         "weld/M.13.v1",
         "weld/M.15.v1",
@@ -877,7 +882,9 @@
         "weld/S.41.v1",
         "weld/S.42.v1",
         "weld/W.01.v1",
-        "weld/W.02.v1"
+        "weld/W.02.v1",
+        "weld/W.03.v1",
+        "weld/W.08.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -946,6 +953,14 @@
           "label": "(6)",
           "section": null,
           "raw_key": "22424434:(6)"
+        },
+        {
+          "record_id": 22636999,
+          "doi": "10.5281/zenodo.22636999",
+          "label": "eq.1",
+          "section": null,
+          "raw_key": "22636999:eq.1",
+          "note": "domain_instantiation (economics)"
         }
       ],
       "role": "other",
@@ -3791,6 +3806,14 @@
           "label": "(42)",
           "section": null,
           "raw_key": "22307148:(42)"
+        },
+        {
+          "record_id": 22636999,
+          "doi": "10.5281/zenodo.22636999",
+          "label": "eq.6",
+          "section": null,
+          "raw_key": "22636999:eq.6",
+          "status_note": "Ledger row (6): 'K_S^A=(Tr_A,Str_A,Cap_A) | Existing knowledge architecture | Toledo knowledge-admission / knowledge-triple lineage'. registry/EQ_LIBRARY.md line 1361 and registry/CANONICAL_MAP.md line 440 both map the raw record eq_19640361.json ('K_S^A = (Tr_A, Str_A, Cap_A)', 'Knowledge (Df) formalized as a triple: trace residue Tr_A, coherent usable structure Str_A, and generative capacity Cap_A') to weld/E.03.v1; CAN-031's own statement.latest has since been revised (BBL-172 latest-formulation-wins) to a more elaborate admission-status formula sigma_K(p)=Admit_E(...), so this is the same admitted object under a later, more developed statement, not a verbatim string match against CAN-031's current text."
         }
       ],
       "role": "other",
@@ -7315,6 +7338,13 @@
           "label": "(31)",
           "section": null,
           "raw_key": "22424434:(31)"
+        },
+        {
+          "record_id": 22636999,
+          "doi": "10.5281/zenodo.22636999",
+          "label": "eq.2",
+          "section": null,
+          "raw_key": "22636999:eq.2"
         }
       ],
       "role": "other",
@@ -8468,6 +8498,20 @@
           "label": "(40)",
           "section": null,
           "raw_key": "22424434:(40)"
+        },
+        {
+          "record_id": 22636999,
+          "doi": "10.5281/zenodo.22636999",
+          "label": "eq.3",
+          "section": null,
+          "raw_key": "22636999:eq.3"
+        },
+        {
+          "record_id": 22636999,
+          "doi": "10.5281/zenodo.22636999",
+          "label": "eq.27",
+          "section": null,
+          "raw_key": "22636999:eq.27"
         }
       ],
       "role": "other",
@@ -8761,6 +8805,13 @@
           "label": "(24)",
           "section": null,
           "raw_key": "22498047:(24)"
+        },
+        {
+          "record_id": 22636999,
+          "doi": "10.5281/zenodo.22636999",
+          "label": "eq.26",
+          "section": null,
+          "raw_key": "22636999:eq.26"
         }
       ],
       "role": "other",
@@ -9807,7 +9858,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "weld/H.29.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -22852,6 +22905,13 @@
           "label": "(38)",
           "section": null,
           "raw_key": "22481928:(38)"
+        },
+        {
+          "record_id": 22636999,
+          "doi": "10.5281/zenodo.22636999",
+          "label": "eq.30",
+          "section": null,
+          "raw_key": "22636999:eq.30"
         }
       ],
       "role": "other",
@@ -82429,6 +82489,1333 @@
       ],
       "drift_note": "'Rooted in ... all above' per the paper's own Appendix A ledger row for Eq.41; listed parents are the three distinct Toledo roots (weld, EQ-015, A.5) touched by the equations this synthesis assembles. Root field set to weld as the paper's own declared mathematical anchor (Section 2 title).",
       "provenance_note_verbatim": "[NEW SYNTHESIS: v0.3 principal synthesis; anchored in v0.1 but adds stochastic-attribution and cross-domain-license layers before the previous retry/cost/stop architecture.]"
+    },
+    {
+      "id": "ECONEXP-v1.0-01",
+      "code": "weld/H.22.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.4"
+      ],
+      "name": "Credential is not expertise (methodological non-collapse)",
+      "statement": {
+        "latest": "\\text{credential} \\neq \\text{expertise}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{credential} \\neq \\text{expertise}",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (4)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/H.30.v1",
+        "weld/H.31.v1",
+        "weld/H.32.v1",
+        "weld/H.33.v1",
+        "weld/H.34.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "4.3 Load-bearing non-collapses",
+        "label": "Eq. (4)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "Methodological non-collapse",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Equation (4) is a methodological non-collapse motivated by the expertise literature and this paper's governance architecture."
+    },
+    {
+      "id": "ECONEXP-v1.0-02",
+      "code": "weld/H.23.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.5"
+      ],
+      "name": "Project role, expertise type, and AI system are three non-collapsing categories",
+      "statement": {
+        "latest": "\\text{project role} \\neq \\text{expertise type} \\neq \\text{AI system}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{project role} \\neq \\text{expertise type} \\neq \\text{AI system}",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (5)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/H.30.v1",
+        "weld/H.31.v1",
+        "weld/H.32.v1",
+        "weld/H.33.v1",
+        "weld/H.34.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "4.3 Load-bearing non-collapses",
+        "label": "Eq. (5)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New methodological non-collapse",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Equation (5) is a new methodological non-collapse motivated by the expertise literature and this paper's governance architecture."
+    },
+    {
+      "id": "ECONEXP-v1.0-03",
+      "code": "weld/H.24.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.7"
+      ],
+      "name": "Three ideal-type expertise states indexed by person, question, domain, time",
+      "statement": {
+        "latest": "\\chi_i(Q,D,t)\\in\\{N,I,C\\}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\chi_i(Q,D,t)\\in\\{N,I,C\\}",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (7)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/H.25.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "6.1 Three ideal-type states",
+        "label": "Eq. (7)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New Definition 1",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Status: New Definition 1; a formal research readout of Collins-Evans ideal types (N=No Expertise, I=Interactional Expertise, C=Contributory Expertise)."
+    },
+    {
+      "id": "ECONEXP-v1.0-04",
+      "code": "weld/H.25.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.8"
+      ],
+      "name": "Expertise-state transition probability conditional on AI assistance, practice, world feedback, resources",
+      "statement": {
+        "latest": "P\\!\\left(\\chi_{i,t+1}=b \\mid \\chi_{i,t}=a, A_t, P_t, W_t, R_t\\right)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "P\\!\\left(\\chi_{i,t+1}=b \\mid \\chi_{i,t}=a, A_t, P_t, W_t, R_t\\right)",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (8)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.24.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [
+        "weld/H.26.v1",
+        "weld/H.27.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "6.2 Not a deterministic ladder",
+        "label": "Eq. (8)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Open",
+      "tier_in_genesis_verbatim": "Open Proposition 1",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Status: Open Proposition 1. The expression permits progression, stagnation, regression, and domain-specific heterogeneity."
+    },
+    {
+      "id": "ECONEXP-v1.0-05",
+      "code": "weld/H.26.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.9"
+      ],
+      "name": "H1 - Interactional Compression hypothesis",
+      "statement": {
+        "latest": "C_{N\\rightarrow I}^{AI} < C_{N\\rightarrow I}^{baseline}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "C_{N\\rightarrow I}^{AI} < C_{N\\rightarrow I}^{baseline}",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (9)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.25.v1",
+          "derived_via": "specializes"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "6.3 Interactional compression hypothesis",
+        "label": "Eq. (9)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Open",
+      "tier_in_genesis_verbatim": "H1 - Interactional Compression (empirical hypothesis for declared tasks and domains, not a universal law)",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "H1 - Interactional Compression. Equation (9) is an empirical hypothesis for declared tasks and domains, not a universal law."
+    },
+    {
+      "id": "ECONEXP-v1.0-06",
+      "code": "weld/H.27.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.10"
+      ],
+      "name": "H2 - Contributory Persistence hypothesis",
+      "statement": {
+        "latest": "|\\Delta C_{I\\rightarrow C}^{AI}| < |\\Delta C_{N\\rightarrow I}^{AI}|",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "|\\Delta C_{I\\rightarrow C}^{AI}| < |\\Delta C_{N\\rightarrow I}^{AI}|",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (10)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.25.v1",
+          "derived_via": "specializes"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "6.4 Contributory persistence hypothesis",
+        "label": "Eq. (10)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Open",
+      "tier_in_genesis_verbatim": "H2 - Contributory Persistence (open empirical hypothesis restricted to practice-intensive domains)",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "H2 - Contributory Persistence. This is an open empirical hypothesis restricted to practice-intensive domains."
+    },
+    {
+      "id": "ECONEXP-v1.0-07",
+      "code": "weld/H.28.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.11",
+        "EconExpertise-v1.0:eq.12",
+        "EconExpertise-v1.0:eq.13"
+      ],
+      "name": "Core Epistemic Registration object (experience-based expert, interactional expert or empty, AI model set)",
+      "statement": {
+        "latest": "\\mathcal R_p = \\left\\langle E_p^{exp}, E_p^{int}, \\mathcal M_p^{AI} \\right\\rangle \\\\ E_p^{int}=\\varnothing \\\\ \\mathcal M_p^{AI}=\\{M_1,M_2,\\ldots,M_k\\}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathcal R_p = \\left\\langle E_p^{exp}, E_p^{int}, \\mathcal M_p^{AI} \\right\\rangle \\\\ E_p^{int}=\\varnothing \\\\ \\mathcal M_p^{AI}=\\{M_1,M_2,\\ldots,M_k\\}",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (11)-(13)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/H.30.v1",
+        "weld/H.31.v1",
+        "weld/H.32.v1",
+        "weld/H.33.v1",
+        "weld/H.34.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "7.2 Registration object",
+        "label": "Eq. (11)-(13)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New Definitions",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "A three-part project-role registration tuple R_p for project p: E_p^exp = Core Respondent/Experience-Based Expert, E_p^int = registered human Interactional Expert (Eq.12: empty set if none present), M_p^AI = set of AI models materially involved (Eq.13). A project-role registry, not a fourth expertise taxonomy; does not certify truth of any registrant's claims."
+    },
+    {
+      "id": "ECONEXP-v1.0-08",
+      "code": "weld/W.03.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.14"
+      ],
+      "name": "Effective candidate-validation workload (New Definition 2)",
+      "statement": {
+        "latest": "\\Lambda_t = \\sum_{c\\in\\mathcal C_t^{new}} w(c)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\Lambda_t = \\sum_{c\\in\\mathcal C_t^{new}} w(c)",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (14)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/W.04.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "8.1 Candidate sets and heterogeneous validation workload",
+        "label": "Eq. (14)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New Definition 2",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Status: New Definition 2. Sum of declared validation-equivalent workload w(c)>0 over the set of new AI/human-generated candidate claims C_t^new in period t; removes the assumption that all candidates are homogeneous."
+    },
+    {
+      "id": "ECONEXP-v1.0-09",
+      "code": "weld/W.04.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.15"
+      ],
+      "name": "Validation capacity as a function of contributory/interactional expertise, world access, data, resources, validation-side AI",
+      "statement": {
+        "latest": "\\mu_t = V\\!\\left( E_t^C, E_t^I, W_t, D_t, R_t, A_{v,t} \\right)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mu_t = V\\!\\left( E_t^C, E_t^I, W_t, D_t, R_t, A_{v,t} \\right)",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (15)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/W.03.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/W.05.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "8.2 Validation capacity",
+        "label": "Eq. (15)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New Definition (implicit; 'No universal functional form is assumed')",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "System validation capacity in the same workload units as Lambda_t, as a function of available contributory expertise E^C, interactional expertise E^I, world-side testing access W, data/evidence access D, non-AI resources R, and AI capability allocated to validation A_v. No universal functional form is assumed."
+    },
+    {
+      "id": "ECONEXP-v1.0-10",
+      "code": "weld/W.05.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.16"
+      ],
+      "name": "Candidate-validation backlog recursion (New Derivation 1)",
+      "statement": {
+        "latest": "B_{t+1} = \\max\\left\\{ 0, (1-\\delta_B)B_t+\\Lambda_t-\\mu_t \\right\\}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "B_{t+1} = \\max\\left\\{ 0, (1-\\delta_B)B_t+\\Lambda_t-\\mu_t \\right\\}",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (16)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/W.04.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/W.06.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "8.3 Candidate-validation backlog",
+        "label": "Eq. (16)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Dr",
+      "tier_in_genesis_verbatim": "New Derivation 1 - Candidate-Validation Backlog",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Status: New Derivation 1 - Candidate-Validation Backlog. Equation (16) is stated as the mathematical core of the theory: B_t is unresolved validation workload carried into period t, delta_B in (0,1] the per-period exit/obsolescence fraction."
+    },
+    {
+      "id": "ECONEXP-v1.0-11",
+      "code": "weld/W.06.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.17"
+      ],
+      "name": "Positive-backlog steady state (Proposition 1, Validation-Backlog Equilibrium)",
+      "statement": {
+        "latest": "B^* = \\frac{\\Lambda-\\mu}{\\delta_B} \\qquad \\text{for }\\Lambda>\\mu",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "B^* = \\frac{\\Lambda-\\mu}{\\delta_B} \\qquad \\text{for }\\Lambda>\\mu",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (17)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/W.05.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/W.07.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "8.4 Steady state",
+        "label": "Eq. (17)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Dr",
+      "tier_in_genesis_verbatim": "Derived from (16); Proposition 1 - Validation-Backlog Equilibrium",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Proposition 1 - Validation-Backlog Equilibrium. Under constant flows and positive exit rate, the active validation backlog is zero when capacity weakly exceeds effective candidate workload and positive in proportion to the candidate-capacity gap when workload exceeds capacity."
+    },
+    {
+      "id": "ECONEXP-v1.0-12",
+      "code": "weld/W.07.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.18",
+        "EconExpertise-v1.0:eq.19",
+        "EconExpertise-v1.0:eq.20",
+        "EconExpertise-v1.0:eq.21"
+      ],
+      "name": "AI comparative statics on the backlog and the AI-induced epistemic scarcity shift condition (Proposition 2)",
+      "statement": {
+        "latest": "\\frac{\\partial B^*}{\\partial A_g} = \\frac{\\partial \\Lambda/\\partial A_g}{\\delta_B} >0 \\\\ \\frac{\\partial B^*}{\\partial A_v} = -\\frac{\\partial \\mu/\\partial A_v}{\\delta_B} <0 \\\\ \\frac{\\partial B^*}{\\partial z} = \\frac{\\partial \\Lambda/\\partial z - \\partial \\mu/\\partial z}{\\delta_B} \\\\ \\frac{\\partial \\Lambda}{\\partial z} > \\frac{\\partial \\mu}{\\partial z} \\;\\Longleftrightarrow\\; \\frac{\\partial B^*}{\\partial z}>0",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\frac{\\partial B^*}{\\partial A_g} = \\frac{\\partial \\Lambda/\\partial A_g}{\\delta_B} >0 \\\\ \\frac{\\partial B^*}{\\partial A_v} = -\\frac{\\partial \\mu/\\partial A_v}{\\delta_B} <0 \\\\ \\frac{\\partial B^*}{\\partial z} = \\frac{\\partial \\Lambda/\\partial z - \\partial \\mu/\\partial z}{\\delta_B} \\\\ \\frac{\\partial \\Lambda}{\\partial z} > \\frac{\\partial \\mu}{\\partial z} \\;\\Longleftrightarrow\\; \\frac{\\partial B^*}{\\partial z}>0",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (18)-(21)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/W.06.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "8.5 AI-induced epistemic scarcity shift",
+        "label": "Eq. (18)-(21)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Dr",
+      "tier_in_genesis_verbatim": "New Derivation / Proposition; Proposition 2 - AI-Induced Epistemic Scarcity Shift",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Proposition 2 - AI-Induced Epistemic Scarcity Shift. In the positive-backlog regime, a general AI capability improvement increases unresolved validation workload if and only if its marginal effect on effective candidate workload exceeds its marginal effect on validation capacity. Deliberately symmetric: permits generation-dominant (backlog rises), balanced (unchanged), and validation-dominant (backlog falls) outcomes."
+    },
+    {
+      "id": "ECONEXP-v1.0-13",
+      "code": "weld/W.08.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.22",
+        "EconExpertise-v1.0:eq.23"
+      ],
+      "name": "Validated output value and its non-proportionality to candidate-set size",
+      "statement": {
+        "latest": "Y_{K,t} = \\sum_{c\\in\\mathcal P_t} v(c)\\,\\mathbf 1[G(c)=1] \\\\ |\\mathcal C_t^{new}|\\uparrow \\not\\Rightarrow Y_{K,t}\\uparrow \\text{ proportionally}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Y_{K,t} = \\sum_{c\\in\\mathcal P_t} v(c)\\,\\mathbf 1[G(c)=1] \\\\ |\\mathcal C_t^{new}|\\uparrow \\not\\Rightarrow Y_{K,t}\\uparrow \\text{ proportionally}",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (22)-(23)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [
+        "weld/W.09.v1",
+        "weld/W.10.v1"
+      ],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "8.6 Validated throughput and value",
+        "label": "Eq. (22)-(23)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New Definition (22) / non-collapse consequence (23)",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Status: New Definition 3 (22): validated output value, summed over processed candidates P_t subject to workload capacity, weighted by realized value v(c) conditional on passing a declared validation gate G(c). Equation (23) states the consequence that candidate abundance does not imply proportional validated value."
+    },
+    {
+      "id": "ECONEXP-v1.0-14",
+      "code": "weld/W.09.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.24"
+      ],
+      "name": "Shadow-value Lagrangian for the validation-constrained institutional optimum (Proposition 3, Bottleneck Revaluation)",
+      "statement": {
+        "latest": "\\mathcal{L} = U(Y_K)-C(x) + \\lambda_V[\\Phi(\\mu,\\mathcal C)-Y_K]",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathcal{L} = U(Y_K)-C(x) + \\lambda_V[\\Phi(\\mu,\\mathcal C)-Y_K]",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (24)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/W.08.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "8.7 Bottleneck revaluation",
+        "label": "Eq. (24)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Dr",
+      "tier_in_genesis_verbatim": "Standard constrained-optimization application; Proposition 3 - Bottleneck Revaluation",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "Proposition 3 - Bottleneck Revaluation. When the validation constraint binds and sufficiently valuable unprocessed candidates exist, the marginal social value of resources that expand mu is positive; a technology that expands candidate supply without proportionately expanding mu can raise the shadow value of contributory expertise, interactional translation, world access, verification infrastructure, and reviewer attention even while lowering the marginal cost of producing plausible answers. Concerns constrained capability, not observed wages."
+    },
+    {
+      "id": "ECONEXP-v1.0-15",
+      "code": "weld/H.29.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "EconExpertise-v1.0:eq.25"
+      ],
+      "name": "Live-problem coupled epistemic system research architecture",
+      "statement": {
+        "latest": "\\text{Live Problem} \\rightarrow \\text{Core Respondent / Practitioner} + \\text{Researcher} + \\text{Interactional Expert if present} + \\text{AI Model(s)} \\rightarrow \\text{Question} \\rightarrow \\text{Candidate Set} \\rightarrow \\text{Discrimination} \\rightarrow \\text{World Test} \\rightarrow \\text{Feedback} \\rightarrow \\text{Revision}.",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{Live Problem} \\rightarrow \\text{Core Respondent / Practitioner} + \\text{Researcher} + \\text{Interactional Expert if present} + \\text{AI Model(s)} \\rightarrow \\text{Question} \\rightarrow \\text{Candidate Set} \\rightarrow \\text{Discrimination} \\rightarrow \\text{World Test} \\rightarrow \\text{Feedback} \\rightarrow \\text{Revision}.",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (25)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads"
+        },
+        {
+          "code": "EQ-015/H.24.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "9. Why Practitioners Become Epistemically Central",
+        "label": "Eq. (25)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New methodological architecture",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "reads_also": [
+        "EQ-015"
+      ],
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement. This entry additionally reads EQ-015/H.24.v1 (CAN-088, 'Human Return closed through action and world feedback') as the composite object's second, world-feedback-closure parent, per the ledger's own two-part provenance note; root is kept at the primary parent weld per this scheme's 'name the primary root' convention for readings of a composite (docs/EQ_CODE_SCHEME.md Layer 1).",
+      "provenance_note_verbatim": "Equation (25) is a research architecture, not a linear law; projects can branch, cycle, terminate, or return to earlier stages. Ledger provenance: 'Present framework + Toledo world-feedback closure.'"
+    },
+    {
+      "id": "ECONEXP-v1.0-16",
+      "code": "weld/W.10.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "W",
+      "aliases": [
+        "EconExpertise-v1.0:eq.28",
+        "EconExpertise-v1.0:eq.29"
+      ],
+      "name": "University Pareto-efficient portfolio objective and its constraint set",
+      "statement": {
+        "latest": "\\left\\{ Y_K, \\Delta R_H^{return}, W, T, N_v \\right\\} \\\\ \\text{Budget}\\leq\\bar B,\\ \\text{Safety risk}\\leq\\bar S,\\ \\text{Protocol burden}\\leq\\bar U,\\ \\text{Provenance and legitimacy gates passed},\\ \\text{Open-exploration capacity protected}.",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\left\\{ Y_K, \\Delta R_H^{return}, W, T, N_v \\right\\} \\\\ \\text{Budget}\\leq\\bar B,\\ \\text{Safety risk}\\leq\\bar S,\\ \\text{Protocol burden}\\leq\\bar U,\\ \\text{Provenance and legitimacy gates passed},\\ \\text{Open-exploration capacity protected}.",
+          "date": "2026-09-07",
+          "reason": "toledo-extractor: initial capture from The Economics of Expertise in the Age of Generative AI v1.0 (Zenodo record pending), Eq. (28)-(29)",
+          "by": "toledo-extractor"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/W.08.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Economics of Expertise in the Age of Generative AI v1.0.1",
+        "repo_anchor": null,
+        "record_id": 22636999,
+        "doi": "10.5281/zenodo.22636999",
+        "section": "13. University Objective: A Constrained Portfolio, Not a Universal Score",
+        "label": "Eq. (28)-(29)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New policy definition",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "Appendix A of the source manuscript states this equation's provenance only as 'Present framework' (no cited Toledo code). Per this extraction task's instruction, rootless 'present framework' equations are rooted at weld and read through the domain-weld requirement weld/M.02.v1 (itself Eq.(1) of this same manuscript, already registered as an economics-domain instantiation of that requirement) rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated direct reading of weld/M.02.v1's own statement.",
+      "provenance_note_verbatim": "A constrained multiobjective portfolio replacing a universal scalar research score; no single indicator (publication, citation, commercialization, policy uptake) is treated as a universal proxy for research value."
+    },
+    {
+      "id": "CES-2026-09-07-01",
+      "code": "weld/H.30.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "CES:E_p"
+      ],
+      "name": "Core Epistemic Structure of a project",
+      "statement": {
+        "latest": "E_p = \\left\\langle X_p^{exp}, X_p^{int}, \\mathcal{M}_p^{AI} \\right\\rangle",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "E_p = \\left\\langle X_p^{exp}, X_p^{int}, \\mathcal{M}_p^{AI} \\right\\rangle",
+          "date": "2026-09-07",
+          "reason": "toledo-v1.4-econ: initial capture, Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1, Blackbox Log ruling BBL-2026-09-07-217, (i)",
+          "by": "toledo-v1.4-econ"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.22.v1",
+          "derived_via": "reads"
+        },
+        {
+          "code": "weld/H.23.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "weld/H.28.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(i)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217)",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "This ruling states E_p's own structure without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13) that state the same non-collapsing-categories architecture, rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement.",
+      "provenance_note_verbatim": "Core Epistemic Structure of a project p: E_p = <X_p^exp, X_p^int, M_p^AI> -- the experience-based expertise slot, the interactional-expertise slot, and the AI-model set of that project, kept as three non-collapsing components. Founder ruling, Blackbox Log BBL-2026-09-07-217."
+    },
+    {
+      "id": "CES-2026-09-07-02",
+      "code": "weld/H.31.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "CES:M_AI"
+      ],
+      "name": "AI model set of a project",
+      "statement": {
+        "latest": "\\mathcal{M}_p^{AI} = \\{M_1, M_2, \\ldots, M_k\\}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathcal{M}_p^{AI} = \\{M_1, M_2, \\ldots, M_k\\}",
+          "date": "2026-09-07",
+          "reason": "toledo-v1.4-econ: initial capture, Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1, Blackbox Log ruling BBL-2026-09-07-217, (ii)",
+          "by": "toledo-v1.4-econ"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.22.v1",
+          "derived_via": "reads"
+        },
+        {
+          "code": "weld/H.23.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "weld/H.28.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(ii)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217)",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "This ruling states M_p^AI's own structure without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13, whose own Eq.13 already states M_p^AI as a set), rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement.",
+      "provenance_note_verbatim": "M_p^AI = {M_1,...,M_k}: the AI models materially used on project p, recorded as a set -- membership only, no ranking or weighting implied. Founder ruling, Blackbox Log BBL-2026-09-07-217."
+    },
+    {
+      "id": "CES-2026-09-07-03",
+      "code": "weld/H.32.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "CES:X_int_empty"
+      ],
+      "name": "Interactional-expert slot empty when the role is unheld",
+      "statement": {
+        "latest": "X_p^{int} = \\varnothing \\quad \\text{(role unheld, not a zero score)}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "X_p^{int} = \\varnothing \\quad \\text{(role unheld, not a zero score)}",
+          "date": "2026-09-07",
+          "reason": "toledo-v1.4-econ: initial capture, Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1, Blackbox Log ruling BBL-2026-09-07-217, (iii)",
+          "by": "toledo-v1.4-econ"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.22.v1",
+          "derived_via": "reads"
+        },
+        {
+          "code": "weld/H.23.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "weld/H.28.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(iii)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217)",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "This ruling states X_p^int's empty-role convention without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13, whose own Eq.12 already states the empty-set convention), rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement.",
+      "provenance_note_verbatim": "X_p^int = the empty set when no interactional expert holds the role on project p -- an unheld role, not a zero score against some scale. Founder ruling, Blackbox Log BBL-2026-09-07-217."
+    },
+    {
+      "id": "CES-2026-09-07-04",
+      "code": "weld/H.33.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "CES:non-collapse"
+      ],
+      "name": "Non-collapse: experience-based expertise, interactional expertise, and AI model are distinct",
+      "statement": {
+        "latest": "\\text{Experience-Based Expertise} \\neq \\text{Interactional Expertise} \\neq \\text{AI Model}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{Experience-Based Expertise} \\neq \\text{Interactional Expertise} \\neq \\text{AI Model}",
+          "date": "2026-09-07",
+          "reason": "toledo-v1.4-econ: initial capture, Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1, Blackbox Log ruling BBL-2026-09-07-217, (iv)",
+          "by": "toledo-v1.4-econ"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.22.v1",
+          "derived_via": "reads"
+        },
+        {
+          "code": "weld/H.23.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "weld/H.28.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(iv)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Dr",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07-217) -- non-collapse rule",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "This ruling states the non-collapse rule without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5, both already stated as non-collapses) and the registration object they license (weld/H.28.v1, Eq.11-13), rather than left as an HRP-X rootless placeholder. Tiered Dr, not Definition, because this is an asserted non-collapse rule over the Core Epistemic Structure's components, not itself a bare typed definition. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement.",
+      "provenance_note_verbatim": "Non-collapse rule: Experience-Based Expertise != Interactional Expertise != AI Model -- none of the three Core Epistemic Structure components may be treated as reducible to, or substitutable for, another. Founder ruling, Blackbox Log BBL-2026-09-07-217."
+    },
+    {
+      "id": "CES-2026-09-07-05",
+      "code": "weld/H.34.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "CES:X_exp"
+      ],
+      "name": "Experience-holder decomposition (lived experience, selection, interpretation)",
+      "statement": {
+        "latest": "X_p^{exp} = \\left\\langle \\text{Exp}, \\text{Sel}, \\text{Int} \\right\\rangle",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "X_p^{exp} = \\left\\langle \\text{Exp}, \\text{Sel}, \\text{Int} \\right\\rangle",
+          "date": "2026-09-07",
+          "reason": "toledo-v1.4-econ: initial capture, Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1, Blackbox Log ruling BBL-2026-09-07-217, (v)",
+          "by": "toledo-v1.4-econ"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.22.v1",
+          "derived_via": "reads"
+        },
+        {
+          "code": "weld/H.23.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "weld/H.28.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": "10.5281/zenodo.22302518",
+        "section": "Blackbox Log ruling BBL-2026-09-07-217",
+        "label": "(v)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "[New Definition / Proposal] (Blackbox Log BBL-2026-09-07 rulings)",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-07",
+      "drift_note": "This ruling states X_p^exp's own decomposition without citing a Toledo code by number; per the Toledo Equation Source Policy (search Toledo first) this reading is rooted at weld and parented on the two Task-1 Economics-of-Expertise readings (weld/H.22.v1 Eq.4, weld/H.23.v1 Eq.5) and the registration object they license (weld/H.28.v1, Eq.11-13, whose own E_p^exp component is decomposed here), rather than left as an HRP-X rootless placeholder. This is a disclosed convention, not a demonstrated verbatim restatement of any one parent's own statement.",
+      "provenance_note_verbatim": "Experience-holder decomposition: X_p^exp = <Exp, Sel, Int> -- lived experience, selection, and interpretation as the three components of an experience-based expert's contribution. From BBL-2026-09-07 rulings the same day as BBL-2026-09-07-217."
     }
   ],
   "raw_to_canonical": {
@@ -83503,9 +84890,9 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 946,
+    "entries": 967,
     "by_status": {
-      "current": 855,
+      "current": 876,
       "split": 30,
       "not_an_equation": 9,
       "unverified": 52
@@ -83513,30 +84900,30 @@
     "by_domain": {
       "M": 151,
       "E": 61,
-      "H": 92,
+      "H": 105,
       "S": 136,
-      "W": 84,
+      "W": 92,
       "C": 59,
       "P": 288,
       "B": 75
     },
     "by_tier": {
       "Th_coqc": 130,
-      "Definition": 407,
-      "Dr": 59,
+      "Definition": 420,
+      "Dr": 64,
       "Ax": 12,
       "finite_diagnostic": 46,
-      "Open": 37,
+      "Open": 40,
       "untagged": 255
     },
     "by_coq_status": {
       "closed": 161,
-      "definition": 357,
+      "definition": 370,
       "wrapped_related": 210,
       "not_formalisable": 70,
-      "open_prop": 29,
+      "open_prop": 37,
       "mapped_not_wrapped": 119
     },
-    "computed": "2026-09-07 from canonical[] (scripts/v13_effort_merge.py)"
+    "computed": "2026-09-07 from canonical[] (scripts/v14_econ_merge.py)"
   }
 }
