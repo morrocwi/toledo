@@ -217,7 +217,7 @@
   {
    "field": "upstream_path",
    "reason": "removed an absolute local filesystem path (including the operator's system username) that this draft initially wrote into this file -- caught by the mandatory leak scan (grep for /home/ paths and local usernames) before this import was finished; not the private-solver-arc-name redaction rule (this source is a public repo, not the solver arc), but the same local-path/privacy discipline applies to every Toledo file",
-   "original_value_pattern": "/home/<local-username>/ANSE.ASIA/readout_genesis",
+   "original_value_pattern": "a local home-directory path ending in /ANSE.ASIA/readout_genesis (prefix redacted)",
    "replaced_with": "(field removed -- the public GitHub remote is the citable location; a local checkout path is not a fact about the source)"
   }
  ],

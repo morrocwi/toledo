@@ -3,6 +3,57 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.4.0 — 2026-09-07
+
+Deposited as Zenodo version DOI (recorded once minted; concept DOI 10.5281/zenodo.22537318);
+GitHub release tag v1.4.0.
+
+Commit `15f74fc` (Economics of Expertise + Core Epistemic Structure registrar merge), plus three
+v1.3.0 follow-ups landed after that tag (`d03e6c6`, `3c1d749`, `48b2382`), plus this release-prep
+pass.
+
+- **Economics of Expertise v1.0.1 + Core Epistemic Structure merged** (`15f74fc`): the deposited
+  paper "The Economics of Expertise in the Age of Generative AI" v1.0.1
+  (10.5281/zenodo.22636999, concept 10.5281/zenodo.22636987) contributed **16** new coded
+  readings under the `weld` root it names (`weld/H.22.v1`–`weld/H.29.v1`,
+  `weld/W.03.v1`–`weld/W.10.v1`) and **7** occurrences added to existing codes (`weld/M.02.v1`,
+  `EQ-015/H.10.v1`, `EQ-015/H.17.v1`, `A.5/H.08.v1` ×2, `EQ-015/M.10.v1`, `weld/E.03.v1` — the
+  last carrying a `status_note` disclosing that its manuscript ledger row maps to an earlier
+  formulation of that code's statement, not its current text). Separately, founder ruling
+  BBL-2026-09-07-217 registered a five-part Core Epistemic Structure as **5** further `weld`
+  readings (`weld/H.30.v1`–`weld/H.34.v1`: the structure itself, the AI model set, the empty
+  interactional-expert convention, the three-way non-collapse rule, and the experience-holder
+  decomposition). 21 new entries total (16 + 5); canonical registry: **967** entries (was 946).
+  See README's "Economics of Expertise v1.0.1 registrations", "Core Epistemic Structure", and
+  "Honest state" sections for the full computed count set.
+- **v1.3.0 follow-ups** (landed after the v1.3.0 tag, shipping in this release): static API
+  export's index/landing page was not counted in its own JSON file list (`d03e6c6`); the static
+  API export gained a landing page at the export root so the GitHub Pages URL itself answers
+  (`48b2382`); the CI leak-scan's username pattern was corrected to ignore generic CI account
+  names such as `runner` as a false positive, with a `TOLEDO_LEAK_SCAN_USERNAME` override added
+  (`3c1d749`).
+- **This release-prep pass**: `CITATION.cff`/`.zenodo.json` → 1.4.0 (v1.3.0's version DOI
+  10.5281/zenodo.22635896 added to `CITATION.cff`'s citation message, a placeholder recorded for
+  1.4.0); `python3 mcp/scripts/sync_version.py` propagated `1.4.0` into `mcp/pyproject.toml` and
+  `toledo_mcp/__init__.py` (both reported "updated"). Regenerated `make build`,
+  `python3 site/build_site.py`, `python3 scripts/build_eq_library.py`,
+  `python3 -m toledo_mcp.export_static --out mcp/dist/static-api` (2,163 files) and `make
+  catalogue` (one `latexmk -pdf` run): docs site **1,559** pages (967 canonical + 592 root rows),
+  catalogue PDF **286** pages with its title page reading "Version 1.4.0" (`pdfinfo`). README's
+  "Honest state" and "What is not done" sections regenerated with live counts.
+- `python3 -m pytest -q tests` (repository root):
+  ```
+  ............................x....x.x                                     [100%]
+  33 passed, 3 xfailed, 1 warning in 2.17s
+  ```
+  `cd mcp && python3 -m pytest -q`:
+  ```
+  ........................................................................ [ 33%]
+  ........................................................................ [ 67%]
+  ......................................................................   [100%]
+  214 passed in 9.81s
+  ```
+
 ## v1.3.0 — 2026-09-07
 
 Deposited as Zenodo version DOI 10.5281/zenodo.22635896 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.3.0.

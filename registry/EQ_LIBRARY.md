@@ -5,7 +5,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 ## Status
 - Chapters inventoried: 40
 - Raw equations: 946
-- Canonical objects: 946
+- Canonical objects: 967
 - Raw→canonical mapped: 1069
 - Coq identifiers (canonical set): 835
 - Master River v1.4 (22519148) equations 1–79: Coq set 22518450, 45 lemmas closed (coq/MR_Ledger.md)
@@ -20,7 +20,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/M.02.v1 | CAN-003 | EQ-015 | M | S_{n+1} = F(S_n, u_n, c_n, T_n) | Definition | closed CAN_003_trajectory, CAN_003_stepper_can_move_state, CAN_003_trajectory_zero | 2 |
 | EQ-015/M.03.v1 | CAN-004 | EQ-015 | M | retention → structure → translation → readout → meaning → experience → memory → belief → claim → checking → st | Dr | closed CAN_004_Stage, CAN_004_index, CAN_004_forbidden_order, CAN_004_index_injective, CAN_004_checking_before | 1 |
 | EQ-015/M.04.v1 | CAN-005 | EQ-015 | M | Retention→Structure→Translation→Readout→Meaning→Report (compressed); Retention→Structure→Candidate State→Suffi | Definition | definition CAN_005_readout_admission_order, CAN_005_readout_admission_order_stage | 4 |
-| weld/M.02.v1 | CAN-006 | weld | M | q_{D,n+1}∘F_n = F#_{D,n}∘q_{D,n}; O_{D,n} = O#_{D,n}∘q_{D,n}; equivalently q_D(F(z,u,c,T)) = F_D(q_D(z),u,c,T) | Definition | closed CAN_006_domain_admissible, CAN_006_domain_weld_satisfiable_on_pair_projection, DomainReading, weld_hold | 5 |
+| weld/M.02.v1 | CAN-006 | weld | M | q_{D,n+1}∘F_n = F#_{D,n}∘q_{D,n}; O_{D,n} = O#_{D,n}∘q_{D,n}; equivalently q_D(F(z,u,c,T)) = F_D(q_D(z),u,c,T) | Definition | closed CAN_006_domain_admissible, CAN_006_domain_weld_satisfiable_on_pair_projection, DomainReading, weld_hold | 6 |
 | weld/M.03.v1 | CAN-007 | weld | M | z ~_{Q,O,c,L} z' ⟺ O(F^k z) = O(F^k z') for all k ≤ L | Definition | closed CAN_007_reader_equiv, CAN_007_reader_equiv_is_equivalence | 2 |
 | A.5/M.01.v1 | CAN-008 | A.5 | M | S_n ≠ Z_{D,n} ≠ D_{D,n} (D=HCA or MEMK) | Definition | closed CAN_008_noncollapse, CAN_008_root_candidate_quotient_are_three_things | 2 |
 | A.8/M.01.v1 | CAN-009 | A.8 | M | ΔA_past = 0 | Dr | closed CAN_009_extends, CAN_009_extension_preserves_past, CAN_009_witness_append_preserves_first_event | 1 |
@@ -44,7 +44,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/E.10.v1 | CAN-028 | EQ-015 | E | When external generation of coherent structure increases without bound, observable production ceases to serve  | Dr | definition CAN028_Regime, CAN028_regime_transition_Open | 2 |
 | weld/E.02.v1 | CAN-029 | weld | E | SC: K(S,p)→Subject(S); the collapse the paper rejects, HSC: Epi(X,p)→Knower(X,p); Possession-Constitution Coll | Definition | closed CAN029_possession_constitution_non_collapse | 6 |
 | EQ-015/E.11.v1 | CAN-030 | EQ-015 | E | K_A(D,t):=V_A^D(M_A(t),θ_D); V_A^D=w1P+w2I+w3S+w4R+w5L, Σw_i^D=1 | Definition | definition CAN030_Profile, CAN030_weights_normalized, CAN030_V_A_D | 2 |
-| weld/E.03.v1 | CAN-031 | weld | E | σ_K(p)=Admit_E(p\|Agent,D,C,O,Access,Language,Tools,Rights,Prov,Ev,Method,Infer,Assumptions,Uncertainty,Scope,O | Definition | definition CAN031_Status, CAN031_status_eq_dec, CAN031_Admission | 18 |
+| weld/E.03.v1 | CAN-031 | weld | E | σ_K(p)=Admit_E(p\|Agent,D,C,O,Access,Language,Tools,Rights,Prov,Ev,Method,Infer,Assumptions,Uncertainty,Scope,O | Definition | definition CAN031_Status, CAN031_status_eq_dec, CAN031_Admission | 19 |
 | weld/E.04.v1 | CAN-032 | weld | E | Π_prac(p)=TestPerformance(Y,Ŷ,intervention,C,O); σ_K(p) ≠ Π_prac(p) | Definition | closed CAN032_Notion, CAN032_code, CAN032_non_collapse, CAN032_status_and_performance_can_diverge | 1 |
 | weld/E.05.v1 | CAN-033 | weld | E | χ_G ∈ {1,0,⊥}, 1=ADMITTED, 0=OBSTRUCTED, ⊥=UNRESOLVED (thirteen admission gates G0–G13); independently, χ_t(d) | Definition | definition CAN033_GateOutcome, CAN033_Provenance, CAN033_gate_eq_dec, CAN033_prov_eq_dec, CAN033_Ledger | 3 |
 | weld/E.06.v1 | CAN-034 | weld | E | Suff_{E,L}(Z_E^cand; Q,O,c,T) ∈ {1,0,⊥}; Inv_E(z)≠Inv_E(z') ⟹ q_E(z)≠q_E(z') | Definition | closed CAN034_Sufficiency, CAN034_invariant_preserving, CAN034_invariant_functional_implies_preserving | 2 |
@@ -74,7 +74,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | A.5/H.05.v1 | CAN-059 | A.5 | H | π^choice_{A,t}∈Π^live_{A,t}(g); π^act≠π^choice possible, Y_obs=O_q(H_{0:T})≠H_{0:T}; possible≠feasible≠live≠ch | Definition | definition CAN_059_is_valid_choice, CAN_059_enactment_may_differ_witness, CAN_059_observation_loses_informatio | 3 |
 | EQ-015/H.09.v1 | CAN-060 | EQ-015 | H | p*_{A,g}(h,z;T,B,P)=max_{π∈Π^wit_A(g;h,z,T,B)} Pr^π_P(Read_g∩D_g∩X_g∩F_g) | Definition | definition CAN_060_p_star, CAN_060_p_star_upper_bound_witness | 1 |
 | A.5/H.06.v1 | CAN-061 | A.5 | H | L_{A,t+1}≠L_{A,t} (if a residue is retained); at world-system scale: Λ̇^live_{H,t}=λ1 B_t+λ2 X_t+λ3 P^plural_t | Definition | definition CAN_061_live_weight_may_change_witness, CAN_061_Open_live_field_dynamic | 2 |
-| EQ-015/H.10.v1 | CAN-062 | EQ-015 | H | AI(Q)=K_like, K_like ≠ K_validated | Definition | definition CAN_062_KnowledgeStatus, CAN_062_status_value, CAN_062_non_collapse_witness | 6 |
+| EQ-015/H.10.v1 | CAN-062 | EQ-015 | H | AI(Q)=K_like, K_like ≠ K_validated | Definition | definition CAN_062_KnowledgeStatus, CAN_062_status_value, CAN_062_non_collapse_witness | 7 |
 | EQ-015/H.11.v1 | CAN-063 | EQ-015 | H | K_like→K_assumed (dangerous shortcut); repaired: K_like --check--> K_checked --independent support--> K_suppor | Dr | definition RepairedStatus, CAN_063_next_status, CAN_063_dangerous_shortcut | 2 |
 | weld/H.05.v1 | CAN-064 | weld | H | T_{H←AI}∘K_AI ≅ K_H∘T_C, with explicit defects for semantic loss, source omission, authority laundering, uncer | Definition | definition TransportDefect, CAN_064_transport_condition | 2 |
 | weld/H.06.v1 | CAN-065 | weld | H | ε_H = Def(q̃_H∘F, F#_H∘q̃_H, O_H, Inv_H) | Definition | definition CAN_065_domain_weld_defect | 2 |
@@ -86,10 +86,10 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/H.14.v1 | CAN-071 | EQ-015 | H | R_s^ep=ρ(I_s,V_s,Q_s); U_s^R=u(C_s^v,T_s^v,A_s^v); R_s^ex=ψ(R_s^ep,U_s^R); Resistance quality ≠ resistance acc | Dr | closed CAN_071_R_ep, CAN_071_U_R, CAN_071_R_ex, CAN_071_quality_ne_accessibility | 3 |
 | EQ-015/H.15.v1 | CAN-072 | EQ-015 | H | K_s=(κ0,κ1,W0,W1); Calibration error ≈ N^{-1}Σ_i(κ_i−y_i)^2 | Dr | definition CalibrationRecord, CAN_072_calibration_record, CAN_072_mk_calibration_record, CAN_072_calibration_e | 2 |
 | weld/H.09.v1 | CAN-073 | weld | H | retained experiential reorganization → possible later CTSA crystallization; retained sensitivity→C_return, ret | Open | definition CAN_073_Open_ctsa_bridge | 2 |
-| A.5/H.08.v1 | CAN-074 | A.5 | H | ΔPerformance_AI>0 ⇏ ΔH_return>0 (equivalently: Assisted performance ≠ Unaided Human Return) | Definition | closed CAN_074_assisted_gain_does_not_imply_return_gain | 4 |
+| A.5/H.08.v1 | CAN-074 | A.5 | H | ΔPerformance_AI>0 ⇏ ΔH_return>0 (equivalently: Assisted performance ≠ Unaided Human Return) | Definition | closed CAN_074_assisted_gain_does_not_imply_return_gain | 6 |
 | A.5/H.09.v1 | CAN-075 | A.5 | H | Exposure ≠ Retention ≠ Improvement | Definition | closed CAN_075_EndChainNotion, CAN_075_end_chain_value, CAN_075_exposure_retention_improvement_non_collapse | 2 |
 | EQ-015/H.16.v1 | CAN-076 | EQ-015 | H | H_return = ⟨G_CTSA, L, M, P, W, Δ_dir⟩ | Definition | definition CAN_076_HReturn, CAN_076_mk_h_return | 3 |
-| EQ-015/H.17.v1 | CAN-077 | EQ-015 | H | R^return_H = ⟨C, T, S, A⟩ | Definition | definition ReturnCTSA4, CAN_077_human_return_ctsa4, CAN_077_mk_human_return_ctsa4 | 2 |
+| EQ-015/H.17.v1 | CAN-077 | EQ-015 | H | R^return_H = ⟨C, T, S, A⟩ | Definition | definition ReturnCTSA4, CAN_077_human_return_ctsa4, CAN_077_mk_human_return_ctsa4 | 3 |
 | EQ-015/H.18.v1 | CAN-078 | EQ-015 | H | D > 0, Resist > 0, A_H > 0 | Definition | definition CAN_078_Open_dra_constitutive | 4 |
 | EQ-015/H.19.v1 | CAN-079 | EQ-015 | H | J*_s=(AUG_s,SYN_s,RET_s); AUG_s=P^joint_s−P^H_s; SYN_s=P^joint_s−max(P^H_s,P^AI_s) | Definition | definition CAN_079_AUG, CAN_079_SYN, CAN_079_aug_syn_non_collapse_witness | 2 |
 | A.5/H.10.v1 | CAN-080 | A.5 | H | AI fluency≠human baseline; explanation≠verification; output count≠epistemic diversity; exposure≠retention≠impr | Dr | closed CAN_080_fluency_ne_baseline, CAN_080_explanation_ne_verification, CAN_080_output_count_ne_epistemic_div | 1 |
@@ -211,7 +211,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | A.5/M.04.v1 | CAN-197 | A.5 | M | G1K≠G2K => L(τ_U\|G1K,Q)≠L(τ_U\|G2K,Q) | Open | definition CAN197_topology_sensitivity_Open | 1 |
 | EQ-015/M.08.v1 | CAN-198 | EQ-015 | M | T_n={(x_k,t_k,w_k)}_{k≤n}, Rhythm_n=Ω(T_n,B_n); m_{t+1}(e)=ρm_t(e)+1[e_t=e], 0≤ρ<1; κ^{sem}_{t+1}(e\|Q) ∝ κ^{se | Definition | definition CAN198_momentum, CAN198_Open_momentum, CAN198_accessibility_score, CAN198_Open_accessibility, CAN19 | 5 |
 | EQ-015/M.09.v1 | CAN-199 | EQ-015 | M | B[t+1]=F(B[t])+C_H(H[t]); H[t+1]=G(H[t])+C_B(B[t]); E[t]=R(B[t],H[t]) | Definition | definition CAN199_B, CAN199_E | 3 |
-| EQ-015/M.10.v1 | CAN-200 | EQ-015 | M | B^use=⟨Time,CognitiveLoad,VerificationCost,Interruption,LiteracyDemand⟩; Epistemically optimal ≢ Behaviorally  | Definition | closed CAN200_Burden, CAN200_OptimalOrAdoptable, CAN200_optimal_ne_adoptable | 2 |
+| EQ-015/M.10.v1 | CAN-200 | EQ-015 | M | B^use=⟨Time,CognitiveLoad,VerificationCost,Interruption,LiteracyDemand⟩; Epistemically optimal ≢ Behaviorally  | Definition | closed CAN200_Burden, CAN200_OptimalOrAdoptable, CAN200_optimal_ne_adoptable | 3 |
 | EQ-002/M.03.v1 | CAN-201 | EQ-002 | M | Readout_{Q,O,c}(S) = z, z ≠ S | Definition | closed CAN_201_hypothesis_satisfiable_on_bool | 1 |
 | EQ-015/E.12.v1 | CAN-202 | EQ-015 | E | M_A[n] = K_A · θ(E[n]) + η_sel + η_map + η_self | Definition | closed CAN202_M_A, CAN202_decomposition | 2 |
 | EQ-002/E.09.v1 | CAN-203 | EQ-002 | E | x_{i,n} = Access(A_n; O_i, L_i, T_i, R_i, C_i) | Definition | definition CAN203_x | 1 |
@@ -1185,6 +1185,27 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | weld/M.30.v1 | EFFORT-v0.3-32 | weld | M | D_{n+1} = \begin{cases} \mathsf{HOLD}, & \mathrm{Route}_Q(e_n)=\mathsf{HOLD},\\ \mathsf{STOP}, & \mathcal{U}_{ | Definition | definition | 1 |
 | weld/M.31.v1 | EFFORT-v0.3-33 | weld | M | \mathcal{U}_{n+1}^{safe} = \varnothing \;\Rightarrow\; \mathsf{STOP} | Dr | open_prop | 1 |
 | weld/M.32.v1 | EFFORT-v0.3-34 | weld | M | \text{Event} \to \text{Readout} \to \text{Conditional/Strong Stochastic License} \to \text{Event-Control Type} | Definition | definition | 1 |
+| weld/H.22.v1 | ECONEXP-v1.0-01 | weld | H | \text{credential} \neq \text{expertise} | Definition | definition | 0 |
+| weld/H.23.v1 | ECONEXP-v1.0-02 | weld | H | \text{project role} \neq \text{expertise type} \neq \text{AI system} | Definition | definition | 0 |
+| weld/H.24.v1 | ECONEXP-v1.0-03 | weld | H | \chi_i(Q,D,t)\in\{N,I,C\} | Definition | definition | 0 |
+| weld/H.25.v1 | ECONEXP-v1.0-04 | weld | H | P\!\left(\chi_{i,t+1}=b \mid \chi_{i,t}=a, A_t, P_t, W_t, R_t\right) | Open | open_prop | 0 |
+| weld/H.26.v1 | ECONEXP-v1.0-05 | weld | H | C_{N\rightarrow I}^{AI} < C_{N\rightarrow I}^{baseline} | Open | open_prop | 0 |
+| weld/H.27.v1 | ECONEXP-v1.0-06 | weld | H | \|\Delta C_{I\rightarrow C}^{AI}\| < \|\Delta C_{N\rightarrow I}^{AI}\| | Open | open_prop | 0 |
+| weld/H.28.v1 | ECONEXP-v1.0-07 | weld | H | \mathcal R_p = \left\langle E_p^{exp}, E_p^{int}, \mathcal M_p^{AI} \right\rangle \\ E_p^{int}=\varnothing \\  | Definition | definition | 0 |
+| weld/W.03.v1 | ECONEXP-v1.0-08 | weld | W | \Lambda_t = \sum_{c\in\mathcal C_t^{new}} w(c) | Definition | definition | 0 |
+| weld/W.04.v1 | ECONEXP-v1.0-09 | weld | W | \mu_t = V\!\left( E_t^C, E_t^I, W_t, D_t, R_t, A_{v,t} \right) | Definition | definition | 0 |
+| weld/W.05.v1 | ECONEXP-v1.0-10 | weld | W | B_{t+1} = \max\left\{ 0, (1-\delta_B)B_t+\Lambda_t-\mu_t \right\} | Dr | open_prop | 0 |
+| weld/W.06.v1 | ECONEXP-v1.0-11 | weld | W | B^* = \frac{\Lambda-\mu}{\delta_B} \qquad \text{for }\Lambda>\mu | Dr | open_prop | 0 |
+| weld/W.07.v1 | ECONEXP-v1.0-12 | weld | W | \frac{\partial B^*}{\partial A_g} = \frac{\partial \Lambda/\partial A_g}{\delta_B} >0 \\ \frac{\partial B^*}{\ | Dr | open_prop | 0 |
+| weld/W.08.v1 | ECONEXP-v1.0-13 | weld | W | Y_{K,t} = \sum_{c\in\mathcal P_t} v(c)\,\mathbf 1[G(c)=1] \\ \|\mathcal C_t^{new}\|\uparrow \not\Rightarrow Y_{K | Definition | definition | 0 |
+| weld/W.09.v1 | ECONEXP-v1.0-14 | weld | W | \mathcal{L} = U(Y_K)-C(x) + \lambda_V[\Phi(\mu,\mathcal C)-Y_K] | Dr | open_prop | 0 |
+| weld/H.29.v1 | ECONEXP-v1.0-15 | weld | H | \text{Live Problem} \rightarrow \text{Core Respondent / Practitioner} + \text{Researcher} + \text{Interactiona | Definition | definition | 0 |
+| weld/W.10.v1 | ECONEXP-v1.0-16 | weld | W | \left\{ Y_K, \Delta R_H^{return}, W, T, N_v \right\} \\ \text{Budget}\leq\bar B,\ \text{Safety risk}\leq\bar S | Definition | definition | 0 |
+| weld/H.30.v1 | CES-2026-09-07-01 | weld | H | E_p = \left\langle X_p^{exp}, X_p^{int}, \mathcal{M}_p^{AI} \right\rangle | Definition | definition | 0 |
+| weld/H.31.v1 | CES-2026-09-07-02 | weld | H | \mathcal{M}_p^{AI} = \{M_1, M_2, \ldots, M_k\} | Definition | definition | 0 |
+| weld/H.32.v1 | CES-2026-09-07-03 | weld | H | X_p^{int} = \varnothing \quad \text{(role unheld, not a zero score)} | Definition | definition | 0 |
+| weld/H.33.v1 | CES-2026-09-07-04 | weld | H | \text{Experience-Based Expertise} \neq \text{Interactional Expertise} \neq \text{AI Model} | Dr | open_prop | 0 |
+| weld/H.34.v1 | CES-2026-09-07-05 | weld | H | X_p^{exp} = \left\langle \text{Exp}, \text{Sel}, \text{Int} \right\rangle | Definition | definition | 0 |
 
 ## Raw inventory by chapter (every numbered equation, with its canonical id when assigned)
 

@@ -210,14 +210,15 @@ indicative of that one run, not a guaranteed SLA — re-run `python3 benchmarks/
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-07 (v1.3)
+## Honest state — computed 2026-09-07 (v1.4)
 
 Every number below was read from the files in this repository by the command shown; none is
-carried over from an earlier note. This section supersedes the v1.2.0 counts below it in
-`CHANGELOG.md` — v1.3 merges **34** newly registered readings from the deposited paper "Effort
-Across Stochastic, Controlled, and Adaptive Worlds" v0.3 (see "Effort v0.3 registrations" below)
-and ships the Toledo MCP server and CLI (see "Finding and checking equations" below), which reads
-this registry but writes nothing into it.
+carried over from an earlier note. This section supersedes the v1.3 counts below it in
+`CHANGELOG.md` — v1.4 merges **16** newly registered readings and **7** occurrences on existing
+codes from the deposited paper "The Economics of Expertise in the Age of Generative AI" v1.0.1
+(see "Economics of Expertise v1.0.1 registrations" below) plus **5** Core Epistemic Structure
+definitions from a founder ruling (see "Core Epistemic Structure" below). No `coqc` was run
+during this pass, per this release's build constraints.
 
 **Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
 `python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
@@ -225,28 +226,25 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **946** canonical entries: **793** mapped from **946** raw equations across **40** deposited
+- **967** canonical entries: **793** mapped from **946** raw equations across **40** deposited
   chapters (`registry/EQ_LIBRARY.md`, `make library`) plus the 119 v1.2 root-extension readings,
-  plus **34** v1.3 readings registered from the Effort v0.3 paper; **1,069** raw occurrence keys
-  resolved (unchanged — the Effort readings are sourced from a Zenodo record, not a raw textbook
-  occurrence). (793+119+34=946, matching `registry/CANONICAL.json`'s own `counts{}.entries`
-  exactly; verified this session by partitioning `canonical[]` into entries with `root` in
-  `{Theta, CMC}` (119), entries whose `origin.doi` is `10.5281/zenodo.22622206` (34), and
-  everything else (793) — `python3 -c "import json; d=json.load(open('registry/CANONICAL.json'));
-  c=d['canonical']; re=[e for e in c if e.get('root') in ('Theta','CMC')];
-  ef=[e for e in c if e.get('origin',{}).get('doi')=='10.5281/zenodo.22622206'];
-  print(len(re), len(ef), len(c)-len(re)-len(ef))"`.)
-- **Status:** `current` 855 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
-- **Domain:** P 288 · S 136 · M 151 · W 84 · H 92 · B 75 · E 61 · C 59.
-- **Tier:** `untagged` 255 · `Definition` 407 · `Th_coqc` 130 · `finite_diagnostic` 46 · `Dr` 59 ·
-  `Open` 37 · `Ax` 12. (`Th_coqc` certifies that a lemma is closed under the stated finite model's
+  plus **34** v1.3 readings from the Effort v0.3 paper, plus **16** v1.4 readings from the
+  Economics of Expertise v1.0.1 paper, plus **5** v1.4 Core Epistemic Structure definitions;
+  **1,069** raw occurrence keys resolved (unchanged — the v1.4 readings are sourced from a Zenodo
+  record and a founder ruling, not a raw textbook occurrence). (793+119+34+16+5=967, matching
+  `registry/CANONICAL.json`'s own `counts{}.entries` exactly.)
+- **Status:** `current` 876 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
+- **Domain:** P 288 · S 136 · M 151 · W 92 · H 105 · B 75 · E 61 · C 59.
+- **Tier:** `untagged` 255 · `Definition` 420 · `Th_coqc` 130 · `finite_diagnostic` 46 · `Dr` 64 ·
+  `Open` 40 · `Ax` 12. (`Th_coqc` certifies that a lemma is closed under the stated finite model's
   global context — an internal-consistency check, never an empirical or physical truth claim;
   `untagged` means the source gave no tier at all, stated as such rather than guessed.)
-- **Coq status:** `closed` 161 · `definition` 357 · `wrapped_related` 210 ·
-  `mapped_not_wrapped` 119 · `open_prop` 29 · `not_formalisable` 70. See "The coq_status ladder"
-  immediately below for what each of these means. (The 34 Effort readings split 18 `definition` /
-  16 `open_prop` — each an honest restatement of what the paper itself states, no wrapper file
-  written for them yet.)
+- **Coq status:** `closed` 161 · `definition` 370 · `wrapped_related` 210 ·
+  `mapped_not_wrapped` 119 · `open_prop` 37 · `not_formalisable` 70. See "The coq_status ladder"
+  immediately below for what each of these means. (The 16 Economics of Expertise readings split
+  9 `definition` / 7 `open_prop`; the 5 Core Epistemic Structure definitions split 4 `definition`
+  / 1 `open_prop` — each an honest restatement of what the source states, no wrapper file written
+  for them yet.)
 
 ### The coq_status ladder (`closed` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
 
@@ -320,9 +318,9 @@ release's v1.2 lanes ran and unchanged by them since neither lane wrote a new wr
 context", 0 failed — the same count as v1.1.0. The 119 v1.2 root-extension readings are
 `mapped_not_wrapped` (evidence-backed match, no wrapper file yet), not new wrapper files.
 
-**Docs site / catalogue** (`make site`, `make catalogue`, this pass): site **1,538** generated
-entry+root pages plus one index (946 canonical entries + 592 root rows, `python3
-site/build_site.py`); printable catalogue PDF **283** pages (`pdfinfo latex/catalogue.pdf`, one
+**Docs site / catalogue** (`make site`, `make catalogue`, this pass): site **1,559** generated
+entry+root pages plus one index (967 canonical entries + 592 root rows, `python3
+site/build_site.py`); printable catalogue PDF **286** pages (`pdfinfo latex/catalogue.pdf`, one
 `latexmk -pdf` run). See "Catalogue redesign" below for its structure. The catalogue is typeset by
 plain `pdflatex`; `latex/unicode_pdf_fallback.sty` maps the corpus's literal math-notation Unicode
 to standard LaTeX constructs, and `scripts/latex_pdf_safe.py` replaces contiguous Thai/Cyrillic
@@ -416,6 +414,60 @@ programme hub 10.5281/zenodo.22308201, `references` this registry's concept DOI
 10.5281/zenodo.22537318); merged into `registry/CANONICAL.json` only after the v1.2.0 tag, per this
 repository's own rule that a release-prep pass must never see a moving registry.
 
+### Economics of Expertise v1.0.1 registrations (v1.4)
+
+The deposited paper "The Economics of Expertise in the Age of Generative AI" v1.0.1
+(10.5281/zenodo.22636999, concept DOI 10.5281/zenodo.22636987) cited existing Toledo codes and
+proposed further equations of its own. Per `EQUATION_SOURCE_POLICY.md`'s required procedure, each
+proposed equation was checked against this registry under the φ-criterion before registration:
+
+- **16 new readings**, all under the `weld` root the paper itself names — `origin.doi` =
+  **10.5281/zenodo.22636999**, `LINEAGE.jsonl` `assigned` events:
+  - `weld/H.22.v1`–`weld/H.29.v1` (8) — the load-bearing non-collapses, the three ideal-type
+    expertise states, the expertise-state transition probability, the interactional-compression
+    and contributory-persistence hypotheses, the Core Epistemic Registration object, and the
+    live-problem coupled epistemic system research architecture.
+  - `weld/W.03.v1`–`weld/W.10.v1` (8) — the candidate-validation workload, validation capacity,
+    the candidate-validation backlog recursion and its steady state, the AI-induced epistemic
+    scarcity shift condition, validated-output value, the shadow-value Lagrangian, and the
+    university Pareto-efficient portfolio objective.
+- **7 occurrences added to existing codes** (no new entries; each an `occurrence_added`
+  `LINEAGE.jsonl` event citing the DOI): `weld/M.02.v1` (eq. 1), `EQ-015/H.10.v1` (eq. 2),
+  `A.5/H.08.v1` (eq. 3 and eq. 27 — two occurrences on the same code), `EQ-015/H.17.v1` (eq. 26),
+  `EQ-015/M.10.v1` (eq. 30), and `weld/E.03.v1` (eq. 6) — the last carries a `status_note`
+  recording that the manuscript's own ledger row for eq. 6 maps to `weld/E.03.v1` under an
+  *earlier* formulation of that code's statement (the raw record `eq_19640361.json`'s
+  `K_S^A = (Tr_A, Str_A, Cap_A)` triple); `weld/E.03.v1`'s own `statement.latest` has since been
+  revised (BBL-172, latest-formulation-wins) to a more elaborate admission-status formula, so this
+  is the same admitted object read at an earlier stage of its own history, not a verbatim string
+  match against the code's current text — recorded plainly rather than silently reconciled.
+
+(8 + 8 = 16; see `registry/proposals/economics_of_expertise_v1_0.merged.json` for the exact
+raw-key → code map.) Deposited separately as its own Zenodo record; merged into
+`registry/CANONICAL.json` for this v1.4.0 release.
+
+### Core Epistemic Structure (founder ruling 2026-09-07)
+
+Founder ruling BBL-2026-09-07-217 fixes a five-part Core Epistemic Structure as the default
+epistemic-registration block for every draft going forward; the ruling was applied in the
+Economics of Expertise manuscript v1.0.1 above. Registered as **5** new `weld` readings, each
+entry's `origin.source` naming Blackbox Log BBL-2026-09-07-217 (the founder ruling) and its
+application in that manuscript:
+
+- **`weld/H.30.v1`** — Core Epistemic Structure of a project.
+- **`weld/H.31.v1`** — AI model set of a project.
+- **`weld/H.32.v1`** — Interactional-expert slot empty when the role is unheld.
+- **`weld/H.33.v1`** — Non-collapse: experience-based expertise, interactional expertise, and AI
+  model are distinct.
+- **`weld/H.34.v1`** — Experience-holder decomposition (lived experience, selection,
+  interpretation).
+
+(See `registry/proposals/core_epistemic_structure.merged.json` for the exact proposal-id → code
+map.) The glosa methodology's card P20 (the mandatory Core Epistemic Structure block on every
+draft) requires its formal object to be "registered in Toledo as a coded reading; cite its code
+once assigned" — these five codes are that assignment; citing them into P20's own card text is
+tracked in the glosa repository, not here.
+
 ## Root-candidate evidence: RD1–RD9, Theta, CMC
 
 **RD1–RD9 vs. the Genesis root axioms (finding, not a code change).** The founder's own shorthand
@@ -437,7 +489,7 @@ above for the two rows now added, their anchors, and the connection evidence (`T
 `EQ-008`/`EQ-022`; `CMC` has no evidenced connection to a Genesis root and its row says so plainly
 rather than asserting one).
 
-## What is not done (v1.3 carry-overs)
+## What is not done (v1.4 carry-overs)
 
 Honestly disclosed, not hidden in a rounded-up claim:
 
@@ -445,22 +497,27 @@ Honestly disclosed, not hidden in a rounded-up claim:
   closing their own entry's statement (see "The coq_status ladder" above) — a real gap between
   "a Toledo file exists for this" and "this entry's own claim is proved". The 119 v1.2
   root-extension readings are one step earlier still (`mapped_not_wrapped` — no wrapper file yet).
+  Unchanged at v1.4 (no `coqc` was run this pass).
 - **70** canonical entries are `not_formalisable` (no formal content located in the source; reason
-  recorded per-entry in `tier_evidence`) and **29** are `open_prop` (stated as an unproved `Prop`,
-  by design) — 16 of these are v1.3's own Effort readings, carried as open exactly as the source
-  paper states them, not forced to a stronger tier.
+  recorded per-entry in `tier_evidence`) and **37** are `open_prop` (stated as an unproved `Prop`,
+  by design) — 16 of these are v1.3's own Effort readings and 8 are new at v1.4 (7 Economics of
+  Expertise readings and 1 Core Epistemic Structure definition), each carried as open exactly as
+  the source states it, not forced to a stronger tier.
 - **52** canonical entries remain `status: unverified`, each with a status note naming why (see
-  "Statement completion" above); unchanged since v1.2 (v1.3 added no new `unverified` entries).
+  "Statement completion" above); unchanged since v1.2 (neither v1.3 nor v1.4 added a new
+  `unverified` entry).
 - `RD1`–`RD9` remains evidence-checked as a distinct object from the Genesis root axioms (see the
   finding above), not an omitted alias — no code has been invented for it.
 - **255** canonical entries still carry tier `untagged` (no tier was stated in their source at
-  all) — unchanged since v1.1 (neither the v1.2 root-extension readings nor the v1.3 Effort
-  readings arrived untagged).
+  all) — unchanged since v1.1 (none of the v1.2, v1.3, or v1.4 additions arrived untagged).
 - **310** genesis-root rows (308 Genesis-document rows plus the 2 v1.2 root-extension rows) still
-  carry only their free-text `tier_in_genesis` string, not a normalised `tier` — unchanged at v1.3
-  (the root layer itself was not touched this release).
+  carry only their free-text `tier_in_genesis` string, not a normalised `tier` — unchanged at v1.4
+  (the root layer itself was not touched this release; v1.4's new readings sit under the existing
+  `weld` root).
 - Master Equation River v1.5 and the textbook's Appendix F (both meant to cite Toledo codes) are
   tracked separately and are not part of this release.
+- Citing `weld/H.30.v1`–`weld/H.34.v1` into glosa card P20's own text is tracked in the glosa
+  repository, not here (see "Core Epistemic Structure" above).
 
 ## Citation
 
