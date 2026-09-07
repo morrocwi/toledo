@@ -33,8 +33,9 @@
 # publishes.
 name: toledo-mcp-ci
 on:
+  workflow_dispatch:
   push:
-    paths: ["mcp/**", "registry/**", "site/**"]
+    paths: ["mcp/**", "registry/**", "site/**", ".github/workflows/**"]
   pull_request:
     paths: ["mcp/**", "site/**"]
 jobs:
