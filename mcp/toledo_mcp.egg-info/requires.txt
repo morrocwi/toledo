@@ -1,0 +1,4 @@
+mcp==1.28.1
+
+[test]
+pytest>=8

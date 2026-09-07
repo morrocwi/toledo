@@ -1,0 +1,3 @@
+[console_scripts]
+toledo = toledo_mcp.cli:main
+toledo-mcp = toledo_mcp.server:main

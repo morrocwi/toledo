@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toledo-mcp"
+# Tracks the registry's own release version (mcp/DESIGN.md sec. 11), NOT an
+# independently incremented API number — this field is managed by
+# `mcp/scripts/sync_version.py`, which reads it from the repository root's
+# CITATION.cff. Do not hand-edit; run `python3 mcp/scripts/sync_version.py`
+# instead. Two genuinely independent numbers stay separate from this one,
+# deliberately: `toledo_mcp.index.INDEX_SCHEMA_VERSION` (the SQLite index's
+# own column/table layout) and `toledo_mcp.index.SUPPORTED_CANONICAL_SCHEMA_VERSIONS`
+# (the set of registry/CANONICAL.json `schema_version` values this build
+# understands, queryable at runtime via the `toledo_index_status` tool) — an
+# internal refactor to either of those does not imply a new registry release,
+# and conflating them with this field would make that look like one anyway.
+version = "1.2.0"
+description = "Stdio MCP server, CLI, and static API export over the Toledo equation registry"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "mcp==1.28.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+toledo = "toledo_mcp.cli:main"
+toledo-mcp = "toledo_mcp.server:main"
+
+[tool.setuptools.packages.find]
+include = ["toledo_mcp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

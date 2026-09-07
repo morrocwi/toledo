@@ -1,0 +1,218 @@
+Metadata-Version: 2.4
+Name: toledo-mcp
+Version: 1.1.0
+Summary: Stdio MCP server, CLI, and static API export over the Toledo equation registry
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: mcp==1.28.1
+Provides-Extra: test
+Requires-Dist: pytest>=8; extra == "test"
+
+# Toledo MCP server
+
+Fast search, lineage, and status lookup over the Toledo equation registry, exposed
+as an MCP (Model Context Protocol) server over stdio — for any AI agent that needs
+to check an equation before using it.
+
+See `docs/DESIGN.md` for the full architecture, the SQLite/FTS5 index design,
+the benchmark numbers behind every performance claim below, and the exact
+tool JSON schemas. `mcp/DESIGN.md` (repo-relative, one level up from this
+file) is a second, independent design pass over that same architecture —
+grafts a follow-up review asked for, plus one confirmed bug — that has not
+yet landed in this checkout; see "Status" and "Known issue" immediately
+below and `docs/CHANGELOG.md` for exactly what has and has not shipped.
+
+## Status
+
+This package is a **baseline, working implementation** (18 tools, 85 tests
+passing — see "Tests and benchmarks" below), not yet the target described in
+`mcp/DESIGN.md`. Concretely absent from this checkout today: a `toledo`
+console-script CLI, a static JSON export for GitHub Pages, the
+`{"ok","data","error"}` response envelope, per-row `verdict` blocks on the
+list-returning tools, and a `format="toon"` option. `docs/STATIC_API.md`
+documents the static-export contract ahead of that code landing, clearly
+marked as a specification; do not assume any file it describes exists on
+disk yet.
+
+### Known issue, unfixed
+
+`toledo_mcp/verdict.py`'s fallback branch answers a `None`/missing `status`
+on an entry as `verdict="REGISTERED_CURRENT"`, `usable=True` — a malformed
+or mid-edit entry gets silently promoted to "safe to cite" instead of
+stopped. This is the single most dangerous failure mode this server can
+have, and it is not yet fixed (fix specified in `mcp/DESIGN.md` §5: a new
+`CAUTION` verdict, `usable=False`, plus a pinning regression test). Until
+that lands, do not treat a `REGISTERED_CURRENT` verdict on an unfamiliar
+code as proof its `status` field is actually `"current"` — cross-check
+against `toledo_status`'s own `status` field in the same response.
+
+## The rule this server exists to enforce
+
+**Founder ruling, 2026-09-07: every equation must be looked up in Toledo before it
+is used. No AI agent may use an unregistered equation.**
+
+That means, before stating, citing, or building on any formula:
+
+1. Call `toledo_check` (with `formula=...` or an exact `code=...`) — or read the
+   `verdict` block `toledo_get`/`toledo_status`/`toledo_by_raw_key` already
+   attach if you're looking a code up directly.
+2. `verdict.usable == true` (`REGISTERED_CURRENT`, or a caveated
+   `REGISTERED_UNVERIFIED`/`HISTORICAL`/`IMPRECISE` — disclose the caveat) —
+   cite the matched code; do not restate or re-derive the formula.
+3. `REGISTERED_SUPERSEDED`/`REGISTERED_SPLIT` — do not use this code; use one
+   of `verdict.redirect` instead.
+4. `REGISTERED_NOT_AN_EQUATION` — this code is a pointer to prose, not a
+   formula; do not present it as one.
+5. `CANDIDATE_MATCH` — a plausible match was found (renaming / positive
+   scale / structural similarity — see `docs/DESIGN.md`) but is **not**
+   confirmed; get a documented φ-criterion confirmation before treating it
+   as the same object, or register a proposal.
+6. `AMBIGUOUS` — conflicting evidence; escalate to a human, do not guess.
+7. `NOT_REGISTERED` — call `toledo_register_proposal` and wait for a human
+   registrar to merge it (poll `toledo_proposal_status` with the returned
+   `path`) before using the formula. This server never merges a proposal
+   into the registry itself; that step is always a human, per
+   `registry/SCHEMA.md`.
+
+## What it reads, what it writes
+
+- Reads `registry/CANONICAL.json`, `registry/genesis_root.json`, and
+  `registry/LINEAGE.jsonl` through a process-wide cache
+  (`toledo_mcp/cache.py`) that reloads only when those files actually
+  change — not fresh on every call (see `docs/DESIGN.md` for why: a fresh
+  reparse cost ~90-100ms per call on this machine against the current
+  registry; cached, most lookups cost tens of microseconds). It still
+  reuses `scripts/toledo_build.py`'s own root+reading merge underneath
+  (`toledo_mcp/core.py`), so its view of "what is registered" is always the
+  one `make build` would also produce.
+- Writes **nothing** to `registry/CANONICAL.json`, `registry/genesis_root.json`,
+  `registry/LINEAGE.jsonl`, `coq/`, or `latex/`.
+- The **only** write path in the whole server is `toledo_register_proposal`,
+  which drops one JSON file under `registry/proposals/<timestamp>_<slug>.json`
+  for a human registrar to review and merge by hand, plus a status-ledger
+  row in `registry/proposals/STATUS.jsonl` (`toledo_mcp/proposals.py`).
+- `mcp/state/index.sqlite3` (gitignored) is this server's own generated
+  search index — safe to delete at any time; it is rebuilt automatically.
+
+## Tools (18)
+
+| Tool | Purpose |
+|---|---|
+| `toledo_search` | Ranked/filtered text search (root, domain, tier, status, coq_status). |
+| `toledo_get` | `{"entry": <full entry>, "verdict": {...}}` for one exact code. |
+| `toledo_status` | Compact tier/status/coq_status/superseded_by + verdict for one code. |
+| `toledo_check` | Founder-rule gate: pass `formula=` or `code=`; returns a verdict (see above). |
+| `toledo_lineage` | Ancestry chain, direct children, and every LINEAGE.jsonl event for one code. |
+| `toledo_ancestors` | Full parent-DAG (not just the single parents[0] chain). |
+| `toledo_descendants` | Full child-DAG. |
+| `toledo_neighbours` | Parents + children + relations + **reverse** relations. |
+| `toledo_by_root` | Every reading of a given Layer-0 root. |
+| `toledo_by_domain` | Every entry in a given domain letter (E H S W M P C B). |
+| `toledo_by_record` | Every code citing a given Zenodo record id / DOI. |
+| `toledo_by_raw_key` | Exact `<record_id>:<label>` occurrence-key lookup. |
+| `toledo_lineage_window` | Paginated/filtered browse of the whole lineage log. |
+| `toledo_counts` | Live aggregate counts. |
+| `toledo_index_status` | Index freshness + schema-version compatibility (versioning/health, not one equation). |
+| `toledo_register_proposal` | The only write path — a human-reviewed proposal file. |
+| `toledo_list_proposals` | Browse the proposal queue, optionally by status. |
+| `toledo_proposal_status` | One proposal's current lifecycle state. |
+
+## Install / dependency
+
+```
+python3 -c "import mcp"          # if this fails:
+pip install --user mcp           # version pinned in mcp/requirements-mcp.txt / pyproject.toml
+```
+
+Everything else the server uses is the Python 3 standard library (SQLite +
+its FTS5 extension, confirmed available on this machine). Transport is
+stdio only — no ports, no network.
+
+## Running it directly
+
+```
+python3 mcp/toledo_mcp/server.py
+```
+
+It talks MCP-over-stdio; run it through an MCP client rather than a plain
+terminal. `docs/DESIGN.md` "End-to-end verification" shows a real client
+session (via the `mcp` Python SDK) exercising `toledo_index_status`,
+`toledo_search`, `toledo_get`, and `toledo_check` over a real stdio
+subprocess launched exactly as `.mcp.json` below launches it.
+
+## Wiring it into an agent
+
+Every MCP-capable agent needs the same three things for a stdio server: a
+command to run, the arguments to run it with, and (optionally) environment
+variables — then it discovers the tools above itself via `tools/list`.
+The examples below use that same `command`/`args` shape; only the top-level
+config key name and file location differ by the agent's own convention.
+
+**A terminal coding agent that reads a project-level MCP config file.** This
+repo's own root `.mcp.json` (already present) is:
+
+```json
+{
+  "mcpServers": {
+    "toledo": {
+      "command": "python3",
+      "args": [
+        "mcp/toledo_mcp/server.py"
+      ]
+    }
+  }
+}
+```
+
+Such an agent typically loads this automatically when its working directory is
+the repo root (or a directory that contains this file); check that agent's own
+docs for the exact discovery path if it is not picked up automatically.
+
+**An IDE-integrated or desktop agent with its own MCP settings file.** Add the
+same `"toledo": {"command": "python3", "args": ["mcp/toledo_mcp/server.py"]}`
+object under whatever key that agent's own settings file uses for its list of
+stdio MCP servers (commonly `mcpServers`, sometimes `mcp_servers` or a
+per-server file under an `mcp/` or `.mcp/` settings directory) — the object
+shape is identical; only the surrounding key/file convention changes. If that
+agent resolves paths relative to a different working directory than the repo
+root, either point `args` at the absolute path to
+`mcp/toledo_mcp/server.py` on that machine, or set the agent's own
+"working directory" / `cwd` setting for this server entry to the Toledo repo
+root so the relative path above resolves, or set the `TOLEDO_ROOT`
+environment variable to the repo root explicitly.
+
+**Any other agent that can only invoke a shell command (no native MCP
+support).** Run `python3 mcp/toledo_mcp/server.py` as a subprocess and speak
+MCP-over-stdio to it directly, or use that agent's own MCP-bridge/adapter
+tooling if it has one — the server itself does not need to change either way.
+
+## Tests and benchmarks
+
+```
+python3 -m pytest -q tests/          # 85 tests
+python3 benchmarks/bench_index.py    # prints + writes benchmarks/results.json
+```
+
+## Planned: CLI console script and static API export (not yet built)
+
+Two more surfaces are specified in `mcp/DESIGN.md` but do not exist as code
+in this checkout — listed here so a reader of this README knows to look for
+them rather than assuming this tool table above is the whole plan:
+
+- **`toledo` CLI** (`mcp/DESIGN.md` §14, stream S3) — a console script
+  matching `scripts/toledo`'s subcommand names (`find`, `show`, `ancestry`,
+  `descendants`, `neighbours`, `by-root`, `by-domain`, `by-record`,
+  `export`) but answering from this package's cached/indexed layer instead
+  of a fresh `registry/TOLEDO.json` read, plus new verdict-aware
+  subcommands (`check`, `status`, `proposals list/show`,
+  `register-proposal`, `index-status`, `show-verdict-rules`). It is a
+  separate, MCP-package-owned CLI — `scripts/toledo` itself is untouched and
+  remains the registry-owning lane's own build-verification tool.
+- **Static API export for GitHub Pages** (`mcp/DESIGN.md` §13, stream S3) —
+  a periodic, eventually-consistent JSON mirror of the same query layer this
+  server answers from, for a caller with no MCP/stdio access. Full contract:
+  `docs/STATIC_API.md`.
+
+Check `docs/CHANGELOG.md` for the dated entry recording when (if) either has
+actually landed before relying on it.

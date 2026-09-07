@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "toledo": {
+      "command": "python3",
+      "args": [
+        "mcp/toledo_mcp/server.py"
+      ]
+    }
+  }
+}

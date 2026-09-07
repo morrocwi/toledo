@@ -1,0 +1,73 @@
+# Toledo MCP package CI — mcp/DESIGN.md section 12.
+#
+# Scope: this workflow only ever touches `mcp/` — it never builds, tests, or
+# gates the registry/coq/latex pipeline that the rest of this repository
+# owns (that pipeline is `make build` / `make test` / `make verify`, run by
+# the registry-owning process, not this file).
+#
+# Four separate jobs, deliberately not one (mcp/DESIGN.md sec. 12): leak-scan
+# needs no Python setup and should fail fast/cheap even while the test job is
+# still running; build-index exercises the *installed* package
+# (`pip install -e mcp/` then import), a different code path from running
+# pytest against the working tree directly — past drift between "works under
+# pytest" and "works once installed" has hidden exactly here before.
+#
+# S3 (`toledo_mcp/cli.py`, `toledo_mcp/export_static.py`) has landed and is
+# exercised below: the `build-index` job's CLI smoke line and the
+# `export-static`/`deploy-pages` pair are real, passing steps against the
+# installed package as of the 2026-09-07 integration pass (see
+# `mcp/docs/CHANGELOG.md`), not a placeholder for a dependency that might be
+# missing. If a future checkout ever regresses S3, these steps fail closed —
+# that remains the correct, visible failure mode, not silent skipping.
+name: toledo-mcp-ci
+on:
+  push:
+    paths: ["mcp/**"]
+  pull_request:
+    paths: ["mcp/**"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -e "mcp/[test]"
+      - run: python3 -m pytest -q mcp/tests/
+      - run: python3 mcp/benchmarks/bench_index.py   # fails loudly on a crash, not on a slow number — this is a smoke run, not a perf gate
+  build-index:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -e mcp/
+      - run: python3 -c "from toledo_mcp import core, index, paths; index.build_index(core.load_registry(), paths.repo_root())"
+      - run: python3 -c "from toledo_mcp import cli; cli.main(['by-domain', 'P'])"   # CLI parity smoke, not a full assertion — the real assertion lives in mcp/tests/test_cli.py (stream S3)
+  leak-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 mcp/scripts/leak_scan.py mcp/
+  export-static:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -e mcp/
+      - run: python3 -m toledo_mcp.export_static --out mcp/dist/static-api
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: mcp/dist/static-api }
+  deploy-pages:
+    needs: export-static
+    if: github.ref == 'refs/heads/main'
+    permissions: { pages: write, id-token: write }
+    environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

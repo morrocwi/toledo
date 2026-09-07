@@ -1,0 +1,33 @@
+# Local runtime state: the SQLite search index + its WAL/SHM sidecars, and
+# the proposals side-index. Rebuilt on demand from registry/CANONICAL.json +
+# registry/genesis_root.json + registry/LINEAGE.jsonl (index.build_index) —
+# never a source of truth, never committed.
+state/*.sqlite3
+state/*.sqlite3-wal
+state/*.sqlite3-shm
+
+# Machine-specific benchmark output (timing numbers are indicative, tied to
+# the machine and the registry size at run time — see benchmarks/bench_index.py's
+# own module docstring). Quote fresh numbers in docs rather than diffing this.
+benchmarks/results.json
+
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# The MCP server's one write path (mcp/DESIGN.md sec. 6) — generated at
+# first use, never checked in; a human registrar reviews and merges these by
+# hand into the real registry, they are not a durable store in themselves.
+proposals/
+
+# export_static.py's build output (mcp/DESIGN.md sec. 13) — CI publishes
+# this to GitHub Pages; it is never committed, since it is a periodic,
+# disclosed-as-eventually-consistent export of the live registry, not a
+# second source of truth to keep in sync by hand.
+dist/
+
+# An optional, never-committed local file of extra leak-scan denylist
+# patterns (mcp/scripts/leak_scan.py --denylist-file) — this is exactly
+# where a real secret pattern (e.g. the private solver-arc repository's own
+# name) would be supplied out of band; it must never be tracked.
+*.leak_denylist.local

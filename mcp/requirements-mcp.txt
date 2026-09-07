@@ -1,0 +1,3 @@
+# Dependency for mcp/toledo_mcp — checked with: python3 -c "import mcp"
+# Everything else this package uses is the Python 3 standard library.
+mcp==1.28.1
