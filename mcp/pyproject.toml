@@ -15,7 +15,7 @@ name = "toledo-mcp"
 # understands, queryable at runtime via the `toledo_index_status` tool) — an
 # internal refactor to either of those does not imply a new registry release,
 # and conflating them with this field would make that look like one anyway.
-version = "1.4.0"
+version = "1.5.0"
 description = "Stdio MCP server, CLI, and static API export over the Toledo equation registry"
 readme = "README.md"
 requires-python = ">=3.12"

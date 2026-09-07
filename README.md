@@ -210,15 +210,19 @@ indicative of that one run, not a guaranteed SLA — re-run `python3 benchmarks/
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-07 (v1.4)
+## Honest state — computed 2026-09-07 (v1.5)
 
 Every number below was read from the files in this repository by the command shown; none is
-carried over from an earlier note. This section supersedes the v1.3 counts below it in
-`CHANGELOG.md` — v1.4 merges **16** newly registered readings and **7** occurrences on existing
-codes from the deposited paper "The Economics of Expertise in the Age of Generative AI" v1.0.1
-(see "Economics of Expertise v1.0.1 registrations" below) plus **5** Core Epistemic Structure
-definitions from a founder ruling (see "Core Epistemic Structure" below). No `coqc` was run
-during this pass, per this release's build constraints.
+carried over from an earlier note. This section supersedes the v1.4 counts below it in
+`CHANGELOG.md` — v1.5 registers **23** new readings and **23** occurrences on existing codes from
+the deposited paper "The Recursive Epistemic Tunnel" v2.1 (see "Recursive Epistemic Tunnel v2.1
+registrations" below) and closes a registry-wide debt pass (see "Debt pass (v1.5)" below): the
+`mapped_not_wrapped` coq_status is retired — the 119 v1.2 Theta/CMC root-extension readings now
+carry a Toledo-native Coq file each, and a new `axioms` coq_status rung distinguishes an
+identifier the entry's own file closes only relative to a named axiom from one `verify.sh` reports
+unconditionally "Closed under the global context". No `coqc` was invoked by this release-prep pass
+itself (the coqc runs behind the debt pass's own Coq-coverage numbers predate it and are read, not
+re-run, here).
 
 **Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
 `python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
@@ -226,34 +230,43 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **967** canonical entries: **793** mapped from **946** raw equations across **40** deposited
+- **990** canonical entries: **793** mapped from **946** raw equations across **40** deposited
   chapters (`registry/EQ_LIBRARY.md`, `make library`) plus the 119 v1.2 root-extension readings,
   plus **34** v1.3 readings from the Effort v0.3 paper, plus **16** v1.4 readings from the
-  Economics of Expertise v1.0.1 paper, plus **5** v1.4 Core Epistemic Structure definitions;
-  **1,069** raw occurrence keys resolved (unchanged — the v1.4 readings are sourced from a Zenodo
-  record and a founder ruling, not a raw textbook occurrence). (793+119+34+16+5=967, matching
-  `registry/CANONICAL.json`'s own `counts{}.entries` exactly.)
-- **Status:** `current` 876 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
-- **Domain:** P 288 · S 136 · M 151 · W 92 · H 105 · B 75 · E 61 · C 59.
-- **Tier:** `untagged` 255 · `Definition` 420 · `Th_coqc` 130 · `finite_diagnostic` 46 · `Dr` 64 ·
-  `Open` 40 · `Ax` 12. (`Th_coqc` certifies that a lemma is closed under the stated finite model's
+  Economics of Expertise v1.0.1 paper, plus **5** v1.4 Core Epistemic Structure definitions, plus
+  **23** v1.5 readings from the Recursive Epistemic Tunnel v2.1 paper; **1,069** raw occurrence
+  keys resolved (unchanged — none of the v1.3–v1.5 readings are sourced from a raw textbook
+  occurrence). (793+119+34+16+5+23=990, matching `registry/CANONICAL.json`'s own
+  `counts{}.entries` exactly.)
+- **Status:** `current` 899 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
+- **Domain:** P 288 · S 136 · M 157 · W 93 · H 121 · B 75 · E 61 · C 59.
+- **Tier:** `untagged` 245 · `Definition` 428 · `Th_coqc` 139 · `finite_diagnostic` 46 · `Dr` 79 ·
+  `Open` 41 · `Ax` 12. (`Th_coqc` certifies that a lemma is closed under the stated finite model's
   global context — an internal-consistency check, never an empirical or physical truth claim;
   `untagged` means the source gave no tier at all, stated as such rather than guessed.)
-- **Coq status:** `closed` 161 · `definition` 370 · `wrapped_related` 210 ·
-  `mapped_not_wrapped` 119 · `open_prop` 37 · `not_formalisable` 70. See "The coq_status ladder"
-  immediately below for what each of these means. (The 16 Economics of Expertise readings split
-  9 `definition` / 7 `open_prop`; the 5 Core Epistemic Structure definitions split 4 `definition`
-  / 1 `open_prop` — each an honest restatement of what the source states, no wrapper file written
-  for them yet.)
+- **Coq status:** `closed` 277 · `definition` 378 · `wrapped_related` 210 · `axioms` 3 ·
+  `open_prop` 52 · `not_formalisable` 70. See "The coq_status ladder" immediately below for what
+  each of these means. `mapped_not_wrapped` no longer appears: the 119 v1.2 Theta/CMC entries that
+  carried it moved to `closed` (116) or the new `axioms` rung (3) this pass — see "Debt pass
+  (v1.5)" below. (The 23 Tunnel v2.1 readings split 8 `definition` / 15 `open_prop` — an honest
+  restatement of what the source states, no wrapper file written for them yet.)
 
-### The coq_status ladder (`closed` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
+### The coq_status ladder (`closed` → `axioms` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
 
 Every canonical entry's `coq.coq_status` field is one honest position on this ladder, never a
 rounded-up claim:
 
 - **`closed`** — the entry's own Toledo-native file (`coq/canonical/<code>.v`) states at least one
   Theorem/Lemma/Corollary/Example/Remark that `verify.sh` reports "Closed under the global
-  context" for the entry's *own* statement. This is the only status that certifies a proof.
+  context" for the entry's *own* statement. This is the only status that certifies an
+  unconditional proof.
+- **`axioms`** (new at v1.5) — the entry's own Toledo-native file closes a Theorem/Lemma under the
+  stated finite model, but `coqc`'s own `Print Assumptions` output names one or more axioms rather
+  than reporting "Closed under the global context"; the entry's `coq.assumptions` field carries the
+  literal `+axioms: <name : statement>, ...` string `coqc` produced, so the reader sees exactly
+  what is assumed rather than a rounded-up "closed". Distinct from `closed` precisely because
+  something beyond the finite model itself is assumed. All **3** entries at this status today are
+  `CMC` readings (see "Debt pass (v1.5)" below).
 - **`definition`** — the entry's own file states a typed `Definition`/`Record` in a finite model,
   with no theorem attached; there is nothing here to be "closed" or "open" — it is a formal
   restatement, not a claim.
@@ -263,39 +276,46 @@ rounded-up claim:
   in v1.1 once their wrapper files were written (task A of the v1.1 scope) — writing the wrapper
   did not manufacture a proof of the entry's own statement, so `wrapped_related`, not `closed`, is
   the honest label.
-- **`mapped_not_wrapped`** — an evidence-backed match against an imported Coq identifier exists
-  (`registry/coq_map.json`), but no Toledo-native wrapper file has been written yet under
-  `coq/canonical/` for this code. All **119** entries at this status are the v1.2 root-extension
-  readings under `Theta`/`CMC` (see below) — an honest middle state between `not_yet_formalised`
-  and `closed`/`wrapped_related`, never asserted without the `coq_map.json` row backing it.
 - **`open_prop`** — an Open/Dr hypothesis stated as an unproved `Definition …_hyp : Prop`, carried
   forward exactly as open, never forced to a proof.
 - **`not_formalisable`** — no formal content exists in the source for this entry; the reason is
   recorded per-entry in `tier_evidence`, not asserted without it.
+
+`mapped_not_wrapped` — an evidence-backed match against an imported Coq identifier exists
+(`registry/coq_map.json`) but no Toledo-native wrapper file has been written yet — is retired as of
+v1.5: the 119 entries that carried it (the v1.2 Theta/CMC root-extension readings) all gained a
+Toledo-native wrapper file this pass and moved to `closed` (116) or `axioms` (3); see "Debt pass
+(v1.5)" below.
 
 **The 2026-09-07 reclassification.** v1.0.0 reported `closed` 337. On inspection during v1.1, 214
 of those 337 entries turned out to carry only a Coq `Definition`, not a proved Theorem/Lemma —
 **v1.0.0 over-counted closure**: a `Definition` was being counted as "closed" alongside genuine
 proved lemmas, which conflates "we wrote a formal type" with "we proved something under it". v1.1
 corrects this: those 214 entries were moved from `closed` to `definition` (each move is a `LINEAGE.jsonl` event),
-leaving `closed` at **161** — the count of canonical entries that actually carry a verified
-theorem in their own Toledo-native file. This is a different count from, but consistent in kind
-with, the **207/207** identifiers `verify.sh` reports "Closed under the global context" across all
-of `coq/canonical/` in this release (see the Coq table below) — an "identifier closed" tally can
-differ from a "canonical entry `coq_status`" tally because one file can carry more than one closed
-identifier, or an identifier belonging to a non-`closed`-status entry (e.g. a helper lemma inside
-a `wrapped_related` file). Readers of the v1.0.0 record should treat its `closed` 337 figure as
-superseded by this correction, not as a second, still-valid number.
+leaving `closed` at **161** — the count of canonical entries that actually carried a verified
+theorem in their own Toledo-native file at v1.1–v1.4. v1.5 raises this to **277** by giving the 119
+Theta/CMC entries their own wrapper files (116 land on `closed`, 3 on the new `axioms` rung); see
+"Debt pass (v1.5)" for that pass's own Coq evidence. The v1.1–v1.4 figure of **207/207** identifiers
+`verify.sh` reported "Closed under the global context" across all of `coq/canonical/` (an
+"identifier closed" tally, which can differ from a "canonical entry `coq_status`" tally because one
+file can carry more than one closed identifier) was not re-measured by a fresh full-arc `verify.sh`
+pass at v1.5 (no `coqc` was invoked by this release-prep pass, per its own build constraint) — the
+119 new files' own per-identifier evidence is each entry's own `coq.assumptions` field, written by
+the debt pass's own `coqc` runs and read, not re-run, here. Readers of the v1.0.0 record should
+treat its `closed` 337 figure as superseded by the v1.1 correction, not as a second, still-valid
+number.
 
 **Genesis root layer** (`registry/genesis_root.json`, git-anchored to
 `morrocwi/readout_genesis@082dde8` for the 590 Genesis-document rows, plus the 2 root-extension
-rows added at v1.2 per the R1 addendum below): **592** root rows. Of these, **282** carry a
-normalised `tier` (added by the tier sidecar, each with a quoted source line): `Definition` 101 ·
-`untagged` 95 · `finite_diagnostic` 41 · `Th_coqc` 26 · `Dr` 16 · `Ax` 2 · `Open` 1 — unchanged
-from v1.1, since neither root-extension row carries a normalised `tier` (both keep only their own
-`tier_in_genesis` string, see the R1 subsection below). The remaining **310** rows (308 + the 2
-extension rows) carry only their exact free-text `tier_in_genesis` string (the corpus uses 150+
-distinct tier strings; normalising all of them is open work, listed below).
+rows added at v1.2 per the R1 addendum below): **592** root rows, unchanged at v1.5 (no row was
+added or removed). Of these, **377** carry a normalised `tier` (added by the tier sidecar, each
+with a quoted source line): `Definition` 101 · `untagged` 95 · `finite_diagnostic` 68 · `Th_coqc`
+51 · `Dr` 43 · `Ax` 13 · `RETRACTED` 3 · `Open` 3 — **95** of these rows (all previously untagged)
+gained their normalised tier this pass, each backed by a quoted source line (see "Debt pass
+(v1.5)" below); computed by diffing this file against the v1.4.0 release tag (commit `6579cf7`).
+The remaining **215** rows (377+215=592) still carry only their exact free-text `tier_in_genesis`
+string (the corpus uses 150+ distinct tier strings; normalising the rest is open work, listed
+below).
 
 **Coq — imported developments** (`coq/<source>/verify_report.json`, one sequential build+`Print
 Assumptions` pass per source; these reports predate this release-prep pass and were read, not
@@ -311,22 +331,35 @@ re-run, here — no `coqc` was invoked during this pass, per this release's buil
 | solver arc (private) | 1,614 | 1,500 | 114 (named) | 0 |
 | **Total** | **3,289** | **3,125** | **164** | **0** |
 
-**Coq — Toledo-native canonical wrappers** (`coq/canonical/`, `build_report.txt` +
-`verify_report.txt`, one sequential build+verify pass, dated 2026-09-07 08:24–08:26, before this
-release's v1.2 lanes ran and unchanged by them since neither lane wrote a new wrapper file):
-**725** files, build **725/725 OK**; verify **207/207** identifiers "Closed under the global
-context", 0 failed — the same count as v1.1.0. The 119 v1.2 root-extension readings are
-`mapped_not_wrapped` (evidence-backed match, no wrapper file yet), not new wrapper files.
+**Coq — Toledo-native canonical wrappers** (`coq/canonical/`). `_CoqProject` lists **928** `.v`
+files (up from 725 at v1.1–v1.4: +119 Theta/CMC wrappers, +34 Effort, +16 Economics of Expertise,
++5 Core Epistemic Structure, +23 Tunnel v2.1, +6 non-wrapper helper files — see "Debt pass (v1.5)"
+for the per-stream file counts and what the 6 are). `build_report.txt` itself records **905 ok, 0 failed (of 905)** —
+its text predates the 23 Tunnel v2.1 files' addition to `_CoqProject`; this release-prep pass
+cross-checked the remaining 23 the honest way available without invoking `coqc` again: every one
+of the 928 `_CoqProject` files has a compiled `.vo`/`.vok` artifact on disk, 0 missing (`python3 -c`
+existence check, this pass). `verify_report.txt` itself reads **"0 identifiers checked, 0
+disclosed-axiom (registered), 0 failed"** — this is the debt pass's own scoped re-verify of only
+the 23 new Tunnel v2.1 files (the "check only what changed" discipline, not a full-arc re-audit),
+and 0 is the *correct* result for that scope: all 23 of those files carry `coq_status`
+`definition`/`open_prop` (8/15) — a `Definition`, never a Theorem/Lemma/Corollary/Example/Remark —
+so `verify.sh`'s own identifier loop correctly finds nothing to `Print Assumptions` on among them.
+The last full-arc verify pass on record for the pre-v1.5 tree remains v1.1.0's **207/207**
+identifiers "Closed under the global context" (see the reclassification note above); this release
+did not re-run that full pass (no `coqc`, per this release's build constraint), so it is quoted as
+last measured, not re-certified at v1.5.
 
-**Docs site / catalogue** (`make site`, `make catalogue`, this pass): site **1,559** generated
-entry+root pages plus one index (967 canonical entries + 592 root rows, `python3
-site/build_site.py`); printable catalogue PDF **286** pages (`pdfinfo latex/catalogue.pdf`, one
-`latexmk -pdf` run). See "Catalogue redesign" below for its structure. The catalogue is typeset by
-plain `pdflatex`; `latex/unicode_pdf_fallback.sty` maps the corpus's literal math-notation Unicode
-to standard LaTeX constructs, and `scripts/latex_pdf_safe.py` replaces contiguous Thai/Cyrillic
-quoted-text runs with a disclosed placeholder pointing back at the JSON/site entry — the
-registries, JSON-LD entries and site carry the exact source text unmodified; only this print
-artifact substitutes.
+**Docs site / catalogue** (`make site`, `make catalogue`, this pass): site **2,240** generated
+pages (`python3 site/build_site.py --out site/dist --strict`; 990 canonical entries + 592 root
+rows plus index/browse/by-root/by-domain/by-tier/by-status/search/agents/about pages — see
+"Website" below); printable catalogue PDF **291** pages, title page reading "Version 1.5.0"
+(`pdfinfo latex/catalogue.pdf`, one `latexmk -pdf` run), **0** `Overfull \hbox` warnings over 20pt
+in `latex/catalogue.log` (`grep` count, this pass — down from the 38 named in DEBT #48
+(`ops/TODOLIST_snapshot_2026-09-07.md`), see "Debt pass (v1.5)" below). The catalogue is typeset by plain `pdflatex`; `latex/unicode_pdf_fallback.sty` maps the
+corpus's literal math-notation Unicode to standard LaTeX constructs, and `scripts/latex_pdf_safe.py`
+replaces contiguous Thai/Cyrillic quoted-text runs with a disclosed placeholder pointing back at
+the JSON/site entry — the registries, JSON-LD entries and site carry the exact source text
+unmodified; only this print artifact substitutes.
 
 ### Root registry extension R1 (Theta, CMC) — founder ruling BBL-2026-09-07-207
 
@@ -343,7 +376,9 @@ own "Root registry extension R1" addendum and `docs/EQ_CODE_SCHEME.md`.
   link (its admissible-operator census reuses `EQ-008`'s forced characterization as a definition;
   its `Theta_n` state variable is the same object named inside `EQ-022`'s own reader/record
   equation). 86 equations/theorems from the imported files were added as `Theta/P.nn.v1` /
-  `Theta/M.nn.v1` readings, `coq_status` `mapped_not_wrapped`.
+  `Theta/M.nn.v1` readings, `coq_status` `mapped_not_wrapped` at v1.2 — each gained its own
+  Toledo-native Coq wrapper file at v1.5 and moved to `closed`/`axioms` (see "Debt pass (v1.5)"
+  above).
 - **`CMC`** (Causal-Memory Closure) — code is the abbreviation the source files use throughout
   (`CMC_TargetClass`, `cmc_bridge_axiom`). Anchor: "solver arc (private)", commit
   `961151db33b0491cba8fabade69f594238d33f84`, `formal/CMC_TargetClass_Definitions.v` (+ 5 sibling
@@ -351,7 +386,9 @@ own "Root registry extension R1" addendum and `docs/EQ_CODE_SCHEME.md`.
   checked directly for a stated link to `EQ-005`/`EQ-006`/`EQ-007` and found none stated explicitly
   in any source text, so the `CMC` row's `parents`/`relations` are both `[]`, with a
   `relations_note` quoting that finding rather than asserting a link. 33 equations/theorems were
-  added as `CMC/P.nn.v1` / `CMC/M.nn.v1` readings, `coq_status` `mapped_not_wrapped`.
+  added as `CMC/P.nn.v1` / `CMC/M.nn.v1` readings, `coq_status` `mapped_not_wrapped` at v1.2 —
+  each gained its own Toledo-native Coq wrapper file at v1.5 and moved to `closed`/`axioms` (see
+  "Debt pass (v1.5)" above).
 
 Both rows carry `role: "root-extension"` (distinct from `role: "root-axiom"`) and a `step: null`
 with a `step_note`: neither root is given an invented position in `READOUT_GENESIS_CORE.md`'s own
@@ -468,6 +505,181 @@ draft) requires its formal object to be "registered in Toledo as a coded reading
 once assigned" — these five codes are that assignment; citing them into P20's own card text is
 tracked in the glosa repository, not here.
 
+### Debt pass (v1.5)
+
+`ops/HANDOFF_OVERNIGHT_2026-09-06.md` and `ops/TODOLIST_snapshot_2026-09-07.md` listed eight open
+registry debts against v1.4.1 (DEBT #42–#49). This section states, per item, what this pass
+actually resolved and what honestly remains — no item below is marked closed unless a computed
+number backs it.
+
+- **DEBT #42 — 52 `unverified` entries.** Each was re-checked directly against its own cited
+  source this pass; none of the 52 had a source identifier surface that the earlier pass had
+  missed, so all 52 **stay `status: unverified`**, each keeping its existing dated `status_note`
+  naming what is missing. `registry/CANONICAL.json`'s own `counts{}.by_status.unverified` is **52**
+  at v1.5 — unchanged from v1.4, confirming no entry was silently upgraded.
+- **DEBT #43 — untagged tiers.** **95** previously-`untagged` `registry/genesis_root.json` rows and
+  **10** previously-`untagged` `registry/CANONICAL.json` entries (`EQ-009/E.03.v1` → `Open`;
+  `EQ-015/B.01.v1`–`EQ-015/B.09.v1` → `Th_coqc`) gained a normalised tier with a quoted source
+  line this pass — computed by diffing both files against the v1.4.0 release tag (commit
+  `6579cf7`). Commit `80d28a5`'s own message states the pass's full self-reported total as **111**
+  tier values quoted from source (**2** composite/ambiguous tag strings reverted rather than kept
+  as invented single tags) — a few beyond the 105 value-changes this pass independently
+  re-diffed are quote-only additions to entries whose tier value was already correct, not
+  re-derived here beyond the commit record. **245** canonical entries and **215** genesis-root rows
+  still carry no normalised tier (down from 255 and 310 respectively) — never invented, per this
+  registry's own tiering rule.
+- **DEBT #44 — 210 `wrapped_related` entries.** Each was examined this pass for whether its own
+  statement is independently derivable as a Theorem in its own Toledo-native file rather than only
+  aliasing an imported one; **0** qualified. All 210 are kept `wrapped_related`, each with its own
+  per-entry reason recorded (per commit `80d28a5`'s message) — `registry/CANONICAL.json`'s own
+  `counts{}.by_coq_status.wrapped_related` reads **210**, unchanged from v1.4, confirming no entry
+  was moved without a real independent closure behind it.
+- **DEBT #45 — Coq coverage for entries with no file.** **119** `Theta`/`CMC` entries (86 + 33,
+  the full v1.2 root-extension set) each gained a Toledo-native `coq/canonical/<code>.v` wrapper
+  file this pass: **116** land on `coq_status` `closed` ("Closed under the global context", each
+  entry's own `coq.assumptions` field carries that literal string) and **3** on the new `axioms`
+  rung (`CMC/M.01.v1`, `CMC/M.02.v1`, `CMC/M.18.v1` — each entry's `coq.assumptions` field names
+  the actual `coqc`-disclosed axioms, e.g. `cmc_retention_lemma_obligation`); see "The coq_status
+  ladder" above. A further **78** Toledo-native Coq files were written for the Effort v0.3 (34),
+  Economics of Expertise v1.0.1 (16), Core Epistemic Structure (5) and Tunnel v2.1 (23) readings —
+  computed by grouping `registry/CANONICAL.json` entries by their `origin` field and counting
+  distinct `coq.file` values per group (34+16+5+23=78). `_CoqProject` now lists **928** `.v` files
+  in total: the pre-v1.5 725, plus these 197 (119+78) per-entry wrapper files, plus **6** further
+  files this pass added that are not any one entry's own wrapper (5 raw-source mirrors of the
+  `CMC_*.v` files under a `_cmc_mirror_` prefix, kept so the imported identifiers they define are
+  directly `Require`-able, plus one shared `_hrp_verdict_vocab.v` helper) — 725+197+6=928, verified
+  by diffing `coq/canonical/`'s file list against the v1.4.0 release tag, this pass. Every one of
+  the 928 has a compiled `.vo`/`.vok` artifact on disk (checked this pass, 0 missing) — see "The
+  coq_status ladder" above for what `build_report.txt`/`verify_report.txt` do and do not cover.
+- **DEBT #46 — CMC's connection to a Genesis root.** `registry/cmc_connection_report.md` (this
+  pass) re-ran the search directly over the full text of all six `CMC_*.v` files (not only their
+  headers) plus every CMC-adjacent document in this tree and every already-imported public
+  repository: **no sentence states a CMC-to-Genesis-root connection anywhere**. This confirms,
+  rather than overturns, `registry/root_candidates_report.md`'s existing finding. The report drafts
+  one candidate sentence — a structural resemblance between `CMC_TargetClass_Definitions.v`'s
+  `TransportReadout` fields (`retained_diffusive`, `intrinsic_finite_speed`) and Genesis roots
+  `EQ-005`/`EQ-006` — explicitly as a proposal for the founder to confirm, reject, or have restated,
+  never as a sourced finding. `registry/genesis_root.json`'s `CMC` row keeps `parents: []`,
+  `relations: []`, unchanged.
+- **DEBT #47 — Core Epistemic Structure block for existing documents.** Tracked as before: applies
+  only to templates/files declaring `ces: required`; existing programme documents (Genesis,
+  Universe, glosa paper, textbook front matter) get the block at each one's own next version, never
+  a retro-edit of a deposited record. No change to this policy at v1.5.
+- **DEBT #48 — catalogue typesetting, overfull boxes, MCP cold start.** Entry names carrying raw
+  ASCII math notation (e.g. `s^L_t`, `Gamma_t`, `q^min_t`) now typeset with real superscripts,
+  subscripts and Greek letters in the printed catalogue — spot-checked this pass
+  (`pdftotext catalogue.pdf -`): "Labour income share s^L_t" renders as "Labour income share sL",
+  "Effective claim Gamma_t" as "Effective claim Γt", "Minimum sufficient q^min_t" as "Minimum
+  sufficient qtmin" (plain-text extraction linearises the sub/superscripts, but the literal caret
+  and underscore characters are gone). `latex/catalogue.log`
+  (this pass's `make catalogue` run) carries **0** `Overfull \hbox` warnings over 20pt (`grep`
+  count), down from the 38 named in the DEBT item. The MCP server's cold-start rebuild-on-every-run
+  defect (root cause: `RegistryCache.ensure_fresh()` called `index.build_index()` unconditionally,
+  ignoring an already-fresh on-disk index) is fixed and tested (`mcp/BENCHMARKS.md`'s 2026-09-07
+  "MCP cold-start prebuilt index" entry); `make build` now also runs `mcp/scripts/build_index.py`,
+  so a release ships `mcp/state/index.sqlite3` prebuilt rather than rebuilding it on first use.
+- **DEBT #49 — glosa KG-hook allowlist.** Resolved in the glosa repository (commit `c16f5bd`, per
+  `ops/HANDOFF_OVERNIGHT_2026-09-06.md`), not this one — noted here only for completeness since it
+  shared the same debt list.
+
+### Recursive Epistemic Tunnel v2.1 registrations
+
+The deposited paper "The Recursive Epistemic Tunnel" v2.1 (10.5281/zenodo.22639311, concept DOI
+10.5281/zenodo.22639309) cited existing Toledo codes and proposed further equations of its own. Per
+`EQUATION_SOURCE_POLICY.md`'s required procedure, each proposed equation was checked against this
+registry under the φ-criterion before registration:
+
+- **23 new readings** (`RET-N01`–`RET-N23` in the manuscript's own registrar numbering), all under
+  existing roots — `origin.doi` = **10.5281/zenodo.22639311**, `LINEAGE.jsonl` `assigned` events:
+
+  | Reading | Code | Name |
+  |---|---|---|
+  | RET-N01 | `EQ-015/H.40.v1` | Recursive epistemic network state |
+  | RET-N02 | `EQ-002/H.05.v1` | Agent-level network readout |
+  | RET-N03 | `EQ-002/H.06.v1` | Readout-of-readout recursion |
+  | RET-N04 | `EQ-015/H.41.v1` | Recursive Epistemic Reflection (RER) minimal cycle |
+  | RET-N05 | `weld/H.35.v1` | Agent-count / provenance-route-count non-collapse |
+  | RET-N06 | `weld/H.36.v1` | Agreeing agents does not entail independent epistemic routes (network Epistemic Mirror Effect) |
+  | RET-N07 | `A.8/M.20.v1` | Typed provenance DAG |
+  | RET-N08 | `EQ-015/H.42.v1` | RET diagnostic state vector |
+  | RET-N09 | `weld/H.37.v1` | Evidence-driven convergence regime |
+  | RET-N10 | `EQ-015/H.43.v1` | Tunnel-contraction regime |
+  | RET-N11 | `EQ-015/H.44.v1` | Recursive Epistemic Tunnel (RET) |
+  | RET-N12 | `EQ-015/H.45.v1` | Collective Epistemic Hallucination (CEH) status-inflation chain |
+  | RET-N13 | `EQ-015/H.46.v1` | Multi-model consensus readout |
+  | RET-N14 | `EQ-015/H.47.v1` | Consensus does not entail validation |
+  | RET-N15 | `A.5/H.24.v1` | Agent accuracy gain does not entail network corrigibility gain |
+  | RET-N16 | `A.8/M.21.v1` | AI-Independent Consequence Requirement |
+  | RET-N17 | `A.8/M.22.v1` | AI-Off World-Closure (AOWC) cycle |
+  | RET-N18 | `A.8/M.23.v1` | AOWC gate conditions |
+  | RET-N19 | `A.8/M.24.v1` | AI-off software closure application |
+  | RET-N20 | `EQ-002/M.04.v1` | Simulation success does not entail world validation |
+  | RET-N21 | `EQ-015/H.48.v1` | RET network stop rule |
+  | RET-N22 | `EQ-015/H.49.v1` | Session reset does not entail epistemic reset |
+  | RET-N23 | `weld/W.11.v1` | Effective independent validation capacity |
+
+- **23 occurrences added to existing codes** (no new entries; each an `occurrence_added`
+  `LINEAGE.jsonl` event citing the DOI), on `EQ-015/M.01.v1`, `EQ-015/M.02.v1`, `weld/M.02.v1`,
+  `weld/M.03.v1`, `A.8/M.01.v1`, `EQ-015/E.03.v1`, `EQ-015/E.08.v1`, `weld/E.03.v1`,
+  `A.5/H.01.v1`, `EQ-015/H.04.v1`, `EQ-015/H.05.v1`, `EQ-015/H.10.v1`, `EQ-015/H.11.v1`,
+  `weld/H.07.v1`, `weld/H.08.v1`, `EQ-015/H.14.v1`, `A.5/H.08.v1`, `EQ-015/H.16.v1`,
+  `EQ-015/H.18.v1`, `EQ-015/H.23.v1`, `EQ-015/H.24.v1`, `A.8/M.02.v1`, `EQ-002/M.03.v1` — see
+  `registry/proposals/recursive_epistemic_tunnel_v2_0.merged.json` for the exact
+  proposal-id/occurrence-id → code map (23 `OCC-CAN-*` occurrence keys, 23 `PROP-RET-*` new-reading
+  keys, one-to-one with the table above and this list).
+
+(23 + 23 confirmed by counting the merged proposal file's own keys.) Deposited separately as its
+own Zenodo record (10.5281/zenodo.22639311, concept 10.5281/zenodo.22639309); merged into
+`registry/CANONICAL.json` for this v1.5.0 release. The manuscript's own independent adversarial
+review found 4 must-fix items against its v2.0 draft (a tier stated as `Dr` where the registry
+records `Definition`; internal-programme references cited without a DOI/version; two occurrences
+listed as used but never actually invoked in the text; one restated code missing a "(reading)"
+flag) — these were fixed in the v2.1 manuscript this registration cites, not carried into Toledo's
+own registry as open items.
+
+### Website
+
+The public, human-readable documentation site at **<https://morrocwi.github.io/toledo/>** is built
+by `python3 site/build_site.py --out site/dist --strict` (this pass: **2,240** pages — home,
+`/browse/` a flat no-JS directory of every code, one page per Layer-0 root (`/by-root/`), one page
+per domain letter (`/by-domain/`), one page per populated tier (`/by-tier/`) and status
+(`/by-status/`), one page per canonical entry/root row (`/entries/`), `/search/`, `/agents/`, and
+`/about/`), sharing one GitHub Pages deployment with the existing static API at `/v1/`
+(`mcp/docs/STATIC_API.md`).
+
+- **A human reader** starts at `/` or `/browse/` and follows a code to its `/entries/<code>.html`
+  page — statement, tier/status/`coq_status`, parents, occurrences, ancestry — or filters by
+  `/by-root/`, `/by-domain/`, `/by-tier/`, `/by-status/`.
+- **An AI agent** goes straight to `/agents/`: the founder rule restated verbatim (every equation
+  is looked up in Toledo before use; no agent may use an unregistered equation), the 19-tool table
+  reproduced from `mcp/README.md`, the `.mcp.json` snippet, a `curl` line against `/v1/`, a minimal
+  runnable stdlib-only Python lookup example, and an embedded JSON-LD `Dataset`/`APIReference`
+  block for a crawler that only parses structured data.
+- **The status glossary** — what `current`, `superseded_by`, `split`, `not_an_equation`,
+  `unverified`, `historical`/`imprecise_as_stated` each mean, and the `coq_status` ladder above —
+  is published on `/about/`, computed at build time from the registry, never hand-typed.
+- **CI deploy**: `.github/workflows/toledo-mcp-ci.yml` builds the human site and the static API as
+  two separate, independently-failing jobs (a broken template cannot take the live `/v1/` mirror
+  down with it, and vice versa), then a third job merges both into the one Pages artifact, on every
+  push to `main` that touches `mcp/**` or `registry/**` — a documentation-only commit does not
+  trigger a redeploy, so the live site can lag until the next such push. Full specification:
+  `site/DESIGN.md`.
+
+### Provenance note: readout_genesis anchor
+
+DEBT #51. This registry's `readout_genesis` import (`coq/readout_genesis/PROVENANCE.json`) is
+anchored to commit `082dde893b70c7500c13d463239909c99cf17f0a` of the local `readout_genesis`
+working tree. Checked this pass (`git ls-remote https://github.com/morrocwi/readout_genesis.git
+HEAD`): that commit is **not** present on the repository's public GitHub remote — the public
+branch head there is `04cde19be2c885a11b42597b1cdb60fb5b7ca1bb`. A public, third-party reader can
+therefore verify the files this Toledo release imports only up to that public head; the difference
+between the public head and this import's local anchor is three local, unpushed commits, the
+substantive one being the Face XI closure ("Face XI closed as an iff: shared readout forces shared
+tau_c"). Whether and when to push those commits to the public remote is the founder's decision, not
+this registry's — this note records the honest gap between "anchored to" and "publicly verifiable
+up to" without resolving it. The same note is recorded, dated, in
+`coq/readout_genesis/PROVENANCE.json`'s own `anchor_publication_note` field.
+
 ## Root-candidate evidence: RD1–RD9, Theta, CMC
 
 **RD1–RD9 vs. the Genesis root axioms (finding, not a code change).** The founder's own shorthand
@@ -487,34 +699,45 @@ bodies of work as candidate Layer-0 roots at v1.1 but added no row for either, p
 decision. That decision came 2026-09-07 (BBL-2026-09-07-207) — see "Root registry extension R1"
 above for the two rows now added, their anchors, and the connection evidence (`Theta` links to
 `EQ-008`/`EQ-022`; `CMC` has no evidenced connection to a Genesis root and its row says so plainly
-rather than asserting one).
+rather than asserting one). The v1.5 debt pass re-ran this same search for `CMC` directly, over the
+full body of every source file rather than only headers, and reached the identical zero result —
+see "Debt pass (v1.5)" above and `registry/cmc_connection_report.md`.
 
-## What is not done (v1.4 carry-overs)
+## What is not done (v1.5 carry-overs)
 
 Honestly disclosed, not hidden in a rounded-up claim:
 
 - **210** `wrapped_related` Coq wrappers alias an imported identifier rather than independently
   closing their own entry's statement (see "The coq_status ladder" above) — a real gap between
-  "a Toledo file exists for this" and "this entry's own claim is proved". The 119 v1.2
-  root-extension readings are one step earlier still (`mapped_not_wrapped` — no wrapper file yet).
-  Unchanged at v1.4 (no `coqc` was run this pass).
+  "a Toledo file exists for this" and "this entry's own claim is proved". This pass examined all
+  210 for a derivable independent closure and found none (see "Debt pass (v1.5)" above); the count
+  is unchanged, each for a real, examined reason rather than by default. The `mapped_not_wrapped`
+  step below this one is now empty — the 119 entries that held it gained a wrapper file this pass.
 - **70** canonical entries are `not_formalisable` (no formal content located in the source; reason
-  recorded per-entry in `tier_evidence`) and **37** are `open_prop` (stated as an unproved `Prop`,
-  by design) — 16 of these are v1.3's own Effort readings and 8 are new at v1.4 (7 Economics of
-  Expertise readings and 1 Core Epistemic Structure definition), each carried as open exactly as
-  the source states it, not forced to a stronger tier.
+  recorded per-entry in `tier_evidence`) and **52** are `open_prop` (stated as an unproved `Prop`,
+  by design) — 15 of these are v1.5's own Tunnel v2.1 readings, 16 are v1.3's Effort readings, 7 are
+  v1.4's Economics of Expertise readings and 1 is v1.4's Core Epistemic Structure definition, each
+  carried as open exactly as the source states it, not forced to a stronger tier.
 - **52** canonical entries remain `status: unverified`, each with a status note naming why (see
-  "Statement completion" above); unchanged since v1.2 (neither v1.3 nor v1.4 added a new
-  `unverified` entry).
+  "Statement completion" above); this pass re-checked all 52 directly against their own cited
+  source (DEBT #42) and found no new evidence to resolve any of them, so the count is unchanged
+  since v1.2 — a re-checked "still unverified", not an un-re-checked carry-over.
 - `RD1`–`RD9` remains evidence-checked as a distinct object from the Genesis root axioms (see the
   finding above), not an omitted alias — no code has been invented for it.
-- **255** canonical entries still carry tier `untagged` (no tier was stated in their source at
-  all) — unchanged since v1.1 (none of the v1.2, v1.3, or v1.4 additions arrived untagged).
-- **310** genesis-root rows (308 Genesis-document rows plus the 2 v1.2 root-extension rows) still
-  carry only their free-text `tier_in_genesis` string, not a normalised `tier` — unchanged at v1.4
-  (the root layer itself was not touched this release; v1.4's new readings sit under the existing
-  `weld` root).
-- Master Equation River v1.5 and the textbook's Appendix F (both meant to cite Toledo codes) are
+- **245** canonical entries still carry tier `untagged` (no tier was stated in their source at
+  all) — down from 255 at v1.4; this pass tagged the 10 that a source line actually supported
+  (DEBT #43) and left the rest untagged rather than guess a tier for them.
+- **215** genesis-root rows still carry only their free-text `tier_in_genesis` string, not a
+  normalised `tier` — down from 310 at v1.4; this pass normalised the 95 that a quoted source line
+  actually supported (DEBT #43) and left the rest as their exact free-text string.
+- **CMC has no evidenced connection to a Genesis root** (DEBT #46) — this pass re-searched directly
+  and confirmed the same zero result already on file; a candidate structural-resemblance sentence
+  is drafted in `registry/cmc_connection_report.md` for the founder to confirm, reject, or restate,
+  not asserted as a finding (see "Debt pass (v1.5)" above).
+- The `readout_genesis` import anchor is a local revision not present on that repository's public
+  GitHub remote (DEBT #51) — see "Provenance note: readout_genesis anchor" above. Whether and when
+  to publish those commits is the founder's decision, not resolved by this release.
+- Master Equation River v1.6 and the textbook's Appendix F (both meant to cite Toledo codes) are
   tracked separately and are not part of this release.
 - Citing `weld/H.30.v1`–`weld/H.34.v1` into glosa card P20's own text is tracked in the glosa
   repository, not here (see "Core Epistemic Structure" above).

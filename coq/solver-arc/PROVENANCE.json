@@ -4,7 +4,7 @@
  "upstream_commit": "961151db33b0491cba8fabade69f594238d33f84",
  "scope": "canonical (non-*_attempt.v) files under formal/ only, as listed in registry/coq_imports.json's S5 manifest for this source: 50 files. 284 files matching *_attempt.v are excluded from import and listed in EXCLUDED_ATTEMPTS.md (counted, not imported, per the task rule and per T9's 'source project's own promotion convention' principle).",
  "licence": {
-  "upstream": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED (Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.)",
+  "upstream": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED (copyright held by the private repository's owner; identity withheld per BBL-198)",
   "toledo": "MIT, per founder authorisation DEC-toledo-solver-arc-copy-2026-0906 (see LICENSE_NOTE.md). This authorisation covers exactly the files listed below, at the commit above -- it is not a blanket relicense of the private repository's entire tree.",
   "decision_ref": "DEC-toledo-solver-arc-copy-2026-0906"
  },
@@ -474,8 +474,14 @@
   {
    "path": "formal/MURG_Completeness.v",
    "original_text": "(* Author: ANSE.ASIA «PRIVATE-REPO-NAME-REDACTED» formal layer          *)",
-   "replaced_text": "(* Author: ANSE.ASIA solver arc (private) formal layer                *)",
+   "replaced_text": "(* Author: solver arc (private) formal layer                          *)",
    "reason": "verbatim source comment named the private repository; replaced per BBL-195/198 (private repo name must never appear in a public Toledo file)."
+  },
+  {
+   "path": "formal/MURG_Completeness.v",
+   "original_text": "(* Author: ANSE.ASIA solver arc (private) formal layer                *)",
+   "replaced_text": "(* Author: solver arc (private) formal layer                          *)",
+   "reason": "second-pass fix (2026-09-07 fixer pass, LEAK-3/LEAK-4): the first redaction above stripped the private repository's own name but left the workstation/org name 'ANSE.ASIA' sitting next to it, unredacted, in the committed file; 'ANSE.ASIA' is this workstation's private, internal organisation name and must never appear in a public Toledo file, same principle as BBL-195/198 applied one layer up."
   },
   {
    "path": "formal/Genesis_PhysicsDAG_Canon_v2_4_0.v",

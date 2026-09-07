@@ -164,7 +164,7 @@ by the script itself).
   above it, consistent with it (the single repeated-query figure sits near
   this run's p50/p95 band).
 - **Index rebuild** (`index.build_index`, cold, 5 runs): **199.1–240.7ms**,
-  median **199.3ms**, over the current 1,504-entry / 2,542-event registry.
+  median **199.3ms**, over the current 1,582-entry / 3,248-event registry (counts re-run 2026-09-08 for v1.5.0).
 
 ## Real stdio round trip, all 19 tools, real registry (not the test fixture)
 
@@ -231,7 +231,7 @@ This is markedly slower than the ~454ms/~947ms figures `mcp/DESIGN.md` §10
 recorded on an earlier occasion — the difference is shared-machine
 contention: `registry/CANONICAL.json`, `registry/genesis_root.json` and
 `registry/LINEAGE.jsonl` were all being actively rewritten by a concurrent
-registry-release run (v1.2, `wf_3483b2de-ea9`) while this benchmark ran, not
+registry-release build for v1.2.0 while this benchmark ran, not
 a regression introduced by this integration pass — the per-call numbers
 above (index rebuild ~199ms, cached `get` tens of microseconds) are
 consistent with `mcp/DESIGN.md`'s own figures and are the numbers that

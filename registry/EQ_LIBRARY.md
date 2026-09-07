@@ -5,9 +5,9 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 ## Status
 - Chapters inventoried: 40
 - Raw equations: 946
-- Canonical objects: 967
+- Canonical objects: 990
 - Raw→canonical mapped: 1069
-- Coq identifiers (canonical set): 835
+- Coq identifiers (canonical set): 913
 - Master River v1.4 (22519148) equations 1–79: Coq set 22518450, 45 lemmas closed (coq/MR_Ledger.md)
 - Founder rulings: BBL-165 (Th_coqc for every equation), 170 (all chapters, one file), 171 (canonicalise first), 172 (latest formulation), 173 (map only), 174 (one master equation along the line), 175/176 (Readout Genesis first: same equation read per domain), 177 (collapse until one reader reads the whole line)
 
@@ -16,27 +16,27 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | Code | CAN | Root object | Domain | Canonical statement | Tier | Coq | #occ |
 |---|---|---|---|---|---|---|---|
 | weld/M.01.v1 | CAN-001 | weld | M | δ_R = (a ♯ b) ⊢[Th_coqc] L_R = D_W − W ⊢[Dr] F (MQ.08 stepper); concretely S_{n+1}=F(S_n,u_n,c_n,T_n); indepen | Th_coqc | closed CAN_001_degree, CAN_001_laplacian, CAN_001_sum_neg_distributes, CAN_001_laplacian_row_sums_to_neg_degre | 7 |
-| EQ-015/M.01.v1 | CAN-002 | EQ-015 | M | S_n = (G_n, Λ_n, T_n) | Definition | closed RootState, CAN_002_root_state_tuple_faithful | 2 |
-| EQ-015/M.02.v1 | CAN-003 | EQ-015 | M | S_{n+1} = F(S_n, u_n, c_n, T_n) | Definition | closed CAN_003_trajectory, CAN_003_stepper_can_move_state, CAN_003_trajectory_zero | 2 |
+| EQ-015/M.01.v1 | CAN-002 | EQ-015 | M | S_n = (G_n, Λ_n, T_n) | Definition | closed RootState, CAN_002_root_state_tuple_faithful | 3 |
+| EQ-015/M.02.v1 | CAN-003 | EQ-015 | M | S_{n+1} = F(S_n, u_n, c_n, T_n) | Definition | closed CAN_003_trajectory, CAN_003_stepper_can_move_state, CAN_003_trajectory_zero | 3 |
 | EQ-015/M.03.v1 | CAN-004 | EQ-015 | M | retention → structure → translation → readout → meaning → experience → memory → belief → claim → checking → st | Dr | closed CAN_004_Stage, CAN_004_index, CAN_004_forbidden_order, CAN_004_index_injective, CAN_004_checking_before | 1 |
 | EQ-015/M.04.v1 | CAN-005 | EQ-015 | M | Retention→Structure→Translation→Readout→Meaning→Report (compressed); Retention→Structure→Candidate State→Suffi | Definition | definition CAN_005_readout_admission_order, CAN_005_readout_admission_order_stage | 4 |
-| weld/M.02.v1 | CAN-006 | weld | M | q_{D,n+1}∘F_n = F#_{D,n}∘q_{D,n}; O_{D,n} = O#_{D,n}∘q_{D,n}; equivalently q_D(F(z,u,c,T)) = F_D(q_D(z),u,c,T) | Definition | closed CAN_006_domain_admissible, CAN_006_domain_weld_satisfiable_on_pair_projection, DomainReading, weld_hold | 6 |
-| weld/M.03.v1 | CAN-007 | weld | M | z ~_{Q,O,c,L} z' ⟺ O(F^k z) = O(F^k z') for all k ≤ L | Definition | closed CAN_007_reader_equiv, CAN_007_reader_equiv_is_equivalence | 2 |
+| weld/M.02.v1 | CAN-006 | weld | M | q_{D,n+1}∘F_n = F#_{D,n}∘q_{D,n}; O_{D,n} = O#_{D,n}∘q_{D,n}; equivalently q_D(F(z,u,c,T)) = F_D(q_D(z),u,c,T) | Definition | closed CAN_006_domain_admissible, CAN_006_domain_weld_satisfiable_on_pair_projection, DomainReading, weld_hold | 7 |
+| weld/M.03.v1 | CAN-007 | weld | M | z ~_{Q,O,c,L} z' ⟺ O(F^k z) = O(F^k z') for all k ≤ L | Definition | closed CAN_007_reader_equiv, CAN_007_reader_equiv_is_equivalence | 3 |
 | A.5/M.01.v1 | CAN-008 | A.5 | M | S_n ≠ Z_{D,n} ≠ D_{D,n} (D=HCA or MEMK) | Definition | closed CAN_008_noncollapse, CAN_008_root_candidate_quotient_are_three_things | 2 |
-| A.8/M.01.v1 | CAN-009 | A.8 | M | ΔA_past = 0 | Dr | closed CAN_009_extends, CAN_009_extension_preserves_past, CAN_009_witness_append_preserves_first_event | 1 |
+| A.8/M.01.v1 | CAN-009 | A.8 | M | ΔA_past = 0 | Dr | closed CAN_009_extends, CAN_009_extension_preserves_past, CAN_009_witness_append_preserves_first_event | 2 |
 | EQ-002/E.01.v1 | CAN-010 | EQ-002 | E | r_n = R_H(x_n \| H_n, c_n); extended with an explicit question index in Before Meaning, Before Choice: ρ^H_n =  | Definition | definition CAN010_human_readout, CAN010_H2_reader_dependence_Open | 4 |
 | EQ-002/E.02.v1 | CAN-011 | EQ-002 | E | R_A = O_A(W; Π_A) (≠ W);  m(A) ≠ ρ(A) | Definition | closed CAN011_R_A, CAN011_readout_not_world_witness, CAN011_Notion, CAN011_code, CAN011_non_collapse | 3 |
 | EQ-002/E.03.v1 | CAN-012 | EQ-002 | E | M_A(E) = (T_A ∘ Π_A)(S_A(E)) | Definition | definition CAN012_M_A | 2 |
 | EQ-015/E.01.v1 | CAN-013 | EQ-015 | E | μ_n = Ψ_H(r_n, H_n, c_n, Q_n); typed as μ_n=(μ_n^aff, μ_n^prag, μ_n^auto, μ_n^conc, μ_n^epi) | Definition | definition CAN013_meaning_giving | 4 |
 | EQ-015/E.02.v1 | CAN-014 | EQ-015 | E | ξ_n=(ξ_n^+,ξ_n^-,ξ_n^0); Ξ_n=α_n^+P_n^++α_n^-P_n^-+α_n^0P_n^0; G~_{μ,n}=G_{μ,n}∘(I+Ξ_n); ε_{Ξ,n}=d_O(G_{μ,n}(z | Definition | closed CAN014_distort, CAN014_distortion_can_change_meaning, CAN014_distortion_preserves_epistemic_mode | 3 |
-| EQ-015/E.03.v1 | CAN-015 | EQ-015 | E | μ_n = Ψ_H(r_n, H_n, c_n, Q_n) | Definition | definition CAN015_meaning | 2 |
+| EQ-015/E.03.v1 | CAN-015 | EQ-015 | E | μ_n = Ψ_H(r_n, H_n, c_n, Q_n) | Definition | definition CAN015_meaning | 3 |
 | EQ-002/E.04.v1 | CAN-016 | EQ-002 | E | μ_n=(μ_n^aff, μ_n^prag, μ_n^auto, μ_n^conc, μ_n^epi) | Definition | definition CAN016_MeaningModes, CAN016_decomposition_faithful | 1 |
 | EQ-015/E.04.v1 | CAN-017 | EQ-015 | E | E_n = Φ_E(x_n, μ_n, γ^μ_n, c_n); central identity: Experience = phenomenon-as-meaningfully-read | Definition | closed CAN017_experience_joint_witness, CAN017_experience_joint_witness_on_bool | 11 |
 | EQ-015/E.05.v1 | CAN-019 | EQ-015 | E | ℓ_n = L_H(E_n, μ_n \| H_n, c_n), with E_n,μ_n permitted before stable ℓ_n; recursive form: μ_n → E_n → ℓ_n → μ_ | Definition | definition CAN019_naming_operator | 6 |
 | EQ-002/E.05.v1 | CAN-020 | EQ-002 | E | ℓ_n=L_H(E_n,μ_n\|H_n,c_n); μ_n→E_n→ℓ_n→μ_{n+1}→E_{n+1} | Definition | definition CAN020_NamingChainStep, CAN020_naming_chain | 2 |
 | EQ-015/E.06.v1 | CAN-021 | EQ-015 | E | I_{H,n}=Retrieve(M_{H,n}\|c_n,Q_n); Res_H(n)=C_H(E_n^cur,I_{H,n}\|c_n,Q_n) ∈[0,1]; Res≠Identity, Res≠Truth, Res≠ | Dr | definition CAN021_ResonanceNotion, CAN021_resonance_non_collapse | 5 |
 | EQ-015/E.07.v1 | CAN-022 | EQ-015 | E | ΔW_{j,N}=Σ_{n=1}^N η_n·eligibleGradient_n; W_n^eff=W_{info,n}·g(Res_H(n),eligibility,context); Σ_{k≤n}W_k^eff  | Definition | definition CAN022_accum_work, CAN022_threshold_crossed, CAN022_Open_transition | 4 |
-| EQ-015/E.08.v1 | CAN-023 | EQ-015 | E | H_{n+1} = U_H(H_n, Retain(E_n, μ_n, r_n), δ^world_{n:n+1}) — restated with an added other-experience term in l | Definition | definition CAN023_retention_can_change_reader | 13 |
+| EQ-015/E.08.v1 | CAN-023 | EQ-015 | E | H_{n+1} = U_H(H_n, Retain(E_n, μ_n, r_n), δ^world_{n:n+1}) — restated with an added other-experience term in l | Definition | definition CAN023_retention_can_change_reader | 14 |
 | EQ-002/E.06.v1 | CAN-024 | EQ-002 | E | m_{t+1}(e)=ρm_t(e)+1[e_t=e]; a_{Q,t}(e)=[Φ_{Q,t}(s)-Φ_{Q,t}(s')]_+; κ^sem_{t+1}(e\|Q)∝κ^sem,(0)_t(e\|Q)·exp(βa+μ | Definition | definition CAN024_momentum, CAN024_Open_momentum_eases_reentry, CAN024_accessibility_score, CAN024_Open_access | 3 |
 | weld/E.01.v1 | CAN-025 | weld | E | Know_A(W) = 1 iff Dist(R_A[n], R_A^ν[n]) ≤ ε_K for all admissible variations ν on window W. Independently echo | Definition | definition CAN025_stable_under, CAN025_stable_under_dec | 2 |
 | EQ-002/E.07.v1 | CAN-026 | EQ-002 | E | ε_tot > 0 (Genesis Constraint-First); decomposed independently as ε_tot = ε_clock + ε_cross + ε_sel + ε_map +  | Ax | closed CAN026_eps_tot, CAN026_decomposition_identity, CAN026_fallibilism_Open | 2 |
@@ -44,7 +44,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/E.10.v1 | CAN-028 | EQ-015 | E | When external generation of coherent structure increases without bound, observable production ceases to serve  | Dr | definition CAN028_Regime, CAN028_regime_transition_Open | 2 |
 | weld/E.02.v1 | CAN-029 | weld | E | SC: K(S,p)→Subject(S); the collapse the paper rejects, HSC: Epi(X,p)→Knower(X,p); Possession-Constitution Coll | Definition | closed CAN029_possession_constitution_non_collapse | 6 |
 | EQ-015/E.11.v1 | CAN-030 | EQ-015 | E | K_A(D,t):=V_A^D(M_A(t),θ_D); V_A^D=w1P+w2I+w3S+w4R+w5L, Σw_i^D=1 | Definition | definition CAN030_Profile, CAN030_weights_normalized, CAN030_V_A_D | 2 |
-| weld/E.03.v1 | CAN-031 | weld | E | σ_K(p)=Admit_E(p\|Agent,D,C,O,Access,Language,Tools,Rights,Prov,Ev,Method,Infer,Assumptions,Uncertainty,Scope,O | Definition | definition CAN031_Status, CAN031_status_eq_dec, CAN031_Admission | 19 |
+| weld/E.03.v1 | CAN-031 | weld | E | σ_K(p)=Admit_E(p\|Agent,D,C,O,Access,Language,Tools,Rights,Prov,Ev,Method,Infer,Assumptions,Uncertainty,Scope,O | Definition | definition CAN031_Status, CAN031_status_eq_dec, CAN031_Admission | 20 |
 | weld/E.04.v1 | CAN-032 | weld | E | Π_prac(p)=TestPerformance(Y,Ŷ,intervention,C,O); σ_K(p) ≠ Π_prac(p) | Definition | closed CAN032_Notion, CAN032_code, CAN032_non_collapse, CAN032_status_and_performance_can_diverge | 1 |
 | weld/E.05.v1 | CAN-033 | weld | E | χ_G ∈ {1,0,⊥}, 1=ADMITTED, 0=OBSTRUCTED, ⊥=UNRESOLVED (thirteen admission gates G0–G13); independently, χ_t(d) | Definition | definition CAN033_GateOutcome, CAN033_Provenance, CAN033_gate_eq_dec, CAN033_prov_eq_dec, CAN033_Ledger | 3 |
 | weld/E.06.v1 | CAN-034 | weld | E | Suff_{E,L}(Z_E^cand; Q,O,c,T) ∈ {1,0,⊥}; Inv_E(z)≠Inv_E(z') ⟹ q_E(z)≠q_E(z') | Definition | closed CAN034_Sufficiency, CAN034_invariant_preserving, CAN034_invariant_functional_implies_preserving | 2 |
@@ -54,12 +54,12 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | A.5/E.02.v1 | CAN-039 | A.5 | E | P^H_t → Q_{H,t} —Decompose_AI→ Q^{AI}_{t+1} —T_AI→ H~_{t+1} —/~_{D,t}→ H^{disc}_{t+1} —Gate→ U_{t+1} —Spawn→ F | Definition | closed CAN039_CandidateSet, CAN039_comparable, CAN039_not_in_implies_not_comparable, CAN039_Notion, CAN039_cod | 19 |
 | EQ-002/E.08.v1 | CAN-040 | EQ-002 | E | k_epi(t) = \|New_{t+1}\| / max(1, \|F_t\|); k_epi<1 contractive, k_epi≈1 critical, k_epi>1 expanding | Definition | closed CAN040_Regime, CAN040_k_epi, CAN040_classify, CAN040_classify_contractive_correct | 4 |
 | EQ-015/H.01.v1 | CAN-041 | EQ-015 | H | H_t →^{L_H} Q_t; Q_t→AI_t→Y_t →^{R_H} E^{AI}_{H,t}; H_{t+1}=U_H(H_t,E^{AI}_{H,t},δ^world,X^other) | Definition | definition CAN_041_pre_prompt_human_state_transport | 4 |
-| A.5/H.01.v1 | CAN-042 | A.5 | H | H_t --L_H--> Q_t, Q_t ≠ H_t (Pre-Prompt Human State Principle); session-indexed restatement H_{s,0}--L_H-->Q_{ | Definition | closed CAN_042_bounded_transport, CAN_042_bounded_transport_satisfiable_on_nat | 4 |
+| A.5/H.01.v1 | CAN-042 | A.5 | H | H_t --L_H--> Q_t, Q_t ≠ H_t (Pre-Prompt Human State Principle); session-indexed restatement H_{s,0}--L_H-->Q_{ | Definition | closed CAN_042_bounded_transport, CAN_042_bounded_transport_satisfiable_on_nat | 5 |
 | EQ-015/H.02.v1 | CAN-043 | EQ-015 | H | A0 = ⟨P0, M0, U0, E0, F0, S0⟩ (latest, DCP eq.12); supersedes H0*=(P0,M0,U0,E0,Φ0,κ0) and ENTRY_{H→AI}=H0*∧V0∧ | Definition | definition EntryStateAnchor, CAN_043_entry_state_anchor, CAN_043_mk_entry_state_anchor | 5 |
 | A.5/H.02.v1 | CAN-044 | A.5 | H | P^live_{H,t} defined; TopicEntry∈{LiveProblem,OpenExploration,RoutineDelegation}; Problem-First⇒{Agenda Owners | Definition | definition CAN_044_TopicEntry, CAN_044_Legitimate, CAN_044_Open_ProblemFirst_implication, CAN_044_ProblemOnlyP | 6 |
 | EQ-015/H.03.v1 | CAN-045 | EQ-015 | H | H_t —L_H→ Q_t; Q_t→AI_t→Y_t —R_H→ E^{AI}_{H,t}; H_{t+1}=U_H(H_t, E^{AI}_{H,t}, δ^{world}, X^{other}); L_{A,t+1 | Definition | definition CAN_045_prompt_coupling_and_update, CAN_045_live_weight_may_change_witness | 4 |
-| EQ-015/H.04.v1 | CAN-046 | EQ-015 | H | Q_t→AI_t→Y_t --R_H--> E^AI_{H,t}; H_{t+1}=U_H(H_t,E^AI_{H,t},δ^world,X^other) | Definition | definition CAN_046_ai_response_chain | 4 |
-| EQ-015/H.05.v1 | CAN-047 | EQ-015 | H | Z_dlg[s,n+1]=F#_dlg(Z_dlg[s,n],u_H[s,n],u_AI[s,n],c[s,n],T[s,n]); χ_recip[s,n,L]=\|D_recip[s,n,L]\|/\|Σ[s,n]\| | Definition | definition CAN_047_dialogue_session_stepper, CAN_047_chi_recip, CAN_047_chi_recip_bounds_witness | 5 |
+| EQ-015/H.04.v1 | CAN-046 | EQ-015 | H | Q_t→AI_t→Y_t --R_H--> E^AI_{H,t}; H_{t+1}=U_H(H_t,E^AI_{H,t},δ^world,X^other) | Definition | definition CAN_046_ai_response_chain | 5 |
+| EQ-015/H.05.v1 | CAN-047 | EQ-015 | H | Z_dlg[s,n+1]=F#_dlg(Z_dlg[s,n],u_H[s,n],u_AI[s,n],c[s,n],T[s,n]); χ_recip[s,n,L]=\|D_recip[s,n,L]\|/\|Σ[s,n]\| | Definition | definition CAN_047_dialogue_session_stepper, CAN_047_chi_recip, CAN_047_chi_recip_bounds_witness | 6 |
 | EQ-002/H.01.v1 | CAN-048 | EQ-002 | H | B[n]→H_body[n]→N[n]→S[n]↔A[n]→π[n]→U[n]→B[n+1], with each arrow a discrete update Φ_*; independently parallele | Definition | definition CAN_048_agency_conditional_chain | 13 |
 | EQ-002/H.02.v1 | CAN-049 | EQ-002 | H | A_{i,n}=q_A(Z_{i,n};Q_A,O_A,c_n); Aut(F_A,O_A)={h: O_A∘h=O_A, h∘F_A=F_A∘h}; I_n=q_comp(M_n⊕Bel_n⊕Θ_n⊕Roles_n⊕B | Definition | definition CAN_049_agency_readout, CAN_049_is_automorphism, CAN_049_Aut | 3 |
 | weld/H.01.v1 | CAN-050 | weld | H | S_A[n]=q_self(F^n[δ_R,T_A,c_{0:n}])=⟨A_A[n],Δ_A[n],H_A[n],Phen_A^str[n],P_A^lived[n],Own_A[n],Coh_A[n],Val_A[n | Definition | definition SelfState, CAN_050_self_readout, CAN_050_mk_self_readout | 2 |
@@ -74,23 +74,23 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | A.5/H.05.v1 | CAN-059 | A.5 | H | π^choice_{A,t}∈Π^live_{A,t}(g); π^act≠π^choice possible, Y_obs=O_q(H_{0:T})≠H_{0:T}; possible≠feasible≠live≠ch | Definition | definition CAN_059_is_valid_choice, CAN_059_enactment_may_differ_witness, CAN_059_observation_loses_informatio | 3 |
 | EQ-015/H.09.v1 | CAN-060 | EQ-015 | H | p*_{A,g}(h,z;T,B,P)=max_{π∈Π^wit_A(g;h,z,T,B)} Pr^π_P(Read_g∩D_g∩X_g∩F_g) | Definition | definition CAN_060_p_star, CAN_060_p_star_upper_bound_witness | 1 |
 | A.5/H.06.v1 | CAN-061 | A.5 | H | L_{A,t+1}≠L_{A,t} (if a residue is retained); at world-system scale: Λ̇^live_{H,t}=λ1 B_t+λ2 X_t+λ3 P^plural_t | Definition | definition CAN_061_live_weight_may_change_witness, CAN_061_Open_live_field_dynamic | 2 |
-| EQ-015/H.10.v1 | CAN-062 | EQ-015 | H | AI(Q)=K_like, K_like ≠ K_validated | Definition | definition CAN_062_KnowledgeStatus, CAN_062_status_value, CAN_062_non_collapse_witness | 7 |
-| EQ-015/H.11.v1 | CAN-063 | EQ-015 | H | K_like→K_assumed (dangerous shortcut); repaired: K_like --check--> K_checked --independent support--> K_suppor | Dr | definition RepairedStatus, CAN_063_next_status, CAN_063_dangerous_shortcut | 2 |
+| EQ-015/H.10.v1 | CAN-062 | EQ-015 | H | AI(Q)=K_like, K_like ≠ K_validated | Definition | definition CAN_062_KnowledgeStatus, CAN_062_status_value, CAN_062_non_collapse_witness | 8 |
+| EQ-015/H.11.v1 | CAN-063 | EQ-015 | H | K_like→K_assumed (dangerous shortcut); repaired: K_like --check--> K_checked --independent support--> K_suppor | Dr | definition RepairedStatus, CAN_063_next_status, CAN_063_dangerous_shortcut | 3 |
 | weld/H.05.v1 | CAN-064 | weld | H | T_{H←AI}∘K_AI ≅ K_H∘T_C, with explicit defects for semantic loss, source omission, authority laundering, uncer | Definition | definition TransportDefect, CAN_064_transport_condition | 2 |
 | weld/H.06.v1 | CAN-065 | weld | H | ε_H = Def(q̃_H∘F, F#_H∘q̃_H, O_H, Inv_H) | Definition | definition CAN_065_domain_weld_defect | 2 |
-| weld/H.07.v1 | CAN-066 | weld | H | ΔΩ̃^H_s=B_sA_s, rank≪d_H; Ω^H_{s+1,0}=Ω^H_{s,0}+η_sΔΩ̃^H_s; Y^return_{s+Δ}=(R_rec,R_disc,T_new,Q_next); RET=(P | Definition | definition CAN_066_candidate_update, CAN_066_is_low_rank, CAN_066_retention_gate_update, CAN_066_gate_weight_v | 4 |
+| weld/H.07.v1 | CAN-066 | weld | H | ΔΩ̃^H_s=B_sA_s, rank≪d_H; Ω^H_{s+1,0}=Ω^H_{s,0}+η_sΔΩ̃^H_s; Y^return_{s+Δ}=(R_rec,R_disc,T_new,Q_next); RET=(P | Definition | definition CAN_066_candidate_update, CAN_066_is_low_rank, CAN_066_retention_gate_update, CAN_066_gate_weight_v | 5 |
 | EQ-015/H.12.v1 | CAN-067 | EQ-015 | H | G_s=g(k,d,v,p,r,1−f,a\|Θ_s,Π_s); T_s=h(c,f,b,o\|Θ_s,Π_s); Δ_s=G_s−T_s; η_s>0,Δ_s>0⇒expansion; η_s>0,Δ_s<0⇒tunnel | Dr | definition CAN_067_Delta_s, CAN_067_is_expansion, CAN_067_is_tunnel | 5 |
 | EQ-015/H.13.v1 | CAN-068 | EQ-015 | H | H0*→K_like→D^eff→R^eff→H↔AI→χ_recip→η→(G−T\|Θ,Π)→Y^return→J* | Dr | definition CAN_068_epistemic_fusion_sequence | 1 |
 | A.5/H.07.v1 | CAN-069 | A.5 | H | AI-first fluency≠human baseline; explanation≠verification; resistance quality≠resistance accessibility; uncert | Definition | closed CAN_069_fluency_ne_baseline, CAN_069_explanation_ne_verification, CAN_069_resistance_quality_ne_accessi | 1 |
-| weld/H.08.v1 | CAN-070 | weld | H | D_s^eff=\|C_s/∼_R\|, d_s=D_s^eff/\|C_s\|; N_distinct=\|{C1,...,Cn}/∼_Q\| | Dr | definition CAN_070_D_eff, CAN_070_d_s | 2 |
-| EQ-015/H.14.v1 | CAN-071 | EQ-015 | H | R_s^ep=ρ(I_s,V_s,Q_s); U_s^R=u(C_s^v,T_s^v,A_s^v); R_s^ex=ψ(R_s^ep,U_s^R); Resistance quality ≠ resistance acc | Dr | closed CAN_071_R_ep, CAN_071_U_R, CAN_071_R_ex, CAN_071_quality_ne_accessibility | 3 |
+| weld/H.08.v1 | CAN-070 | weld | H | D_s^eff=\|C_s/∼_R\|, d_s=D_s^eff/\|C_s\|; N_distinct=\|{C1,...,Cn}/∼_Q\| | Dr | definition CAN_070_D_eff, CAN_070_d_s | 3 |
+| EQ-015/H.14.v1 | CAN-071 | EQ-015 | H | R_s^ep=ρ(I_s,V_s,Q_s); U_s^R=u(C_s^v,T_s^v,A_s^v); R_s^ex=ψ(R_s^ep,U_s^R); Resistance quality ≠ resistance acc | Dr | closed CAN_071_R_ep, CAN_071_U_R, CAN_071_R_ex, CAN_071_quality_ne_accessibility | 4 |
 | EQ-015/H.15.v1 | CAN-072 | EQ-015 | H | K_s=(κ0,κ1,W0,W1); Calibration error ≈ N^{-1}Σ_i(κ_i−y_i)^2 | Dr | definition CalibrationRecord, CAN_072_calibration_record, CAN_072_mk_calibration_record, CAN_072_calibration_e | 2 |
 | weld/H.09.v1 | CAN-073 | weld | H | retained experiential reorganization → possible later CTSA crystallization; retained sensitivity→C_return, ret | Open | definition CAN_073_Open_ctsa_bridge | 2 |
-| A.5/H.08.v1 | CAN-074 | A.5 | H | ΔPerformance_AI>0 ⇏ ΔH_return>0 (equivalently: Assisted performance ≠ Unaided Human Return) | Definition | closed CAN_074_assisted_gain_does_not_imply_return_gain | 6 |
+| A.5/H.08.v1 | CAN-074 | A.5 | H | ΔPerformance_AI>0 ⇏ ΔH_return>0 (equivalently: Assisted performance ≠ Unaided Human Return) | Definition | closed CAN_074_assisted_gain_does_not_imply_return_gain | 7 |
 | A.5/H.09.v1 | CAN-075 | A.5 | H | Exposure ≠ Retention ≠ Improvement | Definition | closed CAN_075_EndChainNotion, CAN_075_end_chain_value, CAN_075_exposure_retention_improvement_non_collapse | 2 |
-| EQ-015/H.16.v1 | CAN-076 | EQ-015 | H | H_return = ⟨G_CTSA, L, M, P, W, Δ_dir⟩ | Definition | definition CAN_076_HReturn, CAN_076_mk_h_return | 3 |
+| EQ-015/H.16.v1 | CAN-076 | EQ-015 | H | H_return = ⟨G_CTSA, L, M, P, W, Δ_dir⟩ | Definition | definition CAN_076_HReturn, CAN_076_mk_h_return | 4 |
 | EQ-015/H.17.v1 | CAN-077 | EQ-015 | H | R^return_H = ⟨C, T, S, A⟩ | Definition | definition ReturnCTSA4, CAN_077_human_return_ctsa4, CAN_077_mk_human_return_ctsa4 | 3 |
-| EQ-015/H.18.v1 | CAN-078 | EQ-015 | H | D > 0, Resist > 0, A_H > 0 | Definition | definition CAN_078_Open_dra_constitutive | 4 |
+| EQ-015/H.18.v1 | CAN-078 | EQ-015 | H | D > 0, Resist > 0, A_H > 0 | Definition | definition CAN_078_Open_dra_constitutive | 5 |
 | EQ-015/H.19.v1 | CAN-079 | EQ-015 | H | J*_s=(AUG_s,SYN_s,RET_s); AUG_s=P^joint_s−P^H_s; SYN_s=P^joint_s−max(P^H_s,P^AI_s) | Definition | definition CAN_079_AUG, CAN_079_SYN, CAN_079_aug_syn_non_collapse_witness | 2 |
 | A.5/H.10.v1 | CAN-080 | A.5 | H | AI fluency≠human baseline; explanation≠verification; output count≠epistemic diversity; exposure≠retention≠impr | Dr | closed CAN_080_fluency_ne_baseline, CAN_080_explanation_ne_verification, CAN_080_output_count_ne_epistemic_div | 1 |
 | EQ-015/H.20.v1 | CAN-081 | EQ-015 | H | H1-H6 [Open], §12 | Open | definition CAN_081_Open_hypotheses | 6 |
@@ -99,8 +99,8 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | A.5/H.12.v1 | CAN-084 | A.5 | H | L(c)={Decision,Risk,Money,Health,Legal,Publication,IrreversibleAction}; V={primary source,data,experiment,calc | Definition | definition StakesKind, VerifyMethod, CAN_084_high_stakes | 3 |
 | A.8/H.01.v1 | CAN-085 | A.8 | H | I_s=⟨ΔM_s, E^decisive_s, U^remain_s, Next_s⟩ | Definition | definition IntegrationRec, CAN_085_integration_record, CAN_085_mk_integration_record | 1 |
 | EQ-015/H.22.v1 | CAN-086 | EQ-015 | H | Reset: fresh framing/session/source route; Removal: absence of decisive AI assistance | Definition | definition CAN_086_is_reset, CAN_086_is_removal | 2 |
-| EQ-015/H.23.v1 | CAN-087 | EQ-015 | H | ΔH_s=⟨ΔC_s,ΔT_s,ΔS_s,ΔA_s,ΔA^corr_{H,s},ΔΛ^live_{H,s}⟩; F^return=f(Criticality,LearningNeed,FailureCost,Depend | Definition | definition ReturnConversionVector, CAN_087_return_conversion_vector, CAN_087_mk_return_conversion_vector, CAN_ | 2 |
-| EQ-015/H.24.v1 | CAN-088 | EQ-015 | H | I_s→a_s→δ^world_{s+1}→H_{s+1,0}; Live Problem→Question→Dialogue→Human Return→Action→World Feedback→Revision or | Definition | definition CAN_088_world_closure, CAN_088_CycleStage, CAN_088_cycle_next | 5 |
+| EQ-015/H.23.v1 | CAN-087 | EQ-015 | H | ΔH_s=⟨ΔC_s,ΔT_s,ΔS_s,ΔA_s,ΔA^corr_{H,s},ΔΛ^live_{H,s}⟩; F^return=f(Criticality,LearningNeed,FailureCost,Depend | Definition | definition ReturnConversionVector, CAN_087_return_conversion_vector, CAN_087_mk_return_conversion_vector, CAN_ | 3 |
+| EQ-015/H.24.v1 | CAN-088 | EQ-015 | H | I_s→a_s→δ^world_{s+1}→H_{s+1,0}; Live Problem→Question→Dialogue→Human Return→Action→World Feedback→Revision or | Definition | definition CAN_088_world_closure, CAN_088_CycleStage, CAN_088_cycle_next | 6 |
 | A.8/H.02.v1 | CAN-089 | A.8 | H | Expansion:=maximize candidate diversity and discriminability; Contraction:=prune by evidence, provenance, stak | Definition | definition CAN_089_is_expansion, CAN_089_is_contraction | 2 |
 | EQ-015/H.25.v1 | CAN-090 | EQ-015 | H | DCPp, DEPp, AgP [Open] | Open | definition CAN_090_Open_dcp_propositions | 3 |
 | EQ-015/H.26.v1 | CAN-091 | EQ-015 | H | H1-H10, §15.2 | Open | definition CAN_091_Open_hypotheses | 10 |
@@ -183,7 +183,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | weld/M.06.v1 | CAN-168 | weld | M | 0≤κ_{A,t,Q}(s'\|s)≤1; μ_{A,t}(π\|Q)=∏κ_{A,t,Q}(s_{k+1}\|s_k); Acc_{A,t}(H\|Q)=sup_π μ_{A,t}(π\|Q); reachable(H)=1 ⇏ | Definition | closed CAN168_path_prob, CAN168_reachable, CAN168_high, CAN168_positive_but_not_high | 10 |
 | weld/M.07.v1 | CAN-169 | weld | M | G^K_{A,t}(Q)=⟨V_{A,t},E_{A,t},ω_{A,t,Q},χ_{A,t}⟩; U_{A,t}(Q)={[H]∈H^disc_{A,t}(Q): W_t(H)≥w0, ∃u∈U_{D,t} with  | Definition | closed CAN169_first_hit, CAN169_tau_U_bounded, CAN169_tau_U_unbounded_Open, CAN169_usable_ne_actually_true | 19 |
 | weld/M.08.v1 | CAN-170 | weld | M | discriminating action u* satisfies δ̂_i(u*)≠δ̂_j(u*); δ*_{t+1}=O_D(Z_{t+1};u*); r*_i=δ̂_i(u*)−δ*_{t+1}; (Z_{t+ | Definition | definition CAN170_discriminating, CAN170_local_residual | 4 |
-| A.8/M.02.v1 | CAN-171 | A.8 | M | Λ(e_i) = ⟨Prov_i, Tier_i, Def_i, Reader_i, Falsifier_i⟩ | Definition | definition CAN171_LedgerEntry | 2 |
+| A.8/M.02.v1 | CAN-171 | A.8 | M | Λ(e_i) = ⟨Prov_i, Tier_i, Def_i, Reader_i, Falsifier_i⟩ | Definition | definition CAN171_LedgerEntry | 3 |
 | A.8/M.03.v1 | CAN-172 | A.8 | M | Status∈{Source, AI-Synthesis, Human-Inference, Candidate, Decision} | Definition | definition CAN172_Status | 1 |
 | A.8/M.04.v1 | CAN-173 | A.8 | M | PRC(e_i)∈{0,1}; C_t^valid=Σ_iw_ie_iPRC(e_i) | finite_diagnostic | closed CAN173_valid_term, CAN173_C_valid, CAN173_C_raw, CAN173_term_le, CAN173_valid_le_raw | 2 |
 | weld/M.09.v1 | CAN-174 | weld | M | ClaimStrength ≤ EvidenceStrength | finite_diagnostic | closed is, CAN174_invariant, CAN174_invariant_refl | 1 |
@@ -212,7 +212,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/M.08.v1 | CAN-198 | EQ-015 | M | T_n={(x_k,t_k,w_k)}_{k≤n}, Rhythm_n=Ω(T_n,B_n); m_{t+1}(e)=ρm_t(e)+1[e_t=e], 0≤ρ<1; κ^{sem}_{t+1}(e\|Q) ∝ κ^{se | Definition | definition CAN198_momentum, CAN198_Open_momentum, CAN198_accessibility_score, CAN198_Open_accessibility, CAN19 | 5 |
 | EQ-015/M.09.v1 | CAN-199 | EQ-015 | M | B[t+1]=F(B[t])+C_H(H[t]); H[t+1]=G(H[t])+C_B(B[t]); E[t]=R(B[t],H[t]) | Definition | definition CAN199_B, CAN199_E | 3 |
 | EQ-015/M.10.v1 | CAN-200 | EQ-015 | M | B^use=⟨Time,CognitiveLoad,VerificationCost,Interruption,LiteracyDemand⟩; Epistemically optimal ≢ Behaviorally  | Definition | closed CAN200_Burden, CAN200_OptimalOrAdoptable, CAN200_optimal_ne_adoptable | 3 |
-| EQ-002/M.03.v1 | CAN-201 | EQ-002 | M | Readout_{Q,O,c}(S) = z, z ≠ S | Definition | closed CAN_201_hypothesis_satisfiable_on_bool | 1 |
+| EQ-002/M.03.v1 | CAN-201 | EQ-002 | M | Readout_{Q,O,c}(S) = z, z ≠ S | Definition | closed CAN_201_hypothesis_satisfiable_on_bool | 2 |
 | EQ-015/E.12.v1 | CAN-202 | EQ-015 | E | M_A[n] = K_A · θ(E[n]) + η_sel + η_map + η_self | Definition | closed CAN202_M_A, CAN202_decomposition | 2 |
 | EQ-002/E.09.v1 | CAN-203 | EQ-002 | E | x_{i,n} = Access(A_n; O_i, L_i, T_i, R_i, C_i) | Definition | definition CAN203_x | 1 |
 | EQ-002/E.10.v1 | CAN-204 | EQ-002 | E | O_A[n] = Π_A(E[n]);  enc_A(O_A)[n] = T_A(O_A[n]) | Definition | definition CAN204_O_A, CAN204_enc_A | 2 |
@@ -569,7 +569,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/M.15.v1 | RUS-0004 | EQ-015 | M | H_nl = \Sigmaᵢ Mᵢ v\Phiᵢv\Psiᵢ + K \Phi^{T}L_w\Psi + \Psi^{T}\nablaV(\Phi) − J^{T}\Psi | finite_diagnostic | wrapped_related EQ_015__M_15_v1_reads | 0 |
 | EQ-009/E.01.v1 | RUS-0005 | EQ-009 | E | z̃ = C z \to z' = \sqrt(1−\gamma) z̃,  \rho = −\sqrt\gamma z̃ \to \Psiₙ₊_{1} = \Psiₙ \oplus \rhoₙ | Definition | definition EQ009_E01_zprime, EQ009_E01_rho, EQ009_E01_unitary, EQ009_E01_Psi_next | 0 |
 | EQ-009/E.02.v1 | RUS-0006 | EQ-009 | E | T1 conservation бваг: Q(zₙ)+\SigmaQ(\rhoⱼ)=Q(z_{0}) — rel. error <10^{-}^{1}^{2}, decay \omegaนตรง (1−\gamma)^ | finite_diagnostic | definition EQ009_E02_conserved | 0 |
-| EQ-009/E.03.v1 | RUS-0007 | EQ-009 | E | T4 = สะพาน: สองชั้นทำนาย envelope เดียวกันเมื่อ \gamma\leftrightarrowD/M | untagged | not_formalisable | 0 |
+| EQ-009/E.03.v1 | RUS-0007 | EQ-009 | E | T4 = สะพาน: สองชั้นทำนาย envelope เดียวกันเมื่อ \gamma\leftrightarrowD/M | Open | not_formalisable | 0 |
 | BridgeCommute/H.01.v1 | RUS-0008 | BridgeCommute | H | T_{j\toi}\cdotF#_H^j = F#_H^i\cdotT_{j\toi}  (commutation criterion for 'closure-meaningful' cross-agent commu | Definition | definition BridgeCommute_H01_v1_commutes | 0 |
 | EQ-015/P.01.v1 | RUS-0009 | EQ-015 | P | Planck–Einstein relation E=\hbar\omega | untagged | wrapped_related EQ_015__P_01_v1_reads | 1 |
 | EQ-015/P.02.v1 | RUS-0010 | EQ-015 | P | Schrödinger equation / eigenvalue problem | untagged | wrapped_related EQ_015__P_02_v1_reads | 1 |
@@ -799,413 +799,436 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | BiologyDomain_living_unit/B.28.v1 | RUS-0235 | BiologyDomain_living_unit | B | Luria-Delbrück fluctuation-test expected mutant number m = N mu | Definition | definition B28_v1_expected_mutants | 1 |
 | BiologyDomain_living_unit/B.29.v1 | RUS-0236 | BiologyDomain_living_unit | B | Karlin-Altschul local-alignment E-value E = K m n exp(-lam S) | Definition | definition B29_v1_karlin_altschul_evalue | 1 |
 | BiologyDomain_living_unit/B.30.v1 | RUS-0237 | BiologyDomain_living_unit | B | Approaching-sound auditory time-dilation effect sizes (+15% approach / -6% recede) | untagged | not_formalisable | 1 |
-| EQ-015/B.01.v1 | RUS-0238 | EQ-015 | B | \forall\, \alpha,\beta,u,dt \in \mathbb{Q},\ \beta \neq 0 \implies \mathrm{step}(\alpha,\beta,u,dt,\mathrm{set | untagged | wrapped_related EQ_015__B_01_v1_reads | 1 |
-| EQ-015/B.02.v1 | RUS-0239 | EQ-015 | B | \forall\, \alpha,\beta,u,dt,C \in \mathbb{Q},\ \beta \neq 0 \implies \mathrm{step}(\alpha,\beta,u,dt,C) - \mat | untagged | wrapped_related EQ_015__B_02_v1_reads | 1 |
-| EQ-015/B.03.v1 | RUS-0240 | EQ-015 | B | \forall\, \alpha,\beta,u,dt \in \mathbb{Q},\ \beta \neq 0,\ \forall\, n \in \mathbb{N},\, C \in \mathbb{Q}:\qu | untagged | wrapped_related EQ_015__B_03_v1_reads | 1 |
-| EQ-015/B.04.v1 | RUS-0241 | EQ-015 | B | \forall\, h \in \mathbb{Q}:\quad \mathrm{disc}(-h) = \mathrm{disc}(h), \quad \mathrm{disc}(h) := 4 - 27h^2 | untagged | wrapped_related EQ_015__B_04_v1_reads | 1 |
-| EQ-015/B.05.v1 | RUS-0242 | EQ-015 | B | \forall\, R,h \in \mathbb{Q}:\quad h = R - R^3 \implies 27h^2 - 4 = (3R^2-1)(9R^4 - 15R^2 + 4) | untagged | wrapped_related EQ_015__B_05_v1_reads | 1 |
-| EQ-015/B.06.v1 | RUS-0243 | EQ-015 | B | \forall\, R,h \in \mathbb{Q}:\quad V_p(R,h)=0 \wedge V_{pp}(R)=0 \implies 27h^2 = 4, \quad V_p(R,h) := R^3 - R | untagged | wrapped_related EQ_015__B_06_v1_reads | 1 |
-| EQ-015/B.07.v1 | RUS-0244 | EQ-015 | B | \forall\, h \in \mathbb{Q}:\quad \mathrm{disc}(h) > 0 \iff 27h^2 < 4 | untagged | wrapped_related EQ_015__B_07_v1_reads | 1 |
-| EQ-015/B.08.v1 | RUS-0245 | EQ-015 | B | \forall\, R,h \in \mathbb{Q}:\quad V_p(R,h)=0 \wedge V_{pp}(R)=0 \implies V_{pp}(R) = 0 | untagged | wrapped_related EQ_015__B_08_v1_reads | 1 |
-| EQ-015/B.09.v1 | RUS-0246 | EQ-015 | B | \forall\, R,h,dt \in \mathbb{Q},\ dt \neq 0:\quad \mathrm{repair\_step}(R,h,dt) = R \iff V_p(R,h) = 0, \quad \ | untagged | wrapped_related EQ_015__B_09_v1_reads | 1 |
+| EQ-015/B.01.v1 | RUS-0238 | EQ-015 | B | \forall\, \alpha,\beta,u,dt \in \mathbb{Q},\ \beta \neq 0 \implies \mathrm{step}(\alpha,\beta,u,dt,\mathrm{set | Th_coqc | wrapped_related EQ_015__B_01_v1_reads | 1 |
+| EQ-015/B.02.v1 | RUS-0239 | EQ-015 | B | \forall\, \alpha,\beta,u,dt,C \in \mathbb{Q},\ \beta \neq 0 \implies \mathrm{step}(\alpha,\beta,u,dt,C) - \mat | Th_coqc | wrapped_related EQ_015__B_02_v1_reads | 1 |
+| EQ-015/B.03.v1 | RUS-0240 | EQ-015 | B | \forall\, \alpha,\beta,u,dt \in \mathbb{Q},\ \beta \neq 0,\ \forall\, n \in \mathbb{N},\, C \in \mathbb{Q}:\qu | Th_coqc | wrapped_related EQ_015__B_03_v1_reads | 1 |
+| EQ-015/B.04.v1 | RUS-0241 | EQ-015 | B | \forall\, h \in \mathbb{Q}:\quad \mathrm{disc}(-h) = \mathrm{disc}(h), \quad \mathrm{disc}(h) := 4 - 27h^2 | Th_coqc | wrapped_related EQ_015__B_04_v1_reads | 1 |
+| EQ-015/B.05.v1 | RUS-0242 | EQ-015 | B | \forall\, R,h \in \mathbb{Q}:\quad h = R - R^3 \implies 27h^2 - 4 = (3R^2-1)(9R^4 - 15R^2 + 4) | Th_coqc | wrapped_related EQ_015__B_05_v1_reads | 1 |
+| EQ-015/B.06.v1 | RUS-0243 | EQ-015 | B | \forall\, R,h \in \mathbb{Q}:\quad V_p(R,h)=0 \wedge V_{pp}(R)=0 \implies 27h^2 = 4, \quad V_p(R,h) := R^3 - R | Th_coqc | wrapped_related EQ_015__B_06_v1_reads | 1 |
+| EQ-015/B.07.v1 | RUS-0244 | EQ-015 | B | \forall\, h \in \mathbb{Q}:\quad \mathrm{disc}(h) > 0 \iff 27h^2 < 4 | Th_coqc | wrapped_related EQ_015__B_07_v1_reads | 1 |
+| EQ-015/B.08.v1 | RUS-0245 | EQ-015 | B | \forall\, R,h \in \mathbb{Q}:\quad V_p(R,h)=0 \wedge V_{pp}(R)=0 \implies V_{pp}(R) = 0 | Th_coqc | wrapped_related EQ_015__B_08_v1_reads | 1 |
+| EQ-015/B.09.v1 | RUS-0246 | EQ-015 | B | \forall\, R,h,dt \in \mathbb{Q},\ dt \neq 0:\quad \mathrm{repair\_step}(R,h,dt) = R \iff V_p(R,h) = 0, \quad \ | Th_coqc | wrapped_related EQ_015__B_09_v1_reads | 1 |
 | Theta/P.01.v1 | R1T-0001 | Theta | P | Theorem real_quartet_no_cp_readout :
   forall a b c d : Q,
     (cim (Cmul (Cmul (mkC a 0) (mkC b 0))
-          | Th_coqc | mapped_not_wrapped real_quartet_no_cp_readout | 1 |
+          | Th_coqc | closed real_quartet_no_cp_readout | 1 |
 | Theta/P.02.v1 | R1T-0002 | Theta | P | Theorem theta_census_exists_3 :
   exists w01 w02 w12 : Q,
     (0 <= w01)%Q /\ (0 <= w02)%Q /\ (0 <= w12)%Q /\
- | Th_coqc | mapped_not_wrapped theta_census_exists_3 | 1 |
+ | Th_coqc | closed theta_census_exists_3 | 1 |
 | Theta/P.03.v1 | R1T-0003 | Theta | P | Theorem theta_census_unique_3 :
   forall w01 w02 w12 v01 v02 v12 : Q,
-    (L01 == - w01)%Q -> (L02 == - w02)%Q | Th_coqc | mapped_not_wrapped theta_census_unique_3 | 1 |
+    (L01 == - w01)%Q -> (L02 == - w02)%Q | Th_coqc | closed theta_census_unique_3 | 1 |
 | Theta/P.04.v1 | R1T-0004 | Theta | P | Theorem edge_generators_independent_3 :
   forall a b c : Q,
-    (a + b == 0)%Q -> (- a == 0)%Q -> (- b == 0)%Q | Th_coqc | mapped_not_wrapped edge_generators_independent_3 | 1 |
+    (a + b == 0)%Q -> (- a == 0)%Q -> (- b == 0)%Q | Th_coqc | closed edge_generators_independent_3 | 1 |
 | Theta/P.05.v1 | R1T-0005 | Theta | P | Theorem fixed_point_balance_law :
-  (p0*p0*p0*s0 + p1*p1*p1*s1 + p2*p2*p2*s2 == 0)%Q. | Th_coqc | mapped_not_wrapped fixed_point_balance_law | 1 |
+  (p0*p0*p0*s0 + p1*p1*p1*s1 + p2*p2*p2*s2 == 0)%Q. | Th_coqc | closed fixed_point_balance_law | 1 |
 | Theta/P.06.v1 | R1T-0006 | Theta | P | Theorem mirror_symmetry_is_dead :
   forall a b gp p : Q,
     ~ (b == 0)%Q ->
-    (gp + a*p + b*(p*p*p) == 0)%Q | Th_coqc | mapped_not_wrapped mirror_symmetry_is_dead | 1 |
+    (gp + a*p + b*(p*p*p) == 0)%Q | Th_coqc | closed mirror_symmetry_is_dead | 1 |
 | Theta/P.07.v1 | R1T-0007 | Theta | P | Theorem agreement_is_dead :
   forall a b p : Q,
     ~ (a == 0)%Q ->
-    (a*p + b*(p*p*p) == 0)%Q ->            | Th_coqc | mapped_not_wrapped agreement_is_dead | 1 |
+    (a*p + b*(p*p*p) == 0)%Q ->            | Th_coqc | closed agreement_is_dead | 1 |
 | Theta/P.08.v1 | R1T-0008 | Theta | P | Theorem locus_Z1Z3_J_square :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi1 == Phi3)%Q -> (P | Th_coqc | mapped_not_wrapped locus_Z1Z3_J_square | 1 |
-| Theta/P.09.v1 | R1T-0009 | Theta | P | Lemma qsquare_nonneg : forall x : Q, (0 <= x*x)%Q. | Th_coqc | mapped_not_wrapped qsquare_nonneg | 1 |
+    (Phi1 == Phi3)%Q -> (P | Th_coqc | closed locus_Z1Z3_J_square | 1 |
+| Theta/P.09.v1 | R1T-0009 | Theta | P | Lemma qsquare_nonneg : forall x : Q, (0 <= x*x)%Q. | Th_coqc | closed qsquare_nonneg | 1 |
 | Theta/P.10.v1 | R1T-0010 | Theta | P | Corollary locus_Z1Z3_J_nonneg :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi1 == Phi3)%Q ->  | Th_coqc | mapped_not_wrapped locus_Z1Z3_J_nonneg | 1 |
-| Theta/P.11.v1 | R1T-0011 | Theta | P | Lemma qsquare_pos_of_nonzero : forall x : Q, ~ (x == 0)%Q -> (0 < x*x)%Q. | Th_coqc | mapped_not_wrapped qsquare_pos_of_nonzero | 1 |
+    (Phi1 == Phi3)%Q ->  | Th_coqc | closed locus_Z1Z3_J_nonneg | 1 |
+| Theta/P.11.v1 | R1T-0011 | Theta | P | Lemma qsquare_pos_of_nonzero : forall x : Q, ~ (x == 0)%Q -> (0 < x*x)%Q. | Th_coqc | closed qsquare_pos_of_nonzero | 1 |
 | Theta/P.12.v1 | R1T-0012 | Theta | P | Corollary locus_Z1Z3_J_pos :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi1 == Phi3)%Q -> (Ps | Th_coqc | mapped_not_wrapped locus_Z1Z3_J_pos | 1 |
+    (Phi1 == Phi3)%Q -> (Ps | Th_coqc | closed locus_Z1Z3_J_pos | 1 |
 | Theta/P.13.v1 | R1T-0013 | Theta | P | Theorem locus_Z0Z2_J_square :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi0 == Phi2)%Q -> (P | Th_coqc | mapped_not_wrapped locus_Z0Z2_J_square | 1 |
+    (Phi0 == Phi2)%Q -> (P | Th_coqc | closed locus_Z0Z2_J_square | 1 |
 | Theta/P.14.v1 | R1T-0014 | Theta | P | Corollary locus_Z0Z2_J_nonneg :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi0 == Phi2)%Q ->  | Th_coqc | mapped_not_wrapped locus_Z0Z2_J_nonneg | 1 |
+    (Phi0 == Phi2)%Q ->  | Th_coqc | closed locus_Z0Z2_J_nonneg | 1 |
 | Theta/P.15.v1 | R1T-0015 | Theta | P | Corollary locus_Z0Z2_J_pos :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi0 == Phi2)%Q -> (Ps | Th_coqc | mapped_not_wrapped locus_Z0Z2_J_pos | 1 |
+    (Phi0 == Phi2)%Q -> (Ps | Th_coqc | closed locus_Z0Z2_J_pos | 1 |
 | Theta/P.16.v1 | R1T-0016 | Theta | P | Theorem diffR_taylor_identity :
   forall Phi0 Phi2 Phi3 Psi0 Psi2 Psi3 dPhi dPsi : Q,
     (
-      (* diffR, ex | Th_coqc | mapped_not_wrapped diffR_taylor_identity | 1 |
+      (* diffR, ex | Th_coqc | closed diffR_taylor_identity | 1 |
 | Theta/P.17.v1 | R1T-0017 | Theta | P | Theorem diffRec_taylor_identity :
   forall Phi0 Phi2 Phi3 Psi0 Psi2 Psi3 dPhi dPsi : Q,
     (
-      (* diffRec | Th_coqc | mapped_not_wrapped diffRec_taylor_identity | 1 |
+      (* diffRec | Th_coqc | closed diffRec_taylor_identity | 1 |
 | Theta/P.18.v1 | R1T-0018 | Theta | P | Theorem linear_diff_system_nondegenerate :
   forall D E F dPhi dPsi : Q,
     (D*dPhi + E*dPsi == 0)%Q ->
-    ( | Th_coqc | mapped_not_wrapped linear_diff_system_nondegenerate | 1 |
+    ( | Th_coqc | closed linear_diff_system_nondegenerate | 1 |
 | Theta/P.19.v1 | R1T-0019 | Theta | P | Theorem edge_locus_kills_support :
   forall Phi_i Phi_j Psi_i Psi_j : Q,
-    (Phi_i == Phi_j)%Q -> (Psi_i == P | Th_coqc | mapped_not_wrapped edge_locus_kills_support | 1 |
+    (Phi_i == Phi_j)%Q -> (Psi_i == P | Th_coqc | closed edge_locus_kills_support | 1 |
 | Theta/P.20.v1 | R1T-0020 | Theta | P | Corollary edge_locus_incompatible_with_strict_support_rule :
   forall Phi_i Phi_j Psi_i Psi_j : Q,
-    (Phi_i  | Th_coqc | mapped_not_wrapped edge_locus_incompatible_with_strict_support_rule | 1 |
+    (Phi_i  | Th_coqc | closed edge_locus_incompatible_with_strict_support_rule | 1 |
 | Theta/P.21.v1 | R1T-0021 | Theta | P | Corollary c4_edge01_locus_excluded :
   forall Phi0 Phi1 Psi0 Psi1 : Q,
-    (Phi0 == Phi1)%Q -> (Psi0 == Psi1)% | Th_coqc | mapped_not_wrapped c4_edge01_locus_excluded | 1 |
+    (Phi0 == Phi1)%Q -> (Psi0 == Psi1)% | Th_coqc | closed c4_edge01_locus_excluded | 1 |
 | Theta/P.22.v1 | R1T-0022 | Theta | P | Corollary c4_edge12_locus_excluded :
   forall Phi1 Phi2 Psi1 Psi2 : Q,
-    (Phi1 == Phi2)%Q -> (Psi1 == Psi2)% | Th_coqc | mapped_not_wrapped c4_edge12_locus_excluded | 1 |
+    (Phi1 == Phi2)%Q -> (Psi1 == Psi2)% | Th_coqc | closed c4_edge12_locus_excluded | 1 |
 | Theta/P.23.v1 | R1T-0023 | Theta | P | Corollary c4_edge23_locus_excluded :
   forall Phi2 Phi3 Psi2 Psi3 : Q,
-    (Phi2 == Phi3)%Q -> (Psi2 == Psi3)% | Th_coqc | mapped_not_wrapped c4_edge23_locus_excluded | 1 |
+    (Phi2 == Phi3)%Q -> (Psi2 == Psi3)% | Th_coqc | closed c4_edge23_locus_excluded | 1 |
 | Theta/P.24.v1 | R1T-0024 | Theta | P | Corollary c4_edge03_locus_excluded :
   forall Phi0 Phi3 Psi0 Psi3 : Q,
-    (Phi0 == Phi3)%Q -> (Psi0 == Psi3)% | Th_coqc | mapped_not_wrapped c4_edge03_locus_excluded | 1 |
+    (Phi0 == Phi3)%Q -> (Psi0 == Psi3)% | Th_coqc | closed c4_edge03_locus_excluded | 1 |
 | Theta/P.25.v1 | R1T-0025 | Theta | P | Corollary c4_reflection_01_23_excluded :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi0 == Ph | Th_coqc | mapped_not_wrapped c4_reflection_01_23_excluded | 1 |
+    (Phi0 == Ph | Th_coqc | closed c4_reflection_01_23_excluded | 1 |
 | Theta/P.26.v1 | R1T-0026 | Theta | P | Corollary c4_reflection_12_30_excluded :
   forall Phi0 Phi1 Phi2 Phi3 Psi0 Psi1 Psi2 Psi3 : Q,
-    (Phi1 == Ph | Th_coqc | mapped_not_wrapped c4_reflection_12_30_excluded | 1 |
+    (Phi1 == Ph | Th_coqc | closed c4_reflection_12_30_excluded | 1 |
 | Theta/P.27.v1 | R1T-0027 | Theta | P | Theorem n2_empty_support_dead :
   forall p s : Q,
     (- p + p*p*p == 0)%Q ->
-    ((- (1#1) + (3#1)*(p*p)) * s | Th_coqc | mapped_not_wrapped n2_empty_support_dead | 1 |
+    ((- (1#1) + (3#1)*(p*p)) * s | Th_coqc | closed n2_empty_support_dead | 1 |
 | Theta/P.28.v1 | R1T-0028 | Theta | P | Lemma red_rsum :
   ((4#1) * ((- D*D*E - p0 + p0*p0*p0) + (D*D*E - p1 + p1*p1*p1))
-   == U * (U*U + (3#1)*(D*D) | Th_coqc | mapped_not_wrapped red_rsum | 1 |
+   == U * (U*U + (3#1)*(D*D) | Th_coqc | closed red_rsum | 1 |
 | Theta/P.29.v1 | R1T-0029 | Theta | P | Lemma red_rdiff :
   ((4#1) * ((- D*D*E - p0 + p0*p0*p0) - (D*D*E - p1 + p1*p1*p1))
-   == D * (- (8#1)*(D*E) -  | Th_coqc | mapped_not_wrapped red_rdiff | 1 |
+   == D * (- (8#1)*(D*E) -  | Th_coqc | closed red_rdiff | 1 |
 | Theta/P.30.v1 | R1T-0030 | Theta | P | Lemma red_csum :
   ((4#1) * ((- D*E*E + (- (1#1) + (3#1)*(p0*p0))*s0)
-            + (D*E*E + (- (1#1) + (3#1)* | Th_coqc | mapped_not_wrapped red_csum | 1 |
+            + (D*E*E + (- (1#1) + (3#1)* | Th_coqc | closed red_csum | 1 |
 | Theta/P.31.v1 | R1T-0031 | Theta | P | Lemma red_cdiff :
   ((4#1) * ((- D*E*E + (- (1#1) + (3#1)*(p0*p0))*s0)
-            - (D*E*E + (- (1#1) + (3#1) | Th_coqc | mapped_not_wrapped red_cdiff | 1 |
+            - (D*E*E + (- (1#1) + (3#1) | Th_coqc | closed red_cdiff | 1 |
 | Theta/P.32.v1 | R1T-0032 | Theta | P | Theorem n2_edge_present_dead :
   forall U D T E : Q,
     (U * (U*U + (3#1)*(D*D) - (4#1)) == 0)%Q ->
-    (D *  | Th_coqc | mapped_not_wrapped n2_edge_present_dead | 1 |
+    (D *  | Th_coqc | closed n2_edge_present_dead | 1 |
 | Theta/P.33.v1 | R1T-0033 | Theta | P | Theorem n2_no_living_fixed_point :
   forall p0 p1 s0 s1 w : Q,
     ( ((w == 0)%Q /\ (0 <= (p0-p1)*(s0-s1))%Q)
- | Th_coqc | mapped_not_wrapped n2_no_living_fixed_point | 1 |
-| Theta/P.34.v1 | R1T-0034 | Theta | P | Lemma qsign_exists : forall x : Q, exists e : Q, (e*e == 1)%Q /\ (0 <= e*x)%Q. | Th_coqc | mapped_not_wrapped qsign_exists | 1 |
+ | Th_coqc | closed n2_no_living_fixed_point | 1 |
+| Theta/P.34.v1 | R1T-0034 | Theta | P | Lemma qsign_exists : forall x : Q, exists e : Q, (e*e == 1)%Q /\ (0 <= e*x)%Q. | Th_coqc | closed qsign_exists | 1 |
 | Theta/P.35.v1 | R1T-0035 | Theta | P | Theorem cyclic_product_switching_invariant_triangle :
   forall a01 a12 a20 eps0 eps1 eps2 : Q,
-    (eps0*eps0  | Th_coqc | mapped_not_wrapped cyclic_product_switching_invariant_triangle | 1 |
+    (eps0*eps0  | Th_coqc | closed cyclic_product_switching_invariant_triangle | 1 |
 | Theta/P.36.v1 | R1T-0036 | Theta | P | Theorem cyclic_product_switching_invariant_C4 :
   forall a01 a12 a23 a30 eps0 eps1 eps2 eps3 : Q,
-    (eps0*ep | Th_coqc | mapped_not_wrapped cyclic_product_switching_invariant_C4 | 1 |
+    (eps0*ep | Th_coqc | closed cyclic_product_switching_invariant_C4 | 1 |
 | Theta/P.37.v1 | R1T-0037 | Theta | P | Theorem tree_gauge_fixable_P3 :
   forall a01 a12 : Q,
     exists eps0 eps1 eps2 : Q,
-      (eps0*eps0 == 1)%Q  | Th_coqc | mapped_not_wrapped tree_gauge_fixable_P3 | 1 |
+      (eps0*eps0 == 1)%Q  | Th_coqc | closed tree_gauge_fixable_P3 | 1 |
 | Theta/P.38.v1 | R1T-0038 | Theta | P | Theorem tree_gauge_fixable_star3 :
   forall a01 a02 : Q,
     exists eps0 eps1 eps2 : Q,
-      (eps0*eps0 == 1) | Th_coqc | mapped_not_wrapped tree_gauge_fixable_star3 | 1 |
+      (eps0*eps0 == 1) | Th_coqc | closed tree_gauge_fixable_star3 | 1 |
 | Theta/P.39.v1 | R1T-0039 | Theta | P | Theorem tree_gauge_fixable_P4 :
   forall a01 a12 a23 : Q,
     exists eps0 eps1 eps2 eps3 : Q,
-      (eps0*eps0 | Th_coqc | mapped_not_wrapped tree_gauge_fixable_P4 | 1 |
+      (eps0*eps0 | Th_coqc | closed tree_gauge_fixable_P4 | 1 |
 | Theta/P.40.v1 | R1T-0040 | Theta | P | Theorem tree_gauge_fixable_star4 :
   forall a01 a02 a03 : Q,
     exists eps0 eps1 eps2 eps3 : Q,
-      (eps0*e | Th_coqc | mapped_not_wrapped tree_gauge_fixable_star4 | 1 |
+      (eps0*e | Th_coqc | closed tree_gauge_fixable_star4 | 1 |
 | Theta/P.41.v1 | R1T-0041 | Theta | P | Theorem quartet_rescale_invariant :
   forall alpha0 alpha1 beta1 beta2 v01 v12 v02 v11 : Cq,
-    (cre alpha0 * | Th_coqc | mapped_not_wrapped quartet_rescale_invariant | 1 |
+    (cre alpha0 * | Th_coqc | closed quartet_rescale_invariant | 1 |
 | Theta/P.42.v1 | R1T-0042 | Theta | P | Theorem quartet_real_scalar_rescale :
   forall lam : Q, forall v01 v12 v02 v11 : Cq,
-    (quartetJraw (Cmul (m | Th_coqc | mapped_not_wrapped quartet_real_scalar_rescale | 1 |
+    (quartetJraw (Cmul (m | Th_coqc | closed quartet_real_scalar_rescale | 1 |
 | Theta/P.43.v1 | R1T-0043 | Theta | P | Theorem family_B_K3_exact :
   forall a1 a2 a3 : Q,
-    (cim (Cmul (Cmul (zB a1) (zB a2)) (Cconj (zB a3))) == a | Th_coqc | mapped_not_wrapped family_B_K3_exact | 1 |
+    (cim (Cmul (Cmul (zB a1) (zB a2)) (Cconj (zB a3))) == a | Th_coqc | closed family_B_K3_exact | 1 |
 | Theta/P.44.v1 | R1T-0044 | Theta | P | Theorem family_B_C4_vanishes :
   forall a01 a12 a23 a30 : Q,
     (cim (Cmul (Cmul (zB a01) (zB a23))
-          | Th_coqc | mapped_not_wrapped family_B_C4_vanishes | 1 |
+          | Th_coqc | closed family_B_C4_vanishes | 1 |
 | Theta/P.45.v1 | R1T-0045 | Theta | P | Theorem family_C_rank1_vanishes :
   forall Za Zb Zc Zd : Cq,
     (cim (Cmul (Cmul (Nij Za Zb) (Nij Zc Zd))
-    | Th_coqc | mapped_not_wrapped family_C_rank1_vanishes | 1 |
+    | Th_coqc | closed family_C_rank1_vanishes | 1 |
 | Theta/P.46.v1 | R1T-0046 | Theta | P | Theorem family_A_not_switching_invariant :
   exists eps0 eps1 eps2 eps3 : Q,
-    (eps0*eps0 == 1)%Q /\ (eps1*e | Th_coqc | mapped_not_wrapped family_A_not_switching_invariant | 1 |
+    (eps0*eps0 == 1)%Q /\ (eps1*e | Th_coqc | closed family_A_not_switching_invariant | 1 |
 | Theta/P.47.v1 | R1T-0047 | Theta | P | Theorem family_A_witness_original_value :
-  (PA 1 2 3 4 5 6 7 8 == 188)%Q. | Th_coqc | mapped_not_wrapped family_A_witness_original_value | 1 |
+  (PA 1 2 3 4 5 6 7 8 == 188)%Q. | Th_coqc | closed family_A_witness_original_value | 1 |
 | Theta/P.48.v1 | R1T-0048 | Theta | P | Theorem family_A_witness_switched_value :
-  (PA 1 2 3 4 5 (-6) 7 (-8) == 144)%Q. | Th_coqc | mapped_not_wrapped family_A_witness_switched_value | 1 |
+  (PA 1 2 3 4 5 (-6) 7 (-8) == 144)%Q. | Th_coqc | closed family_A_witness_switched_value | 1 |
 | Theta/P.49.v1 | R1T-0049 | Theta | P | Theorem skew_source_switching_covariant :
   forall Phi_i Phi_j Psi_i Psi_j Di Dj : Q,
-    (Di*Di == 1)%Q -> (D | Th_coqc | mapped_not_wrapped skew_source_switching_covariant | 1 |
+    (Di*Di == 1)%Q -> (D | Th_coqc | closed skew_source_switching_covariant | 1 |
 | Theta/P.50.v1 | R1T-0050 | Theta | P | Theorem symmetric_source_switched_value :
-  (sQ_switched 1 (-1) 1 2 3 4 == 21)%Q. | Th_coqc | mapped_not_wrapped symmetric_source_switched_value | 1 |
+  (sQ_switched 1 (-1) 1 2 3 4 == 21)%Q. | Th_coqc | closed symmetric_source_switched_value | 1 |
 | Theta/P.51.v1 | R1T-0051 | Theta | P | Theorem symmetric_source_naive_covariant_prediction :
-  (1 * (-1) * sQ 1 2 3 4 == -1)%Q. | Th_coqc | mapped_not_wrapped symmetric_source_naive_covariant_prediction | 1 |
+  (1 * (-1) * sQ 1 2 3 4 == -1)%Q. | Th_coqc | closed symmetric_source_naive_covariant_prediction | 1 |
 | Theta/P.52.v1 | R1T-0052 | Theta | P | Theorem symmetric_source_not_switching_covariant :
-  ~ (sQ_switched 1 (-1) 1 2 3 4 == 1 * (-1) * sQ 1 2 3 4)%Q | Th_coqc | mapped_not_wrapped symmetric_source_not_switching_covariant | 1 |
+  ~ (sQ_switched 1 (-1) 1 2 3 4 == 1 * (-1) * sQ 1 2 3 4)%Q | Th_coqc | closed symmetric_source_not_switching_covariant | 1 |
 | Theta/P.53.v1 | R1T-0053 | Theta | P | Theorem c4_reversal_is_gauge_witness :
   exists eps0 eps1 eps2 eps3 : Q,
-    (eps0*eps0 == 1)%Q /\ (eps1*eps1  | Th_coqc | mapped_not_wrapped c4_reversal_is_gauge_witness | 1 |
+    (eps0*eps0 == 1)%Q /\ (eps1*eps1  | Th_coqc | closed c4_reversal_is_gauge_witness | 1 |
 | Theta/P.54.v1 | R1T-0054 | Theta | P | Theorem k3_no_uniform_reversal_gauge :
   forall eps0 eps1 eps2 : Q,
-    (eps0*eps0 == 1)%Q -> (eps1*eps1 == 1) | Th_coqc | mapped_not_wrapped k3_no_uniform_reversal_gauge | 1 |
+    (eps0*eps0 == 1)%Q -> (eps1*eps1 == 1) | Th_coqc | closed k3_no_uniform_reversal_gauge | 1 |
 | Theta/P.55.v1 | R1T-0055 | Theta | P | Theorem k3_invariance_forces_uniform :
   forall w01 w02 w12 : Q,
-    (- w02 == - w12)%Q ->      (* invariance  | Th_coqc | mapped_not_wrapped k3_invariance_forces_uniform | 1 |
+    (- w02 == - w12)%Q ->      (* invariance  | Th_coqc | closed k3_invariance_forces_uniform | 1 |
 | Theta/P.56.v1 | R1T-0056 | Theta | P | Theorem p3_invariance_forces_uniform :
   forall w01 w12 : Q,
-    (- w01 == - w12)%Q ->      (* invariance unde | Th_coqc | mapped_not_wrapped p3_invariance_forces_uniform | 1 |
+    (- w01 == - w12)%Q ->      (* invariance unde | Th_coqc | closed p3_invariance_forces_uniform | 1 |
 | Theta/P.57.v1 | R1T-0057 | Theta | P | Theorem k3_spectrum_zero :
   forall w : Q,
     (2*w*1 + (-w)*1 + (-w)*1 == 0*1)%Q /\
-    ((-w)*1 + 2*w*1 + (-w | Th_coqc | mapped_not_wrapped k3_spectrum_zero | 1 |
+    ((-w)*1 + 2*w*1 + (-w | Th_coqc | closed k3_spectrum_zero | 1 |
 | Theta/P.58.v1 | R1T-0058 | Theta | P | Theorem k3_spectrum_top_a :   (* eigenvector (1,-1,0), eigenvalue 3w *)
   forall w : Q,
-    (2*w*1 + (-w)*(-1) | Th_coqc | mapped_not_wrapped k3_spectrum_top_a | 1 |
+    (2*w*1 + (-w)*(-1) | Th_coqc | closed k3_spectrum_top_a | 1 |
 | Theta/P.59.v1 | R1T-0059 | Theta | P | Theorem k3_spectrum_top_b :   (* eigenvector (1,0,-1), SAME eigenvalue 3w *)
   forall w : Q,
-    (2*w*1 + (-w) | Th_coqc | mapped_not_wrapped k3_spectrum_top_b | 1 |
+    (2*w*1 + (-w) | Th_coqc | closed k3_spectrum_top_b | 1 |
 | Theta/P.60.v1 | R1T-0060 | Theta | P | Theorem p3_spectrum_zero :
   forall w : Q,
     (w*1 + (-w)*1 + 0*1 == 0*1)%Q /\
-    ((-w)*1 + 2*w*1 + (-w)*1 = | Th_coqc | mapped_not_wrapped p3_spectrum_zero | 1 |
+    ((-w)*1 + 2*w*1 + (-w)*1 = | Th_coqc | closed p3_spectrum_zero | 1 |
 | Theta/P.61.v1 | R1T-0061 | Theta | P | Theorem p3_spectrum_mid :     (* eigenvector (1,0,-1), eigenvalue w *)
   forall w : Q,
-    (w*1 + (-w)*0 + 0*( | Th_coqc | mapped_not_wrapped p3_spectrum_mid | 1 |
+    (w*1 + (-w)*0 + 0*( | Th_coqc | closed p3_spectrum_mid | 1 |
 | Theta/P.62.v1 | R1T-0062 | Theta | P | Theorem p3_spectrum_top :     (* eigenvector (1,-2,1), eigenvalue 3w *)
   forall w : Q,
-    (w*1 + (-w)*(-2) + | Th_coqc | mapped_not_wrapped p3_spectrum_top | 1 |
+    (w*1 + (-w)*(-2) + | Th_coqc | closed p3_spectrum_top | 1 |
 | Theta/P.63.v1 | R1T-0063 | Theta | P | Theorem p3_levels_distinct :
   forall w : Q, (0 < w)%Q ->
-    ~ (0 == w)%Q /\ ~ (0 == 3*w)%Q /\ ~ (w == 3*w)%Q | Th_coqc | mapped_not_wrapped p3_levels_distinct | 1 |
+    ~ (0 == w)%Q /\ ~ (0 == 3*w)%Q /\ ~ (w == 3*w)%Q | Th_coqc | closed p3_levels_distinct | 1 |
 | Theta/P.64.v1 | R1T-0064 | Theta | P | Theorem edge_source_bilinear_01 :
   forall p0 p1 s0 s1 : Q,
-    (p0*s0 - p0*s1 - p1*s0 + p1*s1 == (p0 - p1) *  | Th_coqc | mapped_not_wrapped edge_source_bilinear_01 | 1 |
+    (p0*s0 - p0*s1 - p1*s0 + p1*s1 == (p0 - p1) *  | Th_coqc | closed edge_source_bilinear_01 | 1 |
 | Theta/P.65.v1 | R1T-0065 | Theta | P | Theorem edge_source_bilinear_02 :
   forall p0 p2 s0 s2 : Q,
-    (p0*s0 - p0*s2 - p2*s0 + p2*s2 == (p0 - p2) *  | Th_coqc | mapped_not_wrapped edge_source_bilinear_02 | 1 |
+    (p0*s0 - p0*s2 - p2*s0 + p2*s2 == (p0 - p2) *  | Th_coqc | closed edge_source_bilinear_02 | 1 |
 | Theta/P.66.v1 | R1T-0066 | Theta | P | Theorem edge_source_bilinear_12 :
   forall p1 p2 s1 s2 : Q,
-    (p1*s1 - p1*s2 - p2*s1 + p2*s2 == (p1 - p2) *  | Th_coqc | mapped_not_wrapped edge_source_bilinear_12 | 1 |
-| Theta/P.67.v1 | R1T-0067 | Theta | P | Lemma Qmult_pos_pos : forall a b : Q, (0 < a)%Q -> (0 < b)%Q -> (0 < a * b)%Q. | Th_coqc | mapped_not_wrapped Qmult_pos_pos | 1 |
-| Theta/P.68.v1 | R1T-0068 | Theta | P | Lemma Qsquare_nonneg : forall d : Q, (0 <= d * d)%Q. | Th_coqc | mapped_not_wrapped Qsquare_nonneg | 1 |
+    (p1*s1 - p1*s2 - p2*s1 + p2*s2 == (p1 - p2) *  | Th_coqc | closed edge_source_bilinear_12 | 1 |
+| Theta/P.67.v1 | R1T-0067 | Theta | P | Lemma Qmult_pos_pos : forall a b : Q, (0 < a)%Q -> (0 < b)%Q -> (0 < a * b)%Q. | Th_coqc | closed Qmult_pos_pos | 1 |
+| Theta/P.68.v1 | R1T-0068 | Theta | P | Lemma Qsquare_nonneg : forall d : Q, (0 <= d * d)%Q. | Th_coqc | closed Qsquare_nonneg | 1 |
 | Theta/P.69.v1 | R1T-0069 | Theta | P | Theorem clipped_stationarity_absent :
   forall mu K s w : Q,
-    (0 < mu)%Q -> (0 < K)%Q -> (0 <= s)%Q -> (0 < | Th_coqc | mapped_not_wrapped clipped_stationarity_absent | 1 |
+    (0 < mu)%Q -> (0 < K)%Q -> (0 <= s)%Q -> (0 < | Th_coqc | closed clipped_stationarity_absent | 1 |
 | Theta/P.70.v1 | R1T-0070 | Theta | P | Theorem clipped_stationarity_present :
   forall mu K s w wstar : Q,
-    (0 < mu)%Q -> (0 < K)%Q -> (s < 0)%Q - | Th_coqc | mapped_not_wrapped clipped_stationarity_present | 1 |
+    (0 < mu)%Q -> (0 < K)%Q -> (s < 0)%Q - | Th_coqc | closed clipped_stationarity_present | 1 |
 | Theta/P.71.v1 | R1T-0071 | Theta | P | Theorem discordance_complement_flip :
   forall pi pj si sj : Q,
-    ((pi - pj) * ((- si) - (- sj)) == - ((pi - | Th_coqc | mapped_not_wrapped discordance_complement_flip | 1 |
+    ((pi - pj) * ((- si) - (- sj)) == - ((pi - | Th_coqc | closed discordance_complement_flip | 1 |
 | Theta/P.72.v1 | R1T-0072 | Theta | P | Theorem witness_total_disorder_K3 :
   ((1 - 2) * (3 - 2) < 0)%Q /\
   ((1 - 3) * (3 - 1) < 0)%Q /\
-  ((2 - 3) * | Th_coqc | mapped_not_wrapped witness_total_disorder_K3 | 1 |
+  ((2 - 3) * | Th_coqc | closed witness_total_disorder_K3 | 1 |
 | Theta/P.73.v1 | R1T-0073 | Theta | P | Theorem witness_partial_disorder_P3 :
   ((3 - 1) * ((-2) - (-1)) < 0)%Q /\
-  (0 < (3 - 2) * ((-2) - (-5)))%Q / | Th_coqc | mapped_not_wrapped witness_partial_disorder_P3 | 1 |
+  (0 < (3 - 2) * ((-2) - (-5)))%Q / | Th_coqc | closed witness_partial_disorder_P3 | 1 |
 | Theta/P.74.v1 | R1T-0074 | Theta | P | Lemma quartet_decomp :
   forall a b c d e f g h : Q,
-  (cim (Cmul (Cmul (mkC a b) (mkC g h)) (Cmul (Cconj (mkC | Th_coqc | mapped_not_wrapped quartet_decomp | 1 |
+  (cim (Cmul (Cmul (mkC a b) (mkC g h)) (Cmul (Cconj (mkC | Th_coqc | closed quartet_decomp | 1 |
 | Theta/P.75.v1 | R1T-0075 | Theta | P | Theorem two_gen_quartet_im_vanishes :
   forall a b c d e f g h : Q,
   (a*c + b*d + (e*g + f*h) == 0)%Q ->
-  (( | Th_coqc | mapped_not_wrapped two_gen_quartet_im_vanishes | 1 |
+  (( | Th_coqc | closed two_gen_quartet_im_vanishes | 1 |
 | Theta/P.76.v1 | R1T-0076 | Theta | P | Theorem quartet_conj_flips_sign :
   forall z1 z2 z3 z4 : Cq,
   (cim (Cmul (Cmul (Cconj z1) (Cconj z2))
-        | Th_coqc | mapped_not_wrapped quartet_conj_flips_sign | 1 |
-| Theta/P.77.v1 | R1T-0077 | Theta | P | Theorem witness_unitary : unitary3 V3w = true. | Th_coqc | mapped_not_wrapped witness_unitary | 1 |
-| Theta/P.78.v1 | R1T-0078 | Theta | P | Theorem witness_J_value : Qeq_bool (quartetJ V3w) (110592 # 4151485) = true. | Th_coqc | mapped_not_wrapped witness_J_value | 1 |
-| Theta/P.79.v1 | R1T-0079 | Theta | P | Theorem witness_J_nonzero : Qeq_bool (quartetJ V3w) 0 = false. | Th_coqc | mapped_not_wrapped witness_J_nonzero | 1 |
-| Theta/P.80.v1 | R1T-0080 | Theta | P | Theorem witness_cp_unitary : unitary3 (conj3 V3w) = true. | Th_coqc | mapped_not_wrapped witness_cp_unitary | 1 |
-| Theta/P.81.v1 | R1T-0081 | Theta | P | Theorem witness_cp_flips : Qeq_bool (quartetJ (conj3 V3w)) (- (110592 # 4151485)) = true. | Th_coqc | mapped_not_wrapped witness_cp_flips | 1 |
-| Theta/P.82.v1 | R1T-0082 | Theta | P | Theorem neutral_cp_fixed : meq3 (conj3 I3) I3 = true. | Th_coqc | mapped_not_wrapped neutral_cp_fixed | 1 |
-| Theta/P.83.v1 | R1T-0083 | Theta | P | Theorem neutral_unitary : unitary3 I3 = true. | Th_coqc | mapped_not_wrapped neutral_unitary | 1 |
-| Theta/P.84.v1 | R1T-0084 | Theta | P | Theorem neutral_J_zero : Qeq_bool (quartetJ I3) 0 = true. | Th_coqc | mapped_not_wrapped neutral_J_zero | 1 |
+        | Th_coqc | closed quartet_conj_flips_sign | 1 |
+| Theta/P.77.v1 | R1T-0077 | Theta | P | Theorem witness_unitary : unitary3 V3w = true. | Th_coqc | closed witness_unitary | 1 |
+| Theta/P.78.v1 | R1T-0078 | Theta | P | Theorem witness_J_value : Qeq_bool (quartetJ V3w) (110592 # 4151485) = true. | Th_coqc | closed witness_J_value | 1 |
+| Theta/P.79.v1 | R1T-0079 | Theta | P | Theorem witness_J_nonzero : Qeq_bool (quartetJ V3w) 0 = false. | Th_coqc | closed witness_J_nonzero | 1 |
+| Theta/P.80.v1 | R1T-0080 | Theta | P | Theorem witness_cp_unitary : unitary3 (conj3 V3w) = true. | Th_coqc | closed witness_cp_unitary | 1 |
+| Theta/P.81.v1 | R1T-0081 | Theta | P | Theorem witness_cp_flips : Qeq_bool (quartetJ (conj3 V3w)) (- (110592 # 4151485)) = true. | Th_coqc | closed witness_cp_flips | 1 |
+| Theta/P.82.v1 | R1T-0082 | Theta | P | Theorem neutral_cp_fixed : meq3 (conj3 I3) I3 = true. | Th_coqc | closed neutral_cp_fixed | 1 |
+| Theta/P.83.v1 | R1T-0083 | Theta | P | Theorem neutral_unitary : unitary3 I3 = true. | Th_coqc | closed neutral_unitary | 1 |
+| Theta/P.84.v1 | R1T-0084 | Theta | P | Theorem neutral_J_zero : Qeq_bool (quartetJ I3) 0 = true. | Th_coqc | closed neutral_J_zero | 1 |
 | Theta/P.85.v1 | R1T-0085 | Theta | P | Theorem three_values_realized :
   sgnQ (quartetJ V3w) = SPlus
   /\ sgnQ (quartetJ (conj3 V3w)) = SMinus
-  /\ s | Th_coqc | mapped_not_wrapped three_values_realized | 1 |
+  /\ s | Th_coqc | closed three_values_realized | 1 |
 | Theta/P.86.v1 | R1T-0086 | Theta | P | Theorem values_pairwise_distinct :
-  SPlus <> SMinus /\ SPlus <> SZero /\ SMinus <> SZero. | Th_coqc | mapped_not_wrapped values_pairwise_distinct | 1 |
+  SPlus <> SMinus /\ SPlus <> SZero /\ SMinus <> SZero. | Th_coqc | closed values_pairwise_distinct | 1 |
 | CMC/M.01.v1 | R1C-0001 | CMC | M | Theorem decomposed_bridge_obligation :
-  CMC_Bridge_Obligation. | Ax | mapped_not_wrapped decomposed_bridge_obligation | 1 |
+  CMC_Bridge_Obligation. | Ax | axioms decomposed_bridge_obligation | 1 |
 | CMC/M.02.v1 | R1C-0002 | CMC | M | Theorem decomposed_no_refuter :
   forall g : TransportReadout,
-    CMC_Refuter_Burden g -> False. | Ax | mapped_not_wrapped decomposed_no_refuter | 1 |
+    CMC_Refuter_Burden g -> False. | Ax | axioms decomposed_no_refuter | 1 |
 | CMC/M.03.v1 | R1C-0003 | CMC | M | Theorem closure_free_implies_no_named_closure :
   forall g : TransportReadout,
-    ClosureFree g -> NoNamedClo | Th_coqc | mapped_not_wrapped closure_free_implies_no_named_closure | 1 |
+    ClosureFree g -> NoNamedClo | Th_coqc | closed closure_free_implies_no_named_closure | 1 |
 | CMC/M.04.v1 | R1C-0004 | CMC | M | Theorem no_named_closure_implies_closure_free :
   forall g : TransportReadout,
-    NoNamedClosure g -> Closure | Th_coqc | mapped_not_wrapped no_named_closure_implies_closure_free | 1 |
+    NoNamedClosure g -> Closure | Th_coqc | closed no_named_closure_implies_closure_free | 1 |
 | CMC/M.05.v1 | R1C-0005 | CMC | M | Theorem closure_free_iff_no_named_closure :
   forall g : TransportReadout,
-    ClosureFree g <-> NoNamedClosur | Th_coqc | mapped_not_wrapped closure_free_iff_no_named_closure | 1 |
+    ClosureFree g <-> NoNamedClosur | Th_coqc | closed closure_free_iff_no_named_closure | 1 |
 | CMC/M.06.v1 | R1C-0006 | CMC | M | Theorem refuter_burden_expands_to_named_absence :
   forall g : TransportReadout,
     CMC_Refuter_Burden g ->
-  | Th_coqc | mapped_not_wrapped refuter_burden_expands_to_named_absence | 1 |
+  | Th_coqc | closed refuter_burden_expands_to_named_absence | 1 |
 | CMC/M.07.v1 | R1C-0007 | CMC | M | Theorem independent_exhaustion_blocks_refuter :
   forall s : IndependentTransportSignature,
-    ClosureExhaust | Th_coqc | mapped_not_wrapped independent_exhaustion_blocks_refuter | 1 |
+    ClosureExhaust | Th_coqc | closed independent_exhaustion_blocks_refuter | 1 |
 | CMC/M.08.v1 | R1C-0008 | CMC | M | Theorem retained_definition_not_closure_definition :
-  RetainedDiffusive_independent retained_without_closure_ | Th_coqc | mapped_not_wrapped retained_definition_not_closure_definition | 1 |
+  RetainedDiffusive_independent retained_without_closure_ | Th_coqc | closed retained_definition_not_closure_definition | 1 |
 | CMC/M.09.v1 | R1C-0009 | CMC | M | Theorem finite_speed_definition_not_closure_definition :
-  IntrinsicFiniteSpeed_independent finite_speed_witho | Th_coqc | mapped_not_wrapped finite_speed_definition_not_closure_definition | 1 |
+  IntrinsicFiniteSpeed_independent finite_speed_witho | Th_coqc | closed finite_speed_definition_not_closure_definition | 1 |
 | CMC/M.10.v1 | R1C-0010 | CMC | M | Theorem cattaneo_independent_target_has_closure :
-  CMC_TargetClass_independent cattaneo_independent_signature | Th_coqc | mapped_not_wrapped cattaneo_independent_target_has_closure | 1 |
+  CMC_TargetClass_independent cattaneo_independent_signature | Th_coqc | closed cattaneo_independent_target_has_closure | 1 |
 | CMC/M.11.v1 | R1C-0011 | CMC | M | Theorem fourier_independent_is_not_target_class :
-  ~ CMC_TargetClass_independent fourier_independent_signatur | Th_coqc | mapped_not_wrapped fourier_independent_is_not_target_class | 1 |
+  ~ CMC_TargetClass_independent fourier_independent_signatur | Th_coqc | closed fourier_independent_is_not_target_class | 1 |
 | CMC/M.12.v1 | R1C-0012 | CMC | M | Theorem class_witness_has_nonzero_closure :
   forall (c : WitnessModelClass) (g : TransportReadout),
-    Class | Th_coqc | mapped_not_wrapped class_witness_has_nonzero_closure | 1 |
+    Class | Th_coqc | closed class_witness_has_nonzero_closure | 1 |
 | CMC/M.13.v1 | R1C-0013 | CMC | M | Theorem class_witness_not_closure_free :
   forall (c : WitnessModelClass) (g : TransportReadout),
-    ClassWit | Th_coqc | mapped_not_wrapped class_witness_not_closure_free | 1 |
+    ClassWit | Th_coqc | closed class_witness_not_closure_free | 1 |
 | CMC/M.14.v1 | R1C-0014 | CMC | M | Theorem class_witness_blocks_refuter :
   forall (c : WitnessModelClass) (g : TransportReadout),
-    ClassWitne | Th_coqc | mapped_not_wrapped class_witness_blocks_refuter | 1 |
+    ClassWitne | Th_coqc | closed class_witness_blocks_refuter | 1 |
 | CMC/M.15.v1 | R1C-0015 | CMC | M | Theorem fourier_memoryless_face_not_target :
   forall g : TransportReadout,
-    FourierMemorylessFace g -> ~ C | Th_coqc | mapped_not_wrapped fourier_memoryless_face_not_target | 1 |
+    FourierMemorylessFace g -> ~ C | Th_coqc | closed fourier_memoryless_face_not_target | 1 |
 | CMC/P.01.v1 | R1C-0016 | CMC | P | Theorem Retention_Lemma_certified :
   forall r : CertifiedPhysicalReadout,
-    retained_diffusive (certified_g | Th_coqc | mapped_not_wrapped Retention_Lemma_certified | 1 |
+    retained_diffusive (certified_g | Th_coqc | closed Retention_Lemma_certified | 1 |
 | CMC/P.02.v1 | R1C-0017 | CMC | P | Theorem Finite_Speed_Lemma_certified :
   forall r : CertifiedPhysicalReadout,
-    intrinsic_finite_speed (cert | Th_coqc | mapped_not_wrapped Finite_Speed_Lemma_certified | 1 |
+    intrinsic_finite_speed (cert | Th_coqc | closed Finite_Speed_Lemma_certified | 1 |
 | CMC/P.03.v1 | R1C-0018 | CMC | P | Theorem Closure_Exhaustion_Lemma_certified :
   forall r : CertifiedPhysicalReadout,
-  forall kr ks : CarrierKi | Th_coqc | mapped_not_wrapped Closure_Exhaustion_Lemma_certified | 1 |
+  forall kr ks : CarrierKi | Th_coqc | closed Closure_Exhaustion_Lemma_certified | 1 |
 | CMC/P.04.v1 | R1C-0019 | CMC | P | Theorem certified_physical_readout_has_nonzero_closure :
   forall r : CertifiedPhysicalReadout,
-    NonzeroClo | Th_coqc | mapped_not_wrapped certified_physical_readout_has_nonzero_closure | 1 |
+    NonzeroClo | Th_coqc | closed certified_physical_readout_has_nonzero_closure | 1 |
 | CMC/P.05.v1 | R1C-0020 | CMC | P | Theorem certified_physical_readout_blocks_refuter :
   forall r : CertifiedPhysicalReadout,
-    CMC_Refuter_Bur | Th_coqc | mapped_not_wrapped certified_physical_readout_blocks_refuter | 1 |
+    CMC_Refuter_Bur | Th_coqc | closed certified_physical_readout_blocks_refuter | 1 |
 | CMC/P.06.v1 | R1C-0021 | CMC | P | Theorem cattaneo_telegraph_closure_witness :
   forall r : CertifiedPhysicalReadout,
-    CattaneoTelegraphCerti | Th_coqc | mapped_not_wrapped cattaneo_telegraph_closure_witness | 1 |
+    CattaneoTelegraphCerti | Th_coqc | closed cattaneo_telegraph_closure_witness | 1 |
 | CMC/P.07.v1 | R1C-0022 | CMC | P | Theorem cattaneo_telegraph_blocks_refuter :
   forall r : CertifiedPhysicalReadout,
-    CattaneoTelegraphCertif | Th_coqc | mapped_not_wrapped cattaneo_telegraph_blocks_refuter | 1 |
+    CattaneoTelegraphCertif | Th_coqc | closed cattaneo_telegraph_blocks_refuter | 1 |
 | CMC/P.08.v1 | R1C-0023 | CMC | P | Theorem kinetic_transport_closure_witness :
   forall r : CertifiedPhysicalReadout,
-    KineticTransportCertifi | Th_coqc | mapped_not_wrapped kinetic_transport_closure_witness | 1 |
+    KineticTransportCertifi | Th_coqc | closed kinetic_transport_closure_witness | 1 |
 | CMC/P.09.v1 | R1C-0024 | CMC | P | Theorem kinetic_transport_blocks_refuter :
   forall r : CertifiedPhysicalReadout,
-    KineticTransportCertifie | Th_coqc | mapped_not_wrapped kinetic_transport_blocks_refuter | 1 |
+    KineticTransportCertifie | Th_coqc | closed kinetic_transport_blocks_refuter | 1 |
 | CMC/P.10.v1 | R1C-0025 | CMC | P | Theorem flux_limited_diffusion_closure_witness :
   forall r : CertifiedPhysicalReadout,
-    FluxLimitedDiffusi | Th_coqc | mapped_not_wrapped flux_limited_diffusion_closure_witness | 1 |
+    FluxLimitedDiffusi | Th_coqc | closed flux_limited_diffusion_closure_witness | 1 |
 | CMC/P.11.v1 | R1C-0026 | CMC | P | Theorem flux_limited_diffusion_blocks_refuter :
   forall r : CertifiedPhysicalReadout,
-    FluxLimitedDiffusio | Th_coqc | mapped_not_wrapped flux_limited_diffusion_blocks_refuter | 1 |
+    FluxLimitedDiffusio | Th_coqc | closed flux_limited_diffusion_blocks_refuter | 1 |
 | CMC/P.12.v1 | R1C-0027 | CMC | P | Theorem wave_bounded_propagator_closure_witness :
   forall r : CertifiedPhysicalReadout,
-    WaveBoundedPropag | Th_coqc | mapped_not_wrapped wave_bounded_propagator_closure_witness | 1 |
+    WaveBoundedPropag | Th_coqc | closed wave_bounded_propagator_closure_witness | 1 |
 | CMC/P.13.v1 | R1C-0028 | CMC | P | Theorem wave_bounded_propagator_blocks_refuter :
   forall r : CertifiedPhysicalReadout,
-    WaveBoundedPropaga | Th_coqc | mapped_not_wrapped wave_bounded_propagator_blocks_refuter | 1 |
+    WaveBoundedPropaga | Th_coqc | closed wave_bounded_propagator_blocks_refuter | 1 |
 | CMC/P.14.v1 | R1C-0029 | CMC | P | Theorem fourier_heat_singular_memoryless_face_not_finite_speed_target :
   forall g : TransportReadout,
-    Fou | Th_coqc | mapped_not_wrapped fourier_heat_singular_memoryless_face_not_finite_speed_target | 1 |
+    Fou | Th_coqc | closed fourier_heat_singular_memoryless_face_not_finite_speed_target | 1 |
 | CMC/P.15.v1 | R1C-0030 | CMC | P | Theorem fourier_heat_singular_memoryless_face_not_refuter :
   forall g : TransportReadout,
-    FourierHeatSing | Th_coqc | mapped_not_wrapped fourier_heat_singular_memoryless_face_not_refuter | 1 |
+    FourierHeatSing | Th_coqc | closed fourier_heat_singular_memoryless_face_not_refuter | 1 |
 | CMC/M.16.v1 | R1C-0031 | CMC | M | Theorem nonzero_closure_not_closure_free :
   forall g : TransportReadout,
-    NonzeroClosure g -> ~ ClosureFre | Th_coqc | mapped_not_wrapped nonzero_closure_not_closure_free | 1 |
+    NonzeroClosure g -> ~ ClosureFre | Th_coqc | closed nonzero_closure_not_closure_free | 1 |
 | CMC/M.17.v1 | R1C-0032 | CMC | M | Theorem bridge_obligation_blocks_refuter :
   CMC_Bridge_Obligation ->
   forall g : TransportReadout,
-    CMC_R | Th_coqc | mapped_not_wrapped bridge_obligation_blocks_refuter | 1 |
+    CMC_R | Th_coqc | closed bridge_obligation_blocks_refuter | 1 |
 | CMC/M.18.v1 | R1C-0033 | CMC | M | Theorem cmc_no_refuter_under_axioms :
   forall g : TransportReadout,
-    CMC_Refuter_Burden g -> False. | Ax | mapped_not_wrapped cmc_no_refuter_under_axioms | 1 |
-| weld/E.11.v1 | EFFORT-v0.3-01 | weld | E | \text{uncertainty} \not\equiv \text{stochastic mechanism} \\ \text{stochastic mechanism} \not\equiv \text{othe | Dr | open_prop | 1 |
-| weld/H.13.v1 | EFFORT-v0.3-02 | weld | H | N_{ext} < \infty \;\not\Rightarrow\; N_{int} = N_{ext} | Dr | open_prop | 1 |
-| weld/M.15.v1 | EFFORT-v0.3-03 | weld | M | \mathfrak{M}_Q(r_n) := \{\, m \in \mathfrak{M}_Q^{adm} : O_Q^G(m) = r_n \,\} | Definition | definition | 1 |
-| weld/M.16.v1 | EFFORT-v0.3-04 | weld | M | CSML_Q(M) = \mathsf{PASS} \iff M \in \mathfrak{M}_Q^{adm} \wedge \mathrm{Asm}(M,Q)\ \text{is explicit} | Definition | definition | 1 |
-| weld/M.17.v1 | EFFORT-v0.3-05 | weld | M | SAL_Q^{strong}(n) = \mathsf{PASS} \iff \mathfrak{M}_Q(r_n) \subseteq \mathfrak{M}_Q^{stoch} | Definition | definition | 1 |
-| weld/M.18.v1 | EFFORT-v0.3-06 | weld | M | \mathfrak{M}_Q(r_n)\cap\mathfrak{M}_Q^{stoch}\neq\varnothing,\quad \mathfrak{M}_Q(r_n)\cap\mathfrak{M}_Q^{nons | Dr | open_prop | 1 |
-| weld/M.19.v1 | EFFORT-v0.3-07 | weld | M | CSML_Q(M) = \mathsf{PASS} \;\not\Rightarrow\; SAL_Q^{strong}(n) = \mathsf{PASS} | Dr | open_prop | 1 |
-| weld/M.20.v1 | EFFORT-v0.3-08 | weld | M | T_{R\to D}\circ F_R = F_D\circ T_{R\to D},\quad O_D\circ T_{R\to D}=O_R,\quad W^D_{Q,j}\circ T_{R\to D}=W^R_{Q | Dr | open_prop | 1 |
-| weld/M.21.v1 | EFFORT-v0.3-09 | weld | M | CDOL_Q(\mathcal{R}\to D) = \mathsf{PASS} \iff \exists\, T_{R\to D} : \text{Eq.\ (14) holds} | Definition | definition | 1 |
-| weld/M.22.v1 | EFFORT-v0.3-10 | weld | M | ECT_Q(e_n) \in \{E_0, E_1, E_2, E_3, E_4, \mathsf{HOLD}\} | Definition | definition | 1 |
-| weld/M.23.v1 | EFFORT-v0.3-11 | weld | M | SID_Q(n,m) \in \{\mathsf{SAME}_{mech}, \mathsf{EQUIV}_Q, \mathsf{DIFF}_Q, \mathsf{HOLD}\} | Definition | definition | 1 |
-| weld/M.24.v1 | EFFORT-v0.3-12 | weld | M | SID_Q(n,m) = \mathsf{EQUIV}_Q \;\not\Rightarrow\; \mathcal{G}_n = \mathcal{G}_m | Dr | open_prop | 1 |
-| weld/H.14.v1 | EFFORT-v0.3-13 | weld | H | A_n^Q := q_A(S_n, T_n, c_n; Q) | Definition | definition | 1 |
-| weld/H.15.v1 | EFFORT-v0.3-14 | weld | H | \mathfrak{I}_n^Q := \mathfrak{I}_Q(\mathcal{G}_n, A_n^Q, c_n) | Definition | definition | 1 |
-| weld/H.16.v1 | EFFORT-v0.3-15 | weld | H | SameTrial_Q(n,m)=1 \iff SID_Q(n,m)\in\{\mathsf{SAME}_{mech},\mathsf{EQUIV}_Q\},\ A_n^Q \sim_Q A_m^Q,\ \mathfra | Dr | open_prop | 1 |
-| weld/H.17.v1 | EFFORT-v0.3-16 | weld | H | \text{same source readout} \not\Rightarrow \text{same effective agent} \not\Rightarrow \text{same encounter} | Dr | open_prop | 1 |
-| weld/H.18.v1 | EFFORT-v0.3-17 | weld | H | ISW_Q(\mathcal{G},A,A';c) = \mathsf{PASS} \iff d_I^Q\big(O_I^Q\,\mathfrak{I}_Q(\mathcal{G},A,c),\, O_I^Q\,\mat | Definition | definition | 1 |
-| weld/H.19.v1 | EFFORT-v0.3-18 | weld | H | SID_Q(n,n{+}1)=\mathsf{SAME}_{mech},\quad A_{n+1}^Q \not\sim_Q A_n^Q,\quad ISW_Q(\mathcal{G}_n, A_n^Q, A_{n+1} | Definition | definition | 1 |
-| weld/H.20.v1 | EFFORT-v0.3-19 | weld | H | \mathfrak{I}_{n+1}^Q \not\sim_Q \mathfrak{I}_n^Q | Dr | open_prop | 1 |
-| weld/H.21.v1 | EFFORT-v0.3-20 | weld | H | SID_Q(n,n{+}1)=\mathsf{SAME}_{mech},\ A_{n+1}^Q \not\sim_Q A_n^Q,\ ISW_Q(\mathcal{G}_n, A_n^Q, A_{n+1}^Q; c_n) | Dr | open_prop | 1 |
-| EQ-015/H.38.v1 | EFFORT-v0.3-21 | EQ-015 | H | Y_{n+1}^{world} \to O_Q \to \mu_{n+1}^Q \to E_{n+1}^Q \to \mathrm{Retain}_Q \to A_{n+1}^Q | Dr | open_prop | 1 |
-| EQ-015/H.39.v1 | EFFORT-v0.3-22 | EQ-015 | H | RB_Q(n) = 1 \iff A_{n+1}^Q \not\sim_Q A_n^Q | Definition | definition | 1 |
-| A.5/H.20.v1 | EFFORT-v0.3-23 | A.5 | H | LC_Q(n) = \mathsf{PASS} \iff RB_Q(n)=1 \wedge \Lambda_Q(n) = \mathsf{PASS} | Definition | definition | 1 |
-| A.5/H.21.v1 | EFFORT-v0.3-24 | A.5 | H | IC_Q(n) = \mathsf{PASS} \iff LC_Q(n) = \mathsf{PASS} \wedge \Gamma_Q(n) > \tau_G | Definition | definition | 1 |
-| A.5/H.22.v1 | EFFORT-v0.3-25 | A.5 | H | \text{Exposure} \neq \text{Retained Revision} \neq \text{Certified Learning} \neq \text{Improvement} | Dr | open_prop | 1 |
-| weld/M.25.v1 | EFFORT-v0.3-26 | weld | M | ERG_D = \mathsf{PASS} \iff \exists\, u_a,u_b \in \mathcal{U}_D^{adm} : d_Q\big(R_D(s,u_a), R_D(s,u_b)\big) > \ | Dr | open_prop | 1 |
-| weld/M.26.v1 | EFFORT-v0.3-27 | weld | M | CER_Q = \mathsf{PASS} \iff ERG_D = \mathsf{PASS} \wedge ID_Q(u \to Y) = \mathsf{PASS} | Definition | definition | 1 |
-| A.5/H.23.v1 | EFFORT-v0.3-28 | A.5 | H | V_n^{learn}(u) \not\equiv V_n^{act}(u) | Dr | open_prop | 1 |
-| weld/M.27.v1 | EFFORT-v0.3-29 | weld | M | \mathbf{C}_n(u) = \big(C_n^{int}(u),\, C_n^{ext}(u),\, C_n^{opp}(u),\, C_n^{risk}(u)\big) | Definition | definition | 1 |
-| weld/M.28.v1 | EFFORT-v0.3-30 | weld | M | \mathcal{U}_{n+1}^{safe} := \Big\{ u \in \mathcal{U}_D^{adm} : \mathbf{C}_n(u) \preceq \mathbf{B}_n,\ \mathbb{ | Dr | open_prop | 1 |
-| weld/M.29.v1 | EFFORT-v0.3-31 | weld | M | \mathrm{Route}_Q(e_n) = \begin{cases} \mathcal{A}_M, & ECT_Q(e_n)=E_0,\\ \mathcal{A}_B, & ECT_Q(e_n)=E_1,\\ \m | Definition | definition | 1 |
-| weld/M.30.v1 | EFFORT-v0.3-32 | weld | M | D_{n+1} = \begin{cases} \mathsf{HOLD}, & \mathrm{Route}_Q(e_n)=\mathsf{HOLD},\\ \mathsf{STOP}, & \mathcal{U}_{ | Definition | definition | 1 |
-| weld/M.31.v1 | EFFORT-v0.3-33 | weld | M | \mathcal{U}_{n+1}^{safe} = \varnothing \;\Rightarrow\; \mathsf{STOP} | Dr | open_prop | 1 |
-| weld/M.32.v1 | EFFORT-v0.3-34 | weld | M | \text{Event} \to \text{Readout} \to \text{Conditional/Strong Stochastic License} \to \text{Event-Control Type} | Definition | definition | 1 |
-| weld/H.22.v1 | ECONEXP-v1.0-01 | weld | H | \text{credential} \neq \text{expertise} | Definition | definition | 0 |
-| weld/H.23.v1 | ECONEXP-v1.0-02 | weld | H | \text{project role} \neq \text{expertise type} \neq \text{AI system} | Definition | definition | 0 |
-| weld/H.24.v1 | ECONEXP-v1.0-03 | weld | H | \chi_i(Q,D,t)\in\{N,I,C\} | Definition | definition | 0 |
-| weld/H.25.v1 | ECONEXP-v1.0-04 | weld | H | P\!\left(\chi_{i,t+1}=b \mid \chi_{i,t}=a, A_t, P_t, W_t, R_t\right) | Open | open_prop | 0 |
-| weld/H.26.v1 | ECONEXP-v1.0-05 | weld | H | C_{N\rightarrow I}^{AI} < C_{N\rightarrow I}^{baseline} | Open | open_prop | 0 |
-| weld/H.27.v1 | ECONEXP-v1.0-06 | weld | H | \|\Delta C_{I\rightarrow C}^{AI}\| < \|\Delta C_{N\rightarrow I}^{AI}\| | Open | open_prop | 0 |
-| weld/H.28.v1 | ECONEXP-v1.0-07 | weld | H | \mathcal R_p = \left\langle E_p^{exp}, E_p^{int}, \mathcal M_p^{AI} \right\rangle \\ E_p^{int}=\varnothing \\  | Definition | definition | 0 |
-| weld/W.03.v1 | ECONEXP-v1.0-08 | weld | W | \Lambda_t = \sum_{c\in\mathcal C_t^{new}} w(c) | Definition | definition | 0 |
-| weld/W.04.v1 | ECONEXP-v1.0-09 | weld | W | \mu_t = V\!\left( E_t^C, E_t^I, W_t, D_t, R_t, A_{v,t} \right) | Definition | definition | 0 |
-| weld/W.05.v1 | ECONEXP-v1.0-10 | weld | W | B_{t+1} = \max\left\{ 0, (1-\delta_B)B_t+\Lambda_t-\mu_t \right\} | Dr | open_prop | 0 |
-| weld/W.06.v1 | ECONEXP-v1.0-11 | weld | W | B^* = \frac{\Lambda-\mu}{\delta_B} \qquad \text{for }\Lambda>\mu | Dr | open_prop | 0 |
-| weld/W.07.v1 | ECONEXP-v1.0-12 | weld | W | \frac{\partial B^*}{\partial A_g} = \frac{\partial \Lambda/\partial A_g}{\delta_B} >0 \\ \frac{\partial B^*}{\ | Dr | open_prop | 0 |
-| weld/W.08.v1 | ECONEXP-v1.0-13 | weld | W | Y_{K,t} = \sum_{c\in\mathcal P_t} v(c)\,\mathbf 1[G(c)=1] \\ \|\mathcal C_t^{new}\|\uparrow \not\Rightarrow Y_{K | Definition | definition | 0 |
-| weld/W.09.v1 | ECONEXP-v1.0-14 | weld | W | \mathcal{L} = U(Y_K)-C(x) + \lambda_V[\Phi(\mu,\mathcal C)-Y_K] | Dr | open_prop | 0 |
-| weld/H.29.v1 | ECONEXP-v1.0-15 | weld | H | \text{Live Problem} \rightarrow \text{Core Respondent / Practitioner} + \text{Researcher} + \text{Interactiona | Definition | definition | 0 |
-| weld/W.10.v1 | ECONEXP-v1.0-16 | weld | W | \left\{ Y_K, \Delta R_H^{return}, W, T, N_v \right\} \\ \text{Budget}\leq\bar B,\ \text{Safety risk}\leq\bar S | Definition | definition | 0 |
-| weld/H.30.v1 | CES-2026-09-07-01 | weld | H | E_p = \left\langle X_p^{exp}, X_p^{int}, \mathcal{M}_p^{AI} \right\rangle | Definition | definition | 0 |
-| weld/H.31.v1 | CES-2026-09-07-02 | weld | H | \mathcal{M}_p^{AI} = \{M_1, M_2, \ldots, M_k\} | Definition | definition | 0 |
-| weld/H.32.v1 | CES-2026-09-07-03 | weld | H | X_p^{int} = \varnothing \quad \text{(role unheld, not a zero score)} | Definition | definition | 0 |
-| weld/H.33.v1 | CES-2026-09-07-04 | weld | H | \text{Experience-Based Expertise} \neq \text{Interactional Expertise} \neq \text{AI Model} | Dr | open_prop | 0 |
-| weld/H.34.v1 | CES-2026-09-07-05 | weld | H | X_p^{exp} = \left\langle \text{Exp}, \text{Sel}, \text{Int} \right\rangle | Definition | definition | 0 |
+    CMC_Refuter_Burden g -> False. | Ax | axioms cmc_no_refuter_under_axioms | 1 |
+| weld/E.11.v1 | EFFORT-v0.3-01 | weld | E | \text{uncertainty} \not\equiv \text{stochastic mechanism} \\ \text{stochastic mechanism} \not\equiv \text{othe | Dr | open_prop weld__E_11_v1_hyp | 1 |
+| weld/H.13.v1 | EFFORT-v0.3-02 | weld | H | N_{ext} < \infty \;\not\Rightarrow\; N_{int} = N_{ext} | Dr | open_prop weld__H_13_v1_hyp | 1 |
+| weld/M.15.v1 | EFFORT-v0.3-03 | weld | M | \mathfrak{M}_Q(r_n) := \{\, m \in \mathfrak{M}_Q^{adm} : O_Q^G(m) = r_n \,\} | Definition | definition weld__M_15_v1_def | 1 |
+| weld/M.16.v1 | EFFORT-v0.3-04 | weld | M | CSML_Q(M) = \mathsf{PASS} \iff M \in \mathfrak{M}_Q^{adm} \wedge \mathrm{Asm}(M,Q)\ \text{is explicit} | Definition | definition weld__M_16_v1_def | 1 |
+| weld/M.17.v1 | EFFORT-v0.3-05 | weld | M | SAL_Q^{strong}(n) = \mathsf{PASS} \iff \mathfrak{M}_Q(r_n) \subseteq \mathfrak{M}_Q^{stoch} | Definition | definition weld__M_17_v1_def | 1 |
+| weld/M.18.v1 | EFFORT-v0.3-06 | weld | M | \mathfrak{M}_Q(r_n)\cap\mathfrak{M}_Q^{stoch}\neq\varnothing,\quad \mathfrak{M}_Q(r_n)\cap\mathfrak{M}_Q^{nons | Dr | open_prop weld__M_18_v1_hyp | 1 |
+| weld/M.19.v1 | EFFORT-v0.3-07 | weld | M | CSML_Q(M) = \mathsf{PASS} \;\not\Rightarrow\; SAL_Q^{strong}(n) = \mathsf{PASS} | Dr | open_prop weld__M_19_v1_hyp | 1 |
+| weld/M.20.v1 | EFFORT-v0.3-08 | weld | M | T_{R\to D}\circ F_R = F_D\circ T_{R\to D},\quad O_D\circ T_{R\to D}=O_R,\quad W^D_{Q,j}\circ T_{R\to D}=W^R_{Q | Dr | open_prop weld__M_20_v1_hyp | 1 |
+| weld/M.21.v1 | EFFORT-v0.3-09 | weld | M | CDOL_Q(\mathcal{R}\to D) = \mathsf{PASS} \iff \exists\, T_{R\to D} : \text{Eq.\ (14) holds} | Definition | definition weld__M_21_v1_def | 1 |
+| weld/M.22.v1 | EFFORT-v0.3-10 | weld | M | ECT_Q(e_n) \in \{E_0, E_1, E_2, E_3, E_4, \mathsf{HOLD}\} | Definition | definition weld__M_22_v1_def | 1 |
+| weld/M.23.v1 | EFFORT-v0.3-11 | weld | M | SID_Q(n,m) \in \{\mathsf{SAME}_{mech}, \mathsf{EQUIV}_Q, \mathsf{DIFF}_Q, \mathsf{HOLD}\} | Definition | definition weld__M_23_v1_def | 1 |
+| weld/M.24.v1 | EFFORT-v0.3-12 | weld | M | SID_Q(n,m) = \mathsf{EQUIV}_Q \;\not\Rightarrow\; \mathcal{G}_n = \mathcal{G}_m | Dr | open_prop weld__M_24_v1_hyp | 1 |
+| weld/H.14.v1 | EFFORT-v0.3-13 | weld | H | A_n^Q := q_A(S_n, T_n, c_n; Q) | Definition | definition weld__H_14_v1_def | 1 |
+| weld/H.15.v1 | EFFORT-v0.3-14 | weld | H | \mathfrak{I}_n^Q := \mathfrak{I}_Q(\mathcal{G}_n, A_n^Q, c_n) | Definition | definition weld__H_15_v1_def | 1 |
+| weld/H.16.v1 | EFFORT-v0.3-15 | weld | H | SameTrial_Q(n,m)=1 \iff SID_Q(n,m)\in\{\mathsf{SAME}_{mech},\mathsf{EQUIV}_Q\},\ A_n^Q \sim_Q A_m^Q,\ \mathfra | Dr | open_prop weld__H_16_v1_hyp | 1 |
+| weld/H.17.v1 | EFFORT-v0.3-16 | weld | H | \text{same source readout} \not\Rightarrow \text{same effective agent} \not\Rightarrow \text{same encounter} | Dr | open_prop weld__H_17_v1_hyp | 1 |
+| weld/H.18.v1 | EFFORT-v0.3-17 | weld | H | ISW_Q(\mathcal{G},A,A';c) = \mathsf{PASS} \iff d_I^Q\big(O_I^Q\,\mathfrak{I}_Q(\mathcal{G},A,c),\, O_I^Q\,\mat | Definition | definition weld__H_18_v1_def | 1 |
+| weld/H.19.v1 | EFFORT-v0.3-18 | weld | H | SID_Q(n,n{+}1)=\mathsf{SAME}_{mech},\quad A_{n+1}^Q \not\sim_Q A_n^Q,\quad ISW_Q(\mathcal{G}_n, A_n^Q, A_{n+1} | Definition | definition weld__H_19_v1_def | 1 |
+| weld/H.20.v1 | EFFORT-v0.3-19 | weld | H | \mathfrak{I}_{n+1}^Q \not\sim_Q \mathfrak{I}_n^Q | Dr | open_prop weld__H_20_v1_hyp | 1 |
+| weld/H.21.v1 | EFFORT-v0.3-20 | weld | H | SID_Q(n,n{+}1)=\mathsf{SAME}_{mech},\ A_{n+1}^Q \not\sim_Q A_n^Q,\ ISW_Q(\mathcal{G}_n, A_n^Q, A_{n+1}^Q; c_n) | Dr | open_prop weld__H_21_v1_hyp | 1 |
+| EQ-015/H.38.v1 | EFFORT-v0.3-21 | EQ-015 | H | Y_{n+1}^{world} \to O_Q \to \mu_{n+1}^Q \to E_{n+1}^Q \to \mathrm{Retain}_Q \to A_{n+1}^Q | Dr | open_prop EQ_015__H_38_v1_hyp | 1 |
+| EQ-015/H.39.v1 | EFFORT-v0.3-22 | EQ-015 | H | RB_Q(n) = 1 \iff A_{n+1}^Q \not\sim_Q A_n^Q | Definition | definition EQ_015__H_39_v1_def | 1 |
+| A.5/H.20.v1 | EFFORT-v0.3-23 | A.5 | H | LC_Q(n) = \mathsf{PASS} \iff RB_Q(n)=1 \wedge \Lambda_Q(n) = \mathsf{PASS} | Definition | definition A_5__H_20_v1_def | 1 |
+| A.5/H.21.v1 | EFFORT-v0.3-24 | A.5 | H | IC_Q(n) = \mathsf{PASS} \iff LC_Q(n) = \mathsf{PASS} \wedge \Gamma_Q(n) > \tau_G | Definition | definition A_5__H_21_v1_def | 1 |
+| A.5/H.22.v1 | EFFORT-v0.3-25 | A.5 | H | \text{Exposure} \neq \text{Retained Revision} \neq \text{Certified Learning} \neq \text{Improvement} | Dr | open_prop A_5__H_22_v1_hyp | 1 |
+| weld/M.25.v1 | EFFORT-v0.3-26 | weld | M | ERG_D = \mathsf{PASS} \iff \exists\, u_a,u_b \in \mathcal{U}_D^{adm} : d_Q\big(R_D(s,u_a), R_D(s,u_b)\big) > \ | Dr | open_prop weld__M_25_v1_hyp | 1 |
+| weld/M.26.v1 | EFFORT-v0.3-27 | weld | M | CER_Q = \mathsf{PASS} \iff ERG_D = \mathsf{PASS} \wedge ID_Q(u \to Y) = \mathsf{PASS} | Definition | definition weld__M_26_v1_def | 1 |
+| A.5/H.23.v1 | EFFORT-v0.3-28 | A.5 | H | V_n^{learn}(u) \not\equiv V_n^{act}(u) | Dr | open_prop A_5__H_23_v1_hyp | 1 |
+| weld/M.27.v1 | EFFORT-v0.3-29 | weld | M | \mathbf{C}_n(u) = \big(C_n^{int}(u),\, C_n^{ext}(u),\, C_n^{opp}(u),\, C_n^{risk}(u)\big) | Definition | definition weld__M_27_v1_def | 1 |
+| weld/M.28.v1 | EFFORT-v0.3-30 | weld | M | \mathcal{U}_{n+1}^{safe} := \Big\{ u \in \mathcal{U}_D^{adm} : \mathbf{C}_n(u) \preceq \mathbf{B}_n,\ \mathbb{ | Dr | open_prop weld__M_28_v1_hyp | 1 |
+| weld/M.29.v1 | EFFORT-v0.3-31 | weld | M | \mathrm{Route}_Q(e_n) = \begin{cases} \mathcal{A}_M, & ECT_Q(e_n)=E_0,\\ \mathcal{A}_B, & ECT_Q(e_n)=E_1,\\ \m | Definition | definition weld__M_29_v1_def | 1 |
+| weld/M.30.v1 | EFFORT-v0.3-32 | weld | M | D_{n+1} = \begin{cases} \mathsf{HOLD}, & \mathrm{Route}_Q(e_n)=\mathsf{HOLD},\\ \mathsf{STOP}, & \mathcal{U}_{ | Definition | definition weld__M_30_v1_def | 1 |
+| weld/M.31.v1 | EFFORT-v0.3-33 | weld | M | \mathcal{U}_{n+1}^{safe} = \varnothing \;\Rightarrow\; \mathsf{STOP} | Dr | open_prop weld__M_31_v1_hyp | 1 |
+| weld/M.32.v1 | EFFORT-v0.3-34 | weld | M | \text{Event} \to \text{Readout} \to \text{Conditional/Strong Stochastic License} \to \text{Event-Control Type} | Definition | definition weld__M_32_v1_def | 1 |
+| weld/H.22.v1 | ECONEXP-v1.0-01 | weld | H | \text{credential} \neq \text{expertise} | Definition | definition weld__H_22_v1_def | 0 |
+| weld/H.23.v1 | ECONEXP-v1.0-02 | weld | H | \text{project role} \neq \text{expertise type} \neq \text{AI system} | Definition | definition weld__H_23_v1_def | 0 |
+| weld/H.24.v1 | ECONEXP-v1.0-03 | weld | H | \chi_i(Q,D,t)\in\{N,I,C\} | Definition | definition ExpertiseIdealType, weld__H_24_v1_def | 0 |
+| weld/H.25.v1 | ECONEXP-v1.0-04 | weld | H | P\!\left(\chi_{i,t+1}=b \mid \chi_{i,t}=a, A_t, P_t, W_t, R_t\right) | Open | open_prop ExpertiseIdealType25, weld__H_25_v1_hyp | 0 |
+| weld/H.26.v1 | ECONEXP-v1.0-05 | weld | H | C_{N\rightarrow I}^{AI} < C_{N\rightarrow I}^{baseline} | Open | open_prop weld__H_26_v1_hyp | 0 |
+| weld/H.27.v1 | ECONEXP-v1.0-06 | weld | H | \|\Delta C_{I\rightarrow C}^{AI}\| < \|\Delta C_{N\rightarrow I}^{AI}\| | Open | open_prop weld__H_27_v1_hyp | 0 |
+| weld/H.28.v1 | ECONEXP-v1.0-07 | weld | H | \mathcal R_p = \left\langle E_p^{exp}, E_p^{int}, \mathcal M_p^{AI} \right\rangle \\ E_p^{int}=\varnothing \\  | Definition | definition weld__H_28_v1_def | 0 |
+| weld/W.03.v1 | ECONEXP-v1.0-08 | weld | W | \Lambda_t = \sum_{c\in\mathcal C_t^{new}} w(c) | Definition | definition weld__W_03_v1_def | 0 |
+| weld/W.04.v1 | ECONEXP-v1.0-09 | weld | W | \mu_t = V\!\left( E_t^C, E_t^I, W_t, D_t, R_t, A_{v,t} \right) | Definition | definition weld__W_04_v1_def | 0 |
+| weld/W.05.v1 | ECONEXP-v1.0-10 | weld | W | B_{t+1} = \max\left\{ 0, (1-\delta_B)B_t+\Lambda_t-\mu_t \right\} | Dr | open_prop weld__W_05_v1_hyp | 0 |
+| weld/W.06.v1 | ECONEXP-v1.0-11 | weld | W | B^* = \frac{\Lambda-\mu}{\delta_B} \qquad \text{for }\Lambda>\mu | Dr | open_prop weld__W_06_v1_hyp | 0 |
+| weld/W.07.v1 | ECONEXP-v1.0-12 | weld | W | \frac{\partial B^*}{\partial A_g} = \frac{\partial \Lambda/\partial A_g}{\delta_B} >0 \\ \frac{\partial B^*}{\ | Dr | open_prop weld__W_07_v1_hyp | 0 |
+| weld/W.08.v1 | ECONEXP-v1.0-13 | weld | W | Y_{K,t} = \sum_{c\in\mathcal P_t} v(c)\,\mathbf 1[G(c)=1] \\ \|\mathcal C_t^{new}\|\uparrow \not\Rightarrow Y_{K | Definition | definition weld__W_08_v1_def_indicator, weld__W_08_v1_def | 0 |
+| weld/W.09.v1 | ECONEXP-v1.0-14 | weld | W | \mathcal{L} = U(Y_K)-C(x) + \lambda_V[\Phi(\mu,\mathcal C)-Y_K] | Dr | open_prop weld__W_09_v1_hyp | 0 |
+| weld/H.29.v1 | ECONEXP-v1.0-15 | weld | H | \text{Live Problem} \rightarrow \text{Core Respondent / Practitioner} + \text{Researcher} + \text{Interactiona | Definition | definition weld__H_29_v1_def | 0 |
+| weld/W.10.v1 | ECONEXP-v1.0-16 | weld | W | \left\{ Y_K, \Delta R_H^{return}, W, T, N_v \right\} \\ \text{Budget}\leq\bar B,\ \text{Safety risk}\leq\bar S | Definition | definition weld__W_10_v1_def | 0 |
+| weld/H.30.v1 | CES-2026-09-07-01 | weld | H | E_p = \left\langle X_p^{exp}, X_p^{int}, \mathcal{M}_p^{AI} \right\rangle | Definition | definition weld__H_30_v1_def | 0 |
+| weld/H.31.v1 | CES-2026-09-07-02 | weld | H | \mathcal{M}_p^{AI} = \{M_1, M_2, \ldots, M_k\} | Definition | definition weld__H_31_v1_def | 0 |
+| weld/H.32.v1 | CES-2026-09-07-03 | weld | H | X_p^{int} = \varnothing \quad \text{(role unheld, not a zero score)} | Definition | definition weld__H_32_v1_def | 0 |
+| weld/H.33.v1 | CES-2026-09-07-04 | weld | H | \text{Experience-Based Expertise} \neq \text{Interactional Expertise} \neq \text{AI Model} | Dr | open_prop weld__H_33_v1_hyp | 0 |
+| weld/H.34.v1 | CES-2026-09-07-05 | weld | H | X_p^{exp} = \left\langle \text{Exp}, \text{Sel}, \text{Int} \right\rangle | Definition | definition weld__H_34_v1_def | 0 |
+| EQ-015/H.40.v1 | RET-v2.0-01 | EQ-015 | H | \mathcal G_t = (\mathcal A_t, \mathcal E_t, \mathcal P_t) | Definition | definition EQ_015__H_40_v1_def | 1 |
+| EQ-002/H.05.v1 | RET-v2.0-02 | EQ-002 | H | z_{i,t} = R_{i,t}\left(q_D(S_t), m_{-i,t}, c_{i,t}\right) | Dr | open_prop EQ_002__H_05_v1_hyp | 1 |
+| EQ-002/H.06.v1 | RET-v2.0-03 | EQ-002 | H | z_{j,t+1} = R_{j,t+1}\left(z_{i,t}, c_{j,t+1}\right) | Dr | open_prop EQ_002__H_06_v1_hyp | 1 |
+| EQ-015/H.41.v1 | RET-v2.0-04 | EQ-015 | H | a_i \rightarrow a_j \rightarrow a_i | Definition | definition EQ_015__H_41_v1_def | 1 |
+| weld/H.35.v1 | RET-v2.0-05 | weld | H | N_A(c) \not\equiv N_P(c) | Dr | open_prop weld__H_35_v1_hyp | 1 |
+| weld/H.36.v1 | RET-v2.0-06 | weld | H | N_A(c)\uparrow \not\Rightarrow N_P(c)\uparrow | Dr | open_prop weld__H_36_v1_hyp | 1 |
+| A.8/M.20.v1 | RET-v2.0-07 | A.8 | M | \Pi(c) = (V_c, E_c, \tau_c) | Definition | definition A_8__M_20_v1_def | 1 |
+| EQ-015/H.42.v1 | RET-v2.0-08 | EQ-015 | H | \mathfrak R_t = \left\langle \chi_{\mathrm{recip},t}^{\mathcal G}, D_{\mathcal G,t}^{\mathrm{eff}}, R_{\mathca | Dr | open_prop EQ_015__H_42_v1_hyp | 1 |
+| weld/H.37.v1 | RET-v2.0-09 | weld | H | \Delta D^{eff}_{\mathcal G}<0,\ \Delta R^{ex}_{\mathcal G}>0 \quad\text{and}\quad \Delta P^{ind}_{\mathcal G}> | Definition | definition weld__H_37_v1_def | 1 |
+| EQ-015/H.43.v1 | RET-v2.0-10 | EQ-015 | H | \Delta\chi_{\mathrm{recip}}^{\mathcal G}>0,\ \Delta\kappa_{\mathcal G}>0,\ \Delta D^{eff}_{\mathcal G}<0,\ \De | Definition | definition EQ_015__H_43_v1_def | 1 |
+| EQ-015/H.44.v1 | RET-v2.0-11 | EQ-015 | H | RET \neq Falsehood; \quad RET \neq Consensus | Definition | definition EQ_015__H_44_v1_def | 1 |
+| EQ-015/H.45.v1 | RET-v2.0-12 | EQ-015 | H | K_{\mathrm{like}} \overset{forget}{\longrightarrow} K_{\mathrm{assumed}} \overset{recursion}{\longrightarrow}  | Definition | definition EQ_015__H_45_v1_def | 1 |
+| EQ-015/H.46.v1 | RET-v2.0-13 | EQ-015 | H | Consensus_{\mathcal M}(c) = \frac{1}{k}\sum_{j=1}^{k}\mathbf 1[M_j\ accepts\ c] | Dr | open_prop EQ_015__H_46_v1_hyp | 1 |
+| EQ-015/H.47.v1 | RET-v2.0-14 | EQ-015 | H | Consensus_{\mathcal M}(c)\uparrow \not\Rightarrow Validation(c)\uparrow | Dr | open_prop EQ_015__H_47_v1_hyp | 1 |
+| A.5/H.24.v1 | RET-v2.0-15 | A.5 | H | \Delta Accuracy_{\mathrm{agent}}>0 \not\Rightarrow \Delta Corrigibility_{\mathcal G}>0 | Dr | open_prop A_5__H_24_v1_hyp | 1 |
+| A.8/M.21.v1 | RET-v2.0-16 | A.8 | M | H \Rightarrow y \quad\text{such that}\quad CausalAncestry(y) \not\subseteq \mathcal G^{recursive}_{\le \tau} | Dr | open_prop A_8__M_21_v1_hyp | 1 |
+| A.8/M.22.v1 | RET-v2.0-17 | A.8 | M | Claim \rightarrow Freeze \rightarrow AI\text{-Off} \rightarrow World\ Record \rightarrow Fixed\ Evaluation \ri | Dr | open_prop A_8__M_22_v1_hyp | 1 |
+| A.8/M.23.v1 | RET-v2.0-18 | A.8 | M | Freeze(H,\tau),\ Predeclare(T,\mathcal A_H),\ AI_{\mathrm{decisive\ execution}}(T)=0,\ AI_{\mathrm{primary\ ev | Definition | definition A_8__M_23_v1_def | 1 |
+| A.8/M.24.v1 | RET-v2.0-19 | A.8 | M | Frozen\ Artifact + AI_{\mathrm{runtime}}=0 \rightarrow Test\ Outcome | Dr | open_prop A_8__M_24_v1_hyp | 1 |
+| EQ-002/M.04.v1 | RET-v2.0-20 | EQ-002 | M | Simulation\ Success \not\Rightarrow World\ Validation | Dr | open_prop EQ_002__M_04_v1_hyp | 1 |
+| EQ-015/H.48.v1 | RET-v2.0-21 | EQ-015 | H | \Delta\chi_{\mathrm{recip}}^{\mathcal G}>0,\ \Delta\kappa_{\mathcal G}>0 \ \text{while}\ \Delta D_{\mathcal G} | Dr | open_prop EQ_015__H_48_v1_hyp | 1 |
+| EQ-015/H.49.v1 | RET-v2.0-22 | EQ-015 | H | SessionReset \not\Rightarrow EpistemicReset | Dr | open_prop EQ_015__H_49_v1_hyp | 1 |
+| weld/W.11.v1 | RET-v2.0-23 | weld | W | \mu_t^{eff} = \mu_t(1-\pi_t^{RET}) | Dr | open_prop weld__W_11_v1_hyp | 1 |
 
 ## Raw inventory by chapter (every numbered equation, with its canonical id when assigned)
 

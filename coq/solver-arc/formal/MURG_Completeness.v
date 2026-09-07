@@ -24,7 +24,7 @@
 (*   categories, not Hilbert-space projectors.                        *)
 (*                                                                   *)
 (* Coq version: 8.20.1  (coqc -q -R . RDL formal/MURG_Completeness.v) *)
-(* Author: ANSE.ASIA solver arc (private) formal layer                *)
+(* Author: solver arc (private) formal layer                          *)
 (* Date: 2026-06-26                                                   *)
 (* ================================================================ *)
 

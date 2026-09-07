@@ -72,6 +72,6 @@ from . import core  # noqa: F401
 # form with a regex (`^__version__ = "([^"]+)"$`), so keep it a plain
 # assignment — no expression, no importlib.metadata lookup — or
 # sync_version.py's own read/write round-trip breaks.
-__version__ = "1.4.0"
+__version__ = "1.5.0"
 
 __all__ = ["core", "__version__"]

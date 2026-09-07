@@ -223,5 +223,6 @@
  ],
  "notes": [
   "Verbatim upstream text in this public source mentions the name of a sibling private repository; kept unmodified because the upstream file is already public and mirrors must stay byte-identical (blob-verified)."
- ]
+ ],
+ "anchor_publication_note": "2026-09-08 (Toledo v1.5.0 release-prep, DEBT #51): the import anchor 082dde893b70c7500c13d463239909c99cf17f0a is a local revision of the readout_genesis working tree, not a commit present on the repository's public remote (github.com/morrocwi/readout_genesis) -- verified this session by `git ls-remote https://github.com/morrocwi/readout_genesis.git HEAD`, which returns public head 04cde19be2c885a11b42597b1cdb60fb5b7ca1bb. Public, third-party verification of the files this import copies is therefore possible only up to that public head; the difference between the public head and this local anchor is the Face XI addition, made locally after the last push. Whether and when to push the commits between the public head and this anchor is the founder's decision (DEBT #51); this note records the honest gap, it does not resolve it."
 }

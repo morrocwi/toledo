@@ -372,7 +372,7 @@ STALE_COMMIT_THRESHOLD = 5  # commits behind HEAD before this is real, not cosme
 @pytest.mark.xfail(
     reason=(
         "Known, disclosed carry-over (gate B3, 2026-09-07 fixer pass): registry/CANONICAL.json "
-        "is owned by the v1.2 lane run (wf_3483b2de-ea9) and is off-limits for this fixer pass to "
+        "is owned by the v1.2 lane run and is off-limits for this fixer pass to "
         "hand-edit, so `generated_from_commit` is not re-stamped here. scripts/stamp_release_commit.py "
         "re-stamps it to the exact HEAD sha and is meant to run as the LAST step before `git tag "
         "v1.2.0` (ops/HANDOFF_OVERNIGHT_2026-09-06.md, '2026-09-07 09:10'); this test passes once "

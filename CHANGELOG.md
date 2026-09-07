@@ -3,6 +3,72 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.5.0 — 2026-09-08
+
+Deposited as a Zenodo version (DOI recorded once minted; concept DOI 10.5281/zenodo.22537318);
+GitHub release tag v1.5.0.
+
+Commits `80d28a5` (v1.5 debt pass: registry, Coq coverage, Tunnel v2.1 registrar merge),
+`f1b29bb` (v1.5 debt pass: Makefile index target, benchmark script, SCHEMA addendum),
+`f776f74` (site: presentable human-readable public site, S1–S4), `0be5efc` (site: jargon/MathML/CI
+fixes), plus this release-prep pass.
+
+- **Recursive Epistemic Tunnel v2.1 merged** (`80d28a5`): the deposited paper "The Recursive
+  Epistemic Tunnel" v2.1 (10.5281/zenodo.22639311, concept 10.5281/zenodo.22639309) contributed
+  **23** new coded readings (`RET-N01`–`RET-N23`, under `EQ-015`, `EQ-002`, `weld`, `A.5`, `A.8`)
+  and **23** occurrences added to existing codes. Canonical registry: **990** entries (was 967).
+  See README's "Recursive Epistemic Tunnel v2.1 registrations" section for the full code table.
+- **Registry debt pass** (`80d28a5`, `f1b29bb`): closed out DEBT #42–#49
+  (`ops/TODOLIST_snapshot_2026-09-07.md`) with a real, computed disposition for each — the 52
+  `status: unverified` entries re-checked at source and honestly kept unverified; **95** genesis-root
+  rows and **10** canonical entries newly tier-tagged with a quoted source line (111 tier values
+  quoted in total per the commit's own count, 2 composite tags reverted); all 210 `wrapped_related`
+  entries examined for a derivable independent closure, 0 qualified, each kept with its own
+  recorded reason; **119** `Theta`/`CMC` entries gained a Toledo-native Coq wrapper file each (116
+  land on `closed`, 3 on a new `axioms` coq_status rung — see README's "The coq_status ladder"); a
+  further **78** Coq files written for the Effort v0.3, Economics of Expertise v1.0.1, Core
+  Epistemic Structure and Tunnel v2.1 readings; `_CoqProject` now lists 928 `.v` files, all with a
+  compiled `.vo`/`.vok` artifact; `registry/cmc_connection_report.md` re-confirmed CMC has no
+  evidenced Genesis-root connection and drafted a candidate sentence for the founder; catalogue
+  entry-name typesetting and Overfull-hbox fixes (0 over 20pt this pass, down from 38); an MCP
+  cold-start defect fixed so a shipped `mcp/state/index.sqlite3` is reused instead of rebuilt on
+  every process start (`mcp/scripts/build_index.py`, wired into `make build` and CI). See README's
+  "Debt pass (v1.5)" section for the full per-item accounting.
+- **Public documentation site** (`f776f74`, `0be5efc`): a new human-readable GitHub Pages site at
+  <https://morrocwi.github.io/toledo/>, built by `site/build_site.py` and sharing one Pages
+  deployment with the existing static API under `/v1/`; **2,240** pages this pass (home, `/browse/`,
+  `/by-root/`, `/by-domain/`, `/by-tier/`, `/by-status/`, `/entries/`, `/search/`, `/agents/`,
+  `/about/`). See README's "Website" section.
+- **Provenance note** (this release-prep pass, DEBT #51): the `readout_genesis` import anchor
+  (`082dde893b70c7500c13d463239909c99cf17f0a`) is a local revision not present on that repository's
+  public GitHub remote (public head `04cde19be2c885a11b42597b1cdb60fb5b7ca1bb`, checked this pass);
+  recorded in `coq/readout_genesis/PROVENANCE.json`'s `anchor_publication_note` and README's
+  "Provenance note: readout_genesis anchor" section. Publication of those commits is left to the
+  founder.
+- **This release-prep pass**: `CITATION.cff`/`.zenodo.json` → 1.5.0 (v1.4.0's version DOI
+  10.5281/zenodo.22637913 added to `CITATION.cff`'s citation message, a placeholder recorded for
+  1.5.0); `python3 mcp/scripts/sync_version.py` propagated `1.5.0` into `mcp/pyproject.toml` and
+  `toledo_mcp/__init__.py` (both reported "updated"). Regenerated `make build`,
+  `python3 site/build_site.py --out site/dist --strict`, `python3 scripts/build_eq_library.py`,
+  `python3 -m toledo_mcp.export_static --out mcp/dist/static-api` and `make catalogue` (one
+  `latexmk -pdf` run): docs site **2,240** pages, catalogue PDF **291** pages with its title page
+  reading "Version 1.5.0" (`pdfinfo`), **0** `Overfull \hbox` warnings over 20pt (`grep` count
+  against `latex/catalogue.log`). README's "Honest state", "Debt pass (v1.5)", "Recursive
+  Epistemic Tunnel v2.1 registrations", "Website", "Provenance note: readout_genesis anchor" and
+  "What is not done" sections regenerated with live counts.
+- `python3 -m pytest -q tests` (repository root):
+  ```
+  ............................x....x.x...................                 [100%]
+  52 passed, 3 xfailed, 1 warning in 4.02s
+  ```
+  `cd mcp && python3 -m pytest -q`:
+  ```
+  ........................................................................ [ 33%]
+  ........................................................................ [ 66%]
+  ......................................................................   [100%]
+  216 passed in 10.20s
+  ```
+
 ## v1.4.0 — 2026-09-07
 
 Deposited as Zenodo version DOI 10.5281/zenodo.22637913 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.4.0.

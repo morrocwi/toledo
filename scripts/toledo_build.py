@@ -986,7 +986,7 @@ def entry_occurrences_line(e: dict) -> str | None:
             # paragraph line — \seqsplit{} (v1.5 lane D) instead of the
             # periodic invisible-break marks, same rationale as
             # entry_metadata_line() above.
-            shown.append(seqsplit_wrap(str(piece)))
+            shown.append(seqsplit_wrap(str(piece)) if " " not in str(piece) else latex_escape(str(piece)))
     more = f" (+{len(occs) - len(occs[:12])} more)" if len(occs) > 12 else ""
     return f"Occurrences ({len(occs)}): " + ", ".join(shown) + more
 

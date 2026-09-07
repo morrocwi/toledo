@@ -1575,17 +1575,17 @@
         {
           "line": 94,
           "context": "Core Epistemic Registration, 'AI Model(s) Used:' field",
-          "text": "GPT-5.6 Sol"
+          "text": "[the manuscript's self-named AI model; see its own AI Model(s) Used field]"
         },
         {
           "line": 2192,
           "context": "sec.42 Self-Application Audit, 'Primary AI model:' field",
-          "text": "GPT-5.6 Sol"
+          "text": "[the manuscript's self-named AI model; see its own AI Model(s) Used field]"
         },
         {
           "line": 2580,
           "context": "Declarations > AI Assistance Disclosure",
-          "text": "GPT-5.6 Sol"
+          "text": "[the manuscript's self-named AI model; see its own AI Model(s) Used field]"
         }
       ],
       "verdict": "3 hits, all the same model name in the manuscript's own Core Epistemic Registration / self-application-audit / AI-assistance-disclosure apparatus -- the per-artifact-permission pattern this task cites (BBL-2026-09-07-214) covers exactly this device (the manuscript naming, as its own subject matter, which model it used, in a disclosure/registration section). Not a git-commit trailer, not a Zenodo/CITATION credit, not a byline. No action needed under that pattern; reported per rule 9's 'report every hit' requirement regardless."

@@ -53,7 +53,7 @@
       "repo": "PRIVATE -- name withheld per BBL-195/198; anchored by commit + blob only",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "scope": "canonical (non-*_attempt.v) files under formal/ only: 50 files. Excludes 284 files whose basename matches *_attempt.v (per task rule 'exclude *_attempt.v but count them') -- these are counted, not imported.",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "files_included": 50,
       "files_excluded_but_counted": 284,
       "caveat": "docs/root/FORMAL_MANIFEST.yaml itself categorises 2 of the excluded *_attempt.v files (InfoContinuumLimit_nD_attempt.v, InfoQuantumGravityRootBridge_attempt.v) as category='core'/'reals', status='closed' -- i.e. the repo's own manifest treats them as canonical despite the *_attempt.v filename. This manifest follows the task's literal filename rule (exclude every *_attempt.v) and excludes both from 'files_included'; they are inside the 284-file 'files_excluded_but_counted' figure above, not separately imported. Flagged here rather than silently resolved either way."
@@ -2829,7 +2829,7 @@
       "path": "formal/CMC_Bridge_Decomposition.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "d85d41e525f419f62fa4c77344f9a837999d1178",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "decomposed_bridge_obligation",
         "decomposed_no_refuter"
@@ -2843,7 +2843,7 @@
       "path": "formal/CMC_ClosureFree_Exhaustive.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "1c9ea43bf3ade13aef4a857f0e364fd0ef7d61a0",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "closure_free_implies_no_named_closure",
         "no_named_closure_implies_closure_free",
@@ -2859,7 +2859,7 @@
       "path": "formal/CMC_Independent_Definitions.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "c3a55ff196d8ff26785f85561324fc6cc951f0ac",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "independent_exhaustion_blocks_refuter",
         "retained_definition_not_closure_definition",
@@ -2876,7 +2876,7 @@
       "path": "formal/CMC_ModelClass_Witnesses.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "b81a2074271f107eedd10afc3e9fe4caa6479334",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "class_witness_has_nonzero_closure",
         "class_witness_not_closure_free",
@@ -2892,7 +2892,7 @@
       "path": "formal/CMC_PhysicsClass_Instances.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "de60e3d8f5316475e9e51be308eb8cc945db0e2a",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "Retention_Lemma_certified",
         "Finite_Speed_Lemma_certified",
@@ -2919,7 +2919,7 @@
       "path": "formal/CMC_TargetClass_Definitions.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "974548ed89895d64c5c44eeef5f69531f5d7d72d",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "nonzero_closure_not_closure_free",
         "bridge_obligation_blocks_refuter",
@@ -2934,7 +2934,7 @@
       "path": "formal/Genesis_PhysicsDAG_Canon_v2_4_0.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "29ee06ccd98a180e9e03b2e376fd8ae6dc4ee90c",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "edge_rank",
         "path_rank",
@@ -3032,7 +3032,7 @@
       "path": "formal/InfoAnalysisLift.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "03e8b74ece64842cee384b49c8202e5ba1d81092",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "relaxation_ode",
         "harmonic_velocity",
@@ -3060,7 +3060,7 @@
       "path": "formal/InfoBinaryVacua.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "fbe5771dd06a3eade9ac58601ece3ec3fab9ef57",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "two_distinct_vacua",
         "binary_root_realized_in_potential"
@@ -3074,7 +3074,7 @@
       "path": "formal/InfoEuler.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "31db5dc147c3481ea90fb9789a133fe691f3410d",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "Qnat_S_pos",
         "factN_pos",
@@ -3091,7 +3091,7 @@
       "path": "formal/InfoSolidAngle.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "e73805bb30b804a643a4846cfb6acc51fa9fec8d",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "omega_S1_is_2pi",
         "omega_ladder",
@@ -3107,7 +3107,7 @@
       "path": "formal/MURG_Completeness.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "657414793bc22f0037c77afb4224f0ebe610b228",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "MURGOp_eq_dec",
         "murg_all_complete_definitional",
@@ -3122,7 +3122,7 @@
       "path": "formal/OperatorExtract.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "74cd6ea24cfe512244cacfbc15e66fc6a75ada9a",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [],
       "build_system": "not listed in formal/Makefile VFILES (27 files); not compiled by top-level `make verify`; catalogued only in docs/root/FORMAL_MANIFEST.yaml (category=core)",
       "claimed_status": "claimed, not re-verified here -- docs/root/FORMAL_MANIFEST.yaml states: category='core', tier='Th_coqc', status='closed'; theorems (per manifest): []; one_line: 'Not a theorem file: extracts four already-verified computational readouts from URCF_RD_All to a runnable OCaml module operator.ml — the extracted code is the strongest bridge (verified executable), no new proof content.'",
@@ -3133,7 +3133,7 @@
       "path": "formal/RD.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "4ffb990a6f9c79a6f21521c2cc59af117ffad4c1",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "RD3_succ_ne_zero",
         "RD4_succ_inj",
@@ -3341,7 +3341,7 @@
       "path": "formal/RDL.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "0839e5c6ea97ffcad1eb3c54247509624b17e37c",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "soundness",
         "countermodel_DS",
@@ -3362,7 +3362,7 @@
       "path": "formal/RDL_All.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "af3b605c8a9f6b79ac6efe04f19198e17fc7c087",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "cons_des",
         "sound",
@@ -3609,7 +3609,7 @@
       "path": "formal/RDL_CausalOrder.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "7806c292419ba672890170b7e20c803354d27c49",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "prec_irrefl",
         "prec_trans",
@@ -3631,7 +3631,7 @@
       "path": "formal/RDL_ContinuumLimit.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "755de565372c7651edfd4ceed76bbb098169063f",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "sq_neq0",
         "D2sym_expand",
@@ -3647,7 +3647,7 @@
       "path": "formal/RDL_Distinguishability.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "f6a80a1655d14fe2d472f0bc91560757cfad2a59",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "primordial_difference_exists",
         "distinguishable_implies_asymmetry",
@@ -3668,7 +3668,7 @@
       "path": "formal/RDL_DtN.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "5eea012448fad4a7a230033d01a498889d6cfbf8",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "boundary_edge_recoverable",
         "interior_is_series",
@@ -3685,7 +3685,7 @@
       "path": "formal/RDL_GammaSpectral.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "76cc8016fbb1204f6a564048df1a6a19042dfc55",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "Qplus_nonneg",
         "Qsq_nonneg",
@@ -3706,7 +3706,7 @@
       "path": "formal/RDL_GenesisLink.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "75693bc35286284164f8a211af5ccfe7c7cbc098",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "genesis_chain_realized",
         "readout_is_lossy",
@@ -3721,7 +3721,7 @@
       "path": "formal/RDL_InvolutiveOrthoCore.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "ac1168e2d5219dfc4c3eaf9986a658d3ff511591",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "orth_antitone",
         "orth_expand",
@@ -3742,7 +3742,7 @@
       "path": "formal/RDL_LaplaceBeltrami.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "449e3517cb67a6aab8fc9710c1a84ca767af9b40",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "sumZ_ext",
         "sumZ_zero",
@@ -3779,7 +3779,7 @@
       "path": "formal/RDL_MetricReadout.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "c7dcda220103846161f44ff546337581a2fcf819",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "Sum_ext",
         "Sum_plus",
@@ -3809,7 +3809,7 @@
       "path": "formal/RDL_MetricReadoutLimit.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "79b36a287db4fde4f5be7d6e90f7d232ad3c8ff1",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "D2dir_expand",
         "directional_second_difference_limit",
@@ -3824,7 +3824,7 @@
       "path": "formal/RDL_MetricReadoutRate.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "4391cb46ba7ca3c7e6fa8797e11eb46ca140d99e",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "sq_pos",
         "second_difference_rate",
@@ -3839,7 +3839,7 @@
       "path": "formal/RDL_PhaseSound.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "ab9ecb26da467f25613abe289a3ebbd1d46e9998",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "dual_involutive",
         "inc_refl",
@@ -3897,7 +3897,7 @@
       "path": "formal/RDL_RetentionCenter.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "bb5321007f93778f019e856eedf86b7acabbb59b",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "orth_antitone",
         "orth_expand",
@@ -3925,7 +3925,7 @@
       "path": "formal/RDL_SingleHopHierarchy.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "82c994d45092d1e777c47ec716c7b186820f53e5",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "faithful_reaches",
         "blocked",
@@ -3940,7 +3940,7 @@
       "path": "formal/RDL_SpineGraphCoupled.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "6c23bb7127251c496aa9fd456e46f80ebc02bf84",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "inner_sym",
         "inner_self_nonneg",
@@ -3975,7 +3975,7 @@
       "path": "formal/RDL_SpineGraphEnergy.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "595eb25c0a8a00015f107f5a2aad0f7b15da40ac",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "lapQ_is_div_grad",
         "dirichletQ_density_nonneg",
@@ -3995,7 +3995,7 @@
       "path": "formal/RDL_SpineStability.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "a8f1e10521ff7595db999c62098efdc41942905f",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "four_MK_pos",
         "split_classical",
@@ -4014,7 +4014,7 @@
       "path": "formal/RDL_StarRig.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "060fc3da382e48ec1a58186acb17497aa7322438",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "adj_is_involution",
         "sum_mul_lr",
@@ -4030,7 +4030,7 @@
       "path": "formal/RDL_StarRigCPTP_General.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "894fb7c636c1b9235c35765cf0d43e577f3149ef",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "trace_chan_comp",
         "channel_trace_preserving",
@@ -4049,7 +4049,7 @@
       "path": "formal/RDL_StarRigGeneral.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "ebfa4d692e79c74ddd6e4c22635d34e839c603e0",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "Sum_0",
         "Sum_eq",
@@ -4074,7 +4074,7 @@
       "path": "formal/RDL_StarRigMatrix.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "5073f28056b7554c54d25f9a07c54873a7d8b92a",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "mat2_eq",
         "adj_invol",
@@ -4103,7 +4103,7 @@
       "path": "formal/RDL_StarRigMatrix3.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "1cdaa57ca9ee05a5c89339272ff6036e594cd243",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "mat3_eq",
         "adj_invol",
@@ -4135,7 +4135,7 @@
       "path": "formal/RDL_StarRigMatrixN.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "a0c005038626ac562b6f486873453e0c54dda714",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "sumZ_ext",
         "sumZ_zero",
@@ -4165,7 +4165,7 @@
       "path": "formal/RDL_StarRigMatrixN_Step2.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "488cd273003f245f05ca3e3b5cd512504ca0489f",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "sumZ_ext",
         "sumZ_zero",
@@ -4190,7 +4190,7 @@
       "path": "formal/RDL_StarRigMatrixN_Step3.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "9cd7d40c8279d9984d1c901e430116c6ee30c7c5",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "sumZ_ext",
         "sumZ_zero",
@@ -4222,7 +4222,7 @@
       "path": "formal/RDL_TaylorLimit.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "c058db3b1d62a61861bdcae492cb05cb1cabf2f0",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "d_shift",
         "d_sq_shift",
@@ -4245,7 +4245,7 @@
       "path": "formal/RDL_TelescopeCore.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "f0f9fed3d6b8e98af2724a18d380fe7e19167044",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "telescope",
         "antidifference",
@@ -4262,7 +4262,7 @@
       "path": "formal/RDL_TemplatedSkeleton.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "102173c4383b390fce726f09b25ff0872d81db3c",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "skeleton_sufficient",
         "domain_preserved",
@@ -4277,7 +4277,7 @@
       "path": "formal/RDL_UnitDistance.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "4749771ef655fdba00b800e02f37a0c2444bea01",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "triangular_beats_square",
         "advantage_grows"
@@ -4291,7 +4291,7 @@
       "path": "formal/RDU_NativeInformationUnits.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "365148a8a01ad68151bc70a0c0f56247f3d508c1",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "constants_unimodular",
         "dimension_spanned",
@@ -4307,7 +4307,7 @@
       "path": "formal/RD_ConPA_ReadoutBivalence.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "39a9c9491b7562c93dd44a553a347b83d52a064b",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "soundnessC_param",
         "consistencyC_param",
@@ -4322,7 +4322,7 @@
       "path": "formal/RD_NegTranslation_Core.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "39ee0ac041a3cbcfb51635c6cff9f722f1a0c300",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "nn_em",
         "dn_lem",
@@ -4344,7 +4344,7 @@
       "path": "formal/Scratch_ShipOfTheseus_RD4.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "8caf4e56ab6b9c994cc3a10c99e5b860b3d95612",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "distinct_histories_never_merge"
       ],
@@ -4363,7 +4363,7 @@
       "path": "formal/URCF_RD_All.v",
       "commit": "961151db33b0491cba8fabade69f594238d33f84",
       "blob": "d64dccb5906c5505c275b141f6c78e27b9d4018f",
-      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; 'Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
+      "licence": "PROPRIETARY LICENSE -- ALL RIGHTS RESERVED at the source repo (LICENSE, repo root; '[copyright notice redacted per BBL-198: proprietary, all rights reserved; owner identity withheld]'). Founder-authorised exception for Toledo (BBL-198, DEC-toledo-solver-arc-copy-2026-0906): the owner authorises copying these canonical Coq sources into Toledo under MIT, with provenance 'solver arc (private)' + commit + blob; the private repository's name itself must never appear in any public Toledo file (BBL-195/198).",
       "theorems": [
         "cons_des",
         "sound",

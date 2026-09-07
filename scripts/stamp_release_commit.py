@@ -17,7 +17,7 @@ build`/`make site`/`make catalogue` deliberately do NOT call it, since a dev bui
 should show the registry's committed-from commit, not the working tree's current HEAD.
 
 registry/CANONICAL.json is otherwise off-limits to this fixer pass (owned by the v1.2
-lane run, wf_3483b2de-ea9) -- this script is written, not invoked, by that pass; running
+lane run) -- this script is written, not invoked, by that pass; running
 it is the release-tagger's own explicit next step, tracked in ops/HANDOFF_OVERNIGHT_2026-09-06.md.
 """
 from __future__ import annotations

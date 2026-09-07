@@ -2,7 +2,8 @@
 
 The upstream source for this directory is a **private** repository ("solver arc (private)",
 name withheld per BBL-195/198). Its own `LICENSE` at the anchored commit is a proprietary,
-all-rights-reserved licence ("Copyright (c) 2026 ANSE.ASIA / yaoharee.lt. All rights reserved.").
+all-rights-reserved licence (a proprietary, all-rights-reserved licence; copyright held by
+the private repository's owner, identity withheld per BBL-198).
 
 **Founder authorisation.** The owner (founder) explicitly authorised copying the private
 solver arc's canonical Coq sources (the files listed in `PROVENANCE.json`) into Toledo under
