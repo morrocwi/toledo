@@ -174,6 +174,25 @@ def export_static(out_dir: pathlib.Path, root: pathlib.Path | None = None) -> di
 
     emit("manifest.json", manifest)
 
+    # A landing page at the export root, so the Pages URL itself answers instead
+    # of returning 404: it names the API version prefix and the entry files.
+    index_html = (
+        "<!doctype html><meta charset=\"utf-8\"><title>Toledo static API</title>"
+        "<h1>Toledo — equation library, static read API</h1>"
+        f"<p>Registry release {registry_release_version}, package {_package_version}, "
+        f"{len(entries)} entries, generated {generated_at} from commit {generated_from_commit}.</p>"
+        "<ul><li><a href=\"v1/manifest.json\">v1/manifest.json</a></li>"
+        "<li><a href=\"v1/counts.json\">v1/counts.json</a></li>"
+        "<li><a href=\"v1/verdict-rules.json\">v1/verdict-rules.json</a></li>"
+        "<li><a href=\"v1/search-index.json\">v1/search-index.json</a></li>"
+        "<li>v1/entries/&lt;code&gt;.json, v1/by-root/, v1/by-domain/</li></ul>"
+        "<p>Source and documentation: <a href=\"https://github.com/morrocwi/toledo\">github.com/morrocwi/toledo</a> "
+        "(mcp/docs/STATIC_API.md). Every value here is a readout of the registry files at the commit named above, not a truth claim.</p>"
+    )
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "index.html").write_text(index_html, encoding="utf-8")
+    files_written.append("../index.html")
+
     # entries/<mangled-code>.json — full entry + export-time verdict.
     for e in entries:
         code = e.get("code")
