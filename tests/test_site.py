@@ -281,7 +281,7 @@ def _parse_tools_table_from_readme() -> list[dict]:
 
 def test_tools_table_matches_readme_exactly():
     expected = _parse_tools_table_from_readme()
-    _n = int(re.search(r"^## Tools \\((\\d+)\\)", text, flags=re.M).group(1)) if re.search(r"^## Tools \\((\\d+)\\)", text, flags=re.M) else len(expected)
+    _txt = MCP_README.read_text(encoding="utf-8"); _m = re.search(r"^## Tools \((\d+)\)", _txt, flags=re.M); _n = int(_m.group(1)) if _m else len(expected)
     assert len(expected) == _n, f"mcp/README.md Tools table has {len(expected)} rows, heading says {_n}"
     for row in expected:
         assert re.match(r"^toledo_[a-z_]+$", row["tool"]), row["tool"]
