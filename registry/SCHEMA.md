@@ -222,7 +222,16 @@ error; every affected rung is then computed as `held: false` with an honest, quo
   the glosa Reproduction Card's own `notes` field, not a judgment this script makes).
 - **`registry/review_report_index.json`** — `{"reviews": [...]}`. Each row: `citation`,
   `toledo_codes`, `independence_class` (`P6`'s ladder, e.g. `"I2"`), `reviewer_identity`,
-  `maker_id`. Backs R5 only when `independence_class >= "I2"`.
+  `maker_id`. Backs R5 only when `independence_class >= "I2"`. For a `glosa repro verify`
+  review specifically (`route_id` starting `repro-verify-`), `citation` additionally carries
+  `hash_match` (`bool | None`, `scripts/register_reproduction_evidence.py::parse_hash_match` of
+  the review's own free-text `verdict`) and `verify_outcome` (`"MATCH" | "MISMATCH" | None`, the
+  same fact rendered as the word `cli/glosa`'s own verdict text uses,
+  `verify_outcome_of(hash_match)`) — this is the field `compute_resistance.py::card_holds_r3`
+  reads to withhold R3 (and therefore R4/R6) from a card whose only independent re-execution
+  disclosed a hash MISMATCH, even though the card's own maker-run `run{}` looks complete
+  (design/RESISTANCE_LADDER_v0_1.md §1 item 3; the EQ-068 false-positive this closed). Both
+  fields are `None` when the review carries no parseable verdict text (never guessed).
 - **`registry/claim_card_index.json`** — `{"claims": [...]}`. Each row: `citation`,
   `toledo_codes`, `falsifier` (non-empty, non-`"TODO"`). R1's fallback path only, used when
   no reproduction card's own `preregistered_prediction` already holds R1 for that code.

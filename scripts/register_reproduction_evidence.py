@@ -106,7 +106,21 @@ def parse_hash_match(verdict) -> "bool | None":
     return None
 
 
+def verify_outcome_of(hash_match: "bool | None") -> "str | None":
+    """Human-readable companion to `hash_match` (registry/SCHEMA.md's addendum documents both):
+    `"MATCH"` / `"MISMATCH"` / `None` -- never a third value, never guessed when `hash_match`
+    itself is `None` (no parseable verdict). Kept as a thin, total function over
+    `parse_hash_match`'s own three-valued output so a reader of `review_report_index.json` sees
+    the same word `cli/glosa`'s own verdict text uses, without re-deriving it from the boolean."""
+    if hash_match is True:
+        return "MATCH"
+    if hash_match is False:
+        return "MISMATCH"
+    return None
+
+
 def review_row(review: dict, codes: list, commit_note: str, content_sha256: str, rel_path: str) -> dict:
+    hash_match = parse_hash_match(review.get("verdict"))
     return {
         "toledo_codes": codes,
         "claim": review.get("claim_ref"),
@@ -116,7 +130,13 @@ def review_row(review: dict, codes: list, commit_note: str, content_sha256: str,
         "citation": {
             "repo": "glosa", "commit": None, "commit_note": commit_note,
             "content_sha256": content_sha256, "path": rel_path, "id": review.get("route_id"),
-            "hash_match": parse_hash_match(review.get("verdict")),
+            # `hash_match` (bool|None) is what `compute_resistance.py::card_holds_r3` actually
+            # reads (registry/SCHEMA.md addendum); `verify_outcome` (registry/SCHEMA.md addendum,
+            # "MATCH"/"MISMATCH"/None) is the same fact spelled the way a human reader of this
+            # JSON file recognizes from `cli/glosa`'s own verdict text -- one parse
+            # (`parse_hash_match`), two renderings, never two independently-drifting computations.
+            "hash_match": hash_match,
+            "verify_outcome": verify_outcome_of(hash_match),
         },
     }
 

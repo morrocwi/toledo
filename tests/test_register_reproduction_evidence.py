@@ -148,3 +148,12 @@ def test_review_row_carries_hash_match_from_the_verdict(tmp_path):
     review_paths = rre.find_review_reports(glosa_repo)
     _repro_doc, review_doc = rre.build(glosa_repo, card_paths, review_paths)
     assert review_doc["reviews"][0]["citation"]["hash_match"] is False
+    # registry/SCHEMA.md addendum: verify_outcome is the same fact spelled the way cli/glosa's
+    # own verdict text does -- one parse (parse_hash_match), two renderings.
+    assert review_doc["reviews"][0]["citation"]["verify_outcome"] == "MISMATCH"
+
+
+def test_verify_outcome_of_is_a_total_three_valued_rendering_of_hash_match():
+    assert rre.verify_outcome_of(True) == "MATCH"
+    assert rre.verify_outcome_of(False) == "MISMATCH"
+    assert rre.verify_outcome_of(None) is None
