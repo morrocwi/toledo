@@ -193,8 +193,15 @@ def _load_denylist_file(path: str | None) -> list[str]:
 def scan(paths: list[str], repo_root: str, denylist_file: str | None = None) -> ScanResult:
     result = ScanResult()
 
-    username = os.environ.get("USER") or os.environ.get("LOGNAME") or ""
+    username = (os.environ.get("TOLEDO_LEAK_SCAN_USERNAME")
+                or os.environ.get("USER") or os.environ.get("LOGNAME") or "")
     username = username.strip()
+    # Generic account names used by CI images and containers are common English
+    # words; matching them would flag ordinary prose (a CI run matched "runner"
+    # in a changelog). They are never this workstation's own username.
+    _GENERIC_ACCOUNTS = {"runner", "root", "user", "ubuntu", "admin", "github", "ci", "build"}
+    if username.lower() in _GENERIC_ACCOUNTS:
+        username = ""
     username_re = re.compile(re.escape(username)) if len(username) >= 3 else None
 
     ai_vendor_tokens = _decode_tokens(_AI_VENDOR_TOKENS_B64)
