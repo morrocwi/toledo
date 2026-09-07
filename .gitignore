@@ -40,3 +40,4 @@ latex/*.idx
 latex/*.ilg
 latex/*.ind
 latex/catalogue_meta.tex
+registry/*.bak-*
