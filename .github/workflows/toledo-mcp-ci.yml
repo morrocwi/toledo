@@ -128,7 +128,7 @@ jobs:
           else
             echo "::warning::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset); the category is run locally before every push loud instead of silently skipping this category. Configure the repository secret to fix."
             python3 site/checks/run_all.py site/dist || true
-            exit 0
+            exit 2
           fi
       - uses: actions/upload-artifact@v4
         with: { name: site-dist, path: site/dist, retention-days: 1 }
