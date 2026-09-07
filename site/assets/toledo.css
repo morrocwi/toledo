@@ -65,6 +65,10 @@ pre{background:var(--code-bg);border:1px solid var(--border);border-radius:.35re
 .note{border-left:3px solid var(--pill-status-caution);background:var(--code-bg);
   padding:.5rem .85rem;border-radius:0 .35rem .35rem 0;font-size:.92rem}
 .relation-list{margin:.4rem 0;padding-left:1.25rem}
+dl{margin:.4rem 0 1.25rem}
+dl dt{font-weight:600;margin-top:.5rem}
+dl dt code{font-weight:600}
+dl dd{margin:.15rem 0 0;color:var(--fg-muted)}
 details{border:1px solid var(--border);border-radius:.35rem;padding:.6rem .85rem;
   margin:.75rem 0 1.5rem;background:var(--bg-raised)}
 summary{cursor:pointer;font-weight:600}

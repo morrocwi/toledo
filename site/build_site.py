@@ -103,6 +103,119 @@ DOMAIN_NAMES = {
 }
 
 
+# --------------------------------------------------------------------------
+# Plain-language glossary (R1 re-review finding tier-status-jargon-unexplained):
+# a reader landing on a badge like "Ax", "root_layer_unwired", or "unverified"
+# with zero explanation cannot tell a proved theorem from an open hypothesis.
+# Every sentence below is a restatement of wording already published in
+# README.md ("The coq_status ladder" section) or registry/SCHEMA.md (the
+# tier/coq/status enum rows and their v1.1/v1.2 addenda) — no new meaning is
+# introduced here, only the existing one surfaced on the site itself. Used as
+# a badge `title` attribute, the /about/ definition list, and the top-of-page
+# note on every /by-tier/<v>/ and /by-status/<v>/ listing page.
+# --------------------------------------------------------------------------
+TIER_DEFINITIONS = {
+    "Th_coqc": "Machine-checked and axiom-free: closed under the global context in Coq's own "
+               "Print Assumptions output — an internal-consistency check, never an empirical or "
+               "physical truth claim (README, \"The coq_status ladder\").",
+    "Definition": "A formal Definition/Fixpoint/Inductive-style restatement, with no theorem "
+                  "attached — nothing here is \"closed\" or \"open\", it is a restatement, not a "
+                  "claim (registry/SCHEMA.md).",
+    "Dr": "An Open/Dr hypothesis: the source itself proposes this as a reasoned claim without a "
+          "machine-checked proof, carried forward exactly as stated (registry/SCHEMA.md's "
+          "open_prop addendum).",
+    "Open": "An open, unresolved hypothesis or question, carried forward exactly as open, never "
+            "forced to a proof (registry/SCHEMA.md's open_prop addendum).",
+    "Ax": "The source states this as an axiom (assumed, not derived), or a proved result whose "
+          "closure depends on a disclosed axiom — never claimed as unconditionally closed "
+          "(docs/EQ_CODE_SCHEME.md's Theta/CMC addendum).",
+    "finite_diagnostic": "A diagnostic check confirmed over a finite model or dataset, distinct "
+                         "from a machine-checked proof — the source's own tag, preserved as "
+                         "stated.",
+    "untagged": "The source gave no tier at all for this reading — recorded honestly as untagged "
+                "rather than guessed (README.md).",
+    "RETRACTED": "The source itself retracted this root; the code stays reserved and is shown, "
+                 "never silently removed, so the correction stays visible "
+                 "(docs/MEETING_2026-09-06_toledo_design.md, T14).",
+}
+
+COQ_STATUS_DEFINITIONS = {
+    "closed": "The entry's own Toledo-native Coq file states at least one Theorem/Lemma/"
+              "Corollary/Example/Remark that verify.sh reports \"Closed under the global "
+              "context\" for the entry's own statement — the only status that certifies a proof "
+              "(README, \"The coq_status ladder\").",
+    "definition": "The entry's own file states a typed Definition/Record in a finite model, with "
+                  "no theorem attached; there is nothing here to be \"closed\" or \"open\" — a "
+                  "formal restatement, not a claim (README, \"The coq_status ladder\").",
+    "wrapped_related": "A Toledo-named wrapper file exists and builds, but it only aliases or "
+                       "specialises an identifier imported from another repository; it does not "
+                       "independently close the entry's own statement (README, \"The coq_status "
+                       "ladder\").",
+    "mapped_not_wrapped": "An evidence-backed match against an imported Coq identifier exists, "
+                          "but no Toledo-native wrapper file has been written yet — an honest "
+                          "middle state between no evidence at all and a wrapped/closed proof "
+                          "(README, \"The coq_status ladder\").",
+    "open_prop": "An Open/Dr hypothesis stated as an unproved Definition …_hyp : Prop, carried "
+                "forward exactly as open, never forced to a proof (README, \"The coq_status "
+                "ladder\").",
+    "not_formalisable": "No formal content exists in the source for this entry; the reason is "
+                        "recorded per-entry rather than asserted without it (README, \"The "
+                        "coq_status ladder\").",
+    "axioms": "This is a literal Coq Axiom declaration, disclosed and quoted from its source — "
+             "assumed, not derived, and never pushed to closed/wrapped_related/mapped_not_wrapped "
+             "without further evidence (registry/SCHEMA.md's root-layer addendum).",
+    "root_layer_unwired": "This Layer-0 root has no Coq wiring of its own yet — a separate, "
+                          "not-yet-done stream from the readings' own resolved ladder, never "
+                          "itself evidence of closed/wrapped_related/mapped_not_wrapped "
+                          "(registry/SCHEMA.md's root-layer addendum).",
+    "none": "No Coq status has been recorded for this entry — Coq assessment has not yet reached "
+           "it (registry/SCHEMA.md's base coq_status enum).",
+}
+
+# The `status` field's own enum (registry/SCHEMA.md line 38) — shown on the
+# /by-status/<v>/ listing pages, whose axis is this field, not coq_status.
+STATUS_DEFINITIONS = {
+    "current": "This entry's statement is the standing wording, with no caveat on record.",
+    "superseded_by": "A newer entry replaces this one; see status_note / the referenced code for "
+                     "which one.",
+    "split": "This entry's content has been reorganised into more than one entry; see status_note.",
+    "not_an_equation": "This record points to prose, not a formula — never presented as one "
+                       "(README's verdict rule 4).",
+    "historical": "Kept for the historical record; not the standing statement — see status_note.",
+    "unverified": "The source stated a tier for this reading, but no Coq identifier for it was "
+                 "located, so the tier is kept as the source states and the status is marked "
+                 "unverified (registry/SCHEMA.md's tier_evidence addendum).",
+    "imprecise_as_stated": "The statement as recorded is imprecise; see status_note for the "
+                          "detail.",
+}
+
+
+def _glossary_dl_html(*definition_groups: tuple[str, dict[str, str]]) -> str:
+    """One `<dl>` per (heading, {value: sentence}) group, in dict order —
+    the shared builder for the /about/ definition list and the landing
+    page's "How to read a status" box, so the two can never drift apart."""
+    parts = []
+    for heading, values in definition_groups:
+        rows = "".join(
+            f"<dt><code>{html.escape(v)}</code></dt><dd>{html.escape(sentence)}</dd>"
+            for v, sentence in values.items()
+        )
+        parts.append(f"<h3>{html.escape(heading)}</h3><dl>{rows}</dl>")
+    return "".join(parts)
+
+
+def _definition_title_attr(value: str | None, *definitions: dict[str, str]) -> str:
+    """`title="..."` attribute text for a badge, looked up across one or more
+    definition dicts in order — empty string when the value has no known
+    definition (never a fabricated one)."""
+    if not value:
+        return ""
+    for d in definitions:
+        if value in d:
+            return f' title="{html.escape(d[value])}"'
+    return ""
+
+
 def root_prefix(depth: int) -> str:
     """The `{{root}}` value for a page `depth` directories below the site
     root (0 = site root itself). Always relative (PLACEHOLDERS.md) — this
@@ -504,17 +617,21 @@ def render_listing_row(e: dict, depth: int, *, band_id: str | None = None) -> st
     href = html.escape(f"{prefix}/entries/{site_slug(code)}.html")
     name = e.get("name", "") or ""
     name_short = html.escape(_truncate(name, 90))
-    tier = html.escape(_s(e.get("tier")))
+    tier_value = _s(e.get("tier"))
+    tier = html.escape(tier_value)
+    tier_title = _definition_title_attr(tier_value, TIER_DEFINITIONS)
     domain = e.get("domain") or "—"
-    status = html.escape(e.get("status", "") or "")
+    status_value = e.get("status", "") or ""
+    status_title = _definition_title_attr(status_value, STATUS_DEFINITIONS)
+    status = html.escape(status_value)
     id_attr = f' id="{html.escape(band_id)}"' if band_id else ""
     return (
         f"<tr{id_attr}>"
         f'<td class="code-cell"><a href="{href}">{html.escape(code)}</a></td>'
         f'<td data-verbatim-source="true">{name_short}</td>'
-        f'<td><span class="badge badge-tier">{tier}</span></td>'
+        f'<td><span class="badge badge-tier"{tier_title}>{tier}</span></td>'
         f"<td>{html.escape(str(domain))}</td>"
-        f"<td>{status}</td>"
+        f'<td><span{status_title}>{status}</span></td>'
         "</tr>"
     )
 
@@ -615,12 +732,33 @@ def render_statement_html(statement: dict, presentation_mathml: str | None) -> t
     than folded into `{{statement_html}}` itself."""
     fmt = statement.get("format", "")
     latest = statement.get("latest", "") or ""
+    is_real_latex = fmt in ("latex", "latex+ascii") and _looks_like_real_latex(
+        statement.get("latex") or latest
+    )
     # `presentation_mathml` (registry/SCHEMA.md) is already a complete
     # `<math xmlns="...">...</math>` document, not an inner fragment — wrap
     # it in <noscript> only, never in a second <math> root (that would
-    # nest <math><math>...</math></math>, invalid MathML).
-    mathml_block = f"<noscript>{presentation_mathml}</noscript>" if presentation_mathml else ""
-    if fmt in ("latex", "latex+ascii") and _looks_like_real_latex(statement.get("latex") or latest):
+    # nest <math><math>...</math></math>, invalid MathML). Gated on
+    # `is_real_latex`: for the 81 canonical entries that are both
+    # mislabeled-prose (format=="latex"/"latex+ascii" but text is a plain
+    # English sentence) AND carry a pre-generated `presentation_mathml`,
+    # that MathML was itself generated by mechanically wrapping the prose
+    # letter-by-letter (a registry-side artefact of the same mislabeling,
+    # e.g. "<mi>I</mi><mi>f</mi><mi>t</mi>..." for "If the declared..."),
+    # which renders as unreadable run-together gibberish. That garbled
+    # block previously still reached the no-JS/no-KaTeX `<noscript>` path
+    # even after the visible statement itself was corrected to plain text
+    # (R1 re-review finding nojs-mathml-mislabeled-prose-still-garbled) —
+    # dropping it here for every non-real-latex branch (ascii-math, the
+    # mislabeled-prose fallback, coq, prose) means those pages carry the
+    # plain-text statement alone, with no duplicate garbled MathML in
+    # either the JS or no-JS path.
+    mathml_block = (
+        f"<noscript>{presentation_mathml}</noscript>"
+        if presentation_mathml and is_real_latex
+        else ""
+    )
+    if is_real_latex:
         latex_src = statement.get("latex") or latest
         # Every `statement.latex` value written for `format=="latex+ascii"`
         # (registry/SCHEMA.md's 2026-09-07 v1.2-lane-S addendum; the same
@@ -840,10 +978,11 @@ def render_aliases_html(entry: dict) -> str:
     return f'<p class="lede">Also known as: {items}</p>'
 
 
-def render_badge(value: str | None, css_class: str) -> str:
+def render_badge(value: str | None, css_class: str, *definitions: dict[str, str]) -> str:
     if not value:
         return ""
-    return f'<span class="badge {css_class}">{html.escape(value)}</span>'
+    title_attr = _definition_title_attr(value, *definitions)
+    return f'<span class="badge {css_class}"{title_attr}>{html.escape(value)}</span>'
 
 
 def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text: str,
@@ -875,9 +1014,13 @@ def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text:
         f'{entry_root_link} / {html.escape(code)}</p>'
     )
     domain_badge = render_badge(domain, "badge-domain")
-    tier_badge = render_badge(tier, "badge-tier")
-    status_badge = f'<span class="badge badge-status badge-status--{_status_variant(status)}">{html.escape(status)}</span>'
-    coq_badge = render_badge(coq_status, "badge-coq")
+    tier_badge = render_badge(tier, "badge-tier", TIER_DEFINITIONS)
+    status_title = _definition_title_attr(status, STATUS_DEFINITIONS)
+    status_badge = (
+        f'<span class="badge badge-status badge-status--{_status_variant(status)}"{status_title}>'
+        f'{html.escape(status)}</span>'
+    )
+    coq_badge = render_badge(coq_status, "badge-coq", COQ_STATUS_DEFINITIONS)
     relations_inner = render_relations_html(entry, by_code, reverse_rel, depth)
     relations_wrapped = (
         "<details><summary>Full relations (all parents, children, and cross-references)</summary>"
@@ -947,6 +1090,13 @@ def build_home_context(manifest: dict, root_rows: int, reading_entries: list[dic
         "registry_release_version": html.escape(manifest.get("registry_release_version") or "unreleased"),
         "generated_at": manifest["generated_at"],
         "generated_at_human": _human_date(manifest["generated_at"]),
+        # tier-status-jargon-unexplained (R1 re-review): a newcomer's very
+        # first landing page gets a plain-language "how to read a status"
+        # box, built from the same shared glossary /about/'s own definition
+        # list uses, so the two can never carry different wording.
+        "how_to_read_html": _glossary_dl_html(
+            ("Tier", TIER_DEFINITIONS), ("Coq status", COQ_STATUS_DEFINITIONS),
+        ),
     }
 
 
@@ -986,6 +1136,18 @@ def build_listing_context(short_axis_label: str, axis_value: str, axis_index_pat
         "row_count": str(n),
         "row_count_noun": noun,
         "rows_html": rows_html,
+        # tier-status-jargon-unexplained: a /by-tier/<v>/ page shows that
+        # tier value's own one-sentence definition; a /by-status/<v>/ page
+        # (this axis is the `status` field, not coq_status — DESIGN.md
+        # sec.1's URL scheme) shows that status value's definition. Empty
+        # for /by-domain/ and /by-root/, which carry no jargon to define.
+        "axis_definition_html": (
+            f'<p class="note">{html.escape(TIER_DEFINITIONS[axis_value])}</p>'
+            if short_axis_label == "Tier" and axis_value in TIER_DEFINITIONS
+            else f'<p class="note">{html.escape(STATUS_DEFINITIONS[axis_value])}</p>'
+            if short_axis_label == "Status" and axis_value in STATUS_DEFINITIONS
+            else ""
+        ),
     }
 
 
@@ -1057,6 +1219,13 @@ def build_about_context(manifest: dict, root_rows: int, coverage: dict, concept_
         "coverage_html": coverage_html(coverage, total_pages),
         "mathml_sentence": html.escape(cov["mathml_sentence"]),
         "statement_format_sentence": html.escape(cov["statement_format_sentence"]),
+        # tier-status-jargon-unexplained: the same shared builder home's
+        # "how to read a status" box uses, plus the status field's own
+        # ladder (not shown on the landing page's shorter box).
+        "glossary_html": _glossary_dl_html(
+            ("Tier", TIER_DEFINITIONS), ("Coq status", COQ_STATUS_DEFINITIONS),
+            ("Status", STATUS_DEFINITIONS),
+        ),
         "policy_summary": html.escape(POLICY_SUMMARY),
         "concept_doi": html.escape(concept_doi or "unreleased"),
         "registry_release_version": html.escape(manifest.get("registry_release_version") or "unreleased"),
@@ -1093,6 +1262,24 @@ def build_data_files(root: pathlib.Path, data_dir: pathlib.Path) -> dict:
     Independent of any template — this half of the build always completes."""
     entries, raw_by_code = load_entries(root)
     canonical_counts = load_canonical_counts(root)
+    # clean-checkout-site-build-empty (engineering re-review finding): a
+    # checkout that has not yet run `scripts/toledo_build.py` (registry/
+    # entries/ is .gitignore'd — see registry/SCHEMA.md and the Makefile's
+    # own `site: build ; python3 site/build_site.py` sequencing) previously
+    # produced a silent, near-empty skeleton site (exit 0, 0 registry
+    # entries) instead of failing loud. registry/CANONICAL.json's own
+    # counts{}.entries is always present and non-zero on a real registry, so
+    # a zero-entries load while that count says otherwise is unambiguous
+    # evidence of a missing build step, never a legitimately empty registry.
+    expected_min = canonical_counts.get("entries", 0)
+    if expected_min and not entries:
+        raise SystemExit(
+            f"site/build_site.py: loaded 0 entries from {root / 'registry' / 'entries'} but "
+            f"registry/CANONICAL.json's own counts.entries says {expected_min} — "
+            "registry/entries/ is almost certainly missing because `python3 scripts/"
+            "toledo_build.py` (or `make build`) has not been run yet on this checkout. "
+            "Run that first, or use `make site` which sequences it automatically."
+        )
     coverage = compute_coverage(entries)
     registry_release_version = _citation_field(root, "version")
     generated_from_commit = _git_commit(root)

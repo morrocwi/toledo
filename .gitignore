@@ -24,6 +24,13 @@ latex/*.toc
 latex/*.out
 site/*.html
 site/index.json
+# site/build_site.py's own build output (site/DESIGN.md) — CI publishes
+# site/dist/ to GitHub Pages and regenerates site/data/*.json on every run;
+# neither is committed, matching mcp/dist/'s own never-committed convention
+# (both are periodic, disclosed-as-eventually-consistent generated output,
+# not a second source of truth to keep in sync by hand).
+site/dist/
+site/data/
 registry/entries/
 registry/TOLEDO.json
 graph/

@@ -188,6 +188,13 @@ generated HTML calls `mangle_code(code)` from the imported function instead.
 
 ## 6. `/agents/` page content
 
+**Implemented directly inside `site/templates/agents.tmpl.html`** (S2), not in a separate authored
+directory — see §11's S2/S3 correction note. `build_agents_context()` in `site/build_site.py`
+supplies only the registry-derived placeholders (`{{tools_table_rows}}`/`{{tools_table_html}}`,
+`{{coverage_html}}`/`{{mathml_sentence}}`/`{{statement_format_sentence}}`, `{{entry_count}}`,
+`{{mcp_json_snippet}}`); everything below is fixed, hand-authored HTML already baked into the
+template, kept current against `mcp/README.md` and the founder rule by hand.
+
 - Restates the founder rule verbatim from `README.md`/`mcp/README.md`: every equation is looked up in
   Toledo before use; no agent may use an unregistered equation.
 - The reproduced 19-tool table (`data/tools-table.json`, §4) — always structurally identical to
@@ -423,7 +430,7 @@ tallies its own build loop accumulates.
 |---|---|---|
 | **S1** | `site/build_site.py`, `site/data/` | Reads the registry + `mcp/dist/static-api`; renders every template into `site/dist/`; writes `data/manifest.json`, `data/search-index.json`, `data/tools-table.json`; owns the §5 mangling-fix import and the §9 coverage tallies. |
 | **S2** | `site/templates/`, `site/assets/` | The template files (§2), `toledo.css` (§7), `search.js` (§12) — no registry-reading logic; pure presentation and the search-ranking port. |
-| **S3** | `.github/workflows/`, `site/agents/` | The CI job changes (§8); the `/agents/` page's own content assembly (§6) where it needs to be treated as a distinct authored surface from the generic templates (its JSON-LD, its Python/curl/CLI snippets) — still rendered through S1's build, but the content is S3's to write and keep current against `mcp/README.md`. |
+| **S3** | `.github/workflows/` | The CI job changes (§8). **Correction (2026-09-07 re-review, finding B6-orphaned-agents-scaffold-misdescribed):** an earlier revision of this row named a separate `site/agents/` directory (`content.json`, `jsonld.json`, `lookup_example.py`) as the authored source for the `/agents/` page. `site/build_site.py` never read those files — the actual `/agents/` prose, curl line, Python example, and JSON-LD block are authored directly inside `site/templates/agents.tmpl.html` (S2's own file; `build_agents_context()` in `build_site.py` supplies only the registry-derived placeholders — tools table, coverage sentence, entry count). The orphaned `site/agents/` scaffold (never committed) was deleted rather than wired up, since the template-authored form already matches this document's §6 content requirements exactly and needs no second data path to drift from. `/agents/`'s authored copy is therefore S2's, kept current against `mcp/README.md` and the founder rule by hand, same discipline `site/agents/README.md` used to describe for the deleted scaffold. |
 | **S4** | `tests/test_site.py`, `site/checks/` | Everything in §10. Independent of S1–S3 by construction: it reads `site/dist/` output and the registry directly, never imports `site/build_site.py`'s internals, so it cannot pass merely because it shares assumptions with the generator it is checking. |
 
 ## 12. Search index format and client script

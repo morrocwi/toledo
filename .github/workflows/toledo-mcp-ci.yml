@@ -46,6 +46,14 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -e "mcp/[test]"
       - run: python3 -m pytest -q mcp/tests/
+      # B5-test-build-broken-at-head (re-review finding): the root tests/
+      # directory (GENERATOR + TOOLING layer — scripts/toledo_build.py,
+      # scripts/toledo, site/build_site.py) previously had no CI coverage at
+      # all, so a public signature change to build_site.py (or toledo_build.py)
+      # could break `make test` on every clean checkout while every CI job
+      # here stayed green. Runs the fixture-based suite only (tests/
+      # fixtures/CANONICAL.sample.json), never the real registry.
+      - run: python3 -m pytest -q tests/
       - run: python3 mcp/benchmarks/bench_index.py   # fails loudly on a crash, not on a slow number — this is a smoke run, not a perf gate
   build-index:
     runs-on: ubuntu-latest
@@ -92,6 +100,15 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -e mcp/                      # build_site.py imports mangle_code from it
+      # clean-checkout-site-build-empty (engineering re-review finding):
+      # registry/entries/, registry/TOLEDO.json, vault/, and graph/ are all
+      # .gitignore'd — they exist only after scripts/toledo_build.py runs
+      # (the Makefile's own `site` target already sequences this: `site:
+      # build ; python3 site/build_site.py`). Without this step, a clean
+      # checkout's site/build_site.py silently writes a near-empty skeleton
+      # site (0 registry entries) instead of failing loud, and
+      # tests/test_site.py errors on a missing registry/TOLEDO.json fixture.
+      - run: python3 scripts/toledo_build.py
       - run: python3 site/build_site.py --out site/dist
       - run: python3 -m toledo_mcp.export_static --out mcp/dist/static-api   # so test_entry_page_api_link_is_correctly_mangled (tests/test_site.py) gets real inputs instead of skipping
       - run: python3 -m pytest -q tests/test_site.py

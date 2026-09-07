@@ -117,7 +117,47 @@ def test_site_builds(tmp_path):
     out_root, _ = _build(tmp_path)
     sys.path.insert(0, str(REPO_ROOT / "site"))
     import build_site
-    report = build_site.build_site(out_root)
-    assert report["pages"] == 6
-    assert (out_root / "site" / "index.html").exists()
-    assert (out_root / "site" / "SMP-ROOT.html").exists()
+    # build_site() now requires out_dir/data_dir/templates_dir explicitly
+    # (TEST-BREAK-1: the A5 website workflow added these positional params).
+    # root=out_root so load_entries()/load_canonical_counts() read the
+    # fixture build's own registry/ (written by toledo_build.run_build
+    # above), never the real repo's ~967-entry registry; templates_dir
+    # points at the real site/templates (the fixture carries no templates
+    # of its own). build_data_files()/build_pages() also read, unconditionally,
+    # root/registry/CANONICAL.json (counts{} block -- an absent *key* is
+    # tolerated, but the file itself must exist), root/mcp/README.md (the
+    # tools table) and root/.mcp.json (the /agents/ page) -- none of those
+    # are written by run_build, so all three are copied read-only into
+    # out_root; out_dir/data_dir stay under tmp_path for isolation, matching
+    # this file's own module docstring ("never touches the real ... directories").
+    (out_root / "registry").mkdir(parents=True, exist_ok=True)
+    (out_root / "registry" / "CANONICAL.json").write_bytes(FIXTURE.read_bytes())
+    (out_root / "mcp").mkdir(parents=True, exist_ok=True)
+    (out_root / "mcp" / "README.md").write_bytes((REPO_ROOT / "mcp" / "README.md").read_bytes())
+    (out_root / ".mcp.json").write_bytes((REPO_ROOT / ".mcp.json").read_bytes())
+    site_out = out_root / "site"
+    report = build_site.build_site(
+        out_root, site_out, site_out / "data", REPO_ROOT / "site" / "templates",
+    )
+    # Not a fixed literal count: build_pages() emits one page per entry PLUS
+    # a growing set of index/listing pages (browse, by-root, by-domain,
+    # by-tier, by-status, and any further axis a later stream adds -- this
+    # count already moved from 17 to 18 between two runs of this same test
+    # during Toledo v1.5 lane A5's own website work, purely from a new
+    # legitimate page, not a regression). Asserting the exact number here
+    # would make this test flake against ongoing, unrelated feature work in
+    # site/build_site.py. What TEST-BREAK-1 actually needs verified is that
+    # the build completed honestly (nothing silently skipped or unresolved)
+    # and that the per-entry pages this test's other assertions rely on
+    # really exist -- a lower bound (>= one page per fixture entry, plus the
+    # site's own index) still catches the real regression class (build_site
+    # crashing, or writing zero pages) without pinning to a moving total.
+    assert report["pages_skipped"] == 0
+    assert report["templates_missing"] == []
+    assert report["unresolved_placeholders"] == {}
+    assert report["pages_written"] >= 7  # >= 6 fixture entries + index.html
+    assert (site_out / "index.html").exists()
+    assert (site_out / "entries" / "SMP-ROOT.html").exists()
+    for code in ["SMP-ROOT", "SMP-ROOT2", "SMP-ROOT__H_01_v1", "SMP-ROOT2__S_01_v1",
+                 "SMP-ROOT__H_02_v1", "SMP-ROOT__H_03_v1"]:
+        assert (site_out / "entries" / f"{code}.html").exists(), code
