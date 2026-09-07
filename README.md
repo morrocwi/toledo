@@ -79,6 +79,114 @@ Every code resolves the same way across five surfaces, all generated from
 - **`registry/EQ_LIBRARY.md`** (`make library`) — one generated table row per canonical object.
 - **Printable catalogue** (`latex/catalogue.pdf`, `make catalogue`) — every entry as one PDF.
 
+This repository's own equation-provenance rule is stated in full in
+`EQUATION_SOURCE_POLICY.md`: this registry is the sole authoritative source for an existing
+Toledo equation; a needed equation absent here is inspected for first, derived only if genuinely
+absent, and any new derivation is labelled as a proposal, never presented as an existing entry.
+
+## Finding and checking equations: the Toledo MCP server and CLI
+
+**Founder ruling, 2026-09-07: every equation must be looked up in Toledo before it is used. No
+AI agent may use an unregistered equation.** `mcp/` packages a Model Context Protocol (MCP) server
+and a companion `toledo` command-line client that put this registry in front of any AI agent that
+needs to check a formula before citing or building on it — a lookup gate, not a second copy of the
+registry: it reads `registry/CANONICAL.json`, `registry/genesis_root.json` and
+`registry/LINEAGE.jsonl` through its own cache and index, and its only write path
+(`toledo_register_proposal`) drops a file under `mcp/proposals/` for a human registrar to review;
+it never edits `registry/CANONICAL.json`, `registry/genesis_root.json`, `registry/LINEAGE.jsonl`,
+`coq/`, or `latex/`.
+
+The rule in practice: call `toledo_check` (or read the `verdict` block a code lookup already
+attaches) before stating, citing, or building on a formula. `verdict.usable == true` — cite the
+matched code. A superseded/split code — use the redirect it names. A code that only points to
+prose — do not present it as a formula. A candidate/ambiguous match — get it confirmed, or
+escalate to a human; do not guess. `NOT_REGISTERED` — call `toledo_register_proposal` and wait for
+a human registrar to merge it before using the formula; this server never merges a proposal into
+the registry itself. Full detail: `mcp/README.md`'s "The rule this server exists to enforce".
+
+### The 19 tools
+
+| Tool | Purpose |
+|---|---|
+| `toledo_search` | Ranked/filtered text search (root, domain, tier, status, coq_status), JSON or TOON output, per-row verdict. |
+| `toledo_get` | The full entry plus its verdict, for one exact code. |
+| `toledo_status` | Compact tier/status/coq_status/superseded_by plus verdict for one code. |
+| `toledo_check` | The founder-rule gate: pass a formula or a code and get back a verdict. |
+| `toledo_lineage` | Ancestry chain, direct children, and every lineage event for one code. |
+| `toledo_ancestors` | The full parent DAG, not just the single primary-parent chain. |
+| `toledo_descendants` | The full child DAG. |
+| `toledo_neighbours` | Parents, children, relations and reverse relations, each with its own verdict. |
+| `toledo_by_root` | Every reading of a given Layer-0 root. |
+| `toledo_by_domain` | Every entry in a given domain letter (E H S W M P C B). |
+| `toledo_by_record` | Every code citing a given Zenodo record id or DOI. |
+| `toledo_by_raw_key` | Exact `<record_id>:<label>` occurrence-key lookup. |
+| `toledo_lineage_window` | Paginated, filtered browse of the whole lineage log. |
+| `toledo_counts` | Live aggregate counts, cross-checkable against `registry/CANONICAL.json`'s own `counts{}`. |
+| `toledo_index_status` | Index freshness, schema-version compatibility, and the registry release version. |
+| `toledo_show_verdict_rules` | Introspect the verdict decision table as data, rather than trusting a description of it. |
+| `toledo_register_proposal` | The only write path — one human-reviewed proposal file under `mcp/proposals/`. |
+| `toledo_list_proposals` | Browse the proposal queue, optionally filtered by status. |
+| `toledo_proposal_status` | One proposal's current lifecycle state. |
+
+### Install
+
+For a coding agent that reads a project-level MCP config file, this repository's own root
+`.mcp.json` is already present and picked up automatically when the working directory is this
+repository:
+
+```json
+{
+  "mcpServers": {
+    "toledo": {
+      "command": "python3",
+      "args": ["mcp/toledo_mcp/server.py"]
+    }
+  }
+}
+```
+
+Any other stdio-capable MCP client needs the same `command`/`args` object under whatever key its
+own settings file uses for a list of stdio servers (commonly `mcpServers`, sometimes
+`mcp_servers`, sometimes a per-server file) — the shape is identical; only the surrounding
+key/file convention differs. If that client resolves paths relative to a different working
+directory, point `args` at the absolute path to `mcp/toledo_mcp/server.py`, or set the
+`TOLEDO_ROOT` environment variable to this repository's root. Full detail, including the plain
+"run it as a subprocess" path for a client with no native MCP support: `mcp/README.md`'s "Wiring
+it into an agent".
+
+### The `toledo` CLI
+
+`pip install -e mcp/` installs a `toledo` console script (`toledo find`, `show`, `ancestry`,
+`descendants`, `neighbours`, `by-root`, `by-domain`, `by-record`, `export`, plus the
+verdict-aware `check`, `status`, `proposals list/show`, `register-proposal`, `index-status`,
+`show-verdict-rules`) answering from this package's cached, indexed layer rather than a fresh
+`registry/TOLEDO.json` read each time. It is a separate, MCP-package-owned CLI; `scripts/toledo`
+itself (used above, in "How to find an equation") is untouched and remains the registry-owning
+lane's own build-verification tool.
+
+### Static read API (no MCP client needed)
+
+A caller with no MCP/stdio access reads the same registry as a periodic, eventually-consistent
+JSON mirror published on GitHub Pages: **<https://morrocwi.github.io/toledo/>**. It is served from
+this repository's own CI workflow (`.github/workflows/toledo-mcp-ci.yml`), which rebuilds and
+republishes it on every push to `main` — so it may lag a release by a few minutes, never longer
+than one CI run. Locally, the same mirror is produced by:
+
+```
+python3 -m toledo_mcp.export_static --out mcp/dist/static-api
+```
+
+(run from this repository's root; `mcp/dist/` is gitignored and never committed by hand). Full
+contract: `mcp/docs/STATIC_API.md`.
+
+### Measured latency
+
+From `mcp/BENCHMARKS.md`'s 2026-09-07 integration-pass run, against the real registry, warm
+cache, 1,000 queries: **p50 4.51 ms · p95 7.25 ms · p99 7.55 ms · mean 4.77 ms · max 8.18 ms**;
+a cold index rebuild (5 runs) costs a median **199.3 ms**. `mcp/BENCHMARKS.md` discloses these as
+indicative of that one run, not a guaranteed SLA — re-run `python3 benchmarks/bench_index.py`
+(from `mcp/`) for a current number before citing one elsewhere.
+
 ## Lineage, status and origin
 
 - **Lineage** (`registry/LINEAGE.jsonl`) — an append-only log, one line per event
@@ -103,13 +211,14 @@ Every code resolves the same way across five surfaces, all generated from
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-07 (v1.2)
+## Honest state — computed 2026-09-07 (v1.3)
 
 Every number below was read from the files in this repository by the command shown; none is
-carried over from an earlier note. This section supersedes the v1.1.0 counts below it in
-`CHANGELOG.md` — v1.2 adds 119 readings under two new root rows (Theta, CMC; see "Root registry
-extension R1" below) and completes statement formatting for most of the corpus (see "Statement
-completion" below).
+carried over from an earlier note. This section supersedes the v1.2.0 counts below it in
+`CHANGELOG.md` — v1.3 merges **34** newly registered readings from the deposited paper "Effort
+Across Stochastic, Controlled, and Adaptive Worlds" v0.3 (see "Effort v0.3 registrations" below)
+and ships the Toledo MCP server and CLI (see "Finding and checking equations" below), which reads
+this registry but writes nothing into it.
 
 **Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
 `python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
@@ -117,18 +226,22 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **912** canonical entries, mapped from **946** raw equations across **40** deposited chapters
-  (`registry/EQ_LIBRARY.md`, `make library`) plus the 119 root-extension readings described below;
-  **1,069** raw occurrence keys resolved.
-- **Status:** `current` 821 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
-- **Domain:** P 288 · S 136 · M 133 · W 84 · H 77 · B 75 · E 60 · C 59.
-- **Tier:** `untagged` 255 · `Definition` 389 · `Th_coqc` 130 · `finite_diagnostic` 46 · `Dr` 43 ·
+- **946** canonical entries: **912** mapped from **946** raw equations across **40** deposited
+  chapters (`registry/EQ_LIBRARY.md`, `make library`) plus the 119 v1.2 root-extension readings,
+  plus **34** v1.3 readings registered from the Effort v0.3 paper; **1,069** raw occurrence keys
+  resolved (unchanged — the Effort readings are sourced from a Zenodo record, not a raw textbook
+  occurrence).
+- **Status:** `current` 855 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
+- **Domain:** P 288 · S 136 · M 151 · W 84 · H 92 · B 75 · E 61 · C 59.
+- **Tier:** `untagged` 255 · `Definition` 407 · `Th_coqc` 130 · `finite_diagnostic` 46 · `Dr` 59 ·
   `Open` 37 · `Ax` 12. (`Th_coqc` certifies that a lemma is closed under the stated finite model's
   global context — an internal-consistency check, never an empirical or physical truth claim;
   `untagged` means the source gave no tier at all, stated as such rather than guessed.)
-- **Coq status:** `closed` 161 · `definition` 339 · `wrapped_related` 210 ·
-  `mapped_not_wrapped` 119 · `open_prop` 13 · `not_formalisable` 70. See "The coq_status ladder"
-  immediately below for what each of these means.
+- **Coq status:** `closed` 161 · `definition` 357 · `wrapped_related` 210 ·
+  `mapped_not_wrapped` 119 · `open_prop` 29 · `not_formalisable` 70. See "The coq_status ladder"
+  immediately below for what each of these means. (The 34 Effort readings split 18 `definition` /
+  16 `open_prop` — each an honest restatement of what the paper itself states, no wrapper file
+  written for them yet.)
 
 ### The coq_status ladder (`closed` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
 
@@ -202,9 +315,9 @@ release's v1.2 lanes ran and unchanged by them since neither lane wrote a new wr
 context", 0 failed — the same count as v1.1.0. The 119 v1.2 root-extension readings are
 `mapped_not_wrapped` (evidence-backed match, no wrapper file yet), not new wrapper files.
 
-**Docs site / catalogue** (`make site`, `make catalogue`, this pass): site **1,504** generated
-entry+root pages plus one index (912 canonical entries + 592 root rows, `python3
-site/build_site.py`); printable catalogue PDF **278** pages (`pdfinfo latex/catalogue.pdf`, one
+**Docs site / catalogue** (`make site`, `make catalogue`, this pass): site **1,538** generated
+entry+root pages plus one index (946 canonical entries + 592 root rows, `python3
+site/build_site.py`); printable catalogue PDF **283** pages (`pdfinfo latex/catalogue.pdf`, one
 `latexmk -pdf` run). See "Catalogue redesign" below for its structure. The catalogue is typeset by
 plain `pdflatex`; `latex/unicode_pdf_fallback.sty` maps the corpus's literal math-notation Unicode
 to standard LaTeX constructs, and `scripts/latex_pdf_safe.py` replaces contiguous Thai/Cyrillic
@@ -275,6 +388,29 @@ string-sorted codes, no real contents). `latex/catalogue.tex` was rebuilt from s
 - **Natural code order** throughout (root, then domain letter, then sequence number) rather than
   v1.1.0's plain string sort, plus a **code index** at the end (`\makeindex`).
 
+### Effort v0.3 registrations (v1.3)
+
+The deposited paper "Effort Across Stochastic, Controlled, and Adaptive Worlds" v0.3 (15 pp.,
+dated 7 September 2026) cited 11 existing Toledo codes and proposed 34 further equations of its
+own. Per `EQUATION_SOURCE_POLICY.md`'s required procedure, each of the 34 was checked against this
+registry under the φ-criterion before registration; none was found structurally equivalent (by
+renaming, positive scale, or constant substitution) to an existing entry, so all 34 were registered
+as new readings, `origin.doi` = **10.5281/zenodo.22622206** (concept DOI
+10.5281/zenodo.22622205), `LINEAGE.jsonl` `assigned` events, under the three roots the paper itself
+names:
+
+- **`weld`** — 28 readings: `weld/E.11.v1` (1); `weld/H.13.v1`–`weld/H.21.v1` (9);
+  `weld/M.15.v1`–`weld/M.32.v1` (18).
+- **`EQ-015`** — 2 readings: `EQ-015/H.38.v1`, `EQ-015/H.39.v1`.
+- **`A.5`** — 4 readings: `A.5/H.20.v1`–`A.5/H.23.v1`.
+
+(28 + 2 + 4 = 34; see `registry/proposals/effort_v0_3.merged.json` for the exact
+proposal-id → code map.) Founder instruction: register in Toledo, deposit on Zenodo — **not** into
+the textbook. Deposited separately as its own Zenodo record (publication/preprint, `isPartOf` the
+programme hub 10.5281/zenodo.22308201, `references` this registry's concept DOI
+10.5281/zenodo.22537318); merged into `registry/CANONICAL.json` only after the v1.2.0 tag, per this
+repository's own rule that a release-prep pass must never see a moving registry.
+
 ## Root-candidate evidence: RD1–RD9, Theta, CMC
 
 **RD1–RD9 vs. the Genesis root axioms (finding, not a code change).** The founder's own shorthand
@@ -296,7 +432,7 @@ above for the two rows now added, their anchors, and the connection evidence (`T
 `EQ-008`/`EQ-022`; `CMC` has no evidenced connection to a Genesis root and its row says so plainly
 rather than asserting one).
 
-## What is not done (v1.2 carry-overs)
+## What is not done (v1.3 carry-overs)
 
 Honestly disclosed, not hidden in a rounded-up claim:
 
@@ -305,17 +441,19 @@ Honestly disclosed, not hidden in a rounded-up claim:
   "a Toledo file exists for this" and "this entry's own claim is proved". The 119 v1.2
   root-extension readings are one step earlier still (`mapped_not_wrapped` — no wrapper file yet).
 - **70** canonical entries are `not_formalisable` (no formal content located in the source; reason
-  recorded per-entry in `tier_evidence`) and **13** are `open_prop` (stated as an unproved `Prop`,
-  by design).
+  recorded per-entry in `tier_evidence`) and **29** are `open_prop` (stated as an unproved `Prop`,
+  by design) — 16 of these are v1.3's own Effort readings, carried as open exactly as the source
+  paper states them, not forced to a stronger tier.
 - **52** canonical entries remain `status: unverified`, each with a status note naming why (see
-  "Statement completion" above); down from 61 at v1.1 after this release's statement-completion
-  pass resolved 9 of them.
+  "Statement completion" above); unchanged since v1.2 (v1.3 added no new `unverified` entries).
 - `RD1`–`RD9` remains evidence-checked as a distinct object from the Genesis root axioms (see the
   finding above), not an omitted alias — no code has been invented for it.
 - **255** canonical entries still carry tier `untagged` (no tier was stated in their source at
-  all) — unchanged since v1.1 (the v1.2 root-extension readings all carry a source-stated tier).
+  all) — unchanged since v1.1 (neither the v1.2 root-extension readings nor the v1.3 Effort
+  readings arrived untagged).
 - **310** genesis-root rows (308 Genesis-document rows plus the 2 v1.2 root-extension rows) still
-  carry only their free-text `tier_in_genesis` string, not a normalised `tier`.
+  carry only their free-text `tier_in_genesis` string, not a normalised `tier` — unchanged at v1.3
+  (the root layer itself was not touched this release).
 - Master Equation River v1.5 and the textbook's Appendix F (both meant to cite Toledo codes) are
   tracked separately and are not part of this release.
 

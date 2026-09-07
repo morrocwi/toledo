@@ -3,6 +3,74 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.3.0 — 2026-09-07
+
+Deposited as a Zenodo version (DOI recorded once minted; concept DOI 10.5281/zenodo.22537318);
+GitHub release tag v1.3.0.
+
+Commits `b7ef663` (Effort v0.3 registrar merge), `6257c72` (Toledo MCP server and search core),
+`ef0b5b2` (leak-scan follow-up) plus this release-prep pass.
+
+- **Effort v0.3 merged** (`b7ef663`): 34 new coded readings from the deposited paper "Effort
+  Across Stochastic, Controlled, and Adaptive Worlds" v0.3 (10.5281/zenodo.22622206, concept
+  10.5281/zenodo.22622205) — registered under `weld` (28: `weld/E.11.v1`,
+  `weld/H.13.v1`–`weld/H.21.v1`, `weld/M.15.v1`–`weld/M.32.v1`), `EQ-015` (2:
+  `EQ-015/H.38.v1`–`EQ-015/H.39.v1`) and `A.5` (4: `A.5/H.20.v1`–`A.5/H.23.v1`) — the three roots
+  the paper itself names. A φ-criterion check against the then-912-entry registry found zero
+  equivalent existing entries, so all 34 are new readings, not merges; each carries a
+  `LINEAGE.jsonl` `assigned` event with the DOI as origin. Of the 34, 18 carry `coq_status`
+  `definition` and 16 carry `open_prop` (an honest restatement of what the source paper itself
+  states, no Coq wrapper file written for them). Canonical registry: **946** entries (was 912).
+  See README's "Effort v0.3 registrations" and "Honest state" sections for the full computed
+  count set.
+- **Toledo MCP server and CLI shipped** (`6257c72`): `mcp/` — a stdio Model Context Protocol
+  server exposing 19 tools (`toledo_search`, `toledo_get`, `toledo_status`, `toledo_check`,
+  `toledo_lineage`, `toledo_ancestors`, `toledo_descendants`, `toledo_neighbours`,
+  `toledo_by_root`, `toledo_by_domain`, `toledo_by_record`, `toledo_by_raw_key`,
+  `toledo_lineage_window`, `toledo_counts`, `toledo_index_status`, `toledo_show_verdict_rules`,
+  `toledo_register_proposal`, `toledo_list_proposals`, `toledo_proposal_status`) that enforces the
+  founder rule "every equation must be looked up in Toledo before it is used; no AI agent may use
+  an unregistered equation" at the tool layer — a `{"ok","data","error"}` envelope and a per-row
+  verdict on every tool that returns a citable entry, a SQLite/FTS5 search index with a
+  regex-query guard and self-heal on corruption, and a single write path
+  (`toledo_register_proposal`, under `mcp/proposals/`) that never touches
+  `registry/CANONICAL.json`, `registry/genesis_root.json`, `registry/LINEAGE.jsonl`, `coq/`, or
+  `latex/`. Also ships a `toledo` console-script CLI, a static JSON export for GitHub Pages
+  (`python3 -m toledo_mcp.export_static`), packaging (`mcp/pyproject.toml`), a CI workflow
+  (`.github/workflows/toledo-mcp-ci.yml`), 214 passing tests, and a dated benchmark run
+  (`mcp/BENCHMARKS.md`). Reviewed under four independent lenses; every block raised was fixed
+  before landing — see `mcp/docs/CHANGELOG.md` for the dated, itemised record of each fix.
+- **Leak-scan follow-up** (`ef0b5b2`): `mcp/scripts/leak_scan.py`'s own comment, describing the
+  home-directory-prefix pattern it checks for, was rephrased to avoid spelling that pattern
+  literally — a documentation-only change, made so the module documenting the check does not
+  itself trip the check it documents; no functional code changed.
+- **This release-prep pass**: `CITATION.cff`/`.zenodo.json` → 1.3.0 (v1.2.0's version DOI
+  10.5281/zenodo.22627177 added to `CITATION.cff`'s citation message, a placeholder recorded for
+  1.3.0); `python3 mcp/scripts/sync_version.py` propagated `1.3.0` into `mcp/pyproject.toml` and
+  `toledo_mcp/__init__.py` (both reported "updated"). Regenerated `make build`,
+  `python3 site/build_site.py`, `python3 scripts/build_eq_library.py`,
+  `python3 -m toledo_mcp.export_static --out mcp/dist/static-api` (2,142 files) and `make
+  catalogue` (one `latexmk -pdf` run): docs site **1,538** pages (946 canonical + 592 root rows),
+  catalogue PDF **283** pages with its title page reading "Version 1.3.0" (`pdfinfo`). README's
+  "Honest state" and "What is not done" sections regenerated with live counts, and a new "Finding
+  and checking equations: the Toledo MCP server and CLI" section added, documenting the 19 tools,
+  install (`.mcp.json` plus the generic stdio config), the `toledo` CLI, the static read API
+  (<https://morrocwi.github.io/toledo/>, served from CI, may lag a release by minutes), and the
+  measured latency from `mcp/BENCHMARKS.md`'s 2026-09-07 run (p50 4.51 ms / p95 7.25 ms over 1,000
+  queries).
+- `python3 -m pytest -q tests` (repository root):
+  ```
+  ............................x....x.x                                     [100%]
+  33 passed, 3 xfailed, 1 warning in 2.24s
+  ```
+  `cd mcp && python3 -m pytest -q`:
+  ```
+  ........................................................................ [ 33%]
+  ........................................................................ [ 67%]
+  ......................................................................   [100%]
+  214 passed in 10.32s
+  ```
+
 ## v1.2.0 — 2026-09-07
 
 Deposited as Zenodo version DOI 10.5281/zenodo.22627177 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.2.0.

@@ -5,9 +5,9 @@ authors:
     given-names: Yaoharee
     orcid: "https://orcid.org/0009-0005-3861-0626"
     affiliation: "Open Civil Science Initiative"
-version: "1.2.0"
+version: "1.3.0"
 date-released: "2026-09-07"
 license: "CC-BY-4.0"
 doi: "10.5281/zenodo.22537318"
-message: "Cite the Zenodo concept DOI 10.5281/zenodo.22537318 (resolves to the latest release) or the version DOI of the release you used (v0.1.0 = 10.5281/zenodo.22537319; v1.0.0 = 10.5281/zenodo.22548770; v1.1.0 = 10.5281/zenodo.22574017; v1.2.0 version DOI recorded once minted)."
+message: "Cite the Zenodo concept DOI 10.5281/zenodo.22537318 (resolves to the latest release) or the version DOI of the release you used (v0.1.0 = 10.5281/zenodo.22537319; v1.0.0 = 10.5281/zenodo.22548770; v1.1.0 = 10.5281/zenodo.22574017; v1.2.0 = 10.5281/zenodo.22627177; v1.3.0 version DOI recorded once minted)."
 repository-code: "https://github.com/morrocwi/toledo"

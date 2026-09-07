@@ -5,7 +5,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 ## Status
 - Chapters inventoried: 40
 - Raw equations: 946
-- Canonical objects: 912
+- Canonical objects: 946
 - Raw→canonical mapped: 1069
 - Coq identifiers (canonical set): 835
 - Master River v1.4 (22519148) equations 1–79: Coq set 22518450, 45 lemmas closed (coq/MR_Ledger.md)
@@ -1151,6 +1151,40 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | CMC/M.18.v1 | R1C-0033 | CMC | M | Theorem cmc_no_refuter_under_axioms :
   forall g : TransportReadout,
     CMC_Refuter_Burden g -> False. | Ax | mapped_not_wrapped cmc_no_refuter_under_axioms | 1 |
+| weld/E.11.v1 | EFFORT-v0.3-01 | weld | E | \text{uncertainty} \not\equiv \text{stochastic mechanism} \\ \text{stochastic mechanism} \not\equiv \text{othe | Dr | open_prop | 1 |
+| weld/H.13.v1 | EFFORT-v0.3-02 | weld | H | N_{ext} < \infty \;\not\Rightarrow\; N_{int} = N_{ext} | Dr | open_prop | 1 |
+| weld/M.15.v1 | EFFORT-v0.3-03 | weld | M | \mathfrak{M}_Q(r_n) := \{\, m \in \mathfrak{M}_Q^{adm} : O_Q^G(m) = r_n \,\} | Definition | definition | 1 |
+| weld/M.16.v1 | EFFORT-v0.3-04 | weld | M | CSML_Q(M) = \mathsf{PASS} \iff M \in \mathfrak{M}_Q^{adm} \wedge \mathrm{Asm}(M,Q)\ \text{is explicit} | Definition | definition | 1 |
+| weld/M.17.v1 | EFFORT-v0.3-05 | weld | M | SAL_Q^{strong}(n) = \mathsf{PASS} \iff \mathfrak{M}_Q(r_n) \subseteq \mathfrak{M}_Q^{stoch} | Definition | definition | 1 |
+| weld/M.18.v1 | EFFORT-v0.3-06 | weld | M | \mathfrak{M}_Q(r_n)\cap\mathfrak{M}_Q^{stoch}\neq\varnothing,\quad \mathfrak{M}_Q(r_n)\cap\mathfrak{M}_Q^{nons | Dr | open_prop | 1 |
+| weld/M.19.v1 | EFFORT-v0.3-07 | weld | M | CSML_Q(M) = \mathsf{PASS} \;\not\Rightarrow\; SAL_Q^{strong}(n) = \mathsf{PASS} | Dr | open_prop | 1 |
+| weld/M.20.v1 | EFFORT-v0.3-08 | weld | M | T_{R\to D}\circ F_R = F_D\circ T_{R\to D},\quad O_D\circ T_{R\to D}=O_R,\quad W^D_{Q,j}\circ T_{R\to D}=W^R_{Q | Dr | open_prop | 1 |
+| weld/M.21.v1 | EFFORT-v0.3-09 | weld | M | CDOL_Q(\mathcal{R}\to D) = \mathsf{PASS} \iff \exists\, T_{R\to D} : \text{Eq.\ (14) holds} | Definition | definition | 1 |
+| weld/M.22.v1 | EFFORT-v0.3-10 | weld | M | ECT_Q(e_n) \in \{E_0, E_1, E_2, E_3, E_4, \mathsf{HOLD}\} | Definition | definition | 1 |
+| weld/M.23.v1 | EFFORT-v0.3-11 | weld | M | SID_Q(n,m) \in \{\mathsf{SAME}_{mech}, \mathsf{EQUIV}_Q, \mathsf{DIFF}_Q, \mathsf{HOLD}\} | Definition | definition | 1 |
+| weld/M.24.v1 | EFFORT-v0.3-12 | weld | M | SID_Q(n,m) = \mathsf{EQUIV}_Q \;\not\Rightarrow\; \mathcal{G}_n = \mathcal{G}_m | Dr | open_prop | 1 |
+| weld/H.14.v1 | EFFORT-v0.3-13 | weld | H | A_n^Q := q_A(S_n, T_n, c_n; Q) | Definition | definition | 1 |
+| weld/H.15.v1 | EFFORT-v0.3-14 | weld | H | \mathfrak{I}_n^Q := \mathfrak{I}_Q(\mathcal{G}_n, A_n^Q, c_n) | Definition | definition | 1 |
+| weld/H.16.v1 | EFFORT-v0.3-15 | weld | H | SameTrial_Q(n,m)=1 \iff SID_Q(n,m)\in\{\mathsf{SAME}_{mech},\mathsf{EQUIV}_Q\},\ A_n^Q \sim_Q A_m^Q,\ \mathfra | Dr | open_prop | 1 |
+| weld/H.17.v1 | EFFORT-v0.3-16 | weld | H | \text{same source readout} \not\Rightarrow \text{same effective agent} \not\Rightarrow \text{same encounter} | Dr | open_prop | 1 |
+| weld/H.18.v1 | EFFORT-v0.3-17 | weld | H | ISW_Q(\mathcal{G},A,A';c) = \mathsf{PASS} \iff d_I^Q\big(O_I^Q\,\mathfrak{I}_Q(\mathcal{G},A,c),\, O_I^Q\,\mat | Definition | definition | 1 |
+| weld/H.19.v1 | EFFORT-v0.3-18 | weld | H | SID_Q(n,n{+}1)=\mathsf{SAME}_{mech},\quad A_{n+1}^Q \not\sim_Q A_n^Q,\quad ISW_Q(\mathcal{G}_n, A_n^Q, A_{n+1} | Definition | definition | 1 |
+| weld/H.20.v1 | EFFORT-v0.3-19 | weld | H | \mathfrak{I}_{n+1}^Q \not\sim_Q \mathfrak{I}_n^Q | Dr | open_prop | 1 |
+| weld/H.21.v1 | EFFORT-v0.3-20 | weld | H | SID_Q(n,n{+}1)=\mathsf{SAME}_{mech},\ A_{n+1}^Q \not\sim_Q A_n^Q,\ ISW_Q(\mathcal{G}_n, A_n^Q, A_{n+1}^Q; c_n) | Dr | open_prop | 1 |
+| EQ-015/H.38.v1 | EFFORT-v0.3-21 | EQ-015 | H | Y_{n+1}^{world} \to O_Q \to \mu_{n+1}^Q \to E_{n+1}^Q \to \mathrm{Retain}_Q \to A_{n+1}^Q | Dr | open_prop | 1 |
+| EQ-015/H.39.v1 | EFFORT-v0.3-22 | EQ-015 | H | RB_Q(n) = 1 \iff A_{n+1}^Q \not\sim_Q A_n^Q | Definition | definition | 1 |
+| A.5/H.20.v1 | EFFORT-v0.3-23 | A.5 | H | LC_Q(n) = \mathsf{PASS} \iff RB_Q(n)=1 \wedge \Lambda_Q(n) = \mathsf{PASS} | Definition | definition | 1 |
+| A.5/H.21.v1 | EFFORT-v0.3-24 | A.5 | H | IC_Q(n) = \mathsf{PASS} \iff LC_Q(n) = \mathsf{PASS} \wedge \Gamma_Q(n) > \tau_G | Definition | definition | 1 |
+| A.5/H.22.v1 | EFFORT-v0.3-25 | A.5 | H | \text{Exposure} \neq \text{Retained Revision} \neq \text{Certified Learning} \neq \text{Improvement} | Dr | open_prop | 1 |
+| weld/M.25.v1 | EFFORT-v0.3-26 | weld | M | ERG_D = \mathsf{PASS} \iff \exists\, u_a,u_b \in \mathcal{U}_D^{adm} : d_Q\big(R_D(s,u_a), R_D(s,u_b)\big) > \ | Dr | open_prop | 1 |
+| weld/M.26.v1 | EFFORT-v0.3-27 | weld | M | CER_Q = \mathsf{PASS} \iff ERG_D = \mathsf{PASS} \wedge ID_Q(u \to Y) = \mathsf{PASS} | Definition | definition | 1 |
+| A.5/H.23.v1 | EFFORT-v0.3-28 | A.5 | H | V_n^{learn}(u) \not\equiv V_n^{act}(u) | Dr | open_prop | 1 |
+| weld/M.27.v1 | EFFORT-v0.3-29 | weld | M | \mathbf{C}_n(u) = \big(C_n^{int}(u),\, C_n^{ext}(u),\, C_n^{opp}(u),\, C_n^{risk}(u)\big) | Definition | definition | 1 |
+| weld/M.28.v1 | EFFORT-v0.3-30 | weld | M | \mathcal{U}_{n+1}^{safe} := \Big\{ u \in \mathcal{U}_D^{adm} : \mathbf{C}_n(u) \preceq \mathbf{B}_n,\ \mathbb{ | Dr | open_prop | 1 |
+| weld/M.29.v1 | EFFORT-v0.3-31 | weld | M | \mathrm{Route}_Q(e_n) = \begin{cases} \mathcal{A}_M, & ECT_Q(e_n)=E_0,\\ \mathcal{A}_B, & ECT_Q(e_n)=E_1,\\ \m | Definition | definition | 1 |
+| weld/M.30.v1 | EFFORT-v0.3-32 | weld | M | D_{n+1} = \begin{cases} \mathsf{HOLD}, & \mathrm{Route}_Q(e_n)=\mathsf{HOLD},\\ \mathsf{STOP}, & \mathcal{U}_{ | Definition | definition | 1 |
+| weld/M.31.v1 | EFFORT-v0.3-33 | weld | M | \mathcal{U}_{n+1}^{safe} = \varnothing \;\Rightarrow\; \mathsf{STOP} | Dr | open_prop | 1 |
+| weld/M.32.v1 | EFFORT-v0.3-34 | weld | M | \text{Event} \to \text{Readout} \to \text{Conditional/Strong Stochastic License} \to \text{Event-Control Type} | Definition | definition | 1 |
 
 ## Raw inventory by chapter (every numbered equation, with its canonical id when assigned)
 
