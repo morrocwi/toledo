@@ -297,7 +297,7 @@ def test_tools_table_matches_readme_exactly():
             "`python3 site/build_site.py --out site/dist` first (stream S1)"
         )
     actual = json.loads(data_file.read_text(encoding="utf-8"))
-    assert len(actual) == 19, f"{data_file} has {len(actual)} rows, expected 19"
+    assert len(actual) == _n, f"{data_file} has {len(actual)} rows, expected {_n}"
     for row in actual:
         assert re.match(r"^toledo_[a-z_]+$", row["tool"]), row["tool"]
     assert actual == expected, (
