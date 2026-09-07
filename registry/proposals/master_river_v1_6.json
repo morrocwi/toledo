@@ -1,0 +1,380 @@
+{
+ "schema_version": "1.0.0-proposal",
+ "generated_from_commit": null,
+ "proposal_source": "Master Equation River v1.6 (Appendix C follow-up), building on v1.5 DOI 10.5281/zenodo.22550491 (concept 22414412)",
+ "extraction_date": "2026-09-07",
+ "extractor_note": "Resolves all 24 equations v1.5's own Appendix C lists as carrying no Toledo code (\\eqref{eq:15}, \\eqref{eq:32}-\\eqref{eq:37}, \\eqref{eq:39}-\\eqref{eq:52}, \\eqref{eq:65}, \\eqref{eq:66}, \\eqref{eq:79}). Method: for each equation, read its own statement in v1.5's main.tex verbatim, then screen registry/CANONICAL.json for a structurally identical existing entry under the phi-criterion (bijective renaming / fixed positive scale / fixed constant substitution, no limits or approximations, per docs/EQ_CODE_SCHEME.md's Equivalence Registry criterion) by keyword/substring search on the candidate constructs' own symbols and names, followed by a manual read of the closest matches. This is a keyword/substring screen, not an exhaustive machine-checked equivalence search over all 1,264 entries -- 'no existing entry found' for the three genuinely new proposals below is a Dr-tier readout of this screen, not a proof of non-existence. Three of the 24 (eq.44, eq.66, eq.79) were already hand-identified by registry/COLLAPSE.md sec.2 ('manual, verified textual match') against the root spine (CAN-004/CAN-003, CAN-201/CAN-006, CAN-006); those three are carried into this file as occurrence_proposals unchanged from COLLAPSE.md's own identification, not re-derived here. Root assignment for the remaining 21 follows Section 10 (sec:one-eq-segments) of v1.5 where that section names the root for the segment; where Section 10 states only 'no Toledo code yet' without naming a root, the root is taken from the phi-criterion match itself (this changed the working assumption from EQ-015 to weld for eq.33-eq.36 and to A.5 for eq.42/eq.47-eq.49, since those equations' exact-match existing entries sit under those roots, not EQ-015). Registrar note: this file proposes (i) new occurrences to append to EXISTING entries' own `occurrences` arrays (registry/SCHEMA.md field `occurrences`), and (ii) three wholly new reading entries for constructs with no existing Toledo code. No CANONICAL.json file was edited to produce this file.",
+ "occurrence_proposals": [
+  {
+   "id": "PROP-MR16-OCC-01",
+   "target_code": "EQ-015/M.08.v1",
+   "master_river_eq": 15,
+   "alias": "MR:eq.15",
+   "phi_match": "v1.5 eq.15 (\\mathrm{Rhythm}_t,\\ m_t,\\ a_t,\\ c_t \\longrightarrow \\kappa^{\\mathrm{sem}}_{t+1}) is the same dependency arrow already inside EQ-015/M.08.v1's own statement (which spells out Rhythm_n, m_{t+1}(e), and \\kappa^{sem}_{t+1}(e|Q) in full and states the corrected non-derivation Master Section 10.2 (sec:rhythmnotmomentum) restates as this arrow); no renaming needed, this equation is the summary form of the object M.08.v1 already codes.",
+   "v1_5_evidence": "\"Master should therefore write Rhythm_t,m_t,a_t,c_t\\to\\kappa^{sem}_{t+1} as a dependency/hypothesis interface, rather than writing Rhythm \\Rightarrow Momentum.\" (sec:rhythmnotmomentum, adjacent to eq.15 itself, v1.5 line ~645)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 15", "section": "sec:rhythmnotmomentum (Section 10, canonical notation corrections)", "raw_key": "MR:eq.15"}
+  },
+  {
+   "id": "PROP-MR16-OCC-02",
+   "target_code": "EQ-015/H.05.v1",
+   "master_river_eq": 32,
+   "alias": "MR:eq.32",
+   "phi_match": "Exact textual match: eq.32's \\chi_{recip}[s,n,L]=|D_{recip}[s,n,L]|/|\\Sigma[s,n]| is character-for-character the second clause of EQ-015/H.05.v1's own statement.",
+   "v1_5_evidence": "\"Fusion/Tunnel v8.1 gives the finite dialogue state and reciprocal-lineage diagnostic, [eq.31], [eq.32]\" (sec:humanai2, v1.5 line 340-346)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 32", "section": "sec:humanai2", "raw_key": "MR:eq.32"}
+  },
+  {
+   "id": "PROP-MR16-OCC-03",
+   "target_code": "weld/H.07.v1",
+   "master_river_eq": 33,
+   "alias": "MR:eq.33",
+   "phi_match": "Exact textual match: eq.33's Y^{return}_{s+\\Delta}=(R_{rec},R_{disc},T_{new},Q_{next}) is character-for-character one clause of weld/H.07.v1's own statement ('session-end retention gate and unaided return battery'). Root is weld, not EQ-015 as a first guess from Section 10's silence would suggest -- this is the phi-match's own root.",
+   "v1_5_evidence": "\"v8.1 ... keeps eta_s as a conceptual session-end retention gate but estimates the residue that actually persists through an unaided return battery, [eq.33]\" (sec:humanai2, v1.5 line 350-353)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 33", "section": "sec:humanai2", "raw_key": "MR:eq.33"}
+  },
+  {
+   "id": "PROP-MR16-OCC-04",
+   "target_code": "weld/H.07.v1",
+   "master_river_eq": 34,
+   "alias": "MR:eq.34",
+   "phi_match": "Exact textual match: eq.34's difference-in-differences estimand RET=(P^post_{H,AI}-P^pre_{H,AI})-(P^post_{H,C}-P^pre_{H,C}) is character-for-character the closing clause of weld/H.07.v1's own statement.",
+   "v1_5_evidence": "\"and, for randomized study designs, a difference-in-differences estimand, [eq.34]\" (sec:humanai2, v1.5 line 354-357)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 34", "section": "sec:humanai2", "raw_key": "MR:eq.34"}
+  },
+  {
+   "id": "PROP-MR16-OCC-05",
+   "target_code": "weld/H.07.v1",
+   "master_river_eq": 35,
+   "alias": "MR:eq.35",
+   "phi_match": "Exact textual match: eq.35 (\\widetilde{\\Delta\\Omega}^H_s=B_sA_s,\\ rank(B_sA_s)\\ll d_H, labelled \\label{eq:lowrank}) is character-for-character (modulo the tilde/hat rendering of the same symbol) the opening clause of weld/H.07.v1's own statement. Master's own text explicitly frames eq.35-eq.36 as its own proposed canonical form, not new content of a different theory -- the phi-match holds because Toledo's registrar already coded exactly this same low-rank/gate pair under weld/H.07.v1 from the same source material.",
+   "v1_5_evidence": "\"Master's own notation proposal for writing retention as a restricted update ... is to separate the candidate restricted update from the retention gate, [eq.35=eq:lowrank]\" (sec:humanai2, v1.5 line 359-361); see also sec:etagate's own framing, \"Master's proposal \\eqref{eq:lowrank}--\\eqref{eq:gate} is therefore a proposed canonical form for the programme, not a correction of v8.1's own text.\"",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 35 (\\label{eq:lowrank})", "section": "sec:humanai2 / sec:etagate", "raw_key": "MR:eq.35"}
+  },
+  {
+   "id": "PROP-MR16-OCC-06",
+   "target_code": "weld/H.07.v1",
+   "master_river_eq": 36,
+   "alias": "MR:eq.36",
+   "phi_match": "Exact textual match (via renaming eta_s for g_n, no ration change): eq.36 (\\Omega^H_{s+1,0}=\\Omega^H_{s,0}+\\eta_s\\widetilde{\\Delta\\Omega}^H_s,\\ 0\\le\\eta_s\\le1, labelled \\label{eq:gate}) is the same update-with-gate construction as weld/H.07.v1's own second clause.",
+   "v1_5_evidence": "same paragraph as eq.35 (sec:humanai2, v1.5 line 363-364)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 36 (\\label{eq:gate})", "section": "sec:humanai2 / sec:etagate", "raw_key": "MR:eq.36"}
+  },
+  {
+   "id": "PROP-MR16-OCC-07",
+   "target_code": "EQ-015/H.12.v1",
+   "master_river_eq": 39,
+   "alias": "MR:eq.39",
+   "phi_match": "eq.39's core identity \\Delta_s:=G_s-T_s is character-for-character EQ-015/H.12.v1's own \\Delta_s=G_s-T_s; the added clause sign(\\Delta P_H(s))=sign(\\eta_s\\Delta_s) is a corollary restated in the same symbols on the same object, not a new construct, so is read as an occurrence of the same entry rather than triggering a new code.",
+   "v1_5_evidence": "\"Candidate status and direction are kept separate from fluency/amplification, [eq.38], [eq.39]\" (sec:humanai2, v1.5 line 374-380)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 39", "section": "sec:humanai2", "raw_key": "MR:eq.39"}
+  },
+  {
+   "id": "PROP-MR16-OCC-08",
+   "target_code": "EQ-015/H.19.v1",
+   "master_river_eq": 40,
+   "alias": "MR:eq.40",
+   "phi_match": "Exact textual match, all three clauses (J*_s=(AUG_s,SYN_s,RET_s); AUG_s=P^joint_s-P^H_s; SYN_s=P^joint_s-max(P^H_s,P^AI_s)) character-for-character identical to EQ-015/H.19.v1's own statement.",
+   "v1_5_evidence": "\"and the three-axis outcome that v8.1 forbids collapsing into a single score, [eq.40]\" (sec:humanai2, v1.5 line 381-382)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 40", "section": "sec:humanai2", "raw_key": "MR:eq.40"}
+  },
+  {
+   "id": "PROP-MR16-OCC-09",
+   "target_code": "EQ-015/H.16.v1",
+   "master_river_eq": 41,
+   "alias": "MR:eq.41",
+   "phi_match": "Exact textual match: eq.41 H_{return}=<G_CTSA,L,M,P,W,\\Delta_{dir}> is character-for-character EQ-015/H.16.v1's own statement.",
+   "v1_5_evidence": "sec:return1 (Human Return and CTSA as the upper measurement boundary), v1.5 line ~387-401",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 41", "section": "sec:return1", "raw_key": "MR:eq.41"}
+  },
+  {
+   "id": "PROP-MR16-OCC-10",
+   "target_code": "A.5/H.09.v1",
+   "master_river_eq": 42,
+   "alias": "MR:eq.42",
+   "phi_match": "eq.42's first line Exposure\\neq Retention\\neq Improvement is character-for-character A.5/H.09.v1's own statement. eq.42's second line Accessibility\\neq Warrant\\neq Truth is the same non-collapse-family construction as EQ-015/S.41.v1 ('accessibility != warrant') and A.5/E.09.v1 ('usable != true'); recorded here as a secondary reading rather than triggering a new code, since both halves of eq.42 already have Toledo objects in the same non-collapse family. NOTE for registrar: v1.5's own bucket for this equation is not itemised by name in Section 9 (tab:status) beyond the general non-collapse family, so no tier conflict is flagged.",
+   "v1_5_evidence": "sec:return1, v1.5 line ~394-401 (paired with eq.41, H_return's own non-collapse guard)",
+   "secondary_target_code": "EQ-015/S.41.v1",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 42", "section": "sec:return1", "raw_key": "MR:eq.42"}
+  },
+  {
+   "id": "PROP-MR16-OCC-11",
+   "target_code": "EQ-015/M.03.v1",
+   "secondary_target_code": "EQ-015/M.02.v1",
+   "master_river_eq": 44,
+   "alias": "MR:eq.44",
+   "phi_match": "Carried unchanged from registry/COLLAPSE.md sec.2's own hand-check ('manual, verified textual match'): eq.44 is a human-AI reading of CAN-004 and CAN-003, now EQ-015/M.03.v1 and EQ-015/M.02.v1 respectively (per v1.5 Table tab:one-eq-spine). Not re-derived by this extraction.",
+   "v1_5_evidence": "v1.5 sec:one-eq-segments: \"COLLAPSE.md Sec.2 separately identifies eq.44 as a human-AI reading of CAN-004 and CAN-003 (now EQ-015/M.03.v1 and EQ-015/M.02.v1)\" (v1.5 line 928-930); full eq.44 statement at sec:corrected, v1.5 line 665-677",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 44", "section": "sec:corrected", "raw_key": "MR:eq.44"}
+  },
+  {
+   "id": "PROP-MR16-OCC-12",
+   "target_code": "EQ-015/H.03.v1",
+   "master_river_eq": 46,
+   "alias": "MR:eq.46",
+   "phi_match": "eq.46 (H_{s,0}\\xrightarrow{L_H}Q_{s,0}) is the same Pre-Prompt Human State Principle arrow as EQ-015/H.03.v1's own opening clause (H_t\\to^{L_H}Q_t), under the phi-criterion renaming t -> (s,0) (a session/turn index split, fixed relabelling, no scale or limit change).",
+   "v1_5_evidence": "sec:topicentry3 (Topic Entry and Agenda Ownership Before the Prompt), v1.5 line ~401-433",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 46", "section": "sec:topicentry3", "raw_key": "MR:eq.46"}
+  },
+  {
+   "id": "PROP-MR16-OCC-13",
+   "target_code": "A.5/H.02.v1",
+   "master_river_eq": 47,
+   "alias": "MR:eq.47",
+   "phi_match": "Exact textual match: eq.47's TopicEntry\\in{LiveProblem,OpenExploration,RoutineDelegation} is character-for-character part of A.5/H.02.v1's own statement ('Topic Entry Condition and Problem-First default').",
+   "v1_5_evidence": "v1.5's own Section 9 ledger (tab:status, 'New in v1.3') tags this Domain definitions, consistent with A.5/H.02.v1's registered tier Definition: \"Topic Entry (LiveProblem/OpenExploration/RoutineDelegation, \\eqref{eq:47})\"",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 47", "section": "sec:topicentry3", "raw_key": "MR:eq.47"}
+  },
+  {
+   "id": "PROP-MR16-OCC-14",
+   "target_code": "A.5/H.02.v1",
+   "master_river_eq": 48,
+   "alias": "MR:eq.48",
+   "phi_match": "Exact textual match: eq.48's Problem-First\\Rightarrow{Human Agenda Ownership, Bounded Relevance, World-Side Testability, Observable Human Return} is character-for-character part of A.5/H.02.v1's own statement.",
+   "v1_5_evidence": "v1.5's own Section 9 ledger (tab:status, 'New in v1.3') tags this an Open empirical hypothesis: \"The Problem-First Dialogue Principle (\\eqref{eq:48}) and its non-collapse (\\eqref{eq:49}) ... all tagged Open in their own source papers, none upgraded here.\" TIER NOTE FOR REGISTRAR: v1.5's own ledger tags eq.48 Open, while the phi-matched existing entry A.5/H.02.v1 carries Toledo tier Definition (it bundles eq.47/eq.48/eq.49 as one reading). This occurrence proposal does not ask the registrar to change A.5/H.02.v1's tier; it flags the source-paper-level Open tag as a disclosed discrepancy for the registrar's own judgment, per the honesty this Appendix C exercise is already committed to.",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 48", "section": "sec:topicentry3", "raw_key": "MR:eq.48"}
+  },
+  {
+   "id": "PROP-MR16-OCC-15",
+   "target_code": "A.5/H.02.v1",
+   "master_river_eq": 49,
+   "alias": "MR:eq.49",
+   "phi_match": "Exact textual match: eq.49's Problem-First\\neq Problem-Only is character-for-character the closing clause of A.5/H.02.v1's own statement.",
+   "v1_5_evidence": "same v1.5 Section 9 entry as eq.48 (Open in source paper); same tier-note applies.",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 49", "section": "sec:topicentry3", "raw_key": "MR:eq.49"}
+  },
+  {
+   "id": "PROP-MR16-OCC-16",
+   "target_code": "EQ-015/H.24.v1",
+   "master_river_eq": 50,
+   "alias": "MR:eq.50",
+   "phi_match": "Exact textual match: eq.50 (I_s\\to a_s\\to\\delta^{world}_{s+1}\\to H_{s+1,0}) is character-for-character the first clause of EQ-015/H.24.v1's own statement ('Human Return closed through action and world feedback').",
+   "v1_5_evidence": "sec:return2 (Human Return, Action, and World Feedback), v1.5 line ~433-450; v1.5's Section 9 ledger (tab:status, 'New in v1.3') tags this an Accounting identity: \"the Human Return -> Action -> World Feedback closure (\\eqref{eq:50}--\\eqref{eq:51}) -- bookkeeping/definitional results ... not validated causal or welfare laws\"",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 50", "section": "sec:return2", "raw_key": "MR:eq.50"}
+  },
+  {
+   "id": "PROP-MR16-OCC-17",
+   "target_code": "EQ-015/H.24.v1",
+   "master_river_eq": 51,
+   "alias": "MR:eq.51",
+   "phi_match": "Exact textual match: eq.51 (Live Problem->Question->Dialogue->Human Return->Action->World Feedback->Revision or New Problem) is character-for-character the second clause of EQ-015/H.24.v1's own statement.",
+   "v1_5_evidence": "same v1.5 location and Section 9 entry as eq.50",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 51", "section": "sec:return2", "raw_key": "MR:eq.51"}
+  },
+  {
+   "id": "PROP-MR16-OCC-18",
+   "target_code": "EQ-002/M.03.v1",
+   "master_river_eq": 52,
+   "alias": "MR:eq.52",
+   "phi_match": "Exact textual match, character-for-character: eq.52 (Readout_{Q,O,c}(S)=z,\\ z\\neq S) is EQ-002/M.03.v1's own statement verbatim ('The root readout gate itself'). Root is EQ-002, not EQ-015 -- v1.5's own Section 9 ledger already calls this 'the self-contained readout Readout_{Q,O,c}(S)', matching the root-readout-gate object at CAN-201/EQ-002/M.03.v1 in Table tab:one-eq-spine.",
+   "v1_5_evidence": "v1.5's Section 9 ledger (tab:status, 'New in v1.3'): \"the self-contained readout \\mathrm{Readout}_{Q,O,c}(S) (\\eqref{eq:52})\"",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 52", "section": "sec:worldsystem (boundary equation, immediately preceding)", "raw_key": "MR:eq.52"}
+  },
+  {
+   "id": "PROP-MR16-OCC-19",
+   "target_code": "EQ-015/H.24.v1",
+   "master_river_eq": 65,
+   "alias": "MR:eq.65",
+   "phi_match": "eq.65 (...->H_{return}->a_s->\\delta^{world}->H_{t+3}) is the same Human-Return/action/world-feedback chain as EQ-015/H.24.v1's own statement (already coding eq.50-eq.51), continued past H_return under a fixed relabelling of the index (s -> t+3), which is exactly the renaming allowed by the phi-criterion; no new constant, scale, or limit is introduced.",
+   "v1_5_evidence": "\"the chain in \\eqref{eq:44} continues past H_{return} rather than terminating there; this is an appended tail\" (sec:corrected, v1.5 line ~697-701)",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 65", "section": "sec:corrected", "raw_key": "MR:eq.65"}
+  },
+  {
+   "id": "PROP-MR16-OCC-20",
+   "target_code": "EQ-002/M.03.v1",
+   "secondary_target_code": "weld/M.02.v1",
+   "master_river_eq": 66,
+   "alias": "MR:eq.66",
+   "phi_match": "Carried unchanged from registry/COLLAPSE.md sec.2's own hand-check ('manual, verified textual match'): eq.66 is a reading of CAN-201 and CAN-006, now EQ-002/M.03.v1 and weld/M.02.v1 respectively (per v1.5 Table tab:one-eq-spine). Not re-derived by this extraction.",
+   "v1_5_evidence": "v1.5 sec:one-eq-segments: \"eq.66 as a reading of CAN-201 and CAN-006 (EQ-002/M.03.v1, weld/M.02.v1)\" (v1.5 line 930-931); full eq.66 statement at sec:corrected, v1.5 line 702-707",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 66", "section": "sec:corrected", "raw_key": "MR:eq.66"}
+  },
+  {
+   "id": "PROP-MR16-OCC-21",
+   "target_code": "weld/M.02.v1",
+   "master_river_eq": 79,
+   "alias": "MR:eq.79",
+   "phi_match": "Carried unchanged from registry/COLLAPSE.md sec.2's own hand-check ('manual, verified textual match'): eq.79 is a further reading of CAN-006 (weld/M.02.v1). Not re-derived by this extraction.",
+   "v1_5_evidence": "v1.5 sec:one-eq-segments: \"eq.79 as a further reading of CAN-006 (weld/M.02.v1)\" (v1.5 line 931-932); full eq.79 statement at sec:corrected, v1.5 line 716-719",
+   "occurrence": {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 79", "section": "sec:corrected", "raw_key": "MR:eq.79"}
+  }
+ ],
+ "proposals": [
+  {
+   "id": "PROP-MR16-NEW-01",
+   "code": "weld/H.38.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": ["MR:eq.37"],
+   "name": "AI-side semantic momentum reset across sessions (Fusion/Tunnel scope condition)",
+   "statement": {
+    "latest": "m^{\\mathrm{AI}}_{s+1,0}=0",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "m^{\\mathrm{AI}}_{s+1,0}=0",
+     "date": "2026-09-07",
+     "reason": "master-river-v1.6-extractor: captured from Master Equation River v1.5, eq.37, no existing Toledo entry found for this specific reset condition under the phi-criterion (keyword screen on 'm^{AI}', 'semantic momentum', 'reset across sessions' against CANONICAL.json's 1,264 entries plus a manual read of the weld/H.* and EQ-002/E.06/EQ-015/M.08 momentum-adjacent entries found none stating this as its own object)",
+     "by": "master-river-v1.6-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/H.07.v1",
+     "derived_via": "reads",
+     "evidence": "\"Within the scope of Fusion/Tunnel, AI-side semantic momentum is reset across sessions, m^{AI}_{s+1,0}=0, but this line is a scope condition of the model, not a universal fact about AI with persistent memory.\" (v1.5 sec:humanai2, line 368-372) -- placed as a child reading of weld/H.07.v1 because it sits in the same Fusion/Tunnel session-boundary cluster that entry already codes (session-end retention gate, Y^return, RET), and no other existing code names an AI-momentum reset condition."
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Master Equation River v1.5",
+    "repo_anchor": null,
+    "record_id": 22550491,
+    "doi": "10.5281/zenodo.22550491",
+    "section": "sec:humanai2",
+    "page": null,
+    "label": "Eq. 37"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": null,
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [
+    {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 37", "section": "sec:humanai2", "raw_key": "MR:eq.37"}
+   ],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "\"Within the scope of Fusion/Tunnel, AI-side semantic momentum is reset across sessions, [eq.37], but this line is a scope condition of the model, not a universal fact about AI with persistent memory.\"",
+   "drift_note": "Master River v1.5 itself frames this as a scope-bound modelling condition, not a constitutive or universal law; tier set to Definition (a stated model convention) rather than Dr or Open, following v1.5's own framing rather than upgrading it. Domain letter H (human-AI) chosen to match the parent weld/H.07.v1's own domain, since this is a companion condition inside the same Fusion/Tunnel session-boundary reading, not a method-level (M) object."
+  },
+  {
+   "id": "PROP-MR16-NEW-02",
+   "code": "EQ-015/E.16.v1",
+   "root": "EQ-015",
+   "layer": "reading",
+   "domain": "E",
+   "aliases": ["MR:eq.43"],
+   "name": "Canonical symbol rename resolving a three-way kappa collision (meaning strength / semantic-route accessibility / live-policy accessibility)",
+   "statement": {
+    "latest": "\\gamma^{\\mu}_n=\\text{meaning strength},\\qquad \\kappa^{\\mathrm{sem}}_{A,t}(e\\mid Q)=\\text{semantic-route accessibility},\\qquad \\lambda^{\\mathrm{live}}_{A,t}(\\pi\\mid g)=\\text{live-policy accessibility}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\gamma^{\\mu}_n=\\text{meaning strength},\\qquad \\kappa^{\\mathrm{sem}}_{A,t}(e\\mid Q)=\\text{semantic-route accessibility},\\qquad \\lambda^{\\mathrm{live}}_{A,t}(\\pi\\mid g)=\\text{live-policy accessibility}",
+     "date": "2026-09-07",
+     "reason": "master-river-v1.6-extractor: captured from Master Equation River v1.5, eq.43. This is a notation-unification declaration (which symbol names which already-existing quantity across three source papers), not itself a new mathematical object -- the three quantities it names are already Toledo objects (gamma^mu_n inside EQ-015/E.04.v1's own E_n=Phi_E(x_n,mu_n,gamma^mu_n,c_n); kappa^sem inside EQ-015/M.08.v1; lambda^live inside EQ-015/H.08.v1) but no existing entry states the renaming/disambiguation act itself as its own object, which is what v1.5 eq.43 is.",
+     "by": "master-river-v1.6-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/M.08.v1",
+     "derived_via": "reads",
+     "evidence": "\"In MEMK, \\kappa_n means meaning strength; in From Problem to Hypothesis, \\kappa_t(e|Q) means semantic accessibility; in Choice Begins Before Choice, \\kappa_{A,t}(\\pi|g) means the practical accessibility of a policy. Master should use one consistent rename, [eq.43]\" (v1.5 sec:kappa, line 637-642)"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Master Equation River v1.5",
+    "repo_anchor": null,
+    "record_id": 22550491,
+    "doi": "10.5281/zenodo.22550491",
+    "section": "sec:kappa",
+    "page": null,
+    "label": "Eq. 43"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": null,
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [
+    {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 43", "section": "sec:kappa", "raw_key": "MR:eq.43"}
+   ],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "\"The programme previously used kappa for three different things ... Master should use one consistent rename, [eq.43]\"",
+   "drift_note": "Domain E (epistemic) chosen because the object is a notation-disambiguation across meaning/accessibility constructs already read into EQ-015's E domain (E.04, and the accessibility constructs feeding M.08/H.08); it is not itself a method-level (M) construction, so is not filed as EQ-015/M.16.v1 despite reading M.08.v1 as its nearest parent."
+  },
+  {
+   "id": "PROP-MR16-NEW-03",
+   "code": "EQ-015/M.16.v1",
+   "root": "EQ-015",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": ["MR:eq.45"],
+   "name": "River-summary narrative closure: experience, the changed reader, possibility, choice, action, and the re-read world",
+   "statement": {
+    "latest": "\\text{Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\text{Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.}",
+     "date": "2026-09-07",
+     "reason": "master-river-v1.6-extractor: captured from Master Equation River v1.5, eq.45 (Conclusion). No existing Toledo entry found stating this exact five-step prose closure under the phi-criterion (keyword screen for 'changed reader', 'changes what can become possible', 'reader changes' found no match); it restates, in one narrative sentence, the same root-level architecture (retained difference before naming; readout/meaning/experience ordering; agency as readout-action loop) that v1.5's own Section 9 ledger (tab:status, 'Root / inherited architecture' row) already attributes to the river's foundation, so it is filed as a reading of the root stepper (EQ-015/M.02.v1) rather than a new claim.",
+     "by": "master-river-v1.6-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "\"After reviewing the whole corpus, what the Master Equation River reveals is not that every paper says the same thing, but that each paper fills a missing layer of the same process. The overall picture is [eq.45]\" (v1.5 sec:conclusion1, line 763-765)"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Master Equation River v1.5",
+    "repo_anchor": null,
+    "record_id": 22550491,
+    "doi": "10.5281/zenodo.22550491",
+    "section": "sec:conclusion1",
+    "page": null,
+    "label": "Eq. 45"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": null,
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [
+    {"record_id": 22550491, "doi": "10.5281/zenodo.22550491", "label": "Eq. 45", "section": "sec:conclusion1", "raw_key": "MR:eq.45"}
+   ],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "\"Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.\"",
+   "drift_note": "This is a prose (non-symbolic) restatement of the root stepper's own recursive readout/meaning/experience/agency chain rather than an equation in the algebraic sense; filed at Definition tier, no tier raised, and no independent verification of the narrative claim is asserted beyond what v1.5's own Section 9 ledger already states about the root."
+  }
+ ]
+}

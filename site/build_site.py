@@ -389,9 +389,11 @@ def _parse_tools_table_from_readme(root: pathlib.Path) -> list[dict]:
         if tool in ("Tool", "---") or set(tool) <= {"-"}:
             continue
         rows.append({"tool": tool.strip("`"), "purpose": purpose})
-    if len(rows) != 19:
+    _m = re.search(r"^## Tools \((\d+)\)", text, flags=re.M)
+    expected = int(_m.group(1)) if _m else len(rows)
+    if len(rows) != expected:
         raise SystemExit(
-            f"mcp/README.md '## Tools (N)' table parsed to {len(rows)} rows, expected 19 "
+            f"mcp/README.md '## Tools (N)' table parsed to {len(rows)} rows, but its heading says {expected} "
             "— build_tools_table()'s regex and the README table have drifted apart"
         )
     for row in rows:

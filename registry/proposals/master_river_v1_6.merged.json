@@ -1,0 +1,43 @@
+{
+  "_already_merged_idempotent_skip": [],
+  "_deviations_from_proposal_plan": [],
+  "_open_definition_tier_mismatches": [
+    {
+      "eq": "eq.48",
+      "proposal": "PROP-MR16-OCC-14",
+      "target_code": "A.5/H.02.v1"
+    },
+    {
+      "eq": "eq.49",
+      "proposal": "PROP-MR16-OCC-15",
+      "target_code": "A.5/H.02.v1"
+    }
+  ],
+  "_unmerged": [],
+  "eq_to_code": {
+    "eq.15": "EQ-015/M.08.v1",
+    "eq.32": "EQ-015/H.05.v1",
+    "eq.33": "weld/H.07.v1",
+    "eq.34": "weld/H.07.v1",
+    "eq.35": "weld/H.07.v1",
+    "eq.36": "weld/H.07.v1",
+    "eq.37": "weld/H.38.v1",
+    "eq.39": "EQ-015/H.12.v1",
+    "eq.40": "EQ-015/H.19.v1",
+    "eq.41": "EQ-015/H.16.v1",
+    "eq.42": "A.5/H.09.v1",
+    "eq.43": "EQ-015/E.16.v1",
+    "eq.44": "EQ-015/M.03.v1",
+    "eq.45": "EQ-015/M.16.v1",
+    "eq.46": "EQ-015/H.03.v1",
+    "eq.47": "A.5/H.02.v1",
+    "eq.48": "A.5/H.02.v1",
+    "eq.49": "A.5/H.02.v1",
+    "eq.50": "EQ-015/H.24.v1",
+    "eq.51": "EQ-015/H.24.v1",
+    "eq.52": "EQ-002/M.03.v1",
+    "eq.65": "EQ-015/H.24.v1",
+    "eq.66": "EQ-002/M.03.v1",
+    "eq.79": "weld/M.02.v1"
+  }
+}

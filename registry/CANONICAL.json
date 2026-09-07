@@ -475,6 +475,7 @@
         "EQ-015/M.08.v1",
         "EQ-015/M.10.v1",
         "EQ-015/M.12.v1",
+        "EQ-015/M.16.v1",
         "EQ-015/S.01.v1",
         "EQ-015/S.13.v1",
         "EQ-015/S.14.v1",
@@ -824,6 +825,13 @@
           "label": "(9)",
           "section": null,
           "raw_key": "21529456:(9)"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 44",
+          "section": "sec:corrected",
+          "raw_key": "MR:eq.44"
         }
       ],
       "role": "other",
@@ -1197,6 +1205,13 @@
           "label": "Tunnel-v2.0:eq.3",
           "section": "sec.3, tag{CAN-006}",
           "raw_key": "The Recursive Epistemic Tunnel v2.0:Tunnel-v2.0:eq.3"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 79",
+          "section": "sec:corrected",
+          "raw_key": "MR:eq.79"
         }
       ],
       "role": "other",
@@ -6906,6 +6921,29 @@
           "label": "(43)",
           "section": null,
           "raw_key": "22481928:(43)"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 47",
+          "section": "sec:topicentry3",
+          "raw_key": "MR:eq.47"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 48",
+          "section": "sec:topicentry3",
+          "raw_key": "MR:eq.48",
+          "note": "source tags Open; entry tier unchanged"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 49",
+          "section": "sec:topicentry3",
+          "raw_key": "MR:eq.49",
+          "note": "source tags Open; entry tier unchanged"
         }
       ],
       "role": "other",
@@ -7059,6 +7097,13 @@
           "label": "CBC-14",
           "section": null,
           "raw_key": "22357788:CBC-14"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 46",
+          "section": "sec:topicentry3",
+          "raw_key": "MR:eq.46"
         }
       ],
       "role": "other",
@@ -7392,6 +7437,13 @@
           "label": "Tunnel-v2.0:eq.11",
           "section": "sec.8, prose reference ('CAN-047 -- human-AI-session-stepper'); reciprocal-lineage non-collapse boxed but not \\tag-marked",
           "raw_key": "The Recursive Epistemic Tunnel v2.0:Tunnel-v2.0:eq.11"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 32",
+          "section": "sec:humanai2",
+          "raw_key": "MR:eq.32"
         }
       ],
       "role": "other",
@@ -10344,7 +10396,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "weld/H.38.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -10406,6 +10460,34 @@
           "section": "Appendix A only -- no body-text reference found",
           "raw_key": "The Recursive Epistemic Tunnel v2.0:Tunnel-v2.0:eq.14",
           "status_note": "GAP FINDING: CAN-066 ('session retention gate and unaided return battery') appears only in the Appendix A 'Toledo Canonical Objects Used' table; no section of the manuscript body names it, restates its equation, or narratively applies it. Flagged for the chair rather than silently omitted -- Appendix A over-lists relative to the body's actual usage."
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 33",
+          "section": "sec:humanai2",
+          "raw_key": "MR:eq.33"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 34",
+          "section": "sec:humanai2",
+          "raw_key": "MR:eq.34"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 35 (\\label{eq:lowrank})",
+          "section": "sec:humanai2 / sec:etagate",
+          "raw_key": "MR:eq.35"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 36 (\\label{eq:gate})",
+          "section": "sec:humanai2 / sec:etagate",
+          "raw_key": "MR:eq.36"
         }
       ],
       "role": "other",
@@ -10559,6 +10641,13 @@
           "label": "EF-26 (Repair 10)",
           "section": null,
           "raw_key": "22331922:EF-26 (Repair 10)"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 39",
+          "section": "sec:humanai2",
+          "raw_key": "MR:eq.39"
         }
       ],
       "role": "other",
@@ -11682,6 +11771,13 @@
           "label": "(39)",
           "section": null,
           "raw_key": "22424434:(39)"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 42",
+          "section": "sec:return1",
+          "raw_key": "MR:eq.42"
         }
       ],
       "role": "other",
@@ -11839,6 +11935,13 @@
           "label": "Tunnel-v2.0:eq.18",
           "section": "sec.25, prose reference ('CAN-076 -- human-return-CTSA6')",
           "raw_key": "The Recursive Epistemic Tunnel v2.0:Tunnel-v2.0:eq.18"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 41",
+          "section": "sec:return1",
+          "raw_key": "MR:eq.41"
         }
       ],
       "role": "other",
@@ -12272,6 +12375,13 @@
           "label": "EF-24 (Repair 9)",
           "section": null,
           "raw_key": "22331922:EF-24 (Repair 9)"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 40",
+          "section": "sec:humanai2",
+          "raw_key": "MR:eq.40"
         }
       ],
       "role": "other",
@@ -13550,6 +13660,27 @@
           "label": "Tunnel-v2.0:eq.21",
           "section": "sec.26, tag{CAN-088 reading}; specialized again sec.29 (RET-N17)",
           "raw_key": "The Recursive Epistemic Tunnel v2.0:Tunnel-v2.0:eq.21"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 50",
+          "section": "sec:return2",
+          "raw_key": "MR:eq.50"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 51",
+          "section": "sec:return2",
+          "raw_key": "MR:eq.51"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 65",
+          "section": "sec:corrected",
+          "raw_key": "MR:eq.65"
         }
       ],
       "role": "other",
@@ -30604,7 +30735,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-015/E.16.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -30678,6 +30811,13 @@
           "label": "(21)",
           "section": null,
           "raw_key": "22307148:(21)"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 15",
+          "section": "sec:rhythmnotmomentum (Section 10, canonical notation corrections)",
+          "raw_key": "MR:eq.15"
         }
       ],
       "role": "other",
@@ -31135,6 +31275,20 @@
           "label": "Tunnel-v2.0:eq.23",
           "section": "sec.2.2, tag{CAN-201}; restated in Conclusion sec.51 as 'R(S)!=S'",
           "raw_key": "The Recursive Epistemic Tunnel v2.0:Tunnel-v2.0:eq.23"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 52",
+          "section": "sec:worldsystem (boundary equation, immediately preceding)",
+          "raw_key": "MR:eq.52"
+        },
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 66",
+          "section": "sec:corrected",
+          "raw_key": "MR:eq.66"
         }
       ],
       "role": "other",
@@ -157282,6 +157436,213 @@
           }
         }
       }
+    },
+    {
+      "id": "MR16-01",
+      "code": "weld/H.38.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "MR:eq.37"
+      ],
+      "name": "AI-side semantic momentum reset across sessions (Fusion/Tunnel scope condition)",
+      "statement": {
+        "latest": "m^{\\mathrm{AI}}_{s+1,0}=0",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "m^{\\mathrm{AI}}_{s+1,0}=0",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.6-mr: initial capture, Master Equation River v1.5 (record_id 22550491, doi 10.5281/zenodo.22550491), sec.sec:humanai2, Eq. 37. Independent phi-criterion re-check against all 1264 live CANONICAL.json entries at merge time found no equivalent (best statement-text match: (0.47058823529411764, 'weld/H.31.v1')).",
+          "by": "toledo-v1.6-mr"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.07.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Master Equation River v1.5",
+        "repo_anchor": null,
+        "record_id": 22550491,
+        "doi": "10.5281/zenodo.22550491",
+        "section": "sec:humanai2",
+        "page": null,
+        "label": "Eq. 37",
+        "eq": "eq.37"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 37",
+          "section": "sec:humanai2",
+          "raw_key": "MR:eq.37"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Master River v1.5 itself frames this as a scope-bound modelling condition, not a constitutive or universal law; tier set to Definition (a stated model convention) rather than Dr or Open, following v1.5's own framing rather than upgrading it. Domain letter H (human-AI) chosen to match the parent weld/H.07.v1's own domain, since this is a companion condition inside the same Fusion/Tunnel session-boundary reading, not a method-level (M) object.",
+      "provenance_note_verbatim": "\"Within the scope of Fusion/Tunnel, AI-side semantic momentum is reset across sessions, [eq.37], but this line is a scope condition of the model, not a universal fact about AI with persistent memory.\""
+    },
+    {
+      "id": "MR16-02",
+      "code": "EQ-015/E.16.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "E",
+      "aliases": [
+        "MR:eq.43"
+      ],
+      "name": "Canonical symbol rename resolving a three-way kappa collision (meaning strength / semantic-route accessibility / live-policy accessibility)",
+      "statement": {
+        "latest": "\\gamma^{\\mu}_n=\\text{meaning strength},\\qquad \\kappa^{\\mathrm{sem}}_{A,t}(e\\mid Q)=\\text{semantic-route accessibility},\\qquad \\lambda^{\\mathrm{live}}_{A,t}(\\pi\\mid g)=\\text{live-policy accessibility}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\gamma^{\\mu}_n=\\text{meaning strength},\\qquad \\kappa^{\\mathrm{sem}}_{A,t}(e\\mid Q)=\\text{semantic-route accessibility},\\qquad \\lambda^{\\mathrm{live}}_{A,t}(\\pi\\mid g)=\\text{live-policy accessibility}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.6-mr: initial capture, Master Equation River v1.5 (record_id 22550491, doi 10.5281/zenodo.22550491), sec.sec:kappa, Eq. 43. Independent phi-criterion re-check against all 1265 live CANONICAL.json entries at merge time found no equivalent (best statement-text match: (0.47619047619047616, 'EQ-015/S.35.v1')).",
+          "by": "toledo-v1.6-mr"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/M.08.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Master Equation River v1.5",
+        "repo_anchor": null,
+        "record_id": 22550491,
+        "doi": "10.5281/zenodo.22550491",
+        "section": "sec:kappa",
+        "page": null,
+        "label": "Eq. 43",
+        "eq": "eq.43"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 43",
+          "section": "sec:kappa",
+          "raw_key": "MR:eq.43"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Domain E (epistemic) chosen because the object is a notation-disambiguation across meaning/accessibility constructs already read into EQ-015's E domain (E.04, and the accessibility constructs feeding M.08/H.08); it is not itself a method-level (M) construction, so is not filed as EQ-015/M.16.v1 despite reading M.08.v1 as its nearest parent.",
+      "provenance_note_verbatim": "\"The programme previously used kappa for three different things ... Master should use one consistent rename, [eq.43]\""
+    },
+    {
+      "id": "MR16-03",
+      "code": "EQ-015/M.16.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "MR:eq.45"
+      ],
+      "name": "River-summary narrative closure: experience, the changed reader, possibility, choice, action, and the re-read world",
+      "statement": {
+        "latest": "\\text{Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.6-mr: initial capture, Master Equation River v1.5 (record_id 22550491, doi 10.5281/zenodo.22550491), sec.sec:conclusion1, Eq. 45. Independent phi-criterion re-check against all 1266 live CANONICAL.json entries at merge time found no equivalent (best statement-text match: (0.35390946502057613, 'A.5/H.05.v1')).",
+          "by": "toledo-v1.6-mr"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/M.02.v1",
+          "derived_via": "reads"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Master Equation River v1.5",
+        "repo_anchor": null,
+        "record_id": 22550491,
+        "doi": "10.5281/zenodo.22550491",
+        "section": "sec:conclusion1",
+        "page": null,
+        "label": "Eq. 45",
+        "eq": "eq.45"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": null,
+        "identifier": null,
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 22550491,
+          "doi": "10.5281/zenodo.22550491",
+          "label": "Eq. 45",
+          "section": "sec:conclusion1",
+          "raw_key": "MR:eq.45"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "This is a prose (non-symbolic) restatement of the root stepper's own recursive readout/meaning/experience/agency chain rather than an equation in the algebraic sense; filed at Definition tier, no tier raised, and no independent verification of the narrative claim is asserted beyond what v1.5's own Section 9 ledger already states about the root.",
+      "provenance_note_verbatim": "\"Experience changes the reader; the changed reader changes what can become possible; what becomes possible changes choice; choice changes action and the world; the changed world is read again.\""
     }
   ],
   "raw_to_canonical": {
@@ -158356,17 +158717,17 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1264,
+    "entries": 1267,
     "by_status": {
-      "current": 1173,
+      "current": 1176,
       "split": 30,
       "not_an_equation": 9,
       "unverified": 52
     },
     "by_domain": {
-      "M": 406,
-      "E": 61,
-      "H": 121,
+      "M": 407,
+      "E": 62,
+      "H": 122,
       "S": 136,
       "W": 93,
       "C": 59,
@@ -158375,7 +158736,7 @@
     },
     "by_tier": {
       "Th_coqc": 413,
-      "Definition": 428,
+      "Definition": 431,
       "Dr": 79,
       "Ax": 12,
       "finite_diagnostic": 46,
@@ -158384,13 +158745,13 @@
     },
     "by_coq_status": {
       "closed": 277,
-      "definition": 378,
+      "definition": 381,
       "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 52,
       "axioms": 3,
       "mapped_not_wrapped": 274
     },
-    "computed": "2026-09-08 from canonical[] (scripts/v16_idm_merge.py)"
+    "computed": "2026-09-08 from canonical[] (scripts/v16_mr_merge.py)"
   }
 }
