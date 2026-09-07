@@ -25,7 +25,7 @@ flowchart TB
     subgraph SIBLINGS["Method-family siblings and downstream products (public)"]
         SKILLME["skillme"]
         BIRCA["birca"]
-        PURAG["product_universal_rag"]
+        PURAG["solver-arc-private"]
         RETPHE["RE_T-PHE"]
     end
 
@@ -81,8 +81,8 @@ Toledo's own interfaces are marked in **bold**.
 | zero-readout-certifies | coq-theorem-module | IDM_KeystoneKernel | `coq/IDM_KeystoneKernel.v` | Proves the zero fibre of a finite weighted comparison operator is exactly its constant-on-components case. |
 | zero-readout-certifies | ci-workflow | verify.yml | `.github/workflows/verify.yml` | Proof compilation across two proof-checker versions, PDF build, metadata validation, repository audit. |
 | zero-readout-certifies | data-contract | deposit metadata | `.zenodo.json` | Metadata Zenodo's GitHub integration uses to mint the archival DOI on release. |
-| product_universal_rag | python-package-api | rag_solver.solve | `pgcross_universal/rag_solver.py` | Returns a verdict (TRUTH/QUALIFIED/HOLD/REJECT/ESCALATE) with citations and a claim tier. |
-| product_universal_rag | mcp-server | rag MCP server | `pgcross_universal/mcp_server.py` | A full solve, a fast evidence check, and corpus stats, each with a fixed honesty envelope in the response. |
+| solver-arc-private | python-package-api | rag_solver.solve | `solver-arc-private_universal/rag_solver.py` | Returns a verdict (TRUTH/QUALIFIED/HOLD/REJECT/ESCALATE) with citations and a claim tier. |
+| solver-arc-private | mcp-server | rag MCP server | `solver-arc-private_universal/mcp_server.py` | A full solve, a fast evidence check, and corpus stats, each with a fixed honesty envelope in the response. |
 | skillme | cli/kernel | skillme_protocol_kernel.py | `skillme_protocol_kernel.py` | Validates a checkpoint's structure; explicitly does not verify domain truth or legality. |
 | birca | mcp-server | birca MCP server | `mcp_server/server.py` | Serves a safety-gated intake protocol plus compute tools for math-consistency and evidence-quotient checks; never calls a model itself. |
 | RE_T-PHE | cli | build_library.py | `tools/build_library.py` | Admits only keep/fix-verdict evidence records into a generated library, listing dropped records visibly. |
