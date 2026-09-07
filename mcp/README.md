@@ -40,6 +40,14 @@ stale docstrings) — see `docs/CHANGELOG.md`'s next entry and
 (`cd mcp && python3 -m pytest -q`). See "Tests and benchmarks" below and
 `mcp/BENCHMARKS.md` for every pass's full, quoted output.
 
+A further, separate 2026-09-07 addition (TODO IDM-5, concurrent with
+another run's registry-side work) landed a 20th tool, `toledo_lint` — see
+`docs/CHANGELOG.md`'s "Unreleased — `toledo_lint`" entry for its full scope.
+This makes `tests/test_integration.py::test_stdio_roundtrip_lists_19_tools`
+(which pins the tool count at exactly 19) fail with `assert 20 == 19`; that
+test file is owned by a different scope than this addition and is left for
+its own owner to re-pin, not edited here.
+
 ### Known issues, fixed
 
 `toledo_mcp/verdict.py`'s fallback branch used to answer a `None`/missing
@@ -126,7 +134,7 @@ That means, before stating, citing, or building on any formula:
   answered and this code/root/domain genuinely does not exist" — a normal,
   common answer, not a failure.
 
-## Tools (19)
+## Tools (20)
 
 | Tool | Purpose |
 |---|---|
@@ -146,6 +154,7 @@ That means, before stating, citing, or building on any formula:
 | `toledo_counts` | Live aggregate counts. |
 | `toledo_index_status` | Index freshness + schema-version compatibility + `registry_release_version`. |
 | `toledo_show_verdict_rules` | Introspect the verdict decision table (`verdict.py`'s `RULES`) as data. |
+| `toledo_lint` | TODO IDM-5: continuum-injection lint over a statement (LaTeX/ascii/prose) against the `information-discrete-math` skill's contaminated-concept table; never blocks (P24) — `verdict` is `"clean"` or `"continuum_injection_warned"`, each finding's `toledo_code` resolved at call time by alias. |
 | `toledo_register_proposal` | The only write path — a human-reviewed proposal file under `mcp/proposals/`. |
 | `toledo_list_proposals` | Browse the proposal queue, optionally by status. |
 | `toledo_proposal_status` | One proposal's current lifecycle state. |

@@ -129,7 +129,7 @@ from mcp.server.fastmcp import FastMCP
 
 try:
     from . import cache as cache_mod
-    from . import cli, core, equivalence, paths, proposals, regex_guard, verdict
+    from . import cli, core, equivalence, lint, paths, proposals, regex_guard, verdict
 except ImportError:
     # Run directly as a script (`python3 mcp/toledo_mcp/server.py`, as in the
     # repo-root .mcp.json) rather than via `python3 -m toledo_mcp.server` — put
@@ -139,7 +139,7 @@ except ImportError:
 
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
     from toledo_mcp import cache as cache_mod
-    from toledo_mcp import cli, core, equivalence, paths, proposals, regex_guard, verdict
+    from toledo_mcp import cli, core, equivalence, lint, paths, proposals, regex_guard, verdict
 
 mcp = FastMCP(
     name="toledo",
@@ -718,6 +718,38 @@ def toledo_show_verdict_rules() -> dict[str, Any]:
         "verdict_values": list(verdict.VERDICT_VALUES),
         "rules": [dict(r) for r in verdict.RULES],
     })
+
+
+@mcp.tool()
+@_safe
+def toledo_lint(statement: str, code: str | None = None) -> dict[str, Any]:
+    """TODO IDM-5: continuum-injection lint over a statement (LaTeX/ascii/
+    prose), per the `information-discrete-math` skill's contaminated-concept
+    -> discrete-replacement table (SKILL.md). Detects classical-continuum
+    smuggling — I1 ℝ-completeness/limits-that-land, I2 h→0 infinite
+    divisibility, I3 infinite scale separation (Re→∞, Λ→∞), I4 actual +∞;
+    Z1 a point of zero extent, Z2 exact-zero spacing, Z3 absolute rest/exact
+    vacuum, Z4 the void — plus the classic traps: angle/degree/acos/atan2, a
+    coordinate distance √Σ(Δx)², an operator on a continuum (∂²/
+    d'Alembertian), ε–δ continuity as primitive, π/e/φ as primitive numbers,
+    and trichotomy/LUB.
+
+    `code` is an OPTIONAL Toledo code this statement is being checked for or
+    against — purely informational context echoed back in `data.code`; it
+    does not change which rules fire.
+
+    **This NEVER blocks (P24: it disciplines, not gates)** — `data.verdict`
+    is always exactly one of `"clean"` or `"continuum_injection_warned"`,
+    never a usability gate like `verdict.py`'s founder-rule values. Each
+    `data.findings[]` entry carries `{"class", "matched_text", "why",
+    "discrete_replacement", "toledo_code", "severity": "warn"}` —
+    `toledo_code` is resolved at call time against the LIVE registry by
+    alias (the IDM ladder root/keystone object that carries the discrete
+    replacement, e.g. `R`, `Q`, `D`, `Z`, `L_R`); if that alias is not (yet)
+    registered, `toledo_code` fails soft to the literal string
+    `"code pending"` rather than fabricating a code.
+    """
+    return _envelope(lint.lint_statement(statement, code))
 
 
 @mcp.tool()

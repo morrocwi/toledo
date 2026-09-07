@@ -15,6 +15,48 @@ test-output line below was produced by actually running the command shown,
 on this machine, at that time — never carried over from a description of
 intended work.
 
+## Unreleased — `toledo_lint` (TODO IDM-5) — 2026-09-07
+
+New 20th tool/subcommand, added by a separate concurrent run while another
+run continued editing `site/build_site.py`, `scripts/toledo_build.py`, and
+`export_static.py` (untouched by this entry) — no file this entry names is
+owned by that other run.
+
+- **`toledo_mcp/lint.py` (new).** `lint_statement(statement, code=None)` — a
+  standard-library-only continuum-injection linter over a statement
+  (LaTeX/ascii/prose), against the `information-discrete-math` skill's own
+  contaminated-concept -> discrete-replacement table (I1-I4 injected
+  infinities, Z1-Z4 injected zeros, plus the classic traps:
+  angle/degree/acos/atan2, a coordinate distance `√Σ(Δx)²`, an operator on a
+  continuum (`∂²`/d'Alembertian), ε–δ continuity as primitive, π/e/φ as
+  primitive numbers, trichotomy/LUB). Every rule's `why`/`discrete_
+  replacement` text is quoted verbatim from that skill's SKILL.md, never
+  paraphrased. **This never blocks (P24: it disciplines, not gates)** —
+  `verdict` is always exactly `"clean"` or `"continuum_injection_warned"`,
+  never a usability gate the way `verdict.py`'s founder-rule values are.
+  Each finding's `toledo_code` is resolved AT CALL TIME against the live
+  registry by alias (`resolve_toledo_code`) — never a hand-typed literal
+  code in the rule table — and fails soft to the literal string
+  `"code pending"` if that alias is not (yet) registered, rather than
+  raising or fabricating a code.
+- **`toledo_lint` MCP tool** (`server.py`, 20th tool) and **`toledo lint
+  "<statement>" [--code CODE]` CLI subcommand** (`cli.py`) both wrap the
+  same `lint.lint_statement` — one engine, two surfaces, matching this
+  package's existing "single implementation" discipline for shared logic.
+- **Tests**: `tests/test_lint.py` — 12 statements (6 clean, incl.
+  Q-arithmetic, the graph Laplacian, and the Born-rule overlap fraction; 6
+  continuum-injecting, one per major class family) plus a live-registry
+  test (`test_every_rule_alias_resolves_against_the_real_registry`) that
+  every `LintRule.alias` in `lint.RULES` resolves to a real Toledo code
+  against the actual, currently-checked-in registry.
+- **Known interaction with `tests/test_integration.py`**: that file's
+  `test_stdio_roundtrip_lists_19_tools` pins the tool count at 19 — adding
+  `toledo_lint` makes it 20, so that one pre-existing test now fails
+  (`assert 20 == 19`). That test file is owned by a different stream than
+  this entry's own scope (`toledo_mcp/lint.py`, `server.py`'s one new tool,
+  `cli.py`'s one new subcommand, `tests/test_lint.py`, this changelog, and
+  `README.md`) — left for that file's owner to re-pin, not edited here.
+
 ## 1.2.0 (residual-findings pass) — 2026-09-07
 
 A further pass on the same date closed six residual findings a review of

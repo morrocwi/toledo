@@ -56,13 +56,13 @@ from typing import Any
 
 try:
     from . import cache as cache_mod
-    from . import core, paths, proposals, regex_guard, verdict
+    from . import core, lint, paths, proposals, regex_guard, verdict
 except ImportError:
     # Allow `python3 mcp/toledo_mcp/cli.py ...` (run directly, not installed/
     # `-m`'d) the same way server.py already tolerates it.
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
     from toledo_mcp import cache as cache_mod
-    from toledo_mcp import core, paths, proposals, regex_guard, verdict
+    from toledo_mcp import core, lint, paths, proposals, regex_guard, verdict
 
 
 # ---------------------------------------------------------------------------
@@ -472,6 +472,14 @@ def cmd_show_verdict_rules(args: argparse.Namespace) -> None:
     _emit({"available": True, "statuses": sorted(known), "verdict_values": list(values), "rules": rules})
 
 
+def cmd_lint(args: argparse.Namespace) -> None:
+    """TODO IDM-5: wraps `lint.lint_statement` (see that module's docstring
+    and `server.py`'s `toledo_lint` for the full rule set). Never blocks
+    (P24) — exit code is always 0; the discipline is in `verdict`/`findings`,
+    not in a nonzero exit."""
+    _emit(lint.lint_statement(args.statement, args.code))
+
+
 def cmd_proposals_list(args: argparse.Namespace) -> None:
     root = paths.repo_root()
     rows = proposals.list_proposals(status=args.status, limit=args.limit, root=root)
@@ -601,6 +609,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("show-verdict-rules", help="introspect the verdict decision table (verdict.py)")
     p.set_defaults(func=cmd_show_verdict_rules)
+
+    p = sub.add_parser("lint", help="TODO IDM-5: continuum-injection lint over a statement (never blocks — P24)")
+    p.add_argument("statement")
+    p.add_argument("--code", default=None, help="optional Toledo code this statement is being checked for/against")
+    p.set_defaults(func=cmd_lint)
 
     p_proposals = sub.add_parser("proposals", help="submitted registration proposals")
     proposals_sub = p_proposals.add_subparsers(dest="proposals_command", required=True)

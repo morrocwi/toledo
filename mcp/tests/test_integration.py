@@ -219,7 +219,7 @@ def test_counts_matches_registry_canonical_json_own_counts_field(real_root):
 # manually-run, uncommitted step.
 # ---------------------------------------------------------------------------
 
-def test_stdio_roundtrip_lists_19_tools(fixture_root, tmp_path):
+def test_stdio_roundtrip_lists_20_tools(fixture_root, tmp_path):
     from mcp import ClientSession
     from mcp.client.stdio import StdioServerParameters, stdio_client
 
@@ -240,7 +240,7 @@ def test_stdio_roundtrip_lists_19_tools(fixture_root, tmp_path):
 
                 tools = await session.list_tools()
                 names = {t.name for t in tools.tools}
-                assert len(tools.tools) == 19, sorted(names)
+                assert len(tools.tools) == 20, sorted(names)
                 assert "toledo_show_verdict_rules" in names
                 assert "toledo_register_proposal" in names
 
