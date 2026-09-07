@@ -54,6 +54,7 @@ jobs:
       # could break `make test` on every clean checkout while every CI job
       # here stayed green. Runs the fixture-based suite only (tests/
       # fixtures/CANONICAL.sample.json), never the real registry.
+      - run: python3 scripts/toledo_build.py   # generates registry/TOLEDO.json and registry/entries/, which tests/test_site.py reads
       - run: python3 -m pytest -q tests/
       - run: python3 mcp/benchmarks/bench_index.py   # fails loudly on a crash, not on a slow number — this is a smoke run, not a perf gate
   build-index:
