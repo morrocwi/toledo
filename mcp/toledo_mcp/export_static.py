@@ -191,7 +191,7 @@ def export_static(out_dir: pathlib.Path, root: pathlib.Path | None = None) -> di
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(index_html, encoding="utf-8")
-    files_written.append("../index.html")
+    # index.html is not counted in files_written (that list is the v1/ JSON set).
 
     # entries/<mangled-code>.json — full entry + export-time verdict.
     for e in entries:
