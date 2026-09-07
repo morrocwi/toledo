@@ -104,7 +104,7 @@ escalate to a human; do not guess. `NOT_REGISTERED` — call `toledo_register_pr
 a human registrar to merge it before using the formula; this server never merges a proposal into
 the registry itself. Full detail: `mcp/README.md`'s "The rule this server exists to enforce".
 
-### The 19 tools
+### The 20 tools
 
 | Tool | Purpose |
 |---|---|
@@ -127,6 +127,7 @@ the registry itself. Full detail: `mcp/README.md`'s "The rule this server exists
 | `toledo_register_proposal` | The only write path — one human-reviewed proposal file under `mcp/proposals/`. |
 | `toledo_list_proposals` | Browse the proposal queue, optionally filtered by status. |
 | `toledo_proposal_status` | One proposal's current lifecycle state. |
+| `toledo_lint` | Continuum-injection lint over a statement (LaTeX/ascii/prose) against the `information-discrete-math` skill's contaminated-concept table; warns, never blocks — `verdict` is `"clean"` or `"continuum_injection_warned"`. |
 
 ### Install
 
@@ -210,19 +211,21 @@ indicative of that one run, not a guaranteed SLA — re-run `python3 benchmarks/
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-07 (v1.5)
+## Honest state — computed 2026-09-08 (v1.6)
 
 Every number below was read from the files in this repository by the command shown; none is
-carried over from an earlier note. This section supersedes the v1.4 counts below it in
-`CHANGELOG.md` — v1.5 registers **23** new readings and **23** occurrences on existing codes from
-the deposited paper "The Recursive Epistemic Tunnel" v2.1 (see "Recursive Epistemic Tunnel v2.1
-registrations" below) and closes a registry-wide debt pass (see "Debt pass (v1.5)" below): the
-`mapped_not_wrapped` coq_status is retired — the 119 v1.2 Theta/CMC root-extension readings now
-carry a Toledo-native Coq file each, and a new `axioms` coq_status rung distinguishes an
-identifier the entry's own file closes only relative to a named axiom from one `verify.sh` reports
-unconditionally "Closed under the global context". No `coqc` was invoked by this release-prep pass
-itself (the coqc runs behind the debt pass's own Coq-coverage numbers predate it and are read, not
-re-run, here).
+carried over from an earlier note. This section supersedes the v1.5 counts below it in
+`CHANGELOG.md` — v1.6 adds two independent things: a root registry extension (**R2**) bringing
+`information-discrete-math` in as **18** further Layer-0 roots with **274** readings under them
+(see "Root registry extension R2" below), and **24** Master Equation River v1.6 registrations
+(**21** existing-code occurrences plus **3** new codes; see "Master Equation River v1.6
+registrations" below). It also ships a per-entry Resistance Ladder + Reproduction Ledger (see
+"Resistance ladder R0–R6 and reproduction evidence" below) and a 20th MCP tool, `toledo_lint` (see
+"toledo_lint" below). No `coqc` full-arc re-verify was invoked by this release-prep pass itself;
+the 274 IDM readings carry the honest `mapped_not_wrapped` coq_status (an evidence-backed match
+against an already-verified imported identifier, no Toledo-native wrapper file written yet for
+them) — the same rung the v1.2 Theta/CMC readings held before their own wrapper pass, reintroduced
+here rather than fabricating a closure that was not done.
 
 **Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
 `python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
@@ -230,26 +233,21 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **990** canonical entries: **793** mapped from **946** raw equations across **40** deposited
-  chapters (`registry/EQ_LIBRARY.md`, `make library`) plus the 119 v1.2 root-extension readings,
-  plus **34** v1.3 readings from the Effort v0.3 paper, plus **16** v1.4 readings from the
-  Economics of Expertise v1.0.1 paper, plus **5** v1.4 Core Epistemic Structure definitions, plus
-  **23** v1.5 readings from the Recursive Epistemic Tunnel v2.1 paper; **1,069** raw occurrence
-  keys resolved (unchanged — none of the v1.3–v1.5 readings are sourced from a raw textbook
-  occurrence). (793+119+34+16+5+23=990, matching `registry/CANONICAL.json`'s own
-  `counts{}.entries` exactly.)
-- **Status:** `current` 899 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
-- **Domain:** P 288 · S 136 · M 157 · W 93 · H 121 · B 75 · E 61 · C 59.
-- **Tier:** `untagged` 245 · `Definition` 428 · `Th_coqc` 139 · `finite_diagnostic` 46 · `Dr` 79 ·
-  `Open` 41 · `Ax` 12. (`Th_coqc` certifies that a lemma is closed under the stated finite model's
-  global context — an internal-consistency check, never an empirical or physical truth claim;
-  `untagged` means the source gave no tier at all, stated as such rather than guessed.)
-- **Coq status:** `closed` 277 · `definition` 378 · `wrapped_related` 210 · `axioms` 3 ·
-  `open_prop` 52 · `not_formalisable` 70. See "The coq_status ladder" immediately below for what
-  each of these means. `mapped_not_wrapped` no longer appears: the 119 v1.2 Theta/CMC entries that
-  carried it moved to `closed` (116) or the new `axioms` rung (3) this pass — see "Debt pass
-  (v1.5)" below. (The 23 Tunnel v2.1 readings split 8 `definition` / 15 `open_prop` — an honest
-  restatement of what the source states, no wrapper file written for them yet.)
+- **1,267** canonical entries: **990** at v1.5 plus **274** v1.6 readings from the
+  `information-discrete-math` root extension (R2) plus **3** v1.6 Master Equation River v1.6 new
+  codes. (990+274+3=1,267, matching `registry/CANONICAL.json`'s own `counts{}.entries` exactly.)
+- **Status:** `current` 1,176 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
+- **Domain:** M 407 · P 313 · S 136 · H 122 · W 93 · B 75 · E 62 · C 59.
+- **Tier:** `Th_coqc` 413 · `Definition` 431 · `Dr` 79 · `Ax` 12 · `finite_diagnostic` 46 ·
+  `Open` 41 · `untagged` 245. (`Th_coqc` certifies that a lemma is closed under the stated finite
+  model's global context — an internal-consistency check, never an empirical or physical truth
+  claim; `untagged` means the source gave no tier at all, stated as such rather than guessed.)
+- **Coq status:** `closed` 277 · `definition` 381 · `wrapped_related` 210 · `mapped_not_wrapped`
+  274 · `not_formalisable` 70 · `open_prop` 52 · `axioms` 3. See "The coq_status ladder"
+  immediately below for what each of these means. `mapped_not_wrapped` reappears at v1.6 — it was
+  retired at v1.5 once the 119 v1.2 Theta/CMC readings gained wrapper files, and is reintroduced
+  here by the 274 new IDM readings, which carry it honestly rather than borrowing `closed` from
+  the already-verified 274/274 IDM Coq mirror they are read from.
 
 ### The coq_status ladder (`closed` → `axioms` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
 
@@ -282,10 +280,12 @@ rounded-up claim:
   recorded per-entry in `tier_evidence`, not asserted without it.
 
 `mapped_not_wrapped` — an evidence-backed match against an imported Coq identifier exists
-(`registry/coq_map.json`) but no Toledo-native wrapper file has been written yet — is retired as of
-v1.5: the 119 entries that carried it (the v1.2 Theta/CMC root-extension readings) all gained a
-Toledo-native wrapper file this pass and moved to `closed` (116) or `axioms` (3); see "Debt pass
-(v1.5)" below.
+(`registry/coq_map.json`) but no Toledo-native wrapper file has been written yet — was retired at
+v1.5 (the 119 entries that carried it, the v1.2 Theta/CMC root-extension readings, all gained a
+Toledo-native wrapper file that pass and moved to `closed`/`axioms`; see "Debt pass (v1.5)" below)
+and **reappears at v1.6**: the 274 new `information-discrete-math` root-extension readings (R2)
+carry it, honestly, for the same reason the Theta/CMC readings once did — see "Root registry
+extension R2" below.
 
 **The 2026-09-07 reclassification.** v1.0.0 reported `closed` 337. On inspection during v1.1, 214
 of those 337 entries turned out to carry only a Coq `Definition`, not a proved Theorem/Lemma —
@@ -306,16 +306,16 @@ treat its `closed` 337 figure as superseded by the v1.1 correction, not as a sec
 number.
 
 **Genesis root layer** (`registry/genesis_root.json`, git-anchored to
-`morrocwi/readout_genesis@082dde8` for the 590 Genesis-document rows, plus the 2 root-extension
-rows added at v1.2 per the R1 addendum below): **592** root rows, unchanged at v1.5 (no row was
-added or removed). Of these, **377** carry a normalised `tier` (added by the tier sidecar, each
-with a quoted source line): `Definition` 101 · `untagged` 95 · `finite_diagnostic` 68 · `Th_coqc`
-51 · `Dr` 43 · `Ax` 13 · `RETRACTED` 3 · `Open` 3 — **95** of these rows (all previously untagged)
-gained their normalised tier this pass, each backed by a quoted source line (see "Debt pass
-(v1.5)" below); computed by diffing this file against the v1.4.0 release tag (commit `6579cf7`).
-The remaining **215** rows (377+215=592) still carry only their exact free-text `tier_in_genesis`
-string (the corpus uses 150+ distinct tier strings; normalising the rest is open work, listed
-below).
+`morrocwi/readout_genesis@082dde8` for the 590 Genesis-document rows, the 2 root-extension rows
+added at v1.2 per the R1 addendum below, plus **18** further root-extension rows added at v1.6 per
+the R2 addendum below): **610** root rows (592 + 18). Of these, still only **377** carry a
+normalised `tier` (added by the v1.2/v1.5 tier sidecar passes, each with a quoted source line):
+`Definition` 101 · `untagged` 95 · `finite_diagnostic` 68 · `Th_coqc` 51 · `Dr` 43 · `Ax` 13 ·
+`RETRACTED` 3 · `Open` 3 — unchanged at v1.6 (no new normalisation pass ran this release). The
+remaining **233** rows (377+233=610 — 215 carried over from v1.5, plus the 18 new R2 rows) still
+carry only their exact free-text `tier_in_genesis` string (each R2 row's own string is IDM's own
+verbatim tier tag, e.g. `Ax`, `Th_coqc`, `"Dr → Th_coqc realization"` for `delta_R`; the corpus
+overall uses 150+ distinct tier strings; normalising the rest is open work, listed below).
 
 **Coq — imported developments** (`coq/<source>/verify_report.json`, one sequential build+`Print
 Assumptions` pass per source; these reports predate this release-prep pass and were read, not
@@ -349,17 +349,26 @@ identifiers "Closed under the global context" (see the reclassification note abo
 did not re-run that full pass (no `coqc`, per this release's build constraint), so it is quoted as
 last measured, not re-certified at v1.5.
 
-**Docs site / catalogue** (`make site`, `make catalogue`, this pass): site **2,240** generated
-pages (`python3 site/build_site.py --out site/dist --strict`; 990 canonical entries + 592 root
-rows plus index/browse/by-root/by-domain/by-tier/by-status/search/agents/about pages — see
-"Website" below); printable catalogue PDF **291** pages, title page reading "Version 1.5.0"
-(`pdfinfo latex/catalogue.pdf`, one `latexmk -pdf` run), **0** `Overfull \hbox` warnings over 20pt
-in `latex/catalogue.log` (`grep` count, this pass — down from the 38 named in DEBT #48
-(`ops/TODOLIST_snapshot_2026-09-07.md`), see "Debt pass (v1.5)" below). The catalogue is typeset by plain `pdflatex`; `latex/unicode_pdf_fallback.sty` maps the
-corpus's literal math-notation Unicode to standard LaTeX constructs, and `scripts/latex_pdf_safe.py`
-replaces contiguous Thai/Cyrillic quoted-text runs with a disclosed placeholder pointing back at
-the JSON/site entry — the registries, JSON-LD entries and site carry the exact source text
-unmodified; only this print artifact substitutes.
+**Docs site / catalogue** (`make build && python3 site/build_site.py --out site/dist --strict`,
+`make catalogue`, this pass): site **2,581** generated pages (1,267 canonical entries + 610 root
+rows plus index/browse/by-root/by-domain/by-tier/by-status/search/agents/about/**ecosystem** pages
+— see "Website" below); printable catalogue PDF **334** pages, title page reading "Version 1.6.0"
+(`pdfinfo latex/catalogue.pdf`, one `latexmk -pdf` run), **0** `Overfull \hbox` warnings over
+20pt in `latex/catalogue.log` (`grep -c Overfull latex/catalogue.log`, this pass, reproduced twice:
+once on the already-built log in the working tree and once from a fully clean rebuild in a
+detached worktree with the pending diff applied — same as v1.5).
+Fixing this pass, not carried from an earlier release: four Unicode characters the v1.6 registry
+additions introduced (`⨁ ⊟ ⊤ ↪`, from the `information-discrete-math` root extension's FOLD/
+DECISION/injection statements) had no mapping in `latex/unicode_pdf_fallback.sty`, so `pdflatex`
+silently dropped them from the printed statement text; all four are now mapped
+(`\bigoplus`/`\boxminus`/`\top`/`\hookrightarrow` — `\bigoplus`/`\top`/`\hookrightarrow` are
+LaTeX-kernel primitives, `amssymb` was added for `\boxminus` specifically). The catalogue is
+typeset by plain
+`pdflatex`; `latex/unicode_pdf_fallback.sty` maps the corpus's literal math-notation Unicode to
+standard LaTeX constructs, and `scripts/latex_pdf_safe.py` replaces contiguous Thai/Cyrillic
+quoted-text runs with a disclosed placeholder pointing back at the JSON/site entry — the
+registries, JSON-LD entries and site carry the exact source text unmodified; only this print
+artifact substitutes.
 
 ### Root registry extension R1 (Theta, CMC) — founder ruling BBL-2026-09-07-207
 
@@ -637,21 +646,125 @@ listed as used but never actually invoked in the text; one restated code missing
 flag) — these were fixed in the v2.1 manuscript this registration cites, not carried into Toledo's
 own registry as open items.
 
+### Root registry extension R2: Information Discrete Mathematics
+
+Founder ruling 2026-09-08 ("เอา idm เอาเข้า toledo ก่อน และใน idm ให้อัพเดทรหัสสมการให้ตรงกับ
+toledo, ultracode", relayed in `ops/HANDOFF_OVERNIGHT_2026-09-06.md`): bring
+`information-discrete-math` (IDM, public, MIT, commit `147fc92671f35eb102405fec913eb361dc41f966`)
+into the root registry, using the same no-invented-numbering mechanism R1 already established,
+before updating the IDM repository itself to carry the codes Toledo assigns it.
+`scripts/v16_idm_merge.py` applied the Toledo-side half; full detail in
+`registry/GENESIS_CODE_SCHEME.md`'s own "Root registry extension R2" addendum.
+
+- **18 roots added**, every one of IDM's own Layer-0 objects, code = IDM's own verbatim id, never
+  re-prefixed: `delta_R` (the primitive — a retained difference exists), `RD1`–`RD9` (the nine
+  Axioms of Retained Difference), `D` (the naturals), `Z` (the integers), `Q` (the rationals), `R`
+  (the reals — the continuum as a readout), `L_R` (the relation graph / `L_R = D_W − W`),
+  `Keystone` (`B(Φ,Φ) = I(Φ)`), `A2` (FOLD, the generic accumulation engine), `A3` (DECISION, the
+  witness-search engine).
+- **Connection to Genesis, by quote only — never guessed:** exactly **3** quoted textual links
+  were found (`registry/GENESIS_CODE_SCHEME.md`'s own `phi_check`, `genesis_relations_asserted: 3`)
+  — `delta_R` → `EQ-001` (both a claim that a primordial retained difference exists, quoted both
+  sides),
+  `L_R` → `EQ-008` and `Keystone` → `EQ-008` (both state the identical `L_R = D_W − W` object,
+  quoted both sides). The other 15 roots (`RD1`–`RD9`, `D`, `Z`, `Q`, `R`, `A2`, `A3`) carry
+  `parents: []` with a non-empty `relations_note` recording the check and its honest non-finding —
+  the same disclosed-non-finding convention `CMC`'s row already uses under R1.
+- **274 readings added** under these 10 code-bearing roots (`RD1`, `RD2`, `RD4`–`RD9` carry no
+  readings of their own — every mirrored Coq identifier citing an `RD*` axiom directly resolves to the root `D`
+  it generates): `R` 40 · `D` 80 · `Z` 23 · `L_R` 28 · `delta_R` 11 · `Q` 19 · `Keystone` 30 ·
+  `RD3` 1 · `A2` 28 · `A3` 14 = 274, one per identifier in the 274/274-closed
+  `coq/information-discrete-math/verify_report.json` mirror already imported at v1.0.0,
+  `<root>/<D>.<nn>.v1` grammar, `coq_status: mapped_not_wrapped` (the same honest middle state R1's
+  119 Theta/CMC readings held before their own wrapper pass — wrapping these into
+  `coq/canonical/` files is left to a later release).
+- The treatise itself — `information-discrete-math/textbook/INFORMATION_DISCRETE_MATHEMATICS.md`
+  — is deposited separately: **10.5281/zenodo.22644131**. IDM's own repository (v1.6.0) was then
+  updated to carry the Toledo codes this merge assigned it, per the founder's own second half of
+  the ruling above.
+
+### Master Equation River v1.6 registrations
+
+Master Equation River v1.6 (10.5281/zenodo.22644712, a new version of the concept record
+10.5281/zenodo.22414412) cites Toledo codes for its own equation set. Per
+`EQUATION_SOURCE_POLICY.md`'s required procedure, its 24 equations were checked against this
+registry under the φ-criterion before registration: **21** resolved to existing codes as new
+occurrences (`registry/proposals/master_river_v1_6.merged.json`'s `eq_to_code` map — e.g. `eq.15` →
+`EQ-015/M.08.v1`, `eq.44` → `EQ-015/M.03.v1`, `eq.79` → `weld/M.02.v1`), and **3** did not match any
+existing statement under that criterion and were registered as new readings:
+`EQ-015/E.16.v1`, `EQ-015/M.16.v1`, `weld/H.38.v1` (`LINEAGE.jsonl` `assigned` events, `by:
+"toledo-v1.6-mr"`). No entry was merged speculatively — a same-target-code cluster (`eq.47`–`eq.49`,
+all resolving to `A.5/H.02.v1`) is recorded in the merge file's own
+`_open_definition_tier_mismatches` list for a human registrar to confirm the tier, not silently
+accepted.
+
+### Resistance ladder R0–R6 and reproduction evidence
+
+Founder ruling `BBL-2026-09-07-229`: a per-object resistance readout showing **which** resistance
+steps exist — never one number that hides the missing step. `scripts/compute_resistance.py`
+computes, and is the only script permitted to write, a `resistance` block on every canonical entry
+and root row, propagated unchanged into the site, the JSON-LD entries and the static API (never
+recomputed downstream). Seven fixed rungs, each `{held, evidence[], reason?}`:
+
+- **R0** — stated only (the entry's own `statement.latest`).
+- **R1** — a pre-registered falsifier or claim boundary exists for it.
+- **R2** — Coq-closed (`coq.coq_status == "closed"` — no looser value ever holds this rung).
+- **R3** — a reproducible run exists: hash-frozen, `ai_at_runtime == 0`.
+- **R4** — an external oracle (a published value, an independent implementation, or a public
+  dataset) checked it, within a declared tolerance.
+- **R5** — an independent reviewer (`independence_class >= "I2"`) or interactional-expert record
+  reviewed it.
+- **R6** — an AI-Off World-Closure outcome: reproducible even with the recursion loop switched off.
+
+`held: true` on R3/R4/R6 never means the underlying check *passed* — it means the check
+*happened, honestly*; a card whose own result is `FAIL` still holds those rungs. Evidence comes
+from three optional citation-index files (`registry/reproduction_card_index.json`,
+`registry/review_report_index.json`, `registry/claim_card_index.json`) — each a **citation** to the
+real Reproduction Card / review report living in the `glosa` repository, populated by
+`scripts/register_reproduction_evidence.py`, never hand-edited. The three worked cards registered
+so far,
+cited regardless of outcome (a disclosed `FAIL` is exactly as strong R4/R6 evidence as a `PASS`,
+never softened):
+
+| Card | Claim | Result |
+|---|---|---|
+| `EQ-045` | dim(u(1)) + dim(su(2)) + dim(su(3)) = 12, checked against a from-scratch stdlib computation of the general closed-form Lie-algebra dimension formulas | **PASS** — 1 + 3 + 8 = 12 exactly |
+| `EQ-068` | The RD-to-GeV fit `Λ_RD_to_GeV = 246/v_native` predicts the Higgs boson mass, checked against the PDG Review of Particle Physics value | **FAIL** — predicted 218.00 GeV vs. PDG 125.20 GeV (74.13% relative error), disclosed exactly as measured, not softened |
+| IDM ladder constants (`Q`, `R`) | IDM's own finite-series/Newton readouts of π, √2, e agree with an independent `mpmath` oracle to ≥25 correct decimal digits | **PASS** — traced to the package's own actual 30-digit working precision, tolerance set with margin below that, not tuned to the run's own output |
+
+**R5 today: unheld for every entry.** No review report at `independence_class >= "I2"` exists yet
+for any code in this registry — the rung is disclosed as not-yet-held everywhere, never filled with
+a self-run or a same-agent check standing in for an independent one.
+
+### toledo_lint
+
+The MCP server's 20th tool (`mcp/toledo_mcp/lint.py`), added this release: a continuum-injection
+lint over a statement's own text (LaTeX, ascii-math, or prose), checked against the
+`information-discrete-math` skill's contaminated-concept → discrete-replacement table (**15**
+rules — `len(lint.RULES)`, e.g. flagging an unguarded continuum limit, a bare "smooth function", a
+point of zero size, or a continuum angle/degree). It **warns, it never blocks**: `verdict` is
+`"clean"` or `"continuum_injection_warned"`, each finding naming the matched rule and, where the
+statement resolves to a known code, that code — a lint finding is a flag for a human reviewer to
+read, not a gate that stops a build or a registration.
+
 ### Website
 
 The public, human-readable documentation site at **<https://morrocwi.github.io/toledo/>** is built
-by `python3 site/build_site.py --out site/dist --strict` (this pass: **2,240** pages — home,
+by `python3 site/build_site.py --out site/dist --strict` (this pass: **2,581** pages — home,
 `/browse/` a flat no-JS directory of every code, one page per Layer-0 root (`/by-root/`), one page
 per domain letter (`/by-domain/`), one page per populated tier (`/by-tier/`) and status
-(`/by-status/`), one page per canonical entry/root row (`/entries/`), `/search/`, `/agents/`, and
-`/about/`), sharing one GitHub Pages deployment with the existing static API at `/v1/`
-(`mcp/docs/STATIC_API.md`).
+(`/by-status/`), one page per canonical entry/root row (`/entries/`), `/search/`, `/agents/`,
+`/about/`, and (new at v1.6) `/ecosystem/` — how Toledo relates to the other public repositories in
+the programme, rendered from `site/content/ecosystem.md`, its one Mermaid flowchart rendered
+client-side (CDN+SRI, the same carve-out KaTeX already uses; no `mermaid-cli` is installed on this
+machine to pre-render an SVG at build time instead)), sharing one GitHub Pages deployment with the
+existing static API at `/v1/` (`mcp/docs/STATIC_API.md`).
 
 - **A human reader** starts at `/` or `/browse/` and follows a code to its `/entries/<code>.html`
   page — statement, tier/status/`coq_status`, parents, occurrences, ancestry — or filters by
   `/by-root/`, `/by-domain/`, `/by-tier/`, `/by-status/`.
 - **An AI agent** goes straight to `/agents/`: the founder rule restated verbatim (every equation
-  is looked up in Toledo before use; no agent may use an unregistered equation), the 19-tool table
+  is looked up in Toledo before use; no agent may use an unregistered equation), the 20-tool table
   reproduced from `mcp/README.md`, the `.mcp.json` snippet, a `curl` line against `/v1/`, a minimal
   runnable stdlib-only Python lookup example, and an embedded JSON-LD `Dataset`/`APIReference`
   block for a crawler that only parses structured data.
@@ -703,44 +816,61 @@ rather than asserting one). The v1.5 debt pass re-ran this same search for `CMC`
 full body of every source file rather than only headers, and reached the identical zero result —
 see "Debt pass (v1.5)" above and `registry/cmc_connection_report.md`.
 
-## What is not done (v1.5 carry-overs)
+## What is not done (v1.6 carry-overs)
 
 Honestly disclosed, not hidden in a rounded-up claim:
 
+- **274** `mapped_not_wrapped` Coq readings (the new v1.6 `information-discrete-math` root
+  extension, R2) have an evidence-backed match against an already-verified imported identifier but
+  no Toledo-native wrapper file yet — the same real gap the 119 v1.2 Theta/CMC readings once held,
+  reintroduced here rather than left unregistered; wrapping them is future work, not attempted this
+  pass (see "Root registry extension R2" above).
 - **210** `wrapped_related` Coq wrappers alias an imported identifier rather than independently
   closing their own entry's statement (see "The coq_status ladder" above) — a real gap between
-  "a Toledo file exists for this" and "this entry's own claim is proved". This pass examined all
-  210 for a derivable independent closure and found none (see "Debt pass (v1.5)" above); the count
-  is unchanged, each for a real, examined reason rather than by default. The `mapped_not_wrapped`
-  step below this one is now empty — the 119 entries that held it gained a wrapper file this pass.
+  "a Toledo file exists for this" and "this entry's own claim is proved". Unchanged since v1.5's own
+  examination found none of the 210 had a derivable independent closure.
 - **70** canonical entries are `not_formalisable` (no formal content located in the source; reason
   recorded per-entry in `tier_evidence`) and **52** are `open_prop` (stated as an unproved `Prop`,
-  by design) — 15 of these are v1.5's own Tunnel v2.1 readings, 16 are v1.3's Effort readings, 7 are
-  v1.4's Economics of Expertise readings and 1 is v1.4's Core Epistemic Structure definition, each
-  carried as open exactly as the source states it, not forced to a stronger tier.
+  by design), unchanged since v1.5 — each carried as open exactly as the source states it, not
+  forced to a stronger tier.
 - **52** canonical entries remain `status: unverified`, each with a status note naming why (see
-  "Statement completion" above); this pass re-checked all 52 directly against their own cited
-  source (DEBT #42) and found no new evidence to resolve any of them, so the count is unchanged
-  since v1.2 — a re-checked "still unverified", not an un-re-checked carry-over.
+  "Statement completion" above), unchanged since v1.5's own re-check (DEBT #42) found no new
+  evidence to resolve any of them.
 - `RD1`–`RD9` remains evidence-checked as a distinct object from the Genesis root axioms (see the
-  finding above), not an omitted alias — no code has been invented for it.
+  finding above), not an omitted alias — no code has been invented for it. IDM's own claim that its
+  `RD1`–`RD9` are "the exact same" object as that checked mirror is recorded and transfers the
+  finding (see "Root registry extension R2" above); it is not a second, independent re-check.
 - **245** canonical entries still carry tier `untagged` (no tier was stated in their source at
-  all) — down from 255 at v1.4; this pass tagged the 10 that a source line actually supported
-  (DEBT #43) and left the rest untagged rather than guess a tier for them.
-- **215** genesis-root rows still carry only their free-text `tier_in_genesis` string, not a
-  normalised `tier` — down from 310 at v1.4; this pass normalised the 95 that a quoted source line
-  actually supported (DEBT #43) and left the rest as their exact free-text string.
-- **CMC has no evidenced connection to a Genesis root** (DEBT #46) — this pass re-searched directly
-  and confirmed the same zero result already on file; a candidate structural-resemblance sentence
-  is drafted in `registry/cmc_connection_report.md` for the founder to confirm, reject, or restate,
-  not asserted as a finding (see "Debt pass (v1.5)" above).
+  all) — unchanged since v1.5 (this pass tagged no new entries).
+- **233** genesis-root rows still carry only their free-text `tier_in_genesis` string, not a
+  normalised `tier` — up from 215 at v1.5 by exactly the 18 new R2 rows, none of which was
+  normalised this pass (each keeps IDM's own verbatim tier tag as its free-text string).
+- **CMC has no evidenced connection to a Genesis root** (DEBT #46) — unchanged since v1.5; a
+  candidate structural-resemblance sentence is still drafted in `registry/cmc_connection_report.md`
+  for the founder to confirm, reject, or restate, not asserted as a finding.
 - The `readout_genesis` import anchor is a local revision not present on that repository's public
   GitHub remote (DEBT #51) — see "Provenance note: readout_genesis anchor" above. Whether and when
-  to publish those commits is the founder's decision, not resolved by this release.
-- Master Equation River v1.6 and the textbook's Appendix F (both meant to cite Toledo codes) are
-  tracked separately and are not part of this release.
+  to publish those commits is the founder's decision, not resolved by this release. The public
+  `information-discrete-math` repository was found, during the R2 root-extension work, to carry
+  the same private-repository name in 6 files (unrelated to the anchor gap above) — scrubbed in the
+  same commit that landed R2's own Toledo codes into that repository; its git history still carries
+  it, the same founder decision as the anchor gap.
+- **R5 (independent reviewer) is unheld for every entry in this registry** — no review report at
+  `independence_class >= "I2"` exists yet anywhere (see "Resistance ladder" above). This is the
+  Ladder's own honest starting state, not a regression.
 - Citing `weld/H.30.v1`–`weld/H.34.v1` into glosa card P20's own text is tracked in the glosa
   repository, not here (see "Core Epistemic Structure" above).
+- The 210 v1.2 Theta/CMC readings' own wrapper files, and the 246 not-yet-formalised entries from
+  earlier releases, remain exactly as disclosed in their own release notes above; this release did
+  not revisit them.
+- `mcp/scripts/leak_scan.py`'s `private_repo_name` category was run against every file changed this
+  release but without a `--denylist-file`/`TOLEDO_LEAK_SCAN_DENYLIST_FILE` (this release-prep pass
+  has no access to the actual private-repository name to supply as one) — it reported 0 findings
+  for every other category, and this one category is disclosed as not-yet-run, not a clean result,
+  per the script's own warning. A structural, name-independent check did catch and fix one real
+  instance this pass (`site/content/ecosystem.md`'s duplicate, unredacted description of the same
+  private repository — see the CHANGELOG's v1.6.0 entry), but that does not substitute for the
+  denylist-backed scan closing this category out.
 
 ## Citation
 

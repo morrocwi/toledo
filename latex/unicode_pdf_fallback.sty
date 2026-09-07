@@ -7,7 +7,15 @@
 % no external OpenType font. Loaded by latex/catalogue.tex after amsfonts,
 % textcomp, pifont and newunicodechar.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{unicode_pdf_fallback}[2026/09/07 v1.0.0 Toledo catalogue Unicode fallback]
+\ProvidesPackage{unicode_pdf_fallback}[2026/09/08 v1.1.0 Toledo catalogue Unicode fallback]
+
+% amssymb: only extra dependency this file needs beyond catalogue.tex's own
+% amsfonts+amsmath (amsfonts alone already backs \mathbb below; \boxminus
+% does not exist without amssymb specifically) — added v1.1.0 for the four
+% characters the v1.6.0 registry additions (information-discrete-math root
+% extension) introduced: \bigoplus/\top/\hookrightarrow are LaTeX-kernel
+% primitives needing no package, \boxminus is amssymb's.
+\RequirePackage{amssymb}
 
 \newunicodechar{§}{\textsection{}}
 \newunicodechar{¬}{\ensuremath{\neg}}
@@ -102,6 +110,7 @@
 \newunicodechar{↓}{\ensuremath{\downarrow}}
 \newunicodechar{↔}{\ensuremath{\leftrightarrow}}
 \newunicodechar{↦}{\ensuremath{\mapsto}}
+\newunicodechar{↪}{\ensuremath{\hookrightarrow}}
 \newunicodechar{⇏}{\ensuremath{\nRightarrow}}
 \newunicodechar{⇒}{\ensuremath{\Rightarrow}}
 \newunicodechar{⇓}{\ensuremath{\Downarrow}}
@@ -147,8 +156,10 @@
 \newunicodechar{⊔}{\ensuremath{\sqcup}}
 \newunicodechar{⊕}{\ensuremath{\oplus}}
 \newunicodechar{⊗}{\ensuremath{\otimes}}
+\newunicodechar{⊟}{\ensuremath{\boxminus}}
 \newunicodechar{⊞}{\ensuremath{\boxplus}}
 \newunicodechar{⊢}{\ensuremath{\vdash}}
+\newunicodechar{⊤}{\ensuremath{\top}}
 \newunicodechar{⊥}{\ensuremath{\perp}}
 \newunicodechar{⊨}{\ensuremath{\vDash}}
 \newunicodechar{⋂}{\ensuremath{\bigcap}}
@@ -170,6 +181,7 @@
 \newunicodechar{⟹}{\ensuremath{\Longrightarrow}}
 \newunicodechar{⟺}{\ensuremath{\Longleftrightarrow}}
 \newunicodechar{⪰}{\ensuremath{\succeq}}
+\newunicodechar{⨁}{\ensuremath{\bigoplus}}
 \newunicodechar{ⱼ}{\textsubscript{j}}
 \newunicodechar{【}{\texttt{[[}}
 \newunicodechar{】}{\texttt{]]}}

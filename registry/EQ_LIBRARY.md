@@ -5,9 +5,9 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 ## Status
 - Chapters inventoried: 40
 - Raw equations: 946
-- Canonical objects: 990
+- Canonical objects: 1267
 - Raw→canonical mapped: 1069
-- Coq identifiers (canonical set): 913
+- Coq identifiers (canonical set): 1187
 - Master River v1.4 (22519148) equations 1–79: Coq set 22518450, 45 lemmas closed (coq/MR_Ledger.md)
 - Founder rulings: BBL-165 (Th_coqc for every equation), 170 (all chapters, one file), 171 (canonicalise first), 172 (latest formulation), 173 (map only), 174 (one master equation along the line), 175/176 (Readout Genesis first: same equation read per domain), 177 (collapse until one reader reads the whole line)
 
@@ -18,9 +18,9 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | weld/M.01.v1 | CAN-001 | weld | M | δ_R = (a ♯ b) ⊢[Th_coqc] L_R = D_W − W ⊢[Dr] F (MQ.08 stepper); concretely S_{n+1}=F(S_n,u_n,c_n,T_n); indepen | Th_coqc | closed CAN_001_degree, CAN_001_laplacian, CAN_001_sum_neg_distributes, CAN_001_laplacian_row_sums_to_neg_degre | 7 |
 | EQ-015/M.01.v1 | CAN-002 | EQ-015 | M | S_n = (G_n, Λ_n, T_n) | Definition | closed RootState, CAN_002_root_state_tuple_faithful | 3 |
 | EQ-015/M.02.v1 | CAN-003 | EQ-015 | M | S_{n+1} = F(S_n, u_n, c_n, T_n) | Definition | closed CAN_003_trajectory, CAN_003_stepper_can_move_state, CAN_003_trajectory_zero | 3 |
-| EQ-015/M.03.v1 | CAN-004 | EQ-015 | M | retention → structure → translation → readout → meaning → experience → memory → belief → claim → checking → st | Dr | closed CAN_004_Stage, CAN_004_index, CAN_004_forbidden_order, CAN_004_index_injective, CAN_004_checking_before | 1 |
+| EQ-015/M.03.v1 | CAN-004 | EQ-015 | M | retention → structure → translation → readout → meaning → experience → memory → belief → claim → checking → st | Dr | closed CAN_004_Stage, CAN_004_index, CAN_004_forbidden_order, CAN_004_index_injective, CAN_004_checking_before | 2 |
 | EQ-015/M.04.v1 | CAN-005 | EQ-015 | M | Retention→Structure→Translation→Readout→Meaning→Report (compressed); Retention→Structure→Candidate State→Suffi | Definition | definition CAN_005_readout_admission_order, CAN_005_readout_admission_order_stage | 4 |
-| weld/M.02.v1 | CAN-006 | weld | M | q_{D,n+1}∘F_n = F#_{D,n}∘q_{D,n}; O_{D,n} = O#_{D,n}∘q_{D,n}; equivalently q_D(F(z,u,c,T)) = F_D(q_D(z),u,c,T) | Definition | closed CAN_006_domain_admissible, CAN_006_domain_weld_satisfiable_on_pair_projection, DomainReading, weld_hold | 7 |
+| weld/M.02.v1 | CAN-006 | weld | M | q_{D,n+1}∘F_n = F#_{D,n}∘q_{D,n}; O_{D,n} = O#_{D,n}∘q_{D,n}; equivalently q_D(F(z,u,c,T)) = F_D(q_D(z),u,c,T) | Definition | closed CAN_006_domain_admissible, CAN_006_domain_weld_satisfiable_on_pair_projection, DomainReading, weld_hold | 8 |
 | weld/M.03.v1 | CAN-007 | weld | M | z ~_{Q,O,c,L} z' ⟺ O(F^k z) = O(F^k z') for all k ≤ L | Definition | closed CAN_007_reader_equiv, CAN_007_reader_equiv_is_equivalence | 3 |
 | A.5/M.01.v1 | CAN-008 | A.5 | M | S_n ≠ Z_{D,n} ≠ D_{D,n} (D=HCA or MEMK) | Definition | closed CAN_008_noncollapse, CAN_008_root_candidate_quotient_are_three_things | 2 |
 | A.8/M.01.v1 | CAN-009 | A.8 | M | ΔA_past = 0 | Dr | closed CAN_009_extends, CAN_009_extension_preserves_past, CAN_009_witness_append_preserves_first_event | 2 |
@@ -56,10 +56,10 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/H.01.v1 | CAN-041 | EQ-015 | H | H_t →^{L_H} Q_t; Q_t→AI_t→Y_t →^{R_H} E^{AI}_{H,t}; H_{t+1}=U_H(H_t,E^{AI}_{H,t},δ^world,X^other) | Definition | definition CAN_041_pre_prompt_human_state_transport | 4 |
 | A.5/H.01.v1 | CAN-042 | A.5 | H | H_t --L_H--> Q_t, Q_t ≠ H_t (Pre-Prompt Human State Principle); session-indexed restatement H_{s,0}--L_H-->Q_{ | Definition | closed CAN_042_bounded_transport, CAN_042_bounded_transport_satisfiable_on_nat | 5 |
 | EQ-015/H.02.v1 | CAN-043 | EQ-015 | H | A0 = ⟨P0, M0, U0, E0, F0, S0⟩ (latest, DCP eq.12); supersedes H0*=(P0,M0,U0,E0,Φ0,κ0) and ENTRY_{H→AI}=H0*∧V0∧ | Definition | definition EntryStateAnchor, CAN_043_entry_state_anchor, CAN_043_mk_entry_state_anchor | 5 |
-| A.5/H.02.v1 | CAN-044 | A.5 | H | P^live_{H,t} defined; TopicEntry∈{LiveProblem,OpenExploration,RoutineDelegation}; Problem-First⇒{Agenda Owners | Definition | definition CAN_044_TopicEntry, CAN_044_Legitimate, CAN_044_Open_ProblemFirst_implication, CAN_044_ProblemOnlyP | 6 |
-| EQ-015/H.03.v1 | CAN-045 | EQ-015 | H | H_t —L_H→ Q_t; Q_t→AI_t→Y_t —R_H→ E^{AI}_{H,t}; H_{t+1}=U_H(H_t, E^{AI}_{H,t}, δ^{world}, X^{other}); L_{A,t+1 | Definition | definition CAN_045_prompt_coupling_and_update, CAN_045_live_weight_may_change_witness | 4 |
+| A.5/H.02.v1 | CAN-044 | A.5 | H | P^live_{H,t} defined; TopicEntry∈{LiveProblem,OpenExploration,RoutineDelegation}; Problem-First⇒{Agenda Owners | Definition | definition CAN_044_TopicEntry, CAN_044_Legitimate, CAN_044_Open_ProblemFirst_implication, CAN_044_ProblemOnlyP | 9 |
+| EQ-015/H.03.v1 | CAN-045 | EQ-015 | H | H_t —L_H→ Q_t; Q_t→AI_t→Y_t —R_H→ E^{AI}_{H,t}; H_{t+1}=U_H(H_t, E^{AI}_{H,t}, δ^{world}, X^{other}); L_{A,t+1 | Definition | definition CAN_045_prompt_coupling_and_update, CAN_045_live_weight_may_change_witness | 5 |
 | EQ-015/H.04.v1 | CAN-046 | EQ-015 | H | Q_t→AI_t→Y_t --R_H--> E^AI_{H,t}; H_{t+1}=U_H(H_t,E^AI_{H,t},δ^world,X^other) | Definition | definition CAN_046_ai_response_chain | 5 |
-| EQ-015/H.05.v1 | CAN-047 | EQ-015 | H | Z_dlg[s,n+1]=F#_dlg(Z_dlg[s,n],u_H[s,n],u_AI[s,n],c[s,n],T[s,n]); χ_recip[s,n,L]=\|D_recip[s,n,L]\|/\|Σ[s,n]\| | Definition | definition CAN_047_dialogue_session_stepper, CAN_047_chi_recip, CAN_047_chi_recip_bounds_witness | 6 |
+| EQ-015/H.05.v1 | CAN-047 | EQ-015 | H | Z_dlg[s,n+1]=F#_dlg(Z_dlg[s,n],u_H[s,n],u_AI[s,n],c[s,n],T[s,n]); χ_recip[s,n,L]=\|D_recip[s,n,L]\|/\|Σ[s,n]\| | Definition | definition CAN_047_dialogue_session_stepper, CAN_047_chi_recip, CAN_047_chi_recip_bounds_witness | 7 |
 | EQ-002/H.01.v1 | CAN-048 | EQ-002 | H | B[n]→H_body[n]→N[n]→S[n]↔A[n]→π[n]→U[n]→B[n+1], with each arrow a discrete update Φ_*; independently parallele | Definition | definition CAN_048_agency_conditional_chain | 13 |
 | EQ-002/H.02.v1 | CAN-049 | EQ-002 | H | A_{i,n}=q_A(Z_{i,n};Q_A,O_A,c_n); Aut(F_A,O_A)={h: O_A∘h=O_A, h∘F_A=F_A∘h}; I_n=q_comp(M_n⊕Bel_n⊕Θ_n⊕Roles_n⊕B | Definition | definition CAN_049_agency_readout, CAN_049_is_automorphism, CAN_049_Aut | 3 |
 | weld/H.01.v1 | CAN-050 | weld | H | S_A[n]=q_self(F^n[δ_R,T_A,c_{0:n}])=⟨A_A[n],Δ_A[n],H_A[n],Phen_A^str[n],P_A^lived[n],Own_A[n],Coh_A[n],Val_A[n | Definition | definition SelfState, CAN_050_self_readout, CAN_050_mk_self_readout | 2 |
@@ -78,8 +78,8 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/H.11.v1 | CAN-063 | EQ-015 | H | K_like→K_assumed (dangerous shortcut); repaired: K_like --check--> K_checked --independent support--> K_suppor | Dr | definition RepairedStatus, CAN_063_next_status, CAN_063_dangerous_shortcut | 3 |
 | weld/H.05.v1 | CAN-064 | weld | H | T_{H←AI}∘K_AI ≅ K_H∘T_C, with explicit defects for semantic loss, source omission, authority laundering, uncer | Definition | definition TransportDefect, CAN_064_transport_condition | 2 |
 | weld/H.06.v1 | CAN-065 | weld | H | ε_H = Def(q̃_H∘F, F#_H∘q̃_H, O_H, Inv_H) | Definition | definition CAN_065_domain_weld_defect | 2 |
-| weld/H.07.v1 | CAN-066 | weld | H | ΔΩ̃^H_s=B_sA_s, rank≪d_H; Ω^H_{s+1,0}=Ω^H_{s,0}+η_sΔΩ̃^H_s; Y^return_{s+Δ}=(R_rec,R_disc,T_new,Q_next); RET=(P | Definition | definition CAN_066_candidate_update, CAN_066_is_low_rank, CAN_066_retention_gate_update, CAN_066_gate_weight_v | 5 |
-| EQ-015/H.12.v1 | CAN-067 | EQ-015 | H | G_s=g(k,d,v,p,r,1−f,a\|Θ_s,Π_s); T_s=h(c,f,b,o\|Θ_s,Π_s); Δ_s=G_s−T_s; η_s>0,Δ_s>0⇒expansion; η_s>0,Δ_s<0⇒tunnel | Dr | definition CAN_067_Delta_s, CAN_067_is_expansion, CAN_067_is_tunnel | 5 |
+| weld/H.07.v1 | CAN-066 | weld | H | ΔΩ̃^H_s=B_sA_s, rank≪d_H; Ω^H_{s+1,0}=Ω^H_{s,0}+η_sΔΩ̃^H_s; Y^return_{s+Δ}=(R_rec,R_disc,T_new,Q_next); RET=(P | Definition | definition CAN_066_candidate_update, CAN_066_is_low_rank, CAN_066_retention_gate_update, CAN_066_gate_weight_v | 9 |
+| EQ-015/H.12.v1 | CAN-067 | EQ-015 | H | G_s=g(k,d,v,p,r,1−f,a\|Θ_s,Π_s); T_s=h(c,f,b,o\|Θ_s,Π_s); Δ_s=G_s−T_s; η_s>0,Δ_s>0⇒expansion; η_s>0,Δ_s<0⇒tunnel | Dr | definition CAN_067_Delta_s, CAN_067_is_expansion, CAN_067_is_tunnel | 6 |
 | EQ-015/H.13.v1 | CAN-068 | EQ-015 | H | H0*→K_like→D^eff→R^eff→H↔AI→χ_recip→η→(G−T\|Θ,Π)→Y^return→J* | Dr | definition CAN_068_epistemic_fusion_sequence | 1 |
 | A.5/H.07.v1 | CAN-069 | A.5 | H | AI-first fluency≠human baseline; explanation≠verification; resistance quality≠resistance accessibility; uncert | Definition | closed CAN_069_fluency_ne_baseline, CAN_069_explanation_ne_verification, CAN_069_resistance_quality_ne_accessi | 1 |
 | weld/H.08.v1 | CAN-070 | weld | H | D_s^eff=\|C_s/∼_R\|, d_s=D_s^eff/\|C_s\|; N_distinct=\|{C1,...,Cn}/∼_Q\| | Dr | definition CAN_070_D_eff, CAN_070_d_s | 3 |
@@ -87,11 +87,11 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/H.15.v1 | CAN-072 | EQ-015 | H | K_s=(κ0,κ1,W0,W1); Calibration error ≈ N^{-1}Σ_i(κ_i−y_i)^2 | Dr | definition CalibrationRecord, CAN_072_calibration_record, CAN_072_mk_calibration_record, CAN_072_calibration_e | 2 |
 | weld/H.09.v1 | CAN-073 | weld | H | retained experiential reorganization → possible later CTSA crystallization; retained sensitivity→C_return, ret | Open | definition CAN_073_Open_ctsa_bridge | 2 |
 | A.5/H.08.v1 | CAN-074 | A.5 | H | ΔPerformance_AI>0 ⇏ ΔH_return>0 (equivalently: Assisted performance ≠ Unaided Human Return) | Definition | closed CAN_074_assisted_gain_does_not_imply_return_gain | 7 |
-| A.5/H.09.v1 | CAN-075 | A.5 | H | Exposure ≠ Retention ≠ Improvement | Definition | closed CAN_075_EndChainNotion, CAN_075_end_chain_value, CAN_075_exposure_retention_improvement_non_collapse | 2 |
-| EQ-015/H.16.v1 | CAN-076 | EQ-015 | H | H_return = ⟨G_CTSA, L, M, P, W, Δ_dir⟩ | Definition | definition CAN_076_HReturn, CAN_076_mk_h_return | 4 |
+| A.5/H.09.v1 | CAN-075 | A.5 | H | Exposure ≠ Retention ≠ Improvement | Definition | closed CAN_075_EndChainNotion, CAN_075_end_chain_value, CAN_075_exposure_retention_improvement_non_collapse | 3 |
+| EQ-015/H.16.v1 | CAN-076 | EQ-015 | H | H_return = ⟨G_CTSA, L, M, P, W, Δ_dir⟩ | Definition | definition CAN_076_HReturn, CAN_076_mk_h_return | 5 |
 | EQ-015/H.17.v1 | CAN-077 | EQ-015 | H | R^return_H = ⟨C, T, S, A⟩ | Definition | definition ReturnCTSA4, CAN_077_human_return_ctsa4, CAN_077_mk_human_return_ctsa4 | 3 |
 | EQ-015/H.18.v1 | CAN-078 | EQ-015 | H | D > 0, Resist > 0, A_H > 0 | Definition | definition CAN_078_Open_dra_constitutive | 5 |
-| EQ-015/H.19.v1 | CAN-079 | EQ-015 | H | J*_s=(AUG_s,SYN_s,RET_s); AUG_s=P^joint_s−P^H_s; SYN_s=P^joint_s−max(P^H_s,P^AI_s) | Definition | definition CAN_079_AUG, CAN_079_SYN, CAN_079_aug_syn_non_collapse_witness | 2 |
+| EQ-015/H.19.v1 | CAN-079 | EQ-015 | H | J*_s=(AUG_s,SYN_s,RET_s); AUG_s=P^joint_s−P^H_s; SYN_s=P^joint_s−max(P^H_s,P^AI_s) | Definition | definition CAN_079_AUG, CAN_079_SYN, CAN_079_aug_syn_non_collapse_witness | 3 |
 | A.5/H.10.v1 | CAN-080 | A.5 | H | AI fluency≠human baseline; explanation≠verification; output count≠epistemic diversity; exposure≠retention≠impr | Dr | closed CAN_080_fluency_ne_baseline, CAN_080_explanation_ne_verification, CAN_080_output_count_ne_epistemic_div | 1 |
 | EQ-015/H.20.v1 | CAN-081 | EQ-015 | H | H1-H6 [Open], §12 | Open | definition CAN_081_Open_hypotheses | 6 |
 | EQ-015/H.21.v1 | CAN-082 | EQ-015 | H | π^deploy=f(Stakes,LearningNeed,Irreversibility,DependencyRisk,UserSkill); State→Challenge→Check→Own (Lite); To | Definition | definition CAN_082_deployment_policy, DCPLiteStage, CAN_082_lite_next | 5 |
@@ -100,7 +100,7 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | A.8/H.01.v1 | CAN-085 | A.8 | H | I_s=⟨ΔM_s, E^decisive_s, U^remain_s, Next_s⟩ | Definition | definition IntegrationRec, CAN_085_integration_record, CAN_085_mk_integration_record | 1 |
 | EQ-015/H.22.v1 | CAN-086 | EQ-015 | H | Reset: fresh framing/session/source route; Removal: absence of decisive AI assistance | Definition | definition CAN_086_is_reset, CAN_086_is_removal | 2 |
 | EQ-015/H.23.v1 | CAN-087 | EQ-015 | H | ΔH_s=⟨ΔC_s,ΔT_s,ΔS_s,ΔA_s,ΔA^corr_{H,s},ΔΛ^live_{H,s}⟩; F^return=f(Criticality,LearningNeed,FailureCost,Depend | Definition | definition ReturnConversionVector, CAN_087_return_conversion_vector, CAN_087_mk_return_conversion_vector, CAN_ | 3 |
-| EQ-015/H.24.v1 | CAN-088 | EQ-015 | H | I_s→a_s→δ^world_{s+1}→H_{s+1,0}; Live Problem→Question→Dialogue→Human Return→Action→World Feedback→Revision or | Definition | definition CAN_088_world_closure, CAN_088_CycleStage, CAN_088_cycle_next | 6 |
+| EQ-015/H.24.v1 | CAN-088 | EQ-015 | H | I_s→a_s→δ^world_{s+1}→H_{s+1,0}; Live Problem→Question→Dialogue→Human Return→Action→World Feedback→Revision or | Definition | definition CAN_088_world_closure, CAN_088_CycleStage, CAN_088_cycle_next | 9 |
 | A.8/H.02.v1 | CAN-089 | A.8 | H | Expansion:=maximize candidate diversity and discriminability; Contraction:=prune by evidence, provenance, stak | Definition | definition CAN_089_is_expansion, CAN_089_is_contraction | 2 |
 | EQ-015/H.25.v1 | CAN-090 | EQ-015 | H | DCPp, DEPp, AgP [Open] | Open | definition CAN_090_Open_dcp_propositions | 3 |
 | EQ-015/H.26.v1 | CAN-091 | EQ-015 | H | H1-H10, §15.2 | Open | definition CAN_091_Open_hypotheses | 10 |
@@ -209,10 +209,10 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | A.8/M.16.v1 | CAN-195 | A.8 | M | PracticeObservation→Hypothesis; Claim<-Literature+ExternalEvidence+ComparativeEvidence; ClaimScope≤SamplingSco | finite_diagnostic | definition CAN195_scope_constraint, CAN195_Pipeline | 3 |
 | A.5/M.03.v1 | CAN-196 | A.5 | M | neighboring evidence≠formal-variable validation≠truth of the integrated theory; reachability≠accessibility; sp | untagged | closed CAN196_EvidenceNotion, CAN196_neighboring_ne_formal, CAN196_formal_ne_truth, CAN196_reachability_ne_acc | 6 |
 | A.5/M.04.v1 | CAN-197 | A.5 | M | G1K≠G2K => L(τ_U\|G1K,Q)≠L(τ_U\|G2K,Q) | Open | definition CAN197_topology_sensitivity_Open | 1 |
-| EQ-015/M.08.v1 | CAN-198 | EQ-015 | M | T_n={(x_k,t_k,w_k)}_{k≤n}, Rhythm_n=Ω(T_n,B_n); m_{t+1}(e)=ρm_t(e)+1[e_t=e], 0≤ρ<1; κ^{sem}_{t+1}(e\|Q) ∝ κ^{se | Definition | definition CAN198_momentum, CAN198_Open_momentum, CAN198_accessibility_score, CAN198_Open_accessibility, CAN19 | 5 |
+| EQ-015/M.08.v1 | CAN-198 | EQ-015 | M | T_n={(x_k,t_k,w_k)}_{k≤n}, Rhythm_n=Ω(T_n,B_n); m_{t+1}(e)=ρm_t(e)+1[e_t=e], 0≤ρ<1; κ^{sem}_{t+1}(e\|Q) ∝ κ^{se | Definition | definition CAN198_momentum, CAN198_Open_momentum, CAN198_accessibility_score, CAN198_Open_accessibility, CAN19 | 6 |
 | EQ-015/M.09.v1 | CAN-199 | EQ-015 | M | B[t+1]=F(B[t])+C_H(H[t]); H[t+1]=G(H[t])+C_B(B[t]); E[t]=R(B[t],H[t]) | Definition | definition CAN199_B, CAN199_E | 3 |
 | EQ-015/M.10.v1 | CAN-200 | EQ-015 | M | B^use=⟨Time,CognitiveLoad,VerificationCost,Interruption,LiteracyDemand⟩; Epistemically optimal ≢ Behaviorally  | Definition | closed CAN200_Burden, CAN200_OptimalOrAdoptable, CAN200_optimal_ne_adoptable | 3 |
-| EQ-002/M.03.v1 | CAN-201 | EQ-002 | M | Readout_{Q,O,c}(S) = z, z ≠ S | Definition | closed CAN_201_hypothesis_satisfiable_on_bool | 2 |
+| EQ-002/M.03.v1 | CAN-201 | EQ-002 | M | Readout_{Q,O,c}(S) = z, z ≠ S | Definition | closed CAN_201_hypothesis_satisfiable_on_bool | 4 |
 | EQ-015/E.12.v1 | CAN-202 | EQ-015 | E | M_A[n] = K_A · θ(E[n]) + η_sel + η_map + η_self | Definition | closed CAN202_M_A, CAN202_decomposition | 2 |
 | EQ-002/E.09.v1 | CAN-203 | EQ-002 | E | x_{i,n} = Access(A_n; O_i, L_i, T_i, R_i, C_i) | Definition | definition CAN203_x | 1 |
 | EQ-002/E.10.v1 | CAN-204 | EQ-002 | E | O_A[n] = Π_A(E[n]);  enc_A(O_A)[n] = T_A(O_A[n]) | Definition | definition CAN204_O_A, CAN204_enc_A | 2 |
@@ -1229,6 +1229,505 @@ Generated 2026-09-07 by `registry/build_eq_library.py`. One file for the state o
 | EQ-015/H.48.v1 | RET-v2.0-21 | EQ-015 | H | \Delta\chi_{\mathrm{recip}}^{\mathcal G}>0,\ \Delta\kappa_{\mathcal G}>0 \ \text{while}\ \Delta D_{\mathcal G} | Dr | open_prop EQ_015__H_48_v1_hyp | 1 |
 | EQ-015/H.49.v1 | RET-v2.0-22 | EQ-015 | H | SessionReset \not\Rightarrow EpistemicReset | Dr | open_prop EQ_015__H_49_v1_hyp | 1 |
 | weld/W.11.v1 | RET-v2.0-23 | weld | W | \mu_t^{eff} = \mu_t(1-\pi_t^{RET}) | Dr | open_prop weld__W_11_v1_hyp | 1 |
+| R/P.01.v1 | IDM-0001 | R | P | Lemma s_val : s = 15999999999. | Th_coqc | mapped_not_wrapped s_val | 1 |
+| R/P.02.v1 | IDM-0002 | R | P | Lemma squeeze : s * s < delta_num < (s + 1) * (s + 1). | Th_coqc | mapped_not_wrapped squeeze | 1 |
+| R/P.03.v1 | IDM-0003 | R | P | Theorem delta_num_not_perfect_square : forall m : Z, m * m <> delta_num. | Th_coqc | mapped_not_wrapped delta_num_not_perfect_square | 1 |
+| D/M.01.v1 | IDM-0004 | D | M | Theorem pigeonhole_bits_needed :
+  forall (l : list (list bool)) (rec : list bool -> list bool) (L : nat),
+    | Th_coqc | mapped_not_wrapped pigeonhole_bits_needed | 1 |
+| D/M.02.v1 | IDM-0005 | D | M | Lemma weight_cons : forall x t, weight (x :: t) = b2n x + weight t. | Th_coqc | mapped_not_wrapped weight_cons | 1 |
+| D/M.03.v1 | IDM-0006 | D | M | Lemma weight_app : forall a b, weight (a ++ b) = weight a + weight b. | Th_coqc | mapped_not_wrapped weight_app | 1 |
+| D/M.04.v1 | IDM-0007 | D | M | Lemma weight_repeat_true : forall k, weight (repeat true k) = k. | Th_coqc | mapped_not_wrapped weight_repeat_true | 1 |
+| D/M.05.v1 | IDM-0008 | D | M | Lemma weight_repeat_false : forall k, weight (repeat false k) = 0. | Th_coqc | mapped_not_wrapped weight_repeat_false | 1 |
+| D/M.06.v1 | IDM-0009 | D | M | Lemma fam_elem_weight : forall n r k, weight (fam_elem n r k) = k * (2 * r + 1). | Th_coqc | mapped_not_wrapped fam_elem_weight | 1 |
+| D/M.07.v1 | IDM-0010 | D | M | Lemma k_bound : forall n r k, k <= n / (2 * r + 1) -> k * (2 * r + 1) <= n. | Th_coqc | mapped_not_wrapped k_bound | 1 |
+| D/M.08.v1 | IDM-0011 | D | M | Lemma fam_elem_length : forall n r k, k <= n / (2 * r + 1) -> length (fam_elem n r k) = n. | Th_coqc | mapped_not_wrapped fam_elem_length | 1 |
+| D/M.09.v1 | IDM-0012 | D | M | Lemma fam_length : forall n r, length (fam n r) = S (n / (2 * r + 1)). | Th_coqc | mapped_not_wrapped fam_length | 1 |
+| D/M.10.v1 | IDM-0013 | D | M | Lemma fam_in : forall n r x,
+  In x (fam n r) -> exists k, k <= n / (2 * r + 1) /\ x = fam_elem n r k. | Th_coqc | mapped_not_wrapped fam_in | 1 |
+| D/M.11.v1 | IDM-0014 | D | M | Lemma fam_nodup : forall n r, NoDup (fam n r). | Th_coqc | mapped_not_wrapped fam_nodup | 1 |
+| D/M.12.v1 | IDM-0015 | D | M | Lemma r_correct_far_apart_False :
+  forall (val : list bool -> nat) (r : nat) (bs cs : list bool),
+    r_corre | Th_coqc | mapped_not_wrapped r_correct_far_apart_False | 1 |
+| D/M.13.v1 | IDM-0016 | D | M | Theorem approx_count_deferred_lower_bound :
+  forall (n r L : nat) (rec : list bool -> list bool) (val : list  | Th_coqc | mapped_not_wrapped approx_count_deferred_lower_bound | 1 |
+| R/M.01.v1 | IDM-0017 | R | M | Theorem apriori_multiplicative_contracts :
+  forall (rho : Q) (m s : nat -> Q),
+    (forall k, Qabs (m k) <= r | Th_coqc | mapped_not_wrapped apriori_multiplicative_contracts | 1 |
+| R/M.02.v1 | IDM-0018 | R | M | Theorem apriori_geometric_contracts :
+  forall (rho a q : Q) (s : nat -> Q),
+    Qabs q <= rho ->
+    (forall  | Th_coqc | mapped_not_wrapped apriori_geometric_contracts | 1 |
+| R/M.03.v1 | IDM-0019 | R | M | Theorem apriori_stable :
+  forall (rho : Q) (m s : nat -> Q) (N M : nat),
+    rho <= 1 ->
+    (forall k, Qabs  | Th_coqc | mapped_not_wrapped apriori_stable | 1 |
+| R/M.04.v1 | IDM-0020 | R | M | Lemma half_nonneg : 0 <= (1 # 2). | Th_coqc | mapped_not_wrapped half_nonneg | 1 |
+| R/M.05.v1 | IDM-0021 | R | M | Lemma richardson_ratio_nonneg : forall p, 0 <= richardson_ratio p. | Th_coqc | mapped_not_wrapped richardson_ratio_nonneg | 1 |
+| R/M.06.v1 | IDM-0022 | R | M | Lemma richardson_ratio_le_one : forall p, richardson_ratio p <= 1. | Th_coqc | mapped_not_wrapped richardson_ratio_le_one | 1 |
+| R/M.07.v1 | IDM-0023 | R | M | Theorem richardson_apriori_contracts :
+  forall (p : nat) (a : Q) (s : nat -> Q),
+    (forall k, s k == a * qp | Th_coqc | mapped_not_wrapped richardson_apriori_contracts | 1 |
+| R/M.08.v1 | IDM-0024 | R | M | Theorem richardson_apriori_stable :
+  forall (p : nat) (a : Q) (s : nat -> Q) (N M : nat),
+    (forall k, s k  | Th_coqc | mapped_not_wrapped richardson_apriori_stable | 1 |
+| R/M.09.v1 | IDM-0025 | R | M | Theorem FTCC_exact :
+  forall (f : seqf) (N : nat), agg f N == f N - f 0%nat. | Th_coqc | mapped_not_wrapped FTCC_exact | 1 |
+| R/M.10.v1 | IDM-0026 | R | M | Theorem FTCC_eps_exact :
+  forall (f : seqf) (eps : Q) (N : nat),
+    ~ eps == 0 -> Ieps (Deps f eps) eps N == | Th_coqc | mapped_not_wrapped FTCC_eps_exact | 1 |
+| R/M.11.v1 | IDM-0027 | R | M | Corollary bridge_faithful_exact_core :
+  forall f N, agg f N == f N - f 0%nat. | Th_coqc | mapped_not_wrapped bridge_faithful_exact_core | 1 |
+| Z/M.01.v1 | IDM-0028 | Z | M | Theorem delta_sum : forall f g n, Delta (fun k => f k + g k) n == Delta f n + Delta g n. | Th_coqc | mapped_not_wrapped delta_sum | 1 |
+| Z/M.02.v1 | IDM-0029 | Z | M | Theorem delta_scalar : forall (c : Q) f n, Delta (fun k => c * f k) n == c * Delta f n. | Th_coqc | mapped_not_wrapped delta_scalar | 1 |
+| Z/M.03.v1 | IDM-0030 | Z | M | Theorem delta_product :
+  forall f g n, Delta (fun k => f k * g k) n == f (S n) * Delta g n + g n * Delta f n. | Th_coqc | mapped_not_wrapped delta_product | 1 |
+| Z/M.04.v1 | IDM-0031 | Z | M | Theorem Deps_sum :
+  forall f g eps n, ~ eps == 0 ->
+    Deps (fun k => f k + g k) eps n == Deps f eps n + Dep | Th_coqc | mapped_not_wrapped Deps_sum | 1 |
+| Z/M.05.v1 | IDM-0032 | Z | M | Theorem Deps_product :
+  forall f g eps n, ~ eps == 0 ->
+    Deps (fun k => f k * g k) eps n == f (S n) * Deps | Th_coqc | mapped_not_wrapped Deps_product | 1 |
+| Z/M.06.v1 | IDM-0033 | Z | M | Theorem FTCC_telescope : forall f N, Agg f N == f N - f 0%nat. | Th_coqc | mapped_not_wrapped FTCC_telescope | 1 |
+| Z/M.07.v1 | IDM-0034 | Z | M | Lemma PSum_ext : forall f g N, (forall n, f n == g n) -> PSum f N == PSum g N. | Th_coqc | mapped_not_wrapped PSum_ext | 1 |
+| Z/M.08.v1 | IDM-0035 | Z | M | Lemma PSum_delta_telescope : forall h N, PSum (fun k => Delta h k) N == h N - h 0%nat. | Th_coqc | mapped_not_wrapped PSum_delta_telescope | 1 |
+| Z/M.09.v1 | IDM-0036 | Z | M | Theorem summation_by_parts :
+  forall f g N,
+    PSum (fun n => f (S n) * Delta g n + g n * Delta f n) N
+      | Th_coqc | mapped_not_wrapped summation_by_parts | 1 |
+| R/M.12.v1 | IDM-0037 | R | M | Theorem geom_certified_identity : forall (r : Q) (n : nat),
+  (1 - r) * geom_sum r n == 1 - qpow r n. | Th_coqc | mapped_not_wrapped geom_certified_identity | 1 |
+| R/M.13.v1 | IDM-0038 | R | M | Corollary geom_certified_defect : forall (r : Q) (n : nat),
+  1 - (1 - r) * geom_sum r n == qpow r n. | Th_coqc | mapped_not_wrapped geom_certified_defect | 1 |
+| R/M.14.v1 | IDM-0039 | R | M | Theorem geom_majorant_tail : forall (rho : Q) (t : nat -> Q),
+  (forall k, 0 <= t k) ->
+  (forall k, t (S k) < | Th_coqc | mapped_not_wrapped geom_majorant_tail | 1 |
+| R/M.15.v1 | IDM-0040 | R | M | Lemma one_le_Sk : forall k, 1 <= inject_Z (Z.of_nat (S k)). | Th_coqc | mapped_not_wrapped one_le_Sk | 1 |
+| R/M.16.v1 | IDM-0041 | R | M | Lemma q01 : (0 < 1)%Q. | Th_coqc | mapped_not_wrapped q01 | 1 |
+| R/M.17.v1 | IDM-0042 | R | M | Lemma q01_le : (0 <= 1)%Q. | Th_coqc | mapped_not_wrapped q01_le | 1 |
+| R/M.18.v1 | IDM-0043 | R | M | Lemma pos_Sk : forall k, 0 < inject_Z (Z.of_nat (S k)). | Th_coqc | mapped_not_wrapped pos_Sk | 1 |
+| R/M.19.v1 | IDM-0044 | R | M | Lemma div_le_self : forall a d, 0 <= a -> 1 <= d -> a / d <= a. | Th_coqc | mapped_not_wrapped div_le_self | 1 |
+| R/M.20.v1 | IDM-0045 | R | M | Lemma exp_term_nonneg : forall x k, 0 <= x -> 0 <= exp_term x k. | Th_coqc | mapped_not_wrapped exp_term_nonneg | 1 |
+| R/M.21.v1 | IDM-0046 | R | M | Lemma exp_term_ratio : forall x k, 0 <= x -> exp_term x (S k) <= x * exp_term x k. | Th_coqc | mapped_not_wrapped exp_term_ratio | 1 |
+| R/M.22.v1 | IDM-0047 | R | M | Theorem exp_tail_certified : forall (x : Q) (N M : nat),
+  0 <= x ->
+  (1 - x) * tailsum (exp_term x) N M <= e | Th_coqc | mapped_not_wrapped exp_tail_certified | 1 |
+| R/M.23.v1 | IDM-0048 | R | M | Lemma two_nonneg : (0 <= 2)%Q. | Th_coqc | mapped_not_wrapped two_nonneg | 1 |
+| R/M.24.v1 | IDM-0049 | R | M | Theorem sq_error_propagation : forall (p v e : Q),
+  Qabs (p - v) <= e ->
+  Qabs (p * p - v * v) <= (2 * Qabs  | Th_coqc | mapped_not_wrapped sq_error_propagation | 1 |
+| R/M.25.v1 | IDM-0050 | R | M | Lemma mono_step : forall b1 b2 e, b1 <= b2 -> 0 <= e -> (2 * b1 + e) * e <= (2 * b2 + e) * e. | Th_coqc | mapped_not_wrapped mono_step | 1 |
+| R/M.26.v1 | IDM-0051 | R | M | Lemma valbound_nonneg : forall a m, 0 <= a -> 0 <= valbound a m. | Th_coqc | mapped_not_wrapped valbound_nonneg | 1 |
+| R/M.27.v1 | IDM-0052 | R | M | Lemma errbound_nonneg : forall a e m, 0 <= a -> 0 <= e -> 0 <= errbound a e m. | Th_coqc | mapped_not_wrapped errbound_nonneg | 1 |
+| R/M.28.v1 | IDM-0053 | R | M | Lemma iter_sq_valbound : forall a v m, Qabs v <= a -> Qabs (iter_sq v m) <= valbound a m. | Th_coqc | mapped_not_wrapped iter_sq_valbound | 1 |
+| R/M.29.v1 | IDM-0054 | R | M | Theorem iter_sq_certified : forall (a e p v : Q) (m : nat),
+  Qabs v <= a -> Qabs (p - v) <= e ->
+  Qabs (iter | Th_coqc | mapped_not_wrapped iter_sq_certified | 1 |
+| R/M.30.v1 | IDM-0055 | R | M | Lemma Qmult_le_l_nonneg : forall a b c, 0 <= c -> a <= b -> c * a <= c * b. | Th_coqc | mapped_not_wrapped Qmult_le_l_nonneg | 1 |
+| R/M.31.v1 | IDM-0056 | R | M | Lemma abs_tailsum_le : forall (s : nat -> Q) (N M : nat),
+  Qabs (tailsum s N M) <= tailsum (fun k => Qabs (s  | Th_coqc | mapped_not_wrapped abs_tailsum_le | 1 |
+| R/M.32.v1 | IDM-0057 | R | M | Theorem refine_stable : forall (rho : Q) (s : nat -> Q) (N M : nat),
+  rho <= 1 ->
+  (forall k, Qabs (s (S k)) | Th_coqc | mapped_not_wrapped refine_stable | 1 |
+| R/M.33.v1 | IDM-0058 | R | M | Theorem radd_at : forall g h n, radd g h n = g n + h n. | Th_coqc | mapped_not_wrapped radd_at | 1 |
+| R/M.34.v1 | IDM-0059 | R | M | Theorem rmul_at : forall g h n, rmul g h n = g n * h n. | Th_coqc | mapped_not_wrapped rmul_at | 1 |
+| R/M.35.v1 | IDM-0060 | R | M | Theorem radd_comm : forall g h n, radd g h n == radd h g n. | Th_coqc | mapped_not_wrapped radd_comm | 1 |
+| R/M.36.v1 | IDM-0061 | R | M | Theorem const_gap_zero : forall q n, gap (rconst q) n == 0. | Th_coqc | mapped_not_wrapped const_gap_zero | 1 |
+| R/M.37.v1 | IDM-0062 | R | M | Theorem gap_subadditive :
+  forall g h n, gap (radd g h) n <= gap g n + gap h n. | Th_coqc | mapped_not_wrapped gap_subadditive | 1 |
+| D/M.14.v1 | IDM-0063 | D | M | Lemma b2n_inj : forall x y : bool, b2n x = b2n y -> x = y. | Th_coqc | mapped_not_wrapped b2n_inj | 1 |
+| D/M.15.v1 | IDM-0064 | D | M | Theorem bit_extraction_exact :
+  forall (i : nat) (x : bool), b2n x = (i + b2n x) - i. | Th_coqc | mapped_not_wrapped bit_extraction_exact | 1 |
+| D/M.16.v1 | IDM-0065 | D | M | Theorem profile_injective :
+  forall (i0 : nat) (bs cs : list bool),
+    sturm_profile i0 bs = sturm_profile i | Th_coqc | mapped_not_wrapped profile_injective | 1 |
+| D/M.17.v1 | IDM-0066 | D | M | Lemma bcube_length : forall n, length (bcube n) = 2 ^ n. | Th_coqc | mapped_not_wrapped bcube_length | 1 |
+| D/M.18.v1 | IDM-0067 | D | M | Lemma two_pow_pos : forall k, 1 <= 2 ^ k. | Th_coqc | mapped_not_wrapped two_pow_pos | 1 |
+| D/M.19.v1 | IDM-0068 | D | M | Lemma bcube_all_len : forall n l, In l (bcube n) -> length l = n. | Th_coqc | mapped_not_wrapped bcube_all_len | 1 |
+| D/M.20.v1 | IDM-0069 | D | M | Lemma bcube_complete : forall l : list bool, In l (bcube (length l)). | Th_coqc | mapped_not_wrapped bcube_complete | 1 |
+| D/M.21.v1 | IDM-0070 | D | M | Lemma bcube_halves_disjoint :
+  forall (k : nat) (l : list bool),
+    In l (map (cons true) (bcube k)) ->
+     | Th_coqc | mapped_not_wrapped bcube_halves_disjoint | 1 |
+| D/M.22.v1 | IDM-0071 | D | M | Lemma NoDup_app_disjoint :
+  forall (A : Type) (l1 l2 : list A),
+    NoDup l1 -> NoDup l2 ->
+    (forall x, In | Th_coqc | mapped_not_wrapped NoDup_app_disjoint | 1 |
+| D/M.23.v1 | IDM-0072 | D | M | Lemma NoDup_map_cons :
+  forall (a : bool) (l : list (list bool)),
+    NoDup l -> NoDup (map (cons a) l). | Th_coqc | mapped_not_wrapped NoDup_map_cons | 1 |
+| D/M.24.v1 | IDM-0073 | D | M | Lemma bcube_nodup : forall n, NoDup (bcube n). | Th_coqc | mapped_not_wrapped bcube_nodup | 1 |
+| D/M.25.v1 | IDM-0074 | D | M | Lemma short_records_length : forall n, length (short_records n) = 2 ^ n - 1. | Th_coqc | mapped_not_wrapped short_records_length | 1 |
+| D/M.26.v1 | IDM-0075 | D | M | Lemma short_records_complete :
+  forall (n : nat) (l : list bool), length l < n -> In l (short_records n). | Th_coqc | mapped_not_wrapped short_records_complete | 1 |
+| D/M.27.v1 | IDM-0076 | D | M | Lemma NoDup_map_inj_on :
+  forall (A B : Type) (f : A -> B) (l : list A),
+    NoDup l ->
+    (forall x y, In x | Th_coqc | mapped_not_wrapped NoDup_map_inj_on | 1 |
+| D/M.28.v1 | IDM-0077 | D | M | Theorem deferred_record_bits :
+  forall (n : nat) (rec : list bool -> list bool),
+    (forall bs cs, In bs (bc | Th_coqc | mapped_not_wrapped deferred_record_bits | 1 |
+| D/M.29.v1 | IDM-0078 | D | M | Theorem declared_forgets_tail :
+  forall (j : nat) (bs cs : list bool),
+    firstn j bs = firstn j cs -> decla | Th_coqc | mapped_not_wrapped declared_forgets_tail | 1 |
+| D/M.30.v1 | IDM-0079 | D | M | Theorem declaration_separation :
+  forall (n : nat),
+    (forall rec : list bool -> list bool,
+        (forall | Th_coqc | mapped_not_wrapped declaration_separation | 1 |
+| D/M.31.v1 | IDM-0080 | D | M | Theorem qary_symbol_injective :
+  forall (q a b : nat),
+    a < q -> b < q ->
+    (forall r, r < q - 1 -> (a < | Th_coqc | mapped_not_wrapped qary_symbol_injective | 1 |
+| D/M.32.v1 | IDM-0081 | D | M | Lemma flat_map_cons_length :
+  forall (q : nat) (C : list (list nat)) (L : list nat),
+    length (flat_map (fu | Th_coqc | mapped_not_wrapped flat_map_cons_length | 1 |
+| D/M.33.v1 | IDM-0082 | D | M | Lemma qcube_length : forall q n, length (qcube q n) = q ^ n. | Th_coqc | mapped_not_wrapped qcube_length | 1 |
+| D/M.34.v1 | IDM-0083 | D | M | Lemma qcube_all_len : forall q n l, In l (qcube q n) -> length l = n. | Th_coqc | mapped_not_wrapped qcube_all_len | 1 |
+| D/M.35.v1 | IDM-0084 | D | M | Theorem equivariant_stabilizer_containment :
+    forall g x, stabX g x -> stabV g (r x). | Th_coqc | mapped_not_wrapped equivariant_stabilizer_containment | 1 |
+| D/M.36.v1 | IDM-0085 | D | M | Theorem faithful_stabilizer_equality :
+    forall g x, faithful_on x -> (stabV g (r x) <-> stabX g x). | Th_coqc | mapped_not_wrapped faithful_stabilizer_equality | 1 |
+| D/M.37.v1 | IDM-0086 | D | M | Theorem fixed_value_reads_equal :
+    forall g x, stabV g (r x) -> r (actX g x) = r x. | Th_coqc | mapped_not_wrapped fixed_value_reads_equal | 1 |
+| D/M.38.v1 | IDM-0087 | D | M | Theorem nondegenerate_value_moves :
+    forall g x, r (actX g x) <> r x -> ~ stabV g (r x). | Th_coqc | mapped_not_wrapped nondegenerate_value_moves | 1 |
+| L_R/M.01.v1 | IDM-0088 | L_R | M | Theorem handshake_lemma :
+  forall edges : list (nat * nat),
+    length (endpoints edges) = 2 * length edges. | Th_coqc | mapped_not_wrapped handshake_lemma | 1 |
+| D/M.39.v1 | IDM-0089 | D | M | Theorem finite_yoneda :
+  forall (A B : Type) (f g : A -> B) (dom : list A),
+    (forall x, In x dom -> f x =  | Th_coqc | mapped_not_wrapped finite_yoneda | 1 |
+| delta_R/M.01.v1 | IDM-0090 | delta_R | M | Lemma sing_eq_iff : forall a c, seteq (sing a) (sing c) <-> a = c. | Th_coqc | mapped_not_wrapped sing_eq_iff | 1 |
+| delta_R/M.02.v1 | IDM-0091 | delta_R | M | Theorem kuratowski_pair_inj :
+  forall a b c d : nat,
+    seteq (fst (kpair a b)) (fst (kpair c d)) ->
+    set | Th_coqc | mapped_not_wrapped kuratowski_pair_inj | 1 |
+| D/M.40.v1 | IDM-0092 | D | M | Theorem pigeonhole :
+  forall (l : list nat) (n : nat),
+    (forall x, In x l -> x < n) ->
+    NoDup l ->
+     | Th_coqc | mapped_not_wrapped pigeonhole | 1 |
+| D/M.41.v1 | IDM-0093 | D | M | Theorem semiring_distrib :
+  forall a b c : nat, a * (b + c) = a * b + a * c. | Th_coqc | mapped_not_wrapped semiring_distrib | 1 |
+| D/M.42.v1 | IDM-0094 | D | M | Theorem no_infinite_readout :
+  forall (A : Type) (l : list A), exists n : nat, length l = n. | Th_coqc | mapped_not_wrapped no_infinite_readout | 1 |
+| D/M.43.v1 | IDM-0095 | D | M | Theorem tape_count_succ :
+  forall n : nat, tape_count n < tape_count (S n). | Th_coqc | mapped_not_wrapped tape_count_succ | 1 |
+| D/M.44.v1 | IDM-0096 | D | M | Corollary tape_no_terminal :
+  forall n : nat, exists m, tape_count n < tape_count m. | Th_coqc | mapped_not_wrapped tape_no_terminal | 1 |
+| D/M.45.v1 | IDM-0097 | D | M | Theorem same_set_same_size :
+  forall (A : Type) (l l' : list A),
+    NoDup l -> NoDup l' ->
+    (forall x, In | Th_coqc | mapped_not_wrapped same_set_same_size | 1 |
+| Z/M.10.v1 | IDM-0098 | Z | M | Theorem lagrange_order_div :
+  forall g n : nat, 0 < n -> Nat.divide (n / Nat.gcd g n) n. | Th_coqc | mapped_not_wrapped lagrange_order_div | 1 |
+| L_R/M.02.v1 | IDM-0099 | L_R | M | Theorem no_fibonacci_integer_dim : forall d : Z, d * d <> 1 + d. | Th_coqc | mapped_not_wrapped no_fibonacci_integer_dim | 1 |
+| Z/M.11.v1 | IDM-0100 | Z | M | Theorem ring_distrib_Z :
+  forall a b c : Z, a * (b + c) = a * b + a * c /\ a * (b - c) = a * b - a * c. | Th_coqc | mapped_not_wrapped ring_distrib_Z | 1 |
+| Q/M.01.v1 | IDM-0101 | Q | M | Lemma Qsq_nonneg3 : forall x : Q, 0 <= x * x. | Th_coqc | mapped_not_wrapped Qsq_nonneg3 | 1 |
+| Keystone/M.01.v1 | IDM-0102 | Keystone | M | Theorem cauchy_schwarz_2 :
+  forall a b c d : Q,
+    (a*c + b*d) * (a*c + b*d) <= (a*a + b*b) * (c*c + d*d). | Th_coqc | mapped_not_wrapped cauchy_schwarz_2 | 1 |
+| D/M.46.v1 | IDM-0103 | D | M | Theorem measure_additive :
+  forall (X : Type) (A B : list X), length (A ++ B) = length A + length B. | Th_coqc | mapped_not_wrapped measure_additive | 1 |
+| D/M.47.v1 | IDM-0104 | D | M | Theorem aut_assoc : forall f g h,
+    acts_eq (comp_auto (comp_auto f g) h) (comp_auto f (comp_auto g h)). | Th_coqc | mapped_not_wrapped aut_assoc | 1 |
+| D/M.48.v1 | IDM-0105 | D | M | Theorem aut_id_left  : forall f, acts_eq (comp_auto id_auto f) f. | Th_coqc | mapped_not_wrapped aut_id_left | 1 |
+| D/M.49.v1 | IDM-0106 | D | M | Theorem aut_id_right : forall f, acts_eq (comp_auto f id_auto) f. | Th_coqc | mapped_not_wrapped aut_id_right | 1 |
+| D/M.50.v1 | IDM-0107 | D | M | Theorem aut_inv_left : forall f, acts_eq (comp_auto (inv_auto f) f) id_auto. | Th_coqc | mapped_not_wrapped aut_inv_left | 1 |
+| D/M.51.v1 | IDM-0108 | D | M | Theorem aut_inv_right : forall f, acts_eq (comp_auto f (inv_auto f)) id_auto. | Th_coqc | mapped_not_wrapped aut_inv_right | 1 |
+| D/M.52.v1 | IDM-0109 | D | M | Theorem eval_correct :
+    forall f dom env, eval dom f env = true <-> Sat dom f env. | Th_coqc | mapped_not_wrapped eval_correct | 1 |
+| D/M.53.v1 | IDM-0110 | D | M | Theorem sat_fo_decidable :
+    forall f dom env, {Sat dom f env} + {~ Sat dom f env}. | Th_coqc | mapped_not_wrapped sat_fo_decidable | 1 |
+| D/M.54.v1 | IDM-0111 | D | M | Corollary models_decidable :
+    forall dom f, {Models dom f} + {~ Models dom f}. | Th_coqc | mapped_not_wrapped models_decidable | 1 |
+| delta_R/M.03.v1 | IDM-0112 | delta_R | M | Theorem primordial_difference_exists : exists a b : nat, a <> b. | Th_coqc | mapped_not_wrapped primordial_difference_exists | 1 |
+| RD3/M.01.v1 | IDM-0113 | RD3 | M | Theorem succ_ground_distinct : S 0 <> 0. | Th_coqc | mapped_not_wrapped succ_ground_distinct | 1 |
+| D/M.55.v1 | IDM-0114 | D | M | Theorem discrete_floor : ~ (exists z : nat, 0 < z /\ z < S 0). | Th_coqc | mapped_not_wrapped discrete_floor | 1 |
+| D/M.56.v1 | IDM-0115 | D | M | Corollary no_density_at_root : forall z : nat, 0 < z -> ~ (z < 1). | Th_coqc | mapped_not_wrapped no_density_at_root | 1 |
+| L_R/M.03.v1 | IDM-0116 | L_R | M | Lemma orient_swap_bc : forall ax ay bx by_ cx cy,
+  Orient ax ay cx cy bx by_ == - Orient ax ay bx by_ cx cy. | Th_coqc | mapped_not_wrapped orient_swap_bc | 1 |
+| L_R/M.04.v1 | IDM-0117 | L_R | M | Lemma orient_swap_ab : forall ax ay bx by_ cx cy,
+  Orient bx by_ ax ay cx cy == - Orient ax ay bx by_ cx cy. | Th_coqc | mapped_not_wrapped orient_swap_ab | 1 |
+| L_R/M.05.v1 | IDM-0118 | L_R | M | Lemma orient_cyclic : forall ax ay bx by_ cx cy,
+  Orient ax ay bx by_ cx cy == Orient bx by_ cx cy ax ay. | Th_coqc | mapped_not_wrapped orient_cyclic | 1 |
+| L_R/M.06.v1 | IDM-0119 | L_R | M | Lemma orient_coincident_ab : forall ax ay cx cy,
+  Orient ax ay ax ay cx cy == 0. | Th_coqc | mapped_not_wrapped orient_coincident_ab | 1 |
+| L_R/M.07.v1 | IDM-0120 | L_R | M | Lemma orient_coincident_ac : forall ax ay bx by_,
+  Orient ax ay bx by_ ax ay == 0. | Th_coqc | mapped_not_wrapped orient_coincident_ac | 1 |
+| L_R/M.08.v1 | IDM-0121 | L_R | M | Lemma orient_coincident_bc : forall ax ay bx by_,
+  Orient ax ay bx by_ bx by_ == 0. | Th_coqc | mapped_not_wrapped orient_coincident_bc | 1 |
+| L_R/M.09.v1 | IDM-0122 | L_R | M | Lemma orient_translation : forall ax ay bx by_ cx cy tx ty,
+  Orient (ax + tx) (ay + ty) (bx + tx) (by_ + ty)  | Th_coqc | mapped_not_wrapped orient_translation | 1 |
+| L_R/M.10.v1 | IDM-0123 | L_R | M | Lemma orient_scale : forall s ax ay bx by_ cx cy,
+  Orient (s*ax) (s*ay) (s*bx) (s*by_) (s*cx) (s*cy)
+    == ( | Th_coqc | mapped_not_wrapped orient_scale | 1 |
+| L_R/M.11.v1 | IDM-0124 | L_R | M | Lemma orient_collinear_mid : forall ax ay bx by_,
+  Orient ax ay bx by_ ((ax + bx) / (2#1)) ((ay + by_) / (2#1 | Th_coqc | mapped_not_wrapped orient_collinear_mid | 1 |
+| L_R/M.12.v1 | IDM-0125 | L_R | M | Lemma orient_collinear_aff : forall ax ay bx by_ t,
+  Orient ax ay bx by_ (ax + t*(bx - ax)) (ay + t*(by_ - ay | Th_coqc | mapped_not_wrapped orient_collinear_aff | 1 |
+| L_R/M.13.v1 | IDM-0126 | L_R | M | Theorem repeated_event_zero : forall C : Q, C == - C -> C == 0. | Th_coqc | mapped_not_wrapped repeated_event_zero | 1 |
+| L_R/M.14.v1 | IDM-0127 | L_R | M | Theorem odd_from_cyclic_closure :
+  forall k : nat, (k >= 1)%nat -> Nat.Even (k - 1) -> Nat.Odd k. | Th_coqc | mapped_not_wrapped odd_from_cyclic_closure | 1 |
+| L_R/M.15.v1 | IDM-0128 | L_R | M | Theorem least_nontrivial_odd_is_three :
+  forall k : nat, (k > 1)%nat -> Nat.Odd k -> (k >= 3)%nat. | Th_coqc | mapped_not_wrapped least_nontrivial_odd_is_three | 1 |
+| L_R/M.16.v1 | IDM-0129 | L_R | M | Theorem sym_skew_reconstruct :
+  forall (A : M) i j, A i j == sympart A i j + skewpart A i j. | Th_coqc | mapped_not_wrapped sym_skew_reconstruct | 1 |
+| L_R/M.17.v1 | IDM-0130 | L_R | M | Theorem sympart_self_adjoint :
+  forall (A : M) i j, sympart A i j == sympart A j i. | Th_coqc | mapped_not_wrapped sympart_self_adjoint | 1 |
+| L_R/M.18.v1 | IDM-0131 | L_R | M | Theorem skew_antisym :
+  forall (A : M) i j, skewpart A i j == - skewpart A j i. | Th_coqc | mapped_not_wrapped skew_antisym | 1 |
+| L_R/M.19.v1 | IDM-0132 | L_R | M | Theorem skew_diag_zero :
+  forall (A : M) i, skewpart A i i == 0. | Th_coqc | mapped_not_wrapped skew_diag_zero | 1 |
+| Keystone/P.01.v1 | IDM-0133 | Keystone | P | Lemma Qsq_nonneg : forall x : Q, 0 <= x * x. | Th_coqc | mapped_not_wrapped Qsq_nonneg | 1 |
+| Keystone/P.02.v1 | IDM-0134 | Keystone | P | Lemma Sum_scale : forall n c f, Sum n (fun k => c * f k) == c * Sum n f. | Th_coqc | mapped_not_wrapped Sum_scale | 1 |
+| Keystone/P.03.v1 | IDM-0135 | Keystone | P | Lemma Sum_nonneg : forall n f, (forall k, 0 <= f k) -> 0 <= Sum n f. | Th_coqc | mapped_not_wrapped Sum_nonneg | 1 |
+| Keystone/P.04.v1 | IDM-0136 | Keystone | P | Theorem inner_sym : forall n u v, inner n u v == inner n v u. | Th_coqc | mapped_not_wrapped inner_sym | 1 |
+| Keystone/P.05.v1 | IDM-0137 | Keystone | P | Theorem inner_linear_l : forall n c u1 u2 v,
+  inner n (fun k => c * u1 k + u2 k) v == c * inner n u1 v + inne | Th_coqc | mapped_not_wrapped inner_linear_l | 1 |
+| Keystone/P.06.v1 | IDM-0138 | Keystone | P | Theorem inner_pos : forall n v, 0 <= inner n v v. | Th_coqc | mapped_not_wrapped inner_pos | 1 |
+| Keystone/P.07.v1 | IDM-0139 | Keystone | P | Theorem parallelogram_law : forall n u v,
+  inner n (fun k => u k + v k) (fun k => u k + v k)
+  + inner n (fun | Th_coqc | mapped_not_wrapped parallelogram_law | 1 |
+| Keystone/P.08.v1 | IDM-0140 | Keystone | P | Theorem pythagoras_orthogonal : forall n u v,
+  inner n u v == 0 ->
+  inner n (fun k => u k + v k) (fun k => u | Th_coqc | mapped_not_wrapped pythagoras_orthogonal | 1 |
+| Keystone/P.09.v1 | IDM-0141 | Keystone | P | Theorem cauchy_schwarz_2 : forall u1 u2 v1 v2 : Q,
+  (u1 * v1 + u2 * v2) * (u1 * v1 + u2 * v2)
+  <= (u1 * u1 + | Th_coqc | mapped_not_wrapped cauchy_schwarz_2 | 1 |
+| Keystone/P.10.v1 | IDM-0142 | Keystone | P | Theorem adjoint_involutive : forall n A, meq n (adjoint (adjoint A)) A. | Th_coqc | mapped_not_wrapped adjoint_involutive | 1 |
+| Keystone/P.11.v1 | IDM-0143 | Keystone | P | Theorem adjoint_of_product : forall n A B,
+  meq n (adjoint (mmul n A B)) (mmul n (adjoint B) (adjoint A)). | Th_coqc | mapped_not_wrapped adjoint_of_product | 1 |
+| Keystone/P.12.v1 | IDM-0144 | Keystone | P | Theorem hermitian_2x2_discriminant_nonneg : forall a b c : Q,
+  0 <= (a - c) * (a - c) + 4 * (b * b). | Th_coqc | mapped_not_wrapped hermitian_2x2_discriminant_nonneg | 1 |
+| Keystone/P.13.v1 | IDM-0145 | Keystone | P | Theorem hermitian_2x2_gap_is_discriminant : forall a b c lam1 lam2 : Q,
+  lam1 + lam2 == a + c ->
+  lam1 * lam | Th_coqc | mapped_not_wrapped hermitian_2x2_gap_is_discriminant | 1 |
+| Keystone/P.14.v1 | IDM-0146 | Keystone | P | Theorem projection_idempotent : forall n P, is_projection n P -> meq n (mmul n P P) P. | Th_coqc | mapped_not_wrapped projection_idempotent | 1 |
+| Keystone/P.15.v1 | IDM-0147 | Keystone | P | Theorem projection_self_adjoint : forall n P, is_projection n P -> meq n (adjoint P) P. | Th_coqc | mapped_not_wrapped projection_self_adjoint | 1 |
+| Keystone/P.16.v1 | IDM-0148 | Keystone | P | Lemma Qsq_nonneg : forall x : Q, 0 <= x * x. | Th_coqc | mapped_not_wrapped Qsq_nonneg | 1 |
+| Keystone/P.17.v1 | IDM-0149 | Keystone | P | Lemma Qadd_nonneg : forall a b : Q, 0 <= a -> 0 <= b -> 0 <= a + b. | Th_coqc | mapped_not_wrapped Qadd_nonneg | 1 |
+| Keystone/P.18.v1 | IDM-0150 | Keystone | P | Theorem partial_energy_nonneg : forall xs : list Q, 0 <= partial_energy xs. | Th_coqc | mapped_not_wrapped partial_energy_nonneg | 1 |
+| Keystone/P.19.v1 | IDM-0151 | Keystone | P | Theorem partial_energy_app :
+  forall xs ys : list Q,
+    partial_energy (xs ++ ys) == partial_energy xs + par | Th_coqc | mapped_not_wrapped partial_energy_app | 1 |
+| Keystone/P.20.v1 | IDM-0152 | Keystone | P | Theorem partial_energy_monotone :
+  forall (xs : list Q) (x : Q),
+    partial_energy xs <= partial_energy (xs  | Th_coqc | mapped_not_wrapped partial_energy_monotone | 1 |
+| Keystone/P.21.v1 | IDM-0153 | Keystone | P | Theorem weighted_energy_nonneg :
+  forall wxs : list (Q * Q),
+    Forall (fun p => 0 <= fst p) wxs ->
+    0 <= | Th_coqc | mapped_not_wrapped weighted_energy_nonneg | 1 |
+| Keystone/P.22.v1 | IDM-0154 | Keystone | P | Theorem weighted_energy_app :
+  forall a b : list (Q * Q),
+    weighted_energy (a ++ b) == weighted_energy a + | Th_coqc | mapped_not_wrapped weighted_energy_app | 1 |
+| Keystone/M.02.v1 | IDM-0155 | Keystone | M | Lemma keystone_edge : forall phi e, B_edge phi e == I_edge phi e. | Th_coqc | mapped_not_wrapped keystone_edge | 1 |
+| Keystone/M.03.v1 | IDM-0156 | Keystone | M | Theorem keystone_B_eq_I :
+  forall (phi : Phi) (g : list edge), B_form phi g == I_form phi g. | Th_coqc | mapped_not_wrapped keystone_B_eq_I | 1 |
+| Keystone/M.04.v1 | IDM-0157 | Keystone | M | Lemma Qsq_nonneg : forall x : Q, 0 <= x * x. | Th_coqc | mapped_not_wrapped Qsq_nonneg | 1 |
+| Keystone/M.05.v1 | IDM-0158 | Keystone | M | Lemma Qadd_nonneg : forall a b : Q, 0 <= a -> 0 <= b -> 0 <= a + b. | Th_coqc | mapped_not_wrapped Qadd_nonneg | 1 |
+| Keystone/M.06.v1 | IDM-0159 | Keystone | M | Lemma I_edge_nonneg :
+  forall phi e, (let '(_,_,w) := e in 0 <= w) -> 0 <= I_edge phi e. | Th_coqc | mapped_not_wrapped I_edge_nonneg | 1 |
+| Keystone/M.07.v1 | IDM-0160 | Keystone | M | Theorem keystone_nonneg :
+  forall (phi : Phi) (g : list edge),
+    (forall e, In e g -> let '(_,_,w) := e in  | Th_coqc | mapped_not_wrapped keystone_nonneg | 1 |
+| Keystone/M.08.v1 | IDM-0161 | Keystone | M | Theorem relaxation_dissipation :
+  forall (phi : Phi) (g : list edge) (tau : Q),
+    0 < tau ->
+    (forall e, | Th_coqc | mapped_not_wrapped relaxation_dissipation | 1 |
+| D/M.57.v1 | IDM-0162 | D | M | Theorem sat_dec : forall env f, {sat env f = true} + {sat env f = false}. | Th_coqc | mapped_not_wrapped sat_dec | 1 |
+| D/M.58.v1 | IDM-0163 | D | M | Theorem finite_satisfaction_dec :
+  forall (f : form) (envs : list (nat -> bool)),
+    {forall e, In e envs -> | Th_coqc | mapped_not_wrapped finite_satisfaction_dec | 1 |
+| delta_R/M.04.v1 | IDM-0164 | delta_R | M | Theorem rdl_non_explosion :
+  exists vp vq : V4,
+    designated (conj4 vp (neg4 vp)) = true /\ designated vq = | Th_coqc | mapped_not_wrapped rdl_non_explosion | 1 |
+| delta_R/M.05.v1 | IDM-0165 | delta_R | M | Theorem classical_would_explode :
+  forall x : V4, x = VT \/ x = VF ->
+    designated (conj4 x (neg4 x)) = fal | Th_coqc | mapped_not_wrapped classical_would_explode | 1 |
+| Q/M.02.v1 | IDM-0166 | Q | M | Lemma Sum_plus : forall n f g, Sum n (fun k => f k + g k) == Sum n f + Sum n g. | Th_coqc | mapped_not_wrapped Sum_plus | 1 |
+| Q/M.03.v1 | IDM-0167 | Q | M | Lemma Sum_opp : forall n f, Sum n (fun k => - f k) == - Sum n f. | Th_coqc | mapped_not_wrapped Sum_opp | 1 |
+| Q/M.04.v1 | IDM-0168 | Q | M | Lemma Sum_zero : forall n, Sum n (fun _ => 0) == 0. | Th_coqc | mapped_not_wrapped Sum_zero | 1 |
+| Q/M.05.v1 | IDM-0169 | Q | M | Lemma Sum_ext : forall n f g, (forall k, f k == g k) -> Sum n f == Sum n g. | Th_coqc | mapped_not_wrapped Sum_ext | 1 |
+| Q/M.06.v1 | IDM-0170 | Q | M | Lemma Sum_ext_lt : forall n f g, (forall k, (k < n)%nat -> f k == g k) -> Sum n f == Sum n g. | Th_coqc | mapped_not_wrapped Sum_ext_lt | 1 |
+| Q/M.07.v1 | IDM-0171 | Q | M | Lemma Sum_delta : forall n i f,
+  (i < n)%nat -> Sum n (fun k => if Nat.eqb i k then f k else 0) == f i. | Th_coqc | mapped_not_wrapped Sum_delta | 1 |
+| Q/M.08.v1 | IDM-0172 | Q | M | Theorem madd_comm : forall n A B, meq n (madd A B) (madd B A). | Th_coqc | mapped_not_wrapped madd_comm | 1 |
+| Q/M.09.v1 | IDM-0173 | Q | M | Theorem madd_assoc : forall n A B C, meq n (madd (madd A B) C) (madd A (madd B C)). | Th_coqc | mapped_not_wrapped madd_assoc | 1 |
+| Q/M.10.v1 | IDM-0174 | Q | M | Theorem transpose_involutive : forall n A, meq n (transpose (transpose A)) A. | Th_coqc | mapped_not_wrapped transpose_involutive | 1 |
+| Q/M.11.v1 | IDM-0175 | Q | M | Theorem transpose_mmul : forall n A B, meq n (transpose (mmul n A B)) (mmul n (transpose B) (transpose A)). | Th_coqc | mapped_not_wrapped transpose_mmul | 1 |
+| Q/M.12.v1 | IDM-0176 | Q | M | Theorem mid_left : forall n A i j, (i < n)%nat -> mmul n mid A i j == A i j. | Th_coqc | mapped_not_wrapped mid_left | 1 |
+| L_R/M.20.v1 | IDM-0177 | L_R | M | Theorem laplacian_symmetric : forall i j, Lap i j == transpose Lap i j. | Th_coqc | mapped_not_wrapped laplacian_symmetric | 1 |
+| L_R/M.21.v1 | IDM-0178 | L_R | M | Theorem laplacian_rowsum_zero : forall i, (i < n)%nat -> Sum n (fun j => Lap i j) == 0. | Th_coqc | mapped_not_wrapped laplacian_rowsum_zero | 1 |
+| L_R/M.22.v1 | IDM-0179 | L_R | M | Theorem laplacian_ones_in_kernel :
+    forall i, (i < n)%nat -> Sum n (fun j => Lap i j * 1) == 0. | Th_coqc | mapped_not_wrapped laplacian_ones_in_kernel | 1 |
+| Q/M.13.v1 | IDM-0180 | Q | M | Theorem twirl_image_scalar :
+  forall n A, exists c, forall i j, twirl n A i j = scalarM c i j. | Th_coqc | mapped_not_wrapped twirl_image_scalar | 1 |
+| Q/M.14.v1 | IDM-0181 | Q | M | Lemma Sum_const : forall n c, Sum n (fun _ => c) == inject_Z (Z.of_nat n) * c. | Th_coqc | mapped_not_wrapped Sum_const | 1 |
+| Q/M.15.v1 | IDM-0182 | Q | M | Lemma trace_scalarM : forall n c, trace n (scalarM c) == inject_Z (Z.of_nat n) * c. | Th_coqc | mapped_not_wrapped trace_scalarM | 1 |
+| Q/M.16.v1 | IDM-0183 | Q | M | Lemma inject_nat_nonzero : forall n, (n <> 0)%nat -> ~ inject_Z (Z.of_nat n) == 0. | Th_coqc | mapped_not_wrapped inject_nat_nonzero | 1 |
+| Q/M.17.v1 | IDM-0184 | Q | M | Lemma trace_twirl : forall n A, (n <> 0)%nat -> trace n (twirl n A) == trace n A. | Th_coqc | mapped_not_wrapped trace_twirl | 1 |
+| Q/M.18.v1 | IDM-0185 | Q | M | Theorem twirl_idempotent :
+  forall n A i j, (n <> 0)%nat -> twirl n (twirl n A) i j == twirl n A i j. | Th_coqc | mapped_not_wrapped twirl_idempotent | 1 |
+| Q/M.19.v1 | IDM-0186 | Q | M | Theorem scalar_line_one_dim :
+  forall c d, scalarM c 0%nat 0%nat = scalarM d 0%nat 0%nat -> forall i j, scala | Th_coqc | mapped_not_wrapped scalar_line_one_dim | 1 |
+| D/M.59.v1 | IDM-0187 | D | M | Theorem neg_involution : forall v, neg (neg v) = v. | Th_coqc | mapped_not_wrapped neg_involution | 1 |
+| D/M.60.v1 | IDM-0188 | D | M | Theorem neg_fixed_iff : forall v, neg v = v <-> (v = Sz \/ v = Sbot). | Th_coqc | mapped_not_wrapped neg_fixed_iff | 1 |
+| D/M.61.v1 | IDM-0189 | D | M | Theorem neg_moves_iff : forall v, neg v <> v <-> (v = Sp \/ v = Sm). | Th_coqc | mapped_not_wrapped neg_moves_iff | 1 |
+| D/M.62.v1 | IDM-0190 | D | M | Lemma readout_of_selfneg_is_neutral : neg (r x0) = r x0. | Th_coqc | mapped_not_wrapped readout_of_selfneg_is_neutral | 1 |
+| D/M.63.v1 | IDM-0191 | D | M | Theorem minimal_three_values :
+    exists a b c : A,
+      r a <> r b /\ r a <> r c /\ r b <> r c. | Th_coqc | mapped_not_wrapped minimal_three_values | 1 |
+| D/M.64.v1 | IDM-0192 | D | M | Theorem third_value_is_neutral : r x0 = Sz \/ r x0 = Sbot. | Th_coqc | mapped_not_wrapped third_value_is_neutral | 1 |
+| D/M.65.v1 | IDM-0193 | D | M | Theorem neutral_distinct_from_bottom : Sz <> Sbot. | Th_coqc | mapped_not_wrapped neutral_distinct_from_bottom | 1 |
+| D/M.66.v1 | IDM-0194 | D | M | Theorem two_distinct_neutrals :
+  neg Sz = Sz /\ neg Sbot = Sbot /\ Sz <> Sbot. | Th_coqc | mapped_not_wrapped two_distinct_neutrals | 1 |
+| D/M.67.v1 | IDM-0195 | D | M | Theorem bottom_is_least : forall v, sqle Sbot v. | Th_coqc | mapped_not_wrapped bottom_is_least | 1 |
+| D/M.68.v1 | IDM-0196 | D | M | Theorem bottom_unique : forall x, (forall v, sqle x v) -> x = Sbot. | Th_coqc | mapped_not_wrapped bottom_unique | 1 |
+| D/M.69.v1 | IDM-0197 | D | M | Theorem neutral_is_not_below_sign : ~ sqle Sz Sp. | Th_coqc | mapped_not_wrapped neutral_is_not_below_sign | 1 |
+| D/M.70.v1 | IDM-0198 | D | M | Theorem neutral_is_not_bottom : Sz <> Sbot /\ ~ (forall v, sqle Sz v). | Th_coqc | mapped_not_wrapped neutral_is_not_bottom | 1 |
+| A2/M.01.v1 | IDM-0199 | A2 | M | Lemma op_swap : forall x y z, op x (op y z) = op y (op x z). | Th_coqc | mapped_not_wrapped op_swap | 1 |
+| A2/M.02.v1 | IDM-0200 | A2 | M | Theorem fold_right_perm : forall xs ys,
+    Permutation xs ys -> fold_right op e xs = fold_right op e ys. | Th_coqc | mapped_not_wrapped fold_right_perm | 1 |
+| A2/M.03.v1 | IDM-0201 | A2 | M | Theorem ftcc_Z : forall (f : nat -> Z) (N : nat),
+  fold Z.add 0 (zdelta f) N = f N - f 0%nat. | Th_coqc | mapped_not_wrapped ftcc_Z | 1 |
+| A2/M.04.v1 | IDM-0202 | A2 | M | Lemma foldmin_le_init : forall v0 f N, fold Z.min v0 f N <= v0. | Th_coqc | mapped_not_wrapped foldmin_le_init | 1 |
+| A2/M.05.v1 | IDM-0203 | A2 | M | Lemma foldmin_le_elem : forall v0 f N i,
+  (i < N)%nat -> fold Z.min v0 f N <= f i. | Th_coqc | mapped_not_wrapped foldmin_le_elem | 1 |
+| A2/M.06.v1 | IDM-0204 | A2 | M | Theorem sum_is_fold  : forall f N, sum_readout f N = fold Z.add 0 f N. | Th_coqc | mapped_not_wrapped sum_is_fold | 1 |
+| A2/M.07.v1 | IDM-0205 | A2 | M | Theorem path_is_fold : forall v0 f N, path_accum v0 f N = fold Z.min v0 f N. | Th_coqc | mapped_not_wrapped path_is_fold | 1 |
+| A2/M.08.v1 | IDM-0206 | A2 | M | Theorem pivot_preserves : forall a b c d k x y v w,
+  a * x + b * y = v ->
+  c * x + d * y = w ->
+  (a - k * c | Th_coqc | mapped_not_wrapped pivot_preserves | 1 |
+| A2/M.09.v1 | IDM-0207 | A2 | M | Lemma fold_ext : forall {A} (op : A -> A -> A) (e : A) (f g : nat -> A) N,
+  (forall k, f k = g k) -> fold op  | Th_coqc | mapped_not_wrapped fold_ext | 1 |
+| A2/M.10.v1 | IDM-0208 | A2 | M | Theorem fold_linear : forall (c : Z) (f : nat -> Z) N,
+  fold Z.add 0 (fun k => c * f k) N = c * fold Z.add 0  | Th_coqc | mapped_not_wrapped fold_linear | 1 |
+| A2/M.11.v1 | IDM-0209 | A2 | M | Theorem fold_add_split : forall (f g : nat -> Z) N,
+  fold Z.add 0 (fun k => f k + g k) N = fold Z.add 0 f N + | Th_coqc | mapped_not_wrapped fold_add_split | 1 |
+| A2/M.12.v1 | IDM-0210 | A2 | M | Lemma foldmax_ge_init : forall v0 f N, v0 <= fold Z.max v0 f N. | Th_coqc | mapped_not_wrapped foldmax_ge_init | 1 |
+| A2/M.13.v1 | IDM-0211 | A2 | M | Lemma foldmax_ge_elem : forall v0 f N i,
+  (i < N)%nat -> f i <= fold Z.max v0 f N. | Th_coqc | mapped_not_wrapped foldmax_ge_elem | 1 |
+| A2/M.14.v1 | IDM-0212 | A2 | M | Lemma foldmax_in : forall v0 f N,
+  fold Z.max v0 f N = v0 \/ exists i, (i < N)%nat /\ fold Z.max v0 f N = f i | Th_coqc | mapped_not_wrapped foldmax_in | 1 |
+| A2/M.15.v1 | IDM-0213 | A2 | M | Theorem sum_list_perm : forall xs ys : list Z,
+  Permutation xs ys -> fold_right Z.add 0 xs = fold_right Z.add | Th_coqc | mapped_not_wrapped sum_list_perm | 1 |
+| A2/M.16.v1 | IDM-0214 | A2 | M | Theorem prod_list_perm : forall xs ys : list Z,
+  Permutation xs ys -> fold_right Z.mul 1 xs = fold_right Z.mu | Th_coqc | mapped_not_wrapped prod_list_perm | 1 |
+| A2/M.17.v1 | IDM-0215 | A2 | M | Theorem dot_is_fold : forall u v N,
+  dotf u v N = fold Z.add 0 (fun k => u k * v k) N. | Th_coqc | mapped_not_wrapped dot_is_fold | 1 |
+| A2/M.18.v1 | IDM-0216 | A2 | M | Theorem dot_scale : forall a u v N, dotf (fun k => a * u k) v N = a * dotf u v N. | Th_coqc | mapped_not_wrapped dot_scale | 1 |
+| A2/M.19.v1 | IDM-0217 | A2 | M | Lemma horner_scaled : forall cs x p, p * horner x cs = poly x cs p. | Th_coqc | mapped_not_wrapped horner_scaled | 1 |
+| A2/M.20.v1 | IDM-0218 | A2 | M | Theorem horner_is_poly : forall x cs, horner x cs = poly x cs 1. | Th_coqc | mapped_not_wrapped horner_is_poly | 1 |
+| A2/M.21.v1 | IDM-0219 | A2 | M | Lemma foldmin_in : forall v0 f N,
+  fold Z.min v0 f N = v0 \/ exists i, (i < N)%nat /\ fold Z.min v0 f N = f i | Th_coqc | mapped_not_wrapped foldmin_in | 1 |
+| A2/M.22.v1 | IDM-0220 | A2 | M | Theorem fold_add_app : forall f m n,
+  fold Z.add 0 f (m + n) = fold Z.add 0 f m + fold Z.add 0 (fun k => f (m | Th_coqc | mapped_not_wrapped fold_add_app | 1 |
+| A2/M.23.v1 | IDM-0221 | A2 | M | Theorem factorial_is_fold : forall N,
+  fold Z.mul 1 (fun k => Z.of_nat (S k)) N = Z.of_nat (fact N). | Th_coqc | mapped_not_wrapped factorial_is_fold | 1 |
+| A2/M.24.v1 | IDM-0222 | A2 | M | Lemma relax_nonincreasing : forall d cand : Z, Z.min d cand <= d. | Th_coqc | mapped_not_wrapped relax_nonincreasing | 1 |
+| A2/M.25.v1 | IDM-0223 | A2 | M | Lemma relax_idempotent : forall d cand : Z, Z.min (Z.min d cand) cand = Z.min d cand. | Th_coqc | mapped_not_wrapped relax_idempotent | 1 |
+| A2/M.26.v1 | IDM-0224 | A2 | M | Theorem weak_duality_2 : forall c1 c2 x1 x2 a1 a2 b y,
+  0 <= x1 -> 0 <= x2 -> 0 <= y ->
+  c1 <= y * a1 -> c2  | Th_coqc | mapped_not_wrapped weak_duality_2 | 1 |
+| A2/M.27.v1 | IDM-0225 | A2 | M | Theorem fold_split_even_odd : forall f n,
+  fold Z.add 0 f (2 * n) =
+  fold Z.add 0 (fun k => f (2 * k)%nat) n | Th_coqc | mapped_not_wrapped fold_split_even_odd | 1 |
+| A3/M.01.v1 | IDM-0226 | A3 | M | Theorem witness_sound : forall check bound,
+  decide check bound = true -> exists w, (w < bound)%nat /\ check  | Th_coqc | mapped_not_wrapped witness_sound | 1 |
+| A3/M.02.v1 | IDM-0227 | A3 | M | Theorem witness_complete : forall check bound w,
+  (w < bound)%nat -> check w = true -> decide check bound = t | Th_coqc | mapped_not_wrapped witness_complete | 1 |
+| A3/M.03.v1 | IDM-0228 | A3 | M | Theorem decide_dec : forall check bound,
+  {decide check bound = true} + {decide check bound = false}. | Th_coqc | mapped_not_wrapped decide_dec | 1 |
+| A3/M.04.v1 | IDM-0229 | A3 | M | Theorem witness_composite_sound : forall n,
+  decide (divides_check n) n = true -> composite n. | Th_coqc | mapped_not_wrapped witness_composite_sound | 1 |
+| A3/M.05.v1 | IDM-0230 | A3 | M | Theorem composite_has_factor : forall n,
+  composite n -> exists d, Nat.divide d n /\ d <> 1%nat /\ d <> n. | Th_coqc | mapped_not_wrapped composite_has_factor | 1 |
+| A3/M.06.v1 | IDM-0231 | A3 | M | Theorem decide_reflect : forall check bound,
+  decide check bound = true <-> exists w, (w < bound)%nat /\ chec | Th_coqc | mapped_not_wrapped decide_reflect | 1 |
+| A3/M.07.v1 | IDM-0232 | A3 | M | Theorem witness_power_sound : forall n k,
+  decide (fun w => power_check n k w) (S n) = true -> exists w, (w ^ | Th_coqc | mapped_not_wrapped witness_power_sound | 1 |
+| A3/M.08.v1 | IDM-0233 | A3 | M | Theorem witness_qr_sound : forall a p,
+  decide (fun w => qr_check a p w) p = true -> exists w, ((w * w) mod p | Th_coqc | mapped_not_wrapped witness_qr_sound | 1 |
+| A3/M.09.v1 | IDM-0234 | A3 | M | Theorem witness_dlog_sound : forall g h p,
+  decide (fun w => dlog_check g h p w) p = true -> exists w, ((g ^  | Th_coqc | mapped_not_wrapped witness_dlog_sound | 1 |
+| A3/M.10.v1 | IDM-0235 | A3 | M | Theorem sat_reduces_to_decision : forall f n,
+  decide (fun a => cnf_sat a f) (2 ^ n) = true -> exists a, cnf_ | Th_coqc | mapped_not_wrapped sat_reduces_to_decision | 1 |
+| A3/M.11.v1 | IDM-0236 | A3 | M | Theorem sat_model_sound : forall a f,
+  cnf_sat a f = true -> forall cl, In cl f -> clause_sat a cl = true. | Th_coqc | mapped_not_wrapped sat_model_sound | 1 |
+| A2/M.28.v1 | IDM-0237 | A2 | M | Theorem modpow_is_fold : forall g p N, p <> 0 -> modpow_fold g p N = (g ^ N) mod p. | Th_coqc | mapped_not_wrapped modpow_is_fold | 1 |
+| A3/M.12.v1 | IDM-0238 | A3 | M | Theorem tautology_sound : forall check bound,
+  all_rows check bound = true -> forall w, (w < bound)%nat -> ch | Th_coqc | mapped_not_wrapped tautology_sound | 1 |
+| A3/M.13.v1 | IDM-0239 | A3 | M | Theorem cnf_tautology_sound : forall f n,
+  all_rows (fun a => cnf_sat a f) (2 ^ n) = true -> forall a, (a < 2 | Th_coqc | mapped_not_wrapped cnf_tautology_sound | 1 |
+| A3/M.14.v1 | IDM-0240 | A3 | M | Theorem witness_crt_sound : forall rs ms bound,
+  decide (crt_check rs ms) bound = true ->
+  exists x, forall  | Th_coqc | mapped_not_wrapped witness_crt_sound | 1 |
+| D/M.71.v1 | IDM-0241 | D | M | Theorem classify_bot_iff :
+  forall floor v,
+    classify floor v = Sbot <-> (~ floor == 0 /\ - floor <= v /\  | Th_coqc | mapped_not_wrapped classify_bot_iff | 1 |
+| D/M.72.v1 | IDM-0242 | D | M | Theorem bot_needs_positive_resolution :
+  forall floor v, 0 <= floor -> classify floor v = Sbot -> 0 < floor. | Th_coqc | mapped_not_wrapped bot_needs_positive_resolution | 1 |
+| D/M.73.v1 | IDM-0243 | D | M | Theorem classify_zero_iff :
+  forall floor v, classify floor v = Sz <-> (floor == 0 /\ v == 0). | Th_coqc | mapped_not_wrapped classify_zero_iff | 1 |
+| D/M.74.v1 | IDM-0244 | D | M | Theorem classify_plus_sound :
+  forall floor v, 0 <= floor -> classify floor v = Sp -> 0 < v. | Th_coqc | mapped_not_wrapped classify_plus_sound | 1 |
+| D/M.75.v1 | IDM-0245 | D | M | Theorem classify_minus_sound :
+  forall floor v, 0 <= floor -> classify floor v = Sm -> v < 0. | Th_coqc | mapped_not_wrapped classify_minus_sound | 1 |
+| D/M.76.v1 | IDM-0246 | D | M | Theorem classify_not_bot_is_determinate :
+  forall floor v, classify floor v <> Sbot ->
+    classify floor v = | Th_coqc | mapped_not_wrapped classify_not_bot_is_determinate | 1 |
+| D/M.77.v1 | IDM-0247 | D | M | Theorem bot_monotone_in_floor :
+  forall f1 f2 v, 0 <= f1 -> f1 <= f2 ->
+    classify f1 v = Sbot -> classify  | Th_coqc | mapped_not_wrapped bot_monotone_in_floor | 1 |
+| D/M.78.v1 | IDM-0248 | D | M | Lemma count_if_split :
+  forall (p q r : Q -> bool) vs,
+    (forall v, ((if p v then 1 else 0) = (if q v then  | Th_coqc | mapped_not_wrapped count_if_split | 1 |
+| D/M.79.v1 | IDM-0249 | D | M | Theorem signedfloor_is_certain_plus_unresolved :
+  forall floor vs,
+    signed_floor_below floor vs = (certain | Th_coqc | mapped_not_wrapped signedfloor_is_certain_plus_unresolved | 1 |
+| D/M.80.v1 | IDM-0250 | D | M | Theorem certain_le_signedfloor :
+  forall floor vs, (certain_below floor vs <= signed_floor_below floor vs)%na | Th_coqc | mapped_not_wrapped certain_le_signedfloor | 1 |
+| L_R/M.23.v1 | IDM-0251 | L_R | M | Theorem schur_congruence_00 : MtDM O O == a. | Th_coqc | mapped_not_wrapped schur_congruence_00 | 1 |
+| L_R/M.24.v1 | IDM-0252 | L_R | M | Theorem schur_congruence_01 : MtDM O (S O) == b. | Th_coqc | mapped_not_wrapped schur_congruence_01 | 1 |
+| L_R/M.25.v1 | IDM-0253 | L_R | M | Theorem schur_congruence_10 : MtDM (S O) O == b. | Th_coqc | mapped_not_wrapped schur_congruence_10 | 1 |
+| L_R/M.26.v1 | IDM-0254 | L_R | M | Theorem schur_congruence_11 : MtDM (S O) (S O) == c. | Th_coqc | mapped_not_wrapped schur_congruence_11 | 1 |
+| L_R/M.27.v1 | IDM-0255 | L_R | M | Theorem diag_inertia_additive :
+  forall p q, diag_neg_count p q = (negb_pivot p + negb_pivot q)%nat. | Th_coqc | mapped_not_wrapped diag_inertia_additive | 1 |
+| L_R/M.28.v1 | IDM-0256 | L_R | M | Theorem schur_pivots_are_boundary_and_complement :
+  forall a b c : Q, ~ a == 0 ->
+    diag_neg_count a (schur | Th_coqc | mapped_not_wrapped schur_pivots_are_boundary_and_complement | 1 |
+| delta_R/M.06.v1 | IDM-0257 | delta_R | M | Lemma lookup_graph_in :
+    forall f dom a, In a dom -> lookup (graph f dom) a = Some (f a). | Th_coqc | mapped_not_wrapped lookup_graph_in | 1 |
+| delta_R/M.07.v1 | IDM-0258 | delta_R | M | Theorem graph_total :
+    forall f dom a, In a dom -> exists b, maps_to (graph f dom) a b. | Th_coqc | mapped_not_wrapped graph_total | 1 |
+| delta_R/M.08.v1 | IDM-0259 | delta_R | M | Theorem graph_single_valued :
+    forall f dom a b1 b2,
+      maps_to (graph f dom) a b1 -> maps_to (graph f d | Th_coqc | mapped_not_wrapped graph_single_valued | 1 |
+| delta_R/M.09.v1 | IDM-0260 | delta_R | M | Theorem graph_faithful :
+    forall f g dom, graph f dom = graph g dom -> forall a, In a dom -> f a = g a. | Th_coqc | mapped_not_wrapped graph_faithful | 1 |
+| delta_R/M.10.v1 | IDM-0261 | delta_R | M | Theorem graph_faithful_converse :
+    forall f g dom, (forall a, In a dom -> f a = g a) -> graph f dom = graph | Th_coqc | mapped_not_wrapped graph_faithful_converse | 1 |
+| delta_R/M.11.v1 | IDM-0262 | delta_R | M | Theorem functional_relation_has_map :
+    forall R dom, is_function_on R dom ->
+      exists f : A -> B, foral | Th_coqc | mapped_not_wrapped functional_relation_has_map | 1 |
+| Z/M.12.v1 | IDM-0263 | Z | M | Theorem tmin_assoc : forall a b c, tmin a (tmin b c) = tmin (tmin a b) c. | Th_coqc | mapped_not_wrapped tmin_assoc | 1 |
+| Z/M.13.v1 | IDM-0264 | Z | M | Theorem tmin_comm : forall a b, tmin a b = tmin b a. | Th_coqc | mapped_not_wrapped tmin_comm | 1 |
+| Z/M.14.v1 | IDM-0265 | Z | M | Theorem tmin_idem : forall a, tmin a a = a. | Th_coqc | mapped_not_wrapped tmin_idem | 1 |
+| Z/M.15.v1 | IDM-0266 | Z | M | Theorem tmax_assoc : forall a b c, tmax a (tmax b c) = tmax (tmax a b) c. | Th_coqc | mapped_not_wrapped tmax_assoc | 1 |
+| Z/M.16.v1 | IDM-0267 | Z | M | Theorem tmax_comm : forall a b, tmax a b = tmax b a. | Th_coqc | mapped_not_wrapped tmax_comm | 1 |
+| Z/M.17.v1 | IDM-0268 | Z | M | Theorem tmax_idem : forall a, tmax a a = a. | Th_coqc | mapped_not_wrapped tmax_idem | 1 |
+| Z/M.18.v1 | IDM-0269 | Z | M | Theorem tadd_assoc : forall a b c, tadd a (tadd b c) = tadd (tadd a b) c. | Th_coqc | mapped_not_wrapped tadd_assoc | 1 |
+| Z/M.19.v1 | IDM-0270 | Z | M | Theorem tadd_comm : forall a b, tadd a b = tadd b a. | Th_coqc | mapped_not_wrapped tadd_comm | 1 |
+| Z/M.20.v1 | IDM-0271 | Z | M | Theorem tadd_0_l : forall a, tadd 0 a = a. | Th_coqc | mapped_not_wrapped tadd_0_l | 1 |
+| Z/M.21.v1 | IDM-0272 | Z | M | Theorem minplus_distrib : forall a b c, tadd a (tmin b c) = tmin (tadd a b) (tadd a c). | Th_coqc | mapped_not_wrapped minplus_distrib | 1 |
+| Z/M.22.v1 | IDM-0273 | Z | M | Theorem maxplus_distrib : forall a b c, tadd a (tmax b c) = tmax (tadd a b) (tadd a c). | Th_coqc | mapped_not_wrapped maxplus_distrib | 1 |
+| Z/M.23.v1 | IDM-0274 | Z | M | Theorem bottleneck_distrib : forall a b c, tmin a (tmax b c) = tmax (tmin a b) (tmin a c). | Th_coqc | mapped_not_wrapped bottleneck_distrib | 1 |
+| weld/H.38.v1 | MR16-01 | weld | H | m^{\mathrm{AI}}_{s+1,0}=0 | Definition | definition | 1 |
+| EQ-015/E.16.v1 | MR16-02 | EQ-015 | E | \gamma^{\mu}_n=\text{meaning strength},\qquad \kappa^{\mathrm{sem}}_{A,t}(e\mid Q)=\text{semantic-route access | Definition | definition | 1 |
+| EQ-015/M.16.v1 | MR16-03 | EQ-015 | M | \text{Experience changes the reader; the changed reader changes what can become possible; what becomes possibl | Definition | definition | 1 |
 
 ## Raw inventory by chapter (every numbered equation, with its canonical id when assigned)
 

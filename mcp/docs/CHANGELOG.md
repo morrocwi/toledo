@@ -15,7 +15,7 @@ test-output line below was produced by actually running the command shown,
 on this machine, at that time — never carried over from a description of
 intended work.
 
-## Unreleased — `toledo_lint` (TODO IDM-5) — 2026-09-07
+## `toledo_lint` (IDM-5) — 2026-09-07 — shipped in Toledo v1.6.0
 
 New 20th tool/subcommand, added by a separate concurrent run while another
 run continued editing `site/build_site.py`, `scripts/toledo_build.py`, and

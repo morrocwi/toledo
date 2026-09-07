@@ -620,6 +620,36 @@ KATEX_SCRIPTS = (
     "</script>"
 )
 
+# Mermaid, same CDN-with-SRI carve-out as KaTeX above (DESIGN.md's own
+# "every asset is self-hosted except KaTeX from a CDN with SRI" constraint
+# is extended here for the one other diagram-rendering library the site
+# needs, /ecosystem/'s flowchart — same cdnjs host already allow-listed for
+# KaTeX, pinned version, SRI verified by direct byte download + SHA-512
+# recompute against the actual served file, same discipline as
+# PLACEHOLDERS.md's KaTeX block above). No mermaid-CLI (`mmdc`) is
+# installed on this machine to pre-render the diagram to a static SVG at
+# build time instead (checked: `which mmdc` — not found), so this is
+# client-side rendering, not a build-time SVG — the page's raw diagram
+# source stays visible as ordinary text inside the `<pre class="mermaid">`
+# element for no-JS readers, matching every other statement-rendering path
+# on this site (KaTeX's own `\[...\]` raw-text fallback, above).
+MERMAID_HEAD = ""
+MERMAID_SCRIPTS = (
+    '<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"\n'
+    '  integrity="sha512-6a80OTZVmEJhqYJUmYd5z8yHUCDlYnj6q9XwB/gKOEyNQV/Q8u+XeSG59a2ZKFEHGTYzgfOQKYEBtrZV7vBr+Q=="\n'
+    '  crossorigin="anonymous"></script>\n'
+    "<script>\n"
+    "document.addEventListener('DOMContentLoaded', function () {\n"
+    "  if (window.mermaid) {\n"
+    "    var prefersDark = window.matchMedia && "
+    "window.matchMedia('(prefers-color-scheme: dark)').matches;\n"
+    "    mermaid.initialize({ startOnLoad: true, securityLevel: 'strict',\n"
+    "      theme: prefersDark ? 'dark' : 'default' });\n"
+    "  }\n"
+    "});\n"
+    "</script>"
+)
+
 
 # --------------------------------------------------------------------------
 # Row / badge rendering (shared by browse + every listing page)
@@ -1061,12 +1091,20 @@ def render_resistance_badges_html(resistance: dict | None) -> str:
             f'title="{title_attr}">{html.escape(r)}</span>'
         )
     computed_at = html.escape(str(resistance.get("computed_at") or "unknown"))
+    # <fieldset>/<legend>, not a `role="group"` <div> — DESIGN.md sec.14's
+    # own accessibility checklist ("every interactive control is a native
+    # element... no re-implemented ARIA widget") and check_a11y.py's rule
+    # both read any `role="..."` attribute as a violation regardless of
+    # which role, so this uses the native grouping element instead; the
+    # legend is visually hidden (`.sr-only`, toledo.css) since the visible
+    # "R0"…"R6" badge labels already convey the group to a sighted reader.
     return (
-        '<div class="resistance-ladder" role="group" aria-label="Resistance ladder, R0 through R6">'
+        '<fieldset class="resistance-ladder"><legend class="sr-only">Resistance ladder, '
+        "R0 through R6</legend>"
         + "".join(spans)
         + f'<p class="note">Resistance ladder computed {computed_at}. A rung is held only when a '
         "file on disk backs it, never by assertion; an unheld rung means no such file was found "
-        "yet — it does not mean the underlying claim is false.</p></div>"
+        "yet — it does not mean the underlying claim is false.</p></fieldset>"
     )
 
 
@@ -1385,6 +1423,142 @@ def render_axis_index_content(title: str, description: str, items: list[tuple[st
     )
 
 
+_MD_INLINE_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+_MD_INLINE_BOLD_RE = re.compile(r"\*\*([^*]+)\*\*")
+_MD_INLINE_CODE_RE = re.compile(r"`([^`]+)`")
+
+
+def _md_inline_html(text: str) -> str:
+    """Inline markdown -> HTML for exactly the three inline forms
+    `site/content/*.md` actually uses (bold, inline code, links) — escapes
+    first so a literal `<`/`&` in source prose can never inject markup,
+    then restores only the three patterns above. Not a general markdown
+    engine (none is a repo dependency; see render_ecosystem_html's own
+    docstring)."""
+    escaped = html.escape(text)
+    # Inline code first so a `[`/`]`/`*` inside a code span is never read
+    # as link/bold syntax.
+    parts = _MD_INLINE_CODE_RE.split(escaped)
+    for i in range(1, len(parts), 2):
+        parts[i] = f"<code>{parts[i]}</code>"
+    escaped = "".join(parts)
+    escaped = _MD_INLINE_LINK_RE.sub(
+        lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', escaped
+    )
+    escaped = _MD_INLINE_BOLD_RE.sub(lambda m: f"<strong>{m.group(1)}</strong>", escaped)
+    return escaped
+
+
+def render_ecosystem_html(md_text: str) -> str:
+    """A small, purpose-built markdown -> HTML converter for exactly the
+    constructs `site/content/ecosystem.md` uses (ATX headers, paragraphs,
+    fenced code blocks incl. a ```mermaid block, pipe tables, numbered
+    lists, and the three inline forms `_md_inline_html` handles) — not a
+    general markdown library (none is a dependency of this stdlib-only
+    build; DESIGN.md sec.0's own "no build-time network calls, no new
+    dependency" constraint). A ```mermaid fence renders as
+    `<pre class="mermaid">` (client-side rendering by the CDN+SRI script
+    the caller wires in via `needs_mermaid=True` — see MERMAID_HEAD/
+    MERMAID_SCRIPTS above and this repo's own render_all_docs, no
+    mermaid-CLI available on this machine to pre-render an SVG instead);
+    every other fenced block renders as an ordinary `<pre><code>`. The
+    raw diagram/code source is HTML-escaped into the page exactly like
+    every other `<pre>` block this generator already writes
+    (render_coq_html, render_statement_html) — a no-JS reader, or mermaid
+    itself reading `.textContent`, both get the literal source back."""
+    lines = md_text.split("\n")
+    out: list[str] = []
+    i = 0
+    n = len(lines)
+    while i < n:
+        line = lines[i]
+        stripped = line.strip()
+        if not stripped:
+            i += 1
+            continue
+        # ATX headers
+        m = re.match(r"^(#{1,3})\s+(.*)$", stripped)
+        if m:
+            level = len(m.group(1))
+            out.append(f"<h{level}>{_md_inline_html(m.group(2).strip())}</h{level}>")
+            i += 1
+            continue
+        # Fenced code block
+        m = re.match(r"^```(\S*)\s*$", stripped)
+        if m:
+            lang = m.group(1)
+            body_lines: list[str] = []
+            i += 1
+            while i < n and lines[i].strip() != "```":
+                body_lines.append(lines[i])
+                i += 1
+            i += 1  # skip closing fence
+            body = html.escape("\n".join(body_lines))
+            if lang == "mermaid":
+                out.append(f'<pre class="mermaid">{body}</pre>')
+            else:
+                out.append(f"<pre><code>{body}</code></pre>")
+            continue
+        # Pipe table: header row, then a |---|---| separator row
+        if stripped.startswith("|") and i + 1 < n and re.match(
+            r"^\|?[\s:|-]+\|?$", lines[i + 1].strip()
+        ):
+            def _cells(row: str) -> list[str]:
+                row = row.strip()
+                if row.startswith("|"):
+                    row = row[1:]
+                if row.endswith("|"):
+                    row = row[:-1]
+                return [c.strip() for c in row.split("|")]
+
+            header_cells = _cells(stripped)
+            i += 2  # skip header + separator
+            body_rows: list[list[str]] = []
+            while i < n and lines[i].strip().startswith("|"):
+                body_rows.append(_cells(lines[i]))
+                i += 1
+            thead = "".join(
+                f'<th scope="col">{_md_inline_html(c)}</th>' for c in header_cells
+            )
+            tbody = "".join(
+                "<tr>" + "".join(f"<td>{_md_inline_html(c)}</td>" for c in row) + "</tr>"
+                for row in body_rows
+            )
+            out.append(
+                '<div class="table-wrap"><table>'
+                f"<thead><tr>{thead}</tr></thead><tbody>{tbody}</tbody>"
+                "</table></div>"
+            )
+            continue
+        # Numbered list (consumes consecutive "N. " lines, incl. any
+        # immediately-indented continuation lines of the same item)
+        if re.match(r"^\d+\.\s+", stripped):
+            items: list[str] = []
+            while i < n:
+                mm = re.match(r"^\d+\.\s+(.*)$", lines[i].strip())
+                if not mm:
+                    break
+                item_text = [mm.group(1)]
+                i += 1
+                while i < n and lines[i].strip() and not re.match(
+                    r"^\d+\.\s+", lines[i].strip()
+                ) and not lines[i].strip().startswith("#"):
+                    item_text.append(lines[i].strip())
+                    i += 1
+                items.append(" ".join(item_text))
+            out.append("<ol>" + "".join(f"<li>{_md_inline_html(t)}</li>" for t in items) + "</ol>")
+            continue
+        # Paragraph: consume consecutive non-blank, non-special lines
+        para_lines = [stripped]
+        i += 1
+        while i < n and lines[i].strip() and not lines[i].strip().startswith(("#", "```", "|")) \
+                and not re.match(r"^\d+\.\s+", lines[i].strip()):
+            para_lines.append(lines[i].strip())
+            i += 1
+        out.append(f"<p>{_md_inline_html(' '.join(para_lines))}</p>")
+    return "\n".join(out)
+
+
 # --------------------------------------------------------------------------
 # Orchestration
 # --------------------------------------------------------------------------
@@ -1484,6 +1658,7 @@ def build_pages(root: pathlib.Path, out_dir: pathlib.Path, templates_dir: pathli
             "katex_head": KATEX_HEAD if needs_katex else "",
             "katex_scripts": KATEX_SCRIPTS if needs_katex else "",
             "katex_assets": (KATEX_HEAD + "\n" + KATEX_SCRIPTS) if needs_katex else "",
+            "mermaid_head": "", "mermaid_scripts": "",
             "generated_at": manifest["generated_at"],
         }
         html_out, unresolved = ts.render_with_base(inner_template, inner_context, base_context)
@@ -1498,12 +1673,14 @@ def build_pages(root: pathlib.Path, out_dir: pathlib.Path, templates_dir: pathli
         pages_written.append(rel_path)
 
     def emit_raw(rel_path: str, title: str, description: str, page_class: str, depth: int,
-                 content_html: str):
+                 content_html: str, *, needs_mermaid: bool = False):
         base_context = {
             "title": html.escape(title), "page_title": html.escape(title),
             "description": html.escape(description), "meta_description": html.escape(description),
             "root": root_prefix(depth), "page_class": page_class,
             "katex_head": "", "katex_scripts": "", "katex_assets": "",
+            "mermaid_head": MERMAID_HEAD if needs_mermaid else "",
+            "mermaid_scripts": MERMAID_SCRIPTS if needs_mermaid else "",
             "generated_at": manifest["generated_at"], "content": content_html,
         }
         page_html, unresolved = ts.render("base.tmpl.html", base_context)
@@ -1536,6 +1713,7 @@ def build_pages(root: pathlib.Path, out_dir: pathlib.Path, templates_dir: pathli
             "description": html.escape(description), "meta_description": html.escape(description),
             "root": root_prefix(depth), "page_class": "page-listing",
             "katex_head": "", "katex_scripts": "", "katex_assets": "",
+            "mermaid_head": "", "mermaid_scripts": "",
             "generated_at": manifest["generated_at"],
         }
         html_out, unresolved = ts.render_with_base("listing.tmpl.html", ctx, base_context)
@@ -1737,6 +1915,31 @@ def build_pages(root: pathlib.Path, out_dir: pathlib.Path, templates_dir: pathli
         build_about_context(manifest, root_rows, coverage, concept_doi,
                              compute_resistance_coverage(entries)),
     )
+
+    # /ecosystem/ (depth 1) — site/content/ecosystem.md rendered through
+    # render_ecosystem_html() (a purpose-built markdown->HTML pass, see
+    # that function's own docstring) and emitted via emit_raw() the same
+    # way every other hand-authored index-shaped page above already is
+    # (browse/index.html, by-*/index.html). The page's own mermaid
+    # flowchart renders client-side (needs_mermaid=True wires MERMAID_HEAD/
+    # MERMAID_SCRIPTS into base.tmpl.html's {{mermaid_head}}/
+    # {{mermaid_scripts}} slots) — no mermaid-CLI is installed on this
+    # machine to pre-render an SVG at build time instead (checked).
+    # Read relative to `templates_dir` (its sibling `content/`), not
+    # `root` — `root` is the registry checkout under test in
+    # tests/test_build.py's fixture build (which carries no site/content/
+    # of its own, same reason that test passes the *real* site/templates/
+    # in for templates_dir rather than a fixture copy).
+    ecosystem_md_path = templates_dir.parent / "content" / "ecosystem.md"
+    if ecosystem_md_path.exists():
+        ecosystem_html = render_ecosystem_html(ecosystem_md_path.read_text(encoding="utf-8"))
+        emit_raw(
+            "ecosystem/index.html", "Ecosystem — Toledo",
+            "How Toledo relates to the other public repositories in the same programme.",
+            "page-ecosystem", 1, ecosystem_html, needs_mermaid=True,
+        )
+    else:
+        pages_skipped.append("ecosystem/index.html")
 
     return {
         "pages_written": pages_written,

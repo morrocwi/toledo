@@ -3,6 +3,116 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.6.0 — 2026-09-08
+
+Deposited as a Zenodo version (DOI recorded once minted; concept DOI 10.5281/zenodo.22537318);
+GitHub release tag v1.6.0.
+
+Commits `bf6eb78` (root registry extension R2: information-discrete-math), `4c1e7df`
+(`toledo_lint`, 20th MCP tool), `4059ebf` (resistance: R3 respects a linked review's hash-match
+verdict), `9ee0672` (Master Equation River v1.6 registrar), `40cfda9`/`0a29e3d`/`8a633c4` (tools
+table test reads its expected count from the README heading rather than a hard-coded literal),
+`6221010` (private-repository-name redaction in three mirrored files), `6c749dc` (ecosystem page
+source), `7d65d04` (resistance ladder: `hash_match`/`verify_outcome` documented, index
+regenerated), `78e4c21` (`.gitignore`: registry backups), `e9b95d6` (resistance: IDM ladder
+constants Reproduction Card registered), plus this release-prep pass.
+
+- **Root registry extension R2: information-discrete-math** (`bf6eb78`): founder ruling
+  2026-09-08 brought `information-discrete-math` (IDM, public, MIT) into the root registry as
+  **18** further Layer-0 roots (`delta_R`, `RD1`–`RD9`, `D`, `Z`, `Q`, `R`, `L_R`, `Keystone`,
+  `A2`, `A3`), connected to Genesis roots only by 3 quoted textual links (`delta_R`→`EQ-001`,
+  `L_R`→`EQ-008`, `Keystone`→`EQ-008`), with **274** readings mapped one-per-identifier onto the
+  already-verified 274/274-closed IDM Coq mirror (`coq_status: mapped_not_wrapped`, honestly, not
+  borrowed as `closed`). Canonical registry: **1,264** entries after this commit (was 990). IDM's
+  own treatise deposited separately: **10.5281/zenodo.22644131**. See README's "Root registry
+  extension R2" section.
+- **Master Equation River v1.6 registrations** (`9ee0672`): the 24 equations of Master Equation
+  River v1.6 (10.5281/zenodo.22644712) checked against this registry under the φ-criterion — **21**
+  resolved to existing codes as new occurrences, **3** registered as new readings
+  (`EQ-015/E.16.v1`, `EQ-015/M.16.v1`, `weld/H.38.v1`). Canonical registry: **1,267** entries (was
+  1,264). See README's "Master Equation River v1.6 registrations" section.
+- **Resistance ladder + Reproduction Ledger** (`e9b95d6`, `7d65d04`, `4059ebf`): the per-entry
+  `resistance` block (R0–R6 rungs, `scripts/compute_resistance.py`) now correctly withholds R3/R4/R6
+  when a linked `glosa repro verify` review's own `hash_match` disclosed a MISMATCH, rather than
+  trusting a maker-run's own `run{}` block alone (the defect this closed: `EQ-068`'s own Higgs-mass
+  card looked complete on its maker-run fields but its independent re-execution had disclosed a hash
+  mismatch); a third Reproduction Card registered (IDM's own π/√2/e finite-series approximants vs.
+  an independent `mpmath` oracle, tolerance pre-registered at 25 correct decimal digits with real
+  margin below the package's own traced 30-digit working precision — **PASS**), giving root rows `Q`
+  and `R` held R0/R1/R3/R4/R6. All three cards cited regardless of outcome — `EQ-045`'s gauge-algebra
+  dimension check **PASS**, `EQ-068`'s Higgs-mass prediction **FAIL** (218.00 GeV vs. PDG 125.20
+  GeV), the IDM ladder-constants check **PASS** — a disclosed FAIL is exactly as strong R4/R6
+  evidence as a PASS, never softened. R5 (independent reviewer, `independence_class >= "I2"`) is
+  unheld for every entry in the registry today — no such review exists yet anywhere. See README's
+  "Resistance ladder R0–R6 and reproduction evidence" section.
+- **`toledo_lint`, the 20th MCP tool** (`4c1e7df`): a continuum-injection lint over a statement's
+  own text (LaTeX/ascii-math/prose), checked against the `information-discrete-math` skill's
+  contaminated-concept table (**15** rules); warns, never blocks — `verdict` is `"clean"` or
+  `"continuum_injection_warned"`. See README's "toledo_lint" section.
+- **Website: `/ecosystem/`** (`6c749dc`, this release-prep pass): `site/content/ecosystem.md` — how
+  Toledo relates to the other public repositories in the programme — wired into the built site as
+  `/ecosystem/`, added to the site nav. Its one Mermaid flowchart renders client-side (CDN+SRI, the
+  same carve-out KaTeX already uses; `mmdc`/mermaid-cli is not installed on this machine to
+  pre-render an SVG at build time instead — checked). A merge-garbled paragraph and a stale "19
+  tools" figure in that page's own text were fixed while wiring it. Docs site now **2,581**
+  generated pages (was 2,240). See README's "Website" section.
+- **Private-repository-name redaction** (`6221010`): the solver-arc private repository's real name,
+  found in three mirrored files, replaced with the standing convention `"solver arc (private)"` —
+  proof content unchanged, only the name.
+- **Second leak caught while wiring `/ecosystem/`** (this release-prep pass): `site/content/ecosystem.md`'s
+  own "Public interfaces" table described the private solver-arc repository a second time, under a
+  different, inconsistent identity (`solver-arc-private`, with an unredacted directory-name-shaped
+  path prefix, `solver-arc-private_universal/...`) than the correctly-redacted `solver arc
+  (private)` node the same file's own Mermaid diagram already used for the same repository. Fixed:
+  the orphan duplicate node removed, the table rows renamed to `solver arc (private)` with the path
+  column marked withheld per BBL-198. `mcp/scripts/leak_scan.py` was run against the file (0
+  findings for every category it can check without a local denylist) — its `private_repo_name`
+  category still needs a real `--denylist-file`/`TOLEDO_LEAK_SCAN_DENYLIST_FILE` supplying the
+  actual name to close out, which this release-prep pass does not have access to; disclosed as an
+  open gate, not silently treated as a clean scan.
+- **`_CoqProject`/tools-table test hardening** (`8a633c4`, `0a29e3d`, `40cfda9`): the MCP tools-table
+  test now reads its expected tool count directly from `README.md`'s own `## Tools (N)` heading text
+  rather than a hard-coded literal, so a future tool-count change cannot silently drift the two
+  apart without the test itself changing.
+- **Catalogue Unicode fallback fix** (this release-prep pass): the v1.6 registry additions'
+  `⨁ ⊟ ⊤ ↪` characters (from IDM's FOLD/DECISION/injection statements) had no mapping in
+  `latex/unicode_pdf_fallback.sty`, so `pdflatex` silently dropped them from the printed statement
+  text; mapped to `\bigoplus`/`\boxminus`/`\top`/`\hookrightarrow` (`amssymb` added for
+  `\boxminus`). `make catalogue` now completes with 0 `latexmk` errors (was failing on this before
+  the fix).
+- **Accessibility fix** (this release-prep pass): the per-entry Resistance Ladder badge block used
+  a `role="group"` `<div>`, which `site/checks/check_a11y.py`'s own rule ("no re-implemented ARIA
+  widget: only native interactive elements") correctly flags on every one of the 2,581 pages that
+  carry it. Replaced with a native `<fieldset>`/visually-hidden `<legend>` — `site/checks/run_all.py`
+  now reports 0 hard failures (97 pre-existing, verbatim-source-scoped marketing-word warnings).
+- **This release-prep pass**: `CITATION.cff`/`.zenodo.json` → 1.6.0 (v1.5.0's version DOI
+  10.5281/zenodo.22642109 added to `CITATION.cff`'s citation message, a placeholder recorded for
+  1.6.0); `python3 mcp/scripts/sync_version.py` propagated `1.6.0` into `mcp/pyproject.toml` and
+  `toledo_mcp/__init__.py`. Regenerated `make build`,
+  `python3 site/build_site.py --out site/dist --strict`, `python3 scripts/build_eq_library.py`,
+  `python3 -m toledo_mcp.export_static --out mcp/dist/static-api` and `make catalogue` (one
+  `latexmk -pdf` run): docs site **2,581** pages, catalogue PDF **334** pages with its title page
+  reading "Version 1.6.0" (`pdfinfo`), **0** `Overfull \hbox` warnings over 20pt
+  (`grep -c Overfull latex/catalogue.log` — same as v1.5, reproduced on the built log and on a
+  clean rebuild in a detached worktree). README's "Honest state", "Root registry
+  extension R2", "Master Equation River v1.6 registrations", "Resistance ladder R0–R6 and
+  reproduction evidence", "toledo_lint", "Website" and "What is not done" sections regenerated with
+  live counts.
+- `python3 -m pytest -q tests` (repository root):
+  ```
+  .................................................x....x.x............... [ 90%]
+  .....s..                                                                 [100%]
+  76 passed, 1 skipped, 3 xfailed, 1 warning in 4.56s
+  ```
+  `cd mcp && python3 -m pytest -q`:
+  ```
+  ........................................................................ [ 32%]
+  ........................................................................ [ 64%]
+  ........................................................................ [ 97%]
+  ......                                                                   [100%]
+  222 passed in 11.45s
+  ```
+
 ## v1.5.0 — 2026-09-08
 
 Deposited as Zenodo version DOI 10.5281/zenodo.22642109 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.5.0.
