@@ -46,6 +46,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -e "mcp/[test]"
+      - run: pip install latex2mathml sympy pyyaml   # generator dependencies used by scripts/toledo_build.py (MathML, Content MathML)
       - run: python3 -m pytest -q mcp/tests/
       # B5-test-build-broken-at-head (re-review finding): the root tests/
       # directory (GENERATOR + TOOLING layer — scripts/toledo_build.py,
