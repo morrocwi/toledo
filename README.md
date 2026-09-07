@@ -169,8 +169,7 @@ lane's own build-verification tool.
 A caller with no MCP/stdio access reads the same registry as a periodic, eventually-consistent
 JSON mirror published on GitHub Pages: **<https://morrocwi.github.io/toledo/>**. It is served from
 this repository's own CI workflow (`.github/workflows/toledo-mcp-ci.yml`), which rebuilds and
-republishes it on every push to `main` — so it may lag a release by a few minutes, never longer
-than one CI run. Locally, the same mirror is produced by:
+republishes it on every push to `main` that touches `mcp/**` or `registry/**`; a release commit that changes only documentation does not trigger it, so the mirror can lag until the next such push. Locally, the same mirror is produced by:
 
 ```
 python3 -m toledo_mcp.export_static --out mcp/dist/static-api
