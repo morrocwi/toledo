@@ -309,6 +309,109 @@ def main() -> None:
     }
 
     handle.close()
+
+    # 12. Real stdio cold-start timing (DEBT #48, 2026-09-07, lane E) — spawns
+    # the actual `toledo_mcp/server.py` subprocess (real MCP-over-stdio, real
+    # `initialize()` + one real tool call), under two scenarios, each `repeat`
+    # times into its own fresh temp state dir + a throwaway registry-only
+    # "shadow root" copy (never the real registry/ files, and never the
+    # developer's own mcp/state/ — this must be safe to run alongside other
+    # concurrent lanes editing the real registry):
+    #   - "no_shipped_index": empty state dir, no mcp/state/index.sqlite3 at
+    #     all -- must build cold every time; unaffected by this fix, kept as
+    #     the control.
+    #   - "shipped_index_mtime_changed": a shadow root whose registry files
+    #     were copied then had their mtime bumped (`os.utime`) with NO byte
+    #     change, and a state dir pre-seeded with an index already built
+    #     against that shadow root -- exactly what a release zip landing on a
+    #     fresh machine looks like. Before the DEBT #48 fix this scenario paid
+    #     the same full rebuild as "no_shipped_index" (a pure stat mismatch
+    #     always forced one); after it, `index.check_freshness`'s sha256
+    #     fallback accepts the shipped index and `cache.RegistryCache.
+    #     ensure_fresh` skips the rebuild.
+    # Requires the `mcp` client SDK (mcp/requirements-mcp.txt); skipped with a
+    # disclosed reason if it is not importable rather than failing the run.
+    try:
+        import asyncio
+        import shutil as _shutil
+        from mcp import ClientSession, StdioServerParameters
+        from mcp.client.stdio import stdio_client
+    except ImportError as exc:
+        report["runs"]["mcp_cold_start_stdio"] = {"skipped": f"mcp client SDK not importable: {exc!r}"}
+    else:
+        server_path = REPO_ROOT / "mcp" / "toledo_mcp" / "server.py"
+
+        def _make_shadow_root(tmp_base: pathlib.Path) -> pathlib.Path:
+            shadow = tmp_base / "shadow_root"
+            (shadow / "registry").mkdir(parents=True)
+            for name in ("CANONICAL.json", "genesis_root.json", "LINEAGE.jsonl"):
+                src = REPO_ROOT / "registry" / name
+                if src.exists():
+                    _shutil.copy2(src, shadow / "registry" / name)
+            return shadow
+
+        async def _one_cold_start(registry_root: pathlib.Path, state_dir: pathlib.Path) -> dict:
+            env = dict(os.environ)
+            env["TOLEDO_ROOT"] = str(registry_root)
+            env["TOLEDO_MCP_STATE_DIR"] = str(state_dir)
+            params = StdioServerParameters(command=sys.executable, args=[str(server_path)], env=env)
+            t0 = time.perf_counter()
+            async with stdio_client(params) as (read, write):
+                async with ClientSession(read, write) as session:
+                    await session.initialize()
+                    init_ms = (time.perf_counter() - t0) * 1000.0
+                    t1 = time.perf_counter()
+                    await session.call_tool("toledo_counts", {})
+                    first_call_ms = (time.perf_counter() - t1) * 1000.0
+            return {"init_ms": round(init_ms, 2), "first_call_ms": round(first_call_ms, 2)}
+
+        cold_start_repeat = 3
+        no_index_runs = []
+        shipped_runs = []
+        for _ in range(cold_start_repeat):
+            tmp_base = pathlib.Path(tempfile.mkdtemp(prefix="toledo_mcp_bench_cold_"))
+
+            # Scenario A: no shipped index -- must build cold.
+            shadow_a = _make_shadow_root(tmp_base / "a")
+            state_a = tmp_base / "a" / "state"
+            state_a.mkdir(parents=True)
+            no_index_runs.append(asyncio.run(_one_cold_start(shadow_a, state_a)))
+
+            # Scenario B: shipped index, mtime bumped after building (bytes unchanged).
+            shadow_b = _make_shadow_root(tmp_base / "b")
+            state_b = tmp_base / "b" / "state"
+            state_b.mkdir(parents=True)
+            prior_state_env = os.environ.get("TOLEDO_MCP_STATE_DIR")
+            os.environ["TOLEDO_MCP_STATE_DIR"] = str(state_b)
+            try:
+                shipped_reg = core.load_registry(shadow_b)
+                index.build_index(shipped_reg, shadow_b)
+            finally:
+                if prior_state_env is not None:
+                    os.environ["TOLEDO_MCP_STATE_DIR"] = prior_state_env
+                else:
+                    os.environ.pop("TOLEDO_MCP_STATE_DIR", None)
+            for name in ("CANONICAL.json", "genesis_root.json", "LINEAGE.jsonl"):
+                p = shadow_b / "registry" / name
+                if p.exists():
+                    os.utime(p, None)  # bump mtime only -- bytes unchanged, simulates a zip unpack/checkout
+            shipped_runs.append(asyncio.run(_one_cold_start(shadow_b, state_b)))
+
+        def _summ(runs: list[dict]) -> dict:
+            inits = [r["init_ms"] for r in runs]
+            firsts = [r["first_call_ms"] for r in runs]
+            return {
+                "runs": runs,
+                "median_init_ms": round(statistics.median(inits), 2),
+                "median_first_call_ms": round(statistics.median(firsts), 2),
+            }
+
+        report["runs"]["mcp_cold_start_stdio"] = {
+            "repeat": cold_start_repeat,
+            "no_shipped_index": _summ(no_index_runs),
+            "shipped_index_mtime_changed": _summ(shipped_runs),
+        }
+
     print(json.dumps(report, indent=2, ensure_ascii=False))
 
     out_path = pathlib.Path(__file__).resolve().parent / "results.json"

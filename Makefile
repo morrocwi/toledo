@@ -13,7 +13,10 @@ mcp: ; python3 mcp/toledo_mcp/server.py
 
 # GENERATOR + TOOLING layer (registry/CANONICAL.json + registry/genesis_root.json
 # -> registry/entries, registry/TOLEDO.json, graph/, site/index.json, vault/, latex/catalogue_body.tex)
-build: ; python3 scripts/toledo_build.py
+# Also (re)builds mcp/state/index.sqlite3 (mcp/scripts/build_index.py, DEBT #48
+# lane E, 2026-09-07) so a release zip ships a prebuilt index instead of every
+# MCP cold start paying an avoidable rebuild — see mcp/BENCHMARKS.md.
+build: ; python3 scripts/toledo_build.py && python3 mcp/scripts/build_index.py
 
 # Static docs site (reads what `make build` wrote)
 site: build ; python3 site/build_site.py
