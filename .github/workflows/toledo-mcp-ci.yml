@@ -90,9 +90,8 @@ jobs:
           if [ -f "$RUNNER_TEMP/toledo-denylist.txt" ]; then
             python3 mcp/scripts/leak_scan.py mcp/ --denylist-file "$RUNNER_TEMP/toledo-denylist.txt"
           else
-            echo "::warning::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset); the category is run locally before every push loud instead of silently skipping this category. Configure the repository secret to fix."
-            python3 mcp/scripts/leak_scan.py mcp/ || true
-            exit 0
+            echo "::warning::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset); the category is run locally before every push; configure the repository secret to run it here too."
+            python3 mcp/scripts/leak_scan.py mcp/
           fi
   build-site:
     runs-on: ubuntu-latest
@@ -126,9 +125,8 @@ jobs:
           if [ -f "$RUNNER_TEMP/toledo-denylist.txt" ]; then
             python3 site/checks/run_all.py site/dist --denylist-file "$RUNNER_TEMP/toledo-denylist.txt"
           else
-            echo "::warning::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset); the category is run locally before every push loud instead of silently skipping this category. Configure the repository secret to fix."
-            python3 site/checks/run_all.py site/dist || true
-            exit 2
+            echo "::warning::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset); the category is run locally before every push; configure the repository secret to run it here too."
+            python3 site/checks/run_all.py site/dist
           fi
       - uses: actions/upload-artifact@v4
         with: { name: site-dist, path: site/dist, retention-days: 1 }
