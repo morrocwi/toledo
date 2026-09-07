@@ -5,6 +5,8 @@ counts are computed from the files at that point, never carried over from a prio
 
 ## v1.2.0 — 2026-09-07
 
+Deposited as Zenodo version DOI 10.5281/zenodo.22627177 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.2.0.
+
 Commits `d1057fb` (v1.2 lanes) and `872018f` (gitignore: latex index artefacts) plus this
 release-prep pass. Founder rulings BBL-2026-09-07-207 and BBL-208 (`ops/HANDOFF_OVERNIGHT_2026-09-06.md`,
 "2026-09-07 09:10").
