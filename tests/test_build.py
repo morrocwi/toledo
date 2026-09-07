@@ -295,6 +295,46 @@ def test_compute_rungs_coq_kernel_oracle_never_holds_r4():
     assert rungs["R3"]["held"] is True  # the run itself still holds R3
 
 
+def test_compute_rungs_r3_r4_r6_not_held_when_linked_repro_verify_recorded_a_mismatch():
+    """Integration fix, 2026-09-08: found live via a real card (EQ-068) whose OWN card claimed a
+    filled run{}, but a linked `glosa repro verify` review_report (registry/review_report_index.json,
+    citation.hash_match parsed from the review's own verdict text) recorded an "output_hash
+    MISMATCH" -- and the computed resistance block still reported R3/R4/R6 all held:true, with no
+    mention of the contradiction anywhere the reader could see it without opening a second file.
+    methodology/P22_reproduction_ledger.md item 3: the review, not the maker's own card, is what
+    actually holds R3 for anyone but the maker."""
+    card = _card()
+    review_match = {
+        "citation": {"repo": "glosa", "id": "repro-verify-T-1", "path": "reviews/routes/x/repro-verify-T-1/review_report.yaml",
+                     "hash_match": False},
+        "toledo_codes": ["EQ-068"],
+    }
+    rungs = compute_resistance.compute_rungs("EQ-068", "some statement", None, [card], [review_match], [])
+    assert rungs["R3"]["held"] is False
+    assert "MISMATCH" in rungs["R3"]["reason"]
+    assert rungs["R4"]["held"] is False, "R4 must not hold when its own R3 basis is contradicted"
+    assert rungs["R6"]["held"] is False, "R6 must not hold when its own R4 basis is contradicted"
+
+    # A review that MATCHED (or an unrelated review, or one with no parseable verdict) must never
+    # suppress R3 -- only an actual disclosed MISMATCH does.
+    review_ok = {
+        "citation": {"repo": "glosa", "id": "repro-verify-T-1", "path": "reviews/routes/x/repro-verify-T-1/review_report.yaml",
+                     "hash_match": True},
+        "toledo_codes": ["EQ-068"],
+    }
+    rungs_ok = compute_resistance.compute_rungs("EQ-068", "s", None, [card], [review_ok], [])
+    assert rungs_ok["R3"]["held"] is True
+    assert rungs_ok["R6"]["held"] is True
+
+    review_unrelated = {
+        "citation": {"repo": "glosa", "id": "repro-verify-OTHER-CARD", "path": "reviews/routes/y/repro-verify-OTHER-CARD/review_report.yaml",
+                     "hash_match": False},
+        "toledo_codes": ["EQ-068"],
+    }
+    rungs_unrelated = compute_resistance.compute_rungs("EQ-068", "s", None, [card], [review_unrelated], [])
+    assert rungs_unrelated["R3"]["held"] is True
+
+
 def test_compute_rungs_r5_needs_independence_class_i2_or_above():
     review_i1 = {"citation": {"repo": "glosa", "id": "REV-1"}, "toledo_codes": ["EQ-068"],
                  "independence_class": "I1"}

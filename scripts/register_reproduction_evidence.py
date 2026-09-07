@@ -86,6 +86,26 @@ def card_row(card: dict, commit: str, rel_path: str) -> dict:
     }
 
 
+def parse_hash_match(verdict) -> "bool | None":
+    """Parse a `glosa repro verify` review_report's own free-text `verdict` field (`cli/glosa`'s
+    `cmd_repro_verify`: "hash match on re-execution: input_hash MATCH (...), output_hash
+    MATCH|MISMATCH (...).") into a structured boolean `compute_resistance.py`'s `card_holds_r3`
+    can read directly, instead of re-parsing prose at rung-computation time (methodology/
+    P22_reproduction_ledger.md item 3: this review, not the maker's own first `repro run`, is what
+    actually holds R3 for a reader other than the maker -- so a disclosed MISMATCH here must be
+    able to reach R3). Returns `None` when there is no verdict text, or it names neither word --
+    never guessed."""
+    text = str(verdict or "")
+    if not text:
+        return None
+    lower = text.lower()
+    if "mismatch" in lower:
+        return False
+    if "match" in lower:
+        return True
+    return None
+
+
 def review_row(review: dict, codes: list, commit_note: str, content_sha256: str, rel_path: str) -> dict:
     return {
         "toledo_codes": codes,
@@ -96,6 +116,7 @@ def review_row(review: dict, codes: list, commit_note: str, content_sha256: str,
         "citation": {
             "repo": "glosa", "commit": None, "commit_note": commit_note,
             "content_sha256": content_sha256, "path": rel_path, "id": review.get("route_id"),
+            "hash_match": parse_hash_match(review.get("verdict")),
         },
     }
 

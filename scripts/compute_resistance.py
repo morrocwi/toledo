@@ -187,6 +187,29 @@ def _card_result(card: dict) -> dict:
     return result if isinstance(result, dict) else {}
 
 
+def _review_matches_card(review: dict, card: dict) -> bool:
+    """True when `review`'s own citation names the SAME reproduction_card it independently
+    re-executed -- matched by the card's own citation id occurring in the review's citation
+    id/path (the "repro-verify-<card id>" route_id convention `cli/glosa`'s `cmd_repro_verify`
+    already uses), never by Toledo code alone (one code can be backed by several cards, and a
+    review of one must never silently contradict a different card for the same code)."""
+    card_id = (card.get("citation") or {}).get("id") or card.get("id")
+    if not card_id:
+        return False
+    citation = review.get("citation") or {}
+    haystack = f"{citation.get('id') or ''} {citation.get('path') or ''}"
+    return card_id in haystack
+
+
+def review_hash_match(review: dict) -> "bool | None":
+    """`citation.hash_match` -- a boolean `scripts/register_reproduction_evidence.py` parses from
+    a `repro-verify-*` review_report's own `verdict` text ("... MATCH ..." / "... MISMATCH...").
+    `None` means no such field is present (an index built before this fix, or a review with no
+    parseable verdict) -- never guessed as either True or False."""
+    value = (review.get("citation") or {}).get("hash_match")
+    return value if isinstance(value, bool) else None
+
+
 def card_holds_r1(card: dict) -> bool:
     pred = card.get("preregistered_prediction") or {}
     declared_at = pred.get("declared_at")
@@ -201,16 +224,30 @@ def card_holds_r1(card: dict) -> bool:
     return True
 
 
-def card_holds_r3(card: dict) -> bool:
+def card_holds_r3(card: dict, reviews: "list[dict] | None" = None) -> bool:
     run = _card_run(card)
     # "a filled run{} block" (sec.1 R3 row) — command present is the load-
     # bearing signal; ai_at_runtime must be the literal 0 per the schema
     # (sec.2), checked defensively here too rather than trusted blind.
-    return bool(run.get("command")) and run.get("ai_at_runtime", 0) == 0
+    if not (bool(run.get("command")) and run.get("ai_at_runtime", 0) == 0):
+        return False
+    # Integration fix (2026-09-08): methodology/P22_reproduction_ledger.md item 3 states plainly
+    # that an independent `glosa repro verify` review_report -- never this card's own first
+    # `repro run` -- is what actually HOLDS R3 for a reader other than the maker. When such a
+    # review is linked (registry/review_report_index.json, via
+    # scripts/register_reproduction_evidence.py's own citation.hash_match parse of the review's
+    # verdict text) and it recorded a hash MISMATCH, R3 is not held for this card, regardless of
+    # what the maker's own run{} claims — this is exactly the EQ-068 case caught live: a
+    # repro-verify review disclosed "output_hash MISMATCH" right next to a resistance block that
+    # still reported R3/R4/R6 all held:true.
+    for review in (reviews or []):
+        if _review_matches_card(review, card) and review_hash_match(review) is False:
+            return False
+    return True
 
 
-def card_holds_r4(card: dict) -> bool:
-    if not card_holds_r3(card):
+def card_holds_r4(card: dict, reviews: "list[dict] | None" = None) -> bool:
+    if not card_holds_r3(card, reviews):
         return False
     oracle = card.get("oracle") or {}
     if oracle.get("kind") not in EXTERNAL_ORACLE_KINDS:
@@ -222,7 +259,7 @@ def card_holds_r4(card: dict) -> bool:
     return status in ("PASS", "FAIL")
 
 
-def card_holds_r6(card: dict) -> bool:
+def card_holds_r6(card: dict, reviews: "list[dict] | None" = None) -> bool:
     """AOWC gate (sec.1 R6 row / sec.8/sec.5's `kernel.aowc_gate_check`).
 
     Integration fix (2026-09-08): this function used to require a bespoke
@@ -250,7 +287,7 @@ def card_holds_r6(card: dict) -> bool:
          `aowc_gate_check` applies — readout-not-truth: a lexical check on
          free text, never a verified judgment that a human designed the
          band non-vacuously)."""
-    if not card_holds_r4(card):
+    if not card_holds_r4(card, reviews):
         return False
     run = _card_run(card)
     if run.get("ai_at_runtime") != 0:
@@ -344,19 +381,31 @@ def compute_rungs(code: str, statement_text: str, coq: dict | None,
         }
 
     # R3 — Reproducible run, hash-frozen, AI=0.
-    r3_cards = [c for c in cards if card_holds_r3(c)]
+    r3_cards = [c for c in cards if card_holds_r3(c, reviews)]
     if r3_cards:
         rungs["R3"] = {"held": True, "evidence": [citation_evidence(c, "reproduction_card") for c in r3_cards]}
-    elif cards:
-        rungs["R3"] = {
-            "held": False, "evidence": [],
-            "reason": "linked reproduction_card(s) reference this code but none has a filled run{} yet",
-        }
     else:
-        rungs["R3"] = {"held": False, "evidence": [], "reason": "no reproduction_card references this code"}
+        mismatched = [
+            c for c in cards
+            if bool(_card_run(c).get("command")) and _card_run(c).get("ai_at_runtime", 0) == 0
+            and any(_review_matches_card(r, c) and review_hash_match(r) is False for r in reviews)
+        ]
+        if mismatched:
+            rungs["R3"] = {
+                "held": False, "evidence": [],
+                "reason": "a linked repro-verify review_report recorded a hash MISMATCH against "
+                          "this code's own reproduction_card run — see registry/review_report_index.json",
+            }
+        elif cards:
+            rungs["R3"] = {
+                "held": False, "evidence": [],
+                "reason": "linked reproduction_card(s) reference this code but none has a filled run{} yet",
+            }
+        else:
+            rungs["R3"] = {"held": False, "evidence": [], "reason": "no reproduction_card references this code"}
 
     # R4 — External oracle.
-    r4_cards = [c for c in cards if card_holds_r4(c)]
+    r4_cards = [c for c in cards if card_holds_r4(c, reviews)]
     if r4_cards:
         rungs["R4"] = {"held": True, "evidence": [citation_evidence(c, "reproduction_card") for c in r4_cards]}
     elif not rungs["R3"]["held"]:
@@ -379,7 +428,7 @@ def compute_rungs(code: str, statement_text: str, coq: dict | None,
         }
 
     # R6 — AOWC world record.
-    r6_cards = [c for c in cards if card_holds_r6(c)]
+    r6_cards = [c for c in cards if card_holds_r6(c, reviews)]
     if r6_cards:
         rungs["R6"] = {"held": True, "evidence": [citation_evidence(c, "reproduction_card") for c in r6_cards]}
     elif not rungs["R4"]["held"]:

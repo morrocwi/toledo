@@ -116,3 +116,35 @@ def test_no_glosa_repo_reports_error_not_a_crash(tmp_path):
     missing = tmp_path / "does-not-exist"
     code = rre.main(["--glosa-repo", str(missing)])
     assert code == 2
+
+
+def test_parse_hash_match_reads_the_verdict_text_structurally():
+    """`scripts/compute_resistance.py`'s `card_holds_r3` reads `citation.hash_match` as a boolean
+    -- this is the parse that populates it from `cli/glosa`'s own verdict-text convention
+    ("... input_hash MATCH (...), output_hash MATCH|MISMATCH (...)."). Never guessed when neither
+    word appears."""
+    assert rre.parse_hash_match(
+        "hash match on re-execution: input_hash MATCH ('a' vs recorded 'a'), "
+        "output_hash MISMATCH ('b' vs recorded 'c')."
+    ) is False
+    assert rre.parse_hash_match(
+        "hash match on re-execution: input_hash MATCH ('a' vs recorded 'a'), "
+        "output_hash MATCH ('b' vs recorded 'b')."
+    ) is True
+    assert rre.parse_hash_match(None) is None
+    assert rre.parse_hash_match("") is None
+    assert rre.parse_hash_match("something unrelated") is None
+
+
+def test_review_row_carries_hash_match_from_the_verdict(tmp_path):
+    glosa_repo = _make_fake_glosa_repo(tmp_path)
+    review_path = glosa_repo / "reviews" / "routes" / "some-claim" / "repro-verify-CARD-1" / "review_report.yaml"
+    review_path.write_text(
+        review_path.read_text(encoding="utf-8")
+        + "verdict: 'hash match on re-execution: input_hash MATCH (a vs a), output_hash MISMATCH (b vs c).'\n",
+        encoding="utf-8",
+    )
+    card_paths = rre.find_repro_cards(glosa_repo)
+    review_paths = rre.find_review_reports(glosa_repo)
+    _repro_doc, review_doc = rre.build(glosa_repo, card_paths, review_paths)
+    assert review_doc["reviews"][0]["citation"]["hash_match"] is False

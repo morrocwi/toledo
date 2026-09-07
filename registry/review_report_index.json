@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "source_repo": "glosa",
-  "source_commit": "4ed5632691981e56fdd0db22c8ef6eefb8d93eac",
+  "source_commit": "c4e6b223cd1d358a3c4863180c07b9e4afae0c82",
   "note": "citation index (registry/SCHEMA.md addendum), same convention as reproduction_card_index.json -- see this file's own source_commit for the card citations; review_report files themselves are git-ignored in glosa (see each row's own citation.commit_note).",
   "reviews": [
     {
@@ -10,15 +10,16 @@
       ],
       "claim": "Toledo EQ-045: gauge algebra dim(u(1))+dim(su(2))+dim(su(3))=12",
       "independence_class": "I2",
-      "reviewer_identity": "integrator-check1",
+      "reviewer_identity": "integrator-final",
       "verdict_tier": "finite_diagnostic",
       "citation": {
         "repo": "glosa",
         "commit": null,
         "commit_note": "glosa/.gitignore excludes reviews/routes/ from version control (a local review artifact, never committed) -- this row's citation is pinned by content_sha256 of the review file's own raw bytes instead of a commit; readout-not-truth: this is a citation, not proof the review report will remain reachable at this path indefinitely.",
-        "content_sha256": "98d1be78d27f18fade3e126d7c798b6cf76eca51e61415f0845fd26d4f225962",
+        "content_sha256": "341e0f429bf3e7d501de7281db1a126a4fda855cf29dffd6545986bf1bc285b3",
         "path": "reviews/routes/toledo-eq-045-gauge-algebra-dim-u-1-dim-su-2-dim-su-3-12/repro-verify-REPRO-2026-09-08-0002/review_report.yaml",
-        "id": "repro-verify-REPRO-2026-09-08-0002"
+        "id": "repro-verify-REPRO-2026-09-08-0002",
+        "hash_match": true
       }
     },
     {
@@ -27,15 +28,16 @@
       ],
       "claim": "Toledo EQ-068 clause (a): RD-to-GeV Lambda predicts the Higgs mass",
       "independence_class": "I2",
-      "reviewer_identity": "integrator-check1",
-      "verdict_tier": "Dr",
+      "reviewer_identity": "integrator-final",
+      "verdict_tier": "finite_diagnostic",
       "citation": {
         "repo": "glosa",
         "commit": null,
         "commit_note": "glosa/.gitignore excludes reviews/routes/ from version control (a local review artifact, never committed) -- this row's citation is pinned by content_sha256 of the review file's own raw bytes instead of a commit; readout-not-truth: this is a citation, not proof the review report will remain reachable at this path indefinitely.",
-        "content_sha256": "c406d4ae7a19435baf2d11356d0b504db464f14cfb8f6f7e288b0c3f0b50b485",
+        "content_sha256": "c38dd95a89372a322ed1ec027335e031182be5b49cadc5ad81e3f2a6f67b8d0b",
         "path": "reviews/routes/toledo-eq-068-clause-a-rd-to-gev-lambda-predicts-the-higgs-mass/repro-verify-REPRO-2026-09-08-0001/review_report.yaml",
-        "id": "repro-verify-REPRO-2026-09-08-0001"
+        "id": "repro-verify-REPRO-2026-09-08-0001",
+        "hash_match": true
       }
     }
   ]
