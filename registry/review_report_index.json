@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "source_repo": "glosa",
-  "source_commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+  "source_commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
   "note": "citation index (registry/SCHEMA.md addendum), same convention as reproduction_card_index.json -- see this file's own source_commit for the card citations; review_report files themselves are git-ignored in glosa (see each row's own citation.commit_note).",
   "reviews": [
     {
@@ -38,6 +38,26 @@
         "content_sha256": "252ff3c3839afe4426f297276cc508655521da9e07c641d04b60af764cce0f24",
         "path": "reviews/routes/toledo-eq-068-clause-a-rd-to-gev-lambda-predicts-the-higgs-mass/repro-verify-REPRO-2026-09-08-0001/review_report.yaml",
         "id": "repro-verify-REPRO-2026-09-08-0001",
+        "hash_match": true,
+        "verify_outcome": "MATCH"
+      }
+    },
+    {
+      "toledo_codes": [
+        "Q",
+        "R"
+      ],
+      "claim": "Toledo Q/R (information-discrete-math root extension): the package's own already-shipped finite-series/Newton readouts of pi, e, and sqrt(2) on the D->Z->Q->R number ladder agree with an independent oracle (mpmath) to a declared precision",
+      "independence_class": "I1",
+      "reviewer_identity": "integrator-final",
+      "verdict_tier": "finite_diagnostic",
+      "citation": {
+        "repo": "glosa",
+        "commit": null,
+        "commit_note": "glosa/.gitignore excludes reviews/routes/ from version control (a local review artifact, never committed) -- this row's citation is pinned by content_sha256 of the review file's own raw bytes instead of a commit; readout-not-truth: this is a citation, not proof the review report will remain reachable at this path indefinitely.",
+        "content_sha256": "adaae4eb7741f466ead54badfa82c79c41ef6acc1b9a56f8c47c9213c16d7e2c",
+        "path": "reviews/routes/toledo-q-r-information-discrete-math-root-extension-the-package-s-own-already-shipped-finite-series-newton-readouts-of-pi-e-and-sqrt-2-on-the-d-z-q-r-number-ladder-agree-with-an-independent-oracle-mpmath-to-a-declared-precision/repro-verify-IDM_ladder_constants/review_report.yaml",
+        "id": "repro-verify-IDM_ladder_constants",
         "hash_match": true,
         "verify_outcome": "MATCH"
       }

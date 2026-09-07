@@ -2865,7 +2865,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-045_gauge_dim.json",
                 "id": "REPRO-2026-09-08-0002"
               }
@@ -2882,7 +2882,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-045_gauge_dim.json",
                 "id": "REPRO-2026-09-08-0002"
               }
@@ -2894,7 +2894,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-045_gauge_dim.json",
                 "id": "REPRO-2026-09-08-0002"
               }
@@ -2911,7 +2911,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-045_gauge_dim.json",
                 "id": "REPRO-2026-09-08-0002"
               }
@@ -4309,7 +4309,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-068_higgs_pdg.json",
                 "id": "REPRO-2026-09-08-0001"
               }
@@ -4326,7 +4326,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-068_higgs_pdg.json",
                 "id": "REPRO-2026-09-08-0001"
               }
@@ -4338,7 +4338,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-068_higgs_pdg.json",
                 "id": "REPRO-2026-09-08-0001"
               }
@@ -4355,7 +4355,7 @@
               {
                 "type": "reproduction_card",
                 "repo": "glosa",
-                "commit": "b6ff0c05f5e75b3bca42e1ae8107b2fac7a46489",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
                 "path": "cases/repro/EQ-068_higgs_pdg.json",
                 "id": "REPRO-2026-09-08-0001"
               }
@@ -37328,9 +37328,16 @@
             "evidence": []
           },
           "R1": {
-            "held": false,
-            "evidence": [],
-            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           },
           "R2": {
             "held": false,
@@ -37338,14 +37345,28 @@
             "reason": "coq_status is None (not 'closed')"
           },
           "R3": {
-            "held": false,
-            "evidence": [],
-            "reason": "no reproduction_card references this code"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           },
           "R4": {
-            "held": false,
-            "evidence": [],
-            "reason": "R3 not held"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           },
           "R5": {
             "held": false,
@@ -37353,9 +37374,16 @@
             "reason": "no review_report at independence_class >= I2 references this code"
           },
           "R6": {
-            "held": false,
-            "evidence": [],
-            "reason": "R4 not held"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           }
         }
       }
@@ -37403,9 +37431,16 @@
             "evidence": []
           },
           "R1": {
-            "held": false,
-            "evidence": [],
-            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           },
           "R2": {
             "held": false,
@@ -37413,14 +37448,28 @@
             "reason": "coq_status is None (not 'closed')"
           },
           "R3": {
-            "held": false,
-            "evidence": [],
-            "reason": "no reproduction_card references this code"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           },
           "R4": {
-            "held": false,
-            "evidence": [],
-            "reason": "R3 not held"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           },
           "R5": {
             "held": false,
@@ -37428,9 +37477,16 @@
             "reason": "no review_report at independence_class >= I2 references this code"
           },
           "R6": {
-            "held": false,
-            "evidence": [],
-            "reason": "R4 not held"
+            "held": true,
+            "evidence": [
+              {
+                "type": "reproduction_card",
+                "repo": "glosa",
+                "commit": "4fa953fdbc4fe0a6401fe46b2bba213ea44baa42",
+                "path": "cases/repro/IDM_ladder_constants.json",
+                "id": "IDM_ladder_constants"
+              }
+            ]
           }
         }
       }
