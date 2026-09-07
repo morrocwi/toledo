@@ -3,6 +3,64 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.1.0 — 2026-09-07
+
+Commit `462ff2b` (v1.1 lanes) plus this release-prep pass. Corrects a v1.0.0 counting error and
+closes most of v1.0.0's disclosed carry-overs; no `registry/CANONICAL.json`, `LINEAGE.jsonl`,
+`genesis_root.json`, or `coq/` file outside `coq/canonical/` was touched by the release-prep pass
+itself (those were already updated by `462ff2b` and are frozen for this release).
+
+- **Correction of the v1.0.0 closure count** (`462ff2b`): 214 of v1.0.0's 337 `closed` entries
+  carried only a Coq `Definition`, not a proved Theorem/Lemma — **v1.0.0 over-counted closure**.
+  Each of the 214 is reclassified `closed` → `definition` (`LINEAGE.jsonl` events), leaving
+  `closed` at a corrected **161**. See README's "The coq_status ladder" for the full explanation.
+- **210 `mapped_not_wrapped` entries wrapped** (`462ff2b`, v1.1 task A): every one gets a
+  Toledo-native `coq/canonical/<code>.v` wrapper that `Require`s the imported identifier(s) and
+  restates the entry's statement as a named lemma/definition proved from them (no
+  `Admitted`/`Axiom`). Because the wrapper only aliases or specialises the imported identifier
+  rather than independently closing the entry's own statement, these are honestly labelled
+  `wrapped_related`, not `closed`.
+- **246 `not_yet_formalised` entries resolved** (`462ff2b`, v1.1 task B): each is now one of
+  `definition` (a typed Definition in a finite model), `closed` (proved), `open_prop` (an Open
+  hypothesis stated as an unproved `Prop`), or `not_formalisable` (no formal content in the
+  source, reason recorded in `tier_evidence`) — never forced toward a proof that does not exist.
+- **RD1–RD9 vs. Genesis roots evidence map** (`462ff2b`, v1.1 task C): all nine of the founder's
+  `RD1`–`RD9` identifiers (`coq/solver-arc/formal/RD.v`, public mirror
+  `coq/readout_universe/evidence/RD.v`) checked against Genesis's `E00.1`–`E00.7` root axioms
+  under the φ-equivalence criterion — **0 confirmed same-object pairs**; RD1–RD9 names a
+  from-scratch Peano-style natural-number construction, a distinct object. No alias added, no
+  code invented (`registry/rd_root_map.json`).
+- **Theta / CMC root-candidate report** (`462ff2b`, v1.1 task C): documented as candidate Layer-0
+  roots with no `genesis_root.json` row today — `Theta` publicly anchored
+  (`github.com/morrocwi/readout_genesis@082dde8`), `CMC` with no public anchor at all (private
+  solver-arc only) — recommended for a future founder root-registry decision, no row/code added
+  (`registry/root_candidates_report.md`).
+- **Tier-evidence quoting**: canonical `untagged` tier fell from 332 to 255 as entries received
+  quoted tier evidence during the v1.1 lanes.
+- **Coq — Toledo-native canonical wrappers** (this release-prep pass, sequential
+  build+verify, one coqc process at a time): 725 files, build 725/725 OK; verify 207/207
+  identifiers "Closed under the global context", 0 failed (up from v1.0.0's 339 files, 162/162
+  verified — the growth is the 210 wrapper files plus the files written for the resolved
+  `not_yet_formalised` entries).
+- **Release build (this pass)**: `make build` (1,383 generated entries), `make site` (1,383 docs
+  pages + index), `scripts/build_eq_library.py` regenerated `registry/EQ_LIBRARY.md` (946 raw
+  equations, 40 chapters, canonical 793), `make catalogue` produced a 126-page PDF.
+  `python3 -m pytest -q tests`: 20 passed, 2 disclosed xfailed, 0 failed.
+- **Documentation**: README.md's Honest-state section updated to the live `CANONICAL.json`
+  `counts{}` (793 entries; status current 693 / unverified 61 / split 30 / not_an_equation 9;
+  domain unchanged from v1.0.0; tier untagged 255 / Definition 389 / finite_diagnostic 46 / Dr 43
+  / Open 37 / Th_coqc 14 / Ax 9; coq_status closed 161 / definition 339 / wrapped_related 210 /
+  open_prop 13 / not_formalisable 70); a new "coq_status ladder" subsection explains
+  `closed → definition → wrapped_related → open_prop → not_formalisable` and the v1.0.0 closure
+  correction plainly; a new root-candidate section covers the RD1–RD9 finding and the Theta/CMC
+  note; "What is not done" updated to the current carry-overs. `CITATION.cff` and `.zenodo.json`
+  updated to v1.1.0 (date 2026-09-07); `.zenodo.json` description updated to match.
+- **Known carry-overs for v1.2** (not blockers): 210 `wrapped_related` wrappers remain aliases,
+  not independent closures, of their entry's own statement; 255 canonical entries and 308
+  genesis-root rows still carry no normalised tier; `RD1`–`RD9`, `Theta`, `CMC` still have no
+  `genesis_root.json` row (a founder decision, not a build gap, for the latter two); Master
+  Equation River v1.5 and the textbook's Appendix F are tracked separately.
+
 ## v1.0.0 — 2026-09-07
 
 Deposited as Zenodo version DOI 10.5281/zenodo.22548770 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.0.0.

@@ -1,3 +1,5 @@
+> Terminology note (2026-09-07): the judge-scoring axis originally labelled with a comparative term was renamed `design_quality` throughout this record; the scores and their meaning are unchanged.
+
 # บันทึกการประชุมออกแบบ Toledo — 2026-09-06 (คืน N2)
 # MEETING RECORD — Toledo design meeting, 2026-09-06 (overnight, N2)
 
@@ -5,7 +7,7 @@
 
 การประชุมนี้เป็นส่วนหนึ่งของ BBL-188 (งานอัตโนมัติข้ามคืน). ผู้เสนอ 3 คน — REGISTRAR (schema/code
 grammar/root-parent/dedup), FORMALISER (นำเข้า Coq/การตั้งชื่อ/verification), LIBRARIAN (การนำเสนอ/
-findability/release) — เสนอแบบคนละชุด แล้วให้ผู้ตัดสิน 2 ชุด (แต่ละชุดให้คะแนน world_class /
+findability/release) — เสนอแบบคนละชุด แล้วให้ผู้ตัดสิน 2 ชุด (แต่ละชุดให้คะแนน design_quality /
 constraint_fidelity / feasibility / verified ต่อข้อเสนอ พร้อม cross_conflicts และ missing) ตรวจสอบ
 อิสระ 2 รอบ. เลขาการประชุม (secretary agent) เป็นผู้รวมข้อเสนอ+คำตัดสินเป็นมติที่นี่ — ไม่ใช่ผู้ตัดสินเอง;
 ทุก DECISION ด้านล่างอ้างอิงข้อเสนอต้นทาง + ฉันทามติ/ข้อขัดแย้งที่ผู้ตัดสินชี้ไว้.
@@ -13,7 +15,7 @@ constraint_fidelity / feasibility / verified ต่อข้อเสนอ พ�
 This meeting is part of BBL-188 (overnight autonomous work). Three proposers — REGISTRAR (schema /
 code grammar / root-parent rule / dedup), FORMALISER (Coq import, naming, verification), LIBRARIAN
 (presentation, findability, release) — each drafted an independent design; two judge passes scored
-every proposal (world_class / constraint_fidelity / feasibility / verified) and logged cross-proposal
+every proposal (design_quality / constraint_fidelity / feasibility / verified) and logged cross-proposal
 conflicts and gaps independently. This secretary record merges the three proposals plus both judge
 passes into ruled decisions — it does not re-judge; every decision below cites its source proposal and
 the judges' consensus or dispute.
@@ -142,7 +144,7 @@ weak-point finding, reconciled against LIBRARIAN's and FORMALISER's independent 
 incompatible) `CANONICAL.json` shapes — this is the resolution of the "three incompatible schemas"
 conflict both judge passes flagged as the batch's most consequential integration gap.
 
-**Judge consensus.** Both J1 and J2 rated REGISTRAR's entry-shape idea highly (world_class 7/7,
+**Judge consensus.** Both J1 and J2 rated REGISTRAR's entry-shape idea highly (design_quality 7/7,
 "cleanest formalization... a real improvement over the doc") and both independently flagged the
 storage-layout mismatch against LIBRARIAN and FORMALISER as the top cross-conflict requiring a single
 ruling before N3/N4 write anything.

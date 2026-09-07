@@ -103,25 +103,66 @@ Every code resolves the same way across five surfaces, all generated from
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-07
+## Honest state — computed 2026-09-07 (v1.1)
 
 Every number below was read from the files in this repository by the command shown; none is
-carried over from an earlier note.
+carried over from an earlier note. This section supersedes the v1.0.0 counts below it in
+`CHANGELOG.md` — the coq-status figures in particular changed under the v1.1 reclassification
+described in "The coq_status ladder" subsection just below.
 
-**Canonical registry** (`python3 -c "import json; d=json.load(open('registry/CANONICAL.json'));
-print(len(d['canonical']))"` and the same script tallying `status`/`domain`/`tier`/`coq.coq_status`):
+**Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
+`python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
+c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in c));
+print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
+c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
 - **793** canonical entries, mapped from **946** raw equations across **40** deposited chapters
   (`registry/EQ_LIBRARY.md`, `make library`); **1,069** raw occurrence keys resolved.
-- **Status:** `current` 697 · `unverified` 57 · `split` 30 · `not_an_equation` 9.
+- **Status:** `current` 693 · `unverified` 61 · `split` 30 · `not_an_equation` 9.
 - **Domain:** P 187 · S 136 · M 115 · W 84 · H 77 · B 75 · E 60 · C 59.
-- **Tier:** `untagged` 332 · `Definition` 314 · `finite_diagnostic` 47 · `Dr` 41 · `Open` 37 ·
-  `Th_coqc` 14 · `Ax` 8. (`Th_coqc` certifies that a lemma is closed under the stated finite
+- **Tier:** `untagged` 255 · `Definition` 389 · `finite_diagnostic` 46 · `Dr` 43 · `Open` 37 ·
+  `Th_coqc` 14 · `Ax` 9. (`Th_coqc` certifies that a lemma is closed under the stated finite
   model's global context — an internal-consistency check, never an empirical or physical truth
   claim; `untagged` means the source gave no tier at all, stated as such rather than guessed.)
-- **Coq status:** `closed` 337 · `mapped_not_wrapped` 210 (a `coq_map.json` evidence match exists
-  but no Toledo-native wrapper file yet) · `not_yet_formalised` 246 (no Coq evidence of any kind
-  yet — stated as open, not implied proved).
+- **Coq status:** `closed` 161 · `definition` 339 · `wrapped_related` 210 · `open_prop` 13 ·
+  `not_formalisable` 70. See "The coq_status ladder" immediately below for what each of these
+  means and why the `closed` count fell from v1.0.0's 337.
+
+### The coq_status ladder (`closed` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
+
+Every canonical entry's `coq.coq_status` field is one honest position on this ladder, never a
+rounded-up claim:
+
+- **`closed`** — the entry's own Toledo-native file (`coq/canonical/<code>.v`) states at least one
+  Theorem/Lemma/Corollary/Example/Remark that `verify.sh` reports "Closed under the global
+  context" for the entry's *own* statement. This is the only status that certifies a proof.
+- **`definition`** — the entry's own file states a typed `Definition`/`Record` in a finite model,
+  with no theorem attached; there is nothing here to be "closed" or "open" — it is a formal
+  restatement, not a claim.
+- **`wrapped_related`** — a Toledo-named wrapper file exists and builds, but it only aliases or
+  specialises an identifier imported from another repository; it does not independently close the
+  entry's own statement. This is the status the 210 v1.0.0 `mapped_not_wrapped` entries moved to
+  in v1.1 once their wrapper files were written (task A of the v1.1 scope) — writing the wrapper
+  did not manufacture a proof of the entry's own statement, so `wrapped_related`, not `closed`, is
+  the honest label.
+- **`open_prop`** — an Open/Dr hypothesis stated as an unproved `Definition …_hyp : Prop`, carried
+  forward exactly as open, never forced to a proof.
+- **`not_formalisable`** — no formal content exists in the source for this entry; the reason is
+  recorded per-entry in `tier_evidence`, not asserted without it.
+
+**The 2026-09-07 reclassification.** v1.0.0 reported `closed` 337. On inspection during v1.1, 214
+of those 337 entries turned out to carry only a Coq `Definition`, not a proved Theorem/Lemma —
+**v1.0.0 over-counted closure**: a `Definition` was being counted as "closed" alongside genuine
+proved lemmas, which conflates "we wrote a formal type" with "we proved something under it". v1.1
+corrects this: those 214 entries were moved from `closed` to `definition` (each move is a `LINEAGE.jsonl` event),
+leaving `closed` at **161** — the count of canonical entries that actually carry a verified
+theorem in their own Toledo-native file. This is a different count from, but consistent in kind
+with, the **207/207** identifiers `verify.sh` reports "Closed under the global context" across all
+of `coq/canonical/` in this release (see the Coq table below) — an "identifier closed" tally can
+differ from a "canonical entry `coq_status`" tally because one file can carry more than one closed
+identifier, or an identifier belonging to a non-`closed`-status entry (e.g. a helper lemma inside
+a `wrapped_related` file). Readers of the v1.0.0 record should treat its `closed` 337 figure as
+superseded by this correction, not as a second, still-valid number.
 
 **Genesis root layer** (`registry/genesis_root.json`, git-anchored to
 `morrocwi/readout_genesis@082dde8`): **590** root rows. Of these, **282** carry a normalised
@@ -144,8 +185,10 @@ Assumptions` pass per source, run fresh on this machine):
 | **Total** | **3,289** | **3,125** | **164** | **0** |
 
 **Coq — Toledo-native canonical wrappers** (`coq/canonical/`, `build_report.txt` +
-`verify_report.txt`, one sequential build+verify pass): **339** files, build **339/339 OK**;
-verify **162/162** identifiers "Closed under the global context", 0 failed.
+`verify_report.txt`, one sequential build+verify pass): **725** files, build **725/725 OK**;
+verify **207/207** identifiers "Closed under the global context", 0 failed. (v1.0.0 had 339 files,
+339/339 build, 162/162 verified; the growth is the 210 v1.1 `wrapped_related` wrapper files plus
+the files written for the resolved `not_yet_formalised` entries, task A/B of the v1.1 scope.)
 
 **Docs site / catalogue** (`make site`, `make catalogue`): site **1,383** generated entry pages
 plus one index; printable catalogue PDF **126** pages (`pdfinfo latex/catalogue.pdf`). The
@@ -155,17 +198,52 @@ literal math-notation Unicode to standard LaTeX constructs, and
 placeholder pointing back at the JSON/site entry — the registries, JSON-LD entries and site
 carry the exact source text unmodified; only this print artifact substitutes.
 
+## Root-candidate evidence: RD1–RD9, Theta, CMC
+
+**RD1–RD9 vs. the Genesis root axioms (finding, not a code change).** The founder's own shorthand
+`RD1`–`RD9` is real and machine-checked — found verbatim in `coq/solver-arc/formal/RD.v` and its
+byte-identical public mirror `coq/readout_universe/evidence/RD.v` — but v1.1 evidence-checked all
+nine of them against Genesis's `E00.1`–`E00.7` root axioms (`EQ-001`…`EQ-008` in this registry)
+under the Toledo φ-equivalence criterion (a renaming, fixed positive scale, or fixed constant
+substitution — no limits, no approximations) and found **zero** confirmed same-object pairs
+(`registry/rd_root_map.json`). RD1–RD9 name a from-scratch Peano-style natural-number construction
+(`Inductive D : Type := zero | succ`, with `add`/`mul` built on it) — a different mathematical
+object from Genesis's physical/epistemic root axioms. No alias was added to any `genesis_root.json`
+row and no `coq_map.json` code was changed, since the criterion found no pairs to merge; Genesis's
+own `E00.1`–`E00.7` identifiers remain the sole codes for those axioms.
+
+**Theta and CMC (recommendation, not action).** Two further bodies of work read, on inspection, as
+candidate Layer-0 roots but carry no `genesis_root.json` row today (`registry/root_candidates_report.md`):
+`Theta` (a living/relational-geometry state a 2026-08-08 founder ruling elevates "to a NEW ROOT
+alongside reader Phi / record Psi / retained difference delta_R", per the header comment of
+`coq/readout_genesis/formal/InfoThetaEdgeCensus_attempt.v` and eight sibling `InfoTheta*_attempt.v`
+files, public, `github.com/morrocwi/readout_genesis@082dde8`); and `CMC` (Causal-Memory Closure, a
+named bridge-theorem programme with one disclosed axiom, `coq/solver-arc/formal/CMC_*.v`, six
+files, 33 theorems/definitions, currently unmapped to any Toledo code and with **no public git
+anchor at all** — it exists only in the private solver arc). Neither elevation is stated inside
+`READOUT_GENESIS_CORE.md` or the anchored whitepaper themselves, so this registry build cannot add
+either as a root without either a newer Genesis document snapshot or an explicit founder decision
+to source the row from the `.v`-header citations alone. No row, alias, or code was added for
+either; the report recommends a future root-registry extension and stops there — the decision is
+the founder's.
+
 ## What is not done (v1.1 carry-overs)
 
 Honestly disclosed, not hidden in a rounded-up claim:
 
-- **210** `mapped_not_wrapped` Coq identifiers have evidence of a matching development but no
-  Toledo-native wrapper file yet.
-- **246** canonical entries are `not_yet_formalised` — no Coq development has been located for
-  them at all.
-- The Genesis named roots `RD1`–`RD9`, `Theta`, and `CMC` are not yet present in
-  `genesis_root.json` — no code has been invented for them in their absence.
-- **332** canonical entries carry tier `untagged` (no tier was stated in their source at all).
+- **210** `wrapped_related` Coq wrappers alias an imported identifier rather than independently
+  closing their own entry's statement (see "The coq_status ladder" above) — a real gap between
+  "a Toledo file exists for this" and "this entry's own claim is proved".
+- **70** canonical entries are `not_formalisable` (no formal content located in the source; reason
+  recorded per-entry in `tier_evidence`) and **13** are `open_prop` (stated as an unproved `Prop`,
+  by design).
+- The Genesis named roots `RD1`–`RD9`, `Theta`, and `CMC` are still not present in
+  `genesis_root.json`. v1.1 evidence-checked `RD1`–`RD9` against the existing root axioms and found
+  them a distinct object (see the section above) rather than an omitted alias; `Theta` and `CMC`
+  remain open root-registry candidates pending a founder decision (`registry/root_candidates_report.md`).
+  No code has been invented for any of the three in their absence.
+- **255** canonical entries still carry tier `untagged` (no tier was stated in their source at
+  all) — down from 332 at v1.0.0 after this release's tier-evidence quoting pass.
 - **308** genesis-root rows still carry only their free-text `tier_in_genesis` string, not a
   normalised `tier`.
 - Master Equation River v1.5 and the textbook's Appendix F (both meant to cite Toledo codes) are
