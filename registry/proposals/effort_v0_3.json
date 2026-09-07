@@ -1,0 +1,2073 @@
+{
+ "schema_version": "1.0.0-proposal",
+ "generated_from_commit": "9ca306cf3bc9e6efe4ee5456ee6449abae0cb42a",
+ "proposal_source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3 (Zenodo record pending)",
+ "extraction_date": "2026-09-07",
+ "extractor_note": "34 of 34 [NEW ...]-labeled equations extracted (Eq. 1, 6, 9-16, 18-41; the paper's own prose numbers equations 1 through 41 but only labels 34 of them NEW -- the rest, Eqs. 2, 3, 4, 5, 7, 8, 17, are labeled TOLEDO EXISTING/TOLEDO APPLICATION and are not proposed here. Eq. 6 carries an in-text [NEW PROPOSITION] label but is missing from the paper's own Appendix A Equation Provenance ledger (pp. 11-12) -- an omission in the source, not this extraction; including it is what makes the count come out to the 34 expected. phi-criterion check against registry/CANONICAL.json (912 entries) found no existing entry structurally equivalent (by renaming / positive scale / constant substitution) to any of these 34 -- this was a keyword/substring screen for the constructs' own names (CSML, SAL, ISW, ERG, CER, CDOL, ECT, SID, SameTrial, RB_Q, LC_Q, IC_Q, PASS/FAIL/HOLD enumerations, martingale/bandit/ POMDP) plus a manual read of the closest-related existing entries (weld/*, A.5/*, EQ-015/M.03.v1); it is not an exhaustive machine-checked equivalence search, so treat 'no match found' as a Dr-tier readout of this screen, not a proof of non-existence. root/domain/derived_via assignments for entries whose provenance note names an internal 'Eq. N' rather than a literal Toledo code were resolved by following that internal chain back to the nearest note that does name a real Toledo object; those cases and the two entries with no traceable Toledo citation at all (Eq. 16's 'Toledo domain typing', Eq. 36's 'v0.1 cost anchor') carry a drift_note flagging the inference for reviewer confirmation. This file is NEW ORIGINAL CONTENT from the cited paper -- none of it is copied from CANONICAL.json, genesis_root.json, LINEAGE.jsonl, coq/, latex/, or mcp/, and none of those were edited.",
+ "proposals": [
+  {
+   "id": "PROP-EFFORT-v0.3-01",
+   "code": "weld/E.11.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "E",
+   "aliases": [
+    "Effort-v0.3:eq.1"
+   ],
+   "name": "Effort v0.3 Eq.1: NEW NON-COLLAPSE",
+   "statement": {
+    "latest": "\\text{uncertainty} \\not\\equiv \\text{stochastic mechanism} \\\\ \\text{stochastic mechanism} \\not\\equiv \\text{other-agent control} \\\\ \\text{other-agent control} \\not\\equiv \\text{unresolved residual}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\text{uncertainty} \\not\\equiv \\text{stochastic mechanism} \\\\ \\text{stochastic mechanism} \\not\\equiv \\text{other-agent control} \\\\ \\text{other-agent control} \\not\\equiv \\text{unresolved residual}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 1",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW NON-COLLAPSE: rooted mathematically in Toledo domain/readout separation and interpreted epistemically through Readout Universe; connects four distinct sources of an apparently unpredictable outcome so that ignorance is not silently promoted into ontology.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "1. Why Randomness Is Not a Self-Licensing Objection",
+    "page": 2,
+    "label": "Eq. 1"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW NON-COLLAPSE",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW NON-COLLAPSE: rooted mathematically in Toledo domain/readout separation and interpreted epistemically through Readout Universe; connects four distinct sources of an apparently unpredictable outcome so that ignorance is not silently promoted into ontology.]",
+   "drift_note": "Note names the concept 'Toledo domain/readout separation' rather than a literal code; mapped to weld/M.02.v1 (domain admissibility: q_D commutes with root dynamics AND readout) as the closest matching Toledo object. Domain letter E chosen (not the parent's own M) because the note itself says the equation is 'interpreted epistemically', and its content classifies types of not-knowing, matching Toledo's E (epistemic) domain semantics."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-06",
+   "code": "weld/H.13.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.6"
+   ],
+   "name": "Effort v0.3 Eq.6: NEW PROPOSITION",
+   "statement": {
+    "latest": "N_{ext} < \\infty \\;\\not\\Rightarrow\\; N_{int} = N_{ext}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "N_{ext} < \\infty \\;\\not\\Rightarrow\\; N_{int} = N_{ext}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 6",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW PROPOSITION: rooted in repeated admissible application of Eq. 2; connects a finite number of world-side encounters to potentially multiple internal state revisions without claiming infinite energy, infinite benefit, or monotonic improvement.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "2.1 External encounter count is not internal update count",
+    "page": 2,
+    "label": "Eq. 6"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW PROPOSITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW PROPOSITION: rooted in repeated admissible application of Eq. 2; connects a finite number of world-side encounters to potentially multiple internal state revisions without claiming infinite energy, infinite benefit, or monotonic improvement.]",
+   "review_note": "This equation is not listed in the paper's own Appendix A Equation Provenance ledger (page 11-12), even though it carries an in-text [NEW PROPOSITION] label. Its inclusion is what makes the 34-equation count in this file match the task's expected total; flagging for the founder's own record since the paper's ledger is itself incomplete on this point."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-09",
+   "code": "weld/M.15.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.9"
+   ],
+   "name": "Effort v0.3 Eq.9: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "\\mathfrak{M}_Q(r_n) := \\{\\, m \\in \\mathfrak{M}_Q^{adm} : O_Q^G(m) = r_n \\,\\}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathfrak{M}_Q(r_n) := \\{\\, m \\in \\mathfrak{M}_Q^{adm} : O_Q^G(m) = r_n \\,\\}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 9",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Toledo reader/domain admissibility and finite reader-equivalence; connects an observed record to the set of mechanisms still compatible with that record instead of assuming a unique hidden cause.]"
+    },
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Toledo reader/domain admissibility and finite reader-equivalence; connects an observed record to the set of mechanisms still compatible with that record instead of assuming a unique hidden cause.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "4. Two Licenses for Stochasticity: Modeling Is Not Attribution",
+    "page": 3,
+    "label": "Eq. 9"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: rooted in Toledo reader/domain admissibility and finite reader-equivalence; connects an observed record to the set of mechanisms still compatible with that record instead of assuming a unique hidden cause.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-10",
+   "code": "weld/M.16.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.10"
+   ],
+   "name": "Effort v0.3 Eq.10: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "CSML_Q(M) = \\mathsf{PASS} \\iff M \\in \\mathfrak{M}_Q^{adm} \\wedge \\mathrm{Asm}(M,Q)\\ \\text{is explicit}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "CSML_Q(M) = \\mathsf{PASS} \\iff M \\in \\mathfrak{M}_Q^{adm} \\wedge \\mathrm{Asm}(M,Q)\\ \\text{is explicit}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 10",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Conditional Stochastic Modeling License; rooted in the admissible model class after Toledo inspection. It connects a declared stochastic assumption to legitimate conditional theorem use without asserting that the world-side mechanism has been identified.]"
+    },
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Conditional Stochastic Modeling License; rooted in the admissible model class after Toledo inspection. It connects a declared stochastic assumption to legitimate conditional theorem use without asserting that the world-side mechanism has been identified.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "4. Two Licenses for Stochasticity: Modeling Is Not Attribution",
+    "page": 3,
+    "label": "Eq. 10"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Conditional Stochastic Modeling License; rooted in the admissible model class after Toledo inspection. It connects a declared stochastic assumption to legitimate conditional theorem use without asserting that the world-side mechanism has been identified.]",
+   "drift_note": "Rooted in Eq. 9 (this same batch, PROP-EFFORT-v0.3-03); parent resolved through the chain to Eq.9's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-11",
+   "code": "weld/M.17.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.11"
+   ],
+   "name": "Effort v0.3 Eq.11: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "SAL_Q^{strong}(n) = \\mathsf{PASS} \\iff \\mathfrak{M}_Q(r_n) \\subseteq \\mathfrak{M}_Q^{stoch}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "SAL_Q^{strong}(n) = \\mathsf{PASS} \\iff \\mathfrak{M}_Q(r_n) \\subseteq \\mathfrak{M}_Q^{stoch}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 11",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Strong Stochastic Attribution License; rooted in Eq. 9. It connects finite evidence to permission to treat stochasticity as a property of the load-bearing mechanism rather than only a declared modeling assumption.]"
+    },
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Strong Stochastic Attribution License; rooted in Eq. 9. It connects finite evidence to permission to treat stochasticity as a property of the load-bearing mechanism rather than only a declared modeling assumption.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "4. Two Licenses for Stochasticity: Modeling Is Not Attribution",
+    "page": 3,
+    "label": "Eq. 11"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Strong Stochastic Attribution License; rooted in Eq. 9. It connects finite evidence to permission to treat stochasticity as a property of the load-bearing mechanism rather than only a declared modeling assumption.]",
+   "drift_note": "Rooted in Eq. 9 (this same batch); parent resolved through the chain to Eq.9's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-12",
+   "code": "weld/M.18.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.12"
+   ],
+   "name": "Effort v0.3 Eq.12: NEW DERIVATION",
+   "statement": {
+    "latest": "\\mathfrak{M}_Q(r_n)\\cap\\mathfrak{M}_Q^{stoch}\\neq\\varnothing,\\quad \\mathfrak{M}_Q(r_n)\\cap\\mathfrak{M}_Q^{nonstoch}\\neq\\varnothing \\;\\Rightarrow\\; SAL_Q^{strong}(n)=\\mathsf{HOLD}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathfrak{M}_Q(r_n)\\cap\\mathfrak{M}_Q^{stoch}\\neq\\varnothing,\\quad \\mathfrak{M}_Q(r_n)\\cap\\mathfrak{M}_Q^{nonstoch}\\neq\\varnothing \\;\\Rightarrow\\; SAL_Q^{strong}(n)=\\mathsf{HOLD}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 12",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW DERIVATION: rooted in Eq. 11; connects mechanism non-identifiability to an explicit HOLD state rather than falsely deciding “random” or “not random.”]"
+    },
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW DERIVATION: rooted in Eq. 11; connects mechanism non-identifiability to an explicit HOLD state rather than falsely deciding “random” or “not random.”]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "4. Two Licenses for Stochasticity: Modeling Is Not Attribution",
+    "page": 3,
+    "label": "Eq. 12"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW DERIVATION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DERIVATION: rooted in Eq. 11; connects mechanism non-identifiability to an explicit HOLD state rather than falsely deciding “random” or “not random.”]",
+   "drift_note": "Rooted in Eq. 11 (this same batch); parent resolved through the chain to Eq.9/11's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-13",
+   "code": "weld/M.19.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.13"
+   ],
+   "name": "Effort v0.3 Eq.13: NEW NON-COLLAPSE",
+   "statement": {
+    "latest": "CSML_Q(M) = \\mathsf{PASS} \\;\\not\\Rightarrow\\; SAL_Q^{strong}(n) = \\mathsf{PASS}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "CSML_Q(M) = \\mathsf{PASS} \\;\\not\\Rightarrow\\; SAL_Q^{strong}(n) = \\mathsf{PASS}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 13",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW NON-COLLAPSE: rooted in Eqs. 10–11; separates “a stochastic model is admissible under declared assumptions” from “the event has been strongly identified as stochastic.”]"
+    },
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW NON-COLLAPSE: rooted in Eqs. 10–11; separates “a stochastic model is admissible under declared assumptions” from “the event has been strongly identified as stochastic.”]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "4. Two Licenses for Stochasticity: Modeling Is Not Attribution",
+    "page": 3,
+    "label": "Eq. 13"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW NON-COLLAPSE",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW NON-COLLAPSE: rooted in Eqs. 10–11; separates “a stochastic model is admissible under declared assumptions” from “the event has been strongly identified as stochastic.”]",
+   "drift_note": "Rooted in Eqs. 10-11 (this same batch); parent resolved through the chain to Eq.9's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-14",
+   "code": "weld/M.20.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.14"
+   ],
+   "name": "Effort v0.3 Eq.14: NEW DERIVATION",
+   "statement": {
+    "latest": "T_{R\\to D}\\circ F_R = F_D\\circ T_{R\\to D},\\quad O_D\\circ T_{R\\to D}=O_R,\\quad W^D_{Q,j}\\circ T_{R\\to D}=W^R_{Q,j}\\ \\ \\forall j\\in J_Q",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "T_{R\\to D}\\circ F_R = F_D\\circ T_{R\\to D},\\quad O_D\\circ T_{R\\to D}=O_R,\\quad W^D_{Q,j}\\circ T_{R\\to D}=W^R_{Q,j}\\ \\ \\forall j\\in J_Q",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 14",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DERIVATION: witness-preserving Cross-Domain Objection bridge; directly patterned on Toledo weld/M.02.v1. It connects a theorem's native state space to the effort domain and requires preservation of every distinction the theorem is being used to constrain.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "5. Cross-Domain Objection License: A Larger Filtration Is Not Yet a Larger Explanation",
+    "page": 3,
+    "label": "Eq. 14"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW DERIVATION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DERIVATION: witness-preserving Cross-Domain Objection bridge; directly patterned on Toledo weld/M.02.v1. It connects a theorem's native state space to the effort domain and requires preservation of every distinction the theorem is being used to constrain.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-15",
+   "code": "weld/M.21.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.15"
+   ],
+   "name": "Effort v0.3 Eq.15: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "CDOL_Q(\\mathcal{R}\\to D) = \\mathsf{PASS} \\iff \\exists\\, T_{R\\to D} : \\text{Eq.\\ (14) holds}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "CDOL_Q(\\mathcal{R}\\to D) = \\mathsf{PASS} \\iff \\exists\\, T_{R\\to D} : \\text{Eq.\\ (14) holds}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 15",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Witness-Preserving Cross-Domain Objection License; rooted in Toledo domain-weld admissibility.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "5. Cross-Domain Objection License: A Larger Filtration Is Not Yet a Larger Explanation",
+    "page": 3,
+    "label": "Eq. 15"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Witness-Preserving Cross-Domain Objection License; rooted in Toledo domain-weld admissibility.]",
+   "drift_note": "Rooted in Eq. 14 (this same batch); parent resolved through the chain to Eq.14's own Toledo anchor. Note text itself is split across the page 3/4 boundary in the source PDF; the equation displays on page 3, the closing words of the bracket note print at the top of page 4."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-16",
+   "code": "weld/M.22.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.16"
+   ],
+   "name": "Effort v0.3 Eq.16: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "ECT_Q(e_n) \\in \\{E_0, E_1, E_2, E_3, E_4, \\mathsf{HOLD}\\}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "ECT_Q(e_n) \\in \\{E_0, E_1, E_2, E_3, E_4, \\mathsf{HOLD}\\}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 16",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Toledo domain typing and interpreted through Readout Universe's claim-boundary discipline; connects finite evidence to an event-control regime without forcing classification when the readout cannot support one.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "6. Event-Control Typing With a Legitimate HOLD State",
+    "page": 4,
+    "label": "Eq. 16"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: rooted in Toledo domain typing and interpreted through Readout Universe's claim-boundary discipline; connects finite evidence to an event-control regime without forcing classification when the readout cannot support one.]",
+   "drift_note": "Note names the concept 'Toledo domain typing' rather than a literal code; mapped to weld/M.02.v1 (domain admissibility, the closest existing Toledo object governing domain-typed translation) as best available anchor. Reviewer should confirm this is the intended anchor rather than the EQ_CODE_SCHEME.md domain-letter scheme itself, which carries no Toledo equation code of its own."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-18",
+   "code": "weld/M.23.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.18"
+   ],
+   "name": "Effort v0.3 Eq.18: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "SID_Q(n,m) \\in \\{\\mathsf{SAME}_{mech}, \\mathsf{EQUIV}_Q, \\mathsf{DIFF}_Q, \\mathsf{HOLD}\\}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "SID_Q(n,m) \\in \\{\\mathsf{SAME}_{mech}, \\mathsf{EQUIV}_Q, \\mathsf{DIFF}_Q, \\mathsf{HOLD}\\}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 18",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Toledo finite reader-equivalence; connects direct mechanism evidence, finite readout equivalence, distinguishability, and unresolved comparison without collapsing them.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "7. Source Identity Is Not Trial Identity",
+    "page": 4,
+    "label": "Eq. 18"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: rooted in Toledo finite reader-equivalence; connects direct mechanism evidence, finite readout equivalence, distinguishability, and unresolved comparison without collapsing them.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-19",
+   "code": "weld/M.24.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.19"
+   ],
+   "name": "Effort v0.3 Eq.19: NEW PROPOSITION",
+   "statement": {
+    "latest": "SID_Q(n,m) = \\mathsf{EQUIV}_Q \\;\\not\\Rightarrow\\; \\mathcal{G}_n = \\mathcal{G}_m",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "SID_Q(n,m) = \\mathsf{EQUIV}_Q \\;\\not\\Rightarrow\\; \\mathcal{G}_n = \\mathcal{G}_m",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 19",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW PROPOSITION: rooted in the limited scope of finite reader-equivalence; connects observational/source equivalence to a prohibition on claiming hidden identity.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "7. Source Identity Is Not Trial Identity",
+    "page": 4,
+    "label": "Eq. 19"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW PROPOSITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW PROPOSITION: rooted in the limited scope of finite reader-equivalence; connects observational/source equivalence to a prohibition on claiming hidden identity.]",
+   "drift_note": "Rooted in Eq. 18 (this same batch); parent resolved through the chain to Eq.18's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-20",
+   "code": "weld/H.14.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.20"
+   ],
+   "name": "Effort v0.3 Eq.20: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "A_n^Q := q_A(S_n, T_n, c_n; Q)",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "A_n^Q := q_A(S_n, T_n, c_n; Q)",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 20",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Toledo state/history plus domain translation; connects retained state and history to a task-relative effective agent without reducing the agent to propositional knowledge alone.]"
+    },
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Toledo state/history plus domain translation; connects retained state and history to a task-relative effective agent without reducing the agent to propositional knowledge alone.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8. The Effective Agent and the Positive Separation of Encounters",
+    "page": 4,
+    "label": "Eq. 20"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: rooted in Toledo state/history plus domain translation; connects retained state and history to a task-relative effective agent without reducing the agent to propositional knowledge alone.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-21",
+   "code": "weld/H.15.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.21"
+   ],
+   "name": "Effort v0.3 Eq.21: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "\\mathfrak{I}_n^Q := \\mathfrak{I}_Q(\\mathcal{G}_n, A_n^Q, c_n)",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathfrak{I}_n^Q := \\mathfrak{I}_Q(\\mathcal{G}_n, A_n^Q, c_n)",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 21",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Toledo domain-weld and Readout Genesis relational interpretation; connects world-side source, effective agent, and context into the task-relative agent-world encounter.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8. The Effective Agent and the Positive Separation of Encounters",
+    "page": 5,
+    "label": "Eq. 21"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: rooted in Toledo domain-weld and Readout Genesis relational interpretation; connects world-side source, effective agent, and context into the task-relative agent-world encounter.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-22",
+   "code": "weld/H.16.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.22"
+   ],
+   "name": "Effort v0.3 Eq.22: NEW DERIVATION",
+   "statement": {
+    "latest": "SameTrial_Q(n,m)=1 \\iff SID_Q(n,m)\\in\\{\\mathsf{SAME}_{mech},\\mathsf{EQUIV}_Q\\},\\ A_n^Q \\sim_Q A_m^Q,\\ \\mathfrak{I}_n^Q \\sim_Q \\mathfrak{I}_m^Q",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "SameTrial_Q(n,m)=1 \\iff SID_Q(n,m)\\in\\{\\mathsf{SAME}_{mech},\\mathsf{EQUIV}_Q\\},\\ A_n^Q \\sim_Q A_m^Q,\\ \\mathfrak{I}_n^Q \\sim_Q \\mathfrak{I}_m^Q",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 22",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DERIVATION: rooted in Toledo finite reader-equivalence plus Eqs. 18, 20, and 21; connects world-side sameness to agent-side and interaction-side sameness.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8. The Effective Agent and the Positive Separation of Encounters",
+    "page": 5,
+    "label": "Eq. 22"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW DERIVATION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DERIVATION: rooted in Toledo finite reader-equivalence plus Eqs. 18, 20, and 21; connects world-side sameness to agent-side and interaction-side sameness.]",
+   "drift_note": "Also rooted in Eqs. 18, 20 and 21 (this same batch); all resolve to root weld."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-23",
+   "code": "weld/H.17.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.23"
+   ],
+   "name": "Effort v0.3 Eq.23: NEW NON-COLLAPSE",
+   "statement": {
+    "latest": "\\text{same source readout} \\not\\Rightarrow \\text{same effective agent} \\not\\Rightarrow \\text{same encounter}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\text{same source readout} \\not\\Rightarrow \\text{same effective agent} \\not\\Rightarrow \\text{same encounter}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 23",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW NON-COLLAPSE: rooted in Eq. 22; formalizes the claim that the dice may be the same while the task-relevant experiment is not.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8. The Effective Agent and the Positive Separation of Encounters",
+    "page": 5,
+    "label": "Eq. 23"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW NON-COLLAPSE",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW NON-COLLAPSE: rooted in Eq. 22; formalizes the claim that the dice may be the same while the task-relevant experiment is not.]",
+   "drift_note": "Rooted in Eq. 22 (this same batch); parent resolved through the chain to Eq.22's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-24",
+   "code": "weld/H.18.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.24"
+   ],
+   "name": "Effort v0.3 Eq.24: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "ISW_Q(\\mathcal{G},A,A';c) = \\mathsf{PASS} \\iff d_I^Q\\big(O_I^Q\\,\\mathfrak{I}_Q(\\mathcal{G},A,c),\\, O_I^Q\\,\\mathfrak{I}_Q(\\mathcal{G},A',c)\\big) > \\tau_I",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "ISW_Q(\\mathcal{G},A,A';c) = \\mathsf{PASS} \\iff d_I^Q\\big(O_I^Q\\,\\mathfrak{I}_Q(\\mathcal{G},A,c),\\, O_I^Q\\,\\mathfrak{I}_Q(\\mathcal{G},A',c)\\big) > \\tau_I",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 24",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Interaction-Sensitivity Witness; rooted in Eq. 21. It connects a retained agent-side distinction to a material, preregistered difference in the next interaction instead of presuming that every internal change matters.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8.1 Interaction-Sensitivity Witness",
+    "page": 5,
+    "label": "Eq. 24"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Interaction-Sensitivity Witness; rooted in Eq. 21. It connects a retained agent-side distinction to a material, preregistered difference in the next interaction instead of presuming that every internal change matters.]",
+   "drift_note": "Rooted in Eq. 21 (this same batch); parent resolved through the chain to Eq.21's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-25",
+   "code": "weld/H.19.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.25"
+   ],
+   "name": "Effort v0.3 Eq.25: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "SID_Q(n,n{+}1)=\\mathsf{SAME}_{mech},\\quad A_{n+1}^Q \\not\\sim_Q A_n^Q,\\quad ISW_Q(\\mathcal{G}_n, A_n^Q, A_{n+1}^Q; c_n) = \\mathsf{PASS}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "SID_Q(n,n{+}1)=\\mathsf{SAME}_{mech},\\quad A_{n+1}^Q \\not\\sim_Q A_n^Q,\\quad ISW_Q(\\mathcal{G}_n, A_n^Q, A_{n+1}^Q; c_n) = \\mathsf{PASS}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 25",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Positive Separation premises; rooted in source identity, effective-agent difference, and Eq. 24.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8.2 Positive Source-Held Interaction-Separation Proposition",
+    "page": 5,
+    "label": "Eq. 25"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Positive Separation premises; rooted in source identity, effective-agent difference, and Eq. 24.]",
+   "drift_note": "Rooted in Eqs. 18/20/21/24 (this same batch, via 'source identity, effective-agent difference, and Eq. 24'); parent resolved through the chain to root weld."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-26",
+   "code": "weld/H.20.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.26"
+   ],
+   "name": "Effort v0.3 Eq.26: NEW PROPOSITION",
+   "statement": {
+    "latest": "\\mathfrak{I}_{n+1}^Q \\not\\sim_Q \\mathfrak{I}_n^Q",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathfrak{I}_{n+1}^Q \\not\\sim_Q \\mathfrak{I}_n^Q",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 26",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld",
+     "derived_via": "refines",
+     "evidence": "[NEW PROPOSITION: Positive Source-Held Interaction-Separation Proposition; rooted in Eqs. 21, 24, and 25. It is the positive form of the changed-agent thesis: under a held source, retained agent change becomes load-bearing only when a task reader detects interaction sensitivity.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8.2 Positive Source-Held Interaction-Separation Proposition",
+    "page": 6,
+    "label": "Eq. 26"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW PROPOSITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW PROPOSITION: Positive Source-Held Interaction-Separation Proposition; rooted in Eqs. 21, 24, and 25. It is the positive form of the changed-agent thesis: under a held source, retained agent change becomes load-bearing only when a task reader detects interaction sensitivity.]",
+   "drift_note": "Rooted in Eqs. 21, 24 and 25 (this same batch); parent resolved through the chain to root weld."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-27",
+   "code": "weld/H.21.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.27"
+   ],
+   "name": "Effort v0.3 Eq.27: NEW PROPOSITION",
+   "statement": {
+    "latest": "SID_Q(n,n{+}1)=\\mathsf{SAME}_{mech},\\ A_{n+1}^Q \\not\\sim_Q A_n^Q,\\ ISW_Q(\\mathcal{G}_n, A_n^Q, A_{n+1}^Q; c_n) = \\mathsf{FAIL} \\;\\Rightarrow\\; \\text{no changed-agent credit for } \\mathfrak{I}^Q",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "SID_Q(n,n{+}1)=\\mathsf{SAME}_{mech},\\ A_{n+1}^Q \\not\\sim_Q A_n^Q,\\ ISW_Q(\\mathcal{G}_n, A_n^Q, A_{n+1}^Q; c_n) = \\mathsf{FAIL} \\;\\Rightarrow\\; \\text{no changed-agent credit for } \\mathfrak{I}^Q",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 27",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld",
+     "derived_via": "refines",
+     "evidence": "[NEW PROPOSITION: Interaction-separation falsifier; rooted in Eq. 24. It prevents internal transformation from becoming an unfalsifiable explanation of external divergence.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "8.2 Positive Source-Held Interaction-Separation Proposition",
+    "page": 6,
+    "label": "Eq. 27"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW PROPOSITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW PROPOSITION: Interaction-separation falsifier; rooted in Eq. 24. It prevents internal transformation from becoming an unfalsifiable explanation of external divergence.]",
+   "drift_note": "Rooted in Eq. 24 (this same batch); parent resolved through the chain to Eq.24's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-28",
+   "code": "EQ-015/H.38.v1",
+   "root": "EQ-015",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.28"
+   ],
+   "name": "Effort v0.3 Eq.28: NEW DERIVATION",
+   "statement": {
+    "latest": "Y_{n+1}^{world} \\to O_Q \\to \\mu_{n+1}^Q \\to E_{n+1}^Q \\to \\mathrm{Retain}_Q \\to A_{n+1}^Q",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "Y_{n+1}^{world} \\to O_Q \\to \\mu_{n+1}^Q \\to E_{n+1}^Q \\to \\mathrm{Retain}_Q \\to A_{n+1}^Q",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 28",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/M.03.v1",
+     "derived_via": "special_case_of",
+     "evidence": "[NEW DERIVATION: effort-domain specialization of Toledo constitutional ordering; connects world consequence to readout, meaning/experience, retention, and the next effective agent.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "9. From Returned Consequence to Revision, Learning, and Improvement",
+    "page": 6,
+    "label": "Eq. 28"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW DERIVATION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DERIVATION: effort-domain specialization of Toledo constitutional ordering; connects world consequence to readout, meaning/experience, retention, and the next effective agent.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-29",
+   "code": "EQ-015/H.39.v1",
+   "root": "EQ-015",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.29"
+   ],
+   "name": "Effort v0.3 Eq.29: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "RB_Q(n) = 1 \\iff A_{n+1}^Q \\not\\sim_Q A_n^Q",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "RB_Q(n) = 1 \\iff A_{n+1}^Q \\not\\sim_Q A_n^Q",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 29",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in Eq. 28; connects retained task-relevant change to retry without yet calling that change learning or improvement.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "9. From Returned Consequence to Revision, Learning, and Improvement",
+    "page": 6,
+    "label": "Eq. 29"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: rooted in Eq. 28; connects retained task-relevant change to retry without yet calling that change learning or improvement.]",
+   "drift_note": "Rooted in Eq. 28 (this same batch); parent resolved through the chain to Eq.28's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-30",
+   "code": "A.5/H.20.v1",
+   "root": "A.5",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.30"
+   ],
+   "name": "Effort v0.3 Eq.30: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "LC_Q(n) = \\mathsf{PASS} \\iff RB_Q(n)=1 \\wedge \\Lambda_Q(n) = \\mathsf{PASS}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "LC_Q(n) = \\mathsf{PASS} \\iff RB_Q(n)=1 \\wedge \\Lambda_Q(n) = \\mathsf{PASS}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 30",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "A.5/H.09.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Learning Certification Gate; rooted in Toledo Exposure ≠ Retention ≠ Improvement and Eq. 29; connects retained change to domain-warranted learning evidence.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "9. From Returned Consequence to Revision, Learning, and Improvement",
+    "page": 6,
+    "label": "Eq. 30"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Learning Certification Gate; rooted in Toledo Exposure ≠ Retention ≠ Improvement and Eq. 29; connects retained change to domain-warranted learning evidence.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-31",
+   "code": "A.5/H.21.v1",
+   "root": "A.5",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.31"
+   ],
+   "name": "Effort v0.3 Eq.31: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "IC_Q(n) = \\mathsf{PASS} \\iff LC_Q(n) = \\mathsf{PASS} \\wedge \\Gamma_Q(n) > \\tau_G",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "IC_Q(n) = \\mathsf{PASS} \\iff LC_Q(n) = \\mathsf{PASS} \\wedge \\Gamma_Q(n) > \\tau_G",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 31",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "A.5/H.09.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Improvement Certification Gate; rooted in Toledo's Exposure/Retention/Improvement non-collapse. It connects certified learning to a separately witnessed task improvement rather than treating learning as automatically beneficial.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "9. From Returned Consequence to Revision, Learning, and Improvement",
+    "page": 6,
+    "label": "Eq. 31"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Improvement Certification Gate; rooted in Toledo's Exposure/Retention/Improvement non-collapse. It connects certified learning to a separately witnessed task improvement rather than treating learning as automatically beneficial.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-32",
+   "code": "A.5/H.22.v1",
+   "root": "A.5",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.32"
+   ],
+   "name": "Effort v0.3 Eq.32: NEW NON-COLLAPSE",
+   "statement": {
+    "latest": "\\text{Exposure} \\neq \\text{Retained Revision} \\neq \\text{Certified Learning} \\neq \\text{Improvement}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\text{Exposure} \\neq \\text{Retained Revision} \\neq \\text{Certified Learning} \\neq \\text{Improvement}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 32",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "A.5/H.09.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW NON-COLLAPSE: rooted in Toledo A.5/H.09.v1 and Eqs. 29–31; expands the original non-collapse without replacing it.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "9. From Returned Consequence to Revision, Learning, and Improvement",
+    "page": 6,
+    "label": "Eq. 32"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW NON-COLLAPSE",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW NON-COLLAPSE: rooted in Toledo A.5/H.09.v1 and Eqs. 29–31; expands the original non-collapse without replacing it.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-33",
+   "code": "weld/M.25.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.33"
+   ],
+   "name": "Effort v0.3 Eq.33: NEW DERIVATION",
+   "statement": {
+    "latest": "ERG_D = \\mathsf{PASS} \\iff \\exists\\, u_a,u_b \\in \\mathcal{U}_D^{adm} : d_Q\\big(R_D(s,u_a), R_D(s,u_b)\\big) > \\tau_E",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "ERG_D = \\mathsf{PASS} \\iff \\exists\\, u_a,u_b \\in \\mathcal{U}_D^{adm} : d_Q\\big(R_D(s,u_a), R_D(s,u_b)\\big) > \\tau_E",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 33",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW DERIVATION: strengthened Effort-Relevance Gate; rooted in Toledo stepper/domain-weld/reader-weld. It connects admissible variation in focal control to a task-relevant readout difference above a declared materiality threshold.]"
+    },
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW DERIVATION: strengthened Effort-Relevance Gate; rooted in Toledo stepper/domain-weld/reader-weld. It connects admissible variation in focal control to a task-relevant readout difference above a declared materiality threshold.]"
+    },
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW DERIVATION: strengthened Effort-Relevance Gate; rooted in Toledo stepper/domain-weld/reader-weld. It connects admissible variation in focal control to a task-relevant readout difference above a declared materiality threshold.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "10. Effort Relevance: Sensitivity Before Causality, Identification Before Credit",
+    "page": 6,
+    "label": "Eq. 33"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW DERIVATION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DERIVATION: strengthened Effort-Relevance Gate; rooted in Toledo stepper/domain-weld/reader-weld. It connects admissible variation in focal control to a task-relevant readout difference above a declared materiality threshold.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-34",
+   "code": "weld/M.26.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.34"
+   ],
+   "name": "Effort v0.3 Eq.34: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "CER_Q = \\mathsf{PASS} \\iff ERG_D = \\mathsf{PASS} \\wedge ID_Q(u \\to Y) = \\mathsf{PASS}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "CER_Q = \\mathsf{PASS} \\iff ERG_D = \\mathsf{PASS} \\wedge ID_Q(u \\to Y) = \\mathsf{PASS}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 34",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Causal Effort-Relevance Certificate; rooted mathematically in Eq. 33, with epistemic admissibility interpreted through Readout Universe and the programme's falsifier discipline.]"
+    },
+    {
+     "code": "weld/M.02.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Causal Effort-Relevance Certificate; rooted mathematically in Eq. 33, with epistemic admissibility interpreted through Readout Universe and the programme's falsifier discipline.]"
+    },
+    {
+     "code": "weld/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: Causal Effort-Relevance Certificate; rooted mathematically in Eq. 33, with epistemic admissibility interpreted through Readout Universe and the programme's falsifier discipline.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "10. Effort Relevance: Sensitivity Before Causality, Identification Before Credit",
+    "page": 7,
+    "label": "Eq. 34"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: Causal Effort-Relevance Certificate; rooted mathematically in Eq. 33, with epistemic admissibility interpreted through Readout Universe and the programme's falsifier discipline.]",
+   "drift_note": "Rooted in Eq. 33 (this same batch); parent resolved through the chain to Eq.33's own Toledo anchor."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-35",
+   "code": "A.5/H.23.v1",
+   "root": "A.5",
+   "layer": "reading",
+   "domain": "H",
+   "aliases": [
+    "Effort-v0.3:eq.35"
+   ],
+   "name": "Effort v0.3 Eq.35: NEW NON-COLLAPSE",
+   "statement": {
+    "latest": "V_n^{learn}(u) \\not\\equiv V_n^{act}(u)",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "V_n^{learn}(u) \\not\\equiv V_n^{act}(u)",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 35",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "A.5/H.09.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW NON-COLLAPSE: rooted internally in Exposure ≠ Retention ≠ Improvement and sharpened by the external bandit comparison; separates information/learning value from instrumental action value so that “no new learning” need not imply “stop.”]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "11.2 Bandits: action value and information value are already distinct",
+    "page": 7,
+    "label": "Eq. 35"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW NON-COLLAPSE",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW NON-COLLAPSE: rooted internally in Exposure ≠ Retention ≠ Improvement and sharpened by the external bandit comparison; separates information/learning value from instrumental action value so that “no new learning” need not imply “stop.”]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-36",
+   "code": "weld/M.27.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.36"
+   ],
+   "name": "Effort v0.3 Eq.36: NEW DOMAIN DEFINITION",
+   "statement": {
+    "latest": "\\mathbf{C}_n(u) = \\big(C_n^{int}(u),\\, C_n^{ext}(u),\\, C_n^{opp}(u),\\, C_n^{risk}(u)\\big)",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathbf{C}_n(u) = \\big(C_n^{int}(u),\\, C_n^{ext}(u),\\, C_n^{opp}(u),\\, C_n^{risk}(u)\\big)",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 36",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW DOMAIN DEFINITION: rooted in the finite-budget lineage retained from v0.1; connects internal burden, external expenditure, opportunity cost, and risk without assuming commensurability.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "12. Cost, Risk, and Viability: Effort Is Not an Infinite Resource",
+    "page": 7,
+    "label": "Eq. 36"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW DOMAIN DEFINITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DOMAIN DEFINITION: rooted in the finite-budget lineage retained from v0.1; connects internal burden, external expenditure, opportunity cost, and risk without assuming commensurability.]",
+   "drift_note": "No Toledo code or Toledo-named concept is cited in this note at all -- the only cited anchor is the paper's own prior version ('v0.1'), which is not itself a Toledo registry object. Mapped by default to weld/M.01.v1 (the paper's declared mathematical anchor, Section 2) purely as a placeholder anchor; this is the extractor's own inference, not something the paper states, and should be treated as weakly evidenced until a human reviewer confirms or replaces it."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-37",
+   "code": "weld/M.28.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.37"
+   ],
+   "name": "Effort v0.3 Eq.37: NEW DERIVATION",
+   "statement": {
+    "latest": "\\mathcal{U}_{n+1}^{safe} := \\Big\\{ u \\in \\mathcal{U}_D^{adm} : \\mathbf{C}_n(u) \\preceq \\mathbf{B}_n,\\ \\mathbb{P}\\big(\\tau_{V_D^c} \\le H \\mid \\mathcal{F}_n, u\\big) \\le \\alpha \\Big\\}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathcal{U}_{n+1}^{safe} := \\Big\\{ u \\in \\mathcal{U}_D^{adm} : \\mathbf{C}_n(u) \\preceq \\mathbf{B}_n,\\ \\mathbb{P}\\big(\\tau_{V_D^c} \\le H \\mid \\mathcal{F}_n, u\\big) \\le \\alpha \\Big\\}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 37",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW DERIVATION: risk-aware continuation set; rooted in the Toledo stepper plus finite-budget/viability lineage and explicitly adapted to stochastic settings after the v0.1 one-step deterministic critique.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "12. Cost, Risk, and Viability: Effort Is Not an Infinite Resource",
+    "page": 7,
+    "label": "Eq. 37"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW DERIVATION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW DERIVATION: risk-aware continuation set; rooted in the Toledo stepper plus finite-budget/viability lineage and explicitly adapted to stochastic settings after the v0.1 one-step deterministic critique.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-38",
+   "code": "weld/M.29.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.38"
+   ],
+   "name": "Effort v0.3 Eq.38: NEW SYNTHESIS",
+   "statement": {
+    "latest": "\\mathrm{Route}_Q(e_n) = \\begin{cases} \\mathcal{A}_M, & ECT_Q(e_n)=E_0,\\\\ \\mathcal{A}_B, & ECT_Q(e_n)=E_1,\\\\ \\mathcal{A}_P, & ECT_Q(e_n)=E_2,\\\\ \\mathcal{A}_G, & ECT_Q(e_n)=E_3,\\\\ \\mathcal{A}_X, & ECT_Q(e_n)=E_4,\\\\ \\mathsf{HOLD}, & ECT_Q(e_n)=\\mathsf{HOLD}. \\end{cases}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathrm{Route}_Q(e_n) = \\begin{cases} \\mathcal{A}_M, & ECT_Q(e_n)=E_0,\\\\ \\mathcal{A}_B, & ECT_Q(e_n)=E_1,\\\\ \\mathcal{A}_P, & ECT_Q(e_n)=E_2,\\\\ \\mathcal{A}_G, & ECT_Q(e_n)=E_3,\\\\ \\mathcal{A}_X, & ECT_Q(e_n)=E_4,\\\\ \\mathsf{HOLD}, & ECT_Q(e_n)=\\mathsf{HOLD}. \\end{cases}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 38",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld",
+     "derived_via": "reads",
+     "evidence": "[NEW SYNTHESIS: regime router; rooted in the Event-Control Type and the Toledo domain-weld principle. The adapters are external mathematics; the routing architecture is new.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "13. Continue, Switch, Stop, or HOLD",
+    "page": 7,
+    "label": "Eq. 38"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW SYNTHESIS",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW SYNTHESIS: regime router; rooted in the Event-Control Type and the Toledo domain-weld principle. The adapters are external mathematics; the routing architecture is new.]",
+   "drift_note": "Also rooted in Eq. 16 (Event-Control Type, this same batch), which resolves to root weld."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-39",
+   "code": "weld/M.30.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.39"
+   ],
+   "name": "Effort v0.3 Eq.39: NEW SYNTHESIS",
+   "statement": {
+    "latest": "D_{n+1} = \\begin{cases} \\mathsf{HOLD}, & \\mathrm{Route}_Q(e_n)=\\mathsf{HOLD},\\\\ \\mathsf{STOP}, & \\mathcal{U}_{n+1}^{safe}=\\varnothing,\\\\ \\mathcal{D}_n^{\\star}, & \\text{otherwise.} \\end{cases}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "D_{n+1} = \\begin{cases} \\mathsf{HOLD}, & \\mathrm{Route}_Q(e_n)=\\mathsf{HOLD},\\\\ \\mathsf{STOP}, & \\mathcal{U}_{n+1}^{safe}=\\varnothing,\\\\ \\mathcal{D}_n^{\\star}, & \\text{otherwise.} \\end{cases}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 39",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW SYNTHESIS: rooted in Eqs. 35, 37, and 38; connects epistemic typing to adapter-specific continuation, switching, or stopping without pretending that one heuristic is universally optimal.]"
+    },
+    {
+     "code": "weld",
+     "derived_via": "reads",
+     "evidence": "[NEW SYNTHESIS: rooted in Eqs. 35, 37, and 38; connects epistemic typing to adapter-specific continuation, switching, or stopping without pretending that one heuristic is universally optimal.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "13. Continue, Switch, Stop, or HOLD",
+    "page": 8,
+    "label": "Eq. 39"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW SYNTHESIS",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW SYNTHESIS: rooted in Eqs. 35, 37, and 38; connects epistemic typing to adapter-specific continuation, switching, or stopping without pretending that one heuristic is universally optimal.]",
+   "drift_note": "Also rooted in Eq. 35 (root A.5, this same batch); primary root taken as weld since two of the three cited equations (37, 38) resolve there."
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-40",
+   "code": "weld/M.31.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.40"
+   ],
+   "name": "Effort v0.3 Eq.40: NEW PROPOSITION",
+   "statement": {
+    "latest": "\\mathcal{U}_{n+1}^{safe} = \\varnothing \\;\\Rightarrow\\; \\mathsf{STOP}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\mathcal{U}_{n+1}^{safe} = \\varnothing \\;\\Rightarrow\\; \\mathsf{STOP}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 40",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "refines",
+     "evidence": "[NEW PROPOSITION: sufficient, not necessary, stop condition; rooted in Eq. 37.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "13. Continue, Switch, Stop, or HOLD",
+    "page": 8,
+    "label": "Eq. 40"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "NEW PROPOSITION",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW PROPOSITION: sufficient, not necessary, stop condition; rooted in Eq. 37.]"
+  },
+  {
+   "id": "PROP-EFFORT-v0.3-41",
+   "code": "weld/M.32.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "Effort-v0.3:eq.41"
+   ],
+   "name": "Effort v0.3 Eq.41: NEW SYNTHESIS",
+   "statement": {
+    "latest": "\\text{Event} \\to \\text{Readout} \\to \\text{Conditional/Strong Stochastic License} \\to \\text{Event-Control Type} \\to \\text{Witness-Preserving Bridge} \\to \\text{Interaction Sensitivity} \\to \\text{Retention/Learning} \\to \\text{Changed Agent} \\to \\text{Mathematical Adapter} \\to \\text{Cost/Risk/Viability} \\to \\{\\mathsf{CONTINUE}, \\mathsf{SWITCH}, \\mathsf{STOP}, \\mathsf{HOLD}\\}",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\text{Event} \\to \\text{Readout} \\to \\text{Conditional/Strong Stochastic License} \\to \\text{Event-Control Type} \\to \\text{Witness-Preserving Bridge} \\to \\text{Interaction Sensitivity} \\to \\text{Retention/Learning} \\to \\text{Changed Agent} \\to \\text{Mathematical Adapter} \\to \\text{Cost/Risk/Viability} \\to \\{\\mathsf{CONTINUE}, \\mathsf{SWITCH}, \\mathsf{STOP}, \\mathsf{HOLD}\\}",
+     "date": "2026-09-07",
+     "reason": "toledo-extractor: initial capture from Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3, Eq. 41",
+     "by": "toledo-extractor"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld",
+     "derived_via": "reads",
+     "evidence": "[NEW SYNTHESIS: v0.3 principal synthesis; anchored in v0.1 but adds stochastic-attribution and cross-domain-license layers before the previous retry/cost/stop architecture.]"
+    },
+    {
+     "code": "EQ-015/M.03.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW SYNTHESIS: v0.3 principal synthesis; anchored in v0.1 but adds stochastic-attribution and cross-domain-license layers before the previous retry/cost/stop architecture.]"
+    },
+    {
+     "code": "A.5/H.09.v1",
+     "derived_via": "reads",
+     "evidence": "[NEW SYNTHESIS: v0.3 principal synthesis; anchored in v0.1 but adds stochastic-attribution and cross-domain-license layers before the previous retry/cost/stop architecture.]"
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Effort Across Stochastic, Controlled, and Adaptive Worlds v0.3",
+    "repo_anchor": null,
+    "record_id": 22622206,
+    "doi": "10.5281/zenodo.22622206",
+    "section": "16. The Full Attack-First Architecture",
+    "page": 9,
+    "label": "Eq. 41"
+   },
+   "status": "current",
+   "tier": "Definition",
+   "tier_in_genesis_verbatim": "NEW SYNTHESIS",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": true
+   },
+   "relations": [],
+   "occurrences": [],
+   "role": "other",
+   "first_assigned": "2026-09-07",
+   "provenance_note_verbatim": "[NEW SYNTHESIS: v0.3 principal synthesis; anchored in v0.1 but adds stochastic-attribution and cross-domain-license layers before the previous retry/cost/stop architecture.]",
+   "drift_note": "'Rooted in ... all above' per the paper's own Appendix A ledger row for Eq.41; listed parents are the three distinct Toledo roots (weld, EQ-015, A.5) touched by the equations this synthesis assembles. Root field set to weld as the paper's own declared mathematical anchor (Section 2 title)."
+  }
+ ],
+ "deposit": {
+  "record_id": 22622206,
+  "doi": "10.5281/zenodo.22622206",
+  "concept_doi": "10.5281/zenodo.22622205",
+  "date": "2026-09-07"
+ }
+}
