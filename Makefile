@@ -1,9 +1,15 @@
-.PHONY: coq verify library test build site catalogue
+.PHONY: coq verify library test build site catalogue mcp
 
 coq: ; cd coq/master-river && coq_makefile -f _CoqProject -o Makefile >/dev/null && $(MAKE) -s
 verify: coq ; cd coq/master-river && bash verify.sh | tail -1
 library: ; python3 scripts/build_eq_library.py
 test: ; python3 -m pytest -q tests
+
+# MCP server (mcp/toledo_mcp/) — fast search/status/lookup over the registry
+# files for any MCP-capable agent, stdio transport. Founder rule: look an
+# equation up here before using it. Requires the `mcp` package
+# (mcp/requirements-mcp.txt); everything else it uses is the stdlib.
+mcp: ; python3 mcp/toledo_mcp/server.py
 
 # GENERATOR + TOOLING layer (registry/CANONICAL.json + registry/genesis_root.json
 # -> registry/entries, registry/TOLEDO.json, graph/, site/index.json, vault/, latex/catalogue_body.tex)
