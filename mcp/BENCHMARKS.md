@@ -428,7 +428,7 @@ blindly.
 
 ## 2026-09-07 (later still) — MCP cold-start prebuilt index (DEBT #48, lane E)
 
-DEBT #48 (`ops/TODOLIST_snapshot_2026-09-07.md` / `cpg/notebook/TODOLIST`):
+DEBT #48 (`ops/TODOLIST_snapshot_2026-09-07.md` / solver arc (private)notebook/TODOLIST`):
 "MCP: p50 cold start 1.2 s could use a prebuilt index shipped in the
 release." Root cause found by reading the actual code path, not guessed:
 `cache.RegistryCache.ensure_fresh()` called `index.build_index()`

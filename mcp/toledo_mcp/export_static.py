@@ -67,6 +67,15 @@ DISCLOSURE = (
     "never treat this as authoritative for a release-sensitive task"
 )
 
+# Resistance Ladder (design/RESISTANCE_LADDER_v0_1.md sec.1, S3): the fixed
+# R0-R6 rung order every entry's `resistance.rungs` dict (when present) is
+# keyed by. `resistance` itself is computed and written exclusively by
+# scripts/compute_resistance.py into registry/CANONICAL.json /
+# registry/genesis_root.json — this module never computes a rung, only
+# reads whatever the registry already carries (same "propagate, never
+# recompute" rule scripts/toledo_build.py follows for the same field).
+_RESISTANCE_RUNG_ORDER = ["R0", "R1", "R2", "R3", "R4", "R5", "R6"]
+
 _CITATION_VERSION_RE = re.compile(r'^version:\s*"?([^"\n]+)"?\s*$', re.MULTILINE)
 
 
@@ -125,6 +134,38 @@ def _verdict_rules_payload() -> dict:
             ),
         }
     return {"available": True, "statuses": sorted(known), "verdict_values": list(values), "rules": rules}
+
+
+def _resistance_summary(entries: list) -> dict:
+    """A corpus-wide tally of rungs HELD across every entry (design/
+    RESISTANCE_LADDER_v0_1.md sec.0's own "never a single number" principle,
+    applied at the static-API level the same way `counts.json` already
+    reports per-field breakdowns rather than one collapsed figure): a plain
+    per-rung count, never a percentage or a combined score. `entries_computed`
+    is how many entries carry a `resistance` block at all, distinguishing
+    "checked and unheld" from "not yet checked" (the same distinction
+    site/build_site.py's own resistance_coverage_html renders)."""
+    held_counts = {r: 0 for r in _RESISTANCE_RUNG_ORDER}
+    entries_computed = 0
+    for e in entries:
+        res = e.get("resistance")
+        if not res:
+            continue
+        entries_computed += 1
+        rungs = res.get("rungs") or {}
+        for r in _RESISTANCE_RUNG_ORDER:
+            if (rungs.get(r) or {}).get("held"):
+                held_counts[r] += 1
+    return {
+        "entries_total": len(entries),
+        "entries_with_resistance_computed": entries_computed,
+        "held_counts": held_counts,
+        "disclosure": (
+            "counts of entries HOLDING each rung, never a collapsed score; a rung not counted "
+            "here may be a genuinely unheld rung, or simply not yet computed for that entry — "
+            "see that entry's own resistance.rungs[<rung>].reason for which"
+        ),
+    }
 
 
 def _write_json(path: pathlib.Path, doc: object) -> None:
@@ -195,6 +236,7 @@ def export_static(out_dir: pathlib.Path, root: pathlib.Path | None = None) -> di
         f"{len(entries)} entries, generated {generated_at} from commit {generated_from_commit}.</p>"
         "<ul><li><a href=\"manifest.json\">v1/manifest.json</a></li>"
         "<li><a href=\"counts.json\">v1/counts.json</a></li>"
+        "<li><a href=\"resistance-summary.json\">v1/resistance-summary.json</a></li>"
         "<li><a href=\"verdict-rules.json\">v1/verdict-rules.json</a></li>"
         "<li><a href=\"search-index.json\">v1/search-index.json</a></li>"
         "<li>v1/entries/&lt;code&gt;.json, v1/by-root/, v1/by-domain/</li></ul>"
@@ -240,6 +282,15 @@ def export_static(out_dir: pathlib.Path, root: pathlib.Path | None = None) -> di
 
     # counts.json — same shape as the toledo_counts tool.
     emit("counts.json", c.counts())
+
+    # resistance-summary.json — corpus-wide rungs-held tally (S3, design/
+    # RESISTANCE_LADDER_v0_1.md sec.1/sec.5). Computed directly from the
+    # already-loaded `entries` (each entry's own `resistance` block, when
+    # scripts/compute_resistance.py has run) rather than via cache.py's SQL
+    # index, since that index's schema is owned by a different stream and
+    # does not carry this nested field — see _resistance_summary()'s
+    # docstring for why this stays a plain-Python tally over `entries`.
+    emit("resistance-summary.json", _resistance_summary(entries))
 
     # verdict-rules.json — the one file that "genuinely cannot go stale
     # relative to a registry edit" (mcp/DESIGN.md sec. 13), once available.

@@ -38,6 +38,14 @@ CODE_RE = re.compile(
 
 TIER_ENUM = {"Th_coqc", "finite_diagnostic", "Dr", "Open", "Definition", "Ax", "RETRACTED", "untagged"}
 
+# Resistance Ladder (design/RESISTANCE_LADDER_v0_1.md sec.1, S3) — the fixed
+# rung order every `resistance.rungs` dict is keyed by. Duplicated here
+# (rather than imported) deliberately: this script has no package import of
+# scripts/compute_resistance.py, matching this file's own "pure Python 3
+# stdlib" no-cross-script-import convention (see CODE_RE above, similarly
+# duplicated from registry/SCHEMA.md's code grammar).
+RUNG_ORDER = ["R0", "R1", "R2", "R3", "R4", "R5", "R6"]
+
 # A synthesized root row whose own `statement` text already quotes a literal Coq
 # `Axiom <name> : <Type>.` line (gate B2, 2026-09-07) — used by genesis_row_to_canonical()
 # to disclose that directly instead of defaulting it the same as an un-investigated row.
@@ -198,6 +206,17 @@ def genesis_row_to_canonical(row: dict, anchor: dict) -> dict:
         ],
         "role": row.get("role", "other"),
         "first_assigned": today(),
+        # Resistance Ladder (design/RESISTANCE_LADDER_v0_1.md sec.5, S3):
+        # PROPAGATED from the persisted row, never recomputed here — only
+        # scripts/compute_resistance.py computes/writes this block, into
+        # registry/genesis_root.json's own root_equations[] rows for a root
+        # like this one (registry/CANONICAL.json never stores an
+        # unpromoted root row, so that script writes the block directly
+        # into the row this function is reading `row` from). `None` when
+        # compute_resistance.py has not yet run against this checkout —
+        # rendered downstream as an honest "not yet computed" state, never
+        # as seven fabricated `held: false` rungs.
+        "resistance": row.get("resistance"),
     }
     return entry
 
@@ -337,6 +356,12 @@ def entry_to_jsonld(e: dict, build_commit: str | None, generated_at: str) -> dic
         "dateCreated": e.get("first_assigned"),
         "dateModified": generated_at,
         "coq": e.get("coq", {}),
+        # Resistance Ladder (design/RESISTANCE_LADDER_v0_1.md sec.5, S3):
+        # propagated verbatim from CANONICAL.json/genesis_root.json — this
+        # generator never computes it (scripts/compute_resistance.py owns
+        # that, exclusively). `None` means "not yet computed", never
+        # "every rung unheld".
+        "resistance": e.get("resistance"),
         "generated_from_commit": build_commit,
     }
     return doc
@@ -1204,6 +1229,8 @@ def run_build(canonical_path: pathlib.Path, genesis_path: pathlib.Path | None, o
 
     index_rows = []
     for e in entries:
+        resistance = e.get("resistance")
+        rungs = (resistance or {}).get("rungs", {})
         index_rows.append({
             "code": e["code"],
             "statement_plain": (e.get("statement") or {}).get("latest", ""),
@@ -1212,6 +1239,15 @@ def run_build(canonical_path: pathlib.Path, genesis_path: pathlib.Path | None, o
             "domain": e.get("domain"),
             "tier": e.get("tier"),
             "occurrences": len(e.get("occurrences", [])),
+            # Resistance Ladder (S3): a compact, search-index-friendly
+            # projection of the same `resistance` block carried in full on
+            # registry/entries/<code>.json and TOLEDO.json — the rungs held
+            # (a SUBSET of RUNG_ORDER, never a scalar), plus whether the
+            # ladder has been computed for this code at all. Propagation
+            # only; the held/unheld decision itself is made exclusively by
+            # scripts/compute_resistance.py.
+            "resistance_computed": resistance is not None,
+            "resistance_rungs_held": [r for r in RUNG_ORDER if rungs.get(r, {}).get("held")],
         })
     write_json(out_root / "site" / "index.json", {"generated_at": generated_at, "entries": index_rows})
 

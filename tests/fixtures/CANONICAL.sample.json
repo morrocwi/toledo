@@ -26,7 +26,19 @@
       "relations": [],
       "occurrences": [{"record_id": 1, "doi": "10.5281/zenodo.0", "label": "sample-root", "section": "sample", "raw_key": "1:sample-root"}],
       "role": "root-axiom",
-      "first_assigned": "2026-09-06"
+      "first_assigned": "2026-09-06",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {"held": true, "evidence": []},
+          "R1": {"held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"},
+          "R2": {"held": false, "evidence": [], "reason": "coq_status is 'not_yet_formalised' (not 'closed')"},
+          "R3": {"held": true, "evidence": [{"type": "reproduction_card", "repo": "glosa", "commit": "fixture0000", "path": "cases/repro/SAMPLE-0001.json", "id": "SAMPLE-0001"}]},
+          "R4": {"held": false, "evidence": [], "reason": "no external-oracle card (published_value/independent_implementation/public_dataset) with a filled result for this code"},
+          "R5": {"held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code"},
+          "R6": {"held": false, "evidence": [], "reason": "R4 not held"}
+        }
+      }
     },
     {
       "id": "CAN-000002",

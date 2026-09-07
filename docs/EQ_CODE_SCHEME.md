@@ -135,3 +135,53 @@ into `coq/canonical/` files is left to a later lane, same as the other 210
 v1.1. `registry/coq_map.json`'s own `codes[]` was updated for all 119 rows to
 cite the new reading codes, by evidence (file+identifier match against the
 same source line the reading's statement was copied from).
+
+## Root registry extension R2 (2026-09-08, information-discrete-math)
+
+Founder ruling 2026-09-08 (relayed in `ops/HANDOFF_OVERNIGHT_2026-09-06.md`,
+"2026-09-08 — Resistance ladder + Reproduction Ledger (founder ruling
+BBL-229)" section, context BBL-2026-09-07-229): IDM enters Toledo first,
+carrying its codes back into its own repo afterward (separate lane). Full
+sourcing, per-root evidence, and the phi-check quotes live in
+`registry/GENESIS_CODE_SCHEME.md`'s own dated addendum of the same name and
+on the 18 new rows of `registry/genesis_root.json`; this addendum states only
+the code-scheme consequences. `scripts/v16_idm_merge.py` applied the ruling,
+merging `registry/proposals/idm.json` — never touching CANONICAL entries or
+codes it did not itself create.
+
+**Roots added:** `delta_R`, `RD1`–`RD9`, `D`, `Z`, `Q`, `R`, `L_R`,
+`Keystone`, `A2`, `A3` (18 rows, `role: "root-extension"`) — every code is
+information-discrete-math's own verbatim identifier (public repo,
+`https://github.com/morrocwi/information-discrete-math`, MIT, commit
+`147fc92671f35eb102405fec913eb361dc41f966`). 3 of the 18 carry a real
+`parents` link to a Genesis code (`delta_R`→`EQ-001`, `L_R`→`EQ-008`,
+`Keystone`→`EQ-008`), each backed by a quoted textual match found by the
+proposal's own `phi_check` (`genesis_relations_asserted: 3`) — never
+guessed. The other 15 (`RD1`–`RD9`, `D`, `Z`, `Q`, `R`, `A2`, `A3`) carry
+`parents: []` with a disclosed `relations_note` (the R1 `CMC`-row exemption
+pattern): for `RD1`–`RD9`, the note reuses `registry/rd_root_map.json`'s own
+prior, already-adversarially-checked `NOT_SAME_OBJECT` verdict against every
+Genesis root row (IDM's own treatise states its RD1–RD9 are the same object
+as the mirror `rd_root_map.json` already checked, so that finding transfers
+rather than being redone); for `D`/`Z`/`Q`/`R`/`A2`/`A3`, the note records
+that no source text anywhere states a Genesis connection, so none is
+invented.
+
+**Readings added under these roots (Layer 1, same `<root>/<D>.<nn>.v1`
+grammar):** every one of the 274 identifiers in the 274/274-closed
+`coq/information-discrete-math/verify_report.json` mirror (`by_root`: `R` 40
+· `D` 80 · `Z` 23 · `L_R` 28 · `delta_R` 11 · `Q` 19 · `Keystone` 30 · `RD3` 1
+· `A2` 28 · `A3` 14 = 274), added by `scripts/v16_idm_merge.py`, `id`
+`IDM-0001`…`IDM-0274`. Domain letter `P` or `M` per the source file's own
+subject matter (the extractor's per-file assignment, 25 `P` / 249 `M`).
+`statement` carries `format: "coq"` — the literal Coq declaration. `tier` is
+`Th_coqc` for all 274 (`verify_report.json`: `theorems_total 274,
+theorems_closed 274, theorems_with_axioms 0` — never asserted above that
+Print Assumptions output). `coq.coq_status` is `"mapped_not_wrapped"` for all
+274, matching `registry/SCHEMA.md`'s own definition of that value — wrapping
+into `coq/canonical/` files is left to a later lane, same as R1's 119 and the
+other 210 `mapped_not_wrapped`/`wrapped_related` entries already carried
+over from earlier versions. `registry/coq_map.json`'s own `codes[]` was
+updated for all 274 rows (all 274 `source: "information-discrete-math"` rows
+were unmapped before this merge), by evidence (file+identifier match against
+the same source line the reading's statement was copied from).

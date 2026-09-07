@@ -11,12 +11,19 @@ test: ; python3 -m pytest -q tests
 # (mcp/requirements-mcp.txt); everything else it uses is the stdlib.
 mcp: ; python3 mcp/toledo_mcp/server.py
 
+# Resistance Ladder + Reproduction Ledger (S3, design/RESISTANCE_LADDER_v0_1.md,
+# founder ruling BBL-2026-09-07-229): computes/writes the `resistance` block into
+# registry/CANONICAL.json + registry/genesis_root.json IN PLACE (never touches any
+# other content field, never touches LINEAGE.jsonl). Must run BEFORE `build` below,
+# which only PROPAGATES this field — it never computes a rung itself.
+resistance: ; python3 scripts/compute_resistance.py
+
 # GENERATOR + TOOLING layer (registry/CANONICAL.json + registry/genesis_root.json
 # -> registry/entries, registry/TOLEDO.json, graph/, site/index.json, vault/, latex/catalogue_body.tex)
 # Also (re)builds mcp/state/index.sqlite3 (mcp/scripts/build_index.py, DEBT #48
 # lane E, 2026-09-07) so a release zip ships a prebuilt index instead of every
 # MCP cold start paying an avoidable rebuild — see mcp/BENCHMARKS.md.
-build: ; python3 scripts/toledo_build.py && python3 mcp/scripts/build_index.py
+build: resistance ; python3 scripts/toledo_build.py && python3 mcp/scripts/build_index.py
 
 # Static docs site (reads what `make build` wrote)
 site: build ; python3 site/build_site.py

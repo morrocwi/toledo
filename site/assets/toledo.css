@@ -54,6 +54,14 @@ h3{font-size:1.02rem}
 .badge-status--current{background:var(--pill-status-current)}
 .badge-status--caution{background:var(--pill-status-caution)}
 .badge-status--bad{background:var(--pill-status-bad)}
+/* Resistance ladder (R0-R6, design/RESISTANCE_LADDER_v0_1.md sec.5): every rung shows, held or
+   not -- an unheld rung gets a muted outline, never omitted (sec.0's own "never hide a missing
+   rung" design principle), so a reader never mistakes "not shown" for "held". */
+.resistance-ladder{margin:.35rem 0 1.25rem}
+.badge-resistance{border:1px solid transparent;cursor:help}
+.badge-resistance--held{background:var(--pill-status-current);color:var(--pill-status-fg)}
+.badge-resistance--unheld{background:transparent;color:var(--fg-muted);border-color:var(--border)}
+.resistance-ladder .note{margin-top:.35rem}
 code,pre,kbd{font-family:"DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.92em}
 pre{background:var(--code-bg);border:1px solid var(--border);border-radius:.35rem;
   padding:.85rem 1rem;overflow-x:auto;white-space:pre-wrap;word-break:break-word}

@@ -139,3 +139,139 @@ A code failing this pattern (other than a `HRP-X.<nnn>` rootless placeholder, wh
 - Deliberately conservative: a name containing a backtick-quoted formula span, a name introduced by the literal phrase `"theorem: "` (a bare-identifier label used by this corpus's health-stream readings), or a matched token that would require chaining two sub/superscript groups of the same kind onto one atom (invalid LaTeX, "Double subscript") is left as literal text for that portion rather than guessed — see `scripts/v15_D.py`'s own inline documentation for the three filters and the two real defects (a mixed backtick/math rendering; a decimal exponent silently truncated, `M^0.75` → `(M^0).75`) direct inspection of the first, unfiltered pass over the real registry found before these filters were added.
 - Consumed by `scripts/toledo_build.py`: the printable catalogue's `\section`/`\subsubsection*` headings use `name_latex` (wrapped in `\texorpdfstring{}{}` so hyperref's PDF bookmark/search string still gets the plain `name`) when present, falling back to the existing plain-text heading path otherwise; the generated vault Markdown heading (`vault_markdown()`, consumed by `site/build_site.py` and Obsidian) does the same, since bare `$...$` is valid Markdown-embedded LaTeX in both renderers' own conventions.
 - 80 of 967 entries carry `name_latex` as of this addendum (`ops/v15_D_name_latex_review.md`: 0 flagged ambiguous).
+
+## Addendum 2026-09-08 (S3, Resistance Ladder + Reproduction Ledger) — `resistance` block
+
+Authority: founder ruling `BBL-2026-09-07-229`; field-by-field reference:
+`glosa/design/RESISTANCE_LADDER_v0_1.md` sec.5. This addendum documents the ONE narrow,
+explicitly-authorised exception to this file's own opening constraint ("do not edit
+`registry/CANONICAL.json` content fields except adding a computed `resistance` block via
+the build, never by hand") — the exception that opening line has always referred to.
+
+`resistance` | object | **key omitted only before `scripts/compute_resistance.py` has ever
+run against this checkout** (rendered downstream as "not yet computed", never as seven
+fabricated `held: false` rungs) | written EXCLUSIVELY by `scripts/compute_resistance.py`,
+never by hand, never by any other script; `registry/LINEAGE.jsonl` is untouched by this
+field's own updates (a computed/derived field, the same status `children[]` above already
+has — re-running the script overwrites this block with no ledger event, exactly like the
+`children[]` inversion).
+
+```json
+"resistance": {
+  "computed_at": "YYYY-MM-DD",
+  "rungs": {
+    "R0": {"held": true,  "evidence": []},
+    "R1": {"held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"},
+    "R2": {"held": true,  "evidence": [{"type": "coq", "path": "coq/canonical/<code>.v"}]},
+    "R3": {"held": false, "evidence": [], "reason": "no reproduction_card references this code"},
+    "R4": {"held": false, "evidence": [], "reason": "R3 not held"},
+    "R5": {"held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code"},
+    "R6": {"held": false, "evidence": [], "reason": "R4 not held"}
+  }
+}
+```
+
+`rungs` always carries exactly the seven keys `R0`..`R6` (the fixed ladder,
+`glosa/design/RESISTANCE_LADDER_v0_1.md` sec.1) — never a subset, never an extra key, and
+**never** a collapsed scalar field (`score`/`total`/percentage) anywhere in this object,
+per that document's own sec.0 binding design principle. Each rung row is `{held: bool,
+evidence: array}` plus `reason: string` **only when `held` is `false`** — a `held: true`
+row never carries `reason` (its `evidence[]` is the reason). `held: true` on R3/R4/R6
+does **not** imply the underlying run/oracle comparison passed (`P19`'s own disclaimer,
+restated by the ladder doc's sec.0): a card whose own `result.status` is `"FAIL"` still
+holds R3/R4 — the rung certifies that the check *happened, honestly*, never that it
+succeeded.
+
+**Computation rule per rung** (`glosa/design/RESISTANCE_LADDER_v0_1.md` sec.5, exact):
+R0 from this entry's own `statement.latest` alone; R1/R3/R4/R5/R6 from
+`registry/reproduction_card_index.json` + `registry/review_report_index.json` +
+`registry/claim_card_index.json` (below); R2 from this entry's own `coq.coq_status ==
+"closed"` alone — no looser value (`definition`/`wrapped_related`/`mapped_not_wrapped`/
+`open_prop`/`not_formalisable`/`axioms`/`root_layer_unwired`) ever holds R2.
+
+**Root rows carry this block too.** `registry/genesis_root.json`'s `root_equations[]`
+rows are NOT stored in `registry/CANONICAL.json` (they are synthesized into a
+CANONICAL-shaped entry only at build time, `scripts/toledo_build.py::genesis_row_to_canonical`
+— see the v1.2 addendum above). Two of the ladder's own first Reproduction Cards
+(`glosa/design/RESISTANCE_LADDER_v0_1.md` sec.6, Card 1: `EQ-068`, `EQ-045`) target root
+codes, so `scripts/compute_resistance.py` writes the identical `resistance` block directly
+into each `root_equations[]` row of `registry/genesis_root.json` — same shape, same
+computation rules, with R2 always `false` for a root row (no root row ever carries a
+`coq.coq_status` of its own; `scripts/toledo_build.py`'s synthesis then propagates
+whichever block the row already carries, verbatim, never recomputing it).
+
+### The three citation-index files (toledo-side half of the S1/S3 contract)
+
+`scripts/compute_resistance.py` reads three OPTIONAL files under `registry/`. None of
+these files' rows is a copy of the source card/report — each is a **citation**, the same
+way `origin.repo_anchor` already cites an external repo (`P19`/`P0`'s one-fact-one-home
+rule: the actual Reproduction Card / review report lives in the `glosa` repo; Toledo only
+cites it). Every row's `citation` object is `{repo, commit, path, id}`. Any of the three
+files may be absent — a missing file means "no evidence of this kind exists yet", never an
+error; every affected rung is then computed as `held: false` with an honest, quoted reason.
+
+- **`registry/reproduction_card_index.json`** — `{"cards": [...]}`. Populated by (the
+  glosa repo's own) `glosa repro run --register-toledo`. Each row: `citation`,
+  `toledo_codes: array<string>`, `preregistered_prediction: {declared_at, tolerance}`,
+  `oracle: {kind, source, ...}` (`kind` one of `published_value` \| `independent_implementation`
+  \| `public_dataset` \| `coq_kernel` \| `human_review` — only the first three ever back
+  R4/R6), `run: {command, ai_at_runtime, date} | null`, `result: {status, ...} | null`
+  (`status` one of `PASS` \| `FAIL` \| `ERROR` \| `PENDING`), and `aowc_qualifying: bool`
+  (**explicit, never inferred** from the tolerance text — sec.1's R6 row: deciding whether
+  a declared tolerance is genuinely non-vacuous is the card author's own disclosure, in
+  the glosa Reproduction Card's own `notes` field, not a judgment this script makes).
+- **`registry/review_report_index.json`** — `{"reviews": [...]}`. Each row: `citation`,
+  `toledo_codes`, `independence_class` (`P6`'s ladder, e.g. `"I2"`), `reviewer_identity`,
+  `maker_id`. Backs R5 only when `independence_class >= "I2"`.
+- **`registry/claim_card_index.json`** — `{"claims": [...]}`. Each row: `citation`,
+  `toledo_codes`, `falsifier` (non-empty, non-`"TODO"`). R1's fallback path only, used when
+  no reproduction card's own `preregistered_prediction` already holds R1 for that code.
+
+### Read-side propagation (never recomputed downstream)
+
+`scripts/toledo_build.py` (JSON-LD per-code documents, `TOLEDO.json`, `site/index.json`'s
+`resistance_computed`/`resistance_rungs_held` compact projection), `site/build_site.py`
+(the entry-page badge row, `RESISTANCE_DEFINITIONS` glossary, `/about/`'s corpus-wide
+rungs-held tally) and `mcp/toledo_mcp/export_static.py` (`/v1/entries/<code>.json`'s
+`resistance` field, verbatim, plus the corpus-wide `/v1/resistance-summary.json`) all
+**propagate** this field exactly as `scripts/compute_resistance.py` last wrote it — none
+of them ever computes a rung itself. `None`/absent means "not yet computed", rendered
+honestly as such everywhere, never silently turned into seven `held: false` rows.
+
+## Addendum 2026-09-08 (integration pass) — R6 is derived, never an `aowc_qualifying` field; citation-index population is `scripts/register_reproduction_evidence.py`
+
+Two corrections to the "S3, Resistance Ladder + Reproduction Ledger" addendum directly above,
+found and fixed while wiring the first two Reproduction Cards (`EQ-045`, `EQ-068`) end to end:
+
+- **No `aowc_qualifying` field, on any card, anywhere.** The addendum above documented
+  `registry/reproduction_card_index.json`'s row shape as carrying an `aowc_qualifying: bool` the
+  R6 computation reads directly — that field never existed in `glosa/schema/reproduction_card.schema.json`,
+  in either first-batch card, or anywhere else, so R6 could never be held for a real card
+  regardless of how genuinely AOWC-qualifying it was. `glosa/design/RESISTANCE_LADDER_v0_1.md`
+  sec.1/sec.5 is itself explicit this must be "not a new schema field" and instead ONE shared
+  function (`glosa/kernel/glosa_kernel.py::aowc_gate_check`, which `glosa score`'s own R6
+  computation calls). `scripts/compute_resistance.py::card_holds_r6` now re-implements those exact
+  four conditions instead (Toledo cannot import glosa's Python module — separate repositories by
+  design — so the logic is duplicated textually, not by reference): R4 held; `run.ai_at_runtime
+  == 0`; `preregistered_prediction.declared_at` parses and predates `run.date`; and
+  `preregistered_prediction.tolerance` is non-empty and does not match a short list of
+  vacuous/always-pass lexical markers (a HEURISTIC lexical check, same caveat `aowc_gate_check`
+  itself carries — this never verifies a human actually designed the band non-vacuously). A
+  citation row MAY still carry an `aowc_qualifying` key (harmless, simply unread); it is never
+  required and never sets R6 by itself.
+- **Population mechanism, stated honestly.** The addendum above named `glosa repro run
+  --register-toledo` as what populates `registry/reproduction_card_index.json` /
+  `registry/review_report_index.json` — at integration time, that flag was specified in
+  `glosa/design/RESISTANCE_LADDER_v0_1.md` sec.2/sec.3 but not present in the delivered `glosa/cli/glosa`.
+  The two index files are instead built by this repo's own `scripts/register_reproduction_evidence.py`
+  (`python3 scripts/register_reproduction_evidence.py [--glosa-repo PATH]`), which reads glosa's
+  `cases/repro/*.json` cards and `reviews/routes/**/review_report.{yaml,json}` files directly and
+  regenerates both index files wholesale (never appends a duplicate row for the same source file
+  across reruns). Every card-citation row's `citation.commit` is a real git commit in the glosa
+  checkout (`cases/repro/` is git-tracked there); a review-citation row's `citation.commit` is
+  `null` with a `commit_note` explaining why — glosa's own `.gitignore` excludes `reviews/routes/`
+  from version control entirely (a local review artifact, never committed) — and
+  `citation.content_sha256` (of the review file's own raw bytes at read time) stands in as the
+  "pinned, not just trust-me" anchor `commit` would otherwise provide. If/when `glosa repro run
+  --register-toledo` is actually implemented, `scripts/register_reproduction_evidence.py` should be
+  retired in its favor rather than kept as a second, competing writer of the same two files.

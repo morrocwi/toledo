@@ -189,6 +189,47 @@ STATUS_DEFINITIONS = {
                           "detail.",
 }
 
+# --------------------------------------------------------------------------
+# Resistance Ladder (design/RESISTANCE_LADDER_v0_1.md sec.1/sec.5, founder
+# ruling BBL-2026-09-07-229): R0-R6, a SET of rungs held per entry, each
+# backed by a file on disk — never a single collapsed score. Every sentence
+# below is the same "what it does NOT certify" wording the design doc's own
+# sec.1 table states, restated on the site as a badge `title=` attribute the
+# same way TIER_DEFINITIONS/COQ_STATUS_DEFINITIONS already are. The `held`
+# value itself is never computed here — it is read verbatim from the
+# `resistance` block scripts/compute_resistance.py wrote into
+# registry/CANONICAL.json / registry/genesis_root.json; this module only
+# renders what that field already says.
+# --------------------------------------------------------------------------
+RESISTANCE_DEFINITIONS = {
+    "R0": "Stated: a written statement exists for this code. Certifies nothing beyond \"this was "
+          "written down\" — every entry holds R0 trivially, so a reader never mistakes a bare "
+          "stated equation for a checked one.",
+    "R1": "Pre-registered falsifier or claim boundary, declared before the run/observation it "
+          "constrains. Certifies only that a boundary was drawn ahead of the evidence — not that "
+          "it is a good one, or that anyone has tried to defeat the claim yet.",
+    "R2": "Coq-closed: a machine-checked proof whose kernel sits outside the AI/human authoring "
+          "loop. Certifies internal consistency of a finite formal model — never that the model "
+          "matches the world.",
+    "R3": "Reproducible run: a hash-frozen command with recorded input/output hashes and AI = 0 "
+          "at runtime. Certifies the run is pinned and independently re-runnable — not that its "
+          "result matched anything; a card can hold R3 even when its own result is a disclosed "
+          "FAIL.",
+    "R4": "External oracle: the run's output was compared to a published value, an independent "
+          "implementation, or a public dataset, against a tolerance declared before the run. "
+          "Certifies the comparison itself happened, honestly, PASS or FAIL alike — never that "
+          "it passed.",
+    "R5": "Independent reviewer (I2 or above) or interactional-expert record naming this code. "
+          "Certifies that an independent human/route actually looked — not that they reached a "
+          "favourable verdict.",
+    "R6": "AOWC world record: an external-oracle card additionally frozen before the run, AI = 0 "
+          "for both execution and evaluation, with a tolerance able to genuinely count against "
+          "the claim. Certifies the test could have failed the claim — never that the outcome "
+          "was the one hoped for.",
+}
+
+RUNG_ORDER = ["R0", "R1", "R2", "R3", "R4", "R5", "R6"]
+
 
 def _glossary_dl_html(*definition_groups: tuple[str, dict[str, str]]) -> str:
     """One `<dl>` per (heading, {value: sentence}) group, in dict order —
@@ -985,6 +1026,48 @@ def render_badge(value: str | None, css_class: str, *definitions: dict[str, str]
     return f'<span class="badge {css_class}"{title_attr}>{html.escape(value)}</span>'
 
 
+def render_resistance_badges_html(resistance: dict | None) -> str:
+    """Seven R0-R6 badges (design/RESISTANCE_LADDER_v0_1.md sec.5): held
+    rungs get the `badge-resistance--held` accent, unheld rungs
+    `badge-resistance--unheld` — an unheld rung is rendered exactly as
+    visibly as a held one, never omitted (sec.0's design principle: "never
+    a single number that hides a missing rung"). `resistance` is `None`
+    when scripts/compute_resistance.py has not yet run against this
+    checkout's registry files — rendered as one disclosed sentence, never
+    as seven fabricated `unheld` badges (that would assert "checked, not
+    held" for a rung that was, honestly, simply never checked yet)."""
+    if not resistance:
+        return (
+            '<p class="note">Resistance ladder not yet computed for this entry '
+            "(scripts/compute_resistance.py has not run against this build).</p>"
+        )
+    rungs = resistance.get("rungs") or {}
+    spans = []
+    for r in RUNG_ORDER:
+        row = rungs.get(r) or {}
+        held = bool(row.get("held"))
+        variant = "held" if held else "unheld"
+        definition = RESISTANCE_DEFINITIONS.get(r, "")
+        evidence = row.get("evidence") or []
+        if held:
+            detail = f"held — {len(evidence)} evidence file(s)"
+        else:
+            detail = f"not held — {row.get('reason', 'no reason recorded')}"
+        title_attr = html.escape(f"{definition} ({detail})".strip())
+        spans.append(
+            f'<span class="badge badge-resistance badge-resistance--{variant}" '
+            f'title="{title_attr}">{html.escape(r)}</span>'
+        )
+    computed_at = html.escape(str(resistance.get("computed_at") or "unknown"))
+    return (
+        '<div class="resistance-ladder" role="group" aria-label="Resistance ladder, R0 through R6">'
+        + "".join(spans)
+        + f'<p class="note">Resistance ladder computed {computed_at}. A rung is held only when a '
+        "file on disk backs it, never by assertion; an unheld rung means no such file was found "
+        "yet — it does not mean the underlying claim is false.</p></div>"
+    )
+
+
 def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text: str,
                          depth: int) -> tuple[dict, bool]:
     """Supplies the union of every entry-page placeholder observed across
@@ -1021,6 +1104,7 @@ def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text:
         f'{html.escape(status)}</span>'
     )
     coq_badge = render_badge(coq_status, "badge-coq", COQ_STATUS_DEFINITIONS)
+    resistance_badges_html = render_resistance_badges_html(entry.get("resistance"))
     relations_inner = render_relations_html(entry, by_code, reverse_rel, depth)
     relations_wrapped = (
         "<details><summary>Full relations (all parents, children, and cross-references)</summary>"
@@ -1044,6 +1128,7 @@ def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text:
         "tier_badge_html": tier_badge,
         "status_badge_html": status_badge,
         "coq_status_badge_html": coq_badge,
+        "resistance_badges_html": resistance_badges_html,
         "badges_html": domain_badge + tier_badge + status_badge + coq_badge,
         "status_note_html": render_status_note_html(entry, depth),
         "aliases_html": render_aliases_html(entry),
@@ -1096,6 +1181,7 @@ def build_home_context(manifest: dict, root_rows: int, reading_entries: list[dic
         # list uses, so the two can never carry different wording.
         "how_to_read_html": _glossary_dl_html(
             ("Tier", TIER_DEFINITIONS), ("Coq status", COQ_STATUS_DEFINITIONS),
+            ("Resistance ladder (R0-R6)", RESISTANCE_DEFINITIONS),
         ),
     }
 
@@ -1203,9 +1289,51 @@ POLICY_SUMMARY = (
 )
 
 
-def build_about_context(manifest: dict, root_rows: int, coverage: dict, concept_doi: str | None) -> dict:
+def compute_resistance_coverage(entries: list[dict]) -> dict:
+    """Corpus-wide tally of rungs HELD across every loaded entry page (S3,
+    design/RESISTANCE_LADDER_v0_1.md sec.0's own "the score is a SET of
+    rungs held ... never a single number" principle, extended here to a
+    corpus-level summary the same way sec.9's `compute_coverage` already
+    reports per-format counts rather than one aggregate percentage): a
+    plain per-rung count, never a percentage or a combined index.
+    `computed` is how many of the loaded entries carry a `resistance` block
+    at all — the honest denominator that keeps "checked and unheld" from
+    ever being confused with "not yet checked"."""
+    held = {r: 0 for r in RUNG_ORDER}
+    computed = 0
+    for e in entries:
+        res = e.get("resistance")
+        if not res:
+            continue
+        computed += 1
+        rungs = res.get("rungs") or {}
+        for r in RUNG_ORDER:
+            if (rungs.get(r) or {}).get("held"):
+                held[r] += 1
+    return {"computed": computed, "total": len(entries), "held": held}
+
+
+def resistance_coverage_html(rc: dict) -> str:
+    computed, total = rc["computed"], rc["total"]
+    rows = "".join(
+        f"<li><code>{html.escape(r)}</code> — {rc['held'][r]} of {computed} computed entries "
+        f"({RESISTANCE_DEFINITIONS.get(r, '').split('.')[0]})</li>"
+        for r in RUNG_ORDER
+    )
+    return (
+        f'<p class="note">Resistance ladder computed for {computed} of {total} pages. Counts below '
+        "are entries HOLDING each rung — a rung not held may simply not have been checked yet; "
+        "these counts are never combined into one score.</p>"
+        f"<ul>{rows}</ul>"
+    )
+
+
+def build_about_context(manifest: dict, root_rows: int, coverage: dict, concept_doi: str | None,
+                         resistance_coverage: dict | None = None) -> dict:
     total_pages = manifest["entry_count"] + root_rows
     cov = coverage_sentences(coverage, total_pages)
+    resistance_coverage = resistance_coverage or {"computed": 0, "total": total_pages,
+                                                   "held": {r: 0 for r in RUNG_ORDER}}
     return {
         "entry_count": str(manifest["entry_count"]),
         "root_count": str(root_rows),
@@ -1224,8 +1352,9 @@ def build_about_context(manifest: dict, root_rows: int, coverage: dict, concept_
         # ladder (not shown on the landing page's shorter box).
         "glossary_html": _glossary_dl_html(
             ("Tier", TIER_DEFINITIONS), ("Coq status", COQ_STATUS_DEFINITIONS),
-            ("Status", STATUS_DEFINITIONS),
+            ("Status", STATUS_DEFINITIONS), ("Resistance ladder (R0-R6)", RESISTANCE_DEFINITIONS),
         ),
+        "resistance_coverage_html": resistance_coverage_html(resistance_coverage),
         "policy_summary": html.escape(POLICY_SUMMARY),
         "concept_doi": html.escape(concept_doi or "unreleased"),
         "registry_release_version": html.escape(manifest.get("registry_release_version") or "unreleased"),
@@ -1603,7 +1732,8 @@ def build_pages(root: pathlib.Path, out_dir: pathlib.Path, templates_dir: pathli
         "about/index.html", "About — Toledo",
         "Licence, citation, coverage and policy summary for the Toledo registry.",
         "page-about", 1, "about.tmpl.html",
-        build_about_context(manifest, root_rows, coverage, concept_doi),
+        build_about_context(manifest, root_rows, coverage, concept_doi,
+                             compute_resistance_coverage(entries)),
     )
 
     return {

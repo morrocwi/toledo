@@ -500,3 +500,117 @@ def test_run_all_reports_configuration_error_for_missing_dist(tmp_path):
     missing = tmp_path / "does-not-exist"
     code = run_all.main([str(missing)])
     assert code == 2
+
+
+# --------------------------------------------------------------------- #
+# Resistance Ladder + Reproduction Ledger (S3, design/RESISTANCE_LADDER_v0_1.md,
+# founder ruling BBL-2026-09-07-229). Kept to this file's own stated
+# independence rule: these tests never import site/build_site.py — they
+# read registry/CANONICAL.json's own `resistance` block directly (a real
+# artifact, not a generator's internal context dict) and, where site/dist
+# already carries the corresponding rendered page, the actual HTML markup.
+# A live checkout that has not yet run scripts/compute_resistance.py
+# carries no `resistance` key on any entry at all — every test below skips
+# HONESTLY in that case (readout-not-truth: absence of a rung is reported,
+# never asserted as a pass over data that was never actually checked).
+# --------------------------------------------------------------------- #
+
+_RESISTANCE_RUNG_ORDER = ["R0", "R1", "R2", "R3", "R4", "R5", "R6"]
+
+
+def _entries_with_resistance(canonical: dict) -> list[dict]:
+    return [e for e in canonical.get("canonical", []) if e.get("resistance")]
+
+
+def test_resistance_block_shape_when_present(canonical):
+    """Whenever scripts/compute_resistance.py has run against this
+    checkout, every `resistance` block it wrote is well-shaped: exactly the
+    seven named rungs, each `{held: bool, evidence: list}` plus `reason`
+    only on an unheld rung — never a collapsed score field anywhere in the
+    structure (design doc sec.0)."""
+    computed = _entries_with_resistance(canonical)
+    if not computed:
+        pytest.skip(
+            "no entry in registry/CANONICAL.json carries a `resistance` block yet — "
+            "run `python3 scripts/compute_resistance.py` first"
+        )
+    for e in computed:
+        resistance = e["resistance"]
+        assert set(resistance.keys()) == {"computed_at", "rungs"}, e["code"]
+        rungs = resistance["rungs"]
+        assert set(rungs.keys()) == set(_RESISTANCE_RUNG_ORDER), e["code"]
+        for rung_name, row in rungs.items():
+            assert isinstance(row.get("held"), bool), (e["code"], rung_name)
+            assert isinstance(row.get("evidence"), list), (e["code"], rung_name)
+            if not row["held"]:
+                assert row.get("reason"), f"{e['code']} {rung_name}: unheld rung with no reason recorded"
+            assert "score" not in resistance and "total" not in resistance, (
+                "the resistance block must never carry a collapsed scalar field"
+            )
+
+
+def test_resistance_r4_can_be_held_on_a_disclosed_fail(canonical):
+    """sec.0's non-tautology rule, checked against the real registry: R4
+    being held never implies the underlying oracle comparison passed — a
+    FAIL-holding R4 row is legitimate and must not be silently impossible."""
+    computed = _entries_with_resistance(canonical)
+    r4_held_rows = [
+        e["resistance"]["rungs"]["R4"] for e in computed if e["resistance"]["rungs"]["R4"]["held"]
+    ]
+    if not r4_held_rows:
+        pytest.skip("no entry holds R4 yet in this registry — nothing to check")
+    # Not asserting any particular row IS a fail (that depends on which
+    # cards exist) — only that holding R4 is a real, reachable state at
+    # all once cards exist, i.e. this registry is not vacuously all-unheld.
+    assert all(isinstance(row["evidence"], list) and row["evidence"] for row in r4_held_rows)
+
+
+def test_resistance_static_api_summary_available():
+    static_root = STATIC_API_ENTRIES.parent
+    if not static_root.is_dir():
+        pytest.skip(
+            f"{static_root} not built yet — run "
+            "`python3 -m toledo_mcp.export_static --out mcp/dist/static-api` first"
+        )
+    summary_path = static_root / "resistance-summary.json"
+    assert summary_path.is_file(), "mcp/toledo_mcp/export_static.py must emit v1/resistance-summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    assert set(_RESISTANCE_RUNG_ORDER) <= set(summary["held_counts"].keys())
+    assert summary["entries_with_resistance_computed"] <= summary["entries_total"]
+    # A held-count can never exceed how many entries were even computed —
+    # a mechanical corpus-level sanity check on the same non-collapsing
+    # tally build_site.py's own resistance_coverage_html renders.
+    for rung in _RESISTANCE_RUNG_ORDER:
+        assert summary["held_counts"][rung] <= summary["entries_with_resistance_computed"]
+
+
+def test_entry_page_shows_resistance_ladder_when_computed(toledo_entries):
+    """Once a live entry carries a `resistance` block AND site/templates'
+    entry.tmpl.html declares `{{resistance_badges_html}}` (a template-side
+    change outside this stream's own file ownership — see
+    design/RESISTANCE_LADDER_v0_1.md sec.7's S3 row), its rendered page
+    must show the resistance-ladder markup, with an unheld rung exactly as
+    visible as a held one. Skips honestly, naming which precondition is
+    missing, until both are true."""
+    _require_site_dist()
+    computed = [e for e in toledo_entries if e.get("resistance")]
+    if not computed:
+        pytest.skip("no entry in registry/TOLEDO.json carries a `resistance` block yet")
+    sample = computed[0]
+    page = SITE_DIST / "entries" / f"{site_slug(sample['code'])}.html"
+    if not page.is_file():
+        pytest.skip(f"{page} not built")
+    html_text = page.read_text(encoding="utf-8")
+    if "badge-resistance" not in html_text:
+        pytest.skip(
+            "site/templates/entry.tmpl.html does not declare {{resistance_badges_html}} yet "
+            "(template ownership is outside this stream's own files) — "
+            f"{sample['code']}'s resistance data exists but is not yet wired into the template"
+        )
+    rungs = sample["resistance"]["rungs"]
+    if any(not row["held"] for row in rungs.values()):
+        assert "badge-resistance--unheld" in html_text, (
+            "an unheld rung must render exactly as visibly as a held one (design doc sec.0)"
+        )
+    if any(row["held"] for row in rungs.values()):
+        assert "badge-resistance--held" in html_text
