@@ -1,0 +1,617 @@
+{
+    "EQ-001/B.34.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "prose declaring fitness/natural-selection an explicitly FORBIDDEN root variable and a fully open destination requiring a future calibrated encoding; no operator or relation is stated at this occurrence to type as a Prop without inventing the (not-yet-existing) encoding."
+    },
+    "EQ-001/B.35.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "prose stating that no root-native construction for population-level ecological dynamics exists yet ('fully open'); no operator given."
+    },
+    "EQ-001/B.36.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "administrative/meta node marking a permanent audit-boundary (a checker outside the DAG that must never be promoted); not a mathematical claim."
+    },
+    "EQ-001/C.01.v1": {
+        "file": "EQ_001__C_01_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.02.v1": {
+        "file": "EQ_001__C_02_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.03.v1": {
+        "file": "EQ_001__C_03_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "EQ-001/C.04.v1": {
+        "file": "EQ_001__C_04_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "EQ-001/C.05.v1": {
+        "file": "EQ_001__C_05_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "EQ-001/C.06.v1": {
+        "file": "EQ_001__C_06_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.07.v1": {
+        "file": "EQ_001__C_07_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.08.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "PR-GRAMMAR-001: a research-protocol directive ('candidate mathematical languages must be frozen and reported before held-out evidence is opened'); a procedure, not a mathematical relation."
+    },
+    "EQ-001/C.09.v1": {
+        "file": "EQ_001__C_09_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/C.10.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "PR-GENERATOR-002: a research-protocol directive ('freeze generator identities/aliases/source profiles/contexts/transformations before quotient admission'); a procedure, not a mathematical relation."
+    },
+    "EQ-001/C.11.v1": {
+        "file": "EQ_001__C_11_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "EQ-001/C.12.v1": {
+        "file": "EQ_001__C_12_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.13.v1": {
+        "file": "EQ_001__C_13_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.14.v1": {
+        "file": "EQ_001__C_14_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.15.v1": {
+        "file": "EQ_001__C_15_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "EQ-001/C.16.v1": {
+        "file": "EQ_001__C_16_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/C.17.v1": {
+        "file": "EQ_001__C_17_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/E.01.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "occurrence text is a bare bibliographic/lineage citation naming Shannon's 'A mathematical theory of communication' (1948); no operator or equation is stated at this reading's own occurrence to formalise without inventing the underlying formula."
+    },
+    "EQ-001/E.02.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "occurrence text is a bare bibliographic/lineage citation naming Szilard's information-work engine; no operator or equation is stated at this reading's own occurrence to formalise without inventing the underlying formula."
+    },
+    "EQ-001/E.03.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "occurrence text is a bare bibliographic/lineage citation naming Landauer's erasure principle; no operator or equation is stated at this reading's own occurrence to formalise without inventing the underlying formula."
+    },
+    "EQ-001/E.04.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "occurrence text is a bare bibliographic/lineage citation naming Wheeler's 'it from bit'; no operator or equation is stated at this reading's own occurrence to formalise without inventing the underlying formula."
+    },
+    "EQ-001/E.05.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "occurrence text is a bare bibliographic/lineage citation naming Stinespring dilation; no operator or equation is stated at this reading's own occurrence to formalise without inventing the underlying formula."
+    },
+    "EQ-001/E.06.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "occurrence text is a bare bibliographic/lineage citation naming completely positive maps; no operator or equation is stated at this reading's own occurrence to formalise without inventing the underlying formula."
+    },
+    "EQ-001/E.07.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "occurrence text is a bare bibliographic/lineage citation naming Kraus's states/effects/operations formalism; no operator or equation is stated at this reading's own occurrence to formalise without inventing the underlying formula."
+    },
+    "EQ-001/P.01.v1": {
+        "file": "EQ_001__P_01_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.02.v1": {
+        "file": "EQ_001__P_02_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.03.v1": {
+        "file": "EQ_001__P_03_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.04.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "meta-claim asserting an already machine-checked result lives in a separate cited Coq development ('coqc -q -R . DQG', not among this registry's imported Coq sources); no equation is restated here to formalise without reproducing that external proof."
+    },
+    "EQ-001/P.05.v1": {
+        "file": "EQ_001__P_05_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.06.v1": {
+        "file": "EQ_001__P_06_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.07.v1": {
+        "file": "EQ_001__P_07_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.08.v1": {
+        "file": "EQ_001__P_08_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.09.v1": {
+        "file": "EQ_001__P_09_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.10.v1": {
+        "file": "EQ_001__P_10_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.11.v1": {
+        "file": "EQ_001__P_11_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.12.v1": {
+        "file": "EQ_001__P_12_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.13.v1": {
+        "file": "EQ_001__P_13_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.14.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "bookkeeping/accounting note about how a DAG-closure audit counts this item (folded into a sibling's yellow accounting, not an independent node); no operator stated to formalise at this occurrence."
+    },
+    "EQ-001/P.15.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "a deduplication/import bookkeeping note ('folded in here from the relativity domain... not re-derived'); substantive discrete-connection and curvature content is formalised directly at its own root-native occurrence in this same lane's set (EQ-001/P.51.v1, EQ-001/P.52.v1)."
+    },
+    "EQ-001/P.16.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "names external lemma identifiers (box_quad_is_spine_residual, etc.) and an inherited Minkowski-signature caveat; no equation of its own is stated at this occurrence."
+    },
+    "EQ-001/P.17.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "restates the EQ-001/P.07.v1 crossover discriminant lambda_c = D^2/(4MK) only as a bridge-status caveat about semantic interpretation, not a new equation; the formula itself is formalised at EQ-001/P.07.v1."
+    },
+    "EQ-001/P.18.v1": {
+        "file": "EQ_001__P_18_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.19.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "a bridge-status caveat ('formal-closed / bridge-partial connective') about interpreting geometry as a quantum-gravitational coupling; no operator or equation given at this occurrence."
+    },
+    "EQ-001/P.20.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "a declared-not-derived physical/semantic bridge caveat about whether a formal readout IS physical mass; no new equation given here beyond the already-cited memory-mass algebra (formalised elsewhere)."
+    },
+    "EQ-001/P.21.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "describes a target CPTP-channel 'card' shape as an open bridge from reversible evolution, without stating the target's own operator content at this occurrence."
+    },
+    "EQ-001/P.22.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose ('general existence and uniqueness ... is OPEN') referencing objects (admissible retained states, a general root-derived complex psi) not concretely defined at this occurrence; no operator to state as a Prop without inventing structure."
+    },
+    "EQ-001/P.23.v1": {
+        "file": "EQ_001__P_23_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "EQ-001/P.24.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about whether a mixed-state description arises from tracing out a hidden lineage, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.25.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about whether a subsystem composition operation reproduces tensor-product-shaped behaviour, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.26.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about uniqueness of the Born weight p=|psi|^2 across all admissible refinements, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.27.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about whether a root-native conditional-update (measurement collapse) rule exists, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.28.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about whether an uncertainty-relation formal guard is a root-derivation or only a boundary check, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.29.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about whether a CHSH/Tsirelson-shaped guard is a root-derivation or only a boundary check, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.30.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about whether a particle ontology with mass exists beyond the formal memory-mass algebra, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.31.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about spin and the spin-statistics theorem, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.32.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "OPEN prose about a full QFT closure requiring the joint (unconstructed) quantum/relativity/geometry quotients, with no concrete operator or equation stated at this occurrence to formalise without inventing content."
+    },
+    "EQ-001/P.33.v1": {
+        "file": "EQ_001__P_33_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.34.v1": {
+        "file": "EQ_001__P_34_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.35.v1": {
+        "file": "EQ_001__P_35_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.36.v1": {
+        "file": "EQ_001__P_36_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.37.v1": {
+        "file": "EQ_001__P_37_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.38.v1": {
+        "file": "EQ_001__P_38_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.39.v1": {
+        "file": "EQ_001__P_39_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.40.v1": {
+        "file": "EQ_001__P_40_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.41.v1": {
+        "file": "EQ_001__P_41_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.42.v1": {
+        "file": "EQ_001__P_42_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.43.v1": {
+        "file": "EQ_001__P_43_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.44.v1": {
+        "file": "EQ_001__P_44_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.45.v1": {
+        "file": "EQ_001__P_45_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.46.v1": {
+        "file": "EQ_001__P_46_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.47.v1": {
+        "file": "EQ_001__P_47_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.48.v1": {
+        "file": "EQ_001__P_48_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.49.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "the operator-to-metric formula g^ij ~= (1/2) Hess(sigma_LR) uses a continuum Hessian (second-derivative) operator; excluded by the finite/discrete-only Coq discipline. The underlying Th_coqc-tier proof is an external cross-reference (Face 8), not reproduced here."
+    },
+    "EQ-001/P.50.v1": {
+        "file": "EQ_001__P_50_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.51.v1": {
+        "file": "EQ_001__P_51_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.52.v1": {
+        "file": "EQ_001__P_52_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.53.v1": {
+        "file": "EQ_001__P_53_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.54.v1": {
+        "file": "EQ_001__P_54_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "EQ-001/P.55.v1": {
+        "file": "EQ_001__P_55_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.56.v1": {
+        "file": "EQ_001__P_56_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.57.v1": {
+        "file": "EQ_001__P_57_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.58.v1": {
+        "file": "EQ_001__P_58_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.59.v1": {
+        "file": "EQ_001__P_59_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.60.v1": {
+        "file": "EQ_001__P_60_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.61.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "declared-not-derived caveat ('the identification with any specific physical speed is not established'); no formula given at this occurrence."
+    },
+    "EQ-001/P.62.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "declared-not-derived caveat ('no mass-energy law is derived from the root'); no formula given at this occurrence."
+    },
+    "EQ-001/P.63.v1": {
+        "file": "EQ_001__P_63_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.64.v1": {
+        "file": "EQ_001__P_64_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.65.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "an aggregation/bridge-status summary citing GC-04 (formalised at EQ-001/P.59.v1), GC-05 (EQ-001/P.60.v1) and the Theta-stepper witness (formalised at EQ-001/P.67.v1); no new equation is given at this occurrence beyond that aggregation."
+    },
+    "EQ-001/P.66.v1": {
+        "file": "EQ_001__P_66_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.67.v1": {
+        "file": "EQ_001__P_67_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "EQ-001/P.68.v1": {
+        "file": "EQ_001__P_68_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-001/P.69.v1": {
+        "file": "EQ_001__P_69_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-002/W.02.v1": {
+        "file": "EQ_002__W_02_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-009/E.01.v1": {
+        "file": "EQ_009__E_01_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-009/E.02.v1": {
+        "file": "EQ_009__E_02_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "EQ-009/E.03.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "an informal bridge/correspondence statement between two model layers ('two-layer predict same envelope when gamma <-> D/M'); no operator or closed-form relation given at this occurrence."
+    },
+    "Face.10.IdentifiabilityGate/E.01.v1": {
+        "file": "Face_10_IdentifiabilityGate__E_01_v1.v",
+        "kind": "closed",
+        "reason": null
+    },
+    "MQ08-stepper/P.01.v1": {
+        "file": "MQ08_stepper__P_01_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.10.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "continuum PDE model (state field definition s(x,t) in R^n): real-valued field over continuous space/time with partial derivatives and/or an infinite spectral sum; excluded by the finite/discrete-only (no Coq.Reals) discipline. No finite restatement is given by the source at this occurrence."
+    },
+    "weld/S.11.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "continuum PDE model (violence-potential definition V(x,t)=Phi(s(x,t))): real-valued field over continuous space/time with partial derivatives and/or an infinite spectral sum; excluded by the finite/discrete-only (no Coq.Reals) discipline. No finite restatement is given by the source at this occurrence."
+    },
+    "weld/S.12.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "continuum PDE model (telegraph flux constitutive relation tau dt j + j = -D grad s): real-valued field over continuous space/time with partial derivatives and/or an infinite spectral sum; excluded by the finite/discrete-only (no Coq.Reals) discipline. No finite restatement is given by the source at this occurrence."
+    },
+    "weld/S.13.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "continuum PDE model (continuity equation dt s = -div j - Gamma(s) + Senv): real-valued field over continuous space/time with partial derivatives and/or an infinite spectral sum; excluded by the finite/discrete-only (no Coq.Reals) discipline. No finite restatement is given by the source at this occurrence."
+    },
+    "weld/S.14.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "continuum PDE model (linearized generator dt s = L_tau s): real-valued field over continuous space/time with partial derivatives and/or an infinite spectral sum; excluded by the finite/discrete-only (no Coq.Reals) discipline. No finite restatement is given by the source at this occurrence."
+    },
+    "weld/S.15.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "continuum PDE model (spectral decomposition s(t) = sum c_k e^{-lambda_k t} r_k): real-valued field over continuous space/time with partial derivatives and/or an infinite spectral sum; excluded by the finite/discrete-only (no Coq.Reals) discipline. No finite restatement is given by the source at this occurrence."
+    },
+    "weld/S.16.v1": {
+        "file": "weld__S_16_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.17.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "eigenvalues lambda_pm = -(alpha+beta)/2 +- sqrt(((alpha-beta)/2)^2 + eps^2) involve a square root of a rational discriminant, generally irrational; not typeable in Q under the finite/discrete (no-Reals) discipline."
+    },
+    "weld/S.18.v1": {
+        "file": "weld__S_18_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.19.v1": {
+        "file": "weld__S_19_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.20.v1": {
+        "file": "weld__S_20_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.21.v1": {
+        "file": "weld__S_21_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.30.v1": {
+        "file": "weld__S_30_v1.v",
+        "kind": "open_prop",
+        "reason": null
+    },
+    "weld/S.31.v1": {
+        "file": "weld__S_31_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.32.v1": {
+        "file": "weld__S_32_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.35.v1": {
+        "file": "weld__S_35_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.36.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "states a continuum limit to infinity (lim_{T->infty} C[0,T] = infinity); infinity/limits are non-readouts excluded by the finite/discrete-only discipline, and no finite restatement is given by the source at this occurrence."
+    },
+    "weld/S.38.v1": {
+        "file": null,
+        "kind": "not_formalisable",
+        "reason": "states an infinite-horizon interval condition (C[t,infty)=0); an unbounded time horizon is a non-readout excluded by the finite/discrete-only discipline."
+    },
+    "weld/S.39.v1": {
+        "file": "weld__S_39_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.42.v1": {
+        "file": "weld__S_42_v1.v",
+        "kind": "definition",
+        "reason": null
+    },
+    "weld/S.50.v1": {
+        "file": "weld__S_50_v1.v",
+        "kind": "definition",
+        "reason": null
+    }
+}

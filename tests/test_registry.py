@@ -264,11 +264,22 @@ def test_coq_assumptions_honest():
     can = _load_canonical()
     if not can:
         return
+    # Toledo v1.1 (lanes B1/B2, 2026-09-07) introduced two coq_status values
+    # with a coq.file but no proof obligation: "definition" (a Definition/
+    # Record/Inductive only, nothing for Print Assumptions to check) and
+    # "open_prop" (a Definition <name>_hyp : Prop, deliberately unproved).
+    # For those, assumptions legitimately stays null -- asserting "Closed
+    # under the global context" there would itself be the dishonest claim
+    # this test exists to catch. Every other coq_status with a file set
+    # still requires the honest copied-from-coqc text.
+    NO_PROOF_OBLIGATION = {'definition', 'open_prop'}
     bad = []
     for e in can['canonical']:
         coq = e.get('coq') or {}
         if coq.get('file') is not None:
             a = coq.get('assumptions')
+            if coq.get('coq_status') in NO_PROOF_OBLIGATION and a is None:
+                continue
             if a != 'Closed under the global context' and not (isinstance(a, str) and a.startswith('+axioms:')):
                 bad.append((e['id'], coq.get('file'), a))
     assert not bad, f"coq.file set with dishonest/missing assumptions (T7.9): {bad}"

@@ -35,7 +35,7 @@ for vfile in $(grep -E '\.v$' _CoqProject); do
 From MRC Require Import ${modname}.
 Print Assumptions ${id}.
 EOF
-    out=$(coqc -Q . MRC -Q "$MR_DIR" MR -q "$scratch" 2>&1)
+    out=$(coqc -Q . MRC -Q "$MR_DIR" MR -R "$(cd .. && pwd)/solver-arc" RDL -Q "$(cd .. && pwd)/readout_universe/evidence" URR -q "$scratch" 2>&1)
     if echo "$out" | grep -q "Closed under the global context"; then
       echo "PASS  ${modname}.${id}  -- Closed under the global context" | tee -a "$REPORT"
     else

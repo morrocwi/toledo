@@ -40,7 +40,14 @@ for f in files:
     visit(f, [])
 
 with open(CAN_DIR / "_CoqProject", "w", encoding="utf-8") as fh:
-    fh.write("-Q . MRC\n-Q ../master-river MR\n\n")
+    # -R ../solver-arc RDL and -Q ../readout_universe/evidence URR are required by
+    # every wrapped_related file that Requires From RDL / From URR (Toledo v1.1
+    # lane A, scripts/v11_wrapa.py); build_sequential.sh and verify.sh already pass
+    # these flags on every coqc invocation regardless of what _CoqProject states, so
+    # omitting them here does not break those two scripts, but it silently breaks
+    # any other tool (coq_makefile, an IDE) that derives its flags from this file
+    # alone -- checker finding, fixed here (v1.1 pre-existing gap, not new).
+    fh.write("-Q . MRC\n-Q ../master-river MR\n-R ../solver-arc RDL\n-Q ../readout_universe/evidence URR\n\n")
     fh.write("\n".join(order) + "\n")
 
 print(f"Wrote _CoqProject: {len(order)} files, topological order "

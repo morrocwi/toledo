@@ -1,0 +1,86 @@
+{
+  "_note": "Toledo v1.1 Lane C, task (1). Question: are the founder's RD1-RD9 identifiers (found, not guessed, in coq/solver-arc/formal/RD.v and its byte-identical public mirror coq/readout_universe/evidence/RD.v -- both header-commented 'Axiom map: RD1 zero, RD2 succ, RD5 induction = Inductive D + elim; RD3 succ<>zero, RD4 succ injective = theorems; RD6,RD7 add ; RD8,RD9 mul = recursive definitions') the SAME OBJECTS as any Genesis root row (E00.1-E00.7 / EQ-001..EQ-008, plus N1-N5 and other named results checked as candidates) under the Toledo equivalence criterion (documented registry/GENESIS_CODE_SCHEME.md / Equivalence Registry design: A = B iff a bijective phi of renaming, fixed positive scale, or fixed constant substitution gives A(x)=B(phi(x)) on the shared domain -- no limits, no approximations)?",
+  "method": "RD.v (both copies, diffed byte-identical for the shared header+D-construction region) read directly; every genesis_root.json row whose code or alias starts 'E00.' read directly (EQ-001..EQ-008); N1-N5 and the pre-existing GENESIS_CODE_SCHEME.md build note on RD1-RD9 also checked as candidates. No row in genesis_root.json (590 rows) carries a literal 'RD1'..'RD9' code or alias -- confirmed by direct string search, matching the scheme doc's own prior finding.",
+  "verdict_key": "NOT_SAME_OBJECT = confirmed distinct mathematical object, no phi exists (statements compared directly, quoted both sides); genesis_code is null in every row below because none of the 9 identifiers passed the criterion -- no alias was added anywhere, per the task rule that only confirmed pairs get an alias.",
+  "map": {
+    "RD1": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "coq/solver-arc/formal/RD.v (identical in coq/readout_universe/evidence/RD.v), header: \"(* ---- RD1, RD2, RD5 ---- *)\" then \"Inductive D : Type :=\\n  | zero : D\\n  | succ : D -> D.\" -- RD1 names the nullary constructor `zero : D` of a from-scratch Peano-style inductive type.",
+      "nearest_genesis_candidate": "EQ-001 (alias E00.1)",
+      "genesis_quote": "genesis_root.json EQ-001: name \"Primordial difference\", statement \"\\u2203 a,b : a \\u2260 b\" -- an existence claim about two distinguishable objects, not the introduction of a zero/base term of a number type.",
+      "reasoning": "No renaming/scale/constant-substitution bijection carries the term-introduction 'zero : D' onto the existential claim '\\u2203 a,b : a\\u2260b' -- one is a syntactic constructor of an inductive type, the other is an existence axiom over an unspecified domain of 'distinguishable objects'. Different logical form (term vs. proposition), different arity, different content."
+    },
+    "RD2": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v: \"(* ---- RD1, RD2, RD5 ---- *)\" ... \"| succ : D -> D.\" -- RD2 names the unary successor constructor of the same inductive type D.",
+      "nearest_genesis_candidate": "EQ-002 (alias E00.2)",
+      "genesis_quote": "genesis_root.json EQ-002: name \"Distinguishability needs a distinguisher\", statement \"\\u2203 A : A discriminates E\\u2081 \\u2260 E\\u2082\".",
+      "reasoning": "RD2 is a type-constructor (a function D -> D at the syntax level, no proposition attached); EQ-002 is an existence claim about a distinguishing agent A. No bijective phi relates a constructor signature to an existential proposition about agents; not the same object under the criterion."
+    },
+    "RD3": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v: \"Theorem RD3_succ_ne_zero : forall x : D, succ x <> zero.\\nProof. intros x H. discriminate H. Qed.\"",
+      "nearest_genesis_candidate": "EQ-003 (alias E00.3)",
+      "genesis_quote": "genesis_root.json EQ-003: name \"Asymmetry is forced\", statement \"A\\u2192B \\u2260 B\\u2192A (a directed admissible-transition relation on the retained graph, not material implication)\".",
+      "reasoning": "RD3 is the Peano successor-not-zero axiom for the constructed type D (a fact about D's two constructors never colliding). EQ-003 asserts that a directed transition relation on a retained graph is asymmetric. Superficially both are '<>'-shaped, but the objects compared (succ x vs. zero; A\\u2192B vs. B\\u2192A) are not related by any renaming/scale/constant substitution -- one ranges over an inductively built number type, the other over a domain-specific transition relation the source explicitly says is 'not material implication'. Distinct objects."
+    },
+    "RD4": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v: \"Theorem RD4_succ_inj : forall x y : D, succ x = succ y -> x = y.\\nProof. intros x y H. congruence. Qed.\"",
+      "nearest_genesis_candidate": "EQ-004 (alias E00.4)",
+      "genesis_quote": "genesis_root.json EQ-004: name \"Temporal ordering\", statement \"t(s) := min #steps(s\\u2080 \\u2192 s) \\u2208 \\u2115\".",
+      "reasoning": "RD4 is successor-injectivity for D. EQ-004 defines a step-count function into the naturals. EQ-004 in fact USES a natural-number codomain (\\u2115) rather than stating an axiom equivalent to injectivity of a successor operation; it is a definition of a derived quantity, not a claim about an operator's injectivity. No phi bijection matches the two statements' logical shape (implication over an equality of constructor applications, vs. a definition of a minimum-step function)."
+    },
+    "RD5": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v comment: \"RD1, RD2, RD5 ---- Inductive D : Type := | zero : D | succ : D -> D.\" -- RD5 is the automatically generated structural-induction/elimination principle Coq attaches to this Inductive declaration (D_ind / D_rect), not a separately written theorem in the file.",
+      "nearest_genesis_candidate": "EQ-005 (alias E00.5)",
+      "genesis_quote": "genesis_root.json EQ-005: name \"Persistence / causal memory\", statement \"\\u03c4_c > 0\".",
+      "reasoning": "RD5 is a proof-principle (induction) generated by the type declaration; EQ-005 is a strict-positivity claim about a causal-memory time constant \\u03c4_c. A proof principle and a numeric-positivity axiom are not comparable under the phi-criterion at all -- different logical categories (a scheme for proofs vs. a ground proposition about a scalar)."
+    },
+    "RD6": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v: \"(* ---- RD6, RD7 : addition ---- *)\\nFixpoint add (x y : D) : D :=\\n  match y with zero => x | succ y' => succ (add x y') end.\" -- RD6 is the base case `add x zero = x` (see also Lemma add_zero).",
+      "nearest_genesis_candidate": "EQ-006 (alias E00.6)",
+      "genesis_quote": "genesis_root.json EQ-006: name \"Discrete world before continuum\", statement \"t = n\\u0394\\u03b8, n\\u2208\\u2115, \\u0394\\u03b8>0 (\\u0394\\u03b8=0 undefined; continuum is a controlled readout limit)\".",
+      "reasoning": "RD6 is the recursive-definition base clause for addition on D. EQ-006 states that physical time is an integer multiple of a nonzero discreteness quantum \\u0394\\u03b8. No renaming/scale/constant substitution turns a definitional equation clause (add x zero = x) into an existential/typing claim about how physical time is built from a quantum step; unrelated content."
+    },
+    "RD7": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v: same Fixpoint as RD6 -- RD7 is the recursive case `add x (succ y') = succ (add x y')` (see also Lemma add_succ).",
+      "nearest_genesis_candidate": "EQ-007 (alias E00.7-speed)",
+      "genesis_quote": "genesis_root.json EQ-007: name \"Finite causal propagation speed\", statement \"v = \\u221a(D/\\u03c4_c) < \\u221e\".",
+      "reasoning": "RD7 is addition's recursive step on D. EQ-007 bounds a propagation speed computed from a diffusion constant D and \\u03c4_c. The two share no common shape (one is a recursive equation defining +1-step addition; the other is a derived-quantity bound with a square root and an explicit finiteness clause) and no phi relates them."
+    },
+    "RD8": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v: \"(* ---- RD8, RD9 : multiplication ---- *)\\nFixpoint mul (x y : D) : D :=\\n  match y with zero => zero | succ y' => add (mul x y') x end.\" -- RD8 is the base case `mul x zero = zero` (see also Lemma mul_zero).",
+      "nearest_genesis_candidate": "EQ-008 (alias E00.7-operator)",
+      "genesis_quote": "genesis_root.json EQ-008: name \"Retained graph-Laplacian operator L_R\", statement \"L_R := D_W \\u2212 W (D_W = weighted degree matrix, W = retained adjacency; full operator on a multimode retained state, not a scalar)\".",
+      "reasoning": "RD8 is multiplication's base clause on D (a scalar recursive definition). EQ-008 defines a matrix-valued graph-Laplacian operator L_R on a retained-adjacency graph. A scalar recursive base case and a matrix-operator definition are not the same mathematical object under any renaming/scale/constant-substitution bijection; different types entirely (D -> D vs. an operator on a multimode state space)."
+    },
+    "RD9": {
+      "genesis_code": null,
+      "verdict": "NOT_SAME_OBJECT",
+      "rd_quote": "RD.v: same Fixpoint as RD8 -- RD9 is the recursive case `mul x (succ y') = add (mul x y') x` (see also Lemma mul_succ).",
+      "nearest_genesis_candidate": "none closer than EQ-008 (no ninth E00.x row exists -- E00.1-E00.7 span EQ-001..EQ-008 only, per genesis_root.json and GENESIS_CODE_SCHEME.md's own note that E00.7 was split into a -speed and -operator pair)",
+      "genesis_quote": "n/a -- no distinct ninth root-axiom row exists in genesis_root.json to compare against; the root-axiom stream is exactly E00.1-E00.7 (8 rows, EQ-001..EQ-008 after the E00.7 split), not 9.",
+      "reasoning": "RD9 is multiplication's recursive step on D. There is no ninth Genesis root-axiom row at all (the founder's own RD1-RD9 count already does not line up 1:1 with Genesis's 7-tagged/8-row root-axiom stream -- flagged, not resolved, in GENESIS_CODE_SCHEME.md's build notes). Combined with RD1-RD8 all failing the phi-criterion against their nearest candidates, this confirms RD1-RD9 is a wholly separate formal object (a Peano/natural-number construction the corpus calls the 'Retained-Difference object system, machine-checked... Object stratum of \"The Roots of Mathematics and Geometry\" (Book Zero)', per RD.v's own file banner) and not an alternate naming of the Genesis physical/epistemic root axioms."
+    }
+  },
+  "summary": {
+    "confirmed_pairs": 0,
+    "not_same_object": 9,
+    "aliases_added": 0,
+    "coq_map_updates": 0,
+    "closing_note": "This resolves the open item flagged in registry/GENESIS_CODE_SCHEME.md ('the founder's shorthand RD1-RD9 for the root axioms does not appear verbatim anywhere in either source file... if RD1-RD9 is a live external naming convention (e.g. from the solver arc, private), reconciling it against E00.1-E00.7 is a follow-up'): RD1-RD9 IS a real, machine-checked, named convention -- found verbatim in coq/solver-arc/formal/RD.v and its byte-identical public mirror coq/readout_universe/evidence/RD.v -- but by direct statement comparison it names a Peano-style natural-number construction (D : Type with zero/succ/add/mul), a different mathematical object from Genesis's E00.1-E00.7 physical/epistemic root axioms. No alias was added to any genesis_root.json row and no coq_map.json code was changed, since zero pairs were confirmed under the phi-criterion. Genesis's own root-axiom identifiers (E00.1-E00.7, i.e. EQ-001..EQ-008 in the Appendix-C stream) remain the sole codes for those axioms, unchanged."
+  }
+}

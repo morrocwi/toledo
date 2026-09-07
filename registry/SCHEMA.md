@@ -117,3 +117,7 @@ A code failing this pattern (other than a `HRP-X.<nnn>` rootless placeholder, wh
 `test_forced_chain_intact`, `test_merge_has_phi_evidence`, `test_status_consistency`,
 `test_code_grammar`, `test_coq_assumptions_honest` — in addition to the 3 existing tests
 (`test_raw_inventory_loads`, `test_canonical_codes_unique_and_mapped`, `test_lineage_shape`).
+
+## Addendum 2026-09-07 (v1.1 checker) — coq_status values and tier_evidence
+- `coq.coq_status` now also takes: `definition` (a typed Definition/Record in a finite model, no theorem — `assumptions` is null), `open_prop` (an Open/Dr hypothesis stated as `Definition …_hyp : Prop`, unproved — `assumptions` null), `wrapped_related` (a Toledo-named wrapper that aliases an imported identifier which the entry's statement only reads or specialises; not a closure of the entry's own statement), `not_formalisable` (no formal content in the source; reason recorded in `tier_evidence`). `closed` is reserved for entries whose own file carries at least one Theorem/Lemma/Corollary/Example/Remark reported "Closed under the global context" by verify.sh; 214 pre-v1.1 entries that were pure Definitions were reclassified from `closed` to `definition` on 2026-09-07 (LINEAGE events).
+- `tier_evidence` {quote, source, line, commit} accompanies any tier set or changed after the initial import; a tier is never raised above the source's own tag. Where a source tags a reading Th_coqc but no Coq identifier for it is located, the tier is kept as the source states and `status` is `unverified` with a `status_note`.

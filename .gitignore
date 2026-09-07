@@ -5,6 +5,7 @@
 *.aux
 .*.aux
 .lia.cache
+.nra.cache
 coq/*/Makefile
 Makefile.conf
 .Makefile.d
