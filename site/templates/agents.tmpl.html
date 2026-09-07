@@ -1,0 +1,93 @@
+<p class="breadcrumb"><a href="{{root}}/">Toledo</a> / Agents</p>
+<h1>Using Toledo as an AI agent</h1>
+
+<p class="note"><strong>Founder rule (2026-09-07):</strong> every equation must be looked up in
+Toledo before it is used. No agent may use an unregistered equation. Call <code>toledo_check</code>
+(or read the <code>verdict</code> block a code lookup already attaches) before stating, citing, or
+building on any formula. <code>verdict.usable == true</code> — cite the matched code. A superseded
+or split code — use the redirect it names. A code that only points to prose — do not present it as
+a formula. A candidate or ambiguous match — get it confirmed, or escalate to a human; do not guess.
+Not registered — call <code>toledo_register_proposal</code> and wait for a human registrar; this
+server never merges a proposal into the registry itself.</p>
+
+<h2>Connect: MCP server</h2>
+<p class="lede">Any stdio-capable MCP client reads this repository's root <code>.mcp.json</code>:</p>
+<pre><code>{{mcp_json_snippet}}</code></pre>
+<p class="lede">No native MCP support? Run the server directly and speak MCP-over-stdio to it:</p>
+<pre><code>python3 mcp/toledo_mcp/server.py</code></pre>
+
+<h3>The tools</h3>
+<div class="table-wrap">
+<table>
+<caption>Every Toledo MCP tool, parsed at build time from mcp/README.md's own table.</caption>
+<thead><tr><th scope="col" class="code-cell">Tool</th><th scope="col">Purpose</th></tr></thead>
+<tbody>
+{{tools_table_rows}}
+</tbody>
+</table>
+</div>
+
+<h2>Connect: CLI</h2>
+<pre><code>pip install -e mcp/
+toledo check --formula "..."
+toledo show EQ-015/B.01.v1</code></pre>
+
+<h2>Connect: static JSON API</h2>
+<p class="lede">A periodic, eventually-consistent mirror at <a href="{{root}}/v1/">{{root}}/v1/</a> —
+read <a href="{{root}}/about/">the licence &amp; citation page</a> before treating an answer from
+it as more than "as of that export"; a live MCP call is authoritative, this mirror is
+corroboration.</p>
+<pre><code>curl https://morrocwi.github.io/toledo/v1/entries/EQ_015__B_01_v1.json</code></pre>
+
+<p class="lede">A minimal, runnable, stdlib-only example — the founder rule enforced client-side:</p>
+<pre><code>#!/usr/bin/env python3
+"""Look up a Toledo code before citing it -- the founder rule, enforced client-side."""
+import json
+import urllib.request
+
+code = "EQ-015/B.01.v1"
+mangled = code.replace("/", "__").replace(".", "_").replace("-", "_")
+url = f"https://morrocwi.github.io/toledo/v1/entries/{mangled}.json"
+
+with urllib.request.urlopen(url, timeout=10) as resp:
+    doc = json.load(resp)
+
+verdict = doc["verdict"]
+if verdict["usable"]:
+    print(f"cite {doc['entry']['code']}: {doc['entry']['name']}")
+else:
+    print(f"do not cite ({verdict['verdict']}): {verdict.get('reason', '')}")
+    print("call the live MCP server instead -- this static copy is eventually consistent")
+</code></pre>
+
+<h3>Structured data for crawlers</h3>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Toledo equation registry — static read API",
+  "url": "https://morrocwi.github.io/toledo/v1/manifest.json",
+  "potentialAction": [
+    {"@type": "SearchAction", "target": "https://morrocwi.github.io/toledo/v1/search-index.json"},
+    {"@type": "ConsumeAction", "target": "https://morrocwi.github.io/toledo/v1/entries/{mangled_code}.json"}
+  ]
+}
+</script>
+
+<h2>Coverage, honestly disclosed</h2>
+{{coverage_html}}
+<p class="lede">{{entry_count}} coded entries, registry release {{registry_release_version}}, as of
+{{generated_at_human}}.</p>
+
+<h2>Static API: should / should not</h2>
+<ul>
+<li>Use <code>entries/</code>, <code>by-root/</code>, <code>by-domain/</code>, and
+<code>search-index.json</code> for browsing, corroboration, or an offline mirror.</li>
+<li>Read <code>manifest.json</code>'s <code>generated_at</code>/<code>generated_from_commit</code>
+before treating an answer from this export as more than "as of that export".</li>
+<li>Do not gate a founder-rule-sensitive decision on this export alone when a live MCP connection is
+available — call <code>toledo_check</code>/<code>toledo_get</code> instead.</li>
+<li>A missing <code>entries/&lt;code&gt;.json</code> file here is not proof a code is unregistered
+— it may simply predate the last export. Fall back to the live server rather than concluding
+<code>NOT_REGISTERED</code>.</li>
+</ul>

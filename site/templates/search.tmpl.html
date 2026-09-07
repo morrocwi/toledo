@@ -1,0 +1,25 @@
+<h1>Search</h1>
+
+<noscript>
+<p class="note">Search needs JavaScript to filter entries in your browser. Use
+<a href="{{root}}/browse/">/browse/</a> instead — every entry in one page, readable and
+searchable (Ctrl/Cmd+F) with no JavaScript at all.</p>
+</noscript>
+
+<div id="search-app" hidden>
+<label for="search-input">Find a code, name, or word from a statement</label>
+<input id="search-input" class="search-input" type="search" autocomplete="off"
+       placeholder="e.g. EQ-015/B.01.v1, setpoint, or a word from the formula">
+<p id="search-status" class="search-status" aria-live="polite">Loading search index&hellip;</p>
+<div class="table-wrap">
+<table>
+<caption>Search results, ranked by match strength then natural code order.</caption>
+<thead>
+<tr><th scope="col" class="code-cell">Code</th><th scope="col">Name</th><th scope="col">Tier</th><th scope="col">Domain</th><th scope="col">Status</th></tr>
+</thead>
+<tbody id="search-results-body"></tbody>
+</table>
+</div>
+</div>
+
+<script src="{{root}}/assets/search.js"></script>

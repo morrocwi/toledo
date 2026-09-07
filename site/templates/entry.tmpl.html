@@ -1,0 +1,44 @@
+<p class="breadcrumb"><a href="{{root}}/">Toledo</a> / {{entry_root_link}} / {{code}}</p>
+<h1>{{code}}</h1>
+<p class="lede" data-verbatim-source="true">{{name_html}}</p>
+<div class="badge-row">
+{{domain_badge_html}}
+{{tier_badge_html}}
+{{status_badge_html}}
+{{coq_status_badge_html}}
+</div>
+{{status_note_html}}
+{{aliases_html}}
+
+<h2>Statement</h2>
+<div class="statement">
+{{statement_html}}
+</div>
+
+<h2>Ancestry</h2>
+<p class="lede">The primary parent chain — the same short path <code>toledo_lineage</code> returns
+as its "ancestry chain".</p>
+{{ancestry_html}}
+
+<details>
+<summary>Full relations (all parents, children, and cross-references)</summary>
+<p class="lede">The complete parent/child/relation graph, not just the single chain above — the
+same data <code>toledo_ancestors</code>, <code>toledo_descendants</code>, and
+<code>toledo_neighbours</code> return.</p>
+{{relations_html}}
+</details>
+
+<h2>Occurrences</h2>
+{{occurrences_html}}
+
+<h2>Coq</h2>
+{{coq_html}}
+
+<h2>Origin &amp; provenance</h2>
+{{origin_html}}
+
+<script type="application/ld+json">
+{{jsonld}}
+</script>
+
+<p class="search-status">Machine-readable copy: <a href="{{root}}/v1/entries/{{api_mangled_code}}.json">{{root}}/v1/entries/{{api_mangled_code}}.json</a> (static API — eventually consistent; call the live MCP server for a current verdict). See <a href="{{root}}/agents/">/agents/</a>.</p>

@@ -1,0 +1,20 @@
+<h1>Browse — every entry</h1>
+<p class="lede">All {{entry_count}} coded entries and root rows, in natural code order (root, then
+domain letter, then sequence, then revision). Use your browser's own find (Ctrl/Cmd+F) — this page
+needs no JavaScript to read or search.</p>
+
+<nav class="jump-nav" aria-label="Jump by initial letter">
+{{jump_nav_html}}
+</nav>
+
+<div class="table-wrap">
+<table>
+<caption>Every Toledo code, sorted in natural code order.</caption>
+<thead>
+<tr><th scope="col" class="code-cell">Code</th><th scope="col">Name</th><th scope="col">Tier</th><th scope="col">Domain</th><th scope="col">Status</th></tr>
+</thead>
+<tbody>
+{{rows_html}}
+</tbody>
+</table>
+</div>

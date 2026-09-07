@@ -1,0 +1,38 @@
+<h1>Toledo</h1>
+<p class="lede">Toledo is the coded equation registry of the Human&ndash;AI Readout Programme: one
+statement per code, each carrying its own tier, status, and Coq (<code>Th_coqc</code>)
+formalisation link where one exists. Every reading traces back through its parent chain to a
+Layer-0 root, so the same equation read through a different domain — physics, biology, method, the
+social or epistemic domains — stays connected to where it came from.</p>
+<p class="lede"><strong>Founder rule:</strong> every equation is looked up in Toledo before it is
+used; no agent should use an unregistered equation. See <a href="{{root}}/agents/">/agents/</a> for
+how to check one programmatically.</p>
+
+<div class="stats-grid">
+<div class="stat-card"><span class="n">{{entry_count}}</span><span class="l">coded entries</span></div>
+<div class="stat-card"><span class="n">{{root_count}}</span><span class="l">Layer-0 roots</span></div>
+<div class="stat-card"><span class="n">{{current_count}}</span><span class="l">status: current</span></div>
+<div class="stat-card"><span class="n">{{closed_count}}</span><span class="l">Coq-closed proofs</span></div>
+</div>
+
+<h2>Browse by domain</h2>
+<p class="lede">Each entry belongs to one of eight domains — a reading of a root through that
+domain's own vocabulary.</p>
+<nav class="jump-nav" aria-label="Browse by domain">
+{{domain_links_html}}
+</nav>
+
+<h2>Find an entry</h2>
+<ul>
+<li><a href="{{root}}/browse/">Browse</a> — every entry in one page, works with JavaScript off.</li>
+<li><a href="{{root}}/search/">Search</a> — filter by code, name, or statement text.</li>
+<li>By <a href="{{root}}/by-tier/">tier</a>, <a href="{{root}}/by-status/">status</a>, or
+<a href="{{root}}/by-root/">root</a>.</li>
+</ul>
+
+<h2>Using Toledo as an AI agent</h2>
+<p class="lede">The <a href="{{root}}/agents/">/agents/</a> page has the lookup rule, the MCP
+tools, a static JSON API with a runnable example, and the <code>.mcp.json</code> wiring.</p>
+
+<p class="search-status">Registry release {{registry_release_version}} · generated
+{{generated_at_human}}. Full coverage detail and licence: <a href="{{root}}/about/">/about/</a>.</p>

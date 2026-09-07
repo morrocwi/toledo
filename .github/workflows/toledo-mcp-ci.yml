@@ -1,9 +1,12 @@
 # Toledo MCP package CI — mcp/DESIGN.md section 12.
 #
-# Scope: this workflow only ever touches `mcp/` — it never builds, tests, or
-# gates the registry/coq/latex pipeline that the rest of this repository
-# owns (that pipeline is `make build` / `make test` / `make verify`, run by
-# the registry-owning process, not this file).
+# Scope: this workflow only ever touches `mcp/` (plus, since site/DESIGN.md
+# sec. 8, the read-only public site build under `site/`) — it never builds,
+# tests, or gates the registry/coq/latex pipeline that the rest of this
+# repository owns (that pipeline is `make build` / `make test` / `make
+# verify`, run by the registry-owning process, not this file). The site
+# build reads `registry/` and `mcp/dist/static-api` but never writes to
+# either.
 #
 # Four separate jobs, deliberately not one (mcp/DESIGN.md sec. 12): leak-scan
 # needs no Python setup and should fail fast/cheap even while the test job is
@@ -19,12 +22,21 @@
 # `mcp/docs/CHANGELOG.md`), not a placeholder for a dependency that might be
 # missing. If a future checkout ever regresses S3, these steps fail closed —
 # that remains the correct, visible failure mode, not silent skipping.
+#
+# Pages deploy (site/DESIGN.md sec. 8): the human site (`build-site`) and the
+# static API export (`export-static`) are two separate, independently
+# failing jobs, each uploading its own plain build artifact — a broken
+# template cannot silently take the live `/v1/` API mirror down with it, and
+# a broken static export cannot block the human site from deploying either.
+# `assemble-pages` merges the two plain artifacts into the one Pages
+# artifact (site at the root, static API under `/v1/`) that `deploy-pages`
+# publishes.
 name: toledo-mcp-ci
 on:
   push:
-    paths: ["mcp/**", "registry/**"]
+    paths: ["mcp/**", "registry/**", "site/**"]
   pull_request:
-    paths: ["mcp/**"]
+    paths: ["mcp/**", "site/**"]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -43,14 +55,63 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -e mcp/
-      - run: python3 -c "from toledo_mcp import core, index, paths; index.build_index(core.load_registry(), paths.repo_root())"
+      - run: python3 mcp/scripts/build_index.py   # the exact prebuilt-index step a release packages under mcp/state/ (DEBT #48, 2026-09-07) — same script, not a separate CI-only inline call
       - run: python3 -c "from toledo_mcp import cli; cli.main(['by-domain', 'P'])"   # CLI parity smoke, not a full assertion — the real assertion lives in mcp/tests/test_cli.py (stream S3)
   leak-scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 mcp/scripts/leak_scan.py mcp/
-  export-static:
+      # The private_repo_name category (BBL-198) needs a denylist file this
+      # script's own source is deliberately never allowed to hard-code. If
+      # the optional repository secret TOLEDO_LEAK_SCAN_DENYLIST is
+      # configured (one line: the private solver-arc repository's real
+      # name), write it to a runner-local temp file and pass it through; if
+      # not, FAIL LOUD rather than let this security-shaped gate silently
+      # report "NOT RUN" with a passing exit code — that silent-pass gap is
+      # exactly how a proprietary-repo leak sat undetected on public GitHub
+      # for two weeks before (the adversarial-review incident this
+      # workspace's own standing rules cite). Configure the secret to turn
+      # this green; until then it stays a visible, founder-actionable
+      # failure rather than an invisible no-op.
+      - name: Write denylist file from secret (if configured)
+        if: ${{ secrets.TOLEDO_LEAK_SCAN_DENYLIST != '' }}
+        run: printf '%s\n' "${{ secrets.TOLEDO_LEAK_SCAN_DENYLIST }}" > "$RUNNER_TEMP/toledo-denylist.txt"
+      - run: |
+          if [ -f "$RUNNER_TEMP/toledo-denylist.txt" ]; then
+            python3 mcp/scripts/leak_scan.py mcp/ --denylist-file "$RUNNER_TEMP/toledo-denylist.txt"
+          else
+            echo "::error::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset) — failing loud instead of silently skipping this category. Configure the repository secret to fix."
+            python3 mcp/scripts/leak_scan.py mcp/ || true
+            exit 2
+          fi
+  build-site:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -e mcp/                      # build_site.py imports mangle_code from it
+      - run: python3 site/build_site.py --out site/dist
+      - run: python3 -m toledo_mcp.export_static --out mcp/dist/static-api   # so test_entry_page_api_link_is_correctly_mangled (tests/test_site.py) gets real inputs instead of skipping
+      - run: python3 -m pytest -q tests/test_site.py
+      # Same denylist-secret pattern as the leak-scan job above — see its
+      # comment for why an unset secret fails loud rather than passing
+      # silently for the private_repo_name category.
+      - name: Write denylist file from secret (if configured)
+        if: ${{ secrets.TOLEDO_LEAK_SCAN_DENYLIST != '' }}
+        run: printf '%s\n' "${{ secrets.TOLEDO_LEAK_SCAN_DENYLIST }}" > "$RUNNER_TEMP/toledo-denylist.txt"
+      - run: |
+          if [ -f "$RUNNER_TEMP/toledo-denylist.txt" ]; then
+            python3 site/checks/run_all.py site/dist --denylist-file "$RUNNER_TEMP/toledo-denylist.txt"
+          else
+            echo "::error::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset) — failing loud instead of silently skipping this category. Configure the repository secret to fix."
+            python3 site/checks/run_all.py site/dist || true
+            exit 2
+          fi
+      - uses: actions/upload-artifact@v4
+        with: { name: site-dist, path: site/dist, retention-days: 1 }
+  export-static:                                        # unchanged logic, output now a plain artifact
     runs-on: ubuntu-latest
     needs: test
     if: github.ref == 'refs/heads/main'
@@ -60,10 +121,33 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -e mcp/
       - run: python3 -m toledo_mcp.export_static --out mcp/dist/static-api
+      - uses: actions/upload-artifact@v4
+        with: { name: static-api-dist, path: mcp/dist/static-api, retention-days: 1 }
+  assemble-pages:
+    runs-on: ubuntu-latest
+    needs: [build-site, export-static]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: site-dist, path: merged }
+      - uses: actions/download-artifact@v4
+        with: { name: static-api-dist, path: merged/v1-src }
+      - run: |
+          mkdir -p merged/v1
+          cp -r merged/v1-src/v1/. merged/v1/
+          # export_static's own landing page is written with hrefs relative
+          # to its final deployed location (mcp/toledo_mcp/export_static.py
+          # already writes them bare, e.g. href="manifest.json", not
+          # href="v1/manifest.json" — see that file's own comment); this sed
+          # is a defensive no-op belt-and-braces rewrite in case a future
+          # export_static.py change ever regresses to a v1/-prefixed href,
+          # so a merge here can never re-introduce the doubled v1/v1/ 404.
+          sed -E 's#href="v1/#href="#g' merged/v1-src/index.html > merged/v1/index.html
+          rm -rf merged/v1-src
       - uses: actions/upload-pages-artifact@v3
-        with: { path: mcp/dist/static-api }
+        with: { path: merged }
   deploy-pages:
-    needs: export-static
+    needs: assemble-pages                                # was: needs: export-static
     if: github.ref == 'refs/heads/main'
     permissions: { pages: write, id-token: write }
     environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }

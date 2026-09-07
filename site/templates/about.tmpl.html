@@ -1,0 +1,52 @@
+<p class="breadcrumb"><a href="{{root}}/">Toledo</a> / About</p>
+<h1>About Toledo</h1>
+
+<p class="lede">Toledo is the coded equation registry of the Human&ndash;AI Readout Programme:
+scope is equations and their Coq (<code>Th_coqc</code>) formalisation only. Papers, books and prose
+live in their own records; a Toledo code is cited from there, not duplicated into them. Every
+number on this page is computed from the registry at build time.</p>
+
+<h2>Coverage</h2>
+<div class="stats-grid">
+<div class="stat-card"><span class="n">{{entry_count}}</span><span class="l">canonical entries</span></div>
+<div class="stat-card"><span class="n">{{root_count}}</span><span class="l">root rows</span></div>
+</div>
+<h3>By status</h3>
+{{status_breakdown_html}}
+<h3>By domain</h3>
+{{domain_breakdown_html}}
+<h3>By tier</h3>
+{{tier_breakdown_html}}
+<h3>By Coq status</h3>
+{{coq_status_breakdown_html}}
+<h3>Statement format and MathML</h3>
+{{coverage_html}}
+
+<h2>Equation provenance policy</h2>
+<p class="lede">This registry is the sole authoritative source for an existing Toledo equation. A
+needed equation absent here is checked against this registry's own notation, definitions, and
+derivations before any new equation is proposed; a new derivation is labelled as a proposal, never
+presented as an existing entry. Full policy:
+<a href="https://github.com/morrocwi/toledo/blob/main/EQUATION_SOURCE_POLICY.md">EQUATION_SOURCE_POLICY.md</a>.</p>
+
+<h2>Static API</h2>
+<p class="lede">A caller with no MCP/stdio access reads the same registry as a periodic,
+eventually-consistent JSON mirror under <a href="{{root}}/v1/">{{root}}/v1/</a>. It is
+corroboration, not a substitute for a live lookup — see <a href="{{root}}/agents/">/agents/</a> for
+the should/should-not summary and a runnable example.</p>
+
+<h2>Licence</h2>
+<ul>
+<li>Registries, docs, and generated views (this site included): <strong>CC BY 4.0</strong>.</li>
+<li>Coq sources, scripts, and the MCP server/CLI: <strong>MIT</strong>.</li>
+<li>Imported Coq developments keep their own upstream licence — see each source's own provenance
+file in the repository.</li>
+</ul>
+
+<h2>Citation</h2>
+<p class="lede">Cite the Zenodo concept DOI, which always resolves to the latest release:
+<strong>{{concept_doi}}</strong>. Or cite the specific version used — see
+<a href="https://github.com/morrocwi/toledo/blob/main/CITATION.cff">CITATION.cff</a>. Source:
+<a href="https://github.com/morrocwi/toledo">github.com/morrocwi/toledo</a>.</p>
+
+<p class="search-status">Registry release {{registry_release_version}} · generated {{generated_at_human}} from commit {{generated_from_commit}}.</p>

@@ -1,0 +1,16 @@
+<p class="breadcrumb"><a href="{{root}}/">Toledo</a> / <a href="{{root}}/{{axis_index_path}}/">{{axis_label}}</a> / {{axis_value}}</p>
+<h1>{{axis_label}}: {{axis_value}}</h1>
+<p class="lede">{{axis_description}}</p>
+<p class="search-status">{{row_count}} {{row_count_noun}}.</p>
+
+<div class="table-wrap">
+<table>
+<caption>{{axis_label}} {{axis_value}} — {{row_count}} {{row_count_noun}}.</caption>
+<thead>
+<tr><th scope="col" class="code-cell">Code</th><th scope="col">Name</th><th scope="col">Tier</th><th scope="col">Domain</th><th scope="col">Status</th></tr>
+</thead>
+<tbody>
+{{rows_html}}
+</tbody>
+</table>
+</div>
