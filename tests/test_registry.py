@@ -4,7 +4,7 @@ T7.1-T7.9 below implement docs/MEETING_2026-09-06_toledo_design.md decision T7 /
 "Validated by", extending the original 3 tests (test_raw_inventory_loads,
 test_canonical_codes_unique_and_mapped, test_lineage_shape), which are kept unchanged above them.
 """
-import json, glob, pathlib, collections, re
+import json, glob, pathlib, collections, re, subprocess
 import pytest
 
 R = pathlib.Path(__file__).resolve().parent.parent / 'registry'
@@ -358,3 +358,42 @@ def test_counts_match_canonical():
     for key, exp in expected.items():
         got = stored.get(key)
         assert got == exp, f"counts.{key} stale: stored={got} recomputed={exp}"
+
+
+# ---------------------------------------------------------------------------
+# B3 (2026-09-07 fixer): registry/CANONICAL.json's own `generated_from_commit`
+# (SCHEMA.md: "the toledo git sha at build time") must not drift arbitrarily far
+# behind HEAD -- v1.2.0 shipped with it still pointing at an early N3-stage commit
+# (9ca306c), 11 commits and three releases (N4/N5, v1.0.0, v1.1.0, v1.2.0) stale.
+# ---------------------------------------------------------------------------
+STALE_COMMIT_THRESHOLD = 5  # commits behind HEAD before this is real, not cosmetic, drift
+
+
+@pytest.mark.xfail(
+    reason=(
+        "Known, disclosed carry-over (gate B3, 2026-09-07 fixer pass): registry/CANONICAL.json "
+        "is owned by the v1.2 lane run (wf_3483b2de-ea9) and is off-limits for this fixer pass to "
+        "hand-edit, so `generated_from_commit` is not re-stamped here. scripts/stamp_release_commit.py "
+        "re-stamps it to the exact HEAD sha and is meant to run as the LAST step before `git tag "
+        "v1.2.0` (ops/HANDOFF_OVERNIGHT_2026-09-06.md, '2026-09-07 09:10'); this test passes once "
+        "that step has run for the commit under test."
+    ),
+    strict=False,
+)
+def test_generated_from_commit_not_stale():
+    can = _load_canonical()
+    if not can or "generated_from_commit" not in can:
+        return
+    sha = can["generated_from_commit"]
+    assert sha, "generated_from_commit is empty/null"
+    repo_root = R.parent
+    check = subprocess.run(["git", "cat-file", "-e", sha], cwd=repo_root, capture_output=True)
+    assert check.returncode == 0, f"generated_from_commit {sha} is not a commit reachable in this repo's history"
+    behind = subprocess.run(
+        ["git", "rev-list", "--count", f"{sha}..HEAD"], cwd=repo_root,
+        check=True, capture_output=True, text=True,
+    ).stdout.strip()
+    assert int(behind) <= STALE_COMMIT_THRESHOLD, (
+        f"generated_from_commit {sha} is {behind} commits behind HEAD "
+        f"(threshold {STALE_COMMIT_THRESHOLD}) -- run scripts/stamp_release_commit.py before tagging"
+    )

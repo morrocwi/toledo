@@ -82,6 +82,14 @@
    "file": "PROVENANCE.json",
    "field": "repo_note",
    "reason": "leak scan (PUB-ADVERSARIAL-REVIEW privacy/security dimension): the first-drafted repo_note quoted the local clone's internal LAN mirror remote URL (a private-network host:port) alongside the public GitHub origin; replaced with a non-identifying description ('a private-network mirror remote (internal, not public)') before this file was finalised. No private repository name was ever written here -- this source is the public readout_universe repo, distinct from the private solver arc."
+  },
+  {
+   "file": "evidence/URCF_RD_All.v",
+   "line": 8795,
+   "from": "(a three-member panel named by an AI model name)",
+   "to": "(three-reviewer panel conclusion)",
+   "reason": "AI model name removed from a comment (no AI vendor/model name in public files; disclosure by role only); proof content unchanged; same edit as the solver-arc twin (v1.0.0)",
+   "date": "2026-09-07"
   }
  ],
  "notes": [

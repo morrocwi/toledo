@@ -38,6 +38,11 @@ CODE_RE = re.compile(
 
 TIER_ENUM = {"Th_coqc", "finite_diagnostic", "Dr", "Open", "Definition", "Ax", "RETRACTED", "untagged"}
 
+# A synthesized root row whose own `statement` text already quotes a literal Coq
+# `Axiom <name> : <Type>.` line (gate B2, 2026-09-07) — used by genesis_row_to_canonical()
+# to disclose that directly instead of defaulting it the same as an un-investigated row.
+ROOT_AXIOM_STATEMENT_RE = re.compile(r"^\s*Axiom\s+(\w+)\s*:")
+
 ASSUMPTIONS_MADE = []  # collected for the --sample / build report
 
 
@@ -125,13 +130,35 @@ def genesis_row_to_canonical(row: dict, anchor: dict) -> dict:
     - `occurrences[]` is built from `synthesis_occurrences` (bare strings like
       "(4)") with everything except `raw_key` left null, since genesis_root.json
       does not carry record_id/doi/label/section per occurrence.
-    - `coq` object defaults to all-empty/not_yet_formalised for a synthesized
-      root row (Coq wiring happens in a later stream, N5, not this generator).
+    - `coq` object defaults to all-empty/"root_layer_unwired" for a synthesized root row
+      (Coq wiring happens in a later stream, N5, not this generator) — a distinct value
+      from the reading-layer's retired `not_yet_formalised` enum member (gate B2,
+      2026-09-07, `registry/SCHEMA.md`'s dated addendum), so the two are never confused in
+      a rendered view. The one exception is a root row whose own `statement` already
+      quotes a literal Coq `Axiom` line (currently only `CMC`) — disclosed via
+      `ROOT_AXIOM_STATEMENT_RE` instead of defaulted, since the source already discloses
+      more than "not yet looked at".
     """
     code = row["code"]
     parents = [{"code": p, "derived_via": row.get("derived_via") or "reads"} for p in row.get("parents", [])]
     tier_in_genesis = row.get("tier_in_genesis", "") or ""
     is_retracted = tier_in_genesis.strip().upper() == "RETRACTED"
+    axiom_match = ROOT_AXIOM_STATEMENT_RE.match(row.get("statement", "") or "")
+    if axiom_match:
+        coq = {
+            "file": None,
+            "identifier": axiom_match.group(1),
+            "assumptions": None,
+            "imported_from": row.get("section") or None,
+            "coq_status": "axioms",
+            "coq_axioms": [axiom_match.group(1)],
+            "coq_source_redistributed": row.get("coq_source_redistributed", True),
+        }
+    else:
+        coq = {
+            "file": None, "identifier": None, "assumptions": None, "imported_from": None,
+            "coq_status": "root_layer_unwired", "coq_axioms": [], "coq_source_redistributed": True,
+        }
     entry = {
         "id": f"CAN-ROOT-{code_safe(code)}",
         "code": code,
@@ -163,8 +190,7 @@ def genesis_row_to_canonical(row: dict, anchor: dict) -> dict:
         "superseded_by": None,
         "tier": "RETRACTED" if is_retracted else map_tier(tier_in_genesis),
         "tier_in_genesis_verbatim": tier_in_genesis,
-        "coq": {"file": None, "identifier": None, "assumptions": None, "imported_from": None,
-                "coq_status": "not_yet_formalised", "coq_axioms": [], "coq_source_redistributed": True},
+        "coq": coq,
         "relations": [],
         "occurrences": [
             {"record_id": None, "doi": None, "label": None, "section": row.get("section"), "raw_key": occ}

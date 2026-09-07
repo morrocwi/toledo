@@ -3,6 +3,59 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.2.0 — 2026-09-07
+
+Commits `d1057fb` (v1.2 lanes) and `872018f` (gitignore: latex index artefacts) plus this
+release-prep pass. Founder rulings BBL-2026-09-07-207 and BBL-208 (`ops/HANDOFF_OVERNIGHT_2026-09-06.md`,
+"2026-09-07 09:10").
+
+- **Root registry extension R1** (`d1057fb`, BBL-2026-09-07-207): the root registry gains two
+  rows sourced outside the two anchored Genesis documents, using each source's own identifiers
+  verbatim — `Theta` (living/relational-geometry root state, public `readout_genesis` anchor,
+  connected to Genesis roots `EQ-008` and `EQ-022` with quoted evidence) and `CMC` (Causal-Memory
+  Closure, "solver arc (private)" anchor, no evidenced connection to a Genesis root — stated as
+  such, not asserted). 592 root rows total (was 590). 119 equations/theorems from the imported
+  files were added as `Theta/<D>.nn.v1` / `CMC/<D>.nn.v1` readings, `coq_status`
+  `mapped_not_wrapped` — see README's "Root registry extension R1" and `registry/GENESIS_CODE_SCHEME.md`'s
+  own addendum.
+- **Statement completion** (`d1057fb`): 424 entries gained `statement.format = "latex+ascii"`
+  (a mechanical, symbol-for-symbol LaTeX rendering alongside the pre-existing ascii-math text, no
+  content changed — `registry/SCHEMA.md`'s 2026-09-07 addendum); 9 entries
+  (`EQ-015/B.01.v1`–`EQ-015/B.09.v1`) had a process-note placeholder statement replaced by the
+  source's own theorem statement, once located and transcribed, moving `status` from `unverified`
+  to `current`; 52 entries remain `unverified`, each with a status note.
+- **Catalogue redesign** (`d1057fb`, BBL-208): `latex/catalogue.tex` rebuilt — A4, a title page
+  reading the version from `CITATION.cff`, a table of contents by root/part, one block per entry
+  (code, name, tier/status/`coq_status` line, statement in display math or wrapped monospace as
+  appropriate, parents by code, occurrences), natural code order throughout, and a code index —
+  replacing v1.1.0's broken fixed-width tables and string sort. Printable PDF: 278 pages
+  (`pdfinfo`).
+- **912** canonical entries total (was 793); coq_status gains `mapped_not_wrapped` at count 119.
+  See README's "Honest state" section for the full computed count set.
+- `.gitignore`/`Makefile` (`872018f`): latex index build artefacts excluded from version control.
+- **Release-prep fixes (this pass)**: three bugs found by direct parse of the shipped files, fixed
+  before tagging. (B1) `scripts/build_eq_library.py` read the retired field names `root_object`/
+  `canonical_text` and a `coq/canonical/LEDGER_*.md` glob that no longer matches anything (superseded
+  by per-code Coq files at N3) — `registry/EQ_LIBRARY.md`'s 935-row canonical table was rendering
+  blank `Root object`/`Canonical statement`/`Coq` cells on 912/913/932 rows and a hardcoded
+  "Coq identifiers (canonical set): 0" header; fixed to read each entry's own `root`,
+  `statement.latest` and `coq.coq_status`/`coq.identifier` per `registry/SCHEMA.md`, re-run:
+  0 blank cells across all 912 rows, header now 835. (B2) `scripts/toledo_build.py`'s
+  `genesis_row_to_canonical()` hardcoded `coq_status: "not_yet_formalised"` for every synthesized
+  root row (~590, including this release's own `CMC` root, whose `statement` already quotes its
+  source's literal `Axiom cmc_bridge_axiom : CMC_Bridge_Obligation.` line) — a value the README's
+  own coq_status ladder retired at the reading layer, so a reader hitting it in the printed
+  catalogue could reasonably read it as a regression; renamed the synthesized default to
+  `root_layer_unwired` (a distinct, root-layer-only value, `registry/SCHEMA.md` addendum below) and
+  special-cased any root row whose own statement is a literal Coq `Axiom` declaration (currently
+  only `CMC`) to disclose that axiom's name directly instead. (B3) `registry/CANONICAL.json`'s
+  `generated_from_commit` was still `9ca306c`, an early N3-stage commit 11 commits behind this
+  release's HEAD — `registry/CANONICAL.json` is owned by the v1.2 lane run and stays untouched by
+  this pass, so `scripts/stamp_release_commit.py` (new) is written to re-stamp it at tag time, with
+  `tests/test_registry.py::test_generated_from_commit_not_stale` added (disclosed `xfail` until that
+  stamping step runs). `python3 -m pytest -q tests` (excluding `tests/test_mcp.py`, owned by the
+  separate MCP run): 21 passed, 3 disclosed xfailed, 0 failed.
+
 ## v1.1.0 — 2026-09-07
 
 Deposited as Zenodo version DOI 10.5281/zenodo.22574017 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.1.0.

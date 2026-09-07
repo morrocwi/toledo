@@ -8792,7 +8792,7 @@ End InfoRelational.
 
 
 (* ================================================================================================
-   Module InfoSoliton — masses from the NONLINEAR ∇V soliton spectrum (3-Opus panel conclusion).
+   Module InfoSoliton — masses from the NONLINEAR ∇V soliton spectrum (three-reviewer panel conclusion).
    The 3-member panel (analytical + computational + auditor) + 3 founder papers (17875968 Social-Life-of-
    Particles mass=τ_c memory; 17647053 C5 winding 1:16:400, author-flagged NOT-a-derivation; 18378477
    power-law memory α=d_s/2) converged: masses come from the NONLINEAR ∇V bound-state/tunneling spectrum
