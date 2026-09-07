@@ -99,7 +99,7 @@ def _decode_tokens(tokens_b64: list[str]) -> list[str]:
 SANCTIONED_PRIVATE_REPO_PHRASE = "solver arc (private)"
 
 # Built from two halves at runtime rather than written as one literal
-# "/home/" + more-text run — this module is itself a scan target, and a
+# the home-directory prefix followed by more text — this module is itself a scan target, and a
 # contiguous example of the exact pattern it looks for would be a false
 # positive against itself every single run.
 _HOME_PREFIX = "/" + "home/"
