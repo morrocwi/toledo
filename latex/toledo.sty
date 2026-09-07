@@ -5,10 +5,18 @@
 % needed). Generated catalogue bodies (latex/catalogue_body.tex) and any hand-
 % written paper in this programme may \usepackage{toledo} and use these.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{toledo}[2026/09/06 v1.0.0 Toledo semantic macros]
+\ProvidesPackage{toledo}[2026/09/07 v1.1.0 Toledo semantic macros]
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
+% v1.5 lane D (Overfull \hbox reduction, BBL-208): scripts/toledo_build.py's
+% entry_metadata_line()/entry_occurrences_line() wrap long unbreakable
+% technical tokens (a coq_status enum value, a bare code, a record_id:label
+% occurrence) in \seqsplit{} so TeX can insert a break between any two of
+% its characters -- see seqsplit_wrap() in scripts/toledo_build.py for why
+% this is safe over already latex_escape()'d text (seqsplit consumes one
+% TeX token at a time, so an escape sequence like \_ is never split apart).
+\RequirePackage{seqsplit}
 
 % \Readout[<root code>]{<argument>} — a finite retained readout of its argument.
 % Root: EQ-001 family (E00.1, the primordial-difference readout chain).

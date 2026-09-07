@@ -31,7 +31,14 @@
       "parents": [],
       "derived_via": "definition",
       "step": 1,
-      "step_label": "I.1"
+      "step_label": "I.1",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-001  Ax          ∃ a,b : a ≠ b",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7313",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-002",
@@ -113,7 +120,14 @@
       ],
       "derived_via": "definition",
       "step": 5,
-      "step_label": "I.1"
+      "step_label": "I.1",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-005  Ax          τ_c > 0",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7317",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-006",
@@ -133,7 +147,14 @@
       ],
       "derived_via": "definition",
       "step": 6,
-      "step_label": "I.1"
+      "step_label": "I.1",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-006  Ax          t = nΔθ,  n∈ℕ,  Δθ>0",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7318",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-007",
@@ -198,7 +219,14 @@
       ],
       "derived_via": "definition",
       "step": 9,
-      "step_label": "I.1a"
+      "step_label": "I.1a",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-009  Ax          1 RD := one retained-distinction record",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7321",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-010",
@@ -218,7 +246,14 @@
       ],
       "derived_via": "definition",
       "step": 10,
-      "step_label": "I.1a"
+      "step_label": "I.1a",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-010  Ax          x_domain --[Enc_Ω]--> x_RD",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7322",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-011",
@@ -238,7 +273,14 @@
       ],
       "derived_via": "definition",
       "step": 11,
-      "step_label": "I.1a"
+      "step_label": "I.1a",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-011  Ax          y_RD --[Dec_Ω]--> y_domain",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7323",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-012",
@@ -258,7 +300,14 @@
       ],
       "derived_via": "definition",
       "step": 12,
-      "step_label": "I.1a"
+      "step_label": "I.1a",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-012  Ax          Γ ⊢_{α,ρ,κ} φ",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7324",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-013",
@@ -278,7 +327,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 13,
-      "step_label": "I.1a"
+      "step_label": "I.1a",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-013  Ax          A ⇏ A⊗A",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7325",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-014",
@@ -299,7 +355,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 14,
-      "step_label": "I.1a"
+      "step_label": "I.1a",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "EQ-014  Ax          !_κA ⊢ A^⊗m,  m ≤ κ",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7326",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-015",
@@ -346,7 +409,14 @@
       ],
       "derived_via": "restatement",
       "step": 16,
-      "step_label": "II.7"
+      "step_label": "II.7",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-016  Dr          λ_c = D²/(4MK)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7331",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-017",
@@ -370,7 +440,14 @@
       ],
       "derived_via": "coarse_grain",
       "step": 17,
-      "step_label": "II.8"
+      "step_label": "II.8",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-017  finite_diagnostic (PASS_WITH_LIMITS)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7332",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-018",
@@ -390,7 +467,14 @@
       ],
       "derived_via": "restatement",
       "step": 18,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-018  Dr          𝔖_n = (G_n, Λ_n, 𝒯_n, Θ_n)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7335",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-019",
@@ -410,7 +494,14 @@
       ],
       "derived_via": "definition",
       "step": 19,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-019  Dr          X_n^A = (Φ_n^I, Ψ_n^I)^T",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7336",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-020",
@@ -430,7 +521,14 @@
       ],
       "derived_via": "definition",
       "step": 20,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-020  Dr          𝔾_n = L_{G_n}⊗I_ℱ + I_{G_n}⊗C_ℱ + C_int,n",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7337",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-021",
@@ -489,7 +587,14 @@
       ],
       "derived_via": "restatement",
       "step": 23,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-023  finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7347",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-024",
@@ -508,7 +613,14 @@
       ],
       "derived_via": "restatement",
       "step": 24,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-024  finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7350",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-025",
@@ -527,7 +639,14 @@
       ],
       "derived_via": "restatement",
       "step": 25,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-025  finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7354",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-026",
@@ -547,7 +666,14 @@
       ],
       "derived_via": "restatement",
       "step": 26,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "EQ-026  Th_coqc (2026-07-25 grounding, see this Appendix's own Face 10 note above)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7359",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-027",
@@ -568,7 +694,14 @@
       ],
       "derived_via": "restatement",
       "step": 27,
-      "step_label": "III.Face10"
+      "step_label": "III.Face10",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "EQ-027  Th_coqc (2026-07-25 grounding)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7361",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-028",
@@ -590,7 +723,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 28,
-      "step_label": "III.Face10"
+      "step_label": "III.Face10",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "EQ-028  Th_coqc (2026-07-25 grounding)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7363",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-029",
@@ -610,7 +750,14 @@
       ],
       "derived_via": "domain_reading",
       "step": 29,
-      "step_label": "V.13"
+      "step_label": "V.13",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-029  Dr          I_Q = I_B + O_C + O_P + O_B",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7366",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-030",
@@ -629,7 +776,14 @@
       ],
       "derived_via": "domain_reading",
       "step": 30,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-030  Dr          Z_n = (Φ_n, Ψ_n, Θ_n, U_n, Σ_n, 𝒯_n, Λ_n)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7374",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-031",
@@ -648,7 +802,14 @@
       ],
       "derived_via": "readout",
       "step": 31,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-031  Dr          r = O(X)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7375",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-032",
@@ -668,7 +829,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 32,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "EQ-032  Th_coqc     ∀X,R,O,x1,x2 : x1≠x2 → O(x1)=O(x2) → ...",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7379",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-033",
@@ -688,7 +856,14 @@
       ],
       "derived_via": "forcing",
       "step": 33,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "EQ-033  Th_coqc     ∀X,R,O,h,x : h(x)≠x → O(h(x))=O(x) → ...",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7382",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-034",
@@ -709,7 +884,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 34,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "EQ-034  Th_coqc     x1≠x2 → O(x1)=O(x2) → ...",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7385",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-035",
@@ -728,7 +910,14 @@
       ],
       "derived_via": "definition",
       "step": 35,
-      "step_label": "V.13a"
+      "step_label": "V.13a",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-035  Dr          ⟨x,y⟩_G = x†Gy,  G>0",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7388",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-036",
@@ -861,7 +1050,14 @@
       ],
       "derived_via": "definition",
       "step": 42,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-042  Dr          𝒜 = { h : Oh=O, hF=Fh, h†Gh=G }",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7411",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-043",
@@ -880,7 +1076,14 @@
       ],
       "derived_via": "definition",
       "step": 43,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-043  Dr          H_C = ∏_{e∈C} U_e",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7413",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-044",
@@ -899,7 +1102,14 @@
       ],
       "derived_via": "composition",
       "step": 44,
-      "step_label": "V.22"
+      "step_label": "V.22",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-044  Dr          𝓕_all = 𝓕_G+𝓕_EM+𝓕_W+𝓕_S+𝓕_res",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7416",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-045",
@@ -918,7 +1128,14 @@
       ],
       "derived_via": "readout",
       "step": 45,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-045  finite_diagnostic (blind pipeline)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7418",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-046",
@@ -937,7 +1154,14 @@
       ],
       "derived_via": "specialisation",
       "step": 46,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-046  Dr          x ↦ e^{iα}x",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7422",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-047",
@@ -956,7 +1180,14 @@
       ],
       "derived_via": "specialisation",
       "step": 47,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-047  Dr          x ↦ ρ_R(g)x",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7423",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-048",
@@ -975,7 +1206,14 @@
       ],
       "derived_via": "specialisation",
       "step": 48,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-048  Dr          3⊗3̄ → 1+…",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7426",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-049",
@@ -1013,7 +1251,14 @@
       ],
       "derived_via": "specialisation",
       "step": 50,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "EQ-050  Dr          ℰ_physical ⊆ ℰ_{τ=0}",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7434",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-051",
@@ -1033,7 +1278,14 @@
       ],
       "derived_via": "domain_reading",
       "step": 51,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-051  finite_diagnostic (exact pass, Z₃/2D case only)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7435",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-052",
@@ -1091,7 +1343,14 @@
       ],
       "derived_via": "composition",
       "step": 54,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "EQ-054  Th_coqc     c_0'(κ) = 2c_3(κ)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7458",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-055",
@@ -1129,7 +1388,14 @@
       ],
       "derived_via": "readout",
       "step": 56,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-056  finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7468",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-057",
@@ -1205,7 +1471,14 @@
       ],
       "derived_via": "specialisation",
       "step": 60,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-060  finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7479",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-061",
@@ -1224,7 +1497,14 @@
       ],
       "derived_via": "restatement",
       "step": 61,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-061  finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7483",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-062",
@@ -1243,7 +1523,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 62,
-      "step_label": "V.21"
+      "step_label": "V.21",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-062  finite_diagnostic (NEGATIVE finding — refutes its own opening hypothesis)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7486",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-063",
@@ -1360,7 +1647,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 68,
-      "step_label": "V.22"
+      "step_label": "V.22",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "EQ-068  finite_diagnostic (THREE NEGATIVE FINDINGS, all disclosed, none hidden) — 2026-07-25",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7538",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-069",
@@ -1379,7 +1673,14 @@
       ],
       "derived_via": "domain_reading",
       "step": 69,
-      "step_label": "V.22"
+      "step_label": "V.22",
+      "tier": "RETRACTED",
+      "tier_evidence": {
+        "quote": "EQ-069  RETRACTED 2026-07-26 (continuum contamination — founder ruling; number kept so the ...)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7565",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-070",
@@ -1398,7 +1699,14 @@
       ],
       "derived_via": "restatement",
       "step": 70,
-      "step_label": "V.22"
+      "step_label": "V.22",
+      "tier": "RETRACTED",
+      "tier_evidence": {
+        "quote": "EQ-070  RETRACTED 2026-07-26 (continuum contamination — founder ruling)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7573",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EQ-071",
@@ -1417,7 +1725,14 @@
       ],
       "derived_via": "restatement",
       "step": 71,
-      "step_label": "V.22"
+      "step_label": "V.22",
+      "tier": "RETRACTED",
+      "tier_evidence": {
+        "quote": "EQ-071  RETRACTED 2026-07-26 (continuum contamination — founder ruling)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7581",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "weld",
@@ -2051,7 +2366,14 @@
       ],
       "derived_via": "readout",
       "step": 98,
-      "step_label": "I.2a"
+      "step_label": "I.2a",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "What the inverse arrow does **not** upgrade: the discovered law is `[finite_diagnostic]` on the tape",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:790",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "MQ08-stepper",
@@ -2121,7 +2443,14 @@
       ],
       "derived_via": "readout",
       "step": 102,
-      "step_label": "II.2"
+      "step_label": "II.2",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "it comes from MQ.08 rather than positing it independently. `[Dr]` derivation stance, `[finite_diagnostic]` (memory kernel and speed relations)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:938",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "SpinePDE",
@@ -2155,7 +2484,14 @@
       ],
       "derived_via": "domain_reading",
       "step": 104,
-      "step_label": "II.4"
+      "step_label": "II.4",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "`[Dr]` — these are **structural readouts**, not derivations of measured physics.",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1035",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "MasterEqCanon",
@@ -2223,7 +2559,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 108,
-      "step_label": "II.6"
+      "step_label": "II.6",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "`M ∂²_t Φ` | memory / inertia | `[Dr]`, forcing attempts `[finite_diagnostic]` (failed) ...",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1108",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "TermTier-KLR",
@@ -2325,7 +2668,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 114,
-      "step_label": "II.8"
+      "step_label": "II.8",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "**Layer 2 — RTPE turbulence (1st-order relaxation).** `[finite_diagnostic]`, status **PASS_WITH_LIMITS**",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1187",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "LivingGeometry",
@@ -2376,7 +2726,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 117,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "`[finite_diagnostic]` for the executable stepper machinery (it runs and is checkable on finite instances)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1245",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "DRLAction",
@@ -2393,7 +2750,14 @@
       ],
       "derived_via": "definition",
       "step": 118,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "Face 8's `[Dr]`-tier companion-field proposal (Part III)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1241",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "EtaOmegaMatrices",
@@ -2410,7 +2774,14 @@
       ],
       "derived_via": "definition",
       "step": 119,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "Face 8's `[Dr]`-tier companion-field proposal (Part III)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1241",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "ReaderRecordEqs",
@@ -2461,7 +2832,14 @@
       ],
       "derived_via": "composition",
       "step": 122,
-      "step_label": "II.8a"
+      "step_label": "II.8a",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "`[finite_diagnostic]` for the executable stepper machinery (it runs and is checkable on finite instances)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1245",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "CutCurrent",
@@ -2628,7 +3006,14 @@
       ],
       "derived_via": "specialisation",
       "step": 130,
-      "step_label": "III.Face3"
+      "step_label": "III.Face3",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "### Face 3: Dispersion Split — Classical / Quantum Regimes   [Th_coqc]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1588",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.3.CriticalSplit",
@@ -2645,7 +3030,14 @@
       ],
       "derived_via": "specialisation",
       "step": 131,
-      "step_label": "III.Face3"
+      "step_label": "III.Face3",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "### Face 3: Dispersion Split — Classical / Quantum Regimes   [Th_coqc]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1588",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.3.Dispersion",
@@ -2662,7 +3054,14 @@
       ],
       "derived_via": "composition",
       "step": 132,
-      "step_label": "III.Face3"
+      "step_label": "III.Face3",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "### Face 3: Dispersion Split — Classical / Quantum Regimes   [Th_coqc]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1588",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.4",
@@ -2679,7 +3078,14 @@
       ],
       "derived_via": "specialisation",
       "step": 133,
-      "step_label": "III.Face4"
+      "step_label": "III.Face4",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "### Face 4: Stability / Energy   [Th_coqc]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1631",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.5.LightCone",
@@ -2720,7 +3126,14 @@
       ],
       "derived_via": "readout",
       "step": 135,
-      "step_label": "III.Face5"
+      "step_label": "III.Face5",
+      "tier": "Open",
+      "tier_evidence": {
+        "quote": "the physical speed of light is **`[Open]`** — it is a structural analogy, not a demonstrated identity",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1687",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.6.MassMemory",
@@ -2861,7 +3274,14 @@
       ],
       "derived_via": "readout",
       "step": 142,
-      "step_label": "III.Face8"
+      "step_label": "III.Face8",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "### Face 8: Operator-to-Metric Geometry   [Th_coqc]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1775",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.8.Guardrail",
@@ -2878,7 +3298,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 143,
-      "step_label": "III.Face8"
+      "step_label": "III.Face8",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "### Face 8: Operator-to-Metric Geometry   [Th_coqc]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1775",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.8.CurvatureForce",
@@ -2895,7 +3322,14 @@
       ],
       "derived_via": "composition",
       "step": 144,
-      "step_label": "III.Face8"
+      "step_label": "III.Face8",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "**Curvature and force, restated on this face (new, 2026-07-21, [Dr]).**",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1819",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.9",
@@ -2912,7 +3346,14 @@
       ],
       "derived_via": "domain_reading",
       "step": 145,
-      "step_label": "III.Face9"
+      "step_label": "III.Face9",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "### Face 9: CPTP / Quantum-Channel Face   [Th_coqc]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1841",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.10.StrictGap",
@@ -2929,7 +3370,14 @@
       ],
       "derived_via": "readout",
       "step": 146,
-      "step_label": "III.Face10"
+      "step_label": "III.Face10",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "**`[Th_coqc]` grounding, added 2026-07-25** (formal/InfoTrueRecordUnreadable_attempt.v)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1891",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.10.IdentifiabilityGate",
@@ -2946,7 +3394,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 147,
-      "step_label": "III.Face10"
+      "step_label": "III.Face10",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "`[finite_diagnostic]` that discovers, from the tape alone: (a) how many variables the domain ...",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1925",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.10.bRLedger",
@@ -2963,7 +3418,14 @@
       ],
       "derived_via": "restatement",
       "step": 148,
-      "step_label": "III.Face10"
+      "step_label": "III.Face10",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "the year's cross-domain translation architecture belongs, again explicitly tagged `[finite_diagnostic]` and explicitly *not* first-principles",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:1960",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Face.11.SolveTarget",
@@ -3206,7 +3668,14 @@
       ],
       "derived_via": "definition",
       "step": 159,
-      "step_label": "IV.6"
+      "step_label": "IV.6",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "filled in here as the rest of the same table, not a new concept: `[Dr]` (open) for the deeper structure",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:2248",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Gateway.NativeMasterPDE",
@@ -3224,7 +3693,14 @@
       ],
       "derived_via": "readout",
       "step": 160,
-      "step_label": "IV.6"
+      "step_label": "IV.6",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "filled in here as the rest of the same table, not a new concept: `[Dr]` (open) for the deeper structure",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:2248",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Gateway.GatewayPDE",
@@ -3361,7 +3837,14 @@
       ],
       "derived_via": "readout",
       "step": 168,
-      "step_label": "V.0"
+      "step_label": "V.0",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "a **domain-discovery engine**, tiered `finite_diagnostic`",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:2447",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "q_quantum_osc",
@@ -3605,7 +4088,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 180,
-      "step_label": "V.5"
+      "step_label": "V.5",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "**The λ=0 collapse (new, 2026-07-21, [Dr]).** The same Fiedler spectrum that reads out ...",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:2575",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "q_biology_eigenmode",
@@ -3821,7 +4311,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 190,
-      "step_label": "V.12"
+      "step_label": "V.12",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "it has been given a machine-checked name: **InfoQuotientCompressionExactness** — a `Th_coqc` theorem, not a metaphor.",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:2224",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "bR_Ledger_r_B",
@@ -3855,7 +4352,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 192,
-      "step_label": "V.13"
+      "step_label": "V.13",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "New in v3.1: a `finite_diagnostic`-tier **architecture**, not a first-principles derivation, for ...",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:2751",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "LR_skew_split",
@@ -4253,7 +4757,14 @@
       ],
       "derived_via": "readout",
       "step": 215,
-      "step_label": "V.22"
+      "step_label": "V.22",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "`=0` + a **Z₆ global quotient** (Th_coqc); the one-generation matter skeleton is found BLIND",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:3327",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "FourForceCirculation_v0.2",
@@ -5479,7 +5990,14 @@
       ],
       "derived_via": "definition",
       "step": 272,
-      "step_label": "VI-A.B2a"
+      "step_label": "VI-A.B2a",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "those two steps — carried here as bookkeeping machinery, `[finite_diagnostic]` where it runs, `[Dr]` (interpretive layer)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:3986",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "B.2a.SynthesisComplexity",
@@ -5496,7 +6014,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 273,
-      "step_label": "VI-A.B2a"
+      "step_label": "VI-A.B2a",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "those two steps — carried here as bookkeeping machinery, `[finite_diagnostic]` where it runs, `[Dr]` (interpretive layer)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:3986",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "B.3",
@@ -6737,7 +7262,14 @@
       ],
       "derived_via": "composition",
       "step": 1176,
-      "step_label": "VIII.4"
+      "step_label": "VIII.4",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "Claim tier: `Dr` (open theoretical; falsifiable — §11 of `docs/claims/HUMAN_AGENCY_SINGLE_TAU_C.md`)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:5072",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "OmegaH",
@@ -7532,7 +8064,14 @@
       ],
       "derived_via": "restatement",
       "step": 1291,
-      "step_label": "IX.38"
+      "step_label": "IX.38",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "Steps 38–41 — the growth ladder, the record law, CPTP completeness, and the operator→metric theorem are each proven axiom-free in `RDL_*.v` ... `Th_coqc` here certifies these four specific ∀-statements are proven",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:5897",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "step39",
@@ -7550,7 +8089,14 @@
       ],
       "derived_via": "restatement",
       "step": 1292,
-      "step_label": "IX.39"
+      "step_label": "IX.39",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "Steps 38–41 — the growth ladder, the record law, CPTP completeness, and the operator→metric theorem are each proven axiom-free in `RDL_*.v` ... `Th_coqc` here certifies these four specific ∀-statements are proven",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:5897",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "step40",
@@ -7568,7 +8114,14 @@
       ],
       "derived_via": "restatement",
       "step": 1293,
-      "step_label": "IX.40"
+      "step_label": "IX.40",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "Steps 38–41 — the growth ladder, the record law, CPTP completeness, and the operator→metric theorem are each proven axiom-free in `RDL_*.v` ... `Th_coqc` here certifies these four specific ∀-statements are proven",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:5897",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "step41",
@@ -7586,7 +8139,14 @@
       ],
       "derived_via": "restatement",
       "step": 1294,
-      "step_label": "IX.41"
+      "step_label": "IX.41",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "Steps 38–41 — the growth ladder, the record law, CPTP completeness, and the operator→metric theorem are each proven axiom-free in `RDL_*.v` ... `Th_coqc` here certifies these four specific ∀-statements are proven",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:5897",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "step42",
@@ -7623,7 +8183,14 @@
       ],
       "derived_via": "composition",
       "step": 1018,
-      "step_label": "X.1"
+      "step_label": "X.1",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "(scale-covariance constant) rescales covariantly — `[Th_coqc]`",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:5957",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "X.2",
@@ -7664,7 +8231,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 1125,
-      "step_label": "X.3"
+      "step_label": "X.3",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "X.3 — Assumption Ledger (Th_coqc naming corollary): a claim is `Th_coqc` only when the Coq artifact builds AND assumptions are publicly disclosed.",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6002",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "X.4a",
@@ -7683,7 +8257,14 @@
       ],
       "derived_via": "restatement",
       "step": 1126,
-      "step_label": "X.4"
+      "step_label": "X.4",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "| `Th_coqc` | Machine-checked structural theorem | Energy stability, CPTP, metric | (X.4 admissibility-square row, InfoQuotientCompressionExactness)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6099",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "X.4b",
@@ -7749,7 +8330,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 1085,
-      "step_label": "XI.1"
+      "step_label": "XI.1",
+      "tier": "Th_coqc",
+      "tier_evidence": {
+        "quote": "XI.1 — NEW rule: Th_coqc may never be paired with an unmatched continuum-physics noun (label inflation) | `Th_coqc` | Machine-checked structural theorem |",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6099",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "XI.2a",
@@ -7790,7 +8378,14 @@
       ],
       "derived_via": "restatement",
       "step": 1154,
-      "step_label": "XI.2"
+      "step_label": "XI.2",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "**Quantity is not a pre-existing ℝ (new, 2026-07-21, [Dr], capstone).**",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6131",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "XI.3a",
@@ -8015,7 +8610,14 @@
       ],
       "derived_via": "restatement",
       "step": 1180,
-      "step_label": "XI.5"
+      "step_label": "XI.5",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "F-human: Measure τ_c^H directly and find it is not in the predicted range ... (falsifies §VIII / Dr claim)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6269",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "XI.5-FT1",
@@ -8285,7 +8887,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 1033,
-      "step_label": "XII.4"
+      "step_label": "XII.4",
+      "tier": "Dr",
+      "tier_evidence": {
+        "quote": "Skew-L_R / metric-G well-posedness probe (pre-T1) ... passing this probe does not promote the tier above PROPOSED/Dr.",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6432",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Guard11",
@@ -8371,7 +8980,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 1089,
-      "step_label": "XII.4"
+      "step_label": "XII.4",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "NOT a new root rule — the finite_diagnostic instance of the domain-discovery engine, run over ℚ, else abstain.",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6473",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "Guard15",
@@ -8587,7 +9203,14 @@
       ],
       "derived_via": "restatement",
       "step": 1092,
-      "step_label": "XIV.6"
+      "step_label": "XIV.6",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "### XIV.6 Domain-Discovery Engine (`finite_diagnostic`, adversarially battery-tested)",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6693",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "XIV.7",
@@ -8657,7 +9280,14 @@
       ],
       "derived_via": "definition",
       "step": 1093,
-      "step_label": "AppA.2"
+      "step_label": "AppA.2",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "(z_n,u_n) ≠ (z_n',u_n')  ⇒  (z_{n+1},r_n) ≠ (z_{n+1}',r_n')      [Ax]  no distinction lost at the step",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6947",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "v011.3",
@@ -8691,7 +9321,14 @@
       ],
       "derived_via": "domain_reading",
       "step": 1094,
-      "step_label": "AppA.4"
+      "step_label": "AppA.4",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "Source: v0.11 §10. [finite_diagnostic]",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:6974",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "v011.5",
@@ -8848,7 +9485,14 @@
       ],
       "derived_via": "tier_rule",
       "step": 1099,
-      "step_label": "AppA.13"
+      "step_label": "AppA.13",
+      "tier": "Open",
+      "tier_evidence": {
+        "quote": "Source: v0.11 §19, \"Proposed/open,\" reproduced verbatim. [Open].",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_CORE.md",
+        "line": "READOUT_GENESIS_CORE.md:7138",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "APP-B.1",
@@ -12175,7 +12819,14 @@
       ],
       "derived_via": "composition",
       "step": 1268,
-      "step_label": "WP.S24"
+      "step_label": "WP.S24",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "(HeldOutCheckerReport yaml block, §24.4) claim_status: finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md",
+        "line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3440",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "WP.S24.ArchivalDisclosureRule",
@@ -12266,7 +12917,14 @@
       ],
       "derived_via": "specialisation",
       "step": 1265,
-      "step_label": "WP.S24"
+      "step_label": "WP.S24",
+      "tier": "finite_diagnostic",
+      "tier_evidence": {
+        "quote": "(ConcreteDomainRunReport yaml block, §24) tier: finite_diagnostic",
+        "source": "readout_genesis@082dde893b70c7500c13d463239909c99cf17f0a, READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md",
+        "line": "READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md:3636",
+        "commit": "082dde893b70c7500c13d463239909c99cf17f0a"
+      }
     },
     {
       "code": "WP.S25.PassFailUnresolvedTable",
@@ -12575,7 +13233,14 @@
       },
       "coq_source_redistributed": false,
       "step": null,
-      "step_note": "CMC does not appear in READOUT_GENESIS_CORE.md or the whitepaper at all (confirmed by direct grep, registry/root_candidates_report.md); it has no position in the Genesis document's own step sequence, and none is invented for it."
+      "step_note": "CMC does not appear in READOUT_GENESIS_CORE.md or the whitepaper at all (confirmed by direct grep, registry/root_candidates_report.md); it has no position in the Genesis document's own step sequence, and none is invented for it.",
+      "tier": "Ax",
+      "tier_evidence": {
+        "quote": "\"Axiom cmc_bridge_axiom : CMC_Bridge_Obligation.\" preceded by \"Founder-level CMC axiom, intentionally named and disclosed. The project does not retreat from this claim.\" -- this row's own tier_in_genesis_note already states: \"not a Genesis bracket tag -- inferred directly from the Coq `Axiom` keyword and the source's own disclosure comment ..., which is stronger, not weaker, evidence than a bracket tag.\"",
+        "source": "\"solver arc (private)\"@961151db33b0491cba8fabade69f594238d33f84, formal/CMC_TargetClass_Definitions.v",
+        "line": "formal/CMC_TargetClass_Definitions.v:58",
+        "commit": "961151db33b0491cba8fabade69f594238d33f84"
+      }
     }
   ]
 }

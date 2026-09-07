@@ -282,10 +282,29 @@ def _load_meta(conn: sqlite3.Connection) -> dict:
 
 
 def check_freshness(root: pathlib.Path | None = None) -> Freshness:
-    """Cheap (stat-only, no hashing, no JSON parsing) check of whether the
-    index needs rebuilding: compares size+mtime_ns of CANONICAL.json,
-    genesis_root.json and LINEAGE.jsonl against what was recorded in `meta`
-    at the last build."""
+    """Cheap-first (stat-only) check of whether the index needs rebuilding:
+    compares size+mtime_ns of CANONICAL.json, genesis_root.json and
+    LINEAGE.jsonl against what was recorded in `meta` at the last build.
+
+    MCP cold-start prebuilt-index fix (DEBT #48, 2026-09-07, lane E): a stat
+    mismatch alone no longer condemns the index to a rebuild. A release zip
+    ships `mcp/state/index.sqlite3` already built at packaging time (see
+    `mcp/scripts/build_index.py`); unpacking/cloning it onto a different
+    machine, or simply `git`-checking it out, gives every source registry
+    file a FRESH mtime even though its bytes are byte-for-byte the shipped
+    ones — a pure stat comparison would then rebuild on every single cold
+    start, every time, for a file that never actually changed. So: for any
+    source file whose stat disagrees with `meta`, fall back to comparing the
+    sha256 `build_index` already recorded for it (`meta[f"{name}_sha256"]`,
+    populated on every build, not a new field) against a freshly computed
+    hash of the file on disk — a real, if slightly more expensive
+    (single-digest-per-mismatched-file, not per call) content check, not a
+    second stat trick. Only a genuine content difference (a real registry
+    edit) is still reported as a staleness reason; a shipped index whose
+    hash matches is accepted with no rebuild. `needs_rebuild`/
+    `cache.RegistryCache.ensure_fresh` both route through this function, so
+    the acceptance is automatic wherever a cold start currently forces a
+    rebuild."""
     root = root or paths.repo_root()
     db = paths.index_db_path(root)
     if not db.exists():
@@ -300,8 +319,13 @@ def check_freshness(root: pathlib.Path | None = None) -> Freshness:
     reasons: list[str] = []
     for name, p in _source_paths(root).items():
         fp = file_fingerprint(p)
-        if str(fp["size"]) != meta.get(_fp_key(name, "size")) or str(fp["mtime_ns"]) != meta.get(_fp_key(name, "mtime_ns")):
-            reasons.append(f"registry/{p.name} changed since the index was built")
+        if str(fp["size"]) == meta.get(_fp_key(name, "size")) and str(fp["mtime_ns"]) == meta.get(_fp_key(name, "mtime_ns")):
+            continue  # stat agrees outright -- no hashing needed for this file
+        stored_hash = meta.get(_fp_key(name, "sha256"))
+        actual_hash = sha256_file(p) if stored_hash else None
+        if stored_hash and actual_hash == stored_hash:
+            continue  # stat differs (repackaged/checked-out/touched) but bytes are identical -- accept, no rebuild
+        reasons.append(f"registry/{p.name} changed since the index was built")
 
     stale = bool(reasons)
     return Freshness(

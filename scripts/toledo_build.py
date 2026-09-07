@@ -444,7 +444,17 @@ def entries_to_ttl(entries: list[dict]) -> str:
 def vault_markdown(e: dict) -> str:
     stmt = (e.get("statement") or {}).get("latest", "")
     fmt = (e.get("statement") or {}).get("format", "")
-    lines = [f"# {e['code']} — {e.get('name', '')}", ""]
+    # v1.5 lane D: when this entry carries a name_latex (scripts/v15_D.py --
+    # a faithful LaTeX rendering of the ASCII sub/superscript notation
+    # already in `name`), use it for the vault heading instead of the plain
+    # `name` -- Obsidian and most Markdown renderers (this is what
+    # site/build_site.py's own minimal Markdown->HTML converter is built
+    # for) already render a bare `$...$` span as inline math, so this needs
+    # no wrapper macro the way the printed LaTeX catalogue's
+    # \texorpdfstring{} does (see heading_content() above). Falls back to
+    # the plain `name` when no name_latex was assigned.
+    heading_name = e.get("name_latex") or e.get("name", "")
+    lines = [f"# {e['code']} — {heading_name}", ""]
     lines.append("## Statement")
     lines.append("")
     lines.append(f"```{fmt}")
@@ -600,13 +610,21 @@ _BREAK_EVERY = 14  # raw (pre-escape) characters between forced break points;
 # if any wrapped monospace block still overflows a line.
 
 
-def _wrap_raw_line(line: str) -> str:
-    """Insert an invisible, zero-width break opportunity every _BREAK_EVERY
+def _wrap_raw_line(line: str, break_every: int = _BREAK_EVERY, break_after: str = "") -> str:
+    """Insert an invisible, zero-width break opportunity every `break_every`
     characters of unspaced text so a long unbroken ascii-math/Coq token still
     wraps inside the printed column (BBL-208: no fixed-width table, no
     overflow). Marks are inserted on the RAW string, before latex_escape(), so
     a mark can only ever land between two whole source characters — it never
-    splits a multi-byte Unicode codepoint or a to-be-escaped special char."""
+    splits a multi-byte Unicode codepoint or a to-be-escaped special char.
+
+    `break_after` (v1.5 lane D, Overfull \\hbox reduction) additionally forces
+    a break immediately after any character it names, resetting the periodic
+    counter there too — e.g. `break_after="/."` inserts a break right after
+    every `/` and `.`, a natural place to wrap a run like
+    "Schwarzschild/Kerr" or "V.17" that the plain periodic rule alone did not
+    always reach in time on real headings (found by direct inspection of
+    `latex/catalogue.log`'s Overfull \\hbox lines)."""
     out = []
     run = 0
     for ch in line:
@@ -614,11 +632,27 @@ def _wrap_raw_line(line: str) -> str:
         if ch == " ":
             run = 0
             continue
+        if break_after and ch in break_after:
+            out.append(_BREAK_MARK)
+            run = 0
+            continue
         run += 1
-        if run >= _BREAK_EVERY:
+        if run >= break_every:
             out.append(_BREAK_MARK)
             run = 0
     return "".join(out)
+
+
+_HEADING_BREAK_EVERY = 10  # tighter than the body-text _BREAK_EVERY (14): a
+# \section/\subsubsection* heading is set in a bold, often larger (10-14.4pt)
+# font, so the same character count covers more horizontal width than in
+# body text -- several headings still produced an Overfull \hbox at the
+# original body-text threshold (BBL-208 v1.5 lane D, found by direct
+# inspection of latex/catalogue.log).
+
+_HEADING_BREAK_AFTER = "/."  # natural break points in this corpus's own
+# heading names ("Schwarzschild/Kerr", "V.17 Registered Domain: ..."),
+# combined with the periodic rule above (v1.5 lane D).
 
 
 def wrap_heading_text(name: str) -> str:
@@ -627,10 +661,65 @@ def wrap_heading_text(name: str) -> str:
     an inline formula fragment, e.g. "`M_hat_OLS/M_true ~ Var(a_true)/...`"
     with no internal spaces) -- found by direct test against the real
     document (this was the largest remaining source of Overfull \\hbox
-    warnings, BBL-208). Applies the same invisible-break-every-N-characters
-    technique as monospace_block, so a long heading still wraps onto a
-    second line instead of overflowing the page margin."""
-    return latex_escape(_wrap_raw_line(name or "")).replace(_BREAK_MARK, "\\hspace{0pt}")
+    warnings, BBL-208). Applies the same invisible-break technique as
+    monospace_block, tightened for headings (_HEADING_BREAK_EVERY,
+    _HEADING_BREAK_AFTER — v1.5 lane D), so a long heading still wraps onto a
+    second line instead of overflowing the page margin. `\\sloppy`, scoped to
+    just this heading's own text via the enclosing group, relaxes
+    interword-glue limits so TeX prefers a looser (rather than overfull)
+    line when a natural hyphen (e.g. "domain-discovery") is the only
+    available break near the margin -- a v1.5 lane D addition, the other
+    technique (besides break-marks) this corpus's own Overfull \\hbox
+    reduction task named for the heading class of warning."""
+    marked = _wrap_raw_line(name or "", break_every=_HEADING_BREAK_EVERY, break_after=_HEADING_BREAK_AFTER)
+    escaped = latex_escape(marked).replace(_BREAK_MARK, "\\hspace{0pt}")
+    return "{\\sloppy " + escaped + "}"
+
+
+_MATH_SPAN_SPLIT_RE = re.compile(r"(?<!\\)\$")
+
+
+def wrap_mixed_heading(name_latex: str) -> str:
+    """Heading-layout treatment for a `name_latex` string (scripts/v15_D.py,
+    v1.5 lane D): the SAME \\sloppy + break-after-'/'-and-'.' technique
+    wrap_heading_text() applies to a plain name, but applied only to the
+    PLAIN-TEXT spans of name_latex (already latex_escape()'d by v15_D.py) —
+    every `$...$` math span it contains is left byte-for-byte untouched, so
+    no break mark or \\sloppy scoping is ever inserted inside real math. This
+    is a display-layout decision only: the name_latex FIELD written to
+    registry/CANONICAL.json by v15_D.py never carries a break mark or
+    \\sloppy wrapper -- those are added here, at catalogue-render time, the
+    same separation of concerns wrap_heading_text() already keeps between
+    `name` (data) and its own heading rendering."""
+    parts = _MATH_SPAN_SPLIT_RE.split(name_latex)
+    out = []
+    for i, part in enumerate(parts):
+        if i % 2 == 0:
+            marked = _wrap_raw_line(part, break_every=_HEADING_BREAK_EVERY, break_after=_HEADING_BREAK_AFTER)
+            out.append(marked.replace(_BREAK_MARK, "\\hspace{0pt}"))
+        else:
+            out.append("$" + part + "$")
+    return "{\\sloppy " + "".join(out) + "}"
+
+
+def heading_content(e: dict) -> str:
+    """Heading text for one catalogue \\section/\\subsubsection* (BBL-208
+    layout; v1.5 lane D name_latex extension). When this entry carries a
+    `name_latex` (scripts/v15_D.py: a faithful LaTeX rendering of the ASCII
+    sub/superscript notation already present in its plain `name`), the
+    heading typesets that rendering wrapped in \\texorpdfstring{}{} so
+    hyperref's PDF bookmark/outline and text-extraction string still gets
+    the plain, math-free `name` (the same `latex_escape(name)` fallback
+    used when there is no name_latex, per hyperref's own \\pdfstringdef
+    handling of the standard escaped-text macros latex_escape() produces) —
+    a raw math command left inside a bare heading argument would otherwise
+    leak into the PDF outline/search string as literal TeX source. Falls
+    back to the existing plain-name path when no name_latex was assigned."""
+    name = e.get("name", "")
+    name_latex = e.get("name_latex")
+    if name_latex:
+        return f"\\texorpdfstring{{{wrap_mixed_heading(name_latex)}}}{{{latex_escape(name)}}}"
+    return wrap_heading_text(name)
 
 
 def monospace_block(text: str) -> list[str]:
@@ -825,22 +914,59 @@ def statement_tex_lines(statement: dict | None) -> list[str]:
     return monospace_block(statement.get("ascii") or latest)
 
 
+def seqsplit_wrap(s: str) -> str:
+    """`\\seqsplit{<latex_escape(s)>}` (latex/toledo.sty now `\\RequirePackage`s
+    `seqsplit`, v1.5 lane D): seqsplit lets TeX insert a break between ANY two
+    characters of its argument, which is exactly what a single long
+    unbreakable technical token (a `coq_status` enum value like
+    `root_layer_unwired`, a bare code, a `record_id:label` occurrence) needs
+    and the periodic `_wrap_raw_line` mark-insertion approach could still miss
+    depending on font/column width (found by direct inspection of
+    `latex/catalogue.log`'s Overfull \\hbox lines for the metadata and
+    occurrences lines, BBL-208 v1.5 lane D). Safe over already-escaped ASCII
+    text: seqsplit's own scanner (`seqsplit.dtx`) consumes one TeX TOKEN at a
+    time, so an escape sequence like `\\_` is never split apart -- the break
+    is only ever inserted between whole tokens.
+
+    LATEX-1 (2026-09-07): that token-scanning guarantee does NOT extend to a
+    raw multi-byte UTF-8 character (e.g. a section sign, an em/en-dash) that
+    latex_escape() passes through untouched -- under pdfTeX's 8-bit engine
+    with inputenc-utf8 such a character is two-or-more catcode-12 byte
+    tokens, not one, and \\seqsplit can and does insert a discretionary break
+    between those bytes (reproduced every time on a clean `make catalogue`:
+    56 real "Invalid UTF-8 byte sequence" errors). The technical tokens this
+    function exists for (tier/status/coq_status enum values, bare codes,
+    record_id:label occurrence pieces) are ASCII-only per this docstring's
+    own opening paragraph -- non-ASCII only ever arrives here from a source
+    text field (an occurrence label, e.g.) that was never the intended
+    target. Fix: any non-ASCII codepoint anywhere in the input skips
+    \\seqsplit entirely and falls back to plain latex_escape() -- no
+    mid-character break is possible then, at the cost of that one string not
+    getting seqsplit's anywhere-break behaviour (an ASCII-only technical
+    token never hits this branch, so the fix changes nothing for the actual
+    intended use)."""
+    if not s.isascii():
+        return latex_escape(s)
+    return "\\seqsplit{" + latex_escape(s) + "}"
+
+
 def entry_metadata_line(e: dict) -> str:
     dom = e.get("domain")
     coq_status = (e.get("coq") or {}).get("coq_status") or "none"
     parent_codes = [p.get("code", "") for p in (e.get("parents") or []) if p.get("code")]
     # A parent code can itself be a long, space-free slug (a founder-ruled
-    # root-registry extension id, a rootless HRP-X.<nnn> drift code); wrap it
-    # the same way as an occurrence label so a long parents: list cannot
-    # overflow the metadata line (BBL-208).
-    parents_txt = ", ".join(
-        latex_escape(_wrap_raw_line(c)).replace(_BREAK_MARK, "\\hspace{0pt}") for c in parent_codes
-    ) if parent_codes else "none"
+    # root-registry extension id, a rootless HRP-X.<nnn> drift code) —
+    # \seqsplit{} (v1.5 lane D) lets it wrap anywhere it needs to.
+    parents_txt = ", ".join(seqsplit_wrap(c) for c in parent_codes) if parent_codes else "none"
     bits = [
         f"domain: {latex_escape(dom) if dom else '\\textemdash'}",
-        f"tier: {latex_escape(e.get('tier') or 'untagged')}",
-        f"status: {latex_escape(e.get('status') or '')}",
-        f"coq: {latex_escape(coq_status)}",
+        # tier/status/coq_status are enum-style single "words" (often
+        # underscore-joined, e.g. "root_layer_unwired") with no internal
+        # space for TeX to break at — \seqsplit{} (v1.5 lane D) rather than
+        # a bare latex_escape() so a long value can still wrap.
+        f"tier: {seqsplit_wrap(e.get('tier') or 'untagged')}",
+        f"status: {seqsplit_wrap(e.get('status') or '')}",
+        f"coq: {seqsplit_wrap(coq_status)}",
         f"parents: {parents_txt}",
     ]
     return " \\textbullet\\ ".join(bits)
@@ -857,9 +983,10 @@ def entry_occurrences_line(e: dict) -> str | None:
         if piece:
             # An occurrence label can itself embed a long unbroken run (a
             # source file path, a raw_key) that overflows a footnotesize
-            # paragraph line just like a heading name can — same invisible-
-            # break treatment as wrap_heading_text (BBL-208).
-            shown.append(latex_escape(_wrap_raw_line(str(piece))).replace(_BREAK_MARK, "\\hspace{0pt}"))
+            # paragraph line — \seqsplit{} (v1.5 lane D) instead of the
+            # periodic invisible-break marks, same rationale as
+            # entry_metadata_line() above.
+            shown.append(seqsplit_wrap(str(piece)))
     more = f" (+{len(occs) - len(occs[:12])} more)" if len(occs) > 12 else ""
     return f"Occurrences ({len(occs)}): " + ", ".join(shown) + more
 
@@ -957,13 +1084,13 @@ def build_catalogue_body(entries: list[dict], root_steps: dict | None = None) ->
         out.append(f"\\part{{{latex_escape(label)}}}")
         for r in part_groups[label]:
             skey = natural_sort_string(r["code"])
-            out.append(f"\\section{{{latex_escape(r['code'])} --- {wrap_heading_text(r.get('name', ''))}}}\\index{{{skey}@{latex_escape(r['code'])}}}")
+            out.append(f"\\section{{{latex_escape(r['code'])} --- {heading_content(r)}}}\\index{{{skey}@{latex_escape(r['code'])}}}")
             out.extend(render_entry_body(r))
             entries_typeset += 1
             readings = sorted(readings_by_root.get(r["code"], []), key=lambda e: natural_key(e["code"]))
             for rd in readings:
                 rskey = natural_sort_string(rd["code"])
-                out.append(f"\\subsubsection*{{{latex_escape(rd['code'])} --- {wrap_heading_text(rd.get('name', ''))}}}\\index{{{rskey}@{latex_escape(rd['code'])}}}")
+                out.append(f"\\subsubsection*{{{latex_escape(rd['code'])} --- {heading_content(rd)}}}\\index{{{rskey}@{latex_escape(rd['code'])}}}")
                 out.extend(render_entry_body(rd))
                 entries_typeset += 1
 
@@ -971,7 +1098,7 @@ def build_catalogue_body(entries: list[dict], root_steps: dict | None = None) ->
         out.append(f"\\part{{Rootless items (target: none)}}")
         for e in sorted(orphans, key=lambda e: natural_key(e["code"])):
             skey = natural_sort_string(e["code"])
-            out.append(f"\\subsubsection*{{{latex_escape(e['code'])} --- {wrap_heading_text(e.get('name', ''))}}}\\index{{{skey}@{latex_escape(e['code'])}}}")
+            out.append(f"\\subsubsection*{{{latex_escape(e['code'])} --- {heading_content(e)}}}\\index{{{skey}@{latex_escape(e['code'])}}}")
             out.append(f"\\par\\noindent\\textit{{\\small root {latex_escape(str(e.get('root')))} not found in this build}}")
             out.extend(render_entry_body(e))
             entries_typeset += 1

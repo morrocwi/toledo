@@ -45,6 +45,31 @@ def test_needs_rebuild_true_after_source_edit(fixture_root):
     assert index.needs_rebuild(fixture_root) is True
 
 
+def test_needs_rebuild_false_when_mtime_changes_but_content_is_identical(fixture_root):
+    """MCP cold-start prebuilt-index fix (DEBT #48, 2026-09-07, lane E): a
+    release zip ships `mcp/state/index.sqlite3` already built at packaging
+    time; unpacking it (or a plain `git checkout`) gives every source
+    registry file a brand-new mtime even though its bytes are exactly the
+    ones the shipped index was built from. A pure stat comparison would
+    therefore call it stale on every single cold start, defeating the whole
+    point of shipping it. Simulates exactly that: rewrite CANONICAL.json
+    with byte-identical content (so size AND mtime_ns both change, but the
+    sha256 does not) and confirm the index is still accepted as fresh."""
+    reg = core.load_registry(fixture_root)
+    index.build_index(reg, fixture_root)
+    assert index.needs_rebuild(fixture_root) is False
+
+    canonical_path = fixture_root / "registry" / "CANONICAL.json"
+    text = canonical_path.read_text(encoding="utf-8")
+    time.sleep(0.01)
+    canonical_path.write_text(text, encoding="utf-8")  # rewritten -- new mtime_ns, identical bytes/size
+
+    assert index.needs_rebuild(fixture_root) is False
+    freshness = index.check_freshness(fixture_root)
+    assert freshness.stale is False
+    assert freshness.reasons == []
+
+
 def test_get_connection_auto_builds(fixture_root):
     conn = index.get_connection(fixture_root, auto_build=True)
     try:

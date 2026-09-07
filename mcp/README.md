@@ -261,3 +261,38 @@ Both surfaces specified in `mcp/DESIGN.md` are implemented and installed
   GitHub Pages on `main`, it is never committed by hand.
 
 See `docs/CHANGELOG.md` for the dated entry recording when each landed.
+
+## Cold start: prebuilt index (DEBT #48, 2026-09-07)
+
+`mcp/state/index.sqlite3` is normally built lazily, on demand, the first
+time a tool call needs it — fine for a long-running dev checkout, but it
+means a from-scratch clone (or a downloaded release) pays a full registry
+JSON-parse-and-merge plus an index build on its very first cold start.
+
+`make build` (and CI's `build-index` job) now also run
+`python3 mcp/scripts/build_index.py`, which builds `mcp/state/index.sqlite3`
+from the current registry right after `scripts/toledo_build.py` runs. **A
+release archive should include this file under `mcp/state/`** alongside the
+package so a fresh unpack starts with an already-built index rather than an
+empty `mcp/state/`.
+
+`mcp/state/*.sqlite3` stays gitignored (`mcp/.gitignore`) — it is still
+never a second source of truth checked into git, only a build artifact a
+release zip carries alongside the code, the same way `mcp/dist/static-api/`
+is a build artifact CI publishes without ever committing it.
+
+The runtime side of this: `toledo_mcp.index.check_freshness` used to compare
+only file `size`+`mtime_ns` against what was recorded when the index was
+last built — so a shipped index would look "stale" on a fresh unpack purely
+because unpacking gives every file a new mtime, even though its bytes are
+identical to what the index was built from, forcing an unnecessary rebuild
+on every single cold start. It now falls back to comparing the sha256
+content hash already recorded in the index's own `meta` table (`build_index`
+has always computed and stored this) whenever the cheap stat check
+disagrees, and only reports staleness when the hash disagrees too — a real
+content change, not a touched mtime. `toledo_mcp.cache.RegistryCache.
+ensure_fresh` was also changed to call `index.build_index` only when
+`index.needs_rebuild` actually says so (it used to rebuild unconditionally
+on every full reload, including a process's very first one) — so a
+correctly shipped, matching index is reused as-is. See `mcp/BENCHMARKS.md`
+for the measured before/after cold-start numbers.

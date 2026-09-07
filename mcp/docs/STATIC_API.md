@@ -86,17 +86,20 @@ v1/
 
 One file per canonical entry: the full `registry/SCHEMA.md`-shaped entry
 (every field an equivalent `toledo_get` call's `data.entry` would carry),
-plus its `verdict` block **as computed at export time** — itself carrying a
-nested `computed_at` so a client can tell how old that specific verdict is,
-independent of the top-level manifest's `generated_at` (the two are written
-in the same export run and will normally match, but a client should read
-the per-file timestamp, not assume it equals the manifest's).
+plus its `verdict` block **as computed at export time**, alongside the same
+`generated_at`/`generated_from_commit`/`disclosure` metadata `manifest.json`
+carries at the top level — repeated per-file so a client reading one
+`entries/<code>.json` in isolation (never having fetched `manifest.json`)
+still knows how stale that specific file's verdict is, without assuming it
+equals some other file's timestamp.
 
 ```json
 {
   "entry": { "...": "full SCHEMA.md entry, unchanged from the live schema" },
   "verdict": { "verdict": "REGISTERED_CURRENT", "usable": true, "reason": "...", "redirect": [], "candidates": [] },
-  "computed_at": "2026-09-07T12:00:00Z"
+  "generated_at": "2026-09-07T12:00:00Z",
+  "generated_from_commit": "<git commit hash of the registry state exported>",
+  "disclosure": "eventually consistent; call the live MCP server for a current answer, never treat this as authoritative for a release-sensitive task"
 }
 ```
 

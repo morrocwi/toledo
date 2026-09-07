@@ -425,3 +425,143 @@ other tied code; `method="phi"` already had this exact tie-handling (the
 `verdict_for_check` branch this fix's difflib path was brought in line
 with). Both paths now agree: `AMBIGUOUS`, both codes named, no code picked
 blindly.
+
+## 2026-09-07 (later still) — MCP cold-start prebuilt index (DEBT #48, lane E)
+
+DEBT #48 (`ops/TODOLIST_snapshot_2026-09-07.md` / `cpg/notebook/TODOLIST`):
+"MCP: p50 cold start 1.2 s could use a prebuilt index shipped in the
+release." Root cause found by reading the actual code path, not guessed:
+`cache.RegistryCache.ensure_fresh()` called `index.build_index()`
+**unconditionally** on every full reload — including a process's very
+first one — regardless of whether an on-disk `mcp/state/index.sqlite3`
+already existed and already matched the registry. A release zip shipping a
+prebuilt index got thrown away and rebuilt from scratch on every single
+cold start for no reason, because `index.check_freshness()`'s own
+invalidation compared only `size`+`mtime_ns` against what was recorded at
+build time — and unpacking a zip (or a plain `git checkout`) gives every
+source file a brand-new mtime even when its bytes are byte-for-byte
+identical to what the shipped index was built from.
+
+**Fix, two parts (`mcp/toledo_mcp/index.py`, `mcp/toledo_mcp/cache.py`):**
+1. `check_freshness()` now falls back to comparing the sha256 content hash
+   already recorded in the index's own `meta` table (`build_index` has
+   always computed and stored it) whenever the cheap stat comparison
+   disagrees, before declaring the index stale — a real content check, not
+   a second stat trick. Only a genuine content difference is still reported
+   as staleness; a shipped index whose hash matches is accepted with no
+   rebuild.
+2. `RegistryCache.ensure_fresh()` now calls `index.build_index()` only when
+   `index.needs_rebuild()` actually says so, instead of unconditionally.
+3. New build step, `mcp/scripts/build_index.py`, wired into `make build`
+   and the CI `build-index` job (`.github/workflows/toledo-mcp-ci.yml`) —
+   this is the "ship it" half: a release archive should include the
+   `mcp/state/index.sqlite3` this step produces (see `mcp/README.md`
+   "Cold start: prebuilt index").
+
+**Tests** (`mcp/tests/test_index.py::test_needs_rebuild_false_when_mtime_changes_but_content_is_identical`,
+`mcp/tests/test_cache.py::test_ensure_fresh_reuses_shipped_index_when_hash_matches_despite_mtime_change`)
+pin exactly this: a byte-identical rewrite (new mtime, same content) of a
+source registry file must not trigger a rebuild, and a fresh `RegistryCache`
+(a new process) must not call `index.build_index` when the on-disk index
+already matches by hash.
+
+```
+$ cd mcp && python3 -m pytest -q
+........................................................................ [ 33%]
+........................................................................ [ 66%]
+........................................................................ [100%]
+216 passed in 9.99s
+```
+(214 landed at the residual-findings pass above, + 2 new regression tests
+for this fix.)
+
+### Before/after cold-start measurement (this run, this machine)
+
+Method (`mcp/benchmarks/bench_index.py`'s new `mcp_cold_start_stdio`
+section, added by this fix): spawns the real `toledo_mcp/server.py`
+subprocess over real MCP stdio (`mcp.client.stdio`) against a throwaway
+"shadow root" — a temp-directory copy of the real `registry/CANONICAL.json`
++ `genesis_root.json` + `LINEAGE.jsonl` (never the live registry files, and
+never the developer's own `mcp/state/`, so this is safe to run alongside
+other concurrently-running lanes editing the real registry) — under two
+scenarios, 3 repeats each: `no_shipped_index` (empty state dir, must build
+cold — the control, unaffected by this fix) and
+`shipped_index_mtime_changed` (a state dir pre-seeded with an index already
+built against the shadow root, then every shadow registry file's mtime is
+bumped with `os.utime` — bytes unchanged — reproducing exactly what a
+release-zip unpack or `git checkout` looks like).
+
+To isolate the fix's actual effect, the **same benchmark** was run twice on
+this machine, back to back: once with `mcp/toledo_mcp/index.py` and
+`cache.py` stashed back to their pre-fix content (`git stash` on just those
+two files), once with the fix restored (`git stash pop`) — registry size
+unchanged between the two runs (1,559 entries both times, confirmed from
+each run's own `entry_count`).
+
+**Before (pre-fix code, `git stash`):**
+
+```json
+"mcp_cold_start_stdio": {
+  "repeat": 3,
+  "no_shipped_index": {
+    "runs": [{"init_ms": 1339.56, "first_call_ms": 361.04},
+             {"init_ms": 1480.31, "first_call_ms": 372.83},
+             {"init_ms": 1280.11, "first_call_ms": 382.87}],
+    "median_init_ms": 1339.56, "median_first_call_ms": 372.83
+  },
+  "shipped_index_mtime_changed": {
+    "runs": [{"init_ms": 1354.03, "first_call_ms": 365.70},
+             {"init_ms": 1342.56, "first_call_ms": 370.93},
+             {"init_ms": 1315.69, "first_call_ms": 364.43}],
+    "median_init_ms": 1342.56, "median_first_call_ms": 365.70
+  }
+}
+```
+
+A shipped index made **no measurable difference** before this fix — its
+`first_call_ms` (365.70ms median) is statistically the same as
+`no_shipped_index` (372.83ms median): the shipped index was being silently
+discarded and rebuilt every time, exactly as the root-cause reading above
+predicted.
+
+**After (this fix restored):**
+
+```json
+"mcp_cold_start_stdio": {
+  "repeat": 3,
+  "no_shipped_index": {
+    "runs": [{"init_ms": 1753.55, "first_call_ms": 411.34},
+             {"init_ms": 1325.76, "first_call_ms": 359.94},
+             {"init_ms": 1280.28, "first_call_ms": 346.76}],
+    "median_init_ms": 1325.76, "median_first_call_ms": 359.94
+  },
+  "shipped_index_mtime_changed": {
+    "runs": [{"init_ms": 1461.14, "first_call_ms": 147.22},
+             {"init_ms": 1299.40, "first_call_ms": 135.97},
+             {"init_ms": 1292.69, "first_call_ms": 131.72}],
+    "median_init_ms": 1299.40, "median_first_call_ms": 135.97
+  }
+}
+```
+
+`no_shipped_index` (the control) is unchanged within run-to-run noise, as
+expected — this fix has nothing to reuse when nothing was shipped.
+`shipped_index_mtime_changed`'s `first_call_ms` drops from **365.70ms to
+135.97ms median — a 63% reduction (≈230ms saved)** on the one call this fix
+targets, matching `index_rebuild_cold_5_runs`'s independently-measured
+~200-230ms rebuild cost (this same run: median 226.3ms) almost exactly —
+that rebuild is precisely the work now skipped.
+
+`init_ms` itself (dominated by Python process/interpreter/import startup,
+per the 2026-09-07 integration-pass note above) is not this fix's target
+and shows no consistent before/after difference here, as expected — the
+saving is entirely in the first tool call, where the index build used to
+happen.
+
+The `index_rebuild_cold_5_runs` figure from the same "after" run (median
+226.3ms) corroborates the `shipped_index_mtime_changed` saving above — that
+rebuild cost is almost exactly what disappeared from `first_call_ms`.
+Re-run `python3 mcp/benchmarks/bench_index.py` for a current number (its
+full output overwrites `mcp/benchmarks/results.json`, gitignored); like
+every other figure on this page, this is a snapshot of one run on one
+machine, not a guaranteed SLA.

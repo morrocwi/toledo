@@ -22,7 +22,7 @@ for f in $FILES; do
     echo "MemAvailable ${avail}MB < 1500MB -- waiting before $f" | tee -a "$LOG"
     while [ "$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)" -lt 1500 ]; do sleep 10; done
   fi
-  out=$(coqc -q -Q . MRC -Q ../master-river MR -R ../solver-arc RDL -Q ../readout_universe/evidence URR "$f" 2>&1)
+  out=$(coqc -q -Q . MRC -Q ../master-river MR -R ../solver-arc RDL -Q ../readout_universe/evidence URR -Q ../readout_genesis/formal ReadoutGenesis.Formal "$f" 2>&1)
   status=$?
   if [ $status -eq 0 ]; then
     OK=$((OK+1))

@@ -32,6 +32,40 @@ def test_ensure_fresh_reloads_after_source_edit(fixture_root):
     assert c.registry is not reg1
 
 
+def test_ensure_fresh_reuses_shipped_index_when_hash_matches_despite_mtime_change(fixture_root, monkeypatch):
+    """MCP cold-start prebuilt-index fix (DEBT #48, 2026-09-07, lane E): a
+    release zip ships `mcp/state/index.sqlite3` already built (see
+    `mcp/scripts/build_index.py`); unpacking/checking it out changes the
+    source registry files' mtimes without changing their bytes. A *fresh*
+    `RegistryCache` (modelling a brand-new server process's cold start) must
+    still load the registry into memory (`ensure_fresh()` returns True — the
+    Python-side object always needs building), but must NOT throw away and
+    rebuild an on-disk index that already matches by content hash. Before
+    this fix, `ensure_fresh` called `index.build_index` unconditionally on
+    every first load, defeating a shipped index entirely."""
+    reg = core.load_registry(fixture_root)
+    index.build_index(reg, fixture_root)  # the "release-time" build
+
+    canonical_path = fixture_root / "registry" / "CANONICAL.json"
+    text = canonical_path.read_text(encoding="utf-8")
+    time.sleep(0.01)
+    canonical_path.write_text(text, encoding="utf-8")  # identical bytes, new mtime -- simulates an unpacked release
+
+    build_calls = []
+    real_build_index = index.build_index
+
+    def spy_build_index(*args, **kwargs):
+        build_calls.append(1)
+        return real_build_index(*args, **kwargs)
+
+    monkeypatch.setattr(index, "build_index", spy_build_index)
+
+    c = cache_mod.RegistryCache(root=fixture_root)  # a brand-new process's cache
+    assert c.ensure_fresh() is True  # the in-memory Registry is always (re)loaded on a cold start
+    assert build_calls == []  # but the shipped, matching-by-hash index must not be rebuilt
+    assert c.get("EQ-001/M.01.v1") is not None  # the cache is fully functional off the shipped index
+
+
 def test_get_status_match_core(fixture_root):
     c = cache_mod.RegistryCache(root=fixture_root)
     reg = core.load_registry(fixture_root)

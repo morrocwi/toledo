@@ -47,7 +47,11 @@ with open(CAN_DIR / "_CoqProject", "w", encoding="utf-8") as fh:
     # omitting them here does not break those two scripts, but it silently breaks
     # any other tool (coq_makefile, an IDE) that derives its flags from this file
     # alone -- checker finding, fixed here (v1.1 pre-existing gap, not new).
-    fh.write("-Q . MRC\n-Q ../master-river MR\n-R ../solver-arc RDL\n-Q ../readout_universe/evidence URR\n\n")
+    fh.write(
+        "-Q . MRC\n-Q ../master-river MR\n-R ../solver-arc RDL\n"
+        "-Q ../readout_universe/evidence URR\n"
+        "-Q ../readout_genesis/formal ReadoutGenesis.Formal\n\n"
+    )
     fh.write("\n".join(order) + "\n")
 
 print(f"Wrote _CoqProject: {len(order)} files, topological order "

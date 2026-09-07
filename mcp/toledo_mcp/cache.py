@@ -139,7 +139,20 @@ class RegistryCache:
             return False
 
         self.registry = new_registry
-        index.build_index(self.registry, root)
+        # MCP cold-start prebuilt-index fix (DEBT #48, 2026-09-07, lane E):
+        # this used to call index.build_index() unconditionally on every
+        # full reload, including the very first one in a process's
+        # lifetime -- so a release zip that ships an already-built, already-
+        # matching mcp/state/index.sqlite3 (see mcp/scripts/build_index.py)
+        # got thrown away and rebuilt from scratch on every cold start
+        # anyway, for no reason (~200ms measured, benchmarks/bench_index.py
+        # "index_rebuild_cold_5_runs"). index.needs_rebuild() now accepts a
+        # shipped index whose content hash matches even when its stat
+        # (mtime) does not (index.check_freshness's own fix, same date) --
+        # so gating the rebuild on it here means a correctly shipped index
+        # is reused as-is and only a genuinely stale/missing one is rebuilt.
+        if index.needs_rebuild(root):
+            index.build_index(self.registry, root)
         self._source_fp = current_fp
         self.degraded = False
         self.degraded_reason = None
