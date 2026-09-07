@@ -3224,130 +3224,156 @@
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "quartet_decomp",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.74.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.74.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.74.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "two_gen_quartet_im_vanishes",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.75.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.75.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.75.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "quartet_conj_flips_sign",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.76.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.76.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.76.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "witness_unitary",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.77.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.77.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.77.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "witness_J_value",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.78.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.78.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.78.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "witness_J_nonzero",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.79.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.79.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.79.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "witness_cp_unitary",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.80.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.80.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.80.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "witness_cp_flips",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.81.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.81.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.81.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "neutral_cp_fixed",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.82.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.82.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.82.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "neutral_unitary",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.83.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.83.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.83.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "neutral_J_zero",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.84.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.84.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.84.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "three_values_realized",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.85.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.85.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.85.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoCPEquivariantGenerationBound_attempt.v",
   "identifier": "values_pairwise_distinct",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoCPEquivariantGenerationBound_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.86.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.86.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.86.v1. Statement is this identifier's own Coq declaration in formal/InfoCPEquivariantGenerationBound_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
@@ -3564,730 +3590,876 @@
   "file": "formal/InfoThetaCPSquareObstruction_attempt.v",
   "identifier": "real_quartet_no_cp_readout",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaCPSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.01.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.01.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaCPSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.01.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaCPSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaEdgeCensus_attempt.v",
   "identifier": "theta_census_exists_3",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['EQ-069', 'T1', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaEdgeCensus_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.02.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.02.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaEdgeCensus_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.02.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaEdgeCensus_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaEdgeCensus_attempt.v",
   "identifier": "theta_census_unique_3",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['EQ-069', 'T1', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaEdgeCensus_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.03.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.03.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaEdgeCensus_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.03.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaEdgeCensus_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaEdgeCensus_attempt.v",
   "identifier": "edge_generators_independent_3",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['EQ-069', 'T1', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaEdgeCensus_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.04.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.04.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaEdgeCensus_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.04.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaEdgeCensus_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaFixedPointBalance_attempt.v",
   "identifier": "fixed_point_balance_law",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaFixedPointBalance_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.05.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.05.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaFixedPointBalance_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.05.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaFixedPointBalance_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaFixedPointBalance_attempt.v",
   "identifier": "mirror_symmetry_is_dead",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaFixedPointBalance_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.06.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.06.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaFixedPointBalance_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.06.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaFixedPointBalance_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaFixedPointBalance_attempt.v",
   "identifier": "agreement_is_dead",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaFixedPointBalance_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.07.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.07.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaFixedPointBalance_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.07.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaFixedPointBalance_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "locus_Z1Z3_J_square",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.08.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.08.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.08.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "qsquare_nonneg",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.09.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.09.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.09.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "locus_Z1Z3_J_nonneg",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.10.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.10.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.10.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "qsquare_pos_of_nonzero",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.11.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.11.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.11.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "locus_Z1Z3_J_pos",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.12.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.12.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.12.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "locus_Z0Z2_J_square",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.13.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.13.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.13.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "locus_Z0Z2_J_nonneg",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.14.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.14.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.14.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "locus_Z0Z2_J_pos",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.15.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.15.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.15.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "diffR_taylor_identity",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.16.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.16.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.16.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "diffRec_taylor_identity",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.17.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.17.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.17.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "linear_diff_system_nondegenerate",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.18.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.18.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.18.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "edge_locus_kills_support",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.19.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.19.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.19.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "edge_locus_incompatible_with_strict_support_rule",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.20.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.20.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.20.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "c4_edge01_locus_excluded",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.21.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.21.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.21.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "c4_edge12_locus_excluded",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.22.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.22.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.22.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "c4_edge23_locus_excluded",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.23.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.23.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.23.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "c4_edge03_locus_excluded",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.24.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.24.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.24.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "c4_reflection_01_23_excluded",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.25.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.25.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.25.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaLivingOrientationSign_attempt.v",
   "identifier": "c4_reflection_12_30_excluded",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T2b'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaLivingOrientationSign_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.26.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.26.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.26.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaLivingOrientationSign_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaMinimalLiving_attempt.v",
   "identifier": "n2_empty_support_dead",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaMinimalLiving_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.27.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.27.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.27.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaMinimalLiving_attempt.v",
   "identifier": "red_rsum",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaMinimalLiving_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.28.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.28.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.28.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaMinimalLiving_attempt.v",
   "identifier": "red_rdiff",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaMinimalLiving_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.29.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.29.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.29.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaMinimalLiving_attempt.v",
   "identifier": "red_csum",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaMinimalLiving_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.30.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.30.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.30.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaMinimalLiving_attempt.v",
   "identifier": "red_cdiff",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaMinimalLiving_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.31.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.31.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.31.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaMinimalLiving_attempt.v",
   "identifier": "n2_edge_present_dead",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaMinimalLiving_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.32.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.32.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.32.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaMinimalLiving_attempt.v",
   "identifier": "n2_no_living_fixed_point",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaMinimalLiving_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.33.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.33.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.33.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaMinimalLiving_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
   "identifier": "qsign_exists",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaOrientedSkewObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.34.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.34.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.34.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
   "identifier": "cyclic_product_switching_invariant_triangle",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaOrientedSkewObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.35.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.35.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.35.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
   "identifier": "cyclic_product_switching_invariant_C4",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaOrientedSkewObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.36.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.36.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.36.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
   "identifier": "tree_gauge_fixable_P3",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaOrientedSkewObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.37.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.37.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.37.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
   "identifier": "tree_gauge_fixable_star3",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaOrientedSkewObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.38.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.38.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.38.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
   "identifier": "tree_gauge_fixable_P4",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaOrientedSkewObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.39.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.39.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.39.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaOrientedSkewObstruction_attempt.v",
   "identifier": "tree_gauge_fixable_star4",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaOrientedSkewObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.40.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.40.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.40.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaOrientedSkewObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "quartet_rescale_invariant",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.41.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.41.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.41.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "quartet_real_scalar_rescale",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.42.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.42.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.42.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "family_B_K3_exact",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.43.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.43.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.43.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "family_B_C4_vanishes",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.44.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.44.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.44.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "family_C_rank1_vanishes",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.45.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.45.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.45.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "family_A_not_switching_invariant",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.46.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.46.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.46.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "family_A_witness_original_value",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.47.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.47.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.47.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "family_A_witness_switched_value",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.48.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.48.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.48.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "skew_source_switching_covariant",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.49.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.49.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.49.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "symmetric_source_switched_value",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.50.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.50.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.50.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "symmetric_source_naive_covariant_prediction",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.51.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.51.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.51.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "symmetric_source_not_switching_covariant",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.52.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.52.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.52.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "c4_reversal_is_gauge_witness",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.53.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.53.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.53.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaQuartetSquareObstruction_attempt.v",
   "identifier": "k3_no_uniform_reversal_gauge",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: registry/coq_imports.json's own S5 codes_hint for this file names ['T1', 'T1b', 'T2'] as candidates, but these are bare aliases (e.g. T1/T2/RD1..RD9) reused across many unrelated Genesis rows (GENESIS_CODE_SCHEME.md's own documented collision class) -- not promoted to `codes` without a specific-identifier match; needs maker review against the source's own docs to disambiguate which root, if any, this exact identifier corresponds to.",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaQuartetSquareObstruction_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.54.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.54.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.54.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaQuartetSquareObstruction_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "k3_invariance_forces_uniform",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.55.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.55.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.55.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "p3_invariance_forces_uniform",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.56.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.56.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.56.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "k3_spectrum_zero",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.57.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.57.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.57.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "k3_spectrum_top_a",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.58.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.58.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.58.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "k3_spectrum_top_b",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.59.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.59.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.59.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "p3_spectrum_zero",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.60.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.60.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.60.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "p3_spectrum_mid",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.61.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.61.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.61.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "p3_spectrum_top",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.62.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.62.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.62.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaSectorSpectrum_attempt.v",
   "identifier": "p3_levels_distinct",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaSectorSpectrum_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.63.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.63.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.63.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaSectorSpectrum_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "edge_source_bilinear_01",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.64.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.64.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.64.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "edge_source_bilinear_02",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.65.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.65.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.65.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "edge_source_bilinear_12",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.66.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.66.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.66.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "Qmult_pos_pos",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.67.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.67.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.67.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "Qsquare_nonneg",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.68.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.68.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.68.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "clipped_stationarity_absent",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.69.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.69.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.69.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "clipped_stationarity_present",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.70.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.70.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.70.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "discordance_complement_flip",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.71.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.71.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.71.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "witness_total_disorder_K3",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.72.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.72.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.72.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
   "file": "formal/InfoThetaTopologyReadout_attempt.v",
   "identifier": "witness_partial_disorder_P3",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "InfoThetaTopologyReadout_attempt.v's own header cites 'THETA_ROOT_PROGRAM.md' (per the file: founder ruling 2026-08-08 elevates Theta to a NEW ROOT alongside reader Phi / record Psi / retained difference delta_R). genesis_root.json (built from READOUT_GENESIS_CORE.md) carries no Theta root code yet -- THETA_ROOT_PROGRAM.md is a separate, not-yet-registered document -- so this identifier stays unmapped rather than inventing a root id for it."
+  "codes": [
+   "Theta/P.73.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.73.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to Theta/P.73.v1. Statement is this identifier's own Coq declaration in formal/InfoThetaTopologyReadout_attempt.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "readout_genesis",
@@ -17283,330 +17455,396 @@
   "file": "formal/CMC_TargetClass_Definitions.v",
   "identifier": "nonzero_closure_not_closure_free",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.16.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.16.v1. Statement is this identifier's own Coq declaration in formal/CMC_TargetClass_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.16.v1. Statement is this identifier's own Coq declaration in formal/CMC_TargetClass_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_TargetClass_Definitions.v",
   "identifier": "bridge_obligation_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.17.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.17.v1. Statement is this identifier's own Coq declaration in formal/CMC_TargetClass_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.17.v1. Statement is this identifier's own Coq declaration in formal/CMC_TargetClass_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_TargetClass_Definitions.v",
   "identifier": "cmc_no_refuter_under_axioms",
   "status": "axioms:['cmc_bridge_axiom']",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.18.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.18.v1. Statement is this identifier's own Coq declaration in formal/CMC_TargetClass_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.18.v1. Statement is this identifier's own Coq declaration in formal/CMC_TargetClass_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_Bridge_Decomposition.v",
   "identifier": "decomposed_bridge_obligation",
   "status": "axioms:['cmc_retention_lemma_obligation', 'cmc_finite_speed_lemma_obligation', 'cmc_closure_exhaustion_obligation', 'carrier_present']",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.01.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.01.v1. Statement is this identifier's own Coq declaration in formal/CMC_Bridge_Decomposition.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.01.v1. Statement is this identifier's own Coq declaration in formal/CMC_Bridge_Decomposition.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_Bridge_Decomposition.v",
   "identifier": "decomposed_no_refuter",
   "status": "axioms:['cmc_retention_lemma_obligation', 'cmc_finite_speed_lemma_obligation', 'cmc_closure_exhaustion_obligation', 'carrier_present']",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.02.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.02.v1. Statement is this identifier's own Coq declaration in formal/CMC_Bridge_Decomposition.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.02.v1. Statement is this identifier's own Coq declaration in formal/CMC_Bridge_Decomposition.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ClosureFree_Exhaustive.v",
   "identifier": "closure_free_implies_no_named_closure",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.03.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.03.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.03.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ClosureFree_Exhaustive.v",
   "identifier": "no_named_closure_implies_closure_free",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.04.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.04.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.04.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ClosureFree_Exhaustive.v",
   "identifier": "closure_free_iff_no_named_closure",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.05.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.05.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.05.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ClosureFree_Exhaustive.v",
   "identifier": "refuter_burden_expands_to_named_absence",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.06.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.06.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.06.v1. Statement is this identifier's own Coq declaration in formal/CMC_ClosureFree_Exhaustive.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_Independent_Definitions.v",
   "identifier": "independent_exhaustion_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.07.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.07.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.07.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_Independent_Definitions.v",
   "identifier": "retained_definition_not_closure_definition",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.08.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.08.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.08.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_Independent_Definitions.v",
   "identifier": "finite_speed_definition_not_closure_definition",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.09.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.09.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.09.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_Independent_Definitions.v",
   "identifier": "cattaneo_independent_target_has_closure",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.10.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.10.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.10.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_Independent_Definitions.v",
   "identifier": "fourier_independent_is_not_target_class",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.11.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.11.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.11.v1. Statement is this identifier's own Coq declaration in formal/CMC_Independent_Definitions.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ModelClass_Witnesses.v",
   "identifier": "class_witness_has_nonzero_closure",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.12.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.12.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.12.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ModelClass_Witnesses.v",
   "identifier": "class_witness_not_closure_free",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.13.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.13.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.13.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ModelClass_Witnesses.v",
   "identifier": "class_witness_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.14.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.14.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.14.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_ModelClass_Witnesses.v",
   "identifier": "fourier_memoryless_face_not_target",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/M.15.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.15.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/M.15.v1. Statement is this identifier's own Coq declaration in formal/CMC_ModelClass_Witnesses.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "Retention_Lemma_certified",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.01.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.01.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.01.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "Finite_Speed_Lemma_certified",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.02.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.02.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.02.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "Closure_Exhaustion_Lemma_certified",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.03.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.03.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.03.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "certified_physical_readout_has_nonzero_closure",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.04.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.04.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.04.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "certified_physical_readout_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.05.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.05.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.05.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "cattaneo_telegraph_closure_witness",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.06.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.06.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.06.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "cattaneo_telegraph_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.07.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.07.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.07.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "kinetic_transport_closure_witness",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.08.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.08.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.08.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "kinetic_transport_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.09.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.09.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.09.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "flux_limited_diffusion_closure_witness",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.10.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.10.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.10.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "flux_limited_diffusion_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.11.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.11.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.11.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "wave_bounded_propagator_closure_witness",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.12.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.12.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.12.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "wave_bounded_propagator_blocks_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.13.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.13.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.13.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "fourier_heat_singular_memoryless_face_not_finite_speed_target",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.14.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.14.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.14.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",
   "file": "formal/CMC_PhysicsClass_Instances.v",
   "identifier": "fourier_heat_singular_memoryless_face_not_refuter",
   "status": "Closed under the global context",
-  "codes": [],
-  "evidence": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own).",
-  "confidence": "none",
-  "evidence_quote": "UNMAPPED. hint for the maker: no codes_hint on this file and no explicit registry row/in-file comment names this identifier or its file for a specific EQ-nnn/Genesis id/root code; needs maker review against the source's own README/docs to find one, or leave unmapped if this is purely infrastructure (a helper lemma with no equation of its own)."
+  "codes": [
+   "CMC/P.15.v1"
+  ],
+  "evidence": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.15.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json.",
+  "confidence": "high",
+  "evidence_quote": "Toledo v1.2 Lane R (root extension, founder ruling BBL-2026-09-07-207): mapped to CMC/P.15.v1. Statement is this identifier's own Coq declaration in formal/CMC_PhysicsClass_Instances.v, quoted verbatim in registry/CANONICAL.json."
  },
  {
   "source": "solver arc (private)",

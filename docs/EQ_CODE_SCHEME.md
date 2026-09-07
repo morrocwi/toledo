@@ -87,3 +87,51 @@ code.replace('/', '__').replace('.', '_').replace('-', '_')
 `EQ-015/M.01.v1` → `EQ_015__M_01_v1.v`. This mangling is Coq-filename-only; the docs-site URL
 path (`site/<code>/index.html`) keeps the code's own literal characters (`/`, `.`, `-` are all
 valid URL path-segment characters) and is unaffected.
+
+## Root registry extension R1 (2026-09-07, founder ruling BBL-2026-09-07-207)
+
+**Layer 0 roots may come from a founder-ruled root extension, not only from
+`READOUT_GENESIS_CORE.md`/the whitepaper — with their own ids kept verbatim,
+exactly like every other root code in this scheme.** Ruled by the founder,
+2026-09-07 (relayed in `ops/HANDOFF_OVERNIGHT_2026-09-06.md`,
+BBL-2026-09-07-207): the Theta programme and Causal-Memory Closure (CMC) are
+added as roots and connected into the lineage. Full sourcing, quotes, and the
+relation evidence live in `registry/GENESIS_CODE_SCHEME.md`'s own dated
+addendum of the same name and on the `Theta`/`CMC` rows of
+`registry/genesis_root.json`; this addendum states only the code-scheme
+consequences.
+
+**Roots added:**
+
+| code | what it is | anchor | connects to (source-quoted) |
+|---|---|---|---|
+| `Theta` | living/relational-geometry root state | public `readout_genesis`@`082dde893b70c7500c13d463239909c99cf17f0a`, `formal/InfoThetaEdgeCensus_attempt.v` + 9 more `.v` files | `EQ-008` (reuses its forced admissibility characterization), `EQ-022` (Theta is `G[Theta_n]` inside EQ-022's own reader/record recurrence) |
+| `CMC` | Causal-Memory Closure — a disclosed founder-level bridge axiom | "solver arc (private)"@`961151db33b0491cba8fabade69f594238d33f84`, `formal/CMC_TargetClass_Definitions.v` + 5 more `.v` files | none stated in any source text (checked, per `registry/root_candidates_report.md`) — `relations: []`, recorded rather than guessed |
+
+**Readings added under these roots (Layer 1, same `<root>/<D>.<nn>.v1` grammar
+as every other root):** every coq_map.json-listed identifier in the ten
+Theta/CP files (86) and six CMC files (33) — 119 readings total, added by
+`scripts/v12_R.py`. Domain letter: `P` for all Theta readings and for the one
+CMC file whose own name and header declare it a physics layer
+(`CMC_PhysicsClass_Instances.v`); `M` (method) for CMC's other five files, per
+this scheme's own domain-letter rule ("a domain is a quotient/readout of the
+one root") applied to the source's own stated subject matter. `statement`
+carries `format: "coq"` — the literal Coq declaration, not a transliteration —
+since no other verbatim form was available without inventing one. `tier` is
+derived from `registry/coq_map.json`'s own recorded verification status
+(itself copied from `coq/verify_all.sh`'s Print Assumptions output, per
+`registry/SCHEMA.md`'s existing convention for the `assumptions` field): a
+`Definition`/`Fixpoint`/`Inductive` declaration is tiered `Definition`; a
+proved result with status `"Closed under the global context"` is tiered
+`Th_coqc`; a proved result that itself names a disclosed axiom dependency
+(3 of the 119 — `cmc_no_refuter_under_axioms`, `decomposed_bridge_obligation`,
+`decomposed_no_refuter`, each depending on `cmc_bridge_axiom` and/or three
+further named obligations) is tiered `Ax`, never above what that dependency
+list says. `coq.coq_status` is `"mapped_not_wrapped"` for all 119 — matching
+`registry/SCHEMA.md`'s own definition of that value (an evidence-backed
+`coq_map.json` match with no Toledo-native wrapper file yet) — wrapping these
+into `coq/canonical/` files is left to a later lane, same as the other 210
+`mapped_not_wrapped`/`wrapped_related` entries already carried over from
+v1.1. `registry/coq_map.json`'s own `codes[]` was updated for all 119 rows to
+cite the new reading codes, by evidence (file+identifier match against the
+same source line the reading's statement was copied from).

@@ -1,38 +1,107 @@
-% latex/catalogue.tex — printable catalogue skeleton.
-% \input{}s the GENERATED body (latex/catalogue_body.tex, written by
-% scripts/toledo_build.py) — never hand-edit catalogue_body.tex.
-\documentclass[10pt]{article}
-% Statements are copied verbatim from their sources (BBL-172, latest
-% formulation wins) and carry literal Unicode this machine's pdflatex cannot
-% typeset natively (math alphanumerics, arrows/relations, Thai, Cyrillic).
-% latex/unicode_pdf_fallback.sty maps every such character this corpus uses
-% to a standard LaTeX construct (\mathfrak, \mathbb, \mathcal, textcomp,
-% pifont, ...) via newunicodechar; scripts/latex_pdf_safe.py replaces
-% contiguous Thai/Cyrillic runs (natural-language quotes, not notation, and
-% unrenderable without a shaped Thai/Cyrillic font on this machine) with a
-% disclosed placeholder pointing at the digital entry -- the registries,
-% JSON entries and docs site carry the exact source text unmodified; only
-% this print artifact substitutes.
+% latex/catalogue.tex — printable catalogue shell (BBL-208 redesign, v1.2.0).
+% \input{}s two GENERATED files (never hand-edited):
+%   catalogue_meta.tex  — written by scripts/toledo_build.py (build_catalogue_meta):
+%                         \ToledoVersion / \ToledoLicense, read from CITATION.cff.
+%   catalogue_body.pdf.tex — derived by scripts/latex_pdf_safe.py from the GENERATED
+%                         catalogue_body.tex (written by scripts/toledo_build.py's
+%                         build_catalogue_body): Thai/Cyrillic runs -> a disclosed
+%                         placeholder, and any display-math (\[ \]) block that fails
+%                         to compile standalone -> the same wrapped-monospace fallback
+%                         used for ascii-math (also disclosed). The registries, JSON entries,
+%                         docs site and vault all carry the exact source text
+%                         unmodified; only this print artifact ever substitutes.
+%
+% Statements are copied verbatim from their sources (BBL-172, latest formulation
+% wins) and carry literal Unicode this machine's pdflatex cannot typeset natively
+% (math alphanumerics, arrows/relations, Thai, Cyrillic) — see
+% latex/unicode_pdf_fallback.sty (\newunicodechar) and scripts/latex_pdf_safe.py.
+\documentclass[10pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 \usepackage{pifont}
 \usepackage{newunicodechar}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=2.2cm]{geometry}
 \usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{hyperref}
+\usepackage{makeidx}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,urlcolor=blue!40!black,citecolor=blue!40!black]{hyperref}
 \usepackage{toledo}
 \usepackage{unicode_pdf_fallback}
 
-\title{Toledo --- Equation Library Catalogue}
+\makeindex
+\allowdisplaybreaks
+\setcounter{tocdepth}{1}   % Parts (-1) + root Sections (1) only — individual
+                           % entries are \subsubsection* (starred, never added
+                           % to the ToC), and status_counts_block's \subsection*
+                           % blocks in End matter are starred too.
+\setcounter{secnumdepth}{1}
+
+\title{Toledo}
+\date{}
 \author{}
-\date{Generated \today}
+
+\input{catalogue_meta.tex}
 
 \begin{document}
-\maketitle
+
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\fontsize{34}{40}\selectfont\bfseries Toledo\par}
+\vspace{0.6cm}
+{\Large Equation Library of the Human--AI Readout Programme\par}
+\vspace{2cm}
+{\large Version \ToledoVersion\par}
+\vspace{0.4cm}
+Concept DOI: \href{https://doi.org/10.5281/zenodo.22537318}{10.5281/zenodo.22537318}\par
+\vspace{0.4cm}
+Generated \today\par
+\vspace{0.4cm}
+Licence: \ToledoLicense\par
+\vfill
+\begin{minipage}{0.86\textwidth}
+\small\noindent
+\textbf{How to read this catalogue.} Every object carries a \emph{code}. A
+\textbf{root} code is the source's own identifier, copied verbatim and never
+renumbered (an Appendix~C stream id such as \texttt{EQ-008}, a named result such
+as \texttt{weld} or \texttt{MQ.08}, or a founder-ruled root-registry extension such
+as \texttt{Theta}/\texttt{CMC}). A \textbf{reading} code has the shape
+\texttt{<root>/<D>.<nn>.v<k>}: \texttt{<D>} is one of eight domain letters
+(E~epistemic, H~human--AI, S~social, W~world-system, M~method, P~physics,
+C~chemistry, B~biology/health) naming which domain-lens the root is read through;
+\texttt{<nn>} is that reading's sequence number under its root; \texttt{v<k>} is
+the revision of its statement (the latest revision is always shown). Every entry
+also states its \emph{tier} (an honest evidence label, copied from the source and
+never raised): \texttt{Th\_coqc} (machine-checked in Coq) and
+\texttt{finite\_diagnostic}/\texttt{Dr} (checked by a weaker, disclosed method) are
+the tiers with the strongest evidence behind them; \texttt{Open} discloses an
+acknowledged open question; \texttt{Definition}, \texttt{Ax} (a named, disclosed
+axiom) and \texttt{RETRACTED} are categorical rather than evidence-graded;
+\texttt{untagged} means the source attached no tier marker at all. Separately,
+\emph{coq\_status} states what machine-checked Coq artifact (if any) backs the
+entry today: \texttt{closed} (a Toledo-native file proves it, ``Closed under the
+global context''), \texttt{wrapped\_related} (a Toledo-native wrapper aliases an
+imported identifier that only reads or specialises the statement),
+\texttt{mapped\_not\_wrapped} (an evidence-backed match in the Coq import exists
+but no Toledo-native wrapper file yet), \texttt{definition} (a typed
+Definition/Record, no theorem), \texttt{open\_prop} (an Open/Dr hypothesis stated
+as an unproved Prop), \texttt{not\_formalisable} (no formal content in the
+source), or \texttt{none}/\texttt{not\_yet\_formalised}. A statement typeset as
+display mathematics is the source's own LaTeX transcription; a statement shown in
+a monospaced block is the source's own ASCII-math or Coq text, wrapped for print
+but otherwise unedited; a plain paragraph is prose the source itself states has no
+operator. \emph{Parents} lists the code(s) this entry is derived from or reads;
+\emph{occurrences} lists where it was found in the corpus.
+\end{minipage}
+\vspace{1cm}
+\end{titlepage}
+
+\clearpage
 \tableofcontents
+\clearpage
 
 \input{catalogue_body.pdf.tex}
 

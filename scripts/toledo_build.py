@@ -501,70 +501,499 @@ def latex_escape(s: str) -> str:
     return "".join(out)
 
 
-def build_catalogue_body(entries: list[dict]) -> str:
+# --------------------------------------------------------------------------
+# Printable catalogue (BBL-208, v1.2.0 redesign) — A4/10pt, one block per
+# entry, natural code sort, Genesis-step Parts, real statement typesetting.
+# --------------------------------------------------------------------------
+
+_DIGIT_RUN_RE = re.compile(r"(\d+)")
+
+
+def natural_key(code: str):
+    """Sort key that orders digit runs numerically (A.2 before A.10) instead
+    of lexicographically (BBL-208: the v1.1.0 catalogue string-sorted codes,
+    e.g. A.1, A.10, A.11, A.2). Every token is tagged (0, text) or (1, int) so
+    two keys of different shape never compare a str against an int."""
+    key = []
+    for part in _DIGIT_RUN_RE.split(code):
+        if part == "":
+            continue
+        key.append((1, int(part)) if part.isdigit() else (0, part.lower()))
+    return key
+
+
+def natural_sort_string(code: str) -> str:
+    """A single sortable string for makeidx \\index{sortkey@code}: every digit
+    run zero-padded to a fixed width so lexicographic (makeindex's own) sort
+    matches natural_key's numeric order."""
+    return "".join(
+        p.zfill(6) if p.isdigit() else p for p in _DIGIT_RUN_RE.split(code) if p != ""
+    )
+
+
+# Top-level Genesis headings ("PART I ...", "APPENDIX C ...", "THE FORCED SET
+# ..."); used only to cluster root codes into printable \part{}s for
+# navigation — a display grouping, never a claim about the corpus.
+_PART_HEADING_RE = re.compile(r"^(PART\s+[IVXLCM]+(?:-[A-Z])?\b.*|APPENDIX\s+[A-Z]\b.*|THE FORCED SET\b.*)")
+
+_EXT_PART_LABEL = "Root registry extension (founder ruling 2026-09-07)"
+_UNCLASSIFIED_PART_LABEL = "Genesis (heading not yet classified)"
+
+
+def genesis_part_label(section) -> str | None:
+    if not section:
+        return None
+    top = str(section).split(">")[0].strip()
+    return top if _PART_HEADING_RE.match(top) else None
+
+
+def assign_root_parts(roots_sorted: list[dict], root_steps: dict) -> dict[str, str]:
+    """Forward-fill each root's own top-level Genesis heading (when its
+    `origin.section` carries one) across roots in step order, so a root whose
+    own section string is a narrower sub-heading still lands in the Part its
+    step position actually belongs to. Roots with no step (a founder root-
+    registry extension, e.g. Theta/CMC) get their own trailing Part."""
+    part_of: dict[str, str] = {}
+    current = _UNCLASSIFIED_PART_LABEL
+    for r in roots_sorted:
+        step, _ = root_steps.get(r["code"], (None, None))
+        if step is None:
+            part_of[r["code"]] = _EXT_PART_LABEL
+            continue
+        own = genesis_part_label((r.get("origin") or {}).get("section"))
+        if own:
+            current = own
+        part_of[r["code"]] = current
+    return part_of
+
+
+_BREAK_MARK = ""
+_BREAK_EVERY = 14  # raw (pre-escape) characters between forced break points;
+# tuned against real `latex/catalogue.log` Overfull \hbox warnings (BBL-208
+# "iterate until 0 errors ... report the Overfull \hbox count") — lower this
+# if any wrapped monospace block still overflows a line.
+
+
+def _wrap_raw_line(line: str) -> str:
+    """Insert an invisible, zero-width break opportunity every _BREAK_EVERY
+    characters of unspaced text so a long unbroken ascii-math/Coq token still
+    wraps inside the printed column (BBL-208: no fixed-width table, no
+    overflow). Marks are inserted on the RAW string, before latex_escape(), so
+    a mark can only ever land between two whole source characters — it never
+    splits a multi-byte Unicode codepoint or a to-be-escaped special char."""
+    out = []
+    run = 0
+    for ch in line:
+        out.append(ch)
+        if ch == " ":
+            run = 0
+            continue
+        run += 1
+        if run >= _BREAK_EVERY:
+            out.append(_BREAK_MARK)
+            run = 0
+    return "".join(out)
+
+
+def wrap_heading_text(name: str) -> str:
+    """A \\section{}/\\subsubsection*{} title does not wrap the way body text
+    does when it contains one very long, space-free run (a name that embeds
+    an inline formula fragment, e.g. "`M_hat_OLS/M_true ~ Var(a_true)/...`"
+    with no internal spaces) -- found by direct test against the real
+    document (this was the largest remaining source of Overfull \\hbox
+    warnings, BBL-208). Applies the same invisible-break-every-N-characters
+    technique as monospace_block, so a long heading still wraps onto a
+    second line instead of overflowing the page margin."""
+    return latex_escape(_wrap_raw_line(name or "")).replace(_BREAK_MARK, "\\hspace{0pt}")
+
+
+def monospace_block(text: str) -> list[str]:
+    """Wrapped monospace block for ascii-math / Coq / any non-LaTeX, non-prose
+    statement (BBL-208). Uses \\ttfamily + \\raggedright + an explicit,
+    invisible break every _BREAK_EVERY characters instead of a true verbatim
+    environment (fancyvrb/listings): this project's Unicode fallback
+    (latex/unicode_pdf_fallback.sty, \\newunicodechar) relies on the source
+    characters keeping their normal category codes so they still expand —
+    a real Verbatim/lstlisting environment changes catcodes and was found,
+    by direct test, to break on this corpus's Unicode math symbols (Invalid
+    UTF-8 byte errors under fvextra's breakanywhere). \\ttfamily keeps the
+    same escaping/substitution path already proven to compile."""
+    text = text or ""
+    lines = []
+    for raw_line in text.split("\n"):
+        marked = _wrap_raw_line(raw_line)
+        escaped = latex_escape(marked).replace(_BREAK_MARK, "\\hspace{0pt}")
+        lines.append(escaped)
+    body = " \\\\\n".join(lines) if lines else "\\textit{[no statement text recorded]}"
+    return ["\\begin{quote}", "\\ttfamily\\small\\raggedright\\noindent", body, "\\end{quote}"]
+
+
+_DMATH_LENGTH_CAP = 150  # see statement_tex_lines: display math (\[ \]) does
+# not auto-break, so a statement longer than this is routed straight to the
+# wrapped monospace block instead of one massively overfull display line.
+# (An earlier version of this generator used breqn's auto-breaking `dmath*`
+# to typeset every statement.latex regardless of length; found by direct
+# timing test against the real ~400-entry document to occasionally cost
+# minutes per equation on this corpus's longer chained-relation statements —
+# unacceptable build-time risk for a benefit (automatic line-breaking) that
+# a length cap plus the existing monospace fallback already covers.)
+
+# Three or more consecutive sub/superscript groups on one nucleus with no
+# operator between them (`^{eff}_{tA}^{corr}_{H,t}...`) is invalid LaTeX
+# ("Double subscript"/"Double superscript") -- one sub and one super on the
+# same atom is fine, a third is not. Found by direct test against the real
+# document: this specific chained-annotation shape (Lane S's mechanical
+# ascii->LaTeX conversion has no notation for the source's own "iterated
+# qualifier" style) was not reliably caught by the compile-based validation
+# in scripts/latex_pdf_safe.py (a pdflatex log line can wrap a \message{}
+# marker across two physical log lines, silently losing that block's
+# boundary), so it is rejected here, statically, before display math is ever
+# attempted -- a build-time typesetting decision, not a change to the
+# statement.
+_SCRIPT_RUN_RE = re.compile(r"(?:[_^](?:\{[^{}]*\}|[A-Za-z0-9]))+")
+_SCRIPT_MARKER_RE = re.compile(r"[_^]")
+
+
+def has_chained_subsup(latex_src: str) -> bool:
+    """A TeX atom takes at most one subscript and one superscript, one of
+    each. Any run of 2+ consecutive script groups that is NOT exactly one `_`
+    and one `^` (in either order) is a "Double subscript"/"Double
+    superscript" error -- e.g. `I_{dot}_{t}` (two subscripts) or
+    `^{eff}_{tA}^{corr}` (three groups). Found by direct test against the
+    real document."""
+    for run in _SCRIPT_RUN_RE.findall(latex_src):
+        markers = _SCRIPT_MARKER_RE.findall(run)
+        if len(markers) > 2 or (len(markers) == 2 and markers[0] == markers[1]):
+            return True
+    return False
+
+
+# A \text{...} argument is meant to hold a plain English word-run (this
+# scheme's own stated rule for Lane S's ascii->LaTeX conversion); one that
+# instead contains a bare control sequence (`\text{proportional-to \Gamma }`)
+# is a mis-boundaried \text{} from that mechanical conversion -- found by
+# direct test against the real document (the single largest source of
+# residual pdflatex errors: one such entry alone produced 43 cascading
+# "Missing }"/"Extra }"/"Missing $" errors). Rejected here, statically,
+# before display math is attempted; the same monospace fallback every other
+# non-LaTeX statement gets.
+_TEXT_WITH_MACRO_RE = re.compile(r"\\text\{[^{}]*\\[A-Za-z]")
+
+
+def has_macro_inside_text(latex_src: str) -> bool:
+    return bool(_TEXT_WITH_MACRO_RE.search(latex_src))
+
+
+def comment_out(lines: list[str]) -> list[str]:
+    """Prefix every line with '% ' so it compiles as inert LaTeX comment text
+    until scripts/latex_pdf_safe.py's validation pass decides to uncomment it
+    (used for the disclosed dmath*-failure fallback block, see
+    statement_tex_lines)."""
+    out = []
+    for block in lines:
+        for line in block.split("\n"):
+            out.append("% " + line)
+    return out
+
+
+_SUBSUP_TEXT_RE = re.compile(r"[_^]\\text\{")
+
+
+def brace_wrap_subsup_text(latex_src: str) -> str:
+    """breqn's own math tokenizer (unlike plain amsmath) can misparse a bare
+    \\text{...} used directly as a sub/superscript argument (`^\\text{...}` /
+    `_\\text{...}`, produced wherever Lane S wrapped an English word-run right
+    after a `^`/`_`), raising "Argument of \\text@ has an extra }" cascading
+    into "You can't use `\\lastbox' in vertical mode" (found by direct test
+    against the real document, BBL-208). Wrapping it in its own explicit outer
+    group (`^{\\text{...}}`) changes nothing about what is typeset — a
+    sub/superscript already takes exactly the next brace group or token —
+    it only gives breqn's tokenizer an unambiguous group boundary. A
+    display-typesetting workaround, not a change to the statement (the
+    registry/JSON/site copies of statement.latex are untouched)."""
+    out = []
+    i, n = 0, len(latex_src)
+    while i < n:
+        m = _SUBSUP_TEXT_RE.match(latex_src, i)
+        if not m:
+            out.append(latex_src[i])
+            i += 1
+            continue
+        marker = latex_src[i]
+        j = m.end()
+        depth = 1
+        while j < n and depth > 0:
+            if latex_src[j] == "\\" and j + 1 < n:
+                j += 2
+                continue
+            if latex_src[j] == "{":
+                depth += 1
+            elif latex_src[j] == "}":
+                depth -= 1
+            j += 1
+        out.append(marker + "{" + latex_src[i + 1:j] + "}")
+        i = j
+    return "".join(out)
+
+
+def statement_tex_lines(statement: dict | None) -> list[str]:
+    """Render one entry's statement per BBL-208: statement.latex present ->
+    display math (dmath* auto-breaks long lines, \\allowdisplaybreaks in the
+    preamble); else format=="prose" -> plain paragraph text; else (ascii-math,
+    "coq", or a bare "latex"-labelled plain-text statement carrying no actual
+    .latex field) -> the wrapped monospace block above. Nothing inside a
+    display-math/prose run is escaped or altered — copied verbatim from the
+    source per BBL-172 (latest formulation wins). Display math uses plain
+    `\[ \]` (not breqn's auto-breaking dmath*, see _DMATH_LENGTH_CAP above).
+
+    A display-math candidate also carries its own monospace fallback,
+    pre-rendered here but emitted as an inert LaTeX comment between disclosed
+    markers: scripts/latex_pdf_safe.py test-compiles every such block
+    standalone and, for the ones that do not compile (the mechanical
+    ascii->LaTeX conversion upstream of this script is not error-free — e.g.
+    an unbraced \\sqrt argument, a literal embedded "$"), swaps the block for
+    its own fallback and adds a one-line disclosure. This is a build-time
+    typesetting decision, not a change to the registry statement — the
+    fallback text is the entry's own ascii/latest field, unedited, just as any
+    other ascii-math entry renders."""
+    statement = statement or {}
+    latex_src = statement.get("latex")
+    fmt = statement.get("format")
+    latest = statement.get("latest", "") or ""
+    if latex_src:
+        # Every statement.latex in this corpus (Toledo v1.2 Lane S) is written
+        # as a complete, self-delimited inline-math string ("$...$"), meant to
+        # stand on its own — not as a bare expression meant for insertion into
+        # an already-open math environment. dmath* opens its own math mode, so
+        # the wrapping pair is stripped here (a display-typesetting decision,
+        # not a change to the statement: the registry/JSON/site copies of
+        # statement.latex keep the full "$...$" string exactly as Lane S wrote
+        # it). Any OTHER literal, unescaped "$" inside is left untouched and
+        # will simply fail the compile check below like any other malformed
+        # snippet, falling back to the monospace print form.
+        if len(latex_src) >= 2 and latex_src.startswith("$") and latex_src.endswith("$"):
+            latex_src = latex_src[1:-1]
+        latex_src = brace_wrap_subsup_text(latex_src)
+        # breqn's automatic line-breaking (dmath*) does a combinatorial search
+        # over candidate break points; a long chain of many relation operators
+        # (found by direct test: a ~900-character statement built from ~25
+        # chained \\neq clauses took minutes where a typical entry takes
+        # sub-second) makes that search blow up. _DMATH_LENGTH_CAP bounds
+        # build time by routing the longest statements straight to the same
+        # monospace block used for every non-LaTeX statement, instead of ever
+        # attempting to compile them as display math. A build-time
+        # typesetting decision (like the $-stripping above), not a change to
+        # the statement.
+        if (len(latex_src) > _DMATH_LENGTH_CAP or has_chained_subsup(latex_src)
+                or has_macro_inside_text(latex_src)):
+            return monospace_block(statement.get("ascii") or latest)
+        fallback = monospace_block(statement.get("ascii") or latest)
+        return (
+            ["% TOLEDO-DMATH-BEGIN", "\\[", latex_src, "\\]", "% TOLEDO-DMATH-END",
+             "% TOLEDO-FALLBACK-BEGIN"]
+            + comment_out(fallback)
+            + ["% TOLEDO-FALLBACK-END"]
+        )
+    if fmt == "prose":
+        return ["\\par\\noindent " + latex_escape(latest)]
+    return monospace_block(statement.get("ascii") or latest)
+
+
+def entry_metadata_line(e: dict) -> str:
+    dom = e.get("domain")
+    coq_status = (e.get("coq") or {}).get("coq_status") or "none"
+    parent_codes = [p.get("code", "") for p in (e.get("parents") or []) if p.get("code")]
+    # A parent code can itself be a long, space-free slug (a founder-ruled
+    # root-registry extension id, a rootless HRP-X.<nnn> drift code); wrap it
+    # the same way as an occurrence label so a long parents: list cannot
+    # overflow the metadata line (BBL-208).
+    parents_txt = ", ".join(
+        latex_escape(_wrap_raw_line(c)).replace(_BREAK_MARK, "\\hspace{0pt}") for c in parent_codes
+    ) if parent_codes else "none"
+    bits = [
+        f"domain: {latex_escape(dom) if dom else '\\textemdash'}",
+        f"tier: {latex_escape(e.get('tier') or 'untagged')}",
+        f"status: {latex_escape(e.get('status') or '')}",
+        f"coq: {latex_escape(coq_status)}",
+        f"parents: {parents_txt}",
+    ]
+    return " \\textbullet\\ ".join(bits)
+
+
+def entry_occurrences_line(e: dict) -> str | None:
+    occs = e.get("occurrences") or []
+    if not occs:
+        return None
+    shown = []
+    for o in occs[:12]:
+        rid, label = o.get("record_id"), o.get("label")
+        piece = ":".join(str(x) for x in (rid, label) if x not in (None, "")) or (o.get("raw_key") or "")
+        if piece:
+            # An occurrence label can itself embed a long unbroken run (a
+            # source file path, a raw_key) that overflows a footnotesize
+            # paragraph line just like a heading name can — same invisible-
+            # break treatment as wrap_heading_text (BBL-208).
+            shown.append(latex_escape(_wrap_raw_line(str(piece))).replace(_BREAK_MARK, "\\hspace{0pt}"))
+    more = f" (+{len(occs) - len(occs[:12])} more)" if len(occs) > 12 else ""
+    return f"Occurrences ({len(occs)}): " + ", ".join(shown) + more
+
+
+def render_entry_body(e: dict) -> list[str]:
+    out = ["\\par\\noindent\\textit{\\small " + entry_metadata_line(e) + "}"]
+    note = e.get("status_note")
+    if e.get("status") not in (None, "current") and note:
+        out.append("\\par\\noindent{\\footnotesize\\itshape " + latex_escape(note) + "}")
+    # No blank line here on purpose: breqn's dmath*/dmath environment expects
+    # to be invoked while still in horizontal mode (mid-paragraph), grabbing
+    # the preceding text's last box for its automatic line-breaking; a blank
+    # line here forces an extra \par first, landing dmath* in vertical mode
+    # instead and raising "You can't use `\\lastbox' in vertical mode" —
+    # found by direct test against the real 1504-entry document (BBL-208).
+    out.extend(statement_tex_lines(e.get("statement")))
+    occ_line = entry_occurrences_line(e)
+    if occ_line:
+        out.append("")
+        out.append("\\par\\noindent{\\footnotesize " + occ_line + "}")
+    out.append("\\medskip")
+    out.append("")
+    return out
+
+
+def status_counts_block(entries: list[dict]) -> list[str]:
+    import collections
+    status_counts = collections.Counter(e.get("status") or "current" for e in entries)
+    tier_counts = collections.Counter(e.get("tier") or "untagged" for e in entries)
+    coq_counts = collections.Counter((e.get("coq") or {}).get("coq_status") or "none" for e in entries)
+    out = [f"\\textit{{Computed at this build over {len(entries)} entries.}}", ""]
+    for title, counts in (("status", status_counts), ("tier", tier_counts), ("coq\\_status", coq_counts)):
+        out.append(f"\\subsection*{{By {title}}}")
+        out.append("\\begin{tabular}{lr}")
+        out.append("\\toprule")
+        out.append(f"{title} & count \\\\")
+        out.append("\\midrule")
+        for key, n in sorted(counts.items(), key=lambda kv: (-kv[1], str(kv[0]))):
+            out.append(f"{latex_escape(str(key))} & {n} \\\\")
+        out.append("\\bottomrule")
+        out.append("\\end{tabular}")
+        out.append("")
+    return out
+
+
+def code_index_block(entries: list[dict]) -> list[str]:
+    """Generated two-column index-of-codes (makeidx): every entry's code was
+    already given \\index{sortkey@code} at its own heading in build_catalogue_body;
+    this just emits \\printindex. Kept as its own function so the fallback
+    path (no makeindex available) can be swapped in from one call site."""
+    return ["\\clearpage", "\\phantomsection", "\\addcontentsline{toc}{section}{Index of codes}", "\\printindex"]
+
+
+def build_catalogue_body(entries: list[dict], root_steps: dict | None = None) -> str:
+    root_steps = root_steps or {}
     roots = [e for e in entries if e.get("layer") == "root"]
-    roots.sort(key=lambda e: (e.get("step") if e.get("step") is not None else 10 ** 9, e["code"]))
-    by_root: dict[str, list[dict]] = {r["code"]: [] for r in roots}
+    root_codes = {r["code"] for r in roots}
+    readings_by_root: dict[str, list[dict]] = {}
     orphans = []
     for e in entries:
         if e.get("layer") == "root":
             continue
         root = e.get("root")
-        if root in by_root:
-            by_root[root].append(e)
+        if root in root_codes:
+            readings_by_root.setdefault(root, []).append(e)
         else:
             orphans.append(e)
 
-    out = []
-    out.append("% GENERATED by scripts/toledo_build.py — do not hand-edit.")
-    out.append("\\section*{Part 1 --- Genesis-first catalogue}")
-    for r in roots:
-        readings = sorted(by_root.get(r["code"], []), key=lambda e: e["code"])
-        out.append(f"\\subsection*{{{latex_escape(r['code'])} --- {latex_escape(r.get('name', ''))}}}")
-        out.append(f"\\textit{{tier: {latex_escape(r.get('tier', ''))}; status: {latex_escape(r.get('status', ''))}}}")
-        out.append("")
-        stmt = (r.get("statement") or {}).get("latest", "")
-        out.append("\\par\\noindent\\texttt{" + latex_escape(stmt) + "}")
-        out.append("")
-        if readings:
-            out.append("\\begin{longtable}{p{3.2cm}p{1cm}p{7cm}p{2cm}}")
-            out.append("\\toprule")
-            out.append("Code & Dom. & Statement & Status \\\\")
-            out.append("\\midrule")
-            out.append("\\endhead")
-            for rd in readings:
-                rstmt = (rd.get("statement") or {}).get("latest", "")
-                out.append(
-                    f"{latex_escape(rd['code'])} & {latex_escape(rd.get('domain') or '')} & "
-                    f"{latex_escape(rstmt)} & {latex_escape(rd.get('status', ''))} \\\\"
-                )
-            out.append("\\bottomrule")
-            out.append("\\end{longtable}")
-        out.append("")
+    def root_sort_key(r):
+        step, _ = root_steps.get(r["code"], (None, None))
+        return (0, step) if step is not None else (1, natural_key(r["code"]))
 
-    out.append("\\section*{Part 2 --- Rootless items (target: none)}")
-    hrp_orphans = [e for e in entries if e["code"].startswith("HRP-X.")]
-    if not hrp_orphans and not orphans:
-        out.append("\\textit{None at this build.}")
-    else:
-        out.append("\\begin{longtable}{p{4cm}p{9cm}}")
-        out.append("\\toprule")
-        out.append("Code & Note \\\\")
-        out.append("\\midrule")
-        out.append("\\endhead")
-        for e in hrp_orphans:
-            out.append(f"{latex_escape(e['code'])} & {latex_escape(e.get('status_note', 'no drift_note recorded'))} \\\\")
-        for e in orphans:
-            out.append(f"{latex_escape(e['code'])} & root {latex_escape(str(e.get('root')))} not found in this build \\\\")
-        out.append("\\bottomrule")
-        out.append("\\end{longtable}")
-    out.append("")
+    roots_sorted = sorted(roots, key=root_sort_key)
+    part_of = assign_root_parts(roots_sorted, root_steps)
+
+    # Group roots by their assigned Part label so each Part heading is emitted
+    # exactly once (a root's own step is still what orders roots_sorted, but
+    # the same Genesis heading can recur at non-contiguous step ranges across
+    # 592 root rows built up over several registry passes — grouping first
+    # keeps the printed table of contents from repeating one Part many times).
+    part_groups: dict[str, list[dict]] = {}
+    for r in roots_sorted:
+        part_groups.setdefault(part_of.get(r["code"], _UNCLASSIFIED_PART_LABEL), []).append(r)
+
+    def part_order_key(label: str):
+        steps = [s for s, _ in (root_steps.get(r["code"], (None, None)) for r in part_groups[label]) if s is not None]
+        return (0, min(steps)) if steps else (1, label)
+
+    part_labels_ordered = sorted(part_groups.keys(), key=part_order_key)
+
+    out = ["% GENERATED by scripts/toledo_build.py (build_catalogue_body) --- do not hand-edit.",
+           "\\allowdisplaybreaks"]
+    entries_typeset = 0
+    for label in part_labels_ordered:
+        out.append(f"\\part{{{latex_escape(label)}}}")
+        for r in part_groups[label]:
+            skey = natural_sort_string(r["code"])
+            out.append(f"\\section{{{latex_escape(r['code'])} --- {wrap_heading_text(r.get('name', ''))}}}\\index{{{skey}@{latex_escape(r['code'])}}}")
+            out.extend(render_entry_body(r))
+            entries_typeset += 1
+            readings = sorted(readings_by_root.get(r["code"], []), key=lambda e: natural_key(e["code"]))
+            for rd in readings:
+                rskey = natural_sort_string(rd["code"])
+                out.append(f"\\subsubsection*{{{latex_escape(rd['code'])} --- {wrap_heading_text(rd.get('name', ''))}}}\\index{{{rskey}@{latex_escape(rd['code'])}}}")
+                out.extend(render_entry_body(rd))
+                entries_typeset += 1
+
+    if orphans:
+        out.append(f"\\part{{Rootless items (target: none)}}")
+        for e in sorted(orphans, key=lambda e: natural_key(e["code"])):
+            skey = natural_sort_string(e["code"])
+            out.append(f"\\subsubsection*{{{latex_escape(e['code'])} --- {wrap_heading_text(e.get('name', ''))}}}\\index{{{skey}@{latex_escape(e['code'])}}}")
+            out.append(f"\\par\\noindent\\textit{{\\small root {latex_escape(str(e.get('root')))} not found in this build}}")
+            out.extend(render_entry_body(e))
+            entries_typeset += 1
+
+    out.append("\\part{End matter}")
+    out.append("\\section{Status counts at this build}")
+    out.extend(status_counts_block(entries))
+    out.append("\\section{Index of codes}")
+    out.extend(code_index_block(entries))
+
+    out.insert(1, f"% entries_typeset={entries_typeset}")
     return "\n".join(out)
 
 
 # --------------------------------------------------------------------------
 # Orchestration
 # --------------------------------------------------------------------------
+
+def build_catalogue_meta() -> str:
+    """Tiny generated \\def block \\input by latex/catalogue.tex's title page
+    (BBL-208): version/licence/date read from CITATION.cff at build time (no
+    hardcoded version number), so the catalogue always states whatever
+    CITATION.cff says on the day it is built. Regex, not a YAML parser
+    (stdlib-only, per this script's own no-dependency rule) — CITATION.cff's
+    fields here are single-line `key: "value"` scalars."""
+    citation_path = REPO_ROOT / "CITATION.cff"
+    version, license_, date_released = "unknown", "unknown", today()
+    if citation_path.exists():
+        text = citation_path.read_text(encoding="utf-8")
+        m = re.search(r'^version:\s*"?([^"\n]+)"?\s*$', text, re.MULTILINE)
+        if m:
+            version = m.group(1).strip()
+        m = re.search(r'^license:\s*"?([^"\n]+)"?\s*$', text, re.MULTILINE)
+        if m:
+            license_ = m.group(1).strip()
+        m = re.search(r'^date-released:\s*"?([^"\n]+)"?\s*$', text, re.MULTILINE)
+        if m:
+            date_released = m.group(1).strip()
+    else:
+        note_assumption("CITATION.cff not found at build time; catalogue title page shows 'unknown' version/licence.")
+    return "\n".join([
+        "% GENERATED by scripts/toledo_build.py (build_catalogue_meta) --- do not hand-edit.",
+        f"\\newcommand{{\\ToledoVersion}}{{{latex_escape(version)}}}",
+        f"\\newcommand{{\\ToledoLicense}}{{{latex_escape(license_)}}}",
+        f"\\newcommand{{\\ToledoDateReleased}}{{{latex_escape(date_released)}}}",
+        "",
+    ])
+
 
 def write_json(path: pathlib.Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -633,8 +1062,13 @@ def run_build(canonical_path: pathlib.Path, genesis_path: pathlib.Path | None, o
         })
     write_json(out_root / "site" / "index.json", {"generated_at": generated_at, "entries": index_rows})
 
-    catalogue_body = build_catalogue_body(entries)
+    root_steps: dict[str, tuple] = {}
+    if genesis_doc is not None:
+        for row in genesis_doc.get("root_equations", []):
+            root_steps[row["code"]] = (row.get("step"), row.get("step_note"))
+    catalogue_body = build_catalogue_body(entries, root_steps)
     write_text(out_root / "latex" / "catalogue_body.tex", catalogue_body)
+    write_text(out_root / "latex" / "catalogue_meta.tex", build_catalogue_meta())
 
     return {
         "entries": len(entries),

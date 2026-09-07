@@ -136,3 +136,56 @@ See `genesis_root.json["anchor"]` for the exact commit and blob hashes this
 registry was built from (`readout_genesis` repo, files
 `READOUT_GENESIS_CORE.md` and
 `READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2.0.md`).
+
+## Root registry extension R1 (2026-09-07, founder ruling BBL-2026-09-07-207)
+
+**Roots may also come from a founder-ruled root extension, sourced outside the
+two anchored Genesis documents above, using that extension's own identifiers
+verbatim — the same "no invented numbering" discipline this file already
+applies to `READOUT_GENESIS_CORE.md`, extended to a second kind of source.**
+
+The founder ruled (2026-09-07, relayed in
+`ops/HANDOFF_OVERNIGHT_2026-09-06.md`, "2026-09-07 09:10 — founder rulings →
+v1.2.0", BBL-2026-09-07-207): *"โปรแกรม Theta และ CMC ขยายรากให้จบ ให้ต่อกัน"*
+— extend the root registry with the Theta programme and Causal-Memory
+Closure (CMC) as roots, connected to the existing Genesis roots wherever a
+source states the connection. `scripts/v12_R.py` (Toledo v1.2 Lane R) applied
+this ruling; the two rows it added to `root_equations` are:
+
+- **`Theta`** — the living/relational-geometry root state. Code is the
+  identifier the source itself uses verbatim (`Theta`, capitalised, as used
+  throughout the imported files and the founder's own 2026-08-08 ruling
+  quoted in their header comments); alias `THETA_ROOT_PROGRAM` (the
+  companion document's own name, cited but not itself copied into this
+  tree). Anchor: public repo `readout_genesis`, commit
+  `082dde893b70c7500c13d463239909c99cf17f0a`,
+  `formal/InfoThetaEdgeCensus_attempt.v` (+ 8 further `InfoTheta*_attempt.v`
+  files and `InfoCPEquivariantGenerationBound_attempt.v`, all already
+  imported under `coq/readout_genesis/formal/` by the earlier S7 lane).
+  Connected to Genesis roots `EQ-008` and `EQ-022` — quoted evidence for both
+  links is recorded on the `Theta` row's own `relations[]` in
+  `genesis_root.json`, not asserted here.
+- **`CMC`** (Causal-Memory Closure) — code is the abbreviation the source
+  files themselves use throughout (`CMC_TargetClass`, `CMC_Bridge_Obligation`,
+  `cmc_bridge_axiom`, `CMC_Refuter_Burden`). Anchor: "solver arc (private)",
+  commit `961151db33b0491cba8fabade69f594238d33f84`,
+  `formal/CMC_TargetClass_Definitions.v` (+ 5 further `CMC_*.v` files, already
+  imported under `coq/solver-arc/formal/` by the earlier S7 lane, per
+  `DEC-toledo-solver-arc-copy-2026-0906`). `registry/root_candidates_report.md`
+  already checked this root for a stated connection to Genesis's own
+  `EQ-005`/`EQ-006`/`EQ-007` and found none stated explicitly in any source
+  text — so the `CMC` row's `relations[]` is `[]`, with a `relations_note`
+  quoting that finding rather than asserting the link.
+
+Both rows carry `role: "root-extension"` (not `root-axiom`), an `origin{}`
+object (this file's own root rows otherwise rely on the single top-level
+`genesis_root.json["anchor"]`, which does not cover a second source), and a
+`step: null` with a `step_note` explaining that neither root is invented a
+position in `READOUT_GENESIS_CORE.md`'s own step-by-step ordering (BBL-192/
+193) — both are downstream of that document, not part of it. Every equation/
+named theorem in the imported files (86 for Theta, 33 for CMC) was added as a
+`<root>/<D>.<nn>.v1` reading in `registry/CANONICAL.json` under these two
+roots (`D=P` for Theta and for CMC's one explicitly physics-labelled file,
+`CMC_PhysicsClass_Instances.v`; `D=M` for CMC's other five files), `coq_status
+"mapped_not_wrapped"` — see `docs/EQ_CODE_SCHEME.md`'s own addendum for the
+per-reading rules applied.

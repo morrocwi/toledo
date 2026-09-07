@@ -64,10 +64,28 @@ def test_lineage_shape():
 # ---------------------------------------------------------------------------
 # T7.1 test_no_orphans
 # ---------------------------------------------------------------------------
+def _root_orphan_exempt(r):
+    """EQ-001 is the one Genesis-document root with no parent (T3.4). A second,
+    narrower exemption (registry/GENESIS_CODE_SCHEME.md "Root registry
+    extension R1", 2026-09-07, founder ruling BBL-2026-09-07-207): a
+    root-extension root (role=="root-extension", sourced outside the two
+    anchored Genesis documents) may also have parents==[] PROVIDED the absence
+    of a connection was checked and disclosed, never silently -- relations==[]
+    together with a non-empty relations_note stating what was checked and why
+    no link was found (e.g. the "CMC" row, per registry/root_candidates_report.md).
+    A root-extension row with parents==[] and no relations_note is still an
+    orphan -- this does not exempt inventing a root and skipping the check."""
+    if r['code'] == 'EQ-001':
+        return True
+    return (r.get('role') == 'root-extension'
+            and r.get('relations') == []
+            and bool(r.get('relations_note')))
+
+
 def test_no_orphans():
     roots = _load_genesis_roots()
-    orphans = [r['code'] for r in roots if r.get('parents') == [] and r['code'] != 'EQ-001']
-    assert not orphans, f"root entries with parents==[] other than EQ-001: {orphans}"
+    orphans = [r['code'] for r in roots if r.get('parents') == [] and not _root_orphan_exempt(r)]
+    assert not orphans, f"root entries with parents==[] and no disclosed root-extension exemption: {orphans}"
 
     can = _load_canonical()
     if can:
@@ -314,3 +332,29 @@ def test_step_order_reported():
             if pr is not None and pr.get('step') is not None and r.get('step') is not None and pr['step'] > r['step']:
                 bad.append((r['code'], p))
     assert not bad, f"step-order violations (child.step < parent.step): {len(bad)} -- {bad[:10]}"
+
+
+# ---------------------------------------------------------------------------
+# B1 (2026-09-07 fixer): counts.by_status/by_domain/by_tier/by_coq_status must
+# equal a live recompute from canonical[] -- catches the class of bug where a
+# lane script changes entries but never refreshes the embedded top-level
+# `counts` summary, so the registry's own self-reported numbers disagree with
+# its own array (readout-not-truth: counts from files, not from a cached
+# object that can silently drift).
+# ---------------------------------------------------------------------------
+def test_counts_match_canonical():
+    can = _load_canonical()
+    if not can or "counts" not in can:
+        return
+    canon = can["canonical"]
+    expected = {
+        "entries": len(canon),
+        "by_status": dict(collections.Counter(e["status"] for e in canon)),
+        "by_domain": dict(collections.Counter(e["domain"] for e in canon if e.get("domain"))),
+        "by_tier": dict(collections.Counter(e["tier"] for e in canon)),
+        "by_coq_status": dict(collections.Counter(e["coq"]["coq_status"] for e in canon)),
+    }
+    stored = can["counts"]
+    for key, exp in expected.items():
+        got = stored.get(key)
+        assert got == exp, f"counts.{key} stale: stored={got} recomputed={exp}"
