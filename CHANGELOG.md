@@ -5,6 +5,8 @@ counts are computed from the files at that point, never carried over from a prio
 
 ## v1.1.0 — 2026-09-07
 
+Deposited as Zenodo version DOI 10.5281/zenodo.22574017 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.1.0.
+
 Commit `462ff2b` (v1.1 lanes) plus this release-prep pass. Corrects a v1.0.0 counting error and
 closes most of v1.0.0's disclosed carry-overs; no `registry/CANONICAL.json`, `LINEAGE.jsonl`,
 `genesis_root.json`, or `coq/` file outside `coq/canonical/` was touched by the release-prep pass
