@@ -22,7 +22,7 @@
 name: toledo-mcp-ci
 on:
   push:
-    paths: ["mcp/**"]
+    paths: ["mcp/**", "registry/**"]
   pull_request:
     paths: ["mcp/**"]
 jobs:

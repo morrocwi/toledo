@@ -226,11 +226,17 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **946** canonical entries: **912** mapped from **946** raw equations across **40** deposited
+- **946** canonical entries: **793** mapped from **946** raw equations across **40** deposited
   chapters (`registry/EQ_LIBRARY.md`, `make library`) plus the 119 v1.2 root-extension readings,
   plus **34** v1.3 readings registered from the Effort v0.3 paper; **1,069** raw occurrence keys
   resolved (unchanged — the Effort readings are sourced from a Zenodo record, not a raw textbook
-  occurrence).
+  occurrence). (793+119+34=946, matching `registry/CANONICAL.json`'s own `counts{}.entries`
+  exactly; verified this session by partitioning `canonical[]` into entries with `root` in
+  `{Theta, CMC}` (119), entries whose `origin.doi` is `10.5281/zenodo.22622206` (34), and
+  everything else (793) — `python3 -c "import json; d=json.load(open('registry/CANONICAL.json'));
+  c=d['canonical']; re=[e for e in c if e.get('root') in ('Theta','CMC')];
+  ef=[e for e in c if e.get('origin',{}).get('doi')=='10.5281/zenodo.22622206'];
+  print(len(re), len(ef), len(c)-len(re)-len(ef))"`.)
 - **Status:** `current` 855 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
 - **Domain:** P 288 · S 136 · M 151 · W 84 · H 92 · B 75 · E 61 · C 59.
 - **Tier:** `untagged` 255 · `Definition` 407 · `Th_coqc` 130 · `finite_diagnostic` 46 · `Dr` 59 ·
@@ -467,7 +473,7 @@ Cite the Zenodo concept DOI, which always resolves to the latest release:
 
 - **Registries, docs, generated views** (`registry/`, `docs/`, `graph/`, `vault/`,
   `registry/EQ_LIBRARY.md`): **CC BY 4.0**.
-- **Coq sources and scripts** (`coq/canonical/`, `scripts/`): **MIT**.
+- **Coq sources and scripts** (`coq/canonical/`, `coq/master-river/`, `mcp/`, `scripts/`): **MIT**.
 - **Imported Coq developments** (`coq/<source>/`) keep their own upstream licence — see each
   source's `LICENSE.upstream` file and its `PROVENANCE.json` for the exact commit copied
   (`coq/readout_genesis/LICENSE.upstream` records that the upstream repository carries no licence
@@ -475,6 +481,8 @@ Cite the Zenodo concept DOI, which always resolves to the latest release:
   private solver-arc import is the one exception: its sources are copied in under an explicit MIT
   grant (BBL-198, `coq/solver-arc/LICENSE_NOTE.md`) rather than an upstream licence file, and its
   repository name is never written — only `"solver arc (private)"` plus a commit reference.
+- **MCP server, CLI and static-API package** (`mcp/`, i.e. `toledo_mcp/`, `mcp/scripts/`,
+  `mcp/tests/`): **MIT** (see `mcp/pyproject.toml`).
 
 An AI assistant assisted under the author's direction; no AI system is an author or contributor.
 

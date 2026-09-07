@@ -222,7 +222,7 @@ tooling if it has one — the server itself does not need to change either way.
 ## Tests and benchmarks
 
 ```
-python3 -m pytest -q                 # 212 tests (run from mcp/)
+python3 -m pytest -q                 # 214 tests (run from mcp/)
 python3 benchmarks/bench_index.py    # prints + writes benchmarks/results.json
 ```
 
