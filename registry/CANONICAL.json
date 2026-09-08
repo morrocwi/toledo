@@ -164413,7 +164413,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: partial_overlap. Verbatim evidence: \"Found q_formal/M.05.v1 in CANONICAL.json, named literally 'Anderson-Morley eigenvalue bound lambda_max<=max(deg u+deg v)' -- the exact same classical theorem this proposal cites as its BORROWED half. However q_formal/M.05.v1 is tier 'untagged', coq_status 'wrapped_related', and its own coq.note admits its 29 cited identifiers ... are an undivided generic block shared identically across all 32 q_formal entries, 'with no entry-specific identifier singled out as evidence for this entry's own statement ... picking one lemma to specialise from would be an invented, not evidence-backed, choice -- not done.' In plain terms: q_formal/M.05.v1 is a bare NAME-CITATION of the classical Anderson-Morley result with NO actual matching Coq proof behind it in Toledo. So: the base inequality |lam|<=deg u+deg v is a duplicate of the classical fact q_formal/M.05.v1 already cites by name (not registered as a second new object), but this proposal's Coq file is the FIRST real formalization Toledo has of that already-cited claim. The curvature-floor corollary (lambda<=4-Fmin) is additional content specific to this proposal, not part of the classical citation or any other Toledo row -- genuinely new.\" (registry/proposals/spectral_ceiling_family.json, PROP-SPEC-01.reverification_2026-09-08). AMBIGUITY FLAGGED, not silently resolved: this could instead have been registered as a LINEAGE 'revised' event bumping q_formal/M.05.v1 itself in place (.v1 -> .v2, coq_status wrapped_related -> closed), since this file is q_formal/M.05.v1's own long-overdue first real Coq witness. LINEAGE.jsonl was checked live for a 'citation later gets its first real witness' precedent before choosing -- none found (the closest entries are v1.1 Lane A 'wrapped_related' wrapper events, which wrap an EXISTING Toledo-native identifier around already-imported code, not a later independent proof of a previously bare-cited classical fact). Per task instruction, pattern (a) -- new code + relations[] cross-reference -- is taken in the absence of a precedent; reported to the chair as a genuinely open design question, not a confident choice.",
-      "id": "CAN-1276"
+      "id": "CAN-1276",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_40_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.41.v1",
@@ -164495,7 +164538,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Checked L_R/M.20.v1 (laplacian_symmetric), L_R/M.21.v1 (laplacian_rowsum_zero) and L_R/M.22.v1 (laplacian_ones_in_kernel) -- the only existing L_R/* readings anywhere near this subject. All three are purely structural facts about the Laplacian matrix (symmetry, zero row-sums, the constant vector lying in the kernel); NONE of them prove positive-semidefiniteness (Gamma(x)>=0 for ALL x, not just the constant vector), gauge invariance under edge relabelling, the [1,-2,1] finite-difference stencil identity, or the readout-invariance of the second difference of a quadratic across resolutions h. Whole-registry keyword search for 'positive semidefinite'/'psd'/'gauge invarian'/'stencil'/'second difference'/'dirichlet energy' turned up nothing else relevant. Confirmed genuinely_new.\" (registry/proposals/spectral_ceiling_family.json, PROP-SPEC-02.reverification_2026-09-08).",
-      "id": "CAN-1277"
+      "id": "CAN-1277",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_41_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.42.v1",
@@ -164591,7 +164677,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Found q_formal/M.04.v1 ('Rayleigh quotient / theory of sound') and q_formal/M.08.v1 ('Spectral graph theory (survey)') in CANONICAL.json -- thematically adjacent, but both are the SAME 'untagged'/'wrapped_related' bare-citation pattern as q_formal/M.05.v1 above (identical generic 29-identifier evidence block, explicitly disclosed by their own coq.note as not entry-specific). Neither states the specific inequality x^T L x <= 2*dmax*||x||^2 or the ceiling lambda <= 2*dmax; they are general survey/topic citations, not this specific division-free Gershgorin-type bound. Confirmed genuinely_new content, though thematically related to q_formal/M.04.v1 and M.08.v1 (worth cross-referencing at merge time as 'reads' relations, not as duplicates).\" (registry/proposals/spectral_ceiling_family.json, PROP-SPEC-03.reverification_2026-09-08). Cross-reference added as 'relates-to' (not 'reads') since neither is an actual proof being read/used by this entry's own proof.",
-      "id": "CAN-1278"
+      "id": "CAN-1278",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_42_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.43.v1",
@@ -164683,7 +164812,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: partial_overlap. Verbatim evidence: \"L_R/M.22.v1 ('laplacian_ones_in_kernel', tier Th_coqc, coq_status closed, formal/IDM_Matrix.v line 132) ALREADY proves Sum n (fun j => Lap i j * 1) == 0 -- i.e. the all-ones (constant) vector lies in ker(L), for ANY graph, no connectivity assumption needed. This is exactly the 'constants subset of kernel' half of this proposal's claim -- a DUPLICATE of L_R/M.22.v1, not new. The reverse inclusion ('kernel subset of constants, given connectivity', i.e. the full equality ker(L)=span{1} and the lambda_2>0 zero-mode characterization) is NOT covered by L_R/M.22.v1 or any other L_R/* reading, and is not covered by the thematically-adjacent q_formal/M.06.v1 ('Algebraic connectivity / Fiedler value') or q_formal/M.07.v1 ('Diameter-based algebraic-connectivity floor') either -- both of those are again bare 'untagged'/'wrapped_related' name-citations with the same generic non-entry-specific evidence block, no actual proof of the kernel-equality fact. Kept as partial_overlap: the constants-in-kernel half duplicates L_R/M.22.v1, the connectivity-implies-equality half (and the lambda_2>0 characterization) is genuinely new.\" (registry/proposals/spectral_ceiling_family.json, PROP-SPEC-04.reverification_2026-09-08).",
-      "id": "CAN-1279"
+      "id": "CAN-1279",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_43_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.44.v1",
@@ -164753,7 +164925,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: partial_overlap. Verbatim evidence: \"Original proposal bundled two axioms (RD3_succ_ne_zero, RD4_succ_inj). RD3_succ_ne_zero is a DUPLICATE: RD3/M.01.v1 already proves the identical fact `S 0 <> 0` over Coq's built-in nat -- under the phi-criterion this is the same object as URCF's `RD3_succ_ne_zero : forall x, succ x <> zero` (renaming D->nat, succ->S, zero->0). RD4_succ_inj is GENUINELY NEW: root RD4 has zero registered readings. This proposal is trimmed to keep only the succ-injectivity content; the succ<>zero half is dropped as a duplicate of RD3/M.01.v1, not registered again.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-01.reverification_2026-09-08). This repo's own recompile confirms RD4_succ_inj is Closed under the global context, over the custom inductive D (zero/succ), independent of RD3/M.01.v1's nat-level proof.",
-      "id": "CAN-1280"
+      "id": "CAN-1280",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_44_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.45.v1",
@@ -164852,7 +165067,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root D's own prose already ASSERTS 'D is a commutative semiring (Th 2.2)' ... but that root row's own coq field is null ... Checked all 80 D/* readings in CANONICAL.json by name: pigeonhole/weight/bcube/automorphism/classify-family content, zero overlap with add_assoc/add_comm/mul_comm/mul_assoc/mul_add/add_mul/mul_one/one_mul. No existing READING covers this claim, so per the duplicate-requires-an-existing-reading rule this is genuinely_new.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-02.reverification_2026-09-08).",
-      "id": "CAN-1281"
+      "id": "CAN-1281",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_45_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.46.v1",
@@ -164961,7 +165219,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Same reasoning as 02 for Th 2.3 -- no reading covers le_refl/le_total/lt_wf/strong_induction etc.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-03.reverification_2026-09-08).",
-      "id": "CAN-1282"
+      "id": "CAN-1282",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_46_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.47.v1",
@@ -165055,7 +165356,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root D's prose states 'toNat: D -> N is a semiring-and-order isomorphism D ≅ N (Th 2.4)' but again no local Coq witness exists for the isomorphism itself in this repo, and no D/* reading covers toNat_inj/toNat_add/toNat_mul/iso_to_of/iso_of_to/le_toNat/toNat_le.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-04.reverification_2026-09-08).",
-      "id": "CAN-1283"
+      "id": "CAN-1283",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_47_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.48.v1",
@@ -165124,7 +165468,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Whole-registry keyword search for 'homomorphism'/'term-language' found nothing relevant.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-05.reverification_2026-09-08).",
-      "id": "CAN-1284"
+      "id": "CAN-1284",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_48_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.49.v1",
@@ -165196,7 +165583,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'elementarily equivalent', 'first-order', 'model-theoretic' restricted to any D/IDM/RD material -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-06.reverification_2026-09-08).",
-      "id": "CAN-1285"
+      "id": "CAN-1285",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_49_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.50.v1",
@@ -165276,7 +165706,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'Hilbert', 'soundness', 'proof system' restricted to math/D material -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-07.reverification_2026-09-08).",
-      "id": "CAN-1286"
+      "id": "CAN-1286",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_50_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.51.v1",
@@ -165348,7 +165821,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'Peano Arithmetic', 'model of' restricted to math/D material -- zero matches (the two 'model of' hits found elsewhere are an unrelated ODE-model and a kinetic-isotope-effect entry).\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-08.reverification_2026-09-08).",
-      "id": "CAN-1287"
+      "id": "CAN-1287",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_51_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.52.v1",
@@ -165412,7 +165928,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'Con(PA)', 'consistency of PA' -- zero matches. Confirmed genuinely_new; source line 3768 `Theorem Con_PA : ~ Prov PA Fbot.` uses no Classical_Prop axiom (checked surrounding proof, purely constructive).\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-09.reverification_2026-09-08). This repo's own recompile confirms Con_PA is Closed under the global context -- no classical axiom, distinct from weld/M.53.v1's classical sibling.",
-      "id": "CAN-1288"
+      "id": "CAN-1288",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_52_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.53.v1",
@@ -165481,7 +166040,46 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for classical-PA-consistency content -- zero matches. Confirmed genuinely_new, and confirmed via source (lines 5444-5503, module tags ProvC/soundnessC/consistencyC/Con_PA_classical) that this branch is NOT axiom-free -- it is a separate proof path from the constructive Con_PA (weld/M.52.v1) and must not be folded into it or presented as axiom-free.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-10.reverification_2026-09-08). This repo's own recompile of coq/canonical/weld__M_53_v1.v independently confirms: `Print Assumptions Con_PA_classical.` reports exactly one axiom, `classic : forall P : Prop, P \\/ ~ P` -- never presented as axiom-free, kept a distinct entry from weld/M.52.v1 (constructive, closed).",
-      "id": "CAN-1289"
+      "id": "CAN-1289",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'axioms' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.54.v1",
@@ -165545,7 +166143,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"No matching Toledo row for 'PA_true_in_N' or PA-truth transport. Confirmed genuinely_new; depends on PROP-URCF-04 (toNat iso) and PROP-URCF-08 (D_models_PA), both themselves confirmed genuinely_new above.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-11.reverification_2026-09-08).",
-      "id": "CAN-1290"
+      "id": "CAN-1290",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_54_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.55.v1",
@@ -165612,7 +166253,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'categoricity', 'Dedekind' -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-12.reverification_2026-09-08).",
-      "id": "CAN-1291"
+      "id": "CAN-1291",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_55_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.56.v1",
@@ -165730,7 +166414,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'metric space', 'Tarski', 'betweenness' -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-13.reverification_2026-09-08).",
-      "id": "CAN-1292"
+      "id": "CAN-1292",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_56_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.57.v1",
@@ -165879,7 +166606,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root Z's prose already asserts '(Z,+,*,0,1) is a commutative ring' (Th 3.1) but root Z's own coq field is null and none of the 23 Z/* readings construct Z as the Grothendieck completion (D*D)/~ or prove the full ring-axiom package on that construction: the existing readings are about delta_sum/telescoping (Z/M.01-09), a distributivity fact stated over Coq's BUILT-IN Z (Z/M.11 -- different type, narrower scope), and a tropical (min-plus) semiring family (Z/M.12-23) which is a DIFFERENT algebraic structure entirely.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-14.reverification_2026-09-08).",
-      "id": "CAN-1293"
+      "id": "CAN-1293",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_57_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.58.v1",
@@ -165954,7 +166724,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: partial_overlap. Verbatim evidence: \"Original proposal bundled the discrete FTC (FTC, FTC_Z, FTC_inverse) with the discrete Leibniz product rule. The FTC part is a DUPLICATE: A2/M.03.v1 ('ftcc_Z', closed) proves `fold Z.add 0 (zdelta f) N = f N - f 0` and Z/M.06.v1 ('FTCC_telescope', closed) proves `Agg f N == f N - f 0` -- both are the identical telescoping-sum-recovers-endpoint-difference identity URCF states as FTC/FTC_Z/FTC_inverse. The Leibniz part is GENUINELY NEW: it is a pointwise per-step identity, logically distinct from Z/M.09.v1 ('summation_by_parts', closed), which is the SUMMED/telescoped consequence over a whole range [0,N] -- no reading states the pointwise rule directly. This proposal is trimmed to keep only the Leibniz content; the FTC content is dropped as a duplicate of A2/M.03.v1 and Z/M.06.v1.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-15.reverification_2026-09-08). This repo's own coq/canonical/weld__M_58_v1.v file physically OMITS Sum/FTC_Z/FTC/FTC_inverse (only Delta, zval_Delta and the Leibniz theorem itself are present) -- the trim is structural, not just a registry-level omission.",
-      "id": "CAN-1294"
+      "id": "CAN-1294",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_58_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.59.v1",
@@ -166073,7 +166886,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root Q's prose already asserts '(Q,+,*) is a field' (Th 3.4) with 'the multiplicative inverse qmul_inv' by the SAME identifier name -- but root Q's own coq field is null, and none of the 19 Q/* readings construct Q as (Z*Z_{!=0})/~ or prove field axioms: the existing readings are about matrix trace/twirl/transpose operations (Q/M.08-19) and Sum lemmas (Q/M.02-07), a completely different subject matter.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-16.reverification_2026-09-08).",
-      "id": "CAN-1295"
+      "id": "CAN-1295",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_59_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     },
     {
       "code": "weld/M.60.v1",
@@ -166336,7 +167192,50 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: partial_overlap, kept WHOLE (not trimmed). Verbatim evidence: \"Root R's prose already asserts the ordered-field + Cauchy-completeness claim (Th 3.5/3.6) verbatim. Checked all 40 R/* readings: R/M.33.v1 (radd_at), R/M.34.v1 (rmul_at), R/M.35.v1 (radd_comm), R/M.36.v1 (const_gap_zero) and R/M.37.v1 (gap_subadditive) ... DO give a thin pre-existing partial witness for a DIFFERENT representation of R: pointwise sequences g,h:nat->Q with a generic 'gap' modulus function, only proving pointwise add/mul definitions and commutativity of add plus subadditivity of the gap function -- narrower and structurally different from URCF's Bishop-regular-Cauchy-sequence construction ... The remaining, overwhelming majority of URCF's claim -- the FULL order (Rle/Rlt, antisymmetry, cotransitivity), the multiplicative inverse (Rinv/Rinv_gen), Cauchy-completeness (R_complete, R_complete_metric), the lattice (Rmax/Rmin), convergence (Rconv, uniqueness of limits), the metric (Rdist, triangle inequality, Lipschitz properties) and basic continuity (Rcontinuous_at) -- has NO existing reading anywhere in CANONICAL.json. Kept as partial_overlap rather than trimmed, since the overlapping piece (a near-trivial pointwise-add-commutativity fact on a structurally different representation) is a small fraction of the object.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-17.reverification_2026-09-08). This repo's own recompile of coq/canonical/weld__M_60_v1.v (the full R construction through Rcontinuous_Rabs, excluding the unrelated classical-PA layer that follows it in the source file) confirms every listed identifier Closed under the global context.",
-      "id": "CAN-1296"
+      "id": "CAN-1296",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_60_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     }
   ],
   "raw_to_canonical": {

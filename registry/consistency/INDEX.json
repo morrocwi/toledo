@@ -2,7 +2,7 @@
  "by_dimension": {
   "coq": {
    "fail": 0,
-   "needs_reader": 1223,
+   "needs_reader": 1244,
    "not_checked": 0,
    "pass": 689
   },
@@ -10,11 +10,11 @@
    "fail": 5,
    "needs_reader": 30,
    "not_checked": 0,
-   "pass": 1877
+   "pass": 1898
   },
   "lineage": {
    "fail": 38,
-   "needs_reader": 1847,
+   "needs_reader": 1868,
    "not_checked": 0,
    "pass": 27
   },
@@ -22,17 +22,17 @@
    "fail": 1480,
    "needs_reader": 205,
    "not_checked": 0,
-   "pass": 227
+   "pass": 248
   },
   "structure": {
    "fail": 333,
    "needs_reader": 819,
    "not_checked": 0,
-   "pass": 760
+   "pass": 781
   },
   "symbols": {
    "fail": 140,
-   "needs_reader": 1162,
+   "needs_reader": 1183,
    "not_checked": 0,
    "pass": 610
   },
@@ -40,10 +40,10 @@
    "fail": 7,
    "needs_reader": 225,
    "not_checked": 0,
-   "pass": 1680
+   "pass": 1701
   }
  },
- "computed_at": "2026-09-08T14:11:57Z",
+ "computed_at": "2026-09-08T15:17:31Z",
  "entries": [
   {
    "code": "A.1",
@@ -11116,6 +11116,132 @@
    "sidecar": "registry/consistency/weld__M_39_v1.json"
   },
   {
+   "code": "weld/M.40.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_40_v1.json"
+  },
+  {
+   "code": "weld/M.41.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_41_v1.json"
+  },
+  {
+   "code": "weld/M.42.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_42_v1.json"
+  },
+  {
+   "code": "weld/M.43.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_43_v1.json"
+  },
+  {
+   "code": "weld/M.44.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_44_v1.json"
+  },
+  {
+   "code": "weld/M.45.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_45_v1.json"
+  },
+  {
+   "code": "weld/M.46.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_46_v1.json"
+  },
+  {
+   "code": "weld/M.47.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_47_v1.json"
+  },
+  {
+   "code": "weld/M.48.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_48_v1.json"
+  },
+  {
+   "code": "weld/M.49.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_49_v1.json"
+  },
+  {
+   "code": "weld/M.50.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_50_v1.json"
+  },
+  {
+   "code": "weld/M.51.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_51_v1.json"
+  },
+  {
+   "code": "weld/M.52.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_52_v1.json"
+  },
+  {
+   "code": "weld/M.53.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_53_v1.json"
+  },
+  {
+   "code": "weld/M.54.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_54_v1.json"
+  },
+  {
+   "code": "weld/M.55.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_55_v1.json"
+  },
+  {
+   "code": "weld/M.56.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_56_v1.json"
+  },
+  {
+   "code": "weld/M.57.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_57_v1.json"
+  },
+  {
+   "code": "weld/M.58.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_58_v1.json"
+  },
+  {
+   "code": "weld/M.59.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_59_v1.json"
+  },
+  {
+   "code": "weld/M.60.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_60_v1.json"
+  },
+  {
    "code": "weld/P.01.v1",
    "flag": null,
    "grade": "IC-2",
@@ -11525,22 +11651,22 @@
   "D": 0
  },
  "fingerprint": {
-  "readings_parsed": 1142,
+  "readings_parsed": 1163,
   "readings_unparsed": 160,
-  "readings_unparsed_fraction": "160/1302",
+  "readings_unparsed_fraction": "160/1323",
   "roots_parsed": 398,
   "roots_unparsed": 212,
   "roots_unparsed_fraction": "212/610"
  },
- "grader_commit": "d0d47092a4f2fadad43366423fb5eb1f2724de18",
+ "grader_commit": "9a41c95479d410d19f840338e60920fdc2d17013",
  "histogram": {
   "readings": {
    "IC-0": 1148,
    "IC-1": 27,
-   "IC-2": 127,
+   "IC-2": 148,
    "IC-3": 0,
    "IC-F": 1274,
-   "total": 1302
+   "total": 1323
   },
   "roots": {
    "IC-0": 466,
@@ -11554,7 +11680,7 @@
  "note": "IC is a readout of the registry's own internal agreement, never a truth score and never merged with the resistance ladder R0-R6. needs_reader means unchecked by a human/agent reader, not failing. See docs/CONSISTENCY_SPEC_v0_1.md.",
  "reader_coverage": {
   "lineage_root_edges_cleared": 0,
-  "lineage_root_edges_total": 776
+  "lineage_root_edges_total": 797
  },
  "registry_commit": "9ca306cf3bc9e6efe4ee5456ee6449abae0cb42a",
  "schema_version": "consistency-index-0.1"
