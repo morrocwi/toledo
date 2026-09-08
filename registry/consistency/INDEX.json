@@ -2,7 +2,7 @@
  "by_dimension": {
   "coq": {
    "fail": 0,
-   "needs_reader": 1222,
+   "needs_reader": 1223,
    "not_checked": 0,
    "pass": 689
   },
@@ -10,11 +10,11 @@
    "fail": 5,
    "needs_reader": 30,
    "not_checked": 0,
-   "pass": 1876
+   "pass": 1877
   },
   "lineage": {
    "fail": 38,
-   "needs_reader": 1846,
+   "needs_reader": 1847,
    "not_checked": 0,
    "pass": 27
   },
@@ -22,17 +22,17 @@
    "fail": 1480,
    "needs_reader": 205,
    "not_checked": 0,
-   "pass": 226
+   "pass": 227
   },
   "structure": {
    "fail": 333,
    "needs_reader": 819,
    "not_checked": 0,
-   "pass": 759
+   "pass": 760
   },
   "symbols": {
    "fail": 140,
-   "needs_reader": 1161,
+   "needs_reader": 1162,
    "not_checked": 0,
    "pass": 610
   },
@@ -40,10 +40,10 @@
    "fail": 7,
    "needs_reader": 225,
    "not_checked": 0,
-   "pass": 1679
+   "pass": 1680
   }
  },
- "computed_at": "2026-09-08T13:57:09Z",
+ "computed_at": "2026-09-08T14:02:42Z",
  "entries": [
   {
    "code": "A.1",
@@ -11140,6 +11140,12 @@
    "sidecar": "registry/consistency/weld__P_04_v1.json"
   },
   {
+   "code": "weld/P.05.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__P_05_v1.json"
+  },
+  {
    "code": "weld/S.01.v1",
    "flag": "IC-F",
    "grade": "IC-0",
@@ -11519,22 +11525,22 @@
   "D": 0
  },
  "fingerprint": {
-  "readings_parsed": 1141,
+  "readings_parsed": 1142,
   "readings_unparsed": 160,
-  "readings_unparsed_fraction": "160/1301",
+  "readings_unparsed_fraction": "160/1302",
   "roots_parsed": 398,
   "roots_unparsed": 212,
   "roots_unparsed_fraction": "212/610"
  },
- "grader_commit": "fd57ffd40bab745e3a8ff3ef22bb3e20d46c2e3e",
+ "grader_commit": "ca9f9dfd94e8555fb06d9d840f14d58d65aafd87",
  "histogram": {
   "readings": {
    "IC-0": 1148,
    "IC-1": 27,
-   "IC-2": 126,
+   "IC-2": 127,
    "IC-3": 0,
    "IC-F": 1274,
-   "total": 1301
+   "total": 1302
   },
   "roots": {
    "IC-0": 466,
@@ -11548,7 +11554,7 @@
  "note": "IC is a readout of the registry's own internal agreement, never a truth score and never merged with the resistance ladder R0-R6. needs_reader means unchecked by a human/agent reader, not failing. See docs/CONSISTENCY_SPEC_v0_1.md.",
  "reader_coverage": {
   "lineage_root_edges_cleared": 0,
-  "lineage_root_edges_total": 775
+  "lineage_root_edges_total": 776
  },
  "registry_commit": "9ca306cf3bc9e6efe4ee5456ee6449abae0cb42a",
  "schema_version": "consistency-index-0.1"

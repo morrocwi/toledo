@@ -41,32 +41,18 @@
         }
       ],
       "children": [
-        "CMC/M.19.v1",
-        "MQ08-stepper/M.01.v1",
-        "weld/E.09.v1",
         "weld/H.04.v1",
         "weld/H.07.v1",
         "weld/H.10.v1",
         "weld/H.12.v1",
-        "weld/H.13.v1",
-        "weld/H.14.v1",
-        "weld/M.12.v1",
-        "weld/M.14.v1",
-        "weld/M.25.v1",
-        "weld/M.26.v1",
-        "weld/M.27.v1",
-        "weld/M.28.v1",
-        "weld/M.30.v1",
-        "weld/M.31.v1",
-        "weld/M.37.v1",
-        "weld/M.38.v1",
-        "weld/M.39.v1",
-        "weld/P.01.v1",
         "weld/S.01.v1",
         "weld/S.06.v1",
         "weld/S.07.v1",
         "weld/S.08.v1",
         "weld/S.09.v1",
+        "weld/M.12.v1",
+        "weld/E.09.v1",
+        "weld/M.14.v1",
         "weld/S.10.v1",
         "weld/S.11.v1",
         "weld/S.12.v1",
@@ -83,7 +69,21 @@
         "weld/S.23.v1",
         "weld/S.24.v1",
         "weld/S.25.v1",
-        "weld/S.26.v1"
+        "weld/S.26.v1",
+        "weld/H.13.v1",
+        "weld/H.14.v1",
+        "weld/M.25.v1",
+        "weld/M.26.v1",
+        "weld/M.27.v1",
+        "weld/M.28.v1",
+        "weld/M.30.v1",
+        "weld/M.31.v1",
+        "weld/M.37.v1",
+        "weld/M.38.v1",
+        "weld/P.01.v1",
+        "weld/M.39.v1",
+        "CMC/M.19.v1",
+        "MQ08-stepper/M.01.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -252,7 +252,6 @@
       ],
       "children": [
         "EQ-015/E.11.v1",
-        "EQ-015/E.14.v1",
         "EQ-015/H.01.v1",
         "EQ-015/H.02.v1",
         "EQ-015/H.11.v1",
@@ -277,6 +276,7 @@
         "EQ-015/W.17.v1",
         "EQ-015/W.18.v1",
         "EQ-015/W.19.v1",
+        "EQ-015/E.14.v1",
         "EQ-015/W.20.v1",
         "EQ-015/W.21.v1",
         "EQ-015/W.22.v1",
@@ -456,8 +456,6 @@
       "children": [
         "EQ-015/E.07.v1",
         "EQ-015/E.10.v1",
-        "EQ-015/E.12.v1",
-        "EQ-015/E.15.v1",
         "EQ-015/H.04.v1",
         "EQ-015/H.05.v1",
         "EQ-015/H.08.v1",
@@ -476,19 +474,21 @@
         "EQ-015/H.33.v1",
         "EQ-015/H.34.v1",
         "EQ-015/H.35.v1",
-        "EQ-015/H.52.v1",
+        "EQ-015/S.01.v1",
+        "EQ-015/W.01.v1",
         "EQ-015/M.05.v1",
         "EQ-015/M.06.v1",
         "EQ-015/M.08.v1",
         "EQ-015/M.10.v1",
+        "EQ-015/E.12.v1",
+        "EQ-015/E.15.v1",
         "EQ-015/M.12.v1",
-        "EQ-015/M.16.v1",
-        "EQ-015/S.01.v1",
         "EQ-015/S.13.v1",
         "EQ-015/S.14.v1",
         "EQ-015/S.15.v1",
         "EQ-015/S.16.v1",
-        "EQ-015/W.01.v1"
+        "EQ-015/M.16.v1",
+        "EQ-015/H.52.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -646,6 +646,7 @@
         }
       ],
       "children": [
+        "EQ-015/M.04.v1",
         "EQ-015/E.01.v1",
         "EQ-015/E.02.v1",
         "EQ-015/E.03.v1",
@@ -654,7 +655,6 @@
         "EQ-015/E.06.v1",
         "EQ-015/E.08.v1",
         "EQ-015/E.09.v1",
-        "EQ-015/E.13.v1",
         "EQ-015/H.03.v1",
         "EQ-015/H.06.v1",
         "EQ-015/H.07.v1",
@@ -662,14 +662,6 @@
         "EQ-015/H.10.v1",
         "EQ-015/H.13.v1",
         "EQ-015/H.14.v1",
-        "EQ-015/H.36.v1",
-        "EQ-015/H.37.v1",
-        "EQ-015/H.38.v1",
-        "EQ-015/H.39.v1",
-        "EQ-015/M.04.v1",
-        "EQ-015/M.07.v1",
-        "EQ-015/M.09.v1",
-        "EQ-015/M.11.v1",
         "EQ-015/S.02.v1",
         "EQ-015/S.03.v1",
         "EQ-015/S.04.v1",
@@ -681,6 +673,16 @@
         "EQ-015/S.10.v1",
         "EQ-015/S.11.v1",
         "EQ-015/S.12.v1",
+        "EQ-015/W.07.v1",
+        "EQ-015/W.08.v1",
+        "EQ-015/W.10.v1",
+        "EQ-015/W.12.v1",
+        "EQ-015/M.07.v1",
+        "EQ-015/M.09.v1",
+        "EQ-015/E.13.v1",
+        "EQ-015/M.11.v1",
+        "EQ-015/H.36.v1",
+        "EQ-015/H.37.v1",
         "EQ-015/S.17.v1",
         "EQ-015/S.18.v1",
         "EQ-015/S.19.v1",
@@ -730,10 +732,6 @@
         "EQ-015/S.63.v1",
         "EQ-015/S.64.v1",
         "EQ-015/S.65.v1",
-        "EQ-015/W.07.v1",
-        "EQ-015/W.08.v1",
-        "EQ-015/W.10.v1",
-        "EQ-015/W.12.v1",
         "EQ-015/W.34.v1",
         "EQ-015/W.35.v1",
         "EQ-015/W.36.v1",
@@ -749,6 +747,8 @@
         "EQ-015/W.46.v1",
         "EQ-015/W.49.v1",
         "EQ-015/W.50.v1",
+        "EQ-015/H.38.v1",
+        "EQ-015/H.39.v1",
         "weld/M.32.v1"
       ],
       "origin": {
@@ -1083,32 +1083,16 @@
         }
       ],
       "children": [
-        "EQ-002/H.05.v1",
-        "weld/E.10.v1",
-        "weld/E.11.v1",
         "weld/H.02.v1",
         "weld/H.06.v1",
         "weld/H.09.v1",
-        "weld/H.14.v1",
-        "weld/H.22.v1",
-        "weld/H.23.v1",
-        "weld/H.24.v1",
-        "weld/H.28.v1",
-        "weld/H.29.v1",
-        "weld/M.10.v1",
-        "weld/M.13.v1",
-        "weld/M.15.v1",
-        "weld/M.16.v1",
-        "weld/M.17.v1",
-        "weld/M.18.v1",
-        "weld/M.19.v1",
-        "weld/M.20.v1",
-        "weld/M.21.v1",
-        "weld/M.22.v1",
-        "weld/M.25.v1",
-        "weld/M.26.v1",
         "weld/S.02.v1",
         "weld/S.03.v1",
+        "weld/W.01.v1",
+        "weld/W.02.v1",
+        "weld/M.10.v1",
+        "weld/M.13.v1",
+        "weld/E.10.v1",
         "weld/S.27.v1",
         "weld/S.28.v1",
         "weld/S.29.v1",
@@ -1125,10 +1109,26 @@
         "weld/S.40.v1",
         "weld/S.41.v1",
         "weld/S.42.v1",
-        "weld/W.01.v1",
-        "weld/W.02.v1",
+        "weld/E.11.v1",
+        "weld/M.15.v1",
+        "weld/M.16.v1",
+        "weld/M.17.v1",
+        "weld/M.18.v1",
+        "weld/M.19.v1",
+        "weld/M.20.v1",
+        "weld/M.21.v1",
+        "weld/M.22.v1",
+        "weld/H.14.v1",
+        "weld/M.25.v1",
+        "weld/M.26.v1",
+        "weld/H.22.v1",
+        "weld/H.23.v1",
+        "weld/H.24.v1",
+        "weld/H.28.v1",
         "weld/W.03.v1",
-        "weld/W.08.v1"
+        "weld/W.08.v1",
+        "weld/H.29.v1",
+        "EQ-002/H.05.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -1324,8 +1324,8 @@
         "weld/H.05.v1",
         "weld/H.08.v1",
         "weld/H.11.v1",
-        "weld/H.16.v1",
-        "weld/H.17.v1",
+        "weld/S.04.v1",
+        "weld/S.05.v1",
         "weld/M.04.v1",
         "weld/M.05.v1",
         "weld/M.06.v1",
@@ -1333,17 +1333,6 @@
         "weld/M.08.v1",
         "weld/M.09.v1",
         "weld/M.11.v1",
-        "weld/M.15.v1",
-        "weld/M.16.v1",
-        "weld/M.17.v1",
-        "weld/M.18.v1",
-        "weld/M.19.v1",
-        "weld/M.23.v1",
-        "weld/M.24.v1",
-        "weld/M.25.v1",
-        "weld/M.26.v1",
-        "weld/S.04.v1",
-        "weld/S.05.v1",
         "weld/S.43.v1",
         "weld/S.44.v1",
         "weld/S.45.v1",
@@ -1351,7 +1340,18 @@
         "weld/S.47.v1",
         "weld/S.48.v1",
         "weld/S.49.v1",
-        "weld/S.50.v1"
+        "weld/S.50.v1",
+        "weld/M.15.v1",
+        "weld/M.16.v1",
+        "weld/M.17.v1",
+        "weld/M.18.v1",
+        "weld/M.19.v1",
+        "weld/M.23.v1",
+        "weld/M.24.v1",
+        "weld/H.16.v1",
+        "weld/H.17.v1",
+        "weld/M.25.v1",
+        "weld/M.26.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -1505,13 +1505,6 @@
       "children": [
         "A.5/E.01.v1",
         "A.5/E.02.v1",
-        "A.5/E.03.v1",
-        "A.5/E.04.v1",
-        "A.5/E.05.v1",
-        "A.5/E.06.v1",
-        "A.5/E.07.v1",
-        "A.5/E.08.v1",
-        "A.5/E.09.v1",
         "A.5/H.01.v1",
         "A.5/H.02.v1",
         "A.5/H.03.v1",
@@ -1531,11 +1524,24 @@
         "A.5/H.17.v1",
         "A.5/H.18.v1",
         "A.5/H.19.v1",
+        "A.5/S.01.v1",
+        "A.5/S.02.v1",
+        "A.5/S.03.v1",
+        "A.5/W.01.v1",
+        "A.5/W.02.v1",
+        "A.5/W.03.v1",
         "A.5/M.02.v1",
         "A.5/M.03.v1",
         "A.5/M.04.v1",
+        "A.5/E.03.v1",
         "A.5/M.05.v1",
         "A.5/M.06.v1",
+        "A.5/E.04.v1",
+        "A.5/E.05.v1",
+        "A.5/E.06.v1",
+        "A.5/E.07.v1",
+        "A.5/E.08.v1",
+        "A.5/E.09.v1",
         "A.5/M.07.v1",
         "A.5/M.08.v1",
         "A.5/M.09.v1",
@@ -1562,9 +1568,6 @@
         "A.5/M.30.v1",
         "A.5/M.31.v1",
         "A.5/M.32.v1",
-        "A.5/S.01.v1",
-        "A.5/S.02.v1",
-        "A.5/S.03.v1",
         "A.5/S.04.v1",
         "A.5/S.05.v1",
         "A.5/S.06.v1",
@@ -1582,9 +1585,6 @@
         "A.5/S.18.v1",
         "A.5/S.19.v1",
         "A.5/S.20.v1",
-        "A.5/W.01.v1",
-        "A.5/W.02.v1",
-        "A.5/W.03.v1",
         "A.5/W.04.v1",
         "A.5/W.05.v1",
         "A.5/W.06.v1",
@@ -1740,13 +1740,11 @@
         }
       ],
       "children": [
-        "A.8/E.01.v1",
-        "A.8/E.02.v1",
-        "A.8/E.03.v1",
         "A.8/H.01.v1",
         "A.8/H.02.v1",
         "A.8/H.03.v1",
         "A.8/H.04.v1",
+        "A.8/S.01.v1",
         "A.8/M.02.v1",
         "A.8/M.03.v1",
         "A.8/M.04.v1",
@@ -1762,14 +1760,16 @@
         "A.8/M.14.v1",
         "A.8/M.15.v1",
         "A.8/M.16.v1",
+        "A.8/E.01.v1",
         "A.8/M.17.v1",
         "A.8/M.18.v1",
         "A.8/M.19.v1",
+        "A.8/E.02.v1",
+        "A.8/E.03.v1",
         "A.8/M.21.v1",
         "A.8/M.22.v1",
         "A.8/M.23.v1",
-        "A.8/M.24.v1",
-        "A.8/S.01.v1"
+        "A.8/M.24.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -11010,13 +11010,13 @@
         }
       ],
       "children": [
-        "EQ-015/H.42.v1",
-        "EQ-015/H.43.v1",
-        "EQ-015/H.44.v1",
-        "EQ-015/H.48.v1",
         "weld/H.35.v1",
         "weld/H.36.v1",
-        "weld/H.37.v1"
+        "EQ-015/H.42.v1",
+        "weld/H.37.v1",
+        "EQ-015/H.43.v1",
+        "EQ-015/H.44.v1",
+        "EQ-015/H.48.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -11152,10 +11152,10 @@
       ],
       "children": [
         "EQ-015/H.42.v1",
+        "weld/H.37.v1",
         "EQ-015/H.43.v1",
         "EQ-015/H.44.v1",
-        "EQ-015/H.48.v1",
-        "weld/H.37.v1"
+        "EQ-015/H.48.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -13590,10 +13590,10 @@
         }
       ],
       "children": [
+        "weld/H.29.v1",
         "A.8/M.22.v1",
         "A.8/M.23.v1",
-        "EQ-015/H.50.v1",
-        "weld/H.29.v1"
+        "EQ-015/H.50.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -17430,7 +17430,6 @@
         }
       ],
       "children": [
-        "weld/B.01.v1",
         "weld/S.10.v1",
         "weld/S.11.v1",
         "weld/S.12.v1",
@@ -17447,7 +17446,9 @@
         "weld/S.23.v1",
         "weld/S.24.v1",
         "weld/S.25.v1",
-        "weld/S.26.v1"
+        "weld/S.26.v1",
+        "weld/B.01.v1",
+        "weld/P.05.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -27043,14 +27044,14 @@
         }
       ],
       "children": [
-        "A.8/M.20.v1",
-        "A.8/M.21.v1",
         "EQ-015/H.40.v1",
-        "EQ-015/H.42.v1",
-        "EQ-015/H.48.v1",
-        "EQ-015/H.49.v1",
         "weld/H.35.v1",
-        "weld/H.36.v1"
+        "weld/H.36.v1",
+        "A.8/M.20.v1",
+        "EQ-015/H.42.v1",
+        "A.8/M.21.v1",
+        "EQ-015/H.48.v1",
+        "EQ-015/H.49.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -31217,22 +31218,22 @@
         "EQ-002/E.06.v1",
         "EQ-002/E.07.v1",
         "EQ-002/E.08.v1",
-        "EQ-002/E.09.v1",
-        "EQ-002/E.10.v1",
-        "EQ-002/E.11.v1",
-        "EQ-002/E.12.v1",
         "EQ-002/H.01.v1",
         "EQ-002/H.02.v1",
         "EQ-002/H.03.v1",
         "EQ-002/H.04.v1",
-        "EQ-002/H.05.v1",
-        "EQ-002/H.06.v1",
+        "EQ-002/W.01.v1",
         "EQ-002/M.01.v1",
         "EQ-002/M.02.v1",
-        "EQ-002/M.04.v1",
-        "EQ-002/W.01.v1",
+        "EQ-002/E.09.v1",
+        "EQ-002/E.10.v1",
+        "EQ-002/E.11.v1",
+        "EQ-002/E.12.v1",
         "EQ-002/W.02.v1",
-        "EQ-002/W.03.v1"
+        "EQ-002/W.03.v1",
+        "EQ-002/H.05.v1",
+        "EQ-002/H.06.v1",
+        "EQ-002/M.04.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -65235,9 +65236,9 @@
         }
       ],
       "children": [
-        "CMC/M.19.v1",
         "EQ-001/P.74.v1",
         "EQ-001/P.76.v1",
+        "CMC/M.19.v1",
         "EQ-001/P.78.v1"
       ],
       "origin": {
@@ -68022,11 +68023,11 @@
       ],
       "children": [
         "EQ-001/P.72.v1",
+        "EQ-015/P.118.v1",
         "EQ-001/P.73.v1",
         "EQ-001/P.75.v1",
-        "EQ-001/P.77.v1",
-        "EQ-015/P.118.v1",
-        "EQ-015/P.120.v1"
+        "EQ-015/P.120.v1",
+        "EQ-001/P.77.v1"
       ],
       "origin": {
         "source": "domain_registry",
@@ -72769,8 +72770,8 @@
         }
       ],
       "children": [
-        "EQ-009/E.03.v1",
-        "EQ-015/M.14.v1"
+        "EQ-015/M.14.v1",
+        "EQ-009/E.03.v1"
       ],
       "origin": {
         "source": "readout_universe",
@@ -116172,8 +116173,8 @@
         }
       ],
       "children": [
-        "CMC/M.19.v1",
-        "CMC/P.16.v1"
+        "CMC/P.16.v1",
+        "CMC/M.19.v1"
       ],
       "origin": {
         "source": "solver_arc",
@@ -123267,9 +123268,9 @@
         }
       ],
       "children": [
-        "weld/H.51.v1",
         "weld/M.35.v1",
-        "weld/M.36.v1"
+        "weld/M.36.v1",
+        "weld/H.51.v1"
       ],
       "origin": {
         "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
@@ -164222,6 +164223,107 @@
           }
         }
       }
+    },
+    {
+      "code": "weld/P.05.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "URCF:relaxation-inertia-turbulence-law",
+        "EQ-URCF-TURB-004"
+      ],
+      "name": "Retained-information relaxation-inertia turbulence prediction equation",
+      "statement": {
+        "latest": "\\tau_R \\frac{dI_R}{dt} + L_R I_R = S_R + \\eta_R",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\tau_R \\frac{dI_R}{dt} + L_R I_R = S_R + \\eta_R",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-urcf: initial capture from URCF_RTPE_TURBULENCE_RELAXATION_INERTIA_DIRECT_LP_CLOSURE_v2_2_STANDALONE_PROOF_PACK.yaml",
+          "by": "toledo-v1.8-urcf"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/S.01.v1",
+          "derived_via": "instance_of"
+        },
+        {
+          "code": "EQ-008",
+          "derived_via": "instance_of"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "URCF_RTPE_TURBULENCE_RELAXATION_INERTIA_DIRECT_LP_CLOSURE_v2_2_STANDALONE_PROOF_PACK.yaml (standalone research specification, not deposited on Zenodo, not reviewed by glosa)",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": null
+      },
+      "status": "unverified",
+      "status_note": "URCF turbulence proposal (2026-09-08); unverified, PASS_WITH_LIMITS per the source's own numerical run_log_anchor (6 test cases x 3 grid sizes x 3 viscosities); no glosa/cases/repro/ evidence file exists yet, no resistance rung held. Does NOT resolve Genesis root gap T2 -- see drift_note.",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__P_05_v1.v",
+        "identifier": "weld__P_05_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Two disclosed weaknesses, preserved from the intake proposal (registry/proposals/urcf_turbulence.json), never silently resolved: (1) parent EQ-008 (instance_of): \"The source's own definition of L_R ('graph Laplacian / scale Laplacian / linearized restoration operator / positive operator, positive semidefinite, zero-mode policy declared') matches, in words, IDM/Genesis root EQ-008's canonical definition L_R := D_W - W (weighted-degree minus retained-adjacency, a full operator on a multimode state). The source paper does not itself cite EQ-008; this attachment records a structural match found at intake, not an author claim.\" (2) does_not_resolve (genesis_root_gap T2): \"Genesis root row T2 ('endogenous state-dependent L_R[I_R], where the operator itself depends on the state it is acting on') is the harder, still-open case. This equation's own stated assumption set explicitly keeps 'L_R time-independent' (solution_form_linear_time_invariant) -- it is the easier linear/state-independent sub-case, not an attempted or claimed resolution of T2. State this honestly if the entry is ever cited near T2.\"",
+      "id": "CAN-1275",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     }
   ],
   "raw_to_canonical": {
@@ -165296,12 +165398,12 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1301,
+    "entries": 1302,
     "by_status": {
       "current": 1167,
       "split": 30,
       "not_an_equation": 9,
-      "unverified": 95
+      "unverified": 96
     },
     "by_domain": {
       "M": 418,
@@ -165310,12 +165412,12 @@
       "S": 137,
       "W": 93,
       "C": 59,
-      "P": 330,
+      "P": 331,
       "B": 76
     },
     "by_tier": {
       "Th_coqc": 413,
-      "Definition": 441,
+      "Definition": 442,
       "Dr": 82,
       "Ax": 12,
       "finite_diagnostic": 46,
@@ -165332,9 +165434,9 @@
       "definition": 384,
       "wrapped_related": 210,
       "not_formalisable": 70,
-      "open_prop": 83,
+      "open_prop": 84,
       "axioms": 3
     },
-    "computed": "2026-09-08 from canonical[] (scripts/v18_causal_merge.py)"
+    "computed": "2026-09-08 from canonical[] (scripts/v18_urcf_merge.py)"
   }
 }
