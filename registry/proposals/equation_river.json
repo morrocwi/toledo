@@ -1,0 +1,173 @@
+{
+ "schema_version": "1.0-proposal",
+ "founder_instruction": "2026-09-08: model how one equation, once it exists, grows stronger step by step within our context — think, register in Toledo, Th_coqc, reproducible computation with an outside oracle, review, world record — and returns to the model",
+ "proposals": [
+  {
+   "id": "PROP-RIVER-01",
+   "code": "weld/M.??.v1",
+   "name": "Equation river: rung set of an equation",
+   "statement": {
+    "latest": "S_n(q) \\subseteq \\{R_0,\\dots,R_6\\},\\quad \\varepsilon_n : S_n(q) \\to \\mathcal{F}\\ \\text{(one evidence file per held rung)}",
+    "format": "latex"
+   },
+   "tier": "Definition",
+   "status": "current",
+   "domain": "M",
+   "aliases": [
+    "RIVER:S",
+    "EquationRiver:rung-set"
+   ],
+   "parents": [
+    {
+     "code": "weld/H.30.v1",
+     "derived_via": "reads",
+     "evidence": "founder 2026-09-08: an equation, once it exists, must grow stronger step by step — think, register in Toledo, Th_coqc, reproducible computation with an oracle outside the loop, and return to the model; the rung set is the Core Epistemic Structure's per-artifact resistance readout"
+    }
+   ],
+   "origin": {
+    "source": "Blackbox Log BBL-2026-09-08 (founder instruction) + glosa P23 resistance ladder; applied to every Toledo entry's resistance block",
+    "doi": "10.5281/zenodo.22302518"
+   }
+  },
+  {
+   "id": "PROP-RIVER-02",
+   "code": "weld/M.??.v1",
+   "name": "Equation river: strengthening law (a rung is held only by a verified evidence file)",
+   "statement": {
+    "latest": "S_{n+1}(q) = \\big(S_n(q) \\cup A_n\\big) \\setminus W_n,\\quad A_n=\\{r : \\text{evidence for } r \\text{ added and verified at } n\\},\\ W_n=\\{r : \\text{evidence for } r \\text{ failed verification at } n\\}",
+    "format": "latex"
+   },
+   "tier": "Definition",
+   "status": "current",
+   "domain": "M",
+   "aliases": [
+    "RIVER:update",
+    "EquationRiver:strengthening-law"
+   ],
+   "parents": [
+    {
+     "code": "weld/H.30.v1",
+     "derived_via": "refines",
+     "evidence": "same instruction; rungs are added by files (Coq report, reproduction card, review record, world record) and withdrawn when a verify fails — glosa P22/P23, Toledo scripts/compute_resistance.py"
+    }
+   ],
+   "origin": {
+    "source": "Blackbox Log BBL-2026-09-08 + glosa P22/P23",
+    "doi": "10.5281/zenodo.22302518"
+   }
+  },
+  {
+   "id": "PROP-RIVER-03",
+   "code": "weld/M.??.v1",
+   "name": "Equation river: strength readout is the held set, not a scalar",
+   "statement": {
+    "latest": "\\sigma(q) = S_n(q)\\ \\text{(the tuple of held rungs with their evidence)};\\quad \\sigma^*(q)=|S_n(q)|\\ \\text{is a sorting readout only, never a warrant}",
+    "format": "latex"
+   },
+   "tier": "Dr",
+   "status": "current",
+   "domain": "M",
+   "aliases": [
+    "RIVER:sigma",
+    "EquationRiver:strength-readout"
+   ],
+   "parents": [
+    {
+     "code": "weld/H.33.v1",
+     "derived_via": "reads",
+     "evidence": "readout-not-truth: a count of rungs hides which rung is missing; the founder asked for a score that shows which steps are present (BBL-229)"
+    }
+   ],
+   "origin": {
+    "source": "Blackbox Log BBL-2026-09-07-229 / BBL-2026-09-08",
+    "doi": "10.5281/zenodo.22302518"
+   }
+  },
+  {
+   "id": "PROP-RIVER-04",
+   "code": "EQ-015/H.??.v1",
+   "name": "Equation river: return map (an interruption revises the model; the deposited source is never edited)",
+   "statement": {
+    "latest": "q^{(v+1)} = \\Phi\\big(q^{(v)},\\delta\\big)\\ \\text{for an interruption } \\delta \\text{ from } R_3\\!-\\!R_6\\ (\\text{FAIL, hash mismatch, objection});\\quad S(q^{(v+1)}) \\supseteq S(q^{(v)})\\cap\\{R_0,R_1\\},\\ \\text{all other rungs re-earned};\\ \\text{registered as } .v(v{+}1)\\ \\text{with a LINEAGE 'revised' event}",
+    "format": "latex"
+   },
+   "tier": "Dr",
+   "status": "current",
+   "domain": "H",
+   "aliases": [
+    "RIVER:return",
+    "EquationRiver:return-map"
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/H.24.v1",
+     "derived_via": "reads",
+     "evidence": "world-feedback closure (return → action → feedback): the founder's 'and go back to the original model' — the interruption feeds the model, never the archived source (Toledo rule: deposited sources are never edited; a revision bumps .v<k>)"
+    }
+   ],
+   "origin": {
+    "source": "Blackbox Log BBL-2026-09-08 + Toledo SCHEMA (versions and LINEAGE)",
+    "doi": "10.5281/zenodo.22302518"
+   }
+  },
+  {
+   "id": "PROP-RIVER-05",
+   "code": "weld/M.??.v1",
+   "name": "Equation river: non-collapse of the stages",
+   "statement": {
+    "latest": "\\text{thought} \\neq \\text{registered} \\neq \\text{closed (Th\\_coqc)} \\neq \\text{reproduced} \\neq \\text{oracle-checked} \\neq \\text{reviewed} \\neq \\text{world-recorded};\\quad \\text{PASS} \\neq \\text{proven}\\ (\\text{one non-refutation})",
+    "format": "latex"
+   },
+   "tier": "Dr",
+   "status": "current",
+   "domain": "M",
+   "aliases": [
+    "RIVER:non-collapse",
+    "EquationRiver:non-collapse"
+   ],
+   "parents": [
+    {
+     "code": "weld/H.33.v1",
+     "derived_via": "refines",
+     "evidence": "the Core Epistemic Structure non-collapse rule applied along the strengthening stages; Th_coqc certifies consistency of a finite model, never empirical truth (Toledo README)"
+    }
+   ],
+   "origin": {
+    "source": "Blackbox Log BBL-2026-09-08",
+    "doi": "10.5281/zenodo.22302518"
+   }
+  },
+  {
+   "id": "PROP-RIVER-06",
+   "code": "EQ-015/M.??.v1",
+   "name": "Equation river: stage 3 computes on Q with an oracle outside the loop (no continuum tool required)",
+   "statement": {
+    "latest": "R_3 \\text{ holds iff } q \\text{ is evaluated by a program with } \\mathrm{AI}=0 \\text{ at runtime on } \\mathbb{Q}\\text{-approximants (IDM ladder } D\\to\\mathbb{Z}\\to\\mathbb{Q}\\to\\mathbb{R}\\text{-as-readout)},\\ \\text{inputs/outputs hash-frozen};\\quad R_4 \\text{ holds iff the result meets a tolerance declared before the run against an oracle not produced by the loop}",
+    "format": "latex"
+   },
+   "tier": "Definition",
+   "status": "current",
+   "domain": "M",
+   "aliases": [
+    "RIVER:stage3-4",
+    "EquationRiver:compute-on-Q"
+   ],
+   "parents": [
+    {
+     "code": "Q",
+     "derived_via": "reads",
+     "evidence": "IDM Q-computability law (P24): a computed quantity carries a Q tier and a witness; the founder's 'MATLAB or what?' resolved in our context: standard-library Python on Q-approximants with mpmath/published values/public data as oracles"
+    },
+    {
+     "code": "R",
+     "derived_via": "reads",
+     "evidence": "the continuum as a readout of the discrete ladder"
+    }
+   ],
+   "origin": {
+    "source": "Blackbox Log BBL-2026-09-08 + IDM treatise 10.5281/zenodo.22644131",
+    "doi": "10.5281/zenodo.22302518"
+   }
+  }
+ ]
+}
