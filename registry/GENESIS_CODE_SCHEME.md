@@ -274,3 +274,7 @@ as R1's 119 Theta/CMC readings (wrapping into `coq/canonical/` files left to
 a later lane). `registry/coq_map.json`'s own `codes[]` was updated for all
 274 rows, by evidence (file+identifier match against the same source line
 the reading's statement was copied from).
+
+
+## Addendum 2026-09-08 — CMC disposition (decision meeting)
+The Causal-Memory Closure root stays a standalone root-extension row (parents [], relations []) with its relations_note: two full-text searches of the mirrored sources found no sentence connecting it to a Genesis root (registry/cmc_connection_report.md, registry/root_candidates_report.md), and the registry rule admits a parent only with a quoted source sentence — the same disposition already applied to 15 of the 18 IDM (R2) root rows. A future quoted sentence reopens it through a LINEAGE 'revised' event; nothing is asserted meanwhile.
