@@ -2,7 +2,7 @@
  "by_dimension": {
   "coq": {
    "fail": 0,
-   "needs_reader": 1195,
+   "needs_reader": 1222,
    "not_checked": 0,
    "pass": 689
   },
@@ -10,29 +10,29 @@
    "fail": 5,
    "needs_reader": 30,
    "not_checked": 0,
-   "pass": 1849
+   "pass": 1876
   },
   "lineage": {
    "fail": 38,
    "needs_reader": 1846,
    "not_checked": 0,
-   "pass": 0
+   "pass": 27
   },
   "schema": {
    "fail": 1480,
    "needs_reader": 205,
    "not_checked": 0,
-   "pass": 199
+   "pass": 226
   },
   "structure": {
    "fail": 333,
    "needs_reader": 819,
    "not_checked": 0,
-   "pass": 732
+   "pass": 759
   },
   "symbols": {
    "fail": 140,
-   "needs_reader": 1134,
+   "needs_reader": 1161,
    "not_checked": 0,
    "pass": 610
   },
@@ -40,10 +40,10 @@
    "fail": 7,
    "needs_reader": 225,
    "not_checked": 0,
-   "pass": 1652
+   "pass": 1679
   }
  },
- "computed_at": "2026-09-08T13:45:33Z",
+ "computed_at": "2026-09-08T13:57:09Z",
  "entries": [
   {
    "code": "A.1",
@@ -1804,6 +1804,12 @@
    "sidecar": "registry/consistency/CMC__M_18_v1.json"
   },
   {
+   "code": "CMC/M.19.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/CMC__M_19_v1.json"
+  },
+  {
    "code": "CMC/P.01.v1",
    "flag": "IC-F",
    "grade": "IC-0",
@@ -1892,6 +1898,12 @@
    "flag": "IC-F",
    "grade": "IC-0",
    "sidecar": "registry/consistency/CMC__P_15_v1.json"
+  },
+  {
+   "code": "CMC/P.16.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/CMC__P_16_v1.json"
   },
   {
    "code": "CenterConfinement_v0.3",
@@ -3490,6 +3502,60 @@
    "sidecar": "registry/consistency/EQ_001__P_69_v1.json"
   },
   {
+   "code": "EQ-001/P.70.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_70_v1.json"
+  },
+  {
+   "code": "EQ-001/P.71.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_71_v1.json"
+  },
+  {
+   "code": "EQ-001/P.72.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_72_v1.json"
+  },
+  {
+   "code": "EQ-001/P.73.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_73_v1.json"
+  },
+  {
+   "code": "EQ-001/P.74.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_74_v1.json"
+  },
+  {
+   "code": "EQ-001/P.75.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_75_v1.json"
+  },
+  {
+   "code": "EQ-001/P.76.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_76_v1.json"
+  },
+  {
+   "code": "EQ-001/P.77.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_77_v1.json"
+  },
+  {
+   "code": "EQ-001/P.78.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_001__P_78_v1.json"
+  },
+  {
    "code": "EQ-002",
    "flag": "IC-F",
    "grade": "IC-2",
@@ -4192,6 +4258,18 @@
    "sidecar": "registry/consistency/EQ_015__H_50_v1.json"
   },
   {
+   "code": "EQ-015/H.51.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_015__H_51_v1.json"
+  },
+  {
+   "code": "EQ-015/H.52.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_015__H_52_v1.json"
+  },
+  {
    "code": "EQ-015/M.01.v1",
    "flag": "IC-F",
    "grade": "IC-0",
@@ -4468,10 +4546,28 @@
    "sidecar": "registry/consistency/EQ_015__P_117_v1.json"
   },
   {
+   "code": "EQ-015/P.118.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_015__P_118_v1.json"
+  },
+  {
+   "code": "EQ-015/P.119.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_015__P_119_v1.json"
+  },
+  {
    "code": "EQ-015/P.12.v1",
    "flag": "IC-F",
    "grade": "IC-0",
    "sidecar": "registry/consistency/EQ_015__P_12_v1.json"
+  },
+  {
+   "code": "EQ-015/P.120.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/EQ_015__P_120_v1.json"
   },
   {
    "code": "EQ-015/P.13.v1",
@@ -6124,6 +6220,12 @@
    "sidecar": "registry/consistency/Face_10_IdentifiabilityGate__E_01_v1.json"
   },
   {
+   "code": "Face.10.IdentifiabilityGate/M.01.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/Face_10_IdentifiabilityGate__M_01_v1.json"
+  },
+  {
    "code": "Face.10.StrictGap",
    "flag": "IC-F",
    "grade": "IC-0",
@@ -6974,6 +7076,12 @@
    "flag": "IC-F",
    "grade": "IC-0",
    "sidecar": "registry/consistency/MQ08_stepper.json"
+  },
+  {
+   "code": "MQ08-stepper/M.01.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/MQ08_stepper__M_01_v1.json"
   },
   {
    "code": "MQ08-stepper/P.01.v1",
@@ -10468,6 +10576,12 @@
    "sidecar": "registry/consistency/weld.json"
   },
   {
+   "code": "weld/B.01.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__B_01_v1.json"
+  },
+  {
    "code": "weld/E.01.v1",
    "flag": "IC-F",
    "grade": "IC-2",
@@ -10984,6 +11098,48 @@
    "sidecar": "registry/consistency/weld__M_36_v1.json"
   },
   {
+   "code": "weld/M.37.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_37_v1.json"
+  },
+  {
+   "code": "weld/M.38.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_38_v1.json"
+  },
+  {
+   "code": "weld/M.39.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__M_39_v1.json"
+  },
+  {
+   "code": "weld/P.01.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__P_01_v1.json"
+  },
+  {
+   "code": "weld/P.02.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__P_02_v1.json"
+  },
+  {
+   "code": "weld/P.03.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__P_03_v1.json"
+  },
+  {
+   "code": "weld/P.04.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__P_04_v1.json"
+  },
+  {
    "code": "weld/S.01.v1",
    "flag": "IC-F",
    "grade": "IC-0",
@@ -11284,6 +11440,12 @@
    "sidecar": "registry/consistency/weld__S_50_v1.json"
   },
   {
+   "code": "weld/S.51.v1",
+   "flag": null,
+   "grade": "IC-2",
+   "sidecar": "registry/consistency/weld__S_51_v1.json"
+  },
+  {
    "code": "weld/W.01.v1",
    "flag": "IC-F",
    "grade": "IC-0",
@@ -11357,22 +11519,22 @@
   "D": 0
  },
  "fingerprint": {
-  "readings_parsed": 1114,
+  "readings_parsed": 1141,
   "readings_unparsed": 160,
-  "readings_unparsed_fraction": "160/1274",
+  "readings_unparsed_fraction": "160/1301",
   "roots_parsed": 398,
   "roots_unparsed": 212,
   "roots_unparsed_fraction": "212/610"
  },
- "grader_commit": "d42ad50fe7226b09c5a4baeabf826d988aea0dae",
+ "grader_commit": "fd57ffd40bab745e3a8ff3ef22bb3e20d46c2e3e",
  "histogram": {
   "readings": {
    "IC-0": 1148,
    "IC-1": 27,
-   "IC-2": 99,
+   "IC-2": 126,
    "IC-3": 0,
    "IC-F": 1274,
-   "total": 1274
+   "total": 1301
   },
   "roots": {
    "IC-0": 466,

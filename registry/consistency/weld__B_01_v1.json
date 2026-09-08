@@ -1,0 +1,140 @@
+{
+ "blocked_at": null,
+ "clearances": [],
+ "code": "weld/B.01.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "closed_is_proof_bearing": "pass",
+     "encodes_structure_candidates": "pass",
+     "forbidden": "pass",
+     "header_parents": "pass",
+     "header_quotes": "pass",
+     "identifier_present": "pass",
+     "imported_from_resolves": "pass",
+     "restates_shape": "pass",
+     "status_shape": "pass"
+    }
+   },
+   "status": "needs_reader"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {
+     "contradiction": "pass",
+     "exact": "pass",
+     "fingerprint": "parsed"
+    }
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "coq_header_parents": "pass",
+     "edge_kind_defined": "pass",
+     "ledger_assigned_event": "pass",
+     "ledger_event_code_resolves": "pass",
+     "ledger_merged_events": "pass",
+     "ledger_reason_vs_edge": "pass",
+     "ledger_retired_events": "pass",
+     "ledger_split_events": "pass",
+     "reads_reading_symbols": "pass",
+     "reads_root_sample": "pass",
+     "refines_semantics": "pass",
+     "restates_equality": "pass",
+     "restates_reader": "pass",
+     "root_edge_reader": "pass",
+     "root_empty_parents": "pass",
+     "specializes_instance": "pass",
+     "specializes_reader": "pass",
+     "split_child_origin": "pass",
+     "split_child_verbatim": "pass",
+     "split_coverage": "pass",
+     "split_inherited_edges": "pass",
+     "split_shape": "pass"
+    }
+   },
+   "status": "pass"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "counts": "pass",
+     "enum_values": "pass",
+     "lineage_kinds": "pass",
+     "required_fields": "pass",
+     "root_edge_kind": "pass"
+    }
+   },
+   "status": "pass"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "alias_collision": "pass",
+     "children_inverse": "pass",
+     "closed_reported": "pass",
+     "code_root": "pass",
+     "coq_file_present": "pass",
+     "extra.coq_file_name": "pass",
+     "extra.history_versions": "pass",
+     "extra.raw_map_inverse": "pass",
+     "extra.reads_also_target": "pass",
+     "extra.relations_target": "pass",
+     "extra.root_reachable": "pass",
+     "extra.verify_report_orphans": "pass",
+     "first_assigned_order": "pass",
+     "history_top": "pass",
+     "occurrence_map": "pass",
+     "parents_resolve": "pass",
+     "primary_root": "pass",
+     "r2_iff_closed": "pass",
+     "status_note": "pass"
+    }
+   },
+   "status": "pass"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "contradiction_candidates": "pass",
+     "hygiene": "pass",
+     "latex_lexical": "pass",
+     "registry": "pass",
+     "reserved": "pass",
+     "sense": "needs_reader",
+     "spelling": "pass",
+     "spelling.nearmiss": "pass"
+    }
+   },
+   "status": "needs_reader"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {
+     "cell_table": "pass",
+     "header_tier": "pass",
+     "root_render": "pass",
+     "status_note": "pass",
+     "tier_evidence": "pass",
+     "unverified_not_closed": "pass",
+     "witness_not_statement": "pass"
+    }
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [],
+ "flag": null,
+ "grade": "IC-2",
+ "grader_commit": "fd57ffd40bab745e3a8ff3ef22bb3e20d46c2e3e",
+ "last_lineage_event": {
+  "by": "toledo-v1.8-causal-sweep",
+  "date": "2026-09-08",
+  "event": "assigned"
+ },
+ "layer": "reading"
+}

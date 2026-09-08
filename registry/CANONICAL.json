@@ -41,18 +41,32 @@
         }
       ],
       "children": [
+        "CMC/M.19.v1",
+        "MQ08-stepper/M.01.v1",
+        "weld/E.09.v1",
         "weld/H.04.v1",
         "weld/H.07.v1",
         "weld/H.10.v1",
         "weld/H.12.v1",
+        "weld/H.13.v1",
+        "weld/H.14.v1",
+        "weld/M.12.v1",
+        "weld/M.14.v1",
+        "weld/M.25.v1",
+        "weld/M.26.v1",
+        "weld/M.27.v1",
+        "weld/M.28.v1",
+        "weld/M.30.v1",
+        "weld/M.31.v1",
+        "weld/M.37.v1",
+        "weld/M.38.v1",
+        "weld/M.39.v1",
+        "weld/P.01.v1",
         "weld/S.01.v1",
         "weld/S.06.v1",
         "weld/S.07.v1",
         "weld/S.08.v1",
         "weld/S.09.v1",
-        "weld/M.12.v1",
-        "weld/E.09.v1",
-        "weld/M.14.v1",
         "weld/S.10.v1",
         "weld/S.11.v1",
         "weld/S.12.v1",
@@ -69,15 +83,7 @@
         "weld/S.23.v1",
         "weld/S.24.v1",
         "weld/S.25.v1",
-        "weld/S.26.v1",
-        "weld/H.13.v1",
-        "weld/H.14.v1",
-        "weld/M.25.v1",
-        "weld/M.26.v1",
-        "weld/M.27.v1",
-        "weld/M.28.v1",
-        "weld/M.30.v1",
-        "weld/M.31.v1"
+        "weld/S.26.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -246,6 +252,7 @@
       ],
       "children": [
         "EQ-015/E.11.v1",
+        "EQ-015/E.14.v1",
         "EQ-015/H.01.v1",
         "EQ-015/H.02.v1",
         "EQ-015/H.11.v1",
@@ -270,7 +277,6 @@
         "EQ-015/W.17.v1",
         "EQ-015/W.18.v1",
         "EQ-015/W.19.v1",
-        "EQ-015/E.14.v1",
         "EQ-015/W.20.v1",
         "EQ-015/W.21.v1",
         "EQ-015/W.22.v1",
@@ -450,6 +456,8 @@
       "children": [
         "EQ-015/E.07.v1",
         "EQ-015/E.10.v1",
+        "EQ-015/E.12.v1",
+        "EQ-015/E.15.v1",
         "EQ-015/H.04.v1",
         "EQ-015/H.05.v1",
         "EQ-015/H.08.v1",
@@ -468,20 +476,19 @@
         "EQ-015/H.33.v1",
         "EQ-015/H.34.v1",
         "EQ-015/H.35.v1",
-        "EQ-015/S.01.v1",
-        "EQ-015/W.01.v1",
+        "EQ-015/H.52.v1",
         "EQ-015/M.05.v1",
         "EQ-015/M.06.v1",
         "EQ-015/M.08.v1",
         "EQ-015/M.10.v1",
-        "EQ-015/E.12.v1",
-        "EQ-015/E.15.v1",
         "EQ-015/M.12.v1",
+        "EQ-015/M.16.v1",
+        "EQ-015/S.01.v1",
         "EQ-015/S.13.v1",
         "EQ-015/S.14.v1",
         "EQ-015/S.15.v1",
         "EQ-015/S.16.v1",
-        "EQ-015/M.16.v1"
+        "EQ-015/W.01.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -639,7 +646,6 @@
         }
       ],
       "children": [
-        "EQ-015/M.04.v1",
         "EQ-015/E.01.v1",
         "EQ-015/E.02.v1",
         "EQ-015/E.03.v1",
@@ -648,6 +654,7 @@
         "EQ-015/E.06.v1",
         "EQ-015/E.08.v1",
         "EQ-015/E.09.v1",
+        "EQ-015/E.13.v1",
         "EQ-015/H.03.v1",
         "EQ-015/H.06.v1",
         "EQ-015/H.07.v1",
@@ -655,6 +662,14 @@
         "EQ-015/H.10.v1",
         "EQ-015/H.13.v1",
         "EQ-015/H.14.v1",
+        "EQ-015/H.36.v1",
+        "EQ-015/H.37.v1",
+        "EQ-015/H.38.v1",
+        "EQ-015/H.39.v1",
+        "EQ-015/M.04.v1",
+        "EQ-015/M.07.v1",
+        "EQ-015/M.09.v1",
+        "EQ-015/M.11.v1",
         "EQ-015/S.02.v1",
         "EQ-015/S.03.v1",
         "EQ-015/S.04.v1",
@@ -666,16 +681,6 @@
         "EQ-015/S.10.v1",
         "EQ-015/S.11.v1",
         "EQ-015/S.12.v1",
-        "EQ-015/W.07.v1",
-        "EQ-015/W.08.v1",
-        "EQ-015/W.10.v1",
-        "EQ-015/W.12.v1",
-        "EQ-015/M.07.v1",
-        "EQ-015/M.09.v1",
-        "EQ-015/E.13.v1",
-        "EQ-015/M.11.v1",
-        "EQ-015/H.36.v1",
-        "EQ-015/H.37.v1",
         "EQ-015/S.17.v1",
         "EQ-015/S.18.v1",
         "EQ-015/S.19.v1",
@@ -725,6 +730,10 @@
         "EQ-015/S.63.v1",
         "EQ-015/S.64.v1",
         "EQ-015/S.65.v1",
+        "EQ-015/W.07.v1",
+        "EQ-015/W.08.v1",
+        "EQ-015/W.10.v1",
+        "EQ-015/W.12.v1",
         "EQ-015/W.34.v1",
         "EQ-015/W.35.v1",
         "EQ-015/W.36.v1",
@@ -740,8 +749,6 @@
         "EQ-015/W.46.v1",
         "EQ-015/W.49.v1",
         "EQ-015/W.50.v1",
-        "EQ-015/H.38.v1",
-        "EQ-015/H.39.v1",
         "weld/M.32.v1"
       ],
       "origin": {
@@ -1076,16 +1083,32 @@
         }
       ],
       "children": [
+        "EQ-002/H.05.v1",
+        "weld/E.10.v1",
+        "weld/E.11.v1",
         "weld/H.02.v1",
         "weld/H.06.v1",
         "weld/H.09.v1",
-        "weld/S.02.v1",
-        "weld/S.03.v1",
-        "weld/W.01.v1",
-        "weld/W.02.v1",
+        "weld/H.14.v1",
+        "weld/H.22.v1",
+        "weld/H.23.v1",
+        "weld/H.24.v1",
+        "weld/H.28.v1",
+        "weld/H.29.v1",
         "weld/M.10.v1",
         "weld/M.13.v1",
-        "weld/E.10.v1",
+        "weld/M.15.v1",
+        "weld/M.16.v1",
+        "weld/M.17.v1",
+        "weld/M.18.v1",
+        "weld/M.19.v1",
+        "weld/M.20.v1",
+        "weld/M.21.v1",
+        "weld/M.22.v1",
+        "weld/M.25.v1",
+        "weld/M.26.v1",
+        "weld/S.02.v1",
+        "weld/S.03.v1",
         "weld/S.27.v1",
         "weld/S.28.v1",
         "weld/S.29.v1",
@@ -1102,26 +1125,10 @@
         "weld/S.40.v1",
         "weld/S.41.v1",
         "weld/S.42.v1",
-        "weld/E.11.v1",
-        "weld/M.15.v1",
-        "weld/M.16.v1",
-        "weld/M.17.v1",
-        "weld/M.18.v1",
-        "weld/M.19.v1",
-        "weld/M.20.v1",
-        "weld/M.21.v1",
-        "weld/M.22.v1",
-        "weld/H.14.v1",
-        "weld/M.25.v1",
-        "weld/M.26.v1",
-        "weld/H.22.v1",
-        "weld/H.23.v1",
-        "weld/H.24.v1",
-        "weld/H.28.v1",
+        "weld/W.01.v1",
+        "weld/W.02.v1",
         "weld/W.03.v1",
-        "weld/W.08.v1",
-        "weld/H.29.v1",
-        "EQ-002/H.05.v1"
+        "weld/W.08.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -1317,8 +1324,8 @@
         "weld/H.05.v1",
         "weld/H.08.v1",
         "weld/H.11.v1",
-        "weld/S.04.v1",
-        "weld/S.05.v1",
+        "weld/H.16.v1",
+        "weld/H.17.v1",
         "weld/M.04.v1",
         "weld/M.05.v1",
         "weld/M.06.v1",
@@ -1326,14 +1333,6 @@
         "weld/M.08.v1",
         "weld/M.09.v1",
         "weld/M.11.v1",
-        "weld/S.43.v1",
-        "weld/S.44.v1",
-        "weld/S.45.v1",
-        "weld/S.46.v1",
-        "weld/S.47.v1",
-        "weld/S.48.v1",
-        "weld/S.49.v1",
-        "weld/S.50.v1",
         "weld/M.15.v1",
         "weld/M.16.v1",
         "weld/M.17.v1",
@@ -1341,10 +1340,18 @@
         "weld/M.19.v1",
         "weld/M.23.v1",
         "weld/M.24.v1",
-        "weld/H.16.v1",
-        "weld/H.17.v1",
         "weld/M.25.v1",
-        "weld/M.26.v1"
+        "weld/M.26.v1",
+        "weld/S.04.v1",
+        "weld/S.05.v1",
+        "weld/S.43.v1",
+        "weld/S.44.v1",
+        "weld/S.45.v1",
+        "weld/S.46.v1",
+        "weld/S.47.v1",
+        "weld/S.48.v1",
+        "weld/S.49.v1",
+        "weld/S.50.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -1498,6 +1505,13 @@
       "children": [
         "A.5/E.01.v1",
         "A.5/E.02.v1",
+        "A.5/E.03.v1",
+        "A.5/E.04.v1",
+        "A.5/E.05.v1",
+        "A.5/E.06.v1",
+        "A.5/E.07.v1",
+        "A.5/E.08.v1",
+        "A.5/E.09.v1",
         "A.5/H.01.v1",
         "A.5/H.02.v1",
         "A.5/H.03.v1",
@@ -1517,24 +1531,11 @@
         "A.5/H.17.v1",
         "A.5/H.18.v1",
         "A.5/H.19.v1",
-        "A.5/S.01.v1",
-        "A.5/S.02.v1",
-        "A.5/S.03.v1",
-        "A.5/W.01.v1",
-        "A.5/W.02.v1",
-        "A.5/W.03.v1",
         "A.5/M.02.v1",
         "A.5/M.03.v1",
         "A.5/M.04.v1",
-        "A.5/E.03.v1",
         "A.5/M.05.v1",
         "A.5/M.06.v1",
-        "A.5/E.04.v1",
-        "A.5/E.05.v1",
-        "A.5/E.06.v1",
-        "A.5/E.07.v1",
-        "A.5/E.08.v1",
-        "A.5/E.09.v1",
         "A.5/M.07.v1",
         "A.5/M.08.v1",
         "A.5/M.09.v1",
@@ -1561,6 +1562,9 @@
         "A.5/M.30.v1",
         "A.5/M.31.v1",
         "A.5/M.32.v1",
+        "A.5/S.01.v1",
+        "A.5/S.02.v1",
+        "A.5/S.03.v1",
         "A.5/S.04.v1",
         "A.5/S.05.v1",
         "A.5/S.06.v1",
@@ -1578,6 +1582,9 @@
         "A.5/S.18.v1",
         "A.5/S.19.v1",
         "A.5/S.20.v1",
+        "A.5/W.01.v1",
+        "A.5/W.02.v1",
+        "A.5/W.03.v1",
         "A.5/W.04.v1",
         "A.5/W.05.v1",
         "A.5/W.06.v1",
@@ -1733,11 +1740,13 @@
         }
       ],
       "children": [
+        "A.8/E.01.v1",
+        "A.8/E.02.v1",
+        "A.8/E.03.v1",
         "A.8/H.01.v1",
         "A.8/H.02.v1",
         "A.8/H.03.v1",
         "A.8/H.04.v1",
-        "A.8/S.01.v1",
         "A.8/M.02.v1",
         "A.8/M.03.v1",
         "A.8/M.04.v1",
@@ -1753,16 +1762,14 @@
         "A.8/M.14.v1",
         "A.8/M.15.v1",
         "A.8/M.16.v1",
-        "A.8/E.01.v1",
         "A.8/M.17.v1",
         "A.8/M.18.v1",
         "A.8/M.19.v1",
-        "A.8/E.02.v1",
-        "A.8/E.03.v1",
         "A.8/M.21.v1",
         "A.8/M.22.v1",
         "A.8/M.23.v1",
-        "A.8/M.24.v1"
+        "A.8/M.24.v1",
+        "A.8/S.01.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -11003,13 +11010,13 @@
         }
       ],
       "children": [
-        "weld/H.35.v1",
-        "weld/H.36.v1",
         "EQ-015/H.42.v1",
-        "weld/H.37.v1",
         "EQ-015/H.43.v1",
         "EQ-015/H.44.v1",
-        "EQ-015/H.48.v1"
+        "EQ-015/H.48.v1",
+        "weld/H.35.v1",
+        "weld/H.36.v1",
+        "weld/H.37.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -11145,10 +11152,10 @@
       ],
       "children": [
         "EQ-015/H.42.v1",
-        "weld/H.37.v1",
         "EQ-015/H.43.v1",
         "EQ-015/H.44.v1",
-        "EQ-015/H.48.v1"
+        "EQ-015/H.48.v1",
+        "weld/H.37.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -13583,10 +13590,10 @@
         }
       ],
       "children": [
-        "weld/H.29.v1",
         "A.8/M.22.v1",
         "A.8/M.23.v1",
-        "EQ-015/H.50.v1"
+        "EQ-015/H.50.v1",
+        "weld/H.29.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -17423,6 +17430,7 @@
         }
       ],
       "children": [
+        "weld/B.01.v1",
         "weld/S.10.v1",
         "weld/S.11.v1",
         "weld/S.12.v1",
@@ -26436,7 +26444,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "weld/S.51.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -27033,14 +27043,14 @@
         }
       ],
       "children": [
-        "EQ-015/H.40.v1",
-        "weld/H.35.v1",
-        "weld/H.36.v1",
         "A.8/M.20.v1",
-        "EQ-015/H.42.v1",
         "A.8/M.21.v1",
+        "EQ-015/H.40.v1",
+        "EQ-015/H.42.v1",
         "EQ-015/H.48.v1",
-        "EQ-015/H.49.v1"
+        "EQ-015/H.49.v1",
+        "weld/H.35.v1",
+        "weld/H.36.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -31207,22 +31217,22 @@
         "EQ-002/E.06.v1",
         "EQ-002/E.07.v1",
         "EQ-002/E.08.v1",
-        "EQ-002/H.01.v1",
-        "EQ-002/H.02.v1",
-        "EQ-002/H.03.v1",
-        "EQ-002/H.04.v1",
-        "EQ-002/W.01.v1",
-        "EQ-002/M.01.v1",
-        "EQ-002/M.02.v1",
         "EQ-002/E.09.v1",
         "EQ-002/E.10.v1",
         "EQ-002/E.11.v1",
         "EQ-002/E.12.v1",
-        "EQ-002/W.02.v1",
-        "EQ-002/W.03.v1",
+        "EQ-002/H.01.v1",
+        "EQ-002/H.02.v1",
+        "EQ-002/H.03.v1",
+        "EQ-002/H.04.v1",
         "EQ-002/H.05.v1",
         "EQ-002/H.06.v1",
-        "EQ-002/M.04.v1"
+        "EQ-002/M.01.v1",
+        "EQ-002/M.02.v1",
+        "EQ-002/M.04.v1",
+        "EQ-002/W.01.v1",
+        "EQ-002/W.02.v1",
+        "EQ-002/W.03.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -39179,7 +39189,11 @@
           "derived_via": "split"
         }
       ],
-      "children": [],
+      "children": [
+        "weld/P.02.v1",
+        "weld/P.03.v1",
+        "weld/P.04.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -41911,7 +41925,9 @@
           "derived_via": "split"
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-015/H.51.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -65218,7 +65234,12 @@
           "evidence": "relativity/README.md:10 \"`relativity/` is a **readout** of the master retained-distinction root\" || genesis_root.json code=EQ-001, name=\"Primordial difference\", statement=\"∃ a,b : a ≠ b\", role=\"root-axiom\" -- the object each domain README calls \"the master retained-distinction root\""
         }
       ],
-      "children": [],
+      "children": [
+        "CMC/M.19.v1",
+        "EQ-001/P.74.v1",
+        "EQ-001/P.76.v1",
+        "EQ-001/P.78.v1"
+      ],
       "origin": {
         "source": "domain_registry",
         "repo_anchor": {
@@ -65319,7 +65340,9 @@
           "evidence": "relativity/README.md:10 \"`relativity/` is a **readout** of the master retained-distinction root\" || genesis_root.json code=EQ-001, name=\"Primordial difference\", statement=\"∃ a,b : a ≠ b\", role=\"root-axiom\" -- the object each domain README calls \"the master retained-distinction root\""
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-001/P.70.v1"
+      ],
       "origin": {
         "source": "domain_registry",
         "repo_anchor": {
@@ -67682,7 +67705,9 @@
           "evidence": "relativity/README.md:10 \"`relativity/` is a **readout** of the master retained-distinction root\" || genesis_root.json code=EQ-001, name=\"Primordial difference\", statement=\"∃ a,b : a ≠ b\", role=\"root-axiom\" -- the object each domain README calls \"the master retained-distinction root\""
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-001/P.71.v1"
+      ],
       "origin": {
         "source": "domain_registry",
         "repo_anchor": {
@@ -67995,7 +68020,14 @@
           "evidence": "relativity/README.md:10 \"`relativity/` is a **readout** of the master retained-distinction root\" || genesis_root.json code=EQ-001, name=\"Primordial difference\", statement=\"∃ a,b : a ≠ b\", role=\"root-axiom\" -- the object each domain README calls \"the master retained-distinction root\""
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-001/P.72.v1",
+        "EQ-001/P.73.v1",
+        "EQ-001/P.75.v1",
+        "EQ-001/P.77.v1",
+        "EQ-015/P.118.v1",
+        "EQ-015/P.120.v1"
+      ],
       "origin": {
         "source": "domain_registry",
         "repo_anchor": {
@@ -68844,7 +68876,9 @@
           "evidence": "rule's own statement: \"...stepped by MQ.08.\" (relativity/RULE_REGISTRY.json RB-P2); genesis_root.json code=MQ08-stepper, genesis_id=\"MQ.08\", name=\"MQ.08 discrete stepper\", section=\"PART II — THE UNIVERSAL EQUATION > II.1 Fundamental Computational Root: MQ.08 Discrete Stepper\" -- the best-evidenced match; NOTE genesis_root.json also carries a second, different-sense alias \"MQ.08\" on code=EQ-015 (\"Universal spine PDE\", aliases include \"MQ.08\"); this is an open disambiguation in genesis_root.json itself (N3-owned file, not resolved here), recorded rather than silently picked."
         }
       ],
-      "children": [],
+      "children": [
+        "MQ08-stepper/M.01.v1"
+      ],
       "origin": {
         "source": "domain_registry",
         "repo_anchor": {
@@ -72629,7 +72663,9 @@
           "evidence": "genesis_root.json Face.10.IdentifiabilityGate: 'rank(A) = (number of candidate coefficients) -> law is identifiable' -- Phi_FI is this readout_universe file's own quantitative forced-identification-fraction reading of the same identifiability gate concept (both measure whether a law/labeling is uniquely forced from data)."
         }
       ],
-      "children": [],
+      "children": [
+        "Face.10.IdentifiabilityGate/M.01.v1"
+      ],
       "origin": {
         "source": "readout_universe",
         "repo_anchor": {
@@ -72733,8 +72769,8 @@
         }
       ],
       "children": [
-        "EQ-015/M.14.v1",
-        "EQ-009/E.03.v1"
+        "EQ-009/E.03.v1",
+        "EQ-015/M.14.v1"
       ],
       "origin": {
         "source": "readout_universe",
@@ -86873,7 +86909,9 @@
           "evidence": "same spine-PDE quotient basis as other P-domain imports (Domain Registration Standard, q_D of EQ-015)."
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-015/P.119.v1"
+      ],
       "origin": {
         "source": "solver_arc",
         "repo_anchor": {
@@ -94019,7 +94057,9 @@
           "evidence": "sampled row content is classical/engineering physics (mechanics, thermodynamics, EM, optics, fluids, control); read against the spine PDE's physics quotient q_D of EQ-015 per the Domain Registration Standard."
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-015/P.118.v1"
+      ],
       "origin": {
         "source": "solver_arc",
         "repo_anchor": {
@@ -94133,7 +94173,9 @@
           "evidence": "sampled row content is classical/engineering physics (mechanics, thermodynamics, EM, optics, fluids, control); read against the spine PDE's physics quotient q_D of EQ-015 per the Domain Registration Standard."
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-015/P.120.v1"
+      ],
       "origin": {
         "source": "solver_arc",
         "repo_anchor": {
@@ -116129,7 +116171,10 @@
           "evidence": "declared in coq/solver-arc/formal/CMC_PhysicsClass_Instances.v line 115, one of the files constituting the CMC root per registry/root_candidates_report.md and founder ruling BBL-2026-09-07-207."
         }
       ],
-      "children": [],
+      "children": [
+        "CMC/M.19.v1",
+        "CMC/P.16.v1"
+      ],
       "origin": {
         "source": "solver_arc",
         "repo_anchor": {
@@ -123222,9 +123267,9 @@
         }
       ],
       "children": [
+        "weld/H.51.v1",
         "weld/M.35.v1",
-        "weld/M.36.v1",
-        "weld/H.51.v1"
+        "weld/M.36.v1"
       ],
       "origin": {
         "source": "Blackbox Log BBL-2026-09-07-217 (founder ruling), applied first in the Economics of Expertise manuscript v1.0.1",
@@ -159585,6 +159630,4598 @@
           }
         }
       }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-01",
+      "code": "EQ-015/H.51.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "Barrier-forward-invariance-load-capacity"
+      ],
+      "name": "Barrier/forward-invariance admissibility certificate for bounded load-capacity execution dynamics",
+      "statement": {
+        "latest": "dL/dt = f(L,C,u), buffer b:=C-L; barrier condition db/dt >= -alpha(b) preserves forward-invariance of {b>=0}; No-Go Lemma: if worst-case load growth exceeds bounded architectural control u(t)'s admissible range, execution failure is forced regardless of policy.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "dL/dt = f(L,C,u), buffer b:=C-L; barrier condition db/dt >= -alpha(b) preserves forward-invariance of {b>=0}; No-Go Lemma: if worst-case load growth exceeds bounded architectural control u(t)'s admissible range, execution failure is forced regardless of policy.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-01, origin: High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/S.17.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents",
+        "doi": "10.5281/zenodo.18264276",
+        "record_id": 18264276,
+        "page": null,
+        "eq_label": "(1)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Lemma",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_015__H_51_v1.v",
+        "identifier": "EQ_015__H_51_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(1)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "unlabeled-1",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(2)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(3)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(4)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(5)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(6)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(7)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(8)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(9)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(10)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(11)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(12)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(13)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(14)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(15)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(16)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(17)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        },
+        {
+          "record_id": 18264276,
+          "doi": "10.5281/zenodo.18264276",
+          "eq_label": "(18)",
+          "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-02",
+      "code": "EQ-015/H.52.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "SOMA-READ"
+      ],
+      "name": "SOMA-READ causal readout chain S(t)->R(t)->{E(t),P(t)}->A(t) for somatic agency",
+      "statement": {
+        "latest": "Causal chain: S(t) [unknown-endpoint x reduced-agency contract] -> R(t) [recoverability readout] -> {E(t),P(t)} [endpoint observability, defensive policy] -> A(t) [action/policy transition]; preregistered human protocol, FROZEN draft pre-ethics.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Causal chain: S(t) [unknown-endpoint x reduced-agency contract] -> R(t) [recoverability readout] -> {E(t),P(t)} [endpoint observability, defensive policy] -> A(t) [action/policy transition]; preregistered human protocol, FROZEN draft pre-ethics.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-02, origin: SOMA-READ v1.0: A Preregistered Causal Readout Perturbation Study of Somatic Agency and Endpoint Observability — Flagship Human Empirical Protocol (FROZEN draft, pre-ethics)",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/M.02.v1",
+          "derived_via": "instance_of"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "SOMA-READ v1.0: A Preregistered Causal Readout Perturbation Study of Somatic Agency and Endpoint Observability — Flagship Human Empirical Protocol (FROZEN draft, pre-ethics)",
+        "doi": "10.5281/zenodo.22302190",
+        "record_id": 22302190,
+        "page": 2,
+        "eq_label": "unlabeled-1"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Empirical",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_015__H_52_v1.v",
+        "identifier": "EQ_015__H_52_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 22302190,
+          "doi": "10.5281/zenodo.22302190",
+          "eq_label": "unlabeled-1",
+          "title": "SOMA-READ v1.0: A Preregistered Causal Readout Perturbation Study of Somatic Agency and Endpoint Observability — Flagship Human Empirical Protocol (FROZEN draft, pre-ethics)"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-03",
+      "code": "weld/B.01.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "B",
+      "aliases": [
+        "gamma_eff-derating"
+      ],
+      "name": "Environment-coupled admissibility bandwidth (external-covariate derating of causal recovery bandwidth)",
+      "statement": {
+        "latest": "gamma_eff(PM2.5) = gamma_0 * D(PM2.5), D a monotone-decreasing derating function of ambient PM2.5 concentration, thresholded at operational bands; reduces admissible recovery bandwidth under poor air quality.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "gamma_eff(PM2.5) = gamma_0 * D(PM2.5), D a monotone-decreasing derating function of ambient PM2.5 concentration, thresholded at operational bands; reduces admissible recovery bandwidth under poor air quality.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-03, origin: A Causal–Spectral Planning Specification for AI-Coached Endurance Training Admissible Load–Recovery Design with No-Go Constraints and Environment Derating",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/S.01.v1",
+          "derived_via": "specialises"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "A Causal–Spectral Planning Specification for AI-Coached Endurance Training Admissible Load–Recovery Design with No-Go Constraints and Environment Derating",
+        "doi": "10.5281/zenodo.18404721",
+        "record_id": 18404721,
+        "page": 2,
+        "eq_label": "(4)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__B_01_v1.v",
+        "identifier": "weld__B_01_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18404721,
+          "doi": "10.5281/zenodo.18404721",
+          "eq_label": "(4)",
+          "title": "A Causal–Spectral Planning Specification for AI-Coached Endurance Training Admissible Load–Recovery Design with No-Go Constraints and Environment Derating"
+        },
+        {
+          "record_id": 18404721,
+          "doi": "10.5281/zenodo.18404721",
+          "eq_label": "(5)",
+          "title": "A Causal–Spectral Planning Specification for AI-Coached Endurance Training Admissible Load–Recovery Design with No-Go Constraints and Environment Derating"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-04",
+      "code": "weld/M.37.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "IPR-boundary-regime"
+      ],
+      "name": "IPR-based structural-localization fingerprint and quantile boundary-regime closure rule for graph-Laplacian diagnostics",
+      "statement": {
+        "latest": "IPR(mode_k) = sum_i |v_ki|^4 / (sum_i |v_ki|^2)^2; Delta := IPR(most-localized mode)/mean(IPR); Boundary-Regime Closure: system flagged 'bounded' iff Delta exceeds a quantile-derived tail threshold over an ensemble.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "IPR(mode_k) = sum_i |v_ki|^4 / (sum_i |v_ki|^2)^2; Delta := IPR(most-localized mode)/mean(IPR); Boundary-Regime Closure: system flagged 'bounded' iff Delta exceeds a quantile-derived tail threshold over an ensemble.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-04, origin: Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.01.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis",
+        "doi": "10.5281/zenodo.18372525",
+        "record_id": 18372525,
+        "page": 6,
+        "eq_label": "unlabeled-6"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_37_v1.v",
+        "identifier": "weld__M_37_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18372525,
+          "doi": "10.5281/zenodo.18372525",
+          "eq_label": "unlabeled-6",
+          "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+        },
+        {
+          "record_id": 18372525,
+          "doi": "10.5281/zenodo.18372525",
+          "eq_label": "unlabeled-7",
+          "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+        },
+        {
+          "record_id": 18372525,
+          "doi": "10.5281/zenodo.18372525",
+          "eq_label": "unlabeled-8",
+          "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+        },
+        {
+          "record_id": 18372525,
+          "doi": "10.5281/zenodo.18372525",
+          "eq_label": "unlabeled-9",
+          "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+        },
+        {
+          "record_id": 18372525,
+          "doi": "10.5281/zenodo.18372525",
+          "eq_label": "unlabeled-10",
+          "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+        },
+        {
+          "record_id": 18372525,
+          "doi": "10.5281/zenodo.18372525",
+          "eq_label": "unlabeled-11",
+          "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-05",
+      "code": "weld/M.38.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "Interactive-Causal-Memory",
+        "record-asymmetry-collapse"
+      ],
+      "name": "Interactive Causal Memory: multi-agent record-asymmetry -> collapse/statistical-emergence bridge",
+      "statement": {
+        "latest": "Def 7.1: collapse triggered when misaligned-record rate r_mis(t) exceeds aligned-record rate r_al(t) by a threshold, causing record asymmetry; Thm 8.3: in the N-agent ensemble limit, collapse-event statistics converge to a law determined only by the aggregate (r_al,r_mis) distribution (statistical emergence), independent of microscopic agent identity.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Def 7.1: collapse triggered when misaligned-record rate r_mis(t) exceeds aligned-record rate r_al(t) by a threshold, causing record asymmetry; Thm 8.3: in the N-agent ensemble limit, collapse-event statistics converge to a law determined only by the aggregate (r_al,r_mis) distribution (statistical emergence), independent of microscopic agent identity.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-05, origin: Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.01.v1",
+          "derived_via": "specialises"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems",
+        "doi": "10.5281/zenodo.18213737",
+        "record_id": 18213737,
+        "page": 3,
+        "eq_label": "(12)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_38_v1.v",
+        "identifier": "weld__M_38_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18213737,
+          "doi": "10.5281/zenodo.18213737",
+          "eq_label": "(12)",
+          "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+        },
+        {
+          "record_id": 18213737,
+          "doi": "10.5281/zenodo.18213737",
+          "eq_label": "(13)",
+          "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+        },
+        {
+          "record_id": 18213737,
+          "doi": "10.5281/zenodo.18213737",
+          "eq_label": "(19)",
+          "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+        },
+        {
+          "record_id": 18213737,
+          "doi": "10.5281/zenodo.18213737",
+          "eq_label": "(20)",
+          "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+        },
+        {
+          "record_id": 18213737,
+          "doi": "10.5281/zenodo.18213737",
+          "eq_label": "(21)",
+          "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+        },
+        {
+          "record_id": 18213737,
+          "doi": "10.5281/zenodo.18213737",
+          "eq_label": "(11)-COLLAPSE",
+          "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+        },
+        {
+          "record_id": 18213737,
+          "doi": "10.5281/zenodo.18213737",
+          "eq_label": "(12)-COLLAPSE",
+          "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-06",
+      "code": "CMC/P.16.v1",
+      "root": "CMC",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "covariant-action-causal-transport",
+        "Lyapunov-stability-gate"
+      ],
+      "name": "Covariant action and weighted Lyapunov stability gate for causal transport",
+      "statement": {
+        "latest": "F[s] = Integral d^3x [ (kappa/2)(grad s)^2 + Psi(s) ]  (free-energy functional whose Euler-Lagrange equation reproduces the single-pole causal-transport/Cattaneo relation); plus a weighted Lyapunov stability-gate functional (integrand H_tilde, global dissipation condition) for the transport system and its FLRW/two-flux-superfluid extensions.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "F[s] = Integral d^3x [ (kappa/2)(grad s)^2 + Psi(s) ]  (free-energy functional whose Euler-Lagrange equation reproduces the single-pole causal-transport/Cattaneo relation); plus a weighted Lyapunov stability-gate functional (integrand H_tilde, global dissipation condition) for the transport system and its FLRW/two-flux-superfluid extensions.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-06, origin: Cosmology from Finite Causal Memory",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "CMC/P.06.v1",
+          "derived_via": "derives"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Cosmology from Finite Causal Memory",
+        "doi": "10.5281/zenodo.18208238",
+        "record_id": 18208238,
+        "page": 1,
+        "eq_label": "(1)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Postulate",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/CMC__P_16_v1.v",
+        "identifier": "CMC__P_16_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(1)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(2)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(3)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(4)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(1)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(2)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(3)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(4)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(5)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(6)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(7)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(8)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(9)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(11)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(12)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(14)",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(17)-(20) E1-E3",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(22)-(23) A2",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(51)-(54) L3",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Cj-COS",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "P-COS1..5",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-07",
+      "code": "Face.10.IdentifiabilityGate/M.01.v1",
+      "root": "Face.10.IdentifiabilityGate",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "operational-identity-by-protocol",
+        "G-hbar-non-circular"
+      ],
+      "name": "Non-circular operational identity-by-protocol theorem for G and hbar",
+      "statement": {
+        "latest": "Delta_phi = S / hbar_star  (an emergent/operationally-defined coupling constant hbar_star, from a phase-action calibration, and g_star, from a flux-normalization calibration, are shown to equal the metrologically-defined constant hbar/G by construction, while a companion theorem proves no protocol can predict the constant's numeric value -- a UV no-go).",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Delta_phi = S / hbar_star  (an emergent/operationally-defined coupling constant hbar_star, from a phase-action calibration, and g_star, from a flux-normalization calibration, are shown to equal the metrologically-defined constant hbar/G by construction, while a companion theorem proves no protocol can predict the constant's numeric value -- a UV no-go).",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-07, origin: Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "Face.10.IdentifiabilityGate/E.01.v1",
+          "derived_via": "instance_of"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity",
+        "doi": "10.5281/zenodo.18202581",
+        "record_id": 18202581,
+        "page": 1,
+        "eq_label": "(1)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/Face_10_IdentifiabilityGate__M_01_v1.v",
+        "identifier": "Face_10_IdentifiabilityGate__M_01_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(1)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        },
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(2)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        },
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(3)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        },
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(4)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        },
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(5)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        },
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(6)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        },
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(7)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        },
+        {
+          "record_id": 18202581,
+          "doi": "10.5281/zenodo.18202581",
+          "eq_label": "(8)",
+          "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-08",
+      "code": "weld/S.51.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "S",
+      "aliases": [
+        "causal-access-shrinkage"
+      ],
+      "name": "Causal-access-constrained learning: mask-weighted shrinkage theorem",
+      "statement": {
+        "latest": "A(t) := R_avail(t) / C_task(t); per-feature causal-access mask X_M, causal-access-constrained risk R_CA, mask-weighted normal equations Sigma_M*theta=gamma_M; Monotone Shrinkage Theorem: theta*(p)->0 as access probability p->0, for spuriously-correlated features.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "A(t) := R_avail(t) / C_task(t); per-feature causal-access mask X_M, causal-access-constrained risk R_CA, mask-weighted normal equations Sigma_M*theta=gamma_M; Monotone Shrinkage Theorem: theta*(p)->0 as access probability p->0, for spuriously-correlated features.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-08, origin: Causal Guardrails for Artificial Intelligence",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.06.v1",
+          "derived_via": "specialises"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Causal Guardrails for Artificial Intelligence",
+        "doi": "10.5281/zenodo.18176092",
+        "record_id": 18176092,
+        "page": 2,
+        "eq_label": "(2)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__S_51_v1.v",
+        "identifier": "weld__S_51_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(2)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(3)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(4)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(5)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(1)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(Thm.1 eq)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(Thm.2 eq)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(bound eq, App.B)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-09",
+      "code": "weld/P.01.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "record-cost-asymmetry-no-go"
+      ],
+      "name": "Category-theoretic no-go: persistent class bias requires record-cost asymmetry",
+      "statement": {
+        "latest": "S[F] = sum_i ell(f_i), for F=(f_tau o ... o f_1), ell(id)=0, ell(g o f)=ell(g)+ell(f); No-Go Theorem: a persistent class bias (e.g. matter/antimatter-style asymmetry) requires an asymmetry in record-formation cost, via a Gibbs-measure path-selection argument and a large-beta concentration theorem.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "S[F] = sum_i ell(f_i), for F=(f_tau o ... o f_1), ell(id)=0, ell(g o f)=ell(g)+ell(f); No-Go Theorem: a persistent class bias (e.g. matter/antimatter-style asymmetry) requires an asymmetry in record-formation cost, via a Gibbs-measure path-selection argument and a large-beta concentration theorem.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-09, origin: Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.01.v1",
+          "derived_via": "specialises"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures",
+        "doi": "10.5281/zenodo.18113633",
+        "record_id": 18113633,
+        "page": 1,
+        "eq_label": "Def 1.1"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__P_01_v1.v",
+        "identifier": "weld__P_01_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Def 1.1",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Def 1.2",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Def 1.3",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Thm 2.1",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Prop 3.1",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Prop 3.2",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Selection measure",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Lemma 5.1",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Prop 5.1",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "log eta approx",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "DP recurrence",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        },
+        {
+          "record_id": 18113633,
+          "doi": "10.5281/zenodo.18113633",
+          "eq_label": "Discrete Laplace principle",
+          "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-10",
+      "code": "weld/M.39.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "Causal-State-History"
+      ],
+      "name": "Causal State History: non-Markovian generalisation axioms and cross-domain theorems",
+      "statement": {
+        "latest": "H_t is an operational record constructed from past states {X_s}_{s<=t} via a reproducible protocol with fixed tolerance (epsilon, SNR); generalises S_{n+1}=F(S_n,u_n,c_n,T_n) to Psi(t)=F(Psi(t),{Psi(t')}_{t'<=t}) with an explicit semigroup/generator structure, three axioms (order-sensitivity, monotone records, dissipation-with-memory), and three cross-domain theorems (a finite-volume log-Sobolev inequality on lattice histories, a history-aware flux-closure bound for Navier-Stokes, a diamond-norm contraction bound for quantum measurement).",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "H_t is an operational record constructed from past states {X_s}_{s<=t} via a reproducible protocol with fixed tolerance (epsilon, SNR); generalises S_{n+1}=F(S_n,u_n,c_n,T_n) to Psi(t)=F(Psi(t),{Psi(t')}_{t'<=t}) with an explicit semigroup/generator structure, three axioms (order-sensitivity, monotone records, dissipation-with-memory), and three cross-domain theorems (a finite-volume log-Sobolev inequality on lattice histories, a history-aware flux-closure bound for Navier-Stokes, a diamond-norm contraction bound for quantum measurement).",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-10, origin: Note: Causal State History as a Structural Constraint (Discussion Route)",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.01.v1",
+          "derived_via": "specialises"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Note: Causal State History as a Structural Constraint (Discussion Route)",
+        "doi": "10.5281/zenodo.18105213",
+        "record_id": 18105213,
+        "page": 1,
+        "eq_label": "Def 1"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_39_v1.v",
+        "identifier": "weld__M_39_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Def 1",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Def 2",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Axiom A2",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Axiom A3",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Axiom A4",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Thm 1",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Thm 2",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18105213,
+          "doi": "10.5281/zenodo.18105213",
+          "eq_label": "Thm 3",
+          "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+        },
+        {
+          "record_id": 18103092,
+          "doi": "10.5281/zenodo.18103092",
+          "eq_label": "(1)",
+          "title": "Post–2025 Cosmological Forecast Note under the Causal State History Principle"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-11",
+      "code": "EQ-001/P.70.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "causal-accessibility-horizon"
+      ],
+      "name": "Causal accessibility horizon / early-warning control necessity",
+      "statement": {
+        "latest": "Continuum: t_d <= T - d_theta(Gamma,O); Network: t_d <= T - min_{g,o} d_G(g,o); Budget: T_avail = T - t_d - dt_proc - dt_verify - dt_deploy >= 0.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Continuum: t_d <= T - d_theta(Gamma,O); Network: t_d <= T - min_{g,o} d_G(g,o); Budget: T_avail = T - t_d - dt_proc - dt_verify - dt_deploy >= 0.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-11, origin: Causal Memory Transport Equations",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.36.v1",
+          "derived_via": "derives"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Causal Memory Transport Equations",
+        "doi": "10.5281/zenodo.18075029",
+        "record_id": 18075029,
+        "page": 3,
+        "eq_label": "(35)-(37) App C"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_70_v1.v",
+        "identifier": "EQ_001__P_70_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18075029,
+          "doi": "10.5281/zenodo.18075029",
+          "eq_label": "(35)-(37) App C",
+          "title": "Causal Memory Transport Equations"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(1)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(2)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(3)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(4)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(5)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(6)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(7)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(A1)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18055068,
+          "doi": "10.5281/zenodo.18055068",
+          "eq_label": "(A2)",
+          "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+        },
+        {
+          "record_id": 18053352,
+          "doi": "10.5281/zenodo.18053352",
+          "eq_label": "(6)",
+          "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+        },
+        {
+          "record_id": 18053352,
+          "doi": "10.5281/zenodo.18053352",
+          "eq_label": "(7)",
+          "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+        },
+        {
+          "record_id": 18053352,
+          "doi": "10.5281/zenodo.18053352",
+          "eq_label": "(9)",
+          "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+        },
+        {
+          "record_id": 18053352,
+          "doi": "10.5281/zenodo.18053352",
+          "eq_label": "(11)",
+          "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-12",
+      "code": "EQ-001/P.71.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "BH-singularity-regularization"
+      ],
+      "name": "Black-hole singularity regularization under causal memory",
+      "statement": {
+        "latest": "tau*d^2(phi)/dt^2 + d(phi)/dt = D*Laplacian(phi); finite core radius r_min ~ (G*M*tau^2)^(1/3) replaces the point singularity, a finite maximum core density, and matching quasi-normal-mode-frequency/echo-delay predictions.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "tau*d^2(phi)/dt^2 + d(phi)/dt = D*Laplacian(phi); finite core radius r_min ~ (G*M*tau^2)^(1/3) replaces the point singularity, a finite maximum core density, and matching quasi-normal-mode-frequency/echo-delay predictions.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-12, origin: Black Holes in the Causal-Memory Framework: A Sketch",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.59.v1",
+          "derived_via": "specialises"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Black Holes in the Causal-Memory Framework: A Sketch",
+        "doi": "10.5281/zenodo.18059378",
+        "record_id": 18059378,
+        "page": 1,
+        "eq_label": "(none, telegraph eq)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Postulate",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_71_v1.v",
+        "identifier": "EQ_001__P_71_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, telegraph eq)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, horizon def)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, r_min)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, rho_max)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, T_H)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, rho_out)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, omega_CM)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18059378,
+          "doi": "10.5281/zenodo.18059378",
+          "eq_label": "(none, echo delay)",
+          "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Dr-BH1/BH2/BH3",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "P-BH1/BH2",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(15)-(20)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-13",
+      "code": "EQ-001/P.72.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "cosmological-constant-inverse-causal-time"
+      ],
+      "name": "Cosmological constant as inverse cosmic causal time",
+      "statement": {
+        "latest": "Lambda ~ 1/tau_cosmic^2; tau_cosmic ~ H0^-1 ~ 1e17 s; vacuum-energy-density estimate rho_Lambda ~ hbar*c/(tau_cosmic^2*ell_P^3) ~ 1e-47 GeV^4; predicted dark-energy equation-of-state deviation w(z)=-1+epsilon(z).",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Lambda ~ 1/tau_cosmic^2; tau_cosmic ~ H0^-1 ~ 1e17 s; vacuum-energy-density estimate rho_Lambda ~ hbar*c/(tau_cosmic^2*ell_P^3) ~ 1e-47 GeV^4; predicted dark-energy equation-of-state deviation w(z)=-1+epsilon(z).",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-13, origin: Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.62.v1",
+          "derived_via": "bridges"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology",
+        "doi": "10.5281/zenodo.17828120",
+        "record_id": 17828120,
+        "page": 3,
+        "eq_label": "(10)-(11)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Empirical",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_72_v1.v",
+        "identifier": "EQ_001__P_72_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(10)-(11)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(12)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(13)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-14",
+      "code": "EQ-015/P.118.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "mass-free-identity"
+      ],
+      "name": "The mass-free identity: Schwarzschild radius x causal-memory time = Planck length squared",
+      "statement": {
+        "latest": "R_s * c * tau_c = G*hbar/c^3 = ell_P^2.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "R_s * c * tau_c = G*hbar/c^3 = ell_P^2.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-14, origin: Mass as Causal Memory: A Structural Unication of Black Hole Physics",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/P.111.v1",
+          "derived_via": "bridges"
+        },
+        {
+          "code": "EQ-001/P.62.v1",
+          "derived_via": "bridges"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Mass as Causal Memory: A Structural Unication of Black Hole Physics",
+        "doi": "10.5281/zenodo.17878952",
+        "record_id": 17878952,
+        "page": 2,
+        "eq_label": "(4)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_015__P_118_v1.v",
+        "identifier": "EQ_015__P_118_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(16)-(17)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(3)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(4)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(27) Theorem 5.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(54)-(55) Theorem 10.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.B, route4 Schwarzschild-Compton)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec VI, black holes)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-15",
+      "code": "weld/P.02.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "Deborah-number"
+      ],
+      "name": "The Deborah number for telegraph-causal outflows",
+      "statement": {
+        "latest": "De := tau * Omega; observational inference rule D/tau ~ (ell*Rg/Delta t)^2 from a measured outflow lag.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "De := tau * Omega; observational inference rule D/tau ~ (ell*Rg/Delta t)^2 from a measured outflow lag.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-15, origin: The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/S.12.v1",
+          "derived_via": "instance_of"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783",
+        "doi": "10.5281/zenodo.17922382",
+        "record_id": 17922382,
+        "page": 2,
+        "eq_label": "(5)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Empirical",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__P_02_v1.v",
+        "identifier": "weld__P_02_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17922382,
+          "doi": "10.5281/zenodo.17922382",
+          "eq_label": "(5)",
+          "title": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783"
+        },
+        {
+          "record_id": 17922382,
+          "doi": "10.5281/zenodo.17922382",
+          "eq_label": "(7)",
+          "title": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783"
+        },
+        {
+          "record_id": 17922382,
+          "doi": "10.5281/zenodo.17922382",
+          "eq_label": "(8)",
+          "title": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-16",
+      "code": "EQ-001/P.73.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "global-complexity-axiom",
+        "complexity-from-causal-memory"
+      ],
+      "name": "Complexity as depth in units of causal-memory time (global complexity axiom)",
+      "statement": {
+        "latest": "C(t) := t / tau_c^micro; kappa(x,t):=1/tau_c^micro(x,t); continuity/telegraph equations for a 'complexity density' field; macroscopic relaxation (black-hole ringdown) tied to tau_c^micro times a large factor.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "C(t) := t / tau_c^micro; kappa(x,t):=1/tau_c^micro(x,t); continuity/telegraph equations for a 'complexity density' field; macroscopic relaxation (black-hole ringdown) tied to tau_c^micro times a large factor.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-16, origin: Complexity from Causal Memory: A τc-Based Physics of Depth",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.62.v1",
+          "derived_via": "bridges"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Complexity from Causal Memory: A τc-Based Physics of Depth",
+        "doi": "10.5281/zenodo.17913256",
+        "record_id": 17913256,
+        "page": 1,
+        "eq_label": "(C2)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Postulate",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_73_v1.v",
+        "identifier": "EQ_001__P_73_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(4)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(5)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(6)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(7)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(8)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(C1)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(C2)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(C3)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-17",
+      "code": "EQ-001/P.74.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "covariant-damped-stiff-field-eq"
+      ],
+      "name": "The covariant damped-stiff field equation (telegraph + stiffness term)",
+      "statement": {
+        "latest": "Box(Phi) + 2*lambda*(u^mu grad_mu Phi) + Omega^2*Phi = 0; reduces to ordinary Cattaneo-telegraph dynamics when Omega=0; yields a mass-hierarchy relation and a MOND-like acceleration scale a0 ~= c*H0.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Box(Phi) + 2*lambda*(u^mu grad_mu Phi) + Omega^2*Phi = 0; reduces to ordinary Cattaneo-telegraph dynamics when Omega=0; yields a mass-hierarchy relation and a MOND-like acceleration scale a0 ~= c*H0.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-17, origin: Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\"",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.35.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\"",
+        "doi": "10.5281/zenodo.17767416",
+        "record_id": 17767416,
+        "page": 1,
+        "eq_label": "(1)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Postulate",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_74_v1.v",
+        "identifier": "EQ_001__P_74_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(1)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(2)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(6)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(7)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(8)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17993686,
+          "doi": "10.5281/zenodo.17993686",
+          "eq_label": "(Dr-Y2)",
+          "title": "The Causal-Memory Program: Canon"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-18",
+      "code": "weld/P.03.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "Yukawa-Newtonian-potential"
+      ],
+      "name": "Yukawa-corrected Newtonian potential for a point source",
+      "statement": {
+        "latest": "Phi_N(r) = -(G*M/r) * [1 - e^{-r/ell_c}], derived from an informational Poisson relation Laplacian(Phi_I)=kappa_I*s and a Helmholtz coarse-graining filter (1-ell_c^2 Laplacian)s_cg=s0, bounded by laboratory inverse-square-law tests.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Phi_N(r) = -(G*M/r) * [1 - e^{-r/ell_c}], derived from an informational Poisson relation Laplacian(Phi_I)=kappa_I*s and a Helmholtz coarse-graining filter (1-ell_c^2 Laplacian)s_cg=s0, bounded by laboratory inverse-square-law tests.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-18, origin: Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/S.12.v1",
+          "derived_via": "derives"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport",
+        "doi": "10.5281/zenodo.17846399",
+        "record_id": 17846399,
+        "page": 1,
+        "eq_label": "(7)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__P_03_v1.v",
+        "identifier": "weld__P_03_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17846399,
+          "doi": "10.5281/zenodo.17846399",
+          "eq_label": "(1)",
+          "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+        },
+        {
+          "record_id": 17846399,
+          "doi": "10.5281/zenodo.17846399",
+          "eq_label": "(2)",
+          "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+        },
+        {
+          "record_id": 17846399,
+          "doi": "10.5281/zenodo.17846399",
+          "eq_label": "(3)",
+          "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+        },
+        {
+          "record_id": 17846399,
+          "doi": "10.5281/zenodo.17846399",
+          "eq_label": "(6)",
+          "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+        },
+        {
+          "record_id": 17846399,
+          "doi": "10.5281/zenodo.17846399",
+          "eq_label": "(7)",
+          "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+        },
+        {
+          "record_id": 17846399,
+          "doi": "10.5281/zenodo.17846399",
+          "eq_label": "(8)",
+          "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-19",
+      "code": "EQ-015/P.119.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "ringdown-diffusivity"
+      ],
+      "name": "Ringdown diffusivity under causal saturation",
+      "statement": {
+        "latest": "D_ring = c^2 * tau_220 (imposing c* = c, causal saturation); explicit falsifiable cross-event scaling law D_i/D_j = tau_220,i/tau_220,j, illustrated numerically on GW150914.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "D_ring = c^2 * tau_220 (imposing c* = c, causal saturation); explicit falsifiable cross-event scaling law D_i/D_j = tau_220,i/tau_220,j, illustrated numerically on GW150914.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-19, origin: Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/P.55.v1",
+          "derived_via": "bridges"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework",
+        "doi": "10.5281/zenodo.17616410",
+        "record_id": 17616410,
+        "page": 2,
+        "eq_label": "(4)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Empirical",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_015__P_119_v1.v",
+        "identifier": "EQ_015__P_119_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17616410,
+          "doi": "10.5281/zenodo.17616410",
+          "eq_label": "(4)",
+          "title": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework"
+        },
+        {
+          "record_id": 17616410,
+          "doi": "10.5281/zenodo.17616410",
+          "eq_label": "unlabeled (Appendix A, template)",
+          "title": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework"
+        },
+        {
+          "record_id": 17616410,
+          "doi": "10.5281/zenodo.17616410",
+          "eq_label": "unlabeled (Sec V, cross-event scaling)",
+          "title": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "unlabeled (Sec 7, LVK test)",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "(D1)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-20",
+      "code": "weld/P.04.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "telegraph-Greens-function"
+      ],
+      "name": "Explicit closed-form telegraph Green's function (1D)",
+      "statement": {
+        "latest": "G = [e^{-t/(2 tau)} / (2v)] H(vt-|x|) [ delta(|x|-vt) + (I0(xi) + (vt/sqrt(v^2 t^2 - x^2)) I1(xi)) / (2 tau) ], xi = sqrt(v^2 t^2 - x^2) / (2 v tau); reduces to the heat-kernel / wave-kernel limiting cases as tau->0 / tau->infinity.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "G = [e^{-t/(2 tau)} / (2v)] H(vt-|x|) [ delta(|x|-vt) + (I0(xi) + (vt/sqrt(v^2 t^2 - x^2)) I1(xi)) / (2 tau) ], xi = sqrt(v^2 t^2 - x^2) / (2 v tau); reduces to the heat-kernel / wave-kernel limiting cases as tau->0 / tau->infinity.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-20, origin: The Causal-Memory Program: Canon",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/S.12.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Causal-Memory Program: Canon",
+        "doi": "10.5281/zenodo.17993686",
+        "record_id": 17993686,
+        "page": 19,
+        "eq_label": "(Th-11)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__P_04_v1.v",
+        "identifier": "weld__P_04_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17993686,
+          "doi": "10.5281/zenodo.17993686",
+          "eq_label": "(Th-11)",
+          "title": "The Causal-Memory Program: Canon"
+        },
+        {
+          "record_id": 17993686,
+          "doi": "10.5281/zenodo.17993686",
+          "eq_label": "(Th-13)",
+          "title": "The Causal-Memory Program: Canon"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-21",
+      "code": "EQ-001/P.75.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "proton-radius-causal-time"
+      ],
+      "name": "Effective proton radius as a function of probe causal time",
+      "statement": {
+        "latest": "r_p^eff(tau_c,l) = r_p^core + Delta_r * sqrt(tau_c,l); numerical prediction of a ~4% electron-vs-muon proton-radius discrepancy matched to the observed muonic-hydrogen puzzle, plus a further falsifiable tau-lepton prediction.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "r_p^eff(tau_c,l) = r_p^core + Delta_r * sqrt(tau_c,l); numerical prediction of a ~4% electron-vs-muon proton-radius discrepancy matched to the observed muonic-hydrogen puzzle, plus a further falsifiable tau-lepton prediction.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-21, origin: Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.62.v1",
+          "derived_via": "bridges"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology",
+        "doi": "10.5281/zenodo.17828120",
+        "record_id": 17828120,
+        "page": 3,
+        "eq_label": "(14)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Empirical",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_75_v1.v",
+        "identifier": "EQ_001__P_75_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(14)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(15)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(16)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(17)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(18)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-22",
+      "code": "EQ-001/P.76.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "FRW-telegraph-compatibility"
+      ],
+      "name": "FRW compatibility of the telegraph equation (Hubble-friction extension)",
+      "statement": {
+        "latest": "tau * d^2rho/dt^2 + (1 + 3*H*tau) * drho/dt = (D/a^2) * Laplacian(rho).",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "tau * d^2rho/dt^2 + (1 + 3*H*tau) * drho/dt = (D/a^2) * Laplacian(rho).",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-22, origin: The Causal-Memory Program: Canon",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.35.v1",
+          "derived_via": "specialises"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "The Causal-Memory Program: Canon",
+        "doi": "10.5281/zenodo.17993686",
+        "record_id": 17993686,
+        "page": 35,
+        "eq_label": "(Cj-COS)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Conjecture",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_76_v1.v",
+        "identifier": "EQ_001__P_76_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17993686,
+          "doi": "10.5281/zenodo.17993686",
+          "eq_label": "(Cj-COS)",
+          "title": "The Causal-Memory Program: Canon"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-23",
+      "code": "EQ-015/P.120.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "redshifted-causal-memory-time"
+      ],
+      "name": "Observer-dependent (redshifted) causal-memory time",
+      "statement": {
+        "latest": "tau_c^(distant)(r) = sqrt(1 - R_s/r) * tau_c^(proper).",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "tau_c^(distant)(r) = sqrt(1 - R_s/r) * tau_c^(proper).",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-23, origin: Mass as Causal Memory: A Structural Unication of Black Hole Physics",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/P.112.v1",
+          "derived_via": "instance_of"
+        },
+        {
+          "code": "EQ-001/P.62.v1",
+          "derived_via": "instance_of"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Mass as Causal Memory: A Structural Unication of Black Hole Physics",
+        "doi": "10.5281/zenodo.17878952",
+        "record_id": 17878952,
+        "page": 6,
+        "eq_label": "(23)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_015__P_120_v1.v",
+        "identifier": "EQ_015__P_120_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(23)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-24",
+      "code": "CMC/M.19.v1",
+      "root": "CMC",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "CMF-classification",
+        "kernel-uniqueness",
+        "causal-memory-kernel-forced-form"
+      ],
+      "name": "Causal-memory kernel uniqueness / CMF classification (multiple independent proof routes)",
+      "statement": {
+        "latest": "Any kernel K satisfying causality(P1)+passivity(P2)+finite-order recurrence(H2) is a Completely-Monotone-Finite-resource (CMF) superposition of geometric-decay channels K(n)=sum_k w_k*r_k^n, w_k>=0, 0<r_k<1, certified via Bernstein's theorem/alternating-difference test plus a positive-real (passivity) PSD factorization; the single-exponential-channel special case G(tau)=(D/tau_c)e^{-tau/tau_c} is independently forced by (a) a finite-dimensional local Hamiltonian plus a Lieb-Robinson locality bound, (b) a Laplace-transform + Paley-Wiener causality argument with a Planck-scale lower bound on tau_c, and (c) a direct axiomatic characterization proving the telegraph PDE is the unique linear second-order class member satisfying finite propagation speed, dissipative stability, and source-freedom.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Any kernel K satisfying causality(P1)+passivity(P2)+finite-order recurrence(H2) is a Completely-Monotone-Finite-resource (CMF) superposition of geometric-decay channels K(n)=sum_k w_k*r_k^n, w_k>=0, 0<r_k<1, certified via Bernstein's theorem/alternating-difference test plus a positive-real (passivity) PSD factorization; the single-exponential-channel special case G(tau)=(D/tau_c)e^{-tau/tau_c} is independently forced by (a) a finite-dimensional local Hamiltonian plus a Lieb-Robinson locality bound, (b) a Laplace-transform + Paley-Wiener causality argument with a Planck-scale lower bound on tau_c, and (c) a direct axiomatic characterization proving the telegraph PDE is the unique linear second-order class member satisfying finite propagation speed, dissipative stability, and source-freedom.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-24, origin: Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "CMC/P.06.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "weld/M.01.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "EQ-001/P.35.v1",
+          "derived_via": "refines"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory",
+        "doi": "10.5281/zenodo.18212478",
+        "record_id": 18212478,
+        "page": null,
+        "eq_label": "(4)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/CMC__M_19_v1.v",
+        "identifier": "CMC__M_19_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18212478,
+          "doi": "10.5281/zenodo.18212478",
+          "eq_label": "(4)",
+          "title": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory"
+        },
+        {
+          "record_id": 18212478,
+          "doi": "10.5281/zenodo.18212478",
+          "eq_label": "(6)",
+          "title": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory"
+        },
+        {
+          "record_id": 18212478,
+          "doi": "10.5281/zenodo.18212478",
+          "eq_label": "(7)",
+          "title": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "(1)",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-1",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-2",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-3",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-4",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-5",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-6",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-7",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-11",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-12",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-13",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-15",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "(2)",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18757034,
+          "doi": "10.5281/zenodo.18757034",
+          "eq_label": "unlabeled-16",
+          "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+        },
+        {
+          "record_id": 18210933,
+          "doi": "10.5281/zenodo.18210933",
+          "eq_label": "unlabeled-3",
+          "title": "Time as Irreversible Causal Record A Mathematical Derivation from Causality and Passivity"
+        },
+        {
+          "record_id": 18210933,
+          "doi": "10.5281/zenodo.18210933",
+          "eq_label": "(3)",
+          "title": "Time as Irreversible Causal Record A Mathematical Derivation from Causality and Passivity"
+        },
+        {
+          "record_id": 18210933,
+          "doi": "10.5281/zenodo.18210933",
+          "eq_label": "unlabeled-4",
+          "title": "Time as Irreversible Causal Record A Mathematical Derivation from Causality and Passivity"
+        },
+        {
+          "record_id": 18677955,
+          "doi": "10.5281/zenodo.18677955",
+          "eq_label": "Remark 18.14",
+          "title": "Causal Quantum Gravity"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Theorem T1",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(2)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(3)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(5)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(8)/(9)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18065304,
+          "doi": "10.5281/zenodo.18065304",
+          "eq_label": "A",
+          "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+        },
+        {
+          "record_id": 18065304,
+          "doi": "10.5281/zenodo.18065304",
+          "eq_label": "A'",
+          "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+        },
+        {
+          "record_id": 18065304,
+          "doi": "10.5281/zenodo.18065304",
+          "eq_label": "A2-A4",
+          "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+        },
+        {
+          "record_id": 18065304,
+          "doi": "10.5281/zenodo.18065304",
+          "eq_label": "chi",
+          "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+        },
+        {
+          "record_id": 18065304,
+          "doi": "10.5281/zenodo.18065304",
+          "eq_label": "eta",
+          "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+        },
+        {
+          "record_id": 18051281,
+          "doi": "10.5281/zenodo.18051281",
+          "eq_label": "(Def 1 / Class E)",
+          "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+        },
+        {
+          "record_id": 18051281,
+          "doi": "10.5281/zenodo.18051281",
+          "eq_label": "(3)",
+          "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+        },
+        {
+          "record_id": 18051281,
+          "doi": "10.5281/zenodo.18051281",
+          "eq_label": "Thm 3",
+          "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+        },
+        {
+          "record_id": 18051281,
+          "doi": "10.5281/zenodo.18051281",
+          "eq_label": "Thm 4",
+          "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+        },
+        {
+          "record_id": 18051281,
+          "doi": "10.5281/zenodo.18051281",
+          "eq_label": "(4)",
+          "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+        },
+        {
+          "record_id": 18051281,
+          "doi": "10.5281/zenodo.18051281",
+          "eq_label": "(S:45 multi-pole)",
+          "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Ax-0",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Ax-C/D/S",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Th-1",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Th-2",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Th-4",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Th-5",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Cj-N+",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(3)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(4)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Cor 1 (T1)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(3)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(4)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(5)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(5)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(6)-(7)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(8)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(9)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "(1)",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "(2)",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "(4) Theorem 5.1",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17875968,
+          "doi": "10.5281/zenodo.17875968",
+          "eq_label": "(1)",
+          "title": "The Social Life of Particles How Causal Memory Reveals Hidden Order in the Mass Spectrum"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(18)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(19)-(20)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(2)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(18) Theorem 3.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(19)-(20) Corollary 3.2 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (1)",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (3) Theorem 1.1",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (30)-(31) Corollaries 3.3-3.4",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (33) Corollary 3.5",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (35) Theorem 5.1",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (39)",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (4) Theorem 1.2",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (5) Theorem 1.3",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.B, route2 kernel)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "(D2)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec III, constitutive relation)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec III, kernel)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec VII, macro relaxation)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec VII, spectral gap)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(2)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(3)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(5)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-25",
+      "code": "EQ-001/P.77.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "telegraph-KG-isomorphism",
+        "mass-memory-derivation",
+        "dephasing-map"
+      ],
+      "name": "Telegraph-to-Klein-Gordon dephasing map and derived mass-memory identity (with renormalisation-stability extension)",
+      "statement": {
+        "latest": "Dephasing substitution s(x,t)=e^{-t/(2 tau_c)}*psi(x,t) turns the registered telegraph equation into a Klein-Gordon-type field equation d^2psi/dt^2 - c^2*Laplacian(psi) + psi/(4 tau_c^2) = 0, identifying a derived mass m_eff = hbar/(2 c^2 tau_c) (equivalently m=1/(2 tau_c) in natural units), corroborated by ten independent routes (uncertainty, Zitterbewegung, Compton time, Margolus-Levitin, ...); a companion order-exclusion uniqueness lemma (only quadratic-order-or-lower PDEs survive) and a one-loop renormalisation-stability sketch argue the derived mass gap survives minimal gauge coupling in phi^4/Yukawa/QED/QCD/Yang-Mills completions.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Dephasing substitution s(x,t)=e^{-t/(2 tau_c)}*psi(x,t) turns the registered telegraph equation into a Klein-Gordon-type field equation d^2psi/dt^2 - c^2*Laplacian(psi) + psi/(4 tau_c^2) = 0, identifying a derived mass m_eff = hbar/(2 c^2 tau_c) (equivalently m=1/(2 tau_c) in natural units), corroborated by ten independent routes (uncertainty, Zitterbewegung, Compton time, Margolus-Levitin, ...); a companion order-exclusion uniqueness lemma (only quadratic-order-or-lower PDEs survive) and a one-loop renormalisation-stability sketch argue the derived mass gap survives minimal gauge coupling in phi^4/Yukawa/QED/QCD/Yang-Mills completions.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-25, origin: Causal–Memory Program: Short Talk (Two-Column Boxed)",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.62.v1",
+          "derived_via": "derives"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Causal–Memory Program: Short Talk (Two-Column Boxed)",
+        "doi": "10.5281/zenodo.18065304",
+        "record_id": 18065304,
+        "page": 1,
+        "eq_label": "B0"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_77_v1.v",
+        "identifier": "EQ_001__P_77_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18065304,
+          "doi": "10.5281/zenodo.18065304",
+          "eq_label": "B0",
+          "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+        },
+        {
+          "record_id": 18051281,
+          "doi": "10.5281/zenodo.18051281",
+          "eq_label": "(6)",
+          "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Th-9",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(5)/(6)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Layer2 KG map",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Theorem T2",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "(13)",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(3)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(4)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17767416,
+          "doi": "10.5281/zenodo.17767416",
+          "eq_label": "(5)",
+          "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(5)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(6)-(7)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(8)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17828120,
+          "doi": "10.5281/zenodo.17828120",
+          "eq_label": "(9)",
+          "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "(1)",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "(2)",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "(4) Theorem 5.1",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17875968,
+          "doi": "10.5281/zenodo.17875968",
+          "eq_label": "(1)",
+          "title": "The Social Life of Particles How Causal Memory Reveals Hidden Order in the Mass Spectrum"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(18)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(19)-(20)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17878952,
+          "doi": "10.5281/zenodo.17878952",
+          "eq_label": "(2)",
+          "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(1) [in doc: Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(16) Corollary 2.2 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(25) Theorem 4.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(33)-(34) Theorem 6.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(39) Theorem 7.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(4)-(5) Theorem 2.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(45)-(46) Theorem 8.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(49)-(50) Theorem 9.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17890616,
+          "doi": "10.5281/zenodo.17890616",
+          "eq_label": "(60)-(62) Theorem 11.1 [Ten Independent Proofs]",
+          "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(1.4)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(6.1)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.A, mass-memory)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.A, step-final)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.B, route10 Margolus-Levitin)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.B, route3 Heisenberg)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.B, route5 Zitterbewegung)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(App.B, route7 Compton time)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17899050,
+          "doi": "10.5281/zenodo.17899050",
+          "eq_label": "(unlabeled, Ch.6.3, KG result)",
+          "title": "CAUSAL MEMORY IN PHYSICS"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec V, KG eq)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec V, dephasing)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec V, mass-memory identity)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec VI, cosmology)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17901698,
+          "doi": "10.5281/zenodo.17901698",
+          "eq_label": "unlabeled (Sec VI, particles)",
+          "title": "The Causal-Memory Architecture of the Universe"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(1)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17913256,
+          "doi": "10.5281/zenodo.17913256",
+          "eq_label": "(3)",
+          "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(18)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(19)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(20)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(21)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(22)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(23)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(24)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(25)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(26)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17926609,
+          "doi": "10.5281/zenodo.17926609",
+          "eq_label": "(27)",
+          "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17993686,
+          "doi": "10.5281/zenodo.17993686",
+          "eq_label": "(Th-9)",
+          "title": "The Causal-Memory Program: Canon"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "Proposition 6.1",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "Theorem 4.1",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        },
+        {
+          "record_id": 17855403,
+          "doi": "10.5281/zenodo.17855403",
+          "eq_label": "Theorem 6.2",
+          "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-26",
+      "code": "EQ-001/P.78.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "P",
+      "aliases": [
+        "emergent-Lorentzian-metric",
+        "induced-flat-metric",
+        "analogue-gravity-front-speed"
+      ],
+      "name": "Emergent/analogue Lorentzian metric induced by the causal-memory front speed",
+      "statement": {
+        "latest": "From the telegraph equation's finite front speed v_star^2(s0)=lambda*Psi''(s0)/tau_c (EQ-001/P.35.v1), builds (a) an effective analogue-gravity-style Lorentzian metric g_hat_{mu nu}=eta_{mu nu}+(1-1/n^2)u_mu u_nu with refractive index n(s), and (b) an induced flat light-cone metric ds^2=-v^2 dt^2+|dx|^2 whose curvature vanishes identically, R^alpha_{beta gamma delta}=0 (flatness theorem).",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "From the telegraph equation's finite front speed v_star^2(s0)=lambda*Psi''(s0)/tau_c (EQ-001/P.35.v1), builds (a) an effective analogue-gravity-style Lorentzian metric g_hat_{mu nu}=eta_{mu nu}+(1-1/n^2)u_mu u_nu with refractive index n(s), and (b) an induced flat light-cone metric ds^2=-v^2 dt^2+|dx|^2 whose curvature vanishes identically, R^alpha_{beta gamma delta}=0 (flatness theorem).",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-26, origin: Cosmology from Finite Causal Memory",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/P.35.v1",
+          "derived_via": "derives"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Cosmology from Finite Causal Memory",
+        "doi": "10.5281/zenodo.18208238",
+        "record_id": 18208238,
+        "page": 2,
+        "eq_label": "(8)"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__P_78_v1.v",
+        "identifier": "EQ_001__P_78_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(8)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(10)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(11)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18208238,
+          "doi": "10.5281/zenodo.18208238",
+          "eq_label": "(12)",
+          "title": "Cosmology from Finite Causal Memory"
+        },
+        {
+          "record_id": 18013670,
+          "doi": "10.5281/zenodo.18013670",
+          "eq_label": "Th-14/15",
+          "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+        },
+        {
+          "record_id": 17993686,
+          "doi": "10.5281/zenodo.17993686",
+          "eq_label": "(Th-14)",
+          "title": "The Causal-Memory Program: Canon"
+        },
+        {
+          "record_id": 17993686,
+          "doi": "10.5281/zenodo.17993686",
+          "eq_label": "(Th-15)",
+          "title": "The Causal-Memory Program: Canon"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAUSAL-2026-09-08-27",
+      "code": "MQ08-stepper/M.01.v1",
+      "root": "MQ08-stepper",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "FTCC",
+        "discrete-causal-calculus",
+        "primitive-causal-aggregation-operator"
+      ],
+      "name": "Discrete causal calculus: primitive causal aggregation operator and its Fundamental Theorem (FTCC)",
+      "statement": {
+        "latest": "Primitive aggregation operator (not reducible a priori to sum/integral): X_M := M (.) X, (X_M)_j := M_j*X_j, G_M := sigma(X_M); discrete causal derivative on edge e of a causal-delay graph: CC f(e) := (f(head(e))-f(tail(e)))/delay(e); Fundamental Theorem of Causal Calculus (forward, Thm 8.2): sum over a causal path of CC f * delay = f(end)-f(start); converse (Thm 8.3): a discrete field is a causal-gradient iff its path-sums are path-independent; matching product/quotient/chain rules and discrete curl/divergence (electrodynamics-CC, causal Navier-Stokes) identities for CC on the causal-delay graph.",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Primitive aggregation operator (not reducible a priori to sum/integral): X_M := M (.) X, (X_M)_j := M_j*X_j, G_M := sigma(X_M); discrete causal derivative on edge e of a causal-delay graph: CC f(e) := (f(head(e))-f(tail(e)))/delay(e); Fundamental Theorem of Causal Calculus (forward, Thm 8.2): sum over a causal path of CC f * delay = f(end)-f(start); converse (Thm 8.3): a discrete field is a causal-gradient iff its path-sums are path-independent; matching product/quotient/chain rules and discrete curl/divergence (electrodynamics-CC, causal Navier-Stokes) identities for CC on the causal-delay graph.",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-causal-sweep: initial capture from causal-sweep proposal CS-27, origin: Causal Quantum Gravity",
+          "by": "toledo-v1.8-causal-sweep"
+        }
+      ],
+      "parents": [
+        {
+          "code": "MQ08-stepper/P.01.v1",
+          "derived_via": "refines"
+        },
+        {
+          "code": "weld/M.01.v1",
+          "derived_via": "derives"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "Causal Quantum Gravity",
+        "doi": "10.5281/zenodo.18677955",
+        "record_id": 18677955,
+        "page": 3,
+        "eq_label": "CC"
+      },
+      "status": "unverified",
+      "status_note": "Causal-sweep proposal (2026-09-08); tier as sourced, never raised; unverified pending independent (maker-checker) review of the parent reading and the Coq open_prop stub this entry ships with.",
+      "superseded_by": null,
+      "tier": "Theorem",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/MQ08_stepper__M_01_v1.v",
+        "identifier": "MQ08_stepper__M_01_v1_hyp",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "open_prop",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 18677955,
+          "doi": "10.5281/zenodo.18677955",
+          "eq_label": "CC",
+          "title": "Causal Quantum Gravity"
+        },
+        {
+          "record_id": 18677955,
+          "doi": "10.5281/zenodo.18677955",
+          "eq_label": "Theorem 8.2",
+          "title": "Causal Quantum Gravity"
+        },
+        {
+          "record_id": 18677955,
+          "doi": "10.5281/zenodo.18677955",
+          "eq_label": "Theorem 8.3",
+          "title": "Causal Quantum Gravity"
+        },
+        {
+          "record_id": 18677955,
+          "doi": "10.5281/zenodo.18677955",
+          "eq_label": "Proposition 8.5",
+          "title": "Causal Quantum Gravity"
+        },
+        {
+          "record_id": 18677955,
+          "doi": "10.5281/zenodo.18677955",
+          "eq_label": "Theorem 9.1",
+          "title": "Causal Quantum Gravity"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(none: X_M def)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18176092,
+          "doi": "10.5281/zenodo.18176092",
+          "eq_label": "(none: I_M def)",
+          "title": "Causal Guardrails for Artificial Intelligence"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "FTCC",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "Product rule",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "Quotient rule (corrected)",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "Chain rule (mean-value)",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "Electrodynamics-CC",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "Causal Navier-Stokes",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "Primitive causal aggregation operator",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "A_O[f] def",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        },
+        {
+          "record_id": 18164015,
+          "doi": "10.5281/zenodo.18164015",
+          "eq_label": "D_eps, I_eps ref ops",
+          "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     }
   ],
   "raw_to_canonical": {
@@ -160659,40 +165296,45 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1274,
+    "entries": 1301,
     "by_status": {
       "current": 1167,
-      "not_an_equation": 9,
       "split": 30,
-      "unverified": 68
+      "not_an_equation": 9,
+      "unverified": 95
     },
     "by_domain": {
-      "B": 75,
-      "C": 59,
+      "M": 418,
       "E": 62,
-      "H": 124,
-      "M": 412,
-      "P": 313,
-      "S": 136,
-      "W": 93
+      "H": 126,
+      "S": 137,
+      "W": 93,
+      "C": 59,
+      "P": 330,
+      "B": 76
     },
     "by_tier": {
-      "Ax": 12,
-      "Definition": 435,
-      "Dr": 82,
-      "Open": 41,
       "Th_coqc": 413,
+      "Definition": 441,
+      "Dr": 82,
+      "Ax": 12,
       "finite_diagnostic": 46,
-      "untagged": 245
+      "Open": 41,
+      "untagged": 245,
+      "Lemma": 1,
+      "Empirical": 5,
+      "Theorem": 10,
+      "Postulate": 4,
+      "Conjecture": 1
     },
     "by_coq_status": {
-      "axioms": 3,
       "closed": 551,
       "definition": 384,
+      "wrapped_related": 210,
       "not_formalisable": 70,
-      "open_prop": 56,
-      "wrapped_related": 210
+      "open_prop": 83,
+      "axioms": 3
     },
-    "computed": "2026-09-08 from canonical[] (scripts/v18_clearing_fixes.py)"
+    "computed": "2026-09-08 from canonical[] (scripts/v18_causal_merge.py)"
   }
 }
