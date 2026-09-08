@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-028 — root: reader-equivalence (CAN-007) reading — domain:
-   epistemic — tier: Open (empirical regime-transition law) —
+   epistemic — tier: Dr (empirical regime-transition law) —
    occurrences: 1 *)
 (** Under unbounded external generation, production ceases to uniquely
     index internal organization; regime transition: accumulation ->

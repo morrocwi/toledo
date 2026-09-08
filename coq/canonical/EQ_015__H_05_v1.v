@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-047 — human-AI-session-stepper
 
-    (* CAN-047 — root: Z_dlg[s,n+1]=F#_dlg(Z_dlg[s,n],uH,uAI,c,T); chi_recip=|D_recip|/|Sigma| — domain: human–AI — tier: Th_coqc — occurrences: 5 *)
+    (* CAN-047 — root: Z_dlg[s,n+1]=F#_dlg(Z_dlg[s,n],uH,uAI,c,T); chi_recip=|D_recip|/|Sigma| — domain: human–AI — tier: Definition — occurrences: 5 *)
 
     CANONICAL.json tier: "definition (chi_recip explicitly not
     warrant/truth)". Direct reuse of [MR_Prompt.v] eq.(31)-(32):

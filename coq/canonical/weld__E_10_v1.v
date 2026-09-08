@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-218 — root: root-weld (CAN-001) reading — domain: epistemic —
-   tier: Definition (named principle) — occurrences: 1 *)
+   tier: Dr (named principle) — occurrences: 1 *)
 (** Bridge Burden: an inference from source metadata to a change in
     epistemic standing is licit only if a mediating relation is named;
     absent one, it is pedigree substitution — recorded as the exact

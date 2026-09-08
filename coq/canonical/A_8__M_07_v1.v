@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-180 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition / Open — occurrences: 3 *)
+   tier: finite_diagnostic / Open — occurrences: 3 *)
 (** The Epistemic Isolation Constraint, stated as a strict [Q] inequality
     between human-formation and AI-production rates (Definition tier); its
     stated governance consequence (build synthetic-formation

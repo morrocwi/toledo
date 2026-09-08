@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-243 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: untagged — occurrences: 1 *)
 Theorem CAN243_rawspeed_not_vc : CAN2xx_RawSpeedDown <> CAN2xx_VCDown.
 Proof. discriminate. Qed.
 

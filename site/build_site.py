@@ -829,6 +829,18 @@ def _executable_column_value(e: dict) -> str:
     return "yes" if status in EXECUTABLE_WIDGET_STATUSES else "no"
 
 
+def _ic_column_value(e: dict) -> str:
+    """docs/CONSISTENCY_SPEC_v0_1.md sec.7: "/browse/ gains one column `IC`
+    with the grade string (IC-0…IC-3, +F suffix when flagged); sortable; no
+    colour scale implying a score." Plain text, no badge class implying a
+    quality gradient -- the grade name itself is the whole signal."""
+    consistency = e.get("consistency")
+    if not consistency:
+        return "not checked"
+    grade = html.escape(str(consistency.get("grade") or "IC-0"))
+    return grade + ("+F" if consistency.get("flag") else "")
+
+
 def render_listing_row(e: dict, depth: int, *, band_id: str | None = None, show_executable: bool = False) -> str:
     """No `title="<full name>"` attribute: an earlier revision duplicated
     the full (untruncated) name into a `title` attribute on every row —
@@ -854,6 +866,7 @@ def render_listing_row(e: dict, depth: int, *, band_id: str | None = None, show_
     executable_td = (
         f'<td class="executable-cell">{_executable_column_value(e)}</td>' if show_executable else ""
     )
+    ic_td = f'<td class="ic-cell">{_ic_column_value(e)}</td>' if show_executable else ""
     return (
         f"<tr{id_attr}>"
         f'<td class="code-cell"><a href="{href}">{html.escape(code)}</a></td>'
@@ -862,6 +875,7 @@ def render_listing_row(e: dict, depth: int, *, band_id: str | None = None, show_
         f"<td>{html.escape(str(domain))}</td>"
         f'<td><span{status_title}>{status}</span></td>'
         f"{executable_td}"
+        f"{ic_td}"
         "</tr>"
     )
 
@@ -877,7 +891,7 @@ TABLE_HEADER_ROW = (
 TABLE_HEADER_ROW_WITH_EXECUTABLE = (
     '<thead><tr><th scope="col" class="code-cell">Code</th><th scope="col">Name</th>'
     '<th scope="col">Tier</th><th scope="col">Domain</th><th scope="col">Status</th>'
-    '<th scope="col">Executable</th></tr></thead>'
+    '<th scope="col">Executable</th><th scope="col">IC</th></tr></thead>'
 )
 
 
@@ -1278,6 +1292,62 @@ def render_resistance_badges_html(resistance: dict | None) -> str:
     )
 
 
+_IC_DIMENSION_ORDER = ["schema", "structure", "tier", "symbols", "coq", "duplicates", "lineage"]
+
+
+def render_consistency_badge_html(consistency: dict | None) -> str:
+    """Internal-consistency ladder (docs/CONSISTENCY_SPEC_v0_1.md sec.7):
+    "Internal consistency: IC-k (checked <date>, commit <sha>)" or "not
+    checked"; the IC-F flag with its blocked_at reason; the seven dimension
+    statuses as four-state badges. This is a readout of the registry's own
+    self-agreement -- never a truth score, never merged with the resistance
+    ladder above it. `consistency` is `None` when
+    scripts/compute_consistency.py has not run against this build, rendered
+    as one disclosed sentence, same convention as resistance."""
+    if not consistency:
+        return (
+            '<p class="note">Internal consistency not yet checked for this entry '
+            "(scripts/compute_consistency.py has not run against this build).</p>"
+        )
+    grade = html.escape(str(consistency.get("grade") or "IC-0"))
+    flag = consistency.get("flag")
+    computed_at = html.escape(str(consistency.get("computed_at") or "unknown"))
+    dims = consistency.get("dimensions") or {}
+    spans = []
+    for dim in _IC_DIMENSION_ORDER:
+        status = (dims.get(dim) or {}).get("status", "not_checked")
+        variant = {"pass": "held", "fail": "unheld"}.get(status, "unheld")
+        title_attr = html.escape(f"{dim}: {status}")
+        label = html.escape(dim)
+        spans.append(
+            f'<span class="badge badge-resistance badge-resistance--{variant}" '
+            f'title="{title_attr}">{label}</span>'
+        )
+    flag_html = ""
+    if flag:
+        blocked = consistency.get("blocked_at") or {}
+        reason = html.escape(
+            f"blocked at {blocked.get('rung')}/{blocked.get('dimension')}: {blocked.get('finding')}"
+        )
+        flag_html = f' <span class="badge badge-status badge-status--warn" title="{reason}">{html.escape(flag)}</span>'
+    findings = consistency.get("findings") or []
+    findings_html = ""
+    if findings:
+        items = "".join(f"<li><code>{html.escape(f)}</code></li>" for f in findings[:20])
+        more = f"<li>… {len(findings) - 20} more</li>" if len(findings) > 20 else ""
+        findings_html = f"<details><summary>Open findings ({len(findings)})</summary><ul>{items}{more}</ul></details>"
+    return (
+        '<fieldset class="resistance-ladder"><legend class="sr-only">Internal consistency, '
+        "seven dimensions</legend>"
+        f'<p class="note">Internal consistency: <strong>{grade}</strong>{flag_html} '
+        f"(checked {computed_at}). Not a truth score; a <code>needs_reader</code> dimension is "
+        "unchecked, not failing. See docs/CONSISTENCY_SPEC_v0_1.md.</p>"
+        + "".join(spans)
+        + findings_html
+        + "</fieldset>"
+    )
+
+
 def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text: str,
                          depth: int, root: pathlib.Path | None = None) -> tuple[dict, bool]:
     """Supplies the union of every entry-page placeholder observed across
@@ -1315,6 +1385,7 @@ def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text:
     )
     coq_badge = render_badge(coq_status, "badge-coq", COQ_STATUS_DEFINITIONS)
     resistance_badges_html = render_resistance_badges_html(entry.get("resistance"))
+    consistency_badge_html = render_consistency_badge_html(entry.get("consistency"))
     relations_inner = render_relations_html(entry, by_code, reverse_rel, depth)
     relations_wrapped = (
         "<details><summary>Full relations (all parents, children, and cross-references)</summary>"
@@ -1340,6 +1411,7 @@ def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text:
         "status_badge_html": status_badge,
         "coq_status_badge_html": coq_badge,
         "resistance_badges_html": resistance_badges_html,
+        "consistency_badge_html": consistency_badge_html,
         "executable_widget_html": executable_widget_html,
         "badges_html": domain_badge + tier_badge + status_badge + coq_badge,
         "status_note_html": render_status_note_html(entry, depth),

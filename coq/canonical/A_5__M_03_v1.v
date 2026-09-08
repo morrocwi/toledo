@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-196 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 6 *)
+   tier: untagged — occurrences: 6 *)
 (** The evidence-registry non-collapse chain, on one shared finite
     enumeration: each named pair is disjoint by construction, so every
     inequality below is closed by [discriminate] alone (the same

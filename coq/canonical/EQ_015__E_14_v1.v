@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-219 — root: root-weld (CAN-001) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: Dr — occurrences: 1 *)
 (** No Bare Pedigree: a source label alone is epistemically incomplete
     reporting; the relevant object is the tuple of production procedure,
     selection conditions, dependencies, checks, error model, inferential

@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-165 — root: root-readout-gate (CAN-201) — domain: method —
-   tier: Th_coqc / Open — occurrences: 20 *)
+   tier: Definition / Open — occurrences: 20 *)
 (** Phi:X->Z is admissible relative to R:X->Y iff constant on every fiber
     of R (ker R subset ker Phi), equivalently Phi factors as g o R — the
     source's own "Factorization Theorem", instantiating shared device 1

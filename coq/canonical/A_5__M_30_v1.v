@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-254 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Definition — occurrences: 1 *)
+   tier: finite_diagnostic — occurrences: 1 *)
 (** Governance-definition tier per the registry (not "identity"): the
     distinctness half is offered as Th_coqc-grade scaffolding on the
     shared enumeration; the conditional requirement chain is a typed,

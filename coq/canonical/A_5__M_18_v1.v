@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-241 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: untagged — occurrences: 1 *)
 Theorem CAN241_intellectual_affinity_not_truth :
   CAN2xx_IntellectualAffinity <> CAN2xx_Truth.
 Proof. discriminate. Qed.

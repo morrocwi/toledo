@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-139 — B-SOC-IDCERT
 
-    (* CAN-139 — root: two models agree on Pr(complaint)=1/10, imply a five-fold difference in true potential — domain: social — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-139 — root: two models agree on Pr(complaint)=1/10, imply a five-fold difference in true potential — domain: social — tier: Dr — occurrences: 1 *)
 
     CANONICAL.json tier: "measurement". The single sharpest, most
     concrete instance in this group's corpus of readout-not-truth stated

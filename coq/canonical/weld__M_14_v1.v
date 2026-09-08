@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-216 — root: root-weld (CAN-001) — domain: method —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: Dr — occurrences: 2 *)
 (** The worked audit of a hidden extra access route: if a supposedly fixed
     background source [K*] is constant across two cases whose actual
     downstream process [C] differs (because [C] secretly also reads a

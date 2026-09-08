@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-105 — opportunity-conversion
 
-    (* CAN-105 — root: Omega^real_{i,n}=G_O(Rreturn,Klife,Cred,Net,Perm,MarketReadout); Credential<>Capability; MarketLegibility<>HumanWorth — domain: human–AI — tier: Th_coqc — occurrences: 4 *)
+    (* CAN-105 — root: Omega^real_{i,n}=G_O(Rreturn,Klife,Cred,Net,Perm,MarketReadout); Credential<>Capability; MarketLegibility<>HumanWorth — domain: human–AI — tier: Definition — occurrences: 4 *)
 
     CANONICAL.json tier: "definition". Direct reuse of [MR_HCA.v]
     eq.(75)-(76): [omega_real_75] and the two witnessed non-collapses

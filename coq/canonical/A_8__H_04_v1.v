@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-112 — decisive-record-argmax
 
-    (* CAN-112 — root: u*^diag=argmax_u[IGB(u)-lambdaC.Cost(u)-rho.Risk(u)]; u*^adv=argmin_u E[...]; pi*=argmax_pi E[DeltaH|pi] — domain: human–AI — tier: Open — occurrences: 7 *)
+    (* CAN-112 — root: u*^diag=argmax_u[IGB(u)-lambdaC.Cost(u)-rho.Risk(u)]; u*^adv=argmin_u E[...]; pi*=argmax_pi E[DeltaH|pi] — domain: human–AI — tier: Definition — occurrences: 7 *)
 
     CANONICAL.json tier: "hypothesis/Open (definitions of the
     optimization objective; not validated policies)". No Master River

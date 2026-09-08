@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-190 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc / Definition — occurrences: 9 *)
+   tier: finite_diagnostic / Definition — occurrences: 9 *)
 (** P_local not-subset D_AI: a genuine list non-containment fact, proved
     generically then specialised; the remaining formulas (S_G, the
     global/Thai conversion-plan pair) are typed Definitions. *)

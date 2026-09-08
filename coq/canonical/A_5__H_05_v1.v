@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-059 — choice-noncollapse-chain
 
-    (* CAN-059 — root: pi^choice in Pi^live; pi^act<>pi^choice possible; Y_obs=O_q(H)<>H; possible<>feasible<>live<>chosen<>enacted<>observed — domain: human–AI — tier: Th_coqc — occurrences: 3 *)
+    (* CAN-059 — root: pi^choice in Pi^live; pi^act<>pi^choice possible; Y_obs=O_q(H)<>H; possible<>feasible<>live<>chosen<>enacted<>observed — domain: human–AI — tier: Definition — occurrences: 3 *)
 
     CANONICAL.json tier: "definition". Direct reuse of [MR_Live.v]
     eq.(22)-(24): [is_valid_choice] (eq. 22), the enactment-may-differ

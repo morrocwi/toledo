@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-194 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition / Th_coqc — occurrences: 5 *)
+   tier: finite_diagnostic / Th_coqc — occurrences: 5 *)
 (** B_year, instantiating shared device 2 ([mr_qsum]): a genuine bound
     (each nonnegative budget line is at most the total) follows directly
     from [mr_qsum_ge_member]. *)

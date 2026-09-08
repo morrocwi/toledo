@@ -1,0 +1,92 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.required_fields#c60ec6f4",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "EQ-009/E.03.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.ledger_assigned_event#47b026cb",
+      "lineage.reads_reading_symbols#10521759"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "schema.required_fields#c60ec6f4"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "info_findings": [
+      "structure.occurrence_map#d80a2e52"
+     ],
+     "warn_findings": [
+      "structure.primary_root#a9a69e06"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "symbols.latex_lexical.glued_macro#c754d463",
+      "symbols.latex_lexical.non_math_script#5edde8bc"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "lineage.ledger_assigned_event#47b026cb",
+  "lineage.reads_reading_symbols#10521759",
+  "schema.required_fields#c60ec6f4",
+  "structure.primary_root#a9a69e06",
+  "symbols.latex_lexical.glued_macro#c754d463",
+  "symbols.latex_lexical.non_math_script#5edde8bc"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.5-C",
+  "date": "2026-09-07",
+  "event": "revised"
+ },
+ "layer": "reading"
+}

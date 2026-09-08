@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-034 — root: constitutional-noncollapse (CAN-008) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Definition — occurrences: 1 *)
 (** Suff_{E,L}(Z_E^cand;Q,O,c,T) in {1,0,bottom}; Inv_E(z) <> Inv_E(z') =>
     q_E(z) <> q_E(z'): a candidate domain state must be sufficient, and a
     quotient may not merge states differing on a required future

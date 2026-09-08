@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-071 — resistance-quality-accessibility
 
-    (* CAN-071 — root: R_s^ep=rho(Is,Vs,Qs); U_s^R=u(Csv,Tsv,Asv); R_s^ex=psi(R_s^ep,U_s^R); Resistance quality<>resistance accessibility — domain: human–AI — tier: Th_coqc — occurrences: 3 *)
+    (* CAN-071 — root: R_s^ep=rho(Is,Vs,Qs); U_s^R=u(Csv,Tsv,Asv); R_s^ex=psi(R_s^ep,U_s^R); Resistance quality<>resistance accessibility — domain: human–AI — tier: Dr — occurrences: 3 *)
 
     CANONICAL.json tier: "proposition/law". No Master River eq. citation.
     The three declared functions are typed abstractly; the non-collapse

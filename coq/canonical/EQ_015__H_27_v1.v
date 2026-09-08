@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-092 — DCP-closing-questions
 
-    (* CAN-092 — root: What unresolved difference deserves my attention? / How much AI/friction does this task require? / What remains with me after AI is removed? — domain: human–AI — tier: Definition — occurrences: 1 *)
+    (* CAN-092 — root: What unresolved difference deserves my attention? / How much AI/friction does this task require? / What remains with me after AI is removed? — domain: human–AI — tier: Dr — occurrences: 1 *)
 
     CANONICAL.json tier: "proposition". No Master River eq. citation. A
     closed three-constructor [Inductive] enumerating the reflective

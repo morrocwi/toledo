@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-107 — HCA-worked-scenario
 
-    (* CAN-107 — root: Outcome_C - Outcome_A <> Effect_HCA — domain: human–AI — tier: Th_coqc — occurrences: 2 *)
+    (* CAN-107 — root: Outcome_C - Outcome_A <> Effect_HCA — domain: human–AI — tier: Definition — occurrences: 2 *)
 
     CANONICAL.json tier: "definition/proposition". No Master River eq.
     citation. The raw outcome-difference and the (differently-defined)

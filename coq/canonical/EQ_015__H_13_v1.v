@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-068 — epistemic-fusion-architecture-sequence
 
-    (* CAN-068 — root: H0*->K_like->D^eff->R^eff->H<->AI->chi_recip->eta->(G-T)->Y^return->J* — domain: human–AI — tier: Definition — occurrences: 1 *)
+    (* CAN-068 — root: H0*->K_like->D^eff->R^eff->H<->AI->chi_recip->eta->(G-T)->Y^return->J* — domain: human–AI — tier: Dr — occurrences: 1 *)
 
     CANONICAL.json tier: "proposition". No Master River eq. citation
     (Epistemic Fusion v8.1, record 22331922). A well-typed ten-stage

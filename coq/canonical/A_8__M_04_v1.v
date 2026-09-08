@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-173 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: finite_diagnostic — occurrences: 2 *)
 (** The Provenance Relevance Constraint gates each evidence term to {0,1}
     before it is credited; a real inequality follows: the PRC-gated valid
     credit total never exceeds the ungated raw total, given every raw term

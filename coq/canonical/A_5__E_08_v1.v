@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-227 — root: constitutional-noncollapse (CAN-008) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Dr — occurrences: 1 *)
 (** "Successful adaptation = mental health" is explicitly REJECTED by the
     source. Witnessed non-collapse via the shared enumeration device. *)
 Inductive CAN227_Notion := CAN227_SuccessfulAdaptation | CAN227_MentalHealth.

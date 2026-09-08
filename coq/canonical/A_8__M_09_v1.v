@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-184 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition / Open — occurrences: 3 *)
+   tier: finite_diagnostic / Open — occurrences: 3 *)
 Section CAN184_RecognitionConversion.
   Variables AuthorTy ProblemTy : Type.
   Variable A_s : AuthorTy -> ProblemTy -> nat -> Q.

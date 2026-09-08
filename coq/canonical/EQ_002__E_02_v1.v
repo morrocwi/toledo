@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-011 — root: root-weld (CAN-001) reading, the source-side non-collapse
-   of what a reader receives — domain: epistemic — tier: Th_coqc —
+   of what a reader receives — domain: epistemic — tier: Definition —
    occurrences: 2 *)
 (** R_A = O_A(W; Pi_A) (<> W); m(A) <> rho(A): a source label is a readout,
     not an oracle. Formalised as two witnessed non-collapse facts: (1) a

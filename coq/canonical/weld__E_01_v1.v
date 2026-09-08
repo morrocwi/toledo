@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-025 — root: reader-equivalence (CAN-007) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 2 *)
+   epistemic — tier: Definition — occurrences: 2 *)
 (** Know_A(W) = 1 iff Dist(R_A[n], R_A^nu[n]) <= eps_K for all admissible
     variations nu on window W: knowledge as stability-achievement, made
     decidable given a decidable base distance-comparison and a finite

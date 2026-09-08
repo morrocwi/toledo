@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-101 — capability-conversion-noncollapse
 
-    (* CAN-101 — root: Resources<>Access, Access<>Capability, Capability<>RealizedOpportunity; Access(z)<>Control(z); EqualAIAccess does-not-imply EqualCapabilityConversion — domain: human–AI — tier: Th_coqc — occurrences: 3 *)
+    (* CAN-101 — root: Resources<>Access, Access<>Capability, Capability<>RealizedOpportunity; Access(z)<>Control(z); EqualAIAccess does-not-imply EqualCapabilityConversion — domain: human–AI — tier: Definition — occurrences: 3 *)
 
     CANONICAL.json tier: "definition". No Master River eq. citation (a
     distinct four-pair bundle from [MR_HCA]'s eq.(72)/(76) bundles — this

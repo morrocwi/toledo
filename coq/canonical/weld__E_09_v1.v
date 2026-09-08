@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-205 — root: root-readout-gate (CAN-201) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Definition — occurrences: 1 *)
 (** S_n : X_n -> Z_n; z_n = Pi_n S_n(X_n) + eta_n; z~_n = sum_{j<h_n}
     a_{n,j} z_{n-j}: a raw noisy reading smoothed by a finite trailing
     window into a weighted average — a finite weighted sum over an

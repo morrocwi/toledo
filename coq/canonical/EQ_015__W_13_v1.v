@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-155 — early-warning-diagnostic
 
-    (* CAN-155 — root: Omega_t = w_M(g_M-g_H)+w_D g_D+w_G g_G-w_q g_q-... — domain: world-system — tier: Definition — occurrences: 1 *)
+    (* CAN-155 — root: Omega_t = w_M(g_M-g_H)+w_D g_D+w_G g_G-w_q g_q-... — domain: world-system — tier: Dr — occurrences: 1 *)
 
     CANONICAL.json tier: "measurement". No Master River eq. citation
     (After Labour eq.(52), record 22481924) — freshly formalised. The

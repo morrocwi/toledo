@@ -62046,8 +62046,8 @@
         "doi": null,
         "section": "domains/quantum rule Q-R3; claim_boundary=domains/quantum/CLAIM_BOUNDARY.json (blob b7e27b4364ef79d25c779397ef75515871a776e2)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=not_formalisable is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=not_formalisable)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "class=ROOT_THEOREM; domain_claim_boundary_tier=QUANTUM_ROOT_CLOSURE_PARTIAL; coq_backing.status='green (Th_coqc)'",
@@ -63086,8 +63086,8 @@
         "doi": null,
         "section": "domains/quantum rule Q-M1; claim_boundary=domains/quantum/CLAIM_BOUNDARY.json (blob b7e27b4364ef79d25c779397ef75515871a776e2)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=not_formalisable is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=not_formalisable)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "class=ROOT_THEOREM; domain_claim_boundary_tier=QUANTUM_ROOT_CLOSURE_PARTIAL; coq_backing.status='green (Th_coqc)'",
@@ -63188,8 +63188,8 @@
         "doi": null,
         "section": "domains/quantum rule Q-G1; claim_boundary=domains/quantum/CLAIM_BOUNDARY.json (blob b7e27b4364ef79d25c779397ef75515871a776e2)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=not_formalisable is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=not_formalisable)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "class=ROOT_THEOREM; domain_claim_boundary_tier=QUANTUM_ROOT_CLOSURE_PARTIAL; coq_backing.status='green (Th_coqc), folded from relativity/RULE_REGISTRY.json OB-03/OB-04'",
@@ -66672,8 +66672,8 @@
         "doi": null,
         "section": "domains/relativity rule OB-01; claim_boundary=domains/relativity/CLAIM_BOUNDARY.json (blob 0fcec5d8e34a2d5e4da866153b6e5f614834da43)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=not_formalisable is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=not_formalisable)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "class=ROOT_THEOREM; domain_claim_boundary_tier=FINITE_INTERNAL_CLOSURE; coq_backing.status='green broadening (Th_coqc, unchanged tier)'",
@@ -66875,8 +66875,8 @@
         "doi": null,
         "section": "domains/relativity rule OB-03; claim_boundary=domains/relativity/CLAIM_BOUNDARY.json (blob 0fcec5d8e34a2d5e4da866153b6e5f614834da43)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=definition is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=definition)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "class=ROOT_THEOREM; domain_claim_boundary_tier=FINITE_INTERNAL_CLOSURE; coq_backing.status='green (Th_coqc) -- FINITE_DIAGNOSTIC upgraded to ROOT_THEOREM, 2026-07-21'",
@@ -66976,8 +66976,8 @@
         "doi": null,
         "section": "domains/relativity rule OB-04; claim_boundary=domains/relativity/CLAIM_BOUNDARY.json (blob 0fcec5d8e34a2d5e4da866153b6e5f614834da43)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=definition is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=definition)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "class=ROOT_THEOREM; domain_claim_boundary_tier=FINITE_INTERNAL_CLOSURE; coq_backing.status='green (Th_coqc) -- FINITE_DIAGNOSTIC upgraded to ROOT_THEOREM, 2026-07-21'",
@@ -102612,8 +102612,8 @@
         "doi": null,
         "section": "formal/InfoHealthCausalRelax_attempt.v theorem setpoint_is_fixed (Theorem at formal/InfoHealthCausalRelax_attempt.v:47)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -102737,8 +102737,8 @@
         "doi": null,
         "section": "formal/InfoHealthCausalRelax_attempt.v theorem one_step_error (Theorem at formal/InfoHealthCausalRelax_attempt.v:61)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -102862,8 +102862,8 @@
         "doi": null,
         "section": "formal/InfoHealthCausalRelax_attempt.v theorem n_step_error (Theorem at formal/InfoHealthCausalRelax_attempt.v:83)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -102987,8 +102987,8 @@
         "doi": null,
         "section": "formal/InfoHealthCuspFold_attempt.v theorem disc_even (Theorem at formal/InfoHealthCuspFold_attempt.v:73)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -103112,8 +103112,8 @@
         "doi": null,
         "section": "formal/InfoHealthCuspFold_attempt.v theorem cusp_factor (Theorem at formal/InfoHealthCuspFold_attempt.v:79)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -103237,8 +103237,8 @@
         "doi": null,
         "section": "formal/InfoHealthCuspFold_attempt.v theorem fold_from_double_root (Theorem at formal/InfoHealthCuspFold_attempt.v:87)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -103362,8 +103362,8 @@
         "doi": null,
         "section": "formal/InfoHealthCuspFold_attempt.v theorem bistable_window_dec (Theorem at formal/InfoHealthCuspFold_attempt.v:105)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -103487,8 +103487,8 @@
         "doi": null,
         "section": "formal/InfoHealthCuspFold_attempt.v theorem critical_slowing_marginal (Theorem at formal/InfoHealthCuspFold_attempt.v:109)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -103612,8 +103612,8 @@
         "doi": null,
         "section": "formal/InfoHealthCuspFold_attempt.v theorem rest_iff_critical (Theorem at formal/InfoHealthCuspFold_attempt.v:117)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "tier=Th_coqc with coq_status=wrapped_related is a finding cell of docs/CONSISTENCY_SPEC_v0_1.md Appendix B; SCHEMA v1.1's overlay moves status current -> unverified with this dated note rather than lowering the tier (class D). (coq_status=wrapped_related)",
       "superseded_by": null,
       "tier": "Th_coqc",
       "tier_in_genesis_verbatim": "untagged -- theorem name only, no source tier tag captured in src_solver_arc.json health_stream inventory",
@@ -160661,38 +160661,38 @@
   "counts": {
     "entries": 1274,
     "by_status": {
-      "current": 1182,
-      "split": 30,
+      "current": 1167,
       "not_an_equation": 9,
-      "unverified": 53
+      "split": 30,
+      "unverified": 68
     },
     "by_domain": {
-      "M": 412,
+      "B": 75,
+      "C": 59,
       "E": 62,
       "H": 124,
-      "S": 136,
-      "W": 93,
-      "C": 59,
+      "M": 412,
       "P": 313,
-      "B": 75
+      "S": 136,
+      "W": 93
     },
     "by_tier": {
-      "Th_coqc": 413,
+      "Ax": 12,
       "Definition": 435,
       "Dr": 82,
-      "Ax": 12,
-      "finite_diagnostic": 46,
       "Open": 41,
+      "Th_coqc": 413,
+      "finite_diagnostic": 46,
       "untagged": 245
     },
     "by_coq_status": {
+      "axioms": 3,
       "closed": 551,
       "definition": 384,
-      "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 56,
-      "axioms": 3
+      "wrapped_related": 210
     },
-    "computed": "2026-09-08 from canonical[] (scripts/v18_ranc_merge.py)"
+    "computed": "2026-09-08 from canonical[] (scripts/v18_clearing_fixes.py)"
   }
 }

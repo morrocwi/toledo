@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-017 — root: domain-weld (CAN-006) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: Definition — occurrences: 2 *)
 (** State mapping: literally [MR_Foundation.v]'s
     [eq5_experience_is_phenomenon_and_meaning_jointly] — a Th_coqc witness
     (generalised over the section's [X], [Gamma], [Ctx] carriers) that

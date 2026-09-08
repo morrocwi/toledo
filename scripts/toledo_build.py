@@ -64,6 +64,31 @@ def code_safe(code: str) -> str:
     return code.replace("/", "__").replace(".", "_")
 
 
+def consistency_mangle(code: str) -> str:
+    """registry/SCHEMA.md's Coq-identifier mangling rule ('/'->'__', '.'->'_',
+    '-'->'_'), distinct from code_safe() above (which keeps '-') -- this is
+    the rule docs/CONSISTENCY_SPEC_v0_1.md sec.4 names for
+    registry/consistency/<mangled code>.json sidecar filenames."""
+    return code.replace("/", "__").replace(".", "_").replace("-", "_")
+
+
+_CONSISTENCY_CACHE: dict[tuple[str, str], dict | None] = {}
+
+
+def load_consistency(code: str, out_root: pathlib.Path) -> dict | None:
+    """Readout of the sidecar scripts/compute_consistency.py already wrote
+    (docs/CONSISTENCY_SPEC_v0_1.md sec.4/sec.7). Never computed here, never
+    invented when absent -- an entry with no sidecar yet carries
+    `consistency: null`, which surfaces as "not checked", never as a pass."""
+    key = (str(out_root), code)
+    if key in _CONSISTENCY_CACHE:
+        return _CONSISTENCY_CACHE[key]
+    path = out_root / "registry" / "consistency" / f"{consistency_mangle(code)}.json"
+    value = load_json(path) if path.exists() else None
+    _CONSISTENCY_CACHE[key] = value
+    return value
+
+
 def today() -> str:
     return datetime.date.today().isoformat()
 
@@ -133,8 +158,12 @@ def genesis_row_to_canonical(row: dict, anchor: dict) -> dict:
       genesis_root.json rows carry no assignment date of their own.
     - `status`/`status_note`: "historical" + a generic note when
       tier_in_genesis == RETRACTED (T14), else "current".
-    - `tier` is filled by the best-effort map_tier() heuristic; verbatim text is
-      always preserved in tier_in_genesis_verbatim.
+    - `tier` is the row's own normalised `tier` field when present (with its
+      `tier_evidence`); a row with no normalised tier renders `untagged`
+      (map_tier()'s free-text heuristic is kept only as a documented
+      historical artefact, no longer called here -- see
+      docs/CONSISTENCY_SPEC_v0_1.md sec.2.3 tier.root_render). Verbatim text
+      is always preserved in tier_in_genesis_verbatim.
     - `occurrences[]` is built from `synthesis_occurrences` (bare strings like
       "(4)") with everything except `raw_key` left null, since genesis_root.json
       does not carry record_id/doi/label/section per occurrence.
@@ -151,6 +180,15 @@ def genesis_row_to_canonical(row: dict, anchor: dict) -> dict:
     parents = [{"code": p, "derived_via": row.get("derived_via") or "reads"} for p in row.get("parents", [])]
     tier_in_genesis = row.get("tier_in_genesis", "") or ""
     is_retracted = tier_in_genesis.strip().upper() == "RETRACTED"
+    # tier.root_render (docs/CONSISTENCY_SPEC_v0_1.md sec.2.3, tier dimension,
+    # findings row-tier-ignored / heuristic-tier-without-evidence): a row
+    # that already carries a normalised `tier` (+ `tier_evidence`) in
+    # registry/genesis_root.json is authoritative and is never overridden by
+    # this build's own free-text heuristic; a row with `tier: null` renders
+    # honestly as `untagged` (never a substring guess from a hedged tag) so
+    # the rendered tier is never raised above the source's own tag.
+    row_tier = row.get("tier")
+    row_tier_evidence = row.get("tier_evidence")
     axiom_match = ROOT_AXIOM_STATEMENT_RE.match(row.get("statement", "") or "")
     if axiom_match:
         coq = {
@@ -196,7 +234,8 @@ def genesis_row_to_canonical(row: dict, anchor: dict) -> dict:
         "status": "historical" if is_retracted else "current",
         "status_note": (f"RETRACTED in Readout Genesis: {tier_in_genesis}" if is_retracted else ""),
         "superseded_by": None,
-        "tier": "RETRACTED" if is_retracted else map_tier(tier_in_genesis),
+        "tier": "RETRACTED" if is_retracted else (row_tier if row_tier else "untagged"),
+        "tier_evidence": row_tier_evidence,
         "tier_in_genesis_verbatim": tier_in_genesis,
         "coq": coq,
         "relations": [],
@@ -221,7 +260,8 @@ def genesis_row_to_canonical(row: dict, anchor: dict) -> dict:
     return entry
 
 
-def build_entries(canonical_doc: dict, genesis_doc: dict | None) -> tuple[list[dict], dict]:
+def build_entries(canonical_doc: dict, genesis_doc: dict | None,
+                   consistency_root: pathlib.Path | None = None) -> tuple[list[dict], dict]:
     """Merge CANONICAL.json['canonical'] with any genesis_root.json root row whose
     code is not already present. Returns (entries, raw_to_canonical)."""
     entries_by_code: dict[str, dict] = {}
@@ -249,6 +289,16 @@ def build_entries(canonical_doc: dict, genesis_doc: dict | None) -> tuple[list[d
             parent_code = p.get("code")
             if parent_code in entries_by_code:
                 entries_by_code[parent_code]["children"].append(e["code"])
+
+    # docs/CONSISTENCY_SPEC_v0_1.md sec.4/sec.7: attach the grader's own
+    # sidecar (registry/consistency/<mangled code>.json) verbatim, so every
+    # caller of build_entries (this file's run_build, and mcp/toledo_mcp's
+    # core.py, which reuses this exact function per its own docstring)
+    # carries `consistency` without recomputing it. `None` when the grader
+    # has not run against this checkout -- never invented.
+    croot = consistency_root or REPO_ROOT
+    for e in entries:
+        e["consistency"] = load_consistency(e["code"], croot)
 
     raw_to_canonical = dict(canonical_doc.get("raw_to_canonical", {}))
     return entries, raw_to_canonical
@@ -1240,13 +1290,14 @@ def run_build(canonical_path: pathlib.Path, genesis_path: pathlib.Path | None, o
     if genesis_path and not genesis_path.exists():
         note_assumption(f"registry/genesis_root.json not found at {genesis_path}; no root rows were seeded from it.")
 
-    entries, raw_to_canonical = build_entries(canonical_doc, genesis_doc)
+    entries, raw_to_canonical = build_entries(canonical_doc, genesis_doc, consistency_root=out_root)
     generated_at = today()
     build_commit = canonical_doc.get("generated_from_commit")
 
     entries_dir = out_root / "registry" / "entries"
     for e in entries:
         doc = entry_to_jsonld(e, build_commit, generated_at)
+        doc["consistency"] = e.get("consistency")
         stmt = e.get("statement", {})
         pres_mml, pres_reason = presentation_mathml(stmt)
         cont_mml, openmath, cont_reason = content_mathml(stmt)
@@ -1306,6 +1357,13 @@ def run_build(canonical_path: pathlib.Path, genesis_path: pathlib.Path | None, o
             # scripts/compute_resistance.py.
             "resistance_computed": resistance is not None,
             "resistance_rungs_held": [r for r in RUNG_ORDER if rungs.get(r, {}).get("held")],
+            # Internal-consistency ladder (docs/CONSISTENCY_SPEC_v0_1.md
+            # sec.7): compact projection, same discipline as the resistance
+            # fields immediately above -- IC is a readout of the registry's
+            # own self-agreement, never merged with resistance and never a
+            # score.
+            "consistency_grade": (e.get("consistency") or {}).get("grade"),
+            "consistency_flag": (e.get("consistency") or {}).get("flag"),
         })
     write_json(out_root / "site" / "index.json", {"generated_at": generated_at, "entries": index_rows})
 

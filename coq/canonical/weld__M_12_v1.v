@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-185 — root: root-weld (CAN-001) — domain: method —
-   tier: Definition / Th_coqc — occurrences: 17 *)
+   tier: finite_diagnostic / Th_coqc — occurrences: 17 *)
 (** Deliberately heuristic bookkeeping (per the registry's own tier note):
     [CAN185_chi] and [CAN185_VC]/[CAN185_priority] are typed Definitions;
     the recursive credit-stock bound [B_{t+1} <= B_t + M_t] (mint minus a

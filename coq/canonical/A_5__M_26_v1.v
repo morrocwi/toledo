@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-250 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: untagged — occurrences: 1 *)
 Theorem CAN250_practiceexperience_not_populationevidence :
   CAN2xx_PracticeExperience <> CAN2xx_PopulationEvidence.
 Proof. discriminate. Qed.

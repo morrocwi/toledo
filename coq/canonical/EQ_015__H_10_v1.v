@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-062 — K_like-noncollapse
 
-    (* CAN-062 — root: AI(Q)=K_like, K_like<>K_validated — domain: human–AI — tier: Th_coqc — occurrences: 6 *)
+    (* CAN-062 — root: AI(Q)=K_like, K_like<>K_validated — domain: human–AI — tier: Definition — occurrences: 6 *)
 
     CANONICAL.json tier: "law/definition". Direct reuse of
     [MR_Retention.v] eq.(38): [KnowledgeStatus] (the two-point

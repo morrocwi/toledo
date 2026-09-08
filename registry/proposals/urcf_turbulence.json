@@ -1,0 +1,57 @@
+[
+  {
+    "id": "PROP-URCF-01",
+    "code": "weld/P.??.v1",
+    "name": "Retained-information relaxation-inertia turbulence prediction equation",
+    "statement": {
+      "latest": "\\tau_R \\frac{dI_R}{dt} + L_R I_R = S_R + \\eta_R",
+      "format": "latex",
+      "note_ascii": "tau_R dI_R/dt + L_R I_R = S_R + eta_R"
+    },
+    "definitions": {
+      "I_R": "retained turbulence state (a vector/Hilbert/finite-graph state, not a scalar)",
+      "tau_R": "positive scalar restoration time / relaxation inertia, tau_R > 0",
+      "L_R": "the retained restoration operator: declared as a graph Laplacian / linearized restoration operator, positive semidefinite on the declared state space, zero-mode policy declared",
+      "S_R": "structural source/drive (mean shear, energy injection, boundary forcing, cascade input, ...)",
+      "eta_R": "unresolved residual/stochastic disturbance; the source's own claim_boundary states this must be logged, bounded, and tested, never treated as a free error bin"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "URCF:relaxation-inertia-turbulence-law",
+      "EQ-URCF-TURB-004"
+    ],
+    "parents": [
+      {
+        "code": "weld/S.01.v1",
+        "derived_via": "instance_of",
+        "evidence": "Identical functional shape to the registered Finite-Memory Laplacian/Telegraph Generator (weld/S.01.v1: A := L_R + Gamma; ds/dt = -A s + J, i.e. ds/dt + (L_R+Gamma) s = J), here applied to a new domain (turbulence structural state I_R) instead of the social-instability state s. This is a domain instance of the same first-order retained-response law, not a new law."
+      },
+      {
+        "code": "root/EQ-008",
+        "derived_via": "instance_of",
+        "evidence": "The source's own definition of L_R ('graph Laplacian / scale Laplacian / linearized restoration operator / positive operator, positive semidefinite, zero-mode policy declared') matches, in words, IDM/Genesis root EQ-008's canonical definition L_R := D_W - W (weighted-degree minus retained-adjacency, a full operator on a multimode state). The source paper does not itself cite EQ-008; this attachment records a structural match found at intake, not an author claim."
+      }
+    ],
+    "does_not_resolve": {
+      "genesis_root_gap": "T2",
+      "reason": "Genesis root row T2 ('endogenous state-dependent L_R[I_R], where the operator itself depends on the state it is acting on') is the harder, still-open case. This equation's own stated assumption set explicitly keeps 'L_R time-independent' (solution_form_linear_time_invariant) -- it is the easier linear/state-independent sub-case, not an attempted or claimed resolution of T2. State this honestly if the entry is ever cited near T2."
+    },
+    "resistance_evidence": {
+      "own_reported_tier": "PASS_WITH_LIMITS (source's own run_log_anchor verdict, numerical, 6 test cases x 3 grid sizes x 3 viscosities)",
+      "own_claim_boundary_verbatim": [
+        "not an unconditional proof of the 3D Navier-Stokes Millennium problem",
+        "not a replacement for DNS/LES/RANS solvers",
+        "not empirical validation until tested on external DNS/experimental datasets",
+        "not a universal theorem until continuum-scale analytic estimates are proved"
+      ],
+      "rungs_held": "none yet (R0 stated only) -- no evidence file exists in glosa/cases/repro/ for this object; register one before claiming any rung"
+    },
+    "origin": {
+      "source": "URCF_RTPE_TURBULENCE_RELAXATION_INERTIA_DIRECT_LP_CLOSURE_v2_2_STANDALONE_PROOF_PACK.yaml (standalone research specification, not deposited on Zenodo, not reviewed by glosa)",
+      "doi": null,
+      "note": "Never deposited or registered anywhere before this proposal (2026-09-08 intake). No Toledo-first violation: this object was not previously used or cited as registered."
+    }
+  }
+]

@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-182 — root: root-stepper (CAN-003) — domain: method —
-   tier: Definition — occurrences: 3 *)
+   tier: finite_diagnostic — occurrences: 3 *)
 Inductive CAN182_Outcome := CAN182_Resolve | CAN182_Declare.
 Definition CAN182_decision (Disagreement HumanAvailable : bool) : CAN182_Outcome :=
   if Disagreement then (if HumanAvailable then CAN182_Resolve else CAN182_Declare) else CAN182_Resolve.

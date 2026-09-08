@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-237 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 3 *)
+   tier: untagged — occurrences: 3 *)
 Theorem CAN237_mechanical_not_semantic_validity :
   CAN2xx_MechanicalValidity <> CAN2xx_SemanticValidity.
 Proof. discriminate. Qed.

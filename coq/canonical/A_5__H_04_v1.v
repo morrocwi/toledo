@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-056 — B-HAI-SYNERGY
 
-    (* CAN-056 — root: Sigma_{H+AI}=D^use_{H+AI}/max{D^use_H,D^use_AI,1}; more AI out<>more diversity<>better warrant — domain: human–AI — tier: Th_coqc — occurrences: 4 *)
+    (* CAN-056 — root: Sigma_{H+AI}=D^use_{H+AI}/max{D^use_H,D^use_AI,1}; more AI out<>more diversity<>better warrant — domain: human–AI — tier: Definition — occurrences: 4 *)
 
     CANONICAL.json tier: "definition (finite diagnostic) for (11);
     identity (non-collapse) for (12); hypothesis [Open] for (16)-(17)".

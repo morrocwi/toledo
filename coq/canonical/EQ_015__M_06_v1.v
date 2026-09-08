@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-188 — root: root-stepper (CAN-003) — domain: method —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: Definition — occurrences: 1 *)
 (** The Legitimacy Circulation Loop is a closed 5-stage cycle: iterating
     the step function 5 times returns every stage to itself, a genuine
     (fully computable, [reflexivity]-closed) theorem. *)

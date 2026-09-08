@@ -41,6 +41,17 @@ derivations before any new equation is proposed; a new derivation is labelled as
 presented as an existing entry. Full policy:
 <a href="https://github.com/morrocwi/toledo/blob/main/EQUATION_SOURCE_POLICY.md">EQUATION_SOURCE_POLICY.md</a>.</p>
 
+<h2>Internal-consistency ladder (IC)</h2>
+<p class="lede">IC-0 through IC-3 measure whether the registry <em>agrees with itself</em> — fields
+matching the schema, edges resolving, Coq wrappers matching their statements, symbols carrying one
+sense, and every declared edge shape-checked. It is orthogonal to the Resistance ladder R0–R6 above:
+resistance is evidence against the world, IC is evidence the registry has not contradicted its own
+rules. Neither ladder is ever collapsed into the other and neither is a truth score — an entry can
+be IC-3 and R0, or R4 and IC-0. A dimension marked <code>needs_reader</code> is unchecked by a human
+or agent reader, not a failing grade. Full ladder and the seven audit dimensions:
+<a href="https://github.com/morrocwi/toledo/blob/main/docs/CONSISTENCY_SPEC_v0_1.md">docs/CONSISTENCY_SPEC_v0_1.md</a>;
+corpus-wide tallies: <a href="{{root}}/v1/consistency-summary.json">{{root}}/v1/consistency-summary.json</a>.</p>
+
 <h2>Static API</h2>
 <p class="lede">A caller with no MCP/stdio access reads the same registry as a periodic,
 eventually-consistent JSON mirror under <a href="{{root}}/v1/">{{root}}/v1/</a>. It is

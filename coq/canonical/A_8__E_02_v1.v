@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-217 — root: root-weld (CAN-001) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: Definition — occurrences: 1 *)
 (** RPE = Cr(p|E,R,A,O1) - Cr(p|E,R,A,O2): a measurable shift in credence
     from provenance alone, holding evidence/reliability/dependence fixed.
     Witnessed: nothing forces this difference to be zero. *)

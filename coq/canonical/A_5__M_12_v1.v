@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-235 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 3 *)
+   tier: untagged — occurrences: 3 *)
 (** Registry tier: "identity (non-collapse)" despite the source's own
     "=/=>" connective (DVP does not force reaching K2) — formalised, per
     the registry's own classification, as the same notion-distinctness

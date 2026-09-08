@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-191 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition — occurrences: 3 *)
+   tier: finite_diagnostic — occurrences: 3 *)
 Inductive CAN191_FirewallStage :=
   | CAN191_AICandidate | CAN191_OriginalSource | CAN191_ClaimMatch | CAN191_VerifiedCitation.
 Definition CAN191_scram (FreezeNewRelease Correction ReAudit : bool) : bool :=

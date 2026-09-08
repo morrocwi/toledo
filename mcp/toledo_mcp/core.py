@@ -157,7 +157,7 @@ def _load_once(root: pathlib.Path) -> Registry:
     genesis_path = reg_dir / "genesis_root.json"
     genesis_doc = tb.load_json(genesis_path) if genesis_path.exists() else None
     genesis_doc = _normalise_genesis_parents(genesis_doc)
-    entries, raw_to_canonical = tb.build_entries(canonical_doc, genesis_doc)
+    entries, raw_to_canonical = tb.build_entries(canonical_doc, genesis_doc, consistency_root=root)
     by_code = {e["code"]: e for e in entries}
     lineage_events = load_lineage(reg_dir / "LINEAGE.jsonl")
     return Registry(

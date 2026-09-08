@@ -12,7 +12,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-222 — root-non-collapse-chain
 
-    (* CAN-222 — root: A<>x<>mu<>E<>M<>Bel<>p<>sigma_K(p); plus 8 further typed non-collapse pairs/chains from the same source (Readout Genesis Standalone Synthesis eq.10,12,21,24,26,35,48,70,85), including the closing no-free-governance instance (85) — domain: root — tier: Definition — occurrences: 9 *)
+    (* CAN-222 — root: A<>x<>mu<>E<>M<>Bel<>p<>sigma_K(p); plus 8 further typed non-collapse pairs/chains from the same source (Readout Genesis Standalone Synthesis eq.10,12,21,24,26,35,48,70,85), including the closing no-free-governance instance (85) — domain: root — tier: finite_diagnostic — occurrences: 9 *)
 
     Not an independent root object — per COLLAPSE.md and this file's own
     header, CAN-222 bundles Readout Genesis Standalone Synthesis's own

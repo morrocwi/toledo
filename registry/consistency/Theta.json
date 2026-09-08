@@ -1,0 +1,88 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.enum_values#7781aae4",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "Theta",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row"
+    }
+   },
+   "status": "pass"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "duplicates.fingerprint#5abcee6e"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.root_edge_reader#5e1dffbd"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "schema.enum_values#7781aae4"
+     ],
+     "warn_findings": [
+      "schema.root_edge_kind#6a3574eb"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row (symbols.dimension only)"
+    }
+   },
+   "status": "pass"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "duplicates.fingerprint#5abcee6e",
+  "lineage.root_edge_reader#5e1dffbd",
+  "schema.enum_values#7781aae4",
+  "schema.root_edge_kind#6a3574eb"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.2-R",
+  "date": "2026-09-07",
+  "event": "assigned"
+ },
+ "layer": "root"
+}

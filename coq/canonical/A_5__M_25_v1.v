@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-249 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: untagged — occurrences: 2 *)
 Theorem CAN249_interventioncreator_not_soleevaluator :
   CAN2xx_InterventionCreator <> CAN2xx_SoleEvaluator.
 Proof. discriminate. Qed.

@@ -1,0 +1,74 @@
+{
+ "blocked_at": {
+  "dimension": "lineage",
+  "finding": "lineage.ledger_reason_vs_edge#659818ed",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "weld/W.01.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "lineage.ledger_reason_vs_edge#659818ed"
+     ],
+     "warn_findings": [
+      "lineage.restates_reader#75469ee8"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "lineage.ledger_reason_vs_edge#659818ed",
+  "lineage.restates_reader#75469ee8"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.2-S",
+  "date": "2026-09-07",
+  "event": "revised"
+ },
+ "layer": "reading"
+}

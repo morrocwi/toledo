@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-186 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition — occurrences: 3 *)
+   tier: finite_diagnostic — occurrences: 3 *)
 Inductive CAN186_CompoundingStage :=
   | CAN186_FlagshipConcept | CAN186_Preprint | CAN186_Conference
   | CAN186_Journal | CAN186_EmpiricalTest | CAN186_ComparativeExtension | CAN186_Grant.

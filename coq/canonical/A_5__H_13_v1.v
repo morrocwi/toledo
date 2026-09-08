@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-093 — event-translation-core
 
-    (* CAN-093 — root: E:=event; C_e:=(Se,Re,Ae,taue); That:=I(E|Cacc); That<>E — domain: human–AI — tier: Th_coqc — occurrences: 7 *)
+    (* CAN-093 — root: E:=event; C_e:=(Se,Re,Ae,taue); That:=I(E|Cacc); That<>E — domain: human–AI — tier: Definition — occurrences: 7 *)
 
     CANONICAL.json tier: "definition/proposition". No Master River eq.
     citation. The event-context record and the interpretation function

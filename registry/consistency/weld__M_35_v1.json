@@ -1,0 +1,79 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.enum_values#04400af6",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "weld/M.35.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.reads_reading_symbols#10521759"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "schema.enum_values#04400af6"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "info_findings": [
+      "structure.occurrence_map#d80a2e52"
+     ]
+    }
+   },
+   "status": "pass"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "lineage.reads_reading_symbols#10521759",
+  "schema.enum_values#04400af6"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.7-river",
+  "date": "2026-09-08",
+  "event": "assigned"
+ },
+ "layer": "reading"
+}

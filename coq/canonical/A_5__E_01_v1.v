@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-037 — root: constitutional-noncollapse (CAN-008) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Definition — occurrences: 1 *)
 (** A_n <> r_n <> x_n; root retention =/= belief state =/= meaning =/=
     experience =/= choice: event occurrence, retained record, accessible
     trace, and the four further named notions are eight pairwise-distinct

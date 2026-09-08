@@ -1,0 +1,97 @@
+{
+ "blocked_at": {
+  "dimension": "structure",
+  "finding": "structure.coq_file_present#54f8eb18",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "weld/S.01.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "info_findings": [
+      "coq.header_quotes#968bb66c",
+      "coq.identifier_present#c2d15d80"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "lineage.ledger_reason_vs_edge#1a4822fc",
+      "lineage.split_inherited_edges#1bb9c6e1"
+     ],
+     "warn_findings": [
+      "lineage.split_child_verbatim#d3a86825",
+      "lineage.split_inherited_edges#31e11726"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "structure.coq_file_present#54f8eb18"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "symbols.spelling.nearmiss#ea8c38a0"
+     ],
+     "warn_findings": [
+      "symbols.reserved#64f4359a"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "lineage.ledger_reason_vs_edge#1a4822fc",
+  "lineage.split_child_verbatim#d3a86825",
+  "lineage.split_inherited_edges#1bb9c6e1",
+  "lineage.split_inherited_edges#31e11726",
+  "structure.coq_file_present#54f8eb18",
+  "symbols.reserved#64f4359a",
+  "symbols.spelling.nearmiss#ea8c38a0"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.2-S",
+  "date": "2026-09-07",
+  "event": "revised"
+ },
+ "layer": "reading"
+}

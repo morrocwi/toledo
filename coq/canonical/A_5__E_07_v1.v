@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-226 — root: domain-weld (CAN-006) reading — domain: epistemic —
-   tier: Th_coqc (non-collapse bundle) — occurrences: 1 *)
+   tier: Dr (non-collapse bundle) — occurrences: 1 *)
 (** Experience Is Meaning-Giving's own non-collapse families (EMG-15,
     EMG-20, EMG-27): order <> rhythm <> repetition <> meaning <>
     retention; release <> transformation <> intensity <> truth; shock <>

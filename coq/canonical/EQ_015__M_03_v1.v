@@ -11,7 +11,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-004 — constitutional-ordering
 
-    (* CAN-004 — root: Retention->Structure->Translation->Readout->Meaning->Experience->Memory->Belief->Claim->Checking->Status->Report — domain: root — tier: Definition — occurrences: 1 *)
+    (* CAN-004 — root: Retention->Structure->Translation->Readout->Meaning->Experience->Memory->Belief->Claim->Checking->Status->Report — domain: root — tier: Dr — occurrences: 1 *)
 
     Twelve named stages, walked in a fixed order; the forbidden order is
     naming/status first, backfilling knowledge status after.  Discrete

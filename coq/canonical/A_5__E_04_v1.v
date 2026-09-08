@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-223 — root: constitutional-noncollapse (CAN-008) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Dr — occurrences: 1 *)
 (** Role Separation: generation, truth, evidential support, reliability,
     understanding, possession, endorsement, accountability, credibility,
     and institutional authorization are ten distinct epistemic roles, no

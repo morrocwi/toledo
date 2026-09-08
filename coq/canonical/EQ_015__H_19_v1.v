@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-079 — outcome-vector-J*
 
-    (* CAN-079 — root: J*_s=(AUGs,SYNs,RETs); AUGs=Pjoint-PH; SYNs=Pjoint-max(PH,PAI) — domain: human–AI — tier: Th_coqc — occurrences: 2 *)
+    (* CAN-079 — root: J*_s=(AUGs,SYNs,RETs); AUGs=Pjoint-PH; SYNs=Pjoint-max(PH,PAI) — domain: human–AI — tier: Definition — occurrences: 2 *)
 
     CANONICAL.json tier: "definition". Direct reuse of [MR_Retention.v]
     eq.(40): [AUG]/[SYN] and the proved non-collapse

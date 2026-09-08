@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-035 — root: constitutional-noncollapse (CAN-008) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Dr — occurrences: 1 *)
 (** tau_public(p) <= inf_{g in G_p} tau(g) (Weakest-link claim ceiling,
     proved): a finite [Qmin] fold over a claim's gate tiers, proved to be
     a genuine lower bound of every member (never an unbounded infimum) —

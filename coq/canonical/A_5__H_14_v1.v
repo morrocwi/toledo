@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-095 — grounding-embodiment
 
-    (* CAN-095 — root: G (referential grounding); Ge (experiential grounding); Emb (embodiment); G<>Emb — domain: human–AI — tier: Th_coqc — occurrences: 2 *)
+    (* CAN-095 — root: G (referential grounding); Ge (experiential grounding); Emb (embodiment); G<>Emb — domain: human–AI — tier: Definition — occurrences: 2 *)
 
     CANONICAL.json tier: "definition/hypothesis-Open". No Master River
     eq. citation. The three grounding notions are typed as [Prop]-valued

@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-175 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition — occurrences: 3 *)
+   tier: finite_diagnostic — occurrences: 3 *)
 Section CAN175_K2Procurement.
   Variables Cash lamH H lamL L D R I eps175 : Q.
   Definition CAN175_cost_k2 : Q := (Cash + lamH * H + lamL * L) / (D * R * I + eps175).

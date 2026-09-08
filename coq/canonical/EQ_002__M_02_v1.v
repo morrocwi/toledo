@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-183 — root: root-readout-gate (CAN-201) — domain: method —
-   tier: Definition — occurrences: 3 *)
+   tier: finite_diagnostic — occurrences: 3 *)
 (** Coh_effective = Coh_latent * L_g: a genuine bound follows given
     0<=L_g<=1 and Coh_latent nonnegative, offered here as Th_coqc-grade
     scaffolding for a Definition-tier id (matching the "supporting lemma,

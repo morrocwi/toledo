@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-075 — exposure-retention-improvement-noncollapse
 
-    (* CAN-075 — root: Exposure<>Retention<>Improvement — domain: human–AI — tier: Th_coqc — occurrences: 2 *)
+    (* CAN-075 — root: Exposure<>Retention<>Improvement — domain: human–AI — tier: Definition — occurrences: 2 *)
 
     CANONICAL.json tier: "definition/law". Direct reuse of
     [MR_Retention.v] eq.(42): the first triple of its six-notion

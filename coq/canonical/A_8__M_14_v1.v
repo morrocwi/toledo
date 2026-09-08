@@ -11,6 +11,6 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-192 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition — occurrences: 1 *)
+   tier: finite_diagnostic — occurrences: 1 *)
 Definition CAN192_H_g (questions_defended : nat) : Q := (Z.of_nat questions_defended # 10).
 

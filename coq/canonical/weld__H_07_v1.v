@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-066 — session-retention-gate
 
-    (* CAN-066 — root: DeltaOmegatilde_s=BsAs, rank<<dH; Omega_{s+1,0}=Omega_{s,0}+eta_s.DeltaOmegatilde_s; RET=(Ppost-Ppre)HAI-(Ppost-Ppre)HC — domain: human–AI — tier: Th_coqc — occurrences: 4 *)
+    (* CAN-066 — root: DeltaOmegatilde_s=BsAs, rank<<dH; Omega_{s+1,0}=Omega_{s,0}+eta_s.DeltaOmegatilde_s; RET=(Ppost-Ppre)HAI-(Ppost-Ppre)HC — domain: human–AI — tier: Definition — occurrences: 4 *)
 
     CANONICAL.json tier: "definition (Master's own proposal, not v8.1's
     own text for the low-rank form)". Direct reuse of [MR_Retention.v]

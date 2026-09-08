@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-225 — root: domain-weld (CAN-006) reading — domain: epistemic —
-   tier: Th_coqc (non-collapse bundle) / Open (H6 companion) —
+   tier: Open (non-collapse bundle) / Open (H6 companion) —
    occurrences: 1 *)
 (** Section 8/11's own family: Exposure <> FeltIntensity <> Retention <>
     Improvement; ExternalPattern <> Meaning <> ExplicitNaming;

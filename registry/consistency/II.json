@@ -1,0 +1,79 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.required_fields#c60ec6f4",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "II",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row"
+    }
+   },
+   "status": "pass"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.root_edge_reader#5e1dffbd"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "schema.required_fields#c60ec6f4"
+     ],
+     "warn_findings": [
+      "schema.root_edge_kind#6a3574eb"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row (symbols.dimension only)"
+    }
+   },
+   "status": "pass"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "lineage.root_edge_reader#5e1dffbd",
+  "schema.required_fields#c60ec6f4",
+  "schema.root_edge_kind#6a3574eb"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": null,
+ "layer": "root"
+}

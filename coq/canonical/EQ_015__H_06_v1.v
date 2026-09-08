@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-054 — selective-retention-mechanism
 
-    (* CAN-054 — root: DeltaO_n^fast=BnAn; gn in Q cap [0,1]; O_H[n+1]=O_H[n]+gn.DeltaO_n^fast+eps_n; rank_Q(BnAn)<=m_n<d_n — domain: human–AI — tier: Th_coqc — occurrences: 26 *)
+    (* CAN-054 — root: DeltaO_n^fast=BnAn; gn in Q cap [0,1]; O_H[n+1]=O_H[n]+gn.DeltaO_n^fast+eps_n; rank_Q(BnAn)<=m_n<d_n — domain: human–AI — tier: Definition — occurrences: 26 *)
 
     CANONICAL.json tier: "definition / theorem (rank bounds, proved
     in-article) / hypothesis-Open (empirical programme)". No Master River

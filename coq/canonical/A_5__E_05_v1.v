@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-224 — root: root-readout-gate (CAN-201) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Dr — occurrences: 1 *)
 (** Representationality <> Selectivity, witnessed via the shared
     enumeration device. *)
 Inductive CAN224_Notion := CAN224_Representationality | CAN224_Selectivity.

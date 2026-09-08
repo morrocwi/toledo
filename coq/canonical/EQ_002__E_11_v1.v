@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-206 — root: root-readout-gate (CAN-201) reading — domain:
-   epistemic — tier: Definition — occurrences: 1 *)
+   epistemic — tier: Dr — occurrences: 1 *)
 (** D_n = {D_n^first, D_n^beh, D_n^neural, D_n^world}: a named,
     closed, decidable taxonomy of readout-domain sources. *)
 Inductive CAN206_DomainSource :=

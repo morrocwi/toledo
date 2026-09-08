@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-078 — D-R-A-constitutive
 
-    (* CAN-078 — root: D>0, Resist>0, A_H>0 — domain: human–AI — tier: Open — occurrences: 4 *)
+    (* CAN-078 — root: D>0, Resist>0, A_H>0 — domain: human–AI — tier: Definition — occurrences: 4 *)
 
     CANONICAL.json tier: "definition/hypothesis-Open". No Master River
     eq. citation. Typed as three [Q]-valued positivity conditions on a

@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-063 — K_like-statemachine
 
-    (* CAN-063 — root: K_like->K_assumed (dangerous shortcut); repaired K_like-check->K_checked-support->K_supported-warrant->K_validated — domain: human–AI — tier: Definition — occurrences: 2 *)
+    (* CAN-063 — root: K_like->K_assumed (dangerous shortcut); repaired K_like-check->K_checked-support->K_supported-warrant->K_validated — domain: human–AI — tier: Dr — occurrences: 2 *)
 
     CANONICAL.json tier: "law/proposition". No Master River eq. citation
     (Epistemic Fusion v8.1, EF-05/EF-06 Repair 2, record 22331922). The

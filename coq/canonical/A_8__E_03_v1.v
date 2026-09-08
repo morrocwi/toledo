@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-220 — root: root-weld (CAN-001) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: Dr — occurrences: 1 *)
 (** Provenance may alter epistemic standing only via a specified
     epistemically relevant condition (evidence, reliability, dependence,
     assurance, accountability), never by redescription alone. Formalised

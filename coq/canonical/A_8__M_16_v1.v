@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-195 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition — occurrences: 3 *)
+   tier: finite_diagnostic — occurrences: 3 *)
 Section CAN195_DiscoveryJustification.
   Variables ClaimScope SamplingScope : Q.
   Definition CAN195_scope_constraint : Prop := ClaimScope <= SamplingScope.

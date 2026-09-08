@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-067 — gain-tunnel-functions
 
-    (* CAN-067 — root: Gs=g(k,d,v,p,r,1-f,a); Ts=h(c,f,b,o); Deltas=Gs-Ts; eta>0,Delta>0=>expansion; eta>0,Delta<0=>tunnel — domain: human–AI — tier: Definition — occurrences: 5 *)
+    (* CAN-067 — root: Gs=g(k,d,v,p,r,1-f,a); Ts=h(c,f,b,o); Deltas=Gs-Ts; eta>0,Delta>0=>expansion; eta>0,Delta<0=>tunnel — domain: human–AI — tier: Dr — occurrences: 5 *)
 
     CANONICAL.json tier: "proposition". No Master River eq. citation
     (Epistemic Fusion v8.1, record 22331922). Gain and tunnel are typed

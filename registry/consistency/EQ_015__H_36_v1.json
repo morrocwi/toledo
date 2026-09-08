@@ -1,0 +1,76 @@
+{
+ "blocked_at": {
+  "dimension": "duplicates",
+  "finding": "duplicates.fingerprint.unparsed#019109ea",
+  "rung": null
+ },
+ "clearances": [],
+ "code": "EQ-015/H.36.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {
+     "info_findings": [
+      "duplicates.fingerprint.unparsed#019109ea"
+     ]
+    }
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.ledger_split_events#2254c24b",
+      "lineage.reads_reading_symbols#10521759"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  }
+ },
+ "findings": [
+  "lineage.ledger_split_events#2254c24b",
+  "lineage.reads_reading_symbols#10521759"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-1",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.5-D",
+  "date": "2026-09-07",
+  "event": "revised"
+ },
+ "layer": "reading"
+}

@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-069 — fusion-non-collapse-bundle
 
-    (* CAN-069 — root: AI-first fluency<>human baseline; explanation<>verification; resistance quality<>resistance accessibility; uncertainty signal<>truth — domain: human–AI — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-069 — root: AI-first fluency<>human baseline; explanation<>verification; resistance quality<>resistance accessibility; uncertainty signal<>truth — domain: human–AI — tier: Definition — occurrences: 1 *)
 
     CANONICAL.json tier: "law (mixed definitional/empirical per source's
     own caveat)". No Master River eq. citation. Four independent

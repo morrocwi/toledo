@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-045 — B-HAI-PREPROMPT
 
-    (* CAN-045 — root: H_t-LH->Q_t; Q_t->AI_t->Y_t-RH->E^AI; H_{t+1}=U_H(...); L_{A,t+1}<>L_{A,t} — domain: human–AI — tier: Th_coqc — occurrences: 4 *)
+    (* CAN-045 — root: H_t-LH->Q_t; Q_t->AI_t->Y_t-RH->E^AI; H_{t+1}=U_H(...); L_{A,t+1}<>L_{A,t} — domain: human–AI — tier: Definition — occurrences: 4 *)
 
     CANONICAL.json tier: "identity (27,28,30); definition (29)". Reuse:
     the full eq.(27)-(29) composition is [MR_Prompt.next_state] (same

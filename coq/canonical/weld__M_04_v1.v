@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-166 — root: reader-equivalence (CAN-007) — domain: method —
-   tier: Definition / Open — occurrences: 1 *)
+   tier: Open / Open — occurrences: 1 *)
 (** The preregistered rival-model ladder M0..M5 any readout-retention
     theory must beat: a finite, closed enumeration (Definition tier); the
     claim that M5 in fact beats every M0..M4 on some declared metric is

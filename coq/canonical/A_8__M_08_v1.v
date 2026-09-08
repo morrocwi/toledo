@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-181 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Th_coqc / Definition — occurrences: 4 *)
+   tier: finite_diagnostic / Definition — occurrences: 4 *)
 (** Lambda = min over the named bottleneck rates, instantiating shared
     device 2 ([mr_qmin_fold]): a genuine lower-bound theorem, dualising
     [MR_Live.v]'s [p_star_upper_bound]. The cube-root aggregator [V_c] is

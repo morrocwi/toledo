@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-044 — DCP-topic-entry
 
-    (* CAN-044 — root: TopicEntry in {LiveProblem,OpenExploration,RoutineDelegation}; ProblemFirst=>4 consequents [Open]; ProblemFirst<>ProblemOnly [Open] — domain: human–AI — tier: Open — occurrences: 6 *)
+    (* CAN-044 — root: TopicEntry in {LiveProblem,OpenExploration,RoutineDelegation}; ProblemFirst=>4 consequents [Open]; ProblemFirst<>ProblemOnly [Open] — domain: human–AI — tier: Definition — occurrences: 6 *)
 
     CANONICAL.json tier: "definition/law (PFDP itself [Open])". Direct
     reuse of [MR_TopicEntry.v] eq.(47)-(49): the finite [TopicEntry]

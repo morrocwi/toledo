@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-135 — B-SOC-CORRIG
 
-    (* CAN-135 — root: Delta_spec(R_i)>0 iff channel_i=open and Rdot_i<>0 — domain: social — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-135 — root: Delta_spec(R_i)>0 iff channel_i=open and Rdot_i<>0 — domain: social — tier: Definition — occurrences: 1 *)
 
     CANONICAL.json tier: "definition". Uses the symbol Delta_spec also
     used, with a DIFFERENT formal meaning, in CAN-118 (B-SOC-ETHLOAD) —

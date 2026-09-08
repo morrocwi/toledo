@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-215 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: Definition — occurrences: 2 *)
 (** The worked Bayes example: P(D|+) = 0.90*0.01 / (0.90*0.01+0.09*0.99),
     checked exactly against its reduced fraction 10/109 (approx 0.0917) by
     a decidable [Q] computation, never a floating approximation. *)

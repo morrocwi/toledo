@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-248 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: untagged — occurrences: 2 *)
 Theorem CAN248_k2global_not_k2thai : CAN2xx_K2Global <> CAN2xx_K2Thai.
 Proof. discriminate. Qed.
 

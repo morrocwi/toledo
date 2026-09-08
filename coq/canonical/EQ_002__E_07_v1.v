@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-026 — root: constitutional-noncollapse (CAN-008) reading — domain:
-   epistemic — tier: Th_coqc (decomposition) / Open (universal >0 claim)
+   epistemic — tier: Ax (decomposition) / Open (universal >0 claim)
    — occurrences: 2 *)
 (** eps_tot > 0 (Genesis Constraint-First); independently decomposed as
     eps_tot = eps_clock + eps_cross + eps_sel + eps_map + eps_self (Mind

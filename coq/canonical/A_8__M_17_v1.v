@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-212 — root: historical-invariance (CAN-009) — domain: method —
-   tier: Definition / Th_coqc — occurrences: 3 *)
+   tier: Dr / Th_coqc — occurrences: 3 *)
 (** The Existence-Attribution-Disclosure triad: adequate provenance is
     exactly the conjunction of the three named norms, left abstract as
     Section [Prop]s (each is itself a further per-study predicate, not

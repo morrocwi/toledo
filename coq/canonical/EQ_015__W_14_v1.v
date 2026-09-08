@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-157 — corrigible-agency-worldsystem
 
-    (* CAN-157 — root: A^corr_{H,i,t}(g) = max_{pi in Pi^live_{i,t}(g)} Pr^pi(R_g cap D_g cap X_g cap F_g) — domain: world-system — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-157 — root: A^corr_{H,i,t}(g) = max_{pi in Pi^live_{i,t}(g)} Pr^pi(R_g cap D_g cap X_g cap F_g) — domain: world-system — tier: Definition — occurrences: 1 *)
 
     CANONICAL.json tier: "definition". Master River v1.4 eq.(56)
     [after_labour eq.34]. Direct reuse of [MR_WorldSystem.v]'s

@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-198 — root: root-stepper (CAN-003) — domain: method —
-   tier: Th_coqc / Open — occurrences: 5 *)
+   tier: Definition / Open — occurrences: 5 *)
 (** State mapping: this id's canonical text is exactly [MR_Resonance.v]
     eq.(13)-(15) (momentum, the discretised accessibility score, and the
     "Rhythm alone does not determine accessibility" correction), reused

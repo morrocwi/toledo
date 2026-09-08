@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-102 — barrier-readout
 
-    (* CAN-102 — root: B^bar subset of {Knowledge,Skill,...,Unknown}; ObservedDifficulty<>SkillDeficit — domain: human–AI — tier: Th_coqc — occurrences: 2 *)
+    (* CAN-102 — root: B^bar subset of {Knowledge,Skill,...,Unknown}; ObservedDifficulty<>SkillDeficit — domain: human–AI — tier: Definition — occurrences: 2 *)
 
     CANONICAL.json tier: "definition". Direct reuse of [MR_HCA.v]
     eq.(69)-(70): [BarrierType]/[BarrierLedger] and the proved

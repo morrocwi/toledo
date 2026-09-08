@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-221 — root: root-weld (CAN-001) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: Dr — occurrences: 1 *)
 (** Friction, not magic: institutional certification earns epistemic
     force through reliable friction (criticism, validation, replication,
     robustness testing, archival continuity, correction, answerability),

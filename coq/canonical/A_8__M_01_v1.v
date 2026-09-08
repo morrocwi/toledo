@@ -11,7 +11,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-009 — historical-invariance
 
-    (* CAN-009 — root: Delta A_past = 0 — domain: root — tier: Definition — occurrences: 1 *)
+    (* CAN-009 — root: Delta A_past = 0 — domain: root — tier: Dr — occurrences: 1 *)
 
     The historical occurrence itself is not rewritten by later
     reinterpretation; only bindings among trace/meaning/experience/memory

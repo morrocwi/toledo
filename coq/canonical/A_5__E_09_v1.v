@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-229 — root: reader-equivalence (CAN-007) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: untagged — occurrences: 1 *)
 (** usable <> true; T_U down =/=> W(H) up =/=> truth. The core pairwise
     non-collapse (usable <> true) is witnessed via the shared enumeration
     device; the further two-step non-implication (a falling discovery

@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-113 — CTSA-taxonomy
 
-    (* CAN-113 — root: C->T->Workflow->S->A->C'; FrozenBaseline->K_like->Difference->H<->AI->RetentionGate->CTSAReturn->UnaidedReturnTest->GainLoss — domain: human–AI — tier: Definition — occurrences: 2 *)
+    (* CAN-113 — root: C->T->Workflow->S->A->C'; FrozenBaseline->K_like->Difference->H<->AI->RetentionGate->CTSAReturn->UnaidedReturnTest->GainLoss — domain: human–AI — tier: Dr — occurrences: 2 *)
 
     CANONICAL.json tier: "proposition". No Master River eq. citation. A
     closed six-stage [Inductive] cycle (C->T->Workflow->S->A->C') with an

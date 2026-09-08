@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-057 — live-possibility
 
-    (* CAN-057 — root: Pi^live_{A,t}(g) subset Pi^feas_{A,t}(g) subset Pi^phys_t(g) — domain: human–AI — tier: Th_coqc — occurrences: 4 *)
+    (* CAN-057 — root: Pi^live_{A,t}(g) subset Pi^feas_{A,t}(g) subset Pi^phys_t(g) — domain: human–AI — tier: Definition — occurrences: 4 *)
 
     CANONICAL.json tier: "definition". Direct reuse of [MR_Live.v]
     eq.(19)/(21) (agent scale) and [MR_WorldSystem.v] eq.(55) (its

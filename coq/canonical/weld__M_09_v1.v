@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-174 — root: reader-equivalence (CAN-007) — domain: method —
-   tier: Definition — occurrences: 1 *)
+   tier: finite_diagnostic — occurrences: 1 *)
 (** ClaimStrength <= EvidenceStrength: a bare order relation over [Q]; the
     reflexive instance (claim strength exactly at its own evidence
     ceiling) is offered as Th_coqc-grade scaffolding confirming the

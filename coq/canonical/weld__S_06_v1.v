@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-124 — power-live-gap
 
-    (* CAN-124 — root: L^live_{A,g}=max_{z in J_feas} D_L(L^z_A(g),L^z0_A(g)) — domain: social — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-124 — root: L^live_{A,g}=max_{z in J_feas} D_L(L^z_A(g),L^z0_A(g)) — domain: social — tier: Dr — occurrences: 1 *)
 
     CANONICAL.json tier: "proposition". [canonical_source] prose cites
     "Master Equation River v1.4 eq.(26)" but [in_master_river] is [null]

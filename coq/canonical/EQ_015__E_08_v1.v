@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-023 — root: domain-weld (CAN-006) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: Definition — occurrences: 2 *)
 (** State mapping: literally [MR_Foundation.v]'s
     [eq8_retention_can_change_the_reader] (eq. 8): only a selected residue
     of a readout updates the retained state, and that update genuinely can

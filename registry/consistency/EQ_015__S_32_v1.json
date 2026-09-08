@@ -1,0 +1,89 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.enum_values#61b08a11",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "EQ-015/S.32.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.edge_kind_defined#c1bb4e5a",
+      "lineage.reads_reading_symbols#10521759",
+      "lineage.split_child_origin#b8418bed"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "schema.enum_values#61b08a11"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "structure.primary_root#e7c6404a"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "symbols.spelling.nearmiss#671b58f9"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  }
+ },
+ "findings": [
+  "lineage.edge_kind_defined#c1bb4e5a",
+  "lineage.reads_reading_symbols#10521759",
+  "lineage.split_child_origin#b8418bed",
+  "schema.enum_values#61b08a11",
+  "structure.primary_root#e7c6404a",
+  "symbols.spelling.nearmiss#671b58f9"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.5-a",
+  "date": "2026-09-07",
+  "event": "revised"
+ },
+ "layer": "reading"
+}

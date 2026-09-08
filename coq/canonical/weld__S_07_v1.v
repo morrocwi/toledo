@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-125 — DCP-relational-route
 
-    (* CAN-125 — root: Experience->Interpretations->Absent Perspective->Observable Evidence->Direct Human Conversation — domain: social — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-125 — root: Experience->Interpretations->Absent Perspective->Observable Evidence->Direct Human Conversation — domain: social — tier: Definition — occurrences: 1 *)
 
     CANONICAL.json tier: "definition". Where the primary source (another
     person's mind) is unavailable to AI, route back to direct human

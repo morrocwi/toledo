@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-074 — assisted-vs-return-noncollapse
 
-    (* CAN-074 — root: DeltaPerformance_AI>0 does-not-imply DeltaH_return>0 — domain: human–AI — tier: Th_coqc — occurrences: 4 *)
+    (* CAN-074 — root: DeltaPerformance_AI>0 does-not-imply DeltaH_return>0 — domain: human–AI — tier: Definition — occurrences: 4 *)
 
     CANONICAL.json tier: "law/definition". No Master River eq. citation.
     The failure of the naive implication is discharged as a witnessed

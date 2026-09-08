@@ -1,0 +1,93 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.enum_values#7781aae4",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "EQ-027",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row"
+    }
+   },
+   "status": "pass"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "duplicates.exact#bf2dcc62"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.root_edge_reader#5e1dffbd"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "schema.enum_values#7781aae4"
+     ],
+     "warn_findings": [
+      "schema.root_edge_kind#6a3574eb"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "structure.alias_collision#f12af803"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row (symbols.dimension only)"
+    }
+   },
+   "status": "pass"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "duplicates.exact#bf2dcc62",
+  "lineage.root_edge_reader#5e1dffbd",
+  "schema.enum_values#7781aae4",
+  "schema.root_edge_kind#6a3574eb",
+  "structure.alias_collision#f12af803"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-n4-merge",
+  "date": "2026-09-06",
+  "event": "occurrence_added"
+ },
+ "layer": "root"
+}

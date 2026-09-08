@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-021 — root: domain-weld (CAN-006) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: Dr — occurrences: 2 *)
 (** State mapping: literally [MR_Resonance.v]'s [Notion] enumeration and
     [eq11_resonance_non_collapse] (eq. 9-11): Res <> Identity, Res <>
     Truth, Res <> Retention, Res <> Improvement — the current (v2)

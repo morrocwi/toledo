@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-051 — horizon-triad
 
-    (* CAN-051 — root: Hdyn: Delta_A(lam)=0; Hinfo(A); Hphen(A); Hdyn--DI_K-->Hinfo--IP_K-->Hphen — domain: human–AI — tier: Open — occurrences: 7 *)
+    (* CAN-051 — root: Hdyn: Delta_A(lam)=0; Hinfo(A); Hphen(A); Hdyn--DI_K-->Hinfo--IP_K-->Hphen — domain: human–AI — tier: Definition — occurrences: 7 *)
 
     CANONICAL.json tier: "definition / hypothesis-Open (the weld itself,
     bridge IP_K explicitly open)". No Master River eq. citation (Readout

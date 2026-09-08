@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-103 — candidate-vs-endorsed-routes
 
-    (* CAN-103 — root: C^cand=Gen(...); C^live={c in C^cand: Endorse=1}; ProactiveSuggestion<>HumanGoalOwnership; ... — domain: human–AI — tier: Th_coqc — occurrences: 5 *)
+    (* CAN-103 — root: C^cand=Gen(...); C^live={c in C^cand: Endorse=1}; ProactiveSuggestion<>HumanGoalOwnership; ... — domain: human–AI — tier: Definition — occurrences: 5 *)
 
     CANONICAL.json tier: "definition". Direct reuse of [MR_HCA.v]
     eq.(71)-(72): [C_live]/[C_live_subset_C_cand] and the three witnessed

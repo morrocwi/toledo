@@ -1,0 +1,96 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.required_fields#7bb180dc",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "EQ-001/C.12.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "info_findings": [
+      "coq.header_parents#696e7201",
+      "coq.header_quotes#968bb66c"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {
+     "info_findings": [
+      "duplicates.fingerprint.unparsed#019109ea"
+     ]
+    }
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.ledger_assigned_event#47b026cb"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "schema.required_fields#7bb180dc"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "structure.closed_reported#135b511b"
+     ],
+     "info_findings": [
+      "structure.occurrence_map#d80a2e52"
+     ],
+     "warn_findings": [
+      "structure.occurrence_map#c82dfe06"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "needs_reader"
+  }
+ },
+ "findings": [
+  "lineage.ledger_assigned_event#47b026cb",
+  "schema.required_fields#7bb180dc",
+  "structure.closed_reported#135b511b",
+  "structure.occurrence_map#c82dfe06"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.1-b2",
+  "date": "2026-09-07",
+  "event": "revised"
+ },
+ "layer": "reading"
+}

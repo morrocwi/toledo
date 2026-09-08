@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-014 — root: domain-weld (CAN-006) reading — domain: epistemic —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: Definition — occurrences: 1 *)
 (** Approach/aversion/blindness distort the meaning operator
     (G~_{mu,n} = G_{mu,n} o (I+Xi_n)) without raising epistemic status.
     Formalised as an additive perturbation on the affective/pragmatic/

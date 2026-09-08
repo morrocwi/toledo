@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-061 — live-possibility-dynamics
 
-    (* CAN-061 — root: L_{A,t+1}<>L_{A,t} (if residue retained); Lambdadot^live_H = sum lambda_i x_i - delta.Lambda^live — domain: human–AI — tier: Open — occurrences: 2 *)
+    (* CAN-061 — root: L_{A,t+1}<>L_{A,t} (if residue retained); Lambdadot^live_H = sum lambda_i x_i - delta.Lambda^live — domain: human–AI — tier: Definition — occurrences: 2 *)
 
     CANONICAL.json tier: "definition / hypothesis-Open (dynamic law
     explicitly Open)". The witnessed-possibility half is the same object

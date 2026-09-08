@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-256 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: untagged — occurrences: 2 *)
 Theorem CAN256_aicontribution_not_epistemicresponsibility :
   CAN2xx_AIContribution <> CAN2xx_EpistemicResponsibility.
 Proof. discriminate. Qed.

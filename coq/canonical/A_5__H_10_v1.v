@@ -16,7 +16,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-080 — ctsa-non-collapse-bundle
 
-    (* CAN-080 — root: AI fluency<>human baseline; explanation<>verification; output count<>epistemic diversity; exposure<>retention<>improvement; trust in AI<>calibrated trust — domain: human–AI — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-080 — root: AI fluency<>human baseline; explanation<>verification; output count<>epistemic diversity; exposure<>retention<>improvement; trust in AI<>calibrated trust — domain: human–AI — tier: Dr — occurrences: 1 *)
 
     CANONICAL.json tier: "law". No Master River eq. citation as a bundle
     (individual conjuncts overlap in spirit with CAN-069/075/056 but this

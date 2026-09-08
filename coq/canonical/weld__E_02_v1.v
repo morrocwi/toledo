@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-029 — root: constitutional-noncollapse (CAN-008) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Definition — occurrences: 1 *)
 (** SC: K(S,p) -> Subject(S) is the rejected collapse (Possession-
     Constitution Collapse); HSC: Epi(X,p) -> Knower(X,p) restates it.
     Witnessed non-collapse: a finite model where a structure carries

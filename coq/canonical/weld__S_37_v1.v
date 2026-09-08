@@ -26,7 +26,7 @@ Section CAN_120_MoralCost.
      here (and not restated on [Q]/[nat] since a faithful discrete
      restatement would require an unbounded-limit apparatus this file
      does not build). Typed as an abstract, Section-discharged [Prop] and
-     deliberately left un-proved — tier: Open. *)
+     deliberately left un-proved — tier: Dr. *)
   Variable CAN_120_cost_survival_link : Prop.
 
 End CAN_120_MoralCost.

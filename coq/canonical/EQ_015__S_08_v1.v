@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-134 — B-SOC-RECOVLIVE
 
-    (* CAN-134 — root: L^live_{A,g}=max_{z in J_feas} D_L(L^z_A(g),L^z0_A(g)) — domain: social — tier: Th_coqc — occurrences: 1 *)
+    (* CAN-134 — root: L^live_{A,g}=max_{z in J_feas} D_L(L^z_A(g),L^z0_A(g)) — domain: social — tier: Definition — occurrences: 1 *)
 
     CANONICAL.json tier: "definition". [in_master_river]: eq.(26), already
     formalised, axiom-free, in [../coq/MR_Live.v]

@@ -207,6 +207,35 @@ def _resistance_summary(entries: list) -> dict:
     }
 
 
+def _consistency_summary(root: pathlib.Path) -> dict:
+    """docs/CONSISTENCY_SPEC_v0_1.md sec.7: `/v1/consistency-summary.json` is
+    `registry/consistency/INDEX.json`'s own `histogram`, `by_dimension`,
+    `fingerprint`, `reader_coverage` and `findings_open_by_class` --
+    propagated verbatim, same "never recompute a surface's own copy of a
+    grader's number" rule as `_resistance_summary` above. `None` shape when
+    scripts/compute_consistency.py has not yet run against this checkout --
+    disclosed, never a fabricated all-zero histogram passed off as real."""
+    index_path = root / "registry" / "consistency" / "INDEX.json"
+    if not index_path.exists():
+        return {
+            "computed": False,
+            "disclosure": "scripts/compute_consistency.py has not run against this checkout.",
+        }
+    with open(index_path, "r", encoding="utf-8") as fh:
+        index = json.load(fh)
+    return {
+        "computed": True,
+        "grader_commit": index.get("grader_commit"),
+        "registry_commit": index.get("registry_commit"),
+        "histogram": index.get("histogram"),
+        "by_dimension": index.get("by_dimension"),
+        "fingerprint": index.get("fingerprint"),
+        "reader_coverage": index.get("reader_coverage"),
+        "findings_open_by_class": index.get("findings_open_by_class"),
+        "disclosure": index.get("note"),
+    }
+
+
 def _write_json(path: pathlib.Path, doc: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
@@ -340,6 +369,14 @@ def export_static(out_dir: pathlib.Path, root: pathlib.Path | None = None) -> di
     # the corpus-wide tally, computed straight from the already-loaded
     # `entries`, same as `_resistance_summary`.
     emit("executable-summary.json", _executable_summary(entries))
+
+    # consistency-summary.json — docs/CONSISTENCY_SPEC_v0_1.md sec.7. Each
+    # entry's own `consistency{}` sidecar (scripts/compute_consistency.py)
+    # already travels verbatim inside `entries/<mangled-code>.json` above
+    # (attached by scripts/toledo_build.py's build_entries, which this
+    # module's `entries` list already went through); this file is only the
+    # corpus-wide INDEX.json, read straight off disk, never recomputed.
+    emit("consistency-summary.json", _consistency_summary(root))
 
     # verdict-rules.json — the one file that "genuinely cannot go stale
     # relative to a registry edit" (mcp/DESIGN.md sec. 13), once available.

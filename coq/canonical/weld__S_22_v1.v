@@ -37,7 +37,7 @@ Section CAN_115_SocialLRStepper.
 
 End CAN_115_SocialLRStepper.
 
-(* Witness (tier: Th_coqc): PAR-stepper is not definitionally idle — a
+(* Witness (tier: Definition): PAR-stepper is not definitionally idle — a
    concrete, self-contained finite model (one node, zero coupling and
    zero dissipation, unit time step, non-zero load 1): the stepper moves
    the state by exactly the load, exactly the [../coq/MR_Foundation.v]

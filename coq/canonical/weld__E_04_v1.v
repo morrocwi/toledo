@@ -12,7 +12,7 @@ From MRC Require Import weld__E_03_v1.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-032 — root: readout-admission-order (CAN-005) reading — domain:
-   epistemic — tier: Th_coqc — occurrences: 1 *)
+   epistemic — tier: Definition — occurrences: 1 *)
 (** sigma_K(p) <> Pi_prac(p): epistemic status and practical/operational
     effectiveness are separate axes. Witnessed non-collapse via the
     shared enumeration device, plus a concrete divergence witness on

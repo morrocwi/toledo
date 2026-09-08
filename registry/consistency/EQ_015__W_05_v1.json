@@ -1,0 +1,87 @@
+{
+ "blocked_at": {
+  "dimension": "structure",
+  "finding": "structure.coq_file_present#54f8eb18",
+  "rung": "IC-1"
+ },
+ "clearances": [],
+ "code": "EQ-015/W.05.v1",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "info_findings": [
+      "coq.header_quotes#968bb66c",
+      "coq.identifier_present#c2d15d80"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.reads_reading_symbols#10521759",
+      "lineage.split_child_verbatim#d3a86825"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "structure.coq_file_present#54f8eb18"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "block_findings": [
+      "symbols.spelling#72f98bd8"
+     ]
+    }
+   },
+   "status": "fail"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "lineage.reads_reading_symbols#10521759",
+  "lineage.split_child_verbatim#d3a86825",
+  "structure.coq_file_present#54f8eb18",
+  "symbols.spelling#72f98bd8"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-0",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "toledo-v1.2-S",
+  "date": "2026-09-07",
+  "event": "revised"
+ },
+ "layer": "reading"
+}

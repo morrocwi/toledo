@@ -26,7 +26,7 @@ Section CAN_120_MoralCost.
              (regimes : list nat) (admissible : nat -> bool) (cost : nat -> Q) : Prop :=
     Forall (fun r => admissible r = false \/ cost r > 0) regimes.
 
-  (* Witness (tier: Th_coqc): Tragic is satisfiable on a finite two-regime
+  (* Witness (tier: Definition): Tragic is satisfiable on a finite two-regime
      model, one inadmissible and one admissible-but-costly. *)
   Theorem CAN_120_tragic_satisfiable :
     exists (regimes : list nat) (admissible : nat -> bool) (cost : nat -> Q),

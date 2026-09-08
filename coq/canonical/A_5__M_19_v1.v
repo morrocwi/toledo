@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-242 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 1 *)
+   tier: untagged — occurrences: 1 *)
 Theorem CAN242_activation_action_not_credit_event :
   CAN2xx_ActivationAction <> CAN2xx_CreditEvent.
 Proof. discriminate. Qed.

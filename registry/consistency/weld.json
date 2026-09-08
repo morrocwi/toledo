@@ -1,0 +1,81 @@
+{
+ "blocked_at": {
+  "dimension": "schema",
+  "finding": "schema.root_edge_kind#6a3574eb",
+  "rung": null
+ },
+ "clearances": [],
+ "code": "weld",
+ "computed_at": "2026-09-08",
+ "dimensions": {
+  "coq": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row"
+    }
+   },
+   "status": "pass"
+  },
+  "duplicates": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "lineage": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "lineage.refines_semantics#d45e94d5",
+      "lineage.root_edge_reader#5e1dffbd"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "schema": {
+   "evidence": {
+    "cells": {
+     "warn_findings": [
+      "schema.root_edge_kind#6a3574eb"
+     ]
+    }
+   },
+   "status": "needs_reader"
+  },
+  "structure": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  },
+  "symbols": {
+   "evidence": {
+    "cells": {
+     "_": "not_applicable: root row (symbols.dimension only)"
+    }
+   },
+   "status": "pass"
+  },
+  "tier": {
+   "evidence": {
+    "cells": {}
+   },
+   "status": "pass"
+  }
+ },
+ "findings": [
+  "lineage.refines_semantics#d45e94d5",
+  "lineage.root_edge_reader#5e1dffbd",
+  "schema.root_edge_kind#6a3574eb"
+ ],
+ "flag": "IC-F",
+ "grade": "IC-1",
+ "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "last_lineage_event": {
+  "by": "REGISTRAR checker (S3-fix merge + N3 phi-check confirmation)",
+  "date": "2026-09-06",
+  "event": "revised"
+ },
+ "layer": "root"
+}

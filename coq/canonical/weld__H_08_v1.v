@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-070 — equivalence-class-diagnostic
 
-    (* CAN-070 — root: D_s^eff=|Cs/~R|, d_s=D_s^eff/|Cs|; N_distinct=|{C1..Cn}/~Q| — domain: human–AI — tier: Definition — occurrences: 2 *)
+    (* CAN-070 — root: D_s^eff=|Cs/~R|, d_s=D_s^eff/|Cs|; N_distinct=|{C1..Cn}/~Q| — domain: human–AI — tier: Dr — occurrences: 2 *)
 
     CANONICAL.json tier: "measurement". No Master River eq. citation.
     Both diagnostics are [nat]/[Q]-valued readouts of a finite list

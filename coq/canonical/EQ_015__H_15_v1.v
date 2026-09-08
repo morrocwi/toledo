@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-072 — calibration-audit
 
-    (* CAN-072 — root: K_s=(kappa0,kappa1,W0,W1); calibration error ~ N^-1 sum(kappa_i-y_i)^2 — domain: human–AI — tier: Definition — occurrences: 2 *)
+    (* CAN-072 — root: K_s=(kappa0,kappa1,W0,W1); calibration error ~ N^-1 sum(kappa_i-y_i)^2 — domain: human–AI — tier: Dr — occurrences: 2 *)
 
     CANONICAL.json tier: "measurement". No Master River eq. citation. A
     typed four-field calibration record, and calibration error as a

@@ -18,7 +18,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-053 — meta-readout-governance
 
-    (* CAN-053 — root: R_A^(2)[n]=O_A(R_A^(1)[n]); G_A^MR[n]=R_tau(O_A(O_A(qA(ZA))),Cret,Lacc,FA,PiA); no-free-governance law — domain: human–AI — tier: Definition — occurrences: 18 *)
+    (* CAN-053 — root: R_A^(2)[n]=O_A(R_A^(1)[n]); G_A^MR[n]=R_tau(O_A(O_A(qA(ZA))),Cret,Lacc,FA,PiA); no-free-governance law — domain: human–AI — tier: finite_diagnostic — occurrences: 18 *)
 
     CANONICAL.json tier: "definition / law (no-free-governance) /
     measurement (defect vector, capture margin)". No Master River eq.

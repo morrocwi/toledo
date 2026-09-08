@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-255 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Definition — occurrences: 1 *)
+   tier: finite_diagnostic — occurrences: 1 *)
 Theorem CAN255_disclosurepenalty_not_concealment :
   CAN2xx_DisclosurePenalty <> CAN2xx_Concealment.
 Proof. discriminate. Qed.

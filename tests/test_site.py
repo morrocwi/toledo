@@ -615,3 +615,47 @@ def test_entry_page_shows_resistance_ladder_when_computed(toledo_entries):
         )
     if any(row["held"] for row in rungs.values()):
         assert "badge-resistance--held" in html_text
+
+
+# --------------------------------------------------------------------- #
+# Internal-consistency ladder (docs/CONSISTENCY_SPEC_v0_1.md sec.7)
+# --------------------------------------------------------------------- #
+
+def test_browse_page_has_ic_column():
+    _require_site_dist()
+    browse_dir = SITE_DIST / "browse"
+    if not browse_dir.is_dir():
+        pytest.skip(f"{browse_dir} not built")
+    # /browse/ is paginated by first-character band (browse/A/, browse/B/, ...);
+    # browse/index.html itself is a landing/redirect page with no table.
+    band_pages = sorted(browse_dir.glob("*/index.html"))
+    if not band_pages:
+        pytest.skip(f"no {browse_dir}/<band>/index.html found")
+    html_text = band_pages[0].read_text(encoding="utf-8")
+    assert '<th scope="col">IC</th>' in html_text
+    assert 'class="ic-cell"' in html_text
+
+
+def test_entry_page_carries_consistency_section_when_graded(toledo_entries):
+    _require_site_dist()
+    graded = [e for e in toledo_entries if e.get("consistency")]
+    if not graded:
+        pytest.skip("no entry in registry/TOLEDO.json carries a `consistency` sidecar yet "
+                    "(run scripts/compute_consistency.py first)")
+    sample = graded[0]
+    page = SITE_DIST / "entries" / f"{site_slug(sample['code'])}.html"
+    if not page.is_file():
+        pytest.skip(f"{page} not built")
+    html_text = page.read_text(encoding="utf-8")
+    assert "Internal consistency" in html_text
+    assert sample["consistency"]["grade"] in html_text
+
+
+def test_about_page_explains_ic_is_not_a_truth_score():
+    _require_site_dist()
+    about_page = SITE_DIST / "about" / "index.html"
+    if not about_page.is_file():
+        pytest.skip(f"{about_page} not built")
+    html_text = about_page.read_text(encoding="utf-8")
+    assert "Internal-consistency ladder" in html_text
+    assert "a truth score" in html_text

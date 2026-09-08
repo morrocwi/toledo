@@ -11,7 +11,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-179 — root: reader-equivalence (CAN-007) — domain: method —
-   tier: Th_coqc — occurrences: 3 *)
+   tier: Definition — occurrences: 3 *)
 (** K0<K1<K2<K3: a finite, closed [Inductive] staged order, injectively
     coded into [nat]; the ladder is strictly increasing at every step, a
     genuine (if small) [nat]-arithmetic theorem. *)

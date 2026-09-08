@@ -14,7 +14,7 @@ From MRC Require Import MRC_Prelude.
 (* ==================================================================== *)
 (** ** CAN-130 — B-SOC-MEANPROP
 
-    (* CAN-130 — root: P1..P5 meaning-shaped practical possibility — domain: social — tier: Open — occurrences: 5 *)
+    (* CAN-130 — root: P1..P5 meaning-shaped practical possibility — domain: social — tier: Dr — occurrences: 5 *)
 
     CANONICAL.json tier: "proposition". Prose propositions, not formal
     equations, tagged readout R only loosely (per CANONICAL.json's own

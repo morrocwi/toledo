@@ -8,7 +8,7 @@ Set Implicit Arguments.
 From MRC Require Import MRC_Prelude.
 
 (* CAN-246 — root: constitutional-noncollapse (CAN-008) — domain: method —
-   tier: Th_coqc — occurrences: 2 *)
+   tier: untagged — occurrences: 2 *)
 Theorem CAN246_multiai_consensus_not_geographic_completeness :
   CAN2xx_MultiAIConsensus <> CAN2xx_GeographicCompleteness.
 Proof. discriminate. Qed.
