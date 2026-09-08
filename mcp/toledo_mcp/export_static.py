@@ -136,6 +136,45 @@ def _verdict_rules_payload() -> dict:
     return {"available": True, "statuses": sorted(known), "verdict_values": list(values), "rules": rules}
 
 
+def _executable_summary(entries: list) -> dict:
+    """Corpus-wide tally of the computed `executable{}` block (S4, docs/
+    EXECUTABLE_EQUATIONS_v0_1.md sec.1.4/sec.3.1/sec.8) — mirrors
+    `_resistance_summary`'s own shape and honesty convention exactly: a
+    plain per-status count, `entries_with_executable_block` distinguishing
+    "no executable form for this entry, by design" (§1.4 — most of the
+    corpus, never itself a rigor signal) from "not yet computed on this
+    build" (`scripts/compute_executable.py`, S3, has not run). The §1.4
+    domain-honesty note is carried verbatim so this file alone, read with no
+    other context, still states it — the same requirement site/build_site.py's
+    `/browse/` and `/about/` pages carry into the human-readable site."""
+    status_counts: dict[str, int] = {}
+    with_block = 0
+    for e in entries:
+        ex = e.get("executable")
+        if not ex:
+            continue
+        with_block += 1
+        status = ex.get("status", "unknown")
+        status_counts[status] = status_counts.get(status, 0) + 1
+    return {
+        "entries_total": len(entries),
+        "entries_with_executable_block": with_block,
+        "by_status": status_counts,
+        "domain_honesty_note": (
+            "the vast majority of entries carry no executable{} block at all, by design — "
+            "S (social), E (epistemic), W (world-system) and H (human-AI) are legitimately "
+            "mostly comparative, definitional, and relational statements, not numeric "
+            "relations, and a low or zero executable count in those domains is not a "
+            "quality or completeness signal relative to P/B/C/M "
+            "(docs/EXECUTABLE_EQUATIONS_v0_1.md sec.1.4)"
+        ),
+        "disclosure": (
+            "a computed classifier/review status per entry, never a coverage or rigor "
+            "score across the corpus — see domain_honesty_note"
+        ),
+    }
+
+
 def _resistance_summary(entries: list) -> dict:
     """A corpus-wide tally of rungs HELD across every entry (design/
     RESISTANCE_LADDER_v0_1.md sec.0's own "never a single number" principle,
@@ -237,6 +276,7 @@ def export_static(out_dir: pathlib.Path, root: pathlib.Path | None = None) -> di
         "<ul><li><a href=\"manifest.json\">v1/manifest.json</a></li>"
         "<li><a href=\"counts.json\">v1/counts.json</a></li>"
         "<li><a href=\"resistance-summary.json\">v1/resistance-summary.json</a></li>"
+        "<li><a href=\"executable-summary.json\">v1/executable-summary.json</a></li>"
         "<li><a href=\"verdict-rules.json\">v1/verdict-rules.json</a></li>"
         "<li><a href=\"search-index.json\">v1/search-index.json</a></li>"
         "<li>v1/entries/&lt;code&gt;.json, v1/by-root/, v1/by-domain/</li></ul>"
@@ -291,6 +331,15 @@ def export_static(out_dir: pathlib.Path, root: pathlib.Path | None = None) -> di
     # does not carry this nested field — see _resistance_summary()'s
     # docstring for why this stays a plain-Python tally over `entries`.
     emit("resistance-summary.json", _resistance_summary(entries))
+
+    # executable-summary.json — mirrors resistance-summary.json's own
+    # pattern (S4, docs/EXECUTABLE_EQUATIONS_v0_1.md sec.8). Each entry's own
+    # `executable{}` block (when `scripts/compute_executable.py`, S3, has
+    # run) already travels verbatim inside `entries/<mangled-code>.json`
+    # above (`"entry": e` — no separate computation here); this file is only
+    # the corpus-wide tally, computed straight from the already-loaded
+    # `entries`, same as `_resistance_summary`.
+    emit("executable-summary.json", _executable_summary(entries))
 
     # verdict-rules.json — the one file that "genuinely cannot go stale
     # relative to a registry edit" (mcp/DESIGN.md sec. 13), once available.

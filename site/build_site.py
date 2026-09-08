@@ -231,6 +231,147 @@ RESISTANCE_DEFINITIONS = {
 RUNG_ORDER = ["R0", "R1", "R2", "R3", "R4", "R5", "R6"]
 
 
+# --------------------------------------------------------------------------
+# Executable equations — site try-it widget (S4, docs/EXECUTABLE_EQUATIONS_
+# v0_1.md sec.7). A narrow, opt-in, human-reviewed subset: the widget is
+# rendered ONLY on an entry page whose computed `executable.status` (sec.3.1,
+# written by scripts/compute_executable.py, S3) is one of the two values
+# below — every other entry page is unchanged, no stub, no "coming soon"
+# placeholder (sec.13 item 3).
+# --------------------------------------------------------------------------
+EXECUTABLE_WIDGET_STATUSES = frozenset({"reviewed_eligible", "built"})
+
+# The one and only domain-honesty sentence (sec.1.4), quoted verbatim
+# wherever an `executable` coverage number is shown (once per page, per
+# sec.1.4's own "not a footnote nobody reads" requirement) — /browse/'s new
+# column and /about/'s corpus-wide tally both use this exact string so
+# neither can drift from the other.
+EXECUTABLE_DOMAIN_HONESTY_NOTE = (
+    "S (social), E (epistemic), W (world-system) and H (human&ndash;AI) are legitimately mostly "
+    "comparative, definitional, and relational statements, not numeric relations — a low or zero "
+    "executable count there is not a quality or completeness signal relative to P/B/C/M."
+)
+
+# The widget's own inline computation script — one shared template string,
+# never generated per entry (sec.5/sec.13 item 1); only `__WIDGET_ID_JSON__`
+# varies per entry page, substituted via a plain string replace (never
+# `.format`/an f-string here — the JS body's own literal `{`/`}` pairs would
+# have to be doubled everywhere otherwise, which is exactly the kind of
+# per-entry hand-editing this feature is designed to avoid). Calls the two
+# shared kernel files' own real exported API (site/static/js/_qfrac.js's
+# `QFrac.fromString`/`toDecimalString`, site/static/js/_ir_eval.js's
+# `ToledoIREval.evalNode`/`DEFAULT_TERMS`, both S2) — never a re-implemented
+# third walker (sec.13 item 4).
+_EXECUTABLE_WIDGET_JS = """
+(function () {
+  var widget = document.getElementById(__WIDGET_ID_JSON__);
+  if (!widget || !window.QFrac || !window.ToledoIREval) { return; }
+  var irScript = widget.querySelector('script[data-executable-ir]');
+  var form = widget.querySelector('form[data-executable-form]');
+  var out = widget.querySelector('[data-executable-result]');
+  if (!irScript || !form || !out) { return; }
+  var ir = JSON.parse(irScript.textContent);
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    try {
+      var env = {};
+      var inputs = widget.querySelectorAll('input[data-exec-var]');
+      for (var i = 0; i < inputs.length; i++) {
+        var name = inputs[i].getAttribute('data-exec-var');
+        var raw = inputs[i].value.trim();
+        if (!raw) { throw new Error('"' + name + '" is empty'); }
+        env[name] = window.QFrac.fromString(raw);
+      }
+      var terms = (ir.transcendental && ir.transcendental.default_terms)
+        || window.ToledoIREval.DEFAULT_TERMS;
+      var result = window.ToledoIREval.evalNode(ir.rhs, env, terms);
+      var exact = result.toString();
+      var approx = result.toDecimalString(20);
+      out.textContent = 'result = ' + exact
+        + ' (decimal display only, not the computed value: ' + approx + ')';
+    } catch (e) {
+      out.textContent = 'could not compute: ' + (e && e.message ? e.message : e);
+    }
+  });
+})();
+"""
+
+
+def render_executable_widget_html(entry: dict, root: pathlib.Path, depth: int) -> str:
+    """The site try-it widget (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.7).
+    Offline-first, per site/DESIGN.md's own standing constraint: a plain
+    `<form>` that does nothing with JavaScript disabled; with it enabled,
+    computes in-browser via the two permanent, same-origin kernel files
+    (never fetched again per entry) against the entry's own IR, embedded
+    inline at BUILD TIME — never fetched over the network at widget run
+    time. Reads S1's IR sidecar via the entry's own `executable.ir_ref`
+    (read-only; this module never writes registry/executable/); returns ""
+    (no section at all) unless `executable.status` is `reviewed_eligible`/
+    `built` AND that sidecar file actually resolves and parses — a dangling
+    reference is a data problem for S1/S3 to fix, never a broken page."""
+    executable = entry.get("executable") or {}
+    if executable.get("status") not in EXECUTABLE_WIDGET_STATUSES:
+        return ""
+    ir_ref = executable.get("ir_ref")
+    if not ir_ref:
+        return ""
+    try:
+        ir = json.loads((root / ir_ref).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+        return ""
+
+    input_vars = [v for v in (ir.get("variables") or []) if v.get("role") == "input" and v.get("name")]
+    if not input_vars:
+        return ""
+    sample = (ir.get("sample_inputs") or [{}])
+    sample0 = sample[0] if sample else {}
+
+    prefix = root_prefix(depth)
+    fields_html = "".join(
+        '<p class="executable-field">'
+        f'<label for="exec-in-{html.escape(v["name"])}"><code>{html.escape(v["name"])}</code> '
+        f'<span class="note">(domain {html.escape(v.get("domain", "Q"))})</span></label> '
+        f'<input type="text" id="exec-in-{html.escape(v["name"])}" '
+        f'data-exec-var="{html.escape(v["name"])}" '
+        f'value="{html.escape(str(sample0.get(v["name"], "")))}" '
+        'autocomplete="off" inputmode="text"></p>'
+        for v in input_vars
+    )
+    ir_json_safe = json.dumps(ir, ensure_ascii=False).replace("</script", "<\\/script")
+
+    reproduction_card = executable.get("reproduction_card") or {}
+    citation = reproduction_card.get("citation") or {}
+    if citation.get("path"):
+        commit = str(citation.get("commit") or "")[:12]
+        card_note = (
+            f'filed Reproduction Card: <code>{html.escape(str(citation.get("repo", "")))}'
+            f'{"@" + html.escape(commit) if commit else ""} '
+            f'{html.escape(str(citation.get("path", "")))}</code>'
+        )
+    else:
+        card_note = "no filed Reproduction Card yet for this entry"
+
+    widget_id = f"executable-widget-{html.escape(mangle_code(entry['code']))}"
+    widget_js = _EXECUTABLE_WIDGET_JS.replace("__WIDGET_ID_JSON__", json.dumps(widget_id))
+
+    return (
+        '<h2>Try it</h2>'
+        f'<div class="executable-widget" id="{widget_id}">'
+        f'<script type="application/json" data-executable-ir="true">{ir_json_safe}</script>'
+        '<form data-executable-form="true" autocomplete="off">'
+        f'{fields_html}'
+        '<button type="submit">Compute</button>'
+        '</form>'
+        '<p class="executable-result" data-executable-result="true" aria-live="polite"></p>'
+        '<p class="note">Not a Reproduction Card &mdash; a live convenience check. '
+        f'The evidence for this entry is: {card_note}.</p>'
+        '</div>'
+        f'<script src="{prefix}/static/js/_qfrac.js"></script>'
+        f'<script src="{prefix}/static/js/_ir_eval.js"></script>'
+        f'<script>{widget_js}</script>'
+    )
+
+
 def _glossary_dl_html(*definition_groups: tuple[str, dict[str, str]]) -> str:
     """One `<dl>` per (heading, {value: sentence}) group, in dict order —
     the shared builder for the /about/ definition list and the landing
@@ -676,7 +817,19 @@ def _status_variant(status: str) -> str:
     return "caution"
 
 
-def render_listing_row(e: dict, depth: int, *, band_id: str | None = None) -> str:
+def _executable_column_value(e: dict) -> str:
+    """`/browse/`'s own `executable: yes/no` column (docs/EXECUTABLE_
+    EQUATIONS_v0_1.md sec.7) — computed straight from `executable.status`
+    (sec.3.1), never from any other field: "yes" only for the two statuses
+    the site widget itself renders on (`reviewed_eligible`/`built`); every
+    other status (`candidate`, `reviewed_rejected`) or no `executable` block
+    at all is "no" — a plain binary column, the domain-honesty note (sec.1.4)
+    is carried once per page, never per row."""
+    status = (e.get("executable") or {}).get("status")
+    return "yes" if status in EXECUTABLE_WIDGET_STATUSES else "no"
+
+
+def render_listing_row(e: dict, depth: int, *, band_id: str | None = None, show_executable: bool = False) -> str:
     """No `title="<full name>"` attribute: an earlier revision duplicated
     the full (untruncated) name into a `title` attribute on every row —
     on a large listing (e.g. 899 status=="current" rows, names averaging
@@ -698,6 +851,9 @@ def render_listing_row(e: dict, depth: int, *, band_id: str | None = None) -> st
     status_title = _definition_title_attr(status_value, STATUS_DEFINITIONS)
     status = html.escape(status_value)
     id_attr = f' id="{html.escape(band_id)}"' if band_id else ""
+    executable_td = (
+        f'<td class="executable-cell">{_executable_column_value(e)}</td>' if show_executable else ""
+    )
     return (
         f"<tr{id_attr}>"
         f'<td class="code-cell"><a href="{href}">{html.escape(code)}</a></td>'
@@ -705,6 +861,7 @@ def render_listing_row(e: dict, depth: int, *, band_id: str | None = None) -> st
         f'<td><span class="badge badge-tier"{tier_title}>{tier}</span></td>'
         f"<td>{html.escape(str(domain))}</td>"
         f'<td><span{status_title}>{status}</span></td>'
+        f"{executable_td}"
         "</tr>"
     )
 
@@ -714,8 +871,17 @@ TABLE_HEADER_ROW = (
     '<th scope="col">Tier</th><th scope="col">Domain</th><th scope="col">Status</th></tr></thead>'
 )
 
+# /browse/ only (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.7: "/browse/ gains
+# one column") — every /by-root/, /by-domain/, /by-tier/, /by-status/
+# listing page keeps the plain TABLE_HEADER_ROW above, unchanged.
+TABLE_HEADER_ROW_WITH_EXECUTABLE = (
+    '<thead><tr><th scope="col" class="code-cell">Code</th><th scope="col">Name</th>'
+    '<th scope="col">Tier</th><th scope="col">Domain</th><th scope="col">Status</th>'
+    '<th scope="col">Executable</th></tr></thead>'
+)
 
-def wrap_full_table(bare_rows_html: str, caption: str) -> str:
+
+def wrap_full_table(bare_rows_html: str, caption: str, *, header_html: str = TABLE_HEADER_ROW) -> str:
     """Wraps bare `<tr>` rows into a complete `<table>` with its own
     `<thead>`/`<caption>` — needed only when the *template itself* has no
     `<thead>` of its own for `{{rows_html}}` to drop into (this repository's
@@ -723,8 +889,10 @@ def wrap_full_table(bare_rows_html: str, caption: str) -> str:
     for the same page: one where the template supplies `<table><thead>...`
     and `{{rows_html}}` fills only `<tbody>`, another where it does not and
     expects a complete `<table>`; `rows_html_for_table()` below detects
-    which is actually on disk at build time rather than assuming one)."""
-    return f"<table><caption>{html.escape(caption)}</caption>{TABLE_HEADER_ROW}<tbody>{bare_rows_html}</tbody></table>"
+    which is actually on disk at build time rather than assuming one).
+    `header_html` defaults to the plain 5-column header; `/browse/` passes
+    `TABLE_HEADER_ROW_WITH_EXECUTABLE` for its own extra column."""
+    return f"<table><caption>{html.escape(caption)}</caption>{header_html}<tbody>{bare_rows_html}</tbody></table>"
 
 
 def render_rows(entries: list[dict], depth: int) -> str:
@@ -734,10 +902,12 @@ def render_rows(entries: list[dict], depth: int) -> str:
     return "".join(render_listing_row(e, depth) for e in entries)
 
 
-def render_rows_with_bands(entries: list[dict], depth: int) -> tuple[str, str]:
+def render_rows_with_bands(entries: list[dict], depth: int, *, show_executable: bool = False) -> tuple[str, str]:
     """browse.tmpl.html: bare `<tr>` rows, each first-character band's
     first row carrying `id="band-<CHAR>"`, plus the jump-nav HTML linking
-    to each band (PLACEHOLDERS.md naming: `#band-X` / `id="band-X"`)."""
+    to each band (PLACEHOLDERS.md naming: `#band-X` / `id="band-X"`).
+    `show_executable` (browse-only, docs/EXECUTABLE_EQUATIONS_v0_1.md
+    sec.7) adds the extra `executable: yes/no` cell to every row."""
     seen_bands: list[str] = []
     rows = []
     for e in entries:
@@ -746,7 +916,7 @@ def render_rows_with_bands(entries: list[dict], depth: int) -> tuple[str, str]:
         if band not in seen_bands:
             seen_bands.append(band)
             band_id = f"band-{band}"
-        rows.append(render_listing_row(e, depth, band_id=band_id))
+        rows.append(render_listing_row(e, depth, band_id=band_id, show_executable=show_executable))
     jump_nav = "".join(f'<a href="#band-{html.escape(b)}">{html.escape(b)}</a>' for b in seen_bands)
     return "".join(rows), jump_nav
 
@@ -1109,7 +1279,7 @@ def render_resistance_badges_html(resistance: dict | None) -> str:
 
 
 def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text: str,
-                         depth: int) -> tuple[dict, bool]:
+                         depth: int, root: pathlib.Path | None = None) -> tuple[dict, bool]:
     """Supplies the union of every entry-page placeholder observed across
     this session's several site/templates/entry.tmpl.html revisions (see
     the module docstring's note on concurrent-editing robustness): whatever
@@ -1157,6 +1327,7 @@ def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text:
     # re-serialization; only defensively neutralise a literal "</script"
     # so the JSON can never break out of its containing <script> tag.
     jsonld_safe = raw_text.replace("</script", "<\\/script")
+    executable_widget_html = render_executable_widget_html(entry, root, depth) if root is not None else ""
     context = {
         "code": html.escape(code),
         "entry_root": html.escape(root_code),
@@ -1169,6 +1340,7 @@ def build_entry_context(entry: dict, by_code: dict, reverse_rel: dict, raw_text:
         "status_badge_html": status_badge,
         "coq_status_badge_html": coq_badge,
         "resistance_badges_html": resistance_badges_html,
+        "executable_widget_html": executable_widget_html,
         "badges_html": domain_badge + tier_badge + status_badge + coq_badge,
         "status_note_html": render_status_note_html(entry, depth),
         "aliases_html": render_aliases_html(entry),
@@ -1227,13 +1399,19 @@ def build_home_context(manifest: dict, root_rows: int, reading_entries: list[dic
 
 
 def build_browse_context(entries_sorted: list[dict], depth: int, *, bare_rows: bool) -> dict:
-    rows_html, jump_nav_html = render_rows_with_bands(entries_sorted, depth)
+    rows_html, jump_nav_html = render_rows_with_bands(entries_sorted, depth, show_executable=True)
     if not bare_rows:
-        rows_html = wrap_full_table(rows_html, "Every Toledo code, sorted in natural code order.")
+        rows_html = wrap_full_table(
+            rows_html, "Every Toledo code, sorted in natural code order.",
+            header_html=TABLE_HEADER_ROW_WITH_EXECUTABLE,
+        )
     return {
         "entry_count": str(len(entries_sorted)),
         "jump_nav_html": jump_nav_html,
         "rows_html": rows_html,
+        # docs/EXECUTABLE_EQUATIONS_v0_1.md sec.1.4/sec.7: the domain-honesty
+        # note carried once per page (never per row) next to the new column.
+        "executable_domain_note_html": f'<p class="note">{EXECUTABLE_DOMAIN_HONESTY_NOTE}</p>',
     }
 
 
@@ -1368,12 +1546,54 @@ def resistance_coverage_html(rc: dict) -> str:
     )
 
 
+def compute_executable_coverage(entries: list[dict]) -> dict:
+    """Corpus-wide tally of the computed `executable{}` block (docs/
+    EXECUTABLE_EQUATIONS_v0_1.md sec.1.4/sec.3.1/sec.8), mirroring
+    `compute_resistance_coverage`'s own shape and honesty convention: a
+    plain per-status count, `computed` distinguishing "no executable form
+    for this entry, by design — most of the corpus" from "not yet computed
+    on this build" (`scripts/compute_executable.py`, S3, has not run)."""
+    by_status: dict[str, int] = {}
+    computed = 0
+    for e in entries:
+        ex = e.get("executable")
+        if not ex:
+            continue
+        computed += 1
+        status = ex.get("status") or "unknown"
+        by_status[status] = by_status.get(status, 0) + 1
+    return {"computed": computed, "total": len(entries), "by_status": by_status}
+
+
+def executable_coverage_html(ec: dict) -> str:
+    computed, total = ec["computed"], ec["total"]
+    if computed == 0:
+        body = (
+            '<p class="note">No entry carries a computed <code>executable</code> block yet on this '
+            "build (<code>scripts/compute_executable.py</code> has not run against this checkout).</p>"
+        )
+    else:
+        rows = "".join(
+            f"<li><code>{html.escape(status)}</code> — {count} of {computed} computed entries</li>"
+            for status, count in sorted(ec["by_status"].items())
+        )
+        body = (
+            f'<p class="note">{computed} of {total} entries/root rows carry a computed '
+            "<code>executable</code> status; the rest carry none at all, by design — most of this "
+            "corpus is not a numeric relation to begin with.</p>"
+            f"<ul>{rows}</ul>"
+        )
+    return body + f'<p class="note">{EXECUTABLE_DOMAIN_HONESTY_NOTE}</p>'
+
+
 def build_about_context(manifest: dict, root_rows: int, coverage: dict, concept_doi: str | None,
-                         resistance_coverage: dict | None = None) -> dict:
+                         resistance_coverage: dict | None = None,
+                         executable_coverage: dict | None = None) -> dict:
     total_pages = manifest["entry_count"] + root_rows
     cov = coverage_sentences(coverage, total_pages)
     resistance_coverage = resistance_coverage or {"computed": 0, "total": total_pages,
                                                    "held": {r: 0 for r in RUNG_ORDER}}
+    executable_coverage = executable_coverage or {"computed": 0, "total": total_pages, "by_status": {}}
     return {
         "entry_count": str(manifest["entry_count"]),
         "root_count": str(root_rows),
@@ -1395,6 +1615,7 @@ def build_about_context(manifest: dict, root_rows: int, coverage: dict, concept_
             ("Status", STATUS_DEFINITIONS), ("Resistance ladder (R0-R6)", RESISTANCE_DEFINITIONS),
         ),
         "resistance_coverage_html": resistance_coverage_html(resistance_coverage),
+        "executable_coverage_html": executable_coverage_html(executable_coverage),
         "policy_summary": html.escape(POLICY_SUMMARY),
         "concept_doi": html.escape(concept_doi or "unreleased"),
         "registry_release_version": html.escape(manifest.get("registry_release_version") or "unreleased"),
@@ -1883,7 +2104,7 @@ def build_pages(root: pathlib.Path, out_dir: pathlib.Path, templates_dir: pathli
 
     # /entries/<site-slug>.html (depth 1)
     for e in entries:
-        ctx, needs_katex = build_entry_context(e, by_code, reverse_rel, raw_by_code[e["code"]], 1)
+        ctx, needs_katex = build_entry_context(e, by_code, reverse_rel, raw_by_code[e["code"]], 1, root)
         emit(
             f"entries/{site_slug(e['code'])}.html", f"{e['code']} — Toledo",
             _truncate(e.get("name", "") or "", 150), "page-entry", 1, "entry.tmpl.html",
@@ -1913,7 +2134,8 @@ def build_pages(root: pathlib.Path, out_dir: pathlib.Path, templates_dir: pathli
         "Licence, citation, coverage and policy summary for the Toledo registry.",
         "page-about", 1, "about.tmpl.html",
         build_about_context(manifest, root_rows, coverage, concept_doi,
-                             compute_resistance_coverage(entries)),
+                             compute_resistance_coverage(entries),
+                             compute_executable_coverage(entries)),
     )
 
     # /ecosystem/ (depth 1) — site/content/ecosystem.md rendered through
@@ -1984,12 +2206,41 @@ def copy_assets_into_dist(root: pathlib.Path, out_dir: pathlib.Path) -> list[str
     return copied
 
 
+def copy_executable_static_into_dist(root: pathlib.Path, out_dir: pathlib.Path) -> list[str]:
+    """Copies `site/static/js/` (S2's own shared, unversioned kernel pair —
+    `_qfrac.js`, `_ir_eval.js`, docs/EXECUTABLE_EQUATIONS_v0_1.md sec.5) into
+    `<out>/static/js/` so the try-it widget's `<script src="{{root}}/
+    static/js/...">` tags resolve in the deployed tree — the executable
+    feature's own analogue of `copy_assets_into_dist` just above, kept as a
+    separate function/output path (`/static/`, not `/assets/`) since
+    `site/DESIGN.md`'s own URL scheme (predating this feature) never
+    mentions `/static/` and this module must not blur the two. This module
+    does not author those two files' content, only places them at the URL
+    the widget already references."""
+    src_dir = root / "site" / "static" / "js"
+    if not src_dir.is_dir():
+        return []
+    copied = []
+    dest_dir = out_dir / "static" / "js"
+    for src in sorted(src_dir.glob("*.js")):
+        if not src.is_file():
+            continue
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        dest = dest_dir / src.name
+        dest.write_bytes(src.read_bytes())
+        copied.append(f"static/js/{src.name}")
+    return copied
+
+
 def build_site(root: pathlib.Path, out_dir: pathlib.Path, data_dir: pathlib.Path,
                 templates_dir: pathlib.Path, *, strict: bool = False) -> dict:
     data = build_data_files(root, data_dir)
     page_report = build_pages(root, out_dir, templates_dir, data)
     data_copied = copy_data_into_dist(data_dir, out_dir) if page_report["pages_written"] else []
     assets_copied = copy_assets_into_dist(root, out_dir) if page_report["pages_written"] else []
+    executable_static_copied = (
+        copy_executable_static_into_dist(root, out_dir) if page_report["pages_written"] else []
+    )
 
     report = {
         "entry_count_canonical": data["manifest"]["entry_count"],
@@ -2004,6 +2255,7 @@ def build_site(root: pathlib.Path, out_dir: pathlib.Path, data_dir: pathlib.Path
         "templates_missing": page_report["templates_missing"],
         "data_copied_into_dist": data_copied,
         "assets_copied_into_dist": assets_copied,
+        "executable_static_copied_into_dist": executable_static_copied,
         "unresolved_placeholders": page_report["unresolved_placeholders"],
     }
     if strict and (page_report["templates_missing"] or page_report["unresolved_placeholders"]):

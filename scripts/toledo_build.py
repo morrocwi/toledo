@@ -402,6 +402,14 @@ def entry_to_jsonld(e: dict, build_commit: str | None, generated_at: str) -> dic
         # that, exclusively). `None` means "not yet computed", never
         # "every rung unheld".
         "resistance": e.get("resistance"),
+        # Executable Equations (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.3.1, S3):
+        # propagated verbatim from CANONICAL.json — this generator never
+        # computes it (scripts/compute_executable.py owns that,
+        # exclusively). `None` for the vast majority of entries that carry
+        # no executable block at all, by design (sec.1.4/sec.3.1) — never
+        # fabricated as a stand-in status. Same propagate-never-compute
+        # discipline as `resistance` immediately above.
+        "executable": e.get("executable"),
         "generated_from_commit": build_commit,
     }
     return doc

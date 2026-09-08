@@ -219,7 +219,7 @@ def test_counts_matches_registry_canonical_json_own_counts_field(real_root):
 # manually-run, uncommitted step.
 # ---------------------------------------------------------------------------
 
-def test_stdio_roundtrip_lists_20_tools(fixture_root, tmp_path):
+def test_stdio_roundtrip_lists_21_tools(fixture_root, tmp_path):
     from mcp import ClientSession
     from mcp.client.stdio import StdioServerParameters, stdio_client
 
@@ -240,9 +240,12 @@ def test_stdio_roundtrip_lists_20_tools(fixture_root, tmp_path):
 
                 tools = await session.list_tools()
                 names = {t.name for t in tools.tools}
-                assert len(tools.tools) == 20, sorted(names)
+                # 21 tools (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.8, S4): `toledo_eval` is
+                # the 21st, added after the 20 this pin previously counted.
+                assert len(tools.tools) == 21, sorted(names)
                 assert "toledo_show_verdict_rules" in names
                 assert "toledo_register_proposal" in names
+                assert "toledo_eval" in names
 
                 status = await session.call_tool("toledo_index_status", {})
                 status_payload = status.structuredContent

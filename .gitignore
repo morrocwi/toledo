@@ -36,6 +36,7 @@ registry/TOLEDO.json
 graph/
 vault/
 ops/
+scripts/executable/_classify_output.json
 latex/*.idx
 latex/*.ilg
 latex/*.ind

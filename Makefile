@@ -1,4 +1,4 @@
-.PHONY: coq verify library test build site catalogue mcp
+.PHONY: coq verify library test build site catalogue mcp resistance executable
 
 coq: ; cd coq/master-river && coq_makefile -f _CoqProject -o Makefile >/dev/null && $(MAKE) -s
 verify: coq ; cd coq/master-river && bash verify.sh | tail -1
@@ -18,12 +18,22 @@ mcp: ; python3 mcp/toledo_mcp/server.py
 # which only PROPAGATES this field — it never computes a rung itself.
 resistance: ; python3 scripts/compute_resistance.py
 
+# Executable Equations (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.3.1/sec.10, S3):
+# computes/writes the `executable` block into registry/CANONICAL.json IN PLACE
+# from registry/executable/*.json IR sidecars (a human registrar's own files,
+# never written here), plus registry/executable/INDEX.json. Same in-place-write
+# discipline as `resistance` above, never touches registry/LINEAGE.jsonl. Runs
+# BEFORE `build` below (scripts/compute_executable.py's own docstring), which
+# only PROPAGATES this field into registry/entries/*.json — it never computes
+# the block itself.
+executable: ; python3 scripts/compute_executable.py
+
 # GENERATOR + TOOLING layer (registry/CANONICAL.json + registry/genesis_root.json
 # -> registry/entries, registry/TOLEDO.json, graph/, site/index.json, vault/, latex/catalogue_body.tex)
 # Also (re)builds mcp/state/index.sqlite3 (mcp/scripts/build_index.py, DEBT #48
 # lane E, 2026-09-07) so a release zip ships a prebuilt index instead of every
 # MCP cold start paying an avoidable rebuild — see mcp/BENCHMARKS.md.
-build: resistance ; python3 scripts/toledo_build.py && python3 mcp/scripts/build_index.py
+build: resistance executable ; python3 scripts/toledo_build.py && python3 mcp/scripts/build_index.py
 
 # Static docs site (reads what `make build` wrote)
 site: build ; python3 site/build_site.py

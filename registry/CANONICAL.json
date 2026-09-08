@@ -66318,6 +66318,11 @@
             "reason": "R4 not held"
           }
         }
+      },
+      "executable": {
+        "computed_at": "2026-09-08",
+        "status": "candidate",
+        "ir_ref": "registry/executable/EQ_001__P_45_v1.json"
       }
     },
     {
@@ -68160,6 +68165,11 @@
             "reason": "R4 not held"
           }
         }
+      },
+      "executable": {
+        "computed_at": "2026-09-08",
+        "status": "candidate",
+        "ir_ref": "registry/executable/EQ_001__P_63_v1.json"
       }
     },
     {

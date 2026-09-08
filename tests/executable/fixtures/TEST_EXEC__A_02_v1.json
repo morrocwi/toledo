@@ -1,0 +1,26 @@
+{
+  "schema_version": "executable-ir-0.1",
+  "code": "TEST-EXEC/A.02.v1",
+  "root": "TEST-EXEC",
+  "generated_from_commit": "test-fixture-only",
+  "source_statement": {"format": "latex+ascii", "text": "result = pi (test fixture exercising the REAL S2 pi_const kernel on both sides, not a real Toledo entry)"},
+  "classifier": {"tool": "test-fixture", "sympy_version": null, "antlr4_version": null,
+                 "parsed_at": "2026-09-08", "parsed_repr": "Eq(result, pi)"},
+  "variables": [
+    {"name": "result", "domain": "Q", "role": "output", "unit": null, "constraint": null}
+  ],
+  "relation": "eq",
+  "lhs": {"op": "var", "name": "result"},
+  "rhs": {"op": "call", "fn": "pi_const", "args": []},
+  "transcendental": {"fn": "pi_const", "terms_param": "terms", "algorithm_py": "machin_arctan_series",
+                      "algorithm_js": "brouncker_continued_fraction", "default_terms": 10},
+  "eligibility": {
+    "classifier_candidate": true,
+    "reviewed_by": "test-fixture",
+    "reviewed_at": "2026-09-08",
+    "review_note": "test fixture only -- exercises the REAL S2 ir_eval.py/ir_kernel.py (Machin arctan series) vs the REAL S2 _qfrac.js/_ir_eval.js (Brouncker/arctan continued fraction) transcendental comparison path end to end. Not a real Toledo code."
+  },
+  "sample_inputs": [{}],
+  "status": "built",
+  "drift_note": "test fixture; not part of the real registry"
+}

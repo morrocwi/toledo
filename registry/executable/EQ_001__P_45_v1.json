@@ -1,0 +1,157 @@
+{
+  "schema_version": "executable-ir-0.1",
+  "code": "EQ-001/P.45.v1",
+  "root": "EQ-001",
+  "generated_from_commit": "182a4914c8e08450b269e81f7fce1e6b3630bf0b",
+  "source_statement": {
+    "format": "latex",
+    "text": "x'=Gamma_R\\cdot (x-u\\cdot t), t'=Gamma_R\\cdot (t-u\\cdot x/v^2). Exact witness: event (t=8,x=5) \\to (t'=7,x'=-5/4); Q_v=Q_v'=75."
+  },
+  "classifier": {
+    "tool": "sympy.parsing.latex.parse_latex",
+    "sympy_version": "1.14.0",
+    "antlr4_version": "4.11.0",
+    "parsed_at": "2026-09-08",
+    "parsed_repr": "Eq(x', (G*(a*(m*(a_{R}*m))))*(-t*u + x))"
+  },
+  "variables": [
+    {
+      "name": "G",
+      "domain": "Q",
+      "role": "input",
+      "unit": null,
+      "constraint": null
+    },
+    {
+      "name": "a",
+      "domain": "Q",
+      "role": "input",
+      "unit": null,
+      "constraint": null
+    },
+    {
+      "name": "a_{R}",
+      "domain": "Q",
+      "role": "input",
+      "unit": null,
+      "constraint": null
+    },
+    {
+      "name": "m",
+      "domain": "Q",
+      "role": "input",
+      "unit": null,
+      "constraint": null
+    },
+    {
+      "name": "t",
+      "domain": "Q",
+      "role": "input",
+      "unit": null,
+      "constraint": null
+    },
+    {
+      "name": "u",
+      "domain": "Q",
+      "role": "input",
+      "unit": null,
+      "constraint": null
+    },
+    {
+      "name": "x",
+      "domain": "Q",
+      "role": "input",
+      "unit": null,
+      "constraint": null
+    },
+    {
+      "name": "x'",
+      "domain": "Q",
+      "role": "output",
+      "unit": null,
+      "constraint": null
+    }
+  ],
+  "relation": "eq",
+  "lhs": {
+    "op": "var",
+    "name": "x'"
+  },
+  "rhs": {
+    "op": "mul",
+    "args": [
+      {
+        "op": "mul",
+        "args": [
+          {
+            "op": "var",
+            "name": "G"
+          },
+          {
+            "op": "mul",
+            "args": [
+              {
+                "op": "var",
+                "name": "a"
+              },
+              {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "var",
+                    "name": "m"
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "m"
+                      },
+                      {
+                        "op": "var",
+                        "name": "a_{R}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "sub",
+        "args": [
+          {
+            "op": "var",
+            "name": "x"
+          },
+          {
+            "op": "mul",
+            "args": [
+              {
+                "op": "var",
+                "name": "u"
+              },
+              {
+                "op": "var",
+                "name": "t"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transcendental": null,
+  "eligibility": {
+    "classifier_candidate": true,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "review_note": null
+  },
+  "sample_inputs": [],
+  "status": "candidate",
+  "drift_note": "Mechanically extracted candidate (S1, extract_ir.py). NOT reviewed. sample_inputs intentionally left empty (sec.3: human-declared at review time). variables[].domain defaulted to \"Q\" pending human confirmation of the true domain from the source statement. Output variable kept under its own parsed name (not renamed to a generic \"result\") for direct traceability back to source_statement.text. bare_word_risk: unescaped word(s) ['Exact', 'Gamma', 'event', 'witness'] in source text may have been shattered into single-letter products by sympy's parser — CONFIRM parsed_repr against source_statement.text before any promotion"
+}

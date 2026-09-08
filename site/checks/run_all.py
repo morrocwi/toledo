@@ -19,6 +19,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import check_a11y  # noqa: E402
 import check_banned_words_and_leaks  # noqa: E402
+import check_executable_widget_no_network  # noqa: E402
 import check_perf_budget  # noqa: E402
 
 
@@ -39,6 +40,7 @@ def main(argv: list[str] | None = None) -> int:
         ("check_perf_budget", lambda: check_perf_budget.run(args.dist)),
         ("check_a11y", lambda: check_a11y.run(args.dist)),
         ("check_banned_words_and_leaks", lambda: check_banned_words_and_leaks.run(args.dist, args.denylist_file)),
+        ("check_executable_widget_no_network", lambda: check_executable_widget_no_network.run(args.dist)),
     ]
 
     worst = 0

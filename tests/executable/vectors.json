@@ -1,0 +1,580 @@
+{
+  "schema_version": "executable-test-vectors-0.1",
+  "note": "Shared {ir, inputs, expected_value, tolerance} rows consumed identically by tests/executable/test_ir_kernel.py and tests/executable/test_ir_kernel.js (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.9). Every 'ir' object here is a test-fixture IR document (code root TESTFIX, not a real registry entry) -- no registry/executable/*.json sidecar existed at S2 build time to validate against (S1's extract_ir.py had not yet run), so these fixtures were authored directly against sec.3's frozen IR schema instead. 'expected_value' is an exact rational string; 'tolerance' is an exact rational string ('0' for a Q-exact vector, a small positive bound for a transcendental one) -- both languages parse both fields as exact rationals (Fraction / QFrac), never as float, and assert abs(actual - expected_value) <= tolerance.",
+  "vectors": [
+    {
+      "name": "add_two_rationals",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/M.01.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "b",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "add",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            },
+            {
+              "op": "var",
+              "name": "b"
+            }
+          ]
+        },
+        "transcendental": null,
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "1/2",
+        "b": "1/3"
+      },
+      "expected_value": "5/6",
+      "tolerance": "0"
+    },
+    {
+      "name": "mixed_sub_mul_div",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/M.02.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "b",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "c",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "d",
+            "domain": "Q_nonzero",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "div",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "op": "var",
+                      "name": "a"
+                    },
+                    {
+                      "op": "var",
+                      "name": "b"
+                    }
+                  ]
+                },
+                {
+                  "op": "var",
+                  "name": "c"
+                }
+              ]
+            },
+            {
+              "op": "var",
+              "name": "d"
+            }
+          ]
+        },
+        "transcendental": null,
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "3/4",
+        "b": "1/4",
+        "c": "2",
+        "d": "5"
+      },
+      "expected_value": "1/5",
+      "tolerance": "0"
+    },
+    {
+      "name": "integer_power",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/M.03.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "pow",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            },
+            {
+              "op": "const",
+              "value": "3"
+            }
+          ]
+        },
+        "transcendental": null,
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "2/3"
+      },
+      "expected_value": "8/27",
+      "tolerance": "0"
+    },
+    {
+      "name": "negation",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/M.04.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "neg",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": null,
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "5/7"
+      },
+      "expected_value": "-5/7",
+      "tolerance": "0"
+    },
+    {
+      "name": "sqrt_two",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/P.01.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q_pos",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "sqrt",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": {
+          "fn": "sqrt",
+          "terms_param": "n_terms",
+          "algorithm_py": "newton_raphson",
+          "algorithm_js": "generalized_continued_fraction",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "2"
+      },
+      "expected_value": "35355339059327376220042218105242451964241796884423701829417/25000000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    },
+    {
+      "name": "pi_const",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/P.02.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "pi_const",
+          "args": []
+        },
+        "transcendental": {
+          "fn": "pi_const",
+          "terms_param": "n_terms",
+          "algorithm_py": "machin_arctan_series",
+          "algorithm_js": "brouncker_continued_fraction",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {},
+      "expected_value": "785398163397448309615660845819875721049292349843776455243733/250000000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    },
+    {
+      "name": "exp_of_one",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/P.03.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "exp",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": {
+          "fn": "exp",
+          "terms_param": "n_terms",
+          "algorithm_py": "taylor_series_halving_reduction",
+          "algorithm_js": "lambert_continued_fraction",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "1"
+      },
+      "expected_value": "2718281828459045235360287471352662497757247093699959574966957/1000000000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    },
+    {
+      "name": "sin_small_angle",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/P.04.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "sin",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": {
+          "fn": "sin",
+          "terms_param": "n_terms",
+          "algorithm_py": "taylor_series_halving_reduction",
+          "algorithm_js": "tan_half_angle_continued_fraction",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "1/10"
+      },
+      "expected_value": "49916708323414076153407099205311013494957694008991129996383/500000000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    },
+    {
+      "name": "cos_small_angle",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/P.05.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "cos",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": {
+          "fn": "cos",
+          "terms_param": "n_terms",
+          "algorithm_py": "taylor_series_halving_reduction",
+          "algorithm_js": "tan_half_angle_continued_fraction",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "1/10"
+      },
+      "expected_value": "124375520659753220761945248475483786854822028176885504494919/125000000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    },
+    {
+      "name": "log_hundred",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/C.01.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q_pos",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "log",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": {
+          "fn": "log",
+          "terms_param": "n_terms",
+          "algorithm_py": "artanh_series_sqrt_reduction",
+          "algorithm_js": "continued_fraction_ln1p",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "100"
+      },
+      "expected_value": "143911568312127855251124465917772762975068843039298311002079/31250000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    }
+  ]
+}

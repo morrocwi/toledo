@@ -43,8 +43,18 @@ stale docstrings) — see `docs/CHANGELOG.md`'s next entry and
 A further, separate 2026-09-07 addition (IDM-5, concurrent with another
 run's registry-side work) landed a 20th tool, `toledo_lint` — see
 `docs/CHANGELOG.md`'s "`toledo_lint`" entry for its full scope.
-`tests/test_integration.py::test_stdio_roundtrip_lists_20_tools` (renamed
-from the earlier `..._lists_19_tools`, re-pinned to 20) covers the current
+
+A 2026-09-08 addition (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.8, stream S4)
+landed a 21st tool, `toledo_eval` — evaluates one reviewed-eligible
+executable-equation IR sidecar (`registry/executable/<mangled-code>.json`,
+sec.3) at declared exact-rational inputs, via `scripts/executable/
+ir_eval.py`'s shared, Fraction-only reference evaluator (never a second,
+parallel interpretation of the same IR). Fail-closed for a code with no
+sidecar, an unreviewed (`candidate`) or `reviewed_rejected` sidecar, a
+non-string input, or a build where the reference runtime is not yet
+importable — see `toledo_eval`'s own docstring in `toledo_mcp/server.py`.
+`tests/test_integration.py::test_stdio_roundtrip_lists_21_tools` (renamed
+from the earlier `..._lists_20_tools`, re-pinned to 21) covers the current
 count.
 
 ### Known issues, fixed
@@ -133,7 +143,7 @@ That means, before stating, citing, or building on any formula:
   answered and this code/root/domain genuinely does not exist" — a normal,
   common answer, not a failure.
 
-## Tools (20)
+## Tools (21)
 
 | Tool | Purpose |
 |---|---|
@@ -154,6 +164,7 @@ That means, before stating, citing, or building on any formula:
 | `toledo_index_status` | Index freshness + schema-version compatibility + `registry_release_version`. |
 | `toledo_show_verdict_rules` | Introspect the verdict decision table (`verdict.py`'s `RULES`) as data. |
 | `toledo_lint` | Continuum-injection lint over a statement (LaTeX/ascii/prose) against the `information-discrete-math` skill's contaminated-concept table (15 rules); never blocks (P24) — `verdict` is `"clean"` or `"continuum_injection_warned"`, each finding's `toledo_code` resolved at call time by alias. |
+| `toledo_eval` | Evaluate one reviewed-eligible executable-equation IR sidecar at declared exact-rational inputs, via `scripts/executable/ir_eval.py`'s shared Fraction-only evaluator; fail-closed (never raises) for no sidecar / unreviewed / rejected / a non-string input. |
 | `toledo_register_proposal` | The only write path — a human-reviewed proposal file under `mcp/proposals/`. |
 | `toledo_list_proposals` | Browse the proposal queue, optionally by status. |
 | `toledo_proposal_status` | One proposal's current lifecycle state. |

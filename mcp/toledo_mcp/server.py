@@ -96,6 +96,22 @@ synthesis this rewrite implements):
     instructions, since the real `cache.degraded` attribute does not exist
     yet to exercise directly).
 
+S4 addition (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.8) -- `toledo_eval`, the 21st
+tool: evaluates one reviewed-eligible executable-equation IR sidecar
+(`registry/executable/<mangled-code>.json`, S1's output) at caller-declared
+exact-rational inputs, via `scripts/executable.ir_eval` -- S2's shared,
+Fraction-only reference evaluator, the SAME one the site widget's build step
+and the cross-check runner (S3) both call, never re-implemented here. Reads
+`inputs` values ONLY as strings; a JSON/float number is rejected, never
+silently coerced, so no floating value ever crosses into the evaluator.
+Fail-closed for a code with no sidecar, an unreviewed (`candidate`) sidecar, a
+`reviewed_rejected` sidecar, or a runtime that is not yet importable on this
+build (S2 has not landed `scripts/executable/ir_eval.py` in every checkout
+this file runs against) -- returns `{"evaluable": false, ...}` rather than
+raising. A live result carries the identical "not a Reproduction Card" caveat
+the site widget shows and is never itself written into any resistance/
+reproduction record.
+
 Kept from the first pass, unchanged in shape or reasoning:
   - Every tool reads through `cache.get_cache()` instead of calling
     `core.load_registry()` fresh inline.
@@ -120,26 +136,30 @@ Dependency: the `mcp` package plus the Python standard library; nothing else.
 """
 from __future__ import annotations
 
+import decimal
 import functools
+import importlib.util
 import json as _json
+import pathlib
 import sqlite3
+import sys
+from fractions import Fraction
 from typing import Any, Literal
 
 from mcp.server.fastmcp import FastMCP
 
 try:
     from . import cache as cache_mod
-    from . import cli, core, equivalence, lint, paths, proposals, regex_guard, verdict
+    from . import cli, core, equivalence, export_static, lint, paths, proposals, regex_guard, verdict
 except ImportError:
     # Run directly as a script (`python3 mcp/toledo_mcp/server.py`, as in the
     # repo-root .mcp.json) rather than via `python3 -m toledo_mcp.server` — put
     # mcp/ on sys.path so the package-relative import above still resolves.
-    import pathlib
     import sys
 
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
     from toledo_mcp import cache as cache_mod
-    from toledo_mcp import cli, core, equivalence, lint, paths, proposals, regex_guard, verdict
+    from toledo_mcp import cli, core, equivalence, export_static, lint, paths, proposals, regex_guard, verdict
 
 mcp = FastMCP(
     name="toledo",
@@ -750,6 +770,233 @@ def toledo_lint(statement: str, code: str | None = None) -> dict[str, Any]:
     `"code pending"` rather than fabricating a code.
     """
     return _envelope(lint.lint_statement(statement, code))
+
+
+# ---------------------------------------------------------------------------
+# toledo_eval (21st tool, S4 — docs/EXECUTABLE_EQUATIONS_v0_1.md sec.8)
+# ---------------------------------------------------------------------------
+
+def _executable_sidecar_path(code: str, root: pathlib.Path) -> pathlib.Path:
+    """`registry/executable/<mangled-code>.json` — reuses
+    `export_static.mangle_code` verbatim (registry/SCHEMA.md's own Coq-file
+    mangling rule; never a fourth independently-invented scheme — the site's
+    api-mangled URLs and the Coq wrapper file names already share this one)."""
+    return paths.registry_dir(root) / "executable" / f"{export_static.mangle_code(code)}.json"
+
+
+def _load_executable_sidecar(code: str) -> dict[str, Any] | None:
+    """Reads one IR sidecar straight off disk. S1 (docs/EXECUTABLE_EQUATIONS_
+    v0_1.md sec.10) owns writing these files; this is a plain, read-only load
+    — the same relationship this server already holds with every other
+    registry file. `None` for a missing or unparsable sidecar (this server
+    never writes `registry/executable/`), so `toledo_eval` can fail closed
+    with "no IR sidecar for this code" rather than raising."""
+    p = _executable_sidecar_path(code, paths.repo_root())
+    if not p.exists():
+        return None
+    try:
+        with open(p, encoding="utf-8") as fh:
+            data = _json.load(fh)
+    except (OSError, _json.JSONDecodeError):
+        return None
+    return data if isinstance(data, dict) else None
+
+
+_IR_EVAL_PKG_NAME = "_toledo_scripts_executable_for_mcp"
+
+# `scripts/executable/` is CODE shipped alongside this package (like
+# `scripts/toledo_build.py`, which `core._toledo_build` resolves the exact
+# same way — `pathlib.Path(__file__).resolve().parents[2]`), never registry
+# DATA — so it is deliberately NOT resolved via `paths.repo_root()`
+# (`TOLEDO_ROOT`-overridable, meant for pointing an isolated test at a
+# fixture registry while the server's own code stays the real installed
+# tree). Kept as its own constant, computed the same way `core.py`'s
+# `REPO_ROOT` is, so the two never silently diverge in what "this repo's
+# root" means for locating a checked-in script.
+_REPO_ROOT_FOR_SCRIPTS = pathlib.Path(__file__).resolve().parents[2]
+
+
+def _load_ir_eval():
+    """Loads `scripts/executable/ir_eval.py` by file path (matching
+    `core.py`'s own established pattern for `scripts/toledo_build.py` — see
+    `core._toledo_build`), rather than `from scripts.executable import
+    ir_eval` (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.8's own named
+    alternative: "or an equivalent local-file import").
+
+    This is not stylistic: on this workstation a pip-installed distribution
+    happens to occupy the top-level name `scripts` in `site-packages`, and
+    PEP 420 namespace-package resolution means a REGULAR package found
+    anywhere on `sys.path` wins over this repository's own `scripts/`
+    directory (which carries no `__init__.py`) regardless of import order —
+    `import scripts.executable` silently resolves to the wrong distribution
+    (or fails outright) rather than this repo's own tree. File-path loading
+    sidesteps the collision entirely; `scripts/executable/ir_eval.py`'s own
+    `from . import ir_kernel` relative import still resolves correctly
+    because the parent package below is registered in `sys.modules` with a
+    real `__path__` before `ir_eval` itself is executed.
+
+    Raises `ImportError` (never a bare `FileNotFoundError`/`AttributeError`)
+    when `scripts/executable/` is not yet present on this build (S2 has not
+    landed it in this checkout) — the caller turns that into `toledo_eval`'s
+    own disclosed "runtime not available" reason."""
+    if f"{_IR_EVAL_PKG_NAME}.ir_eval" in sys.modules:
+        return sys.modules[f"{_IR_EVAL_PKG_NAME}.ir_eval"]
+
+    scripts_executable_dir = _REPO_ROOT_FOR_SCRIPTS / "scripts" / "executable"
+    pkg_init = scripts_executable_dir / "__init__.py"
+    if not pkg_init.is_file():
+        raise ImportError(f"{scripts_executable_dir} not present on this build (scripts/executable/__init__.py missing)")
+
+    if _IR_EVAL_PKG_NAME not in sys.modules:
+        pkg_spec = importlib.util.spec_from_file_location(
+            _IR_EVAL_PKG_NAME, pkg_init, submodule_search_locations=[str(scripts_executable_dir)],
+        )
+        if pkg_spec is None or pkg_spec.loader is None:
+            raise ImportError(f"cannot load {pkg_init}")
+        pkg_mod = importlib.util.module_from_spec(pkg_spec)
+        sys.modules[_IR_EVAL_PKG_NAME] = pkg_mod
+        pkg_spec.loader.exec_module(pkg_mod)
+
+    mod_path = scripts_executable_dir / "ir_eval.py"
+    if not mod_path.is_file():
+        raise ImportError(f"{mod_path} not present on this build (S2 has not landed ir_eval.py)")
+    full_name = f"{_IR_EVAL_PKG_NAME}.ir_eval"
+    spec = importlib.util.spec_from_file_location(full_name, mod_path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"cannot load {mod_path}")
+    mod = importlib.util.module_from_spec(spec)
+    mod.__package__ = _IR_EVAL_PKG_NAME
+    sys.modules[full_name] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _decimal_display(value_str: str, digits: int = 24) -> str:
+    """Decimal string, DISPLAY ONLY — the MCP-side mirror of `site/static/
+    js/_qfrac.js`'s `toDecimalString` (docs/EXECUTABLE_EQUATIONS_v0_1.md
+    sec.5's "the one place a floating-point-shaped string is ever produced,
+    and it is never fed back into a comparison"). This is a presentational
+    helper owned by this tool's own response shaping, not part of the
+    Fraction-only reference kernel (`ir_kernel.py`/`ir_eval.py`, S2) — it
+    never participates in `toledo_eval`'s own evaluation or in any
+    cross-check comparison."""
+    try:
+        frac = Fraction(value_str)
+    except (ValueError, ZeroDivisionError):
+        return value_str
+    ctx = decimal.Context(prec=digits + 12)
+    d = ctx.divide(decimal.Decimal(frac.numerator), decimal.Decimal(frac.denominator))
+    text = format(d, f".{digits}f")
+    if "." in text:
+        text = text.rstrip("0").rstrip(".")
+    return text or "0"
+
+
+@mcp.tool()
+@_safe
+def toledo_eval(code: str, inputs: dict[str, str]) -> dict[str, Any]:
+    """Evaluate one reviewed-eligible executable equation at declared rational inputs.
+
+    Fail-closed for any code with no IR sidecar, or whose sidecar status is not
+    "reviewed_eligible"/"built": returns {"evaluable": false, "code": ..., "reason": "..."}
+    rather than raising or guessing. `inputs` values MUST be strings ("3", "22/7") —
+    a JSON/float number is rejected, never silently coerced, so no floating value ever
+    crosses into the evaluator.
+
+    Reuses `scripts/executable/ir_eval.py` — the SAME in-process evaluator the site
+    widget's build step and the cross-check runner both call — never a second,
+    parallel interpretation of the same IR (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.4/
+    sec.13 item 4). A live `toledo_eval` result carries the identical "not a
+    Reproduction Card" caveat the site widget shows (sec.7) and is never itself
+    written into any resistance/reproduction record.
+
+    Success: `data = {"evaluable": true, "code", "value": "<exact rational string>",
+    "approx_display": "<decimal string, captioned display-only>", "terms_used":
+    int | null, "error_bound": "<rational string>" | null, "reproduction_card":
+    {citation} | null}`.
+
+    Failure: `data = {"evaluable": false, "code", "reason": "no IR sidecar for this
+    code" | "sidecar status is 'candidate', not yet human-reviewed" | "sidecar
+    status is 'reviewed_rejected': <review_note>" | "<input name> could not be
+    parsed as an exact rational" | "executable reference runtime is not available
+    on this build: <detail>"}` — the last reason fires when `scripts/executable/
+    ir_eval.py` (S2's own deliverable) is not yet importable in this checkout;
+    it is disclosed honestly rather than treated as "code not registered".
+    """
+    if not isinstance(inputs, dict):
+        return _invalid("inputs must be a JSON object of {variable_name: exact-rational-string}")
+    for name, value in inputs.items():
+        if not isinstance(value, str):
+            return _envelope({
+                "evaluable": False, "code": code,
+                "reason": (
+                    f"{name!r} could not be parsed as an exact rational "
+                    '(inputs must be strings, e.g. "3" or "22/7" — a JSON/float '
+                    "number is rejected, never silently coerced)"
+                ),
+            })
+
+    sidecar = _load_executable_sidecar(code)
+    if sidecar is None:
+        return _envelope({"evaluable": False, "code": code, "reason": "no IR sidecar for this code"})
+
+    status = sidecar.get("status")
+    if status == "candidate":
+        return _envelope({
+            "evaluable": False, "code": code,
+            "reason": "sidecar status is 'candidate', not yet human-reviewed",
+        })
+    if status == "reviewed_rejected":
+        note = ((sidecar.get("eligibility") or {}).get("review_note") or "").strip()
+        return _envelope({
+            "evaluable": False, "code": code,
+            "reason": f"sidecar status is 'reviewed_rejected': {note}",
+        })
+    if status not in ("reviewed_eligible", "built"):
+        return _envelope({
+            "evaluable": False, "code": code,
+            "reason": f"sidecar status is {status!r}, not evaluable",
+        })
+
+    try:
+        ir_eval = _load_ir_eval()  # S2-owned shared evaluator, loaded by file path — see _load_ir_eval's docstring
+    except ImportError as exc:
+        return _envelope({
+            "evaluable": False, "code": code,
+            "reason": f"executable reference runtime is not available on this build: {exc}",
+        })
+
+    try:
+        result = ir_eval.evaluate(sidecar, inputs)
+    except Exception as exc:  # noqa: BLE001 — ir_eval's own contract: a
+        # malformed rational string, or a domain violation (e.g. dividing by
+        # a variable whose stated domain excludes zero), raises; this is the
+        # one place that exception becomes toledo_eval's typed fail-closed
+        # shape instead of an uncaught error reaching the stdio transport (a
+        # genuine "cannot read the registry at all" failure still escapes to
+        # `_safe` above, unchanged).
+        return _envelope({"evaluable": False, "code": code, "reason": str(exc)})
+
+    value = result.get("value") if isinstance(result, dict) else None
+    # The reproduction-card citation is an optional annotation on an
+    # otherwise-complete evaluation — a registry read failure here (e.g. no
+    # `registry/CANONICAL.json` in an isolated test checkout) must never
+    # turn a genuinely successful `ir_eval.evaluate` result into a hard
+    # error; it degrades to `reproduction_card: None` instead.
+    try:
+        entry = cache_mod.get_cache().get(code)
+    except (FileNotFoundError, OSError, _json.JSONDecodeError):
+        entry = None
+    reproduction_card = (entry.get("executable") or {}).get("reproduction_card") if entry else None
+    return _envelope({
+        "evaluable": True,
+        "code": code,
+        "value": value,
+        "approx_display": _decimal_display(value) if value is not None else None,
+        "terms_used": result.get("terms_used") if isinstance(result, dict) else None,
+        "error_bound": result.get("error_bound") if isinstance(result, dict) else None,
+        "reproduction_card": reproduction_card,
+    })
 
 
 @mcp.tool()
