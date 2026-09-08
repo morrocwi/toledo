@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "source_repo": "glosa",
-  "source_commit": "387ad232552a15ecdf2cff3724094654c13f4691",
+  "source_commit": "b44f596f699fb83abbd73ca4a432b1d56ec31cf1",
   "note": "citation index (registry/SCHEMA.md addendum), same convention as reproduction_card_index.json -- see this file's own source_commit for the card citations; review_report files themselves are git-ignored in glosa (see each row's own citation.commit_note).",
   "reviews": [
     {
