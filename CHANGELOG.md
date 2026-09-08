@@ -3,6 +3,117 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.7.0 — 2026-09-08
+
+Deposited as a Zenodo version (DOI recorded once minted; concept DOI 10.5281/zenodo.22537318);
+GitHub release tag v1.7.0.
+
+Commits `f09a91b` (v1.7 registrar: Equation River), `182a491` (274 IDM readings wrapped in
+Toledo-native Coq files and verified closed; presentation MathML extended), `98240c6`/`de25c59`
+(executable-equations v0.1 pilot: end-to-end run against the real registry, then independence/gap/
+rounding fixes), plus this release-prep pass.
+
+- **Equation River registrations** (`f09a91b`, founder instruction `BBL-2026-09-08-238`): six
+  proposals modelling how an equation grows stronger step by step within this workspace's own
+  context (think → register in Toledo → Th_coqc → reproducible computation against an outside
+  oracle → review → return to the model) were merged as new readings: `weld/M.33.v1` (the rung set
+  `S_n(q) ⊆ {R0,…,R6}` with one evidence file per held rung), `weld/M.34.v1` (the strengthening
+  law — a rung is added only by a verified evidence file, and withdrawn if that evidence's
+  verification later fails), `weld/M.35.v1` (the strength readout is the held rung *set*, never a
+  collapsed scalar — a count hides which rung is missing), `EQ-015/H.50.v1` (the return map, the
+  evidence flowing back into the source model), `weld/M.36.v1` (stage non-collapse), and
+  `EQ-015/M.17.v1` (stages 3–4 realised concretely on `Q`, an outside-oracle-checked computation).
+  Canonical registry: **1,273** entries (was 1,267). See README's "Equation River registrations"
+  section.
+- **274 `information-discrete-math` root-extension readings wrapped and closed** (`182a491`):
+  `scripts/v17_wrap_idm.py` wrote a Toledo-native `coq/canonical/<code>.v` wrapper for every one of
+  the 274 v1.6 IDM readings that had carried the honest `mapped_not_wrapped` middle state since
+  their v1.6 introduction (each wrapper restates the already-verified imported `IDM` identifier
+  under the entry's own code, `-R ../information-discrete-math IDM` added to
+  `coq/canonical/_CoqProject`); `verify.sh` reports **274 identifiers checked, 0 disclosed-axiom, 0
+  failed** — all 274 land on `closed`. Registry-wide `coq_status`: `closed` **277 → 551**,
+  `mapped_not_wrapped` **274 → 0** (retired a second time, honestly — see README's "The
+  `coq_status` ladder"). `coq/canonical/` now carries **1,202** `.v` files (was 928); every one has
+  a compiled `.vo`/`.vok` artifact on disk (checked this pass without a fresh full-arc `coqc`
+  invocation, per the standing "check only what changed" discipline — `coq/canonical/
+  build_report.txt` itself still reads its pre-IDM-wrap **905 ok, 0 failed** and was not re-run).
+  See README's "Root registry extension R2" section.
+- **Presentation MathML extended to `latex+ascii` statements** (`182a491`): `scripts/
+  toledo_build.py`'s presentation-MathML pass, previously scoped to `format: latex` only, now also
+  covers `format: latex+ascii`. Canonical (reading) entries with a populated `presentation_mathml`
+  field: **447 → 863** (of 1,273 canonical entries; recomputed this pass over freshly built
+  `registry/entries/*.json` — `863`, matching the commit's own count exactly). **16** entries
+  attempt conversion and fail; each records the real reason in its own `mathml_error` field rather
+  than being silently dropped (recomputed this pass — **16**). Root rows are unaffected and remain
+  ascii-only (**0** of 610 root-row entries carry `presentation_mathml`) — documented open work, not
+  silently left inconsistent with the reading rows.
+- **Executable Equations v0.1 — opt-in pilot layer** (`98240c6`, `de25c59`,
+  `docs/EXECUTABLE_EQUATIONS_v0_1.md`): a single shared interpreter (a Python-on-`Q` reference
+  kernel plus a generated JavaScript twin, `scripts/executable/ir_kernel.py` / `site/static/js/
+  _ir_eval.js` + `_qfrac.js`) walks a small per-equation intermediate-representation (IR) file at
+  run time — no per-entry source file is ever hand-written or generated. Stated plainly, not
+  rounded up: of **841** entries eligible by the status/format gate (`status not in
+  {not_an_equation, split}` and `statement.format in {latex, latex+ascii}`), **118** parse with
+  real equation structure (an Eq node with at least one side carrying real structure, via `sympy.
+  parsing.latex.parse_latex`) — but only **2** IR sidecars exist at all
+  (`registry/executable/EQ_001__P_45_v1.json`, `EQ_001__P_63_v1.json`), both `status: "candidate"`,
+  `eligibility.reviewed_by: null`, **0** `built`. One of the two, `EQ-001/P.45.v1`, carries a known
+  sympy misread disclosed in its own `drift_note`: the unescaped word `Gamma_R` was shattered into
+  a product of single letters (`G*a*m*a_{R}*m`), and the statement's second clause (the `t'`
+  transform) was dropped from the IR entirely — the extractor kept only the `x'` equation. The
+  human-review gate blocks exactly this: neither sidecar is `reviewed_eligible`, so `toledo_eval`
+  (the 21st MCP tool, evaluating a reviewed-eligible IR at declared exact-rational inputs via a
+  shared `Fraction`-only evaluator) refuses both, fail-closed. No corpus equation has been
+  cross-checked end-to-end yet, and the site try-it widget renders on **0** pages by design — a
+  widget that is wired but shows nowhere is exactly the honest state of a 0-`reviewed_eligible`,
+  0-`built` pilot. `de25c59` additionally: reclassified the Python-vs-JS twin comparison as
+  `twin_consistency` rather than `independent_implementation` (both evaluators walk the same IR
+  tree extracted once from the same statement by the same pipeline, so agreement caps at R3, not a
+  stronger independence class); propagated a filed `EXEC-` Reproduction Card's own result onto
+  `registry/executable/INDEX.json`'s new `counts.by_result` breakdown (today: `PASS` 0, `FAIL` 0,
+  `ERROR` 0 — no card has been filed yet); fixed a JS-twin rounding bug (`QFrac.roundToPrecision`
+  rounded a negative exact tie away from zero instead of matching the Python reference's
+  floor-based rule); and added `tests/executable/test_ir_schema.py`. See README's "Executable
+  Equations v0.1" section.
+- **Reproduction evidence unchanged**: the same three worked cards from v1.6 remain the only ones
+  registered — `EQ-045` gauge-algebra dimension check **PASS**, `EQ-068` Higgs-mass prediction
+  **FAIL** against the published PDG value, IDM ladder-constants check **PASS**. R5 (independent
+  reviewer, `independence_class >= "I2"`) remains unheld for every entry in this registry.
+- **Downstream**: the textbook "Written by AI. Still True." Edition 1.2 (10.5281/zenodo.22651765)
+  now carries an Appendix G generated from this registry's own `reproduction_card_index.json`/
+  `review_report_index.json` and cites Toledo v1.6.0 (the version current when that edition was
+  built); recorded here for lineage, not re-verified as part of this pass since it lives in a
+  separate repository. All 229 Zenodo concepts across the programme were classified into 9 hubs
+  the same day, also outside this repository's own scope.
+- **This release-prep pass**: `CITATION.cff`/`.zenodo.json` → 1.7.0 (v1.6.0's version DOI
+  10.5281/zenodo.22646681 added to `CITATION.cff`'s citation message, a placeholder recorded for
+  1.7.0); `python3 mcp/scripts/sync_version.py` propagated `1.7.0` into `mcp/pyproject.toml` and
+  `toledo_mcp/__init__.py`. Regenerated `make build`,
+  `python3 site/build_site.py --out site/dist --strict`, `PYTHONPATH=mcp python3 -m
+  toledo_mcp.export_static --out mcp/dist/static-api` and `make catalogue` (one `latexmk -pdf`
+  run): docs site **2,587** pages (was 2,581 — +6 for the 6 new Equation River entries), catalogue
+  PDF **335** pages with its title page reading "Version 1.7.0" (`pdfinfo`/`pdftotext`, read from
+  `CITATION.cff` at build time). README's "Honest state", "Equation River registrations", "274
+  information-discrete-math readings wrapped and closed", "Presentation MathML extended", and
+  "Executable Equations v0.1" sections regenerated with live counts; root README's own tools table
+  updated 20 → 21 (`toledo_eval` was already documented in `mcp/README.md` by `98240c6` but never
+  carried into the root `README.md`, which still read "The 20 tools" until this pass — fixed here).
+- **Adversarial-gate finding, disclosed rather than silently carried forward**: v1.5.0's and
+  v1.6.0's own CHANGELOG entries state "**0** `Overfull \hbox` warnings over 20pt
+  (`grep -c Overfull latex/catalogue.log`)". Re-run this pass, that exact command produces **no
+  output at all** in an interactive shell where `grep` is shadowed by a `ugrep`-based wrapper that
+  silently treats this log as a binary file and skips it (`-I`), rather than printing `0` — a false
+  reading a prior release-prep pass appears to have taken at face value. Using the real `grep`
+  (`/bin/grep -c Overfull latex/catalogue.log`, or `grep -a`) instead: **636** total `Overfull
+  \hbox` lines, of which **34** exceed 20pt (largest: 145.7pt, at `EQ-001/B.13.v1`'s printed
+  entry). Reproduced identically on a clean v1.6.0 (`66eb48a`) checkout built in a detached
+  worktree — this is not a v1.7 regression, it is a pre-existing typesetting gap that the prior
+  releases' own verification command never actually measured. Left open, not fixed, by this
+  documentation-only pass; the correct command for this check going forward is `grep -a` or
+  `/bin/grep`, never the bare `grep` alias some interactive coding-agent shells install.
+- `python3 -m pytest -q tests` (repository root): **176 passed, 1 skipped, 3 xfailed**.
+- `cd mcp && python3 -m pytest -q`: **222 passed**.
+
 ## v1.6.0 — 2026-09-08
 
 Deposited as Zenodo version DOI 10.5281/zenodo.22646681 (concept DOI 10.5281/zenodo.22537318); GitHub release tag v1.6.0.

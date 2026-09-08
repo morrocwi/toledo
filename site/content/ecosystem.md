@@ -55,7 +55,7 @@ Toledo's own interfaces are marked in **bold**.
 
 | Repo | Kind | Name | Entry | Contract (condensed) |
 |---|---|---|---|---|
-| **toledo** | mcp_server | **toledo (stdio, 20 tools)** | `mcp/toledo_mcp/server.py` | Search/get/status/check/lineage and related lookups over the registry, plus a lint tool over a statement's own text; read-only except a proposal tool that drops a review file for a human registrar and never edits the registry itself. |
+| **toledo** | mcp_server | **toledo (stdio, 21 tools)** | `mcp/toledo_mcp/server.py` | Search/get/status/check/lineage and related lookups over the registry, plus a lint tool over a statement's own text and an eval tool over a reviewed-eligible executable-equation IR sidecar; read-only except a proposal tool that drops a review file for a human registrar and never edits the registry itself. |
 | **toledo** | cli | **toledo (mcp-package CLI)** | `mcp/toledo_mcp/cli.py` | find/show/ancestry/descendants/neighbours/export plus verdict-aware checks, from the cached/indexed layer. |
 | **toledo** | cli | **scripts/toledo (registry-owning CLI)** | `scripts/toledo` | The same kind of lookups, read from the generated `registry/TOLEDO.json` — a separate tool from the mcp-package's CLI of the same name. |
 | **toledo** | build_script | **toledo_build.py** | `scripts/toledo_build.py` | Generates every downstream surface (JSON export, vault, site, graph, static API, catalogue) from `registry/CANONICAL.json`. |

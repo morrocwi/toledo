@@ -7,7 +7,12 @@
     "candidate": 2,
     "reviewed_eligible": 0,
     "reviewed_ineligible": 0,
-    "built": 0
+    "built": 0,
+    "by_result": {
+      "PASS": 0,
+      "FAIL": 0,
+      "ERROR": 0
+    }
   },
   "entries": [
     {

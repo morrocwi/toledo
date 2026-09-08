@@ -104,7 +104,7 @@ escalate to a human; do not guess. `NOT_REGISTERED` — call `toledo_register_pr
 a human registrar to merge it before using the formula; this server never merges a proposal into
 the registry itself. Full detail: `mcp/README.md`'s "The rule this server exists to enforce".
 
-### The 20 tools
+### The 21 tools
 
 | Tool | Purpose |
 |---|---|
@@ -124,6 +124,7 @@ the registry itself. Full detail: `mcp/README.md`'s "The rule this server exists
 | `toledo_counts` | Live aggregate counts, cross-checkable against `registry/CANONICAL.json`'s own `counts{}`. |
 | `toledo_index_status` | Index freshness, schema-version compatibility, and the registry release version. |
 | `toledo_show_verdict_rules` | Introspect the verdict decision table as data, rather than trusting a description of it. |
+| `toledo_eval` | Evaluate one reviewed-eligible executable-equation IR sidecar at declared exact-rational inputs, via a shared `Fraction`-only evaluator; fail-closed (never raises) for no sidecar / unreviewed / rejected / a non-string input. |
 | `toledo_register_proposal` | The only write path — one human-reviewed proposal file under `mcp/proposals/`. |
 | `toledo_list_proposals` | Browse the proposal queue, optionally filtered by status. |
 | `toledo_proposal_status` | One proposal's current lifecycle state. |
@@ -211,21 +212,20 @@ indicative of that one run, not a guaranteed SLA — re-run `python3 benchmarks/
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-08 (v1.6)
+## Honest state — computed 2026-09-08 (v1.7)
 
 Every number below was read from the files in this repository by the command shown; none is
-carried over from an earlier note. This section supersedes the v1.5 counts below it in
-`CHANGELOG.md` — v1.6 adds two independent things: a root registry extension (**R2**) bringing
-`information-discrete-math` in as **18** further Layer-0 roots with **274** readings under them
-(see "Root registry extension R2" below), and **24** Master Equation River v1.6 registrations
-(**21** existing-code occurrences plus **3** new codes; see "Master Equation River v1.6
-registrations" below). It also ships a per-entry Resistance Ladder + Reproduction Ledger (see
-"Resistance ladder R0–R6 and reproduction evidence" below) and a 20th MCP tool, `toledo_lint` (see
-"toledo_lint" below). No `coqc` full-arc re-verify was invoked by this release-prep pass itself;
-the 274 IDM readings carry the honest `mapped_not_wrapped` coq_status (an evidence-backed match
-against an already-verified imported identifier, no Toledo-native wrapper file written yet for
-them) — the same rung the v1.2 Theta/CMC readings held before their own wrapper pass, reintroduced
-here rather than fabricating a closure that was not done.
+carried over from an earlier note. This section supersedes the v1.6 counts below it in
+`CHANGELOG.md` — v1.7 adds four independent things: **6** Equation River readings (see "Equation
+River registrations" below); the 274 `information-discrete-math` root-extension readings
+introduced at v1.6 now wrapped in Toledo-native Coq files and verified closed, not merely mapped
+(see "274 information-discrete-math readings wrapped and closed" below); presentation MathML
+extended from 447 to 863 canonical-entry rows (see "Presentation MathML extended" below); and an
+opt-in Executable Equations v0.1 pilot layer plus a 21st MCP tool, `toledo_eval` (see "Executable
+Equations v0.1" below). No `coqc` full-arc re-verify was invoked by this release-prep pass itself
+— the 274 IDM readings' `closed` status comes from `182a491`'s own scoped `verify.sh` run over
+exactly those 274 new files (274 identifiers checked, 0 disclosed-axiom, 0 failed), read here, not
+re-run.
 
 **Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
 `python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
@@ -233,21 +233,29 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **1,267** canonical entries: **990** at v1.5 plus **274** v1.6 readings from the
-  `information-discrete-math` root extension (R2) plus **3** v1.6 Master Equation River v1.6 new
-  codes. (990+274+3=1,267, matching `registry/CANONICAL.json`'s own `counts{}.entries` exactly.)
-- **Status:** `current` 1,176 · `unverified` 52 · `split` 30 · `not_an_equation` 9.
-- **Domain:** M 407 · P 313 · S 136 · H 122 · W 93 · B 75 · E 62 · C 59.
-- **Tier:** `Th_coqc` 413 · `Definition` 431 · `Dr` 79 · `Ax` 12 · `finite_diagnostic` 46 ·
+- **1,273** canonical entries: **1,267** at v1.6 plus **6** v1.7 Equation River readings
+  (`weld/M.33.v1`, `weld/M.34.v1`, `weld/M.35.v1`, `EQ-015/H.50.v1`, `weld/M.36.v1`,
+  `EQ-015/M.17.v1`). (1,267+6=1,273, matching `registry/CANONICAL.json`'s own `counts{}.entries`
+  exactly.)
+- **Status:** `current` 1,182 (+6) · `unverified` 52 · `split` 30 · `not_an_equation` 9.
+- **Domain:** M 412 (+5) · P 313 · S 136 · H 123 (+1) · W 93 · B 75 · E 62 · C 59.
+- **Tier:** `Th_coqc` 413 · `Definition` 434 (+3) · `Dr` 82 (+3) · `Ax` 12 · `finite_diagnostic` 46 ·
   `Open` 41 · `untagged` 245. (`Th_coqc` certifies that a lemma is closed under the stated finite
   model's global context — an internal-consistency check, never an empirical or physical truth
-  claim; `untagged` means the source gave no tier at all, stated as such rather than guessed.)
-- **Coq status:** `closed` 277 · `definition` 381 · `wrapped_related` 210 · `mapped_not_wrapped`
-  274 · `not_formalisable` 70 · `open_prop` 52 · `axioms` 3. See "The coq_status ladder"
-  immediately below for what each of these means. `mapped_not_wrapped` reappears at v1.6 — it was
-  retired at v1.5 once the 119 v1.2 Theta/CMC readings gained wrapper files, and is reintroduced
-  here by the 274 new IDM readings, which carry it honestly rather than borrowing `closed` from
-  the already-verified 274/274 IDM Coq mirror they are read from.
+  claim; `untagged` means the source gave no tier at all, stated as such rather than guessed. The
+  +3/+3 split between `Definition` and `Dr` is the six new river readings: three state a
+  categorical `Definition` — the rung set, the strengthening law, the stage-3/4-on-`Q` realisation
+  — and three state an open `Dr` hypothesis — the strength readout, the return map, stage
+  non-collapse.)
+- **Coq status:** `closed` 551 (+274) · `definition` 384 (+3) · `wrapped_related` 210 ·
+  `mapped_not_wrapped` **0** (−274) · `not_formalisable` 70 · `open_prop` 55 (+3) · `axioms` 3. See
+  "The coq_status ladder" immediately below for what each of these means. `mapped_not_wrapped` is
+  retired a second time at v1.7 — the 274 v1.6 IDM readings that carried it are the same 274 that
+  gained a Toledo-native wrapper file this release and moved to `closed` (see "274
+  information-discrete-math readings wrapped and closed" below), the same pattern that retired it
+  once already at v1.5 for the 119 Theta/CMC readings. The three new `open_prop` river readings are
+  the strength-readout/return-map/stage-non-collapse `Dr` hypotheses above, carried as stated open
+  `Prop`s, never forced to a proof.
 
 ### The coq_status ladder (`closed` → `axioms` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
 
@@ -282,10 +290,12 @@ rounded-up claim:
 `mapped_not_wrapped` — an evidence-backed match against an imported Coq identifier exists
 (`registry/coq_map.json`) but no Toledo-native wrapper file has been written yet — was retired at
 v1.5 (the 119 entries that carried it, the v1.2 Theta/CMC root-extension readings, all gained a
-Toledo-native wrapper file that pass and moved to `closed`/`axioms`; see "Debt pass (v1.5)" below)
-and **reappears at v1.6**: the 274 new `information-discrete-math` root-extension readings (R2)
-carry it, honestly, for the same reason the Theta/CMC readings once did — see "Root registry
-extension R2" below.
+Toledo-native wrapper file that pass and moved to `closed`/`axioms`; see "Debt pass (v1.5)" below),
+reappeared at v1.6 (the 274 new `information-discrete-math` root-extension readings, R2, carried it
+honestly for the same reason the Theta/CMC readings once did), and is **retired a second time at
+v1.7**: all 274 of those readings gained a Toledo-native wrapper file this release and moved to
+`closed` — see "274 information-discrete-math readings wrapped and closed" below. **0** entries
+carry `mapped_not_wrapped` today.
 
 **The 2026-09-07 reclassification.** v1.0.0 reported `closed` 337. On inspection during v1.1, 214
 of those 337 entries turned out to carry only a Coq `Definition`, not a proved Theorem/Lemma —
@@ -295,7 +305,10 @@ corrects this: those 214 entries were moved from `closed` to `definition` (each 
 leaving `closed` at **161** — the count of canonical entries that actually carried a verified
 theorem in their own Toledo-native file at v1.1–v1.4. v1.5 raises this to **277** by giving the 119
 Theta/CMC entries their own wrapper files (116 land on `closed`, 3 on the new `axioms` rung); see
-"Debt pass (v1.5)" for that pass's own Coq evidence. The v1.1–v1.4 figure of **207/207** identifiers
+"Debt pass (v1.5)" for that pass's own Coq evidence. v1.7 raises this again to **551** by giving the
+274 v1.6 IDM root-extension readings their own wrapper files, all 274 landing on `closed`
+(`coq/canonical/verify.sh`: 274 identifiers checked, 0 disclosed-axiom, 0 failed) — see "274
+information-discrete-math readings wrapped and closed" below. The v1.1–v1.4 figure of **207/207** identifiers
 `verify.sh` reported "Closed under the global context" across all of `coq/canonical/` (an
 "identifier closed" tally, which can differ from a "canonical entry `coq_status`" tally because one
 file can carry more than one closed identifier) was not re-measured by a fresh full-arc `verify.sh`
@@ -311,10 +324,11 @@ added at v1.2 per the R1 addendum below, plus **18** further root-extension rows
 the R2 addendum below): **610** root rows (592 + 18). Of these, still only **377** carry a
 normalised `tier` (added by the v1.2/v1.5 tier sidecar passes, each with a quoted source line):
 `Definition` 101 · `untagged` 95 · `finite_diagnostic` 68 · `Th_coqc` 51 · `Dr` 43 · `Ax` 13 ·
-`RETRACTED` 3 · `Open` 3 — unchanged at v1.6 (no new normalisation pass ran this release). The
-remaining **233** rows (377+233=610 — 215 carried over from v1.5, plus the 18 new R2 rows) still
-carry only their exact free-text `tier_in_genesis` string (each R2 row's own string is IDM's own
-verbatim tier tag, e.g. `Ax`, `Th_coqc`, `"Dr → Th_coqc realization"` for `delta_R`; the corpus
+`RETRACTED` 3 · `Open` 3 — unchanged since v1.6 (no new root row and no new normalisation pass ran
+at v1.7 — the six new Equation River objects are canonical readings, not root rows). The
+remaining **233** rows (377+233=610 — 215 carried over from v1.5, plus the 18 R2 rows added at v1.6)
+still carry only their exact free-text `tier_in_genesis` string (each R2 row's own string is IDM's
+own verbatim tier tag, e.g. `Ax`, `Th_coqc`, `"Dr → Th_coqc realization"` for `delta_R`; the corpus
 overall uses 150+ distinct tier strings; normalising the rest is open work, listed below).
 
 **Coq — imported developments** (`coq/<source>/verify_report.json`, one sequential build+`Print
@@ -331,32 +345,33 @@ re-run, here — no `coqc` was invoked during this pass, per this release's buil
 | solver arc (private) | 1,614 | 1,500 | 114 (named) | 0 |
 | **Total** | **3,289** | **3,125** | **164** | **0** |
 
-**Coq — Toledo-native canonical wrappers** (`coq/canonical/`). `_CoqProject` lists **928** `.v`
-files (up from 725 at v1.1–v1.4: +119 Theta/CMC wrappers, +34 Effort, +16 Economics of Expertise,
-+5 Core Epistemic Structure, +23 Tunnel v2.1, +6 non-wrapper helper files — see "Debt pass (v1.5)"
-for the per-stream file counts and what the 6 are). `build_report.txt` itself records **905 ok, 0 failed (of 905)** —
-its text predates the 23 Tunnel v2.1 files' addition to `_CoqProject`; this release-prep pass
-cross-checked the remaining 23 the honest way available without invoking `coqc` again: every one
-of the 928 `_CoqProject` files has a compiled `.vo`/`.vok` artifact on disk, 0 missing (`python3 -c`
-existence check, this pass). `verify_report.txt` itself reads **"0 identifiers checked, 0
-disclosed-axiom (registered), 0 failed"** — this is the debt pass's own scoped re-verify of only
-the 23 new Tunnel v2.1 files (the "check only what changed" discipline, not a full-arc re-audit),
-and 0 is the *correct* result for that scope: all 23 of those files carry `coq_status`
-`definition`/`open_prop` (8/15) — a `Definition`, never a Theorem/Lemma/Corollary/Example/Remark —
-so `verify.sh`'s own identifier loop correctly finds nothing to `Print Assumptions` on among them.
-The last full-arc verify pass on record for the pre-v1.5 tree remains v1.1.0's **207/207**
-identifiers "Closed under the global context" (see the reclassification note above); this release
-did not re-run that full pass (no `coqc`, per this release's build constraint), so it is quoted as
-last measured, not re-certified at v1.5.
+**Coq — Toledo-native canonical wrappers** (`coq/canonical/`). `_CoqProject` lists **1,202** `.v`
+files (up from 928 at v1.6: +274 IDM wrapper files, `scripts/v17_wrap_idm.py`, plus `-R
+../information-discrete-math IDM` added to `_CoqProject`). `coq/canonical/verify.sh`'s own scoped
+re-verify of exactly those 274 new files reads **"274 identifiers checked, 0 disclosed-axiom
+(registered), 0 failed"** (the "check only what changed" discipline, not a full-arc re-audit) — all
+274 land on `closed`. `build_report.txt` itself still records the pre-IDM-wrap **905 ok, 0 failed
+(of 905)** and was not re-run this pass; this release-prep pass cross-checked the remaining 297
+files (1,202−905) the honest way available without invoking `coqc` again: every one of the 1,202
+`_CoqProject` files has a compiled `.vo`/`.vok` artifact on disk, 0 missing (`python3 -c` existence
+check, this pass). The last full-arc verify pass on record for the pre-v1.5 tree remains v1.1.0's
+**207/207** identifiers "Closed under the global context" (see the reclassification note above);
+this release did not re-run that full pass (no full-arc `coqc`, per this release's build
+constraint), so it is quoted as last measured, not re-certified at v1.7.
 
 **Docs site / catalogue** (`make build && python3 site/build_site.py --out site/dist --strict`,
-`make catalogue`, this pass): site **2,581** generated pages (1,267 canonical entries + 610 root
-rows plus index/browse/by-root/by-domain/by-tier/by-status/search/agents/about/**ecosystem** pages
-— see "Website" below); printable catalogue PDF **334** pages, title page reading "Version 1.6.0"
-(`pdfinfo latex/catalogue.pdf`, one `latexmk -pdf` run), **0** `Overfull \hbox` warnings over
-20pt in `latex/catalogue.log` (`grep -c Overfull latex/catalogue.log`, this pass, reproduced twice:
-once on the already-built log in the working tree and once from a fully clean rebuild in a
-detached worktree with the pending diff applied — same as v1.5).
+`make catalogue`, this pass): site **2,587** generated pages (1,273 canonical entries + 610 root
+rows plus index/browse/by-root/by-domain/by-tier/by-status/search/agents/about/ecosystem pages —
+see "Website" below); printable catalogue PDF **335** pages, title page reading "Version 1.7.0"
+(`pdftotext -f 1 -l 1 latex/catalogue.pdf -`, one `latexmk -pdf` run — the version string is read
+from `CITATION.cff` at build time, `scripts/toledo_build.py`). **34** `Overfull \hbox` warnings
+exceed 20pt in `latex/catalogue.log` (`/bin/grep -c Overfull latex/catalogue.log`, or `grep -a`;
+plain `grep` inside some interactive coding-agent shells is shadowed by a `ugrep`-based wrapper that
+silently skips this file as binary and returns no output at all — not a real `0`). This is **not a
+v1.7 regression**: reproduced identically (34, largest 145.7pt) on a clean v1.6.0 (`66eb48a`)
+checkout built in a detached worktree this pass — the prior releases' own "0 over 20pt" figure was
+never actually measured by the command they named. Left open as a real, disclosed typesetting gap,
+not fixed by this documentation-only pass.
 Fixing this pass, not carried from an earlier release: four Unicode characters the v1.6 registry
 additions introduced (`⨁ ⊟ ⊤ ↪`, from the `information-discrete-math` root extension's FOLD/
 DECISION/injection statements) had no mapping in `latex/unicode_pdf_fallback.sty`, so `pdflatex`
@@ -675,9 +690,9 @@ before updating the IDM repository itself to carry the codes Toledo assigns it.
   it generates): `R` 40 · `D` 80 · `Z` 23 · `L_R` 28 · `delta_R` 11 · `Q` 19 · `Keystone` 30 ·
   `RD3` 1 · `A2` 28 · `A3` 14 = 274, one per identifier in the 274/274-closed
   `coq/information-discrete-math/verify_report.json` mirror already imported at v1.0.0,
-  `<root>/<D>.<nn>.v1` grammar, `coq_status: mapped_not_wrapped` (the same honest middle state R1's
-  119 Theta/CMC readings held before their own wrapper pass — wrapping these into
-  `coq/canonical/` files is left to a later release).
+  `<root>/<D>.<nn>.v1` grammar, `coq_status: mapped_not_wrapped` at v1.6 (the same honest middle
+  state R1's 119 Theta/CMC readings held before their own wrapper pass). **Wrapped and moved to
+  `closed` at v1.7** — see "274 information-discrete-math readings wrapped and closed" below.
 - The treatise itself — `information-discrete-math/textbook/INFORMATION_DISCRETE_MATHEMATICS.md`
   — is deposited separately: **10.5281/zenodo.22644131**. IDM's own repository (v1.6.0) was then
   updated to carry the Toledo codes this merge assigned it, per the founder's own second half of
@@ -697,6 +712,101 @@ existing statement under that criterion and were registered as new readings:
 all resolving to `A.5/H.02.v1`) is recorded in the merge file's own
 `_open_definition_tier_mismatches` list for a human registrar to confirm the tier, not silently
 accepted.
+
+### Equation River registrations
+
+Founder instruction, 2026-09-08 (`BBL-2026-09-08-238`, relayed in
+`ops/HANDOFF_OVERNIGHT_2026-09-06.md`): model how one equation, once it exists, grows stronger step
+by step within this workspace's own context — think, register in Toledo, `Th_coqc`, reproducible
+computation with an outside oracle, review, world record — and returns to the source model.
+`registry/proposals/equation_river.json` (6 proposals) was checked against this registry and merged
+by `scripts/v17_river_merge.py`; `registry/proposals/equation_river.merged.json` records the
+assigned codes:
+
+| Proposal | Code | Reading |
+|---|---|---|
+| `PROP-RIVER-01` | `weld/M.33.v1` | Rung set: `S_n(q) ⊆ {R0,…,R6}`, one evidence file per held rung. |
+| `PROP-RIVER-02` | `weld/M.34.v1` | Strengthening law: a rung is added by a verified evidence file and withdrawn if that evidence's own verification later fails. |
+| `PROP-RIVER-03` | `weld/M.35.v1` | Strength readout is the held rung *set*, never a collapsed scalar — a count hides which rung is missing. |
+| `PROP-RIVER-04` | `EQ-015/H.50.v1` | Return map: the evidence flows back into the source model. |
+| `PROP-RIVER-05` | `weld/M.36.v1` | Stage non-collapse. |
+| `PROP-RIVER-06` | `EQ-015/M.17.v1` | Stages 3–4 realised concretely on `Q`, an outside-oracle-checked computation. |
+
+Three (`weld/M.33.v1`, `weld/M.34.v1`, `EQ-015/M.17.v1`) are tier `Definition`; three
+(`weld/M.35.v1`, `EQ-015/H.50.v1`, `weld/M.36.v1`) are tier `Dr`, `coq_status: open_prop` — stated
+hypotheses, not forced to a proof. Canonical registry: **1,273** entries (was 1,267).
+
+### 274 information-discrete-math readings wrapped and closed
+
+`scripts/v17_wrap_idm.py` writes a Toledo-native `coq/canonical/<code>.v` wrapper for every one of
+the 274 v1.6 `information-discrete-math` root-extension readings that had carried the honest
+`mapped_not_wrapped` middle state since their introduction (see "Root registry extension R2"
+above) — each wrapper restates the already-verified imported `IDM` identifier under the entry's own
+Toledo code, `-R ../information-discrete-math IDM` added to `coq/canonical/_CoqProject`.
+`coq/canonical/verify.sh`'s own scoped re-verify of exactly these 274 new files reports **274
+identifiers checked, 0 disclosed-axiom (registered), 0 failed** — all 274 land on `closed`, none on
+`axioms` (writing an alias/restatement wrapper introduces no additional assumption beyond what the
+imported IDM development itself already closed). Registry-wide: `coq_status` `closed` **277 →
+551**, `mapped_not_wrapped` **274 → 0**. `coq/canonical/` now carries **1,202** `.v` files (was
+928); every file has a compiled `.vo`/`.vok` artifact on disk (checked this pass, 0 missing). This
+is the identical pattern the 119 v1.2 Theta/CMC readings went through at v1.5 — see "Debt pass
+(v1.5)" above — applied here to the 274 IDM readings one release later.
+
+### Presentation MathML extended to latex+ascii statements
+
+`scripts/toledo_build.py`'s presentation-MathML pass, previously scoped to `statement.format ==
+"latex"` only, now also converts `format: "latex+ascii"` statements. Canonical (reading) entries
+carrying a populated `presentation_mathml` field: **447 → 863** (of 1,273 canonical entries;
+recomputed this pass by counting non-null `presentation_mathml` over a freshly built
+`registry/entries/*.json` — **863**, exact). **16** entries attempt conversion and fail; each
+records the real failure reason in its own `mathml_error` field — recomputed this pass, **16**,
+never silently dropped. Root rows are unaffected by this pass and remain ascii-only: **0** of the
+610 root-row entries carry `presentation_mathml` — a real, disclosed gap, not an oversight, and
+listed as open work below.
+
+### Executable Equations v0.1
+
+Founder question, 2026-09-08: should every equation also get an executable form (JavaScript or
+otherwise)? Answered in `docs/EXECUTABLE_EQUATIONS_v0_1.md`: **no, not every equation — a narrow,
+opt-in, human-reviewed subset, and never as a hand-written second copy.** One shared interpreter (a
+Python-on-`Q` reference kernel, `scripts/executable/ir_kernel.py`, plus a generated JavaScript
+twin, `site/static/js/_ir_eval.js`/`_qfrac.js`) walks a small per-equation intermediate
+representation (IR) file (`registry/executable/<code>.json`) at run time; no per-entry source file
+is ever hand-written or generated.
+
+Measured scope, stated plainly, not rounded up (`ops/executable_classifier_report.md`,
+`scripts/executable/classify.py`/`extract_ir.py`, this pass's own re-run against the real
+registry):
+
+- **841** of 1,273 canonical entries are eligible by the status/format gate
+  (`status not in {not_an_equation, split}` and `statement.format in {latex, latex+ascii}`).
+- **118** of those parse to an Eq node with real structure on at least one side
+  (`sympy.parsing.latex.parse_latex`) — a raw syntactic-parse signal only, never a coverage or
+  rigor metric (two independent false-positive hazards are documented in the classifier report:
+  prose read as implicit multiplication, and a multi-clause statement truncated at its first
+  relational clause).
+- Only **2** IR sidecars exist at all — `registry/executable/EQ_001__P_45_v1.json`,
+  `EQ_001__P_63_v1.json` — both `status: "candidate"`, `eligibility.reviewed_by: null`, **0**
+  `built` (`registry/executable/INDEX.json`, this pass).
+- **`EQ-001/P.45.v1`'s own `drift_note` discloses a known sympy misread**: the unescaped word
+  `Gamma_R` in the source LaTeX was shattered by the parser into a product of single letters
+  (`G*a*m*a_{R}*m`), and the statement's second clause (the `t'` Lorentz-transform equation) was
+  dropped from the IR entirely — the extractor mechanically kept only the `x'` equation, the one
+  with a single bare output symbol. The human-review gate is exactly what is supposed to catch
+  this: neither sidecar is `reviewed_eligible`, so `toledo_eval` (the 21st MCP tool — evaluate a
+  reviewed-eligible IR at declared exact-rational inputs via a shared `Fraction`-only evaluator)
+  refuses both, fail-closed, never silently computing from an unreviewed or misread sidecar.
+- No corpus equation has been cross-checked end-to-end yet (the Python-vs-JS `twin_consistency`
+  runner, `scripts/executable/crosscheck_runner.py`, has 0 `reviewed_eligible` sidecars to run
+  against), and the site try-it widget renders on **0** pages by design — a widget wired but shown
+  nowhere is the honest state of a 0-`reviewed_eligible`, 0-`built` pilot, not a bug.
+- **Domain-honesty note, carried verbatim into every place this count is surfaced**: S (social)
+  measures at or near zero parse-successes; E (epistemic), W (world-system) and H (human–AI) are
+  all low. This is not a quality gap — those domains are legitimately mostly comparative,
+  definitional and relational statements, not numeric relations.
+
+Full build-stream ownership, IR schema, the do-not-build list, and the false-positive hazards this
+pilot found: `docs/EXECUTABLE_EQUATIONS_v0_1.md`.
 
 ### Resistance ladder R0–R6 and reproduction evidence
 
@@ -738,7 +848,7 @@ a self-run or a same-agent check standing in for an independent one.
 
 ### toledo_lint
 
-The MCP server's 20th tool (`mcp/toledo_mcp/lint.py`), added this release: a continuum-injection
+The MCP server's 20th tool (`mcp/toledo_mcp/lint.py`), added at v1.6: a continuum-injection
 lint over a statement's own text (LaTeX, ascii-math, or prose), checked against the
 `information-discrete-math` skill's contaminated-concept → discrete-replacement table (**15**
 rules — `len(lint.RULES)`, e.g. flagging an unguarded continuum limit, a bare "smooth function", a
@@ -750,21 +860,22 @@ read, not a gate that stops a build or a registration.
 ### Website
 
 The public, human-readable documentation site at **<https://morrocwi.github.io/toledo/>** is built
-by `python3 site/build_site.py --out site/dist --strict` (this pass: **2,581** pages — home,
-`/browse/` a flat no-JS directory of every code, one page per Layer-0 root (`/by-root/`), one page
-per domain letter (`/by-domain/`), one page per populated tier (`/by-tier/`) and status
-(`/by-status/`), one page per canonical entry/root row (`/entries/`), `/search/`, `/agents/`,
-`/about/`, and (new at v1.6) `/ecosystem/` — how Toledo relates to the other public repositories in
-the programme, rendered from `site/content/ecosystem.md`, its one Mermaid flowchart rendered
-client-side (CDN+SRI, the same carve-out KaTeX already uses; no `mermaid-cli` is installed on this
-machine to pre-render an SVG at build time instead)), sharing one GitHub Pages deployment with the
-existing static API at `/v1/` (`mcp/docs/STATIC_API.md`).
+by `python3 site/build_site.py --out site/dist --strict` (this pass: **2,587** pages, up from 2,581
+at v1.6 by exactly the 6 new Equation River entries — home, `/browse/` a flat no-JS directory of
+every code, one page per Layer-0 root (`/by-root/`), one page per domain letter (`/by-domain/`),
+one page per populated tier (`/by-tier/`) and status (`/by-status/`), one page per canonical
+entry/root row (`/entries/`), `/search/`, `/agents/`, `/about/`, and (added at v1.6)
+`/ecosystem/` — how Toledo relates to the other public repositories in the programme, rendered from
+`site/content/ecosystem.md`, its one Mermaid flowchart rendered client-side (CDN+SRI, the same
+carve-out KaTeX already uses; no `mermaid-cli` is installed on this machine to pre-render an SVG at
+build time instead)), sharing one GitHub Pages deployment with the existing static API at `/v1/`
+(`mcp/docs/STATIC_API.md`).
 
 - **A human reader** starts at `/` or `/browse/` and follows a code to its `/entries/<code>.html`
   page — statement, tier/status/`coq_status`, parents, occurrences, ancestry — or filters by
   `/by-root/`, `/by-domain/`, `/by-tier/`, `/by-status/`.
 - **An AI agent** goes straight to `/agents/`: the founder rule restated verbatim (every equation
-  is looked up in Toledo before use; no agent may use an unregistered equation), the 20-tool table
+  is looked up in Toledo before use; no agent may use an unregistered equation), the 21-tool table
   reproduced from `mcp/README.md`, the `.mcp.json` snippet, a `curl` line against `/v1/`, a minimal
   runnable stdlib-only Python lookup example, and an embedded JSON-LD `Dataset`/`APIReference`
   block for a crawler that only parses structured data.
@@ -816,15 +927,40 @@ rather than asserting one). The v1.5 debt pass re-ran this same search for `CMC`
 full body of every source file rather than only headers, and reached the identical zero result —
 see "Debt pass (v1.5)" above and `registry/cmc_connection_report.md`.
 
-## What is not done (v1.6 carry-overs)
+## What is not done (v1.7 carry-overs)
 
 Honestly disclosed, not hidden in a rounded-up claim:
 
-- **274** `mapped_not_wrapped` Coq readings (the new v1.6 `information-discrete-math` root
-  extension, R2) have an evidence-backed match against an already-verified imported identifier but
-  no Toledo-native wrapper file yet — the same real gap the 119 v1.2 Theta/CMC readings once held,
-  reintroduced here rather than left unregistered; wrapping them is future work, not attempted this
-  pass (see "Root registry extension R2" above).
+- **Resolved this release**: the 274 `mapped_not_wrapped` IDM readings carried forward from v1.6
+  gained their own Toledo-native wrapper files and moved to `closed` (see "274
+  information-discrete-math readings wrapped and closed" above) — `mapped_not_wrapped` is at **0**
+  today. The gap is not eliminated as a *class*: it is the honest middle state any future root
+  extension will pass through again before its own wrapper pass, exactly as it has twice already
+  (v1.2 Theta/CMC, v1.6 IDM).
+- **Executable Equations v0.1 is a measurement and a pilot, not a coverage claim**: of 841
+  status/format-eligible entries and 118 that parse with real equation structure, only **2** IR
+  sidecars exist, neither `reviewed_eligible`, **0** `built`, **0** cross-checked end-to-end, and
+  the try-it widget renders on 0 pages by design. Reviewing the 2 existing candidates (one of which
+  carries a disclosed sympy misread that must be fixed by a human, not auto-promoted), extracting
+  more of the 118 `eq_structured` entries, and building out S2's Python/JS kernels beyond the
+  pilot's own scope are all future work, not attempted this pass beyond the pilot commits
+  themselves (see "Executable Equations v0.1" above).
+- **Presentation MathML's 863/1,273 canonical-entry coverage does not extend to root rows**: all
+  610 genesis-root rows remain ascii-only (**0** carry `presentation_mathml`) — a real, disclosed
+  gap between the two layers, not silently left inconsistent (see "Presentation MathML extended"
+  above). Content MathML (as opposed to presentation MathML) remains a separate, unresolved gap:
+  `docs/EXECUTABLE_EQUATIONS_v0_1.md` §1.1 records that the `antlr4-python3-runtime` dependency
+  content MathML needs is present on at least one workstation used on this programme but is not yet
+  wired into `make build`/CI as an asserted precondition — closing that gap is future work, not
+  attempted by this documentation-only pass.
+- **A real, pre-existing LaTeX typesetting gap was found, not fixed, this pass**: `latex/
+  catalogue.log` carries **34** `Overfull \hbox` warnings exceeding 20pt (largest 145.7pt), present
+  identically on a clean v1.6.0 rebuild — the "0 over 20pt" figure v1.5.0 and v1.6.0's own
+  CHANGELOG entries reported was never actually measured, because the `grep` command they named
+  silently returns no output at all (not a genuine `0`) when run through an interactive shell's
+  `ugrep`-based wrapper, which treats this log as binary and skips it. See the CHANGELOG's v1.7.0
+  entry for the reproduction detail; fixing the typesetting (not just the measurement command) is
+  future work.
 - **210** `wrapped_related` Coq wrappers alias an imported identifier rather than independently
   closing their own entry's statement (see "The coq_status ladder" above) — a real gap between
   "a Toledo file exists for this" and "this entry's own claim is proved". Unchanged since v1.5's own

@@ -997,7 +997,7 @@ def render_statement_html(statement: dict, presentation_mathml: str | None) -> t
     # plain-text statement alone, with no duplicate garbled MathML in
     # either the JS or no-JS path.
     mathml_block = (
-        f"<noscript>{presentation_mathml}</noscript>"
+        f'<noscript data-verbatim-source="true">{presentation_mathml}</noscript>'
         if presentation_mathml and is_real_latex
         else ""
     )
