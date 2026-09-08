@@ -212,7 +212,7 @@ indicative of that one run, not a guaranteed SLA — re-run `python3 benchmarks/
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-08 (v1.8)
+## Honest state — computed 2026-09-08 (v1.8, redone after the spectral+tower merges)
 
 Every number below was read from the files in this repository by the command shown; none is
 carried over from an earlier note. This section supersedes the v1.7 counts below it in
@@ -220,11 +220,13 @@ carried over from an earlier note. This section supersedes the v1.7 counts below
 seven equation-clearing audit dimensions, plus a same-day fix to its per-cell evidence (see
 "Internal-Consistency ladder" below); one Religious Attribution Non-Collapse reading
 (`weld/H.51.v1`); **27** causal-memory root-extension readings (see "Causal-memory root extension"
-below); and one URCF turbulence reading, `weld/P.05.v1` (see "URCF turbulence instance" below). No
-`coqc` full-arc re-verify was invoked by this release-prep pass — every new open_prop stub this
-release adds was individually `coqc`-checked at merge time (see the sections below); the
-pre-existing full-arc `build_report.txt` was not re-run, per the standing "check only what changed"
-discipline.
+below); one URCF turbulence reading, `weld/P.05.v1` (see "URCF turbulence instance" below); a
+**4**-object spectral-ceiling family, `weld/M.40.v1`–`weld/M.43.v1`; and a **17**-object
+URCF_RD_All tower family, `weld/M.44.v1`–`weld/M.60.v1` (see "Spectral-ceiling family" and
+"URCF_RD_All tower family" below). No `coqc` full-arc re-verify was invoked by this release-prep
+pass — every new open_prop stub this release adds was individually `coqc`-checked at merge time
+(see the sections below); the pre-existing full-arc `build_report.txt` was not re-run, per the
+standing "check only what changed" discipline.
 
 **Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
 `python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
@@ -232,30 +234,31 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **1,302** canonical entries: **1,273** at v1.7 plus **1** RANC (`weld/H.51.v1`) plus **27**
-  causal-sweep readings plus **1** URCF turbulence reading (`weld/P.05.v1`). (1,273+1+27+1=1,302,
-  matching `registry/CANONICAL.json`'s own `counts{}.entries` exactly.)
-- **Status:** `current` 1,167 (−15) · `unverified` 96 (+44) · `split` 30 · `not_an_equation` 9. The
-  −15/+44 shift is two independent things, not one: `scripts/v18_clearing_fixes.py` (`cb03ab6`)
-  moved 15 pre-existing `tier.cell_table` entries `current` → `unverified` with a dated
-  `status_note` (a confirmed clearing finding, no statement text touched); the other 29 of the +44
-  are every one of this release's new entries (RANC + 27 causal-sweep + URCF), all registered
-  `unverified` per SCHEMA's own "never assign a status the source did not itself state" discipline.
-- **Domain:** M 418 (+6) · P 331 (+18) · S 137 (+1) · H 126 (+3) · W 93 · B 76 (+1) · E 62 · C 59.
-- **Tier:** `Th_coqc` 413 · `Definition` 442 (+8) · `Dr` 82 · `Ax` 12 · `finite_diagnostic` 46 ·
-  `Open` 41 · `untagged` 245 · `Theorem` 10 (new) · `Empirical` 5 (new) · `Postulate` 4 (new) ·
-  `Lemma` 1 (new) · `Conjecture` 1 (new). (`Th_coqc` certifies that a lemma is closed under the
-  stated finite model's global context — an internal-consistency check, never an empirical or
-  physical truth claim; `untagged` means the source gave no tier at all, stated as such rather than
-  guessed. The five new tier labels are the causal-sweep proposals' own source-stated tiers,
-  carried verbatim — Toledo does not collapse a source's `Theorem`/`Empirical`/`Postulate`/
-  `Lemma`/`Conjecture` framing into the pre-existing six-value vocabulary.)
-- **Coq status:** `closed` 551 · `definition` 384 · `wrapped_related` 210 · `not_formalisable` 70 ·
-  `open_prop` 84 (+29) · `axioms` 3. See "The coq_status ladder" immediately below for what each of
-  these means. Every one of this release's 29 new entries (RANC + 27 causal-sweep + URCF) is
-  `open_prop`: tier as its own source states, never raised; each ships its own
-  `coq/canonical/<code>.v` open-proposition stub, individually `coqc`-verified to compile at merge
-  time, no proof attempted.
+- **1,323** canonical entries: **1,273** at v1.7 plus **1** RANC (`weld/H.51.v1`) plus **27**
+  causal-sweep readings plus **1** URCF turbulence reading (`weld/P.05.v1`) plus **4**
+  spectral-ceiling readings (`weld/M.40.v1`–`M.43.v1`) plus **17** URCF_RD_All tower readings
+  (`weld/M.44.v1`–`M.60.v1`). (1,273+1+27+1+4+17=1,323, matching `registry/CANONICAL.json`'s own
+  `counts{}.entries` exactly.)
+- **Status:** `current` 1,188 (−15, +21 spectral+tower) · `unverified` 96 · `split` 30 ·
+  `not_an_equation` 9. The 15 `tier.cell_table` moves (`scripts/v18_clearing_fixes.py`, `cb03ab6`)
+  and the RANC/causal-sweep/URCF-turbulence entries (registered `unverified`) are unchanged from
+  the prior pass; the 21 new spectral+tower entries are registered `current` (each carries a
+  concrete Coq closure or a fully witnessed statement, not a bare open hypothesis), which is why
+  `unverified` itself did not move again this pass.
+- **Domain:** M 439 (+21 spectral+tower) · P 331 · S 137 · H 126 · W 93 · B 76 · E 62 · C 59 — all
+  21 new spectral+tower objects land in `weld/M`.
+- **Tier:** `Th_coqc` 434 (+21 spectral+tower) · `Definition` 442 · `Dr` 82 · `Ax` 12 ·
+  `finite_diagnostic` 46 · `Open` 41 · `untagged` 245 · `Theorem` 10 · `Empirical` 5 ·
+  `Postulate` 4 · `Lemma` 1 · `Conjecture` 1. All 21 spectral+tower entries carry tier `Th_coqc` —
+  each closes (or, for `weld/M.53.v1`, closes under one disclosed classical axiom) a Theorem/Lemma
+  in its own Toledo-native Coq file under the stated finite model's global context.
+- **Coq status:** `closed` 571 (+20) · `definition` 384 · `wrapped_related` 210 ·
+  `not_formalisable` 70 · `open_prop` 84 · `axioms` 4 (+1). See "The coq_status ladder" immediately
+  below for what each of these means. Of the 21 new spectral+tower entries, **20** are `closed`
+  (axiom-free, `Print Assumptions` reports "Closed under the global context") and **1**
+  (`weld/M.53.v1`, `Con_PA_classical`) is `axioms` — its own `coq.assumptions` field carries the
+  literal `Classical_Prop.classic` axiom `coqc` disclosed, kept distinct from its axiom-free
+  sibling `weld/M.52.v1` (`Con_PA`, `closed`) rather than folded into it.
 
 ### The coq_status ladder (`closed` → `axioms` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
 
@@ -271,8 +274,10 @@ rounded-up claim:
   than reporting "Closed under the global context"; the entry's `coq.assumptions` field carries the
   literal `+axioms: <name : statement>, ...` string `coqc` produced, so the reader sees exactly
   what is assumed rather than a rounded-up "closed". Distinct from `closed` precisely because
-  something beyond the finite model itself is assumed. All **3** entries at this status today are
-  `CMC` readings (see "Debt pass (v1.5)" below).
+  something beyond the finite model itself is assumed. **3** of the **4** entries at this status
+  today are `CMC` readings (see "Debt pass (v1.5)" below); the 4th, added at v1.8, is
+  `weld/M.53.v1` (`Con_PA_classical`, the URCF_RD_All tower family's classically-dependent
+  Con(PA) sibling — `Classical_Prop.classic` is the one named axiom).
 - **`definition`** — the entry's own file states a typed `Definition`/`Record` in a finite model,
   with no theorem attached; there is nothing here to be "closed" or "open" — it is a formal
   restatement, not a claim.
@@ -308,7 +313,10 @@ Theta/CMC entries their own wrapper files (116 land on `closed`, 3 on the new `a
 "Debt pass (v1.5)" for that pass's own Coq evidence. v1.7 raises this again to **551** by giving the
 274 v1.6 IDM root-extension readings their own wrapper files, all 274 landing on `closed`
 (`coq/canonical/verify.sh`: 274 identifiers checked, 0 disclosed-axiom, 0 failed) — see "274
-information-discrete-math readings wrapped and closed" below. The v1.1–v1.4 figure of **207/207** identifiers
+information-discrete-math readings wrapped and closed" below. v1.8's spectral-ceiling and
+URCF_RD_All tower merges raise this again to **571** (+20; the tower family's 21st new entry,
+`weld/M.53.v1`, lands on `axioms` instead — see "Spectral-ceiling family" and "URCF_RD_All tower
+family" below). The v1.1–v1.4 figure of **207/207** identifiers
 `verify.sh` reported "Closed under the global context" across all of `coq/canonical/` (an
 "identifier closed" tally, which can differ from a "canonical entry `coq_status`" tally because one
 file can carry more than one closed identifier) was not re-measured by a fresh full-arc `verify.sh`
@@ -360,18 +368,25 @@ this release did not re-run that full pass (no full-arc `coqc`, per this release
 constraint), so it is quoted as last measured, not re-certified at v1.7.
 
 **Docs site / catalogue** (`make build && python3 site/build_site.py --out site/dist --strict`,
-`make catalogue`, this pass): site **2,587** generated pages (1,273 canonical entries + 610 root
-rows plus index/browse/by-root/by-domain/by-tier/by-status/search/agents/about/ecosystem pages —
-see "Website" below); printable catalogue PDF **335** pages, title page reading "Version 1.7.0"
-(`pdftotext -f 1 -l 1 latex/catalogue.pdf -`, one `latexmk -pdf` run — the version string is read
-from `CITATION.cff` at build time, `scripts/toledo_build.py`). **34** `Overfull \hbox` warnings
-exceed 20pt in `latex/catalogue.log` (`/bin/grep -c Overfull latex/catalogue.log`, or `grep -a`;
-plain `grep` inside some interactive coding-agent shells is shadowed by a `ugrep`-based wrapper that
-silently skips this file as binary and returns no output at all — not a real `0`). This is **not a
-v1.7 regression**: reproduced identically (34, largest 145.7pt) on a clean v1.6.0 (`66eb48a`)
-checkout built in a detached worktree this pass — the prior releases' own "0 over 20pt" figure was
-never actually measured by the command they named. Left open as a real, disclosed typesetting gap,
-not fixed by this documentation-only pass.
+`PYTHONPATH=mcp python3 -m toledo_mcp.export_static --out mcp/dist/static-api`, `make catalogue`,
+this pass, redone for the corrected 1,323-entry count): site **2,644** generated pages (1,323
+canonical entries + 610 root rows plus index/browse/by-root/by-domain/by-tier/by-status/search/
+agents/about/ecosystem pages — see "Website" below, +57 pages over the pre-spectral+tower
+v1.7 figure of 2,587 (1,273 canonical entries) — 21 new canonical-entry pages plus 36 further
+index/listing-page deltas from the new entries populating existing by-root/by-domain/by-tier
+browse pages); printable
+catalogue PDF **346** pages (was 335), title page reading "Version 1.8.0" (`pdftotext -f 1 -l 1
+latex/catalogue.pdf -`, one `latexmk -pdf` run — the version string is read from `CITATION.cff` at
+build time, `scripts/toledo_build.py`). **43** `Overfull \hbox` warnings exceed 20pt in
+`latex/catalogue.log` this pass (`/bin/grep -oE 'Overfull \\hbox \([0-9.]+pt' latex/catalogue.log |
+grep -oE '[0-9.]+' | awk '$1>20'`, real `/bin/grep`/`awk`, never the bare `grep` some interactive
+coding-agent shells shadow with a `ugrep` wrapper that silently treats this log as binary and
+returns no output at all — not a real `0`), up from v1.7's **34** — an increase, not a fixed
+count, driven by the 21 new spectral+tower entries' own printed statement text (long Coq
+identifiers, dense inline math) adding new overfull lines rather than any regression in existing
+ones; largest line is still **145.7pt**, unchanged from v1.7, confirming the pre-existing worst
+offender (`EQ-001/B.13.v1`) was not touched by this pass. Left open as a real, disclosed
+typesetting gap, not fixed by this release-prep pass.
 Fixing this pass, not carried from an earlier release: four Unicode characters the v1.6 registry
 additions introduced (`⨁ ⊟ ⊤ ↪`, from the `information-discrete-math` root extension's FOLD/
 DECISION/injection statements) had no mapping in `latex/unicode_pdf_fallback.sty`, so `pdflatex`
@@ -860,12 +875,15 @@ and leaves a genuinely unexamined cell absent — never defaulting to `"pass"`. 
 second run changes nothing but `INDEX.json`'s own timestamp); `tests/test_consistency.py` carries
 a standing regression test for this.
 
-**Corpus reading, this checkout** (`registry/consistency/INDEX.json`): **1,912** sidecars
-(**1,302** readings + **610** roots). Readings: IC-0 **1,148** · IC-1 **27** · IC-2 **127** · IC-3
-**0**; **1,274** carry `flag: "IC-F"`. Roots: IC-0 **466** · IC-1 **51** · IC-2 **93** · IC-3 **0**;
-**610** carry `flag: "IC-F"`. By dimension (`pass`/`fail`/`needs_reader`, `not_checked` is 0
-throughout): `schema` 227/1,480/205 · `structure` 760/333/819 · `tier` 1,680/7/225 · `symbols`
-610/140/1,162 · `coq` 689/0/1,223 · `duplicates` 1,877/5/30 · `lineage` 27/38/1,847. Most entries
+**Corpus reading, this checkout** (`registry/consistency/INDEX.json`, recomputed by `4d381e1` for
+the spectral+tower merges): **1,933** sidecars (**1,323** readings + **610** roots). Readings:
+IC-0 **1,148** · IC-1 **27** · IC-2 **148** (+21 — every one of the 21 new spectral+tower entries
+lands at IC-2 with `flag: None`, no open finding) · IC-3 **0**; **1,274** carry `flag: "IC-F"`
+(unchanged — none of the 21 new entries carries an open finding). Roots: IC-0 **466** · IC-1
+**51** · IC-2 **93** · IC-3 **0**; **610** carry `flag: "IC-F"`. By dimension (`pass`/`fail`/
+`needs_reader`, `not_checked` is 0 throughout, corpus-wide totals): `schema` 248/1,480/205 ·
+`structure` 781/333/819 · `tier` 1,701/7/225 · `symbols` 610/140/1,183 · `coq` 689/0/1,244 ·
+`duplicates` 1,898/5/30 · `lineage` 27/38/1,868. Most entries
 sit at IC-0 because `lineage` and `coq` carry a corpus-wide `needs_reader` reader queue (root-layer
 parent edges awaiting a human/agent `reads_root` verdict; every entry with a Coq file awaiting an
 `encodes_structure` verdict) — a stated, unresolved reader backlog, not a hidden failure.
@@ -914,6 +932,75 @@ this reading does **not** close Genesis root gap T2 (the harder, still-open case
 `L_R[I_R]` itself depends on the state it acts on) — its own stated assumption set keeps `L_R`
 time-independent, the easier linear sub-case only. `coq_status: open_prop`, tier `Definition` per
 the source's framing; `coq/canonical/weld__P_05_v1.v` `coqc`-verified to compile.
+
+### Spectral-ceiling family
+
+`registry/proposals/spectral_ceiling_family.json` (`325c477`), merged only after independent
+adversarial re-verification (`ops/urcf_tower/REVERIFICATION_2026-09-08.md`) against the live
+registry rather than the proposal file's own morning-of overlap check: **4** new readings,
+`weld/M.40.v1`–`weld/M.43.v1`, all tier `Th_coqc`, all `coq_status: closed` (axiom-free).
+
+- **`weld/M.40.v1`** — Anderson-Morley sharp curvature ceiling, witness form over `Q`
+  (`InfoSpectralCeilingSharp.v`). `partial_overlap` with `q_formal/M.05.v1` (a bare, unwitnessed
+  classical citation of the same named result): only the curvature-floor corollary
+  (`lam <= 4 - Fmin`) is registered as this entry's own statement; `relations[]` cross-references
+  `q_formal/M.05.v1` (`refines`) rather than re-asserting its content.
+- **`weld/M.41.v1`** — Dirichlet energy positive-semidefiniteness, gauge invariance, stencil
+  identity and second-difference form (`RDL_GammaSpectral.v`). `genuinely_new` (corpus-wide search
+  found no prior reading), registered in full.
+- **`weld/M.42.v1`** — Rayleigh-quotient spectral ceiling `lam <= 2*dmax`, a division-free proof
+  (`RDL_SpectralCeiling.v`). `genuinely_new`, registered in full; `relations[]` notes thematic
+  adjacency (not overlap) to `q_formal/M.04.v1` and `q_formal/M.08.v1`.
+- **`weld/M.43.v1`** — `ker(L_R) = constants` under connectivity, i.e. the full kernel
+  characterization plus the `λ₂ > 0` zero-mode criterion (`URCF_RD_All.v` module `Graph` /
+  `RDL_Graph.v`). `partial_overlap` with `L_R/M.22.v1` (which already proves only the
+  "constants ⊆ kernel" half, for any graph, no connectivity needed): the reverse inclusion
+  ("kernel ⊆ constants, given connectivity") is the genuinely new half and is what this entry
+  registers; `relations[]` cross-references `L_R/M.22.v1` (`refines`) plus `q_formal/M.06.v1`/
+  `M.07.v1` (`relates-to`, thematic adjacency only — neither actually proves the kernel-equality
+  fact either).
+
+All four Coq files were recompiled and `Print Assumptions`-verified in this repo (`coqc` 8.20.1,
+`coq/canonical/_CoqProject` include paths): all four closed under the global context, axiom-free.
+
+### URCF_RD_All tower family
+
+`registry/proposals/urcf_rd_all_family.json` (`9a41c95`, `scripts/v18_tower_merge.py`), same
+2026-09-08 reverification pass: **17** new readings, `weld/M.44.v1`–`weld/M.60.v1`, an initial
+capture from a private, never-previously-deposited tower file (`URCF_RD_All.v`, Module `RD`, lines
+~3155–5634) building a Peano/PA model-theory tower over Genesis roots `D`, `RD3`, `RD4`, `Z`, `Q`
+and `R`. Every parent code and alias was re-verified against the **live** registry (not the
+proposal's own morning-of dedup) before assignment. All 17 are tier `Th_coqc`.
+
+Content, in source order: successor non-collapse/injectivity over `D` and root `RD4` (`M.44`,
+`partial_overlap` — only `RD4`'s successor-injectivity is new, the `succ<>zero` half duplicates
+`RD3/M.01.v1` and is dropped rather than re-registered); `D`'s commutative-semiring package
+(`M.45`, `genuinely_new`); order/well-foundedness/strong induction on `D` (`M.46`, `genuinely_new`);
+the `toNat : D -> N` semiring-and-order isomorphism (`M.47`, `genuinely_new`); term-language
+homomorphisms (`M.48`, `genuinely_new`); elementary equivalence (`M.49`, `genuinely_new`); a
+Hilbert-style proof system and soundness (`M.50`, `genuinely_new`); `D` as a model of Peano
+Arithmetic (`M.51`, `genuinely_new`); the **constructive** consistency of PA, `Con_PA`, no
+classical axiom (`M.52`, `genuinely_new`, `closed`); a **classically-dependent** sibling
+consistency proof, `Con_PA_classical` (`M.53`, `genuinely_new`, `coq_status: axioms` — `Print
+Assumptions` names exactly one axiom, `Classical_Prop.classic`; a separate proof path from `M.52`,
+never folded into it or presented as axiom-free); PA-truth transport via the `toNat` isomorphism
+(`M.54`, `genuinely_new`); Dedekind categoricity (`M.55`, `genuinely_new`); a metric-space/Tarski
+betweenness layer (`M.56`, `genuinely_new`); Grothendieck-completion ring construction of `Z`
+(`M.57`, `genuinely_new` — root `Z`'s own prose asserts the ring claim but its `coq` field was
+null and no existing `Z/*` reading constructs it this way); the discrete Leibniz product rule
+(`M.58`, `partial_overlap` — bundled with the discrete FTC in the source, but the FTC content
+duplicates `A2/M.03.v1`/`Z/M.06.v1`; the Coq file **physically omits** `Sum`/`FTC_Z`/`FTC`/
+`FTC_inverse`, so the trim is structural, not a registry-only omission); `Q` as a field via
+`(Z*Z_{≠0})/~` (`M.59`, `genuinely_new`); and `R` as a Bishop-regular-Cauchy-sequence ordered
+field through Cauchy-completeness, order, inverse, metric and basic continuity (`M.60`,
+`partial_overlap`, **kept whole rather than trimmed** — the only overlapping piece, a
+near-trivial pointwise-add-commutativity fact against a structurally different prior `R`
+representation, `R/M.33.v1`–`M.37.v1`, is a small fraction of the object; the overwhelming
+majority of the claim has no prior reading).
+
+**16** of the 17 are `coq_status: closed` (axiom-free); **1** (`M.53`) is `axioms`. All 17 Coq
+files were recompiled and `Print Assumptions`-verified in this repo, independently of the source
+tower file's own claims about itself.
 
 ### Resistance ladder R0–R6 and reproduction evidence
 

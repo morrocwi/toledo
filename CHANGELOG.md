@@ -10,7 +10,9 @@ Version DOI: recorded once minted (concept 10.5281/zenodo.22537318).
 Commits `d786116`/`8954bcf` (Religious Attribution Non-Collapse), `8be7433`/`ef3adc7`/`270c2af`
 (executable-equations registrar review), `cb03ab6` (Internal-Consistency ladder + mechanical
 clearing fixes), `fd57ffd` (consistency-grader per-cell evidence fix), `ca9f9df` (causal-sweep
-merge), `d0d4709` (URCF turbulence merge), plus this release-prep pass.
+merge), `d0d4709` (URCF turbulence merge), `325c477` (spectral-ceiling family merge, 4 objects),
+`9a41c95` (URCF_RD_All tower family merge, 17 objects), `4d381e1` (consistency-sidecar recompute +
+site/API rebuild for the two merges above), plus this release-prep redo.
 
 - **Internal-Consistency ladder (IC-0…IC-3)** (`cb03ab6`, `docs/CONSISTENCY_SPEC_v0_1.md`, founder
   instruction 2026-09-08: "at minimum [Toledo] must be systematically self-consistent"):
@@ -77,15 +79,65 @@ merge), `d0d4709` (URCF turbulence merge), plus this release-prep pass.
   `docs/TURBULENCE_KNOWLEDGE_LEDGER_2026-09-08.md` (`d42ad50`) — 13 turbulence/Navier-Stokes
   sources read in full at intake, 4 Coq files independently compiled and tier-checked; strongest
   verified fact recorded: `ker(L_R) = constants`, axiom-free.
-- **This release-prep pass**: `CITATION.cff`/`.zenodo.json` → 1.8.0 (version-DOI citation list left
-  as-is; the chair appends v1.8.0's DOI after minting); `python3 mcp/scripts/sync_version.py`
-  propagated `1.8.0` into `mcp/pyproject.toml` and `toledo_mcp/__init__.py`. Regenerated
+- **Spectral-ceiling family** (`325c477`, `registry/proposals/spectral_ceiling_family.json`, after
+  independent adversarial re-verification `ops/urcf_tower/REVERIFICATION_2026-09-08.md`): **4**
+  new readings, `weld/M.40.v1`–`weld/M.43.v1`. `weld/M.40.v1` (Anderson-Morley sharp curvature
+  ceiling, witness form over `Q`) and `weld/M.43.v1` (`ker(L_R) = constants` under connectivity)
+  are `partial_overlap`: each is trimmed to only the half of its source claim not already covered
+  by an existing reading (`q_formal/M.05.v1` and `L_R/M.22.v1` respectively), with `relations[]`
+  cross-referencing the pre-existing code for the overlapping half rather than re-registering it.
+  `weld/M.41.v1` (Dirichlet energy PSD/gauge/stencil/second-difference) and `weld/M.42.v1`
+  (Rayleigh-quotient ceiling `lam <= 2*dmax`, division-free) are `genuinely_new`, registered in
+  full. All four Coq files (`InfoSpectralCeilingSharp.v`, `RDL_GammaSpectral.v`,
+  `RDL_SpectralCeiling.v`, `URCF_RD_All.v` module Graph / `RDL_Graph.v`) recompiled and
+  Print-Assumptions-verified in this repo — axiom-free.
+- **URCF_RD_All tower family** (`9a41c95`, `registry/proposals/urcf_rd_all_family.json`, same
+  reverification pass, `scripts/v18_tower_merge.py`): **17** new readings, `weld/M.44.v1`–
+  `weld/M.60.v1`, capturing a private tower file (`URCF_RD_All.v`, Module RD, never previously
+  deposited or registered) covering a Peano/PA model-theory tower across Genesis roots `D`, `RD3`,
+  `RD4`, `Z`, `Q` and `R`: successor non-collapse and injectivity, `D`'s commutative-semiring
+  package, order/well-foundedness, the `toNat : D -> N` isomorphism, term-language homomorphisms,
+  elementary equivalence, a Hilbert-style proof system, `D` as a model of PA, the constructive
+  consistency of PA (`weld/M.52.v1`, `Con_PA`, axiom-free), a **classically-dependent** sibling
+  consistency proof (`weld/M.53.v1`, `Con_PA_classical` — `Print Assumptions` names exactly one
+  axiom, `Classical_Prop.classic`; kept as a distinct entry, never presented as axiom-free and
+  never folded into `weld/M.52.v1`), PA-truth transport, Dedekind categoricity, a metric/Tarski
+  betweenness layer, the discrete Leibniz product rule, `Q` as a field, and `R` as a Bishop-regular
+  Cauchy-sequence ordered field with Cauchy-completeness. **14** of the 17 are `genuinely_new`
+  (verified by corpus-wide keyword search against `CANONICAL.json`, zero matches, per entry);
+  **3** are `partial_overlap`: `weld/M.44.v1` (only `RD4` successor-injectivity is new; the
+  `succ<>zero` half duplicates `RD3/M.01.v1`, dropped rather than re-registered), `weld/M.58.v1`
+  (only the pointwise Leibniz rule is new; the bundled discrete-FTC half duplicates `A2/M.03.v1`/
+  `Z/M.06.v1`, physically omitted from the Coq file, not just the registry entry), and
+  `weld/M.60.v1` (kept whole rather than trimmed — the overlapping piece, a near-trivial
+  pointwise-add-commutativity fact against a structurally different prior `R` representation
+  (`R/M.33`–`M.37.v1`), is a small fraction of the object; the overwhelming majority — full order,
+  multiplicative inverse, completeness, metric, convergence, continuity — has no prior reading).
+  All 17 Coq files `coqc`-recompiled and `Print Assumptions`-verified in this repo: 16 axiom-free,
+  1 (`weld/M.53.v1`) correctly disclosing its one classical axiom.
+- **Consistency sidecars recomputed, site and both static APIs rebuilt** (`4d381e1`): re-ran
+  `scripts/compute_consistency.py` over the 21 new entries (all land on IC-2, no open finding) and
   `make build`, `python3 site/build_site.py --out site/dist --strict`,
+  `python3 -m toledo_mcp.export_static --out mcp/dist/static-api`. Full release gate re-run at
+  that commit: both pytest suites (root **186 passed / 1 skipped / 3 xfailed**, `mcp/` **222
+  passed**), `site/checks/run_all.py`, and an adversarial leak/attribution/priority-word scan over
+  every file the three merge commits touched — no regressions found.
+- **This release-prep pass (redone against the corrected 1,323 count)**: `CITATION.cff`/
+  `.zenodo.json` → 1.8.0 (version-DOI citation list left as-is; the chair appends v1.8.0's DOI
+  after minting); `python3 mcp/scripts/sync_version.py` propagated `1.8.0` into
+  `mcp/pyproject.toml` and `toledo_mcp/__init__.py`. Regenerated `make build`,
+  `python3 site/build_site.py --out site/dist --strict`,
   `python3 -m toledo_mcp.export_static --out mcp/dist/static-api` and `make catalogue`. Full
-  release gate re-run: both pytest suites (root + `mcp/`), `site/checks/run_all.py`, and an
-  adversarial leak/attribution/priority-word scan over every file changed today.
-- **Canonical registry: 1,273 → 1,302** entries (1 RANC + 27 causal-sweep + 1 URCF; 610 root rows
-  unchanged). See README's "Honest state" section for the full live count breakdown.
+  release gate re-run: both pytest suites (root + `mcp/`), `site/checks/run_all.py`, and a second
+  adversarial leak/attribution/priority-word scan, this time also covering this pass's own
+  `README.md`/`CHANGELOG.md`/catalogue edits, not only the three merge commits.
+- **Canonical registry: 1,273 → 1,323** entries (1 RANC + 27 causal-sweep + 1 URCF + 4
+  spectral-ceiling + 17 URCF_RD_All tower = 1,273+50=1,323; 610 root rows unchanged). Of the 21
+  spectral+tower objects, 16 are wholly new codes registered in full and 5 (`weld/M.40.v1`,
+  `weld/M.43.v1`, `weld/M.44.v1`, `weld/M.58.v1`, `weld/M.60.v1`) are new codes carrying only the
+  non-overlapping half of their source claim, with `relations[]` pointing at the pre-existing code
+  for the overlapping half rather than re-stating it. See README's "Honest state" section for the
+  full live count breakdown.
 
 ## v1.7.0 — 2026-09-08
 

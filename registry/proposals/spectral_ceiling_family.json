@@ -1,0 +1,145 @@
+[
+  {
+    "id": "PROP-SPEC-01",
+    "code": "weld/M.??.v1",
+    "name": "Anderson-Morley sharp curvature ceiling for a graph Laplacian eigenpair (witness form over Q)",
+    "statement": {
+      "latest": "\\forall (\\lambda, x) \\text{ an exact node-pair witness of } L_R x=\\lambda x,\\ \\exists (u,v)\\in E:\\ |\\lambda|\\le \\deg u+\\deg v.\\quad \\text{Corollary (curvature floor } F_{\\min}\\text{): } \\lambda \\le 4-F_{\\min}",
+      "format": "latex",
+      "note_ascii": "for any exact eigenpair (lam,x) there is an edge (u,v) with Qabs(lam) <= deg(u)+deg(v); under a curvature floor Fmin, lam <= 4 - Fmin (a factor sqrt(2) tighter than the 2*dmax route)"
+    },
+    "tier": "Th_coqc",
+    "status": "current",
+    "domain": "M",
+    "aliases": ["InfoSpectralCeilingSharp:anderson_morley_witness", "InfoSpectralCeilingSharp:sharp_curvature_ceiling"],
+    "coq": {
+      "file": "coq/canonical/weld__M_pending_anderson_morley.v",
+      "identifiers": ["esum_abs_triangle", "exists_max_edge", "acontrib_bound", "pair_term_bound", "anderson_morley_witness", "sharp_curvature_ceiling"],
+      "print_assumptions_verbatim": "all 6 = Closed under the global context",
+      "coq_status": "closed"
+    },
+    "reverification_2026-09-08": {
+      "verdict": "partial_overlap",
+      "evidence": "Found q_formal/M.05.v1 in CANONICAL.json, named literally 'Anderson–Morley eigenvalue bound λ_max≤max(deg u+deg v)' -- the exact same classical theorem this proposal cites as its BORROWED half. However q_formal/M.05.v1 is tier 'untagged', coq_status 'wrapped_related', and its own coq.note admits its 29 cited identifiers (Sum_ext, row_add, bil_add_l, energy_rate, kraus_completeness, etc., all from formal/RDL_MetricReadout.v/RDL_SpineStability.v/RDL_StarRig.v) are an undivided generic block shared identically across all 32 q_formal entries, 'with no entry-specific identifier singled out as evidence for this entry's own statement... picking one lemma to specialise from would be an invented, not evidence-backed, choice -- not done.' In plain terms: q_formal/M.05.v1 is a bare NAME-CITATION of the classical Anderson-Morley result with NO actual matching Coq proof behind it in Toledo. So: the base inequality |lam|<=deg u+deg v is a duplicate of the classical fact q_formal/M.05.v1 already cites by name (do not register the base bound as a second new object), but this proposal's Coq file, if it materializes, would be the FIRST real formalization Toledo has of that already-cited claim -- a genuine gap-filler, not corroboration of an existing proof (there is no existing proof to corroborate). The curvature-floor corollary (lambda <= 4 - Fmin, tying the bound to a curvature floor Fmin) is additional content specific to this proposal, not part of the classical citation or any other Toledo row -- genuinely new. Kept as partial_overlap: base bound flagged as overlapping the citation q_formal/M.05.v1 (and should be cross-referenced/could retire the wrapped_related placeholder in q_formal/M.05.v1 once this is properly wired at merge time), curvature-floor corollary kept as the clearly new content.",
+      "duplicate_of_citation_only": ["q_formal/M.05.v1"]
+    },
+    "borrowed_vs_derived": "BORROWED inequality: Anderson & Morley, Linear and Multilinear Algebra 18:141-145, 1985 (classical spectral-graph-theory result, already cited in Toledo as q_formal/M.05.v1 but with no real Coq witness attached -- see reverification note). DERIVED here: a machine-checked, rational-native (no reals, no eigen-vocabulary) witness-form proof of that inequality, plus the curvature-floor corollary (lambda <= 4 - Fmin), stated by the source file itself as new -- not claimed as the original Anderson-Morley result.",
+    "parents": [
+      {
+        "code": "L_R",
+        "derived_via": "refines",
+        "evidence": "Sharpens (a factor sqrt(2) tighter, per the source file's own header) the weaker 2*dmax spectral ceiling proved in the companion file RDL_SpectralCeiling.v (PROP-SPEC-03 below), both bounding the spectrum of the same retained graph-Laplacian operator L_R (root EQ-008 / root row 'L_R')."
+      }
+    ],
+    "origin": {
+      "source": "InfoSpectralCeilingSharp.v (standalone Coq file, Downloads, not previously deposited or registered)",
+      "doi": null
+    }
+  },
+  {
+    "id": "PROP-SPEC-02",
+    "code": "weld/M.??.v1",
+    "name": "Dirichlet energy nonnegativity and gauge invariance for a weighted graph (L_R PSD, Fiedler); discrete second-difference IS the discrete negative Laplacian",
+    "statement": {
+      "latest": "\\text{energy\\_nonneg: nonnegative edge weights} \\Rightarrow \\Gamma(x)\\ge 0\\ (L_R \\text{ PSD}).\\quad \\text{energy\\_edge\\_gauge: } \\Gamma \\text{ invariant under edge-list relabelling}.\\quad \\text{laplacian\\_stencil: } [1,-2,1]*f = (\\Delta_{\\text{discrete}} f).\\quad \\text{secondDiff\\_readout\\_invariant: the second difference of a quadratic reads out the same value } 2a \\text{ at every resolution } h",
+      "format": "latex",
+      "note_ascii": "energy_nonneg (L_R PSD/Fiedler), energy_edge_gauge (gauge invariance), laplacian_stencil ([1,-2,1] = discrete negative Laplacian), secondDiff_quadratic (exact, no error term), secondDiff_readout_invariant (a readout-invariant, division-free, like pi across polygon resolutions)"
+    },
+    "tier": "Th_coqc",
+    "status": "current",
+    "domain": "M",
+    "aliases": ["RDL_GammaSpectral:energy_nonneg", "RDL_GammaSpectral:laplacian_stencil", "RDL_GammaSpectral:secondDiff_readout_invariant"],
+    "coq": {
+      "file": "coq/canonical/weld__M_pending_gamma_spectral.v",
+      "identifiers": ["energy_nonneg", "energy_edge_gauge", "laplacian_stencil", "secondDiff_quadratic", "secondDiff_readout_invariant"],
+      "print_assumptions_verbatim": "all 5 = Closed under the global context",
+      "coq_status": "closed"
+    },
+    "reverification_2026-09-08": {
+      "verdict": "genuinely_new",
+      "evidence": "Checked L_R/M.20.v1 (laplacian_symmetric), L_R/M.21.v1 (laplacian_rowsum_zero) and L_R/M.22.v1 (laplacian_ones_in_kernel) -- the only existing L_R/* readings anywhere near this subject. All three are purely structural facts about the Laplacian matrix (symmetry, zero row-sums, the constant vector lying in the kernel); NONE of them prove positive-semidefiniteness (Gamma(x)>=0 for ALL x, not just the constant vector), gauge invariance under edge relabelling, the [1,-2,1] finite-difference stencil identity, or the readout-invariance of the second difference of a quadratic across resolutions h. Whole-registry keyword search for 'positive semidefinite'/'psd'/'gauge invarian'/'stencil'/'second difference'/'dirichlet energy' turned up nothing else relevant. Confirmed genuinely_new."
+    },
+    "parents": [
+      {
+        "code": "L_R",
+        "derived_via": "refines",
+        "evidence": "Proves, over Q with no axioms, the PSD/positive-semidefinite property that the existing root row 'L_R' already states in prose ('L_R is symmetric (B_sym), PSD (B_self_nonneg), its kernel contains constants'); this file supplies the machine-checked witness for the PSD half plus the axiom-free discrete-Laplacian-stencil precursor to the continuum limit L_R -> -Delta_g (root row q_geometry_LR_Laplacian). Note: L_R/M.20.v1 and L_R/M.21.v1 already witness the symmetry and row-sum-zero halves of that same root prose; this proposal adds the PSD half plus new gauge/stencil/readout-invariance content that has no existing reading at all."
+      }
+    ],
+    "origin": {
+      "source": "RDL_GammaSpectral.v (standalone Coq file, Downloads, not previously deposited or registered)",
+      "doi": null
+    }
+  },
+  {
+    "id": "PROP-SPEC-03",
+    "code": "weld/M.??.v1",
+    "name": "Rayleigh-quotient spectral ceiling of a graph quadratic form from the degree bound (division-free, no eigenvalue theory)",
+    "statement": {
+      "latest": "x^T L x \\le 2\\,d_{\\max}\\,\\|x\\|^2\\quad\\Rightarrow\\quad 0\\le\\lambda\\le 2\\,d_{\\max}\\ \\text{(any exact Rayleigh pair)}",
+      "format": "latex",
+      "note_ascii": "deg_node_swap (double-counting identity), form_degree_bound (x^T L x <= 2*dmax*||x||^2), rayleigh_nonneg, rayleigh_ceiling (lam <= 2*dmax), mode_product_ceiling, step_ratio_window (dimensionless step ratio in [0,4])"
+    },
+    "tier": "Th_coqc",
+    "status": "current",
+    "domain": "M",
+    "aliases": ["RDL_SpectralCeiling:rayleigh_ceiling", "RDL_SpectralCeiling:step_ratio_window"],
+    "coq": {
+      "file": "coq/canonical/weld__M_pending_spectral_ceiling.v",
+      "identifiers": ["deg_node_swap", "form_degree_bound", "rayleigh_nonneg", "rayleigh_ceiling", "mode_product_ceiling", "step_ratio_window"],
+      "print_assumptions_verbatim": "all 6 = Closed under the global context",
+      "coq_status": "closed"
+    },
+    "reverification_2026-09-08": {
+      "verdict": "genuinely_new",
+      "evidence": "Found q_formal/M.04.v1 ('Rayleigh quotient / theory of sound') and q_formal/M.08.v1 ('Spectral graph theory (survey)') in CANONICAL.json -- thematically adjacent, but both are the SAME 'untagged'/'wrapped_related' bare-citation pattern as q_formal/M.05.v1 above (identical generic 29-identifier evidence block, explicitly disclosed by their own coq.note as not entry-specific). Neither states the specific inequality x^T L x <= 2*dmax*||x||^2 or the ceiling lambda <= 2*dmax; they are general survey/topic citations, not this specific division-free Gershgorin-type bound. Confirmed genuinely_new content, though thematically related to q_formal/M.04.v1 and M.08.v1 (worth cross-referencing at merge time as 'reads' relations, not as duplicates)."
+    },
+    "parents": [
+      {
+        "code": "L_R",
+        "derived_via": "refines",
+        "evidence": "The Gershgorin-type spectral ceiling lambda <= 2*dmax for the retained graph-Laplacian L_R, derived by pure sum manipulation (no eigen-theory invoked, an eigenpair taken extensionally as a hypothesis) -- the weaker bound that PROP-SPEC-01 (Anderson-Morley) sharpens by a factor of sqrt(2)."
+      }
+    ],
+    "origin": {
+      "source": "RDL_SpectralCeiling.v (standalone Coq file, Downloads, not previously deposited or registered)",
+      "doi": null
+    }
+  },
+  {
+    "id": "PROP-SPEC-04",
+    "code": "weld/M.??.v1",
+    "name": "Kernel of the graph Laplacian equals the constants on a connected graph (lambda_2 > 0 zero-mode characterization)",
+    "statement": {
+      "latest": "\\text{Graph connected} \\Rightarrow \\ker(L_R) = \\{\\text{constant vectors}\\}\\ (\\lambda_2>0)",
+      "format": "latex",
+      "note_ascii": "kernel_connected: for a connected weighted graph, ker(L_R) is exactly the constant vectors (sharpening the root row L_R's own weaker 'kernel contains constants' to an exact equality under connectivity)"
+    },
+    "tier": "Th_coqc",
+    "status": "current",
+    "domain": "M",
+    "aliases": ["URCF_RD_All:Graph.kernel_connected"],
+    "coq": {
+      "file": "coq/canonical/weld__M_pending_kernel_connected.v",
+      "identifiers": ["Graph.kernel_connected", "Graph.energy_nonneg", "Graph.energy_const", "Graph.energy_zero_edge"],
+      "print_assumptions_verbatim": "Closed under the global context (this module's identifiers; the source file URCF_RD_All.v carries 215 Print Assumptions calls total, 212 axiom-free including these 4, 2 rely on Classical_Prop.classic for an unrelated PA-consistency module, not extracted here)",
+      "coq_status": "closed"
+    },
+    "reverification_2026-09-08": {
+      "verdict": "partial_overlap",
+      "evidence": "L_R/M.22.v1 ('laplacian_ones_in_kernel', tier Th_coqc, coq_status closed, formal/IDM_Matrix.v line 132) ALREADY proves `Sum n (fun j => Lap i j * 1) == 0` -- i.e. the all-ones (constant) vector lies in ker(L), for ANY graph, no connectivity assumption needed. This is exactly the 'constants ⊆ kernel' half of this proposal's claim -- a DUPLICATE of L_R/M.22.v1, not new. The reverse inclusion ('kernel ⊆ constants, given connectivity', i.e. the full equality ker(L)=span{1} and the lambda_2>0 zero-mode characterization) is NOT covered by L_R/M.22.v1 or any other L_R/* reading, and is not covered by the thematically-adjacent q_formal/M.06.v1 ('Algebraic connectivity / Fiedler value') or q_formal/M.07.v1 ('Diameter-based algebraic-connectivity floor') either -- both of those are again bare 'untagged'/'wrapped_related' name-citations with the same generic non-entry-specific evidence block, no actual proof of the kernel-equality fact. Kept as partial_overlap: the constants-in-kernel half duplicates L_R/M.22.v1, the connectivity-implies-equality half (and the lambda_2>0 characterization) is genuinely new.",
+      "duplicate_of_partial": ["L_R/M.22.v1"]
+    },
+    "parents": [
+      {
+        "code": "L_R",
+        "derived_via": "refines",
+        "evidence": "Sharpens the root row 'L_R''s own stated property ('its kernel contains constants') to an exact equality conditional on graph connectivity. This is also the fact that discharges the zero-mode premise the URCF turbulence law (PROP-URCF-01, registry/proposals/urcf_turbulence.json) assumes but never itself proves -- cross-reference both when merging. Note: the 'constants ⊆ kernel' direction is already witnessed by L_R/M.22.v1 (laplacian_ones_in_kernel); only the reverse direction under connectivity is new."
+      }
+    ],
+    "origin": {
+      "source": "URCF_RD_All.v, module RDL_Graph.v (standalone Coq file, Downloads, not previously deposited or registered)",
+      "doi": null
+    }
+  }
+]
