@@ -1,6 +1,6 @@
 {
   "schema_version": "executable-index-0.1",
-  "computed_at": "2026-09-08",
+  "computed_at": "2026-09-09",
   "generated_from_commit": "9ca306cf3bc9e6efe4ee5456ee6449abae0cb42a",
   "note": "generated (never hand-edited) by scripts/compute_executable.py -- a projection of registry/executable/*.json sidecars plus registry/reproduction_card_index.json's EXEC-* rows; docs/EXECUTABLE_EQUATIONS_v0_1.md sec.6 step 8.",
   "counts": {
