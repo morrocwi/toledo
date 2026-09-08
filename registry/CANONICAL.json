@@ -159514,7 +159514,7 @@
         "source": "domain_registry",
         "repo_anchor": null,
         "record_id": null,
-        "doi": "PLACEHOLDER-PENDING-ZENODO-DEPOSIT-plural-interfaces-singular-commitments-v1.0",
+        "doi": "10.5281/zenodo.22660591",
         "section": "8.1 Religious Attribution Non-Collapse (RANC), \"The five-level model\"",
         "label": null
       },
@@ -159545,7 +159545,46 @@
       "role": "other",
       "first_assigned": "2026-09-08",
       "drift_note": "Rooted at weld and parented on weld/H.33.v1 (the Core Epistemic Structure non-collapse rule) because both are asserted non-collapse disciplines over typed levels of analysis, but RANC is a genuinely different object (5 levels -- output/policy/institution/belief/religious-classification -- vs 3 registration roles; no phi-criterion renaming/scale/substitution bijection maps one onto the other). This is a disclosed convention (same discipline family, not a demonstrated restatement of the parent's own statement), per SCHEMA.md's drift_note field. Tiered Definition, not Dr, per the source manuscript's own framing (sec.8.1 calls this a stated 'principle' defining a non-identity relation among five named objects, not a proved theorem) -- note for the chair: the structurally closest precedent, weld/H.33.v1, was instead tiered Dr ('an asserted non-collapse rule ... not itself a bare typed definition'); this entry follows the source manuscript's explicit Definition framing rather than that precedent, and the divergence is recorded here rather than silently resolved either way.",
-      "provenance_note_verbatim": "Religious Attribution Non-Collapse (RANC): O \\not\\equiv P \\not\\equiv N \\not\\equiv B_i \\not\\equiv J_i -- model output, product policy, institutional normative commitment, an actor's interior belief, and a person-specific religious classification are five distinct objects; none may be silently identified with, or taken to entail, another (O \\nRightarrow J_i unless each transition is independently evidenced). \"Plural Interfaces, Singular Commitments\" (Yaoharee Lahtee, v1.0, 2026-09-08), sec.8.1."
+      "provenance_note_verbatim": "Religious Attribution Non-Collapse (RANC): O \\not\\equiv P \\not\\equiv N \\not\\equiv B_i \\not\\equiv J_i -- model output, product policy, institutional normative commitment, an actor's interior belief, and a person-specific religious classification are five distinct objects; none may be silently identified with, or taken to entail, another (O \\nRightarrow J_i unless each transition is independently evidenced). \"Plural Interfaces, Singular Commitments\" (Yaoharee Lahtee, v1.0, 2026-09-08), sec.8.1.",
+      "resistance": {
+        "computed_at": "2026-09-08",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'open_prop' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     }
   ],
   "raw_to_canonical": {
