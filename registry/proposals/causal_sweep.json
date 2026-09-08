@@ -1,0 +1,2853 @@
+{
+ "schema_version": "1.0-proposal",
+ "founder_instruction": "2026-09-08: sweep only topics absent from IDM/Genesis readout; read for duplicates across parts before branching new objects; check whether each new branch connects to IDM Genesis -- if it does not connect, report it as unattached.",
+ "sweep_source": "ops/causal_sweep judged_part1.json (8 new_branch, 0 unattached) + judged_part2.json (16 new_branch, 12 attached/4 unattached) + judged_part3.json (17 new_branch, 15 attached/2 unattached) = 41 raw new-branch objects before cross-part dedup",
+ "proposals": [
+  {
+   "id": "CS-01",
+   "code": "EQ-015/H.??.v1",
+   "name": "Barrier/forward-invariance admissibility certificate for bounded load-capacity execution dynamics",
+   "statement": {
+    "latest": "dL/dt = f(L,C,u), buffer b:=C-L; barrier condition db/dt >= -alpha(b) preserves forward-invariance of {b>=0}; No-Go Lemma: if worst-case load growth exceeds bounded architectural control u(t)'s admissible range, execution failure is forced regardless of policy.",
+    "format": "ascii"
+   },
+   "tier": "Lemma",
+   "status": "unverified",
+   "domain": "H",
+   "aliases": [
+    "Barrier-forward-invariance-load-capacity"
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/S.17.v1",
+     "derived_via": "refines",
+     "evidence": "EQ-015/S.17.v1 already registers an Ethical Load (Lyapunov potential) V_{A,R}(M)>=0; this candidate builds a full barrier-certificate/forward-invariance apparatus (buffer variable, barrier condition, quantitative no-go lemma on worst-case load growth, recovery Lyapunov) around a load(L)-capacity(C) pair -- the control-theoretic machinery (barrier functions, forward invariance, admissible control bound u(t)) is new relative to the single scalar Lyapunov potential already registered."
+    }
+   ],
+   "origin": {
+    "source": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents",
+    "doi": "10.5281/zenodo.18264276",
+    "record_id": 18264276,
+    "page": null,
+    "eq_label": "(1)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(1)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "unlabeled-1",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(2)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(3)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(4)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(5)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(6)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(7)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(8)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(9)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(10)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(11)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(12)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(13)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(14)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(15)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(16)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(17)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    },
+    {
+     "record_id": 18264276,
+     "doi": "10.5281/zenodo.18264276",
+     "eq_label": "(18)",
+     "title": "High Capability, Low Execution: A Causal Life Architecture of Finite State Maintenance Integrating Psychology, Neuroscience, Endocrinology, Stability Theory, and Artificial Agents"
+    }
+   ]
+  },
+  {
+   "id": "CS-02",
+   "code": "EQ-015/H.??.v1",
+   "name": "SOMA-READ causal readout chain S(t)->R(t)->{E(t),P(t)}->A(t) for somatic agency",
+   "statement": {
+    "latest": "Causal chain: S(t) [unknown-endpoint x reduced-agency contract] -> R(t) [recoverability readout] -> {E(t),P(t)} [endpoint observability, defensive policy] -> A(t) [action/policy transition]; preregistered human protocol, FROZEN draft pre-ethics.",
+    "format": "ascii"
+   },
+   "tier": "Empirical",
+   "status": "unverified",
+   "domain": "H",
+   "aliases": [
+    "SOMA-READ"
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/M.02.v1",
+     "derived_via": "instance_of",
+     "evidence": "EQ-015/M.02.v1 already registers the general root transition S_{n+1}=F(S_n,u_n,c_n,T_n); the SOMA-READ protocol is a preregistered human-subjects instance of exactly this template, specialised to a somatic/interoceptive recoverability readout R(t) and a defensive-policy transition endpoint A(t) -- a new domain instantiation (human physiology, empirical/preregistered), not a new stepper form."
+    }
+   ],
+   "origin": {
+    "source": "SOMA-READ v1.0: A Preregistered Causal Readout Perturbation Study of Somatic Agency and Endpoint Observability — Flagship Human Empirical Protocol (FROZEN draft, pre-ethics)",
+    "doi": "10.5281/zenodo.22302190",
+    "record_id": 22302190,
+    "page": 2,
+    "eq_label": "unlabeled-1"
+   },
+   "occurrences": [
+    {
+     "record_id": 22302190,
+     "doi": "10.5281/zenodo.22302190",
+     "eq_label": "unlabeled-1",
+     "title": "SOMA-READ v1.0: A Preregistered Causal Readout Perturbation Study of Somatic Agency and Endpoint Observability — Flagship Human Empirical Protocol (FROZEN draft, pre-ethics)"
+    }
+   ]
+  },
+  {
+   "id": "CS-03",
+   "code": "weld/B.??.v1",
+   "name": "Environment-coupled admissibility bandwidth (external-covariate derating of causal recovery bandwidth)",
+   "statement": {
+    "latest": "gamma_eff(PM2.5) = gamma_0 * D(PM2.5), D a monotone-decreasing derating function of ambient PM2.5 concentration, thresholded at operational bands; reduces admissible recovery bandwidth under poor air quality.",
+    "format": "ascii"
+   },
+   "tier": "Definition",
+   "status": "unverified",
+   "domain": "B",
+   "aliases": [
+    "gamma_eff-derating"
+   ],
+   "parents": [
+    {
+     "code": "weld/S.01.v1",
+     "derived_via": "specialises",
+     "evidence": "weld/S.01.v1 (finite-memory Laplacian/telegraph generator) fixes tau_c/gamma as the system's own internal parameters; this candidate couples the recovery bandwidth to an external environmental covariate (PM2.5 concentration) via an explicit derating rule -- a new type of relation (external covariate -> admissibility bandwidth) layered on the existing generator."
+    }
+   ],
+   "origin": {
+    "source": "A Causal–Spectral Planning Specification for AI-Coached Endurance Training Admissible Load–Recovery Design with No-Go Constraints and Environment Derating",
+    "doi": "10.5281/zenodo.18404721",
+    "record_id": 18404721,
+    "page": 2,
+    "eq_label": "(4)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18404721,
+     "doi": "10.5281/zenodo.18404721",
+     "eq_label": "(4)",
+     "title": "A Causal–Spectral Planning Specification for AI-Coached Endurance Training Admissible Load–Recovery Design with No-Go Constraints and Environment Derating"
+    },
+    {
+     "record_id": 18404721,
+     "doi": "10.5281/zenodo.18404721",
+     "eq_label": "(5)",
+     "title": "A Causal–Spectral Planning Specification for AI-Coached Endurance Training Admissible Load–Recovery Design with No-Go Constraints and Environment Derating"
+    }
+   ]
+  },
+  {
+   "id": "CS-04",
+   "code": "weld/M.??.v1",
+   "name": "IPR-based structural-localization fingerprint and quantile boundary-regime closure rule for graph-Laplacian diagnostics",
+   "statement": {
+    "latest": "IPR(mode_k) = sum_i |v_ki|^4 / (sum_i |v_ki|^2)^2; Delta := IPR(most-localized mode)/mean(IPR); Boundary-Regime Closure: system flagged 'bounded' iff Delta exceeds a quantile-derived tail threshold over an ensemble.",
+    "format": "ascii"
+   },
+   "tier": "Definition",
+   "status": "unverified",
+   "domain": "M",
+   "aliases": [
+    "IPR-boundary-regime"
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "refines",
+     "evidence": "weld/M.01.v1 already welds the graph Laplacian into the causal-memory stepper; this candidate adds a diagnostic quantity computed directly from the Laplacian's own eigenmodes (v_ki) -- an inverse-participation-ratio localization fingerprint (structural contrast ratio Delta) plus a quantile-based 'bounded boundary regime' closure rule -- a refinement (diagnostic instrument) on the existing Laplacian object, not a new stepper."
+    }
+   ],
+   "origin": {
+    "source": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis",
+    "doi": "10.5281/zenodo.18372525",
+    "record_id": 18372525,
+    "page": 6,
+    "eq_label": "unlabeled-6"
+   },
+   "occurrences": [
+    {
+     "record_id": 18372525,
+     "doi": "10.5281/zenodo.18372525",
+     "eq_label": "unlabeled-6",
+     "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+    },
+    {
+     "record_id": 18372525,
+     "doi": "10.5281/zenodo.18372525",
+     "eq_label": "unlabeled-7",
+     "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+    },
+    {
+     "record_id": 18372525,
+     "doi": "10.5281/zenodo.18372525",
+     "eq_label": "unlabeled-8",
+     "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+    },
+    {
+     "record_id": 18372525,
+     "doi": "10.5281/zenodo.18372525",
+     "eq_label": "unlabeled-9",
+     "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+    },
+    {
+     "record_id": 18372525,
+     "doi": "10.5281/zenodo.18372525",
+     "eq_label": "unlabeled-10",
+     "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+    },
+    {
+     "record_id": 18372525,
+     "doi": "10.5281/zenodo.18372525",
+     "eq_label": "unlabeled-11",
+     "title": "Causal Memory Graph Framework An AI-Implementable Specification for Boundary-Aware Structural Graph Analysis"
+    }
+   ]
+  },
+  {
+   "id": "CS-05",
+   "code": "weld/M.??.v1",
+   "name": "Interactive Causal Memory: multi-agent record-asymmetry -> collapse/statistical-emergence bridge",
+   "statement": {
+    "latest": "Def 7.1: collapse triggered when misaligned-record rate r_mis(t) exceeds aligned-record rate r_al(t) by a threshold, causing record asymmetry; Thm 8.3: in the N-agent ensemble limit, collapse-event statistics converge to a law determined only by the aggregate (r_al,r_mis) distribution (statistical emergence), independent of microscopic agent identity.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "M",
+   "aliases": [
+    "Interactive-Causal-Memory",
+    "record-asymmetry-collapse"
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "specialises",
+     "evidence": "ADVERSARIAL RE-CHECK: the source paper connects micro-level aligned/misaligned record-accumulation rates among N interacting finite-capacity agents to macro ensemble-level collapse statistics, using the same 'record' vocabulary as weld/M.01.v1's delta_R|-L_R chain, but the evidence supplied does not exhibit a concrete formula deriving r_mis/r_al or the collapse law FROM L_R/F -- it is a conceptual extension of the single-agent stepper into a multi-agent ensemble, not a shown deduction. Downgraded from the originally claimed 'derives' to 'specialises' (parent framework applied to a new, more structured N-agent setting) since 'derives' was not earned by the evidence text."
+    }
+   ],
+   "origin": {
+    "source": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems",
+    "doi": "10.5281/zenodo.18213737",
+    "record_id": 18213737,
+    "page": 3,
+    "eq_label": "(12)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18213737,
+     "doi": "10.5281/zenodo.18213737",
+     "eq_label": "(12)",
+     "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+    },
+    {
+     "record_id": 18213737,
+     "doi": "10.5281/zenodo.18213737",
+     "eq_label": "(13)",
+     "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+    },
+    {
+     "record_id": 18213737,
+     "doi": "10.5281/zenodo.18213737",
+     "eq_label": "(19)",
+     "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+    },
+    {
+     "record_id": 18213737,
+     "doi": "10.5281/zenodo.18213737",
+     "eq_label": "(20)",
+     "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+    },
+    {
+     "record_id": 18213737,
+     "doi": "10.5281/zenodo.18213737",
+     "eq_label": "(21)",
+     "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+    },
+    {
+     "record_id": 18213737,
+     "doi": "10.5281/zenodo.18213737",
+     "eq_label": "(11)-COLLAPSE",
+     "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+    },
+    {
+     "record_id": 18213737,
+     "doi": "10.5281/zenodo.18213737",
+     "eq_label": "(12)-COLLAPSE",
+     "title": "Interactive Causal Memory Theory: Emergent Noise, Shock, and Record Formation in Multi-Agent Systems"
+    }
+   ]
+  },
+  {
+   "id": "CS-06",
+   "code": "CMC/P.??.v1",
+   "name": "Covariant action and weighted Lyapunov stability gate for causal transport",
+   "statement": {
+    "latest": "F[s] = Integral d^3x [ (kappa/2)(grad s)^2 + Psi(s) ]  (free-energy functional whose Euler-Lagrange equation reproduces the single-pole causal-transport/Cattaneo relation); plus a weighted Lyapunov stability-gate functional (integrand H_tilde, global dissipation condition) for the transport system and its FLRW/two-flux-superfluid extensions.",
+    "format": "ascii"
+   },
+   "tier": "Postulate",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "covariant-action-causal-transport",
+    "Lyapunov-stability-gate"
+   ],
+   "parents": [
+    {
+     "code": "CMC/P.06.v1",
+     "derived_via": "derives",
+     "evidence": "Supplies a covariant action/Lagrangian S[g,Psi,v,lambda,J,theta] whose Euler-Lagrange equations reproduce the single-pole causal-transport (Cattaneo-type) relation Toledo's closure witness (CMC/P.06.v1) already certifies, plus a new weighted Lyapunov stability-gate functional for that transport system and its FLRW/two-flux-superfluid extensions -- a variational-derivation-plus-stability-certificate route the closure witness does not itself supply."
+    }
+   ],
+   "origin": {
+    "source": "Cosmology from Finite Causal Memory",
+    "doi": "10.5281/zenodo.18208238",
+    "record_id": 18208238,
+    "page": 1,
+    "eq_label": "(1)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(1)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(2)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(3)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(4)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(1)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(2)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(3)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(4)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(5)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(6)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(7)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(8)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(9)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(11)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(12)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(14)",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(17)-(20) E1-E3",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(22)-(23) A2",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(51)-(54) L3",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Cj-COS",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "P-COS1..5",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    }
+   ]
+  },
+  {
+   "id": "CS-07",
+   "code": "Face.10.IdentifiabilityGate/M.??.v1",
+   "name": "Non-circular operational identity-by-protocol theorem for G and hbar",
+   "statement": {
+    "latest": "Delta_phi = S / hbar_star  (an emergent/operationally-defined coupling constant hbar_star, from a phase-action calibration, and g_star, from a flux-normalization calibration, are shown to equal the metrologically-defined constant hbar/G by construction, while a companion theorem proves no protocol can predict the constant's numeric value -- a UV no-go).",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "M",
+   "aliases": [
+    "operational-identity-by-protocol",
+    "G-hbar-non-circular"
+   ],
+   "parents": [
+    {
+     "code": "Face.10.IdentifiabilityGate/E.01.v1",
+     "derived_via": "instance_of",
+     "evidence": "Proves a non-circular 'operational identity by protocol' theorem for physical coupling constants (G, hbar): this is a specific instance of the general forced-identification-fraction machinery Toledo already carries (Phi_FI, Face.10.IdentifiabilityGate/E.01.v1: Phi_FI(q;A1,A2,C,pi)=1-V*(C\\pi)/V*(C)) applied to metrology -- a new instance, not a new primitive."
+    }
+   ],
+   "origin": {
+    "source": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity",
+    "doi": "10.5281/zenodo.18202581",
+    "record_id": 18202581,
+    "page": 1,
+    "eq_label": "(1)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(1)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    },
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(2)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    },
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(3)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    },
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(4)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    },
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(5)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    },
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(6)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    },
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(7)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    },
+    {
+     "record_id": 18202581,
+     "doi": "10.5281/zenodo.18202581",
+     "eq_label": "(8)",
+     "title": "Non-Circular Operational Identification of the Gravitational Constant 𝐺 & ℏ  in Causal Memory Gravity"
+    }
+   ]
+  },
+  {
+   "id": "CS-08",
+   "code": "weld/S.??.v1",
+   "name": "Causal-access-constrained learning: mask-weighted shrinkage theorem",
+   "statement": {
+    "latest": "A(t) := R_avail(t) / C_task(t); per-feature causal-access mask X_M, causal-access-constrained risk R_CA, mask-weighted normal equations Sigma_M*theta=gamma_M; Monotone Shrinkage Theorem: theta*(p)->0 as access probability p->0, for spuriously-correlated features.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "S",
+   "aliases": [
+    "causal-access-shrinkage"
+   ],
+   "parents": [
+    {
+     "code": "weld/M.06.v1",
+     "derived_via": "specialises",
+     "evidence": "weld/M.06.v1 already has a general weighted access kernel distinguishing reachability from accessibility (kappa_{A,t,Q}); this candidate specialises that into a concrete statistical-learning result: a causal-access-constrained risk, mask-weighted normal equations, and a proven monotone shrinkage theorem for spuriously-correlated features -- a concrete theorem the access-kernel definition alone does not supply."
+    }
+   ],
+   "origin": {
+    "source": "Causal Guardrails for Artificial Intelligence",
+    "doi": "10.5281/zenodo.18176092",
+    "record_id": 18176092,
+    "page": 2,
+    "eq_label": "(2)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(2)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(3)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(4)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(5)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(1)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(Thm.1 eq)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(Thm.2 eq)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(bound eq, App.B)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    }
+   ]
+  },
+  {
+   "id": "CS-09",
+   "code": "weld/P.??.v1",
+   "name": "Category-theoretic no-go: persistent class bias requires record-cost asymmetry",
+   "statement": {
+    "latest": "S[F] = sum_i ell(f_i), for F=(f_tau o ... o f_1), ell(id)=0, ell(g o f)=ell(g)+ell(f); No-Go Theorem: a persistent class bias (e.g. matter/antimatter-style asymmetry) requires an asymmetry in record-formation cost, via a Gibbs-measure path-selection argument and a large-beta concentration theorem.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "record-cost-asymmetry-no-go"
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "specialises",
+     "evidence": "Builds a weighted category of states with an additive path-cost budget S[F] and a lax persistence functor tracking which records survive a transition -- a categorical formalisation of exactly the retained-record idea weld/M.01.v1 states informally via delta_R|-L_R -- then proves a new structural no-go theorem via a Gibbs-measure path-selection argument."
+    }
+   ],
+   "origin": {
+    "source": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures",
+    "doi": "10.5281/zenodo.18113633",
+    "record_id": 18113633,
+    "page": 1,
+    "eq_label": "Def 1.1"
+   },
+   "occurrences": [
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Def 1.1",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Def 1.2",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Def 1.3",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Thm 2.1",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Prop 3.1",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Prop 3.2",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Selection measure",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Lemma 5.1",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Prop 5.1",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "log eta approx",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "DP recurrence",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    },
+    {
+     "record_id": 18113633,
+     "doi": "10.5281/zenodo.18113633",
+     "eq_label": "Discrete Laplace principle",
+     "title": "Physics Letter: A Structural No-Go on Bias without Record-Cost Asymmetry in Causal Memory Architectures"
+    }
+   ]
+  },
+  {
+   "id": "CS-10",
+   "code": "weld/M.??.v1",
+   "name": "Causal State History: non-Markovian generalisation axioms and cross-domain theorems",
+   "statement": {
+    "latest": "H_t is an operational record constructed from past states {X_s}_{s<=t} via a reproducible protocol with fixed tolerance (epsilon, SNR); generalises S_{n+1}=F(S_n,u_n,c_n,T_n) to Psi(t)=F(Psi(t),{Psi(t')}_{t'<=t}) with an explicit semigroup/generator structure, three axioms (order-sensitivity, monotone records, dissipation-with-memory), and three cross-domain theorems (a finite-volume log-Sobolev inequality on lattice histories, a history-aware flux-closure bound for Navier-Stokes, a diamond-norm contraction bound for quantum measurement).",
+    "format": "ascii"
+   },
+   "tier": "Definition",
+   "status": "unverified",
+   "domain": "M",
+   "aliases": [
+    "Causal-State-History"
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "specialises",
+     "evidence": "Generalises the root recursion S_{n+1}=F(S_n,u_n,c_n,T_n) (weld/M.01.v1) from single-state Markov dependence to a full non-Markovian Causal State History with an explicit semigroup/generator structure, then adds axioms and cross-domain theorems the root does not carry."
+    }
+   ],
+   "origin": {
+    "source": "Note: Causal State History as a Structural Constraint (Discussion Route)",
+    "doi": "10.5281/zenodo.18105213",
+    "record_id": 18105213,
+    "page": 1,
+    "eq_label": "Def 1"
+   },
+   "occurrences": [
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Def 1",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Def 2",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Axiom A2",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Axiom A3",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Axiom A4",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Thm 1",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Thm 2",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18105213,
+     "doi": "10.5281/zenodo.18105213",
+     "eq_label": "Thm 3",
+     "title": "Note: Causal State History as a Structural Constraint (Discussion Route)"
+    },
+    {
+     "record_id": 18103092,
+     "doi": "10.5281/zenodo.18103092",
+     "eq_label": "(1)",
+     "title": "Post–2025 Cosmological Forecast Note under the Causal State History Principle"
+    }
+   ]
+  },
+  {
+   "id": "CS-11",
+   "code": "EQ-001/P.??.v1",
+   "name": "Causal accessibility horizon / early-warning control necessity",
+   "statement": {
+    "latest": "Continuum: t_d <= T - d_theta(Gamma,O); Network: t_d <= T - min_{g,o} d_G(g,o); Budget: T_avail = T - t_d - dt_proc - dt_verify - dt_deploy >= 0.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "causal-accessibility-horizon"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.36.v1",
+     "derived_via": "derives",
+     "evidence": "Starts from the finite causal cone already derived in EQ-001/P.36.v1 (|x|<=v*t) and adds a control-theoretic consequence not present in Toledo: an early-warning/reachability necessity law (detection time t_d<=T-d_c(Gamma,O)) and a matching Causal Accessibility Horizon theorem bounding which target states are reachable by time T for any controller, independent of dissipation."
+    }
+   ],
+   "origin": {
+    "source": "Causal Memory Transport Equations",
+    "doi": "10.5281/zenodo.18075029",
+    "record_id": 18075029,
+    "page": 3,
+    "eq_label": "(35)-(37) App C"
+   },
+   "occurrences": [
+    {
+     "record_id": 18075029,
+     "doi": "10.5281/zenodo.18075029",
+     "eq_label": "(35)-(37) App C",
+     "title": "Causal Memory Transport Equations"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(1)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(2)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(3)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(4)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(5)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(6)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(7)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(A1)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18055068,
+     "doi": "10.5281/zenodo.18055068",
+     "eq_label": "(A2)",
+     "title": "Early Warning Necessitates Timely Controllability Under Finite-Speed Causal Response"
+    },
+    {
+     "record_id": 18053352,
+     "doi": "10.5281/zenodo.18053352",
+     "eq_label": "(6)",
+     "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+    },
+    {
+     "record_id": 18053352,
+     "doi": "10.5281/zenodo.18053352",
+     "eq_label": "(7)",
+     "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+    },
+    {
+     "record_id": 18053352,
+     "doi": "10.5281/zenodo.18053352",
+     "eq_label": "(9)",
+     "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+    },
+    {
+     "record_id": 18053352,
+     "doi": "10.5281/zenodo.18053352",
+     "eq_label": "(11)",
+     "title": "The Causal Accessibility Horizon: A Structural Limit on Finite-Time Reachability"
+    }
+   ]
+  },
+  {
+   "id": "CS-12",
+   "code": "EQ-001/P.??.v1",
+   "name": "Black-hole singularity regularization under causal memory",
+   "statement": {
+    "latest": "tau*d^2(phi)/dt^2 + d(phi)/dt = D*Laplacian(phi); finite core radius r_min ~ (G*M*tau^2)^(1/3) replaces the point singularity, a finite maximum core density, and matching quasi-normal-mode-frequency/echo-delay predictions.",
+    "format": "ascii"
+   },
+   "tier": "Postulate",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "BH-singularity-regularization"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.59.v1",
+     "derived_via": "specialises",
+     "evidence": "EQ-001/P.59.v1 already treats a horizon as a finite (not infinite) rank-loss boundary; this candidate specialises that finiteness principle into a concrete black-hole interior construction (finite core radius, finite maximum core density, quasi-normal-mode/echo-delay predictions) none of which the root currently states."
+    }
+   ],
+   "origin": {
+    "source": "Black Holes in the Causal-Memory Framework: A Sketch",
+    "doi": "10.5281/zenodo.18059378",
+    "record_id": 18059378,
+    "page": 1,
+    "eq_label": "(none, telegraph eq)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, telegraph eq)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, horizon def)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, r_min)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, rho_max)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, T_H)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, rho_out)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, omega_CM)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18059378,
+     "doi": "10.5281/zenodo.18059378",
+     "eq_label": "(none, echo delay)",
+     "title": "Black Holes in the Causal-Memory Framework: A Sketch"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Dr-BH1/BH2/BH3",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "P-BH1/BH2",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(15)-(20)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    }
+   ]
+  },
+  {
+   "id": "CS-13",
+   "code": "EQ-001/P.??.v1",
+   "name": "Cosmological constant as inverse cosmic causal time",
+   "statement": {
+    "latest": "Lambda ~ 1/tau_cosmic^2; tau_cosmic ~ H0^-1 ~ 1e17 s; vacuum-energy-density estimate rho_Lambda ~ hbar*c/(tau_cosmic^2*ell_P^3) ~ 1e-47 GeV^4; predicted dark-energy equation-of-state deviation w(z)=-1+epsilon(z).",
+    "format": "ascii"
+   },
+   "tier": "Empirical",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "cosmological-constant-inverse-causal-time"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.62.v1",
+     "derived_via": "bridges",
+     "evidence": "Reinterprets the cosmological constant as an inverse cosmic causal time built on the mass-memory-time construct EQ-001/P.62.v1 targets, giving a vacuum-energy-density order-of-magnitude estimate and a predicted dark-energy equation-of-state deviation -- a bridge from the causal-memory-time primitive to a cosmological observable."
+    }
+   ],
+   "origin": {
+    "source": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology",
+    "doi": "10.5281/zenodo.17828120",
+    "record_id": 17828120,
+    "page": 3,
+    "eq_label": "(10)-(11)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(10)-(11)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(12)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(13)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    }
+   ]
+  },
+  {
+   "id": "CS-14",
+   "code": "EQ-015/P.??.v1",
+   "name": "The mass-free identity: Schwarzschild radius x causal-memory time = Planck length squared",
+   "statement": {
+    "latest": "R_s * c * tau_c = G*hbar/c^3 = ell_P^2.",
+    "format": "ascii"
+   },
+   "tier": "Definition",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "mass-free-identity"
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/P.111.v1",
+     "derived_via": "bridges",
+     "evidence": "Combines the already-registered Schwarzschild radius (EQ-015/P.111.v1, r_s=2GM/c^2) with the mass-memory time (EQ-001/P.62.v1's target quantity) into a mass-free structural identity R_s*c*tau_c=G*hbar/c^3=ell_P^2 -- a genuinely new combined object, not present under either parent code alone."
+    },
+    {
+     "code": "EQ-001/P.62.v1",
+     "derived_via": "bridges",
+     "evidence": "The causal-memory time tau_c is the second factor of the identity; both parent codes are required to state the combination honestly."
+    }
+   ],
+   "origin": {
+    "source": "Mass as Causal Memory: A Structural Unication of Black Hole Physics",
+    "doi": "10.5281/zenodo.17878952",
+    "record_id": 17878952,
+    "page": 2,
+    "eq_label": "(4)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(16)-(17)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(3)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(4)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(27) Theorem 5.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(54)-(55) Theorem 10.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.B, route4 Schwarzschild-Compton)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec VI, black holes)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    }
+   ]
+  },
+  {
+   "id": "CS-15",
+   "code": "weld/P.??.v1",
+   "name": "The Deborah number for telegraph-causal outflows",
+   "statement": {
+    "latest": "De := tau * Omega; observational inference rule D/tau ~ (ell*Rg/Delta t)^2 from a measured outflow lag.",
+    "format": "ascii"
+   },
+   "tier": "Empirical",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "Deborah-number"
+   ],
+   "parents": [
+    {
+     "code": "weld/S.12.v1",
+     "derived_via": "instance_of",
+     "evidence": "Applies the already-registered telegraph flux constitutive relation (weld/S.12.v1) to a specific astrophysical system (NGC 3783 AGN disc-corona) and introduces a named dimensionless ratio, the Deborah number, plus an observational inference rule from a measured outflow lag."
+    }
+   ],
+   "origin": {
+    "source": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783",
+    "doi": "10.5281/zenodo.17922382",
+    "record_id": 17922382,
+    "page": 2,
+    "eq_label": "(5)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17922382,
+     "doi": "10.5281/zenodo.17922382",
+     "eq_label": "(5)",
+     "title": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783"
+    },
+    {
+     "record_id": 17922382,
+     "doi": "10.5281/zenodo.17922382",
+     "eq_label": "(7)",
+     "title": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783"
+    },
+    {
+     "record_id": 17922382,
+     "doi": "10.5281/zenodo.17922382",
+     "eq_label": "(8)",
+     "title": "The Telegraph–Causal Framework for Ultra-Fast Outflows in NGC 3783"
+    }
+   ]
+  },
+  {
+   "id": "CS-16",
+   "code": "EQ-001/P.??.v1",
+   "name": "Complexity as depth in units of causal-memory time (global complexity axiom)",
+   "statement": {
+    "latest": "C(t) := t / tau_c^micro; kappa(x,t):=1/tau_c^micro(x,t); continuity/telegraph equations for a 'complexity density' field; macroscopic relaxation (black-hole ringdown) tied to tau_c^micro times a large factor.",
+    "format": "ascii"
+   },
+   "tier": "Postulate",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "global-complexity-axiom",
+    "complexity-from-causal-memory"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.62.v1",
+     "derived_via": "bridges",
+     "evidence": "Defines physical complexity as depth measured in units of the causal-memory time and gives continuity/telegraph equations for a complexity-density field -- a new conceptual bridge from the mass-memory time to a complexity/depth metric with its own field equations, genuinely absent from Toledo, which has tau_c only as a physical (mass-related) quantity, never as a complexity-depth unit."
+    }
+   ],
+   "origin": {
+    "source": "Complexity from Causal Memory: A τc-Based Physics of Depth",
+    "doi": "10.5281/zenodo.17913256",
+    "record_id": 17913256,
+    "page": 1,
+    "eq_label": "(C2)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(4)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(5)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(6)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(7)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(8)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(C1)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(C2)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(C3)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    }
+   ]
+  },
+  {
+   "id": "CS-17",
+   "code": "EQ-001/P.??.v1",
+   "name": "The covariant damped-stiff field equation (telegraph + stiffness term)",
+   "statement": {
+    "latest": "Box(Phi) + 2*lambda*(u^mu grad_mu Phi) + Omega^2*Phi = 0; reduces to ordinary Cattaneo-telegraph dynamics when Omega=0; yields a mass-hierarchy relation and a MOND-like acceleration scale a0 ~= c*H0.",
+    "format": "ascii"
+   },
+   "tier": "Postulate",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "covariant-damped-stiff-field-eq"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.35.v1",
+     "derived_via": "refines",
+     "evidence": "Generalizes the plain telegraph equation (EQ-001/P.35.v1) by adding a stiffness term that reduces to ordinary Cattaneo-telegraph dynamics only when Omega=0; the added term produces a genuine mass-hierarchy relation and a MOND-like acceleration scale tying galactic dynamics to vacuum relaxation time, neither of which follows from the bare telegraph equation already registered."
+    }
+   ],
+   "origin": {
+    "source": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\"",
+    "doi": "10.5281/zenodo.17767416",
+    "record_id": 17767416,
+    "page": 1,
+    "eq_label": "(1)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(1)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(2)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(6)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(7)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(8)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17993686,
+     "doi": "10.5281/zenodo.17993686",
+     "eq_label": "(Dr-Y2)",
+     "title": "The Causal-Memory Program: Canon"
+    }
+   ]
+  },
+  {
+   "id": "CS-18",
+   "code": "weld/P.??.v1",
+   "name": "Yukawa-corrected Newtonian potential for a point source",
+   "statement": {
+    "latest": "Phi_N(r) = -(G*M/r) * [1 - e^{-r/ell_c}], derived from an informational Poisson relation Laplacian(Phi_I)=kappa_I*s and a Helmholtz coarse-graining filter (1-ell_c^2 Laplacian)s_cg=s0, bounded by laboratory inverse-square-law tests.",
+    "format": "ascii"
+   },
+   "tier": "Definition",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "Yukawa-Newtonian-potential"
+   ],
+   "parents": [
+    {
+     "code": "weld/S.12.v1",
+     "derived_via": "derives",
+     "evidence": "Starting from the registered Maxwell-Cattaneo/telegraph closure (weld/S.12.v1), adds an informational Poisson relation and a Helmholtz coarse-graining filter to derive an explicit Yukawa-corrected Newtonian potential bounded by laboratory inverse-square-law tests."
+    }
+   ],
+   "origin": {
+    "source": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport",
+    "doi": "10.5281/zenodo.17846399",
+    "record_id": 17846399,
+    "page": 1,
+    "eq_label": "(7)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17846399,
+     "doi": "10.5281/zenodo.17846399",
+     "eq_label": "(1)",
+     "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+    },
+    {
+     "record_id": 17846399,
+     "doi": "10.5281/zenodo.17846399",
+     "eq_label": "(2)",
+     "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+    },
+    {
+     "record_id": 17846399,
+     "doi": "10.5281/zenodo.17846399",
+     "eq_label": "(3)",
+     "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+    },
+    {
+     "record_id": 17846399,
+     "doi": "10.5281/zenodo.17846399",
+     "eq_label": "(6)",
+     "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+    },
+    {
+     "record_id": 17846399,
+     "doi": "10.5281/zenodo.17846399",
+     "eq_label": "(7)",
+     "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+    },
+    {
+     "record_id": 17846399,
+     "doi": "10.5281/zenodo.17846399",
+     "eq_label": "(8)",
+     "title": "Causal Regularization of Newtonian Gravity via Maxwell–Cattaneo Transport"
+    }
+   ]
+  },
+  {
+   "id": "CS-19",
+   "code": "EQ-015/P.??.v1",
+   "name": "Ringdown diffusivity under causal saturation",
+   "statement": {
+    "latest": "D_ring = c^2 * tau_220 (imposing c* = c, causal saturation); explicit falsifiable cross-event scaling law D_i/D_j = tau_220,i/tau_220,j, illustrated numerically on GW150914.",
+    "format": "ascii"
+   },
+   "tier": "Empirical",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "ringdown-diffusivity"
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/P.55.v1",
+     "derived_via": "bridges",
+     "evidence": "Algebraically identifies a 'ringdown diffusivity' directly from the measured quasinormal-mode damping time (already registered as EQ-015/P.55.v1's analytic representation), with an explicit falsifiable cross-event scaling law and a numerical illustration on GW150914."
+    }
+   ],
+   "origin": {
+    "source": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework",
+    "doi": "10.5281/zenodo.17616410",
+    "record_id": 17616410,
+    "page": 2,
+    "eq_label": "(4)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17616410,
+     "doi": "10.5281/zenodo.17616410",
+     "eq_label": "(4)",
+     "title": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework"
+    },
+    {
+     "record_id": 17616410,
+     "doi": "10.5281/zenodo.17616410",
+     "eq_label": "unlabeled (Appendix A, template)",
+     "title": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework"
+    },
+    {
+     "record_id": 17616410,
+     "doi": "10.5281/zenodo.17616410",
+     "eq_label": "unlabeled (Sec V, cross-event scaling)",
+     "title": "Informational Diffusivity of Black-Hole Ringdown: A Causally Constrained Telegraph-Based Surrogate Framework"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "unlabeled (Sec 7, LVK test)",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "(D1)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    }
+   ]
+  },
+  {
+   "id": "CS-20",
+   "code": "weld/P.??.v1",
+   "name": "Explicit closed-form telegraph Green's function (1D)",
+   "statement": {
+    "latest": "G = [e^{-t/(2 tau)} / (2v)] H(vt-|x|) [ delta(|x|-vt) + (I0(xi) + (vt/sqrt(v^2 t^2 - x^2)) I1(xi)) / (2 tau) ], xi = sqrt(v^2 t^2 - x^2) / (2 v tau); reduces to the heat-kernel / wave-kernel limiting cases as tau->0 / tau->infinity.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "telegraph-Greens-function"
+   ],
+   "parents": [
+    {
+     "code": "weld/S.12.v1",
+     "derived_via": "refines",
+     "evidence": "Gives the explicit closed-form telegraph Green's function and its heat-kernel/wave-kernel limiting cases as tau->0/tau->infinity -- Toledo has the telegraph flux constitutive relation and PDE itself (weld/S.12.v1) but no registered explicit solution kernel."
+    }
+   ],
+   "origin": {
+    "source": "The Causal-Memory Program: Canon",
+    "doi": "10.5281/zenodo.17993686",
+    "record_id": 17993686,
+    "page": 19,
+    "eq_label": "(Th-11)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17993686,
+     "doi": "10.5281/zenodo.17993686",
+     "eq_label": "(Th-11)",
+     "title": "The Causal-Memory Program: Canon"
+    },
+    {
+     "record_id": 17993686,
+     "doi": "10.5281/zenodo.17993686",
+     "eq_label": "(Th-13)",
+     "title": "The Causal-Memory Program: Canon"
+    }
+   ]
+  },
+  {
+   "id": "CS-21",
+   "code": "EQ-001/P.??.v1",
+   "name": "Effective proton radius as a function of probe causal time",
+   "statement": {
+    "latest": "r_p^eff(tau_c,l) = r_p^core + Delta_r * sqrt(tau_c,l); numerical prediction of a ~4% electron-vs-muon proton-radius discrepancy matched to the observed muonic-hydrogen puzzle, plus a further falsifiable tau-lepton prediction.",
+    "format": "ascii"
+   },
+   "tier": "Empirical",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "proton-radius-causal-time"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.62.v1",
+     "derived_via": "bridges",
+     "evidence": "Proposes an effective proton radius that grows with the causal time of the probing lepton, a bridge from the causal-memory-time primitive to a specific, falsifiable particle-physics puzzle (the proton-radius discrepancy) not registered anywhere in Toledo."
+    }
+   ],
+   "origin": {
+    "source": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology",
+    "doi": "10.5281/zenodo.17828120",
+    "record_id": 17828120,
+    "page": 3,
+    "eq_label": "(14)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(14)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(15)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(16)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(17)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(18)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    }
+   ]
+  },
+  {
+   "id": "CS-22",
+   "code": "EQ-001/P.??.v1",
+   "name": "FRW compatibility of the telegraph equation (Hubble-friction extension)",
+   "statement": {
+    "latest": "tau * d^2rho/dt^2 + (1 + 3*H*tau) * drho/dt = (D/a^2) * Laplacian(rho).",
+    "format": "ascii"
+   },
+   "tier": "Conjecture",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "FRW-telegraph-compatibility"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.35.v1",
+     "derived_via": "specialises",
+     "evidence": "Adds a Hubble-friction term to the telegraph equation for FRW compatibility -- a cosmological specialisation of the already-registered flat-space telegraph PDE (EQ-001/P.35.v1); author-labelled as a Conjecture (Cj-COS), not yet a proven theorem."
+    }
+   ],
+   "origin": {
+    "source": "The Causal-Memory Program: Canon",
+    "doi": "10.5281/zenodo.17993686",
+    "record_id": 17993686,
+    "page": 35,
+    "eq_label": "(Cj-COS)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17993686,
+     "doi": "10.5281/zenodo.17993686",
+     "eq_label": "(Cj-COS)",
+     "title": "The Causal-Memory Program: Canon"
+    }
+   ]
+  },
+  {
+   "id": "CS-23",
+   "code": "EQ-015/P.??.v1",
+   "name": "Observer-dependent (redshifted) causal-memory time",
+   "statement": {
+    "latest": "tau_c^(distant)(r) = sqrt(1 - R_s/r) * tau_c^(proper).",
+    "format": "ascii"
+   },
+   "tier": "Definition",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "redshifted-causal-memory-time"
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/P.112.v1",
+     "derived_via": "instance_of",
+     "evidence": "Applies the Schwarzschild gravitational time-dilation factor (already EQ-015/P.112.v1, d_tau/dt=sqrt(1-r_s/r)) directly to the causal-memory time itself, giving an observer-dependent redshifted mass-memory time."
+    },
+    {
+     "code": "EQ-001/P.62.v1",
+     "derived_via": "instance_of",
+     "evidence": "The quantity being redshifted (tau_c) is the causal-memory time targeted by EQ-001/P.62.v1; both parents are needed to state the combination honestly."
+    }
+   ],
+   "origin": {
+    "source": "Mass as Causal Memory: A Structural Unication of Black Hole Physics",
+    "doi": "10.5281/zenodo.17878952",
+    "record_id": 17878952,
+    "page": 6,
+    "eq_label": "(23)"
+   },
+   "occurrences": [
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(23)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    }
+   ]
+  },
+  {
+   "id": "CS-24",
+   "code": "CMC/M.??.v1",
+   "name": "Causal-memory kernel uniqueness / CMF classification (multiple independent proof routes)",
+   "statement": {
+    "latest": "Any kernel K satisfying causality(P1)+passivity(P2)+finite-order recurrence(H2) is a Completely-Monotone-Finite-resource (CMF) superposition of geometric-decay channels K(n)=sum_k w_k*r_k^n, w_k>=0, 0<r_k<1, certified via Bernstein's theorem/alternating-difference test plus a positive-real (passivity) PSD factorization; the single-exponential-channel special case G(tau)=(D/tau_c)e^{-tau/tau_c} is independently forced by (a) a finite-dimensional local Hamiltonian plus a Lieb-Robinson locality bound, (b) a Laplace-transform + Paley-Wiener causality argument with a Planck-scale lower bound on tau_c, and (c) a direct axiomatic characterization proving the telegraph PDE is the unique linear second-order class member satisfying finite propagation speed, dissipative stability, and source-freedom.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "M",
+   "aliases": [
+    "CMF-classification",
+    "kernel-uniqueness",
+    "causal-memory-kernel-forced-form"
+   ],
+   "parents": [
+    {
+     "code": "CMC/P.06.v1",
+     "derived_via": "refines",
+     "evidence": "CMC/P.06.v1 (cattaneo_telegraph_closure_witness) already certifies closure for the single-channel Cattaneo/telegraph case; this merged object proves the fully general statement (CMF superposition, part 1: 18212478/18757034/18210933) and a matching axiomatic uniqueness-among-a-class theorem (part 2: 18065304/18051281/18013670), of which the single-channel Cattaneo case is one instance -- the closure witness only certifies membership, not this characterization/uniqueness-among-a-class result."
+    },
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "refines",
+     "evidence": "weld/M.01.v1's root weld postulates that retained distinction forces the finite causal graph/stepper abstractly; part 2 (18013670 Theorem T1) supplies a genuinely new microscopic derivation route -- a finite-dimensional local Hamiltonian plus a Lieb-Robinson bound forcing exactly the single-pole exponential kernel -- a primitive (Lieb-Robinson velocity, many-body locality bound) the root does not carry on its own."
+    },
+    {
+     "code": "EQ-001/P.35.v1",
+     "derived_via": "refines",
+     "evidence": "EQ-001/P.35.v1 only asserts the telegraph process is 'derived from finite retention, not inserted' without a uniqueness proof; part 3 (17890616/17901698/17926609/17899050 Theorem 1.1) supplies an actual kernel-uniqueness argument (Laplace-transform + Lieb-Robinson locality + Paley-Wiener causality) forcing the single-pole exponential kernel, plus a Planck-scale lower bound on tau_c."
+    }
+   ],
+   "origin": {
+    "source": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory",
+    "doi": "10.5281/zenodo.18212478",
+    "record_id": 18212478,
+    "page": null,
+    "eq_label": "(4)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18212478,
+     "doi": "10.5281/zenodo.18212478",
+     "eq_label": "(4)",
+     "title": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory"
+    },
+    {
+     "record_id": 18212478,
+     "doi": "10.5281/zenodo.18212478",
+     "eq_label": "(6)",
+     "title": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory"
+    },
+    {
+     "record_id": 18212478,
+     "doi": "10.5281/zenodo.18212478",
+     "eq_label": "(7)",
+     "title": "Cellular Aging as Irreversible Record Accumulation under Finite Causal Memory"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "(1)",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-1",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-2",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-3",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-4",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-5",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-6",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-7",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-11",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-12",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-13",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-15",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "(2)",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18757034,
+     "doi": "10.5281/zenodo.18757034",
+     "eq_label": "unlabeled-16",
+     "title": "Causal Memory Admissibility (CMAP): A Structural Necessity Classication Discrete-First, Primitives-Grounded, Domain-Independent"
+    },
+    {
+     "record_id": 18210933,
+     "doi": "10.5281/zenodo.18210933",
+     "eq_label": "unlabeled-3",
+     "title": "Time as Irreversible Causal Record A Mathematical Derivation from Causality and Passivity"
+    },
+    {
+     "record_id": 18210933,
+     "doi": "10.5281/zenodo.18210933",
+     "eq_label": "(3)",
+     "title": "Time as Irreversible Causal Record A Mathematical Derivation from Causality and Passivity"
+    },
+    {
+     "record_id": 18210933,
+     "doi": "10.5281/zenodo.18210933",
+     "eq_label": "unlabeled-4",
+     "title": "Time as Irreversible Causal Record A Mathematical Derivation from Causality and Passivity"
+    },
+    {
+     "record_id": 18677955,
+     "doi": "10.5281/zenodo.18677955",
+     "eq_label": "Remark 18.14",
+     "title": "Causal Quantum Gravity"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Theorem T1",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(2)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(3)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(5)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(8)/(9)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18065304,
+     "doi": "10.5281/zenodo.18065304",
+     "eq_label": "A",
+     "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+    },
+    {
+     "record_id": 18065304,
+     "doi": "10.5281/zenodo.18065304",
+     "eq_label": "A'",
+     "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+    },
+    {
+     "record_id": 18065304,
+     "doi": "10.5281/zenodo.18065304",
+     "eq_label": "A2-A4",
+     "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+    },
+    {
+     "record_id": 18065304,
+     "doi": "10.5281/zenodo.18065304",
+     "eq_label": "chi",
+     "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+    },
+    {
+     "record_id": 18065304,
+     "doi": "10.5281/zenodo.18065304",
+     "eq_label": "eta",
+     "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+    },
+    {
+     "record_id": 18051281,
+     "doi": "10.5281/zenodo.18051281",
+     "eq_label": "(Def 1 / Class E)",
+     "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+    },
+    {
+     "record_id": 18051281,
+     "doi": "10.5281/zenodo.18051281",
+     "eq_label": "(3)",
+     "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+    },
+    {
+     "record_id": 18051281,
+     "doi": "10.5281/zenodo.18051281",
+     "eq_label": "Thm 3",
+     "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+    },
+    {
+     "record_id": 18051281,
+     "doi": "10.5281/zenodo.18051281",
+     "eq_label": "Thm 4",
+     "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+    },
+    {
+     "record_id": 18051281,
+     "doi": "10.5281/zenodo.18051281",
+     "eq_label": "(4)",
+     "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+    },
+    {
+     "record_id": 18051281,
+     "doi": "10.5281/zenodo.18051281",
+     "eq_label": "(S:45 multi-pole)",
+     "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Ax-0",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Ax-C/D/S",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Th-1",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Th-2",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Th-4",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Th-5",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Cj-N+",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(3)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(4)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Cor 1 (T1)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(3)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(4)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(5)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(5)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(6)-(7)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(8)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(9)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "(1)",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "(2)",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "(4) Theorem 5.1",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17875968,
+     "doi": "10.5281/zenodo.17875968",
+     "eq_label": "(1)",
+     "title": "The Social Life of Particles How Causal Memory Reveals Hidden Order in the Mass Spectrum"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(18)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(19)-(20)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(2)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(18) Theorem 3.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(19)-(20) Corollary 3.2 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (1)",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (3) Theorem 1.1",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (30)-(31) Corollaries 3.3-3.4",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (33) Corollary 3.5",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (35) Theorem 5.1",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (39)",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (4) Theorem 1.2",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "[in doc: Quantum Memory Pixel Layer v3] (5) Theorem 1.3",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.B, route2 kernel)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "(D2)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec III, constitutive relation)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec III, kernel)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec VII, macro relaxation)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec VII, spectral gap)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(2)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(3)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(5)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    }
+   ],
+   "notes": "Cross-part merge (founder-flagged example): part-1 candidate 'CMF (Completely Monotone Finite-resource) memory-kernel classification theorem', part-2 candidates 'Theorem T1 (single-pole memory kernel forced by a Lieb-Robinson bound)' and 'uniqueness of telegraph dynamics in a defined PDE class', and part-3 candidate 'Theorem 1.1 (Kernel Uniqueness - Main Result)' all judge different papers proving the SAME forced-kernel-form result via different routes; consolidated into one object with all occurrences and all three distinct parent readings."
+  },
+  {
+   "id": "CS-25",
+   "code": "EQ-001/P.??.v1",
+   "name": "Telegraph-to-Klein-Gordon dephasing map and derived mass-memory identity (with renormalisation-stability extension)",
+   "statement": {
+    "latest": "Dephasing substitution s(x,t)=e^{-t/(2 tau_c)}*psi(x,t) turns the registered telegraph equation into a Klein-Gordon-type field equation d^2psi/dt^2 - c^2*Laplacian(psi) + psi/(4 tau_c^2) = 0, identifying a derived mass m_eff = hbar/(2 c^2 tau_c) (equivalently m=1/(2 tau_c) in natural units), corroborated by ten independent routes (uncertainty, Zitterbewegung, Compton time, Margolus-Levitin, ...); a companion order-exclusion uniqueness lemma (only quadratic-order-or-lower PDEs survive) and a one-loop renormalisation-stability sketch argue the derived mass gap survives minimal gauge coupling in phi^4/Yukawa/QED/QCD/Yang-Mills completions.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "telegraph-KG-isomorphism",
+    "mass-memory-derivation",
+    "dephasing-map"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.62.v1",
+     "derived_via": "derives",
+     "evidence": "EQ-001/P.62.v1 states verbatim that retention memory is 'declared (not derived) as playing a mass-like role; no mass-energy law is derived from the root.' This merged object supplies exactly that missing derivation via the dephasing substitution, giving m=hbar/(2 c^2 tau_c) as a derived (not merely declared) consequence, with independent corroborating routes and a renormalisation-stability argument for the resulting mass gap -- all as a proposed derivation route, not yet independently machine-checked."
+    }
+   ],
+   "origin": {
+    "source": "Causal–Memory Program: Short Talk (Two-Column Boxed)",
+    "doi": "10.5281/zenodo.18065304",
+    "record_id": 18065304,
+    "page": 1,
+    "eq_label": "B0"
+   },
+   "occurrences": [
+    {
+     "record_id": 18065304,
+     "doi": "10.5281/zenodo.18065304",
+     "eq_label": "B0",
+     "title": "Causal–Memory Program: Short Talk (Two-Column Boxed)"
+    },
+    {
+     "record_id": 18051281,
+     "doi": "10.5281/zenodo.18051281",
+     "eq_label": "(6)",
+     "title": "Uniqueness of Telegraph Dynamics Under Minimal Causal-Dissipative Constraints"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Th-9",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(5)/(6)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Layer2 KG map",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Theorem T2",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "(13)",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(3)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(4)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17767416,
+     "doi": "10.5281/zenodo.17767416",
+     "eq_label": "(5)",
+     "title": "Information Inertia and Geometric Causality: A Structural Synthesis of Reality Beyond \"It from Bit\""
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(5)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(6)-(7)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(8)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17828120,
+     "doi": "10.5281/zenodo.17828120",
+     "eq_label": "(9)",
+     "title": "Mass as Inverse Causal Time: A Unified Resolution of Four Persistent Puzzles in Particle Physics and Cosmology"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "(1)",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "(2)",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "(4) Theorem 5.1",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17875968,
+     "doi": "10.5281/zenodo.17875968",
+     "eq_label": "(1)",
+     "title": "The Social Life of Particles How Causal Memory Reveals Hidden Order in the Mass Spectrum"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(18)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(19)-(20)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17878952,
+     "doi": "10.5281/zenodo.17878952",
+     "eq_label": "(2)",
+     "title": "Mass as Causal Memory: A Structural Unication of Black Hole Physics"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(1) [in doc: Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(16) Corollary 2.2 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(25) Theorem 4.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(33)-(34) Theorem 6.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(39) Theorem 7.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(4)-(5) Theorem 2.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(45)-(46) Theorem 8.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(49)-(50) Theorem 9.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17890616,
+     "doi": "10.5281/zenodo.17890616",
+     "eq_label": "(60)-(62) Theorem 11.1 [Ten Independent Proofs]",
+     "title": "Pixel Gravity and the Structure of Causal Memory: Kernel Uniqueness and Planck-Limited Relaxation"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(1.4)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(6.1)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.A, mass-memory)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.A, step-final)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.B, route10 Margolus-Levitin)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.B, route3 Heisenberg)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.B, route5 Zitterbewegung)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(App.B, route7 Compton time)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17899050,
+     "doi": "10.5281/zenodo.17899050",
+     "eq_label": "(unlabeled, Ch.6.3, KG result)",
+     "title": "CAUSAL MEMORY IN PHYSICS"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec V, KG eq)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec V, dephasing)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec V, mass-memory identity)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec VI, cosmology)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17901698,
+     "doi": "10.5281/zenodo.17901698",
+     "eq_label": "unlabeled (Sec VI, particles)",
+     "title": "The Causal-Memory Architecture of the Universe"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(1)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17913256,
+     "doi": "10.5281/zenodo.17913256",
+     "eq_label": "(3)",
+     "title": "Complexity from Causal Memory: A τc-Based Physics of Depth"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(18)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(19)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(20)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(21)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(22)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(23)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(24)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(25)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(26)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17926609,
+     "doi": "10.5281/zenodo.17926609",
+     "eq_label": "(27)",
+     "title": "A Minimal Telegraph Representation of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17993686,
+     "doi": "10.5281/zenodo.17993686",
+     "eq_label": "(Th-9)",
+     "title": "The Causal-Memory Program: Canon"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "Proposition 6.1",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "Theorem 4.1",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    },
+    {
+     "record_id": 17855403,
+     "doi": "10.5281/zenodo.17855403",
+     "eq_label": "Theorem 6.2",
+     "title": "Mass as a Structural Necessity of Finite-Speed Causal Transport"
+    }
+   ],
+   "notes": "Cross-part merge (founder-flagged example): part-2 candidate 'telegraph-to-Klein-Gordon dephasing map (m=1/2tau_c)' (18065304 B0) and part-3 candidates 'Theorem 2.1 (Telegraph-KG Isomorphism)' and 'Theorem 6.2 (One-loop stability, sketch)' (which the source judge itself flagged as extending the Theorem-2.1 derivation) state and extend the SAME mass-memory identity; consolidated into one object with all occurrences."
+  },
+  {
+   "id": "CS-26",
+   "code": "EQ-001/P.??.v1",
+   "name": "Emergent/analogue Lorentzian metric induced by the causal-memory front speed",
+   "statement": {
+    "latest": "From the telegraph equation's finite front speed v_star^2(s0)=lambda*Psi''(s0)/tau_c (EQ-001/P.35.v1), builds (a) an effective analogue-gravity-style Lorentzian metric g_hat_{mu nu}=eta_{mu nu}+(1-1/n^2)u_mu u_nu with refractive index n(s), and (b) an induced flat light-cone metric ds^2=-v^2 dt^2+|dx|^2 whose curvature vanishes identically, R^alpha_{beta gamma delta}=0 (flatness theorem).",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "P",
+   "aliases": [
+    "emergent-Lorentzian-metric",
+    "induced-flat-metric",
+    "analogue-gravity-front-speed"
+   ],
+   "parents": [
+    {
+     "code": "EQ-001/P.35.v1",
+     "derived_via": "derives",
+     "evidence": "Takes the already-registered causal-memory front speed v_star^2=lambda*Psi''/tau_c (EQ-001/P.35.v1) and builds a new geometric object: an effective (analogue-gravity-style) Lorentzian metric with refractive index n(s), and (independently, in a second paper) an induced flat metric ds^2=-v^2dt^2+|dx|^2 with a matching flatness theorem -- a relation between the existing front-speed quantity and a spacetime metric the root does not currently state."
+    }
+   ],
+   "origin": {
+    "source": "Cosmology from Finite Causal Memory",
+    "doi": "10.5281/zenodo.18208238",
+    "record_id": 18208238,
+    "page": 2,
+    "eq_label": "(8)"
+   },
+   "occurrences": [
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(8)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(10)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(11)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18208238,
+     "doi": "10.5281/zenodo.18208238",
+     "eq_label": "(12)",
+     "title": "Cosmology from Finite Causal Memory"
+    },
+    {
+     "record_id": 18013670,
+     "doi": "10.5281/zenodo.18013670",
+     "eq_label": "Th-14/15",
+     "title": "FOUNDATION Truth, Physics, and Cosmology from Causal Memory"
+    },
+    {
+     "record_id": 17993686,
+     "doi": "10.5281/zenodo.17993686",
+     "eq_label": "(Th-14)",
+     "title": "The Causal-Memory Program: Canon"
+    },
+    {
+     "record_id": 17993686,
+     "doi": "10.5281/zenodo.17993686",
+     "eq_label": "(Th-15)",
+     "title": "The Causal-Memory Program: Canon"
+    }
+   ],
+   "notes": "Own-reading cross-part merge (not founder-named, found by re-reading occurrence content): part-2 candidate 'emergent/analogue Lorentzian metric from causal-memory front speed' (record 18208238, citing 18013670 Th-14/15) and part-3 candidate '(Th-14) Induced Metric' (record 17993686, its own independently-numbered Th-14/Th-15) both derive the SAME induced flat light-cone metric and flatness result from the SAME front-speed quantity, in different papers; consolidated into one object."
+  },
+  {
+   "id": "CS-27",
+   "code": "MQ08-stepper/M.??.v1",
+   "name": "Discrete causal calculus: primitive causal aggregation operator and its Fundamental Theorem (FTCC)",
+   "statement": {
+    "latest": "Primitive aggregation operator (not reducible a priori to sum/integral): X_M := M (.) X, (X_M)_j := M_j*X_j, G_M := sigma(X_M); discrete causal derivative on edge e of a causal-delay graph: CC f(e) := (f(head(e))-f(tail(e)))/delay(e); Fundamental Theorem of Causal Calculus (forward, Thm 8.2): sum over a causal path of CC f * delay = f(end)-f(start); converse (Thm 8.3): a discrete field is a causal-gradient iff its path-sums are path-independent; matching product/quotient/chain rules and discrete curl/divergence (electrodynamics-CC, causal Navier-Stokes) identities for CC on the causal-delay graph.",
+    "format": "ascii"
+   },
+   "tier": "Theorem",
+   "status": "unverified",
+   "domain": "M",
+   "aliases": [
+    "FTCC",
+    "discrete-causal-calculus",
+    "primitive-causal-aggregation-operator"
+   ],
+   "parents": [
+    {
+     "code": "MQ08-stepper/P.01.v1",
+     "derived_via": "refines",
+     "evidence": "MQ08-stepper/P.01.v1 already discretizes retention into ticks with a finite causal operator; this merged object refines that into a full discrete calculus built on a new primitive aggregation operator (intsum_causal/X_M mask, explicitly not reducible a priori to sum/integral) with its own algebra (product/quotient/chain rules)."
+    },
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "derives",
+     "evidence": "18677955's Theorem 8.2 (FTCC forward)/8.3 (FTCC converse) and Theorem 9.1 (discrete vector-calculus identities) establish a Stokes-like fundamental theorem for the discrete causal-derivative operator CC on the causal-delay graph -- new discrete-calculus machinery derived from the graph-Laplacian/causal-delay-graph substrate weld/M.01.v1 supplies, not previously registered as its own object."
+    }
+   ],
+   "origin": {
+    "source": "Causal Quantum Gravity",
+    "doi": "10.5281/zenodo.18677955",
+    "record_id": 18677955,
+    "page": 3,
+    "eq_label": "CC"
+   },
+   "occurrences": [
+    {
+     "record_id": 18677955,
+     "doi": "10.5281/zenodo.18677955",
+     "eq_label": "CC",
+     "title": "Causal Quantum Gravity"
+    },
+    {
+     "record_id": 18677955,
+     "doi": "10.5281/zenodo.18677955",
+     "eq_label": "Theorem 8.2",
+     "title": "Causal Quantum Gravity"
+    },
+    {
+     "record_id": 18677955,
+     "doi": "10.5281/zenodo.18677955",
+     "eq_label": "Theorem 8.3",
+     "title": "Causal Quantum Gravity"
+    },
+    {
+     "record_id": 18677955,
+     "doi": "10.5281/zenodo.18677955",
+     "eq_label": "Proposition 8.5",
+     "title": "Causal Quantum Gravity"
+    },
+    {
+     "record_id": 18677955,
+     "doi": "10.5281/zenodo.18677955",
+     "eq_label": "Theorem 9.1",
+     "title": "Causal Quantum Gravity"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(none: X_M def)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18176092,
+     "doi": "10.5281/zenodo.18176092",
+     "eq_label": "(none: I_M def)",
+     "title": "Causal Guardrails for Artificial Intelligence"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "FTCC",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "Product rule",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "Quotient rule (corrected)",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "Chain rule (mean-value)",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "Electrodynamics-CC",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "Causal Navier-Stokes",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "Primitive causal aggregation operator",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "A_O[f] def",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    },
+    {
+     "record_id": 18164015,
+     "doi": "10.5281/zenodo.18164015",
+     "eq_label": "D_eps, I_eps ref ops",
+     "title": "Causal Calculus: Primitive Aggregation under Finite Causal Access"
+    }
+   ],
+   "notes": "Cross-part merge (founder-flagged example): part-1 candidate 'Fundamental Theorem of (discrete) Causal Calculus (FTCC) on the causal-delay graph' (18677955) and part-2 candidate 'primitive causal aggregation operator + discrete causal calculus' (18176092, citing 18164015's own FTCC/product/quotient/chain rules) both build the SAME discrete-calculus apparatus (a causal derivative CC with a Stokes-like fundamental theorem); consolidated into one object with two distinct parent readings (the primitive operator's own root, and the graph substrate the FTCC is proved on)."
+  }
+ ]
+}
