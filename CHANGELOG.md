@@ -5,7 +5,7 @@ counts are computed from the files at that point, never carried over from a prio
 
 ## v1.8.0 — 2026-09-08
 
-Version DOI: recorded once minted (concept 10.5281/zenodo.22537318).
+Version DOI: 10.5281/zenodo.22663583 (concept 10.5281/zenodo.22537318).
 
 Commits `d786116`/`8954bcf` (Religious Attribution Non-Collapse), `8be7433`/`ef3adc7`/`270c2af`
 (executable-equations registrar review), `cb03ab6` (Internal-Consistency ladder + mechanical
