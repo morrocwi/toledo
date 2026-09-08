@@ -38,6 +38,61 @@ def _dump(obj) -> str:
     return json.dumps(obj, sort_keys=True, indent=1, ensure_ascii=False) + "\n"
 
 
+# --- Block 1 fix (ops/clearing/CHECKER_2026-09-08.md) --------------------
+# Every findings_<dimension>.json header discloses, via `cells_run`, which
+# cells that dimension's auditor actually examined for this run. A finding
+# id is always `<dimension>.<cell>#<hash>` (verified corpus-wide against
+# all seven ops/clearing/findings_*.json files), so a cell can be matched
+# back to any finding filed against it without inventing new bookkeeping.
+# `duplicates` carries no `cells_run` header field at all (its
+# findings_duplicates.json has no per-cell auditor header), so its cell set
+# is the fixed pair the spec's own sec.4 worked example names
+# (`exact`, `fingerprint`) plus the reader-only `contradiction` cell.
+_DUPLICATES_BASE_CELLS = ["exact", "fingerprint", "contradiction"]
+
+# Dimension -> the cell name(s) a `needs_reader_here` flag (reader_sets in
+# main()) actually refers to. These names are read off each dimension's own
+# reader-queue rule in scripts/clearing/reader_cells.py (coq: entries with a
+# coq file needing a reader verdict on `encodes_structure`; symbols: every
+# entry needing a reader verdict on `sense`; tier: the `witness_not_statement`
+# probe queue; lineage: root-layer parent edges needing a `reads_root`
+# verdict, plus probes/lineage/reader_rows.jsonl; duplicates: contradiction
+# candidate groups needing a reader verdict).
+_READER_CELLS = {
+    "tier": {"witness_not_statement"},
+    "symbols": {"sense"},
+    "coq": {"encodes_structure"},
+    "lineage": {"reads_root_sample", "restates_reader", "specializes_reader"},
+    "duplicates": {"contradiction"},
+}
+
+
+def _normalize_cell_name(raw: str) -> str:
+    """A `cells_run` header entry is sometimes a bare cell name
+    (`enum_values`) and sometimes a cell name with a parenthetical auditor
+    note (`witness_not_statement (candidate list only)`,
+    `spelling.nearmiss (reader-judged)`) -- strip the note, keep the name."""
+    if " (" in raw:
+        raw = raw.split(" (", 1)[0]
+    return raw.strip()
+
+
+def _cells_run_for(dim: str, dim_headers: dict) -> list:
+    if dim == "duplicates":
+        return list(_DUPLICATES_BASE_CELLS)
+    header = dim_headers.get(dim) or {}
+    return [_normalize_cell_name(c) for c in (header.get("cells_run") or [])]
+
+
+def _cell_from_fid(fid: str) -> str:
+    """Finding ids are `<dimension>.<cell>#<hash>` -- e.g.
+    `duplicates.exact#8b1c0e44` -> `exact`,
+    `symbols.latex_lexical.chained_superscript#80feeeb1` ->
+    `latex_lexical.chained_superscript`."""
+    head = fid.split("#", 1)[0]
+    return head.split(".", 1)[1] if "." in head else head
+
+
 _FIXED_TIER_CELL_TABLE_IDS = {
     "tier.cell_table#Th_coqc-x-wrapped_related",
     "tier.cell_table#Th_coqc-x-not_formalisable",
@@ -110,11 +165,15 @@ def unparsed_sets(dup_header):
     return readings, roots
 
 
-def grade_entry(code, is_root, code_findings, finding_meta, reader_sets):
+def grade_entry(code, is_root, code_findings, finding_meta, reader_sets, dim_headers):
     """Returns (grade, flag, blocked_at, dimensions_dict, findings_list, clearances_list)."""
     dims_out = {}
     all_findings = []
     mech_pass = {}  # dimension -> bool (no block finding)
+    # duplicates fingerprint coverage gates IC-2 specifically -- computed
+    # here (not after the loop) so the per-cell `fingerprint` value below
+    # can use it too.
+    unparsed = code in reader_sets.get("_unparsed", set())
     for dim in R.DIMENSIONS:
         fids = code_findings.get(dim, {}).get(code, [])
         cells = {}
@@ -144,13 +203,47 @@ def grade_entry(code, is_root, code_findings, finding_meta, reader_sets):
         if block_fids:
             cells["block_findings"] = block_fids
 
+        # Block 1 fix: a cell this dimension's auditor actually examined for
+        # `code` (per that dimension's own `cells_run` header) is recorded
+        # as its own evidence entry -- "pass" unless a finding against
+        # `code` names that exact cell (fail for a block finding,
+        # needs_reader for a warn finding), or the cell is a reader-only
+        # cell this code is currently queued on. A cell this dimension does
+        # not report examining stays absent (never defaults to "pass") --
+        # this is what makes "never examined" distinguishable from
+        # "examined, clean" per docs/CONSISTENCY_SPEC_v0_1.md sec.0/sec.4.
+        if not (dim == "coq" and is_root) and not (dim == "symbols" and is_root):
+            fail_cells = {_cell_from_fid(fid) for fid in block_fids}
+            warn_cells = {_cell_from_fid(fid) for fid in warn_fids}
+            reader_cells_here = _READER_CELLS.get(dim, set()) if needs_reader_here else set()
+            for cell in _cells_run_for(dim, dim_headers):
+                if cell in cells:
+                    continue  # a finding already named this exact cell below
+                if cell in fail_cells:
+                    cells[cell] = "fail"
+                elif cell in warn_cells or cell in reader_cells_here:
+                    cells[cell] = "needs_reader"
+                else:
+                    cells[cell] = "pass"
+            if dim == "duplicates":
+                cells["fingerprint"] = "unparsed" if unparsed else "parsed"
+            # A finding cell not present in cells_run (a cell name the
+            # header didn't disclose, e.g. a namespaced sub-cell like
+            # `symbols.latex_lexical.glued_macro`) still gets its own
+            # explicit entry so the finding is never orphaned from the
+            # evidence it was raised against.
+            for fid in block_fids:
+                cell = _cell_from_fid(fid)
+                cells.setdefault(cell, "fail")
+            for fid in warn_fids:
+                cell = _cell_from_fid(fid)
+                if cells.get(cell) != "fail":
+                    cells[cell] = "needs_reader"
+
         mech_pass[dim] = not block_fids
         dims_out[dim] = {"status": status, "evidence": {"cells": cells}}
         all_findings.extend(block_fids)
         all_findings.extend(warn_fids)
-
-    # duplicates fingerprint coverage gates IC-2 specifically
-    unparsed = code in reader_sets.get("_unparsed", set())
 
     ic1_ok = all(mech_pass[d] for d in R.IC1_DIMENSIONS)
     ic2_ok = ic1_ok and all(mech_pass[d] for d in R.IC2_EXTRA_DIMENSIONS) and not unparsed
@@ -255,7 +348,7 @@ def main(argv=None):
 
     def process(code, is_root, layer):
         grade, flag, blocked_at, dims_out, findings, clearances = grade_entry(
-            code, is_root, code_findings, finding_meta, reader_sets
+            code, is_root, code_findings, finding_meta, reader_sets, dim_headers
         )
         bucket = "roots" if is_root else "readings"
         histogram[bucket][grade] += 1

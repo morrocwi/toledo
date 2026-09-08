@@ -11,9 +11,18 @@
   "coq": {
    "evidence": {
     "cells": {
+     "closed_is_proof_bearing": "pass",
+     "encodes_structure_candidates": "pass",
+     "forbidden": "pass",
+     "header_parents": "pass",
+     "header_quotes": "pass",
+     "identifier_present": "pass",
+     "imported_from_resolves": "pass",
      "info_findings": [
       "coq.restates_shape#fd157b08"
-     ]
+     ],
+     "restates_shape": "pass",
+     "status_shape": "pass"
     }
    },
    "status": "needs_reader"
@@ -21,6 +30,9 @@
   "duplicates": {
    "evidence": {
     "cells": {
+     "contradiction": "pass",
+     "exact": "pass",
+     "fingerprint": "unparsed",
      "info_findings": [
       "duplicates.fingerprint.unparsed#019109ea"
      ]
@@ -30,7 +42,30 @@
   },
   "lineage": {
    "evidence": {
-    "cells": {}
+    "cells": {
+     "coq_header_parents": "pass",
+     "edge_kind_defined": "pass",
+     "ledger_assigned_event": "pass",
+     "ledger_event_code_resolves": "pass",
+     "ledger_merged_events": "pass",
+     "ledger_reason_vs_edge": "pass",
+     "ledger_retired_events": "pass",
+     "ledger_split_events": "pass",
+     "reads_reading_symbols": "pass",
+     "reads_root_sample": "needs_reader",
+     "refines_semantics": "pass",
+     "restates_equality": "pass",
+     "restates_reader": "needs_reader",
+     "root_edge_reader": "pass",
+     "root_empty_parents": "pass",
+     "specializes_instance": "pass",
+     "specializes_reader": "needs_reader",
+     "split_child_origin": "pass",
+     "split_child_verbatim": "pass",
+     "split_coverage": "pass",
+     "split_inherited_edges": "pass",
+     "split_shape": "pass"
+    }
    },
    "status": "needs_reader"
   },
@@ -39,7 +74,12 @@
     "cells": {
      "block_findings": [
       "schema.required_fields#fec7bc16"
-     ]
+     ],
+     "counts": "pass",
+     "enum_values": "pass",
+     "lineage_kinds": "pass",
+     "required_fields": "fail",
+     "root_edge_kind": "pass"
     }
    },
    "status": "fail"
@@ -47,9 +87,28 @@
   "structure": {
    "evidence": {
     "cells": {
+     "alias_collision": "pass",
      "block_findings": [
       "structure.closed_reported#ca618f1c"
      ],
+     "children_inverse": "pass",
+     "closed_reported": "fail",
+     "code_root": "pass",
+     "coq_file_present": "pass",
+     "extra.coq_file_name": "pass",
+     "extra.history_versions": "pass",
+     "extra.raw_map_inverse": "pass",
+     "extra.reads_also_target": "pass",
+     "extra.relations_target": "pass",
+     "extra.root_reachable": "pass",
+     "extra.verify_report_orphans": "pass",
+     "first_assigned_order": "pass",
+     "history_top": "pass",
+     "occurrence_map": "needs_reader",
+     "parents_resolve": "pass",
+     "primary_root": "pass",
+     "r2_iff_closed": "pass",
+     "status_note": "pass",
      "warn_findings": [
       "structure.occurrence_map#17df9e79"
      ]
@@ -59,13 +118,30 @@
   },
   "symbols": {
    "evidence": {
-    "cells": {}
+    "cells": {
+     "contradiction_candidates": "pass",
+     "hygiene": "pass",
+     "latex_lexical": "pass",
+     "registry": "pass",
+     "reserved": "pass",
+     "sense": "needs_reader",
+     "spelling": "pass",
+     "spelling.nearmiss": "pass"
+    }
    },
    "status": "needs_reader"
   },
   "tier": {
    "evidence": {
-    "cells": {}
+    "cells": {
+     "cell_table": "pass",
+     "header_tier": "pass",
+     "root_render": "pass",
+     "status_note": "pass",
+     "tier_evidence": "pass",
+     "unverified_not_closed": "pass",
+     "witness_not_statement": "pass"
+    }
    },
    "status": "pass"
   }
@@ -77,7 +153,7 @@
  ],
  "flag": "IC-F",
  "grade": "IC-0",
- "grader_commit": "8954bcfd747162c815a4a58b4bb156ef0b334ca7",
+ "grader_commit": "d42ad50fe7226b09c5a4baeabf826d988aea0dae",
  "last_lineage_event": {
   "by": "toledo-v1.5-b",
   "date": "2026-09-07",

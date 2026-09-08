@@ -117,6 +117,40 @@ def test_no_sidecar_carries_a_bare_pass_without_evidence_shape():
             assert block["status"] in ("pass", "fail", "not_checked", "needs_reader")
 
 
+def test_every_examined_cell_carries_its_own_evidence_not_a_bare_pass():
+    """Regression for ops/clearing/CHECKER_2026-09-08.md Block 1: a `pass`
+    dimension must name which cells it examined (docs/CONSISTENCY_SPEC_v0_1.md
+    sec.4's own worked example), never leave `evidence.cells` populated only
+    with the auditor's raw block/warn/info finding-id lists. This must hold
+    corpus-wide, not just on a sample, because Block 1 was itself a
+    corpus-wide defect that a 50-file sample would not have caught."""
+    _run_grader()
+    meta_keys = {"warn_findings", "info_findings", "block_findings"}
+    checked_any = False
+    for p in CONSISTENCY_DIR.glob("*.json"):
+        if p.name == "INDEX.json":
+            continue
+        doc = json.loads(p.read_text(encoding="utf-8"))
+        for dim, block in doc["dimensions"].items():
+            cells = block["evidence"]["cells"]
+            real_cells = {k: v for k, v in cells.items() if k not in meta_keys}
+            if real_cells == {"_": cells.get("_")} and "_" in real_cells:
+                # root-row not_applicable shortcut (coq/symbols on a root row)
+                continue
+            assert real_cells, (
+                f"{p.name} dimension {dim!r} has evidence.cells populated only "
+                f"with {sorted(cells.keys())} -- no named cell was examined; "
+                "this is the exact 'pass and never-examined look the same' "
+                "defect CHECKER_2026-09-08.md Block 1 found"
+            )
+            for cell, status in real_cells.items():
+                assert status in ("pass", "fail", "needs_reader", "parsed", "unparsed"), (
+                    p.name, dim, cell, status
+                )
+            checked_any = True
+    assert checked_any
+
+
 def test_findings_referenced_by_sidecars_exist_in_their_dimension_file():
     """Every finding id a sidecar cites is traceable back to a real,
     on-disk ops/clearing/findings_<dimension>.json row -- no invented ids."""
