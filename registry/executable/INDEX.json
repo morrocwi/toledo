@@ -4,12 +4,12 @@
   "generated_from_commit": "9ca306cf3bc9e6efe4ee5456ee6449abae0cb42a",
   "note": "generated (never hand-edited) by scripts/compute_executable.py -- a projection of registry/executable/*.json sidecars plus registry/reproduction_card_index.json's EXEC-* rows; docs/EXECUTABLE_EQUATIONS_v0_1.md sec.6 step 8.",
   "counts": {
-    "candidate": 2,
+    "candidate": 0,
     "reviewed_eligible": 0,
-    "reviewed_ineligible": 0,
-    "built": 0,
+    "reviewed_ineligible": 1,
+    "built": 1,
     "by_result": {
-      "PASS": 0,
+      "PASS": 1,
       "FAIL": 0,
       "ERROR": 0
     }
@@ -17,13 +17,24 @@
   "entries": [
     {
       "code": "EQ-001/P.45.v1",
-      "status": "candidate",
-      "ir_ref": "registry/executable/EQ_001__P_45_v1.json"
+      "status": "reviewed_ineligible",
+      "ir_ref": "registry/executable/EQ_001__P_45_v1.json",
+      "reviewed_by": "chair as registrar under founder delegation BBL-2026-09-08-243"
     },
     {
       "code": "EQ-001/P.63.v1",
-      "status": "candidate",
-      "ir_ref": "registry/executable/EQ_001__P_63_v1.json"
+      "status": "built",
+      "ir_ref": "registry/executable/EQ_001__P_63_v1.json",
+      "reviewed_by": "chair as registrar under founder delegation BBL-2026-09-08-243",
+      "reproduction_card": {
+        "citation": {
+          "repo": "glosa",
+          "commit": "4915694f55c78251499c76d2f70bfa7e105b187a",
+          "path": "cases/repro/EXEC-EQ_001__P_63_v1.json",
+          "id": "EXEC-EQ_001__P_63_v1"
+        },
+        "result_status": "PASS"
+      }
     }
   ]
 }

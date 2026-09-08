@@ -31,10 +31,10 @@
     },
     {
       "name": "c",
-      "domain": "Q",
+      "domain": "Q_nonzero",
       "role": "input",
       "unit": null,
-      "constraint": null
+      "constraint": "c != 0 (denominator c^4; Q_nonzero tightened at review from the classifier's default \"Q\" -- see eligibility.review_note)"
     },
     {
       "name": "r_{s}",
@@ -92,11 +92,15 @@
   "transcendental": null,
   "eligibility": {
     "classifier_candidate": true,
-    "reviewed_by": null,
-    "reviewed_at": null,
-    "review_note": null
+    "reviewed_by": "chair as registrar under founder delegation BBL-2026-09-08-243",
+    "reviewed_at": "2026-09-08",
+    "review_note": "Source statement (registry/CANONICAL.json code EQ-001/P.63.v1, statement.latest, quoted verbatim): \"r_s = 2\\cdot G\\cdot E/c^4, admitted only as a declared calculator identity, not a derived theorem of this domain.\" Reviewed under founder delegation BBL-2026-09-08-243 item 2 (human-registrar role for the executable layer delegated to the chair; I act for the chair and record that delegation verbatim here). Character-by-character check of this IR against the canonical statement: parsed_repr 'Eq(r_{s}, (E*(2*G))/(c**4))' reads as r_{s} = (2*G*E)/c^4 -- exactly the statement's calculator identity r_s = 2*G*E/c^4, with the trailing qualifying clause ('admitted only as a declared calculator identity, not a derived theorem of this domain') correctly excluded from the equation tree (it is prose, not part of the r_s=... relation) and instead already carried, verbatim, in source_statement.text and CANONICAL.json's own tier_in_genesis_verbatim (class=DECLARED_FORMULA). IR tree walked node by node: lhs={op:var,name:r_{s}} (the sole declared output variable, matches parsed_repr's LHS exactly); rhs=div(mul(mul(const 2,var G),var E), pow(var c, const 4)) = (2*G*E)/c^4, matching parsed_repr's RHS term-for-term (mul nesting is associative/commutative per sec.3, no semantic difference from (E*(2*G))). Every identifier occurring in lhs/rhs (r_{s}, G, E, c) is a single declared variable in variables[] with no bare multi-letter word or dropped clause -- none of the two S1-disclosed false-positive hazards (prose-as-symbol-product; formula-fragment-in-longer-prose) apply here, because the entire statement IS the bare formula plus one clearly-separated qualifying clause the extractor correctly did not fold into the tree. c's domain tightened from the classifier's default \"Q\" to \"Q_nonzero\" at this review (c appears as the base of pow(c,4) in the denominator; Q would silently permit a sample input of 0, which ir_kernel.py's div node must reject -- Q_nonzero declares this up front rather than relying on a runtime division-by-zero exception). sample_inputs authored below, three rows, all pre-registered before any run, hand-verified on Q (Fraction arithmetic, shown here, never tuned after seeing a result): (a) G=2, E=3, c=1 -> r_s = 2*2*3/1^4 = 12/1 = 12. (b) G=1/2, E=3/4, c=3 -> r_s = 2*(1/2)*(3/4)/3^4 = (1*(3/4))/81 = (3/4)/81 = 3/324 = 1/108 (gcd(3,324)=3). (c) G=1, E=1, c=2 -> r_s = 2*1*1/2^4 = 2/16 = 1/8. All three lie inside the declared domains (E,G in Q; c in Q_nonzero, none of the three c values is 0). Eligible: this IR is a faithful, exact rendering of the statement's calculator identity."
   },
-  "sample_inputs": [],
-  "status": "candidate",
-  "drift_note": "Mechanically extracted candidate (S1, extract_ir.py). NOT reviewed. sample_inputs intentionally left empty (sec.3: human-declared at review time). variables[].domain defaulted to \"Q\" pending human confirmation of the true domain from the source statement. Output variable kept under its own parsed name (not renamed to a generic \"result\") for direct traceability back to source_statement.text. bare_word_risk: unescaped word(s) ['admitted', 'as', 'calculator', 'declared', 'derived', 'domain', 'identity', 'not', 'of', 'only', 'theorem', 'this'] in source text may have been shattered into single-letter products by sympy's parser — CONFIRM parsed_repr against source_statement.text before any promotion"
+  "sample_inputs": [
+    {"G": "2", "E": "3", "c": "1"},
+    {"G": "1/2", "E": "3/4", "c": "3"},
+    {"G": "1", "E": "1", "c": "2"}
+  ],
+  "status": "built",
+  "drift_note": "Mechanically extracted candidate (S1, extract_ir.py), reviewed and promoted to reviewed_eligible (see eligibility.review_note), then to built: scripts/executable/ir_eval.py loaded and structurally validated this sidecar and evaluated it cleanly against all three sample_inputs rows (12, 1/108, 1/8 -- matching eligibility.review_note's hand arithmetic exactly), and scripts/executable/crosscheck_runner.py --code EQ-001/P.63.v1 then ran the Python reference and the JS twin against the same three rows and filed cases/repro/EXEC-EQ_001__P_63_v1.json in the glosa checkout with result.status PASS (sec.3's own built-state definition: 'S2 has generated no per-entry file, but has validated this IR loads and evaluates cleanly against sample_inputs under the shared kernel'). c's domain tightened Q -> Q_nonzero at review (see eligibility.review_note); E and G left as the classifier's default \"Q\" -- no narrower domain is asserted by the source statement for either. Output variable kept under its own parsed name (r_{s}, not renamed to a generic \"result\") for direct traceability back to source_statement.text."
 }
