@@ -1,0 +1,142 @@
+[
+  {
+    "source": "URCF-RTPE Turbulence Relaxation-Inertia + Direct LP Closure v2.2",
+    "location": "Downloads/URCF_RTPE_TURBULENCE_RELAXATION_INERTIA_DIRECT_LP_CLOSURE_v2_2_STANDALONE_PROOF_PACK.yaml (byte-identical duplicate '(1)' confirmed via md5, not separately extracted)",
+    "claim_verbatim": "tau_R dI_R/dt + L_R I_R = S_R + eta_R (EQ-URCF-TURB-004); NS cascade residual: H_q^{rem,v2}=[H_q^{hid}-C_q^{tr}-C_q^p-C_q^{inc}-C_q^{nonalign}-C_q^{hf}-C_q^{para}]_+; own reported result v2_sup_theta_rem=0.0, v2_sum_H_rem=0.0 on finite synthetic classes (grids 16/24/32, nu in {0.1,0.01,0.001}, 7 hand-picked cases)",
+    "own_stated_tier": "T1/T3_protocol; run verdict PASS_WITH_LIMITS; explicit forbidden wording list includes 'solved Navier-Stokes', 'proved global regularity', 'turbulence universally closed'",
+    "verified_tier": "Dr (derivation), finite_diagnostic (numbers relayed from source's own run log, not independently reproduced -- no harness code was supplied with the YAML)",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": {"code": "PROP-URCF-01 (proposal, not yet CANONICAL), instance_of weld/S.01.v1 and root/EQ-008; does_not_resolve root/T2", "derived_via": "instance_of"},
+    "strengthen_note": "Supply the numerical harness so v2_sup_theta_rem=0 can be independently re-run; encode proof_02 semigroup stability as a finite-dimensional Coq lemma over Q; run the already-specified component-ablation matrix (proof_10) to rule out C_hf/C_para over-absorption."
+  },
+  {
+    "source": "URS-RDT Master v0.11 -- Turbulence-Integrated Multimode Operator (living-geometry canonical form)",
+    "location": "Downloads/URS_RDT_MASTER_v0_11_TURBULENCE_INTEGRATED.md and matching .yaml",
+    "claim_verbatim": "tau_R delta_t I_{R,n} + L_R[I_{R,n},Theta_n] I_{R,n} = S_{R,n} + eta_{R,n}; L_R[I,Theta]I = L_R^(+)[Theta]I + L_R^(-)[Theta]I + N_R[I;Theta]",
+    "own_stated_tier": "canonical_architecture_candidate; explicitly NOT claiming 'an unconditional solution of three-dimensional Navier-Stokes' or 'universal turbulence closure'; 'The proof that RTPE is an exact reduction of the complete DRL-Telegraph architecture is currently open'",
+    "verified_tier": "Dr",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": {"code": "root/T2 (Genesis gap this document sits on top of, general nonlinear endogenous L_R[I_R] case, [Open])", "derived_via": "names_open_gap"},
+    "strengthen_note": "Derive and machine-check the moving-basis identity (Delta Phi_n = V_{n+1} Delta phi_n + (V_{n+1}-V_n) phi_n) for a small finite graph with an explicit Theta_n update rule -- the smallest concrete instance of the T2 gap, plausibly Coq-over-Q encodable."
+  },
+  {
+    "source": "InfoSpectralCeilingSharp.v (Anderson-Morley curvature ceiling, witness form)",
+    "location": "Downloads/InfoSpectralCeilingSharp.v",
+    "claim_verbatim": "for any exact node pair (lam,x) ... there is an edge (u,v) of E with Qabs lam <= deg u + deg v; corollary under curvature floor: lam <= 4 - Fmin",
+    "own_stated_tier": "Expected: Print Assumptions => Closed under the global context (self-expected axiom-free)",
+    "verified_tier": "Th_coqc",
+    "coq_evidence": {"file": "Downloads/InfoSpectralCeilingSharp.v", "compiled": true, "print_assumptions": "esum_abs_triangle, exists_max_edge, acontrib_bound, pair_term_bound, anderson_morley_witness, sharp_curvature_ceiling: all 6 = Closed under the global context"},
+    "toledo_attachment": null,
+    "strengthen_note": "General graph-Laplacian spectral fact, not turbulence-specific; would need an explicit instantiation lemma connecting this graph object to the turbulence L_R's specific dyadic-shell graph to be cited as turbulence evidence."
+  },
+  {
+    "source": "RDL_GammaSpectral.v (Dirichlet energy / L_R PSD, discrete Laplacian precursor)",
+    "location": "Downloads/RDL_GammaSpectral.v",
+    "claim_verbatim": "energy_nonneg: nonneg weights implies energy >= 0 (L_R PSD, Fiedler); laplacian_stencil: [1,-2,1] second difference IS the discrete negative Laplacian",
+    "own_stated_tier": "coqc 8.18.0, axiom-free discrete core (self-stated)",
+    "verified_tier": "Th_coqc",
+    "coq_evidence": {"file": "Downloads/RDL_GammaSpectral.v", "compiled": true, "print_assumptions": "energy_nonneg, energy_edge_gauge, laplacian_stencil, secondDiff_quadratic, secondDiff_readout_invariant: all 5 = Closed under the global context"},
+    "toledo_attachment": null,
+    "strengthen_note": "Proves L_R PSD in general; turbulence-specific citation requires the same instantiation step as InfoSpectralCeilingSharp.v."
+  },
+  {
+    "source": "RDL_SpectralCeiling.v (Rayleigh-quotient / degree-bound spectral ceiling)",
+    "location": "Downloads/RDL_SpectralCeiling.v",
+    "claim_verbatim": "form_degree_bound: x^T L x <= 2*dmax*||x||^2; rayleigh_ceiling: lam <= 2*dmax; step_ratio_window: dimensionless step ratio lands in [0,4]",
+    "own_stated_tier": "candidate for coqc 8.18.0, axiom-free target (self-stated)",
+    "verified_tier": "Th_coqc",
+    "coq_evidence": {"file": "Downloads/RDL_SpectralCeiling.v", "compiled": true, "print_assumptions": "deg_node_swap, form_degree_bound, rayleigh_nonneg, rayleigh_ceiling, mode_product_ceiling, step_ratio_window: all 6 = Closed under the global context"},
+    "toledo_attachment": null,
+    "strengthen_note": "step_ratio_window is closer to a CFL-type numerical stability bound; general graph fact, not turbulence-specific by itself."
+  },
+  {
+    "source": "URCF_RD_All.v -- Module Graph (RDL_Graph.v), kernel_connected theorem (lambda_2 > 0 discharge)",
+    "location": "Downloads/URCF_RD_All.v",
+    "claim_verbatim": "In the URCF frame this IS the retained order D plus the geometry operator L_R = D_W - W. Here we mechanize the symmetric-weight graph-Laplacian spectral facts that BOTH the URCF turbulence (RTPE) and DHRG proof packs assume as a premise (Delta_spec = lambda_2 > 0). kernel_connected: connected V => (energy V x == 0 => x constant on V) ... ker L_R = constants <=> the graph is connected. (=> the assumed lambda_2 > 0 premise is now a theorem.)",
+    "own_stated_tier": "VERIFIED (coqc 8.18.0), axiom-free (self-stated in file header)",
+    "verified_tier": "Th_coqc",
+    "coq_evidence": {"file": "Downloads/URCF_RD_All.v", "compiled": true, "print_assumptions": "215 Print Assumptions calls total: 212 = Closed under the global context (including Graph.kernel_connected, Graph.energy_nonneg, Graph.energy_const, Graph.energy_zero_edge); 2 = Axioms: Classical_Prop.classic (Con_PA_classical / RD.Con_PA_classical, unrelated PA-consistency lemmas, not axiom-free, not turbulence-relevant)"},
+    "toledo_attachment": {"code": "root/EQ-008 (L_R := D_W - W)", "derived_via": "discharges_assumed_premise (lambda_2 > 0 zero-mode characterization for connected graphs)"},
+    "strengthen_note": "Strongest result in this sweep for the turbulence L_R's own stated assumptions. Add an explicit lemma connecting the turbulence pack's specific dyadic-shell L_R instance to this general connected-graph kernel theorem to close the citation gap honestly."
+  },
+  {
+    "source": "unified_spine_blowup_control.py (mislabeled as Coq by folder name; actually Python)",
+    "location": "Downloads/coq_fixed/unified_spine_blowup_control.py",
+    "claim_verbatim": "M Phi'' + D Phi' + K L_R Phi + g Phi^3 = J (PGFT Eq.49); dE/dt = <Phi',J> - <Phi',D Phi'>; smoother (D Phi' + K L_R Phi) vs turbulence-like forcing (g Phi^3 + J); enough damping D => energy bounded (no blow-up), D=0 => energy can grow without bound",
+    "own_stated_tier": "Claim tier: finite_diagnostic (code units). NOT a proof of Navier-Stokes regularity (self-stated in docstring)",
+    "verified_tier": "finite_diagnostic",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": null,
+    "strengthen_note": "Re-run on the actual multimode dyadic-shell state space used by EQ-URCF-TURB-004 rather than a toy scalar field on a 1-D ring."
+  },
+  {
+    "source": "retained_spectral_credibility_all.zip (unzipped, checked, unrelated)",
+    "location": "Downloads/retained_spectral_credibility_all.zip (contains credibility-ubuntu-py312.zip, credibility-ubuntu-py311-jax.zip, credibility-macos-py311.zip, each one JSON report)",
+    "claim_verbatim": "ACCEPT supports reproducibility and correctness for the declared and adversarial one-dimensional finite-diagnostic suite. Scaling data is reported across k and N; it does not imply universal solver dominance.",
+    "own_stated_tier": "ACCEPT (verdict field, all 3 platforms)",
+    "verified_tier": "not_turbulence_relevant",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": null,
+    "strengthen_note": "No .v files inside; zero grep matches for turbulence/navier/stokes across all three JSONs; confirmed unrelated one-dimensional spectral-credibility suite, not fluid dynamics."
+  },
+  {
+    "source": "cpg_solver navier_stokes_2d.py -- 2D incompressible Navier-Stokes flagship solver (Taylor-Green vortex)",
+    "location": "ANSE.ASIA/cpg/cpg_solver/cpg_solver/solvers/navier_stokes_2d.py; ANSE.ASIA/cpg/cpg_solver/cpg_solver/registry/solver_cards/navier_stokes_2d.card.yaml; ANSE.ASIA/cpg/cpg_solver/tests/test_navier_stokes_2d.py",
+    "claim_verbatim": "pseudo-spectral (vorticity-streamfunction, RK4) approximation of 2D incompressible Navier-Stokes -- Taylor-Green vortex; n={n}, nt={nt}; vorticity nRMSE={nrmse} vs exact; energy-decay error={energy_decay_error}. NOT a proof, NOT a DNS/CFD replacement, NOT a turbulence claim. (honest_report property, verbatim)",
+    "own_stated_tier": "claim_tier: benchmark_candidate (card.yaml); forbidden_use: [proof_of_navier_stokes, proof_of_turbulence, cfd_or_dns_replacement]",
+    "verified_tier": "finite_diagnostic",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": null,
+    "strengthen_note": "pytest tests/test_navier_stokes_2d.py -v run this pass: 4 passed, 0 failed (test_matches_exact_to_spectral_precision, test_kinetic_energy_decays_as_exp_minus_4_nu_t, test_decay_rate_changes_with_viscosity, test_failcloses_on_bad_inputs). Register the Taylor-Green exact solution and error bound as a Toledo occurrence; extend to a genuinely turbulent (non-laminar-decaying) test case."
+  },
+  {
+    "source": "research_universal_solver -- test_graph_navier_stokes.py and README 'four turbulence bricks'",
+    "location": "ANSE.ASIA/research_universal_solver/scripts/test_graph_navier_stokes.py (docstring only, not run); ANSE.ASIA/research_universal_solver/README.md",
+    "claim_verbatim": "Worked example: the four turbulence bricks (InfoGlobalLaminarReadout / InfoDiffusionMaxPrinciple / InfoMonotoneMaxPrinciple / InfoSkewNotMonotone) + predictions P1-P3. (README.md, quoted as permitted public-facing text)",
+    "own_stated_tier": "Tiers (never collapse): Th_coqc (axiom-free Q, Print Assumptions Closed) / finite_diagnostic (measured) / Dr (stance) / Open/+reals (needs infinity) -- general repo-wide tier discipline stated in README",
+    "verified_tier": "not_independently_verified_this_pass",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": "not run -- proprietary LICENSE (PROPRIETARY LICENSE, ALL RIGHTS RESERVED) read in full; per task instruction, code was not run or copied at length; repo's own internal index self-reports Th_coqc for InfoGlobalLaminarReadout_attempt.v and InfoMonotoneMaxPrinciple_attempt.v but this was not independently compiled by me"},
+    "toledo_attachment": null,
+    "strengthen_note": "If the founder authorizes a future in-repo (internal-only, license-respecting) pass, independently re-run Print Assumptions on the two named .v attempt files rather than relaying the repo's own self-reported tier."
+  },
+  {
+    "source": "Zenodo 18164015 -- Causal Calculus: Primitive Aggregation under Finite Causal Access (Causal Navier-Stokes discretization)",
+    "location": "ANSE.ASIA/toledo/ops/causal_sweep/candidates_part2.json (record_id 18164015, eq_label 'Causal Navier-Stokes'); ANSE.ASIA/toledo/ops/causal_sweep/txt/18164015.txt",
+    "claim_verbatim": "(u_n - u_{n-1})/eps_t + div_c(u_{n-1} tensor u_{n-1}) = -(1/rho)*grad_c p_n + nu*Laplacian_c u_{n-1} + f_{n-1}, div_c u_n = 0",
+    "own_stated_tier": "tier_as_stated: unstated",
+    "verified_tier": "Dr",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": null,
+    "strengthen_note": "This is a definitional discretization of standard NS with an implicit-Euler step, not a theorem; no proof or numerical check present in extracted material. No Toledo occurrence attached in this pass."
+  },
+  {
+    "source": "Zenodo 18105213 -- Note: Causal State History as a Structural Constraint on Three Problems in Mathematical Physics (Discussion Route) -- Theorem 2, history-aware flux closure (Navier-Stokes conditional no-blow-up)",
+    "location": "ANSE.ASIA/toledo/ops/causal_sweep/candidates_part2.json, judged_part2.json (record_id 18105213, eq_label 'Thm 2'); full text ANSE.ASIA/toledo/ops/causal_sweep/txt/18105213.txt",
+    "claim_verbatim": "Theorem 2 (History-aware flux closure with constants (conditional route)). If Integral_0^T Sum_lambda lambda*Phi_lambda(t) dt <= C0 * Integral_0^T Integral_0^t K(t-s)*nu*||grad u(s)||_{L2}^2 ds dt, with kappa=||K||_{L1} and C0*kappa <= theta < 1, then for any critical norm ||u||_{Xcrit}, sup_t ||u(t)||^2_{Xcrit} <= (1/(1-theta))*(||u0||^2_{Xcrit} + C1*nu^{-1}*||u0||^2_{L2}); hence no finite-time blow-up.",
+    "own_stated_tier": "Theorem (conditional route); own caveat verbatim: 'the inequality itself is the hard part and is not proved here'; abstract: 'No open problem is claimed to be solved'; closing note: 'not to advance or replace existing proofs'",
+    "verified_tier": "Dr",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": {"code": "specialises weld/M.01.v1 (per judged_part2.json verdict: new_branch)", "derived_via": "specialises"},
+    "strengthen_note": "The paper's own honest answer is correct: prove the flux-closure premise (Assumption 2 + the inequality) for a genuine admissible-kernel class, or the conditional route stays exactly that. This is the same open uniform-flux/residual-storage-bound gap independently named by source 1's continuum_theorem_target and source 2's root/T2 -- three documents converge on one open analytic gap."
+  },
+  {
+    "source": "Peripheral mentions across workspace (grouped; each confirmed not dedicated turbulence content)",
+    "location": "Downloads/PGFT_Roots_of_Mathematics_and_Geometry_RAG.md; Downloads/info_physics_spectrum_ai_engineer_operator_ultimate_standalone_v2_2.md; Downloads/info_physics_spectrum_ai_engineer_operator_runtime_grade_v2_3.md; Downloads/info_physics_ai_workspace_readout_operator_theory_standalone_v2_4.yaml; Downloads/RIG.txt; Downloads/DHRG_DIRECTIONAL_RESONANCE_SPECTRAL_PROOF_PACK_v2_0.yaml; Downloads/INFORMATION_CHEMISTRY_v0_6_STANDALONE/information_chemistry_v0_6/INFORMATION_CHEMISTRY_CANON_v0_6_STANDALONE.yaml; Downloads/readout_alphabet_note.tex; Downloads/READOUT_GENESIS_UNIVERSAL_TECHNICAL_WHITEPAPER_v1.2_EN.yaml.pseudo.dag.md; Downloads/INDEX.md",
+    "claim_verbatim": "Fluid: partial_t u + (u.grad)u = -grad p + nu*Delta u + f, div u = 0 (PGFT_Roots, listed as one of six example native force forms only); turbulence_ruling (INFORMATION_CHEMISTRY): 'A second-order recurrence can encode inertia or relaxation, but turbulence additionally requires checked nonlinear transfer, multiscale transport, boundary conditions, closure, and observables. The static v0.6 calculation neither infers nor tests a turbulence closure.'",
+    "own_stated_tier": "varies; all either disclaim overclaim (e.g. 'Never overclaim full GR/QFT/SM/Navier-Stokes/global theory') or use 'turbulence' as a metaphor for a signal-quality gate unrelated to fluid dynamics",
+    "verified_tier": "not_turbulence_relevant",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": null,
+    "strengthen_note": "No action needed; confirmed by direct grep/read that these belong to larger unrelated programs (force-registry, engineering-physics domain cards, information chemistry, readout-alphabet) and mention turbulence/NS only in passing or as a disclaimer."
+  },
+  {
+    "source": "Candidate files checked and confirmed to contain zero turbulence/NS/fluid content",
+    "location": "Downloads/URCF_PGFT_Crosswalk_Addendum.pdf and .tex; Downloads/EASM_SPINE_ARCHITECTURE.md; Downloads/Information_Semantics_of_Arithmetic_URCF.md; Downloads/ONE_SPINE_final.pdf; Downloads/URCF_Verified_Foundations_and_Reproducible_Computation.pdf (and its -1 duplicate)",
+    "claim_verbatim": null,
+    "own_stated_tier": null,
+    "verified_tier": "not_turbulence_relevant",
+    "coq_evidence": {"file": null, "compiled": false, "print_assumptions": null},
+    "toledo_attachment": null,
+    "strengthen_note": "Checked via grep (text files) and pdftotext|grep (PDFs) for turbulen/navier/stokes/vorticity/cascade/reynolds/incompressib -- zero matches in all files. Belong to a larger, unrelated 'unified spine' / force-registry research program; confirmed off-topic, not assumed."
+  }
+]
