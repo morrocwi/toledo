@@ -497,11 +497,31 @@ def build_card(sidecar: dict, row_results: "list[dict]", sample_inputs: "list[di
             "declared_at": declared_at,
         },
         "oracle": {
-            "kind": "independent_implementation",
+            # Integration fix (2026-09-08, R1-1 finding): this was "independent_implementation"
+            # unconditionally, which registry/SCHEMA.md and compute_resistance.py's own
+            # EXTERNAL_ORACLE_KINDS both reserve for a check against something genuinely
+            # external to Toledo's own generator -- but the Python reference and the JS twin
+            # both walk the SAME IR tree (registry/executable/<code>.json), produced by the SAME
+            # extraction pipeline, from the SAME Toledo statement. Agreement between them proves
+            # two correctly-implemented rational-arithmetic walkers compute the same function of
+            # the same tree the same way; it does NOT prove that tree was extracted correctly
+            # from the statement (a mis-extraction bug, e.g. the disclosed bare-multi-letter-word
+            # or multi-letter-superscript shattering in ops/executable_classifier_report.md,
+            # would reproduce identically in both twins and still PASS). `twin_consistency`
+            # names this honestly: it holds R3 (a reproducible, hash-frozen, ai_at_runtime==0 run
+            # happened) but is deliberately excluded from compute_resistance.py's
+            # EXTERNAL_ORACLE_KINDS, so it can never hold R4/R6 the way a genuine external-oracle
+            # kind can -- see glosa/schema/reproduction_card.schema.json's oracle.kind enum and
+            # glosa/methodology/P22_reproduction_ledger.md's own "why oracle.kind has exactly six
+            # values" note.
+            "kind": "twin_consistency",
             "source": (
-                "site/static/js/_ir_eval.js twin, run via node -- a different algorithm family "
-                "per transcendental.algorithm_js than the Python reference (see this code's own "
-                "IR sidecar, registry/executable/" + mangle_code(code) + ".json)"
+                "site/static/js/_ir_eval.js twin, run via node -- walks the SAME IR tree "
+                "(registry/executable/" + mangle_code(code) + ".json) as the Python reference "
+                "via a different algorithm family per transcendental.algorithm_js where "
+                "applicable; both were extracted, once, from the same Toledo statement by the "
+                "same pipeline, so this is a same-IR twin-consistency check, never a genuinely "
+                "independent implementation of the underlying claim"
             ),
             "doi_or_url": None,
             "version": None,

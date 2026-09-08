@@ -153,6 +153,33 @@ test("disallowed function is rejected", () => {
   );
 });
 
+// ---------------------------------------------------------------------
+// R2-1 integration fix (2026-09-08): QFrac.roundToPrecision must round a negative exact tie the
+// SAME way scripts/executable/ir_kernel.py::_round_to_precision does (Python's divmod-based
+// rule: floor division, remainder always in [0, denominator), every exact tie toward
+// +infinity) -- these are the exact hand-verified examples the finding named. Before this fix
+// QFrac.roundToPrecision(-3/2, 0) returned -2 (away from zero); the Python reference returns -1.
+// ---------------------------------------------------------------------
+
+const ROUND_TO_PRECISION_CASES = [
+  { num: -3n, den: 2n, digits: 0, expectedNum: -1n, expectedDen: 1n },  // -1.5 exact tie -> -1
+  { num: -5n, den: 2n, digits: 0, expectedNum: -2n, expectedDen: 1n },  // -2.5 exact tie -> -2
+  { num: -1n, den: 2n, digits: 0, expectedNum: 0n, expectedDen: 1n },   // -0.5 exact tie -> 0
+  { num: 3n, den: 2n, digits: 0, expectedNum: 2n, expectedDen: 1n },    // +1.5 exact tie -> 2 (unaffected side)
+  { num: -7n, den: 4n, digits: 1, expectedNum: -17n, expectedDen: 10n }, // -1.75 exact tie at 1 digit -> -1.7
+];
+
+for (const c of ROUND_TO_PRECISION_CASES) {
+  test(`roundToPrecision negative-tie case ${c.num}/${c.den} @ ${c.digits} digits`, () => {
+    const result = new QFrac(c.num, c.den).roundToPrecision(c.digits);
+    const expected = new QFrac(c.expectedNum, c.expectedDen);
+    assert.ok(
+      result.eq(expected),
+      `${c.num}/${c.den} rounded to ${c.digits} digits: got ${result.toString()}, expected ${expected.toString()}`
+    );
+  });
+}
+
 test("QFrac.fromString rejects a malformed literal", () => {
   assert.throws(() => QFrac.fromString("not-a-number"), (err) => err instanceof QFracError);
 });

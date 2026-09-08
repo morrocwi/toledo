@@ -167,19 +167,26 @@
 
     /**
      * Round to `digits` decimal digits, returned as an exact QFrac whose denominator divides
-     * 10**digits -- integer arithmetic only (BigInt divmod, round-half-up), never a float.
-     * Mirrors scripts/executable/ir_kernel.py::_round_to_precision exactly, so both
-     * interpreters bound the bit-length of a transcendental accumulator the identical way.
+     * 10**digits -- integer arithmetic only (BigInt divmod, floor + round-half-up), never a
+     * float. Mirrors scripts/executable/ir_kernel.py::_round_to_precision EXACTLY, digit for
+     * digit, so both interpreters bound the bit-length of a transcendental accumulator the
+     * identical way -- including at a negative exact tie (Python's `divmod` always yields a
+     * remainder in [0, denominator), i.e. floor division, and rounds every exact tie toward
+     * +infinity; this method reproduces that same rule via a floor-corrected remainder rather
+     * than a magnitude/sign-based tie-break, which previously rounded a negative exact tie
+     * away from zero -- the opposite direction from the Python reference).
      */
     roundToPrecision(digits) {
       const scale = 10n ** BigInt(digits);
       const numerator = this.num * scale;
-      const denominator = this.den;
+      const denominator = this.den; // always > 0 -- QFrac's own constructor invariant
       let quotient = numerator / denominator;
-      const remainder = numerator % denominator;
-      if (2n * bigAbs(remainder) >= bigAbs(denominator)) {
-        quotient += numerator >= 0n ? 1n : -1n;
+      let remainder = numerator % denominator;
+      if (remainder < 0n) {
+        remainder += denominator;
+        quotient -= 1n;
       }
+      if (2n * remainder >= denominator) quotient += 1n;
       return new QFrac(quotient, scale);
     }
 

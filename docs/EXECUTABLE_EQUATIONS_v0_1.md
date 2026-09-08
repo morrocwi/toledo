@@ -299,12 +299,20 @@ the Makefile immediately alongside `resistance:` and before `build:`), writes:
   "ir_ref": "registry/executable/EQ_045__P_03_v1.json",
   "reviewed_by": "<human registrar id>",
   "reproduction_card": {"citation": {"repo": "glosa", "commit": "<sha>",
-                                      "path": "cases/repro/EXEC-EQ_045__P_03_v1.json"}}
+                                      "path": "cases/repro/EXEC-EQ_045__P_03_v1.json"},
+                          "result_status": "PASS" | "FAIL" | "ERROR"}
 }
 ```
 
 `ir_ref`, `reviewed_by`, and `reproduction_card` are **omitted, not null**, whenever no IR sidecar
-exists for a code yet — the same three-state convention `owner_year`/`drift_note` already use. The
+exists for a code yet — the same three-state convention `owner_year`/`drift_note` already use.
+**`reproduction_card.result_status`** (added 2026-09-09, R1-2 integration fix) is read verbatim
+from the filed card's own `result.status` in `registry/reproduction_card_index.json` — never
+recomputed — and is itself omitted (not null) whenever the card exists but has not yet run
+(`result: null`, still `PENDING`). A disclosed `FAIL` is carried here exactly as prominently as a
+`PASS`: this is the one field that lets `registry/executable/INDEX.json` and `/browse/`/`/about/`
+(§7) distinguish "filed and PASSED" from "filed and FAILED" without opening the card file, instead
+of collapsing both into the same binary "has a card" signal. The
 **vast majority of the 1,267 entries carry no `executable` block at all**, by design (§1.4) — this
 is never rendered as "false" without the domain-honesty note (§9.3).
 
@@ -400,9 +408,20 @@ Per code, the runner:
    `register_reproduction_evidence.py` both already use — no absolute path, no username, ever
    written into the card), with:
    - `toledo_codes: ["<code>"]`
-   - `oracle: {"kind": "independent_implementation", "source": "site/static/js/_ir_eval.js twin,
-     run via node — a different algorithm family per transcendental.algorithm_js than the Python
-     reference (see IR sidecar)"}`
+   - `oracle: {"kind": "twin_consistency", "source": "site/static/js/_ir_eval.js twin, run via
+     node — walks the SAME IR tree as the Python reference, extracted once from the same Toledo
+     statement by the same pipeline, via a different algorithm family per
+     transcendental.algorithm_js where applicable (see IR sidecar)"}`. **Integration fix
+     (2026-09-08):** this is `"twin_consistency"`, never `"independent_implementation"` —
+     the two evaluators are generated to walk the *same* IR tree the *same* extraction pipeline
+     produced from the *same* statement, so agreement between them is evidence a mis-extraction
+     bug would reproduce identically on both sides (`ops/executable_classifier_report.md`'s own
+     disclosed bare-word/superscript hazards); it is real, filed, hash-frozen evidence and holds
+     R3 (§6 step 3, a reproducible `ai_at_runtime==0` run happened), but
+     `scripts/compute_resistance.py::EXTERNAL_ORACLE_KINDS` deliberately excludes it, so it can
+     never hold R4/R6 the way a genuine external-oracle `oracle.kind` can (registry/SCHEMA.md,
+     `glosa/schema/reproduction_card.schema.json`'s six-value enum,
+     `glosa/methodology/P22_reproduction_ledger.md`).
    - `environment.packages: {}` (both reference and twin are stdlib/BigInt-only; `node` itself is
      named in `run.command`, not as a Python package)
    - `run.ai_at_runtime: 0` (a mechanical comparison of two already-written, already-reviewed
@@ -451,10 +470,18 @@ enhancement over the same data").
   check. The filed Reproduction Card for this entry, run offline, is the evidence" with a link to
   the card's citation — this line exists specifically because a live browser result must never be
   mistaken for, or wired to, the R3/R4/R6 evidence that only §6's filed card provides (§13 item 10).
-- `/browse/` gains one column, `executable: yes/no`, computed straight from `executable.status`
-  (§3.1) — accompanied, once per page (not per row), by the domain-honesty note from §1.4, verbatim,
-  so the column is never misread as a rigor or completeness score across domains. `/about/`'s
-  corpus-wide tally carries the identical note next to its own count.
+- `/browse/` gains one column showing the entry's own state, computed straight from
+  `executable.status` (§3.1) and, when present, `executable.reproduction_card.result_status`
+  (§3.1, R1-2 integration fix, 2026-09-08): **not a binary `yes/no`** — `not filed` (no sidecar,
+  or a sidecar not yet `reviewed_eligible`/`built`) \| `filed — PASS` \| `filed — FAIL` \|
+  `filed — ERROR`. A binary column would render a disclosed FAIL identically to an unattempted
+  entry; this repository's own README worked-cards table and P22/P23's "cited regardless of
+  outcome, never softened" discipline both require a FAIL to be exactly as visible as a PASS.
+  Accompanied, once per page (not per row), by the domain-honesty note from §1.4, verbatim, so the
+  column is never misread as a rigor or completeness score across domains. `/about/`'s corpus-wide
+  tally is the identical `not filed / PASS / FAIL / ERROR` breakdown (mirroring
+  `registry/executable/INDEX.json`'s own `counts.by_result`), never one collapsed count, and
+  carries the same domain-honesty note next to it.
 
 ---
 

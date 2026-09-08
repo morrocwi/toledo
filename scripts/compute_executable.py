@@ -78,6 +78,18 @@ import sys
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
+# Loaded by file path (sibling-file sys.path insert), not `from scripts.executable import
+# ir_eval` -- this workstation demonstrates a real collision (a third-party `scripts` package
+# installed in site-packages shadows this repository's own top-level `scripts/` directory once
+# any sys.path entry ahead of the repo root supplies one, confirmed directly in ir_eval.py's own
+# module docstring). `ir_eval.py` itself does `from . import ir_kernel`, which raises
+# `ImportError: attempted relative import with no known parent package` when loaded as a flat
+# module this way -- its own `except ImportError` fallback (module-level in ir_eval.py) then
+# inserts its own directory onto sys.path and imports `ir_kernel` as a plain sibling module, so
+# this simple flat import still resolves correctly end to end.
+sys.path.insert(0, str(REPO_ROOT / "scripts" / "executable"))
+import ir_eval  # noqa: E402
+
 # sec.3's own sidecar status lifecycle -> sec.3.1's own CANONICAL.json `executable.status` enum.
 # The two enums use different words for the same "a human looked and said no" state
 # (`reviewed_rejected` on the sidecar vs `reviewed_ineligible` on the computed block) -- this is
@@ -118,9 +130,19 @@ def write_json(path: pathlib.Path, obj) -> None:
 
 def load_sidecars(executable_dir: pathlib.Path) -> "dict[str, dict]":
     """Returns {code: sidecar_dict}, skipping (with a stderr warning, never a crash) any file that
-    is not valid JSON or carries no `code` field -- a malformed sidecar must never silently vanish
-    from view nor abort the whole build; `tests/executable/test_ir_schema.py` is the mechanical
-    schema gate, this loader is only ever defensive here."""
+    is not valid JSON, carries no `code` field, or fails `ir_eval.validate_ir_shape` -- a
+    malformed sidecar must never silently vanish from view nor abort the whole build.
+
+    Integration fix (2026-09-08): this loader used to check for a `code` key ONLY -- a
+    schema-invalid sidecar (e.g. one whose `transcendental.algorithm_py`/`algorithm_js` disagree
+    with `ir_kernel.py`'s own declared families, or one missing a required top-level key) would
+    silently enter `registry/executable/INDEX.json` and `CANONICAL.json`'s `executable` block via
+    `make build` with no warning at all, surfacing only much later as a runtime exception from
+    `toledo_eval`, the site widget's build step, or `crosscheck_runner.py`. Calling the SAME
+    schema gate `tests/executable/test_ir_schema.py` checks (never a second, re-derived check)
+    here means a bad sidecar is reported loudly at `make executable` time instead -- fail-loud,
+    per this repo's own readout-not-truth discipline -- and is excluded from this run's counts
+    exactly like an unreadable/code-less file already was."""
     sidecars: dict[str, dict] = {}
     if not executable_dir.is_dir():
         return sidecars
@@ -135,6 +157,12 @@ def load_sidecars(executable_dir: pathlib.Path) -> "dict[str, dict]":
         code = doc.get("code")
         if not code:
             print(f"warning: skipping sidecar with no 'code' field: {path}", file=sys.stderr)
+            continue
+        try:
+            ir_eval.validate_ir_shape(doc)
+        except ir_eval.IRValidationError as exc:
+            print(f"warning: skipping schema-invalid sidecar {path} (code {code!r}): {exc}",
+                  file=sys.stderr)
             continue
         sidecars[code] = doc
     return sidecars
@@ -159,7 +187,17 @@ def find_reproduction_card_citation(code: str, repro_rows: "list[dict]") -> "dic
     citation id/path names this feature's own `EXEC-` prefix (crosscheck_runner.py's own filed-card
     convention, docs/EXECUTABLE_EQUATIONS_v0_1.md sec.6) -- so an unrelated, non-executable-feature
     Reproduction Card that happens to also cite the same code (e.g. a hand-authored EQ-045/EQ-068
-    card) is never mistaken for this feature's own filed evidence."""
+    card) is never mistaken for this feature's own filed evidence.
+
+    Returns `{"citation": {...}, "result_status": "PASS"|"FAIL"|"ERROR"}` (the last key omitted,
+    never null, when the filed card's own `result` is still unset/PENDING -- the same
+    "omitted, not null" three-state convention this module already uses elsewhere). Integration
+    fix (2026-09-08): this used to discard the row's own `result.status` entirely, so a filed,
+    disclosed FAIL was invisible everywhere this citation is surfaced (registry/executable/
+    INDEX.json, CANONICAL.json's `executable` block, and every site surface built from either) --
+    read verbatim from `reproduction_card_index.json`'s own row, never recomputed or re-derived,
+    exactly the "a disclosed FAIL is filed exactly as legitimately as a PASS" discipline P22/P23
+    already hold the rest of this registry to."""
     for row in repro_rows:
         codes = set(c for c in (row.get("toledo_codes") or []) if isinstance(c, str))
         if code not in codes:
@@ -168,7 +206,11 @@ def find_reproduction_card_citation(code: str, repro_rows: "list[dict]") -> "dic
         card_id = str(citation.get("id") or "")
         card_path = str(citation.get("path") or "")
         if card_id.startswith("EXEC-") or "EXEC-" in card_path:
-            return {k: v for k, v in citation.items() if v is not None}
+            card_info: dict = {"citation": {k: v for k, v in citation.items() if v is not None}}
+            result_status = (row.get("result") or {}).get("status")
+            if result_status:
+                card_info["result_status"] = result_status
+            return card_info
     return None
 
 
@@ -206,9 +248,9 @@ def compute_executable_block(code: str, sidecar: dict, repro_rows: "list[dict]",
     # else: omitted, not null -- sec.3.1's own three-state convention (never write null here).
 
     if block_status in ("reviewed_eligible", "built"):
-        citation = find_reproduction_card_citation(code, repro_rows)
-        if citation:
-            block["reproduction_card"] = {"citation": citation}
+        card_info = find_reproduction_card_citation(code, repro_rows)
+        if card_info:
+            block["reproduction_card"] = card_info
         # else: omitted -- no filed card for this code yet (crosscheck_runner.py has not
         # been run against it, or it has and produced no card because the sidecar itself
         # refused eligibility at run time -- either way, never fabricated).
@@ -245,7 +287,17 @@ def compute_for_canonical(canonical_doc: dict, sidecars: "dict[str, dict]",
 def build_index(sidecars: "dict[str, dict]", repro_rows: "list[dict]", computed_at: str,
                  generated_from_commit: "str | None") -> dict:
     entries = []
-    counts = {"candidate": 0, "reviewed_eligible": 0, "reviewed_ineligible": 0, "built": 0}
+    # `by_result` (Integration fix, 2026-09-08): a PASS/FAIL/ERROR breakdown over every FILED
+    # EXEC- card this index projects, kept as a sub-object under `counts` (never flattened into
+    # its sibling int keys, so `sum(counts[k] for k in ("candidate", ...))`-style callers over
+    # the sidecar-status keys are unaffected) -- so a disclosed FAIL is exactly as visible in
+    # this aggregate as a PASS, matching P22/P23's own "cited regardless of outcome" discipline
+    # (docs/EXECUTABLE_EQUATIONS_v0_1.md sec.7's `/browse/`/`/about/` tallies read this same
+    # breakdown rather than a collapsed binary "executable: yes/no" count).
+    counts = {
+        "candidate": 0, "reviewed_eligible": 0, "reviewed_ineligible": 0, "built": 0,
+        "by_result": {"PASS": 0, "FAIL": 0, "ERROR": 0},
+    }
     for code in sorted(sidecars):
         sidecar = sidecars[code]
         block = compute_executable_block(code, sidecar, repro_rows, computed_at)
@@ -255,6 +307,9 @@ def build_index(sidecars: "dict[str, dict]", repro_rows: "list[dict]", computed_
             row["reviewed_by"] = block["reviewed_by"]
         if "reproduction_card" in block:
             row["reproduction_card"] = block["reproduction_card"]
+            result_status = block["reproduction_card"].get("result_status")
+            if result_status in counts["by_result"]:
+                counts["by_result"][result_status] += 1
         entries.append(row)
     return {
         "schema_version": "executable-index-0.1",

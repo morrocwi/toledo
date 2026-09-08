@@ -214,8 +214,15 @@ error; every affected rung is then computed as `held: false` with an honest, quo
   glosa repo's own) `glosa repro run --register-toledo`. Each row: `citation`,
   `toledo_codes: array<string>`, `preregistered_prediction: {declared_at, tolerance}`,
   `oracle: {kind, source, ...}` (`kind` one of `published_value` \| `independent_implementation`
-  \| `public_dataset` \| `coq_kernel` \| `human_review` — only the first three ever back
-  R4/R6), `run: {command, ai_at_runtime, date} | null`, `result: {status, ...} | null`
+  \| `public_dataset` \| `coq_kernel` \| `human_review` \| `twin_consistency` — only the first
+  three ever back R4/R6. `twin_consistency` (added 2026-09-08, Executable Equations R1-1
+  integration fix): a same-IR cross-language comparison — e.g.
+  `scripts/executable/crosscheck_runner.py`'s Python-reference-vs-JS-twin check — where both
+  evaluators walk the identical IR tree the identical extraction pipeline produced from the
+  identical statement, so agreement is not evidence independent of that extraction; it can back
+  R3 (a real, hash-frozen, `ai_at_runtime==0` run happened) but is deliberately excluded from
+  `scripts/compute_resistance.py::EXTERNAL_ORACLE_KINDS`, so it never backs R4/R6),
+  `run: {command, ai_at_runtime, date} | null`, `result: {status, ...} | null`
   (`status` one of `PASS` \| `FAIL` \| `ERROR` \| `PENDING`), and `aowc_qualifying: bool`
   (**explicit, never inferred** from the tolerance text — sec.1's R6 row: deciding whether
   a declared tolerance is genuinely non-vacuous is the card author's own disclosure, in

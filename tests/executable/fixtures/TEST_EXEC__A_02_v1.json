@@ -13,12 +13,12 @@
   "lhs": {"op": "var", "name": "result"},
   "rhs": {"op": "call", "fn": "pi_const", "args": []},
   "transcendental": {"fn": "pi_const", "terms_param": "terms", "algorithm_py": "machin_arctan_series",
-                      "algorithm_js": "brouncker_continued_fraction", "default_terms": 10},
+                      "algorithm_js": "arctan_continued_fraction", "default_terms": 10},
   "eligibility": {
     "classifier_candidate": true,
     "reviewed_by": "test-fixture",
     "reviewed_at": "2026-09-08",
-    "review_note": "test fixture only -- exercises the REAL S2 ir_eval.py/ir_kernel.py (Machin arctan series) vs the REAL S2 _qfrac.js/_ir_eval.js (Brouncker/arctan continued fraction) transcendental comparison path end to end. Not a real Toledo code."
+    "review_note": "test fixture only -- exercises the REAL S2 ir_eval.py/ir_kernel.py (Machin arctan series) vs the REAL S2 _qfrac.js/_ir_eval.js (Machin arctan continued fraction) transcendental comparison path end to end. Not a real Toledo code."
   },
   "sample_inputs": [{}],
   "status": "built",

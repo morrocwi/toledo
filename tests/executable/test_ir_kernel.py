@@ -195,6 +195,26 @@ def test_ir_eval_requires_bare_output_variable_on_lhs() -> None:
         ir_eval.validate_ir_shape(ir)
 
 
+@pytest.mark.parametrize(
+    "value, digits, expected",
+    [
+        (Fraction(-3, 2), 0, Fraction(-1)),   # exact tie -1.5 -> Python divmod rounds toward +inf
+        (Fraction(-5, 2), 0, Fraction(-2)),   # exact tie -2.5 -> -2
+        (Fraction(-1, 2), 0, Fraction(0)),    # exact tie -0.5 -> 0
+        (Fraction(3, 2), 0, Fraction(2)),     # exact tie +1.5 -> 2 (unaffected side, sign check)
+        (Fraction(-7, 4), 1, Fraction(-17, 10)),  # -1.75 exact tie at 1 digit -> -1.7 (toward +inf)
+    ],
+)
+def test_round_to_precision_negative_exact_tie(value: Fraction, digits: int, expected: Fraction) -> None:
+    """R2-1 integration fix (2026-09-08): a negative value landing exactly on a rounding tie must
+    round the SAME way Python's own divmod-based rule does (floor division, remainder always in
+    [0, denominator), every exact tie toward +infinity) -- these four values are exactly the
+    hand-verified examples the finding named, hard-coded here as a permanent regression guard on
+    the Python reference side (the JS twin's own QFrac.roundToPrecision has the mirrored test in
+    tests/executable/test_ir_kernel.js)."""
+    assert ir_kernel._round_to_precision(value, digits) == expected
+
+
 def test_algorithm_families_are_pairwise_distinct_per_function() -> None:
     """ir_kernel.py's own module-level invariant, re-asserted here as a test rather than only
     an import-time assert: for every allowed transcendental fn, the declared Python-reference

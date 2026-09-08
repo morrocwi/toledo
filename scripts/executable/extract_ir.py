@@ -80,27 +80,39 @@ CLASSIFY_OUTPUT = pathlib.Path(__file__).resolve().parent / "_classify_output.js
 EXECUTABLE_DIR = REPO_ROOT / "registry" / "executable"
 REPORT_MD = REPO_ROOT / "ops" / "executable_classifier_report.md"
 
+# Loaded by file path (sibling of this script, same directory), not `from scripts.executable
+# import ir_kernel` -- this workstation demonstrates a real collision (a third-party `scripts`
+# package installed in site-packages shadows this repository's own top-level `scripts/`
+# directory once any sys.path entry ahead of the repo root supplies one), so a package-style
+# import is not reliable here (the same reason ir_eval.py/crosscheck_runner.py/
+# test_ir_kernel.py all avoid it too). `ir_kernel.py` is the SOLE source of truth for which
+# algorithm family each interpreter implements per transcendental `fn` (sec.3/sec.5) -- this
+# extractor never drafts its own competing pair (Integration fix, 2026-09-08: a prior
+# `DRAFT_ALGORITHMS` dict here disagreed with `ir_kernel.ALGORITHM_FAMILY_PY`/`_JS` for every
+# single function, which `ir_eval.py::check_transcendental_lint` would have rejected the moment
+# a human tried to promote a transcendental candidate to `reviewed_eligible`).
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import ir_kernel  # noqa: E402
+
 SCHEMA_VERSION = "executable-ir-0.1"
 
-ALLOWED_FUNCTIONS = {"sin", "cos", "tan", "exp", "log", "sqrt", "abs"}
-# fn names that are not Q-exact and need a `transcendental` block (sec.3).
-# "abs" is Q-exact for a rational input (|p/q| is computed exactly by the
-# reference/twin, no series needed) so it is deliberately excluded here.
-TRANSCENDENTAL_FUNCTIONS = {"sin", "cos", "exp", "log", "sqrt", "pi_const", "e_const"}
-
-# sec.5's own two-genuinely-different-algorithm-families requirement is a
-# DRAFT proposal from this extractor, not a binding S2 decision — every
-# sidecar's drift_note says so explicitly. Chosen to already be two
-# different named families per function, per sec.3/sec.5/sec.12 item 12.
-DRAFT_ALGORITHMS = {
-    "sqrt": ("newton_raphson", "continued_fraction_babylonian"),
-    "exp": ("taylor_argument_reduced", "continued_fraction_exp"),
-    "sin": ("taylor_argument_reduced", "cordic_rational_iteration"),
-    "cos": ("taylor_argument_reduced", "cordic_rational_iteration"),
-    "log": ("newton_raphson", "atanh_series"),
-    "pi_const": ("machin_arctan_series", "chudnovsky_binary_splitting"),
-    "e_const": ("taylor_argument_reduced", "continued_fraction_exp"),
-}
+# The exact vocabulary the shared kernels (ir_kernel.py / _ir_eval.js) actually implement
+# (ir_kernel.ALLOWED_FNS) plus the ordinary Q-exact functions sympy may represent as an
+# explicit Function node. `tan`, `abs`, and `e_const` were REMOVED here (Integration fix,
+# 2026-09-08): neither kernel implements them, so an IR sidecar naming any of the three could
+# never be evaluated by ir_eval.py/_ir_eval.js/toledo_eval, permanently -- a statement using one
+# of them is correctly rejected by `sympy_to_node` (`Unsupported`) rather than silently drafted
+# into a dead sidecar. Widening this list is a reviewed, two-file change to `ir_kernel.py` +
+# `_ir_eval.js` first (sec.2's architecture ruling), never a unilateral addition here.
+ALLOWED_FUNCTIONS = {"sin", "cos", "exp", "log", "sqrt"}
+# fn names that are not Q-exact and need a `transcendental` block (sec.3) -- kept identical to
+# `ir_kernel.ALLOWED_FNS` by construction (asserted below), the same "one shared vocabulary"
+# guarantee sec.2 requires.
+TRANSCENDENTAL_FUNCTIONS = {"sin", "cos", "exp", "log", "sqrt", "pi_const"}
+assert TRANSCENDENTAL_FUNCTIONS == set(ir_kernel.ALLOWED_FNS), (
+    "extract_ir.py's own transcendental vocabulary has drifted from ir_kernel.ALLOWED_FNS -- "
+    "widen/narrow both together, never one alone"
+)
 
 _BARE_WORD = re.compile(r"(?<!\\)(?<![A-Za-z])[A-Za-z]{2,}(?![A-Za-z])")
 _SAFE_BARE_WORDS = {
@@ -150,8 +162,13 @@ def sympy_to_node(expr, used_fns: set) -> dict:
         used_fns.add("pi_const")
         return {"op": "call", "fn": "pi_const", "args": []}
     if expr == sympy.E:
-        used_fns.add("e_const")
-        return {"op": "call", "fn": "e_const", "args": []}
+        # Neither ir_kernel.py nor _ir_eval.js implements a bare Euler's-number constant fn
+        # (Integration fix, 2026-09-08 -- ir_kernel.ALLOWED_FNS has no "e_const"; only `exp(x)`
+        # is supported, handled separately below via the is_Pow/base==sympy.E branch). Reject
+        # here rather than draft a sidecar the shared kernel can never evaluate.
+        raise Unsupported("bare Euler's number 'e' has no shared-kernel fn (e_const is not "
+                           "implemented by ir_kernel.py/_ir_eval.js); rewrite as exp(1) if "
+                           "that is what the source statement means")
 
     if expr.is_Rational:  # covers Integer and Rational, not Float
         return {"op": "const", "value": rational_str(expr)}
@@ -237,12 +254,9 @@ def node_to_sympy(node: dict):
         fn = node["fn"]
         if fn == "pi_const":
             return sympy.pi
-        if fn == "e_const":
-            return sympy.E
         arg = node_to_sympy(node["args"][0])
-        return {"sin": sympy.sin, "cos": sympy.cos, "tan": sympy.tan,
-                "exp": sympy.exp, "log": sympy.log, "sqrt": sympy.sqrt,
-                "abs": sympy.Abs}[fn](arg)
+        return {"sin": sympy.sin, "cos": sympy.cos,
+                "exp": sympy.exp, "log": sympy.log, "sqrt": sympy.sqrt}[fn](arg)
     if op == "neg":
         return -node_to_sympy(node["args"][0])
     if op == "add":
@@ -367,7 +381,12 @@ def extract_one(entry: dict, commit: str, sympy_version: str, antlr4_version: st
     used_transcendental = used_fns & TRANSCENDENTAL_FUNCTIONS
     if used_transcendental:
         fn = next(iter(used_transcendental))
-        algo_py, algo_js = DRAFT_ALGORITHMS[fn]
+        # Read verbatim from S2's own shared kernel (ir_kernel.py), NEVER drafted here
+        # (Integration fix, 2026-09-08) — this is the one place these names are allowed to
+        # come from, so a sidecar this script writes can never disagree with what
+        # ir_eval.py::check_transcendental_lint will require at promotion/evaluation time.
+        algo_py = ir_kernel.ALGORITHM_FAMILY_PY[fn]
+        algo_js = ir_kernel.ALGORITHM_FAMILY_JS[fn]
         transcendental = {
             "terms_param": "n_terms",
             "algorithm_py": algo_py,
@@ -375,10 +394,10 @@ def extract_one(entry: dict, commit: str, sympy_version: str, antlr4_version: st
             "default_terms": 40,
         }
         risks.append(
-            f"transcendental_algorithm_draft: algorithm_py='{algo_py}' / "
-            f"algorithm_js='{algo_js}' for fn='{fn}' are THIS SCRIPT's OWN "
-            f"draft proposal (sec.3/sec.5), not an S2 decision — confirm "
-            f"the two really are independent algorithm families before build"
+            f"transcendental_algorithm_families: algorithm_py='{algo_py}' / "
+            f"algorithm_js='{algo_js}' for fn='{fn}' are read verbatim from S2's own shared "
+            f"kernel (ir_kernel.ALGORITHM_FAMILY_PY/_JS) — CONFIRM the source statement "
+            f"actually needs {fn!r} (not a different transcendental) before promotion"
         )
 
     drift_parts = [

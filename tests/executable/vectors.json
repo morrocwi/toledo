@@ -336,7 +336,7 @@
           "fn": "pi_const",
           "terms_param": "n_terms",
           "algorithm_py": "machin_arctan_series",
-          "algorithm_js": "brouncker_continued_fraction",
+          "algorithm_js": "arctan_continued_fraction",
           "default_terms": 30
         },
         "eligibility": {
@@ -574,6 +574,120 @@
         "a": "100"
       },
       "expected_value": "143911568312127855251124465917772762975068843039298311002079/31250000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    },
+    {
+      "name": "exp_of_negative_one",
+      "note": "Negative-argument regression vector (R2-1 integration fix, 2026-09-08): every prior transcendental vector above used a nonnegative argument only, so neither kernel's shared rounding primitive (ir_kernel._round_to_precision / QFrac.roundToPrecision) was ever exercised at a negative intermediate value by this shared suite -- exactly the class of divergence a floor-vs-truncating rounding-tie disagreement would hide.",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/P.06.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "exp",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": {
+          "fn": "exp",
+          "terms_param": "n_terms",
+          "algorithm_py": "taylor_series_halving_reduction",
+          "algorithm_js": "lambert_continued_fraction",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "-1"
+      },
+      "expected_value": "367879441171442321595523770161460867445811131031767834507837/1000000000000000000000000000000000000000000000000000000000000",
+      "tolerance": "1/100000000000000"
+    },
+    {
+      "name": "sin_negative_small_angle",
+      "note": "Negative-argument regression vector (R2-1 integration fix, 2026-09-08) -- see exp_of_negative_one's own note.",
+      "ir": {
+        "schema_version": "executable-ir-0.1",
+        "code": "TESTFIX/P.07.v1",
+        "root": "TESTFIX",
+        "generated_from_commit": "test-fixture-not-a-real-commit",
+        "variables": [
+          {
+            "name": "a",
+            "domain": "Q",
+            "role": "input"
+          },
+          {
+            "name": "result",
+            "domain": "Q",
+            "role": "output"
+          }
+        ],
+        "relation": "eq",
+        "lhs": {
+          "op": "var",
+          "name": "result"
+        },
+        "rhs": {
+          "op": "call",
+          "fn": "sin",
+          "args": [
+            {
+              "op": "var",
+              "name": "a"
+            }
+          ]
+        },
+        "transcendental": {
+          "fn": "sin",
+          "terms_param": "n_terms",
+          "algorithm_py": "taylor_series_halving_reduction",
+          "algorithm_js": "tan_half_angle_continued_fraction",
+          "default_terms": 30
+        },
+        "eligibility": {
+          "classifier_candidate": true,
+          "reviewed_by": "test-fixture",
+          "reviewed_at": "2026-09-08",
+          "review_note": "S2 shared test vector, not a real registry entry."
+        },
+        "sample_inputs": [],
+        "status": "built"
+      },
+      "inputs": {
+        "a": "-1/10"
+      },
+      "expected_value": "-99833416646828152306814198410622026989915388017982259992767/1000000000000000000000000000000000000000000000000000000000000",
       "tolerance": "1/100000000000000"
     }
   ]

@@ -98,7 +98,7 @@ ALGORITHM_FAMILY_PY: dict[str, str] = {
 # a genuinely different family per row than ALGORITHM_FAMILY_PY above, by construction (sec.5,
 # sec.6 step 5: two independent derivations, not one algorithm typed twice).
 ALGORITHM_FAMILY_JS: dict[str, str] = {
-    "pi_const": "brouncker_continued_fraction",
+    "pi_const": "arctan_continued_fraction",
     "exp": "lambert_continued_fraction",
     "sin": "tan_half_angle_continued_fraction",
     "cos": "tan_half_angle_continued_fraction",
