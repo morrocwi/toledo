@@ -164684,6 +164684,1659 @@
       "first_assigned": "2026-09-08",
       "drift_note": "Reverification 2026-09-08 verdict: partial_overlap. Verbatim evidence: \"L_R/M.22.v1 ('laplacian_ones_in_kernel', tier Th_coqc, coq_status closed, formal/IDM_Matrix.v line 132) ALREADY proves Sum n (fun j => Lap i j * 1) == 0 -- i.e. the all-ones (constant) vector lies in ker(L), for ANY graph, no connectivity assumption needed. This is exactly the 'constants subset of kernel' half of this proposal's claim -- a DUPLICATE of L_R/M.22.v1, not new. The reverse inclusion ('kernel subset of constants, given connectivity', i.e. the full equality ker(L)=span{1} and the lambda_2>0 zero-mode characterization) is NOT covered by L_R/M.22.v1 or any other L_R/* reading, and is not covered by the thematically-adjacent q_formal/M.06.v1 ('Algebraic connectivity / Fiedler value') or q_formal/M.07.v1 ('Diameter-based algebraic-connectivity floor') either -- both of those are again bare 'untagged'/'wrapped_related' name-citations with the same generic non-entry-specific evidence block, no actual proof of the kernel-equality fact. Kept as partial_overlap: the constants-in-kernel half duplicates L_R/M.22.v1, the connectivity-implies-equality half (and the lambda_2>0 characterization) is genuinely new.\" (registry/proposals/spectral_ceiling_family.json, PROP-SPEC-04.reverification_2026-09-08).",
       "id": "CAN-1279"
+    },
+    {
+      "code": "weld/M.44.v1",
+      "root": "RD4",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.RD4_succ_inj"
+      ],
+      "name": "Peano successor injectivity for the retained-difference object D (RD4 axiom, first Toledo witness)",
+      "statement": {
+        "latest": "\\forall x\\, y : D,\\ \\mathrm{succ}(x) = \\mathrm{succ}(y) \\Rightarrow x = y",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\forall x\\, y : D,\\ \\mathrm{succ}(x) = \\mathrm{succ}(y) \\Rightarrow x = y",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-01. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "RD4",
+          "derived_via": "restates",
+          "evidence": "genesis_root.json root RD4 states the succ-injectivity axiom verbatim ('RD4 succ is injective'); root RD4 had zero registered readings before this entry (confirmed by a live query against CANONICAL.json) -- this is the first Toledo witness of RD4's own already-declared but never-formalized axiom."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_44_v1.v",
+        "identifier": "RD4_succ_inj",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_44_v1.v",
+            "identifier": "RD4_succ_inj"
+          }
+        ]
+      },
+      "relations": [
+        {
+          "type": "same_form_different_theory",
+          "target": "RD3/M.01.v1",
+          "note": "The proposal's succ<>zero half duplicates RD3/M.01.v1 ('succ_ground_distinct', closed, over Coq's built-in nat) -- dropped, not re-registered as a second object. This entry's own registered statement is ONLY the succ-injectivity half (RD4), an independent second Coq proof of the sibling RD3/RD4 axiom pair over a different concrete representation (a custom inductive D vs. built-in nat)."
+        }
+      ],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: partial_overlap. Verbatim evidence: \"Original proposal bundled two axioms (RD3_succ_ne_zero, RD4_succ_inj). RD3_succ_ne_zero is a DUPLICATE: RD3/M.01.v1 already proves the identical fact `S 0 <> 0` over Coq's built-in nat -- under the phi-criterion this is the same object as URCF's `RD3_succ_ne_zero : forall x, succ x <> zero` (renaming D->nat, succ->S, zero->0). RD4_succ_inj is GENUINELY NEW: root RD4 has zero registered readings. This proposal is trimmed to keep only the succ-injectivity content; the succ<>zero half is dropped as a duplicate of RD3/M.01.v1, not registered again.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-01.reverification_2026-09-08). This repo's own recompile confirms RD4_succ_inj is Closed under the global context, over the custom inductive D (zero/succ), independent of RD3/M.01.v1's nat-level proof.",
+      "id": "CAN-1280"
+    },
+    {
+      "code": "weld/M.45.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.add_assoc",
+        "URCF_RD_All:RD.add_comm",
+        "URCF_RD_All:RD.mul_comm",
+        "URCF_RD_All:RD.mul_assoc",
+        "URCF_RD_All:RD.mul_add",
+        "URCF_RD_All:RD.add_mul",
+        "URCF_RD_All:RD.mul_one",
+        "URCF_RD_All:RD.one_mul"
+      ],
+      "name": "D is a commutative semiring under add/mul/zero/one (first Toledo-local Coq witness of root D's Th 2.2)",
+      "statement": {
+        "latest": "(D,\\ \\mathrm{add},\\ \\mathrm{mul},\\ \\mathrm{zero},\\ \\mathrm{one}) \\text{ satisfies: add\\_assoc, add\\_comm, mul\\_comm, mul\\_assoc, mul\\_add, add\\_mul, mul\\_one, one\\_mul}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "(D,\\ \\mathrm{add},\\ \\mathrm{mul},\\ \\mathrm{zero},\\ \\mathrm{one}) \\text{ satisfies: add\\_assoc, add\\_comm, mul\\_comm, mul\\_assoc, mul\\_add, add\\_mul, mul\\_one, one\\_mul}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-02. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "restates",
+          "evidence": "genesis_root.json root row D states verbatim \"D is a commutative semiring (Th 2.2)\" -- this proof set is the first Toledo-local Coq witness of that already-declared but previously-unformalized root claim (root D's own coq field is null; this repo's coq/information-discrete-math/formal/IDM_Genesis.v carries only 3 unrelated theorems, none semiring laws)."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_45_v1.v",
+        "identifier": "add_assoc, add_comm, mul_comm, mul_assoc, mul_add, add_mul, mul_one, one_mul",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "add_assoc"
+          },
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "add_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "mul_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "mul_assoc"
+          },
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "mul_add"
+          },
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "add_mul"
+          },
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "mul_one"
+          },
+          {
+            "file": "coq/canonical/weld__M_45_v1.v",
+            "identifier": "one_mul"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root D's own prose already ASSERTS 'D is a commutative semiring (Th 2.2)' ... but that root row's own coq field is null ... Checked all 80 D/* readings in CANONICAL.json by name: pigeonhole/weight/bcube/automorphism/classify-family content, zero overlap with add_assoc/add_comm/mul_comm/mul_assoc/mul_add/add_mul/mul_one/one_mul. No existing READING covers this claim, so per the duplicate-requires-an-existing-reading rule this is genuinely_new.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-02.reverification_2026-09-08).",
+      "id": "CAN-1281"
+    },
+    {
+      "code": "weld/M.46.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.le_refl",
+        "URCF_RD_All:RD.le_trans",
+        "URCF_RD_All:RD.le_antisym",
+        "URCF_RD_All:RD.le_total",
+        "URCF_RD_All:RD.add_cancel_r",
+        "URCF_RD_All:RD.lt_irrefl",
+        "URCF_RD_All:RD.lt_trans",
+        "URCF_RD_All:RD.lt_trichotomy",
+        "URCF_RD_All:RD.lt_wf",
+        "URCF_RD_All:RD.strong_induction"
+      ],
+      "name": "(D, le) is a total, well-ordered order with additive cancellation and strong induction (first Toledo-local witness of root D's Th 2.3)",
+      "statement": {
+        "latest": "\\mathrm{le} \\text{ is refl/trans/antisym/total on } D;\\ \\mathrm{add} \\text{ is right-cancellative};\\ \\mathrm{lt} \\text{ is irrefl/trans/trichotomous and well-founded, giving strong induction on } D",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathrm{le} \\text{ is refl/trans/antisym/total on } D;\\ \\mathrm{add} \\text{ is right-cancellative};\\ \\mathrm{lt} \\text{ is irrefl/trans/trichotomous and well-founded, giving strong induction on } D",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-03. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "restates",
+          "evidence": "genesis_root.json root row D states verbatim \"(D,≺) is a total, well-ordered order (Th 2.3)\" -- first Toledo-local witness of that declared claim."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_46_v1.v",
+        "identifier": "le_refl, le_trans, le_antisym, le_total, add_cancel_r, lt_irrefl, lt_trans, lt_trichotomy, lt_wf, strong_induction",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "le_refl"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "le_trans"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "le_antisym"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "le_total"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "add_cancel_r"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "lt_irrefl"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "lt_trans"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "lt_trichotomy"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "lt_wf"
+          },
+          {
+            "file": "coq/canonical/weld__M_46_v1.v",
+            "identifier": "strong_induction"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Same reasoning as 02 for Th 2.3 -- no reading covers le_refl/le_total/lt_wf/strong_induction etc.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-03.reverification_2026-09-08).",
+      "id": "CAN-1282"
+    },
+    {
+      "code": "weld/M.47.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.iso_to_of",
+        "URCF_RD_All:RD.iso_of_to",
+        "URCF_RD_All:RD.toNat_inj",
+        "URCF_RD_All:RD.toNat_add",
+        "URCF_RD_All:RD.toNat_mul",
+        "URCF_RD_All:RD.le_toNat",
+        "URCF_RD_All:RD.toNat_le"
+      ],
+      "name": "toNat is a semiring-and-order isomorphism D ~= nat (first Toledo-local witness of root D's Th 2.4)",
+      "statement": {
+        "latest": "\\mathrm{toNat} : D \\to \\mathbb{N} \\text{ is injective and preserves add, mul, le}: \\mathrm{iso\\_to\\_of},\\ \\mathrm{iso\\_of\\_to},\\ \\mathrm{toNat\\_inj},\\ \\mathrm{toNat\\_add},\\ \\mathrm{toNat\\_mul},\\ \\mathrm{le\\_toNat},\\ \\mathrm{toNat\\_le}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathrm{toNat} : D \\to \\mathbb{N} \\text{ is injective and preserves add, mul, le}: \\mathrm{iso\\_to\\_of},\\ \\mathrm{iso\\_of\\_to},\\ \\mathrm{toNat\\_inj},\\ \\mathrm{toNat\\_add},\\ \\mathrm{toNat\\_mul},\\ \\mathrm{le\\_toNat},\\ \\mathrm{toNat\\_le}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-04. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "restates",
+          "evidence": "genesis_root.json root row D states verbatim \"toNat: D → ℕ is a semiring-and-order isomorphism D ≅ ℕ (Th 2.4)\" -- first Toledo-local witness of that declared claim."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_47_v1.v",
+        "identifier": "iso_to_of, iso_of_to, toNat_inj, toNat_add, toNat_mul, le_toNat, toNat_le",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_47_v1.v",
+            "identifier": "iso_to_of"
+          },
+          {
+            "file": "coq/canonical/weld__M_47_v1.v",
+            "identifier": "iso_of_to"
+          },
+          {
+            "file": "coq/canonical/weld__M_47_v1.v",
+            "identifier": "toNat_inj"
+          },
+          {
+            "file": "coq/canonical/weld__M_47_v1.v",
+            "identifier": "toNat_add"
+          },
+          {
+            "file": "coq/canonical/weld__M_47_v1.v",
+            "identifier": "toNat_mul"
+          },
+          {
+            "file": "coq/canonical/weld__M_47_v1.v",
+            "identifier": "le_toNat"
+          },
+          {
+            "file": "coq/canonical/weld__M_47_v1.v",
+            "identifier": "toNat_le"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root D's prose states 'toNat: D -> N is a semiring-and-order isomorphism D ≅ N (Th 2.4)' but again no local Coq witness exists for the isomorphism itself in this repo, and no D/* reading covers toNat_inj/toNat_add/toNat_mul/iso_to_of/iso_of_to/le_toNat/toNat_le.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-04.reverification_2026-09-08).",
+      "id": "CAN-1283"
+    },
+    {
+      "code": "weld/M.48.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.eval_hom",
+        "URCF_RD_All:RD.eqn_transfer"
+      ],
+      "name": "Term-language interpretation homomorphism and equational transfer between D and nat",
+      "statement": {
+        "latest": "\\mathrm{eval\\_hom}:\\ \\mathrm{toNat}(\\mathrm{evD}(env,t)) = \\mathrm{evN}(\\mathrm{toNat}\\circ env,\\ t);\\quad \\mathrm{eqn\\_transfer}: \\text{equations valid on nat under this env transfer back to } D",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathrm{eval\\_hom}:\\ \\mathrm{toNat}(\\mathrm{evD}(env,t)) = \\mathrm{evN}(\\mathrm{toNat}\\circ env,\\ t);\\quad \\mathrm{eqn\\_transfer}: \\text{equations valid on nat under this env transfer back to } D",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-05. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "Builds on D's Th 2.4 isomorphism (weld/M.47.v1) but states new content (term-language semantics transfer) not present anywhere else in Toledo."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_48_v1.v",
+        "identifier": "eval_hom, eqn_transfer",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_48_v1.v",
+            "identifier": "eval_hom"
+          },
+          {
+            "file": "coq/canonical/weld__M_48_v1.v",
+            "identifier": "eqn_transfer"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Whole-registry keyword search for 'homomorphism'/'term-language' found nothing relevant.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-05.reverification_2026-09-08).",
+      "id": "CAN-1284"
+    },
+    {
+      "code": "weld/M.49.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.sat_transfer",
+        "URCF_RD_All:RD.sentence_transfer",
+        "URCF_RD_All:RD.satD_ext",
+        "URCF_RD_All:RD.evN_ext",
+        "URCF_RD_All:RD.evD_evN"
+      ],
+      "name": "Full first-order satisfaction transfer; D and nat are elementarily equivalent",
+      "statement": {
+        "latest": "\\forall f\\ (\\text{first-order formula}),\\ envD,\\ envN:\\ (\\forall v,\\ \\mathrm{toNat}(envD\\,v)=envN\\,v) \\Rightarrow (\\mathrm{satD}(envD,f) \\Leftrightarrow \\mathrm{satN}(envN,f));\\quad \\mathrm{sentence\\_transfer}: D \\equiv \\mathrm{nat}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\forall f\\ (\\text{first-order formula}),\\ envD,\\ envN:\\ (\\forall v,\\ \\mathrm{toNat}(envD\\,v)=envN\\,v) \\Rightarrow (\\mathrm{satD}(envD,f) \\Leftrightarrow \\mathrm{satN}(envN,f));\\quad \\mathrm{sentence\\_transfer}: D \\equiv \\mathrm{nat}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-06. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "Full first-order-satisfaction/elementary-equivalence transfer for D and nat is not stated anywhere in genesis_root.json's D row or elsewhere in CANONICAL.json -- new model-theoretic property built on root D."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_49_v1.v",
+        "identifier": "sat_transfer, sentence_transfer",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_49_v1.v",
+            "identifier": "sat_transfer"
+          },
+          {
+            "file": "coq/canonical/weld__M_49_v1.v",
+            "identifier": "sentence_transfer"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'elementarily equivalent', 'first-order', 'model-theoretic' restricted to any D/IDM/RD material -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-06.reverification_2026-09-08).",
+      "id": "CAN-1285"
+    },
+    {
+      "code": "weld/M.50.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.satD_subst",
+        "URCF_RD_All:RD.Prov",
+        "URCF_RD_All:RD.soundness",
+        "URCF_RD_All:RD.consistency",
+        "URCF_RD_All:RD.prov_sound_N"
+      ],
+      "name": "A Hilbert-style proof system over D, sound and consistent",
+      "statement": {
+        "latest": "\\text{a substitution lemma (satD\\_subst) supports a Hilbert-style derivability relation Prov over } D,\\ \\text{sound (soundness) and consistent via a model-existence argument (consistency, prov\\_sound\\_N)}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{a substitution lemma (satD\\_subst) supports a Hilbert-style derivability relation Prov over } D,\\ \\text{sound (soundness) and consistent via a model-existence argument (consistency, prov\\_sound\\_N)}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-07. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "No Hilbert-style proof system, soundness theorem, or consistency result for D appears anywhere in CANONICAL.json or genesis_root.json -- new proof-theoretic content built on root D."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_50_v1.v",
+        "identifier": "satD_subst, soundness, consistency, prov_sound_N",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_50_v1.v",
+            "identifier": "satD_subst"
+          },
+          {
+            "file": "coq/canonical/weld__M_50_v1.v",
+            "identifier": "soundness"
+          },
+          {
+            "file": "coq/canonical/weld__M_50_v1.v",
+            "identifier": "consistency"
+          },
+          {
+            "file": "coq/canonical/weld__M_50_v1.v",
+            "identifier": "prov_sound_N"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'Hilbert', 'soundness', 'proof system' restricted to math/D material -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-07.reverification_2026-09-08).",
+      "id": "CAN-1286"
+    },
+    {
+      "code": "weld/M.51.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.D_validates_induction",
+        "URCF_RD_All:RD.D_models_PA",
+        "URCF_RD_All:RD.PA_closed",
+        "URCF_RD_All:RD.IndAx",
+        "URCF_RD_All:RD.PA"
+      ],
+      "name": "D is a model of first-order Peano Arithmetic",
+      "statement": {
+        "latest": "D \\text{ validates every first-order induction instance (D\\_validates\\_induction), hence } D \\models \\mathrm{PA} \\text{ (D\\_models\\_PA)}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "D \\text{ validates every first-order induction instance (D\\_validates\\_induction), hence } D \\models \\mathrm{PA} \\text{ (D\\_models\\_PA)}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-08. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "genesis_root.json code D states D's algebraic/order structure but no existing Toledo row asserts the model-theoretic fact D |= PA -- a new named result built on the already-registered D object."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_51_v1.v",
+        "identifier": "D_validates_induction, D_models_PA",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_51_v1.v",
+            "identifier": "D_validates_induction"
+          },
+          {
+            "file": "coq/canonical/weld__M_51_v1.v",
+            "identifier": "D_models_PA"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'Peano Arithmetic', 'model of' restricted to math/D material -- zero matches (the two 'model of' hits found elsewhere are an unrelated ODE-model and a kinetic-isotope-effect entry).\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-08.reverification_2026-09-08).",
+      "id": "CAN-1287"
+    },
+    {
+      "code": "weld/M.52.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.Con_PA"
+      ],
+      "name": "Constructive consistency of PA, witnessed by the D model",
+      "statement": {
+        "latest": "\\mathrm{Con}(\\mathrm{PA}) \\text{ holds constructively (no excluded middle used), witnessed by } D\\_models\\_PA",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathrm{Con}(\\mathrm{PA}) \\text{ holds constructively (no excluded middle used), witnessed by } D\\_models\\_PA",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-09. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "No Toledo object states constructive Con(PA); it chains to root D via the D_models_PA result (weld/M.51.v1) rather than any pre-existing consistency row."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_52_v1.v",
+        "identifier": "Con_PA",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_52_v1.v",
+            "identifier": "Con_PA"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'Con(PA)', 'consistency of PA' -- zero matches. Confirmed genuinely_new; source line 3768 `Theorem Con_PA : ~ Prov PA Fbot.` uses no Classical_Prop axiom (checked surrounding proof, purely constructive).\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-09.reverification_2026-09-08). This repo's own recompile confirms Con_PA is Closed under the global context -- no classical axiom, distinct from weld/M.53.v1's classical sibling.",
+      "id": "CAN-1288"
+    },
+    {
+      "code": "weld/M.53.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.ProvC",
+        "URCF_RD_All:RD.soundnessC",
+        "URCF_RD_All:RD.consistencyC",
+        "URCF_RD_All:RD.Con_PA_classical"
+      ],
+      "name": "Classical consistency of PA (excluded-middle dependent, Classical_Prop.classic)",
+      "statement": {
+        "latest": "\\text{a classical derivability relation ProvC over PA is sound (soundnessC) and consistent (consistencyC, Con\\_PA\\_classical), with } \\mathtt{Classical\\_Prop.classic} \\text{ as the sole axiom used}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{a classical derivability relation ProvC over PA is sound (soundnessC) and consistent (consistencyC, Con\\_PA\\_classical), with } \\mathtt{Classical\\_Prop.classic} \\text{ as the sole axiom used}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-10. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "No Toledo object states classical Con(PA); same lineage as constructive Con_PA (weld/M.52.v1) but explicitly non-axiom-free (sole axiom Classical_Prop.classic), so registered as its own tagged entry rather than folded into the axiom-free sibling."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_53_v1.v",
+        "identifier": "Con_PA_classical",
+        "assumptions": "+axioms: classic : forall P : Prop, P \\/ ~ P",
+        "imported_from": null,
+        "coq_status": "axioms",
+        "coq_axioms": [
+          "classic : forall P : Prop, P \\/ ~ P"
+        ],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_53_v1.v",
+            "identifier": "Con_PA_classical"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for classical-PA-consistency content -- zero matches. Confirmed genuinely_new, and confirmed via source (lines 5444-5503, module tags ProvC/soundnessC/consistencyC/Con_PA_classical) that this branch is NOT axiom-free -- it is a separate proof path from the constructive Con_PA (weld/M.52.v1) and must not be folded into it or presented as axiom-free.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-10.reverification_2026-09-08). This repo's own recompile of coq/canonical/weld__M_53_v1.v independently confirms: `Print Assumptions Con_PA_classical.` reports exactly one axiom, `classic : forall P : Prop, P \\/ ~ P` -- never presented as axiom-free, kept a distinct entry from weld/M.52.v1 (constructive, closed).",
+      "id": "CAN-1289"
+    },
+    {
+      "code": "weld/M.54.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.PA_true_in_N"
+      ],
+      "name": "PA is true in the standard model nat",
+      "statement": {
+        "latest": "\\mathrm{PA\\_true\\_in\\_N}:\\ \\mathrm{PA}(a) \\Rightarrow \\mathrm{satN}(env0N,\\ a), \\text{ transported via toNat (Th 2.4) and D\\_models\\_PA}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathrm{PA\\_true\\_in\\_N}:\\ \\mathrm{PA}(a) \\Rightarrow \\mathrm{satN}(env0N,\\ a), \\text{ transported via toNat (Th 2.4) and D\\_models\\_PA}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-11. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "No matching Toledo row; genesis_root's D entry already states toNat: D -> N is a semiring-and-order isomorphism (Th 2.4), and this result rides that isomorphism (weld/M.47.v1) and D_models_PA (weld/M.51.v1) to transport PA-truth."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_54_v1.v",
+        "identifier": "PA_true_in_N",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_54_v1.v",
+            "identifier": "PA_true_in_N"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"No matching Toledo row for 'PA_true_in_N' or PA-truth transport. Confirmed genuinely_new; depends on PROP-URCF-04 (toNat iso) and PROP-URCF-08 (D_models_PA), both themselves confirmed genuinely_new above.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-11.reverification_2026-09-08).",
+      "id": "CAN-1290"
+    },
+    {
+      "code": "weld/M.55.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.categoricity",
+        "URCF_RD_All:RD.emb",
+        "URCF_RD_All:RD.emb_surj",
+        "URCF_RD_All:RD.emb_inj"
+      ],
+      "name": "Second-order categoricity of D (Dedekind's theorem)",
+      "statement": {
+        "latest": "\\text{any second-order structure } (M,z_M,s_M) \\text{ satisfying D's axioms is uniquely isomorphic to } D \\text{ via the canonical embedding } \\mathrm{emb}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\text{any second-order structure } (M,z_M,s_M) \\text{ satisfying D's axioms is uniquely isomorphic to } D \\text{ via the canonical embedding } \\mathrm{emb}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-12. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "No existing Toledo/Genesis row -- the D root row states D's semiring/order/isomorphism facts (Th 2.2-2.4) but not categoricity of any second-order axiomatization of D."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_55_v1.v",
+        "identifier": "categoricity",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_55_v1.v",
+            "identifier": "categoricity"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'categoricity', 'Dedekind' -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-12.reverification_2026-09-08).",
+      "id": "CAN-1291"
+    },
+    {
+      "code": "weld/M.56.v1",
+      "root": "D",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.dist",
+        "URCF_RD_All:RD.dist_self",
+        "URCF_RD_All:RD.dist_eq0",
+        "URCF_RD_All:RD.dist_pos",
+        "URCF_RD_All:RD.dist_sym",
+        "URCF_RD_All:RD.dist_tri",
+        "URCF_RD_All:RD.Betw",
+        "URCF_RD_All:RD.Betw_id",
+        "URCF_RD_All:RD.Betw_sym",
+        "URCF_RD_All:RD.Betw_refl_l",
+        "URCF_RD_All:RD.dist2"
+      ],
+      "name": "D (and D*D) is a discrete metric space with Tarski-style betweenness",
+      "statement": {
+        "latest": "\\mathrm{dist}(x,y) := |\\mathrm{toNat}(x)-\\mathrm{toNat}(y)| \\text{ satisfies the metric axioms; the L1 product metric dist2 on } D{\\times}D \\text{ inherits them; Tarski-style Betw satisfies identity, symmetry, reflexivity}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathrm{dist}(x,y) := |\\mathrm{toNat}(x)-\\mathrm{toNat}(y)| \\text{ satisfies the metric axioms; the L1 product metric dist2 on } D{\\times}D \\text{ inherits them; Tarski-style Betw satisfies identity, symmetry, reflexivity}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-13. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "D",
+          "derived_via": "derives",
+          "evidence": "No Toledo/Genesis row classifies D (or D*D) as a metric space or states Tarski-style betweenness on it; the existing D root row covers only the semiring/well-order structure."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_56_v1.v",
+        "identifier": "dist_self, dist_eq0, dist_pos, dist_sym, dist_tri, Betw_id, Betw_sym, Betw_refl_l, dist2_self, dist2_eq0, dist2_sym, dist2_tri",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist_self"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist_eq0"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist_pos"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist_sym"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist_tri"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "Betw_id"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "Betw_sym"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "Betw_refl_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist2_self"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist2_eq0"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist2_sym"
+          },
+          {
+            "file": "coq/canonical/weld__M_56_v1.v",
+            "identifier": "dist2_tri"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Searched CANONICAL.json for 'metric space', 'Tarski', 'betweenness' -- zero matches.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-13.reverification_2026-09-08).",
+      "id": "CAN-1292"
+    },
+    {
+      "code": "weld/M.57.v1",
+      "root": "Z",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.zeq_zval",
+        "URCF_RD_All:RD.zval_add",
+        "URCF_RD_All:RD.zval_neg",
+        "URCF_RD_All:RD.zval_mul",
+        "URCF_RD_All:RD.zeq_refl",
+        "URCF_RD_All:RD.zeq_sym",
+        "URCF_RD_All:RD.zeq_trans",
+        "URCF_RD_All:RD.zadd_cong",
+        "URCF_RD_All:RD.zneg_cong",
+        "URCF_RD_All:RD.zmul_cong",
+        "URCF_RD_All:RD.zadd_comm",
+        "URCF_RD_All:RD.zadd_assoc",
+        "URCF_RD_All:RD.zadd_0_l",
+        "URCF_RD_All:RD.zadd_neg",
+        "URCF_RD_All:RD.zmul_comm",
+        "URCF_RD_All:RD.zmul_assoc",
+        "URCF_RD_All:RD.zmul_1_l",
+        "URCF_RD_All:RD.zmul_distrib_l"
+      ],
+      "name": "Z (Grothendieck completion of D) is a commutative ring isomorphic to standard Z (first Toledo-local witness of root Z's Th 3.1)",
+      "statement": {
+        "latest": "Z_r := (D \\times D)/\\sim,\\ (\\mathrm{zadd},\\mathrm{zneg},\\mathrm{zmul}) \\text{ satisfy the commutative-ring axioms up to zeq, congruent w.r.t. zeq, and zval: } Z_r \\to \\mathbb{Z} \\text{ is a ring homomorphism}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Z_r := (D \\times D)/\\sim,\\ (\\mathrm{zadd},\\mathrm{zneg},\\mathrm{zmul}) \\text{ satisfy the commutative-ring axioms up to zeq, congruent w.r.t. zeq, and zval: } Z_r \\to \\mathbb{Z} \\text{ is a ring homomorphism}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-14. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "Z",
+          "derived_via": "restates",
+          "evidence": "genesis_root.json root Z (\"the integers Z, Grothendieck completion of D\") already states verbatim \"Th 3.1: (Z,+,*,0,1) is a commutative ring\" -- first Toledo-local witness of that declared claim, under the phi-criterion the same object (renaming zadd/zmul/zeq for +/*/=)."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_57_v1.v",
+        "identifier": "zeq_zval, zval_add, zval_neg, zval_mul, zeq_refl, zeq_sym, zeq_trans, zadd_cong, zneg_cong, zmul_cong, zadd_comm, zadd_assoc, zadd_0_l, zadd_neg, zmul_comm, zmul_assoc, zmul_1_l, zmul_distrib_l",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zeq_zval"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zval_add"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zval_neg"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zval_mul"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zeq_refl"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zeq_sym"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zeq_trans"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zadd_cong"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zneg_cong"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zmul_cong"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zadd_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zadd_assoc"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zadd_0_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zadd_neg"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zmul_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zmul_assoc"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zmul_1_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_57_v1.v",
+            "identifier": "zmul_distrib_l"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root Z's prose already asserts '(Z,+,*,0,1) is a commutative ring' (Th 3.1) but root Z's own coq field is null and none of the 23 Z/* readings construct Z as the Grothendieck completion (D*D)/~ or prove the full ring-axiom package on that construction: the existing readings are about delta_sum/telescoping (Z/M.01-09), a distributivity fact stated over Coq's BUILT-IN Z (Z/M.11 -- different type, narrower scope), and a tropical (min-plus) semiring family (Z/M.12-23) which is a DIFFERENT algebraic structure entirely.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-14.reverification_2026-09-08).",
+      "id": "CAN-1293"
+    },
+    {
+      "code": "weld/M.58.v1",
+      "root": "A2",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.Leibniz"
+      ],
+      "name": "Discrete Leibniz product rule for Z-valued sequences (FTC/FTC_Z/FTC_inverse half trimmed as duplicate)",
+      "statement": {
+        "latest": "\\Delta(f \\cdot g)(n) = f(n{+}1)\\cdot\\Delta g(n) + \\Delta f(n)\\cdot g(n),\\ \\text{exact, no remainder term, for } f,g : D \\to Z_r",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\Delta(f \\cdot g)(n) = f(n{+}1)\\cdot\\Delta g(n) + \\Delta f(n)\\cdot g(n),\\ \\text{exact, no remainder term, for } f,g : D \\to Z_r",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-15. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "A2",
+          "derived_via": "derives",
+          "evidence": "A2 already carries the telescoping/FTCC identity (A2/M.03.v1) as a Th_coqc reading; the pointwise discrete Leibniz/product-rule identity for the same difference operator is new content built on that engine, not itself registered anywhere."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_58_v1.v",
+        "identifier": "Leibniz",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_58_v1.v",
+            "identifier": "Leibniz"
+          }
+        ]
+      },
+      "relations": [
+        {
+          "type": "reads",
+          "target": "A2/M.03.v1",
+          "note": "A2/M.03.v1 ('ftcc_Z', closed) proves the discrete FTC telescoping identity (`fold Z.add 0 (zdelta f) N = f N - f 0`); this proposal's own bundled FTC/FTC_Z/FTC_inverse content is a DUPLICATE of that identity (renaming Sum/Delta for Agg/zdelta) and is dropped from this entry's own registered statement -- kept only as internal support the Leibniz theorem is built on."
+        },
+        {
+          "type": "reads",
+          "target": "Z/M.06.v1",
+          "note": "Z/M.06.v1 ('FTCC_telescope', closed) proves the same telescoping identity (`Agg f N == f N - f 0`) over this repo's own Z-rooted telescoping engine -- also duplicated by the dropped FTC/FTC_Z/FTC_inverse half, not re-registered."
+        }
+      ],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: partial_overlap. Verbatim evidence: \"Original proposal bundled the discrete FTC (FTC, FTC_Z, FTC_inverse) with the discrete Leibniz product rule. The FTC part is a DUPLICATE: A2/M.03.v1 ('ftcc_Z', closed) proves `fold Z.add 0 (zdelta f) N = f N - f 0` and Z/M.06.v1 ('FTCC_telescope', closed) proves `Agg f N == f N - f 0` -- both are the identical telescoping-sum-recovers-endpoint-difference identity URCF states as FTC/FTC_Z/FTC_inverse. The Leibniz part is GENUINELY NEW: it is a pointwise per-step identity, logically distinct from Z/M.09.v1 ('summation_by_parts', closed), which is the SUMMED/telescoped consequence over a whole range [0,N] -- no reading states the pointwise rule directly. This proposal is trimmed to keep only the Leibniz content; the FTC content is dropped as a duplicate of A2/M.03.v1 and Z/M.06.v1.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-15.reverification_2026-09-08). This repo's own coq/canonical/weld__M_58_v1.v file physically OMITS Sum/FTC_Z/FTC/FTC_inverse (only Delta, zval_Delta and the Leibniz theorem itself are present) -- the trim is structural, not just a registry-level omission.",
+      "id": "CAN-1294"
+    },
+    {
+      "code": "weld/M.59.v1",
+      "root": "Q",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.qeq_refl",
+        "URCF_RD_All:RD.qeq_sym",
+        "URCF_RD_All:RD.qeq_trans",
+        "URCF_RD_All:RD.qadd_comm",
+        "URCF_RD_All:RD.qadd_assoc",
+        "URCF_RD_All:RD.qadd_0_l",
+        "URCF_RD_All:RD.qadd_neg",
+        "URCF_RD_All:RD.qmul_comm",
+        "URCF_RD_All:RD.qmul_assoc",
+        "URCF_RD_All:RD.qmul_1_l",
+        "URCF_RD_All:RD.qmul_distrib_l",
+        "URCF_RD_All:RD.qmul_inv"
+      ],
+      "name": "Q (field of fractions of Z) is a commutative field isomorphic to standard Q (first Toledo-local witness of root Q's Th 3.4)",
+      "statement": {
+        "latest": "Q_f := (\\mathbb{Z}\\times\\mathbb{Z}_{\\neq0})/\\sim,\\ (\\mathrm{qadd},\\mathrm{qmul}) \\text{ satisfy the field axioms up to qeq including the multiplicative inverse qmul\\_inv, congruent w.r.t. qeq, qval: } Q_f \\to \\mathbb{Q} \\text{ a field homomorphism}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Q_f := (\\mathbb{Z}\\times\\mathbb{Z}_{\\neq0})/\\sim,\\ (\\mathrm{qadd},\\mathrm{qmul}) \\text{ satisfy the field axioms up to qeq including the multiplicative inverse qmul\\_inv, congruent w.r.t. qeq, qval: } Q_f \\to \\mathbb{Q} \\text{ a field homomorphism}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-16. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "Q",
+          "derived_via": "restates",
+          "evidence": "genesis_root.json root Q (\"the rationals Q, field of fractions of Z\") already states verbatim \"Def 3.3: Q := (Z×Z_{≠0})/∼ ... Th 3.4: (Q,+,·) is a field: qadd_neg, qmul_assoc, qmul_distrib_l, and the multiplicative inverse qmul_inv\" -- same construction, same identifier name qmul_inv, first Toledo-local witness of that declared claim."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_59_v1.v",
+        "identifier": "qeq_refl, qeq_sym, qeq_trans, qadd_comm, qadd_assoc, qadd_0_l, qadd_neg, qmul_comm, qmul_assoc, qmul_1_l, qmul_distrib_l, qmul_inv",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qeq_refl"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qeq_sym"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qeq_trans"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qadd_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qadd_assoc"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qadd_0_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qadd_neg"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qmul_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qmul_assoc"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qmul_1_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qmul_distrib_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_59_v1.v",
+            "identifier": "qmul_inv"
+          }
+        ]
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: genuinely_new. Verbatim evidence: \"Root Q's prose already asserts '(Q,+,*) is a field' (Th 3.4) with 'the multiplicative inverse qmul_inv' by the SAME identifier name -- but root Q's own coq field is null, and none of the 19 Q/* readings construct Q as (Z*Z_{!=0})/~ or prove field axioms: the existing readings are about matrix trace/twirl/transpose operations (Q/M.08-19) and Sum lemmas (Q/M.02-07), a completely different subject matter.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-16.reverification_2026-09-08).",
+      "id": "CAN-1295"
+    },
+    {
+      "code": "weld/M.60.v1",
+      "root": "R",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "URCF_RD_All:RD.RR",
+        "URCF_RD_All:RD.Req",
+        "URCF_RD_All:RD.inj_Q",
+        "URCF_RD_All:RD.Radd",
+        "URCF_RD_All:RD.Rle",
+        "URCF_RD_All:RD.Rlt",
+        "URCF_RD_All:RD.Rmul",
+        "URCF_RD_All:RD.R_complete",
+        "URCF_RD_All:RD.R_complete_metric",
+        "URCF_RD_All:RD.Rinv",
+        "URCF_RD_All:RD.Rinv_gen",
+        "URCF_RD_All:RD.Rmax",
+        "URCF_RD_All:RD.Rmin",
+        "URCF_RD_All:RD.Rconv",
+        "URCF_RD_All:RD.Rdist",
+        "URCF_RD_All:RD.Rcontinuous_at"
+      ],
+      "name": "R (Bishop regular Cauchy sequences of Q) is a complete constructive ordered field -- top rung of the discrete-root number ladder D -> Z -> Q -> R",
+      "statement": {
+        "latest": "R := \\{f : \\mathbb{Z}^+ \\to \\mathbb{Q} \\mid |f(n)-f(m)| \\le \\tfrac1n+\\tfrac1m\\}/\\mathrm{Req};\\ R \\text{ is an ordered field up to Req (Radd/Rle/Rlt/Rmul, order and ring laws), Cauchy-complete (R\\_complete, R\\_complete\\_metric) with a constructive lattice (Rmax/Rmin), convergence (Rconv), inverses (Rinv/Rinv\\_gen), a metric (Rdist), and basic } \\epsilon\\text{-}\\delta \\text{ continuity (Rcontinuous\\_at)}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "R := \\{f : \\mathbb{Z}^+ \\to \\mathbb{Q} \\mid |f(n)-f(m)| \\le \\tfrac1n+\\tfrac1m\\}/\\mathrm{Req};\\ R \\text{ is an ordered field up to Req (Radd/Rle/Rlt/Rmul, order and ring laws), Cauchy-complete (R\\_complete, R\\_complete\\_metric) with a constructive lattice (Rmax/Rmin), convergence (Rconv), inverses (Rinv/Rinv\\_gen), a metric (Rdist), and basic } \\epsilon\\text{-}\\delta \\text{ continuity (Rcontinuous\\_at)}",
+          "date": "2026-09-08",
+          "reason": "toledo-v1.8-tower: initial capture from URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered), PROP-URCF-17. See drift_note for the 2026-09-08 reverification verdict/evidence.",
+          "by": "toledo-v1.8-tower"
+        }
+      ],
+      "parents": [
+        {
+          "code": "R",
+          "derived_via": "restates",
+          "evidence": "genesis_root.json root R (\"the reals R, the continuum as a readout\") already states verbatim \"Def 3.4: R := Bishop regular Cauchy sequences of Q ... Th 3.5 (ordered field up to Req). Th 3.6 (Cauchy-completeness, R_complete)\" -- the same object names; a thin partial pre-existing witness exists (R/M.33-37, a different pointwise/gap representation, see relations[] below) but the bulk of this claim (completeness, order, inverse, metric, convergence, continuity) has no existing Toledo reading."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "URCF_RD_All.v, Module RD, lines ~3155-5634 (private tower file, Downloads, not previously deposited or registered)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_60_v1.v",
+        "identifier": "Req_refl, Req_sym, Req_trans, Radd_comm, Radd_0_l, Radd_opp, Rle_refl, Rle_trans, Rle_antisym, Rmul_comm, Rmul_1_l, Rmul_distrib_l, Rmul_assoc, R_complete, R_complete_metric, Rmul_inv, Rmul_inv_gen, Rlt_trans, Rlt_cotrans, Rmax_lub, Rmin_glb, Rconv_const, Rlimit_unique, Rconv_recip, Rdist_triangle, Rcontinuous_Rabs",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Req_refl"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Req_sym"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Req_trans"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Radd_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Radd_0_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Radd_opp"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rle_refl"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rle_trans"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rle_antisym"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "inj_Q_le"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Radd_le_mono_r"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rlt_irrefl"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmul_comm"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmul_1_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmul_wd"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmul_distrib_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmul_assoc"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "R_complete"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "R_complete_metric"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmul_inv"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmul_inv_gen"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rlt_le_weak"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rlt_trans"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rlt_cotrans"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rle_max_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rle_max_r"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmax_lub"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmin_le_l"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmin_le_r"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rmin_glb"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rconv_const"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rlimit_unique"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rconv_recip"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rcomplete_conv"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rdist_self"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rdist_sym"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rdist_nonneg"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rdist_triangle"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rabs_Lipschitz"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Ropp_isometry"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Radd_Lipschitz"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rcontinuous_id"
+          },
+          {
+            "file": "coq/canonical/weld__M_60_v1.v",
+            "identifier": "Rcontinuous_Rabs"
+          }
+        ]
+      },
+      "relations": [
+        {
+          "type": "same_form_different_theory",
+          "target": "R/M.33.v1",
+          "note": "R/M.33.v1 ('radd_at', closed) gives a thin, structurally-different partial witness of R using a different concrete representation (pointwise sequences g,h:nat->Q with a generic 'gap' modulus function, only the pointwise add definition) -- narrower than this entry's Bishop-regular-Cauchy-sequence construction (explicit 1/n+1/m modulus, Req equivalence, inj_Q injection). Kept whole per the reverification note's own recommendation rather than trimmed, since the overlap is a near-trivial fraction of the object."
+        },
+        {
+          "type": "same_form_different_theory",
+          "target": "R/M.34.v1",
+          "note": "R/M.34.v1 ('rmul_at', closed) is the pointwise/gap representation's mul-definition counterpart to R/M.33.v1 above -- same thin-overlap disposition, not this entry's own Rmul (canonical-bound + scaled-sampling construction, a materially different and much stronger development including commutativity, associativity, distributivity, well-definedness, and the multiplicative inverse)."
+        },
+        {
+          "type": "same_form_different_theory",
+          "target": "R/M.35.v1",
+          "note": "R/M.35.v1 ('radd_comm', closed) proves add-commutativity on the pointwise/gap representation -- the one piece the reverification note flags as an arguable trivial-fact overlap with this entry's own Radd_comm (Bishop-regular representation); kept as a disclosed cross-reference rather than a trim, since the two are different concrete representations of R and the overlap is a near-trivial commutativity fact."
+        }
+      ],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-08",
+      "drift_note": "Reverification 2026-09-08 verdict: partial_overlap, kept WHOLE (not trimmed). Verbatim evidence: \"Root R's prose already asserts the ordered-field + Cauchy-completeness claim (Th 3.5/3.6) verbatim. Checked all 40 R/* readings: R/M.33.v1 (radd_at), R/M.34.v1 (rmul_at), R/M.35.v1 (radd_comm), R/M.36.v1 (const_gap_zero) and R/M.37.v1 (gap_subadditive) ... DO give a thin pre-existing partial witness for a DIFFERENT representation of R: pointwise sequences g,h:nat->Q with a generic 'gap' modulus function, only proving pointwise add/mul definitions and commutativity of add plus subadditivity of the gap function -- narrower and structurally different from URCF's Bishop-regular-Cauchy-sequence construction ... The remaining, overwhelming majority of URCF's claim -- the FULL order (Rle/Rlt, antisymmetry, cotransitivity), the multiplicative inverse (Rinv/Rinv_gen), Cauchy-completeness (R_complete, R_complete_metric), the lattice (Rmax/Rmin), convergence (Rconv, uniqueness of limits), the metric (Rdist, triangle inequality, Lipschitz properties) and basic continuity (Rcontinuous_at) -- has NO existing reading anywhere in CANONICAL.json. Kept as partial_overlap rather than trimmed, since the overlapping piece (a near-trivial pointwise-add-commutativity fact on a structurally different representation) is a small fraction of the object.\" (registry/proposals/urcf_rd_all_family.json, PROP-URCF-17.reverification_2026-09-08). This repo's own recompile of coq/canonical/weld__M_60_v1.v (the full R construction through Rcontinuous_Rabs, excluding the unrelated classical-PA layer that follows it in the source file) confirms every listed identifier Closed under the global context.",
+      "id": "CAN-1296"
     }
   ],
   "raw_to_canonical": {
@@ -165758,15 +167411,15 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1306,
+    "entries": 1323,
     "by_status": {
-      "current": 1171,
+      "current": 1188,
       "split": 30,
       "not_an_equation": 9,
       "unverified": 96
     },
     "by_domain": {
-      "M": 422,
+      "M": 439,
       "E": 62,
       "H": 126,
       "S": 137,
@@ -165776,7 +167429,7 @@
       "B": 76
     },
     "by_tier": {
-      "Th_coqc": 417,
+      "Th_coqc": 434,
       "Definition": 442,
       "Dr": 82,
       "Ax": 12,
@@ -165790,13 +167443,13 @@
       "Conjecture": 1
     },
     "by_coq_status": {
-      "closed": 555,
+      "closed": 571,
       "definition": 384,
       "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 84,
-      "axioms": 3
+      "axioms": 4
     },
-    "computed": "2026-09-08 from canonical[] (scripts/v18_spectral_merge.py)"
+    "computed": "2026-09-08 from canonical[] (scripts/v18_tower_merge.py)"
   }
 }
