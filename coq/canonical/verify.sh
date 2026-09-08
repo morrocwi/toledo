@@ -108,7 +108,7 @@ for vfile in $FILES; do
 From MRC Require Import ${modname}.
 Print Assumptions ${id}.
 EOF
-    out=$(coqc -Q . MRC -Q "$MR_DIR" MR -R "$(cd .. && pwd)/solver-arc" RDL -Q "$(cd .. && pwd)/readout_universe/evidence" URR -Q "$(cd .. && pwd)/readout_genesis/formal" ReadoutGenesis.Formal -q "$scratch" 2>&1)
+    out=$(coqc -Q . MRC -Q "$MR_DIR" MR -R "$(cd .. && pwd)/solver-arc" RDL -Q "$(cd .. && pwd)/readout_universe/evidence" URR -Q "$(cd .. && pwd)/readout_genesis/formal" ReadoutGenesis.Formal -R "$(cd .. && pwd)/information-discrete-math" IDM -q "$scratch" 2>&1)
     if echo "$out" | grep -q "Closed under the global context"; then
       echo "PASS  ${modname}.${id}  -- Closed under the global context" | tee -a "$REPORT"
     elif echo "$out" | grep -q "Axioms:" && registered=$(axiom_lookup FILE "${vfile}"); then

@@ -50,7 +50,8 @@ with open(CAN_DIR / "_CoqProject", "w", encoding="utf-8") as fh:
     fh.write(
         "-Q . MRC\n-Q ../master-river MR\n-R ../solver-arc RDL\n"
         "-Q ../readout_universe/evidence URR\n"
-        "-Q ../readout_genesis/formal ReadoutGenesis.Formal\n\n"
+        "-Q ../readout_genesis/formal ReadoutGenesis.Formal\n"
+        "-R ../information-discrete-math IDM\n\n"
     )
     fh.write("\n".join(order) + "\n")
 

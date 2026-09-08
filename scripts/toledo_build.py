@@ -259,11 +259,51 @@ def build_entries(canonical_doc: dict, genesis_doc: dict | None) -> tuple[list[d
 # --------------------------------------------------------------------------
 
 def presentation_mathml(statement: dict):
-    if statement.get("format") != "latex":
-        return None, "statement.format is not \"latex\" (no Presentation MathML attempted)"
-    latex_src = statement.get("latest", "")
+    """Toledo v1.7 cheap-win lane 2 (MathML): extended, 2026-09-08, to also
+    cover statement.format == "latex+ascii" (registry/SCHEMA.md's v1.2 lane S
+    addendum, 424 entries) -- for that format the LaTeX SOURCE to convert is
+    statement["latex"] (the mechanically-generated rendering of the ascii
+    text), never statement["latest"] (which, per that addendum, stays the
+    ORIGINAL ascii-math text for latex+ascii and is not itself LaTeX). For
+    plain format == "latex" (455 entries, unchanged), statement["latest"] IS
+    the source to convert, exactly as before this lane.
+
+    A conversion FAILURE (latex2mathml raising, or a missing/empty source
+    field) is never silent: the caller writes it into the per-entry JSON-LD
+    document's own "mathml_error" field (distinct from this function's
+    returned `reason`, which also covers the non-error case "format is
+    prose/coq/ascii-math/root-layer, no attempt was made at all" -- only a
+    real attempt-and-fail is surfaced as mathml_error, per this lane's own
+    task scope: "failures recorded per entry as mathml_error, never
+    silent").
+
+    Root rows (registry/genesis_root.json, statement.format == "ascii-math",
+    synthesized by genesis_row_to_canonical() above) are OUT OF SCOPE for
+    this lane -- see that function's own docstring, which already documents
+    this as a real, disclosed gap ("no MathML is attempted for synthesized
+    root rows... a real gap the real CANONICAL.json entries should close by
+    giving roots a latex statement.format where one exists"). TODO
+    (undone by this lane, left for a later one, never silently skipped):
+    once/if a root row carries its own genuine LaTeX rendering of its
+    ascii-math `statement`, extend genesis_row_to_canonical() to emit
+    statement.format == "latex" or "latex+ascii" for that row so it flows
+    through this same function unmodified -- do NOT special-case
+    "ascii-math" in presentation_mathml() itself, since ascii-math is a
+    free-text/unicode-symbol convention, not a typeset source, and a
+    mechanical ascii-math -> LaTeX converter for root statements has not
+    been written or reviewed (scripts/v12_S.py's ascii->latex converter was
+    built and reviewed only for reading-layer CANONICAL.json entries, per
+    ops/v12_S_ascii_to_latex_review.md; extending it to the 610 root rows'
+    own free-text conventions is new, unaudited scope, not a copy-paste)."""
+    fmt = statement.get("format")
+    if fmt == "latex":
+        latex_src = statement.get("latest", "")
+    elif fmt == "latex+ascii":
+        latex_src = statement.get("latex", "")
+    else:
+        return None, "statement.format is not \"latex\" or \"latex+ascii\" (no Presentation MathML attempted)"
     if not latex_src.strip():
-        return None, "empty statement"
+        return None, f"empty statement.{'latest' if fmt == 'latex' else 'latex'} field"
     try:
         import latex2mathml.converter as l2m
         return l2m.convert(latex_src), None
@@ -1199,13 +1239,23 @@ def run_build(canonical_path: pathlib.Path, genesis_path: pathlib.Path | None, o
     entries_dir = out_root / "registry" / "entries"
     for e in entries:
         doc = entry_to_jsonld(e, build_commit, generated_at)
-        pres_mml, pres_reason = presentation_mathml(e.get("statement", {}))
-        cont_mml, openmath, cont_reason = content_mathml(e.get("statement", {}))
+        stmt = e.get("statement", {})
+        pres_mml, pres_reason = presentation_mathml(stmt)
+        cont_mml, openmath, cont_reason = content_mathml(stmt)
         doc["presentation_mathml"] = pres_mml
         doc["presentation_mathml_reason"] = pres_reason
         doc["content_mathml"] = cont_mml
         doc["openmath"] = openmath
         doc["content_mathml_reason"] = cont_reason
+        # Toledo v1.7 cheap-win lane 2 (MathML): mathml_error is non-null
+        # ONLY when a real conversion attempt was made (statement.format in
+        # {"latex", "latex+ascii"}) and it failed -- distinct from
+        # presentation_mathml_reason above, which also covers the
+        # not-even-attempted case (prose/coq/ascii-math/root-layer
+        # statements). Never silent: a failed conversion always lands here,
+        # never just dropped.
+        attempted = stmt.get("format") in ("latex", "latex+ascii")
+        doc["mathml_error"] = pres_reason if (attempted and pres_mml is None) else None
         write_json(entries_dir / f"{code_safe(e['code'])}.json", doc)
 
     toledo_doc = {
