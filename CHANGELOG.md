@@ -3,6 +3,90 @@
 All notable changes to Toledo are recorded here. Dates are the commit date in this repository;
 counts are computed from the files at that point, never carried over from a prior note.
 
+## v1.8.0 — 2026-09-08
+
+Version DOI: recorded once minted (concept 10.5281/zenodo.22537318).
+
+Commits `d786116`/`8954bcf` (Religious Attribution Non-Collapse), `8be7433`/`ef3adc7`/`270c2af`
+(executable-equations registrar review), `cb03ab6` (Internal-Consistency ladder + mechanical
+clearing fixes), `fd57ffd` (consistency-grader per-cell evidence fix), `ca9f9df` (causal-sweep
+merge), `d0d4709` (URCF turbulence merge), plus this release-prep pass.
+
+- **Internal-Consistency ladder (IC-0…IC-3)** (`cb03ab6`, `docs/CONSISTENCY_SPEC_v0_1.md`, founder
+  instruction 2026-09-08: "at minimum [Toledo] must be systematically self-consistent"):
+  `scripts/compute_consistency.py` grades every canonical entry and root row across seven
+  equation-clearing audit dimensions (schema, structure, tier, symbols, coq, duplicates, lineage),
+  reading the confirmed findings already produced by `ops/clearing/audit_*.py`, and writes
+  read-only sidecars under `registry/consistency/<mangled code>.json` plus `INDEX.json` — never a
+  truth score, orthogonal to and never merged with the resistance ladder R0–R6. `needs_reader` is
+  an honest state, not a pass. `scripts/v18_clearing_fixes.py` applied the subset of confirmed
+  findings that are mechanical and need no outstanding founder ruling (15 `tier.cell_table` status
+  moves, 125 wrapper header-comment tier corrections).
+  - **Evidence fix** (`fd57ffd`, `ops/clearing/CHECKER_2026-09-08.md` Block 1): the grader
+    initially left `evidence.cells` empty for every clean dimension pass, so "never examined" and
+    "checked and clean" were indistinguishable from the sidecar alone — the exact three-state
+    confusion the spec's own sec.0 forbids. `grade_entry` now copies each dimension's own
+    `cells_run` disclosure (from its `findings_<dimension>.json` header) into `evidence.cells` as
+    `{cell: "pass"}` for every examined cell with no finding against that code, `"fail"`/
+    `"needs_reader"` for a cell a finding id (`<dimension>.<cell>#<hash>`) names, and leaves a
+    genuinely unexamined cell absent — never defaulting to `"pass"`. Verified corpus-wide (no
+    sidecar left with empty real-cell evidence) and idempotent; a regression test was added.
+  - **Corpus reading, this checkout**: **1,912** sidecars (**1,302** readings + **610** roots).
+    Readings: IC-0 **1,148** · IC-1 **27** · IC-2 **127** · IC-3 **0**; **1,274** carry at least
+    one open finding (`flag: "IC-F"`). Roots: IC-0 **466** · IC-1 **51** · IC-2 **93** · IC-3 **0**;
+    **610** carry at least one open finding. No entry holds IC-3 yet — that rung needs clearance
+    rows (`ops/clearing/clearances.jsonl`), which do not exist in this checkout. See README's new
+    "Internal-Consistency ladder" section.
+- **Religious Attribution Non-Collapse (RANC)** (`d786116`/`8954bcf`): one new reading,
+  `weld/H.51.v1`, from "Plural Interfaces, Singular Commitments" v1.0 sec.8.1 (Yaoharee Lahtee) — a
+  five-level non-collapse chain (model output, product policy, institutional norm, actor belief,
+  person-specific religious classification). `phi_check` found no existing match; parented on
+  `weld/H.33.v1` (Core Epistemic Structure non-collapse) as the closest prior discipline, tier
+  `Definition` per the source's own framing, `coq_status: open_prop`. `origin.doi` patched to the
+  minted Zenodo record `10.5281/zenodo.22660591` once available.
+- **Executable-equations registrar review** (`8be7433`/`ef3adc7`/`270c2af`, founder ruling
+  `BBL-2026-09-08-243` item 2): acting under chair delegation, `EQ-001/P.45.v1` (Lorentz boost
+  pair) set `reviewed_ineligible` — `sympy`'s parse shattered the bare identifier `Gamma_R` into
+  single-letter symbols and dropped the statement's second clause, so its IR does not represent the
+  source statement; `EQ-001/P.63.v1` built and cross-checked instead. Evidence citations
+  (`registry/reproduction_card_index.json`, `registry/executable/INDEX.json`) repointed at the
+  glosa commit that actually holds the reproduction cards (an earlier citation pointed at a commit
+  filed before the card existed there).
+- **Causal-memory root extension** (`ca9f9df`, `registry/proposals/causal_sweep.json`): **27** new
+  readings from a 2026-09-08 sweep of causal-memory-programme records (41 raw new-branch objects
+  deduped to 27 across three judged parts). `scripts/v18_causal_merge.py` re-verified every parent
+  code and alias against the live registry, assigned real `.v1` running numbers per (root, domain)
+  replacing the proposal's `??` placeholders, and appended one LINEAGE `assigned` event per entry.
+  New readings land under `EQ-015/H` (2), `weld/B` (1), `weld/M` (3), `CMC/P` (1),
+  `Face.10.IdentifiabilityGate/M` (1), `weld/S` (1), `weld/P` (4), `EQ-001/P` (9), `EQ-015/P` (3),
+  `CMC/M` (1), `MQ08-stepper/M` (1) (2+1+3+1+1+1+4+9+3+1+1 = 27). All 27 are
+  `coq_status: open_prop` (tier as proposed, never raised); each got its own
+  `coq/canonical/<code>.v` open-proposition stub, individually `coqc`-verified to compile (27/27
+  clean, no proof attempted). See README's new "Causal-memory root extension" section.
+- **URCF turbulence instance** (`d0d4709`, `registry/proposals/urcf_turbulence.json`): one new
+  reading, `weld/P.05.v1`, the Retained-Information Relaxation-Inertia turbulence prediction
+  equation (τ_R dI_R/dt + L_R I_R = S_R + η_R) from a standalone research pack never deposited on
+  Zenodo (`origin.doi: null`). `instance_of` `weld/S.01.v1` (the Finite-Memory Laplacian/Telegraph
+  Generator this equation instantiates in a new domain) and `instance_of` `EQ-008` (a structural,
+  not author-cited, match to IDM/Genesis root `EQ-008`'s `L_R := D_W − W`) — the proposal file's own
+  `"root/EQ-008"` prefix did not match the registry's bare-root citation convention and was
+  corrected. Its own `does_not_resolve` caveat is preserved verbatim in `drift_note`: this reading
+  does **not** close Genesis root gap T2 (the harder, still-open state-dependent `L_R[I_R]` case) —
+  it is the easier linear/time-invariant sub-case only. `coq_status: open_prop`,
+  `coqc`-verified to compile. See README's new "URCF turbulence instance" section. Related:
+  `docs/TURBULENCE_KNOWLEDGE_LEDGER_2026-09-08.md` (`d42ad50`) — 13 turbulence/Navier-Stokes
+  sources read in full at intake, 4 Coq files independently compiled and tier-checked; strongest
+  verified fact recorded: `ker(L_R) = constants`, axiom-free.
+- **This release-prep pass**: `CITATION.cff`/`.zenodo.json` → 1.8.0 (version-DOI citation list left
+  as-is; the chair appends v1.8.0's DOI after minting); `python3 mcp/scripts/sync_version.py`
+  propagated `1.8.0` into `mcp/pyproject.toml` and `toledo_mcp/__init__.py`. Regenerated
+  `make build`, `python3 site/build_site.py --out site/dist --strict`,
+  `python3 -m toledo_mcp.export_static --out mcp/dist/static-api` and `make catalogue`. Full
+  release gate re-run: both pytest suites (root + `mcp/`), `site/checks/run_all.py`, and an
+  adversarial leak/attribution/priority-word scan over every file changed today.
+- **Canonical registry: 1,273 → 1,302** entries (1 RANC + 27 causal-sweep + 1 URCF; 610 root rows
+  unchanged). See README's "Honest state" section for the full live count breakdown.
+
 ## v1.7.0 — 2026-09-08
 
 Version DOI: 10.5281/zenodo.22652336 (concept 10.5281/zenodo.22537318).

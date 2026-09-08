@@ -212,20 +212,19 @@ indicative of that one run, not a guaranteed SLA — re-run `python3 benchmarks/
 - **`children[]`** is always computed at build time by inverting every entry's `parents[]` — a
   hand-written value is discarded and logged, never trusted.
 
-## Honest state — computed 2026-09-08 (v1.7)
+## Honest state — computed 2026-09-08 (v1.8)
 
 Every number below was read from the files in this repository by the command shown; none is
-carried over from an earlier note. This section supersedes the v1.6 counts below it in
-`CHANGELOG.md` — v1.7 adds four independent things: **6** Equation River readings (see "Equation
-River registrations" below); the 274 `information-discrete-math` root-extension readings
-introduced at v1.6 now wrapped in Toledo-native Coq files and verified closed, not merely mapped
-(see "274 information-discrete-math readings wrapped and closed" below); presentation MathML
-extended from 447 to 863 canonical-entry rows (see "Presentation MathML extended" below); and an
-opt-in Executable Equations v0.1 pilot layer plus a 21st MCP tool, `toledo_eval` (see "Executable
-Equations v0.1" below). No `coqc` full-arc re-verify was invoked by this release-prep pass itself
-— the 274 IDM readings' `closed` status comes from `182a491`'s own scoped `verify.sh` run over
-exactly those 274 new files (274 identifiers checked, 0 disclosed-axiom, 0 failed), read here, not
-re-run.
+carried over from an earlier note. This section supersedes the v1.7 counts below it in
+`CHANGELOG.md` — v1.8 adds: the **Internal-Consistency ladder** (IC-0…IC-3), a new grader over the
+seven equation-clearing audit dimensions, plus a same-day fix to its per-cell evidence (see
+"Internal-Consistency ladder" below); one Religious Attribution Non-Collapse reading
+(`weld/H.51.v1`); **27** causal-memory root-extension readings (see "Causal-memory root extension"
+below); and one URCF turbulence reading, `weld/P.05.v1` (see "URCF turbulence instance" below). No
+`coqc` full-arc re-verify was invoked by this release-prep pass — every new open_prop stub this
+release adds was individually `coqc`-checked at merge time (see the sections below); the
+pre-existing full-arc `build_report.txt` was not re-run, per the standing "check only what changed"
+discipline.
 
 **Canonical registry** (`registry/CANONICAL.json`'s own live `counts{}` field, cross-checked by
 `python3 -c "import json,collections; d=json.load(open('registry/CANONICAL.json'));
@@ -233,29 +232,30 @@ c=d['canonical']; print(len(c)); print(collections.Counter(e['status'] for e in 
 print(collections.Counter(e['domain'] for e in c)); print(collections.Counter(e['tier'] for e in
 c)); print(collections.Counter(e['coq']['coq_status'] for e in c))"` — both agree):
 
-- **1,273** canonical entries: **1,267** at v1.6 plus **6** v1.7 Equation River readings
-  (`weld/M.33.v1`, `weld/M.34.v1`, `weld/M.35.v1`, `EQ-015/H.50.v1`, `weld/M.36.v1`,
-  `EQ-015/M.17.v1`). (1,267+6=1,273, matching `registry/CANONICAL.json`'s own `counts{}.entries`
-  exactly.)
-- **Status:** `current` 1,182 (+6) · `unverified` 52 · `split` 30 · `not_an_equation` 9.
-- **Domain:** M 412 (+5) · P 313 · S 136 · H 123 (+1) · W 93 · B 75 · E 62 · C 59.
-- **Tier:** `Th_coqc` 413 · `Definition` 434 (+3) · `Dr` 82 (+3) · `Ax` 12 · `finite_diagnostic` 46 ·
-  `Open` 41 · `untagged` 245. (`Th_coqc` certifies that a lemma is closed under the stated finite
-  model's global context — an internal-consistency check, never an empirical or physical truth
-  claim; `untagged` means the source gave no tier at all, stated as such rather than guessed. The
-  +3/+3 split between `Definition` and `Dr` is the six new river readings: three state a
-  categorical `Definition` — the rung set, the strengthening law, the stage-3/4-on-`Q` realisation
-  — and three state an open `Dr` hypothesis — the strength readout, the return map, stage
-  non-collapse.)
-- **Coq status:** `closed` 551 (+274) · `definition` 384 (+3) · `wrapped_related` 210 ·
-  `mapped_not_wrapped` **0** (−274) · `not_formalisable` 70 · `open_prop` 55 (+3) · `axioms` 3. See
-  "The coq_status ladder" immediately below for what each of these means. `mapped_not_wrapped` is
-  retired a second time at v1.7 — the 274 v1.6 IDM readings that carried it are the same 274 that
-  gained a Toledo-native wrapper file this release and moved to `closed` (see "274
-  information-discrete-math readings wrapped and closed" below), the same pattern that retired it
-  once already at v1.5 for the 119 Theta/CMC readings. The three new `open_prop` river readings are
-  the strength-readout/return-map/stage-non-collapse `Dr` hypotheses above, carried as stated open
-  `Prop`s, never forced to a proof.
+- **1,302** canonical entries: **1,273** at v1.7 plus **1** RANC (`weld/H.51.v1`) plus **27**
+  causal-sweep readings plus **1** URCF turbulence reading (`weld/P.05.v1`). (1,273+1+27+1=1,302,
+  matching `registry/CANONICAL.json`'s own `counts{}.entries` exactly.)
+- **Status:** `current` 1,167 (−15) · `unverified` 96 (+44) · `split` 30 · `not_an_equation` 9. The
+  −15/+44 shift is two independent things, not one: `scripts/v18_clearing_fixes.py` (`cb03ab6`)
+  moved 15 pre-existing `tier.cell_table` entries `current` → `unverified` with a dated
+  `status_note` (a confirmed clearing finding, no statement text touched); the other 29 of the +44
+  are every one of this release's new entries (RANC + 27 causal-sweep + URCF), all registered
+  `unverified` per SCHEMA's own "never assign a status the source did not itself state" discipline.
+- **Domain:** M 418 (+6) · P 331 (+18) · S 137 (+1) · H 126 (+3) · W 93 · B 76 (+1) · E 62 · C 59.
+- **Tier:** `Th_coqc` 413 · `Definition` 442 (+8) · `Dr` 82 · `Ax` 12 · `finite_diagnostic` 46 ·
+  `Open` 41 · `untagged` 245 · `Theorem` 10 (new) · `Empirical` 5 (new) · `Postulate` 4 (new) ·
+  `Lemma` 1 (new) · `Conjecture` 1 (new). (`Th_coqc` certifies that a lemma is closed under the
+  stated finite model's global context — an internal-consistency check, never an empirical or
+  physical truth claim; `untagged` means the source gave no tier at all, stated as such rather than
+  guessed. The five new tier labels are the causal-sweep proposals' own source-stated tiers,
+  carried verbatim — Toledo does not collapse a source's `Theorem`/`Empirical`/`Postulate`/
+  `Lemma`/`Conjecture` framing into the pre-existing six-value vocabulary.)
+- **Coq status:** `closed` 551 · `definition` 384 · `wrapped_related` 210 · `not_formalisable` 70 ·
+  `open_prop` 84 (+29) · `axioms` 3. See "The coq_status ladder" immediately below for what each of
+  these means. Every one of this release's 29 new entries (RANC + 27 causal-sweep + URCF) is
+  `open_prop`: tier as its own source states, never raised; each ships its own
+  `coq/canonical/<code>.v` open-proposition stub, individually `coqc`-verified to compile at merge
+  time, no proof attempted.
 
 ### The coq_status ladder (`closed` → `axioms` → `definition` → `wrapped_related` → `open_prop` → `not_formalisable`)
 
@@ -807,6 +807,113 @@ registry):
 
 Full build-stream ownership, IR schema, the do-not-build list, and the false-positive hazards this
 pilot found: `docs/EXECUTABLE_EQUATIONS_v0_1.md`.
+
+### Internal-Consistency ladder (IC-0…IC-3)
+
+`docs/CONSISTENCY_SPEC_v0_1.md`, founder instruction 2026-09-08 (verbatim, Thai): "ultracode
+ตั้งทีมชำระสมการด้วย เพื่อให้ toledo เป็นระบบสมการที่แข็งแกร่ง และแยกความแม่นยำในตัวเองอย่างน้อยที่สุดต้อง
+สอดคล้องภายในในตัวเองอย่างเป็นระบบ" — set up an equation-clearing team so Toledo is a strong
+equation system, and at minimum its own internal precision must be systematically self-consistent.
+Internal consistency (IC) is the registry agreeing with **itself** — fields with the schema,
+fields with each other, statements with the Coq files they point to, edges with the statements
+they connect, symbols with one declared sense — and is orthogonal to the resistance ladder R0–R6
+below (evidence against the world): an entry can be IC-3 and R0, or R4 and IC-0. Neither ladder
+ever collapses into the other or into one number.
+
+`scripts/compute_consistency.py` grades every canonical entry and root row across seven
+equation-clearing audit dimensions (`schema`, `structure`, `tier`, `symbols`, `coq`, `duplicates`,
+`lineage`), reading the confirmed findings already produced by `ops/clearing/audit_*.py`, and
+writes read-only sidecars under `registry/consistency/<mangled code>.json` plus a corpus-wide
+`INDEX.json` — never touching `registry/CANONICAL.json` or `registry/genesis_root.json` itself. A
+dimension is `pass` (every examined cell clean), `fail` (a block-severity finding is open against
+it), `needs_reader` (a warn-severity finding, or a cell still queued for a human/agent reader
+verdict), or `not_checked` (that dimension's auditor did not run) — `needs_reader` is an honest,
+unresolved state, never rendered as a pass. Per docs/CONSISTENCY_SPEC_v0_1.md sec.4, each
+dimension's own evidence names which cells were actually examined (`evidence.cells`), so "never
+checked" and "checked and clean" are never indistinguishable from the sidecar alone — see the
+"Evidence fix" note below for why that guarantee needed a same-day repair.
+
+The four rungs: **IC-0** (no guarantee yet — the default), **IC-1** (`schema`, `structure`,
+`tier`, `lineage` all pass — "shape-consistent"), **IC-2** (IC-1 plus `symbols`, `coq`,
+`duplicates` all pass, and the entry's statement text parses under the duplicates fingerprint
+check — "text-consistent"), **IC-3** (IC-2 plus an independent clearance row exists in
+`ops/clearing/clearances.jsonl`) — no entry holds IC-3 in this checkout, since that file does not
+exist yet. An entry with any open finding also carries `flag: "IC-F"` regardless of its rung, and
+`blocked_at` names the lowest failing `{rung, dimension, finding}`.
+
+`scripts/v18_clearing_fixes.py` applied the subset of confirmed findings that are mechanical and
+need no outstanding founder ruling: 15 `tier.cell_table` status moves (`current` → `unverified`
+with a dated `status_note`, per SCHEMA's own overlay) and 125 wrapper header-comment tier
+corrections (the `tier:` word in a Coq file's own header comment corrected to match the entry's
+registry tier) — idempotent, LINEAGE-logged, no statement text touched.
+
+**Evidence fix (same day, `ops/clearing/CHECKER_2026-09-08.md` Block 1):** the grader's first
+version left `evidence.cells` empty for every clean dimension pass — a "pass" and a cell the
+dimension's own auditor never examined for that code rendered identically. `grade_entry` now
+copies each dimension's own `cells_run` disclosure (from its `findings_<dimension>.json` header;
+`duplicates` — which carries no such header — uses the spec's own fixed `exact`/`fingerprint`/
+`contradiction` cells) into `evidence.cells` as `{cell: "pass"}` for every examined cell with no
+finding against that code, `"fail"`/`"needs_reader"` for a cell a finding id
+(`<dimension>.<cell>#<hash>`, verified to hold corpus-wide across all seven findings files) names,
+and leaves a genuinely unexamined cell absent — never defaulting to `"pass"`. Verified corpus-wide
+(no sidecar left with only the auditor's raw finding-id lists as evidence) and idempotent (a
+second run changes nothing but `INDEX.json`'s own timestamp); `tests/test_consistency.py` carries
+a standing regression test for this.
+
+**Corpus reading, this checkout** (`registry/consistency/INDEX.json`): **1,912** sidecars
+(**1,302** readings + **610** roots). Readings: IC-0 **1,148** · IC-1 **27** · IC-2 **127** · IC-3
+**0**; **1,274** carry `flag: "IC-F"`. Roots: IC-0 **466** · IC-1 **51** · IC-2 **93** · IC-3 **0**;
+**610** carry `flag: "IC-F"`. By dimension (`pass`/`fail`/`needs_reader`, `not_checked` is 0
+throughout): `schema` 227/1,480/205 · `structure` 760/333/819 · `tier` 1,680/7/225 · `symbols`
+610/140/1,162 · `coq` 689/0/1,223 · `duplicates` 1,877/5/30 · `lineage` 27/38/1,847. Most entries
+sit at IC-0 because `lineage` and `coq` carry a corpus-wide `needs_reader` reader queue (root-layer
+parent edges awaiting a human/agent `reads_root` verdict; every entry with a Coq file awaiting an
+`encodes_structure` verdict) — a stated, unresolved reader backlog, not a hidden failure.
+
+### Causal-memory root extension
+
+`registry/proposals/causal_sweep.json` (2026-09-08 founder-instructed sweep): **27** new readings
+from the causal-memory research programme, deduped from 41 raw new-branch objects found across
+three judged intake parts (`ops/causal_sweep/judged_part1.json`/`part2.json`/`part3.json`).
+`scripts/v18_causal_merge.py` re-verified every proposal's parent code and alias against the live
+registry (not the proposal file's own morning-of dedup — the registry can change between intake
+and merge) before assigning real `.v1` running numbers per `(root, domain)`, replacing the
+proposal's `??` placeholders, and appended one LINEAGE `assigned` event per entry.
+
+New readings, by root/domain: `EQ-015/H` (2, `H.51`–`H.52`) · `weld/B` (1, `B.01`) · `weld/M` (3,
+`M.37`–`M.39`) · `CMC/P` (1, `P.16`) · `Face.10.IdentifiabilityGate/M` (1, `M.01`) · `weld/S` (1,
+`S.51`) · `weld/P` (4, `P.01`–`P.04`) · `EQ-001/P` (9, `P.70`–`P.78`) · `EQ-015/P` (3,
+`P.118`–`P.120`) · `CMC/M` (1, `M.19`) · `MQ08-stepper/M` (1, `M.01`). Every entry is
+`coq_status: open_prop` with tier exactly as its own source states (never raised) — five of the 27
+carry a tier label new to this registry (`Theorem`, `Empirical`, `Postulate`, `Lemma`,
+`Conjecture`, carried verbatim rather than collapsed into the pre-existing vocabulary; see "Honest
+state" above). Each got its own `coq/canonical/<code>.v` open-proposition stub — a
+`Definition <code>_hyp : Prop` stating the claim's general shape over abstract Parameters/Types,
+no proof attempted — individually `coqc`-verified to compile (27/27 clean) rather than trusted from
+the merge script alone.
+
+### URCF turbulence instance
+
+`registry/proposals/urcf_turbulence.json`: one new reading, `weld/P.05.v1`, the Retained-
+Information Relaxation-Inertia turbulence prediction equation `τ_R dI_R/dt + L_R I_R = S_R + η_R`,
+from a standalone research pack (`URCF_RTPE_TURBULENCE_RELAXATION_INERTIA_DIRECT_LP_CLOSURE_v2_2_
+STANDALONE_PROOF_PACK.yaml`) never deposited on Zenodo (`origin.doi: null`). Two `instance_of`
+parents: `weld/S.01.v1` (the Finite-Memory Laplacian/Telegraph Generator — identical functional
+shape, `ds/dt + (L_R+Γ)s = J`, applied here to a new domain, the turbulence structural state `I_R`,
+instead of the social-instability state `s`) and `EQ-008` (a structural, not author-cited, match:
+the source's own words for `L_R` — "graph Laplacian / linearized restoration operator, positive
+semidefinite, zero-mode policy declared" — match IDM/Genesis root `EQ-008`'s canonical
+`L_R := D_W − W`). The proposal file's own parent citation, `"root/EQ-008"`, did not match the
+registry's own bare-root citation convention (every existing root-layer parent in
+`registry/CANONICAL.json` is cited bare, e.g. `weld/M.01.v1 <- weld`, `EQ-015/M.01.v1 <- EQ-015`;
+`registry/genesis_root.json`'s own row id is `"EQ-008"`, never `"root/"`-prefixed) and was
+corrected, not silently kept wrong.
+
+The proposal's own `does_not_resolve` caveat is preserved verbatim in the entry's `drift_note`:
+this reading does **not** close Genesis root gap T2 (the harder, still-open case where the operator
+`L_R[I_R]` itself depends on the state it acts on) — its own stated assumption set keeps `L_R`
+time-independent, the easier linear sub-case only. `coq_status: open_prop`, tier `Definition` per
+the source's framing; `coq/canonical/weld__P_05_v1.v` `coqc`-verified to compile.
 
 ### Resistance ladder R0–R6 and reproduction evidence
 
