@@ -123,6 +123,69 @@ _SAFE_BARE_WORDS = {
 }
 _MULTI_LETTER_SUPERSCRIPT = re.compile(r"\^\{[A-Za-z]{2,}\}")
 
+# --------------------------------------------------------------------------
+# Hard mechanical guards (EXEC-1): reject rather than silently emit a wrong
+# IR candidate. Both hazards below were found live in the real registry —
+# EQ-001/P.45.v1's own drift_note names both defects by hand, after a human
+# reviewer had to catch what this extractor should have refused to write in
+# the first place. `bare_word_risk`/`superscript_label_risk` above stay as
+# informational, disclosed-in-drift_note signals for borderline cases; the
+# two checks below are narrower and CONFIRMED against the actually-parsed
+# expression / a hard clause count, so they can safely reject outright
+# instead of merely flagging.
+# --------------------------------------------------------------------------
+
+# A bare (no leading backslash), 2+-letter-prefixed identifier with an
+# underscore — e.g. "Gamma_R", "tau_c" — is the exact shape sympy's
+# parse_latex is known to shatter into single-letter symbols (a 1-letter
+# prefix like "r_s" or "Q_v" is NOT flagged here: sympy already keeps those
+# intact as one Symbol, confirmed against the real registry's own P.45/P.63
+# pair below).
+_MULTI_LETTER_IDENTIFIER = re.compile(r"(?<!\\)\b[A-Za-z]{2,}_[A-Za-z0-9]+\b")
+
+# A standalone '=' (not part of '<=', '>=', '!=', '==') marks one relational
+# clause. `parse_latex` only ever returns ONE `Eq` node, so any source text
+# with more than one such '=' has at least one clause/witness value that
+# was silently dropped from the IR — this is exactly what happened to
+# EQ-001/P.45.v1's second clause and its exact witness.
+_EQUALS_SIGN = re.compile(r"(?<![<>=!])=(?!=)")
+
+
+def shattered_identifier_candidates(source_text: str) -> list[str]:
+    """Bare multi-letter, underscore-bearing identifiers in the source text
+    that are at risk of being shattered by parse_latex (see module note)."""
+    hits = []
+    for m in _MULTI_LETTER_IDENTIFIER.finditer(source_text):
+        ident = m.group(0)
+        prefix = ident.split("_", 1)[0]
+        if prefix.lower() in _SAFE_BARE_WORDS:
+            continue
+        hits.append(ident)
+    return sorted(set(hits))
+
+
+def confirm_shattered_identifiers(candidates: list[str], expr) -> list[str]:
+    """Of the candidate identifiers, which ones did NOT survive as a single
+    whole symbol in the parsed expression's own free_symbols -- i.e. sympy
+    really did shatter them (confirmed against the parse, not just a
+    text-level guess)."""
+    free_names = {str(s) for s in expr.free_symbols}
+
+    def variants(word: str):
+        yield word
+        if "_" in word:
+            head, tail = word.split("_", 1)
+            yield f"{head}_{{{tail}}}"  # sympy's braced-subscript rendering
+
+    return [w for w in candidates if not any(v in free_names for v in variants(w))]
+
+
+def dropped_clause_count(source_text: str) -> int:
+    """Number of standalone relational '=' signs in the source text. A
+    single successfully-parsed Eq accounts for exactly one; more than one
+    present in the source means at least one clause was dropped."""
+    return len(_EQUALS_SIGN.findall(source_text))
+
 
 class Unsupported(Exception):
     pass
@@ -318,6 +381,38 @@ def extract_one(entry: dict, commit: str, sympy_version: str, antlr4_version: st
             "(neither side is a single bare symbol) — mechanically "
             "extracting which side is the computed output requires solving "
             "the relation, out of scope for this extractor"
+        )
+        return result
+
+    shattered_candidates = shattered_identifier_candidates(text)
+    confirmed_shattered = confirm_shattered_identifiers(shattered_candidates, formula_expr)
+    if confirmed_shattered:
+        result["status"] = "skipped"
+        result["reason"] = (
+            f"REJECTED by mechanical shattered-identifier guard: "
+            f"identifier(s) {confirmed_shattered} appear bare (2+ letters before an "
+            f"underscore, no leading backslash) in the source text but do NOT survive as a "
+            f"whole symbol in the parsed expression's free_symbols "
+            f"({sorted(str(s) for s in formula_expr.free_symbols)}) -- sympy's parse_latex "
+            f"has shattered the identifier into single-letter symbols, silently corrupting "
+            f"the extracted formula (the exact defect found by hand in EQ-001/P.45.v1's own "
+            f"review_note: 'Gamma_R' -> G*a*m*a_{{R}}). No sidecar written; a human must "
+            f"escape the identifier in the source statement (e.g. \\Gamma_R) before this "
+            f"code can be extracted."
+        )
+        return result
+
+    eq_count = dropped_clause_count(text)
+    if eq_count > 1:
+        result["status"] = "skipped"
+        result["reason"] = (
+            f"REJECTED by mechanical dropped-clause guard: source text contains {eq_count} "
+            f"top-level '=' signs but sympy's parse_latex returns exactly one `Eq` node here, "
+            f"so at least {eq_count - 1} additional clause(s)/witness value(s) would be "
+            f"silently dropped from the IR (the exact defect found by hand in EQ-001/P.45.v1's "
+            f"own review_note: the statement's second clause and its declared exact witness "
+            f"were dropped entirely). No sidecar written; a human must split the source "
+            f"statement into one relation per executable code before extraction."
         )
         return result
 
