@@ -1,0 +1,105 @@
+[
+  {
+    "id": "PROP-CONF-01",
+    "code": "weld/M.??.v1",
+    "name": "Whole-trajectory split-conformal quantile with fail-closed +infinity boundary",
+    "statement": {
+      "latest": "\\text{Given calibration scores } A_{(1)}\\le\\cdots\\le A_{(n)}: \\quad r_\\alpha=\\lceil(n+1)(1-\\alpha)\\rceil,\\quad q_\\alpha=A_{(r_\\alpha)}\\text{ if }r_\\alpha\\le n,\\quad q_\\alpha=+\\infty\\text{ if }r_\\alpha=n+1",
+      "format": "latex",
+      "note_ascii": "r_alpha = ceil((n+1)(1-alpha)); q_alpha = A_(r_alpha) if r_alpha<=n else +infinity (never clamped back to n)"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "cqts.safety:safe_split_conformal_quantile",
+      "task-conditioned-6d-pose-stop:C8"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [],
+    "origin": {
+      "source": "task-conditioned-6d-pose-stop, cqts/safety.py::safe_split_conformal_quantile (public, github.com/morrocwi/task-conditioned-6d-pose-stop); retroactive Toledo-first registration -- this equation was implemented and used before being registered",
+      "doi": null
+    }
+  },
+  {
+    "id": "PROP-CONF-02",
+    "code": "weld/M.??.v1",
+    "name": "Whole-trajectory nonconformity score by max-aggregation over stages and coordinates",
+    "statement": {
+      "latest": "A_j = \\max_{k\\le K}\\max_{i\\le 6}\\left[\\log(|e_{j,k,i}|+\\delta_i) - \\log(s_{j,k,i})\\right]",
+      "format": "latex",
+      "note_ascii": "A_j = max over K stages and 6 coordinates of the log-scaled nonconformity; used because the stopping stage is chosen adaptively, so per-stage independence cannot be assumed"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "task-conditioned-6d-pose-stop:C7"
+    ],
+    "parents": [
+      {
+        "code": "PROP-CONF-01",
+        "derived_via": "instance_of",
+        "evidence": "the input score consumed by PROP-CONF-01's quantile construction"
+      }
+    ],
+    "origin": {
+      "source": "task-conditioned-6d-pose-stop (public); retroactive registration",
+      "doi": null
+    },
+    "note": "This construction's conservativeness (the joint max over K x 6 = 90 cells inflates q_alpha strongly: exp(q)~7.4x observed empirically on BOP-LMO real data with K=15, n=40) is the diagnosed cause of a real falsifying result -- see GLS-2026-005 in glosa and lab/results/real-bop-lmo-2026-09-09{,-run2}/ in the source repo."
+  },
+  {
+    "id": "PROP-CONF-03",
+    "code": "weld/M.??.v1",
+    "name": "Bonferroni-corrected multi-checkpoint conformal band (union-bound whole-trajectory coverage without joint stage-aggregation)",
+    "statement": {
+      "latest": "\\text{For checkpoint stages } k_1,\\ldots,k_{K'}\\text{ (predeclared, } K'\\le n/(\\lceil(n+1)(1-\\alpha)\\rceil\\text{-feasibility bound):}\\quad A_{j,k_m}=\\max_{i\\le6}[\\log(|e_{j,k_m,i}|+\\delta_i)-\\log(s_{j,k_m,i})],\\quad q_{k_m}=\\text{SplitConformalQuantile}(\\{A_{j,k_m}\\}_{j=1}^n,\\ \\alpha/K').\\quad \\text{Then } P\\Big(\\bigcup_{m=1}^{K'} \\{e^\\star_{k_m}\\notin \\text{env}_{k_m}\\}\\Big) \\le \\sum_{m=1}^{K'}\\alpha/K' = \\alpha \\text{ (union bound)}",
+      "format": "latex",
+      "note_ascii": "Bonferroni: calibrate each of K' predeclared checkpoint stages separately at level alpha/K' (coordinate-max only, no stage-aggregation), union bound over K' stages gives the same overall alpha-level whole-trajectory guarantee as the joint max-over-stages construction (PROP-CONF-01/02), without the multiplicative stage-count penalty inside a single max."
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "task-conditioned-6d-pose-stop:GLS-2026-005-revised-hypothesis"
+    ],
+    "coq": {
+      "file": "coq/canonical/PROP_CONF_03_union_bound.v",
+      "identifiers": [
+        "finite_union_bound",
+        "bonferroni_checkpoints"
+      ],
+      "print_assumptions_verbatim": "both = Closed under the global context",
+      "coq_status": "closed"
+    },
+    "parents": [
+      {
+        "code": "PROP-CONF-01",
+        "derived_via": "refines",
+        "evidence": "same quantile construction applied per-checkpoint instead of jointly over all stages"
+      },
+      {
+        "code": "PROP-CONF-02",
+        "derived_via": "specialises",
+        "evidence": "nonconformity score restricted to coordinate-max only, dropping the stage dimension of the max, at each of K' predeclared checkpoints"
+      }
+    ],
+    "feasibility_constraint": {
+      "statement": "K' checkpoint stages are feasible only while ceil((n+1)(1-alpha/K')) <= n; computed for n=40, alpha=0.1: K'<=4 is feasible, K'=5 already forces q=+infinity at every checkpoint (verified by direct computation, see GLS-2026-005 diagnosis revision).",
+      "verified_by": "python3 arithmetic, 2026-09-09, glosa/projects/GLS-2026-005_pose-stop-conformal-diagnosis/DIAGNOSIS_HYPOTHESIS.md"
+    },
+    "origin": {
+      "source": "New construction, designed 2026-09-09 to fix the diagnosed cause of two real-data falsifying results in task-conditioned-6d-pose-stop (GLS-2026-005). NOT YET IMPLEMENTED OR TESTED as of registration -- Toledo-first: registered before use, per the workspace's standing rule.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 stated only. The union-bound argument itself (Boole's inequality over a finite index set of K' events) is a standard, mechanically provable fact -- queued for a Coq witness over Q (finite probability, rational bounds) before any R2 claim.",
+      "empirical_test_status": "not yet run; this is the design artifact that authorizes the next real-data cycle, not a result"
+    }
+  }
+]
