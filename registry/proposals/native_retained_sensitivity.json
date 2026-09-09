@@ -1,0 +1,59 @@
+[
+  {
+    "id": "PROP-NATIVE-01",
+    "code": "weld/H.??.v1",
+    "name": "What error IS under readout-not-truth: retained update, not distance to an unobserved true pose",
+    "statement": {
+      "latest": "\\Delta_k:=\\delta_R(\\hat T_k,\\hat T_{k-1})\\quad(\\text{a directly observed retained difference between consecutive readouts})\\quad\\text{replaces}\\quad e_k:=\\operatorname{Log}(\\hat T_k^{-1}T^\\star)\\quad(\\text{a distance to an unobserved }T^\\star,\\text{ a non-readout})",
+      "format": "latex",
+      "note_ascii": "the classical pose-error definition e_k = Log(That_k^-1 T*) requires the unobserved true pose T* -- a non-readout in this workspace's own information-discrete-math discipline (I1-style injection: treating an unread quantity as if it were a number). The readout-native replacement is the retained difference between actual consecutive readouts, Delta_k, which needs no T* at all, not even offline for calibration."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "H",
+    "aliases": ["task-conditioned-6d-pose-stop:GLS-2026-005-native-error-definition"],
+    "parents": [
+      {"code": "delta_R", "derived_via": "instance_of", "evidence": "this is a direct application of the workspace's own root primitive (a retained difference exists) to the specific case of consecutive pose-refinement readouts, replacing a T*-relative definition that the primitive's own discipline forbids treating as a readout."}
+    ],
+    "honest_caveats": [
+      "This does not claim the classical e_k is 'wrong' in the sense of being mathematically ill-defined -- T* is a coherent mathematical object under a classical-realist stance. It claims that USING it (even only offline, only for calibration) silently imports a non-readout into what this workspace's own standing discipline (EPIS-UNIVERSAL-LENS) requires flagging, and that a genuinely native alternative should be tried before concluding the whole calibration line is exhausted.",
+      "A first empirical test of this native construction would still reasonably compare its ACT/HOLD decisions against T*-derived ground truth in the lab (as an external check, not as a calibration input) -- this is a legitimate use of T* as a checker, not as a definitional ingredient, and does not violate the readout-not-truth stance any more than any other falsifiable prediction does."
+    ],
+    "origin": {
+      "source": "Founder instruction 2026-09-09: 'ต้องตั้งคำถามก่อนว่า error คืออะไรในปรัชญาของเรา และวางโมเดลขึ้นมาใหม่จากรากของ Toledo เอง' (first ask what error IS in our own philosophy, then build a new model from Toledo's own roots), after four real-data cycles refuted every calibration-side fix without questioning the underlying error definition itself.",
+      "doi": null
+    }
+  },
+  {
+    "id": "PROP-NATIVE-02",
+    "code": "weld/H.??.v1",
+    "name": "Retained-sensitivity task admissibility: ACT licensed when the task verdict is invariant along data-justified uncertain directions, using the correspondence Hessian's own spectrum (no ground truth anywhere)",
+    "statement": {
+      "latest": "\\text{Let }H_k\\text{ be the real ICP normal-equations Hessian at stage }k\\text{, with eigenpairs }(\\lambda_j,v_j).\\quad\\text{A direction }v_j\\text{ is data-justified-uncertain if }\\lambda_j\\text{ is small (near the proven floor);}\\quad\\text{the data-justified perturbation magnitude along }v_j\\text{ is }\\propto 1/\\lambda_j\\ (\\text{bounded by weld/M.40.v1's ceiling and, once proven, a floor}).\\quad\\boxed{\\text{ACT}\\iff O_T(\\hat T_k)=O_T(\\hat T_k\\oplus\\epsilon v_j)\\ \\text{for every data-justified-uncertain }v_j}",
+      "format": "latex",
+      "note_ascii": "instead of building a calibrated completion set around an assumed true pose (needs T*), perturb the CURRENT estimate along the correspondence Hessian's own low-eigenvalue directions (the directions the DATA ITSELF says are weakly constrained -- directly computable, no ground truth needed) by a magnitude the data itself justifies (inverse eigenvalue, bounded by the proven L_R ceiling), and license ACT only if the task verdict does not change along any such direction. This reuses the real H_k eigen-structure task-conditioned-6d-pose-stop's fourth cycle already computes, but for its actually-valid purpose (identifying weakly-constrained directions) rather than the refuted purpose (a graph-diameter-based decay-rate extrapolation, which needed H_k to have graph structure it does not have)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "H",
+    "aliases": ["task-conditioned-6d-pose-stop:GLS-2026-005-H3-native-sensitivity-criterion"],
+    "parents": [
+      {"code": "PROP-NATIVE-01", "derived_via": "instance_of", "evidence": "uses only retained/observed quantities (H_k's own real eigenstructure), never T*, consistent with the native error definition above"},
+      {"code": "L_R", "derived_via": "bridges", "evidence": "H_k's role here (identifying weakly-constrained directions via its spectrum) is the same structural role L_R plays generally; unlike PROP-DECAY-01 (refuted, run 4), this construction does NOT require H_k to have graph/diameter structure -- it only uses H_k's own eigenvalues directly, which always exist for any real symmetric matrix, sidestepping run 4's exact refutation."},
+      {"code": "weld/M.40.v1", "derived_via": "bridges", "evidence": "bounds the largest data-justified perturbation direction's inverse-eigenvalue magnitude from below (a small perturbation bound on the best-constrained directions)"}
+    ],
+    "honest_caveats": [
+      "This is a genuinely new construction, not yet implemented or tested as of registration -- Toledo-first: registered before use.",
+      "Unlike PROP-DECAY-01, this does NOT need q_formal/M.07's diameter-based floor at all (no graph diameter is needed), which removes that proposal's central structural flaw -- but it still needs its own correctness argument for WHY invariance-under-data-justified-perturbation licenses ACT with any coverage-like guarantee; this is currently a Dr-tier design, not a proven guarantee, and needs the same kind of adversarial scrutiny every prior cycle's hypothesis received before being trusted.",
+      "The relationship between 'small eigenvalue direction' and 'actual pose error along that direction' is itself an assumption (weakly-constrained by these correspondences does not automatically mean large true error) -- must be checked empirically, honestly, the same way runs 1-4 checked their own assumptions."
+    ],
+    "origin": {
+      "source": "Designed 2026-09-09 in response to the founder's instruction to build a new model natively from Toledo's own roots after four calibration-side falsifications. NOT YET IMPLEMENTED OR TESTED.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 stated only.",
+      "empirical_test_status": "not yet run; candidate for a fifth real-data cycle pending founder selection in the glosa hypothesis-selection process (GLS-2026-005, GLOSA-PC-20260909-0005)"
+    }
+  }
+]
