@@ -86,7 +86,7 @@
       "note_ascii": "M_k accumulates a streak count of consecutive stages where the single-instant imagination+reason check (PROP-NATIVE-02) found the task verdict invariant under every data-justified perturbation; ACT is licensed only once the streak reaches a predeclared threshold theta, not on a single passing instant. A telescoping accumulator in the same idiom as root A2 (FOLD engine)."
     },
     "tier": "Dr",
-    "status": "unverified",
+    "status": "refuted",
     "domain": "H",
     "aliases": [
       "task-conditioned-6d-pose-stop:GLS-2026-005-H3b-memory-accumulator"
@@ -106,11 +106,16 @@
     "honest_caveats": [
       "Founder framing (verbatim, 2026-09-09): human imagination and reason connect through memory and work simultaneously to decide -- this proposal is the readout-native translation of that observation for this specific problem, not a claim about neuroscience.",
       "A streak-based threshold theta trades responsiveness for noise-robustness; too small a theta gives little protection over the single-instant check (PROP-NATIVE-02) already being tested; too large a theta may prevent ACT from ever firing even when it honestly should, the same failure mode as runs 1-4.",
-      "Not yet implemented or tested -- proposed as the next iteration if the single-instant H3 (PROP-NATIVE-01/02, run 5) proves too noise-sensitive to certify reliably."
+      "Not yet implemented or tested -- proposed as the next iteration if the single-instant H3 (PROP-NATIVE-01/02, run 5) proves too noise-sensitive to certify reliably.",
+      "Empirically refuted 2026-09-09 (run6): on this backend/dataset, the underlying single-instant check (PROP-NATIVE-02) is a near-constant function of stage, so a streak/memory accumulator has nothing to filter and degenerates into a fixed-delay knob. This does not rule out memory/persistence constructions in general -- only that gating a non-noisy signal behind persistence cannot recover safety by itself."
     ],
     "origin": {
       "source": "Founder instruction 2026-09-09: 'มนุษย์ สมองส่วนจินตนาการและเหตุผล เชื่อมกับความจำ ทำงานพร้อมกัน และตัดสินใจ' (imagination and reason connect through memory and work together to decide) -- extends PROP-NATIVE-01/02 with a memory/persistence component.",
       "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 stated; R2 (falsifier reachable and reached) now applied via a real BOP-LMO run.",
+      "empirical_test_status": "Run 6 executed 2026-09-09 (task-conditioned-6d-pose-stop, lab/results/real-bop-lmo-2026-09-09-run6/RESULT.md), predeclaration commit 2b4f835982b84c931d538e536278cbce167efeec. A TRAIN-only diagnostic, computed and disclosed BEFORE test.jsonl was opened, found PROP-NATIVE-02's per-stage invariance check evaluates True at every one of 640 TRAIN stage readings (40 episodes x 16 stages, all 3 tasks) -- no toggling exists for a streak counter to filter. This predicted the resetting-streak accumulator M_k (implemented per this entry's own note_ascii reading, not the literal non-resetting-sum LaTeX -- see RATIONALE.md for the disclosed interpretation choice) would degenerate into a fixed-delay knob rather than a genuine noise filter. Confirmed on FINAL TEST: ACT fires deterministically at k=theta-1=3 (theta=4) on 100% of test episodes for all three tasks, unsafe on 80.0-87.5% of them (99/120 task-episode pairs) -- a modest drop from PROP-NATIVE-02's own 92.5-100% attributable only to 3 extra ICP iterations run before commit, not to any noise-filtering property of the memory mechanism. A disclosed follow-up variant additionally scaling the perturbation magnitude by the current observable ICP residual RMSE (addressing PROP-NATIVE-02's own diagnosed root cause directly) produced byte-identical outcomes: the scale factor's dynamic range (~1.15-1.8x, capped at 2x) is roughly two orders of magnitude too small relative to the gap between the perturbation cap and the real coarse-detector initial-pose error to matter. REFUTED as a fix for PROP-NATIVE-02's unsafe-ACT finding: memory/persistence cannot filter a signal that never toggles, and this is exactly what both real BOP-LMO runs (TRAIN and TEST) found on this backend. Marked refuted (not refuted_unsafe): the construction did not make the unsafe outcome WORSE than PROP-NATIVE-02 (it modestly improved the unsafe rate via extra ICP iterations) while still failing to establish safety."
     }
   }
 ]
