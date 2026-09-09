@@ -1164,10 +1164,22 @@ def render_coq_html(entry: dict) -> str:
         rows.append("<li>axioms: " + ", ".join(html.escape(a) for a in axioms) + "</li>")
     identifiers = coq.get("identifiers") or []
     if identifiers:
-        idlist = "".join(
-            f"<li><code>{html.escape(_s(i.get('identifier')))}</code> in <code>{html.escape(_s(i.get('file')))}</code></li>"
-            for i in identifiers
-        )
+        # Two shapes appear in the registry: a list of {identifier, file} dicts
+        # (older per-identifier-mapping convention), and a plain list of
+        # identifier-name strings paired with one shared coq.file (the
+        # convention used by today's spectral/conformal/decay proposals).
+        # Render both honestly rather than crashing the whole site build.
+        shared_file = coq.get("file")
+        idlist_items = []
+        for i in identifiers:
+            if isinstance(i, dict):
+                idlist_items.append(
+                    f"<li><code>{html.escape(_s(i.get('identifier')))}</code> in <code>{html.escape(_s(i.get('file')))}</code></li>"
+                )
+            else:
+                file_part = f" in <code>{html.escape(_s(shared_file))}</code>" if shared_file else ""
+                idlist_items.append(f"<li><code>{html.escape(_s(i))}</code>{file_part}</li>")
+        idlist = "".join(idlist_items)
         rows.append(f"<li>mapped identifiers:<ul>{idlist}</ul></li>")
     return '<ul class="relation-list">' + "".join(rows) + "</ul>"
 
