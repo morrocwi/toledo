@@ -63,6 +63,10 @@ proposal file and its own Coq status for the outcome, success or a documented st
   not an established identity, precisely because this document exists to hold the general,
   domain-neutral version of the claim separately from any one domain's borrowed use of it.
 
+## Connection to the Millennium Navier-Stokes problem, through our own lens
+
+See `docs/NAVIER_STOKES_THROUGH_OUR_LENS.md` (2026-09-09) -- Fefferman's official Clay problem statement, read for what its known content (Beale-Kato-Majda; the ceiling/floor shrinking with resolution) implies for THIS ceiling/floor pair. Dr-tier reading, no claim on the Clay problem itself; the concrete consequence is that kappa=lambda_max/lambda_2 is provably non-uniform in graph size (O(nD)), which is now recorded as an honest caveat on PROP-DECAY-01.
+
 ## What to do next, in order of value
 
 1. **Attempt the Mohar-bound Coq proof properly** (a real min-max/Courant–Fischer argument, not a
