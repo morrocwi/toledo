@@ -11,9 +11,15 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "H",
-    "aliases": ["task-conditioned-6d-pose-stop:GLS-2026-005-native-error-definition"],
+    "aliases": [
+      "task-conditioned-6d-pose-stop:GLS-2026-005-native-error-definition"
+    ],
     "parents": [
-      {"code": "delta_R", "derived_via": "instance_of", "evidence": "this is a direct application of the workspace's own root primitive (a retained difference exists) to the specific case of consecutive pose-refinement readouts, replacing a T*-relative definition that the primitive's own discipline forbids treating as a readout."}
+      {
+        "code": "delta_R",
+        "derived_via": "instance_of",
+        "evidence": "this is a direct application of the workspace's own root primitive (a retained difference exists) to the specific case of consecutive pose-refinement readouts, replacing a T*-relative definition that the primitive's own discipline forbids treating as a readout."
+      }
     ],
     "honest_caveats": [
       "This does not claim the classical e_k is 'wrong' in the sense of being mathematically ill-defined -- T* is a coherent mathematical object under a classical-realist stance. It claims that USING it (even only offline, only for calibration) silently imports a non-readout into what this workspace's own standing discipline (EPIS-UNIVERSAL-LENS) requires flagging, and that a genuinely native alternative should be tried before concluding the whole calibration line is exhausted.",
@@ -36,11 +42,25 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "H",
-    "aliases": ["task-conditioned-6d-pose-stop:GLS-2026-005-H3-native-sensitivity-criterion"],
+    "aliases": [
+      "task-conditioned-6d-pose-stop:GLS-2026-005-H3-native-sensitivity-criterion"
+    ],
     "parents": [
-      {"code": "PROP-NATIVE-01", "derived_via": "instance_of", "evidence": "uses only retained/observed quantities (H_k's own real eigenstructure), never T*, consistent with the native error definition above"},
-      {"code": "L_R", "derived_via": "bridges", "evidence": "H_k's role here (identifying weakly-constrained directions via its spectrum) is the same structural role L_R plays generally; unlike PROP-DECAY-01 (refuted, run 4), this construction does NOT require H_k to have graph/diameter structure -- it only uses H_k's own eigenvalues directly, which always exist for any real symmetric matrix, sidestepping run 4's exact refutation."},
-      {"code": "weld/M.40.v1", "derived_via": "bridges", "evidence": "bounds the largest data-justified perturbation direction's inverse-eigenvalue magnitude from below (a small perturbation bound on the best-constrained directions)"}
+      {
+        "code": "PROP-NATIVE-01",
+        "derived_via": "instance_of",
+        "evidence": "uses only retained/observed quantities (H_k's own real eigenstructure), never T*, consistent with the native error definition above"
+      },
+      {
+        "code": "L_R",
+        "derived_via": "bridges",
+        "evidence": "H_k's role here (identifying weakly-constrained directions via its spectrum) is the same structural role L_R plays generally; unlike PROP-DECAY-01 (refuted, run 4), this construction does NOT require H_k to have graph/diameter structure -- it only uses H_k's own eigenvalues directly, which always exist for any real symmetric matrix, sidestepping run 4's exact refutation."
+      },
+      {
+        "code": "weld/M.40.v1",
+        "derived_via": "bridges",
+        "evidence": "bounds the largest data-justified perturbation direction's inverse-eigenvalue magnitude from below (a small perturbation bound on the best-constrained directions)"
+      }
     ],
     "honest_caveats": [
       "This is a genuinely new construction, not yet implemented or tested as of registration -- Toledo-first: registered before use.",
@@ -54,6 +74,43 @@
     "resistance_evidence": {
       "rungs_held": "R0 stated only.",
       "empirical_test_status": "not yet run; candidate for a fifth real-data cycle pending founder selection in the glosa hypothesis-selection process (GLS-2026-005, GLOSA-PC-20260909-0005)"
+    }
+  },
+  {
+    "id": "PROP-NATIVE-03",
+    "code": "weld/H.??.v1",
+    "name": "Memory-accumulated decision rule: ACT licensed only on a persistent streak of task-invariance, not a single-instant check",
+    "statement": {
+      "latest": "M_k := M_{k-1} + \\mathbb{1}[\\text{task verdict invariant under every imagined perturbation at stage } k],\\quad M_0:=0,\\quad \\boxed{\\text{ACT} \\iff M_k \\ge \\theta} \\text{ (a predeclared persistence threshold)}",
+      "format": "latex",
+      "note_ascii": "M_k accumulates a streak count of consecutive stages where the single-instant imagination+reason check (PROP-NATIVE-02) found the task verdict invariant under every data-justified perturbation; ACT is licensed only once the streak reaches a predeclared threshold theta, not on a single passing instant. A telescoping accumulator in the same idiom as root A2 (FOLD engine)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "H",
+    "aliases": [
+      "task-conditioned-6d-pose-stop:GLS-2026-005-H3b-memory-accumulator"
+    ],
+    "parents": [
+      {
+        "code": "PROP-NATIVE-02",
+        "derived_via": "refines",
+        "evidence": "adds a persistence/memory requirement on top of the single-instant imagination+reason check, to filter noise-driven false invariance on real, noisy sensor data"
+      },
+      {
+        "code": "A2",
+        "derived_via": "instance_of",
+        "evidence": "M_k is a telescoping accumulator over a binary per-stage readout, the same generic FOLD-engine shape as root A2 (I_+[f](N) = sum_{k<N} f[k])"
+      }
+    ],
+    "honest_caveats": [
+      "Founder framing (verbatim, 2026-09-09): human imagination and reason connect through memory and work simultaneously to decide -- this proposal is the readout-native translation of that observation for this specific problem, not a claim about neuroscience.",
+      "A streak-based threshold theta trades responsiveness for noise-robustness; too small a theta gives little protection over the single-instant check (PROP-NATIVE-02) already being tested; too large a theta may prevent ACT from ever firing even when it honestly should, the same failure mode as runs 1-4.",
+      "Not yet implemented or tested -- proposed as the next iteration if the single-instant H3 (PROP-NATIVE-01/02, run 5) proves too noise-sensitive to certify reliably."
+    ],
+    "origin": {
+      "source": "Founder instruction 2026-09-09: 'มนุษย์ สมองส่วนจินตนาการและเหตุผล เชื่อมกับความจำ ทำงานพร้อมกัน และตัดสินใจ' (imagination and reason connect through memory and work together to decide) -- extends PROP-NATIVE-01/02 with a memory/persistence component.",
+      "doi": null
     }
   }
 ]
