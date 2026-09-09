@@ -278,3 +278,51 @@ the reading's statement was copied from).
 
 ## Addendum 2026-09-08 — CMC disposition (decision meeting)
 The Causal-Memory Closure root stays a standalone root-extension row (parents [], relations []) with its relations_note: two full-text searches of the mirrored sources found no sentence connecting it to a Genesis root (registry/cmc_connection_report.md, registry/root_candidates_report.md), and the registry rule admits a parent only with a quoted source sentence — the same disposition already applied to 15 of the 18 IDM (R2) root rows. A future quoted sentence reopens it through a LINEAGE 'revised' event; nothing is asserted meanwhile.
+
+## Addendum 2026-09-09 — Foundation hierarchy: IDM / Readout Genesis / Readout Universe over legacy solver_arc citations
+
+Founder ruling, verbatim: "telodo ต้องเอา idm readout-genesis readout-uninverse เป็นฐานนะ เพราะความรุ้นี้
+สอดคล้องกันแะใหม่ ความรุ้เก่ามันอาจจะยังคลาดเคลื่อน วางให้ดี" (Toledo must use IDM, Readout Genesis, and
+Readout Universe as its foundation, because that body of knowledge is internally coherent and newer;
+older knowledge may still be inaccurate — position this well).
+
+**The ruling, made concrete and checkable, not just declared:** the registry already exhibits exactly
+the pattern the founder is naming. Computed 2026-09-09 from `registry/CANONICAL.json`:
+
+| Source layer | Entries | `coq_status` |
+|---|---:|---|
+| `information-discrete-math` (root extension R2) | 274 | **100% `closed`** (machine-checked, axiom-free, wrapped 2026-09-08) |
+| `q_formal` root (imported by name from `solver_arc`'s own `docs/root/EQUATION_REGISTRY.md`, "UNIVERSE-SOLVER worker", 2026-09-06) | 32 | **100% `wrapped_related`** (cited only — no Toledo-native proof for any of them) |
+
+This is not a coincidence the founder is pattern-matching without cause: the two Toledo entries that
+this session's own work exposed as classical-but-unproven citations (`q_formal/M.05.v1` Anderson–
+Morley, `q_formal/M.06.v1`/`M.07.v1` Fiedler/Mohar) are both in this 32-entry `q_formal` set, and both
+turned out to need real, separate mechanization work before they could be trusted for a downstream
+proposal (`PROP-SPEC-01`, `PROP-DECAY-01`'s honest caveats).
+
+**Standing rule, effective now:**
+1. **Foundation tier** = `information-discrete-math` (root extension R2), `readout_genesis` (the
+   Genesis document itself and its own root anchors, e.g. `EQ-001`), and `readout_universe` (the
+   synthesis repo). These are the layers a new Toledo proposal should be checked against FIRST for
+   both duplication (φ-criterion) and correctness, and the layers a conflict should be resolved
+   *toward*, not away from, absent a specific reason stated otherwise.
+2. **Legacy/needs-reverification tier** = anything imported by bare citation from `solver_arc`'s own
+   equation inventory without an independent Toledo-native proof — currently the entire `q_formal`
+   root (32 entries, all `wrapped_related`) is the clearest instance, but this applies to any future
+   entry with the same shape (`origin.source: "solver_arc"`, `coq_status` never advancing past
+   `wrapped_related`/`untagged`), regardless of root.
+3. **This does not mean deleting or distrusting legacy entries outright** — a bare citation of a real
+   classical theorem (Anderson–Morley, Mohar) is not wrong, it is simply unverified *by this
+   registry*. It means: (a) never let a downstream Toledo proposal silently inherit a legacy
+   citation's tier for its own claim (already the discipline `PROP-SPEC-01`/`PROP-DECAY-01` followed
+   this session); (b) when a legacy entry conflicts with, or is superseded by, a foundation-tier
+   result, the foundation-tier result wins by default, and the legacy entry's own `status_note`
+   should record the conflict rather than sitting silently outdated; (c) mechanizing a legacy
+   citation (as attempted, honestly not completed, for the Mohar bound this session) is the
+   registrar's preferred way to retire an entry out of the legacy tier, not asserting it should be
+   trusted as-is.
+
+**Not done in this pass (flagged, not fixed):** a mechanical script tagging every legacy-tier entry
+with a `foundation_tier: "legacy_needs_reverification"` field, and a site/browse badge showing it, so
+a reader sees this distinction without reading this file — left as a concrete follow-up (see the
+workspace todolist item filed alongside this ruling).
