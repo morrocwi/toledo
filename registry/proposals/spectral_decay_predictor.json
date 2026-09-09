@@ -1,0 +1,37 @@
+[
+  {
+    "id": "PROP-DECAY-01",
+    "code": "weld/M.??.v1",
+    "name": "Condition-number-bounded geometric decay predictor for iterative Laplacian-type refinement (ICP error-scale replacement for a fitted log-linear model)",
+    "statement": {
+      "latest": "\\kappa_k=\\frac{\\lambda_{\\max}(H_k)}{\\lambda_2(H_k)},\\quad \\rho_k\\le\\frac{\\kappa_k-1}{\\kappa_k+1}\\ (\\text{standard Gauss--Newton/ICP normal-equation contraction rate}),\\quad s_{k,i}:=\\rho_k^{\\,K-k}\\cdot|\\text{residual}_{k,i}|\\ \\text{(replacing the fitted log-linear }s_{k,i}\\text{ of weld/M.61? / task-conditioned-6d-pose-stop's C6)}",
+      "format": "latex",
+      "note_ascii": "kappa_k = lambda_max(H_k)/lambda_2(H_k) of the ICP normal-equations matrix at stage k; rho_k <= (kappa_k-1)/(kappa_k+1) bounds the per-stage contraction rate (standard optimization theory, cited not re-derived here); s_k,i = rho_k^(K-k) * current residual replaces the ad hoc log-linear fit with a decay law derived from the actual conditioning of the problem"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["task-conditioned-6d-pose-stop:proposed-C6-replacement"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "L_R", "derived_via": "instance_of", "evidence": "H_k, the ICP normal-equations matrix at each refinement stage, is treated as an instance of the same weighted-graph-Laplacian-type quadratic-form object L_R already roots -- this identification is itself an assumption of this proposal, not an established Toledo fact, and must be checked against the real backend's H_k before use (see honest_caveats)."},
+      {"code": "weld/M.40.v1", "derived_via": "bridges", "evidence": "supplies a proven, axiom-free upper bound on lambda_max(H_k) (Anderson-Morley curvature ceiling)"},
+      {"code": "weld/M.42.v1", "derived_via": "bridges", "evidence": "alternative proven upper bound on lambda_max(H_k) (Rayleigh-quotient degree bound), whichever is tighter for the real correspondence graph is used"},
+      {"code": "q_formal/M.07.v1", "derived_via": "bridges", "evidence": "supplies the lower bound on lambda_2(H_k) via the diameter-based algebraic-connectivity floor lambda_2>=4/(nD) -- this citation is currently coq_status wrapped_related (cited, not itself mechanized in Toledo); a Coq witness is being attempted as part of this proposal, see coq field once it lands."}
+    ],
+    "honest_caveats": [
+      "The identification of ICP's normal-equations matrix H_k with the combinatorial graph Laplacian L_R family is an ANALOGY, not a proven equivalence -- H_k is built from point-correspondence covariances (a weighted least-squares Hessian), not literally the unweighted-degree-minus-adjacency object L_R:=D_W-W. This proposal's parents[] instance_of edge records this as an assumption to be checked, not an established fact.",
+      "The Gauss-Newton contraction-rate formula rho_k<=(kappa_k-1)/(kappa_k+1) is a standard, cited result from numerical optimization (not re-derived or Coq-verified here); it also assumes local, well-behaved convergence (no line-search failures, no degenerate correspondences), which real noisy depth data may violate.",
+      "q_formal/M.07's lambda_2>=4/(nD) bound requires knowing the correspondence graph's diameter D and vertex count n at each stage -- these must be computed from the real backend's actual correspondence structure, not assumed.",
+      "This is a genuinely higher-risk hypothesis than the prior two real-data cycles (tolerance re-derivation, Bonferroni checkpoints), both of which only touched calibration machinery; this one touches the pose ERROR ESTIMATE itself and could be wrong in either direction (tighter AND correct, tighter AND WRONG/uncalibrated, or no different from the log-linear fit)."
+    ],
+    "origin": {
+      "source": "Designed 2026-09-09, founder instruction: use Toledo/Readout Genesis to build a decision-enabling error predictor for task-conditioned-6d-pose-stop's third diagnosed bottleneck (the observable-feature error-scale predictor, C6, suspected too weak/uninformative after both calibration-side fixes were empirically refuted). NOT YET IMPLEMENTED OR TESTED as of registration -- Toledo-first: registered before use.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 stated only. Depends on q_formal/M.07 (currently cited, not mechanized) and on the H_k~L_R identification (an assumption, not a fact) -- this entry cannot honestly claim any rung above R0 until both are addressed.",
+      "empirical_test_status": "not yet run; scoped as a fourth real-data cycle"
+    }
+  }
+]
