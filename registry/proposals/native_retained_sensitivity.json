@@ -182,5 +182,53 @@
       "rungs_held": "R0 stated; R2 (falsifier reachable and reached) now applied via a real BOP-LMO run.",
       "empirical_test_status": "Run 7 executed 2026-09-09 (task-conditioned-6d-pose-stop, lab/results/real-bop-lmo-2026-09-09-run7/RESULT.md), predeclaration commit a76a8b9 (2026-09-09), following the 2026-09-09 ultracode team meeting convened after PROP-NATIVE-03/run6 was refuted. A TRAIN+CALIBRATION-only diagnostic, computed and disclosed BEFORE test.jsonl was opened (lab/derive_native_conformal_energy_from_train.py, native_conformal_energy_threshold_derivation.json), found TWO structural defects: (1) eps_{k,j}=min(q_k/lambda_j, CEILING) saturates at CEILING (reused byte-identical as PROP-NATIVE-02/03s own CAP=0.0327) on 100% of 160 TRAIN stage-checkpoint pairs for all three tasks -- q_k (order ~2.1-2.2, a dimensionless log-nonconformity quantile) divided by lambda_j (typically < 1) is essentially always larger than the reused ceiling, so the conformal quantile never actually influences the magnitude; (2) the checkpoint certificate gate (disclosed reading of the registered q_{k_m}<=tau_i as PROP-CONF-03s own certificate condition, a units-mismatch as literally typeset) is TRUE on 0/40 TRAIN episodes at all 4 predeclared checkpoints for all 3 tasks -- reproducing PROP-CONF-03/run3s own already-known certificate_rate=0.0 finding. This predicted, before test.jsonl was opened, that run7 would fail closed to near-100% HOLD -- the OPPOSITE failure mode from PROP-NATIVE-02/03 (unsafe-early-ACT). Confirmed exactly on FINAL TEST: ACT rate 0% (100% HOLD) on all 40 test episodes for all three tasks; unsafe-ACT rate 0% (achieved by never acting, not by acting correctly); non-inferiority FAILS in the over-conservative direction (LCB -23.7% to -49.1%, vs the estimators own 10.0-32.5% completion rate). Checkpoint-level gate diagnostics confirm the mechanism: m_k>=theta alone held on 72/160 checkpoint readings (45%) per task -- the Keystone/decay half of the construction is not itself vacuous -- but the certificate gate held on 0/160 readings per task, making it the sole binding constraint throughout. REFUTED, marked refuted_over_conservative (a distinct outcome class from PROP-NATIVE-02s \"unverified/unsafe\" and PROP-NATIVE-03s \"refuted\" for unsafe-ACT): this construction never produced an unsafe ACT, but only because it never acted at all -- zero unsafe-ACT is not a safety success when achieved this way. Establishes, on a THIRD independently-designed construction, that PROP-CONF-03s own per-checkpoint conformal envelope is vacuous on this backend/dataset not only as a standalone certificate (PROP-CONF-03/run3s original finding) but also when reused as a conjunctive gate inside a materially different mechanism -- a within-project stability finding about that specific calibration construction."
     }
+  },
+  {
+    "id": "PROP-NATIVE-05",
+    "code": "weld/H.??.v1",
+    "name": "Transduce-then-resonate-then-decide: a Policy-argmin stopping rule built from readout_genesis's Active World-Readout Loop, keeping the imagination/reason/memory triad intact",
+    "statement": {
+      "latex": "\\text{Let } r_k \\text{ be the raw per-stage signal (Hessian eigenpair, residual, conformal quantile). Do NOT threshold } r_k \\text{ directly (the Ω_H lesson: raw-carrier resonance is a category error).}\\quad\\text{Transduce: } \\omega_{A,k} := C_H(E_H(T_H(S_H(r_{k-w:k})))) \\text{ -- a compressed envelope/trend over a short window } w, \\text{ not the instantaneous value.}\\quad\\text{Resonate (reason, generalized from PROP-NATIVE-02's binary invariance to a graded gain): } G_k := 1/(1+(\\omega_{A,k}\\tau_c-1)^2).\\quad\\text{Imagine: } C_k := \\{z : r_k \\text{ does not exclude } z\\} \\text{ (unchanged from PROP-NATIVE-01).}\\quad\\text{Remember (decayed, from Ch.39 eq.19 / readout_genesis VIII.4's repair rate, refining PROP-NATIVE-03's hard streak): } M_k := \\rho M_{k-1} + G_k\\cdot\\Gamma_k,\\ \\Gamma_k:=\\text{Keystone energy of the perturbation (PROP-NATIVE-04's ingredient)}.\\quad\\text{Decide (readout_genesis VIII.3 Step 5, POLICY): } \\text{ACT} \\iff \\pi^*=\\arg\\min_{a\\in\\{\\text{ACT},\\text{CONTINUE}\\}}\\big[E\\|\\text{Res}\\|^2(M_k) + \\lambda C(k) + \\rho\\,\\text{Risk}(M_k) - \\nu\\,\\text{Val}(k) + \\mu\\,\\text{RepairLoss}\\big] = \\text{ACT}.",
+      "format": "latex",
+      "note_ascii": "Synthesizes three prior threads rather than replacing them: (1) the imagination/reason/memory triad already derived from delta_R/A2/L_R (PROP-NATIVE-01/02/03, docs/DECISION_EQUATION_FROM_READOUT_METAPHYSICS.md) is kept intact -- C_k (imagination) is unchanged, the reason/discharge condition is generalized from a binary invariance check to a graded resonance gain, and the memory accumulator is kept but now weighted by both the resonance gain and a real scale-valued Keystone energy (PROP-NATIVE-04's ingredient) instead of a boolean; (2) readout_genesis's own Active World-Readout Loop (Part VIII, Th_coqc-adjacent Dr/Open tier, NOT yet a Toledo-coded canonical entry) supplies two ingredients every prior pose-stop run lacked: the Omega_H transduction discipline (never threshold a raw signal directly -- select/transduce/extract-envelope/compress it first, the exact lesson of why raw-carrier resonance predicts humans should be blind to light) diagnoses runs 4-7's shared failure mode (all thresholded H_k/residual/streak values directly, none transduced them into an envelope/trend first); and the POLICY step's 5-term argmin (epistemic residual, cost, risk, value, repair-loss) replaces every prior run's single-threshold-on-uncertainty framing with an explicit economic tradeoff, matching the founder's own instruction that reason+imagination+memory must work together and decide, not that a single number crossing a line decides."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "H",
+    "aliases": [
+      "task-conditioned-6d-pose-stop:GLS-2026-005-run8-transduce-resonate-decide"
+    ],
+    "parents": [
+      {
+        "code": "PROP-NATIVE-01",
+        "derived_via": "refines",
+        "evidence": "C_k (the unexcluded-hypothesis imagination construction) is retained unchanged; this proposal only changes how the reason/discharge condition and memory accumulator interact with it."
+      },
+      {
+        "code": "PROP-NATIVE-02",
+        "derived_via": "refines",
+        "evidence": "the binary invariance/reason check is generalized to a graded resonance gain G_k, addressing run 5's diagnosed failure (an all-or-nothing check on an undersized perturbation) with a continuous alternative."
+      },
+      {
+        "code": "PROP-NATIVE-03",
+        "derived_via": "refines",
+        "evidence": "the hard reset-to-zero streak accumulator is replaced with a decayed accumulator weighted by real magnitude (resonance gain times Keystone energy), addressing run 6's diagnosed failure (persistence degenerating into a fixed-delay knob because the underlying check never toggled)."
+      },
+      {
+        "code": "PROP-NATIVE-04",
+        "derived_via": "refines",
+        "evidence": "reuses the Keystone quadratic-form energy Gamma_k as the real-valued magnitude fed into the memory accumulator, but no longer gates ACT on a separately-calibrated conformal certificate that run 7 found vacuous (0/40 TRAIN episodes) -- that gate is replaced by the POLICY argmin's own risk/value/repair terms."
+      }
+    ],
+    "honest_caveats": [
+      "readout_genesis's Active World-Readout Loop (Part VIII: SENSE/RECORD/PHENOMENALIZE/RESONANCE/POLICY/ACT+REPAIR, and the Omega_H Horizon Transduction Operator) is ITSELF tiered Dr/Open in its home repository, not Th_coqc -- it is an internally-consistent, falsifiable theoretical model of human perception/policy, not a proven law. Parenting this pose-stop proposal to it means PROP-NATIVE-05 inherits that same Dr/Open status; it does not become more proven by analogy to a human-cognition model that is itself unproven.",
+      "The transduction stage (S_H/T_H/E_H/C_H, here collapsed to a single windowed-envelope extraction over the last w stages) is the least specified part of this proposal -- readout_genesis's own text states this pipeline has NOT been checked as a formal commuting-square even in its home domain (vision/audition), let alone adapted here. Choosing window width w, and exactly what 'envelope extraction' means for a 6D pose residual sequence, is genuine new design work, not a lookup.",
+      "The POLICY argmin's four extra terms (cost, risk, value, repair-loss) require real, disclosed, TRAIN-only-derived numbers for this specific robotic task (time cost per ICP iteration, a calibrated risk estimate from runs 5-7's own unsafe-ACT rates, a stated task value, and an estimated repair/re-attempt cost) -- these are economic parameters this project has never had to declare before (every prior run only tuned a single uncertainty threshold), and picking them honestly from TRAIN data alone, disclosed before FINAL TEST, is itself a new predeclaration discipline this run must get right.",
+      "This is explicitly a synthesis/design proposal, not yet implemented or tested -- run 8 is the first real-data test of it. Given runs 4-7's track record (four consecutive falsifications, alternating between unsafe-too-early and safe-but-never-acts), the appropriately calibrated prior is that this too may fail, and it should be tested with the same rigor and honesty as every prior cycle, not treated as the design that finally must work because it is more sophisticated."
+    ],
+    "origin": {
+      "source": "Founder instruction sequence, 2026-09-09: after being shown readout_genesis's Active World-Readout Loop (Part VIII) as an answer to 'how do humans know where things are without calculating,' founder instructed 'อย่าลืมเหตุผลและจินตนาการและการตัดสินใจด้วยนะ' (don't forget reason, imagination, and decision-making) -- this proposal is the explicit synthesis of that loop with the imagination/reason/memory decision equation already derived earlier the same day (PROP-NATIVE-01/02/03) and the Keystone-energy ingredient from the run-7 team meeting (PROP-NATIVE-04), rather than treating the new loop as a replacement for the earlier derivation.",
+      "doi": null
+    }
   }
 ]
