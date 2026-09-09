@@ -40,7 +40,7 @@
       "note_ascii": "instead of building a calibrated completion set around an assumed true pose (needs T*), perturb the CURRENT estimate along the correspondence Hessian's own low-eigenvalue directions (the directions the DATA ITSELF says are weakly constrained -- directly computable, no ground truth needed) by a magnitude the data itself justifies (inverse eigenvalue, bounded by the proven L_R ceiling), and license ACT only if the task verdict does not change along any such direction. This reuses the real H_k eigen-structure task-conditioned-6d-pose-stop's fourth cycle already computes, but for its actually-valid purpose (identifying weakly-constrained directions) rather than the refuted purpose (a graph-diameter-based decay-rate extrapolation, which needed H_k to have graph structure it does not have)."
     },
     "tier": "Dr",
-    "status": "unverified",
+    "status": "refuted_unsafe",
     "domain": "H",
     "aliases": [
       "task-conditioned-6d-pose-stop:GLS-2026-005-H3-native-sensitivity-criterion"
@@ -72,8 +72,8 @@
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0 stated only.",
-      "empirical_test_status": "not yet run; candidate for a fifth real-data cycle pending founder selection in the glosa hypothesis-selection process (GLS-2026-005, GLOSA-PC-20260909-0005)"
+      "rungs_held": "R0 stated; R2 (falsifier reachable and reached) now applied via a real BOP-LMO run.",
+      "empirical_test_status": "Run 5 executed 2026-09-09 (task-conditioned-6d-pose-stop, lab/results/real-bop-lmo-2026-09-09-run5/RESULT.md), predeclaration commit 43954c09eedda7f3802adee6d83b559c836d19e6. This is the first of five real-data cycles on this problem to license ACT at all, and it did so unsafely: ACT fired on 100% of test episodes for all three declared tasks, always at the very first ICP stage (k=0, before any refinement), and was wrong (unsafe ACT) on 92.5-100% of those episodes. This directly refutes this proposal's own honest_caveats item ('the relationship between a small eigenvalue direction and actual pose error along that direction is itself an assumption ... must be checked empirically') at least at this trajectory stage on this backend. Diagnosed cause: the perturbation magnitude this construction produces (bounded by a TRAIN-derived CAP) is systematically smaller than the real coarse-detector initial-pose error, so the invariance test answers a much easier question (is a tiny wobble around the current estimate tolerable) than the one it needs to answer (is the current estimate close to correct). H_k's spectral floor alone, without an absolute residual/noise-scale term (the kind PROP-DECAY-01's own predictor already paired with its contraction rate), is not a safe proxy for pose-estimate uncertainty on this backend. PROP-NATIVE-03 (already registered, parented to this proposal) proposes a persistence/memory-accumulator refinement as one candidate next iteration; a residual-scale-paired variant of this proposal's own perturbation magnitude is another, not yet registered."
     }
   },
   {
