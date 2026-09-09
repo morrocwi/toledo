@@ -98,7 +98,7 @@
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0 stated only. The union-bound argument itself (Boole's inequality over a finite index set of K' events) is a standard, mechanically provable fact -- queued for a Coq witness over Q (finite probability, rational bounds) before any R2 claim.",
+      "rungs_held": "R0 stated; R2 held for the union-bound argument itself (Coq-closed, axiom-free, coq/canonical/PROP_CONF_03_union_bound.v). The per-stage split-conformal exchangeability guarantee it composes (PROP-CONF-01 at level alpha/K per checkpoint) is cited from standard conformal-prediction theory, not itself mechanized here.",
       "empirical_test_status": "not yet run; this is the design artifact that authorizes the next real-data cycle, not a result"
     }
   }
