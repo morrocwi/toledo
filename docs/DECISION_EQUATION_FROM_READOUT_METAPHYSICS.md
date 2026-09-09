@@ -82,6 +82,47 @@ decision instead of to a human epistemic act.
 
 ## What "success" means for this derivation, stated honestly
 
+## Independent confirmation in the founder's own prior published architecture
+
+Founder framing, 2026-09-09 (two-part, given across two messages): "จินตนาการคือการเคลื่อนย้าย
+ความหมายไปในเหตุการณ์ต่างๆ สร้างโครงสร้างความหมายและความเป็นไปได้ใหม่ๆ" (imagination is the
+movement of meaning across events, creating structures of meaning and new possibility), then "ส่วน
+การคิดคือการทดลองย้ายความหมายกับเหตุการณ์มาแปะกัน แล้วดูว่ามันเข้ากันไหม" (reasoning is the
+experiment of placing a moved meaning against an event and checking whether they fit).
+
+Reading `cpg_research_journal`'s "Written by AI. Still True." textbook, Chapter 39 ("Before Meaning,
+Before Choice: A Readout-Native Derivation of Experience, Live Possibility, Agency, and Human–AI
+Return", Lahtee 2026, record 22424434) already gives this exact triad a typed formal shape, built
+from the same Readout Genesis/Readout Universe root this document derives from — an independent
+route to the same architecture, not a citation of convenience:
+
+- **Imagination** ↔ semantic attraction `a_{Q,t}(e) = [Φ_{Q,t}(s) − Φ_{Q,t}(s′)]_+` (Ch.39 eq. 18),
+  feeding the history-shaped access law `κ^sem_{t+1}(e|Q)` (eq. 20) — meaning pulled toward a
+  destination-state along a declared access landscape, the same non-collapse move `C_k` makes for a
+  pose readout (§ "Imagination, derived" above), except Ch.39's own text marks eq. 20 explicitly
+  **OPEN** ("a typed finite hypothesis, not a validated universal cognitive law") — this document's
+  `C_k` should carry the identical honesty, not more confidence than its sibling construction earned.
+- **Reason** ↔ **resonance**, Ch.39's own name (p.5, directly after eq. 20) for "a domain diagnostic
+  of congruence between a current externally prompted experience and retained experiential
+  organisation" — this is precisely the founder's "place the moved meaning against the event, check
+  whether it fits," and precisely `PROP-NATIVE-02`'s invariance discharge condition
+  (`O_T(z)` unchanged across every unexcluded `z`) restated as a fit-check instead of an
+  invariance-check — two readings of the same operation, congruence in one domain, invariance in the
+  other.
+- **Memory** ↔ the momentum accumulator `m_{t+1}(e) = ρ·m_t(e) + 𝟙[e_t=e]` (eq. 19) and the
+  retention law `Retain(E_n) > 0 ⟹ H_{n+1} ≠ H_n` (eq. 17) — the same role as `M_k`/`PROP-NATIVE-03`
+  above, but built with exponential decay (`ρ`) rather than a hard streak-and-threshold; a decayed
+  accumulator is a candidate refinement of `PROP-NATIVE-03` worth registering if run 5's hard-streak
+  version proves too brittle on noisy real sensor data.
+
+This is Dr-tier confirmation, not proof: Chapter 39's own equation is explicitly unvalidated, and
+finding the same shape twice from the same root is expected (both are readings of the one
+metaphysics), not independent evidence the shape is empirically correct. It does strengthen the
+claim that `PROP-NATIVE-01/02/03`'s lineage is a genuine reading of this workspace's root, not an ad
+hoc analogy invented for one pose-stop project.
+
+## What "success" means for this derivation, stated honestly
+
 A correct derivation from the metaphysics does not guarantee the *empirical* construction works —
 `PROP-DECAY-01` (run 4) was also carefully derived from real Toledo theorems and was still
 empirically refuted, on structural grounds the derivation itself had flagged as an assumption to
