@@ -1,0 +1,306 @@
+[
+  {
+    "id": "PROP-NS-STEPPER-STABILITY-01",
+    "code": "weld/P.??.v1",
+    "name": "Spectral-gap decay and explicit-step (CFL-type) stability for the retained-turbulence relaxation-inertia ODE",
+    "statement": {
+      "latest": "\\text{Given }\\tau_R\\dot I_R+L_RI_R=G_R\\ (\\text{weld/P.05.v1}),\\ L_R=L_R^T\\succeq0:\\ \\text{(spectral gap) if }\\langle x,L_Rx\\rangle\\ge\\lambda_*\\|x\\|_2^2\\ \\forall x\\in(\\ker L_R)^\\perp,\\ \\text{then}\\ \\|PI_R(t)\\|_2\\le e^{-\\lambda_*t/\\tau_R}\\|PI_0\\|_2+\\frac1{\\tau_R}\\int_0^te^{-\\lambda_*(t-s)/\\tau_R}\\|PG_R(s)\\|_2\\,ds;\\ \\text{(explicit-step stability) for the stepper } I_R^{n+1}=I_R^n+\\frac h{\\tau_R}(G_R^n-L_RI_R^n),\\ A_R:=I-\\frac h{\\tau_R}L_R,\\ \\text{if }0\\le h\\lambda_{\\max}/\\tau_R\\le2\\ \\text{then}\\ \\|A_R\\|_2\\le1\\ \\text{and}\\ \\|I_R^N\\|_2\\le\\|I_R^0\\|_2+\\frac h{\\tau_R}\\sum_{k=0}^{N-1}\\|G_R^k\\|_2.",
+      "format": "latex",
+      "note_ascii": "Two linear-algebra corollaries of the already-registered retained-turbulence ODE (weld/P.05.v1 via PROP-NS-CONTINUATION-01's continuation result): (1) a spectral-gap estimate -- on the orthogonal complement of ker L_R, the projected retained state decays exponentially at rate lambda_*/tau_R plus a forced term (standard energy/Gronwall-type bound for a positive-semidefinite linear system); (2) an explicit-Euler stepper for the same ODE is non-expansive (||A_R||_2<=1, hence numerically stable) exactly when the step size h obeys the CFL-type bound h*lambda_max/tau_R <= 2, with a companion one-step-residual/finite mismatch metric (eq 33-34 of the source) that is explicitly NOT a continuum singularity criterion. A numerical Euler-stepper convergence check (part of the same source's companion verification script) confirms O(h) convergence consistent with (but not proof of) the stability bound.",
+      "provenance_of_check": "The O(h) numeric convergence table (source eqs 50-60) is reported by the source as script-verified; this session did not itself re-run that script for this registration -- see honest_caveats."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "readout_ns_development_series_v0_2:Corollary-6.4",
+      "readout_ns_development_series_v0_2:Theorem-7.1",
+      "readout_ns_development_series_v0_2:eq-33-34"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "weld/P.05.v1",
+        "derived_via": "extends",
+        "evidence": "Both results are stated for the same retained ODE tau_R dI_R/dt + L_R I_R = G_R already canonical at weld/P.05.v1; this proposal adds a spectral-gap refinement and a discrete-stepper stability analysis of that equation, neither of which is stated in weld/P.05.v1's own entry or in PROP-NS-CONTINUATION-01's registered statement (which stops at global boundedness, not spectral decay rate or a discrete-time stepper)."
+      },
+      {
+        "code": "EQ-008",
+        "derived_via": "instance_of",
+        "evidence": "L_R is the same retained graph-Laplacian-type operator rooted at EQ-008 (L_R := D_W - W) already cited as a parent by the sibling proposal PROP-NS-CONTINUATION-01; the spectral-gap hypothesis (a positive lower bound on <x,L_R x> off ker L_R) is precisely the kind of bound EQ-008's spectral ceiling/floor template is written to supply."
+      }
+    ],
+    "honest_caveats": [
+      "Both sub-results are standard linear-algebra/ODE facts (a Gronwall-type projected energy estimate; the well-known non-expansiveness condition for an explicit-Euler step of a linear system with a symmetric PSD generator) applied to an already-registered equation, not novel mathematics. Checked by hand/algebraically by this session (eigenvalue bound |1 - h*lambda_j/tau_R| <= 1 under the stated condition, and the Gronwall integral form) but NOT machine-checked in Coq. Tier is Dr, not Th_coqc.",
+      "The source's own numeric Euler-stepper convergence table (eqs 50-60, 'O(h) convergence confirmed') is reported as script-verified in the source manuscript; this registration cites that claim but has not independently re-run the check in this session (unlike PROP-NS-WITNESS-01, where this session did re-run the verification script). Do not treat the numeric portion as finite_diagnostic-verified by this session -- it is carried at Dr tier pending an independent re-run.",
+      "Says nothing about the continuum Navier-Stokes PDE itself; bounds only the same not-yet-connected finite-dimensional retained state I_R(t) already flagged as unconnected to a genuine NS translation by PROP-NS-CONTINUATION-01's own caveats."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee, 'Readout-Navier-Stokes Development Series', Volume 2 'A Finite Mathematical Separation for Navier-Stokes Readouts' (v0.2, September 2026), Corollary 6.4 and Theorem 7.1 (with supporting eqs 33-34, 50-60). Part of the 6-volume series registered in glosa as GLS-2026-007. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209), founder instruction 2026-09-09 ('ลงทะเบียนสมการและทำ Coq ให้ครบ').",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 only: hand/algebraic re-derivation by this session of both bounds; no independent adversarial review, no Coq mechanization, no re-run of the source's own numeric convergence script by this session.",
+      "empirical_test_status": "Source manuscript reports its own script-verified O(h) convergence for the explicit stepper; not independently re-run by this registering session."
+    }
+  },
+  {
+    "id": "PROP-NS-FOUR-LAYER-NONCOLLAPSE-01",
+    "code": "weld/M.??.v1",
+    "name": "Four-layer non-collapse lattice for domain event, adapter failure, retained blow-up, and task breakdown",
+    "statement": {
+      "latest": "\\text{Let }E_1:=\\Sigma_D\\text{-event (domain distinction)},\\ E_2:=\\text{adapter/weld failure},\\ E_3:=\\Sigma_R(T_*)\\text{ (retained-layer blow-up)},\\ E_4:=\\text{task-level breakdown}.\\ \\text{Then no pair among }E_1,\\dots,E_4\\text{ is logically equivalent to another: each }E_i\\text{ can occur without the others, given (i) the exact-weld witness of Theorem 3.1/9.1 (}E_1\\text{ without }E_2,E_3,E_4\\text{) and (ii) the }H_R(T_*)\\text{-conditional continuation bound of Theorem 8.1 (}\\neg E_3\\text{ whenever }H_R(T_*)\\text{ holds, independent of }\\Sigma_{NS}\\text{).}\\ \\text{Also: bounded }I_R\\text{ does not decide task adequacy (Prop.\\,10.1), and a }K\\text{-Lipschitz reader }O_Q\\text{ never blows up if }I_R\\text{ stays bounded (Prop.\\,10.2).}",
+      "format": "latex",
+      "note_ascii": "A synthesis theorem combining the two already-registered proposals (PROP-NS-WITNESS-01's non-entailment witness as the E1-without-E2 arrow, PROP-NS-CONTINUATION-01's HR-conditional bound as the not-E3 arrow) plus two new supporting propositions: (10.1) a bounded retained state I_R does not by itself decide whether a declared task reader judges the situation adequate/inadequate -- boundedness and task-adequacy are logically independent; (10.2) if the task reader O_Q is K-Lipschitz in I_R, then O_Q cannot blow up while I_R stays bounded (an immediate Lipschitz-continuity corollary). The four-layer lattice (domain event / adapter-weld failure / retained-layer blow-up / task-level breakdown) is asserted to be non-collapsing: none of the four events entails or is entailed by any other in general, using the two prior proposals as its two main supporting arrows plus the two new propositions as auxiliary non-collapse links (E3 vs E4)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "readout_ns_development_series_v0_2:Proposition-10.1",
+      "readout_ns_development_series_v0_2:Proposition-10.2",
+      "readout_ns_development_series_v0_2:Theorem-11.1"
+    ],
+    "coq": {
+      "identifiers": [
+        "FourLayerElementary.bounded_does_not_decide_adequacy",
+        "FourLayerElementary.lipschitz_reader_bounded"
+      ],
+      "file": "coq/canonical/PROP_NS_FOUR_LAYER_NONCOLLAPSE_01_elementary.v",
+      "coq_status": "partial_compiled_axiom_free",
+      "coq_axioms": [],
+      "print_assumptions": "Both theorems: Closed under the global context.",
+      "verified": "2026-09-09, this task."
+    },
+    "parents": [
+      {
+        "code": "weld/M.??.v1",
+        "derived_via": "extends",
+        "evidence": "Uses the exact witness/non-entailment result registered as PROP-NS-WITNESS-01 (id, not yet a Toledo code -- see that proposal's own 'code' placeholder) as its E1-without-{E2,E3,E4} supporting arrow; parent recorded by proposal id pending PROP-NS-WITNESS-01's own code assignment."
+      },
+      {
+        "code": "weld/P.??.v1",
+        "derived_via": "extends",
+        "evidence": "Uses the HR(T*)-conditional continuation/non-blow-up bound registered as PROP-NS-CONTINUATION-01 (id, not yet a Toledo code) as its not-E3 supporting arrow; parent recorded by proposal id pending PROP-NS-CONTINUATION-01's own code assignment."
+      }
+    ],
+    "honest_caveats": [
+      "Propositions 10.1 and 10.2 are elementary (10.1 is a non-implication observation with no proof content beyond definition-unpacking in the source; 10.2 is an immediate one-line Lipschitz-continuity corollary). The genuinely non-trivial content of this registration is the SYNTHESIS -- assembling the four-layer lattice out of the two prior proposals plus these two elementary links -- not new base mathematics.",
+      "The 'four-layer non-collapse' claim is stated informally in the source (Theorem 11.1) as 'from the definitions and Theorems 3.1 and 9.1 alone' with a short proof sketch; this registration has NOT been independently re-derived symbol-by-symbol by this session beyond confirming its two cited supporting theorems are the already-verified PROP-NS-WITNESS-01/PROP-NS-CONTINUATION-01. Tier Dr, not Th_coqc, and treat the synthesis claim itself (as opposed to its two cited sub-results) as less scrutinized than either parent.",
+      "Parent codes above are placeholders (weld/M.??.v1, weld/P.??.v1) mirroring the still-unassigned codes of PROP-NS-WITNESS-01 and PROP-NS-CONTINUATION-01 themselves; update this entry's parents once the registrar assigns final Toledo codes to those two proposals.",
+      "PARTIAL Coq closure only (2026-09-09): the two genuinely NEW elementary propositions (source Vol.2 Propositions 10.1/10.2) are mechanized and axiom-free (coq/canonical/PROP_NS_FOUR_LAYER_NONCOLLAPSE_01_elementary.v). The proposal's full four-layer non-collapse synthesis is NOT mechanized -- it depends on PROP-NS-CONTINUATION-01 (a continuous-time linear-ODE well-posedness result requiring real-analysis/ODE machinery, e.g. Coquelicot, not invested in this task) and on PROP-NS-WITNESS-01 (which IS separately Th_coqc). Tier intentionally left at Dr, not raised to Th_coqc, because the registered claim is broader than what was mechanized -- do not upgrade without formalizing the ODE continuation result too."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee, 'Readout-Navier-Stokes Development Series', Volume 2 'A Finite Mathematical Separation for Navier-Stokes Readouts' (v0.2, September 2026), Propositions 10.1, 10.2, and Theorem 11.1. Part of the 6-volume series registered in glosa as GLS-2026-007. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209), founder instruction 2026-09-09.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 only: this session confirmed the two cited supporting theorems (3.1/9.1 and 6.1-8.1 chain) match already-registered PROP-NS-WITNESS-01/PROP-NS-CONTINUATION-01 verbatim by direct text comparison; the synthesis theorem's own proof sketch was read but not independently re-derived.",
+      "empirical_test_status": "not applicable -- logical/definitional synthesis, no numeric component."
+    }
+  },
+  {
+    "id": "PROP-NS-FOURIER-TRACE-01",
+    "code": "weld/P.??.v1",
+    "name": "Finite-Fourier-mode trace survival through an H^s breakdown time, with weak-L2 reconstruction and spectral defect",
+    "statement": {
+      "latest": "\\text{For the Fourier-Galerkin projection }u=\\sum_ku_k(t)e_k\\text{ of (NS), fix }M<\\infty.\\ \\text{Theorem (finite-mode continuation): if }u\\in C([0,T_*);H^s),\\ s>5/2,\\ \\text{is a smooth solution on }[0,T_*)\\text{ with possible }H^s\\text{ breakdown at }T_*,\\ \\text{then }\\lim_{t\\uparrow T_*}P_Mu(t)\\text{ exists in }H^s\\ \\forall M<\\infty\\ \\text{(finite-mode separation).}\\ \\text{Theorem (finite-energy trace, weak L}^2\\text{): if }\\sum_k\\|u_k\\|^2_{L^\\infty([0,T_*);L^2)}<\\infty,\\ \\text{then }u_k(t)\\to u_k^*\\text{ as }t\\uparrow T_*\\ \\forall k,\\ \\text{and }u^*:=\\sum_ku_k^*e_k\\in L^2\\text{ is a well-defined weak trace, with an exact spectral defect }\\delta^*:=\\lim_M(\\|u(t)\\|^2_{L^2}-\\|P_Mu^*\\|^2_{L^2})\\text{ localized to high frequencies (}k\\to\\infty\\text{) as }t\\uparrow T_*.",
+      "format": "latex",
+      "note_ascii": "The chain: (1) every FIXED Fourier mode of a Galerkin-projected Navier-Stokes solution has a finite limit as t approaches a hypothetical H^s breakdown time T* (each mode's ODE stays regular even if the full H^s norm blows up) -- Volume 3's core result; (2) under an ell^2-summability hypothesis on the mode energies, the full family of per-mode limits assembles into a genuine weak L2 trace u* at T* -- Volume 4's extension beyond fixed-M results; (3) the difference between the true kinetic energy and the energy captured by any fixed finite cutoff M defines an exact spectral defect delta*, which is shown to concentrate at high frequencies as the breakdown time is approached. This bundles Volume 3 (fixed-mode continuation, standard Fourier-Galerkin technique) and Volume 4 (the more complete ell^2/weak-trace/defect construction, which subsumes Volume 3's fixed-M results) into one registered derivation chain, per the survey's recommendation to avoid registering each volume's overlapping restatement separately."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "readout_ns_development_series_v0_3:Lemma-2.1",
+      "readout_ns_development_series_v0_3:Theorem-2.2",
+      "readout_ns_development_series_v0_3:Theorem-3.1",
+      "readout_ns_development_series_v0_3:Corollary-3.2",
+      "readout_ns_development_series_v0_3:Theorem-4.1",
+      "readout_ns_development_series_v0_3:Theorem-7.1",
+      "readout_ns_development_series_v0_3:Theorem-8.1",
+      "readout_ns_development_series_v0_4:Theorem-3.1",
+      "readout_ns_development_series_v0_4:Corollary-3.2",
+      "readout_ns_development_series_v0_4:Theorem-4.1",
+      "readout_ns_development_series_v0_4:Theorem-4.2"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "weld/P.05.v1",
+        "derived_via": "instance_of",
+        "evidence": "The finite-mode retained equation for the projected coefficients (source Vol.6 eq 5-11, and the analogous finite-mode ODE underlying Vol.3/4's per-mode continuation) is an explicit instance of the same retained-relaxation-inertia structure already canonical at weld/P.05.v1 -- a fixed-dimension linear/near-linear ODE per Fourier mode, forced by the unresolved nonlinear transfer."
+      }
+    ],
+    "honest_caveats": [
+      "This is standard applied-PDE technique (Fourier-Galerkin projection, per-mode ODE regularity, ell^2 summability giving weak-L2 convergence) applied within this workspace's readout framing, not novel base mathematics -- the source itself treats the Fourier setup and Galerkin machinery as standard/external (classified 'external/standard' by the Survey phase, not registered here). What IS registered here is the derivation CHAIN as applied to define and track the discrete finite-mode trace and the delta* defect, which is not present in any existing Toledo entry or either of the two GLS-2026-006 proposals.",
+      "Checked by this session only by reading the stated theorems and proofs (standard energy-method arguments); not independently re-derived line-by-line, not Coq-checked, and not the subject of any numeric verification script. Tier is Dr.",
+      "Volume 3's version of this chain is materially subsumed by Volume 4's more complete ell^2/weak-trace construction (per Survey's finding, confirmed by this session's reading); both are bundled here as one proposal rather than registered twice, with Volume 4 treated as the operative, more complete statement.",
+      "Says nothing about a specific singular candidate (that specialization is registered separately as PROP-NS-CANDIDATE-DEFECT-LOCALIZATION-01) and nothing about the tape-closed/discrete-crossing capstone (registered separately as PROP-NS-TAPE-CLOSED-DOMAIN-01 / PROP-NS-DISCRETE-CROSSING-01)."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee, 'Readout-Navier-Stokes Development Series', Volume 3 'A Fourier-Mode Separation for Navier-Stokes Readouts' (v0.3) and Volume 4 'Crossing the Breakdown Time -- Finite-Mode Traces and Weak Continuation' (v0.4), September 2026. Part of the 6-volume series registered in glosa as GLS-2026-007. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209), founder instruction 2026-09-09.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 only: this session read the stated theorems/proofs directly from the extracted PDF text and confirmed the claimed chain structure (fixed-mode continuation -> ell^2 weak trace -> spectral defect); no independent re-derivation, no Coq, no numeric test.",
+      "empirical_test_status": "not applicable at this registration stage."
+    }
+  },
+  {
+    "id": "PROP-NS-CANDIDATE-DEFECT-LOCALIZATION-01",
+    "code": "weld/P.??.v1",
+    "name": "Candidate-specific weak-trace identification and single-point defect localization for a periodic OpenAI-style singular candidate",
+    "statement": {
+      "latest": "\\text{For the specific periodic candidate satisfying (C1)-(C9) (}u(0)=0\\text{, forcing, }C^\\infty\\text{ away from }x=0\\text{): the abstract weak trace }u^*\\text{ of PROP-NS-FOURIER-TRACE-01 satisfies }u^*=u_\\partial\\ \\text{a.e.}\\ \\text{(the construction's own declared endpoint field, Theorem 4.1); the spectral defect }\\delta^*\\text{ is entirely concentrated at the singular point }x=0\\text{ (Theorem 5.2, for every sufficiently small }\\rho>0\\text{, the defect outside }B_\\rho(0)\\text{ vanishes in the limit); and }\\delta^*=0\\iff\\text{norm convergence}\\iff\\text{strong }L^2\\text{ convergence (Theorem 7.1, Corollary 7.2: no-concentration criterion).}",
+      "format": "latex",
+      "note_ascii": "Specializes the abstract weak-trace/defect machinery of PROP-NS-FOURIER-TRACE-01 to the specific candidate construction that mirrors OpenAI's 2026-09-08 stated hypotheses (u(0)=0, a forcing term, smoothness away from a single spatial point x=0). Three genuinely candidate-specific results: (1) the abstract weak trace u* is identified with the construction's own declared endpoint field u_partial almost everywhere -- not a generic existence statement but a concrete identification; (2) the entire possible energy defect delta* is shown to concentrate at the single singular point x=0 as the localization radius rho shrinks -- a sharp, specific localization not available in the abstract Volume 3/4 chain; (3) a strong-crossing equivalence reduces the open question of whether the crossing is strong (not just weak) to a single scalar/local no-concentration condition (delta*=0)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "readout_ns_development_series_v0_5:Theorem-4.1",
+      "readout_ns_development_series_v0_5:Theorem-5.2",
+      "readout_ns_development_series_v0_5:Theorem-7.1",
+      "readout_ns_development_series_v0_5:Corollary-7.2"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "weld/P.??.v1",
+        "derived_via": "extends",
+        "evidence": "This proposal specializes PROP-NS-FOURIER-TRACE-01's abstract weak-trace/spectral-defect machinery to one specific candidate construction; parent recorded by proposal id pending PROP-NS-FOURIER-TRACE-01's own code assignment (registered in this same file)."
+      }
+    ],
+    "honest_caveats": [
+      "The candidate's own hypotheses (C1)-(C9) are external/candidate-specific assumptions (mirroring OpenAI's stated construction properties) -- this proposal does not itself establish that any real Navier-Stokes solution actually satisfies (C1)-(C9); it derives consequences CONDITIONAL on those hypotheses, exactly as the source states.",
+      "Checked by this session only by reading the stated theorems/proofs; not independently re-derived, not Coq-checked, no numeric verification.",
+      "Theorem 5.2's localization is a limiting statement (as rho -> 0); no explicit rate is claimed by the source and none is asserted here.",
+      "Depends on PROP-NS-FOURIER-TRACE-01 in this same file -- if that proposal's tier or content is later revised, this entry's parent link and honest caveats must be revisited."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee, 'Readout-Navier-Stokes Development Series', Volume 5 'At the Constructed Breakdown Time -- Finite-Energy Trace, Defect Localization, and Weak Crossing' (v0.5, September 2026), Theorem 4.1, Theorem 5.2, Theorem 7.1, Corollary 7.2. Part of the 6-volume series registered in glosa as GLS-2026-007. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209), founder instruction 2026-09-09.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 only: this session read the stated theorems/proofs directly from the extracted PDF text.",
+      "empirical_test_status": "not applicable at this registration stage."
+    }
+  },
+  {
+    "id": "PROP-NS-TAPE-CLOSED-DOMAIN-01",
+    "code": "weld/M.??.v1",
+    "name": "Retained cut-current tape and exact tape-closed finite-mode domain gate (all Readout-Genesis defects exactly zero)",
+    "statement": {
+      "latest": "\\text{Fix a finite grid }0=t_0<\\dots<t_N=T,\\ h_n:=t_{n+1}-t_n,\\ A_{M,n}:=e^{-h_nL_M}.\\ \\text{Cut current: }\\chi_{M,n}:=\\int_{t_n}^{t_{n+1}}e^{-(t_{n+1}-s)L_M}(S_M(s)+\\eta_M(s))\\,ds.\\ \\text{Theorem (exact tape-closed recurrence): }I_{M,n+1}=A_{M,n}I_{M,n}+\\chi_{M,n},\\ \\text{so }F^\\sharp_{M,n}(I,\\chi):=A_{M,n}I+\\chi\\ \\text{is an exact finite update conditioned on the declared tape }T_{M,N}:=(\\chi_{M,0},\\dots,\\chi_{M,N-1}).\\ \\text{Theorem (exact Readout-Genesis domain gate): }q_{M,n+1}\\circ F_{NS,n}=F^\\sharp_{M,n}\\circ(q_{M,n},\\chi_{M,n}),\\ O_{M,n}=O^\\sharp_{M,n}\\circ q_{M,n},\\ \\text{and with exact arithmetic }\\varepsilon_{dyn}=\\varepsilon_{read}=\\varepsilon_{inv}=0.\\ \\text{Theorem (future readout sufficiency): }I_{M,n}=I'_{M,n}\\ \\wedge\\ \\chi_{M,j}=\\chi'_{M,j}\\ (n\\le j<n+L)\\ \\Rightarrow\\ I_{M,n+r}=I'_{M,n+r}\\ (0\\le r\\le L).",
+      "format": "latex",
+      "note_ascii": "The most structurally novel object in the series: turns the exact-but-not-closed Fourier residual (the unresolved nonlinear transfer between modes) into a DECLARED, dynamically-welded finite quantity -- the 'retained cut-current tape' T_{M,N} -- rather than approximating or discarding it. Once the tape is declared, the finite-mode update becomes an EXACT (not approximate) recurrence conditioned on the tape (Theorem 3.2), and the resulting finite domain exactly satisfies all three Readout-Genesis weld/gate identities (commuting dynamics, matching readout, zero invariant defect) with all three defect terms epsilon_dyn/epsilon_read/epsilon_inv provably zero under exact arithmetic (Theorem 4.1) -- the closest the series comes to a partial, finite-truncated construction of the still-Open q_NS adapter flagged as NSR-02 in Volume 1. Theorem 5.1 shows the resulting finite state plus tape is sufficient (in the technical readout sense) for any future finite-horizon reader."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "readout_ns_development_series_v0_6:Definition-3.1",
+      "readout_ns_development_series_v0_6:Theorem-3.2",
+      "readout_ns_development_series_v0_6:Theorem-4.1",
+      "readout_ns_development_series_v0_6:Theorem-5.1"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "EQ-015/M.01.v1",
+        "derived_via": "instance_of",
+        "evidence": "The cut-current tape T_{M,N} reuses the same append-only-tape/record-retention concept already canonical under the EQ-015 root (the workspace's general append-only tape T_n construction, cited in Volume 1's own T-CAN-002/003 citations of EQ-015/M.01.v1 and M.02.v1); this proposal is a domain-specific instance of that general tape concept, applied to Fourier-mode cut currents rather than a generic record sequence."
+      },
+      {
+        "code": "weld/M.02.v1",
+        "derived_via": "instance_of",
+        "evidence": "Theorem 4.1's 'exact Readout-Genesis domain gate' (eq 21-23: q_{M,n+1} o F_{NS,n} = F^#_{M,n} o (q_{M,n}, chi_{M,n}), and the readout-commuting identity) is an explicit instantiation of the CAN-006 weld schema (canonical at weld/M.02.v1) for this specific finite-mode/tape-closed domain, with all three defect terms exactly zero rather than merely bounded."
+      },
+      {
+        "code": "weld/P.05.v1",
+        "derived_via": "extends",
+        "evidence": "The variation-of-constants recurrence I_{M,n+1}=A_{M,n}I_{M,n}+chi_{M,n} is the same retained-ODE machinery already canonical at weld/P.05.v1 (and used by PROP-NS-CONTINUATION-01), specialized to a declared finite time grid with the residual forcing folded into the explicit tape term chi_{M,n} rather than left as an unresolved continuous forcing."
+      }
+    ],
+    "honest_caveats": [
+      "This is exact finite linear algebra (a variation-of-constants recurrence over a fixed grid, and direct substitution to verify the two weld identities) -- checkable by hand, not requiring any continuum/analytic machinery, but NOT yet machine-checked in Coq. Tier is Dr, not Th_coqc, pending an actual compiling axiom-free Coq proof.",
+      "The zero-defect result (epsilon_dyn=epsilon_read=epsilon_inv=0) holds ONLY 'with exact arithmetic' as the source states explicitly -- it says nothing about floating-point/numerical implementation, and nothing about whether the tape itself is ever computable from a real physical Navier-Stokes state (the source's own Remark 3.3 states explicitly that the update is 'tape-closed, not autonomous': no assertion eta_M = Gamma_M(I_M) is used or required, i.e. the tape is NOT derived from the retained state itself -- it is a separately declared input).",
+      "This is a PARTIAL construction of the still-Open q_NS adapter (NSR-02 from Volume 1) only for the finite-truncated, tape-augmented reading -- it does not close NSR-02 for a genuine, autonomous, physically-derived Navier-Stokes reader. Flagging this distinction explicitly per this workspace's own honest-tiering discipline: worth surfacing to the founder as measurable forward progress on an open obligation, but NOT a resolution of that obligation.",
+      "Depends structurally on the finite-mode setup shared with PROP-NS-FOURIER-TRACE-01 in this same file, though it does not share that proposal's specific theorems and is registered independently."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee, 'Readout-Navier-Stokes Development Series', Volume 6 'Readout-Navier-Stokes Discrete Crossing Theorem' (v0.6, September 2026, capstone volume), Definition 3.1, Theorem 3.2, Theorem 4.1, Theorem 5.1. Part of the 6-volume series registered in glosa as GLS-2026-007. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209), founder instruction 2026-09-09.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 only: this session read Definition 3.1 through Theorem 5.1 directly from the extracted PDF text (verbatim excerpt confirmed: 'Fix a finite grid... Theorem 3.2 (Exact tape-closed recurrence)... Theorem 4.1 (Exact Readout-Genesis domain gate)... epsilon_dyn = epsilon_read = epsilon_inv = 0'), confirmed the two weld/domain-gate identities follow by direct substitution as the source's own one-line proofs state, and confirmed no existing Toledo entry or either of the two GLS-2026-006 proposals contains this tape construction. Not independently re-derived beyond following the source's own (short, direct-substitution) proofs; no Coq, no numeric test.",
+      "empirical_test_status": "not applicable at this registration stage -- exact symbolic identities, not a numerically tested claim."
+    }
+  },
+  {
+    "id": "PROP-NS-DISCRETE-CROSSING-01",
+    "code": "weld/M.??.v1",
+    "name": "Readout-Navier-Stokes Discrete Crossing Theorem (H^3 continuum breakdown does not imply finite tape-closed readout breakdown)",
+    "statement": {
+      "latest": "\\text{Define }\\Sigma_{H^3}(1):=\\mathbf1_{\\limsup_{t\\uparrow1}\\|u(t)\\|_{H^3}=\\infty},\\ \\text{Break}_M(1):=\\mathbf1_{\\{I_M(1^-),I_M(1),I_M(1^+)\\ \\text{do not agree}\\}}.\\ \\text{Theorem (Readout-Navier-Stokes discrete crossing): under Assumption 1, for every fixed }M<\\infty:\\ \\Sigma_{H^3}(1)=1\\ \\wedge\\ \\text{Break}_M(1)=0.\\ \\text{Hence } H^3\\text{ continuum breakdown} \\;\\not\\Rightarrow\\; \\text{finite tape-closed readout breakdown}.\\ \\text{Corollary (all fixed finite cutoffs survive): }\\forall M<\\infty,\\ \\text{Break}_M(1)=0.",
+      "format": "latex",
+      "note_ascii": "The series' capstone/headline theorem. Combines: (i) the candidate's own assumed continuum H^3 blow-up at t=1 (an external hypothesis, Assumption 1, mirroring OpenAI's stated construction); (ii) weak L2 continuity of the finite-mode trace (from PROP-NS-FOURIER-TRACE-01's chain); and (iii) the exact tape-closed domain's zero-defect closure (from PROP-NS-TAPE-CLOSED-DOMAIN-01) to conclude that, for every FIXED finite mode cutoff M, the retained finite state does not register any discontinuity at the moment of continuum breakdown, when the unresolved nonlinear transfer is retained explicitly as an exact tape rather than discarded or approximated. This does not resolve the continuum Clay problem; it is a statement entirely about what a class of finite readers can and cannot see."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "readout_ns_development_series_v0_6:Theorem-6.1",
+      "readout_ns_development_series_v0_6:Corollary-6.2"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "weld/M.??.v1",
+        "derived_via": "extends",
+        "evidence": "Uses the tape-closed domain's exact zero-defect closure (registered in this same file as PROP-NS-TAPE-CLOSED-DOMAIN-01) as its main structural lemma; parent recorded by proposal id pending that proposal's own Toledo code assignment."
+      },
+      {
+        "code": "weld/P.??.v1",
+        "derived_via": "extends",
+        "evidence": "Uses the weak-continuity/finite-mode-crossing result (registered in this same file as PROP-NS-FOURIER-TRACE-01) as its second structural input; parent recorded by proposal id pending that proposal's own Toledo code assignment."
+      }
+    ],
+    "honest_caveats": [
+      "This is the series' own headline synthesis, explicitly built on top of the two proposals immediately above in this file (PROP-NS-TAPE-CLOSED-DOMAIN-01, PROP-NS-FOURIER-TRACE-01) plus an external candidate-specific assumption (Assumption 1, the candidate's own asserted H^3 breakdown). It is a CONDITIONAL statement about that specific candidate class, not a general Navier-Stokes existence-and-smoothness result, and the source itself states this ('does not establish... an autonomous finite Navier-Stokes solver... finite-data prediction of whether Sigma_H3=1... smooth continuation through t=1', source Vol.6 sec.7).",
+      "Checked by this session only by reading the source's stated theorem/proof and confirming it follows from its two cited supporting results as claimed; not independently re-derived beyond that, not Coq-checked, no numeric test.",
+      "Tier is Dr, explicitly not Th_coqc -- and note this proposal's tier is bounded above by the weaker of its two Dr-tier parents (PROP-NS-TAPE-CLOSED-DOMAIN-01, PROP-NS-FOURIER-TRACE-01); if either parent's tier or content changes, this entry must be revisited.",
+      "Should be presented to the founder honestly as: the series' most complete forward synthesis on the finite/tape-closed reading of the open NSR-02/NSR-03/NSR-04 bridge obligations from Volume 1 -- NOT as a resolution of the Clay Millennium Navier-Stokes existence-and-smoothness problem, which remains fully open in this workspace's own tier discipline."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee, 'Readout-Navier-Stokes Development Series', Volume 6 'Readout-Navier-Stokes Discrete Crossing Theorem' (v0.6, September 2026, capstone volume), Theorem 6.1 and Corollary 6.2. Part of the 6-volume series registered in glosa as GLS-2026-007. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209), founder instruction 2026-09-09.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 only: this session read Theorem 6.1/Corollary 6.2 directly from the extracted PDF text and confirmed it cites exactly the two structural results registered as PROP-NS-TAPE-CLOSED-DOMAIN-01 and PROP-NS-FOURIER-TRACE-01 in this same file, plus the external candidate assumption; not independently re-derived beyond that, no Coq, no numeric test.",
+      "empirical_test_status": "not applicable at this registration stage."
+    }
+  }
+]

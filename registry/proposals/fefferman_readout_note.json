@@ -8,8 +8,8 @@
       "format": "latex",
       "note_ascii": "8-state system (2^3 states), domain 2^2 states. F flips coords 1 and 3, fixes coord 2. qD/O project as declared. The exact-weld identities hold on all 8 states (brute-force checked) and F^2=Id (period-2, checked to k=9999 and proved by the flip structure). Witness pair z=(0,0,0), z'=(1,0,1) is reader-indistinguishable (O never differs) at every finite horizon L, while the domain question Q(a,b)=a differs forever. Conclusion: exact domain-dynamics welding plus exact reader-factorization does NOT imply finite-horizon reader decidability of an arbitrary domain question -- a separate bridge theorem is required per domain question, not inherited for free from an exact weld."
     },
-    "tier": "finite_diagnostic",
-    "status": "verified_by_script",
+    "tier": "Th_coqc",
+    "status": "verified_by_coq",
     "domain": "M",
     "aliases": [
       "readout_problem_fefferman_level:Theorem-1",
@@ -17,15 +17,27 @@
       "state_breakdown_math_only_v0_2:Corollary-3.2"
     ],
     "coq": {
-      "identifiers": [],
-      "coq_status": "not_attempted",
-      "coq_axioms": []
+      "identifiers": [
+        "FiniteWeld.exact_weld_dynamics",
+        "FiniteWeld.exact_weld_reader",
+        "FiniteWeld.F_period_two",
+        "FiniteWeld.iter_F_closed_form",
+        "FiniteWeld.witness_reader_equiv",
+        "FiniteWeld.witness_domain_differs",
+        "FiniteWeld.ns_witness_main"
+      ],
+      "file": "coq/canonical/PROP_NS_WITNESS_01_finite_weld.v",
+      "coq_status": "compiled_axiom_free",
+      "coq_axioms": [],
+      "print_assumptions": "Print Assumptions ns_witness_main. => Closed under the global context.",
+      "verified": "2026-09-09, this task: coqc -q clean compile + independent Print Assumptions scratch check."
     },
     "parents": [],
     "honest_caveats": [
       "This is a finite, brute-force-enumerable combinatorial fact over an 8-element state space. It is VERIFIED BY PYTHON SCRIPT (~/Downloads/verify_state_breakdown_math.py, re-run 2026-09-09 by this session, exact enumeration over all 8 states plus period check to k=9999), not by a Coq machine-checked proof. Tier is finite_diagnostic, not Th_coqc -- do not upgrade the tier without an actual Coq artifact.",
       "The theorem is a statement about finite discrete dynamics and finite readers in the abstract. It says nothing about the Navier-Stokes equation, the Clay Millennium Problem, or any specific physical system -- it is cited by the companion papers only as the reason a separate 'readout problem' (whether a specific translation's reader determines a specific domain predicate) must be posed and proved on its own, for any specific domain application including a prospective Navier-Stokes reading.",
-      "No parent root is claimed here: this is a small, self-contained combinatorial construction, not an instance of an existing Toledo root object. Registering it with parents:[] (rather than forcing a parent that does not honestly apply) follows this workspace's own honest-block discipline."
+      "No parent root is claimed here: this is a small, self-contained combinatorial construction, not an instance of an existing Toledo root object. Registering it with parents:[] (rather than forcing a parent that does not honestly apply) follows this workspace's own honest-block discipline.",
+      "UPGRADED 2026-09-09: mechanized in Coq (coq/canonical/PROP_NS_WITNESS_01_finite_weld.v), compiled clean with coqc 8.20.1, and Print Assumptions ns_witness_main reports 'Closed under the global context' (axiom-free). This is also the independent machine verification that the Readout-NS Development Series Volume 1 Appendix C itself asked for (its own NSR01_finite_witness.v companion was stated as not independently compiled by the manuscript's own environment)."
     ],
     "origin": {
       "source": "Yaoharee Lahtee, two source PDFs: 'A Readout Problem for Fefferman's Existence and Smoothness of the Navier-Stokes Equation' (Theorem 1) and 'State Breakdown Is Not Readout Breakdown' v0.2 (Theorem 3.1/Corollary 3.2), both dated September 2026, ~/Downloads/. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209) as part of the glosa intake/publication pipeline for these two documents. The first source PDF is now the public repository github.com/morrocwi/readout-problem-navier-stokes (release v0.1.0), deposited on Zenodo.",
