@@ -1,0 +1,46 @@
+[
+  {
+    "id": "PROP-EPSC-38",
+    "code": "weld/P.??.v1",
+    "name": "Exact finite sample-to-scaled-Taylor interpolation noise amplification law",
+    "statement": {
+      "latest": "\\kappa_\\infty(h)=\\|S D_h^{-1}V^{-1}\\|_\\infty=\\max_n |s_n| |h|^{-n}\\sum_j |(V^{-1})_{nj}|,\\qquad \\|\\delta z\\|_\\infty\\le\\kappa_\\infty(h)(\\sigma+r_{sample})",
+      "format": "latex",
+      "note_ascii": "for distinct finite sample nodes, exact rational Vandermonde interpolation followed by a declared diagonal Taylor-row scaling has the displayed induced infinity norm; any separately certified sample-space measurement and truncation radii are amplified by the same finite operator"
+    },
+    "definitions": {
+      "V": "power Vandermonde matrix V[j,n]=t_j^n for distinct sample nodes",
+      "D_h": "diag(1,h,...,h^(m-1)) for nonzero sample spacing h",
+      "S": "declared diagonal scaling of recovered Taylor/interpolation coefficients",
+      "r_sample": "separately certified sample-space model/Taylor remainder radius"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc-sample-interpolation-conditioning",
+      "epsc-sample-to-scaled-jet-noise-law"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-37",
+        "derived_via": "quantitative_conditioning_of_the_interpolation_route",
+        "evidence": "PROP-EPSC-37 supplies a derivative-free finite sample chart structurally; PROP-EPSC-38 quantifies the distinct sample-to-scaled-Taylor intermediate reconstruction operator"
+      },
+      {
+        "code": "PROP-EPSC-36",
+        "derived_via": "measurement_interface_diagnostic",
+        "evidence": "narrows the open measurement interface by identifying and exactly quantifying one potentially ill-conditioned intermediate route"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps19_n1_sample_interpolation_conditioning.py",
+      "doi": null
+    },
+    "claim_boundary": "Finite interpolation linear algebra only. It does not certify the conditioning of the direct nonlinear sample map, an ODE/PDE flow remainder, physical sensor noise, branch capture, arbitrary finite N, continuum completion, Navier-Stokes regularity, or the Clay Millennium problem. In the current fixed-N=1 application, the severe small-h amplification applies to reconstruction of the existing scaled Taylor chart and is not a no-go theorem for direct finite-time sample inversion."
+  }
+]
