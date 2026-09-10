@@ -1,0 +1,54 @@
+[
+  {
+    "id": "PROP-EPSC-33",
+    "code": "weld/P.??.v1",
+    "name": "Exact centered entrywise full-N=1 local inverse box",
+    "statement": {
+      "latest": "\\|x-x_*\\|_\\infty\\le10^{-17}\\;\\Longrightarrow\\;q:=\\sup_{x\\in B}\\|I-J_0^{-1}DH(x)\\|_\\infty\\le0.08058674502845<\\tfrac12<1",
+      "format": "latex",
+      "note_ascii": "for the fixed finite N=1 49-dimensional translation slice, exact common-denominator integer propagation of centered state, tangent and Jacobian radii combined with the exact rational center inverse certifies a q<1 local inverse box of radius 10^-17"
+    },
+    "definitions": {
+      "x_*": "the declared small-integer full-rank N=1 center",
+      "H": "the selected 49-observation shell-energy Taylor chart on the explicit translation slice",
+      "J_0": "DH(x_*) in characteristic zero",
+      "B": "the infinity-norm state-space box ||x-x_*||_inf <= 10^-17",
+      "q": "exact preconditioned induced-infinity Jacobian defect upper bound"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n1-exact-entrywise-1e-17",
+      "n1-centered-interval-inverse-box"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-23",
+        "derived_via": "exact_entrywise_instantiation",
+        "evidence": "instantiates the fail-closed preconditioned interval inverse criterion with exact integer/Fraction arithmetic"
+      },
+      {
+        "code": "PROP-EPSC-29",
+        "derived_via": "uses_certified_N1_observation_chart_family",
+        "evidence": "continues the finite N=1 chart-conditioning programme after exact chart recertification"
+      },
+      {
+        "code": "PROP-EPSC-31",
+        "derived_via": "supplies_fixed_N_q_certificate",
+        "evidence": "provides the q<1 branch-local conditioning ingredient needed by the quantitative inner-certificate bridge at N=1"
+      },
+      {
+        "code": "PROP-EPSC-24",
+        "derived_via": "narrows_measurement_ready_frontier",
+        "evidence": "state-space local inversion is certified on a much larger exact box, while sensor/noise branch capture remains open"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_exact_entrywise_interval.py; reproduction ledger reports V7-EPSC18-N1-EXACT-ENTRYWISE-INTERVAL PASS and V7-EPSC18-N1-EXACT-ENTRYWISE-RADIUS DERIVED on 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=1 local state-space certificate only. The reproduced q is an exact certificate for the declared box, but this does not itself certify that noisy physical measurements select that branch or that 10^-17 is a practical sensor tolerance. It does not establish arbitrary-finite-N inversion, continuum regularity, DNS adequacy, singularity formation, or the Clay result. No completed-infinity premise is used in the native proof."
+  }
+]
