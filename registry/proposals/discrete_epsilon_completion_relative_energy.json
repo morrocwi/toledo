@@ -6,11 +6,11 @@
     "statement": {
       "latest": "\\sup_{0\\le t\\le T}\\|u(t)-v(t)\\|_2^2\\le e^{A_T}\\left(e_0^2+\\frac{B_T}{\\nu}\\right),\\quad A_T=2\\int_0^T\\|\\nabla v\\|_\\infty dt,\\quad B_T=\\int_0^T\\|r\\|_{H^{-1}}^2dt",
       "format": "latex",
-      "note_ascii": "Leray-Hopf solution u is bounded in L2 from a smooth approximate path v by exp(A)*(initial_error^2 + residual_Hminus1_L2t^2/nu)"
+      "note_ascii": "Leray-Hopf solution u is bounded in L2 from a smooth/piecewise-smooth comparison path v by exp(A)*(initial_error^2 + residual_Hminus1_L2t^2/nu)"
     },
     "definitions": {
       "u": "Leray-Hopf weak solution of the declared periodic incompressible Navier-Stokes problem",
-      "v": "smooth divergence-free comparison path",
+      "v": "continuous divergence-free comparison path with the regularity required by the relative-energy argument",
       "r": "equation residual v_t + P[(v.grad)v] - nu Delta v - Pf",
       "e_0": "certified upper bound on ||u0-v(0)||_2",
       "A_T": "twice the time integral of ||grad v||_infinity",
@@ -29,7 +29,7 @@
       "source": "Standard relative-energy/weak-strong-stability estimate specialised to EPSC in github.com/morrocwi/readout-problem-navier-stokes/paper/NS_RELATIVE_ENERGY_ADAPTER_CERTIFICATE.md; implementation in github.com/morrocwi/information-discrete-math/idm/ns_relative_energy_adapter.py.",
       "doi": null
     },
-    "claim_boundary": "This registers the analytic adapter form, not an end-to-end certification of the current RK4 tape. No originality claim for the underlying relative-energy/Gronwall inequality and no global regularity claim."
+    "claim_boundary": "This registers the analytic adapter form, not a global regularity theorem. No originality claim for the underlying relative-energy/Gronwall inequality."
   },
   {
     "id": "PROP-EPSC-14",
@@ -38,11 +38,11 @@
     "statement": {
       "latest": "\\widehat r_q=P_q\\left[i\\sum_{p+s=q}(s\\cdot\\widehat v_p)\\widehat v_s\\right],\\quad\\|q\\|_\\infty>K;\\qquad\\|r\\|_{H^{-1}}^2=\\sum_{q\\ne0}\\frac{|\\widehat r_q|^2}{|q|^2}",
       "format": "latex",
-      "note_ascii": "for an exact K-Galerkin path, unresolved nonlinear residual is a finite 2K-cube triad tape and its H^-1 norm is a finite weighted sum"
+      "note_ascii": "for a K-supported Fourier comparison state/path, the nonlinear residual lives in a finite 2K cube and its H^-1 norm is a finite weighted sum"
     },
     "definitions": {
       "v": "K-supported divergence-free Fourier comparison state/path",
-      "r_q": "unresolved Leray-projected nonlinear residual coefficient",
+      "r_q": "Leray-projected residual coefficient",
       "P_q": "Fourier Leray projector"
     },
     "tier": "Definition",
@@ -50,40 +50,67 @@
     "domain": "P",
     "aliases": ["epsc-galerkin-residual-tape", "finite-Hminus1-residual"],
     "coq": {"identifiers": [], "coq_status": "open_prop"},
-    "parents": [{"code": "PROP-EPSC-13", "derived_via": "provides_residual_input", "evidence": "turns the relative-energy residual integrand into a finite Fourier quantity for exact Galerkin paths"}],
+    "parents": [{"code": "PROP-EPSC-13", "derived_via": "provides_residual_input", "evidence": "turns the relative-energy residual integrand into a finite Fourier quantity"}],
     "origin": {
-      "source": "Standard Fourier-Galerkin residual bookkeeping; finite implementation in github.com/morrocwi/information-discrete-math/idm/ns_relative_energy_adapter.py and witness checker in github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_relative_energy_adapter.py.",
+      "source": "Standard Fourier residual bookkeeping; finite implementation in github.com/morrocwi/information-discrete-math/idm/ns_relative_energy_adapter.py and witness checkers in github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/.",
       "doi": null
     },
-    "claim_boundary": "Snapshot residual is finite-computable. A certified time-integral upper bound still requires a validated continuous-time path/enclosure."
+    "claim_boundary": "Snapshot and polynomial-in-time residuals are finite-computable. This statement alone does not certify an arbitrary numerical trajectory."
   },
   {
     "id": "PROP-EPSC-15",
     "code": "weld/P.??.v1",
-    "name": "Validated RK4 continuous-time residual enclosure",
+    "name": "Exact piecewise-linear enclosure of a floating-point RK4 tape",
     "statement": {
-      "latest": "\\text{RK4 tape}\\to v_h(t)\\to (\\overline A_T,\\overline B_T)\\text{ with }A_T\\le\\overline A_T,\\;B_T\\le\\overline B_T",
+      "latest": "\\text{binary64 RK4 nodes}\\to\\text{exact dyadic Leray-projected nodes}\\to v_h(t)\\to(\\overline A_T,\\overline B_T),\\quad A_T\\le\\overline A_T,\\;B_T\\le\\overline B_T",
       "format": "latex",
-      "note_ascii": "construct a validated interpolation of the floating-point RK4 tape and rigorous upper bounds on the grad-Linf and H^-1 residual integrals"
+      "note_ascii": "reinterpret each recorded float exactly as a dyadic rational, project exactly onto divergence-free Fourier space, join nodes by an exact piecewise-linear path, integrate a rational residual polynomial exactly, and bound the gradient integral and exponential from above"
     },
     "definitions": {
-      "v_h": "validated continuous-time finite Fourier interpolation of the numerical RK4 tape",
-      "A_bar": "certified upper bound on 2 int ||grad v_h||_infinity",
-      "B_bar": "certified upper bound on int ||full equation residual||_{H^-1}^2"
+      "v_h": "exact rational continuous piecewise-linear K-supported divergence-free interpolation of the recorded RK4 nodes after exact Leray projection",
+      "A_bar": "rigorous finite upper bound on 2 int ||grad v_h||_infinity obtained from a Fourier l1 majorant",
+      "B_bar": "exact rational value/upper bound for int ||full equation residual of v_h||_{H^-1}^2 on the declared periodic Fourier convention",
+      "float_semantics": "each binary64 component is treated as its exact IEEE-754 dyadic rational; no interval guess is made about the stored bit pattern"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-rk4-residual-enclosure", "validated-time-adapter", "exact-dyadic-rk4-path"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-EPSC-13", "derived_via": "supplies_certified_summaries", "evidence": "the exact piecewise-linear construction supplies the A_T and B_T inputs required by the relative-energy adapter"},
+      {"code": "PROP-EPSC-14", "derived_via": "time_polynomial_closure", "evidence": "affine Fourier coefficients make the quadratic Navier-Stokes residual degree at most two in each time cell, so its squared H^-1 norm integrates exactly as a degree-four rational polynomial"},
+      {"code": "PROP-EPSC-12", "derived_via": "resolves", "evidence": "provides a concrete certified finite-tape-to-continuum comparison-path adapter for the declared finite run"}
+    ],
+    "origin": {
+      "source": "Construction and executable witness in github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_rk4_continuous_enclosure.py; 2026-09-10. Reusable implementation is mirrored in github.com/morrocwi/information-discrete-math.",
+      "doi": null
+    },
+    "claim_boundary": "The finite enclosure construction is exact after capture of the stated binary64 tape and the continuum implication uses PROP-EPSC-13 at analytic Dr tier. It does not prove global regularity, uniqueness of arbitrary weak solutions, physical DNS adequacy, or that a coarse cutoff is accurate. Tightness and computational scaling at large K are separate questions."
+  },
+  {
+    "id": "PROP-EPSC-16",
+    "code": "weld/P.??.v1",
+    "name": "Scalable tight high-cutoff certified path enclosure",
+    "statement": {
+      "latest": "\\text{minimise certified }\\overline A_T,\\overline B_T\\text{ cost and looseness as }K,T\\text{ grow, without changing the fail-closed proof obligation}",
+      "format": "latex",
+      "note_ascii": "engineering frontier: make the exact/certified path enclosure efficient and non-vacuous for larger Fourier cutoffs and longer trajectories"
+    },
+    "definitions": {
+      "tight": "certificate remains informative rather than exploding through conservative l1 or Gronwall bounds",
+      "scalable": "certification cost grows acceptably relative to the underlying retained solver"
     },
     "tier": "Open",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc-rk4-residual-enclosure", "validated-time-adapter"],
+    "aliases": ["epsc-scalable-enclosure", "high-K-certified-adapter"],
     "coq": {"identifiers": [], "coq_status": "open_prop"},
-    "parents": [
-      {"code": "PROP-EPSC-13", "derived_via": "implementation_obligation", "evidence": "certified A_T and B_T are the only remaining numerical summaries needed by the relative-energy adapter"},
-      {"code": "PROP-EPSC-12", "derived_via": "refines", "evidence": "replaces the broad Galerkin-to-continuum adapter target with a precise continuous-time enclosure problem"}
-    ],
+    "parents": [{"code": "PROP-EPSC-15", "derived_via": "engineering_refinement", "evidence": "correctness construction exists; practical high-K tightness and cost remain to be improved"}],
     "origin": {
-      "source": "Open implementation/formal-numerics target isolated 2026-09-10 by combining the finite IDM RK4 solver with the residual-based relative-energy adapter.",
+      "source": "Open engineering/research target isolated after the exact piecewise-linear EPSC-15 construction passed its finite reproduction checks.",
       "doi": null
     },
-    "claim_boundary": "OPEN. Nodewise residual samples or floating-point agreement are not sufficient; interval/certified continuous-time bounds are required."
+    "claim_boundary": "OPEN optimisation problem only; failure to close it does not invalidate the finite correctness of PROP-EPSC-15."
   }
 ]
