@@ -17,22 +17,13 @@
     "tier": "Definition",
     "status": "unverified",
     "domain": "M",
-    "aliases": [
-      "nested-readout-consistency-defect",
-      "discrete-epsilon-completion:delta_K"
-    ],
-    "coq": {
-      "identifiers": [],
-      "coq_status": "open_prop"
-    },
+    "aliases": ["nested-readout-consistency-defect", "discrete-epsilon-completion:delta_K"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
     "parents": [],
     "origin": {
       "source": "Discrete epsilon-completion programme, designed 2026-09-10 from the Information Discrete Mathematics / Readout-Navier-Stokes finite refinement work. Toledo-first registration before canonical promotion.",
       "doi": null,
-      "repo_targets": [
-        "github.com/morrocwi/information-discrete-math",
-        "github.com/morrocwi/readout-problem-navier-stokes"
-      ]
+      "repo_targets": ["github.com/morrocwi/information-discrete-math", "github.com/morrocwi/readout-problem-navier-stokes"]
     },
     "claim_boundary": "delta_K is an observable nested-refinement defect. Small delta_K alone is not a proof that the omitted infinite tail is small."
   },
@@ -53,25 +44,10 @@
     "tier": "Definition",
     "status": "unverified",
     "domain": "P",
-    "aliases": [
-      "ns-fourier-boundary-energy",
-      "discrete-epsilon-completion:ns-boundary-proxy"
-    ],
-    "coq": {
-      "identifiers": [],
-      "coq_status": "open_prop"
-    },
-    "parents": [
-      {
-        "code": "PROP-EPSC-01",
-        "derived_via": "paired_diagnostic",
-        "evidence": "used beside the nested-refinement defect in the first Navier-Stokes epsilon-completion finite diagnostic"
-      }
-    ],
-    "origin": {
-      "source": "Readout-Navier-Stokes discrete-native epsilon-completion finite diagnostic, 2026-09-10; intended source repo github.com/morrocwi/readout-problem-navier-stokes.",
-      "doi": null
-    },
+    "aliases": ["ns-fourier-boundary-energy", "discrete-epsilon-completion:ns-boundary-proxy"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-EPSC-01", "derived_via": "paired_diagnostic", "evidence": "used beside the nested-refinement defect in the first Navier-Stokes epsilon-completion finite diagnostic"}],
+    "origin": {"source": "Readout-Navier-Stokes discrete-native epsilon-completion finite diagnostic, 2026-09-10; source repo github.com/morrocwi/readout-problem-navier-stokes.", "doi": null},
     "claim_boundary": "Boundary energy is a finite diagnostic proxy for unresolved activity. It is not, by itself, a rigorous upper bound on the complete omitted Fourier tail."
   },
   {
@@ -93,69 +69,155 @@
     "tier": "Definition",
     "status": "unverified",
     "domain": "M",
-    "aliases": [
-      "discrete-epsilon-completion-gate",
-      "epsilon-completion:ACCEPT-HOLD"
-    ],
-    "coq": {
-      "identifiers": [],
-      "coq_status": "open_prop"
-    },
+    "aliases": ["discrete-epsilon-completion-gate", "epsilon-completion:ACCEPT-HOLD"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
     "parents": [
-      {
-        "code": "PROP-EPSC-01",
-        "derived_via": "uses",
-        "evidence": "the acceptance rule consumes the measured nested-refinement defect"
-      },
-      {
-        "code": "PROP-EPSC-04",
-        "derived_via": "requires",
-        "evidence": "continuum/infinite-object certification requires a proved omitted-information upper bound; without it the rule explicitly returns HOLD"
-      }
+      {"code": "PROP-EPSC-01", "derived_via": "uses", "evidence": "the acceptance rule consumes the measured nested-refinement defect"},
+      {"code": "PROP-EPSC-04", "derived_via": "requires", "evidence": "infinite-object certification requires a proved omitted-information upper bound in the declared target norm"}
     ],
-    "origin": {
-      "source": "Discrete epsilon-completion programme, 2026-09-10. Registered before implementation as a general certification protocol in Information Discrete Mathematics.",
-      "doi": null
-    },
-    "claim_boundary": "This is a fail-closed protocol definition, not a theorem that beta_K exists for every problem or every Navier-Stokes state."
+    "origin": {"source": "Discrete epsilon-completion programme, 2026-09-10. Registered before implementation as a general certification protocol in Information Discrete Mathematics.", "doi": null},
+    "claim_boundary": "This is a fail-closed protocol definition, not a theorem that beta_K exists for every problem, target norm or Navier-Stokes state."
   },
   {
     "id": "PROP-EPSC-04",
     "code": "weld/M.??.v1",
     "name": "Computable omitted-information tail certificate target",
     "statement": {
-      "latest": "\\|(I-P_K)x\\|\\le\\beta_K(\\mathcal R_K),\\qquad\\beta_K\\ge0,\\qquad\\beta_K\\to0\\text{ as }K\\to\\infty",
+      "latest": "\\|(I-P_K)x\\|_Y\\le\\beta_{K,Y}(\\mathcal R_K;\\mathcal A),\\qquad\\beta_{K,Y}\\ge0,\\qquad\\beta_{K,Y}\\to0\\text{ as }K\\to\\infty",
       "format": "latex",
-      "note_ascii": "||(I-P_K)x|| <= beta_K(R_K), beta_K >= 0, beta_K -> 0 as K -> infinity"
+      "note_ascii": "||(I-P_K)x||_Y <= beta_(K,Y)(records_K; assumptions A), beta>=0, beta->0"
     },
     "definitions": {
       "P_K": "declared finite projection/refinement operator",
-      "R_K": "finite records available at level K (notation here denotes the record set, not necessarily the restriction operator used in PROP-EPSC-01)",
-      "beta_K": "computable upper bound derived only from declared finite records and stated assumptions",
-      "x": "target object in the problem's declared completion space"
+      "Y": "declared target/completion norm or readout space",
+      "R_K": "finite records available at level K",
+      "A": "explicit admissible-class assumptions and problem-data certificates",
+      "beta_(K,Y)": "computable upper bound for omitted distinctions in the declared target",
+      "x": "target object"
     },
     "tier": "Open",
     "status": "unverified",
     "domain": "M",
-    "aliases": [
-      "finite-to-infinite-tail-certificate",
-      "discrete-epsilon-completion:beta_K"
-    ],
-    "coq": {
-      "identifiers": [],
-      "coq_status": "open_prop"
+    "aliases": ["finite-to-infinite-tail-certificate", "discrete-epsilon-completion:beta_K"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-EPSC-01", "derived_via": "closes_gap_left_by", "evidence": "nested agreement does not control unrepresented distinctions; a target-indexed beta is the missing certificate"}],
+    "origin": {"source": "Open mathematical target isolated by the 2026-09-10 Readout-Navier-Stokes discrete-native refinement experiment and refined after the spacetime-tail analysis.", "doi": null},
+    "claim_boundary": "PARTIALLY RESOLVED BY TARGET-SPACE REFINEMENT. PROP-EPSC-07 supplies beta for Leray-Hopf trajectories in L2_t L2_x. Arbitrary prescribed terminal-state completion from retained coefficients alone remains open/obstructed; E_partialK remains only a diagnostic proxy."
+  },
+  {
+    "id": "PROP-EPSC-05",
+    "code": "weld/P.??.v1",
+    "name": "Terminal finite-Fourier-readout non-identifiability obstruction",
+    "statement": {
+      "latest": "P_Kv=0\\;\\not\\Rightarrow\\;\\|(I-P_K)v\\|_2=0;\\quad q=(K+1,0,0),\\;\\widehat v_{\\pm q}=a_{\\pm},\\;q\\cdot a_+=0",
+      "format": "latex",
+      "note_ascii": "an arbitrary divergence-free conjugate pair outside K changes the tail without changing P_K"
     },
+    "definitions": {
+      "P_K": "finite Fourier cube projection",
+      "q": "one omitted integer mode",
+      "a_plus": "arbitrarily scalable velocity coefficient perpendicular to q"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["terminal-tail-no-go", "epsc-terminal-nonidentifiability"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-EPSC-04", "derived_via": "limits", "evidence": "shows why beta must depend on a declared admissible class/extra certificate rather than retained terminal coefficients alone"}],
+    "origin": {"source": "Elementary Fourier witness written in github.com/morrocwi/readout-problem-navier-stokes/paper/NS_SPACETIME_TAIL_CERTIFICATE.md; finite witness checker in reproduction/checks/check_volume7_spacetime_tail.py.", "doi": null},
+    "claim_boundary": "This is an identifiability statement about unrestricted terminal L2 states; it is not a statement that Navier-Stokes dynamics can realize every such perturbation at a prescribed time."
+  },
+  {
+    "id": "PROP-EPSC-06",
+    "code": "weld/M.??.v1",
+    "name": "Spectral Hs-to-L2 tail inequality",
+    "statement": {
+      "latest": "\\|(I-P_K)u\\|_2\\le\\frac{\\||\\nabla|^s u\\|_2}{\\kappa_{K+1}^s},\\qquad s>0",
+      "format": "latex",
+      "note_ascii": "L2 omitted Fourier tail <= H^s seminorm / omitted-wavenumber-floor^s"
+    },
+    "definitions": {
+      "kappa_(K+1)": "minimum Euclidean wavenumber among omitted modes",
+      "s": "positive regularity exponent"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["spectral-tail-from-Hs", "epsc-Hs-tail"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-EPSC-04", "derived_via": "specializes", "evidence": "provides beta_K once an H^s seminorm bound is available"}],
+    "origin": {"source": "Standard Fourier/Sobolev tail inequality; project-specific role is its insertion into the EPSC certificate architecture, not the inequality's mathematical originality.", "doi": null},
+    "claim_boundary": "Standard analysis. Toledo registration records provenance/role only and makes no originality claim for the inequality itself."
+  },
+  {
+    "id": "PROP-EPSC-07",
+    "code": "weld/P.??.v1",
+    "name": "Leray-Hopf spacetime Fourier-tail certificate",
+    "statement": {
+      "latest": "\\|(I-P_K)u\\|_{L^2(0,T;L^2_x)}\\le\\frac{\\|u_0\\|_2}{\\sqrt{2\\nu}\\,\\kappa_{K+1}}\\quad\\text{(unforced Leray-Hopf)}",
+      "format": "latex",
+      "note_ascii": "unforced Leray-Hopf spacetime tail beta = ||u0||/(sqrt(2 nu)*kappa_(K+1))"
+    },
+    "definitions": {
+      "u": "Leray-Hopf weak solution",
+      "nu": "positive viscosity",
+      "P_K": "finite Fourier projection",
+      "kappa_(K+1)": "minimum omitted wavenumber; K+1 on the 2pi torus with the project cube convention"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-spacetime-tail-certificate", "leray-spectral-tail-beta"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
     "parents": [
-      {
-        "code": "PROP-EPSC-01",
-        "derived_via": "closes_gap_left_by",
-        "evidence": "nested agreement does not control unrepresented distinctions; beta_K is the missing certificate needed to turn finite stability into an infinite-object guarantee"
-      }
+      {"code": "PROP-EPSC-06", "derived_via": "integrates", "evidence": "integrates the s=1 spectral tail inequality in time"},
+      {"code": "PROP-EPSC-04", "derived_via": "partially_closes", "evidence": "supplies an explicit computable beta_K->0 in the declared L2_t L2_x target norm"}
     ],
-    "origin": {
-      "source": "Open mathematical target isolated by the 2026-09-10 Readout-Navier-Stokes discrete-native refinement experiment. Toledo-first registration before any theorem claim.",
-      "doi": null
+    "origin": {"source": "Standard Leray-Hopf energy inequality combined with the standard spectral tail inequality; proof specialized and recorded in github.com/morrocwi/readout-problem-navier-stokes/paper/NS_SPACETIME_TAIL_CERTIFICATE.md and implemented in github.com/morrocwi/information-discrete-math/idm/ns_tail_certificate.py.", "doi": null},
+    "claim_boundary": "This closes EPSC-04 only for the declared spacetime norm and assumptions. It does not control an arbitrary prescribed terminal time and does not resolve global regularity."
+  },
+  {
+    "id": "PROP-EPSC-08",
+    "code": "weld/M.??.v1",
+    "name": "Lipschitz readout lift of an epsilon tail certificate",
+    "statement": {
+      "latest": "\\|Q(u)-Q(P_Ku)\\|\\le L_Q\\,\\beta_{K,Y}\\quad\\text{whenever }Q\\text{ is }L_Q\\text{-Lipschitz on }Y",
+      "format": "latex",
+      "note_ascii": "certified state tail beta lifts through a Lipschitz readout by multiplication with L_Q"
     },
-    "claim_boundary": "OPEN. No universal beta_K construction is established here. In the current Navier-Stokes experiment E_partialK is only a diagnostic proxy and must not be substituted for beta_K in a theorem-level ACCEPT verdict."
+    "definitions": {
+      "Q": "declared readout",
+      "L_Q": "verified Lipschitz constant",
+      "Y": "state norm in which beta is certified"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["epsc-readout-lift", "lipschitz-beta-lift"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-EPSC-07", "derived_via": "reads", "evidence": "turns the spacetime state certificate into a task/readout certificate"}],
+    "origin": {"source": "Elementary Lipschitz composition; project-specific role is in the Readout/EPSC architecture, not a claim of mathematical originality.", "doi": null},
+    "claim_boundary": "Requires an actual Lipschitz bound for the declared reader. Non-Lipschitz or discontinuous questions are not certified by this step."
+  },
+  {
+    "id": "PROP-EPSC-09",
+    "code": "weld/P.??.v1",
+    "name": "Conditional terminal Hs Fourier-tail certificate",
+    "statement": {
+      "latest": "\\||\\nabla|^s u(T)\\|_2\\le M_s(T)\\;\\Longrightarrow\\;\\|(I-P_K)u(T)\\|_2\\le\\frac{M_s(T)}{\\kappa_{K+1}^s}",
+      "format": "latex",
+      "note_ascii": "verified pointwise H^s bound M_s(T) implies terminal tail beta=M_s/kappa^(s)"
+    },
+    "definitions": {
+      "M_s(T)": "separately proved/certified pointwise H^s seminorm upper bound at the requested time"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-terminal-Hs-certificate", "conditional-terminal-beta"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-EPSC-06", "derived_via": "specializes", "evidence": "applies the spectral tail inequality at the prescribed terminal time"}],
+    "origin": {"source": "Standard Fourier/Sobolev estimate specialized to the EPSC terminal target; implementation in github.com/morrocwi/information-discrete-math/idm/ns_tail_certificate.py.", "doi": null},
+    "claim_boundary": "Conditional only. Producing a globally valid pointwise M_s(T) for arbitrary 3-D Navier-Stokes data is not supplied and is precisely where the classical regularity difficulty can re-enter."
   }
 ]
