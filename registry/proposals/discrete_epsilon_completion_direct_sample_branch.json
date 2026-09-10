@@ -2,24 +2,24 @@
   {
     "id": "PROP-EPSC-39",
     "code": "weld/P.??.v1",
-    "name": "Finite direct-sample contraction branch certificate",
+    "name": "Finite direct-sample self-map budget gate",
     "statement": {
-      "latest": "q:=\\sup_{x\\in B(z,r)}\\|I-A DS(x)\\|_\\infty<1,\\quad \\|A\\|_\\infty\\delta+qr\\le r\\;\\Longrightarrow\\;\\exists!x\\in B(z,r):S(x)=y,\\quad \\|x-z\\|_\\infty\\le\\frac{\\|A\\|_\\infty}{1-q}\\delta",
+      "latest": "q<1,\\quad \\|A\\|_\\infty\\delta+qr\\le r\\;\\Longrightarrow\\;\\delta\\le\\frac{(1-q)r}{\\|A\\|_\\infty},\\qquad \\rho_{cond}:=\\frac{\\|A\\|_\\infty}{1-q}\\delta\\le r",
       "format": "latex",
-      "note_ascii": "a finite raw-data uncertainty box certifies its own local inverse branch when a fixed preconditioner, a branch-wide Jacobian-defect bound below one, and the Banach self-map inequality are independently certified"
+      "note_ascii": "given separately certified finite quantities q, A, delta and r, the raw-data self-map budget and conditional radius factor are exact finite inequalities"
     },
     "definitions": {
-      "S": "finite-dimensional square direct sample/observation map on the declared local branch",
-      "B(z,r)": "declared convex infinity-norm branch ball",
-      "A": "fixed invertible finite preconditioner",
-      "delta": "raw-data center discrepancy plus certified sensor radius plus certified forward-model radius"
+      "A": "declared square finite preconditioner",
+      "q": "separately supplied branch-wide preconditioned Jacobian-defect upper bound",
+      "delta": "raw-data center discrepancy plus certified sensor radius plus certified forward-model radius",
+      "r": "declared local branch radius"
     },
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
     "aliases": [
-      "epsc-direct-sample-branch-certificate",
-      "epsc-banach-raw-measurement-branch"
+      "epsc-direct-sample-budget-gate",
+      "epsc-finite-raw-measurement-gate"
     ],
     "coq": {
       "identifiers": [],
@@ -28,19 +28,56 @@
     "parents": [
       {
         "code": "PROP-EPSC-31",
-        "derived_via": "self_map_strengthening",
-        "evidence": "adds a sufficient raw-data self-map condition so branch membership need not be supplied as an external boolean"
+        "derived_via": "finite_budget_specialization",
+        "evidence": "isolates the exact q<1 and self-map arithmetic needed before any branch-existence interpretation"
       },
       {
         "code": "PROP-EPSC-36",
-        "derived_via": "generic_branch_capture_adapter",
-        "evidence": "isolates the finite theorem needed to convert a direct sample-map q<1 certificate into raw-data branch capture and rho_N"
+        "derived_via": "measurement_interface_substep",
+        "evidence": "supplies a fail-closed finite data-budget gate for the raw-sample route"
       }
     ],
     "origin": {
       "source": "github.com/morrocwi/information-discrete-math/idm/finite_sample_branch.py",
       "doi": null
     },
-    "claim_boundary": "Finite local theorem only. It does not construct q, A, the forward-model radius, or a sensor model; it does not exclude additional roots outside the declared branch. No arbitrary-N, continuum, Navier-Stokes regularity, physical validation, or Clay conclusion follows automatically. No completed-infinity premise is used."
+    "claim_boundary": "Pure finite inequality gate only. It does not by itself prove that an exact real root exists, that a contraction limit is attained, that an unknown state lies in the branch, or that the branch is globally unique. Those require a separately tiered finite witness/exclusion argument or a declared real-analysis adapter. No arbitrary-N, continuum, physical, or Clay conclusion follows."
+  },
+  {
+    "id": "PROP-EPSC-40",
+    "code": "weld/P.??.v1",
+    "name": "Real-analysis branch-existence adapter for the direct-sample gate",
+    "statement": {
+      "latest": "[\\text{complete real metric-space branch}+q<1+T_y(B)\\subseteq B]\\;\\Longrightarrow\\;\\exists!x\\in B:T_y(x)=x",
+      "format": "latex",
+      "note_ascii": "Banach fixed-point existence/attainment is an optional real-analysis consequence of the finite gate after explicitly granting the completeness and real-existence premises"
+    },
+    "definitions": {
+      "T_y": "x-A(S(x)-y)",
+      "B": "declared complete real metric-space branch used only in this adapter"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc-banach-branch-adapter",
+      "epsc-real-analysis-direct-sample-branch"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-39",
+        "derived_via": "optional_real_analysis_interpretation",
+        "evidence": "the finite gate supplies the contraction/self-map inequalities but not completeness or attained fixed-point existence"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math/AGENTS.md",
+      "doi": null
+    },
+    "claim_boundary": "OPEN/adaptor tier under the repository's finite-first discipline. This is not a native finite theorem and must never be used to claim completed-infinity ontology, continuum physical reality, or global branch selection."
   }
 ]
