@@ -1,0 +1,104 @@
+[
+  {
+    "id": "PROP-NSOBS-09",
+    "code": "weld/P.??.v1",
+    "name": "Finite shell-energy transfer balance",
+    "statement": {
+      "latest": "\\dot I_s=T_s-2\\nu s I_s+F_s,\\qquad \\sum_s T_s=0\\text{ in the unforced closed finite system}",
+      "format": "latex",
+      "note_ascii": "finite Fourier-Galerkin shell energy separates nonlinear inter-shell transfer from viscous dissipation and forcing"
+    },
+    "definitions": {
+      "I_s": "retained kinetic energy in the finite squared-wavenumber shell s",
+      "T_s": "finite nonlinear triad transfer into shell s",
+      "F_s": "declared shell forcing power"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-shell-transfer-balance"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-03","derived_via":"finite_shell_energy_identity","evidence":"uses the declared shell-energy reader on the finite Galerkin dynamics"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md","doi":null},
+    "claim_boundary": "Finite Galerkin identity. It does not identify informational transfer with physical SI energy outside the declared NS translation."
+  },
+  {
+    "id": "PROP-NSOBS-10",
+    "code": "weld/P.??.v1",
+    "name": "Shell transfer and first energy-jet equivalence",
+    "statement": {
+      "latest": "T=\\dot I+2\\nu S I-F\\;\\Longrightarrow\\;\\operatorname{rank}D(I,T)=\\operatorname{rank}D(I,\\dot I)\\text{ for prescribed forcing}",
+      "format": "latex",
+      "note_ascii": "transfer variables expose mechanism but are an affine reparameterization of the first shell-energy jet when forcing is prescribed"
+    },
+    "definitions": {"S":"diagonal shell-index operator"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-transfer-first-jet-equivalence"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-09","derived_via":"algebraic_rearrangement","evidence":"solve the shell balance for T"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_energy_transfer_observability.py","doi":null},
+    "claim_boundary": "Does not claim transfer creates extra local rank; its value is mechanism visibility and measurement reformulation."
+  },
+  {
+    "id": "PROP-NSOBS-11",
+    "code": "weld/P.??.v1",
+    "name": "Arbitrary-finite-cutoff kinematic triad connectivity",
+    "statement": {
+      "latest": "\\forall N\\ge2,\\;\\forall k\\text{ with }\\|k\\|_\\infty=N,\\;\\exists p\\in K_{N-1},q\\in K_N:\\;p+q=k,\\;p\\times q\\ne0",
+      "format": "latex",
+      "note_ascii": "every newly admitted boundary mode has at least one non-collinear Navier-Stokes triad connecting it to the preceding finite cutoff"
+    },
+    "definitions": {"K_N":"declared finite cubic Fourier mode set"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-all-finite-N-triad-connectivity"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_energy_transfer_observability.py","doi":null},
+    "claim_boundary": "Kinematic connectivity only. It does not imply nonzero amplitudes, absence of cancellation, observable-minor independence, or all-N rank saturation. A finite sweep through N=8 is reproduction evidence for the construction, not the logical basis of the arbitrary-finite-N statement."
+  },
+  {
+    "id": "PROP-NSOBS-12",
+    "code": "weld/P.??.v1",
+    "name": "Exact N=2 shell-energy earliest-order saturation",
+    "statement": {
+      "latest": "N=2:\\quad \\operatorname{rank}D\\mathcal J_{29}=241<245,\\qquad \\operatorname{rank}D\\mathcal J_{30}=245=d_2-3",
+      "format": "latex",
+      "note_ascii": "the nine-shell reader at fixed finite N=2 reaches the translation ceiling at the first structurally admissible depth R=30"
+    },
+    "definitions": {"d_2":"248","m_2":"9"},
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-n2-shell-saturation"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-03","derived_via":"attains_shell_ceiling","evidence":"R=30 is the structural minimum for d_2=248,m_2=9"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_k2_shell_energy_observability.py","doi":null},
+    "claim_boundary": "Exact fixed-finite-resolution modular certificate only; not an arbitrary-N proof."
+  },
+  {
+    "id": "PROP-NSOBS-13",
+    "code": "weld/P.??.v1",
+    "name": "Three consecutive finite shell-saturation witnesses",
+    "statement": {
+      "latest": "(N,R_I^{min},d_N-3)=(1,23,49),(2,30,245),(3,39,681)",
+      "format": "latex",
+      "note_ascii": "shell-energy observability reaches the structural minimum at three consecutive fixed finite cutoffs N=1,2,3"
+    },
+    "definitions": {},
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-shell-N123-contiguous"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-NSOBS-05","derived_via":"extends_record_set","evidence":"uses existing N=1 and N=3 shell saturation records"},
+      {"code":"PROP-NSOBS-12","derived_via":"fills_middle_resolution","evidence":"adds exact N=2 shell saturation at R=30"}
+    ],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "Three finite cases only. PROP-NSOBS-07 remains OPEN because connectivity and three witnesses do not prove arbitrary-finite-N minor independence."
+  }
+]
