@@ -1,0 +1,44 @@
+[
+  {
+    "id": "PROP-EPSC-37",
+    "code": "weld/P.??.v1",
+    "name": "Fixed N=1 derivative-free finite-time sample chart existence",
+    "statement": {
+      "latest": "\\mathcal S_h(x)=((I_0\\circ\\phi_{jh})(x))_{j=0}^{23}\\oplus((I_1\\circ\\phi_{jh})(x))_{j=0}^{23}\\oplus I_2(x),\\qquad \\det D\\mathcal S_h(x_*)=c h^{552}+O(h^{553}),\\;c\\ne0",
+      "format": "latex",
+      "note_ascii": "the already-certified fixed-N=1 49-row shell-energy Taylor chart implies a 49-component derivative-free finite-time sample chart that is locally invertible for all sufficiently small nonzero sample spacings"
+    },
+    "definitions": {
+      "phi_t": "local analytic flow of the fixed finite N=1 polynomial Fourier-Galerkin ODE",
+      "S_h": "49-component shell-energy sample map: 24 samples of shell 0, 24 samples of shell 1 at times jh for j=0..23, plus shell 2 at time zero",
+      "c": "product of the reordered 49-row Taylor-chart Jacobian determinant and the two 24x24 Vandermonde determinants",
+      "552": "two times sum_{n=0}^{23} n"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc-n1-finite-sample-chart",
+      "derivative-free-energy-sample-observability",
+      "sample-time-observability-bridge"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-33",
+        "derived_via": "vandermonde_sample_lift",
+        "evidence": "the fixed-N=1 shell-energy Taylor chart has a certified nonsingular 49-row quotient Jacobian at the declared center"
+      },
+      {
+        "code": "PROP-EPSC-36",
+        "derived_via": "partial_structural_resolution",
+        "evidence": "removes high-order numerical differentiation from the structural raw-time-sample observability interface while leaving explicit spacing, conditioning, noise and branch capture open"
+      }
+    ],
+    "origin": {
+      "source": "Finite determinant/Vandermonde construction in github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_FINITE_SAMPLE_OBSERVABILITY_BRIDGE.md and checker check_volume7_eps19_n1_finite_sample_chart.py; reusable finite algebra in github.com/morrocwi/information-discrete-math/idm/finite_sample_chart.py; 2026-09-11.",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=1, local and existential in sample spacing. It proves neither an explicit useful h nor branch-wide q_h<1, raw-sensor noise tolerance, branch selection, arbitrary-finite-N sample conditioning, continuum Navier-Stokes regularity, DNS adequacy, or the Clay Millennium problem. Proposal identifier only; weld code remains a placeholder pending canonical Toledo audit."
+  }
+]
