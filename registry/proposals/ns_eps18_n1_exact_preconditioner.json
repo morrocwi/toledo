@@ -1,0 +1,54 @@
+[
+  {
+    "id": "PROP-EPSC-27",
+    "code": "weld/P.??.v1",
+    "name": "Exact characteristic-zero preconditioner tightening of the full N=1 finite inverse radius",
+    "statement": {
+      "latest": "A=J_0^{-1},\\quad S=\\max_i\\sum_j|A_{ij}|H_j,\\quad r=\\frac{1}{2S}\\Longrightarrow\\|A(J(x)-J_0)\\|_\\infty\\le\\tfrac12;\\qquad 10^{-59}<r\\le10^{-58}",
+      "format": "latex",
+      "note_ascii": "the actual integer-scaled characteristic-zero 49x49 N=1 observability Jacobian is reconstructed and inverted exactly over Q; its infinity inverse norm lies between 1.28 and 1.29, replacing determinant-only Cramer/Hadamard preconditioning by A=J0^{-1}"
+    },
+    "definitions": {
+      "J_0": "selected 49x49 C^n n!-scaled shell-energy Taylor-jet Jacobian at the deterministic small-integer N=1 center on the certified translation-transverse slice",
+      "A": "the exact rational inverse J_0^{-1}",
+      "H_j": "certified finite Hessian-row l1 majorant for selected observation j on the declared enclosing box",
+      "S": "max_i sum_j |A_ij| H_j",
+      "r": "strictly positive finite infinity-norm local-state radius with preconditioned defect at most one half"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n1-exact-preconditioner-radius",
+      "n1-characteristic-zero-jacobian-inverse"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-22",
+        "derived_via": "uses_explicit_full_n1_symmetry_slice_chart",
+        "evidence": "the same 49-dimensional translation-transverse shell-energy chart is reconstructed over characteristic zero"
+      },
+      {
+        "code": "PROP-EPSC-23",
+        "derived_via": "uses_exact_rational_preconditioned_inverse_core",
+        "evidence": "A=J0^-1 makes the center defect exactly zero and the finite Hessian enclosure controls the neighborhood defect"
+      },
+      {
+        "code": "PROP-EPSC-26",
+        "derived_via": "removes_determinant_bound_slack",
+        "evidence": "the preceding row-aware Cramer/Hadamard radius is replaced by the actual exact rational inverse of the selected center Jacobian"
+      },
+      {
+        "code": "PROP-EPSC-24",
+        "derived_via": "narrows_measurement_ready_frontier",
+        "evidence": "the certified radius improves from the 10^-3878 scale to between 10^-59 and 10^-58, but remains far below practical measurement scale"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_exact_preconditioner.py; reproduction workflow PASS on 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=1 local result only. The exact inverse removes determinant-bound slack but still uses conservative finite Hessian majorants. It is not a practical sensor tolerance, does not certify robust branch capture or arbitrary-N inversion, and has no continuum-regularity, singularity, or Clay implication."
+  }
+]
