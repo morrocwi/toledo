@@ -1,0 +1,136 @@
+[
+  {
+    "id": "PROP-SCA-PNP-07",
+    "code": "A3/M.??.v1",
+    "name": "Exact non-polynomial SAT demand/capacity separation schema",
+    "statement": {
+      "latest": "[\\forall p\\in\\mathrm{poly},\\;\\forall N,\\;\\exists n\\ge N:\\;H_n(\\mathrm{SAT}_n)>p(n)K_n]\\;\\land\\;[\\text{every correct size-}s\\text{ SAT circuit has }H_n(\\mathrm{SAT}_n)\\le sK_n]\\;\\Longrightarrow\\;\\mathrm{SAT}\\notin P/\\mathrm{poly}\\;\\Longrightarrow\\;P\\ne NP",
+      "format": "latex",
+      "note_ascii": "if H_n(SAT_n)/K_n is not eventually bounded by any polynomial and universal circuit accounting holds, then SAT notin P/poly, hence P != NP"
+    },
+    "definitions": {
+      "H_n": "admissible non-circular semantic-demand quantity for the canonical length-n SAT function",
+      "K_n": "universal per-gate semantic capacity scale",
+      "p": "arbitrary polynomial gate budget",
+      "N": "arbitrary lower cutoff on input length"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["semantic-closure:conditional-separation-exact", "p-vs-np:non-polynomial-demand-ratio-schema"],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-SCA-PNP-05",
+        "derived_via": "refines",
+        "evidence": "The v0.1 route used the stronger eventually-dominates-every-polynomial condition. This refinement records the exact weaker condition needed to exclude a polynomial-size circuit family."
+      }
+    ],
+    "origin": {
+      "source": "Route-closure corrigendum to Semantic Closure Accounting for Boolean Circuits v0.1, 2026-09-11.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "52f1da3b114378df274800284c47bdde72d8d13d",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/ROUTE_CLOSURE.md"
+      },
+      "doi": null
+    },
+    "claim_boundary": "Sufficient conditional schema only. No converse is claimed and the SAT-specific demand/capacity premise remains open."
+  },
+  {
+    "id": "PROP-SCA-PNP-08",
+    "code": "A3/M.??.v1",
+    "name": "Demand-Circuit Dominance route-closure theorem",
+    "statement": {
+      "latest": "[\\forall C\\text{ correct for }f_n:\\;H_n(f_n)\\le |C|K_n]\\;\\Longrightarrow\\;H_n(f_n)\\le CC(f_n)K_n;\\qquad BK_n<H_n(f_n)\\Longrightarrow B<CC(f_n)",
+      "format": "latex",
+      "note_ascii": "universal H <= circuit_size*K implies H <= minimum_circuit_size*K; any B*K < H is already a circuit lower-bound certificate B < CC(f_n)"
+    },
+    "definitions": {
+      "CC(f_n)": "minimum correct circuit size for f_n in the declared finite circuit model",
+      "H_n": "declared semantic demand",
+      "K_n": "declared per-gate capacity scale",
+      "B": "candidate circuit-size budget"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["demand-circuit-dominance", "semantic-closure:route-closure", "p-vs-np:no-free-potential"],
+    "coq": {
+      "identifiers": ["demand_gap_is_circuit_lower_bound", "universal_accounting_excludes_budget", "positive_capacity_strict_gate_step"],
+      "coq_status": "open_prop",
+      "source_candidate": "information-discrete-math@402c0809feb212774dc394eac5527a0260bc774d:formal/IDM_DemandCircuitDominance.v"
+    },
+    "parents": [
+      {
+        "code": "PROP-SCA-PNP-03",
+        "derived_via": "specializes",
+        "evidence": "The RRR demand/capacity inequality becomes a direct circuit lower-bound certificate once universal accounting is assumed for every correct circuit."
+      },
+      {
+        "code": "PROP-SCA-PNP-04",
+        "derived_via": "clarifies",
+        "evidence": "The theorem identifies that a super-budget semantic demand gap is already the transferred circuit lower bound, not an independent shortcut around it."
+      }
+    ],
+    "origin": {
+      "source": "Route-closure analysis, 2026-09-11; finite multiplication-only kernel formalized in the IDM P-vs-NP research branch.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/information-discrete-math",
+        "commit": "402c0809feb212774dc394eac5527a0260bc774d",
+        "path": "formal/IDM_DemandCircuitDominance.v"
+      },
+      "doi": null
+    },
+    "claim_boundary": "Finite meta-theorem only. It proves that the H/K route packages a circuit lower bound; it does not supply an admissible SAT-specific H_n or K_n and does not prove P != NP."
+  },
+  {
+    "id": "PROP-SCA-PNP-09",
+    "code": "A3/M.??.v1",
+    "name": "SAT Semantic Demand target — exact P/poly-strength refinement",
+    "statement": {
+      "latest": "\\forall p\\text{ polynomial},\\;\\forall N,\\;\\exists n\\ge N:\\quad H_n(\\mathrm{SAT}_n)>p(n)K_n,\\qquad\\text{with universal sharing- and recomputation-aware capacity accounting for every bounded-fan-in Boolean circuit}",
+      "format": "latex",
+      "note_ascii": "for every polynomial p and cutoff N, some n>=N has H_n(SAT_n)>p(n)K_n, with universal sharing/recomputation-aware circuit accounting"
+    },
+    "definitions": {
+      "H_n": "to-be-constructed non-circular SAT semantic demand",
+      "K_n": "to-be-proved universal semantic capacity scale per circuit gate",
+      "p": "arbitrary polynomial gate bound",
+      "N": "arbitrary input-length cutoff"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["SAT-semantic-demand-open-theorem-exact", "semantic-closure:load-bearing-open-target-refined"],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-SCA-PNP-06",
+        "derived_via": "refines",
+        "evidence": "The original target H/(K n^c)->infinity for every c is sufficient but stronger than necessary. This row records the exact non-polynomial-boundedness target needed for P/poly exclusion."
+      },
+      {
+        "code": "PROP-SCA-PNP-08",
+        "derived_via": "limited_by",
+        "evidence": "Demand-Circuit Dominance shows that proving this target together with universal accounting is itself an unrestricted circuit lower-bound breakthrough."
+      }
+    ],
+    "origin": {
+      "source": "Route-closure corrigendum to Semantic Closure Accounting for Boolean Circuits, 2026-09-11.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "52f1da3b114378df274800284c47bdde72d8d13d",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/ROUTE_CLOSURE.md"
+      },
+      "doi": null
+    },
+    "claim_boundary": "OPEN. Registration records the exact target; it does not establish the target or change the public status of P versus NP."
+  }
+]
