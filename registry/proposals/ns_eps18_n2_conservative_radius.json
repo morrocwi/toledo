@@ -1,0 +1,56 @@
+[
+  {
+    "id": "PROP-EPSC-34",
+    "code": "weld/P.??.v1",
+    "name": "Conservative positive full-N=2 shell-chart local inverse box",
+    "statement": {
+      "latest": "\\|x-x_*\\|_\\infty\\le r_2,\\quad 10^{-79490}<r_2\\le10^{-79489}\\;\\Longrightarrow\\;q_2:=\\sup_{x\\in B_2}\\|I-A_2DH_2(x)\\|_\\infty\\le\\tfrac12<1",
+      "format": "latex",
+      "note_ascii": "for the fixed finite N=2 245-dimensional translation slice, a small-integer full-rank shell-energy chart, integer row scaling, Cramer-Hadamard inverse bound, and finite Hessian majorant certify a strictly positive local inverse box with q_2<=1/2"
+    },
+    "definitions": {
+      "x_*": "the deterministic small-integer N=2 full-rank center from seed 20260910, with every finite coordinate of magnitude at most 3",
+      "H_2": "the selected 245-observation shell-energy Taylor chart through order R=30 on the explicit 245-dimensional translation slice",
+      "A_2": "the exact conceptual inverse J_0^{-1}, bounded without explicitly forming all rational entries by the nonzero integer determinant plus Cramer/Hadamard",
+      "B_2": "the infinity-norm state-space box ||x-x_*||_inf <= r_2",
+      "q_2": "certified induced-infinity Jacobian defect upper bound on B_2",
+      "row_scaling": "C=14400, used as C^n n! on Taylor rows; it clears nu=1/200 and all declared N=2 basis-extraction denominators"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n2-positive-radius",
+      "n2-conservative-inverse-box",
+      "second-resolution-observability-to-rho-bridge"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-NSOBS-12",
+        "derived_via": "starts_from_exact_N2_shell_saturation",
+        "evidence": "N=2 shell energy reaches the translation-limited rank 245 at the earliest structural order R=30"
+      },
+      {
+        "code": "PROP-EPSC-30",
+        "derived_via": "explicit_square_chart_instantiation",
+        "evidence": "the explicit N=2 translation slice and 245x245 shell observation minor instantiate the structural observability-to-local-chart bridge"
+      },
+      {
+        "code": "PROP-EPSC-31",
+        "derived_via": "supplies_fixed_N_quantitative_conditioning",
+        "evidence": "the branch-wide q_2<=1/2 bound supplies the conditioning ingredient required by the quantitative inner-certificate bridge"
+      },
+      {
+        "code": "PROP-EPSC-32",
+        "derived_via": "second_fixed_resolution_witness",
+        "evidence": "together with the N=1 quantitative certificate, this is a second fixed finite resolution witnessing the intended certificate architecture; the arbitrary-finite-N schema remains open"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n2_explicit_radius.py; focused GitHub Actions run 34508217350 passed on 2026-09-10 and reported V7-EPSC18-N2-EXPLICIT-POSITIVE-RADIUS DERIVED",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=2 local state-space certificate only. The certified radius is intentionally extremely conservative (about 10^-79490 in the declared infinity norm) and is not a practical sensor tolerance. It does not certify noisy measurement branch capture, a useful rho_2 for physical data, arbitrary-finite-N inversion, continuum regularity, DNS adequacy, singularity formation, or the Clay problem. No completed-infinity premise is used in the native proof."
+  }
+]
