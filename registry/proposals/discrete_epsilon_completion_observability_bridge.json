@@ -1,0 +1,348 @@
+[
+  {
+    "id": "PROP-EPSC-20",
+    "code": "weld/P.??.v1",
+    "name": "Quantitative reduced-triad retained inverse witness",
+    "statement": {
+      "latest": "r=\\frac{J_{1,a}+2\\nu x}{2c_a},\\;c_a=3/10,\\qquad |r-\\widehat r|\\le\\frac{\\sigma_J+2\\nu\\sigma_x}{2|c_a|}",
+      "format": "latex",
+      "note_ascii": "an analytic reduced three-mode finite subcase has an explicit retained-coordinate inverse and uncertainty radius"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-reduced-triad-inverse"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-EPSC-18","derived_via":"fixed_reduced_subcase","evidence":"partial finite witness for the retained inversion programme"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md","doi":null},
+    "claim_boundary": "Reduced finite triad only; it is not the full 49-dimensional N=1 inverse and not a continuum statement."
+  },
+  {
+    "id": "PROP-EPSC-21",
+    "code": "weld/P.??.v1",
+    "name": "Derivative-free finite-window shell-transfer uncertainty certificate",
+    "statement": {
+      "latest": "\\int_{t_0}^{t_1}T_sdt=I_s(t_1)-I_s(t_0)+2\\nu s\\int_{t_0}^{t_1}I_sdt-\\int_{t_0}^{t_1}F_sdt",
+      "format": "latex",
+      "note_ascii": "integrating the finite shell balance converts endpoint, energy-integral and forcing-integral radii directly into a transfer-integral radius without numerical differentiation"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-window-transfer-certificate"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-09","derived_via":"time_integration_and_interval_triangle","evidence":"integrates the finite shell-transfer balance"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_energy_transfer_observability.py","doi":null},
+    "claim_boundary": "Removes differentiation from one measurement substep only; it does not reconstruct the full finite state or close PROP-EPSC-19."
+  },
+  {
+    "id": "PROP-EPSC-22",
+    "code": "weld/P.??.v1",
+    "name": "Full N=1 symmetry-slice local retained inverse existence",
+    "statement": {
+      "latest": "N=1:\\quad X_1\\;(52\\text{ real coordinates})\\;/\\;\\mathbb T^3\\;\\leadsto\\;S_1\\cong\\mathbb R^{49},\\qquad \\det DH_1(x_*)\\ne0",
+      "format": "latex",
+      "note_ascii": "an explicit translation-transverse 49-dimensional slice and selected 49-observation shell-energy Taylor chart have a nonzero characteristic-zero Jacobian minor"
+    },
+    "definitions": {"H_1":"selected 49-row shell-energy Taylor observation chart on the explicit N=1 slice"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-full-n1-local-inverse"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-NSOBS-08","derived_via":"explicit_slice_and_nonzero_minor","evidence":"turns quotient-rank saturation into a concrete square local chart"}
+    ],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_local_inverse.py","doi":null},
+    "claim_boundary": "Fixed finite N=1 and branch-local only. Local inverse existence is not a quantitative noise radius, global injectivity, arbitrary-N inversion, or continuum regularity."
+  },
+  {
+    "id": "PROP-EPSC-23",
+    "code": "weld/P.??.v1",
+    "name": "Finite preconditioned interval inverse criterion",
+    "statement": {
+      "latest": "q=\\sup_{x\\in B}\\|I-A DH(x)\\|_\\infty<1\\;\\Longrightarrow\\;\\|x-z\\|_\\infty\\le\\frac{\\|A\\|_\\infty}{1-q}\\|H(x)-H(z)\\|_\\infty",
+      "format": "latex",
+      "note_ascii": "a certified finite branch, fixed preconditioner and interval Jacobian defect below one give a quantitative local inverse Lipschitz bound"
+    },
+    "definitions": {"B":"declared convex finite-dimensional branch box","A":"fixed exact or validated preconditioner"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-finite-interval-inverse-criterion"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [],
+    "origin": {"source":"github.com/morrocwi/information-discrete-math/idm/finite_interval_inverse.py","doi":null},
+    "claim_boundary": "Finite-dimensional quantitative inverse criterion. It requires the branch and q<1 certificate; it does not supply them automatically."
+  },
+  {
+    "id": "PROP-EPSC-24",
+    "code": "weld/P.??.v1",
+    "name": "Practical branch-captured N=1 measurement radius",
+    "statement": {
+      "latest": "\\text{raw finite measurements with certified uncertainty}\\;\\longmapsto\\;(\\widehat x_1,\\rho_1)\\text{ on a guaranteed correct local branch}",
+      "format": "latex",
+      "note_ascii": "open measurement-readiness target for the full N=1 retained inverse"
+    },
+    "definitions": {},
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-practical-rho1", "epsc-n1-measurement-readiness"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-EPSC-22","derived_via":"open_quantitative_extension","evidence":"local inverse existence leaves conditioning, measurement mapping and branch capture open"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/CLAIMS.md","doi":null},
+    "claim_boundary": "OPEN. Later branch-conditioned chart-noise propagation does not close raw-measurement-to-chart conversion or global/local branch capture."
+  },
+  {
+    "id": "PROP-EPSC-25",
+    "code": "weld/P.??.v1",
+    "name": "First explicit positive full-N=1 quantitative inverse radius",
+    "statement": {
+      "latest": "10^{-7934}<r_1\\le10^{-7933},\\qquad q_1\\le1/2",
+      "format": "latex",
+      "note_ascii": "a deliberately coarse finite Cramer-Hadamard and Hessian-majorant construction proves a strictly positive N=1 local inverse radius"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n1-first-positive-radius"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-EPSC-22","derived_via":"quantitative_majorant","evidence":"upgrades local existence to one explicit positive branch radius"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_explicit_radius.py","doi":null},
+    "claim_boundary": "Mathematical existence-scale radius only; far below a practical sensor tolerance."
+  },
+  {
+    "id": "PROP-EPSC-26",
+    "code": "weld/P.??.v1",
+    "name": "Row-aware full-N=1 quantitative radius",
+    "statement": {
+      "latest": "10^{-3878}<r_1\\le10^{-3877},\\qquad q_1\\le1/2",
+      "format": "latex",
+      "note_ascii": "retaining selected-observation row majorants removes thousands of decimal orders of uniform-bound slack"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n1-row-aware-radius"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-EPSC-25","derived_via":"rowwise_majorant_refinement","evidence":"same fixed finite chart with less pessimistic certified row bounds"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_rowwise_radius.py","doi":null},
+    "claim_boundary": "Fixed N=1 local mathematical radius; still not measurement-ready."
+  },
+  {
+    "id": "PROP-EPSC-27",
+    "code": "weld/P.??.v1",
+    "name": "Exact characteristic-zero N=1 preconditioner certificate",
+    "statement": {
+      "latest": "\\det J_0\\ne0,\\qquad 1.28<\\|J_0^{-1}\\|_\\infty<1.29,\\qquad 10^{-59}<r_1\\le10^{-58}\\text{ under the declared scalar envelope}",
+      "format": "latex",
+      "note_ascii": "the selected 49x49 characteristic-zero Jacobian is reconstructed and inverted exactly with rational arithmetic"
+    },
+    "definitions": {},
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n1-exact-preconditioner"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-EPSC-26","derived_via":"exact_center_inverse","evidence":"replaces determinant-only inverse bounds with the actual exact rational center inverse"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_exact_preconditioner.py","doi":null},
+    "claim_boundary": "Exact fixed-N=1 center conditioning; branch-wide interval control remains a separate obligation."
+  },
+  {
+    "id": "PROP-EPSC-28",
+    "code": "weld/P.??.v1",
+    "name": "Componentwise finite nonlinear N=1 enclosure",
+    "statement": {
+      "latest": "10^{-28}<r_1\\le10^{-27},\\qquad q_1\\le1/2",
+      "format": "latex",
+      "note_ascii": "componentwise rational derivative recurrences plus the exact preconditioner enlarge the certified N=1 branch radius"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n1-componentwise-radius"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-EPSC-27","derived_via":"componentwise_nonlinear_enclosure","evidence":"tightens branch-wide Jacobian variation bounds"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_componentwise_radius.py","doi":null},
+    "claim_boundary": "Fixed N=1 state-space certificate; not a physical measurement tolerance."
+  },
+  {
+    "id": "PROP-EPSC-29",
+    "code": "weld/P.??.v1",
+    "name": "Exact centered entrywise N=1 interval enclosure",
+    "statement": {
+      "latest": "\\|x-x_*\\|_\\infty\\le10^{-17}\\;\\Longrightarrow\\;q_1=\\sup\\|I-J_0^{-1}DH_1(x)\\|_\\infty\\le0.08058674502845<1/2",
+      "format": "latex",
+      "note_ascii": "exact common-denominator centered propagation of state, tangent and Jacobian radii certifies the current strongest fixed-N=1 branch box"
+    },
+    "definitions": {},
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n1-exact-entrywise-interval"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-EPSC-28","derived_via":"centered_entrywise_interval_refinement","evidence":"removes additional wrapping/slack while keeping exact finite arithmetic"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_exact_entrywise_interval.py","doi":null},
+    "claim_boundary": "Fixed N=1 local state-space box only. The displayed decimal is a report of the exact rational defect; raw measurement mapping and branch capture remain open."
+  },
+  {
+    "id": "PROP-EPSC-30",
+    "code": "weld/P.??.v1",
+    "name": "Saturated quotient observability to explicit finite square chart",
+    "statement": {
+      "latest": "\\operatorname{rank}D\\mathcal O_N=d_N-3\\text{ with a locally free }\\mathbb T^3\\text{ action and an explicit transverse slice }S_N\\;\\Longrightarrow\\;\\exists H_N:S_N\\to\\mathbb R^{d_N-3},\\;\\det DH_N(x_*)\\ne0",
+      "format": "latex",
+      "note_ascii": "select independent observation rows after fixing the three translation directions to obtain a nonsingular square finite chart"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-observability-to-square-chart"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-08","derived_via":"transverse_slice_plus_row_selection","evidence":"uses quotient-rank completeness and finite linear algebra"}],
+    "origin": {"source":"github.com/morrocwi/toledo/docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md","doi":null},
+    "claim_boundary": "Finite local structural bridge only. It does not supply a useful radius, global injectivity, branch capture, or all-N saturation."
+  },
+  {
+    "id": "PROP-EPSC-31",
+    "code": "weld/P.??.v1",
+    "name": "Certified finite chart to retained-state radius",
+    "statement": {
+      "latest": "q_N:=\\sup_{x\\in B_N}\\|I-A_NDH_N(x)\\|_\\infty<1\\;\\Longrightarrow\\;\\rho_N\\le\\frac{\\|A_N\\|_\\infty}{1-q_N}(\\sigma_{meas}+\\sigma_{res})",
+      "format": "latex",
+      "note_ascii": "a certified finite branch and preconditioned Jacobian defect convert chart measurement and forward-residual uncertainty into a retained-state radius"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-chart-to-rho"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-EPSC-23","derived_via":"measurement_triangle","evidence":"combine the interval inverse Lipschitz bound with ||H(x)-H(z)||<=sigma_meas+sigma_res"},
+      {"code":"PROP-EPSC-30","derived_via":"chart_input","evidence":"requires an explicit finite square chart"
+    ],
+    "origin": {"source":"github.com/morrocwi/toledo/docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md","doi":null},
+    "claim_boundary": "Branch-conditioned finite result. It does not itself certify that raw measurements select the branch or determine sigma_meas for the declared chart."
+  },
+  {
+    "id": "PROP-EPSC-32",
+    "code": "weld/P.??.v1",
+    "name": "Arbitrary-finite-resolution constructive quantitative inverse programme",
+    "statement": {
+      "latest": "N<\\infty\\;\\longmapsto\\;\\mathcal C_N=(S_N,H_N,A_N,B_N,q_N),\\qquad q_N<1",
+      "format": "latex",
+      "note_ascii": "open schema that accepts any particular finite cutoff and emits a finite quantitative inverse certificate package"
+    },
+    "definitions": {},
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-arbitrary-finite-N-inverse-schema"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-EPSC-30","derived_via":"generalization_target","evidence":"structural bridge required at each finite cutoff"},
+      {"code":"PROP-EPSC-31","derived_via":"generalization_target","evidence":"quantitative q_N certificate required at each finite cutoff"}
+    ],
+    "origin": {"source":"github.com/morrocwi/toledo/docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md","doi":null},
+    "claim_boundary": "OPEN. Arbitrary finite input means a constructive finite proof schema; it does not posit or require a completed N=infinity object."
+  },
+  {
+    "id": "PROP-EPSC-33",
+    "code": "weld/P.??.v1",
+    "name": "Fixed-N=1 observability-to-quantitative-inverse bridge instance",
+    "statement": {
+      "latest": "N=1:\\quad \\|x-x_*\\|_\\infty\\le10^{-17},\\qquad q_1\\le0.08058674502845<1/2",
+      "format": "latex",
+      "note_ascii": "the explicit N=1 quotient chart crosses the structural-to-quantitative bridge with an exact centered entrywise branch certificate"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n1-bridge-instance"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-EPSC-29","derived_via":"fixed_resolution_certificate","evidence":"supplies the exact N=1 q_1 branch"},
+      {"code":"PROP-EPSC-30","derived_via":"explicit_chart","evidence":"supplies the structural square-chart bridge"},
+      {"code":"PROP-EPSC-31","derived_via":"quantitative_interpretation","evidence":"interprets q_1<1 as a retained-state inverse certificate"}
+    ],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_exact_entrywise_interval.py","doi":null},
+    "claim_boundary": "Fixed finite N=1 branch only; raw sensor mapping and branch capture remain separate."
+  },
+  {
+    "id": "PROP-EPSC-34",
+    "code": "weld/P.??.v1",
+    "name": "Fixed-N=2 positive quantitative observability-to-EPSC bridge instance",
+    "statement": {
+      "latest": "N=2:\\quad10^{-79490}<r_2\\le10^{-79489},\\qquad q_2\\le1/2<1",
+      "format": "latex",
+      "note_ascii": "the exact N=2 shell-saturated quotient chart has a strictly positive conservative quantitative local inverse box"
+    },
+    "definitions": {"d_2":"248","slice_dimension":"245","shell_count":"9","Taylor_depth":"30"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n2-positive-bridge-instance"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-NSOBS-12","derived_via":"n2_structural_input","evidence":"N=2 shell reader saturates at R=30"},
+      {"code":"PROP-EPSC-30","derived_via":"explicit_245D_chart","evidence":"translation gauge and selected 245-observation chart are nonsingular"},
+      {"code":"PROP-EPSC-31","derived_via":"coarse_quantitative_majorant","evidence":"finite Cramer-Hadamard and Hessian bounds give q_2<=1/2"}
+    ],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n2_explicit_radius.py","doi":null},
+    "claim_boundary": "Strictly positive fixed-N=2 mathematical radius, but extremely conservative and not a practical measurement tolerance. No arbitrary-N or continuum claim."
+  },
+  {
+    "id": "PROP-EPSC-35",
+    "code": "weld/P.??.v1",
+    "name": "Fixed-N=1 branch-conditioned scaled-chart noise propagation",
+    "statement": {
+      "latest": "x,z\\in B_1,\\;\\|y-H_1(x)\\|_\\infty\\le\\sigma,\\;\\|H_1(z)-y\\|_\\infty\\le\\tau\\;\\Longrightarrow\\;\\|x-z\\|_\\infty<\\frac{129}{50}(\\sigma+\\tau)",
+      "format": "latex",
+      "note_ascii": "on the already-certified N=1 branch, q_1<=1/2 and ||A_1||<1.29 propagate scaled-chart measurement plus forward residual uncertainty to a finite state radius with factor below 2.58"
+    },
+    "definitions": {"H_1":"selected C^n n! row-scaled shell-energy Taylor chart","B_1":"certified N=1 box ||x-x_*||_inf<=10^-17"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-n1-branch-chart-noise"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-EPSC-27","derived_via":"exact_preconditioner_norm","evidence":"uses ||A_1||_inf<1.29"},
+      {"code":"PROP-EPSC-33","derived_via":"certified_branch_defect","evidence":"uses the fixed N=1 q_1<1 branch"},
+      {"code":"PROP-EPSC-31","derived_via":"measurement_triangle","evidence":"specializes the generic chart-to-rho theorem"}
+    ],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps19_n1_chart_noise.py","doi":null},
+    "claim_boundary": "Partial EPSC-19 closure only after branch membership and uncertainty in the selected scaled chart are supplied. It is not yet raw physical time-series conversion, global branch capture, arbitrary-N noise stability, or a continuum theorem."
+  },
+  {
+    "id": "PROP-EPSC-36",
+    "code": "weld/P.??.v1",
+    "name": "Raw finite-window measurements to certified chart and branch capture",
+    "statement": {
+      "latest": "\\text{raw finite energy samples/windows with uncertainty}\\;\\longmapsto\\;(H_N\\text{ uncertainty},\\text{certified branch})\\;\\longmapsto\\;\\rho_N",
+      "format": "latex",
+      "note_ascii": "open derivative-free measurement-interface problem between finite observed time windows and the selected local inverse chart"
+    },
+    "definitions": {},
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-raw-window-branch-capture"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-EPSC-21","derived_via":"window_measurement_input","evidence":"finite-window transfer summaries avoid one differentiation step"},
+      {"code":"PROP-EPSC-35","derived_via":"missing_upstream_interface","evidence":"branch-conditioned chart noise is solved at N=1 once chart uncertainty and branch membership are given"}
+    ],
+    "origin": {"source":"github.com/morrocwi/toledo/docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md","doi":null},
+    "claim_boundary": "OPEN. Must certify finite sample/window-to-chart uncertainty and branch selection without assuming the answer. No completed-infinity premise is permitted."
+  }
+]
