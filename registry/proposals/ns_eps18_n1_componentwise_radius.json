@@ -1,0 +1,49 @@
+[
+  {
+    "id": "PROP-EPSC-28",
+    "code": "weld/P.??.v1",
+    "name": "Componentwise coefficient-tensor tightening of the full N=1 exact-preconditioned radius",
+    "statement": {
+      "latest": "A=J_0^{-1},\\quad H_j^{cw}\\text{ from exact coefficientwise majorization},\\quad S_{cw}=\\max_i\\sum_j|A_{ij}|H_j^{cw},\\quad r_{cw}=\\frac{1}{2S_{cw}};\\qquad 10^{-28}<r_{cw}\\le10^{-27}",
+      "format": "latex",
+      "note_ascii": "the exact 52x52x52 integer coefficient tensor of the C-scaled N=1 Galerkin bilinear map is used to propagate componentwise state, first-derivative, and second-derivative majorants on a rational local box; combining these row Hessian bounds with the exact rational inverse J0^-1 yields q<=1/2 at a radius between 10^-28 and 10^-27"
+    },
+    "definitions": {
+      "T": "exact integer coefficient tensor of the scaled finite N=1 Galerkin bilinear map; the reproduced tensor has 2096 nonzero coefficients and induced infinity row-sum bound 36000",
+      "H_j_cw": "componentwise propagated exact rational l1 Hessian-row majorant for selected observation j on the declared radius-1/1000 local box",
+      "A": "exact characteristic-zero rational inverse J_0^{-1} from PROP-EPSC-27",
+      "S_cw": "max_i sum_j |A_ij| H_j_cw",
+      "r_cw": "finite infinity-norm state-space radius 1/(2 S_cw), certified to lie inside the declared local box"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n1-componentwise-radius",
+      "n1-coefficient-tensor-local-inverse-radius"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-27",
+        "derived_via": "uses_exact_characteristic_zero_preconditioner",
+        "evidence": "the exact rational center inverse removes determinant-bound slack before local nonlinear variation is bounded"
+      },
+      {
+        "code": "PROP-EPSC-23",
+        "derived_via": "specializes_exact_preconditioned_inverse_criterion",
+        "evidence": "the componentwise recurrence provides the certified local Jacobian-variation bound required for q<1"
+      },
+      {
+        "code": "PROP-EPSC-24",
+        "derived_via": "further_narrows_measurement_ready_frontier",
+        "evidence": "the reproduced rigorous radius improves from the exact-preconditioner 10^-59 scale to the 10^-28 scale, while practical measurement/noise branch stability remains open"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_componentwise_radius.py; reproduction ledger PASS/DERIVED evidence dated 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=1 local certificate only. The 10^-28 to 10^-27 radius is a conservative state-space inverse neighborhood, not a practical sensor/noise tolerance. It does not establish global branch uniqueness, arbitrary-N inversion, all-N saturation, continuum regularity or singularity, physical DNS adequacy, or the Clay result."
+  }
+]
