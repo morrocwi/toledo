@@ -1,0 +1,133 @@
+[
+  {
+    "id": "PROP-EPSC-22",
+    "code": "weld/P.??.v1",
+    "name": "Full N=1 finite symmetry-slice energy-jet local inverse existence",
+    "statement": {
+      "latest": "\\exists\\ x_*,\\ H_{1,\\mathrm{slice}}:\\mathbb R^{49}\\to\\mathbb R^{49}\\text{ from the finite shell-energy Taylor jet with }\\det D H_{1,\\mathrm{slice}}(x_*)\\ne0",
+      "format": "latex",
+      "note_ascii": "for the complete N=1 52-real-dimensional Fourier-Galerkin state, an explicit three-coordinate translation-transverse gauge and an explicit 49x49 shell-energy Taylor-jet minor have nonzero good-prime reduction, hence the corresponding rational minor is nonzero and a local real inverse exists on the finite symmetry slice"
+    },
+    "definitions": {
+      "x_*": "explicit finite integer/rational N=1 witness used by the reproduction checker",
+      "H_1_slice": "49 selected shell-energy Taylor observations restricted to a 49-dimensional affine coordinate slice transverse to spatial translation",
+      "good_prime": "p=1000003, which does not divide the declared rational denominators in the N=1 order-23 construction"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n1-local-inverse-existence",
+      "n1-energy-jet-symmetry-slice-inverse"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-NSOBS-05",
+        "derived_via": "makes_the_saturated_rank_witness_explicit_on_a_slice",
+        "evidence": "the reproduction checker verifies rank 49, translation kernel, a transverse 3-coordinate gauge, and a nonzero selected 49x49 minor"
+      },
+      {
+        "code": "PROP-NSOBS-08",
+        "derived_via": "constructs_local_quotient_chart",
+        "evidence": "the generic local quotient-completeness statement is instantiated by an explicit finite symmetry-fixed chart at N=1"
+      },
+      {
+        "code": "PROP-EPSC-18",
+        "derived_via": "partial_closure_local_existence",
+        "evidence": "closes local inverse existence for one full finite resolution but does not yet supply the quantitative rho_1 required by EPSC-18"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_EPSC18_N1_LOCAL_INVERSE.md and reproduction/checks/check_volume7_eps18_n1_local_inverse.py; ledger PASS/DERIVED evidence dated 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "Finite N=1 local-existence result only. It does not give a useful quantitative reconstruction radius, branch capture under noise, global injectivity, arbitrary-N inversion, continuum regularity, or a Clay result. No completed infinite Fourier object is assumed in the native witness."
+  },
+  {
+    "id": "PROP-EPSC-23",
+    "code": "weld/P.??.v1",
+    "name": "Exact rational interval preconditioned local-inverse certificate core",
+    "statement": {
+      "latest": "q=\\|I-AJ(B)\\|_\\infty<1\\;\\Longrightarrow\\;\\|x-z\\|_\\infty\\le\\frac{\\|A\\|_\\infty}{1-q}\\|H(x)-H(z)\\|_\\infty\\text{ on a certified common branch}",
+      "format": "latex",
+      "note_ascii": "a finite interval Jacobian enclosure with exact rational endpoints and a rational preconditioner gives a fail-closed quantitative local inverse factor when the preconditioned defect is strictly below one"
+    },
+    "definitions": {
+      "B": "declared finite convex box inside an already-certified symmetry slice/branch",
+      "J(B)": "entrywise interval enclosure of DH over B",
+      "A": "fixed rational preconditioner",
+      "q": "rigorous induced infinity-norm upper bound on I-AJ(B)"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc-exact-rational-interval-inverse",
+      "finite-krawczyk-defect-core"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-18",
+        "derived_via": "supplies_quantitative_sufficient_condition",
+        "evidence": "EPSC-18 needs a certified retained-state radius rather than rank alone"
+      },
+      {
+        "code": "PROP-EPSC-22",
+        "derived_via": "next_quantitative_layer",
+        "evidence": "the explicit N=1 local chart supplies a concrete target for an interval Jacobian enclosure"
+      }
+    ],
+    "origin": {
+      "source": "Standard finite-dimensional contraction/inverse estimate; exact rational implementation in github.com/morrocwi/information-discrete-math/idm/finite_interval_inverse.py and fail-closed wrapper in idm/certified_local_inverse.py",
+      "doi": null
+    },
+    "claim_boundary": "Registered as a standard finite certification mechanism, not an originality claim. It is only as valid as the supplied interval enclosure J(B) and independently certified branch/symmetry containment. Sampled or floating Jacobians are not silently promoted to intervals."
+  },
+  {
+    "id": "PROP-EPSC-24",
+    "code": "weld/P.??.v1",
+    "name": "Useful quantitative rho_1 for the full N=1 energy-jet inverse",
+    "statement": {
+      "latest": "\\text{construct finite }B,A,J(B)\\text{ for the EPSC-22 chart with }q<1\\text{ and a non-vacuous }\\rho_1=\\frac{\\|A\\|}{1-q}(\\sigma_{meas}+\\sigma_{res})",
+      "format": "latex",
+      "note_ascii": "remaining N=1 quantitative frontier: build a directed-rounding or exact-rational interval Jacobian enclosure around the explicit full slice, certify branch containment, and obtain a practically informative retained-state radius"
+    },
+    "definitions": {
+      "rho_1": "certified retained finite-state reconstruction radius on the N=1 quotient chart",
+      "sigma_meas": "certified observation uncertainty",
+      "sigma_res": "certified forward observation residual"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n1-quantitative-radius",
+      "n1-krawczyk-observability-frontier"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-22",
+        "derived_via": "quantifies_local_existence",
+        "evidence": "a concrete full N=1 local inverse chart now exists"
+      },
+      {
+        "code": "PROP-EPSC-23",
+        "derived_via": "uses_interval_inverse_core",
+        "evidence": "q<1 on a certified finite box would convert observation error to rho_1"
+      },
+      {
+        "code": "PROP-EPSC-19",
+        "derived_via": "feeds_noisy_chain",
+        "evidence": "a quantitative rho_1 is needed before window/noise uncertainty can reach the final observable-to-continuum composition"
+      }
+    ],
+    "origin": {
+      "source": "Open target isolated after the exact N=1 symmetry-slice minor passed reproduction on 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "OPEN. Nonzero Jacobian determinant proves local existence but does not itself provide a numerical radius, robust branch choice, or measurement-stable inverse."
+  }
+]
