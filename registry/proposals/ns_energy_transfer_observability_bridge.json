@@ -1,0 +1,146 @@
+[
+  {
+    "id": "PROP-NSOBS-09",
+    "code": "weld/P.??.v1",
+    "name": "Finite shell-energy transfer balance and conservation",
+    "statement": {
+      "latest": "\\dot I_s=T_s-2\\nu s I_s+F_s,\\qquad \\sum_s T_s=0\\text{ in the unforced closed finite Galerkin system}",
+      "format": "latex",
+      "note_ascii": "shell energy separates nonlinear redistribution T_s from viscous dissipation; total nonlinear transfer cancels across retained shells"
+    },
+    "definitions": {
+      "I_s": "retained kinetic energy in squared-radius shell s",
+      "T_s": "nonlinear inter-shell transfer contribution",
+      "F_s": "declared prescribed shell-energy input; zero in the unforced case"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-shell-transfer-balance", "ns-energy-redistribution-balance"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-NSOBS-03", "derived_via": "makes_block_dependence_explicit", "evidence": "sum_s T_s=0 is the explicit shell-transfer dependence behind the m_N-1 increment ceiling"}
+    ],
+    "origin": {
+      "source": "Standard finite Fourier-Galerkin Navier-Stokes shell-energy bookkeeping; application note github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md",
+      "doi": null
+    },
+    "claim_boundary": "Standard finite NS identity, registered for provenance and system linkage only. Not an originality, continuum-regularity, or physical-DNS claim."
+  },
+  {
+    "id": "PROP-NSOBS-10",
+    "code": "weld/P.??.v1",
+    "name": "Shell-transfer / first-energy-jet affine equivalence",
+    "statement": {
+      "latest": "T=\\dot I+2\\nu S I-F\\;\\Longrightarrow\\;\\operatorname{rank}D(I,T)=\\operatorname{rank}D(I,\\dot I)\\quad\\text{for prescribed }F",
+      "format": "latex",
+      "note_ascii": "energy plus transfer is an invertible affine reparameterization of energy plus its first derivative; transfer exposes mechanism but does not create extra local rank"
+    },
+    "definitions": {
+      "S": "diagonal matrix of squared shell radii",
+      "F": "known prescribed shell-energy input"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["transfer-visible-observability", "transfer-first-jet-equivalence"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-NSOBS-09", "derived_via": "invertible_block_transform", "evidence": "T=dI/dt+2 nu S I-F and the block transform has determinant one"},
+      {"code": "PROP-NSOBS-03", "derived_via": "explains_rank_increment", "evidence": "transfer conservation leaves at most m_N-1 new directions per derivative block"}
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md; exact K=1 modular support in check_volume7_energy_transfer_observability.py",
+      "doi": null
+    },
+    "claim_boundary": "Finite prescribed-forcing statement. Does not by itself prove saturation, conditioning, global injectivity, or noisy inversion."
+  },
+  {
+    "id": "PROP-NSOBS-11",
+    "code": "weld/P.??.v1",
+    "name": "All-cutoff kinematic triad-transfer connectivity lemma",
+    "statement": {
+      "latest": "N\\ge2,\\ \\|k\\|_\\infty=N\\;\\Longrightarrow\\;\\exists p\\in K_{N-1},q\\in K_N:\ p+q=k,\\ p\\times q\\ne0",
+      "format": "latex",
+      "note_ascii": "every newly added boundary Fourier mode has a constructive non-collinear Navier-Stokes triad connection to the previous cutoff"
+    },
+    "definitions": {
+      "K_N": "nonzero integer Fourier modes with infinity norm at most N"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-all-N-triad-connectivity", "boundary-old-cutoff-transfer-connectivity"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-NSOBS-07", "derived_via": "narrows_open_conjecture", "evidence": "removes lack of kinematic triad connectivity as a possible obstruction; rank/minor independence remains open"},
+      {"code": "PROP-NSOBS-09", "derived_via": "transfer_hypergraph_reading", "evidence": "non-collinear triads are the kinematic carrier of shell redistribution"}
+    ],
+    "origin": {
+      "source": "Constructive proof in github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md; finite exhaustive witness through N=8 in the companion checker",
+      "doi": null
+    },
+    "claim_boundary": "Analytic kinematic connectivity lemma only. It does not prove generic nonzero amplitudes, absence of cancellations, nonvanishing observable minors, or all-N rank saturation."
+  },
+  {
+    "id": "PROP-EPSC-20",
+    "code": "weld/P.??.v1",
+    "name": "Quantitative certified inverse radius for the analytic NS triad subcase",
+    "statement": {
+      "latest": "r=\\frac{J_{1,a}+2\\nu x}{2c_a},\\quad |r-\\widehat r|\\le\\frac{\\sigma_J+2\\nu\\sigma_x}{2|c_a|},\\quad c_a=3/10",
+      "format": "latex",
+      "note_ascii": "the existing reduced three-mode observability model admits an explicit quantitative inverse and certified absolute-error radius"
+    },
+    "definitions": {
+      "x": "first reduced shell-energy invariant",
+      "r": "fourth reduced triad invariant",
+      "J_1_a": "first component of the first shell-energy derivative",
+      "sigma_x": "certified absolute radius for x",
+      "sigma_J": "certified absolute radius for J_1_a"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc18-triad-witness", "triad-quantitative-inner-certificate"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-EPSC-18", "derived_via": "partial_witness", "evidence": "supplies the requested quantitative rho-type inversion on the exact reduced triad subcase, but not on the full Fourier cube"},
+      {"code": "PROP-NSOBS-10", "derived_via": "uses_first_transfer_jet", "evidence": "the recovered invariant is encoded in the first shell-energy/transfer layer"}
+    ],
+    "origin": {
+      "source": "Analytic triad subcase already present in readout-problem-navier-stokes, quantified in reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md and implemented in information-discrete-math/idm/ns_transfer_observability.py",
+      "doi": null
+    },
+    "claim_boundary": "Partial closure only. EPSC-18 remains OPEN for the full N=1 cube and arbitrary finite N because gauge fixing, branch selection and certified full-state conditioning are not supplied."
+  },
+  {
+    "id": "PROP-EPSC-21",
+    "code": "weld/P.??.v1",
+    "name": "Derivative-free window transfer uncertainty certificate",
+    "statement": {
+      "latest": "\\int_{t_0}^{t_1}T_sdt=I_s(t_1)-I_s(t_0)+2\\nu s\\int_{t_0}^{t_1}I_sdt-\\int_{t_0}^{t_1}F_sdt,\\quad \\operatorname{rad}\\!\\left(\\int T_sdt\\right)\\le r_1+r_0+2\\nu s r_I+r_F",
+      "format": "latex",
+      "note_ascii": "integrated shell balance provides a certified transfer observable without numerical differentiation and with direct interval-radius propagation"
+    },
+    "definitions": {
+      "r_0": "certified radius of the initial shell energy",
+      "r_1": "certified radius of the final shell energy",
+      "r_I": "certified radius of the shell-energy time integral",
+      "r_F": "certified radius of the forcing time integral"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc19-window-transfer-subcertificate", "noise-stable-transfer-window"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-EPSC-19", "derived_via": "partial_noise_stability", "evidence": "removes high-order numerical differentiation from the transfer-observation substep but does not certify the later full-state inverse"},
+      {"code": "PROP-NSOBS-09", "derived_via": "time_integration", "evidence": "integrates the exact shell balance and propagates interval radii by the triangle inequality"}
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md; implementation in github.com/morrocwi/information-discrete-math/idm/ns_transfer_observability.py",
+      "doi": null
+    },
+    "claim_boundary": "Partial EPSC-19 closure only. A certified map from noisy window observations to a full quotient-state radius rho_N is still required before end-to-end measurement-to-continuum certification."
+  }
+]
