@@ -1,19 +1,17 @@
-# Toledo MCP package CI — mcp/DESIGN.md section 12.
+# Toledo MCP/public-surface CI.
 #
-# Scope: this workflow only ever touches `mcp/` (plus, since site/DESIGN.md
-# sec. 8, the read-only public site build under `site/`) — it never builds,
-# tests, or gates the registry/coq/latex pipeline that the rest of this
-# repository owns (that pipeline is `make build` / `make test` / `make
-# verify`, run by the registry-owning process, not this file). The site
-# build reads `registry/` and `mcp/dist/static-api` but never writes to
-# either.
+# The workflow verifies the MCP package, rebuilds the public registry/site
+# surfaces, and runs public repository tests whose committed inputs are
+# available in a clean checkout. Raw clearing/audit material under ops/ is
+# intentionally gitignored; regeneration tests for that material explicitly
+# skip when those private/local evidence inputs are absent.
 name: toledo-mcp-ci
 on:
   workflow_dispatch:
   push:
-    paths: ["mcp/**", "registry/**", "site/**", ".github/workflows/**"]
+    paths: ["mcp/**", "registry/**", "site/**", "tests/**", ".github/workflows/**"]
   pull_request:
-    paths: ["mcp/**", "site/**"]
+    paths: ["mcp/**", "registry/**", "site/**", "tests/**", ".github/workflows/**"]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,8 +21,6 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -e "mcp/[test]"
       # SymPy's LaTeX parser currently requires antlr4-python3-runtime 4.11.x.
-      # Pin the compatible runtime so the root TeX/registry consistency tests
-      # exercise the parser instead of failing at import time.
       - run: pip install latex2mathml sympy pyyaml "antlr4-python3-runtime==4.11.*"
       - run: python3 -m pytest -q mcp/tests/
       - run: python3 scripts/toledo_build.py
