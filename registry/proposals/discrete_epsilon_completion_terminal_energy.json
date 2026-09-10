@@ -1,0 +1,86 @@
+[
+  {
+    "id": "PROP-EPSC-10",
+    "code": "weld/P.??.v1",
+    "name": "Leray-Hopf terminal energy-budget Fourier-tail certificate",
+    "statement": {
+      "latest": "\\|(I-P_K)u(T)\\|_2^2\\le\\|u_0\\|_2^2-\\|P_Ku(T)\\|_2^2-2\\nu\\int_0^T\\|\\nabla P_Ku(t)\\|_2^2\\,dt",
+      "format": "latex",
+      "note_ascii": "terminal tail^2 <= initial L2^2 - retained terminal L2^2 - 2*retained viscous dissipation"
+    },
+    "definitions": {
+      "u": "unforced Leray-Hopf weak solution on the periodic torus",
+      "P_K": "orthogonal Fourier projection onto the retained cube",
+      "T": "declared terminal time",
+      "retained_energy_tape": "certified terminal retained L2 lower bound plus certified lower bound on accumulated retained viscous dissipation"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-terminal-energy-budget", "terminal-beta-EB"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-EPSC-04", "derived_via": "partially_closes", "evidence": "supplies a finite-K terminal L2 upper bound from a richer certified retained energy tape"},
+      {"code": "PROP-EPSC-05", "derived_via": "adds_information_to_bypass", "evidence": "the no-go concerns terminal coefficients alone; this certificate adds accumulated resolved dissipation and an initial energy budget"}
+    ],
+    "origin": {
+      "source": "Standard consequence of the Leray-Hopf energy inequality and orthogonal Fourier energy split; specialised proof in github.com/morrocwi/readout-problem-navier-stokes/paper/NS_TERMINAL_ENERGY_BUDGET_CERTIFICATE.md; fail-closed implementation in github.com/morrocwi/information-discrete-math/idm/ns_terminal_certificate.py.",
+      "doi": null
+    },
+    "claim_boundary": "Requires exact/certified directional bounds for the actual continuum projection. Values from an uncertified finite Galerkin surrogate must not be substituted. No global regularity claim."
+  },
+  {
+    "id": "PROP-EPSC-11",
+    "code": "weld/P.??.v1",
+    "name": "Energy-defect floor and energy-equality terminal closure",
+    "statement": {
+      "latest": "(\\beta_K^{EB})^2=\\|(I-P_K)u(T)\\|_2^2+2\\nu\\int_0^T\\|\\nabla(I-P_K)u\\|_2^2dt+\\mathcal D_E(T);\\quad\\lim_{K\\to\\infty}(\\beta_K^{EB})^2=\\mathcal D_E(T)",
+      "format": "latex",
+      "note_ascii": "energy-budget beta^2 = terminal tail^2 + twice unresolved dissipation + energy defect; if defect=0 then beta_K->0"
+    },
+    "definitions": {
+      "D_E(T)": "energy-inequality slack ||u0||^2-||u(T)||^2-2 nu int ||grad u||^2",
+      "beta_K_EB": "terminal energy-budget certificate of PROP-EPSC-10"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-energy-defect-floor", "energy-equality-terminal-closure"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-EPSC-10", "derived_via": "decomposes", "evidence": "orthogonal Fourier decomposition separates the certificate into terminal tail, unresolved dissipation and energy slack"}],
+    "origin": {
+      "source": "Algebraic decomposition of the standard Leray-Hopf energy budget; project-specific contribution is its use as an EPSC obstruction/closure diagnostic, not a claim that the energy identity itself is new.",
+      "doi": null
+    },
+    "claim_boundary": "Energy equality is an additional condition. This entry does not assert unconditional energy equality for every 3-D Leray-Hopf solution."
+  },
+  {
+    "id": "PROP-EPSC-12",
+    "code": "weld/P.??.v1",
+    "name": "Finite-Galerkin to continuum retained-record adapter certificate",
+    "statement": {
+      "latest": "\\mathcal R_K^{num}\\xrightarrow{\\;\\varepsilon_{adapt}\\;}\\mathcal R_K^{cont}\\quad\\text{with certified directional errors sufficient for PROP-EPSC-10}",
+      "format": "latex",
+      "note_ascii": "certify that numerical retained modes/dissipation bound the actual continuum projection before using terminal energy-budget beta"
+    },
+    "definitions": {
+      "R_K_num": "finite solver record",
+      "R_K_cont": "actual continuum projected record",
+      "epsilon_adapt": "proved adapter error budget preserving the directional inequalities required by the terminal certificate"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-ns-adapter-certificate", "galerkin-to-continuum-energy-tape"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-EPSC-10", "derived_via": "implementation_obligation", "evidence": "without this bridge the finite Galerkin trajectory is not automatically the actual P_Ku trajectory"},
+      {"code": "PROP-EPSC-01", "derived_via": "refines", "evidence": "nested numerical agreement is evidence for the adapter but is not itself a certified adapter error bound"}
+    ],
+    "origin": {
+      "source": "Open bridge isolated by combining the EPSC fail-closed discipline with the terminal energy-budget theorem and the existing Readout-NS finite Galerkin solver.",
+      "doi": null
+    },
+    "claim_boundary": "OPEN. This is the next mathematical/numerical bridge required before the project's finite Galerkin output can drive a continuum terminal certificate."
+  }
+]
