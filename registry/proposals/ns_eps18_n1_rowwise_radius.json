@@ -4,9 +4,9 @@
     "code": "weld/P.??.v1",
     "name": "Row-aware Hadamard tightening of the full N=1 finite inverse radius",
     "statement": {
-      "latest": "R_j\ge\|J_{0,j*}\|_1,\ H_j\ge\sup_{x\in B}\|D J_{j*}(x)\|_{\infty\to1}\;\Longrightarrow\;\|J_0^{-1}(J(x)-J_0)\|_\infty\le r\sum_j\left(\prod_{k\ne j}R_k\right)H_j;\quad r=\frac{1}{2\sum_j(\prod_{k\ne j}R_k)H_j}",
+      "latest": "R_j\ge\|J_{0,j*}\|_1,\ H_j\ge\sup_{x\in B}\|D J_{j*}(x)\|_{\infty\to1}\;\Longrightarrow\;\|J_0^{-1}(J(x)-J_0)\|_\infty\le r\sum_j\left(\prod_{k\ne j}R_k\right)H_j;\quad r=\frac{1}{2\sum_j(\prod_{k\ne j}R_k)H_j},\quad 10^{-3878}<r\le10^{-3877}",
       "format": "latex",
-      "note_ascii": "on the already-certified full N=1 49-dimensional symmetry slice, retain one Jacobian-row and Hessian-row majorant per selected Taylor observation instead of replacing all rows by the largest row; integer nonzero determinant plus row-wise Hadamard cofactor bounds then give q<=1/2 at a much larger rigorous radius"
+      "note_ascii": "on the already-certified full N=1 49-dimensional symmetry slice, retain one Jacobian-row and Hessian-row majorant per selected Taylor observation instead of replacing every row by the largest row; the reproduced bound has a 3878-digit denominator versus 7934 digits for the uniform-row proof, a 4056-decimal-order improvement in the power-of-ten radius bracket, while keeping q<=1/2"
     },
     "definitions": {
       "J_0": "integer-row-scaled selected 49x49 shell-energy Taylor-jet Jacobian at the small-integer N=1 center",
@@ -32,18 +32,18 @@
       {
         "code": "PROP-EPSC-25",
         "derived_via": "tightens_uniform_row_cramer_hadamard_bound",
-        "evidence": "replaces 49*Jmax^48*Hmax by the row-aware sum of cofactor and Hessian products while preserving the same q<=1/2 proof architecture"
+        "evidence": "replaces 49*Jmax^48*Hmax by the row-aware sum of cofactor and Hessian products while preserving q<=1/2; reproduction reports denominator digits 7934 -> 3878"
       },
       {
         "code": "PROP-EPSC-24",
         "derived_via": "narrows_practical_radius_frontier",
-        "evidence": "the rigorous radius improves by more than four thousand decimal orders but remains far below practical measurement scale, so the entrywise-preconditioned frontier remains open"
+        "evidence": "the rigorous radius bracket improves by 4056 decimal orders but remains far below practical measurement scale, so the entrywise-preconditioned frontier remains open"
       }
     ],
     "origin": {
-      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_rowwise_radius.py; introduced 2026-09-10",
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_rowwise_radius.py; reproduction ledger run 2026-09-10 reports inverse-bound digits=3871, radius-denominator digits=3878, q<=1/2 and 4056-order bracket gain",
       "doi": null
     },
-    "claim_boundary": "Finite N=1 tightening only. It improves a rigorous positive-radius lower bound, not the actual conditioning of the inverse. It is still based on conservative derivative majorants and determinant >=1, does not supply a practical sensor/noise tolerance, does not certify global branch uniqueness, does not extend automatically to arbitrary N, and has no continuum-regularity or Clay implication."
+    "claim_boundary": "Finite N=1 tightening only. It improves a rigorous positive-radius lower bound, not the actual conditioning of the inverse. The certified radius remains astronomically small, is not a practical sensor/noise tolerance, does not certify global branch uniqueness, does not extend automatically to arbitrary N, and has no continuum-regularity or Clay implication."
   }
 ]
