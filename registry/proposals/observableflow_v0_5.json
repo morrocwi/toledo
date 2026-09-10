@@ -1,0 +1,232 @@
+[
+  {
+    "id": "PROP-OBSFLOW-00",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "ObservableFlow sensor-depth design variable",
+    "statement": {
+      "latest": "\\mathcal D=(S,R),\\quad S\\subseteq\\{1,\\ldots,m\\},\\quad R\\in\\mathbb N_0",
+      "format": "latex",
+      "note_ascii": "D=(S,R): choose a spatial sensor subset S and finite temporal depth R."
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["ObservableFlow design pair (S,R)", "readout-problem-navier-stokes:software/observableflow/closure/OBSERVABLEFLOW_V05_TECHNICAL_NOTE.md#1-problem"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [],
+    "origin": {
+      "source": "Retroactive Toledo intake of the frozen ObservableFlow v0.5 method family. Proposed root name is the source project's own identifier `ObservableFlow`; canonical root/parent assignment is intentionally left to the Toledo registrar rather than invented here.",
+      "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_TECHNICAL_NOTE.md"},
+      "doi": null
+    }
+  },
+  {
+    "id": "PROP-OBSFLOW-01",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Affine reduced-state dynamics",
+    "statement": {"latest": "x_{t+1}=A x_t+a", "format": "latex", "note_ascii": "x_(t+1) = A x_t + a"},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow affine ROM dynamics", "readout-problem-navier-stokes:openfoam_benchmark.py::_fit_affine"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-00", "derived_via": "specializes", "evidence": "dynamical model used to evaluate a sensor-depth design"}],
+    "origin": {"source": "Frozen ObservableFlow v0.5 definition, not a theorem about Navier--Stokes.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_TECHNICAL_NOTE.md"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-02",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Affine measurement map",
+    "statement": {"latest": "y_t=Cx_t+c", "format": "latex", "note_ascii": "y_t = C x_t + c"},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow affine sensor map", "readout-problem-navier-stokes:openfoam_benchmark.py::_fit_affine"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-00", "derived_via": "specializes", "evidence": "measurement model used by the sensor-depth design"}],
+    "origin": {"source": "Frozen ObservableFlow v0.5 definition.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_TECHNICAL_NOTE.md"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-03",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Finite-horizon state-transition products",
+    "statement": {"latest": "\\Phi_0=I,\\qquad \\Phi_k=A_{k-1}\\Phi_{k-1}=A_{k-1}A_{k-2}\\cdots A_0\\quad(k\\ge1)", "format": "latex", "note_ascii": "Phi_0=I; Phi_k=A_(k-1) Phi_(k-1)."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/core.py::state_transition_products"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-01", "derived_via": "specializes", "evidence": "finite-horizon tangent propagation used by the local observation map"}],
+    "origin": {"source": "Implemented ObservableFlow v0.5 definition for time-varying local transitions.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/core.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-04",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Noise-whitened finite-horizon local observability matrix",
+    "statement": {"latest": "\\mathcal O_{S,R}=\\operatorname{stack}_{k=0}^{R}\\operatorname{stack}_{i\\in S}\\left(\\frac{H_{i,k}\\Phi_k}{\\sigma_i}\\right)", "format": "latex", "note_ascii": "O_(S,R)=stack over k=0..R and i in S of H_(i,k) Phi_k / sigma_i."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow local observation matrix", "readout-problem-navier-stokes:software/observableflow/observableflow/core.py::observability_matrix"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-03", "derived_via": "specializes", "evidence": "stacks propagated measurement Jacobians and whitens each sensor by declared noise scale"}],
+    "origin": {"source": "Implemented ObservableFlow v0.5 definition. sigma_i must be positive; whitening is part of the implemented matrix construction.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/core.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-05",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "LTI finite-horizon observability specialization",
+    "statement": {"latest": "\\mathcal O_{S,R}=\\begin{bmatrix}C_S\\\\C_SA\\\\C_SA^2\\\\\\vdots\\\\C_SA^R\\end{bmatrix}", "format": "latex", "note_ascii": "O_(S,R)=[C_S; C_S A; C_S A^2; ...; C_S A^R]."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow LTI observation matrix", "OBSERVABLEFLOW_V05_TECHNICAL_NOTE §1"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-04", "derived_via": "specializes", "evidence": "constant A and linear C specialization of the general local time-varying observation matrix"}],
+    "origin": {"source": "Frozen ObservableFlow v0.5 technical-note specialization.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_TECHNICAL_NOTE.md"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-06",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Relative-SVD numerical rank rule",
+    "statement": {"latest": "\\operatorname{rank}_{\\mathrm{rtol}}(\\mathcal O)=\\#\\{j:\\sigma_j(\\mathcal O)>\\mathrm{rtol}\\,\\sigma_1(\\mathcal O)\\}", "format": "latex", "note_ascii": "rank_rtol(O)=number of singular values s_j > rtol*s_1."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/core.py::svd_metrics"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-04", "derived_via": "specializes", "evidence": "numerical rank diagnostic applied to the finite observation matrix"}],
+    "origin": {"source": "Implemented numerical diagnostic; default rtol in v0.5 code is 1e-10. This is a numerical convention, not an exact-rank theorem.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/core.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-07",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Observation-matrix condition number diagnostic",
+    "statement": {"latest": "\\kappa(\\mathcal O)=\\begin{cases}\\sigma_{\\max}(\\mathcal O)/\\sigma_{\\min}(\\mathcal O),&\\sigma_{\\min}>0,\\\\+\\infty,&\\sigma_{\\min}=0.\\end{cases}", "format": "latex", "note_ascii": "kappa(O)=sigma_max/sigma_min when sigma_min>0, otherwise +infinity."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/core.py::svd_metrics"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-04", "derived_via": "specializes", "evidence": "stability diagnostic of the observation matrix singular spectrum"}],
+    "origin": {"source": "Implemented ObservableFlow v0.5 diagnostic.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/core.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-08",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Declared spatial-plus-temporal design cost",
+    "statement": {"latest": "C(S,R)=\\sum_{i\\in S}c_i+c_RR", "format": "latex", "note_ascii": "C(S,R)=sum_(i in S) sensor_cost_i + depth_unit_cost*R. Frozen v0.5 benchmark instance: c_i=1 and c_R=0.25."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/core.py::analyze_design", "ObservableFlow v0.5 declared cost"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-00", "derived_via": "specializes", "evidence": "cost attached to the sensor-depth design pair"}],
+    "origin": {"source": "Implemented cost definition. The numerical values c_i=1 and c_R=0.25 are benchmark choices, not physical constants.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/core.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-09",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Structural feasibility gate",
+    "statement": {"latest": "\\operatorname{Feasible}(S,R)\\iff\\operatorname{rank}(\\mathcal O_{S,R})\\ge r_{\\mathrm{target}}\\ \\land\\ \\sigma_{\\min}(\\mathcal O_{S,R})\\ge\\sigma_{\\mathrm{floor}}", "format": "latex", "note_ascii": "Feasible iff rank(O)>=target_rank and sigma_min(O)>=min_sigma."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/core.py::analyze_design"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-06", "derived_via": "specializes", "evidence": "rank component of structural feasibility"}, {"code": "PROP-OBSFLOW-07", "derived_via": "specializes", "evidence": "smallest-singular-value component of structural feasibility"}],
+    "origin": {"source": "Implemented structural gate. Separate condition-number and reconstruction-error gates are application/benchmark policies.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/core.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-10",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Stability-aware structural objective",
+    "statement": {"latest": "J_{\\mathrm{stab}}(S,R)=C(S,R)+w_\\kappa\\log_{10}(\\max\\{\\kappa(\\mathcal O_{S,R}),1\\})", "format": "latex", "note_ascii": "J_stab=C+w_kappa*log10(max(kappa(O),1)); v0.5 default w_kappa=0.25."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/stability.py::stability_objective"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-07", "derived_via": "specializes", "evidence": "adds conditioning penalty"}, {"code": "PROP-OBSFLOW-08", "derived_via": "specializes", "evidence": "adds declared design cost"}],
+    "origin": {"source": "Implemented ObservableFlow v0.5 search objective. w_kappa=0.25 is a declared engineering weight, not a theorem or universal constant.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/stability.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-11",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Frozen v0.5 validation-selection objective",
+    "statement": {"latest": "J_{\\mathrm{val}}=C+0.25\\log_{10}\\kappa+4E_{\\mathrm{val}}+2E_{\\mathrm{val,noise}}", "format": "latex", "note_ascii": "J_val=C+0.25 log10(kappa)+4 E_val+2 E_val_noise."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow v0.5 frozen validation objective", "OBSERVABLEFLOW_V05_TECHNICAL_NOTE §1"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-10", "derived_via": "refines", "evidence": "application-layer selection adds held-out validation reconstruction terms after structural candidate generation"}],
+    "origin": {"source": "Frozen benchmark rule. Coefficients 0.25, 4 and 2 are benchmark choices and are not asserted as universal.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_TECHNICAL_NOTE.md"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-12",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Affine finite-window observation equation",
+    "statement": {"latest": "y_{\\mathrm{stack}}=\\mathcal O_{S,R}x_0+q_{S,R}", "format": "latex", "note_ascii": "y_stack=O_(S,R) x_0 + q_(S,R)."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/openfoam_benchmark.py::_affine_observation_system"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-01", "derived_via": "specializes", "evidence": "affine state propagation contributes q"}, {"code": "PROP-OBSFLOW-02", "derived_via": "specializes", "evidence": "affine measurement map contributes rows and offsets"}, {"code": "PROP-OBSFLOW-05", "derived_via": "refines", "evidence": "adds affine offset to the LTI stacked observation system"}],
+    "origin": {"source": "Implemented ObservableFlow reconstruction equation.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/openfoam_benchmark.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-13",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Finite-window pseudoinverse state reconstruction",
+    "statement": {"latest": "\\widehat x_0=\\mathcal O_{S,R}^{+}(y_{\\mathrm{stack}}-q_{S,R})", "format": "latex", "note_ascii": "x_hat_0=pinv(O_(S,R)) (y_stack-q_(S,R))."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/openfoam_benchmark.py::reconstruct_holdout_states"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-12", "derived_via": "specializes", "evidence": "implemented Moore--Penrose pseudoinverse recovery from the finite-window affine observation equation"}],
+    "origin": {"source": "Implemented estimator definition; no universal stability guarantee is claimed from pseudoinversion alone.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/openfoam_benchmark.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-14",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Reconstruction RMSE and normalized RMSE",
+    "statement": {"latest": "e=\\widehat X-X,\\qquad \\mathrm{RMSE}=\\sqrt{\\operatorname{mean}(e^2)},\\qquad \\mathrm{NRMSE}=\\frac{\\mathrm{RMSE}}{\\sqrt{\\operatorname{mean}(X^2)}}", "format": "latex", "note_ascii": "e=X_hat-X; RMSE=sqrt(mean(e^2)); NRMSE=RMSE/sqrt(mean(X^2))."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["readout-problem-navier-stokes:software/observableflow/observableflow/openfoam_benchmark.py::ReconstructionMetrics", "readout-problem-navier-stokes:openfoam_benchmark.py::reconstruct_holdout_states"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-13", "derived_via": "specializes", "evidence": "metrics of reconstruction error produced by the finite-window estimator"}],
+    "origin": {"source": "Implemented ObservableFlow v0.5 evaluation definitions.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/observableflow/openfoam_benchmark.py"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-15",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Frozen v0.5 deployment gate",
+    "statement": {"latest": "\\operatorname{DeployPass}\\iff(\\kappa\\le1000)\\land(E_{\\mathrm{clean}}\\le0.50)\\land(E_{\\mathrm{noise}}\\le1.00)", "format": "latex", "note_ascii": "DeployPass iff kappa<=1000 and E_clean<=0.50 and E_noise<=1.00."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow v0.5 declared deployment gates", "OBSERVABLEFLOW_V05_FINAL_MANIFEST.json:configuration.deployment_gates"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-07", "derived_via": "specializes", "evidence": "condition-number engineering gate"}, {"code": "PROP-OBSFLOW-14", "derived_via": "specializes", "evidence": "clean/noisy held-out error gates"}],
+    "origin": {"source": "Frozen engineering policy for one benchmark. Thresholds are declared gates, not mathematical or physical constants.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_FINAL_MANIFEST.json"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-16",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Three-axis final-test Pareto dominance rule",
+    "statement": {"latest": "A\\prec B\\iff[\\forall j\\in\\{C,E_{\\mathrm{clean}},E_{\\mathrm{noise}}\\}:A_j\\le B_j]\\land[\\exists j:A_j<B_j]", "format": "latex", "note_ascii": "A dominates B iff A is no worse on C, E_clean, E_noise and strictly better on at least one."},
+    "tier": "Definition", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow v0.5 predeclared Pareto rule", "OBSERVABLEFLOW_V05_TECHNICAL_NOTE §4"],
+    "coq": {"identifiers": [], "coq_status": "not_yet_formalised"},
+    "parents": [{"code": "PROP-OBSFLOW-08", "derived_via": "specializes", "evidence": "cost axis"}, {"code": "PROP-OBSFLOW-14", "derived_via": "specializes", "evidence": "clean/noisy error axes"}],
+    "origin": {"source": "Frozen benchmark comparison rule, not a statement of universal method superiority.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_TECHNICAL_NOTE.md"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-17",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Frozen cavity benchmark Pareto inequalities",
+    "statement": {"latest": "(4.0,0.6073,0.6076)<_{\\mathrm{coord}}(8.0,0.7676,0.7676)", "format": "latex", "note_ascii": "On the frozen cavity final test: ObservableFlow (cost,clean NRMSE,noisy NRMSE)=(4.0,0.6073,0.6076), PySensors=(8.0,0.7676,0.7676); every declared comparison coordinate is lower for ObservableFlow."},
+    "tier": "finite_diagnostic", "status": "unverified", "domain": "M",
+    "aliases": ["[SimulatedData] Simulation=Yes", "ObservableFlow v0.5 frozen final-test result"],
+    "coq": {"identifiers": [], "coq_status": "none"},
+    "parents": [{"code": "PROP-OBSFLOW-16", "derived_via": "instance_of", "evidence": "one finite simulated benchmark instance of the declared Pareto rule"}],
+    "origin": {"source": "[SimulatedData] Simulation=Yes. Finite benchmark diagnostic only; OpenFOAM-13 cavity, final untouched test, frozen v0.5 evidence lane. This is not a theorem and not evidence of general market superiority.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/benchmarks/openfoam13_cavity/results/head_to_head_v05.json"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-18",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Frozen cavity deployment-gate failure",
+    "statement": {"latest": "E_{\\mathrm{clean}}^{\\mathrm{OF}}=0.6073>0.50\\quad\\Longrightarrow\\quad\\neg\\operatorname{DeployPass}_{\\mathrm{OF}}", "format": "latex", "note_ascii": "ObservableFlow clean NRMSE 0.6073 exceeds the frozen 0.50 gate, hence DeployPass is false for the frozen benchmark."},
+    "tier": "finite_diagnostic", "status": "unverified", "domain": "M",
+    "aliases": ["[SimulatedData] Simulation=Yes", "ObservableFlow v0.5 negative deployment result"],
+    "coq": {"identifiers": [], "coq_status": "none"},
+    "parents": [{"code": "PROP-OBSFLOW-15", "derived_via": "instance_of", "evidence": "finite benchmark evaluation of the frozen deployment conjunction"}],
+    "origin": {"source": "[SimulatedData] Simulation=Yes. Preserved negative result; no threshold was relaxed after observing test performance.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "08064153e861d87f09b6c336a29ec08196a86358", "path": "software/observableflow/closure/OBSERVABLEFLOW_V05_FINAL_MANIFEST.json"}, "doi": null}
+  },
+  {
+    "id": "PROP-OBSFLOW-FW-01",
+    "code": "ObservableFlow/M.??.v1",
+    "name": "Future deployment-cost decomposition",
+    "statement": {"latest": "C_{\\mathrm{deploy}}(S,R)=C_{\\mathrm{sensor}}(S)+C_{\\mathrm{latency}}(R)+C_{\\mathrm{storage}}(S,R)+C_{\\mathrm{compute}}(S,R)", "format": "latex", "note_ascii": "C_deploy=C_sensor+C_latency+C_storage+C_compute."},
+    "tier": "Open", "status": "unverified", "domain": "M",
+    "aliases": ["ObservableFlow v0.6+ future-work cost interface", "NOT USED IN v0.5"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code": "PROP-OBSFLOW-08", "derived_via": "refines", "evidence": "future proposed refinement of the simple v0.5 sensor-plus-depth cost"}],
+    "origin": {"source": "NEW FUTURE-WORK PROPOSAL, written after v0.5 closure. Not implemented, tested, or used to obtain the frozen v0.5 result. Registered separately to prevent retrospective attribution.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "354e828f6dfbbbf01fe4b145b92ee965523649bd", "path": "software/observableflow/FUTURE_WORK.md"}, "doi": null}
+  }
+]
