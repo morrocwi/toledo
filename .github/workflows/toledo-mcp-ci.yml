@@ -69,12 +69,18 @@ jobs:
           TOLEDO_DENYLIST: ${{ secrets.TOLEDO_LEAK_SCAN_DENYLIST }}
         run: |
           if [ -n "$TOLEDO_DENYLIST" ]; then printf '%s\n' "$TOLEDO_DENYLIST" > "$RUNNER_TEMP/toledo-denylist.txt"; fi
-      - run: |
+      - name: Scan generated site for leaks and banned prose
+        run: |
+          # GitHub-hosted Linux runners expose USER/LOGNAME=runner. That is an
+          # ephemeral service account, not a user-specific secret. Remove only
+          # those two environment variables for this CI-only scan so ordinary
+          # English occurrences of "runner" do not become false positives.
+          # Local runs still scan the caller's real USER/LOGNAME as before.
           if [ -f "$RUNNER_TEMP/toledo-denylist.txt" ]; then
-            python3 site/checks/run_all.py site/dist --denylist-file "$RUNNER_TEMP/toledo-denylist.txt"
+            env -u USER -u LOGNAME python3 site/checks/run_all.py site/dist --denylist-file "$RUNNER_TEMP/toledo-denylist.txt"
           else
             echo "::warning::private_repo_name leak category has no denylist configured (TOLEDO_LEAK_SCAN_DENYLIST secret unset); the category is run locally before every push; configure the repository secret to run it here too."
-            python3 site/checks/run_all.py site/dist
+            env -u USER -u LOGNAME python3 site/checks/run_all.py site/dist
           fi
       - uses: actions/upload-artifact@v4
         with: { name: site-dist, path: site/dist, retention-days: 1 }
