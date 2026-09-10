@@ -1,0 +1,44 @@
+[
+  {
+    "id": "PROP-EPSC-29",
+    "code": "weld/P.??.v1",
+    "name": "Exact recertification after finite N=1 observation-row chart optimization",
+    "statement": {
+      "latest": "\\mathcal R_*\\in\\arg\\min_{\\mathcal R\\in\\mathfrak R_{N=1}}\\widetilde S(\\mathcal R),\\qquad J_{\\mathcal R_*}(x_*)\\text{ re-inverted exactly over }\\mathbb Q,\\qquad r_{\\mathcal R_*}=\\frac{1}{2S(\\mathcal R_*)}>r_{\\mathcal R_0}",
+      "format": "latex",
+      "note_ascii": "within the structurally minimal N=1 shell-energy Taylor chart family (three order-zero rows and two of three shell rows at each order 1..23), a deterministic floating search is used only to choose a candidate; the final selected chart is then independently rechecked at rank 49 and re-inverted exactly over Q, and its componentwise local radius is rigorously larger than the previous first-independent chart radius"
+    },
+    "definitions": {
+      "mathfrak_R_N1": "finite family of structurally minimal 49-observation shell-energy Taylor charts: all three shell rows at order 0 and one of three shell-row pairs at each order 1..23",
+      "R_0": "previous first-independent-row N=1 chart",
+      "R_*": "deterministically selected candidate chart from six declared search starts",
+      "S(R)": "exact post-selection preconditioned componentwise Jacobian-variation slope max_i sum_j |(J_R(x_*)^{-1})_ij| H_j",
+      "r_R": "certified q<=1/2 local infinity-radius 1/(2 S(R))"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n1-row-chart-optimization",
+      "n1-energy-jet-chart-selection"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-28",
+        "derived_via": "reuses_componentwise_exact_radius_certificate",
+        "evidence": "the candidate chart is evaluated with the same exact coefficient-tensor Hessian bounds and exact rational inverse machinery"
+      },
+      {
+        "code": "PROP-EPSC-24",
+        "derived_via": "narrows_measurement_ready_frontier",
+        "evidence": "row choice is shown not to be the dominant remaining obstruction: the exact radius improves but remains in the same 10^-28 to 10^-27 power-of-ten bracket"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_row_selection.py; reproduction workflow 34500951227 completed success on 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=1 chart-selection result only. Floating arithmetic is used solely as a search heuristic; the accepted chart is exactly re-certified. The result does not establish global optimality over all possible readers, a measurement-ready tolerance, branch/noise stability, arbitrary-N inversion, all-N saturation, continuum regularity or singularity, physical DNS adequacy, or the Clay result."
+  }
+]
