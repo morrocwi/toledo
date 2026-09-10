@@ -1,0 +1,130 @@
+[
+  {
+    "id": "PROP-EPSC-30",
+    "code": "weld/P.??.v1",
+    "name": "Finite observability-saturation to square-chart local-inverse bridge",
+    "statement": {
+      "latest": "\\operatorname{rank}D\\mathcal O_{N,R}(x_*)=d_N-3,\\quad S_N\\pitchfork(\\mathbb T^3\\!\\cdot x_*),\\quad \\dim S_N=d_N-3\\;\\Longrightarrow\\;\\exists\\ H_N,S_N\\supset B_N\\ni x_*:\\det DH_N(x_*)\\ne0\\text{ and }H_N|_{B_N}\\text{ is locally invertible}",
+      "format": "latex",
+      "note_ascii": "at a fixed finite cutoff N, saturation of an invariant observation jet to the translation quotient dimension plus an explicit transverse symmetry slice lets one select a square observation subchart with nonsingular Jacobian and hence a local inverse"
+    },
+    "definitions": {
+      "N": "one declared finite Fourier-Galerkin cutoff",
+      "O_(N,R)": "finite total-energy or shell-energy observation jet through finite depth R",
+      "S_N": "explicit local symmetry slice transverse to the three-dimensional translation orbit",
+      "H_N": "a selected square set of d_N-3 observation coordinates restricted to S_N",
+      "B_N": "a local neighborhood on the slice"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "nsobs-to-epsc18-local-inverse-bridge",
+      "finite-inner-completeness-to-local-inversion"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-NSOBS-08",
+        "derived_via": "adds_explicit_slice_and_square_minor",
+        "evidence": "NSOBS-08 supplies local differential completeness modulo translations at saturation; the bridge makes the quotient chart explicit before invoking finite-dimensional inverse-function theory"
+      },
+      {
+        "code": "PROP-EPSC-18",
+        "derived_via": "structural_prerequisite_for",
+        "evidence": "EPSC-18 asks for a quantitative inverse radius; a nonsingular finite square chart is the local existence layer that must precede any quantitative radius"
+      }
+    ],
+    "origin": {
+      "source": "Synthesis of the finite energy-observability programme and the EPSC quantitative-inverse programme in github.com/morrocwi/readout-problem-navier-stokes, 2026-09-10.",
+      "doi": null
+    },
+    "claim_boundary": "This is a fixed-finite-N bridge theorem. Rank saturation alone is not a quantitative error certificate, does not choose a global branch, and does not imply arbitrary-N saturation or any continuum/Clay result."
+  },
+  {
+    "id": "PROP-EPSC-31",
+    "code": "weld/P.??.v1",
+    "name": "Finite quantitative inner-certificate bridge from a saturated observation chart",
+    "statement": {
+      "latest": "q_N:=\\sup_{x\\in B_N}\\|I-A_NDH_N(x)\\|_\\infty<1\\;\\Longrightarrow\\;\\rho_N\\le\\frac{\\|A_N\\|_\\infty}{1-q_N}(\\sigma_{meas}+\\sigma_{res})",
+      "format": "latex",
+      "note_ascii": "once a fixed finite saturated observation chart H_N has an explicit branch B_N, preconditioner A_N, and certified Jacobian defect q_N<1, measurement and forward-residual radii yield a quantitative finite-state radius rho_N"
+    },
+    "definitions": {
+      "A_N": "fixed finite preconditioner, ideally an exact or certified approximation to DH_N(x_*)^{-1}",
+      "q_N": "certified induced-norm defect bound on the entire declared branch B_N",
+      "sigma_meas": "certified observation-data radius in the declared chart norm",
+      "sigma_res": "certified forward residual of the reconstructed finite state",
+      "rho_N": "certified finite quotient-state error radius on the same branch"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "saturation-to-rhoN-bridge",
+      "finite-inner-error-certificate"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-30",
+        "derived_via": "quantifies_local_inverse",
+        "evidence": "starts from the explicit finite square chart and common branch supplied by the local bridge"
+      },
+      {
+        "code": "PROP-EPSC-18",
+        "derived_via": "formalizes_target",
+        "evidence": "this is the fail-closed quantitative form of the EPSC-18 inner inversion target"
+      }
+    ],
+    "origin": {
+      "source": "Finite preconditioned inverse estimate implemented generically in github.com/morrocwi/information-discrete-math/idm/certified_local_inverse.py and instantiated for N=1 in github.com/morrocwi/readout-problem-navier-stokes reproduction checks.",
+      "doi": null
+    },
+    "claim_boundary": "Requires certified same-branch containment, a certified symmetry slice, and q_N<1. If any obligation is missing the correct verdict is HOLD. This is finite-native and contains no completed-infinity premise."
+  },
+  {
+    "id": "PROP-EPSC-32",
+    "code": "weld/P.??.v1",
+    "name": "Arbitrary-finite-resolution inner-certificate programme",
+    "statement": {
+      "latest": "N<\\infty\\;\\mapsto\\;\\mathcal C_N=(S_N,H_N,A_N,B_N,q_N),\\qquad q_N<1,\\qquad \\rho_N=\\frac{\\|A_N\\|}{1-q_N}(\\sigma_{meas}+\\sigma_{res})",
+      "format": "latex",
+      "note_ascii": "open programme: give a constructive certificate package for each arbitrary finite input N, rather than assume a completed infinite-resolution state"
+    },
+    "definitions": {
+      "C_N": "finite proof/certificate package consisting of symmetry slice, square observation chart, preconditioner, certified branch and Jacobian defect",
+      "arbitrary finite N": "a schema/algorithm accepting any particular finite cutoff as input; not a completed N=infinity object"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "finite-first-general-N-inner-certificate",
+      "nsobs-epsc-general-finite-bridge"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-NSOBS-07",
+        "derived_via": "strengthens_beyond_rank_saturation",
+        "evidence": "all-N rank saturation would supply the structural observability layer but still would not by itself supply quantitative branches or conditioning"
+      },
+      {
+        "code": "PROP-EPSC-31",
+        "derived_via": "resolution_indexed_extension",
+        "evidence": "asks for the quantitative inner-certificate package at arbitrary finite resolution"
+      },
+      {
+        "code": "PROP-EPSC-17",
+        "derived_via": "feeds_outer_composition_when_available",
+        "evidence": "a certified rho_N can later be composed with a separately proved outer beta_N; the continuum adapter remains logically downstream"
+      }
+    ],
+    "origin": {
+      "source": "Finite-first research frontier isolated by the N=1 quantitative inversion work and the N=1,2,3 energy-observability programme, 2026-09-10.",
+      "doi": null
+    },
+    "claim_boundary": "OPEN. Existing fixed-N certificates do not prove this schema. The statement deliberately avoids an N->infinity ontological premise; any continuum interpretation is an external adapter and requires its own beta_N theorem."
+  }
+]
