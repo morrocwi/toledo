@@ -1,0 +1,40 @@
+[
+  {
+    "id": "PROP-NSOBS-14",
+    "code": "weld/P.??.v1",
+    "name": "Explicit N=1 cubic-symmetry shell-energy alias beyond translations",
+    "statement": {
+      "latest": "\\exists x_a,x_b\\in X_1:\\;x_b\\notin\\mathbb T^3\\!\\cdot x_a,\\quad I^{(n)}(x_a)=I^{(n)}(x_b)\\text{ for every arbitrary finite }n",
+      "format": "latex",
+      "note_ascii": "one-mode states supported at (1,0,0) and (0,1,0), related by a cubic axis swap but not by translation, have identical shell-energy derivative records; for each finite n the equality follows from the one-mode formula I^(n)=(-2 nu)^n I"
+    },
+    "definitions": {
+      "X_1": "fixed finite N=1 incompressible Fourier-Galerkin state space",
+      "I": "three-component shell-energy reader",
+      "translation_orbit": "spatial translations alter Fourier phases but preserve wavevector support"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "nsobs-cubic-shell-alias",
+      "nsobs-n1-axis-swap-alias"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-NSOBS-08",
+        "derived_via": "global_symmetry_boundary",
+        "evidence": "local quotient completeness modulo continuous translations does not exclude discrete global aliases"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps36_shell_symmetry_obstruction.py",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=1 explicit alias. It refutes global uniqueness modulo translations for shell-energy-only observations, but does not classify every discrete symmetry or every possible non-symmetry alias at arbitrary finite N."
+  }
+]
