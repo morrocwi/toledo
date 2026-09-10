@@ -227,6 +227,6 @@
     "aliases": ["ObservableFlow v0.6+ future-work cost interface", "NOT USED IN v0.5"],
     "coq": {"identifiers": [], "coq_status": "open_prop"},
     "parents": [{"code": "PROP-OBSFLOW-08", "derived_via": "refines", "evidence": "future proposed refinement of the simple v0.5 sensor-plus-depth cost"}],
-    "origin": {"source": "NEW FUTURE-WORK PROPOSAL, written after v0.5 closure. Not implemented, tested, or used to obtain the frozen v0.5 result. Registered separately to prevent retrospective attribution.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "354e828f6dfbbbf01fe4b145b92ee965523649bd", "path": "software/observableflow/FUTURE_WORK.md"}, "doi": null}
+    "origin": {"source": "NEW FUTURE-WORK PROPOSAL, written after v0.5 closure. Not implemented, tested, or used to obtain the frozen v0.5 result. Registered separately to prevent retrospective attribution.", "repo_anchor": {"repo": "morrocwi/readout-problem-navier-stokes", "commit": "caa38baf8a7b5ccd5737874084fa439a41a26522", "path": "software/observableflow/FUTURE_WORK.md"}, "doi": null}
   }
 ]
