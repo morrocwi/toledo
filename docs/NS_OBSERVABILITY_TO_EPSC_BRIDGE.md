@@ -6,8 +6,9 @@ The proposal records referenced here are now stored in:
 
 - `registry/proposals/ns_energy_observability.json` (`PROP-NSOBS-01..08`),
 - `registry/proposals/ns_energy_observability_extensions.json` (`PROP-NSOBS-09..13`),
-- `registry/proposals/discrete_epsilon_completion_relative_energy.json` (`PROP-EPSC-13..19`), and
-- `registry/proposals/discrete_epsilon_completion_observability_bridge.json` (`PROP-EPSC-20..36`).
+- `registry/proposals/discrete_epsilon_completion_relative_energy.json` (`PROP-EPSC-13..19`),
+- `registry/proposals/discrete_epsilon_completion_observability_bridge.json` (`PROP-EPSC-20..36`), and
+- `registry/proposals/discrete_epsilon_completion_sample_chart.json` (`PROP-EPSC-37`).
 
 All `weld/P.??.v1` codes remain proposal placeholders until canonical Toledo audit.
 
@@ -74,7 +75,7 @@ then for `x,z` in the same branch,
 
 ### C. Measurement interface
 
-The quantitative inverse begins with uncertainty in the declared chart, not automatically with raw sensor samples. If measured chart data `y` obeys
+The quantitative inverse begins with uncertainty in a declared finite chart, not automatically with raw sensor samples. For the selected Taylor chart, if measured chart data `y` obeys
 
 \[
 \|y-H_N(x)\|_\infty\le\sigma
@@ -95,7 +96,9 @@ then
 }
 \]
 
-This is already rigorous once branch membership and chart uncertainty are certified. The remaining measurement problem is upstream: convert raw finite samples/windows into certified uncertainty for `H_N` and certify the correct branch without assuming it. That open interface is `PROP-EPSC-36` and is part of the still-open full `PROP-EPSC-19` programme.
+This is already rigorous once branch membership and chart uncertainty are certified. The fixed-`N=1` work now also shows that high-order numerical differentiation is **not structurally necessary**: `PROP-EPSC-37` converts the nonsingular N=1 Taylor chart into a 49-component finite-time shell-energy sample chart that is locally invertible for every sufficiently small nonzero sample spacing.
+
+What remains open in `PROP-EPSC-36` is therefore narrower and quantitative: choose an explicit useful spacing/window, certify the sample-map Jacobian over a branch, propagate raw measurement/model uncertainty through that sample chart, and certify correct branch capture without assuming it. That remains part of the still-open full `PROP-EPSC-19` programme.
 
 ### D. Optional outer completion
 
@@ -131,15 +134,27 @@ q_N<1
 }
 \]
 
-For actual measured data the unresolved upstream interface is
+At fixed `N=1`, the measurement-side structural lift now has a derivative-free route:
+
+\[
+\boxed{
+\text{finite shell-energy values at finitely many times}
+\to
+\mathcal S_h
+\to
+\text{local quotient observability}
+}
+\]
+
+for all sufficiently small nonzero `h`. The unresolved quantitative upstream interface is
 
 \[
 \boxed{
 \text{raw finite samples/windows}
 \to
-(H_N\text{-uncertainty},\text{branch certificate})
+(\mathcal S_h\text{-uncertainty},\text{branch certificate},q_h<1)
 \to
-\rho_N.
+\rho_1.
 }
 \]
 
@@ -161,9 +176,10 @@ In Toledo lineage terms:
 -> `PROP-EPSC-30`
 -> `PROP-EPSC-31`
 -> fixed-resolution witnesses `PROP-EPSC-33/34/35`
--> `PROP-EPSC-32` (OPEN arbitrary-finite-`N` programme).
+-> `PROP-EPSC-37` at fixed N=1 for the derivative-free sample-chart lift
+-> `PROP-EPSC-36` for explicit spacing/conditioning/noise/branch capture.
 
-`PROP-EPSC-21` supplies a derivative-free window-transfer summary. `PROP-EPSC-36` is the OPEN raw-window/chart-and-branch interface. `PROP-EPSC-17` sits downstream as the optional inner-plus-outer composition theorem.
+`PROP-EPSC-32` remains the OPEN arbitrary-finite-`N` constructive programme. `PROP-EPSC-21` supplies a separate derivative-free window-transfer summary. `PROP-EPSC-17` sits downstream as the optional inner-plus-outer composition theorem.
 
 ## 3. Fixed N=1: quantitative bridge and chart-noise step
 
@@ -179,7 +195,7 @@ q_1\le0.08058674502845<1/2.
 
 This fixed-resolution bridge instance is `PROP-EPSC-33`.
 
-There is now one further partial EPSC-19 closure. The exact center inverse satisfies
+There is also a partial EPSC-19 closure. The exact center inverse satisfies
 
 \[
 \|A_1\|_\infty<1.29.
@@ -201,9 +217,61 @@ implies
 }
 \]
 
-This is `PROP-EPSC-35`. It is a genuine finite noise-to-state radius for the selected **scaled chart**, conditional on branch membership. It is not yet a physical sensor tolerance because raw time samples have not yet been certified into that high-order chart and the branch has not yet been selected from the raw data.
+This is `PROP-EPSC-35`. It is a genuine finite noise-to-state radius for the selected **scaled Taylor chart**, conditional on branch membership. It is not yet a physical sensor tolerance.
 
-## 4. Fixed N=2: structural and positive quantitative bridge
+## 4. Fixed N=1: derivative-free finite-time sample chart
+
+Write the shell-energy output of the local finite Galerkin flow as
+
+\[
+I_s(\phi_t(x))=\sum_{n\ge0}a_{s,n}(x)t^n.
+\]
+
+The selected 49-row Taylor chart is, up to row ordering, all three shell rows at order zero plus shell 0 and shell 1 at orders `1..23`. Define instead the actual finite-time sample map
+
+\[
+\mathcal S_h(x)=
+\Bigl(
+I_0(\phi_{0h}(x)),\ldots,I_0(\phi_{23h}(x)),
+I_1(\phi_{0h}(x)),\ldots,I_1(\phi_{23h}(x)),
+I_2(x)
+\Bigr).
+\]
+
+This uses 49 shell-energy values and no numerical derivatives. For each of the two 24-sample shell blocks, the lowest-order change of basis from Taylor coefficients to samples is the Vandermonde matrix
+
+\[
+V_{jn}=j^n,\qquad0\le j,n\le23.
+\]
+
+Since the nodes `0,...,23` are distinct, `det V` is nonzero. Determinant multilinearity then gives
+
+\[
+\boxed{
+\det D\mathcal S_h(x_*)
+=c h^{552}+O(h^{553}),
+\qquad
+c=(\det V)^2\det J_{\rm jet}\ne0,
+}
+\]
+
+because
+
+\[
+552=2\sum_{n=0}^{23}n.
+\]
+
+The finite checker verifies the jet and Vandermonde nonvanishing through the declared good-prime reduction. The finite Galerkin vector field is polynomial, hence the local flow/output is analytic. Therefore some `eta>0` exists such that
+
+\[
+0<|h|<\eta
+\quad\Longrightarrow\quad
+\det D\mathcal S_h(x_*)\ne0.
+\]
+
+This is `PROP-EPSC-37`. It closes only the **structural derivative-free sample-chart existence** step. It does not give an explicit useful `eta`, and taking `h` extremely small can worsen conditioning. The next certificate must select an explicit spacing and bound the actual sample-map conditioning/remainder over a branch.
+
+## 5. Fixed N=2: structural and positive quantitative bridge
 
 For `N=2`,
 
@@ -223,7 +291,7 @@ The first quantitative certificate uses integer Taylor-row scale `C=14400`, whic
 
 This is `PROP-EPSC-34`. It proves that the full structural-to-positive-quantitative bridge crosses a second finite resolution. The radius is deliberately very loose and is not a useful sensor tolerance. The next N=2 target is conditioning quality: construct an exact or validated preconditioner and centered entrywise enclosure, analogous to the N=1 tightening.
 
-## 5. Energy transfer is a mechanism/measurement layer, not a substitute for the inverse
+## 6. Energy transfer is a mechanism/measurement layer, not a substitute for the inverse
 
 For finite Fourier-Galerkin Navier--Stokes shell energy,
 
@@ -249,9 +317,9 @@ I_s(t_1)-I_s(t_0)
 
 which is `PROP-EPSC-21` and avoids numerical differentiation in this substep.
 
-The remaining problem is not to pretend that a transfer integral already equals the selected high-order inverse chart. `PROP-EPSC-36` must certify that measurement interface.
+`PROP-EPSC-37` provides a different derivative-free route: actual shell-energy samples themselves can form a local chart at fixed N=1 for sufficiently short nonzero spacing. Neither result substitutes for the still-open explicit conditioning and branch-capture obligation in `PROP-EPSC-36`.
 
-## 6. Finite-first meaning of arbitrary N
+## 7. Finite-first meaning of arbitrary N
 
 The general target is constructive:
 
@@ -268,7 +336,7 @@ This is `PROP-EPSC-32`. It means an algorithm/schema that accepts any particular
 The current evidence ladder is
 
 \[
-N=1:\;\text{structural + tight local quantitative + branch-conditioned chart-noise certificate},
+N=1:\;\text{structural + tight local quantitative + chart-noise + derivative-free finite-sample local existence},
 \]
 
 \[
@@ -279,16 +347,16 @@ N=2:\;\text{structural + conservative positive quantitative certificate},
 N=3:\;\text{structural saturation certificate only}.
 \]
 
-Therefore the high-value next tasks are (i) raw-window/sample -> chart plus branch certification at N=1, (ii) improve N=2 conditioning, (iii) build an explicit N=3 quantitative branch, and (iv) separately attack arbitrary-finite-N structural minor independence.
+Therefore the high-value next tasks are (i) explicit sample spacing + branch-wide conditioning/noise/branch certification at N=1, (ii) improve N=2 conditioning, (iii) build an explicit N=3 quantitative branch, and (iv) separately attack arbitrary-finite-N structural minor independence.
 
-## 7. Fail-closed boundaries
+## 8. Fail-closed boundaries
 
 The following remain distinct open obligations:
 
 - `PROP-NSOBS-07`: arbitrary-finite-`N` earliest-order saturation.
 - `PROP-EPSC-32`: arbitrary-finite-`N` constructive quantitative certificate packages.
-- `PROP-EPSC-36`: raw finite-window/sample -> selected chart uncertainty plus branch capture.
-- `PROP-EPSC-24`: practical measurement-ready full-N=1 radius; `PROP-EPSC-35` closes only the downstream branch-conditioned chart-noise step.
+- `PROP-EPSC-36`: explicit finite sample/window spacing, branch-wide sample-map conditioning, raw uncertainty propagation and branch capture. `PROP-EPSC-37` closes only the local derivative-free existence substep at fixed N=1.
+- `PROP-EPSC-24`: practical measurement-ready full-N=1 radius; `PROP-EPSC-35` closes only the downstream branch-conditioned Taylor-chart noise step.
 - `PROP-EPSC-19`: full noisy measurement-to-continuum propagation.
 - practical N=2 conditioning beyond the extremely conservative `PROP-EPSC-34` radius.
 - `PROP-EPSC-16`: scalable/tight outer path/tail certification.
