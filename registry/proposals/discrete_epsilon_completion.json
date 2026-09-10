@@ -1,0 +1,161 @@
+[
+  {
+    "id": "PROP-EPSC-01",
+    "code": "weld/M.??.v1",
+    "name": "Nested Readout Consistency Defect",
+    "statement": {
+      "latest": "\\delta_K(x):=\\left\\|R_K x_{K+1}-x_K\\right\\|",
+      "format": "latex",
+      "note_ascii": "delta_K(x) := || R_K x_(K+1) - x_K ||"
+    },
+    "definitions": {
+      "x_K": "finite state or declared readout computed at refinement level K",
+      "x_(K+1)": "the corresponding state/readout computed at the next refinement level",
+      "R_K": "declared restriction map from level K+1 back to the information represented at level K",
+      "delta_K": "observed disagreement between nested finite refinements on their shared information"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "nested-readout-consistency-defect",
+      "discrete-epsilon-completion:delta_K"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [],
+    "origin": {
+      "source": "Discrete epsilon-completion programme, designed 2026-09-10 from the Information Discrete Mathematics / Readout-Navier-Stokes finite refinement work. Toledo-first registration before canonical promotion.",
+      "doi": null,
+      "repo_targets": [
+        "github.com/morrocwi/information-discrete-math",
+        "github.com/morrocwi/readout-problem-navier-stokes"
+      ]
+    },
+    "claim_boundary": "delta_K is an observable nested-refinement defect. Small delta_K alone is not a proof that the omitted infinite tail is small."
+  },
+  {
+    "id": "PROP-EPSC-02",
+    "code": "weld/P.??.v1",
+    "name": "Navier-Stokes Fourier boundary-energy diagnostic",
+    "statement": {
+      "latest": "E_{\\partial K}(u):=\\frac12\\sum_{\\|k\\|_\\infty=K}|\\widehat u_k|^2",
+      "format": "latex",
+      "note_ascii": "E_boundary(K) := 1/2 sum_{||k||_inf=K} |u_hat_k|^2"
+    },
+    "definitions": {
+      "K": "finite symmetric Fourier cutoff",
+      "u_hat_k": "retained divergence-free Fourier velocity coefficient",
+      "E_partialK": "energy carried by the outermost retained Fourier shell of the declared cube"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns-fourier-boundary-energy",
+      "discrete-epsilon-completion:ns-boundary-proxy"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-01",
+        "derived_via": "paired_diagnostic",
+        "evidence": "used beside the nested-refinement defect in the first Navier-Stokes epsilon-completion finite diagnostic"
+      }
+    ],
+    "origin": {
+      "source": "Readout-Navier-Stokes discrete-native epsilon-completion finite diagnostic, 2026-09-10; intended source repo github.com/morrocwi/readout-problem-navier-stokes.",
+      "doi": null
+    },
+    "claim_boundary": "Boundary energy is a finite diagnostic proxy for unresolved activity. It is not, by itself, a rigorous upper bound on the complete omitted Fourier tail."
+  },
+  {
+    "id": "PROP-EPSC-03",
+    "code": "weld/M.??.v1",
+    "name": "Fail-closed discrete epsilon-completion acceptance gate",
+    "statement": {
+      "latest": "\\mathrm{ACCEPT}_\\varepsilon(K)\\;\\Longleftarrow\\;\\delta_K+\\beta_K\\le\\varepsilon;\\qquad\\text{if no proved }\\beta_K\\text{ is available, return HOLD rather than continuum-complete}",
+      "format": "latex",
+      "note_ascii": "ACCEPT_epsilon(K) only if delta_K + beta_K <= epsilon; without a proved omitted-information bound beta_K, HOLD for continuum-completeness"
+    },
+    "definitions": {
+      "delta_K": "nested readout consistency defect PROP-EPSC-01",
+      "beta_K": "proved computable upper bound on omitted information/tail, target PROP-EPSC-04",
+      "epsilon": "declared tolerance",
+      "ACCEPT_epsilon": "certification verdict at the declared tolerance",
+      "HOLD": "fail-closed verdict when the hypotheses needed for certification are unavailable"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "discrete-epsilon-completion-gate",
+      "epsilon-completion:ACCEPT-HOLD"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-01",
+        "derived_via": "uses",
+        "evidence": "the acceptance rule consumes the measured nested-refinement defect"
+      },
+      {
+        "code": "PROP-EPSC-04",
+        "derived_via": "requires",
+        "evidence": "continuum/infinite-object certification requires a proved omitted-information upper bound; without it the rule explicitly returns HOLD"
+      }
+    ],
+    "origin": {
+      "source": "Discrete epsilon-completion programme, 2026-09-10. Registered before implementation as a general certification protocol in Information Discrete Mathematics.",
+      "doi": null
+    },
+    "claim_boundary": "This is a fail-closed protocol definition, not a theorem that beta_K exists for every problem or every Navier-Stokes state."
+  },
+  {
+    "id": "PROP-EPSC-04",
+    "code": "weld/M.??.v1",
+    "name": "Computable omitted-information tail certificate target",
+    "statement": {
+      "latest": "\\|(I-P_K)x\\|\\le\\beta_K(\\mathcal R_K),\\qquad\\beta_K\\ge0,\\qquad\\beta_K\\to0\\text{ as }K\\to\\infty",
+      "format": "latex",
+      "note_ascii": "||(I-P_K)x|| <= beta_K(R_K), beta_K >= 0, beta_K -> 0 as K -> infinity"
+    },
+    "definitions": {
+      "P_K": "declared finite projection/refinement operator",
+      "R_K": "finite records available at level K (notation here denotes the record set, not necessarily the restriction operator used in PROP-EPSC-01)",
+      "beta_K": "computable upper bound derived only from declared finite records and stated assumptions",
+      "x": "target object in the problem's declared completion space"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "finite-to-infinite-tail-certificate",
+      "discrete-epsilon-completion:beta_K"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-01",
+        "derived_via": "closes_gap_left_by",
+        "evidence": "nested agreement does not control unrepresented distinctions; beta_K is the missing certificate needed to turn finite stability into an infinite-object guarantee"
+      }
+    ],
+    "origin": {
+      "source": "Open mathematical target isolated by the 2026-09-10 Readout-Navier-Stokes discrete-native refinement experiment. Toledo-first registration before any theorem claim.",
+      "doi": null
+    },
+    "claim_boundary": "OPEN. No universal beta_K construction is established here. In the current Navier-Stokes experiment E_partialK is only a diagnostic proxy and must not be substituted for beta_K in a theorem-level ACCEPT verdict."
+  }
+]
