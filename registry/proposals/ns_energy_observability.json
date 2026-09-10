@@ -1,0 +1,174 @@
+[
+  {
+    "id": "PROP-NSOBS-01",
+    "code": "weld/P.??.v1",
+    "name": "Finite Fourier-Galerkin real phase-space dimension",
+    "statement": {
+      "latest": "d_N=2\\big((2N+1)^3-1\\big)",
+      "format": "latex",
+      "note_ascii": "real phase-space dimension of the divergence-free reality-constrained cubic Fourier-Galerkin state used by the NS observability programme"
+    },
+    "definitions": {
+      "N": "cubic Fourier cutoff",
+      "d_N": "real state-space dimension in the declared coordinate convention"
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-state-dimension"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex",
+      "doi": null
+    },
+    "claim_boundary": "Bookkeeping definition in the declared finite Fourier convention; no originality or continuum claim."
+  },
+  {
+    "id": "PROP-NSOBS-02",
+    "code": "weld/P.??.v1",
+    "name": "Scalar total-energy Lie-jet rank ceiling",
+    "statement": {
+      "latest": "\\operatorname{rank}D\\mathcal E_R\\le\\min(R+1,d_N-3),\\qquad R_E^{\\min}=d_N-4",
+      "format": "latex",
+      "note_ascii": "translation symmetry and scalar output count impose the generic finite-resolution ceiling and the earliest possible scalar-energy temporal depth"
+    },
+    "definitions": {
+      "E": "total retained kinetic energy",
+      "mathcal_E_R": "(E,L_F E,...,L_F^R E)",
+      "d_N-3": "translation-symmetry quotient dimension at generic free-action states"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-scalar-energy-ceiling", "nsobs-scalar-min-depth"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-01","derived_via":"dimension_count","evidence":"uses the finite phase-space dimension"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "Universal finite-resolution structural ceiling; it does not assert that the ceiling is attained at every N."
+  },
+  {
+    "id": "PROP-NSOBS-03",
+    "code": "weld/P.??.v1",
+    "name": "Shell-energy Lie-jet rank ceiling",
+    "statement": {
+      "latest": "\\operatorname{rank}D\\mathcal J_R\\le\\min\\big(m_N+(m_N-1)R,d_N-3\\big),\\qquad R_I^{\\min}=\\left\\lceil\\frac{d_N-3-m_N}{m_N-1}\\right\\rceil",
+      "format": "latex",
+      "note_ascii": "the shell balance contributes one scalar dependence per new shell-derivative block, giving a measurement-channel versus temporal-depth ceiling"
+    },
+    "definitions": {
+      "m_N": "number of distinct squared shell radii |k|^2 at cutoff N",
+      "mathcal_J_R": "(I,L_F I,...,L_F^R I) for the full shell-energy reader"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-shell-energy-ceiling", "nsobs-shell-min-depth"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-01","derived_via":"dimension_count","evidence":"uses the finite phase-space dimension"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "Universal finite-resolution structural ceiling; generic saturation at all N remains separate."
+  },
+  {
+    "id": "PROP-NSOBS-04",
+    "code": "weld/P.??.v1",
+    "name": "Positive-viscosity energy-observability rank universality",
+    "statement": {
+      "latest": "\\mathcal L_{F_\\nu}^r h(\\nu y)=\\nu^{r+2}\\mathcal L_{F_1}^r h(y),\\quad D_x\\mathcal L_{F_\\nu}^r h(\\nu y)=\\nu^{r+1}D_y\\mathcal L_{F_1}^r h(y),\\quad \\nu>0",
+      "format": "latex",
+      "note_ascii": "for quadratic energy readers and the finite NS scaling x=nu y, s=nu t, positive viscosity changes the jet Jacobian only by invertible state/row scalings, so rank is independent of nu>0"
+    },
+    "definitions": {"h":"total-energy or shell-energy reader","F_nu":"finite Fourier-Galerkin NS vector field at viscosity nu"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-positive-viscosity-rank-universality"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "Applies only to positive viscosity in the declared finite system; nu=0 is a distinct endpoint and continuum claims are excluded."
+  },
+  {
+    "id": "PROP-NSOBS-05",
+    "code": "weld/P.??.v1",
+    "name": "Exact finite saturation records for energy readers",
+    "statement": {
+      "latest": "(N,\\text{reader},R,\\operatorname{rank})\\in\\{(1,E,48,49),(1,I,23,49),(2,E,244,245),(3,I,39,681)\\}",
+      "format": "latex",
+      "note_ascii": "exact modular certificates reach the translation ceiling at the earliest structurally admissible order in four recorded reader-resolution cases"
+    },
+    "definitions": {},
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-certified-saturation-cases"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-NSOBS-02","derived_via":"attains_ceiling","evidence":"scalar cases attain the scalar structural ceiling"},
+      {"code":"PROP-NSOBS-03","derived_via":"attains_ceiling","evidence":"shell cases attain the shell structural ceiling"},
+      {"code":"PROP-NSOBS-04","derived_via":"extends_positive_viscosity","evidence":"the rank statement propagates to every nu>0 by the positive-viscosity scaling"}
+    ],
+    "origin": {"source":"Exact modular certificates and reproduction scripts cited by github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "Finite certified cases only. This is not a proof of the all-N saturation conjecture."
+  },
+  {
+    "id": "PROP-NSOBS-06",
+    "code": "weld/P.??.v1",
+    "name": "Energy-reader measurement-time tradeoff",
+    "statement": {
+      "latest": "1\\text{ scalar channel requires }R\\ge d_N-4;\\quad m_N\\text{ shell channels require }R\\ge\\left\\lceil\\frac{d_N-3-m_N}{m_N-1}\\right\\rceil",
+      "format": "latex",
+      "note_ascii": "more simultaneous invariant energy channels can reduce the minimum temporal Lie-jet depth required before symmetry-limited local completeness is structurally possible"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-measurement-time-tradeoff"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code":"PROP-NSOBS-02","derived_via":"compare_depth_bounds","evidence":"scalar lower depth"},
+      {"code":"PROP-NSOBS-03","derived_via":"compare_depth_bounds","evidence":"multi-shell lower depth"}
+    ],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "Structural observability tradeoff only; it is not a sensor-noise, conditioning, or computational-cost theorem."
+  },
+  {
+    "id": "PROP-NSOBS-07",
+    "code": "weld/P.??.v1",
+    "name": "Optimal all-resolution energy-readout saturation conjecture",
+    "statement": {
+      "latest": "\\operatorname{rank}_{gen}D\\mathcal E_{d_N-4}=d_N-3,\\qquad \\operatorname{rank}_{gen}D\\mathcal J_{R_I^{min}}=d_N-3\\quad\\text{for every finite }N,\\nu>0",
+      "format": "latex",
+      "note_ascii": "conjecture that both structural ceilings are generically sharp at the earliest admissible order for every finite cubic cutoff"
+    },
+    "definitions": {},
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-all-N-saturation-conjecture"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-05","derived_via":"finite_evidence_motivates","evidence":"four exact saturation records motivate but do not prove the conjecture"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "OPEN. No continuum N-to-infinity statement and no all-N proof is claimed."
+  },
+  {
+    "id": "PROP-NSOBS-08",
+    "code": "weld/P.??.v1",
+    "name": "Local finite-state completeness modulo translations at saturation",
+    "statement": {
+      "latest": "\\operatorname{rank}D\\mathcal O_R=d_N-3\\;\\Longrightarrow\\;\\ker D\\mathcal O_R=T_x(\\mathbb T^3\\!\\cdot x)\\quad\\text{at generic free-action states}",
+      "format": "latex",
+      "note_ascii": "when an invariant energy jet reaches the translation ceiling and the translation action is locally free, the only infinitesimal ambiguity is translation"
+    },
+    "definitions": {"mathcal_O_R":"either saturated total-energy or shell-energy Lie jet"},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["nsobs-local-quotient-completeness", "inner-completeness"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [{"code":"PROP-NSOBS-05","derived_via":"rank_plus_free_group_action","evidence":"applies to the certified saturation cases"}],
+    "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
+    "claim_boundary": "Local differential completeness modulo continuous translation only; not global injectivity and not a stable/noisy inversion result."
+  }
+]
