@@ -2,7 +2,16 @@
 
 Status: research integration note, finite-first. This document makes the bridge between the energy-observability lane and the EPSC lane explicit without collapsing their claim boundaries.
 
-## 1. Three logically distinct layers
+The proposal records referenced here are now stored in:
+
+- `registry/proposals/ns_energy_observability.json` (`PROP-NSOBS-01..08`),
+- `registry/proposals/ns_energy_observability_extensions.json` (`PROP-NSOBS-09..13`),
+- `registry/proposals/discrete_epsilon_completion_relative_energy.json` (`PROP-EPSC-13..19`), and
+- `registry/proposals/discrete_epsilon_completion_observability_bridge.json` (`PROP-EPSC-20..36`).
+
+All `weld/P.??.v1` codes remain proposal placeholders until canonical Toledo audit.
+
+## 1. Four logically distinct layers
 
 ### A. Structural inner observability
 
@@ -24,7 +33,7 @@ spatial-translation invariance forces generic rank at most `d_N-3`. Thus
 \operatorname{rank}D\mathcal O_{N,R}(x_*)=d_N-3
 \]
 
-means local differential completeness only modulo the three translation directions, provided the translation action is locally free. This is the structural content of the NSOBS lane, especially `PROP-NSOBS-08`.
+means local differential completeness only modulo the three translation directions, provided the translation action is locally free (`PROP-NSOBS-08`).
 
 For shell energies,
 
@@ -37,17 +46,14 @@ For shell energies,
 Exact reproduction reaches the ceiling at the first structurally admissible order for three consecutive fixed finite cutoffs:
 
 \[
-\boxed{
-(N,R_I^{min},d_N-3)
-=(1,23,49),(2,30,245),(3,39,681).
-}
+\boxed{(N,R_I^{min},d_N-3)=(1,23,49),(2,30,245),(3,39,681).}
 \]
 
-The `N=2` middle case is `PROP-NSOBS-12`; the three-case conjunction is `PROP-NSOBS-13`. These are strong finite witnesses, not a proof of arbitrary-finite-`N` saturation (`PROP-NSOBS-07` remains open).
+The `N=2` middle case is `PROP-NSOBS-12`; the three-case conjunction is `PROP-NSOBS-13`. These are finite witnesses, not a proof of arbitrary-finite-`N` saturation. `PROP-NSOBS-07` remains OPEN.
 
 ### B. Quantitative inner certification
 
-Rank saturation is not yet an error certificate. To turn structural observability into a finite-state radius, choose an explicit transverse slice `S_N`, select a square observation chart `H_N`, and certify one branch `B_N`.
+Rank saturation is not yet an error certificate. Choose an explicit transverse slice `S_N`, select a square observation chart `H_N`, and certify one convex branch `B_N`.
 
 If `A_N` is a fixed preconditioner and
 
@@ -55,7 +61,7 @@ If `A_N` is a fixed preconditioner and
 q_N:=\sup_{x\in B_N}\|I-A_NDH_N(x)\|_\infty<1,
 \]
 
-then
+then for `x,z` in the same branch,
 
 \[
 \|x-z\|_\infty
@@ -64,21 +70,36 @@ then
 \|H_N(x)-H_N(z)\|_\infty.
 \]
 
-Consequently certified observation and forward-model residual radii give
+`PROP-EPSC-30` is the structural bridge from saturated quotient rank to an explicit square chart. `PROP-EPSC-31` is the quantitative bridge from a certified branch and `q_N<1` to a retained-state radius.
+
+### C. Measurement interface
+
+The quantitative inverse begins with uncertainty in the declared chart, not automatically with raw sensor samples. If measured chart data `y` obeys
+
+\[
+\|y-H_N(x)\|_\infty\le\sigma
+\]
+
+and a candidate `z` in the same certified branch obeys
+
+\[
+\|H_N(z)-y\|_\infty\le\tau,
+\]
+
+then
 
 \[
 \boxed{
 \rho_N\le
-\frac{\|A_N\|_\infty}{1-q_N}
-(\sigma_{meas}+\sigma_{res}).
+\frac{\|A_N\|_\infty}{1-q_N}(\sigma+\tau).
 }
 \]
 
-`PROP-EPSC-30` is the structural bridge from saturated quotient rank to an explicit square chart. `PROP-EPSC-31` is the quantitative bridge from a certified branch and `q_N<1` to `rho_N`.
+This is already rigorous once branch membership and chart uncertainty are certified. The remaining measurement problem is upstream: convert raw finite samples/windows into certified uncertainty for `H_N` and certify the correct branch without assuming it. That open interface is `PROP-EPSC-36` and is part of the still-open full `PROP-EPSC-19` programme.
 
-### C. Outer completion
+### D. Optional outer completion
 
-Only after an inner finite radius `rho_N` exists do we optionally attach a separately proved omitted-tail certificate `beta_N`. If the Fourier retained/tail decomposition is orthogonal and the symmetry preserves the cutoff, `PROP-EPSC-17` gives
+Only after an inner finite radius `rho_N` exists do we optionally attach a separately proved omitted-tail certificate `beta_N`. If the retained/tail decomposition is orthogonal and the symmetry preserves the cutoff, `PROP-EPSC-17` gives
 
 \[
 \boxed{
@@ -88,15 +109,15 @@ Only after an inner finite radius `rho_N` exists do we optionally attach a separ
 }
 \]
 
-The outer EPSC certificate is not a premise of the finite-native inverse proof.
+The outer continuum adapter is not a premise of the finite-native inverse proof.
 
 ## 2. The bridge as one explicit chain
 
-The programme should therefore be read as
+The finite-native programme is
 
 \[
 \boxed{
-\text{energy/shell observations}
+\text{finite observations}
 \to
 \text{rank saturation modulo translation}
 \to
@@ -106,11 +127,23 @@ H_N
 \to
 q_N<1
 \to
-\rho_N
+\rho_N.
 }
 \]
 
-followed, only when needed and independently justified, by
+For actual measured data the unresolved upstream interface is
+
+\[
+\boxed{
+\text{raw finite samples/windows}
+\to
+(H_N\text{-uncertainty},\text{branch certificate})
+\to
+\rho_N.
+}
+\]
+
+Only when a continuum target is declared do we append
 
 \[
 \boxed{
@@ -124,29 +157,53 @@ followed, only when needed and independently justified, by
 
 In Toledo lineage terms:
 
-`PROP-NSOBS-03/05/08/12/13`
+`PROP-NSOBS-03/08/12/13`
 -> `PROP-EPSC-30`
 -> `PROP-EPSC-31`
--> fixed-resolution witnesses `PROP-EPSC-33` and `PROP-EPSC-34`
+-> fixed-resolution witnesses `PROP-EPSC-33/34/35`
 -> `PROP-EPSC-32` (OPEN arbitrary-finite-`N` programme).
 
-`PROP-EPSC-17` sits downstream as the optional inner-plus-outer composition theorem.
+`PROP-EPSC-21` supplies a derivative-free window-transfer summary. `PROP-EPSC-36` is the OPEN raw-window/chart-and-branch interface. `PROP-EPSC-17` sits downstream as the optional inner-plus-outer composition theorem.
 
-## 3. Fixed N=1: quantitative bridge crossed tightly
+## 3. Fixed N=1: quantitative bridge and chart-noise step
 
-For `N=1`, the finite real state dimension is 52. An explicit translation gauge leaves a 49-dimensional slice, and a selected 49-observation shell-energy Taylor chart is nonsingular in characteristic zero.
+For `N=1`, the finite real state dimension is 52. An explicit translation gauge leaves a 49-dimensional slice, and a selected 49-observation shell-energy Taylor chart is nonsingular in characteristic zero (`PROP-EPSC-22`).
 
-The exact centered entrywise enclosure certifies
+The tightening sequence is recorded as `PROP-EPSC-25..29`. The current exact centered entrywise enclosure certifies
 
 \[
 \|x-x_*\|_\infty\le10^{-17},
 \qquad
-\boxed{q_1\le0.08058674502845<1/2}.
+q_1\le0.08058674502845<1/2.
 \]
 
-This is `PROP-EPSC-33`. It is a genuine branch-local finite inverse certificate. It still does not by itself certify that noisy physical measurements lie in or select that branch.
+This fixed-resolution bridge instance is `PROP-EPSC-33`.
 
-## 4. Fixed N=2: the same bridge is now crossed a second time
+There is now one further partial EPSC-19 closure. The exact center inverse satisfies
+
+\[
+\|A_1\|_\infty<1.29.
+\]
+
+Using only the conservative certified bound `q_1<=1/2`, for true state `x` and candidate `z` already certified to lie in the same N=1 box,
+
+\[
+\|y-H_1(x)\|_\infty\le\sigma,
+\qquad
+\|H_1(z)-y\|_\infty\le\tau
+\]
+
+implies
+
+\[
+\boxed{
+\|x-z\|_\infty<\frac{129}{50}(\sigma+\tau)=2.58(\sigma+\tau).
+}
+\]
+
+This is `PROP-EPSC-35`. It is a genuine finite noise-to-state radius for the selected **scaled chart**, conditional on branch membership. It is not yet a physical sensor tolerance because raw time samples have not yet been certified into that high-order chart and the branch has not yet been selected from the raw data.
+
+## 4. Fixed N=2: structural and positive quantitative bridge
 
 For `N=2`,
 
@@ -154,77 +211,47 @@ For `N=2`,
 d_2=248,\qquad d_2-3=245,\qquad m_2=9.
 \]
 
-The shell reader reaches exact rank 245 at the earliest possible depth `R=30`. An explicit three-coordinate translation gauge produces a 245-dimensional slice, and an exact good-prime computation selects a nonsingular 245-observation shell chart. A deterministic small-integer center with every coordinate of magnitude at most 3 also retains full rank.
+The shell reader reaches exact rank 245 at the earliest possible depth `R=30` (`PROP-NSOBS-12`). An explicit three-coordinate translation gauge produces a 245-dimensional slice, and an exact good-prime computation selects a nonsingular 245-observation shell chart. A deterministic small-integer center with every coordinate of magnitude at most 3 retains full rank.
 
-The quantitative certificate then chooses the integer Taylor-row scale
-
-\[
-C=14400,
-\]
-
-which clears `nu=1/200` and all declared N=2 basis-extraction denominators. The selected row-scaled characteristic-zero Jacobian has nonzero integer determinant. Cramer--Hadamard bounds its inverse, while finite recurrence majorants bound Jacobian variation on the surrounding finite box.
-
-The resulting rigorous but deliberately coarse radius satisfies
+The first quantitative certificate uses integer Taylor-row scale `C=14400`, which clears `nu=1/200` and the declared basis-extraction denominators. Cramer--Hadamard plus finite recurrence majorants give
 
 \[
 \boxed{10^{-79490}<r_2\le10^{-79489}},
-\]
-
-and throughout
-
-\[
-\|x-x_*\|_\infty\le r_2
-\]
-
-the certificate gives
-
-\[
+\qquad
 \boxed{q_2\le\tfrac12<1}.
 \]
 
-This is `PROP-EPSC-34`.
+This is `PROP-EPSC-34`. It proves that the full structural-to-positive-quantitative bridge crosses a second finite resolution. The radius is deliberately very loose and is not a useful sensor tolerance. The next N=2 target is conditioning quality: construct an exact or validated preconditioner and centered entrywise enclosure, analogous to the N=1 tightening.
 
-The radius is far too small to interpret as a practical sensor tolerance. Its significance is different: the full logical bridge
+## 5. Energy transfer is a mechanism/measurement layer, not a substitute for the inverse
 
-\[
-\text{structural observability}
-\to
-\text{explicit quotient chart}
-\to
-\text{positive quantitative inverse box}
-\]
-
-has now been reproduced at **two distinct finite resolutions**, `N=1` and `N=2`.
-
-That is evidence for the architecture of `PROP-EPSC-32`; it does not prove the arbitrary-finite-`N` schema.
-
-## 5. Why the N=1 and N=2 certificates are different in strength
-
-The `N=1` result uses an exact rational center inverse plus centered entrywise propagation and therefore reaches the much larger state radius `10^-17` with `q_1≈0.08059`.
-
-The first `N=2` quantitative result deliberately avoids forming a huge exact 245x245 rational inverse. Instead it uses only the fact that the row-scaled determinant is a nonzero integer, Cramer--Hadamard, and global finite operator majorants. That makes the proof cheap and rigorous but creates enormous slack, hence the radius near `10^-79490`.
-
-The next N=2 engineering/mathematical target is therefore not existence. Existence and a positive `q_2<1` branch are already certified. The target is **conditioning quality**: build an exact or validated numerical preconditioner and centered entrywise Jacobian enclosure to enlarge the N=2 radius by many orders of magnitude.
-
-## 6. Energy transfer is a mechanism/measurement layer, not a substitute for the inverse
-
-The shell balance
+For finite Fourier-Galerkin Navier--Stokes shell energy,
 
 \[
-\dot I_s=T_s-2\nu sI_s+F_s
+\dot I_s=T_s-2\nu sI_s+F_s.
 \]
 
-separates nonlinear inter-shell transfer from dissipation. For prescribed forcing,
+For prescribed forcing,
 
 \[
 T=\dot I+2\nu SI-F,
 \]
 
-so `(I,T)` is an affine reparameterization of `(I,\dot I)` and does not manufacture extra first-order rank by itself (`PROP-NSOBS-10`). Its role is to expose how distinguishability moves through shell interactions and to support derivative-free finite-window measurements (`PROP-EPSC-21`).
+so `(I,T)` is an affine reparameterization of `(I,dI/dt)` and does not create extra first-order rank (`PROP-NSOBS-10`). Transfer remains useful because it exposes redistribution and supports finite-window balances. Time integration gives
 
-Thus transfer belongs inside the observation/measurement mechanism layer; it does not replace `H_N`, branch certification, or `q_N<1`.
+\[
+\int_{t_0}^{t_1}T_sdt
+=
+I_s(t_1)-I_s(t_0)
++2\nu s\int_{t_0}^{t_1}I_sdt
+-\int_{t_0}^{t_1}F_sdt,
+\]
 
-## 7. Finite-first meaning of arbitrary N
+which is `PROP-EPSC-21` and avoids numerical differentiation in this substep.
+
+The remaining problem is not to pretend that a transfer integral already equals the selected high-order inverse chart. `PROP-EPSC-36` must certify that measurement interface.
+
+## 6. Finite-first meaning of arbitrary N
 
 The general target is constructive:
 
@@ -236,12 +263,12 @@ N<\infty\mapsto
 }
 \]
 
-This is `PROP-EPSC-32`. It means an algorithm/schema that accepts any particular finite cutoff and emits a finite proof object. It does not postulate a completed `N=\infty` state.
+This is `PROP-EPSC-32`. It means an algorithm/schema that accepts any particular finite cutoff and emits a finite proof object. It does not postulate a completed `N=infinity` state.
 
-The evidence ladder is now sharper:
+The current evidence ladder is
 
 \[
-N=1:\;\text{structural + strong quantitative certificate},
+N=1:\;\text{structural + tight local quantitative + branch-conditioned chart-noise certificate},
 \]
 
 \[
@@ -252,19 +279,21 @@ N=2:\;\text{structural + conservative positive quantitative certificate},
 N=3:\;\text{structural saturation certificate only}.
 \]
 
-The natural next tests are therefore (i) improve N=2 conditioning and (ii) build an explicit N=3 quotient chart/positive branch, while separately attacking the arbitrary-finite-`N` structural theorem.
+Therefore the high-value next tasks are (i) raw-window/sample -> chart plus branch certification at N=1, (ii) improve N=2 conditioning, (iii) build an explicit N=3 quantitative branch, and (iv) separately attack arbitrary-finite-N structural minor independence.
 
-## 8. Fail-closed boundaries
+## 7. Fail-closed boundaries
 
 The following remain distinct open obligations:
 
 - `PROP-NSOBS-07`: arbitrary-finite-`N` earliest-order saturation.
 - `PROP-EPSC-32`: arbitrary-finite-`N` constructive quantitative certificate packages.
-- practical N=2 conditioning and measurement branch capture beyond the extremely conservative `PROP-EPSC-34` radius.
-- `PROP-EPSC-19/21`: realistic noise/window uncertainty propagation.
+- `PROP-EPSC-36`: raw finite-window/sample -> selected chart uncertainty plus branch capture.
+- `PROP-EPSC-24`: practical measurement-ready full-N=1 radius; `PROP-EPSC-35` closes only the downstream branch-conditioned chart-noise step.
+- `PROP-EPSC-19`: full noisy measurement-to-continuum propagation.
+- practical N=2 conditioning beyond the extremely conservative `PROP-EPSC-34` radius.
 - `PROP-EPSC-16`: scalable/tight outer path/tail certification.
 - a valid `beta_N` whenever a continuum target is actually claimed.
 
-If the required inner or outer certificate for a declared target is absent, the correct verdict is `HOLD`.
+If any certificate required for a declared target is absent, the correct verdict is `HOLD`.
 
 This document is an architecture/provenance bridge. Proposal identifiers are not canonical verified Toledo theorem codes. No result here proves continuum Navier--Stokes regularity, physical DNS adequacy, or the Clay Millennium problem.
