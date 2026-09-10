@@ -7,30 +7,6 @@
 # verify`, run by the registry-owning process, not this file). The site
 # build reads `registry/` and `mcp/dist/static-api` but never writes to
 # either.
-#
-# Four separate jobs, deliberately not one (mcp/DESIGN.md sec. 12): leak-scan
-# needs no Python setup and should fail fast/cheap even while the test job is
-# still running; build-index exercises the *installed* package
-# (`pip install -e mcp/` then import), a different code path from running
-# pytest against the working tree directly — past drift between "works under
-# pytest" and "works once installed" has hidden exactly here before.
-#
-# S3 (`toledo_mcp/cli.py`, `toledo_mcp/export_static.py`) has landed and is
-# exercised below: the `build-index` job's CLI smoke line and the
-# `export-static`/`deploy-pages` pair are real, passing steps against the
-# installed package as of the 2026-09-07 integration pass (see
-# `mcp/docs/CHANGELOG.md`), not a placeholder for a dependency that might be
-# missing. If a future checkout ever regresses S3, these steps fail closed —
-# that remains the correct, visible failure mode, not silent skipping.
-#
-# Pages deploy (site/DESIGN.md sec. 8): the human site (`build-site`) and the
-# static API export (`export-static`) are two separate, independently
-# failing jobs, each uploading its own plain build artifact — a broken
-# template cannot silently take the live `/v1/` API mirror down with it, and
-# a broken static export cannot block the human site from deploying either.
-# `assemble-pages` merges the two plain artifacts into the one Pages
-# artifact (site at the root, static API under `/v1/`) that `deploy-pages`
-# publishes.
 name: toledo-mcp-ci
 on:
   workflow_dispatch:
@@ -46,18 +22,14 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -e "mcp/[test]"
-      - run: pip install latex2mathml sympy pyyaml   # generator dependencies used by scripts/toledo_build.py (MathML, Content MathML)
+      # SymPy's LaTeX parser currently requires antlr4-python3-runtime 4.11.x.
+      # Pin the compatible runtime so the root TeX/registry consistency tests
+      # exercise the parser instead of failing at import time.
+      - run: pip install latex2mathml sympy pyyaml "antlr4-python3-runtime==4.11.*"
       - run: python3 -m pytest -q mcp/tests/
-      # B5-test-build-broken-at-head (re-review finding): the root tests/
-      # directory (GENERATOR + TOOLING layer — scripts/toledo_build.py,
-      # scripts/toledo, site/build_site.py) previously had no CI coverage at
-      # all, so a public signature change to build_site.py (or toledo_build.py)
-      # could break `make test` on every clean checkout while every CI job
-      # here stayed green. Runs the fixture-based suite only (tests/
-      # fixtures/CANONICAL.sample.json), never the real registry.
-      - run: python3 scripts/toledo_build.py   # generates registry/TOLEDO.json and registry/entries/, which tests/test_site.py reads
+      - run: python3 scripts/toledo_build.py
       - run: python3 -m pytest -q tests/
-      - run: python3 mcp/benchmarks/bench_index.py   # fails loudly on a crash, not on a slow number — this is a smoke run, not a perf gate
+      - run: python3 mcp/benchmarks/bench_index.py
   build-index:
     runs-on: ubuntu-latest
     needs: test
@@ -66,24 +38,12 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -e mcp/
-      - run: python3 mcp/scripts/build_index.py   # the exact prebuilt-index step a release packages under mcp/state/ (DEBT #48, 2026-09-07) — same script, not a separate CI-only inline call
-      - run: python3 -c "from toledo_mcp import cli; cli.main(['by-domain', 'P'])"   # CLI parity smoke, not a full assertion — the real assertion lives in mcp/tests/test_cli.py (stream S3)
+      - run: python3 mcp/scripts/build_index.py
+      - run: python3 -c "from toledo_mcp import cli; cli.main(['by-domain', 'P'])"
   leak-scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # The private_repo_name category (BBL-198) needs a denylist file this
-      # script's own source is deliberately never allowed to hard-code. If
-      # the optional repository secret TOLEDO_LEAK_SCAN_DENYLIST is
-      # configured (one line: the private solver-arc repository's real
-      # name), write it to a runner-local temp file and pass it through; if
-      # not, FAIL LOUD rather than let this security-shaped gate silently
-      # report "NOT RUN" with a passing exit code — that silent-pass gap is
-      # exactly how a proprietary-repo leak sat undetected on public GitHub
-      # for two weeks before (the adversarial-review incident this
-      # workspace's own standing rules cite). Configure the secret to turn
-      # this green; until then it stays a visible, founder-actionable
-      # failure rather than an invisible no-op.
       - name: Write denylist file from secret (if configured)
         env:
           TOLEDO_DENYLIST: ${{ secrets.TOLEDO_LEAK_SCAN_DENYLIST }}
@@ -103,23 +63,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: pip install -e mcp/                      # build_site.py imports mangle_code from it
-      # clean-checkout-site-build-empty (engineering re-review finding):
-      # registry/entries/, registry/TOLEDO.json, vault/, and graph/ are all
-      # .gitignore'd — they exist only after scripts/toledo_build.py runs
-      # (the Makefile's own `site` target already sequences this: `site:
-      # build ; python3 site/build_site.py`). Without this step, a clean
-      # checkout's site/build_site.py silently writes a near-empty skeleton
-      # site (0 registry entries) instead of failing loud, and
-      # tests/test_site.py errors on a missing registry/TOLEDO.json fixture.
-      - run: pip install -e "mcp/[test]" latex2mathml sympy pyyaml
+      - run: pip install -e "mcp/[test]" latex2mathml sympy pyyaml "antlr4-python3-runtime==4.11.*"
       - run: python3 scripts/toledo_build.py
       - run: python3 site/build_site.py --out site/dist
-      - run: python3 -m toledo_mcp.export_static --out mcp/dist/static-api   # so test_entry_page_api_link_is_correctly_mangled (tests/test_site.py) gets real inputs instead of skipping
+      - run: python3 -m toledo_mcp.export_static --out mcp/dist/static-api
       - run: python3 -m pytest -q tests/test_site.py
-      # Same denylist-secret pattern as the leak-scan job above — see its
-      # comment for why an unset secret fails loud rather than passing
-      # silently for the private_repo_name category.
       - name: Write denylist file from secret (if configured)
         env:
           TOLEDO_DENYLIST: ${{ secrets.TOLEDO_LEAK_SCAN_DENYLIST }}
@@ -134,7 +82,7 @@ jobs:
           fi
       - uses: actions/upload-artifact@v4
         with: { name: site-dist, path: site/dist, retention-days: 1 }
-  export-static:                                        # unchanged logic, output now a plain artifact
+  export-static:
     runs-on: ubuntu-latest
     needs: test
     if: github.ref == 'refs/heads/main'
@@ -158,19 +106,12 @@ jobs:
       - run: |
           mkdir -p merged/v1
           cp -r merged/v1-src/v1/. merged/v1/
-          # export_static's own landing page is written with hrefs relative
-          # to its final deployed location (mcp/toledo_mcp/export_static.py
-          # already writes them bare, e.g. href="manifest.json", not
-          # href="v1/manifest.json" — see that file's own comment); this sed
-          # is a defensive no-op belt-and-braces rewrite in case a future
-          # export_static.py change ever regresses to a v1/-prefixed href,
-          # so a merge here can never re-introduce the doubled v1/v1/ 404.
           sed -E 's#href="v1/#href="#g' merged/v1-src/index.html > merged/v1/index.html
           rm -rf merged/v1-src
       - uses: actions/upload-pages-artifact@v3
         with: { path: merged }
   deploy-pages:
-    needs: assemble-pages                                # was: needs: export-static
+    needs: assemble-pages
     if: github.ref == 'refs/heads/main'
     permissions: { pages: write, id-token: write }
     environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }
