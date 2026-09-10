@@ -1,0 +1,49 @@
+[
+  {
+    "id": "PROP-EPSC-26",
+    "code": "weld/P.??.v1",
+    "name": "Row-aware Hadamard tightening of the full N=1 finite inverse radius",
+    "statement": {
+      "latest": "R_j\ge\|J_{0,j*}\|_1,\ H_j\ge\sup_{x\in B}\|D J_{j*}(x)\|_{\infty\to1}\;\Longrightarrow\;\|J_0^{-1}(J(x)-J_0)\|_\infty\le r\sum_j\left(\prod_{k\ne j}R_k\right)H_j;\quad r=\frac{1}{2\sum_j(\prod_{k\ne j}R_k)H_j}",
+      "format": "latex",
+      "note_ascii": "on the already-certified full N=1 49-dimensional symmetry slice, retain one Jacobian-row and Hessian-row majorant per selected Taylor observation instead of replacing all rows by the largest row; integer nonzero determinant plus row-wise Hadamard cofactor bounds then give q<=1/2 at a much larger rigorous radius"
+    },
+    "definitions": {
+      "J_0": "integer-row-scaled selected 49x49 shell-energy Taylor-jet Jacobian at the small-integer N=1 center",
+      "R_j": "finite certified l1 majorant for selected Jacobian row j at the center",
+      "H_j": "finite certified Jacobian-row variation majorant per unit infinity-radius on the enclosing norm-4 box",
+      "C_j": "row-aware cofactor bound product_{k != j} R_k",
+      "r": "strictly positive finite state-space radius chosen so the preconditioned Jacobian defect is at most one half"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc18-n1-rowwise-radius",
+      "n1-row-aware-hadamard-inverse-radius"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-EPSC-22",
+        "derived_via": "uses_full_n1_symmetry_slice_chart",
+        "evidence": "the 49-dimensional local inverse chart and nonzero integer-scaled determinant are already certified"
+      },
+      {
+        "code": "PROP-EPSC-25",
+        "derived_via": "tightens_uniform_row_cramer_hadamard_bound",
+        "evidence": "replaces 49*Jmax^48*Hmax by the row-aware sum of cofactor and Hessian products while preserving the same q<=1/2 proof architecture"
+      },
+      {
+        "code": "PROP-EPSC-24",
+        "derived_via": "narrows_practical_radius_frontier",
+        "evidence": "the rigorous radius improves by more than four thousand decimal orders but remains far below practical measurement scale, so the entrywise-preconditioned frontier remains open"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps18_n1_rowwise_radius.py; introduced 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "Finite N=1 tightening only. It improves a rigorous positive-radius lower bound, not the actual conditioning of the inverse. It is still based on conservative derivative majorants and determinant >=1, does not supply a practical sensor/noise tolerance, does not certify global branch uniqueness, does not extend automatically to arbitrary N, and has no continuum-regularity or Clay implication."
+  }
+]
