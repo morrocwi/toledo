@@ -1,0 +1,46 @@
+[
+  {
+    "id": "PROP-EPSC-39",
+    "code": "weld/P.??.v1",
+    "name": "Finite direct-sample contraction branch certificate",
+    "statement": {
+      "latest": "q:=\\sup_{x\\in B(z,r)}\\|I-A DS(x)\\|_\\infty<1,\\quad \\|A\\|_\\infty\\delta+qr\\le r\\;\\Longrightarrow\\;\\exists!x\\in B(z,r):S(x)=y,\\quad \\|x-z\\|_\\infty\\le\\frac{\\|A\\|_\\infty}{1-q}\\delta",
+      "format": "latex",
+      "note_ascii": "a finite raw-data uncertainty box certifies its own local inverse branch when a fixed preconditioner, a branch-wide Jacobian-defect bound below one, and the Banach self-map inequality are independently certified"
+    },
+    "definitions": {
+      "S": "finite-dimensional square direct sample/observation map on the declared local branch",
+      "B(z,r)": "declared convex infinity-norm branch ball",
+      "A": "fixed invertible finite preconditioner",
+      "delta": "raw-data center discrepancy plus certified sensor radius plus certified forward-model radius"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc-direct-sample-branch-certificate",
+      "epsc-banach-raw-measurement-branch"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-31",
+        "derived_via": "self_map_strengthening",
+        "evidence": "adds a sufficient raw-data self-map condition so branch membership need not be supplied as an external boolean"
+      },
+      {
+        "code": "PROP-EPSC-36",
+        "derived_via": "generic_branch_capture_adapter",
+        "evidence": "isolates the finite theorem needed to convert a direct sample-map q<1 certificate into raw-data branch capture and rho_N"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math/idm/finite_sample_branch.py",
+      "doi": null
+    },
+    "claim_boundary": "Finite local theorem only. It does not construct q, A, the forward-model radius, or a sensor model; it does not exclude additional roots outside the declared branch. No arbitrary-N, continuum, Navier-Stokes regularity, physical validation, or Clay conclusion follows automatically. No completed-infinity premise is used."
+  }
+]
