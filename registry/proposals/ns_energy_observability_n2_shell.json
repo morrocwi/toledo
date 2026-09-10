@@ -1,0 +1,92 @@
+[
+  {
+    "id": "PROP-NSOBS-12",
+    "code": "weld/P.??.v1",
+    "name": "Exact N=2 shell-energy earliest-order saturation",
+    "statement": {
+      "latest": "d_2=248,\\quad m_2=9,\\quad \\operatorname{rank}D\\mathcal J_{2,30}=245=d_2-3,\\quad \\operatorname{rank}D\\mathcal J_{2,29}=241<245",
+      "format": "latex",
+      "note_ascii": "for the fixed finite cubic cutoff N=2, the nine-channel shell-energy jet reaches the translation-limited rank 245 at R=30, exactly the earliest order allowed by rank <= min(9+8R,245)"
+    },
+    "definitions": {
+      "N": "fixed finite cubic Fourier cutoff N=2",
+      "d_2": "248 real incompressible state coordinates",
+      "m_2": "9 distinct squared-wavenumber shells: 1,2,3,4,5,6,8,9,12",
+      "J_(2,R)": "shell-energy observation jet through finite order R"
+    },
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "n2-shell-energy-saturation-r30",
+      "k2-shell-observability"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-NSOBS-03",
+        "derived_via": "attains_shell_structural_ceiling",
+        "evidence": "for m_2=9 the universal shell ceiling is min(9+8R,245), so R=30 is the first admissible saturation depth"
+      },
+      {
+        "code": "PROP-NSOBS-04",
+        "derived_via": "positive_viscosity_rank_universality",
+        "evidence": "the exact witness is computed at nu=1/200; the existing positive-viscosity scaling result transfers generic rank to every nu>0"
+      },
+      {
+        "code": "PROP-NSOBS-07",
+        "derived_via": "new_finite_case_evidence_for",
+        "evidence": "adds the previously missing N=2 shell-reader case while leaving arbitrary-finite-N saturation open"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_k2_shell_energy_observability.py; focused GitHub Actions run 34505502747 completed success on 2026-09-10 with exact F_251 ranks R=29:241 and R=30:245",
+      "doi": null
+    },
+    "claim_boundary": "Fixed finite N=2 generic local differential observability result modulo translation only. It does not prove global reconstruction, quantitative noise stability, arbitrary-finite-N saturation, continuum regularity, DNS adequacy, or any Clay claim."
+  },
+  {
+    "id": "PROP-NSOBS-13",
+    "code": "weld/P.??.v1",
+    "name": "Contiguous finite shell-saturation evidence at N=1,2,3",
+    "statement": {
+      "latest": "(N,R_I^{min},d_N-3)=(1,23,49),(2,30,245),(3,39,681)\\quad\\text{all attain the shell-reader structural ceiling}",
+      "format": "latex",
+      "note_ascii": "the shell-energy reader is now exactly certified to saturate at its earliest structurally admissible depth for each of the three consecutive finite cutoffs N=1,2,3"
+    },
+    "definitions": {
+      "R_I^min": "ceil((d_N-3-m_N)/(m_N-1)), the finite shell-reader structural minimum",
+      "contiguous": "the three separate finite inputs N=1, N=2 and N=3; not a statement over an infinite completed family"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "shell-saturation-N123",
+      "three-consecutive-finite-resolution-shell-witnesses"
+    ],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {
+        "code": "PROP-NSOBS-05",
+        "derived_via": "combines_existing_N1_and_N3_shell_certificates",
+        "evidence": "the existing saturation record contains the N=1 shell R=23 and N=3 shell R=39 cases"
+      },
+      {
+        "code": "PROP-NSOBS-12",
+        "derived_via": "fills_middle_resolution",
+        "evidence": "the exact N=2 shell R=30 result fills the missing finite resolution"
+      },
+      {
+        "code": "PROP-NSOBS-07",
+        "derived_via": "strengthens_evidence_but_does_not_close",
+        "evidence": "three consecutive finite cases support but do not prove the arbitrary-finite-N saturation conjecture"
+      }
+    ],
+    "origin": {
+      "source": "Synthesis of the exact N=1, N=2 and N=3 shell-energy reproduction certificates in github.com/morrocwi/readout-problem-navier-stokes, 2026-09-10",
+      "doi": null
+    },
+    "claim_boundary": "This is a conjunction of three certified fixed-finite-N cases. It is not induction, does not prove a uniform minor construction, and must not be cited as proof of PROP-NSOBS-07."
+  }
+]
