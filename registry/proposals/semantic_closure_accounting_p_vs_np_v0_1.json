@@ -1,0 +1,257 @@
+[
+  {
+    "id": "PROP-SCA-PNP-01",
+    "code": "A3/M.??.v1",
+    "name": "Circuit-to-Genesis semantic-ledger size preservation",
+    "statement": {
+      "latest": "\\operatorname{LedgerSize}(\\operatorname{CGSL}(C))=\\operatorname{CircuitSize}(C)",
+      "format": "latex",
+      "note_ascii": "LedgerSize(CGSL(C)) = CircuitSize(C)"
+    },
+    "definitions": {
+      "C": "finite topologically ordered fan-in-two DeMorgan circuit DAG",
+      "CGSL": "one-entry-per-gate circuit-to-Genesis semantic-ledger compilation preserving parent references and sharing",
+      "LedgerSize": "number of ledger entries",
+      "CircuitSize": "number of circuit gate descriptors in the chosen finite representation"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["semantic-closure:CGSL-size", "p-vs-np:cgsl-one-entry-per-gate"],
+    "coq": {
+      "identifiers": ["cgsl_one_entry_per_gate", "cgsl_semantics_preserved", "cgsl_terminal_reader_preserved"],
+      "coq_status": "open_prop",
+      "source_candidate": "information-discrete-math@bda2c36720e76c2340719c64fb13aae239d426bb:formal/IDM_CircuitGenesisBridge.v"
+    },
+    "parents": [
+      {
+        "code": "A3",
+        "derived_via": "reads",
+        "evidence": "The manuscript applies IDM's A3 DECISION root to finite Boolean-circuit decision computation and records the exact size-preserving semantic-ledger compilation used by that reading."
+      }
+    ],
+    "origin": {
+      "source": "New derivation/proposal from Semantic Closure Accounting for Boolean Circuits v0.1, 2026-09-10.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "4e65c39e35784c6aa9586c3e507c39096e56d5ee",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/Semantic_Closure_Accounting_P_vs_NP_v0.1.tex"
+      },
+      "doi": null
+    },
+    "claim_boundary": "Finite representation/bookkeeping statement only. It gives no circuit lower bound and does not prove P != NP. The cited external Coq development is a formal candidate until independently imported/verified by Toledo."
+  },
+  {
+    "id": "PROP-SCA-PNP-02",
+    "code": "A3/M.??.v1",
+    "name": "Retain-Recompute-Resolve semantic trichotomy",
+    "statement": {
+      "latest": "\\mathcal O(h,u)\\ne\\mathcal O(h',u)\\;\\Longrightarrow\\;R(h)\\ne R(h')\\;\\lor\\;Q(h)\\ne Q(h')\\;\\lor\\;C(h)\\ne C(h')",
+      "format": "latex",
+      "note_ascii": "O(h,u) != O(h',u) => R(h)!=R(h') OR Q(h)!=Q(h') OR C(h)!=C(h')"
+    },
+    "definitions": {
+      "O": "declared future/terminal Boolean readout",
+      "R": "retained semantic channel",
+      "Q": "recomputation-seed channel",
+      "C": "certified resolution/closure channel",
+      "h,h'": "finite histories",
+      "u": "admissible future continuation/intervention"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["RRR-trichotomy", "semantic-closure:no-free-collapse-three-channels"],
+    "coq": {
+      "identifiers": ["no_free_collapse_three_channels", "retain_recompute_resolve_trichotomy"],
+      "coq_status": "open_prop",
+      "source_candidate": "information-discrete-math@bda2c36720e76c2340719c64fb13aae239d426bb:formal/IDM_RetainRecomputeResolve.v"
+    },
+    "parents": [
+      {
+        "code": "A3",
+        "derived_via": "reads",
+        "evidence": "Decision computation is read through three legal semantic channels; exact decoding plus a future-readout distinction yields the trichotomy by deterministic non-collapse."
+      }
+    ],
+    "origin": {
+      "source": "New derivation/proposal assembled from Readout Genesis No-Early-Collapse discipline and IDM decision/readout machinery; manuscript v0.1, 2026-09-10.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "4e65c39e35784c6aa9586c3e507c39096e56d5ee",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/Semantic_Closure_Accounting_P_vs_NP_v0.1.tex"
+      },
+      "doi": null
+    },
+    "claim_boundary": "Semantic non-collapse theorem schema only. Without resource charges on Q/recomputation it does not imply a time or circuit lower bound."
+  },
+  {
+    "id": "PROP-SCA-PNP-03",
+    "code": "A3/M.??.v1",
+    "name": "RRR semantic-demand versus gate-capacity inequality",
+    "statement": {
+      "latest": "D\\le R+Q+C,\\quad R\\le s\\kappa_R,\\quad Q\\le s\\kappa_Q,\\quad C\\le s\\kappa_C\\;\\Longrightarrow\\;D\\le s(\\kappa_R+\\kappa_Q+\\kappa_C)",
+      "format": "latex",
+      "note_ascii": "D<=R+Q+C and R<=s*kR and Q<=s*kQ and C<=s*kC => D<=s*(kR+kQ+kC)"
+    },
+    "definitions": {
+      "D": "independently certified semantic demand",
+      "R,Q,C": "charged retention, recomputation and certified-resolution resource amounts",
+      "s": "circuit gate count",
+      "kappa_R,kappa_Q,kappa_C": "declared per-gate capacities for the three legal channels"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["RRR-capacity-bound", "semantic-closure:demand-capacity-kernel"],
+    "coq": {
+      "identifiers": ["demand_bounded_by_gate_capacity", "demand_gap_excludes_gate_budget", "certified_gate_lower_bound"],
+      "coq_status": "open_prop",
+      "source_candidate": "information-discrete-math@bda2c36720e76c2340719c64fb13aae239d426bb:formal/IDM_RRRCostLowerBound.v"
+    },
+    "parents": [
+      {
+        "code": "PROP-SCA-PNP-02",
+        "derived_via": "refines",
+        "evidence": "Turns the qualitative three-channel RRR disjunction into a resource-aware finite accounting inequality."
+      }
+    ],
+    "origin": {
+      "source": "New derivation/proposal in Semantic Closure Accounting for Boolean Circuits v0.1, 2026-09-10.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "4e65c39e35784c6aa9586c3e507c39096e56d5ee",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/Semantic_Closure_Accounting_P_vs_NP_v0.1.tex"
+      },
+      "doi": null
+    },
+    "claim_boundary": "The arithmetic implication is elementary. The statement does not supply a non-circular SAT demand D or prove any universal per-gate capacity values; those semantic premises remain open."
+  },
+  {
+    "id": "PROP-SCA-PNP-04",
+    "code": "A3/M.??.v1",
+    "name": "Semantic-ledger lower-bound transfer to circuits",
+    "statement": {
+      "latest": "[\\forall L\\;\\mathrm{correct}(L)\\Rightarrow |L|>B]\\;\\land\\;[C\\mapsto L(C),\\;\\mathrm{correct}(C)\\Rightarrow\\mathrm{correct}(L(C)),\\;|L(C)|\\le|C|]\\;\\Longrightarrow\\;[\\forall C\\;\\mathrm{correct}(C)\\Rightarrow |C|>B]",
+      "format": "latex",
+      "note_ascii": "if every correct ledger has size > B and every correct circuit compiles to a correct nonexpanding ledger, then every correct circuit has size > B"
+    },
+    "definitions": {
+      "B": "finite proposed size bound",
+      "L": "semantic ledger",
+      "C": "Boolean circuit",
+      "L(C)": "compiled ledger"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["ledger-lower-bound-transfer", "semantic-closure:circuit-transfer"],
+    "coq": {
+      "identifiers": ["ledger_lower_bound_transfers_to_circuits", "no_small_ledger_implies_no_small_circuit"],
+      "coq_status": "open_prop",
+      "source_candidate": "information-discrete-math@bda2c36720e76c2340719c64fb13aae239d426bb:formal/IDM_CircuitLedgerTransfer.v"
+    },
+    "parents": [
+      {
+        "code": "PROP-SCA-PNP-01",
+        "derived_via": "uses",
+        "evidence": "The transfer requires the correctness-preserving nonexpanding CGSL compilation."
+      }
+    ],
+    "origin": {
+      "source": "New derivation/proposal in Semantic Closure Accounting for Boolean Circuits v0.1, 2026-09-10.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "4e65c39e35784c6aa9586c3e507c39096e56d5ee",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/Semantic_Closure_Accounting_P_vs_NP_v0.1.tex"
+      },
+      "doi": null
+    },
+    "claim_boundary": "Bookkeeping transfer only. It transfers a genuine ledger lower bound if one exists; it does not establish the lower bound premise."
+  },
+  {
+    "id": "PROP-SCA-PNP-05",
+    "code": "A3/M.??.v1",
+    "name": "Conditional SAT semantic-demand separation schema",
+    "statement": {
+      "latest": "[\\forall p\\in\\mathrm{poly},\\;H_n(\\mathrm{SAT}_n)>p(n)K_n\\text{ eventually}]\\;\\land\\;[\\text{every size-}s\\text{ SAT circuit has }H_n(\\mathrm{SAT}_n)\\le sK_n]\\;\\Longrightarrow\\;\\mathrm{SAT}\\notin P/\\mathrm{poly}\\;\\Longrightarrow\\;P\\ne NP",
+      "format": "latex",
+      "note_ascii": "superpolynomial semantic-demand/capacity ratio + universal circuit accounting => SAT notin P/poly => P != NP"
+    },
+    "definitions": {
+      "H_n": "admissible non-circular semantic-demand quantity for the canonical length-n SAT function",
+      "K_n": "universal per-gate semantic capacity scale",
+      "p": "arbitrary polynomial gate budget"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["conditional-P-vs-NP-semantic-demand-schema", "semantic-closure:conditional-separation"],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-SCA-PNP-03",
+        "derived_via": "uses",
+        "evidence": "Uses the finite RRR demand-versus-capacity inequality at each input length."
+      },
+      {
+        "code": "PROP-SCA-PNP-04",
+        "derived_via": "uses",
+        "evidence": "Uses semantic-ledger-to-circuit transfer to return a ledger lower bound to Boolean circuits."
+      }
+    ],
+    "origin": {
+      "source": "Conditional complexity-theoretic implication assembled in Semantic Closure Accounting for Boolean Circuits v0.1, 2026-09-10.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "4e65c39e35784c6aa9586c3e507c39096e56d5ee",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/Semantic_Closure_Accounting_P_vs_NP_v0.1.tex"
+      },
+      "doi": null
+    },
+    "claim_boundary": "Conditional theorem schema only. The load-bearing SAT semantic-demand/capacity premise is not proved. Registration must not be read as a P != NP claim."
+  },
+  {
+    "id": "PROP-SCA-PNP-06",
+    "code": "A3/M.??.v1",
+    "name": "SAT Semantic Demand Theorem target",
+    "statement": {
+      "latest": "\\frac{H_n(\\mathrm{SAT}_n)}{K_n n^c}\\longrightarrow\\infty\\quad\\text{for every fixed }c,\\qquad\\text{with a universal sharing- and recomputation-aware capacity theorem for every bounded-fan-in Boolean circuit}",
+      "format": "latex",
+      "note_ascii": "H_n(SAT_n)/(K_n*n^c) -> infinity for every fixed c, with universal sharing/recomputation-aware circuit capacity accounting"
+    },
+    "definitions": {
+      "H_n": "to-be-constructed semantic demand that is independent of minimum circuit size, minimum remaining work, SAT oracles, circuit equivalence, MCSP, and the full SAT truth table",
+      "K_n": "to-be-proved universal semantic capacity scale per circuit gate",
+      "c": "arbitrary fixed nonnegative constant exponent"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["SAT-semantic-demand-open-theorem", "semantic-closure:load-bearing-open-target"],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-SCA-PNP-05",
+        "derived_via": "required_by",
+        "evidence": "This is exactly the unproved asymptotic premise needed to instantiate the conditional separation schema."
+      }
+    ],
+    "origin": {
+      "source": "Open research target isolated in Semantic Closure Accounting for Boolean Circuits v0.1, 2026-09-10 after negative-control and barrier audit.",
+      "repo_anchor": {
+        "repo": "https://github.com/morrocwi/readout-problem-navier-stokes",
+        "commit": "4e65c39e35784c6aa9586c3e507c39096e56d5ee",
+        "path": "p_vs_np/semantic_closure_accounting_v0.1/Semantic_Closure_Accounting_P_vs_NP_v0.1.tex"
+      },
+      "doi": null
+    },
+    "claim_boundary": "OPEN. This is not established by IDM, Readout Genesis, the manuscript, or its finite Coq candidates. It is registered to make the missing theorem explicit and non-transferable by rhetoric."
+  }
+]
