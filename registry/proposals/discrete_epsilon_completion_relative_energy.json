@@ -112,5 +112,92 @@
       "doi": null
     },
     "claim_boundary": "OPEN optimisation problem only; failure to close it does not invalidate the finite correctness of PROP-EPSC-15."
+  },
+  {
+    "id": "PROP-EPSC-17",
+    "code": "weld/P.??.v1",
+    "name": "Observable-to-continuum orthogonal composition certificate",
+    "statement": {
+      "latest": "\\inf_{g\\in G}\\|u(T)-g\\widehat x_N\\|_2\\le\\sqrt{\\rho_N^2+\\beta_N^2}",
+      "format": "latex",
+      "note_ascii": "if an invariant observation process certifies the retained projection P_N u(T) modulo an isometric symmetry group G within finite-state radius rho_N, and EPSC supplies an omitted-tail bound beta_N, then orthogonality of P_N and I-P_N yields a continuum quotient-state radius sqrt(rho_N^2+beta_N^2)"
+    },
+    "definitions": {
+      "G": "declared isometric symmetry group preserving the Fourier cutoff; for the NS energy-reader application, spatial translations",
+      "rho_N": "certified retained-state reconstruction radius modulo G",
+      "beta_N": "certified omitted-tail L2 radius from an EPSC adapter",
+      "xhat_N": "finite reconstructed state supported in P_N"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["observable-to-continuum-certificate", "inner-plus-outer-completeness", "measurement-to-continuum-composition"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-NSOBS-08", "derived_via": "finite_inner_completeness_input", "evidence": "energy observability supplies local finite-state identifiability modulo translations at saturated cases"},
+      {"code": "PROP-EPSC-04", "derived_via": "outer_tail_input", "evidence": "EPSC supplies the omitted-information radius beta_N"},
+      {"code": "PROP-EPSC-15", "derived_via": "constructive_outer_adapter_example", "evidence": "exact-dyadic path enclosure is one concrete route to an EPSC terminal beta_N"}
+    ],
+    "origin": {
+      "source": "Synthesis of the finite energy-observability programme and EPSC in github.com/morrocwi/readout-problem-navier-stokes/paper/NS_OBSERVABLE_TO_CONTINUUM_CERTIFICATES.tex; 2026-09-10.",
+      "doi": null
+    },
+    "claim_boundary": "The composition theorem is conditional on an actual certified finite reconstruction radius rho_N and a valid EPSC beta_N. Rank saturation alone is qualitative local identifiability and does not supply rho_N. No global injectivity or Clay claim."
+  },
+  {
+    "id": "PROP-EPSC-18",
+    "code": "weld/P.??.v1",
+    "name": "Certified energy-jet inversion radius",
+    "statement": {
+      "latest": "\\mathcal O_{N,R}(x)\\text{ with certified data/error}\\to(\\widehat x_N,\\rho_N)\\text{ such that }\\inf_{g\\in\\mathbb T^3}\\|P_Nu-g\\widehat x_N\\|_2\\le\\rho_N",
+      "format": "latex",
+      "note_ascii": "construct a quantitative certified inverse from total/shell energy Lie-jet data to a retained Fourier state modulo translations, with a proved reconstruction radius"
+    },
+    "definitions": {
+      "mathcal_O_N_R": "saturated or overdetermined energy Lie-jet observation map",
+      "rho_N": "certified quotient-state reconstruction error radius"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-certified-observability-inverse", "energy-jet-inversion-radius"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-NSOBS-05", "derived_via": "quantifies_exact_rank_evidence", "evidence": "exact rank saturation provides local injectivity modulo symmetry but not numerical inversion bounds"},
+      {"code": "PROP-EPSC-17", "derived_via": "missing_inner_certificate", "evidence": "rho_N is the finite-side quantity required by the observable-to-continuum composition theorem"}
+    ],
+    "origin": {
+      "source": "Open bridge isolated by combining NS energy observability with EPSC; github.com/morrocwi/readout-problem-navier-stokes/paper/NS_OBSERVABLE_TO_CONTINUUM_CERTIFICATES.tex.",
+      "doi": null
+    },
+    "claim_boundary": "OPEN. Differential rank saturation must not be reported as a certified inversion radius. Conditioning, branch selection, and symmetry alignment must be controlled."
+  },
+  {
+    "id": "PROP-EPSC-19",
+    "code": "weld/P.??.v1",
+    "name": "Noise-stable measurement-to-continuum certificate",
+    "statement": {
+      "latest": "\\|\\delta y\\|\\le\\sigma\\to\\rho_N(\\sigma)\\to\\sqrt{\\rho_N(\\sigma)^2+\\beta_N^2}\\le\\varepsilon",
+      "format": "latex",
+      "note_ascii": "propagate certified measurement and differentiation uncertainty through a stable quotient-state inverse and the EPSC tail certificate to a final continuum tolerance"
+    },
+    "definitions": {
+      "sigma": "certified measurement/jet uncertainty",
+      "rho_N(sigma)": "certified retained-state reconstruction radius under that uncertainty"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": ["epsc-noisy-observable-certificate", "stable-measurement-to-continuum"],
+    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "parents": [
+      {"code": "PROP-EPSC-18", "derived_via": "stability_refinement", "evidence": "requires a quantitative certified inverse rather than rank alone"},
+      {"code": "PROP-EPSC-17", "derived_via": "final_composition", "evidence": "combines the noisy finite radius with the omitted-tail beta"}
+    ],
+    "origin": {
+      "source": "Open practical frontier isolated from the energy-observability paper's explicit warning about noisy high-order differentiation and the EPSC composition requirement.",
+      "doi": null
+    },
+    "claim_boundary": "OPEN practical certification problem. No physical sensor layout or robust high-order derivative estimator is claimed."
   }
 ]
