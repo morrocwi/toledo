@@ -16,9 +16,16 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["nsobs-shell-transfer-balance", "ns-energy-redistribution-balance"],
+    "aliases": [
+      "nsobs-shell-transfer-balance",
+      "ns-energy-redistribution-balance"
+    ],
     "coq": {
-      "identifiers": ["shell_balance_is_definitional", "antisym_double_sum_zero", "shell_transfer_conserved"],
+      "identifiers": [
+        "shell_balance_is_definitional",
+        "antisym_double_sum_zero",
+        "shell_transfer_conserved"
+      ],
       "coq_status": "partially_compiled_axiom_free",
       "file": "coq/canonical/PROP_NSOBS_09_shell_transfer_balance.v",
       "coq_axioms": [],
@@ -27,7 +34,11 @@
       "honest_caveats": "Mechanizes exactly the combinatorial step the proposal's own how_to_check names: for an ABSTRACT pairwise shell-to-shell transfer coefficient X(s,s') satisfying the antisymmetry X(s,s')=-X(s',s) (the shell-coarsened image of the per-triad convective-coupling antisymmetry C(k;p,q)=-C(p;k,q) the proposal cites), the total double sum sum_s sum_s' X(s,s') is exactly 0, by finite double-sum exchange (proved by induction) plus S=-S => S=0 in Q; and the balance equation itself is proved as the pure algebraic identity it is by construction (T_s defined as Idot_s+2 nu s I_s-F_s). NOT mechanized: deriving the antisymmetry hypothesis X(s,s')=-X(s',s) from the actual Navier-Stokes convective term / incompressible pressure projection acting on a concrete finite Fourier-Galerkin triad set K_N (i.e. going from the cited exact fact sum_k u_k.(u.grad u)_k=0 to a specific triad-indexed C(k;p,q) and then to shell-grouped X), and NOT mechanized as a literal three-index (k,p,q) triad construction -- the pairwise shell-flux X(s,s') formalization is a standard, mathematically equivalent coarsening but is a strictly smaller mechanization than the literal wavevector-triad statement. TIER FIX (this task): this copy previously read tier=Definition, which mismatched the extensions.json copy's tier=Dr for the same proposal id; Dr is correct since sum_s T_s=0 is a real conservation claim requiring the antisymmetry input, not a naming convention needing no proof -- fixed here to Dr to match. Tier left at Dr (not upgraded to Th_coqc) because the physical antisymmetry premise is assumed, not derived, in the mechanization."
     },
     "parents": [
-      {"code": "PROP-NSOBS-03", "derived_via": "makes_block_dependence_explicit", "evidence": "sum_s T_s=0 is the explicit shell-transfer dependence behind the m_N-1 increment ceiling"}
+      {
+        "code": "PROP-NSOBS-03",
+        "derived_via": "makes_block_dependence_explicit",
+        "evidence": "sum_s T_s=0 is the explicit shell-transfer dependence behind the m_N-1 increment ceiling"
+      }
     ],
     "origin": {
       "source": "Standard finite Fourier-Galerkin Navier-Stokes shell-energy bookkeeping; application note github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md",
@@ -51,9 +62,19 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["transfer-visible-observability", "transfer-first-jet-equivalence"],
+    "aliases": [
+      "transfer-visible-observability",
+      "transfer-first-jet-equivalence"
+    ],
     "coq": {
-      "identifiers": ["affine_left_inverse", "affine_right_inverse", "same_fibers", "image_bijection", "nsobs10_same_fibers", "nsobs10_image_bijection"],
+      "identifiers": [
+        "affine_left_inverse",
+        "affine_right_inverse",
+        "same_fibers",
+        "image_bijection",
+        "nsobs10_same_fibers",
+        "nsobs10_image_bijection"
+      ],
       "coq_status": "partially_compiled_axiom_free",
       "file": "coq/canonical/PROP_NSOBS_10_affine_rank_invariance.v",
       "coq_axioms": [],
@@ -62,8 +83,16 @@
       "honest_caveats": "Mechanizes exactly the algebraic mechanism the proposal's own how_to_check names: the block map A(I,w):=(I, w+off(I)) (off(I) standing for the constant-in-time term 2 nu S I - F, kept fully abstract since neither the linearity of S nor any field property of nu/F is needed for invertibility) is a two-sided bijection for any group-cancelling vadd/vsub on the abstract value space W (affine_left_inverse, affine_right_inverse); consequently, for an arbitrary Jacobian map J standing for D(I,Idot), postcomposing with this bijection changes neither the fibers/kernel of J (same_fibers, nsobs10_same_fibers: A(J x)=A(J y) iff J x=J y) nor the image up to an explicit bijection (image_bijection, nsobs10_image_bijection). NOT mechanized: a numeral 'rank' quantity -- this repo's Coq toolchain has no finite-dimensional linear-algebra/matrix-rank library loaded (rocq-mathcomp-algebra, which supplies mxrank, is not installed; installing it mid-task was attempted and aborted as disproportionate for one elementary proposal). The literal registered equation rank D(I,T) = rank D(I,Idot) follows from the mechanized kernel-equality by the classical (not reformalized here) rank-nullity theorem for two linear maps sharing the same domain. SYNCED (this task) with the extensions.json copy of this same proposal id, same duplication pattern already flagged by the PROP-NSOBS-09 entry above. Tier left at Dr (not upgraded to Th_coqc) because the numeral rank equality itself is not produced by a Coq rank function in this file."
     },
     "parents": [
-      {"code": "PROP-NSOBS-09", "derived_via": "invertible_block_transform", "evidence": "T=dI/dt+2 nu S I-F and the block transform has determinant one"},
-      {"code": "PROP-NSOBS-03", "derived_via": "explains_rank_increment", "evidence": "transfer conservation leaves at most m_N-1 new directions per derivative block"}
+      {
+        "code": "PROP-NSOBS-09",
+        "derived_via": "invertible_block_transform",
+        "evidence": "T=dI/dt+2 nu S I-F and the block transform has determinant one"
+      },
+      {
+        "code": "PROP-NSOBS-03",
+        "derived_via": "explains_rank_increment",
+        "evidence": "transfer conservation leaves at most m_N-1 new directions per derivative block"
+      }
     ],
     "origin": {
       "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md; exact K=1 modular support in check_volume7_energy_transfer_observability.py",
@@ -76,7 +105,7 @@
     "code": "weld/P.??.v1",
     "name": "All-cutoff kinematic triad-transfer connectivity lemma",
     "statement": {
-      "latest": "N\\ge2,\\ \\|k\\|_\\infty=N\\;\\Longrightarrow\\;\\exists p\\in K_{N-1},q\\in K_N:\ p+q=k,\\ p\\times q\\ne0",
+      "latest": "N\\ge2,\\ \\|k\\|_\\infty=N\\;\\Longrightarrow\\;\\exists p\\in K_{N-1},q\\in K_N:\\ p+q=k,\\ p\\times q\\ne0",
       "format": "latex",
       "note_ascii": "every newly added boundary Fourier mode has a constructive non-collinear Navier-Stokes triad connection to the previous cutoff"
     },
@@ -86,17 +115,34 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["nsobs-all-N-triad-connectivity", "boundary-old-cutoff-transfer-connectivity"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "aliases": [
+      "nsobs-all-N-triad-connectivity",
+      "boundary-old-cutoff-transfer-connectivity"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
     "parents": [
-      {"code": "PROP-NSOBS-07", "derived_via": "narrows_open_conjecture", "evidence": "removes lack of kinematic triad connectivity as a possible obstruction; rank/minor independence remains open"},
-      {"code": "PROP-NSOBS-09", "derived_via": "transfer_hypergraph_reading", "evidence": "non-collinear triads are the kinematic carrier of shell redistribution"}
+      {
+        "code": "PROP-NSOBS-07",
+        "derived_via": "narrows_open_conjecture",
+        "evidence": "removes lack of kinematic triad connectivity as a possible obstruction; rank/minor independence remains open"
+      },
+      {
+        "code": "PROP-NSOBS-09",
+        "derived_via": "transfer_hypergraph_reading",
+        "evidence": "non-collinear triads are the kinematic carrier of shell redistribution"
+      }
     ],
     "origin": {
       "source": "Constructive proof in github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md; finite exhaustive witness through N=8 in the companion checker",
       "doi": null
     },
-    "claim_boundary": "Analytic kinematic connectivity lemma only. It does not prove generic nonzero amplitudes, absence of cancellations, nonvanishing observable minors, or all-N rank saturation."
+    "claim_boundary": "Analytic kinematic connectivity lemma only. It does not prove generic nonzero amplitudes, absence of cancellations, nonvanishing observable minors, or all-N rank saturation.",
+    "honest_caveats": [
+      "Registry hygiene fix 2026-09-11: this entry contained a malformed JSON string escape (a literal single backslash followed by a space inside the LaTeX statement, an invalid JSON escape sequence) that made this entire file fail to parse. Fixed to a valid double-backslash escape (representing LaTeX \\ , matching the escaping convention used elsewhere in the same string). No change to the mathematical content or tier/status."
+    ]
   },
   {
     "id": "PROP-EPSC-20",
@@ -117,7 +163,10 @@
     "tier": "Th_coqc",
     "status": "verified_by_coq",
     "domain": "P",
-    "aliases": ["epsc18-triad-witness", "triad-quantitative-inner-certificate"],
+    "aliases": [
+      "epsc18-triad-witness",
+      "triad-quantitative-inner-certificate"
+    ],
     "coq": {
       "identifiers": [
         "affine_inverse_error_bound",
@@ -133,8 +182,16 @@
       "verified": "2026-09-11"
     },
     "parents": [
-      {"code": "PROP-EPSC-18", "derived_via": "partial_witness", "evidence": "supplies the requested quantitative rho-type inversion on the exact reduced triad subcase, but not on the full Fourier cube"},
-      {"code": "PROP-NSOBS-10", "derived_via": "uses_first_transfer_jet", "evidence": "the recovered invariant is encoded in the first shell-energy/transfer layer"}
+      {
+        "code": "PROP-EPSC-18",
+        "derived_via": "partial_witness",
+        "evidence": "supplies the requested quantitative rho-type inversion on the exact reduced triad subcase, but not on the full Fourier cube"
+      },
+      {
+        "code": "PROP-NSOBS-10",
+        "derived_via": "uses_first_transfer_jet",
+        "evidence": "the recovered invariant is encoded in the first shell-energy/transfer layer"
+      }
     ],
     "origin": {
       "source": "Analytic triad subcase already present in readout-problem-navier-stokes, quantified in reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md and implemented in information-discrete-math/idm/ns_transfer_observability.py",
@@ -166,9 +223,14 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc19-window-transfer-subcertificate", "noise-stable-transfer-window"],
+    "aliases": [
+      "epsc19-window-transfer-subcertificate",
+      "noise-stable-transfer-window"
+    ],
     "coq": {
-      "identifiers": ["window_transfer_radius_bound"],
+      "identifiers": [
+        "window_transfer_radius_bound"
+      ],
       "coq_status": "partially_compiled_axiom_free",
       "file": "coq/canonical/PROP_EPSC_21_window_transfer_certificate.v",
       "coq_axioms": [],
@@ -176,8 +238,16 @@
       "verified": "2026-09-11, this task: coqc -q clean compile + independent Print Assumptions scratch check on window_transfer_radius_bound."
     },
     "parents": [
-      {"code": "PROP-EPSC-19", "derived_via": "partial_noise_stability", "evidence": "removes high-order numerical differentiation from the transfer-observation substep but does not certify the later full-state inverse"},
-      {"code": "PROP-NSOBS-09", "derived_via": "time_integration", "evidence": "integrates the exact shell balance and propagates interval radii by the triangle inequality"}
+      {
+        "code": "PROP-EPSC-19",
+        "derived_via": "partial_noise_stability",
+        "evidence": "removes high-order numerical differentiation from the transfer-observation substep but does not certify the later full-state inverse"
+      },
+      {
+        "code": "PROP-NSOBS-09",
+        "derived_via": "time_integration",
+        "evidence": "integrates the exact shell balance and propagates interval radii by the triangle inequality"
+      }
     ],
     "origin": {
       "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md; implementation in github.com/morrocwi/information-discrete-math/idm/ns_transfer_observability.py",
