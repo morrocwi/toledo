@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Record merged NS-FUB-A1C residual-centered finite localization evidence from NS merge 8c47a6cc476d96f766d4ef6273d5a05c1b955980. A1C-RV/RG1 receive fixed-N evidence; general A1C-G and A1C-X remain OPEN. No canonical Toledo code or Clay conclusion is promoted.",
+  "scope": "Record merged NS-FUB-A1C fixed-finite residual-certificate completeness evidence from NS merge df022097ea899bacb917238be7a69b40c15e2107. A1C-COMP-Q/ENUM-Q and restricted XQ are pinned as non-canonical research statements; general A1C-X and Clay regularity remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "The general validated finite-dynamics/data adapter and singularity-capture route remain OPEN. The residual layer improves localization and removes the absolute-tube wrapping defect but does not establish arbitrary-target termination, arbitrary-N coverage, or global regularity."
+    "evidence": "Fixed-finite certificate completeness does not close arbitrary continuum initial-data representation, arbitrary-N uniformity, efficient/adaptive generation, or all-scale regularity/tail control."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Adds docs/CLAY_NS_A1C_RESIDUAL_TUBE_2026-09-11.md pinned to NS merge 8c47a6cc... and records A1C-RV DERIVED/fixed-N PASS, A1C-RG1 fixed-N PASS, A1C-G OPEN, A1C-X OPEN. Issue #11 remains the canonicalization gate."
+    "evidence": "Adds docs/CLAY_NS_A1C_COMPLETENESS_2026-09-11.md pinned to NS merge df022097...; issue #11 remains the canonicalization gate."
   },
   "claim_effect": "provenance-change"
 }
