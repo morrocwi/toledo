@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Record merged NS-FUB-A1 fixed-N Galerkin global-extension and certificate-failure no-go evidence from NS merge 72d7672ea1753794e452fd0bb5206dea7be21764, explicitly restricted to the unforced periodic positive-viscosity branch used by the current Clay attack. Also harden Toledo governance so docs/CLAY_* status/provenance notes are fail-closed sensitive paths. General NS-FUB-A1/A2 and Clay regularity remain OPEN.",
+  "scope": "Record merged NS P2 finite-to-continuum reduction evidence from NS merge 83e966df251e548fd9574d9553d7f4bf5551877b. Pin derived Stokes/old-history tail estimates, NS-P2-HH-GEOM-LIFT, and the adapter-neutral NS-P2-H3-MARGIN reduction; record NS-P2-H3-MARGIN-UNIFORM as the single main OPEN/HOLD frontier and the external High-High preprint as HOLD after independent audit. No Clay conclusion is promoted.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "The live NS TODO already records fixed-N verifier/generator failure as non-PDE failure and keeps uniform-in-N PDE-relevant deterioration plus the frequency-weighted all-scale tail mechanism OPEN."
+    "evidence": "The NS source reduction closes P2 only as a reduction and explicitly leaves the uniform cutoff-independent H3 dissipative-margin theorem OPEN. This provenance update does not promote P3 or a Clay theorem."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Updates docs/CLAY_NS_FIXED_N_EXTENSIBILITY_NO_GO_2026-09-11.md to the correct unforced scope and updates the governance profile so docs/CLAY_* paths require an ACK and high-impact review. Issue #11 remains the canonicalization gate."
+    "evidence": "Adds docs/CLAY_NS_P2_REDUCTION_2026-09-11.md pinned to NS merge 83e966df...; all identifiers remain non-canonical and Toledo issue #11 remains the canonicalization gate."
   },
   "claim_effect": "provenance-change"
 }
