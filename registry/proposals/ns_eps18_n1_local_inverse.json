@@ -36,17 +36,25 @@
       "note_ascii": "a finite interval Jacobian enclosure with exact rational endpoints and a rational preconditioner gives a fail-closed quantitative local inverse factor when the preconditioned defect is strictly below one"
     },
     "definitions": {"B": "declared finite convex box inside an already-certified symmetry slice/branch", "J(B)": "entrywise interval enclosure of DH over B", "A": "fixed rational preconditioner", "q": "rigorous induced infinity-norm upper bound on I-AJ(B)"},
-    "tier": "Dr",
-    "status": "unverified",
+    "tier": "Th_coqc",
+    "status": "verified_by_coq",
     "domain": "P",
     "aliases": ["epsc-exact-rational-interval-inverse", "finite-krawczyk-defect-core"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "coq": {
+      "identifiers": ["PROP_EPSC_23_perturbed_inverse_bound", "PROP_EPSC_23_division_form", "neumann_defect_bound"],
+      "file": "coq/canonical/PROP_EPSC_23_perturbed_inverse.v",
+      "coq_status": "compiled_axiom_free",
+      "coq_axioms": [],
+      "print_assumptions": "Closed under the global context (both PROP_EPSC_23_perturbed_inverse_bound and PROP_EPSC_23_division_form, verified via a throwaway scratch file, deleted after)",
+      "verified": "2026-09-11"
+    },
     "parents": [
       {"code": "PROP-EPSC-18", "derived_via": "supplies_quantitative_sufficient_condition", "evidence": "EPSC-18 needs a certified retained-state radius rather than rank alone"},
       {"code": "PROP-EPSC-22", "derived_via": "next_quantitative_layer", "evidence": "the explicit N=1 local chart supplies a concrete target for an interval Jacobian enclosure"}
     ],
     "origin": {"source": "Standard finite-dimensional contraction/inverse estimate; exact rational implementation in github.com/morrocwi/information-discrete-math/idm/finite_interval_inverse.py and fail-closed wrapper in idm/certified_local_inverse.py", "doi": null},
-    "claim_boundary": "Registered as a standard finite certification mechanism, not an originality claim. It is only as valid as the supplied interval enclosure J(B) and independently certified branch/symmetry containment. Sampled or floating Jacobians are not silently promoted to intervals."
+    "claim_boundary": "Registered as a standard finite certification mechanism, not an originality claim. It is only as valid as the supplied interval enclosure J(B) and independently certified branch/symmetry containment. Sampled or floating Jacobians are not silently promoted to intervals.",
+    "honest_caveats": "Mechanized: the full abstract algebraic core the source's own how_to_check isolates as generic and NS-independent -- given a finite-dimensional normed space V (left fully abstract, no concrete R^n/matrix representation needed), an operator M standing for A o J_avg with a uniform defect bound ||v - M v|| <= q*||v|| for all v (the branch-wide ||I-AJ(B)||_infty<=q certification, applied pointwise -- a faithful reading once the branch B itself is abstracted away as already-certified, per PROP-EPSC-22), and a preconditioner Aop with its defining operator-norm bound ||Aop d||<=||A||*||d||, both the multiplied form ||x-z||*(1-q) <= ||A||*||H(x)-H(z)|| and the literal registered LaTeX division form ||x-z|| <= (||A||/(1-q))*||H(x)-H(z)|| are proved, axiom-free, with NO Neumann-series convergence argument and NO explicit inverse-operator construction needed -- just the group identity v=(v-Mv)+Mv, the triangle inequality, and finite (Q) arithmetic. NOT mechanized here: (1) that any concrete finite Jacobian interval enclosure J(B) built from an actual N=1 (or any N) NS energy-jet chart satisfies the two hypotheses (the uniform defect bound and the operator-norm bound) for some computed q<1 and some computed ||A|| -- that is a separate per-instance numerical/interval-arithmetic certification, not re-derived here; (2) branch containment/uniqueness itself -- a certified common branch B is assumed to already exist, exactly as PROP-EPSC-22 supplies and this proposal's own claim_boundary already states."
   },
   {
     "id": "PROP-EPSC-24",
