@@ -52,7 +52,15 @@
     "status": "unverified",
     "domain": "P",
     "aliases": ["transfer-visible-observability", "transfer-first-jet-equivalence"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "coq": {
+      "identifiers": ["affine_left_inverse", "affine_right_inverse", "same_fibers", "image_bijection", "nsobs10_same_fibers", "nsobs10_image_bijection"],
+      "coq_status": "partially_compiled_axiom_free",
+      "file": "coq/canonical/PROP_NSOBS_10_affine_rank_invariance.v",
+      "coq_axioms": [],
+      "print_assumptions": "Closed under the global context",
+      "verified": "2026-09-11, this task: coqc -q clean compile + independent Print Assumptions scratch check on all six theorems.",
+      "honest_caveats": "Mechanizes exactly the algebraic mechanism the proposal's own how_to_check names: the block map A(I,w):=(I, w+off(I)) (off(I) standing for the constant-in-time term 2 nu S I - F, kept fully abstract since neither the linearity of S nor any field property of nu/F is needed for invertibility) is a two-sided bijection for any group-cancelling vadd/vsub on the abstract value space W (affine_left_inverse, affine_right_inverse); consequently, for an arbitrary Jacobian map J standing for D(I,Idot), postcomposing with this bijection changes neither the fibers/kernel of J (same_fibers, nsobs10_same_fibers: A(J x)=A(J y) iff J x=J y) nor the image up to an explicit bijection (image_bijection, nsobs10_image_bijection). NOT mechanized: a numeral 'rank' quantity -- this repo's Coq toolchain has no finite-dimensional linear-algebra/matrix-rank library loaded (rocq-mathcomp-algebra, which supplies mxrank, is not installed; installing it mid-task was attempted and aborted as disproportionate for one elementary proposal). The literal registered equation rank D(I,T) = rank D(I,Idot) follows from the mechanized kernel-equality by the classical (not reformalized here) rank-nullity theorem for two linear maps sharing the same domain. SYNCED (this task) with the extensions.json copy of this same proposal id, same duplication pattern already flagged by the PROP-NSOBS-09 entry above. Tier left at Dr (not upgraded to Th_coqc) because the numeral rank equality itself is not produced by a Coq rank function in this file."
+    },
     "parents": [
       {"code": "PROP-NSOBS-09", "derived_via": "invertible_block_transform", "evidence": "T=dI/dt+2 nu S I-F and the block transform has determinant one"},
       {"code": "PROP-NSOBS-03", "derived_via": "explains_rank_increment", "evidence": "transfer conservation leaves at most m_N-1 new directions per derivative block"}
