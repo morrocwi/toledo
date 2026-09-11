@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Bootstrap Clay research governance CI; no theorem or canonical status changed.",
+  "scope": "Record P1 machine-checked safe-core provenance and P2 negative-control/refutation status; no Clay conclusion or canonical Toledo code is promoted.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Cross-repo CLAY_RESEARCH_TODO.md reviewed; Toledo priority remains issue #11 after source statements stabilize."
+    "evidence": "Cross-repo CLAY_RESEARCH_TODO.md reviewed. P1 safe core is complete; P2 narrows naive FUB-03/04/05; next direct mathematical target remains NS-FUB-A1 and PNP-FUB-A1 under strengthened hypotheses."
   },
   "toledo": {
-    "status": "not-required",
-    "evidence": "Governance infrastructure only; no canonical entry, theorem tier, proposal status, or provenance relation changed."
+    "status": "updated",
+    "evidence": "Adds docs/CLAY_P1_P2_STATUS_2026-09-11.md and keeps morrocwi/toledo#11 as the canonicalization gate. Proposal IDs remain non-canonical."
   },
-  "claim_effect": "none"
+  "claim_effect": "provenance-change"
 }
