@@ -19,11 +19,25 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc-relative-energy-adapter", "residual-to-terminal-beta"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "aliases": [
+      "epsc-relative-energy-adapter",
+      "residual-to-terminal-beta"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
     "parents": [
-      {"code": "PROP-EPSC-12", "derived_via": "analytic_closure", "evidence": "gives the adapter theorem once certified continuous-time residual summaries are available"},
-      {"code": "PROP-EPSC-04", "derived_via": "supplies_beta", "evidence": "for a P_K-supported terminal comparison path, the full L2 adapter error directly bounds the omitted terminal Fourier tail"}
+      {
+        "code": "PROP-EPSC-12",
+        "derived_via": "analytic_closure",
+        "evidence": "gives the adapter theorem once certified continuous-time residual summaries are available"
+      },
+      {
+        "code": "PROP-EPSC-04",
+        "derived_via": "supplies_beta",
+        "evidence": "for a P_K-supported terminal comparison path, the full L2 adapter error directly bounds the omitted terminal Fourier tail"
+      }
     ],
     "origin": {
       "source": "Standard relative-energy/weak-strong-stability estimate specialised to EPSC in github.com/morrocwi/readout-problem-navier-stokes/paper/NS_RELATIVE_ENERGY_ADAPTER_CERTIFICATE.md; implementation in github.com/morrocwi/information-discrete-math/idm/ns_relative_energy_adapter.py.",
@@ -48,9 +62,21 @@
     "tier": "Definition",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc-galerkin-residual-tape", "finite-Hminus1-residual"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
-    "parents": [{"code": "PROP-EPSC-13", "derived_via": "provides_residual_input", "evidence": "turns the relative-energy residual integrand into a finite Fourier quantity"}],
+    "aliases": [
+      "epsc-galerkin-residual-tape",
+      "finite-Hminus1-residual"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-13",
+        "derived_via": "provides_residual_input",
+        "evidence": "turns the relative-energy residual integrand into a finite Fourier quantity"
+      }
+    ],
     "origin": {
       "source": "Standard Fourier residual bookkeeping; finite implementation in github.com/morrocwi/information-discrete-math/idm/ns_relative_energy_adapter.py and witness checkers in github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/.",
       "doi": null
@@ -75,12 +101,31 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc-rk4-residual-enclosure", "validated-time-adapter", "exact-dyadic-rk4-path"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "aliases": [
+      "epsc-rk4-residual-enclosure",
+      "validated-time-adapter",
+      "exact-dyadic-rk4-path"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
     "parents": [
-      {"code": "PROP-EPSC-13", "derived_via": "supplies_certified_summaries", "evidence": "the exact piecewise-linear construction supplies the A_T and B_T inputs required by the relative-energy adapter"},
-      {"code": "PROP-EPSC-14", "derived_via": "time_polynomial_closure", "evidence": "affine Fourier coefficients make the quadratic Navier-Stokes residual degree at most two in each time cell, so its squared H^-1 norm integrates exactly as a degree-four rational polynomial"},
-      {"code": "PROP-EPSC-12", "derived_via": "resolves", "evidence": "provides a concrete certified finite-tape-to-continuum comparison-path adapter for the declared finite run"}
+      {
+        "code": "PROP-EPSC-13",
+        "derived_via": "supplies_certified_summaries",
+        "evidence": "the exact piecewise-linear construction supplies the A_T and B_T inputs required by the relative-energy adapter"
+      },
+      {
+        "code": "PROP-EPSC-14",
+        "derived_via": "time_polynomial_closure",
+        "evidence": "affine Fourier coefficients make the quadratic Navier-Stokes residual degree at most two in each time cell, so its squared H^-1 norm integrates exactly as a degree-four rational polynomial"
+      },
+      {
+        "code": "PROP-EPSC-12",
+        "derived_via": "resolves",
+        "evidence": "provides a concrete certified finite-tape-to-continuum comparison-path adapter for the declared finite run"
+      }
     ],
     "origin": {
       "source": "Construction and executable witness in github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_rk4_continuous_enclosure.py; 2026-09-10. Reusable implementation is mirrored in github.com/morrocwi/information-discrete-math.",
@@ -104,9 +149,21 @@
     "tier": "Open",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc-scalable-enclosure", "high-K-certified-adapter"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
-    "parents": [{"code": "PROP-EPSC-15", "derived_via": "engineering_refinement", "evidence": "correctness construction exists; practical high-K tightness and cost remain to be improved"}],
+    "aliases": [
+      "epsc-scalable-enclosure",
+      "high-K-certified-adapter"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-15",
+        "derived_via": "engineering_refinement",
+        "evidence": "correctness construction exists; practical high-K tightness and cost remain to be improved"
+      }
+    ],
     "origin": {
       "source": "Open engineering/research target isolated after the exact piecewise-linear EPSC-15 construction passed its finite reproduction checks.",
       "doi": null
@@ -131,18 +188,46 @@
     "tier": "Dr",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["observable-to-continuum-certificate", "inner-plus-outer-completeness", "measurement-to-continuum-composition"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "aliases": [
+      "observable-to-continuum-certificate",
+      "inner-plus-outer-completeness",
+      "measurement-to-continuum-composition"
+    ],
+    "coq": {
+      "identifiers": [
+        "epsc17_squared_composition_bound"
+      ],
+      "file": "coq/canonical/PROP_EPSC_17_orthogonal_composition.v",
+      "coq_status": "partially_compiled_axiom_free",
+      "coq_axioms": [],
+      "print_assumptions": "Closed under the global context.",
+      "verified": "2026-09-11"
+    },
     "parents": [
-      {"code": "PROP-NSOBS-08", "derived_via": "finite_inner_completeness_input", "evidence": "energy observability supplies local finite-state identifiability modulo translations at saturated cases"},
-      {"code": "PROP-EPSC-04", "derived_via": "outer_tail_input", "evidence": "EPSC supplies the omitted-information radius beta_N"},
-      {"code": "PROP-EPSC-15", "derived_via": "constructive_outer_adapter_example", "evidence": "exact-dyadic path enclosure is one concrete route to an EPSC terminal beta_N"}
+      {
+        "code": "PROP-NSOBS-08",
+        "derived_via": "finite_inner_completeness_input",
+        "evidence": "energy observability supplies local finite-state identifiability modulo translations at saturated cases"
+      },
+      {
+        "code": "PROP-EPSC-04",
+        "derived_via": "outer_tail_input",
+        "evidence": "EPSC supplies the omitted-information radius beta_N"
+      },
+      {
+        "code": "PROP-EPSC-15",
+        "derived_via": "constructive_outer_adapter_example",
+        "evidence": "exact-dyadic path enclosure is one concrete route to an EPSC terminal beta_N"
+      }
     ],
     "origin": {
       "source": "Synthesis of the finite energy-observability programme and EPSC in github.com/morrocwi/readout-problem-navier-stokes/paper/NS_OBSERVABLE_TO_CONTINUUM_CERTIFICATES.tex; 2026-09-10.",
       "doi": null
     },
-    "claim_boundary": "The composition theorem is conditional on an actual certified finite reconstruction radius rho_N and a valid EPSC beta_N. Rank saturation alone is qualitative local identifiability and does not supply rho_N. No global injectivity or Clay claim."
+    "claim_boundary": "The composition theorem is conditional on an actual certified finite reconstruction radius rho_N and a valid EPSC beta_N. Rank saturation alone is qualitative local identifiability and does not supply rho_N. No global injectivity or Clay claim.",
+    "honest_caveats": [
+      "Coq closure 2026-09-11 (partial, honest): mechanizes the SQUARED-form Pythagorean core -- given the orthogonality identity ||a+b||^2=||a||^2+||b||^2 and independent radius certificates ||a||^2<=rho^2, ||b||^2<=beta^2, proves ||a+b||^2<=rho^2+beta^2, entirely in Q (no Coq.Reals). NOT mechanized: taking square roots (needs Coq.Reals' sqrt, not attempted, this repo's established practice of avoiding Coq.Reals where a claim doesn't strictly need it), and the construction of the infimum over the symmetry group G itself -- both taken as given from the source's own statement. Tier left at Dr pending those two extensions."
+    ]
   },
   {
     "id": "PROP-EPSC-18",
@@ -160,11 +245,25 @@
     "tier": "Open",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc-certified-observability-inverse", "energy-jet-inversion-radius"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "aliases": [
+      "epsc-certified-observability-inverse",
+      "energy-jet-inversion-radius"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
     "parents": [
-      {"code": "PROP-NSOBS-05", "derived_via": "quantifies_exact_rank_evidence", "evidence": "exact rank saturation provides local injectivity modulo symmetry but not numerical inversion bounds"},
-      {"code": "PROP-EPSC-17", "derived_via": "missing_inner_certificate", "evidence": "rho_N is the finite-side quantity required by the observable-to-continuum composition theorem"}
+      {
+        "code": "PROP-NSOBS-05",
+        "derived_via": "quantifies_exact_rank_evidence",
+        "evidence": "exact rank saturation provides local injectivity modulo symmetry but not numerical inversion bounds"
+      },
+      {
+        "code": "PROP-EPSC-17",
+        "derived_via": "missing_inner_certificate",
+        "evidence": "rho_N is the finite-side quantity required by the observable-to-continuum composition theorem"
+      }
     ],
     "origin": {
       "source": "Open bridge isolated by combining NS energy observability with EPSC; github.com/morrocwi/readout-problem-navier-stokes/paper/NS_OBSERVABLE_TO_CONTINUUM_CERTIFICATES.tex.",
@@ -188,11 +287,25 @@
     "tier": "Open",
     "status": "unverified",
     "domain": "P",
-    "aliases": ["epsc-noisy-observable-certificate", "stable-measurement-to-continuum"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "aliases": [
+      "epsc-noisy-observable-certificate",
+      "stable-measurement-to-continuum"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
     "parents": [
-      {"code": "PROP-EPSC-18", "derived_via": "stability_refinement", "evidence": "requires a quantitative certified inverse rather than rank alone"},
-      {"code": "PROP-EPSC-17", "derived_via": "final_composition", "evidence": "combines the noisy finite radius with the omitted-tail beta"}
+      {
+        "code": "PROP-EPSC-18",
+        "derived_via": "stability_refinement",
+        "evidence": "requires a quantitative certified inverse rather than rank alone"
+      },
+      {
+        "code": "PROP-EPSC-17",
+        "derived_via": "final_composition",
+        "evidence": "combines the noisy finite radius with the omitted-tail beta"
+      }
     ],
     "origin": {
       "source": "Open practical frontier isolated from the energy-observability paper's explicit warning about noisy high-order differentiation and the EPSC composition requirement.",

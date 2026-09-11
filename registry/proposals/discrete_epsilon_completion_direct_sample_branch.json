@@ -14,16 +14,24 @@
       "delta": "raw-data center discrepancy plus certified sensor radius plus certified forward-model radius",
       "r": "declared local branch radius"
     },
-    "tier": "Dr",
-    "status": "unverified",
+    "tier": "Th_coqc",
+    "status": "verified_by_coq",
     "domain": "P",
     "aliases": [
       "epsc-direct-sample-budget-gate",
       "epsc-finite-raw-measurement-gate"
     ],
     "coq": {
-      "identifiers": [],
-      "coq_status": "open_prop"
+      "identifiers": [
+        "epsc39_delta_bound",
+        "epsc39_rho_cond_bound'",
+        "epsc39_rho_cond"
+      ],
+      "file": "coq/canonical/PROP_EPSC_39_self_map_budget_gate.v",
+      "coq_status": "compiled_axiom_free",
+      "coq_axioms": [],
+      "print_assumptions": "Closed under the global context (all three).",
+      "verified": "2026-09-11"
     },
     "parents": [
       {
@@ -41,7 +49,10 @@
       "source": "github.com/morrocwi/information-discrete-math/idm/finite_sample_branch.py",
       "doi": null
     },
-    "claim_boundary": "Pure finite inequality gate only. It does not by itself prove that an exact real root exists, that a contraction limit is attained, that an unknown state lies in the branch, or that the branch is globally unique. Those require a separately tiered finite witness/exclusion argument or a declared real-analysis adapter. No arbitrary-N, continuum, physical, or Clay conclusion follows."
+    "claim_boundary": "Pure finite inequality gate only. It does not by itself prove that an exact real root exists, that a contraction limit is attained, that an unknown state lies in the branch, or that the branch is globally unique. Those require a separately tiered finite witness/exclusion argument or a declared real-analysis adapter. No arbitrary-N, continuum, physical, or Clay conclusion follows.",
+    "honest_caveats": [
+      "Coq closure 2026-09-11: both registered inequalities (the delta budget bound and the rho_cond radius bound) are fully mechanized as exact rational-field algebra (Q, no Coq.Reals) from the stated hypotheses q<1, normA>0, and the self-map budget inequality. Does not establish that q, normA, delta, r are genuinely certified quantities for any real finite-sample system -- a separate, per-instance obligation exactly as the source states."
+    ]
   },
   {
     "id": "PROP-EPSC-40",
