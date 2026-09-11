@@ -30,10 +30,10 @@ PROFILES = {
     },
     "morrocwi/toledo": {
         "sensitive_exact": {"README.md", "AGENTS.md", "docs/CLAY_BRIDGE_PROGRAM_2026-09-11.md", "docs/EQ_CODE_SCHEME.md", "registry/SCHEMA.md", "registry/CANONICAL.json", "registry/CANONICAL_REGISTRY.json", "registry/CANONICAL_MAP.md", "registry/EQ_LIBRARY.md"},
-        "sensitive_prefixes": ("coq/", "registry/"),
+        "sensitive_prefixes": ("coq/", "registry/", "docs/CLAY_"),
         "sensitive_contains": ("BRIDGE", "CLAIM"),
         "high_exact": {"docs/CLAY_BRIDGE_PROGRAM_2026-09-11.md", "registry/CANONICAL.json", "registry/CANONICAL_REGISTRY.json", "registry/CANONICAL_MAP.md", "registry/EQ_LIBRARY.md"},
-        "high_prefixes": ("coq/", "registry/"),
+        "high_prefixes": ("coq/", "registry/", "docs/CLAY_"),
         "high_contains": ("BRIDGE", "CLAIM"),
     },
 }

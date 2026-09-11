@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Record merged NS-FUB-A1 energy/L2-only H3 tail-suppression no-go evidence from NS merge af97fc84542dc042b3b6c386458fc0afbd797bef. The energy-only subroute is recorded as REFUTED; the positive frequency-weighted/PDE-derived all-scale tail mechanism, general NS-FUB-A1/A2, and Clay regularity remain OPEN.",
+  "scope": "Record merged NS-FUB-A1 fixed-N Galerkin global-extension and certificate-failure no-go evidence from NS merge 72d7672ea1753794e452fd0bb5206dea7be21764, explicitly restricted to the unforced periodic positive-viscosity branch used by the current Clay attack. Also harden Toledo governance so docs/CLAY_* status/provenance notes are fail-closed sensitive paths. General NS-FUB-A1/A2 and Clay regularity remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "The cross-repository live TODO already keeps the positive all-scale tail mechanism OPEN and now records the energy/L2-only subcase as REFUTED. No later phase is promoted by this provenance update."
+    "evidence": "The live NS TODO already records fixed-N verifier/generator failure as non-PDE failure and keeps uniform-in-N PDE-relevant deterioration plus the frequency-weighted all-scale tail mechanism OPEN."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Adds docs/CLAY_NS_H3_TAIL_NO_GO_2026-09-11.md pinned to NS merge af97fc84...; issue #11 remains the canonicalization gate and no canonical registry code is assigned."
+    "evidence": "Updates docs/CLAY_NS_FIXED_N_EXTENSIBILITY_NO_GO_2026-09-11.md to the correct unforced scope and updates the governance profile so docs/CLAY_* paths require an ACK and high-impact review. Issue #11 remains the canonicalization gate."
   },
   "claim_effect": "provenance-change"
 }
