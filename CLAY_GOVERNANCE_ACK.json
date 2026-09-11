@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Record P1 machine-checked safe-core provenance and P2 negative-control/refutation status; no Clay conclusion or canonical Toledo code is promoted.",
+  "scope": "Pin merged P2 negative-control evidence and record the NS-FUB-A1E/A1V/A1C research decomposition from the merged NS source. No Clay conclusion or canonical Toledo code is promoted.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Cross-repo CLAY_RESEARCH_TODO.md reviewed. P1 safe core is complete; P2 narrows naive FUB-03/04/05; next direct mathematical target remains NS-FUB-A1 and PNP-FUB-A1 under strengthened hypotheses."
+    "evidence": "Cross-repo CLAY_RESEARCH_TODO.md reviewed. P1 safe core and P2 negative controls are complete; the current NS bottlenecks are validated constructive A1C capture and a non-vacuous regularity-sensitive uniform/tail mechanism."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Adds docs/CLAY_P1_P2_STATUS_2026-09-11.md and keeps morrocwi/toledo#11 as the canonicalization gate. Proposal IDs remain non-canonical."
+    "evidence": "docs/CLAY_P1_P2_STATUS_2026-09-11.md now pins IDM merge b37b9be5... and NS merge 83830384..., and records A1E DERIVED-under-adapters, A1V finite exact PASS, A1C OPEN. Issue #11 remains the canonicalization gate."
   },
   "claim_effect": "provenance-change"
 }
