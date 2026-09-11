@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Record merged NS-FUB-A1C fixed-finite residual-certificate completeness evidence from NS merge df022097ea899bacb917238be7a69b40c15e2107. A1C-COMP-Q/ENUM-Q and restricted XQ are pinned as non-canonical research statements; general A1C-X and Clay regularity remain OPEN.",
+  "scope": "Record merged NS-FUB-A1 energy/L2-only H3 tail-suppression no-go evidence from NS merge af97fc84542dc042b3b6c386458fc0afbd797bef. The energy-only subroute is recorded as REFUTED; the positive frequency-weighted/PDE-derived all-scale tail mechanism, general NS-FUB-A1/A2, and Clay regularity remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Fixed-finite certificate completeness does not close arbitrary continuum initial-data representation, arbitrary-N uniformity, efficient/adaptive generation, or all-scale regularity/tail control."
+    "evidence": "The cross-repository live TODO already keeps the positive all-scale tail mechanism OPEN and now records the energy/L2-only subcase as REFUTED. No later phase is promoted by this provenance update."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Adds docs/CLAY_NS_A1C_COMPLETENESS_2026-09-11.md pinned to NS merge df022097...; issue #11 remains the canonicalization gate."
+    "evidence": "Adds docs/CLAY_NS_H3_TAIL_NO_GO_2026-09-11.md pinned to NS merge af97fc84...; issue #11 remains the canonicalization gate and no canonical registry code is assigned."
   },
   "claim_effect": "provenance-change"
 }
