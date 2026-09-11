@@ -123,10 +123,10 @@
       "identifiers": [
         "PROP_NSOBS_12_arithmetic_layer"
       ],
-      "coq_status": "partial_axiom_free",
       "file": "coq/canonical/PROP_NSOBS_12_n2_shell_arithmetic.v",
+      "coq_status": "partial_arithmetic_layer_compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context",
+      "print_assumptions": "Print Assumptions PROP_NSOBS_12_arithmetic_layer. => Closed under the global context.",
       "verified": "2026-09-11"
     },
     "parents": [
@@ -142,7 +142,10 @@
     },
     "claim_boundary": "Exact fixed-finite-resolution modular certificate only; not an arbitrary-N proof.",
     "honest_caveats": [
-      "Partial mechanization only. The arithmetic layer of the claim (d_2 = 2*((2*2+1)^3-1) = 248; m_2 = 9 via decidable enumeration of sum-of-three-squares values over the N=2 index cube {-2..2}^3, giving exactly {1,2,3,4,5,6,8,9,12}; and the PROP-NSOBS-03 ceiling formula rank <= min(m_2+(m_2-1)*R, d_2-3) with R_min = ceil((d_2-3-m_2)/(m_2-1)) instantiated at N=2 giving R_min=30, ceiling(29)=241, ceiling(30)=245) is now compiled axiom-free in coq/canonical/PROP_NSOBS_12_n2_shell_arithmetic.v, Print Assumptions: Closed under the global context. The RANK LAYER remains open: the actual computed rank of the concrete 245-dimensional Jacobian of the real N=2 Fourier-Galerkin Navier-Stokes shell-energy observation jet -- i.e. that rank D J_{2,30} genuinely equals 245 and rank D J_{2,29} genuinely equals 241 for the real quadratic ODE system -- is NOT mechanized here. That figure was cited from reproduction/checks/check_k2_shell_energy_observability.py and GitHub Actions run 34505502747 (2026-09-10), but that script does not exist in the local clone of github.com/morrocwi/readout-problem-navier-stokes as of 2026-09-11, and no NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex construction was found locally either. Reconstructing the explicit N=2 quadratic system and a certified rank computation is real remaining work; tier/status left unchanged (finite_diagnostic/unverified) pending that reconstruction."
+      "The registered statement bundles two layers: (a) an ARITHMETIC layer -- d_2=2*((2*2+1)^3-1)=248; m_2=9, the number of distinct nonzero values of k1^2+k2^2+k3^2 over the N=2 index cube {-2..2}^3 (exactly {1,2,3,4,5,6,8,9,12}, verified by literal finite enumeration of all 125 triples inside Coq); and the PROP-NSOBS-03 shell-rank ceiling formula rank<=min(m_2+(m_2-1)*R, d_2-3) with R_min=ceil((d_2-3-m_2)/(m_2-1)), instantiated at N=2 giving R_min=30, ceiling(29)=241, ceiling(30)=245 -- exactly matching the four numbers in the registered claim; (b) a RANK-ATTAINMENT layer -- that the concrete Lie-jet Jacobian of the real finite Fourier-Galerkin N=2 Navier-Stokes shell-energy observation jet actually attains rank 245 at R=30 and rank 241 at R=29.",
+      "coq/canonical/PROP_NSOBS_12_n2_shell_arithmetic.v mechanizes ONLY layer (a), axiom-free: d_2 is proved equal to its closed form by computation; m_2 is computed inside Coq by literal finite enumeration of the 5x5x5 integer cube (not merely asserted), with both set-membership directions and NoDup checked by vm_compute; the ceiling and minimum-depth quantities are computed from d_2,m_2 by the registry's own PROP-NSOBS-03 formula. Print Assumptions PROP_NSOBS_12_arithmetic_layer. => Closed under the global context.",
+      "Layer (b) -- rank attainment -- is NOT mechanized and was not attempted: it requires the explicit N=2 quadratic Fourier-Galerkin NS coefficients on the real, divergence-free/reality-constrained 248-dimensional coordinate basis, a witness state (nu=1/200 per the origin note), and an exact-rational rank computation of a 245-by-(9*31)-ish Jacobian. This construction is absent from the local clone of github.com/morrocwi/readout-problem-navier-stokes as of 2026-09-11: reproduction/checks/check_k2_shell_energy_observability.py (cited as the source, plus GitHub Actions run 34505502747, 2026-09-10) does not exist locally, and no NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex construction was found locally either (checked paper/, reproduction/checks/, registry/, scripts/, verification/). Reconstructing it is a nontrivial derivation in its own right, not a routine Coq exercise, and mirrors the identical open layer already documented on the sibling proposal PROP-NSOBS-05.",
+      "Tier is left at finite_diagnostic (not raised to Th_coqc) and status left at unverified because the FULL registered claim (arithmetic + rank-attainment) is not yet mechanized -- only the arithmetic layer is now Coq-verified. The rank-attainment reconstruction remains a separate tracked item, shared with PROP-NSOBS-05."
     ]
   },
   {
