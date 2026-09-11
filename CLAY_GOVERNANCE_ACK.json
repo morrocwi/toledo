@@ -3,7 +3,7 @@
   "reviewed_at": "2026-09-11",
   "scope": "Pin the stabilized NS P2 complex phase-holonomy and geometric frustration-or-cut continuation from upstream immutable NS merge e1f9cef783e39724279216db92dfdeaa65bcb39f. Record exact PASS identities and local/family DERIVED consequences only. Preserve all-boundary coverage, temporal switching, constructive R_j recurrence, NS-P2-FRUSTRATION-OR-CUT, and Clay Navier-Stokes regularity as OPEN. Provenance/status only; no canonical Toledo theorem promotion.",
   "todo": {
-    "status": "reviewed-no-canonicalization",
+    "status": "updated",
     "evidence": "The upstream merge advances overlapping complex phase holonomy from OPEN to exact/DERIVED results for declared families, but the load-bearing sector/coverage theorem or matching high-weight escape network remains unresolved. Issue #11 therefore remains the canonicalization gate."
   },
   "toledo": {
