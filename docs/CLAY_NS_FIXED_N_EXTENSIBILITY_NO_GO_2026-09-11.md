@@ -14,11 +14,15 @@ Exact calibration: `reproduction/checks/check_ns_fub_a1_fixed_n_energy_extensibi
 
 The final source head passed the dedicated fixed-N extensibility workflow together with H3 witness, H3 tail no-go, completeness, validated-tube, residual-tube, tube-chain, and Clay-governance workflows.
 
+## Scope
+
+This note records the **unforced periodic positive-viscosity Galerkin branch** used by the current Clay regularity attack (`f=0`). For prescribed nonzero forcing the energy balance contains the forcing-work term and requires a corresponding forcing estimate; that broader statement is not claimed here.
+
 ## Non-canonical research statements
 
 ### `NS-FUB-A1-FIXEDN-GLOBAL`
 
-For each fixed finite Fourier-Galerkin cutoff with positive viscosity, the finite-dimensional Galerkin trajectory exists for all finite times. The proof is the standard finite-dimensional energy argument:
+For each fixed finite Fourier-Galerkin cutoff of the **unforced** periodic Navier--Stokes system with positive viscosity, the finite-dimensional Galerkin trajectory exists for all finite times. The proof is the standard finite-dimensional energy argument:
 
 \[
 \frac12\frac{d}{dt}\|u_N\|_2^2 + \nu\|\nabla u_N\|_2^2=0,
@@ -26,19 +30,19 @@ For each fixed finite Fourier-Galerkin cutoff with positive viscosity, the finit
 
 combined with finite-dimensional ODE continuation.
 
-**Status:** DERIVED.
+**Status:** DERIVED in the declared unforced setting.
 
 ### `NS-FUB-A1C-CHAIN-EXIST-Q`
 
-For a fixed finite rational Galerkin ODE, rational initial state, and rational finite target time, the fixed-finite residual-certificate completeness argument yields a finite rational validated trajectory chain covering the interval.
+For a fixed finite rational unforced Galerkin ODE, rational initial state, and rational finite target time, the fixed-finite residual-certificate completeness argument yields a finite rational validated trajectory chain covering the interval.
 
-**Status:** DERIVED in the fixed rational finite-data setting; no useful runtime bound is claimed.
+**Status:** DERIVED in the fixed rational finite-data unforced setting; no useful runtime bound is claimed.
 
 ### `NS-FUB-A1-CERTFAIL-NOGO`
 
-In that fixed rational finite-data setting, nonexistence of any valid finite trajectory certificate to a finite target time cannot represent a genuine Galerkin dynamical breakdown. Failure/HOLD of a particular integrator, interval scheme, search strategy, or resource budget may reflect algorithmic limitations but not nonexistence of the fixed-N trajectory.
+In that fixed rational finite-data unforced setting, nonexistence of any valid finite trajectory certificate to a finite target time cannot represent a genuine Galerkin dynamical breakdown. Failure/HOLD of a particular integrator, interval scheme, search strategy, or resource budget may reflect algorithmic limitations but not nonexistence of the fixed-N trajectory.
 
-**Status:** DERIVED no-go consequence.
+**Status:** DERIVED no-go consequence in the declared scope.
 
 ## Exact N=1 implementation calibration
 
@@ -68,7 +72,7 @@ fixed-N certificate recursion/extensibility failure
     -> continuum singularity witness
 ```
 
-is **REFUTED as stated**.
+is **REFUTED as stated** for the current unforced periodic branch.
 
 The only potentially useful descendant is a **uniform-in-N** loss of a certified quantity that has a separate proved PDE-regularity meaning. Worsening runtime, conditioning, certificate size, or interval width alone is insufficient.
 
