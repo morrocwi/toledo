@@ -1,0 +1,314 @@
+{
+  "registry_id": "TOLEDO-CITIZEN-BRIDGE-v0.17",
+  "registry_status": "new derivation/proposal",
+  "date": "2026-09-11",
+  "author": "Yaoharee Lahtee",
+  "source_document": "docs/TOLEDO_CITIZEN_BRIDGE_EQUATIONS_v0.17.md",
+  "canonical_status": "not_yet_promoted_to_CANONICAL.json",
+  "policy": "EQUATION_SOURCE_POLICY.md",
+  "entries": [
+    {
+      "id": "TCB-E001",
+      "name": "Citizen Experiential Capital",
+      "kind": "definition",
+      "domain": "citizen_epistemic",
+      "statement": "E_c = {Experience, Observation, Context, Practice, Failure, Constraint, Goal}",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-E002",
+      "name": "Provisional Knowledge-like Capital",
+      "kind": "composition",
+      "domain": "epistemic",
+      "statement": "K*_0 = Compose(E_c, A_exchange | AccessibleEvidence)",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-E001"]
+    },
+    {
+      "id": "TCB-E003",
+      "name": "Institutionally Escalated Knowledge-like Capital",
+      "kind": "composition",
+      "domain": "epistemic",
+      "statement": "K*_I = Compose(K*_0, E_set, I_service | R, D_own, D_public)",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-E002"]
+    },
+    {
+      "id": "TCB-R001",
+      "name": "Institutional Escalation Need",
+      "kind": "routing_heuristic",
+      "domain": "routing",
+      "statement": "E_inst = f(Risk, DiagnosticUncertainty, Irreversibility, SpecializedEvidenceNeed, ProfessionalAuthorityNeed, RegulatorySensitivity, PopulationExposure)",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-C001",
+      "name": "Total Citizen Route Cost",
+      "kind": "cost_function",
+      "domain": "routing",
+      "statement": "C_total(r) = C_money(r) + lambda*C_time(r) + mu*C_cognitive(r) + nu*C_access(r) + xi*C_coordination(r) + rho*C_opportunity(r)",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-R002",
+      "name": "Minimum-Cost Sufficient Route",
+      "kind": "constrained_optimization",
+      "domain": "routing",
+      "statement": "r* = argmin_r C_total(r), subject to Safety(r)>=S_min, EvidenceAdequacy(r)>=E_needed, Rights(r)=PASS, DecisionUsability(r)=TRUE, AuthorityRequirements(r)=satisfied",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-C001"]
+    },
+    {
+      "id": "TCB-A001",
+      "name": "Citizen Action Readiness",
+      "kind": "predicate",
+      "domain": "action",
+      "statement": "ACTION_READY = TRUE iff ProblemStructured AND HardRisksCleared AND EvidenceSufficientForAction AND ResidualUncertaintyAcceptable AND ActionFeasibleForCitizen",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-F001",
+      "name": "Next-Best Information Action",
+      "kind": "constrained_optimization",
+      "domain": "field_diagnosis",
+      "statement": "a* = argmax_a [ExpectedInformationGain(a)*DecisionRelevance(a)] / [Cost(a) + lambda*Time(a) + mu*RiskExposure(a) + epsilon]",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-F002",
+      "name": "Field Risk Exposure",
+      "kind": "risk_heuristic",
+      "domain": "field_diagnosis",
+      "statement": "RiskExposure(a) = AssetAtRisk(a)*HarmSeverity(a)*Irreversibility(a)",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-F003",
+      "name": "Counterfactual Difference-in-Differences Readout",
+      "kind": "diagnostic_equation",
+      "domain": "field_diagnosis",
+      "statement": "DeltaY = (Y_T,post - Y_T,pre) - (Y_C,post - Y_C,pre)",
+      "status": "new derivation/proposal",
+      "note": "Use where a practical comparison is available; does not by itself establish universal causality."
+    },
+    {
+      "id": "TCB-F004",
+      "name": "Transferability Heuristic",
+      "kind": "planning_heuristic",
+      "domain": "preinnovation",
+      "statement": "Transferability = f(MechanismStability, CrossSiteReplication, ImplementationSensitivity, ContextSimilarity, HumanDependence)",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-F005",
+      "name": "Innovation Promotion Gate",
+      "kind": "predicate",
+      "domain": "preinnovation",
+      "statement": "INNOVATION_PROMOTE = TRUE iff PreInnovationDisposition=INNOVATION_CANDIDATE AND LocalResultConfidence>=required_level AND ExistingSolutionCheckCompleted AND NoveltyScopeSufficientForClaim AND TransferabilityStateAppropriateForIntendedClaim AND RightsSafetyConstraintsPass",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-K001",
+      "name": "Knowledge-like Asset Map",
+      "kind": "definition",
+      "domain": "knowledge_asset",
+      "statement": "K_MAP(K*) = {K_claim, K_knowhow, K_process, K_data, K_artifact, K_rights, K_relational, K_context, K_brand_trust, K_market}",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-K002",
+      "name": "Knowledge Portability Vector",
+      "kind": "vector_definition",
+      "domain": "knowledge_asset",
+      "statement": "P_K = [C_k, 1-T_k, 1-X_k, 1-H_k, R_k, S_rights, 1-Rel_k]",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-K001"]
+    },
+    {
+      "id": "TCB-K003",
+      "name": "Knowledge Portability Heuristic",
+      "kind": "planning_heuristic",
+      "domain": "knowledge_asset",
+      "statement": "Portability_K = GeometricMean(P_K)",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-K002"]
+    },
+    {
+      "id": "TCB-U001",
+      "name": "Knowledge Utilization Route Value",
+      "kind": "planning_heuristic",
+      "domain": "knowledge_utilization",
+      "statement": "RouteValue_U(r) = [KnowledgeRouteFit(r,K_MAP)*CreatorRoleFitSoft(r)*RecipientCapability(r)*ExpectedValueRealized(r)*MissionFit(r)*RightsPreservation(r)] / [TransferFriction(r)+GovernanceCost(r)+CapitalNeed(r)+Time(r)+StrategicRisk(r)+epsilon]",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-K001"]
+    },
+    {
+      "id": "TCB-U002",
+      "name": "Knowledge Utilization Route Selection",
+      "kind": "constrained_optimization",
+      "domain": "knowledge_utilization",
+      "statement": "UtilizationRoute* = argmax_r RouteValue_U(r), subject to hard route gates G_U(r)=PASS",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-U001"]
+    },
+    {
+      "id": "TCB-U003",
+      "name": "Market Channel Conditional Value",
+      "kind": "planning_heuristic",
+      "domain": "knowledge_utilization",
+      "statement": "ChannelValue(c|r) = [Reach(c,r)*CounterpartyQuality(c,r)*TransactionProbability(c,r)] / [SearchCost(c,r)+Time(c,r)+DisclosureRisk(c,r)+epsilon]",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-B001",
+      "name": "Business-0 Formation Predicate",
+      "kind": "predicate",
+      "domain": "business_zero",
+      "statement": "B0_F = TRUE iff AccountableOwner AND MinimumViableTeamAdequate AND RightsGate=PASS AND DemandRouteExists AND LegalRouteReady AND TransactionDesignDefined AND MilestoneRunwayToFirstDelivery>=0 AND InnovationVentureFitAcceptable",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-B002",
+      "name": "First Economic Cycle Closure Predicate",
+      "kind": "predicate",
+      "domain": "business_zero",
+      "statement": "B0_C = TRUE iff B0_F AND DemandIndependence>=required_rung AND WorldBoundCommitment AND FirstDeliveryCompleted AND ValueExchangeOccurred AND TrueCostRecorded AND LearningLoopActive",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-B001"]
+    },
+    {
+      "id": "TCB-B003",
+      "name": "True Resource Cost",
+      "kind": "cost_function",
+      "domain": "business_zero",
+      "statement": "TrueCost = CashCost + ImputedFounderLabor + InKindResourceCost + GrantSupportedCost + ComplianceAmortization + SharedInfrastructureCost",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-B004",
+      "name": "Milestone Runway",
+      "kind": "finance_equation",
+      "domain": "business_zero",
+      "statement": "MilestoneRunway = AvailableCapital - CapitalToNextGate",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-G001",
+      "name": "Business Regime Transition",
+      "kind": "state_transition",
+      "domain": "business_dynamics",
+      "statement": "RegimeTransition_(t->t+1) = 1[R_(t+1) != R_t]",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-G002",
+      "name": "Sustainable Operating Capacity",
+      "kind": "bottleneck_heuristic",
+      "domain": "business_dynamics",
+      "statement": "C_sustainable = min(C_people, C_asset, C_supplier, C_capital, C_space, C_approval, C_service, C_logistics)",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-G003",
+      "name": "Execution Debt",
+      "kind": "state_metric",
+      "domain": "business_dynamics",
+      "statement": "D_exec = max(0, CommittedDemand - C_sustainable)",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-G002"]
+    },
+    {
+      "id": "TCB-G004",
+      "name": "Incremental Growth Value",
+      "kind": "planning_equation",
+      "domain": "business_dynamics",
+      "statement": "DeltaV_growth = DeltaRevenue - DeltaOperatingCost - DeltaFormalizationCost - DeltaCapitalCost - DeltaMaintenanceCost - DeltaExternalityCost - DeltaDependencyRisk - DeltaFailureReserve",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-I001",
+      "name": "Institution Utility",
+      "kind": "routing_heuristic",
+      "domain": "institutional_routing",
+      "statement": "InstitutionUtility(i|s) = [CapabilityFit(i,s)*Accessibility(i,s)*ExpectedDecisionGain(i,s)*Timeliness(i,s)] / [MoneyCost(i,s)+TimeCost(i,s)+AccessBurden(i,s)+CoordinationCost(i,s)+epsilon]",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-X001",
+      "name": "Problem Representation Triplet",
+      "kind": "definition",
+      "domain": "cross_actor",
+      "statement": "P_C=CitizenProblem; P_S=AIStructuredProblem; P_D=DisciplinaryProblem",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-X002",
+      "name": "Meaning Preservation State",
+      "kind": "typed_predicate",
+      "domain": "cross_actor",
+      "statement": "MeaningPreserved(P_next,P_C) in {PASS,HOLD_UNKNOWN,FAIL}",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-X001"]
+    },
+    {
+      "id": "TCB-X003",
+      "name": "Valid Handoff Predicate",
+      "kind": "predicate",
+      "domain": "cross_actor",
+      "statement": "HANDOFF_VALID = TRUE iff MeaningPreserved=PASS AND RequestedCapabilityNamed AND DecisionOwnerNamed AND ConsentPass AND DataUseScopeKnown AND ReturnRequired AND ResponseTimeFit AND FallbackRouteKnown",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-X002"]
+    },
+    {
+      "id": "TCB-X004",
+      "name": "Response-Time Fit",
+      "kind": "time_equation",
+      "domain": "cross_actor",
+      "statement": "TimeFit(i) = DecisionWindow - ExpectedResponseTime_i",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-X005",
+      "name": "Return-to-Citizen Gate",
+      "kind": "predicate",
+      "domain": "cross_actor",
+      "statement": "RETURN_GATE = PASS iff UsableResultReturned AND KnownUnknownsStated AND NextActionStated AND RelevantDataReturned AND CitizenCorrectionPossible AND UnresolvedRiskAndRightsDisclosed",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-X006",
+      "name": "Bridge Integrity Bottleneck",
+      "kind": "bottleneck_heuristic",
+      "domain": "cross_actor",
+      "statement": "BridgeIntegrity = min(MeaningLegibility, Access, IncentiveAlignment, EffectiveCoordinationAuthority, Continuity, RightsClarity, ResponseTimeFit)",
+      "status": "new derivation/proposal"
+    },
+    {
+      "id": "TCB-X007",
+      "name": "Cross-Actor Route Utility",
+      "kind": "routing_heuristic",
+      "domain": "cross_actor",
+      "statement": "CrossActorUtility(r) = [CapabilityFit(r)*BridgeIntegrity(r)*ExpectedDecisionGain(r)*ReturnProbability(r)] / [MoneyCost(r)+TimeCost(r)+CoordinationCost(r)+RightsRisk(r)+epsilon]",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-X006"]
+    },
+    {
+      "id": "TCB-X008",
+      "name": "Citizen Closure Predicate",
+      "kind": "predicate",
+      "domain": "cross_actor",
+      "statement": "CITIZEN_CLOSURE = TRUE iff ReturnGate=PASS AND UsableResultReachesDecisionOwner AND OriginalCitizenGoal in {resolved, improved, safely_held, explicitly_rescoped_with_consent}",
+      "status": "new derivation/proposal",
+      "depends_on": ["TCB-X005"]
+    },
+    {
+      "id": "TCB-X009",
+      "name": "Citizen Success",
+      "kind": "conceptual_equation",
+      "domain": "cross_actor",
+      "statement": "CitizenSuccess = SafeUsefulResolution + TraceableLearning",
+      "status": "new derivation/proposal",
+      "note": "Innovation is optional; '+' is conceptual composition, not an asserted cardinal metric."
+    }
+  ]
+}
