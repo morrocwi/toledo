@@ -30,6 +30,20 @@ The following are research proposal identifiers, **not canonical Toledo codes** 
 - Keep finite theorem, finite uniformity bridge, global semantic bridge, and Clay conclusion separate.
 - Record counterexamples, retractions, failed analogies, and non-vacuity failures as first-class provenance.
 
+## Mandatory PR governance gate
+
+Clay-sensitive changes must go through a pull request to `main` so `.github/workflows/clay-governance.yml` can evaluate them before merge.
+
+If a PR changes Toledo registry, Coq, bridge, claim, or canonical-status-sensitive paths, the same PR must update `CLAY_GOVERNANCE_ACK.json` and record:
+
+- TODO review status: `updated` or `reviewed-no-change`;
+- Toledo action: `updated` or `issue-open` for high-impact changes;
+- claim effect: `status-only`, `statement-change`, `formal-proof-change`, or `provenance-change` as appropriate.
+
+High-impact changes may not use `toledo.status=not-required`, and they may not use `claim_effect=none` or `documentation-only`. Missing or inconsistent acknowledgement causes the CI job to fail with `CLAY GOVERNANCE HOLD`.
+
+Do not bypass the preventive check with a direct push for future Clay-sensitive changes.
+
 ## Active work
 
 - Toledo issue #11 — canonicalize shared Clay bridge proposals after statements stabilize.
