@@ -114,11 +114,24 @@
       "sigma_x": "certified absolute radius for x",
       "sigma_J": "certified absolute radius for J_1_a"
     },
-    "tier": "Dr",
-    "status": "unverified",
+    "tier": "Th_coqc",
+    "status": "verified_by_coq",
     "domain": "P",
     "aliases": ["epsc18-triad-witness", "triad-quantitative-inner-certificate"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "coq": {
+      "identifiers": [
+        "affine_inverse_error_bound",
+        "epsc20_reduced_triad_error_bound"
+      ],
+      "coq_status": "compiled_axiom_free",
+      "coq_axioms": [],
+      "file": "coq/canonical/PROP_EPSC_20_affine_inverse_error.v",
+      "print_assumptions": {
+        "affine_inverse_error_bound": "Closed under the global context",
+        "epsc20_reduced_triad_error_bound": "Closed under the global context"
+      },
+      "verified": "2026-09-11"
+    },
     "parents": [
       {"code": "PROP-EPSC-18", "derived_via": "partial_witness", "evidence": "supplies the requested quantitative rho-type inversion on the exact reduced triad subcase, but not on the full Fourier cube"},
       {"code": "PROP-NSOBS-10", "derived_via": "uses_first_transfer_jet", "evidence": "the recovered invariant is encoded in the first shell-energy/transfer layer"}
@@ -127,7 +140,13 @@
       "source": "Analytic triad subcase already present in readout-problem-navier-stokes, quantified in reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md and implemented in information-discrete-math/idm/ns_transfer_observability.py",
       "doi": null
     },
-    "claim_boundary": "Partial closure only. EPSC-18 remains OPEN for the full N=1 cube and arbitrary finite N because gauge fixing, branch selection and certified full-state conditioning are not supplied."
+    "claim_boundary": "Partial closure only. EPSC-18 remains OPEN for the full N=1 cube and arbitrary finite N because gauge fixing, branch selection and certified full-state conditioning are not supplied.",
+    "honest_caveats": [
+      "The Th_coqc upgrade covers exactly the registered statement: r is an affine function of (J_{1,a}, x) with coefficient c_a, and the stated worst-case error bound follows from that affine structure by ordinary triangle-inequality error propagation, mechanized generically over Q (affine_inverse_error_bound) and instantiated at the source's own c_a = 3/10 (epsc20_reduced_triad_error_bound).",
+      "This is exact linear error propagation for an affine formula, not an approximation; it required no NS-specific derivation beyond taking r's affine form and c_a as given.",
+      "One implicit hypothesis was made explicit and mechanized as a hypothesis, not proved: nu >= 0 (kinematic viscosity is physically nonnegative). The source's bound writes the coefficient on sigma_x as \"2*nu\", not \"2*|nu|\", which is only literally correct when nu >= 0; the Coq theorem states this as an explicit hypothesis (Hnu_nonneg) rather than silently assuming it.",
+      "NOT mechanized here, and out of scope for this entry per its own claim_boundary: the derivation of c_a = 3/10 from the reduced triad model itself, and whether J_{1,a}/x are genuinely observable with independent worst-case radii sigma_J/sigma_x -- both are taken as given inputs from the calling model, exactly as the source states them."
+    ]
   },
   {
     "id": "PROP-EPSC-21",
