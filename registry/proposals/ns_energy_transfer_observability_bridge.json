@@ -13,11 +13,19 @@
       "T_s": "nonlinear inter-shell transfer contribution",
       "F_s": "declared prescribed shell-energy input; zero in the unforced case"
     },
-    "tier": "Definition",
+    "tier": "Dr",
     "status": "unverified",
     "domain": "P",
     "aliases": ["nsobs-shell-transfer-balance", "ns-energy-redistribution-balance"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "coq": {
+      "identifiers": ["shell_balance_is_definitional", "antisym_double_sum_zero", "shell_transfer_conserved"],
+      "coq_status": "partially_compiled_axiom_free",
+      "file": "coq/canonical/PROP_NSOBS_09_shell_transfer_balance.v",
+      "coq_axioms": [],
+      "print_assumptions": "Closed under the global context",
+      "verified": "2026-09-11, this task: coqc -q clean compile + independent Print Assumptions scratch check on all three theorems.",
+      "honest_caveats": "Mechanizes exactly the combinatorial step the proposal's own how_to_check names: for an ABSTRACT pairwise shell-to-shell transfer coefficient X(s,s') satisfying the antisymmetry X(s,s')=-X(s',s) (the shell-coarsened image of the per-triad convective-coupling antisymmetry C(k;p,q)=-C(p;k,q) the proposal cites), the total double sum sum_s sum_s' X(s,s') is exactly 0, by finite double-sum exchange (proved by induction) plus S=-S => S=0 in Q; and the balance equation itself is proved as the pure algebraic identity it is by construction (T_s defined as Idot_s+2 nu s I_s-F_s). NOT mechanized: deriving the antisymmetry hypothesis X(s,s')=-X(s',s) from the actual Navier-Stokes convective term / incompressible pressure projection acting on a concrete finite Fourier-Galerkin triad set K_N (i.e. going from the cited exact fact sum_k u_k.(u.grad u)_k=0 to a specific triad-indexed C(k;p,q) and then to shell-grouped X), and NOT mechanized as a literal three-index (k,p,q) triad construction -- the pairwise shell-flux X(s,s') formalization is a standard, mathematically equivalent coarsening but is a strictly smaller mechanization than the literal wavevector-triad statement. TIER FIX (this task): this copy previously read tier=Definition, which mismatched the extensions.json copy's tier=Dr for the same proposal id; Dr is correct since sum_s T_s=0 is a real conservation claim requiring the antisymmetry input, not a naming convention needing no proof -- fixed here to Dr to match. Tier left at Dr (not upgraded to Th_coqc) because the physical antisymmetry premise is assumed, not derived, in the mechanization."
+    },
     "parents": [
       {"code": "PROP-NSOBS-03", "derived_via": "makes_block_dependence_explicit", "evidence": "sum_s T_s=0 is the explicit shell-transfer dependence behind the m_N-1 increment ceiling"}
     ],
