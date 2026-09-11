@@ -9,7 +9,7 @@
       "note_ascii": "kappa_k = lambda_max(H_k)/lambda_2(H_k) of the ICP normal-equations matrix at stage k; rho_k <= (kappa_k-1)/(kappa_k+1) bounds the per-stage contraction rate (standard optimization theory, cited not re-derived here); s_k,i = rho_k^(K-k) * current residual replaces the ad hoc log-linear fit with a decay law derived from the actual conditioning of the problem"
     },
     "tier": "Dr",
-    "status": "unverified",
+    "status": "refuted_structural",
     "domain": "M",
     "aliases": [
       "task-conditioned-6d-pose-stop:proposed-C6-replacement"
@@ -41,6 +41,7 @@
       }
     ],
     "honest_caveats": [
+      "STATUS CORRECTED 2026-09-11: this entry's status field previously read 'unverified' with resistance_evidence still saying 'not yet run', even though the fourth real-data cycle (task-conditioned-6d-pose-stop, run 4, 2026-09-09) already executed and STRUCTURALLY REFUTED this proposal -- the real ICP correspondence-graph Hessian H_k was found to have no graph-diameter structure, so q_formal/M.07's diameter-based floor lambda_2>=4/(nD) does not apply to it at all (the H_k~L_R identification flagged as an assumption below is the specific thing that failed). This mislabeling was caught and fixed during a Toledo debt sweep (founder instruction: 'ติดป้ายที่ถูกปฏิเสธไปแล้วด้วยนะ' -- also tag items that have already been refuted). Status corrected to 'refuted_structural'; see lab/results/real-bop-lmo-2026-09-09-run4/RESULT.md in task-conditioned-6d-pose-stop for the full result.",
       "The identification of ICP's normal-equations matrix H_k with the combinatorial graph Laplacian L_R family is an ANALOGY, not a proven equivalence -- H_k is built from point-correspondence covariances (a weighted least-squares Hessian), not literally the unweighted-degree-minus-adjacency object L_R:=D_W-W. This proposal's parents[] instance_of edge records this as an assumption to be checked, not an established fact.",
       "The Gauss-Newton contraction-rate formula rho_k<=(kappa_k-1)/(kappa_k+1) is a standard, cited result from numerical optimization (not re-derived or Coq-verified here); it also assumes local, well-behaved convergence (no line-search failures, no degenerate correspondences), which real noisy depth data may violate.",
       "q_formal/M.07's lambda_2>=4/(nD) bound requires knowing the correspondence graph's diameter D and vertex count n at each stage -- these must be computed from the real backend's actual correspondence structure, not assumed.",
@@ -52,8 +53,8 @@
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0 stated only. Depends on q_formal/M.07 (currently cited, not mechanized) and on the H_k~L_R identification (an assumption, not a fact) -- this entry cannot honestly claim any rung above R0 until both are addressed.",
-      "empirical_test_status": "not yet run; scoped as a fourth real-data cycle"
+      "rungs_held": "R0 stated; R2 (falsifier reachable and reached) applied via a real BOP-LMO run, 2026-09-09.",
+      "empirical_test_status": "Run 4 executed 2026-09-09 (task-conditioned-6d-pose-stop, lab/results/real-bop-lmo-2026-09-09-run4/RESULT.md). STRUCTURALLY REFUTED: the real ICP correspondence-graph Hessian H_k has no graph-diameter structure, so the L_R/q_formal-M.07 diameter-based spectral floor this proposal depends on does not apply to it. This is a clean, disclosed falsification, not an inconclusive result."
     }
   }
 ]
