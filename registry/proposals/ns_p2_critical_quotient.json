@@ -276,5 +276,396 @@
       "rungs_held": "Source-reported refutation, recorded not independently re-tested.",
       "empirical_test_status": "REFUTED per the source document's own research process."
     }
+  },
+  {
+    "id": "PROP-P3-EQUAL-SHELL-DIRECTION-LOCK-01",
+    "code": "weld/M.??.v1",
+    "name": "Equal-shell triad direction lock: projected forcing at a fixed target is rigidly tangent",
+    "statement": {
+      "latest": "\\text{Let }k=(0,0,1),\\ |p|=|q|=|k|=1,\\ p+q=k\\ (\\Rightarrow p\\cdot q=-\\tfrac12),\\ p(\\theta)=(\\tfrac{\\sqrt3}{2}\\cos\\theta,\\tfrac{\\sqrt3}{2}\\sin\\theta,\\tfrac12),\\ q(\\theta)=k-p(\\theta).\\ \\text{For every }a\\perp p,\\ b\\perp q\\ (\\text{real or complex}):\\quad g:=P_k[(a\\cdot q)b+(b\\cdot p)a]=\\tfrac{\\sqrt3}{2}\\,C(a,b)\\,e_\\theta,\\quad e_\\theta:=(-\\sin\\theta,\\cos\\theta,0),\\quad C(a,b)=a_2b_1-a_1b_2\\ \\text{in the frames }(e_\\theta,\\,p\\times e_\\theta),(e_\\theta,\\,q\\times e_\\theta).",
+      "format": "latex",
+      "note_ascii": "At fixed target k the equal-shell triad family is one-parameter (theta). The k-transverse projection of the triad forcing is PARALLEL to e_theta for every admissible amplitude pair; amplitudes only set the scalar C. Verified symbolically in theta (not just at sample points), basis-independent (fixed frame, rotated frames, and general orthogonal projection of free vectors), and identical over C."
+    },
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_standalone_vnext:Section-113-equal-shell-algebra",
+      "p3_attack_2026-09-11:triad_verify.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-SELF-CLOSURE-01",
+        "derived_via": "corollary_of_B_T_formula_P_eq_Q"
+      }
+    ],
+    "honest_caveats": [
+      "v2 self-audit 2026-09-11 (after the orchestrating session read both source files in full): this is a COROLLARY of the source's own Section 14 adapted-basis components B_N = A(-xv/Q + yu/P), B_T = A (Q^2-P^2)/(PQK) yv (DERIVED EXACT in source). It is not a new lemma; this entry's value is the CAS verification and the explicit form. With P=Q the tangential component B_T vanishes identically, so B is parallel to N = p x q; for k=(0,0,1) that is the e_theta direction found here.",
+      "CAS-symbolic identity (sympy, exact in theta over Q(sqrt3)), machine-checked by two independent scripts -- NOT Coq. Tier finite_diagnostic is the honest ceiling; promote to Th_coqc only with a Coq artifact.",
+      "Consequence A (N=2): two DISTINCT equal-shell triads (theta1 != theta2 mod pi; theta and theta+pi are the same unordered triad) cannot exactly cancel with both contributions nonzero, since e_theta1, e_theta2 are linearly independent. Consequence B (N=3): theta = 0, 2pi/3, 4pi/3 with (a,b) = (e_theta, -q x e_theta) gives g's = (0,sqrt3/2,0), (-3/4,-sqrt3/4,0), (3/4,-sqrt3/4,0), sum exactly 0, all nonzero, wavevectors rank 3.",
+      "Fourier reality constraint u(-p)=conj(u(p)) is VACUOUS for the N=3 witness: all six sources lie on the z=+1/2 cap, pairwise distinct and non-antipodal, and in the 12-mode real-closed set the only pairs summing to +-k are the original triads and their mirrors.",
+      "Specific to |k|=1 with k=(0,0,1) and the equal-shell family; not tested for general k or mixed shells (see PROP-P3-SINGLE-SOURCE-SURJECTIVITY-01 for the non-equal-shell contrast).",
+      "Says nothing about Navier-Stokes regularity, P2, or Clay. It is a static single-target algebraic fact."
+    ],
+    "origin": {
+      "source": "Session 2026-09-11 (AI assistant, counterexample-first attack on the founder's 'P3 -- Multi-Source Cancellation Classification'), three independent attack agents + three independent adversarial verifiers, all exact sympy (rational / Q(sqrt3) / Q(i), no floats). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/. Source program: Yaoharee Lahtee, 'P2 Standalone vNext' sections 9, 112, 116, 118.4.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 53,
+        "merge_sha": "e702d57f5816c796ade5daf9c24c651d4a9f7b80",
+        "paths": [
+          "paper/NS_P2_STANDALONE_VNEXT.md",
+          "paper/NS_P2_MULTISOURCE_CANCELLATION_OCSR_GEN1.md",
+          "paper/NS_P2_UNIFORM_SCALE_LOSS_AUDIT.md",
+          "reproduction/checks/check_ns_p2_multisource_cancellation.py",
+          "reproduction/checks/check_ns_p2_uniform_scale_loss_audit.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: derived by attack agent; R1: independently re-derived by adversarial verifier with own parametrization, three basis conventions, symbolic theta, complex amplitudes, and explicit reality-constraint antipodal check.",
+      "empirical_test_status": "exact symbolic; N=3 witness verified by direct substitution to the exact zero vector."
+    }
+  },
+  {
+    "id": "PROP-P3-SINGLE-SOURCE-SURJECTIVITY-01",
+    "code": "weld/M.??.v1",
+    "name": "Non-equal-shell single-source map is onto the k-transverse plane; two-source exact cancellation is automatic",
+    "statement": {
+      "latest": "\\text{For a productive triad }(p,q,k),\\ p+q=k,\\ \\text{with }|p|\\ne|q|\\ \\text{(non-equal-shell) and generic fixed }b\\perp q:\\ \\text{the linear map }a\\mapsto g(a):=P_k[(a\\cdot q)b+(b\\cdot p)a]\\ \\text{on }\\{a\\perp p\\}\\ \\text{has rank }2=\\dim k^{\\perp}.\\ \\text{Hence for any two such triads at the same }k\\text{ and any }a_1\\ne0\\ \\exists!\\,a_2:\\ g_1+g_2=0.",
+      "format": "latex",
+      "note_ascii": "Verified exactly on k=(1,1,1) with p_i = e_i, q_i = k - e_i: each single-source map has rank 2, nullity 0; system for 2 triads rank 2 / nullity 2; for 3 triads rank 2 / nullity 4 (rank is pinned at dim k-perp = 2 regardless of triad count). Full bilinear (a and b both free) two-triad cancellation also exhibited: a1=(0,1,2), b1=(3,1,-1), b2=(1,1,-1), a2=(-3,0,3). Non-coplanarity of the wavevectors plays NO role in this mechanism."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "p3_attack_2026-09-11:verify_p3.py",
+      "p3_attack_2026-09-11:p3_cancellation.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-SELF-CLOSURE-01",
+        "derived_via": "corollary_of_B_T_formula_P_neq_Q"
+      }
+    ],
+    "honest_caveats": [
+      "v2 self-audit 2026-09-11 (after the orchestrating session read both source files in full): this is a COROLLARY of the source's own Section 14 adapted-basis components B_N = A(-xv/Q + yu/P), B_T = A (Q^2-P^2)/(PQK) yv (DERIVED EXACT in source). It is not a new lemma; this entry's value is the CAS verification and the explicit form. With P != Q, B_N and B_T are independent bilinear forms in the amplitude coordinates, so the image is the full 2D plane k-perp; the rank-2 instances here are that fact made explicit.",
+      "The GENERAL statement (rank 2 for every non-equal-shell triad and generic b) is Dr: argued, and consistent with the equal-shell rank-1 lock being the degenerate case, but only INSTANCES were machine-checked (k=(1,1,1) configuration exactly; k=(1,0,0) two-shell configuration exactly). Those instances are finite_diagnostic; the universal claim is not.",
+      "Reality constraint vacuous on both checked configurations (no antipodal sources, none equal to +-k). A configuration containing an antipodal source pair (q_j = -p_i) is NOT covered and remains Open.",
+      "Consequence, corrected: the 'exact registered cancellation' branch that the source already carries (Section 112 'null or exactly cancelled'; Section 116 'exact global cancellation obligation') is nonempty and generic, not exceptional. No source claim is refuted by this."
+    ],
+    "origin": {
+      "source": "Session 2026-09-11 (AI assistant, counterexample-first attack on the founder's 'P3 -- Multi-Source Cancellation Classification'), three independent attack agents + three independent adversarial verifiers, all exact sympy (rational / Q(sqrt3) / Q(i), no floats). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/. Source program: Yaoharee Lahtee, 'P2 Standalone vNext' sections 9, 112, 116, 118.4.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 53,
+        "merge_sha": "e702d57f5816c796ade5daf9c24c651d4a9f7b80",
+        "paths": [
+          "paper/NS_P2_STANDALONE_VNEXT.md",
+          "paper/NS_P2_MULTISOURCE_CANCELLATION_OCSR_GEN1.md",
+          "paper/NS_P2_UNIFORM_SCALE_LOSS_AUDIT.md",
+          "reproduction/checks/check_ns_p2_multisource_cancellation.py",
+          "reproduction/checks/check_ns_p2_uniform_scale_loss_audit.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: rank/nullity computed by attack agent; R1: adversarial verifier re-derived with an independent transverse parametrization and found the stronger fact (single-source surjectivity) that makes non-coplanarity irrelevant.",
+      "empirical_test_status": "exact rational and Q(i) arithmetic on two integer configurations."
+    }
+  },
+  {
+    "id": "PROP-P3-MULTI-SOURCE-CANCELLATION-WITNESSES-01",
+    "code": "weld/M.??.v1",
+    "name": "Explicit exact zero-sum multi-source cancellation witnesses (genuinely 3D, nondegenerate, reality-consistent)",
+    "statement": {
+      "latest": "\\exists\\ \\text{finite sets of productive triads }\\{(p_\\alpha,q_\\alpha,k)\\}\\ \\text{with amplitudes }a_\\alpha\\perp p_\\alpha,\\ b_\\alpha\\perp q_\\alpha,\\ \\text{all }g_\\alpha:=P_k[(a_\\alpha\\cdot q_\\alpha)b_\\alpha+(b_\\alpha\\cdot p_\\alpha)a_\\alpha]\\ne0,\\ \\operatorname{rank}\\{p_\\alpha,q_\\alpha,k\\}=3,\\ \\operatorname{rank}\\{a_\\alpha,b_\\alpha\\}=3,\\ \\text{no antipodal sources},\\quad\\text{such that}\\quad \\sum_\\alpha g_\\alpha=0\\ \\text{exactly}.",
+      "format": "latex",
+      "note_ascii": "Witness W1 (N=2, two-shell): k=(1,0,0); p1=(1,1,0), q1=(0,-1,0), a1=(-1,1,-1), b1=(1,0,1); p2=(1,0,1), q2=(0,0,-1), a2=(-1,1,1), b2=(2,3,0); g1=(0,1,-2), g2=(0,-1,2). Witness W2 (N=3): k=(1,1,1); p_i=e_i, q_i=k-e_i; a1=(0,66,-22), b1=(1,-1,1); a2=(1,0,2), b2=(-2,1,2); a3=(3,1,0), b3=(-2,2,1); g1=(44/3,-22/3,-22/3), g2=(-7,1,6), g3=(-23/3,19/3,4/3). Witness W3 (N=3, equal-shell): see PROP-P3-EQUAL-SHELL-DIRECTION-LOCK-01. Each verified by an independent adversarial script to the exact zero vector; each triad's raw bilinear term nonzero before projection (productive)."
+    },
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "p3_attack_2026-09-11:verify_triads.py",
+      "p3_attack_2026-09-11:verify_p3.py",
+      "p3_attack_2026-09-11:triad_verify.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "instance_with_net_response_zero"
+      }
+    ],
+    "honest_caveats": [
+      "v2 self-audit 2026-09-11: these are EXISTENCE witnesses for the cancellation branch the source ALREADY names (Section 9: 'if they do cancel, the cancellation ledger is large'; Section 112: 'null or exactly cancelled'; Section 116: 'exact global cancellation obligation'). They refute nothing in the source. In the source's own accounting each witness has net response 0 and cancellation deficit C_k = sum ||g_alpha|| > 0; whether C_k > 0 is a payable physical loss (D_cancel) or only a constraint F_e = 0 on the amplitudes (Section 114.1, Generative Constraint Accumulation) is exactly Witness Soundness (Section 111.5, OPEN). The witnesses turn that obligation into three concrete test cases. The first constraint each imposes is explicit: C_1 e_theta1 + C_2 e_theta2 + C_3 e_theta3 = 0 (equal-shell) or the rank-2 linear relation (two-shell); following it through the outward descendants (|s|^2 = 3L^2, Sections 115/117) is the OCSR test in miniature and is not part of this entry.",
+      "W1's two triads are congruent (90-degree rotation about k); whether N=2 two-shell cancellation exists WITHOUT such a symmetry is Open. W2's non-coplanarity is not the operative mechanism (see PROP-P3-SINGLE-SOURCE-SURJECTIVITY-01).",
+      "Reality constraint is satisfied vacuously (no antipodal pairs, no source equals +-k; mirror pairs reproduce conj(sum)=0 at -k). Other targets fed by the same modes were not examined.",
+      "Under the discrete lens: all readouts are exact rationals / Q(sqrt3); 'sqrt2 shell' etc. are labels for |p|^2 = 2, not continuum readouts.",
+      "No claim about Navier-Stokes regularity, P2, or Clay follows from these witnesses."
+    ],
+    "origin": {
+      "source": "Session 2026-09-11 (AI assistant, counterexample-first attack on the founder's 'P3 -- Multi-Source Cancellation Classification'), three independent attack agents + three independent adversarial verifiers, all exact sympy (rational / Q(sqrt3) / Q(i), no floats). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/. Source program: Yaoharee Lahtee, 'P2 Standalone vNext' sections 9, 112, 116, 118.4.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 53,
+        "merge_sha": "e702d57f5816c796ade5daf9c24c651d4a9f7b80",
+        "paths": [
+          "paper/NS_P2_STANDALONE_VNEXT.md",
+          "paper/NS_P2_MULTISOURCE_CANCELLATION_OCSR_GEN1.md",
+          "paper/NS_P2_UNIFORM_SCALE_LOSS_AUDIT.md",
+          "reproduction/checks/check_ns_p2_multisource_cancellation.py",
+          "reproduction/checks/check_ns_p2_uniform_scale_loss_audit.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: constructed by three independent attack agents from three different geometries; R1: each witness re-derived from scratch by a separate adversarial verifier (transversality, productivity, projection, exact sum, ranks, antipodal check).",
+      "empirical_test_status": "exact; no numerics."
+    }
+  },
+  {
+    "id": "PROP-P2-CR0-CORE-INCLUSION-OPEN-01",
+    "code": "weld/P.??.v1",
+    "name": "Chain-recurrent zero-defect core inclusion (canonical GIR target) -- registered as OPEN object",
+    "statement": {
+      "latest": "\\operatorname{CR}_0\\big(\\overline{\\mathcal Q}^{\\,sc}_{P2}\\big)\\subseteq\\mathcal P\\cup\\mathcal D,",
+      "format": "latex",
+      "note_ascii": "CR_0 = zero-defect chain-recurrent core of the compactified scale-covariant P2 behaviour space Q-bar^{sc}_{P2} = Q_finite u boundary_- u boundary_+; P = planar/2D3C saturation states; D = degenerate/nonproductive states. Introduced in the source (Section 109, eq. 109.3 / 118.3) to replace the over-strong 'every viable compact set is in P u D' target, which fails on sets containing transient points (source's own counterexample: q -> p, p -> p with q outside P u D)."
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_standalone_vnext:Section-109-eq-109.3",
+      "ns_p2_standalone_vnext:Section-118-eq-118.3",
+      "founder_manifesto_2026-09-11:GIR-new-form"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-SELF-CLOSURE-01",
+        "derived_via": "program_dependency"
+      }
+    ],
+    "honest_caveats": [
+      "Registered so that the program's canonical OPEN target can be CITED by code (Toledo-first rule) -- registration is not endorsement and confers no tier. Status in source: 'CANONICAL TARGET / OPEN'.",
+      "Source dependency chain (118.2): Recurrence-to-Saturation + Witness Soundness + (OWR/FNW or OCSR) => IRR => no interior Productive Information Circuit; together with lower/upper boundary rigidity => this inclusion. Every link is OPEN or CONDITIONAL in the source.",
+      "The 2026-09-11 witnesses (PROP-P3-MULTI-SOURCE-CANCELLATION-WITNESSES-01) show the static 'no cancellation' route to OCSR is not available; the inclusion, if true, must be reached through constraint accumulation under recurrence.",
+      "Clay Navier-Stokes regularity: OPEN, unchanged."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext', sections 109 and 118 (NS_P2_STANDALONE(1).md, the later of the two 2026-09-11 source files); founder manifesto to the next AI, 2026-09-11. Registered by the 2026-09-11 session under the Toledo-first rule.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 53,
+        "merge_sha": "e702d57f5816c796ade5daf9c24c651d4a9f7b80",
+        "paths": [
+          "paper/NS_P2_STANDALONE_VNEXT.md",
+          "paper/NS_P2_MULTISOURCE_CANCELLATION_OCSR_GEN1.md",
+          "paper/NS_P2_UNIFORM_SCALE_LOSS_AUDIT.md",
+          "reproduction/checks/check_ns_p2_multisource_cancellation.py",
+          "reproduction/checks/check_ns_p2_uniform_scale_loss_audit.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "none -- open target",
+      "empirical_test_status": "not applicable"
+    }
+  },
+  {
+    "id": "PROP-P3-W3-OUTWARD-SUPPRESSION-GEN1-01",
+    "code": "weld/M.??.v1",
+    "name": "W3, generation 1: suppressing both outward descendants of an equal-shell triad kills the parent vector",
+    "statement": {
+      "latest": "\\text{W3 }(k=(0,0,1),\\ |p_i|=|q_i|=1,\\ \\theta_i\\in\\{0,\\tfrac{2\\pi}{3},\\tfrac{4\\pi}{3}\\}),\\ c\\perp k\\text{ free.}\\ \\text{Descendants }s_{1,i}=p_i+k,\\ s_{2,i}=q_i+k,\\ |s|^2=3,\\ \\text{six distinct targets, single-source each.}\\ D_{1,i}\\parallel D_{2,i}\\parallel e_{\\theta_i},\\ D_{1,i}\\!\\cdot\\!e=(A_{1i},A_{2i})M_i c,\\ D_{2,i}\\!\\cdot\\!e=-(B_{1i},B_{2i})M_i c,\\ \\det M_i=\\tfrac34.\\quad c\\ne0\\ \\wedge\\ D_{1,i}=D_{2,i}=0\\ \\Rightarrow\\ C_i:=A_{2i}B_{1i}-A_{1i}B_{2i}=0\\ \\Rightarrow\\ \\mathcal B_{p_i,q_i}(a_i,b_i)=0.",
+      "format": "latex",
+      "note_ascii": "Both descendant null-forms of one triad share one invertible 2x2 matrix, so a_i and b_i are pinned to the same line and the parent determinant C_i vanishes. Groebner: c1*C_i and c2*C_i lie in the ideal <D1.e, D2.e>, C_i itself does not -- so the c=0 component is exactly the escape. Strictly stronger than the Section 13 self-closure lemma on this configuration: the lemma only gives <c,B_pq>=0 (vacuous when c is orthogonal to e_theta), this kills B_pq itself. Holds over R and C for the bilinear (unconjugated) pairing."
+    },
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_standalone_vnext:Section-115-117-OCSR",
+      "p3_attack_2026-09-11:verify_w3_gen1.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-SELF-CLOSURE-01",
+        "derived_via": "equal_shell_instance_strengthened"
+      },
+      {
+        "code": "PROP-P3-MULTI-SOURCE-CANCELLATION-WITNESSES-01",
+        "derived_via": "generation_1_of_W3"
+      }
+    ],
+    "honest_caveats": [
+      "One fixed configuration (W3). The shared-matrix fact is, by the source's own Section 14 formulas at K=P=Q, general for equal shells (the (K^2-P^2)yt=0 conditions become vacuous and the two remaining conditions share one linear form) -- but that generalization was read off the source, not machine-checked here.",
+      "One generation only, through k only (self-closure descendants). Says nothing about generation 2 or about descendants via other parents; see PROP-P3-W3-FULLCONV-DEPTH1-01 for the full pairwise closure.",
+      "Sesquilinear/Hermitian conventions not covered (source's B is bilinear).",
+      "Not a theorem about OCSR in general; it is one exact instance of the 'suppress every outward channel => degeneracy' direction, on this seed."
+    ],
+    "origin": {
+      "source": "Session 2026-09-11, W3 generation-1 computations (attack agent + independent adversarial verifier, exact sympy over Q(sqrt3), Groebner certification for the nullity claim). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/{ocsr_gen1*.py, verify_w3_gen1.py, w3_conv.py, w3_family.py}. Source program: 'P2 Standalone vNext' sections 13-16, 35, 111.7, 115-118.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 53,
+        "merge_sha": "e702d57f5816c796ade5daf9c24c651d4a9f7b80",
+        "paths": [
+          "paper/NS_P2_STANDALONE_VNEXT.md",
+          "paper/NS_P2_MULTISOURCE_CANCELLATION_OCSR_GEN1.md",
+          "paper/NS_P2_UNIFORM_SCALE_LOSS_AUDIT.md",
+          "reproduction/checks/check_ns_p2_multisource_cancellation.py",
+          "reproduction/checks/check_ns_p2_uniform_scale_loss_audit.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 attack agent; R1 independent verifier with own parametrization + Groebner basis; both exact.",
+      "empirical_test_status": "exact"
+    }
+  },
+  {
+    "id": "PROP-P3-W3-FULLCONV-DEPTH1-01",
+    "code": "weld/M.??.v1",
+    "name": "W3 with dead k-mode is not a depth-1 zero-defect web: 36 nonzero off-k targets, 30 single-source",
+    "statement": {
+      "latest": "\\text{W3 real field, 12 modes }\\pm p_i,\\pm q_i,\\ \\hat u(k)=0.\\ \\text{One full-convolution generation (all 60 pairs with }m_1+m_2\\ne0\\text{) lands on 44 distinct targets: }\\pm k\\ (\\text{exactly cancelled}),\\ 6\\text{ at }|t|^2=\\tfrac94\\ (F_t\\equiv0),\\ \\text{and }36\\text{ with }F_t\\ne0:\\ 6\\text{ at }|t|^2=\\tfrac34\\ (2\\text{ sources, }C_t=\\tfrac{\\sqrt{39}}4-\\tfrac{\\sqrt3}2>0),\\ 12\\text{ at }\\tfrac74,\\ 6\\text{ at }3,\\ 12\\text{ at }\\tfrac{13}4\\ (\\text{single source each}).\\ \\text{No rescaling }a_i\\to\\lambda_ia_i,\\ b_i\\to\\mu_ib_i\\ \\text{with }\\lambda_i\\mu_i=s\\text{ kills all off-}k\\text{ forcings except }s=0.",
+      "format": "latex",
+      "note_ascii": "The parents' own cross-interactions (p_i,p_j), (q_i,q_j), (p_i,-p_j), (p_i,-p_i) produce forced descendants that cannot cancel (single source) -- forced novelty in the sense of Section 111.7 / 118.1. The (p_i,p_j) and (q_i,q_j) forcings scale as lambda_i lambda_j and mu_i mu_j, so they are independent of how the parents are balanced into k. Six targets at |t|^2=9/4 are structural zeros of B for that geometry (not designed in)."
+    },
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_standalone_vnext:Section-16-35-full-local-saturation",
+      "p3_attack_2026-09-11:w3_conv.py",
+      "p3_attack_2026-09-11:w3_family.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-MULTI-SOURCE-CANCELLATION-WITNESSES-01",
+        "derived_via": "depth_1_saturation_of_W3"
+      }
+    ],
+    "honest_caveats": [
+      "One seed, one generation, exact. It shows THIS cancellation witness is not a zero-defect web at depth 1 (novelty branch), consistent with the source's Section 16 conjecture on one instance. It is not a proof of that conjecture and not a statement about any other seed.",
+      "R1 DONE 2026-09-11: independently re-derived with a hand-rolled exact Q(sqrt3) class (no sympy trig), all 44 targets, histogram, feeding map, |F|^2 values, deficit, and the rescaling solve reproduced; ordered-vs-unordered pair sum differs by the uniform factor 2 only. The |t|^2=9/4 zeros are PROJECTION zeros: both dot-product factors are nonzero but the raw vector is exactly parallel to t (e.g. -p1+p3: raw = t/2), so P_t kills each pair individually.",
+      "No claim about P2, GIR, or Clay follows."
+    ],
+    "origin": {
+      "source": "Session 2026-09-11, W3 generation-1 computations (attack agent + independent adversarial verifier, exact sympy over Q(sqrt3), Groebner certification for the nullity claim). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/{ocsr_gen1*.py, verify_w3_gen1.py, w3_conv.py, w3_family.py}. Source program: 'P2 Standalone vNext' sections 13-16, 35, 111.7, 115-118.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 53,
+        "merge_sha": "e702d57f5816c796ade5daf9c24c651d4a9f7b80",
+        "paths": [
+          "paper/NS_P2_STANDALONE_VNEXT.md",
+          "paper/NS_P2_MULTISOURCE_CANCELLATION_OCSR_GEN1.md",
+          "paper/NS_P2_UNIFORM_SCALE_LOSS_AUDIT.md",
+          "reproduction/checks/check_ns_p2_multisource_cancellation.py",
+          "reproduction/checks/check_ns_p2_uniform_scale_loss_audit.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 exact computation by attack agent; R1 independent verifier with a different exact-arithmetic implementation.",
+      "empirical_test_status": "exact"
+    }
+  },
+  {
+    "id": "PROP-P2-ORTHOGONAL-TURN-MIRROR-TAX-01",
+    "code": "weld/M.??.v1",
+    "name": "Orthogonal-turn chain: scale-uniform forced mirror novelty at 17/25 of the forward rate",
+    "statement": {
+      "latest": "\\text{For the self-similar chain }p_{j+1}=p_j+q_j,\\ p_j=A^je_1,\\ q_j=A^j(2,4,0),\\ A=\\begin{pmatrix}3&0&4\\\\4&0&-3\\\\0&5&0\\end{pmatrix},\\ A^{\\!\\top}\\!A=25I,\\ \\text{with the chain's own polarizations }T_j,N_j:\\quad |\\mathcal B(p_j,-q_j,T_j,N_j)|^2=|\\mathcal B(p_j,q_j,T_j,N_j)|^2,\\qquad \\frac{|p_j-q_j|^2}{|p_j+q_j|^2}=\\frac{17}{25}\\quad\\forall j.",
+      "format": "latex",
+      "note_ascii": "Every selected step of the strongest known selected escape is forced, single-source and phase-independently, to inject H^1 novelty at the mirror target p_j - q_j at exactly 17/25 of the forward rate; pair-efficiency of the selected channel is 25/42 at every scale under any amplitude normalisation. Generation-1 full convolution of the five-mode chain has 8 single-source and 2 rank-2 multi-source off-tree targets that no phase/amplitude choice cancels. The mirror target sits at |p_j - q_j| = sqrt(17) 5^j ~ 0.825 |p_{j+1}| -- the SAME dyadic shell as p_{j+1} for j <= 5 -- so this is comparable-scale novelty, not a shell-ratio loss."
+    },
+    "tier": "finite_diagnostic",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_orthogonal_turn_allscale_escape",
+      "p3_attack_2026-09-11:ot_chain_gen1_fullconv.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-ORTHOGONAL-TURN-01",
+        "derived_via": "full_convolution_generation_1"
+      },
+      {
+        "code": "PROP-P2-SELF-CLOSURE-01",
+        "derived_via": "forced_descendant"
+      }
+    ],
+    "honest_caveats": [
+      "Exact for j = 0,1,2,3 by CAS over Q(sqrt5, i); all j follows from the similitude A^T A = 25 I (argued, not separately machine-checked). Single agent computation; no independent verifier yet (R1 pending).",
+      "Decides the constraint branch of (114.4) for this chain (no zero-novelty web at any j) but does NOT decide any shell-ratio contraction: the leak lands in the same dyadic shell. The window layer (FW-6) and a shell-routing theorem are what would turn it into a loss.",
+      "Not yet in the NS repo; not pushed; no P2/Clay claim."
+    ],
+    "origin": {
+      "source": "Session 2026-09-12 design memo for the constructive-generator residue (option 1). Source program: NS_P2_ORTHOGONAL_TURN_ALLSCALE_ESCAPE.md; standalone vNext sections 7, 35, 114.4.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 53,
+        "merge_sha": "e702d57f5816c796ade5daf9c24c651d4a9f7b80",
+        "paths": [
+          "paper/NS_P2_STANDALONE_VNEXT.md",
+          "paper/NS_P2_MULTISOURCE_CANCELLATION_OCSR_GEN1.md",
+          "paper/NS_P2_UNIFORM_SCALE_LOSS_AUDIT.md",
+          "reproduction/checks/check_ns_p2_multisource_cancellation.py",
+          "reproduction/checks/check_ns_p2_uniform_scale_loss_audit.py"
+        ],
+        "note": "not yet in the NS repo at this merge; pinned to the merge that carries its parent fixtures only"
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 exact computation by one agent.",
+      "empirical_test_status": "exact"
+    }
   }
 ]
