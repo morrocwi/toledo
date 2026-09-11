@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Record final NS P2 phase closure from NS merge c25baad7617ce419a012a3b53c9bd40bc6af25b9. Pin NS-P2-FINAL-EQUIV as a derived regularity-equivalence/non-vacuity result; retire the P2 H3-margin and P2B scale-contraction residuals as active separate bridge targets; preserve Clay Navier-Stokes global regularity as OPEN. This is provenance/status bookkeeping, not a new Toledo theorem.",
+  "scope": "Pin the consolidated NS P0-P2 research handoff and reopened exact triad/phase attack from upstream NS merge dc1073f7403342e6609e8ea24ddfdeccd6a8ef4b. Preserve NS-P2-FINAL-EQUIV as DERIVED under its declared adapter; record the correction that equivalence is not refutation; record the exact REFUTED/PASS/DERIVED triad findings; keep NS-P2-FRUSTRATION-OR-CUT and the constructive uniform recurrence OPEN. Provenance/status only; no canonical Toledo theorem promotion.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "P2 source phase is closed by reduction/equivalence, not by a Clay proof. No P3 or other Clay priority is promoted by this provenance update."
+    "evidence": "The upstream merge contains CLAY_P0_P2_RESEARCH_HANDOFF_2026-09-11.md and FUTURE_WORK_P2_TRIAD_ATTACK.md with an executable continuation path for another AI. Toledo records provenance/status and leaves canonicalization to issue #11."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Adds docs/CLAY_NS_P2_FINAL_CLOSURE_2026-09-11.md pinned to NS merge c25baad... and records the distinct statuses DERIVED, REFUTED, REGULARITY-EQUIVALENT/HOLD, and Clay OPEN. Canonicalization still belongs to Toledo issue #11."
+    "evidence": "Adds docs/CLAY_NS_P0_P2_HANDOFF_TRIAD_ATTACK_2026-09-11.md pinned to NS merge dc1073f7403342e6609e8ea24ddfdeccd6a8ef4b. The note distinguishes CLOSED/PASS/DERIVED/REFUTED/OPEN findings and explicitly keeps the overlapping-triad frustration-or-cut theorem OPEN."
   },
   "claim_effect": "provenance-change"
 }
