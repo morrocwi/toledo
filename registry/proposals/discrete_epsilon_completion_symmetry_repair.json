@@ -1,0 +1,82 @@
+[
+  {
+    "id": "PROP-EPSC-41",
+    "code": "weld/P.??.v1",
+    "name": "Translation-only global shell branch-capture obstruction",
+    "statement": {
+      "latest": "\\text{shell-energy-only data}\\;\\not\\Longrightarrow\\;\\text{globally unique state in }X_1/\\mathbb T^3",
+      "format": "latex",
+      "note_ascii": "the explicit PROP-NSOBS-14 axis-swap pair is outside one translation orbit yet has identical shell-energy records at every arbitrary finite derivative order"
+    },
+    "definitions": {},
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc36-translation-only-branch-obstruction",
+      "epsc-shell-global-alias"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-NSOBS-14",
+        "derived_via": "explicit_counterexample",
+        "evidence": "two non-translation-equivalent finite states share the full arbitrary-finite-order shell-energy record"
+      },
+      {
+        "code": "PROP-EPSC-36",
+        "derived_via": "target_refinement",
+        "evidence": "the original global branch-selection wording cannot hold for shell-energy-only data modulo translations alone"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps36_shell_symmetry_obstruction.py",
+      "doi": null
+    },
+    "claim_boundary": "Refutes only unique global shell-energy branch capture modulo translations as stated. It does not refute local inverses, orbit-valued reconstruction under a larger symmetry group, or reconstruction after adding orientation-breaking information."
+  },
+  {
+    "id": "PROP-EPSC-42",
+    "code": "weld/P.??.v1",
+    "name": "Symmetry-aware repair of the raw-window reconstruction target",
+    "statement": {
+      "latest": "\\text{raw shell samples}\\to [x]_G\\pm\\rho_N\\quad\\text{or}\\quad(\\text{shell samples}+\\text{orientation-breaking readout/prior})\\to x\\pm\\rho_N",
+      "format": "latex",
+      "note_ascii": "after PROP-EPSC-41, a globally meaningful measurement target must either return an equivalence class under all declared reader symmetries or add information that breaks those symmetries"
+    },
+    "definitions": {
+      "G": "declared symmetry group preserving both the finite dynamics and the chosen reader; at minimum it must contain translations and any admitted cubic lattice symmetries"
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc36-symmetry-aware-repair",
+      "epsc-orbit-valued-measurement-target"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-41",
+        "derived_via": "repair_after_obstruction",
+        "evidence": "translation-only uniqueness is impossible for the shell reader"
+      },
+      {
+        "code": "PROP-EPSC-39",
+        "derived_via": "local_finite_gate",
+        "evidence": "the finite direct-sample q/data-budget gate remains valid inside any chosen local representative chart"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/toledo/docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md",
+      "doi": null
+    },
+    "claim_boundary": "OPEN repair target. It does not assert that the complete symmetry group has already been classified, that an augmented reader is globally injective, or that practical sensor tolerances are available."
+  }
+]
