@@ -1,0 +1,51 @@
+[
+  {
+    "id": "PROP-EPSC-43",
+    "code": "weld/P.??.v1",
+    "name": "Declared-scale physical readout adapter",
+    "statement": {
+      "latest": "\\Delta t_{phys}=T_0 h,\\quad \\sigma=\\sigma_{phys}/Y_0,\\quad \\tau=\\tau_{phys}/Y_0,\\quad \\rho_{phys}=X_0 C_{ret} K(\\sigma+\\tau);\\qquad \\epsilon_{phys}=X_0\\sqrt{(C_{ret}K(\\sigma+\\tau))^2+\\beta_N^2}",
+      "format": "latex",
+      "note_ascii": "conditional unit/scaling adapter: once physical time, observation and state scales are explicitly declared, a certified finite inverse factor K converts sensor/model uncertainty into a physical retained-state radius; a physical epsilon is emitted only if an independently certified tail beta_N in the same state norm is supplied"
+    },
+    "definitions": {
+      "h": "declared nondimensional sample spacing",
+      "T_0": "declared physical time scale (for advective scaling, L/U)",
+      "Y_0": "declared physical observation scale mapping y_phys=Y_0 y",
+      "X_0": "declared physical state scale mapping x_phys=X_0 x",
+      "K": "certified nondimensional local inverse factor, e.g. ||A||/(1-q)",
+      "C_ret": "declared finite norm adapter from coordinate infinity norm to the retained-state norm",
+      "sigma_phys": "certified physical sensor uncertainty radius",
+      "tau_phys": "certified physical forward-model uncertainty radius",
+      "beta_N": "separately certified nondimensional omitted-tail radius in the same state norm used for the outer composition"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "epsc-physical-sensor-to-rho-adapter",
+      "epsc-rho-beta-physical-epsilon-adapter"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      {
+        "code": "PROP-EPSC-39",
+        "derived_via": "physicalize_certified_finite_data_budget",
+        "evidence": "PROP-EPSC-39 supplies the finite direct-sample q/data-budget structure and a nondimensional retained coordinate radius"
+      },
+      {
+        "code": "PROP-EPSC-17",
+        "derived_via": "optional_inner_plus_outer_completion",
+        "evidence": "when an independently certified tail beta_N is available in a compatible retained/tail norm, the Pythagorean inner-plus-outer composition is scaled by X_0"
+      }
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math/idm/finite_physical_readout.py",
+      "doi": null
+    },
+    "claim_boundary": "Conditional scaling theorem only. It never invents L, U, T_0, X_0, Y_0, a sensor specification, a retained-norm calibration, physical adequacy of a finite Galerkin cutoff, or a continuum tail certificate. If beta_N is absent or uncertified, the outer physical epsilon verdict is HOLD. It has no Navier-Stokes regularity or Clay implication."
+  }
+]
