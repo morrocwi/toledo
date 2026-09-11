@@ -13,16 +13,24 @@
       "I": "three-component shell-energy reader",
       "translation_orbit": "spatial translations alter Fourier phases but preserve wavevector support"
     },
-    "tier": "Dr",
-    "status": "unverified",
+    "tier": "Th_coqc",
+    "status": "verified_by_coq",
     "domain": "P",
     "aliases": [
       "nsobs-cubic-shell-alias",
       "nsobs-n1-axis-swap-alias"
     ],
     "coq": {
-      "identifiers": [],
-      "coq_status": "open_prop"
+      "identifiers": [
+        "nsobs14_axis_swap_alias",
+        "I_agree",
+        "x_b_not_in_orbit_of_x_a"
+      ],
+      "file": "coq/canonical/PROP_NSOBS_14_axis_swap_alias.v",
+      "coq_status": "compiled_axiom_free",
+      "coq_axioms": [],
+      "print_assumptions": "Closed under the global context",
+      "verified": "2026-09-11"
     },
     "parents": [
       {
@@ -35,6 +43,7 @@
       "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/checks/check_volume7_eps36_shell_symmetry_obstruction.py",
       "doi": null
     },
-    "claim_boundary": "Fixed finite N=1 explicit alias. It refutes global uniqueness modulo translations for shell-energy-only observations, but does not classify every discrete symmetry or every possible non-symmetry alias at arbitrary finite N."
+    "claim_boundary": "Fixed finite N=1 explicit alias. It refutes global uniqueness modulo translations for shell-energy-only observations, but does not classify every discrete symmetry or every possible non-symmetry alias at arbitrary finite N.",
+    "honest_caveats": "The N=1 truncated single-mode closed-form decay law I^(n)(x) = (-2*nu*kappa(wv x))^n * E0(x) is taken as a definition in the Coq file (it is the direct algebraic consequence of dE/dt = -2*nu*kappa*E, which this proposal's how_to_check derives in prose from the Galerkin-truncation annihilation of the single axis-aligned unit mode's quadratic self-term); the Navier-Stokes/Galerkin-projection argument establishing that this closed form is the TRUE truncated-dynamics solution is not itself mechanized here. The translation-orbit non-membership is proved from the single abstract hypothesis the proposal's own argument actually uses (a translation preserves wavevector support), over an arbitrary group action G, not from a constructed torus-translation action. Both the kappa-equality ((1,0,0) and (0,1,0) both have |k|^2=1) and the wavevector inequality are exact finite arithmetic, checked by computation/discriminate."
   }
 ]
