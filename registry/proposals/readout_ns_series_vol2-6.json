@@ -209,8 +209,8 @@
       "format": "latex",
       "note_ascii": "The most structurally novel object in the series: turns the exact-but-not-closed Fourier residual (the unresolved nonlinear transfer between modes) into a DECLARED, dynamically-welded finite quantity -- the 'retained cut-current tape' T_{M,N} -- rather than approximating or discarding it. Once the tape is declared, the finite-mode update becomes an EXACT (not approximate) recurrence conditioned on the tape (Theorem 3.2), and the resulting finite domain exactly satisfies all three Readout-Genesis weld/gate identities (commuting dynamics, matching readout, zero invariant defect) with all three defect terms epsilon_dyn/epsilon_read/epsilon_inv provably zero under exact arithmetic (Theorem 4.1) -- the closest the series comes to a partial, finite-truncated construction of the still-Open q_NS adapter flagged as NSR-02 in Volume 1. Theorem 5.1 shows the resulting finite state plus tape is sufficient (in the technical readout sense) for any future finite-horizon reader."
     },
-    "tier": "Dr",
-    "status": "unverified",
+    "tier": "Th_coqc",
+    "status": "verified_by_coq",
     "domain": "M",
     "aliases": [
       "readout_ns_development_series_v0_6:Definition-3.1",
@@ -219,9 +219,20 @@
       "readout_ns_development_series_v0_6:Theorem-5.1"
     ],
     "coq": {
-      "identifiers": [],
-      "coq_status": "not_attempted",
-      "coq_axioms": []
+      "identifiers": [
+        "tape_closed_recurrence",
+        "exact_domain_gate",
+        "future_readout_sufficiency"
+      ],
+      "coq_status": "compiled_axiom_free",
+      "coq_axioms": [],
+      "file": "coq/canonical/PROP_NS_TAPE_CLOSED_DOMAIN_01.v",
+      "print_assumptions": {
+        "tape_closed_recurrence": "Closed under the global context",
+        "exact_domain_gate": "Closed under the global context",
+        "future_readout_sufficiency": "Closed under the global context"
+      },
+      "verified": "2026-09-11"
     },
     "parents": [
       {
@@ -241,10 +252,11 @@
       }
     ],
     "honest_caveats": [
-      "This is exact finite linear algebra (a variation-of-constants recurrence over a fixed grid, and direct substitution to verify the two weld identities) -- checkable by hand, not requiring any continuum/analytic machinery, but NOT yet machine-checked in Coq. Tier is Dr, not Th_coqc, pending an actual compiling axiom-free Coq proof.",
+      "This is exact finite linear algebra (a variation-of-constants recurrence over a fixed grid, and direct substitution to verify the two weld identities) -- checkable by hand, not requiring any continuum/analytic machinery. UPDATE (2026-09-11): now machine-checked in Coq, axiom-free -- see the Coq-closure caveat below; tier raised Dr -> Th_coqc accordingly.",
       "The zero-defect result (epsilon_dyn=epsilon_read=epsilon_inv=0) holds ONLY 'with exact arithmetic' as the source states explicitly -- it says nothing about floating-point/numerical implementation, and nothing about whether the tape itself is ever computable from a real physical Navier-Stokes state (the source's own Remark 3.3 states explicitly that the update is 'tape-closed, not autonomous': no assertion eta_M = Gamma_M(I_M) is used or required, i.e. the tape is NOT derived from the retained state itself -- it is a separately declared input).",
       "This is a PARTIAL construction of the still-Open q_NS adapter (NSR-02 from Volume 1) only for the finite-truncated, tape-augmented reading -- it does not close NSR-02 for a genuine, autonomous, physically-derived Navier-Stokes reader. Flagging this distinction explicitly per this workspace's own honest-tiering discipline: worth surfacing to the founder as measurable forward progress on an open obligation, but NOT a resolution of that obligation.",
-      "Depends structurally on the finite-mode setup shared with PROP-NS-FOURIER-TRACE-01 in this same file, though it does not share that proposal's specific theorems and is registered independently."
+      "Depends structurally on the finite-mode setup shared with PROP-NS-FOURIER-TRACE-01 in this same file, though it does not share that proposal's specific theorems and is registered independently.",
+      "Coq closure (2026-09-11): all three theorems named in Definition 3.1/Theorem 3.2, Theorem 4.1, and Theorem 5.1 are mechanized in coq/canonical/PROP_NS_TAPE_CLOSED_DOMAIN_01.v and compile axiom-free (Print Assumptions: 'Closed under the global context' for all three). Following the task's own re-reading of the theorem statements: A_{M,n} is formalized as an ARBITRARY function V -> V at each step (its linearity is never used by any of the three proofs -- only 'a function applied consistently'), chi_{M,n} as an arbitrary given element of V, and the vector space V itself is left fully abstract with only the one operation the recurrence uses (an addition). Theorem 4.1's third defect term epsilon_inv is not spelled out as a distinct symbolic equation in the source's own inline statement (only the dynamics weld and the reader weld are given explicitly there); it is formalized here as the general Gate-5 invariant-weld condition from the shared Readout-Genesis schema (Inv_alpha = Inv#_alpha o q_alpha, READOUT_GENESIS_CORE.md), structurally identical in shape to the explicit reader weld -- this is a faithful reconstruction of the standard schema's own third component, not a fabricated hypothesis, but it is a reconstruction rather than a verbatim transcription of a third equation from this specific source volume, and should be read as such. The defect terms are stated over Q (rationals), not R, because a direct test in this task confirmed that merely requiring Coq.Reals.Reals in this Coq version (8.20.1) already pulls in the axiom ClassicalDedekindReals.sig_forall_dec even for the trivial fact 0%R = 0%R -- nothing in Theorem 4.1's content requires the reals, so Q keeps the proof genuinely axiom-free, matching this repo's existing PROP_CONF_03_union_bound.v precedent of staying rational-native. As with all Coq mechanizations in this repo of the same idiom, the weld hypotheses (weld_dynamics, weld_reader, weld_invariant) are taken as explicit hypotheses, exactly as the source's own one-line direct-substitution proofs assume them -- this file does not establish that any real physical Navier-Stokes state actually supplies them; it mechanizes the exact recurrence/weld/sufficiency structure conditional on those hypotheses, which is exactly what the source's own honest_caveats already say this content is (checkable finite linear algebra, not a continuum PDE result)."
     ],
     "origin": {
       "source": "Yaoharee Lahtee, 'Readout-Navier-Stokes Development Series', Volume 6 'Readout-Navier-Stokes Discrete Crossing Theorem' (v0.6, September 2026, capstone volume), Definition 3.1, Theorem 3.2, Theorem 4.1, Theorem 5.1. Part of the 6-volume series registered in glosa as GLS-2026-007. Registered under this workspace's Toledo-first standing rule (BBL-2026-09-07-209), founder instruction 2026-09-09.",
