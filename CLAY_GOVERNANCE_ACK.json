@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Record merged NS P2 finite-to-continuum reduction evidence from NS merge 83e966df251e548fd9574d9553d7f4bf5551877b. Pin derived Stokes/old-history tail estimates, NS-P2-HH-GEOM-LIFT, and the adapter-neutral NS-P2-H3-MARGIN reduction; record NS-P2-H3-MARGIN-UNIFORM as the single main OPEN/HOLD frontier and the external High-High preprint as HOLD after independent audit. No Clay conclusion is promoted.",
+  "scope": "Record final NS P2 phase closure from NS merge c25baad7617ce419a012a3b53c9bd40bc6af25b9. Pin NS-P2-FINAL-EQUIV as a derived regularity-equivalence/non-vacuity result; retire the P2 H3-margin and P2B scale-contraction residuals as active separate bridge targets; preserve Clay Navier-Stokes global regularity as OPEN. This is provenance/status bookkeeping, not a new Toledo theorem.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "The NS source reduction closes P2 only as a reduction and explicitly leaves the uniform cutoff-independent H3 dissipative-margin theorem OPEN. This provenance update does not promote P3 or a Clay theorem."
+    "evidence": "P2 source phase is closed by reduction/equivalence, not by a Clay proof. No P3 or other Clay priority is promoted by this provenance update."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Adds docs/CLAY_NS_P2_REDUCTION_2026-09-11.md pinned to NS merge 83e966df...; all identifiers remain non-canonical and Toledo issue #11 remains the canonicalization gate."
+    "evidence": "Adds docs/CLAY_NS_P2_FINAL_CLOSURE_2026-09-11.md pinned to NS merge c25baad... and records the distinct statuses DERIVED, REFUTED, REGULARITY-EQUIVALENT/HOLD, and Clay OPEN. Canonicalization still belongs to Toledo issue #11."
   },
   "claim_effect": "provenance-change"
 }
