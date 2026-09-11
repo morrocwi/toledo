@@ -132,7 +132,14 @@
     "status": "unverified",
     "domain": "P",
     "aliases": ["epsc19-window-transfer-subcertificate", "noise-stable-transfer-window"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "coq": {
+      "identifiers": ["window_transfer_radius_bound"],
+      "coq_status": "partially_compiled_axiom_free",
+      "file": "coq/canonical/PROP_EPSC_21_window_transfer_certificate.v",
+      "coq_axioms": [],
+      "print_assumptions": "Closed under the global context",
+      "verified": "2026-09-11, this task: coqc -q clean compile + independent Print Assumptions scratch check on window_transfer_radius_bound."
+    },
     "parents": [
       {"code": "PROP-EPSC-19", "derived_via": "partial_noise_stability", "evidence": "removes high-order numerical differentiation from the transfer-observation substep but does not certify the later full-state inverse"},
       {"code": "PROP-NSOBS-09", "derived_via": "time_integration", "evidence": "integrates the exact shell balance and propagates interval radii by the triangle inequality"}
@@ -141,6 +148,12 @@
       "source": "github.com/morrocwi/readout-problem-navier-stokes/reproduction/NS_ENERGY_TRANSFER_OBSERVABILITY_BRIDGE.md; implementation in github.com/morrocwi/information-discrete-math/idm/ns_transfer_observability.py",
       "doi": null
     },
+    "honest_caveats": [
+      "The registered statement bundles two layers: (a) an EXACT-IDENTITY layer -- int T_s dt = I_s(t1) - I_s(t0) + 2 nu s int I_s dt - int F_s dt, which is the fundamental theorem of calculus applied to PROP-NSOBS-09's continuum ODE d I_s/dt = T_s - 2 nu s I_s + F_s; and (b) a RADIUS-COMPOSITION layer -- that the same affine combination, applied to independently-radius-certified reported quantities, has output radius bounded by r_1+r_0+2 nu s r_I+r_F via the triangle inequality.",
+      "coq/canonical/PROP_EPSC_21_window_transfer_certificate.v mechanizes ONLY layer (b), axiom-free: for arbitrary rational 'reported' and 'true' values of I_s(t1), I_s(t0), int I_s dt, int F_s dt with arbitrary certified rational error radii r_1, r_0, r_I, r_F, and the transfer-window quantity DEFINED (per layer (a)) as the same affine combination of either the reported or the true inputs, Qabs(Tint_reported - Tint_true) <= r_1 + r_0 + Qabs(coeff)*r_I + r_F is proved from the triangle inequality alone -- no PDE/manifold content, matching the proposal's own how_to_check note that this half is 'completely generic'.",
+      "Layer (a) -- the FTC step itself, i.e. that int T_s dt for an ACTUAL continuum time integral equals that affine combination -- is NOT mechanized: it needs Coq.Reals/Coquelicot real-analysis integral/derivative machinery this repo does not have applied to PROP-NSOBS-09's ODE, and PROP-NSOBS-09 itself is not yet Coq-mechanized (coq_status open_prop at time of writing). It is instead taken in the .v file as a defining identity for the abstract quantity Tint (an explicit Definition, applied identically to reported and true inputs), exactly as the source states it -- cited, not re-derived from an actual integral.",
+      "Tier is left at Dr (not raised to Th_coqc) and status left at unverified because the FULL registered claim (exact identity + radius bound) is not yet mechanized end-to-end -- only the generic radius-composition sub-result is now Coq-verified, axiom-free. A separate tracked item would need to mechanize PROP-NSOBS-09's ODE and its FTC integration in Coq.Reals/Coquelicot before layer (a) can be closed the same way."
+    ],
     "claim_boundary": "Partial EPSC-19 closure only. A certified map from noisy window observations to a full quotient-state radius rho_N is still required before end-to-end measurement-to-continuum certification."
   }
 ]
