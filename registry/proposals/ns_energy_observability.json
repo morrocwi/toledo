@@ -79,14 +79,32 @@
       "note_ascii": "for quadratic energy readers and the finite NS scaling x=nu y, s=nu t, positive viscosity changes the jet Jacobian only by invertible state/row scalings, so rank is independent of nu>0"
     },
     "definitions": {"h":"total-energy or shell-energy reader","F_nu":"finite Fourier-Galerkin NS vector field at viscosity nu"},
-    "tier": "Dr",
-    "status": "unverified",
+    "tier": "Th_coqc",
+    "status": "verified_by_coq",
     "domain": "P",
     "aliases": ["nsobs-positive-viscosity-rank-universality"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "coq": {
+      "identifiers": ["nsobs04_energy_scaling", "nsobs04_jacobian_scaling"],
+      "coq_status": "compiled_axiom_free",
+      "coq_axioms": [],
+      "file": "coq/canonical/PROP_NSOBS_04_positive_viscosity_scaling.v",
+      "print_assumptions": {
+        "nsobs04_energy_scaling": "Closed under the global context",
+        "nsobs04_jacobian_scaling": "Closed under the global context"
+      },
+      "verified": "2026-09-11"
+    },
     "parents": [],
     "origin": {"source":"github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
-    "claim_boundary": "Applies only to positive viscosity in the declared finite system; nu=0 is a distinct endpoint and continuum claims are excluded."
+    "claim_boundary": "Applies only to positive viscosity in the declared finite system; nu=0 is a distinct endpoint and continuum claims are excluded.",
+    "honest_caveats": [
+      "Coq closure (2026-09-11): both registered identities (energy-reader scaling and Jacobian/derivative scaling) are mechanized for EVERY finite order r (not just r=0,1,2) in coq/canonical/PROP_NSOBS_04_positive_viscosity_scaling.v and compile axiom-free (Print Assumptions: 'Closed under the global context' for both theorems -- no Coq Axiom is declared anywhere in the file).",
+      "The vector-field scaling identity F_nu(nu.y)=nu^2.F_1(y) is FULLY PROVED from scratch (lemma field_scaling) from B declared bilinear and L declared linear over an abstract Q-vector space -- pure algebra, no calculus, no extra hypotheses beyond the ordinary bilinearity/linearity laws.",
+      "The energy reader's degree-2 homogeneity h(nu.y)=nu^2*h(y) is taken directly as the defining property of 'h is a quadratic energy reader' (the registry's own definitions field), not re-derived from an underlying bilinear form, since the registry does not specify h's internal construction beyond 'quadratic'.",
+      "The directional-derivative/Lie-derivative operator Deriv is left ABSTRACT and given exactly four ordinary multivariable-calculus facts as explicit Hypotheses (Section Variables, not Coq Axioms): linearity in the direction argument, linearity in the function argument for a constant scalar multiple, the chain rule for composition with a scalar dilation delta_nu(z)=nu.z, and that the derivative depends only on a function's values (two everywhere-equal functions have equal derivatives). These are cited from ordinary, uncontested multivariable calculus, not mechanized from Coq.Reals -- matching this repo's established Q-over-R precedent (see PROP_NS_TAPE_CLOSED_DOMAIN_01.v's weld_dynamics/weld_reader/weld_invariant hypotheses for the same idiom): merely importing Coq.Reals.Reals in this Coq version already pulls in the axiom ClassicalDedekindReals.sig_forall_dec even for a trivial fact, so the four facts are taken as premises of the final theorems rather than derived from a from-scratch real-analysis construction of Deriv. Print Assumptions therefore reports the file as closed/axiom-free, but the theorems' actual physical content is conditional on a concrete Fourier-Galerkin Deriv satisfying these four cited facts, which this file does not itself construct.",
+      "The proof needs nu<>0 (for one exact power-of-nu cancellation step in the inductive step) but otherwise uses no positivity, ordering, or other property of nu beyond Q being a field -- the registry's own claim_boundary already restricts to nu>0, a strictly stronger hypothesis, so this costs nothing beyond what the registered claim already assumes. Worth flagging honestly: the mechanized algebraic identity would hold on any field satisfying the same four Deriv laws, not only the positive reals -- the 'nu>0' restriction belongs to the surrounding viscosity physics, not to this scaling lemma by itself.",
+      "This file does not construct a concrete Deriv (real multivariable total derivative) from Coq.Reals or Coquelicot, does not construct a concrete finite-dimensional B/L pair matching the actual finite Fourier-Galerkin nonlinear/diffusion operators beyond their declared bilinear/linear algebraic shape, and does not touch the surrounding Lie-jet-rank/observability claims of PROP-NSOBS-02/03/06/08 (those remain separate, untouched Dr-tier proposals resting on genuine jet-bundle/manifold machinery this file does not attempt)."
+    ]
   },
   {
     "id": "PROP-NSOBS-05",
