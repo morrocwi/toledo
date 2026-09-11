@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Pin merged P2 negative-control evidence and record the NS-FUB-A1E/A1V/A1C research decomposition from the merged NS source. No Clay conclusion or canonical Toledo code is promoted.",
+  "scope": "Record merged NS-FUB-A1C-V fixed-N=1 validated finite Galerkin tube evidence. A1C-G and A1C-X remain OPEN; no Clay conclusion or canonical Toledo code is promoted.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Cross-repo CLAY_RESEARCH_TODO.md reviewed. P1 safe core and P2 negative controls are complete; the current NS bottlenecks are validated constructive A1C capture and a non-vacuous regularity-sensitive uniform/tail mechanism."
+    "evidence": "Cross-repo CLAY_RESEARCH_TODO.md already leaves the general validated finite-dynamics/data adapter OPEN. The fixed-N=1 A1C-V PASS is a verifier/calibration sublayer only."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "docs/CLAY_P1_P2_STATUS_2026-09-11.md now pins IDM merge b37b9be5... and NS merge 83830384..., and records A1E DERIVED-under-adapters, A1V finite exact PASS, A1C OPEN. Issue #11 remains the canonicalization gate."
+    "evidence": "Adds docs/CLAY_NS_A1C_VALIDATED_TUBE_2026-09-11.md pinned to NS merge 188671ff...; issue #11 remains the canonicalization gate and no canonical code is assigned."
   },
   "claim_effect": "provenance-change"
 }
