@@ -102,14 +102,27 @@
     "status": "unverified",
     "domain": "P",
     "aliases": ["nsobs-certified-saturation-cases"],
-    "coq": {"identifiers": [], "coq_status": "open_prop"},
+    "coq": {
+      "identifiers": ["nsobs05_case_1E", "nsobs05_case_1I", "nsobs05_case_2E", "nsobs05_case_3I", "nsobs05_four_certified_cases"],
+      "file": "coq/canonical/PROP_NSOBS_05_saturation_arithmetic.v",
+      "coq_status": "partial_arithmetic_layer_compiled_axiom_free",
+      "coq_axioms": [],
+      "print_assumptions": "Print Assumptions nsobs05_four_certified_cases. => Closed under the global context.",
+      "verified": "2026-09-11"
+    },
     "parents": [
       {"code":"PROP-NSOBS-02","derived_via":"attains_ceiling","evidence":"scalar cases attain the scalar structural ceiling"},
       {"code":"PROP-NSOBS-03","derived_via":"attains_ceiling","evidence":"shell cases attain the shell structural ceiling"},
       {"code":"PROP-NSOBS-04","derived_via":"extends_positive_viscosity","evidence":"the rank statement propagates to every nu>0 by the positive-viscosity scaling"}
     ],
+    "honest_caveats": [
+      "The registered statement bundles two layers: (a) an ARITHMETIC layer -- d_N=2((2N+1)^3-1), m_N=|{distinct nonzero k_x^2+k_y^2+k_z^2 over {-N..N}^3}|, a minimum-depth quantity (R_E^min=d_N-4 or a ceiling-division R_I^min), and a ceiling (min of a linear expression and d_N-3); (b) a RANK-ATTAINMENT layer -- that the concrete Lie-jet Jacobian of the finite Fourier-Galerkin NS ODE system actually attains that ceiling rank for the stated (N,reader,R) in each of the four cases.",
+      "coq/canonical/PROP_NSOBS_05_saturation_arithmetic.v mechanizes ONLY layer (a), axiom-free: d_N is proved equal to its closed form by computation; m_N is computed inside Coq by literal finite enumeration of the (2N+1)^3 integer cube (not asserted); the minimum-depth and ceiling quantities are computed from d_N,m_N by the registry's own formulas; all four (N,reader,R,rank) records check out exactly as stated arithmetically (Print Assumptions: Closed under the global context, no axioms).",
+      "Layer (b) -- rank attainment -- is NOT mechanized and was not attempted: it requires the explicit quadratic Fourier-Galerkin NS coefficients on the real, divergence-free/reality-constrained coordinate basis of dimension d_N, a witness state, and an exact-rational rank computation of a Jacobian up to 40x681 (N=3). This construction is absent from this local repo and from the cited .tex (not present locally either); reproducing it correctly is a nontrivial derivation in its own right, not a routine Coq exercise, and was explicitly out of scope for this pass per the founder's own survey classification ('matrix-rank layer needs reconstruction').",
+      "Tier is left at finite_diagnostic (not raised to Th_coqc) and status left at unverified because the FULL registered claim (arithmetic + rank-attainment) is not yet mechanized -- only a genuine, non-trivial sub-result (the arithmetic layer) is now Coq-verified. A separate tracked item should own the rank-attainment reconstruction."
+    ],
     "origin": {"source":"Exact modular certificates and reproduction scripts cited by github.com/morrocwi/readout-problem-navier-stokes/paper/NS_ENERGY_OBSERVABILITY_ALL_K_FINAL.tex","doi":null},
-    "claim_boundary": "Finite certified cases only. This is not a proof of the all-N saturation conjecture."
+    "claim_boundary": "Finite certified cases only. This is not a proof of the all-N saturation conjecture. The Coq mechanization on file covers only the arithmetic consistency of the four records, not rank attainment of the concrete Jacobian."
   },
   {
     "id": "PROP-NSOBS-06",
