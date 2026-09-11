@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-11",
-  "scope": "Pin the consolidated NS P0-P2 research handoff and reopened exact triad/phase attack from upstream NS merge dc1073f7403342e6609e8ea24ddfdeccd6a8ef4b. Preserve NS-P2-FINAL-EQUIV as DERIVED under its declared adapter; record the correction that equivalence is not refutation; record the exact REFUTED/PASS/DERIVED triad findings; keep NS-P2-FRUSTRATION-OR-CUT and the constructive uniform recurrence OPEN. Provenance/status only; no canonical Toledo theorem promotion.",
+  "scope": "Pin the stabilized NS P2 complex phase-holonomy and geometric frustration-or-cut continuation from upstream immutable NS merge e1f9cef783e39724279216db92dfdeaa65bcb39f. Record exact PASS identities and local/family DERIVED consequences only. Preserve all-boundary coverage, temporal switching, constructive R_j recurrence, NS-P2-FRUSTRATION-OR-CUT, and Clay Navier-Stokes regularity as OPEN. Provenance/status only; no canonical Toledo theorem promotion.",
   "todo": {
-    "status": "reviewed-no-change",
-    "evidence": "The upstream merge contains CLAY_P0_P2_RESEARCH_HANDOFF_2026-09-11.md and FUTURE_WORK_P2_TRIAD_ATTACK.md with an executable continuation path for another AI. Toledo records provenance/status and leaves canonicalization to issue #11."
+    "status": "updated",
+    "evidence": "The upstream merge advances overlapping complex phase holonomy from OPEN to exact/DERIVED results for declared families, but the load-bearing sector/coverage theorem or matching high-weight escape network remains unresolved. Issue #11 therefore remains the canonicalization gate."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Adds docs/CLAY_NS_P0_P2_HANDOFF_TRIAD_ATTACK_2026-09-11.md pinned to NS merge dc1073f7403342e6609e8ea24ddfdeccd6a8ef4b. The note distinguishes CLOSED/PASS/DERIVED/REFUTED/OPEN findings and explicitly keeps the overlapping-triad frustration-or-cut theorem OPEN."
+    "evidence": "Adds docs/CLAY_NS_P2_COMPLEX_HOLONOMY_GEOMETRIC_CUT_2026-09-11.md pinned to NS merge e1f9cef783e39724279216db92dfdeaa65bcb39f. The provenance note records complex holonomy, dyadic n-to-2n holonomy, the three-parameter phase/geometry trichotomy, the near-dyadic H3 coupling cut, and explicit OPEN boundaries without assigning new Toledo codes."
   },
   "claim_effect": "provenance-change"
 }
