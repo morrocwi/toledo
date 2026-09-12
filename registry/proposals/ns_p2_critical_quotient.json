@@ -1190,7 +1190,7 @@
       "Claim boundary from the source: exact on the three registered witnesses W1/W2/W3 only, one full-convolution generation; global NS-P2-WITNESS-SOUNDNESS for arbitrary cancellation webs, antipodal-source configurations, OCSR beyond the certified finite seeds/generations, UBRR, full recurrent GIR, G7 and Clay regularity remain OPEN.",
       "The interpretive step (C_k>0 is a live constraint rather than a payable defect) is a governance/sufficiency reading, not a physical-dissipation statement; the source explicitly declines to use C_k>0 => physical loss.",
       "The registering pass read the merged note and its checker text; it did not independently re-run the exact depth-1 convolution, so tier Dr (exact finite computation as reported by the source and its CI), not finite_diagnostic.",
-      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note applies the reuse-first order but does not itself record a lookup outcome; the registering pass's own Toledo lookup on 2026-09-12 (CANONICAL.json and proposals, keyword and statement comparison) found no matching object.",
       "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
       "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
@@ -1247,7 +1247,7 @@
       "Claim boundary from the source: every wavevector of this family has k_z=0 and every generated polarization is e_3, so the family lies in the 2D3C terminal class P (2D3C reduction, where regularity is classical). The result exhibits the exact constraint-propagation / outward mechanism inside that class; it is not evidence about the productive non-planar sector.",
       "Does not prove global OCSR: a larger web may recruit additional sources to cancel the two outward descendants; the source states this explicitly.",
       "Exact symbolic PASS in the source checker; the registering pass did not independently re-derive the four bilinear evaluations, hence Dr.",
-      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note applies the reuse-first order but does not itself record a lookup outcome; the registering pass's own Toledo lookup on 2026-09-12 (CANONICAL.json and proposals, keyword and statement comparison) found no matching object.",
       "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
       "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
@@ -1335,7 +1335,7 @@
     "code": "weld/P.??.v1",
     "name": "Cross-family boundary cancellation forces planarity or off-plane novelty (anchor-cross determinant dichotomy)",
     "statement": {
-      "latest": "p=(0,P,0),\\ a=e_3,\\ s=(K,L,0)\\ne0,\\ r+t=s,\\ u\\perp r,\\ v\\perp t,\\ \\mathcal B_{r,t}(u,v)=\\gamma e_3,\\ \\gamma\\ne0,\\ r=(x,y,z):\\quad \\det L_r=\\frac{z^2(|r|^2-|p|^2)}{|p+r|^2},\\ \\det L_t=\\frac{z^2(|t|^2-|p|^2)}{|p+t|^2}\\ (L_r:u\\mapsto\\mathcal B_{p,r}(e_3,u));\\quad z\\ne0\\Rightarrow\\max\\{\\|\\mathcal B_{p,r}(e_3,u)\\|,\\|\\mathcal B_{p,t}(e_3,v)\\|\\}>0\\ \\text{with the nonzero descendant at }p+r\\text{ or }p+t\\text{ having third coordinate }\\pm z\\ne0;\\quad\\text{hence }r_z=t_z=0\\ \\vee\\ \\text{off-plane novelty}.",
+      "latest": "p=(0,P,0),\\ a=e_3,\\ P\\ne0,\\ s=(K,L,0)\\ne0,\\ r+t=s,\\ u\\perp r,\\ v\\perp t,\\ \\mathcal B_{r,t}(u,v)=\\gamma e_3,\\ \\gamma\\ne0,\\ r=(x,y,z):\\quad \\det L_r=\\frac{z^2(|r|^2-|p|^2)}{|p+r|^2},\\ \\det L_t=\\frac{z^2(|t|^2-|p|^2)}{|p+t|^2}\\ (L_r:u\\mapsto\\mathcal B_{p,r}(e_3,u));\\quad z\\ne0\\Rightarrow\\max\\{\\|\\mathcal B_{p,r}(e_3,u)\\|,\\|\\mathcal B_{p,t}(e_3,v)\\|\\}>0\\ \\text{with the nonzero descendant at }p+r\\text{ or }p+t\\text{ having third coordinate }\\pm z\\ne0;\\quad\\text{hence }r_z=t_z=0\\ \\vee\\ \\text{off-plane novelty}.",
       "format": "latex",
       "note_ascii": "Proof route from the source: on the z!=0 branch both anchor-cross kernels nontrivial would force |r|=|t|=|p| by (CF-1)-(CF-2); the equal-shell direction lock then gives B_{r,t}(u,v) parallel to r x t = (-Lz, Kz, -Ky+Lx), whose horizontal squared magnitude z^2(K^2+L^2)>0 contradicts the assumed e_3 direction. Non-vacuity instance: s=(1,2,0), r=(1,0,1), t=(0,2,-1), u=(0,1,0), v=(-1/3,-1/4,-1/2) gives B_{r,t}(u,v)=-e_3 with both anchor-cross descendants nonzero at (1,1,1) and (0,3,-1). Normalisation note recorded in the source: (CF-1) is the determinant in the checker's transverse coordinates; with orthonormal bases the area ratio is z^2(|r|^2-|p|^2)/(|r||p+r|), differing by the positive factor |p+r|/|r|, so the null locus z=0 or |r|=|p| is identical."
     },
@@ -1594,7 +1594,7 @@
     "honest_caveats": [
       "Claim boundary from the source: alignments p||n or q||n are retained as explicit lower-dimensional degeneracy branches; if the three productive pair interactions are not all present, that absence is a registered nonproductivity / sparsity condition, not silent closure. Whether every compact productive zero-defect recurrent web in the rank-2 branch contains the required three-pair patch is OPEN.",
       "Exact symbolic PASS in the source checker; registering pass read only, hence Dr.",
-      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note applies the reuse-first order but does not itself record a lookup outcome; the registering pass's own Toledo lookup on 2026-09-12 (CANONICAL.json and proposals, keyword and statement comparison) found no matching object.",
       "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
       "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
@@ -1621,7 +1621,7 @@
     "code": "weld/P.??.v1",
     "name": "Rank-2 self-closure forces planarity or polarization escape: one productive W-closed triad plus its exact self-closure descendant suffices",
     "statement": {
-      "latest": "W=n^\\perp,\\ p+q=k,\\ a\\in W\\cap p^\\perp,\\ b\\in W\\cap q^\\perp,\\ c:=\\mathcal B_{p,q}(a,b)\\ne0,\\ c\\in W:\\quad n\\cdot k=0;\\quad \\max\\{\\|\\mathcal B_{p,k}(a,c)\\|,\\|\\mathcal B_{q,k}(b,c)\\|\\}>0;\\quad \\text{if the nonzero self-closure descendant also lies in }W\\text{ (nonalignment branch) then }n\\cdot p=n\\cdot q=n\\cdot k=0.\\quad\\text{Dichotomy: descendant leaves }W\\ \\vee\\ p,q,k\\in W\\ \\vee\\ \\text{declared alignment/degeneracy branch.}",
+      "latest": "p,q\\nparallel n\\ (\\text{nonalignment branch}):\\quad W=n^\\perp,\\ p+q=k,\\ a\\in W\\cap p^\\perp,\\ b\\in W\\cap q^\\perp,\\ c:=\\mathcal B_{p,q}(a,b)\\ne0,\\ c\\in W:\\quad n\\cdot k=0;\\quad \\max\\{\\|\\mathcal B_{p,k}(a,c)\\|,\\|\\mathcal B_{q,k}(b,c)\\|\\}>0;\\quad \\text{if the nonzero self-closure descendant also lies in }W\\text{ (nonalignment branch) then }n\\cdot p=n\\cdot q=n\\cdot k=0.\\quad\\text{Dichotomy: descendant leaves }W\\ \\vee\\ p,q,k\\in W\\ \\vee\\ \\text{declared alignment/degeneracy branch.}",
       "format": "latex",
       "note_ascii": "The scalar transfer <c, B_{p,q}(a,b)> = |c|^2 > 0 makes the existing productive-triad self-closure lemma applicable without any triangle-completeness assumption on the productive interaction graph (removes the sparse-web concern left by the plane-rigidity result). Non-vacuity: p=(1,0,1), q=(0,2,-1), k=(1,2,0), a=e_3 x p, b=e_3 x q gives B_{p,q}(a,b)=(-12/5, 6/5, 0) in W, nonzero; both exact self-closure descendants have nonzero e_3 component, so the nonplanar branch genuinely produces polarization escape."
     },

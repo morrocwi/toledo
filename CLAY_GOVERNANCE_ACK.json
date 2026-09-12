@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-12",
-  "scope": "Register the NS P2 local-rigidity lane from NS PRs #55/#56 as eleven NEW DERIVATION / PROPOSAL entries under the reuse-first gate TG-RFG-01: W1/W2/W3 witness-soundness reuse audit (cancellation as live constraint), antipodal cancellation outward family, antipodal cancellation ladder (both 2D3C terminal class P), cross-family boundary cancellation, general anchor-cross nullity locus, four-anchor suppression corollary, shell-conditioned polarization-span obstruction, rank-2 polarization-plane rigidity, rank-2 self-closure planarity, plane-switch capacity / two-lineage plane lock, and plane-switch normal/lineage reconstruction identity. All entries tier Dr, status unverified, placeholder codes only; parents cite existing proposal ids or canonical weld codes; every entry carries its NS paper path, merge SHA and checker name. Global Witness Soundness, cancellation compatibility, OCSR/FNW, G6/G7 and Clay Navier-Stokes regularity remain OPEN.",
+  "scope": "Review fixes to three NS P2 local-rigidity proposal entries registered in #29: lookup-outcome wording corrected on three entries (the source notes do not record a lookup outcome; the registering pass performed it), the hypothesis P≠0 restored in PROP-P3-CROSS-FAMILY-BOUNDARY-CANCEL-01, and the nonalignment-branch qualifier added to PROP-P3-RANK2-SELFCLOSURE-PLANARITY-01. Status/tier unchanged (Dr, unverified); no canonical code assigned; all global claims remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Proposal entries only; the Toledo TODO is unchanged by this PR."
+    "evidence": "Wording/hypothesis fidelity only."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "registry/proposals/ns_p2_critical_quotient.json: 37 proposal entries (26 prior + 11 new), append-only diff, every new entry labelled NEW DERIVATION / PROPOSAL — not yet in Toledo, with claim boundary, reuse-first provenance (NS repository paper path + merge commit of PR #55 or #56) and checker PASS status in NS CI recorded."
+    "evidence": "registry/proposals/ns_p2_critical_quotient.json: five fields on five entries edited for citation accuracy; no entry added or removed."
   },
   "claim_effect": "provenance-change"
 }
