@@ -1797,7 +1797,7 @@
     "statement": {
       "latest": "A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}\\in GL(2,\\mathbb R)\\ \\text{a representative of the Type-P loop monodromy }M:\\quad M[X:Y]=[X:Y]\\iff cX^2+(d-a)XY-bY^2=0;\\quad \\Delta_P:=(d-a)^2+4bc=(\\operatorname{tr}A)^2-4\\det A;\\quad M\\ne I\\Rightarrow\\#\\operatorname{Fix}_{\\mathbb{RP}^1}(M)=\\begin{cases}0,&\\Delta_P<0\\\\1,&\\Delta_P=0\\\\2,&\\Delta_P>0\\end{cases};\\quad \\text{exact zero-defect return of a rank-2 retained plane with }M\\ne I\\Rightarrow\\Delta_P>0\\ \\wedge\\ \\operatorname{RetReturn}(M)\\subseteq\\{[\\ell_+],[\\ell_-]\\};\\quad [m]\\notin\\operatorname{Fix}(M)\\ \\text{third re-entered future-relevant lineage, no terminal/exit/defect/resolution}\\Rightarrow\\text{recurrence incompatibility}.",
       "format": "latex",
-      "note_ascii": "Fixed-line equation (A1-1), discriminant (A1-2), three real cases E/P/H. Case E (Delta_P<0): no real retained projective lineage returns exactly. Case P (Delta_P=0, M!=I): one recurrent class, so a rank-2 recurrent retained plane cannot be carried by two independent returned lineages -> rank drop / degeneration or registered resolution/exit/defect. Case H (Delta_P>0): the two-line skeleton (A1-3) is the only nonidentity branch that can support a recurrent rank-2 retained plane. A 'third re-entered lineage candidate' is defined typed: actual full-convolution lineage path, same base fiber after joint reanchor, future-reader relevant, outside Fix(M) (A1-4); its exact return contradicts M[m]=[m] (A1-5). Reduces A1 to the two-line escape target (A1-7), which the source leaves OPEN."
+      "note_ascii": "Fixed-line equation (A1-1), discriminant (A1-2), three real cases E/P/H. Case E (Delta_P<0): no real fixed projective lineage exists in the declared real fixture (complex Type-P recurrence reopened, lane T0-04). Case P (Delta_P=0, M!=I): one recurrent class, so a rank-2 recurrent retained plane cannot be carried by two independent returned lineages -> rank drop / degeneration or registered resolution/exit/defect. Case H (Delta_P>0): the two-line skeleton (A1-3) is the only nonidentity branch that can support a recurrent rank-2 retained plane. A 'third re-entered lineage candidate' is defined typed: actual full-convolution lineage path, same base fiber after joint reanchor, future-reader relevant, outside Fix(M) (A1-4); its exact return contradicts M[m]=[m] (A1-5). Reduces A1 to the two-line escape target (A1-7), which the source leaves OPEN."
     },
     "tier": "Dr",
     "status": "unverified",
@@ -1833,7 +1833,8 @@
       "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
       "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for a projective fixed-line / trace-discriminant classification of a 2x2 loop monodromy (the existing 'discriminant' objects in Toledo are the spine crossover discriminant lambda_c = D^2/4MK, unrelated) and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
       "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
-      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge).",
+      "NS PR #61 (merge 066b689): Case E is real-fixture only — 'no real fixed projective lineage exists in the declared real fixture'; complex Type-P recurrence is reopened (lane T0-04)."
     ],
     "origin": {
       "source": "NS repository note 'paper/NS_P2_A1_NONIDENTITY_TWO_LINE_REDUCTION.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #58, merge commit 90099ea11bba6d2ed108f7a946a699fbe26064e1. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
@@ -1966,7 +1967,8 @@
       "Reduction-type result: its only new algebra is the parent PROP-P3-ORTHOGONAL-TURN-FULLCLOSURE-ESCAPE-01; the checker cited certifies that parent, not the reduction's logical assembly. Registering pass read only, hence Dr.",
       "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for an A1 two-line recurrence reduction of this form and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
       "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
-      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge).",
+      "Field note (NS PR #61): the two-line skeleton (#Fix(M) <= 2) survives complexification; the elliptic exclusion of the parent classification does not."
     ],
     "origin": {
       "source": "NS repository note 'paper/NS_P2_A1_TWO_LINE_ESCAPE_REDUCTION.md' (third-person registration from the merged text; the note labels itself REUSE-FIRST REDUCTION + NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #58, merge commit 90099ea11bba6d2ed108f7a946a699fbe26064e1. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
@@ -2132,7 +2134,7 @@
       "ns_p2_recursive_suppression_charging_card:Section-3-eq-RSC-1",
       "ns_p2_recursive_suppression_charging_card:Section-4 (RSC-O / RSC-E / RSC-C)",
       "ns_p2_standalone_vnext:Section-114-1 (no-silent-loss / null-web lineage discipline)",
-      "M3 multi-label checker"
+      "M3 fail-closed label-set interface (specified in source; no checker)"
     ],
     "coq": {
       "identifiers": [],
@@ -2165,7 +2167,7 @@
       "Registered so that the program's canonical OPEN target for the A1 residue can be CITED by code (Toledo-first rule) — registration is not endorsement and confers no tier. Status in source: 'OPEN THEOREM CANDIDATE / REUSE-FIRST DECOMPOSITION'; claim boundary from the source: the M3 four-label / multi-label / UNRESOLVED interface is SPECIFIED, (RSC-1) is DERIVED elementary, RSC-O, RSC-E, RSC-C and the candidate itself are OPEN.",
       "NPSC depth-1 exhaustive results are supporting evidence / falsification control only, never a premise.",
       "Finite diagnostics (W1-W3, orthogonal-turn generation-1, NPSC boxes, T0-02 catalogues) can falsify local variants and discover missing labels; finite success cannot promote the global theorem. The source instructs not to invent a fifth suppression label unless an exact UNRESOLVED fixture forces it.",
-      "The source lists 'M3 label soundness' as a reused object; no Toledo entry carries that name, so it is recorded as the alias 'M3 multi-label checker' only. The source also names PR #59 Type-P shell confinement / identity-loop fixtures as pending input that may strengthen RSC-E but is NOT a premise of this card (both are registered separately in this pass as PROP-P3-TYPE-P-SHELL-CONFINEMENT-01 / PROP-P3-TYPE-P-IDENTITY-LOOP-FIXTURES-01).",
+      "The card specifies the M3 four-label / multi-label / UNRESOLVED interface (source §1, §7 'SPECIFIED'); no Toledo entry and no NS checker file carry the name M3 as of this pass, so it is recorded as an alias string only.",
       "A proof would fold A1 into OCSR / Witness Soundness rather than create a separate holonomy theorem; the objective is to show repeated suppression cannot remain compact, productive, nonplanar, reader-sufficient and zero-defect indefinitely — not that every suppression immediately loses energy.",
       "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for an object named or equivalent to recursive suppression charging and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
       "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
@@ -2221,7 +2223,7 @@
       },
       {
         "code": "PROP-P3-MULTI-ANCHOR-SUPPRESSION-01",
-        "derived_via": "two_anchor_simultaneous_suppression"
+        "derived_via": "registering_pass_link (not cited in the source reuse list)"
       }
     ],
     "honest_caveats": [
