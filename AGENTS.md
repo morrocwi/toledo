@@ -11,6 +11,31 @@ Toledo is the theorem/provenance/status registry for the shared Clay research pr
 5. `morrocwi/readout-problem-navier-stokes/CLAY_READ_FIRST.md`
 6. `morrocwi/readout-problem-navier-stokes/CLAY_RESEARCH_TODO.md`
 7. `morrocwi/information-discrete-math/docs/UNIVERSAL_FINITE_OBSTRUCTION_UNIFORM_BRIDGE_KERNEL.md`
+8. `EQUATION_SOURCE_POLICY.md`, especially `TG-RFG-01`.
+
+## Mandatory central reuse-first gate
+
+Every mathematical or Clay-sensitive derivation MUST obey the canonical rule in `EQUATION_SOURCE_POLICY.md`:
+
+```text
+Toledo lookup
+    -> Genesis compatibility
+    -> reuse existing object
+    -> derive only the missing piece
+    -> mark PROPOSAL
+```
+
+Operationally:
+
+- run the Toledo lookup/check before introducing a formula, theorem object, constraint, bridge, or renamed equivalent;
+- inspect `morrocwi/readout_genesis` before assigning ontology/translation meaning;
+- reuse the existing canonical object whenever it covers the need;
+- if something is genuinely missing, derive only the smallest missing piece from declared parents and assumptions;
+- keep that result `PROPOSAL` until the normal Toledo review/registration path promotes it.
+
+If lookup is ambiguous or status/lineage is unresolved, return `HOLD`. If this order is bypassed, treat the result as `DRIFT`; do not promote or cite it as established Toledo mathematics.
+
+This gate is provenance governance, not theorem evidence. Passing it never upgrades an `OPEN`, `HOLD`, or Clay status.
 
 ## Current proposal IDs
 
@@ -29,6 +54,7 @@ The following are research proposal identifiers, **not canonical Toledo codes** 
 - Map Coq/Rocq identifiers only when actual formal evidence exists.
 - Keep finite theorem, finite uniformity bridge, global semantic bridge, and Clay conclusion separate.
 - Record counterexamples, retractions, failed analogies, and non-vacuity failures as first-class provenance.
+- Do not bypass `TG-RFG-01` by moving an unregistered equation or theorem object into another repository first.
 
 ## Mandatory PR governance gate
 
