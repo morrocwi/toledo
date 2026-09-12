@@ -1789,5 +1789,466 @@
       "rungs_held": "R0: exact symbolic identity check in the source; registering pass read only.",
       "empirical_test_status": "check_ns_p2_plane_switch_normal_lineage.py PASS in NS CI (exact-multisource-cancellation job, PR #56)."
     }
+  },
+  {
+    "id": "PROP-P3-TYPEP-FIXEDLINE-CLASSIFICATION-01",
+    "code": "weld/M.??.v1",
+    "name": "Type-P loop monodromy fixed-line classification: a real 2x2 representative fixes 0, 1 or 2 real projective lines according to the sign of (tr A)^2 - 4 det A; nonidentity rank-2 recurrence survives only on the two-line skeleton",
+    "statement": {
+      "latest": "A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}\\in GL(2,\\mathbb R)\\ \\text{a representative of the Type-P loop monodromy }M:\\quad M[X:Y]=[X:Y]\\iff cX^2+(d-a)XY-bY^2=0;\\quad \\Delta_P:=(d-a)^2+4bc=(\\operatorname{tr}A)^2-4\\det A;\\quad M\\ne I\\Rightarrow\\#\\operatorname{Fix}_{\\mathbb{RP}^1}(M)=\\begin{cases}0,&\\Delta_P<0\\\\1,&\\Delta_P=0\\\\2,&\\Delta_P>0\\end{cases};\\quad \\text{exact zero-defect return of a rank-2 retained plane with }M\\ne I\\Rightarrow\\Delta_P>0\\ \\wedge\\ \\operatorname{RetReturn}(M)\\subseteq\\{[\\ell_+],[\\ell_-]\\};\\quad [m]\\notin\\operatorname{Fix}(M)\\ \\text{third re-entered future-relevant lineage, no terminal/exit/defect/resolution}\\Rightarrow\\text{recurrence incompatibility}.",
+      "format": "latex",
+      "note_ascii": "Fixed-line equation (A1-1), discriminant (A1-2), three real cases E/P/H. Case E (Delta_P<0): no real fixed projective lineage exists in the declared real fixture (complex Type-P recurrence reopened, lane T0-04). Case P (Delta_P=0, M!=I): one recurrent class, so a rank-2 recurrent retained plane cannot be carried by two independent returned lineages -> rank drop / degeneration or registered resolution/exit/defect. Case H (Delta_P>0): the two-line skeleton (A1-3) is the only nonidentity branch that can support a recurrent rank-2 retained plane. A 'third re-entered lineage candidate' is defined typed: actual full-convolution lineage path, same base fiber after joint reanchor, future-reader relevant, outside Fix(M) (A1-4); its exact return contradicts M[m]=[m] (A1-5). Reduces A1 to the two-line escape target (A1-7), which the source leaves OPEN."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_a1_nonidentity_two_line_reduction:Section-1-eq-A1-1",
+      "ns_p2_a1_nonidentity_two_line_reduction:Section-1-eq-A1-2",
+      "ns_p2_a1_nonidentity_two_line_reduction:Section-2-eq-A1-3",
+      "ns_p2_a1_nonidentity_two_line_reduction:Section-3-eq-A1-5",
+      "PROP-P3-PROJECTIVE-THREE-LINE-RIGIDITY-01 (NS-side dependency, not registered in Toledo)",
+      "check_ns_p2_typeP_nonidentity_fixedline_classification.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-PLANE-SWITCH-NORMAL-LINEAGE-01",
+        "derived_via": "projective_null_transport_and_holonomy_language"
+      },
+      {
+        "code": "PROP-P3-PLANE-SWITCH-CAPACITY-01",
+        "derived_via": "two_lineage_plane_lock_requires_two_returned_classes"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: fixed-line equation, discriminant classification, and 'nonidentity rank-2 recurrence -> only possible in the two-line case' are DERIVED (the latter conditionally on the typed exact-return definition); 'third re-entered lineage outside Fix(M) -> recurrence clash' is a logical consequence of that definition. Full-convolution generation of a third re-entered lineage, two-line skeleton impossibility in general, rank-0 collapse-edge recurrent classification, and the identity-monodromy branch are OPEN.",
+      "Real-amplitude fixture convention; over the complex fiber PGL(2,C) has no elliptic case, so only 'M ≠ I ⇒ at most two returned classes' and the parabolic rank-drop survive.",
+      "Finite diagnostics (equal-shell / W3 / NPSC-style closure tests) may be used to falsify or calibrate (A1-7) but, per the source, must not be promoted to a theorem across arbitrary depth or unbounded mode boxes.",
+      "The source cites 'PROP-P3-PROJECTIVE-THREE-LINE-RIGIDITY-01' (NS paper NS_P2_PROJECTIVE_HOLONOMY_TYPE_AUDIT.md, (PH-1)-(PH-2)) as a reused object; that identifier is not registered in Toledo as of this pass, so it is recorded here as an alias/dependency string only, not as a parent.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for a projective fixed-line / trace-discriminant classification of a 2x2 loop monodromy (the existing 'discriminant' objects in Toledo are the spine crossover discriminant lambda_c = D^2/4MK, unrelated) and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge).",
+      "NS PR #61 (merge 066b689): Case E is real-fixture only — 'no real fixed projective lineage exists in the declared real fixture'; complex Type-P recurrence is reopened (lane T0-04)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_A1_NONIDENTITY_TWO_LINE_REDUCTION.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #58, merge commit 90099ea11bba6d2ed108f7a946a699fbe26064e1. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 58,
+        "merge_sha": "90099ea11bba6d2ed108f7a946a699fbe26064e1",
+        "paths": [
+          "paper/NS_P2_A1_NONIDENTITY_TWO_LINE_REDUCTION.md",
+          "reproduction/checks/check_ns_p2_typeP_nonidentity_fixedline_classification.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact finite projective algebra derived in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_typeP_nonidentity_fixedline_classification.py PASS in NS CI (exact-a1-two-line-reduction job, PR #58)."
+    }
+  },
+  {
+    "id": "PROP-P3-ORTHOGONAL-TURN-FULLCLOSURE-ESCAPE-01",
+    "code": "weld/P.??.v1",
+    "name": "Orthogonal-turn full-closure escape: the unique nondegenerate zero-dispersion orthogonal-turn triple is mutually orthogonal, and its full-convolution descendants s=p+q, t=p+r carry strictly positive projective frame dispersion against both parent planes",
+    "statement": {
+      "latest": "p=(P,0,0),\\ q=(a,b,0),\\ r=(c,0,d),\\ P,b,d\\ne0:\\quad n_1=p\\times q=(0,0,Pb),\\ n_2=p\\times r=(0,-Pd,0),\\ n_3=q\\times r=(bd,-ad,-bc);\\quad n_3\\cdot n_1=-Pb^2c,\\ n_3\\cdot n_2=Pad^2;\\quad \\text{zero dispersion with both parents}\\Rightarrow a=c=0;\\quad p=(P,0,0),\\ q=(0,Q,0),\\ r=(0,0,R):\\ s=p+q,\\ t=p+r,\\ n_{st}=s\\times t=(QR,-PR,-PQ);\\quad c_{pq}^2=\\frac{P^2Q^2}{Q^2R^2+P^2R^2+P^2Q^2},\\ c_{pr}^2=\\frac{P^2R^2}{Q^2R^2+P^2R^2+P^2Q^2},\\ 0<c^2<1;\\quad \\mu=4c^2(1-c^2)>0\\ \\text{for both.}",
+      "format": "latex",
+      "note_ascii": "Exact wavevector geometry, verified symbolically by the checker. Upgrades Standalone vNext Section 11 (a nonplanar orthogonal zero-dispersion patch cannot stay zero-dispersion under full local closure beyond two generations unless a coupling is suppressed/degenerate) to an exact statement: full local closure of a nonplanar orthogonal-turn two-line patch produces a positive-dispersion event within at most two geometric closure generations unless a generated channel is suppressed. Geometric only: it does not prove every descendant scalar NSE channel is nonzero; suppression by polarization nullity, zero amplitude, exact cancellation, terminalization, exit or defect must be routed through the existing ledgers (this is the load-bearing residue)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_a1_two_line_escape_reduction:Section-2",
+      "ns_p2_standalone_vnext:Section-11 (exact checker upgrade)",
+      "check_ns_p2_orthogonal_turn_fullclosure_escape.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-ORTHOGONAL-TURN-01",
+        "derived_via": "orthogonal_turn_branch_of_plane_turn_trichotomy"
+      },
+      {
+        "code": "PROP-P2-ORTHOGONAL-TURN-MIRROR-TAX-01",
+        "derived_via": "projective_frame_dispersion_invariant_mu"
+      },
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "suppressed_descendant_must_be_registered_not_deleted"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: 'orthogonal-turn full-closure wavevector geometry: DERIVED exact / proposal'. The statement is geometric; whether the forced positive-dispersion descendant is realized as a nonzero scalar NSE channel is not proved, and repeated suppression of such descendants (recursive charging) is OPEN.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for an orthogonal-turn full-convolution descendant dispersion identity of this form and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_A1_TWO_LINE_ESCAPE_REDUCTION.md' (third-person registration from the merged text; the note labels itself REUSE-FIRST REDUCTION + NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #58, merge commit 90099ea11bba6d2ed108f7a946a699fbe26064e1. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 58,
+        "merge_sha": "90099ea11bba6d2ed108f7a946a699fbe26064e1",
+        "paths": [
+          "paper/NS_P2_A1_TWO_LINE_ESCAPE_REDUCTION.md",
+          "reproduction/checks/check_ns_p2_orthogonal_turn_fullclosure_escape.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact symbolic wavevector-geometry identities derived in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_orthogonal_turn_fullclosure_escape.py PASS in NS CI (exact-projective-type-audit job, PR #58)."
+    }
+  },
+  {
+    "id": "PROP-P3-A1-TWO-LINE-ESCAPE-REDUCTION-01",
+    "code": "weld/P.??.v1",
+    "name": "A1 two-line nonidentity escape reduction: M ≠ I with a productive recurrent web and at most two fixed classes reduces to planar/2D3C, or an event-level frustration/cut, or a registered full-convolution suppression ledger",
+    "statement": {
+      "latest": "M=T_{loop}\\ne I,\\ \\text{productive recurrent web},\\ \\#\\operatorname{Fix}(M)\\le2\\ \\Longrightarrow\\ \\text{planar/2D3C}\\ \\vee\\ \\text{event-level frustration/cut}\\ \\vee\\ \\text{full-convolution suppression ledger};\\qquad \\text{via the shared-mode trichotomy at every active event: (1) positive projective frame dispersion}\\Rightarrow\\text{local phase-frustration tax}\\vee\\text{amplitude/coupling cut};\\ (2)\\ \\text{zero dispersion, same plane}\\Rightarrow\\text{planar/2D3C};\\ (3)\\ \\text{zero dispersion, orthogonal turn}\\Rightarrow\\text{positive-dispersion event}\\vee\\text{registered suppression}.",
+      "format": "latex",
+      "note_ascii": "(A1-RED). Branch 1 uses the already-derived shared-frame mismatch machinery on the actual registered event geometry (explicit Fourier triads, hence a valid Type-P-to-Type-Phi local realization; no new phase-packing theorem). Branch 2 is the existing planar/2D3C regular branch. Branch 3 is PROP-P3-ORTHOGONAL-TURN-FULLCLOSURE-ESCAPE-01. Effect on the attack map: the earlier target 'M != I -> force a third returned line' is downgraded; the preferred route is M != I -> at most two recurrent classes -> local trichotomy -> planar OR event-level tax/cut OR suppressed descendant -> recursively charge suppression via OCSR + Witness Soundness. Falsification first: search for a compact productive full-convolution web that repeatedly cancels/nulls every positive-dispersion descendant while staying nonplanar, zero-defect, no-exit and reader-sufficient."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_a1_two_line_escape_reduction:Section-3-eq-A1-RED",
+      "ns_p2_a1_two_line_escape_reduction:Section-5 (remaining exact obligation)",
+      "PROP-P3-PROJECTIVE-THREE-LINE-RIGIDITY-01 (NS-side dependency, not registered in Toledo)",
+      "check_ns_p2_orthogonal_turn_fullclosure_escape.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-TYPEP-FIXEDLINE-CLASSIFICATION-01",
+        "derived_via": "at_most_two_fixed_classes_two_line_skeleton"
+      },
+      {
+        "code": "PROP-P3-ORTHOGONAL-TURN-FULLCLOSURE-ESCAPE-01",
+        "derived_via": "branch_3_orthogonal_turn_forces_dispersion_or_suppression"
+      },
+      {
+        "code": "PROP-P2-ORTHOGONAL-TURN-01",
+        "derived_via": "shared_mode_plane_turn_trichotomy"
+      },
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "suppression_routed_through_exact_cancellation_ledger"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "no_silent_loss_suppressed_channel_must_be_registered"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: 'A1 two-line nonidentity branch reduction: DERIVED reduction / proposal', conditional on the already-recorded planar and frame-mismatch theorems and on explicit registration of suppressed descendants. It is NOT a proof of the nonidentity FNW branch: repeated suppression may be supplied by cancellation/degeneracy patterns not yet globally charged. Recursive charging of suppressed descendants, OCSR, Witness Soundness, FNW/G6, G4/G7 are OPEN.",
+      "The remaining exact obligation stated by the source — repeated suppression of forced positive-dispersion descendants => payable reader consequence / exit / degeneration — must be reached without the false shortcut C_k>0 => physical defect.",
+      "The source cites 'PROP-P3-PROJECTIVE-THREE-LINE-RIGIDITY-01' (NS paper NS_P2_PROJECTIVE_HOLONOMY_TYPE_AUDIT.md, (PH-1)-(PH-2)) as a reused object; that identifier is not registered in Toledo as of this pass, so it is recorded here as an alias/dependency string only, not as a parent.",
+      "Reduction-type result: its only new algebra is the parent PROP-P3-ORTHOGONAL-TURN-FULLCLOSURE-ESCAPE-01; the checker cited certifies that parent, not the reduction's logical assembly. Registering pass read only, hence Dr.",
+      "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for an A1 two-line recurrence reduction of this form and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge).",
+      "Field note (NS PR #61): the two-line skeleton (#Fix(M) <= 2) survives complexification; the elliptic exclusion of the parent classification does not."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_A1_TWO_LINE_ESCAPE_REDUCTION.md' (third-person registration from the merged text; the note labels itself REUSE-FIRST REDUCTION + NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #58, merge commit 90099ea11bba6d2ed108f7a946a699fbe26064e1. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 58,
+        "merge_sha": "90099ea11bba6d2ed108f7a946a699fbe26064e1",
+        "paths": [
+          "paper/NS_P2_A1_TWO_LINE_ESCAPE_REDUCTION.md",
+          "paper/NS_P2_A1_NONIDENTITY_TWO_LINE_REDUCTION.md",
+          "reproduction/checks/check_ns_p2_orthogonal_turn_fullclosure_escape.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: reuse-first reduction assembled in the source from derived parents; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_orthogonal_turn_fullclosure_escape.py (the reduction's Branch-3 parent) PASS in NS CI (exact-projective-type-audit job, PR #58); the reduction itself has no separate checker."
+    }
+  },
+  {
+    "id": "PROP-P3-TYPE-P-SHELL-CONFINEMENT-01",
+    "code": "weld/P.??.v1",
+    "name": "Type-P transport shell confinement: the zero-cross projective transport T_e is single-valued on the whole fiber iff |k_1| = |k_2|; an unequal-shell edge is the rank-0 collapse [k_1 x k_2] -> [k_1 x k_2]; every closed non-rank-0 Type-P loop lies on one shell",
+    "statement": {
+      "latest": "T_e([a])=[b]\\iff a\\in k_1^\\perp,\\ b\\in k_2^\\perp,\\ \\mathcal B_{k_1,k_2}(a,b)=0,\\ b\\ne0,\\qquad \\mathcal B_{p,q}(a,b)=\\mathbb P_{p+q}[(a\\cdot q)b+(b\\cdot p)a];\\quad \\ker\\big(b\\mapsto\\mathcal B_{k_1,k_2}(a,b)\\big)\\ne\\{0\\}\\iff a\\cdot k_2=0\\ \\vee\\ |k_1|=|k_2|;\\quad T_e\\ \\text{single-valued on }\\mathbb P(k_1^\\perp)\\iff|k_1|=|k_2|;\\quad |k_1|\\ne|k_2|,\\ k_1\\nparallel k_2\\Rightarrow T_e=\\{[k_1\\times k_2]\\mapsto[k_1\\times k_2]\\}\\ (\\text{rank-0 projective collapse});\\quad \\text{non-rank-0 Type-P transport on }k_1\\to k_2\\Rightarrow|k_1|=|k_2|\\ (\\text{TP-1});\\quad \\text{closed loop with all edges non-rank-0}\\Rightarrow|k_1|=\\cdots=|k_m|.",
+      "format": "latex",
+      "note_ascii": "Corollary of the reused general anchor-cross nullity theorem (ACN-1) with p=k_1, q=k_2. Branch (i) equal shell: kernel is a line for every class, T_e is a genuine projective map. Branch (ii) unequal shell: only the class [k_1 x k_2] has a zero-cross partner (itself); every other class has trivial kernel; the induced projective relation is constant (the linear cross map has rank 1 at that anchor; 'rank-0' names the induced projective relation). Parallel unequal-shell edge k_2 = c k_1, c != -1: every class has a.k_2=0 and the kernel is all of k_2^perp, so T_e is not single-valued and (TP-1) still holds. Consequence: a recurrent Type-P web that does not collapse classes through rank-0 edges lives in the equal-shell sector, the same arena as the equal-shell direction lock, W3 and NPSC. Checker certifies (TP-1) on three explicit unequal-shell edges and three equal-shell control edges."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_typeP_loop_transport_fixtures:Section-2-eq-TP-1",
+      "ns_p2_standalone_vnext:Section-114-eq-114.1 (T_e definition, reused)",
+      "ns_p2_standalone_vnext:Section-114-eq-114.2 (T_loop recurrent condition, reused)",
+      "check_ns_p2_typeP_loop_transport.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "ACN-1_specialised_to_p=k1_q=k2_anchor_in_k1_perp"
+      },
+      {
+        "code": "PROP-P2-CR0-CORE-INCLUSION-OPEN-01",
+        "derived_via": "standalone_vnext_114.1_projective_null_transport_definition"
+      },
+      {
+        "code": "PROP-P3-EQUAL-SHELL-DIRECTION-LOCK-01",
+        "derived_via": "confines_type_P_recurrence_to_equal_shell_sector"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: (TP-1) is DERIVED / EXACT as a corollary of the reused nullity theorem and is a Type-P (projective polarization/lineage holonomy) statement only; nothing here is a Type-Phi scalar phase cycle, the inference Type P -> Type Phi -> packed tax is not used, and no cancellation is promoted to physical loss. A1, A3, (PH-3) coverage, FNW/OCSR/Witness Soundness, WS for D_cancel, G4/G6/G7 and Clay regularity remain OPEN.",
+      "FINITE_DIAGNOSTIC metadata recorded from the source, never as a theorem: forty random integer cycles (m in {3,4}, entries in [-3,3], seed 1) all contain an edge on which T_e is not single-valued — consistent with (TP-1), evidence of nothing beyond it, deliberately not reproduced in CI.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for a shell-confinement corollary of the zero-cross projective transport and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_TYPEP_LOOP_TRANSPORT_FIXTURES.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #59, merge commit 7abeb4033d50bd75b8ee4b616fbfe5158bcf5ed3. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 59,
+        "merge_sha": "7abeb4033d50bd75b8ee4b616fbfe5158bcf5ed3",
+        "paths": [
+          "paper/NS_P2_TYPEP_LOOP_TRANSPORT_FIXTURES.md",
+          "reproduction/checks/check_ns_p2_typeP_loop_transport.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact corollary of a registered nullity proposal, certified on explicit edges in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_typeP_loop_transport.py PASS in NS CI (exact-multisource-cancellation job, PR #59)."
+    }
+  },
+  {
+    "id": "PROP-P3-TYPE-P-IDENTITY-LOOP-FIXTURES-01",
+    "code": "weld/P.??.v1",
+    "name": "Type-P equal-shell loop monodromy fixtures: two explicit integer loops with M = I exactly (identity branch A3 non-empty at transport level) and explicit nonidentity loops with two / zero real fixed lines (A1 inputs)",
+    "statement": {
+      "latest": "M=T_{e_m}\\circ\\cdots\\circ T_{e_1}\\in PGL(2,\\mathbb Q)\\ \\text{in the basis of }k_1^\\perp:\\quad \\text{shell }9:\\ (2,-2,1)\\to(2,-2,-1)\\to(-2,-2,1)\\to(-2,-2,-1)\\to\\ \\text{back}:\\ M=I;\\quad \\text{shell }5:\\ (-1,-2,0)\\to(-2,1,0)\\to(2,1,0)\\to\\ \\text{back}\\ (z=0,\\ \\text{planar, class }\\mathcal P):\\ M=I;\\quad \\text{shell }5:\\ (1,0,2)\\to(-2,1,0)\\to(-1,2,0):\\ M\\sim\\begin{pmatrix}1&1\\\\5/2&-2\\end{pmatrix},\\ \\#\\operatorname{Fix}=2;\\quad \\text{shell }6:\\ (1,2,-1)\\to(-2,1,1)\\to(-1,-1,2):\\ M\\sim\\begin{pmatrix}7&-3\\\\-1&4\\end{pmatrix},\\ \\#\\operatorname{Fix}=2;\\quad \\text{shell }5:\\ (1,0,-2)\\to(-2,1,0)\\to(0,-1,2):\\ M\\sim\\begin{pmatrix}1&1\\\\-5/2&2\\end{pmatrix},\\ \\#\\operatorname{Fix}=0.",
+      "format": "latex",
+      "note_ascii": "EXACT_FIXTURE: M ~ I iff the 2x2 representative is a nonzero scalar matrix; otherwise real fixed lines are the real roots of M21 + M22 x - x(M11 + M12 x) together with [0:1] when M12 = 0, so #Fix in {0,1,2}. The two identity loops are branch-B (identity monodromy) witnesses: every lineage class returns, so the identity branch A3 of the three-line-rigidity fork is non-empty at the level of the transport algebra. They are NOT counterexamples to anything: productivity, zero-defect, full-convolution closure, phase/amplitude compatibility of the underlying webs are untested. The shell-5 identity loop is planar (class P of CR_0 subset P u D); the shell-9 rectangle is not planar. The nonidentity fixtures realise the two-line and zero-line cases on concrete integer loops (A1 falsification-search inputs); no productive web returning on only the two fixed classes is exhibited."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_typeP_loop_transport_fixtures:Section-3-2 (identity fixtures)",
+      "ns_p2_typeP_loop_transport_fixtures:Section-3-3 (nonidentity fixtures)",
+      "PROP-P3-PROJECTIVE-THREE-LINE-RIGIDITY-01 (NS-side dependency, not registered in Toledo)",
+      "check_ns_p2_typeP_loop_transport.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-TYPE-P-SHELL-CONFINEMENT-01",
+        "derived_via": "equal_shell_sector_makes_M_exactly_computable"
+      },
+      {
+        "code": "PROP-P3-TYPEP-FIXEDLINE-CLASSIFICATION-01",
+        "derived_via": "real_fixed_line_count_of_each_fixture"
+      },
+      {
+        "code": "PROP-P2-CR0-CORE-INCLUSION-OPEN-01",
+        "derived_via": "planar_identity_loop_lands_in_class_P"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: EXACT FIXTURE / PROPOSAL. Derived consequence: the identity branch (A3) is non-empty at the transport level. A3 is NOT closed — productive identity-monodromy rigidity (M = I + productivity + D = E = 0 => planar / degenerate / terminal) remains OPEN, and the fixtures neither prove nor refute it. Identity monodromy is a necessary-type condition for branch B, not a construction of a recurrent web.",
+      "FINITE_DIAGNOSTIC metadata recorded from the source, never as a theorem: random equal-shell cycles m in {3,4,5}, entries in [-3,3], antipodal consecutive pairs excluded, seed 7 — shell 9: 48 loops, 1 identity, 2 with 0 real fixed lines, 0 with 1, 45 with 2; shell 6: 52 loops, 0/9/0/43; shell 5: 52 loops, 1/11/0/40. Read-out only: no rate, no genericity theorem, no all-shell statement; not reproduced in CI (the deterministic EXACT_FIXTURE loops above are).",
+      "Real-amplitude fixture convention: fixed-line counts are over RP^1; over the complex fiber the zero-fixed-line (elliptic) case does not occur.",
+      "The source cites 'PROP-P3-PROJECTIVE-THREE-LINE-RIGIDITY-01' (NS paper NS_P2_PROJECTIVE_HOLONOMY_TYPE_AUDIT.md, (PH-1)-(PH-2)) as a reused object; that identifier is not registered in Toledo as of this pass, so it is recorded here as an alias/dependency string only, not as a parent.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for explicit Type-P loop monodromy fixtures and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_TYPEP_LOOP_TRANSPORT_FIXTURES.md' (third-person registration from the merged text; the note labels this result EXACT FIXTURE / PROPOSAL within a NEW DERIVATION / PROPOSAL note). Merged to main of morrocwi/readout-problem-navier-stokes via PR #59, merge commit 7abeb4033d50bd75b8ee4b616fbfe5158bcf5ed3. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 59,
+        "merge_sha": "7abeb4033d50bd75b8ee4b616fbfe5158bcf5ed3",
+        "paths": [
+          "paper/NS_P2_TYPEP_LOOP_TRANSPORT_FIXTURES.md",
+          "reproduction/checks/check_ns_p2_typeP_loop_transport.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact rational monodromy computation on explicit integer loops in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_typeP_loop_transport.py PASS in NS CI (exact-multisource-cancellation job, PR #59)."
+    }
+  },
+  {
+    "id": "PROP-P3-RECURSIVE-SUPPRESSION-CHARGING-01",
+    "code": "weld/P.??.v1",
+    "name": "Recursive suppression charging (RSC) -- OPEN THEOREM CANDIDATE: a compact productive recurrent two-line web with zero defect, no terminal/exit, and every forced descendant repeatedly suppressed and M3-resolved is planar, rank-degenerate, scale-escaping, or carries a registered future-reader consequence; reduced by finite pigeonhole to three OPEN branches RSC-O / RSC-E / RSC-C",
+    "statement": {
+      "latest": "\\mathsf L_j\\subseteq\\{\\mathrm O,\\mathrm E,\\mathrm C,\\mathrm T\\},\\quad \\mathrm O:\\ a\\cdot q=0,\\quad \\mathrm E:\\ |q|=|p|,\\quad \\mathrm C:\\ \\sum_\\alpha g_{\\alpha,k}=0\\ \\text{with some }g_{\\alpha,k}\\ne0,\\quad \\mathrm T:\\ \\text{terminal/exit/named defect};\\qquad (\\mathrm{RSC}):\\ \\text{compact productive recurrent two-line web}+\\text{zero registered defect, no terminal, no exit}+\\text{every forced descendant repeatedly suppressed and M3-resolved}\\Longrightarrow\\text{planar}\\vee\\text{rank degeneration}\\vee\\text{scale escape}\\vee\\text{registered future-reader consequence};\\qquad (\\mathrm{RSC\\text{-}1}):\\ \\text{no }\\mathrm T\\text{ ever}\\Rightarrow\\mathrm O\\text{ i.o.}\\ \\vee\\ \\mathrm E\\text{ i.o.}\\ \\vee\\ \\mathrm C\\text{ i.o.}",
+      "format": "latex",
+      "note_ascii": "OPEN THEOREM CANDIDATE — no theorem claim is promoted by the source card. M3 classifies each suppression fail-closed by a SET of labels (O orthogonality, E equal-shell nullity, C exact multisource cancellation, T terminal/exit/named defect); a suppression certifiable by no registered label is UNRESOLVED and cannot enter a promoted proof branch. C is a cancellation/constraint label only, never by itself a physical defect or payable loss. (RSC-1) is the elementary infinite-pigeonhole extraction over the three nonterminal atomic labels; mixed label-sets such as {O,E} belong to every atomic branch they contain. The three load-bearing OPEN obligations: RSC-O (O infinitely often => planar / rank-degenerate / exit / reader consequence), RSC-E (E i.o. => planar / rank-degenerate / scale escape / reader consequence), RSC-C (C i.o. => registered future-reader consequence / degeneration / exit; depends on global multi-source cancellation compatibility + Witness Soundness; C_k>0 => physical defect is not allowed). Falsification target: an exact compact productive recurrent web with no T event, all forced descendants M3-resolved, nonplanar, rank >= 2, no scale escape, no future-reader consequence, zero registered defect, and an infinite/cyclic suppression history using only O/E/C labels refutes (RSC) as stated."
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_recursive_suppression_charging_card:Section-2-eq-RSC",
+      "ns_p2_recursive_suppression_charging_card:Section-3-eq-RSC-1",
+      "ns_p2_recursive_suppression_charging_card:Section-4 (RSC-O / RSC-E / RSC-C)",
+      "ns_p2_standalone_vnext:Section-114-1 (no-silent-loss / null-web lineage discipline)",
+      "M3 fail-closed label-set interface (specified in source; no checker)"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-CR0-CORE-INCLUSION-OPEN-01",
+        "derived_via": "standalone_vnext_114.1_lineage_null_web_architecture"
+      },
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "O_and_E_labels_are_the_two_nullity_branches"
+      },
+      {
+        "code": "PROP-P3-EQUAL-SHELL-DIRECTION-LOCK-01",
+        "derived_via": "RSC-E_reusable_input"
+      },
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "C_label_is_exact_cancellation_ledger_entry"
+      },
+      {
+        "code": "PROP-P3-A1-TWO-LINE-ESCAPE-REDUCTION-01",
+        "derived_via": "RSC_is_the_A1_residue_after_two_line_reduction"
+      }
+    ],
+    "honest_caveats": [
+      "Registered so that the program's canonical OPEN target for the A1 residue can be CITED by code (Toledo-first rule) — registration is not endorsement and confers no tier. Status in source: 'OPEN THEOREM CANDIDATE / REUSE-FIRST DECOMPOSITION'; claim boundary from the source: the M3 four-label / multi-label / UNRESOLVED interface is SPECIFIED, (RSC-1) is DERIVED elementary, RSC-O, RSC-E, RSC-C and the candidate itself are OPEN.",
+      "NPSC depth-1 exhaustive results are supporting evidence / falsification control only, never a premise.",
+      "Finite diagnostics (W1-W3, orthogonal-turn generation-1, NPSC boxes, T0-02 catalogues) can falsify local variants and discover missing labels; finite success cannot promote the global theorem. The source instructs not to invent a fifth suppression label unless an exact UNRESOLVED fixture forces it.",
+      "The card specifies the M3 four-label / multi-label / UNRESOLVED interface (source §1, §7 'SPECIFIED'); no Toledo entry and no NS checker file carry the name M3 as of this pass, so it is recorded as an alias string only.",
+      "A proof would fold A1 into OCSR / Witness Soundness rather than create a separate holonomy theorem; the objective is to show repeated suppression cannot remain compact, productive, nonplanar, reader-sufficient and zero-defect indefinitely — not that every suppression immediately loses energy.",
+      "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for an object named or equivalent to recursive suppression charging and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_RECURSIVE_SUPPRESSION_CHARGING_CARD.md' (third-person registration from the merged text; the card labels itself OPEN THEOREM CANDIDATE / REUSE-FIRST DECOMPOSITION). Merged to main of morrocwi/readout-problem-navier-stokes via PR #60, merge commit 5a8a959039c3c3f40c431a468f9b1e08b58c7be7. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 60,
+        "merge_sha": "5a8a959039c3c3f40c431a468f9b1e08b58c7be7",
+        "paths": [
+          "paper/NS_P2_RECURSIVE_SUPPRESSION_CHARGING_CARD.md"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "none -- open theorem candidate; only the elementary pigeonhole extraction (RSC-1) is derived in the source.",
+      "empirical_test_status": "No checker for the candidate itself. The first branch certificate, check_ns_p2_rsc_o_two_anchor_planarity.py (PROP-P3-RSC-O-TWO-ANCHOR-PLANARITY-01), PASS in NS CI (exact-a1-two-line-reduction job, PR #60); the clay-governance job PASS on PR #60."
+    }
+  },
+  {
+    "id": "PROP-P3-RSC-O-TWO-ANCHOR-PLANARITY-01",
+    "code": "weld/P.??.v1",
+    "name": "RSC-O two-anchor orthogonality suppression forces wavevector planarity: a recruited mode cross-silent through the O branch to two anchors with independent polarization lines is parallel to a_1 x a_2 and makes p_1, p_2, q coplanar",
+    "statement": {
+      "latest": "(p_i,a_i),\\ a_i\\ne0,\\ a_i\\cdot p_i=0,\\ a_1\\times a_2\\ne0;\\quad q\\ne0,\\ b\\ne0,\\ b\\cdot q=0;\\quad (\\mathrm O\\text{-}1):\\ a_1\\cdot q=a_2\\cdot q=0;\\quad (\\mathrm O\\text{-}2):\\ \\mathcal B_{p_1,q}(a_1,b)=\\mathcal B_{p_2,q}(a_2,b)=0\\ \\Longrightarrow\\ \\mathcal B_{p_i,q}(a_i,b)=\\mathbb P_{k_i}\\big((b\\cdot p_i)a_i\\big)=(b\\cdot p_i)a_i,\\ k_i=p_i+q;\\quad (\\mathrm O\\text{-}3):\\ b\\cdot p_1=b\\cdot p_2=0;\\quad (\\mathrm O\\text{-}4):\\ \\det[p_1,p_2,q]=0,\\ \\dim\\operatorname{span}\\{p_1,p_2,q\\}\\le2;\\quad (\\mathrm O\\text{-}5):\\ q\\parallel a_1\\times a_2.",
+      "format": "latex",
+      "note_ascii": "Exact local linear algebra. On the orthogonality branch a_i is perpendicular to k_i = p_i + q, so the projection P_{k_i} acts trivially on a_i and cross silence reduces to b.p_i = 0; b != 0 orthogonal to q, p_1, p_2 forces the three wavevectors to be linearly dependent. (O-5): a_1 x a_2 != 0 makes W^perp one-dimensional, so q is locked to the normal of the two polarization lines. In the surviving nonidentity A1 two-line skeleton with fixed classes [l_+], [l_-] and representatives a_+ x a_- != 0, any recruited mode simultaneously O-silent to one retained anchor from each fixed line satisfies q || a_+ x a_- and produces a planar wavevector certificate; repeated double-O suppression is confined to one normal direction. To be used as a charge certificate inside RSC-O, not as a global recurrence theorem."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_rsc_orthogonality_two_anchor_planarity:Section-2-eq-O-4",
+      "ns_p2_rsc_orthogonality_two_anchor_planarity:Section-3-eq-O-5",
+      "check_ns_p2_rsc_o_two_anchor_planarity.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-RECURSIVE-SUPPRESSION-CHARGING-01",
+        "derived_via": "first_exact_charge_certificate_for_branch_RSC-O"
+      },
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "orthogonality_branch_a_dot_q=0_of_the_nullity_locus"
+      },
+      {
+        "code": "PROP-P3-MULTI-ANCHOR-SUPPRESSION-01",
+        "derived_via": "registering_pass_link (not cited in the source reuse list)"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: an exact local theorem and RSC-O charge certificate. Not proved: that every O-labelled event is double-O (a web may alternate single-anchor suppressions, mix O with E or C, replace anchors, or route descendants through other registered branches); promotion from infinitely many O-labelled suppressions to infinitely many double-O events; compatibility of repeated planar triples across changing anchors; full RSC-O; RSC globally; OCSR / Witness Soundness / FNW / G6; G4 / G7 / Clay regularity.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for a two-anchor orthogonality-suppression planarity theorem and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_RSC_ORTHOGONALITY_TWO_ANCHOR_PLANARITY.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #60, merge commit 5a8a959039c3c3f40c431a468f9b1e08b58c7be7. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-13.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 60,
+        "merge_sha": "5a8a959039c3c3f40c431a468f9b1e08b58c7be7",
+        "paths": [
+          "paper/NS_P2_RSC_ORTHOGONALITY_TWO_ANCHOR_PLANARITY.md",
+          "reproduction/checks/check_ns_p2_rsc_o_two_anchor_planarity.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact local linear-algebra theorem derived in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_rsc_o_two_anchor_planarity.py PASS in NS CI (exact-a1-two-line-reduction job, PR #60)."
+    }
   }
 ]
