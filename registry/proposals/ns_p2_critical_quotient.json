@@ -2146,7 +2146,7 @@
       "ns_p2_recursive_suppression_charging_card:Section-3-eq-RSC-1",
       "ns_p2_recursive_suppression_charging_card:Section-4 (RSC-O / RSC-E / RSC-C)",
       "ns_p2_standalone_vnext:Section-114-1 (no-silent-loss / null-web lineage discipline)",
-      "M3 fail-closed label-set interface (specified in source; no checker)"
+      "M3 label-set interface (registered as PROP-P3-M3-SUPPRESSION-LABELS-01)"
     ],
     "coq": {
       "identifiers": [],
@@ -2173,13 +2173,17 @@
       {
         "code": "PROP-P3-A1-TWO-LINE-ESCAPE-REDUCTION-01",
         "derived_via": "RSC_is_the_A1_residue_after_two_line_reduction"
+      },
+      {
+        "code": "PROP-P3-M3-SUPPRESSION-LABELS-01",
+        "derived_via": "label_interface_registered_after_card"
       }
     ],
     "honest_caveats": [
       "Registered so that the program's canonical OPEN target for the A1 residue can be CITED by code (Toledo-first rule) — registration is not endorsement and confers no tier. Status in source: 'OPEN THEOREM CANDIDATE / REUSE-FIRST DECOMPOSITION'; claim boundary from the source: the M3 four-label / multi-label / UNRESOLVED interface is SPECIFIED, (RSC-1) is DERIVED elementary, RSC-O, RSC-E, RSC-C and the candidate itself are OPEN.",
       "NPSC depth-1 exhaustive results are supporting evidence / falsification control only, never a premise.",
       "Finite diagnostics (W1-W3, orthogonal-turn generation-1, NPSC boxes, T0-02 catalogues) can falsify local variants and discover missing labels; finite success cannot promote the global theorem. The source instructs not to invent a fifth suppression label unless an exact UNRESOLVED fixture forces it.",
-      "The card specifies the M3 four-label / multi-label / UNRESOLVED interface (source §1, §7 'SPECIFIED'); no Toledo entry and no NS checker file carry the name M3 as of this pass, so it is recorded as an alias string only.",
+      "The card specifies the M3 four-label / multi-label / UNRESOLVED interface (source §1, §7 'SPECIFIED'); the interface was subsequently registered as PROP-P3-M3-SUPPRESSION-LABELS-01 (NS #62) — see parents.",
       "A proof would fold A1 into OCSR / Witness Soundness rather than create a separate holonomy theorem; the objective is to show repeated suppression cannot remain compact, productive, nonplanar, reader-sufficient and zero-defect indefinitely — not that every suppression immediately loses energy.",
       "Registering-pass lookup outcome (first person of the registering pass, 2026-09-13): I searched registry/CANONICAL.json and registry/proposals/ under the equivalence criterion (renaming / positive scale / constant substitution) for an object named or equivalent to recursive suppression charging and found no matching canonical or proposal object; the source note separately records its own null Toledo lookup. Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL.",
       "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G4/G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
