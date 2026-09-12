@@ -4,7 +4,7 @@
     "code": "weld/P.??.v1",
     "name": "Row-aware Hadamard tightening of the full N=1 finite inverse radius",
     "statement": {
-      "latest": "R_j\ge\|J_{0,j*}\|_1,\ H_j\ge\sup_{x\in B}\|D J_{j*}(x)\|_{\infty\to1}\;\Longrightarrow\;\|J_0^{-1}(J(x)-J_0)\|_\infty\le r\sum_j\left(\prod_{k\ne j}R_k\right)H_j;\quad r=\frac{1}{2\sum_j(\prod_{k\ne j}R_k)H_j},\quad 10^{-3878}<r\le10^{-3877}",
+      "latest": "R_j\\ge\\|J_{0,j*}\\|_1,\\ H_j\\ge\\sup_{x\\in B}\\|D J_{j*}(x)\\|_{\\infty\\to1}\\;\\Longrightarrow\\;\\|J_0^{-1}(J(x)-J_0)\\|_\\infty\\le r\\sum_j\\left(\\prod_{k\\ne j}R_k\\right)H_j;\\quad r=\\frac{1}{2\\sum_j(\\prod_{k\\ne j}R_k)H_j},\\quad 10^{-3878}<r\\le10^{-3877}",
       "format": "latex",
       "note_ascii": "on the already-certified full N=1 49-dimensional symmetry slice, retain one Jacobian-row and Hessian-row majorant per selected Taylor observation instead of replacing every row by the largest row; the reproduced bound has a 3878-digit denominator versus 7934 digits for the uniform-row proof, a 4056-decimal-order improvement in the power-of-ten radius bracket, while keeping q<=1/2"
     },

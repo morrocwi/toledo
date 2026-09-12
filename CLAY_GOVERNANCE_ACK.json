@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-12",
-  "scope": "Adopt TG-RFG-01 as the central cross-repository reuse-first derivation gate: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. This is a provenance/governance change only. It does not alter any canonical equation, theorem statement, Coq proof, finite bridge result, or Clay status.",
+  "scope": "Adopt TG-RFG-01 as the central cross-repository reuse-first derivation gate: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. This is a provenance/governance change only. It does not alter any canonical equation, theorem statement, Coq proof, finite bridge result, or Clay status. Combined with the NS P2 proposals PR (#28, already on main): Register NS P2 Standalone vNext-lane proposals (direction lock, multi-source cancellation witnesses, W3 generation-1, CR_0 target, scale-loss audit provenance, H3 shell readout, Duhamel window split, window bilinear constant, retention-gap recurrence, energy-only remainder refutation, Uniform Retention Gap HOLD, tax summability, Finite Recurrence Exclusion occurrence) and three NEW DERIVATION / PROPOSAL entries (occupation primal, Farkas dual certificate, occupation soundness); repair two proposal JSON files that failed to parse (syntax only, no semantic change). All entries unverified; no canonical code assigned; Witness Soundness, OCSR, G4/G6/G7 and Clay Navier-Stokes regularity remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "The active Clay TODO obligations remain unchanged. TG-RFG-01 constrains how future mathematical objects are located, interpreted, reused, minimally derived, and proposed; it does not close or reclassify any G4/G6/G7, P2, P-vs-NP, or Clay obligation."
+    "evidence": "Governance gate TG-RFG-01 (this PR) and proposal registrations (#28) only; the Toledo TODO is unchanged."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "EQUATION_SOURCE_POLICY.md now names TG-RFG-01 as the canonical central governance rule, and AGENTS.md requires all mathematical/Clay-sensitive work to follow it. No canonical registry entry is added or promoted."
+    "evidence": "EQUATION_SOURCE_POLICY.md now names TG-RFG-01 as the canonical central governance rule, and AGENTS.md requires all mathematical/Clay-sensitive work to follow it. No canonical registry entry is added or promoted. Also on main via #28: registry/proposals/ns_p2_critical_quotient.json: 26 proposal entries (23 prior + 3 new), every entry labelled NEW DERIVATION / PROPOSAL — not yet in Toledo, refuted-in-source items carry status unverified + status_note; registry/proposals/ns_eps18_n1_rowwise_radius.json and discrete_epsilon_completion_observability_bridge.json: parse repairs only."
   },
   "claim_effect": "provenance-change"
 }
