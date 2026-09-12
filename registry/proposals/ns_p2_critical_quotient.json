@@ -981,5 +981,137 @@
       "rungs_held": "R0 source comparison by orchestrating session",
       "empirical_test_status": "n/a"
     }
+  },
+  {
+    "id": "PROP-RG-OCCUPATION-PRIMAL-01",
+    "code": "weld/M.??.v1",
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "name": "Occupation primal on a finite registered event set: stationary zero-defect/no-exit productive circulation",
+    "statement": {
+      "latest": "E\\ \\text{finite registered event set},\\ z_e\\in C_e\\subseteq\\mathbb{Q}^{n_e},\\ (Bz)_{v,r}=\\sum_{h(e)=v}Q_{e,r}z_e-\\sum_{t(e)=v}P_{e,r}z_e;\\quad (P):\\ z\\in\\prod_e C_e\\cap\\{d=0,x=0\\},\\ Bz=0,\\ \\sum_e p_e(z_e)=1.",
+      "format": "latex",
+      "note_ascii": "NEW DERIVATION / PROPOSAL (not yet in Toledo). Definition only. Parents: weld/M.02.v1 (event maps commute with the exact translation), EQ-001/C.16.v1 (lineage), Readout Genesis B.3 occupation normal forms over a partition. Instantiated for the NS leaf in GLS-2026-009 C0_SCHEMA sections 1-5; round-0 result recorded in rg_occ_c0_w3.json (spurious primal support = unknown gen-2 event)."
+    },
+    "aliases": [
+      "GLS-2026-009:C0_SCHEMA",
+      "founder_sketch_2026-09-12:occupation-flow"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "weld/M.02.v1",
+        "derived_via": "event_lift_commutation"
+      },
+      {
+        "code": "EQ-001/C.16.v1",
+        "derived_via": "lineage_channel_accounting"
+      }
+    ],
+    "honest_caveats": [
+      "A feasible occupation is a stationary mixture of events, not a trajectory; realization (Q_{e_n} z_n = P_{e_{n+1}} z_{n+1}) is a separate obligation.",
+      "Rows of C_e enter only with an inclusion certificate (exact events satisfy them); C_e must be closed for the Cesaro step of PROP-RG-OCC-SOUND-01."
+    ],
+    "origin": {
+      "source": "Founder sketches 2026-09-12 14:50-15:40 (occupation-flow primal/dual, C0_SCHEMA); orchestrating session GLS-2026-009.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 self-consistency; round-0 LP executed exactly (fractions)",
+      "empirical_test_status": "round 0: PRIMAL_FEASIBLE_SPURIOUS_BY_CONSTRUCTION"
+    }
+  },
+  {
+    "id": "PROP-RG-FARKAS-DUAL-CERTIFICATE-01",
+    "code": "weld/E.??.v1",
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "E",
+    "name": "Farkas dual certificate for the occupation primal on a closed rational polyhedral outer cone",
+    "statement": {
+      "latest": "C^{(r)}\\ \\text{closed rational polyhedral}:\\ (P)\\ \\text{infeasible}\\iff\\exists y,\\ \\eta>0,\\ \\lambda\\ge0:\\ B^{\\top}y-\\eta p=\\sum\\lambda\\cdot\\mathrm{rows}(C^{(r)}).\\ \\text{Checker: expand the identity only.}",
+      "format": "latex",
+      "note_ascii": "NEW DERIVATION / PROPOSAL (not yet in Toledo). The mathematical content is the standard Farkas lemma (external, relayed); what is new is its use as a Track-A certificate object for PROP-RG-OCCUPATION-PRIMAL-01. A certificate on an OUTER relaxation is a proof for the exact events; a primal on a relaxation is only a candidate."
+    },
+    "aliases": [
+      "GLS-2026-009:DUAL_CERTIFIED",
+      "founder_sketch_2026-09-12:dual-descent"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-RG-OCCUPATION-PRIMAL-01",
+        "derived_via": "linear_duality"
+      }
+    ],
+    "honest_caveats": [
+      "No certificate at a bounded degree/relaxation level is not a counterexample: return UNRESOLVED.",
+      "Per-edge weighted graphs are the wrong primal object below whole-step aggregation (TODO_RC_LANE U18)."
+    ],
+    "origin": {
+      "source": "Founder sketches 2026-09-12 14:20-15:25; orchestrating session GLS-2026-009.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0; the m=1 instance already holds as a Nullstellensatz certificate (rg_cert_w3_nullstellensatz.json, checker PASS)",
+      "empirical_test_status": "m=1 W3: UNSAT_CERTIFIED"
+    }
+  },
+  {
+    "id": "PROP-RG-OCC-SOUND-01",
+    "code": "weld/M.??.v1",
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "M",
+    "name": "Occupation soundness: an exact productive zero-defect recurrent core induces a feasible outer occupation primal",
+    "statement": {
+      "latest": "\\mathrm{Rec}^{ex}_0\\ne\\varnothing\\ \\wedge\\ (\\text{COMM: }P_e\\alpha_e=\\alpha P^{ex}_e,\\ Q_e\\alpha_e=\\alpha Q^{ex}_e)\\ \\wedge\\ \\text{Suff}=1\\ \\wedge\\ \\text{G4 bounded normalized states}\\ \\wedge\\ \\text{ZPR}\\ \\wedge\\ C^{(0)}\\ \\text{closed, }C^{ex}\\subseteq C^{(0)}\\ \\Longrightarrow\\ \\mathfrak P(C^{(0)})\\ne\\varnothing.",
+      "format": "latex",
+      "note_ascii": "NEW DERIVATION / PROPOSAL (not yet in Toledo). Theorem candidate; contrapositive: DUAL certificate => no exact productive recurrent core (the G6 use). Proof sketch: Cesaro average of productivity-normalized occupation along the recurrent trajectory (S_N -> infinity branch) plus zero-productivity rigidity (S_N finite branch)."
+    },
+    "aliases": [
+      "GLS-2026-009:RC-OCC-SOUND",
+      "founder_sketch_2026-09-12:OS"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-RG-OCCUPATION-PRIMAL-01",
+        "derived_via": "cesaro_limit_of_occupation"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "reader_sufficiency_hypothesis"
+      },
+      {
+        "code": "weld/E.06.v1",
+        "derived_via": "sufficiency_gate"
+      }
+    ],
+    "honest_caveats": [
+      "Conditional on G4 (open), ZPR (definition-level unless the degenerate class is defined independently: rank-1-locked polarizations or collinear addresses), closedness of the outer cone, and COMM for the event lift.",
+      "Does not prove NS regularity; does not replace G4 or G7."
+    ],
+    "origin": {
+      "source": "Founder sketch 2026-09-12 15:25 (RC-OCC-SOUND); orchestrating session GLS-2026-009.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 sketch audit only",
+      "empirical_test_status": "n/a"
+    }
   }
 ]
