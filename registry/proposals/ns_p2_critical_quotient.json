@@ -902,5 +902,84 @@
       "rungs_held": "none -- open target",
       "empirical_test_status": "protocol v2 pending"
     }
+  },
+  {
+    "id": "PROP-P2-TAX-SUMMABILITY-FROM-BALANCE-01",
+    "code": "weld/M.??.v1",
+    "name": "Accumulated physical tax is always summable under the certified balance (B); the 'tax accumulates OR zero-defect recurrence' split is not a dichotomy",
+    "statement": {
+      "latest": "\\mathcal V(q')+D(q\\to q')\\le\\mathcal V(q)+\\varepsilon_{\\rm br}\\ \\ (\\text{balance (B), Sec. 51.2}),\\ \\mathcal V\\ge0\\ \\Longrightarrow\\ \\sum_{j}D_j\\le\\mathcal V_0+\\sum_j\\varepsilon_{{\\rm br},j}<\\infty.\\quad\\text{Hence }\\limsup_j\\mathcal V_j>0\\Rightarrow D_j\\to0\\text{ along the orbit, and the omega-limit set is zero-defect (Sec. 82); all weight sits on GIR / CR}_0\\text{ exclusion.}",
+      "format": "latex",
+      "note_ascii": "One-line consequence of the balance identity. Corrects the sketch's case split 'sum Delta_j = infinity OR zero-defect recurrence': the first branch cannot occur once (B) holds with summable bridge defect, so cumulative-tax arguments do not weaken the GIR requirement; they reduce to it."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "standalone:eq-(B)-51.2",
+      "standalone:82.1-omega-limit"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-CR0-CORE-INCLUSION-OPEN-01",
+        "derived_via": "reduces_to"
+      }
+    ],
+    "honest_caveats": [
+      "Elementary telescoping; not machine-checked. Requires V >= 0 and summable bridge defect, both declared in the standalone (Sec. 51.2, 62)."
+    ],
+    "origin": {
+      "source": "Founder datum-centred closure sketches 2026-09-12 08:45-08:58, checked by the orchestrating session against NS_P2_STANDALONE_VNEXT sections 17-18, 51-62, 81-82, 108.3, 109-118.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 inspection",
+      "empirical_test_status": "n/a"
+    }
+  },
+  {
+    "id": "PROP-P2-FINITE-RECURRENCE-EXCLUSION-OCCURRENCE-01",
+    "code": "weld/M.??.v1",
+    "name": "'Finite Recurrence Exclusion Lemma' (founder 2026-09-12) is an occurrence of standalone Sections 17-18 and 59-61, not a new object",
+    "statement": {
+      "latest": "X_\\varepsilon:=\\{Z:S(Z)\\ge\\varepsilon,\\ Z\\notin\\mathcal P\\cup\\mathcal D\\}\\ \\text{compact, no zero-defect recurrent point}\\ \\Longrightarrow\\ \\exists L_\\varepsilon<\\infty,\\gamma_\\varepsilon>0:\\ \\text{every }L_\\varepsilon\\text{-block leaves }X_\\varepsilon\\text{ or pays defect}\\ge\\gamma_\\varepsilon.\\quad\\equiv\\quad\\text{Sec. 17-18 (finite depth }D(M,\\kappa,\\delta),\\ W_D\\ge c(M,\\kappa,\\delta)>0\\text{ by compactness) and Sec. 59-61 (nested compact }K_n,\\ K_m=\\varnothing\\Rightarrow\\delta=\\min_{\\mathfrak P_m}\\Delta_m>0).",
+      "format": "latex",
+      "note_ascii": "Registered as an occurrence per Toledo-first (existing object => cite, never duplicate). The quantitative upgrade S_{j+L} <= (1-gamma) S_j additionally needs scale-normalized homogeneity (Sec. 61: sum D >= delta V_j) and bridge decay eps_j <= C theta^j (Sec. 62) -- the G7 conditions -- so 'four bridges (WS + OCSR + UBRR + FRE)' should read 'Q (compact exact scale-covariant quotient, G4) + WS + OCSR + UBRR, then the G7 quantitative conditions'; FRE is DERIVED given Q, and Q is where the datum budget B(d_0) < infinity must actually be proven (T1 gap: ancestry tightness + uniform far-affine bridge, OPEN)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "standalone:Sec-17-18",
+      "standalone:Sec-59-61",
+      "founder_sketch_2026-09-12:FRE"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-CR0-CORE-INCLUSION-OPEN-01",
+        "derived_via": "quantitative_exit_conditional_on_Q"
+      }
+    ],
+    "honest_caveats": [
+      "Conditional on compactness/closedness/l.s.c. exactly as the source states; none of those is established. Section 108.3 rule applies: no state definition may encode future contraction or regularity to obtain compactness."
+    ],
+    "origin": {
+      "source": "Founder datum-centred closure sketches 2026-09-12 08:45-08:58, checked by the orchestrating session against NS_P2_STANDALONE_VNEXT sections 17-18, 51-62, 81-82, 108.3, 109-118.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 source comparison by orchestrating session",
+      "empirical_test_status": "n/a"
+    }
   }
 ]
