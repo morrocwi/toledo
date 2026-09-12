@@ -2696,7 +2696,7 @@
     "domain": "P",
     "aliases": [
       "NS_P2_RSC_O_ONE_SIDED_SILENT_LAYER.md",
-      "rg_one_sided_layer_core.py",
+      "check_ns_p2_rsc_o_one_sided_silent_layer.py",
       "RC-RSC-O-ONE-SIDED-SILENT-LAYER (internal vault card, tier Dr, status DERIVED)"
     ],
     "coq": {
