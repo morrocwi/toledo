@@ -8583,8 +8583,8 @@
         "date": "2026-07-18",
         "label": "(18)"
       },
-      "status": "current",
-      "status_note": "",
+      "status": "unverified",
+      "status_note": "statement.latest carries the source paper's own claim \"rank_Q(B_nA_n)<=m_n (proved)\" (record 21425420, Human LoRA eq.(18)-(29),(32)-(48)) -- this is the SOURCE ARTICLE's claim, not an independent Toledo Coq verification of that specific inequality. The backing coq.file (coq/canonical/EQ_015__H_06_v1.v) proves only CAN_054_gate_weight_valid, CAN_054_retained_update, the finite-bottleneck predicate CAN_054_finite_bottleneck, and its satisfiability CAN_054_finite_bottleneck_satisfiable (that SOME instance, e.g. rank_n=1,dim_n=2, satisfies 0<rank_n<dim_n) -- it does not prove rank_Q(B_nA_n)<=m_n as a general theorem for arbitrary A_n,B_n; the file's own header comment already discloses this honestly (lines 23-34). tier is correctly kept at Definition (not raised to Th_coqc) per SCHEMA.md's own rule; this status_note applies the matching status=unverified per the same rule (\"where a source tags a reading Th_coqc but no Coq identifier for it is located, tier is kept as the source states and status is unverified with a status_note\"). Independently confirmed 2026-09-13 during Reader-Domain Capacity-Depth Lower Bound (RDLB) reuse-pipeline verification -- this entry was cited as a candidate parent for RDLB's finite-bottleneck specialization and the rank claim needed direct checking before reuse.",
       "superseded_by": null,
       "tier": "Definition",
       "tier_in_genesis_verbatim": "definition / theorem (rank bounds, proved in-article) / hypothesis-Open (empirical programme)",
@@ -169409,10 +169409,10 @@
   "counts": {
     "entries": 1333,
     "by_status": {
-      "current": 1198,
+      "current": 1197,
+      "unverified": 97,
       "split": 30,
-      "not_an_equation": 9,
-      "unverified": 96
+      "not_an_equation": 9
     },
     "by_domain": {
       "M": 448,
