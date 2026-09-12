@@ -2991,5 +2991,124 @@
       "rungs_held": "R0/R2 (via its two children, both independently re-verified this pass); this Definition-tier entry itself carries no separate machine-check obligation beyond correctly naming and citing its already-verified parts.",
       "empirical_test_status": "not applicable."
     }
+  },
+  {
+    "id": "PROP-P3-FINITE-PARTITION-REFINEMENT-CLOSURE-01",
+    "code": "weld/M.??.v1",
+    "name": "Finite Partition Refinement / Stabilization Closure (T1-T5): for any finite state set S, finite operation-index set U, and readout O, the recursive finite-horizon equivalence eqv(r) is monotone-refining, reaches a stable fixed horizon within |S|^2 steps, gives a well-defined stable quotient dynamics, is the coarsest readout-respecting F-compatible equivalence at every horizon, and coincides with the finite-word future-observable-equality characterization",
+    "statement": {
+      "latest": "\\text{For finite } S,\\ \\text{finite } U,\\ O:S\\to Y,\\ F:U\\times S\\to S,\\ \\text{define } \\mathrm{eqv}_0(s,t):=O(s){=}O(t),\\ \\mathrm{eqv}_{r+1}(s,t):=O(s){=}O(t)\\wedge\\forall u{\\in}U.\\,\\mathrm{eqv}_r(F(u,s),F(u,t)):\\quad(T1)\\ \\mathrm{eqv}_{r+1}\\Rightarrow\\mathrm{eqv}_r;\\quad(T2)\\ \\exists\\,r^*{\\le}|S|^2:\\ \\forall s,t.\\ \\mathrm{eqv}_{r^*+1}(s,t)\\Leftrightarrow\\mathrm{eqv}_{r^*}(s,t)\\ (\\text{Stable}(r^*));\\quad(T3)\\ \\mathrm{Stable}(r_0)\\wedge\\mathrm{eqv}_{r_0}(s,t)\\Rightarrow\\forall u.\\ \\mathrm{eqv}_{r_0}(F(u,s),F(u,t));\\quad(T4)\\ \\forall Q\\ \\text{s.t. } Q{\\Rightarrow}(O{=}O)\\wedge(Q\\Rightarrow\\forall u.\\,Q\\circ F_u):\\ Q(s,t)\\Rightarrow\\mathrm{eqv}_{r_0}(s,t)\\ \\forall r_0;\\quad(T5)\\ \\mathrm{eqv}_r(s,t)\\Leftrightarrow\\forall w{\\in}U^{\\le r}.\\ O(\\mathrm{apply\\_word}(w,s)){=}O(\\mathrm{apply\\_word}(w,t)).",
+      "format": "latex",
+      "note_ascii": "Recursive finite-horizon equivalence eqv(r,s,t): eqv(0,s,t):=O s=O t; eqv(S r,s,t):=(O s=O t) /\\ forall u, eqv(r,F u s,F u t). T1 monotone: eqv(S r) -> eqv(r). T2 finite termination: exists r_star <= |elemsS|*|elemsS|, Stable r_star (eqv(S r_star) <-> eqv(r_star) pointwise) -- WEAKENED bound vs. the |S| target: this file tracks countRel(r) = #{(s,t) in S x S : eqv r s t} (non-increasing, strictly decreasing while unstable, bounded by |S|^2) rather than the number of distinct equivalence CLASSES (bounded by |S|, would need a canonical-representative extraction not built here); only the numeric tightness is weakened, the theorem's constructive/existential content is not. T3 quotient well-defined at any stable horizon: Stable r0 /\\ eqv(r0,s,t) -> forall u, eqv(r0,F u s,F u t), i.e. F_u#([s]):=[F u s] is representative-independent. T4 minimality: for ANY relation Q respecting O and F-compatible (Q s t -> forall u, Q (F u s)(F u t)), Q s t -> eqv(r0,s,t) at every horizon r0 -- eqv is the coarsest such relation. T5 finite-horizon characterization: eqv(r,s,t) <-> for every word w in U* with length w <= r, O(apply_word w s) = O(apply_word w t) -- generalizes the single-operation iterated form to a finite word over the whole index set U."
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "FinitePartitionRefinementClosure.v:T1_monotone",
+      "FinitePartitionRefinementClosure.v:T2_finite_termination",
+      "FinitePartitionRefinementClosure.v:T3_quotient_well_defined",
+      "FinitePartitionRefinementClosure.v:T4_minimality",
+      "FinitePartitionRefinementClosure.v:T5_finite_horizon_char",
+      "T1-T5 finite partition refinement/stabilization",
+      "Finite Partition Refinement / Stabilization Closure"
+    ],
+    "coq": {
+      "file": "readout-problem-navier-stokes-internal/p3_attack_2026-09-11/coq/FinitePartitionRefinementClosure.v",
+      "identifiers": [
+        {
+          "file": "FinitePartitionRefinementClosure.v",
+          "identifier": "T1_monotone"
+        },
+        {
+          "file": "FinitePartitionRefinementClosure.v",
+          "identifier": "T2_finite_termination"
+        },
+        {
+          "file": "FinitePartitionRefinementClosure.v",
+          "identifier": "T3_quotient_well_defined"
+        },
+        {
+          "file": "FinitePartitionRefinementClosure.v",
+          "identifier": "T4_minimality"
+        },
+        {
+          "file": "FinitePartitionRefinementClosure.v",
+          "identifier": "T5_finite_horizon_char"
+        }
+      ],
+      "print_assumptions_verbatim": "T1_monotone: Closed under the global context. T2_finite_termination: Closed under the global context. T3_quotient_well_defined: Closed under the global context. T4_minimality: Closed under the global context. T5_finite_horizon_char: Closed under the global context.",
+      "coq_status": "closed",
+      "coq_axioms": [],
+      "coq_source_redistributed": false,
+      "imported_from": null
+    },
+    "parents": [
+      {
+        "code": "EQ-001/C.05.v1",
+        "derived_via": "generalizes_and_independently_proves_the_domain_neutral_form",
+        "evidence": "EQ-001/C.05.v1 (tier untagged, status current) states, for the chemistry domain instance: 'For a finite state set, repeatedly splitting cells by declared readout and successor-cell signatures terminates in an exact closed refinement.' CORRECTION applied at independent adversarial review (this registering pass's Phase 1 ground_check mistakenly read coq_status as None -- the live registry's coq/canonical/EQ_001__C_05_v1.v actually attaches a real, UNPROVED Coq object: `EQ001_C05_hyp`, a Definition (not a Theorem) stating 'forall refine_step is_closed P0, exists k, is_closed (Nat.iter k refine_step P0)' over an explicit list-of-lists partition representation, with its own comment reading 'not proved here (would need a partition-refinement development), stated openly' -- hence coq_status `open_prop` is accurate and was NOT a fabricated status word as the original chat sketch's use of 'open_prop' first suggested; the correction is only that this file's ground_check under-read the coq field, not that 'open_prop' was an invented Toledo value (tier/status themselves are still untagged/current, unaffected). T1_monotone + T2_finite_termination are an INDEPENDENT axiom-free Coq proof of the same general termination claim, but over a DIFFERENT representation (a recursive finite-horizon relation `eqv` on states directly, not an explicit `refine_step` function on `list (list State)` partitions) -- this registration does NOT claim to discharge EQ001_C05_hyp itself; instantiating `eqv`'s refinement as a concrete `refine_step`/`is_closed` pair to literally prove EQ001_C05_hyp is future work, not attempted here."
+      },
+      {
+        "code": "EQ-001/C.07.v1",
+        "derived_via": "reads_as_a_caveat_on_T2_T3_stabilization",
+        "evidence": "EQ-001/C.07.v1 (untagged/current): 'A quotient fixed point can hide source-state cycles or currents; therefore fixed quotient readout alone establishes only observational stationarity.' Carried forward explicitly, not silently dropped: reaching Stable(r_star) in T2, and the well-defined quotient dynamics in T3, are OBSERVATIONAL stationarity at horizon-r_star readout resolution only -- neither theorem is or implies evidence of any source-level equilibrium of the underlying F."
+      },
+      {
+        "code": "EQ-001/C.13.v1",
+        "derived_via": "generalizes_and_independently_proves_the_domain_neutral_form",
+        "evidence": "EQ-001/C.13.v1 (tier untagged, status current) states: 'If equal occupation vectors imply equal registered readout and successor signatures in every frozen profile, the count quotient exactly factors those profiles.' CORRECTION applied at independent adversarial review (this registering pass's Phase 1 ground_check mistakenly read coq_status as None -- the live registry's coq/canonical/EQ_001__C_13_v1.v actually attaches a real, ALREADY-PROVED Coq theorem: `EQ001_C13_factorization_thm` (re-exported alias of MRC_Prelude's `mr_factorization_thm`), coq_status `closed`, `assumptions`: 'Closed under the global context' -- so there IS a Coq-checked closure on record for this claim's occupation-count-multiset instance; the original chat sketch's word 'closed' was directionally right about that instance, though not a value Toledo's tier/status fields themselves carry. T3_quotient_well_defined is a DIFFERENT, independently-built formalization -- it proves representative-independence of `F_u#([s]):=[F u s]` for the recursive relation `eqv` at a stable horizon, not the occupation-count multiset factorization `EQ001_C13_factorization_thm` proves -- so it is NOT a duplicate of that already-closed theorem, but this registration must not (and does not) claim 'no prior Coq-checked closure exists' for the C.13 claim in general; only that this file's specific eqv-relation formalization is new relative to it."
+      },
+      {
+        "code": "EQ-001/C.16.v1",
+        "derived_via": "reads_as_the_no_lineage_side_channel_framing_for_T5",
+        "evidence": "EQ-001/C.16.v1 (untagged/current): 'The marked quotient stores structural occupation separately from an append-only lineage sidecar; equal structural projections need not identify marked histories.' Cited as context/framing only, not reused proof content: T5's finite-horizon equivalence eqv(r) is built purely from the declared readout O and the dynamics F -- it carries no lineage-style side channel of its own, consistent with (but not derived from) C.16's structural-vs-lineage separation."
+      },
+      {
+        "code": "weld/M.02.v1",
+        "derived_via": "instances_the_domain_admissibility_commuting_square",
+        "evidence": "weld/M.02.v1 (Definition/current): the commuting square q_D∘F = F_D#∘q_D. T3_quotient_well_defined's F_u#([s]):=[F u s] is exactly this commuting square restricted to the partition-quotient domain reader q_r0(s):=eqv-class of s at a stable horizon r0."
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "generalizes_single_operation_iteration_to_a_finite_word_over_U",
+        "evidence": "weld/M.03.v1 (Definition/current): no-early-collapse future-reader equivalence z ~_{Q,O,c,L} z' <=> O(F^k z) = O(F^k z') for all k<=L (a single fixed operation F, iterated k times). T5_finite_horizon_char is the direct generalization of this to a finite WORD drawn from the whole index set U (apply_word), and reduces to weld/M.03.v1 exactly when U is a singleton (every word of length k is that one operation repeated)."
+      },
+      {
+        "code": "weld/E.06.v1",
+        "derived_via": "instances_the_sufficiency_no_merge_on_differing_invariant_gate",
+        "evidence": "weld/E.06.v1 (Definition/current): a candidate quotient may not merge states differing on a required future invariant. T4_minimality's proof that eqv(r0) is the coarsest relation among all O-respecting, F-compatible equivalences Q is exactly this gate instantiated at the partition-quotient reader: any admissible Q cannot conflate what eqv(r0) already keeps apart."
+      },
+      {
+        "code": "A.8/M.01.v1",
+        "derived_via": "specializes_the_general_historical_immutability_principle",
+        "evidence": "A.8/M.01.v1 (Dr/current): the general principle Delta A_past = 0 (a later reinterpretation does not rewrite the historical occurrence). This entry's supporting lemma Stable_forever (Stable r0 -> forall k, Stable (r0+k)) is a NEW, partition-specific specialization of that general principle -- extending the refinement process past a stable horizon never disturbs (un-freezes) it -- and is genuinely derived here, not something A.8/M.01.v1 already states for partitions (ground_check item 5c)."
+      },
+      {
+        "code": "Genesis A.13 Gate 5 / A.11 (READOUT_GENESIS_CORE.md, not yet in Toledo)",
+        "derived_via": "instances_the_domain_neutral_invariant_completion_gate",
+        "evidence": "Genesis Part A.13 'Gate 5 -- Invariant-Completion Gate' and adjacent A.11 state, in domain-neutral form: q(z)=q(z') but Inv_alpha(z)!=Inv_alpha(z') => refine C_a -> C_a,1 (+) C_a,2. T1_monotone's iterated cell-splitting-by-mismatch is the finite, terminating, Coq-verified instance of exactly this general pair. This Genesis principle has no Toledo code of its own as of this registration (grepped CANONICAL.json for 'invariant-completion'/'gate 5'/'a.11' -- zero hits) -- cited by name/section only, not by Toledo code, and this registration does not itself register that Genesis object; a future session should register A.13 Gate 5 / A.11 in Toledo separately, on its own merits."
+      }
+    ],
+    "honest_caveats": [
+      "MANDATORY SCOPE LINE (verbatim per standing task instruction): This is a finite combinatorial/domain-theoretic lemma about ANY finite (S,F,O) system. It does not by itself resolve any Clay Millennium Problem or any domain-specific uniformity question (P vs NP, Navier-Stokes, Yang-Mills, Riemann, Hodge, BSD) -- those require domain-specific uniformity theorems over the resulting family of finite quotients, which remain entirely OPEN.",
+      "Phase 1 GROUND check (p3_attack_2026-09-11/rg_t1t5_ground_check.md) confirmed every cited parent exists exactly as described above, and corrected two inflated citations from the original chat sketch: EQ-001/C.05.v1's status is tier `untagged`/status `current` (NOT `open_prop`, which is not a value that exists anywhere in Toledo's tier/status vocabulary), and EQ-001/C.13.v1's status is likewise `untagged`/`current` (NOT `closed`, also not a real Toledo value). Neither C.05 nor C.13 is claimed closed or promoted by this registration; both stay exactly as registered. Ground check also confirmed A.8/M.01.v1 (CAN-009) is a general principle, not a partition-specific lemma -- the Stable_forever specialization is new content, not something CAN-009 already proves for partitions.",
+      "INDEPENDENT ADVERSARIAL REVIEW FINDING (this PR, before merge): the Phase 1 ground_check above (rg_t1t5_ground_check.md) read `coq_status: None` for both EQ-001/C.05.v1 and EQ-001/C.13.v1, but a fresh, independent re-read of the live registry/CANONICAL.json's `coq` sub-object (not just its `tier`/`status` fields) found this to be wrong: C.05 carries a real, unproved Coq Definition (`EQ001_C05_hyp`, coq_status `open_prop`, explicitly commented as not proved), and C.13 carries a real, ALREADY-PROVED Coq theorem (`EQ001_C13_factorization_thm`, coq_status `closed`, 'Closed under the global context'). Both parent-citation entries above have been corrected accordingly. This does NOT retract or weaken T1-T5 itself (both parents use a different representation -- explicit list-of-lists partitions / occupation-count multisets -- from this file's recursive `eqv` relation on states, so neither is a literal duplicate), but it does mean: (a) do not repeat the 'coq_status None' claim elsewhere for these two codes, and (b) a genuine, not-yet-attempted follow-on exists -- instantiating this file's `eqv`-refinement machinery as a concrete `refine_step`/`is_closed` pair to literally discharge EQ001_C05_hyp would be new, worthwhile work, distinct from what is registered here.",
+      "T2's bound is EXPLICITLY WEAKENED relative to the original chat-sketch target: proved here is r_star <= |S|^2 (via the coarser measure countRel(r) = number of ordered pairs (s,t) with eqv(r,s,t), which is non-increasing, strictly decreasing while unstable, and bounded by |S|^2), not the tighter r_star <= |S| (which would require tracking the number of distinct equivalence CLASSES via a canonical-representative-extraction construction, a materially larger development not attempted here). This is a real, explicit, constructively-obtained finite bound -- only its numeric tightness is weaker, not its existential/constructive content.",
+      "Independently re-verified by this registering pass (Phase 3 NAME+REGISTER), separately from Phase 2's own report: deleted all .vo/.vok/.vos/.glob/.aux artifacts in p3_attack_2026-09-11/coq/, ran `coqc -q FinitePartitionRefinementClosure.v` from scratch (Coq 8.20.1) -- exit 0 -- then `coqc -q PrintAssumptions_T1T5.v` (a separate scratch file that Requires the target and runs Print Assumptions on each of the five theorems) -- exit 0, all five lines read verbatim 'Closed under the global context'. Additionally ran `coqchk -silent FinitePartitionRefinementClosure` (a separate kernel-level re-checker, not just coqc's own elaborator) -- exit 0. Grepped the .v file for Admitted/Axiom/Classical/excluded_middle: the only two hits are inside comments (a code-comment use of the English word 'classically' describing the un-taken tighter-bound route, and a comment noting the pigeonhole argument avoids excluded-middle) -- zero actual uses in the proof scripts.",
+      "SINGLE-ENTRY GRANULARITY, documented rationale (task allowed either choice): T1-T5 are registered as ONE Th_coqc entry rather than five separate proposal ids, because all five theorems operate on the SAME Fixpoint (`eqv`) inside the SAME Coq Section with the SAME shared hypotheses (finite Elem/U, decidable Y), and are mutually dependent within one file (T2's proof uses T1; T3-T5 all unfold the same `eqv` definition T1/T2 are stated over) -- unlike this repo's own PROP-P3-LRS-* precedent, which split two theorems that concern genuinely DIFFERENT mathematical objects (a scalar minimizer identity vs. a general-N matrix PSD closure) into two ids. Splitting T1-T5 into five ids would create five entries that cannot be cited independently of one another without restating the same Section variables and Fixpoint each time.",
+      "The .v file cited here (FinitePartitionRefinementClosure.v) and its checker script (PrintAssumptions_T1T5.v) live in the PRIVATE internal repository readout-problem-navier-stokes-internal (p3_attack_2026-09-11/coq/), not in the public morrocwi/toledo repository -- NOT copied/redistributed into this repo at this proposal stage (coq_source_redistributed: false), consistent with this workspace's public/private separation discipline. Only the statement, identifiers, and independently re-verified compilation/assumption result are registered here.",
+      "weld/E.08.v1 (CAN-036, cross-window bridge-transport tolerance) is deliberately NOT cited as a parent: T5's finite-horizon equivalence stays within one fixed horizon r and does not attempt to transport a stabilized partition across two different finite-horizon windows. If a future extension needs that cross-window transport, its tolerance is an open, uncomputed obligation exactly like this same workspace's own S1/S2 open item on weld/E.08.v1 -- it must not be silently assumed zero if T1-T5 is ever extended that way.",
+      "Representation choice: a manual finite-list-with-decidable-equality encoding ('Listable'-style), not mathcomp's Fintype, matching this repo's own sibling FiniteEndogenousLaplacian_*.v convention of self-contained files compiling with plain `coqc -q` and no external library dependency.",
+      "NEW DERIVATION / PROPOSAL -- not yet in Toledo (proposal entry; placeholder code assigned at merge). Must not be cited elsewhere as an existing Toledo theorem until registered."
+    ],
+    "origin": {
+      "source": "readout-problem-navier-stokes-internal/p3_attack_2026-09-11/ (rg_t1t5_ground_check.md Phase 1 GROUND, coq/FinitePartitionRefinementClosure.v + coq/PrintAssumptions_T1T5.v Phase 2 FORMALIZE). Founder's fifth ultracode launch this session (2026-09-12): after declining the 'finish the whole project' framing (would require closing 6 Millennium Prize problems -- refused as a math lie), accepted the founder's own honest alternative of closing what is actually closeable -- T1-T5, the finite partition-refinement/stabilization theorem sketched across many prior messages -- and producing an honest project ledger otherwise. Registered under the Toledo-first / reuse-first-gate rules (EPIS-REUSE-PIPELINE, EPIS-TOLEDO-FIRST) as Phase 3 NAME+REGISTER.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0/R2: independently re-verified (this registering pass, a from-scratch coqc + coqchk rebuild, separate from Phase 2's own two-agent verification) axiom-free over the global context, all five named theorems; the cited Toledo parents (EQ-001/C.05.v1, EQ-001/C.07.v1, EQ-001/C.13.v1, EQ-001/C.16.v1, weld/M.02.v1, weld/M.03.v1, weld/E.06.v1, A.8/M.01.v1) were re-confirmed present in registry/CANONICAL.json at registration time, at exactly the tiers/statuses cited (none inflated).",
+      "empirical_test_status": "not applicable -- exact finite combinatorics, no empirical measurement involved."
+    }
   }
 ]
