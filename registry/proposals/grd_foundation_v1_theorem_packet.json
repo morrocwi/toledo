@@ -1,0 +1,322 @@
+[
+  {
+    "id": "PROP-GRD-01",
+    "code": "weld/M.??.v1",
+    "name": "Eq-Obs correspondence (reader-family / indistinguishability Galois connection)",
+    "statement": {
+      "latest": "E \\subseteq \\operatorname{Obs}(R) \\iff R \\subseteq \\operatorname{Eq}(E)",
+      "format": "latex",
+      "note_ascii": "For a declared experiment family E and a state relation R: E is admissible under R iff R refines the indistinguishability Eq(E) induced by E. This is the defining Galois-connection property between (Family, subseteq) and (Rel, subseteq)."
+    },
+    "definitions": {
+      "Experiment": "State -> Value (a finite readout)",
+      "Family": "Experiment -> Prop (a declared set of experiments)",
+      "Eq(E)": "the indistinguishability relation induced by E: s ~ t iff every e in E agrees on s and t",
+      "Obs(R)": "the admissible-observable family for R: {e | R subseteq ker e}"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-t1-eq-obs-correspondence"],
+    "coq": {
+      "identifiers": [
+        {
+          "file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v",
+          "identifier": "T1_eq_obs_correspondence"
+        }
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only. No continuum premise, no Clay conclusion. Domain instantiation is a separate obligation."
+  },
+  {
+    "id": "PROP-GRD-02",
+    "code": "weld/M.??.v1",
+    "name": "Reader closure: extensive, monotone, idempotent, saturation-invariant",
+    "statement": {
+      "latest": "\\operatorname{Cl}(E) := \\operatorname{Obs}(\\operatorname{Eq}(E)); \\quad E \\subseteq \\operatorname{Cl}(E); \\quad A \\subseteq B \\Rightarrow \\operatorname{Cl}(A) \\subseteq \\operatorname{Cl}(B); \\quad \\operatorname{Cl}(\\operatorname{Cl}(E)) = \\operatorname{Cl}(E); \\quad \\operatorname{Eq}(\\operatorname{Cl}(E)) = \\operatorname{Eq}(E)",
+      "format": "latex",
+      "note_ascii": "The reader-saturation closure operator Cl is extensive, monotone, idempotent, and leaves the induced indistinguishability relation unchanged (saturation does not create or destroy distinctions)."
+    },
+    "definitions": {
+      "Cl(E)": "reader saturation: Obs(Eq(E))"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-t2-reader-closure"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T2_closure_extensive"},
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T2_closure_monotone"},
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T2_eq_closure_invariant"},
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T2_closure_idempotent"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [{"code": "weld/M.??.v1", "derived_via": "PROP-GRD-01 (Eq-Obs correspondence)"}],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only. No continuum premise, no Clay conclusion."
+  },
+  {
+    "id": "PROP-GRD-03",
+    "code": "weld/M.??.v1",
+    "name": "Future-reader equivalence is stable under a declared first action (dynamic weld congruence)",
+    "statement": {
+      "latest": "s \\sim_Q t \\Rightarrow F_u(s) \\sim_Q F_u(t)",
+      "format": "latex",
+      "note_ascii": "All-future reader equivalence is a congruence with respect to every declared action: this is the relational well-definedness condition required before the quotient transition F_u^# can be named (CAN-006 commuting-square precondition)."
+    },
+    "definitions": {
+      "FutureEq (~_Q)": "s ~_Q t iff every reader agrees on s and t after every future word of actions"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-t3-t4-future-equivalence-congruence"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T3_future_equivalence_dynamic_stability"},
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T4_dynamic_weld_well_defined"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [
+      {"code": "weld/M.03.v1", "derived_via": "specializes"},
+      {"code": "weld/M.02.v1", "derived_via": "precondition_for"}
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only. Note: T4_dynamic_weld_well_defined is proof-identical to T3 and supplies only the congruence property; the literal quotient/projection/commuting-square instantiation is a separate, already-registered occurrence of CAN-006 (weld/M.02.v1) via T4b_quotient_commuting_square, merged information-discrete-math PR #131."
+  },
+  {
+    "id": "PROP-GRD-04",
+    "code": "weld/M.??.v1",
+    "name": "Sufficiency kernel inclusion",
+    "statement": {
+      "latest": "\\forall s\\,t,\\ \\rho(s)=\\rho(t) \\Rightarrow s \\sim_Q t \\quad (\\ker\\rho \\subseteq {\\sim_Q})",
+      "format": "latex",
+      "note_ascii": "For a candidate representation rho that is sufficient for a relation R, the kernel of rho (states rho maps identically) is contained in R. The corresponding factor-map existence is not duplicated here -- it is Toledo CAN-165."
+    },
+    "definitions": {
+      "SufficientFor(R)": "forall s t, rho s = rho t -> R s t"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-t5-sufficiency-kernel-inclusion"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T5_sufficiency_kernel_inclusion"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [
+      {"code": "weld/E.06.v1", "derived_via": "instance_of"},
+      {"code": "EQ-002/M.01.v1", "derived_via": "companion_to (factorisation supplied by CAN-165, not restated here)"}
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only."
+  },
+  {
+    "id": "PROP-GRD-05",
+    "code": "weld/M.??.v1",
+    "name": "Question monotonicity",
+    "statement": {
+      "latest": "E_A \\subseteq E_B \\Rightarrow \\operatorname{Eq}(E_B) \\subseteq \\operatorname{Eq}(E_A)",
+      "format": "latex",
+      "note_ascii": "Adding experiments can only refine (never coarsen) the induced indistinguishability relation."
+    },
+    "definitions": {},
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-t6-question-monotonicity"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T6_question_monotonicity"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [{"code": "weld/M.??.v1", "derived_via": "PROP-GRD-01 (Eq-Obs correspondence)"}],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only."
+  },
+  {
+    "id": "PROP-GRD-06",
+    "code": "weld/M.??.v1",
+    "name": "Joint-question intersection",
+    "statement": {
+      "latest": "\\operatorname{Eq}(E_A \\cup E_B) = \\operatorname{Eq}(E_A) \\cap \\operatorname{Eq}(E_B)",
+      "format": "latex",
+      "note_ascii": "The indistinguishability induced by the union of two experiment families is exactly the intersection of the two separately-induced relations; this does not silently create any mixed/joint intervention -- mixed-action experiments must be declared explicitly."
+    },
+    "definitions": {},
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-t7-joint-question-intersection"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "T7_joint_question_intersection"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [{"code": "weld/M.??.v1", "derived_via": "PROP-GRD-01 (Eq-Obs correspondence)"}],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only."
+  },
+  {
+    "id": "PROP-GRD-07",
+    "code": "weld/M.??.v1",
+    "name": "Closed-reader binary meet/join laws",
+    "statement": {
+      "latest": "\\operatorname{Cl}(E) \\text{ is closed}; \\quad A,B \\text{ closed} \\Rightarrow A \\cap B \\text{ closed}; \\quad \\operatorname{Cl}(A \\cup B) \\text{ is closed}",
+      "format": "latex",
+      "note_ascii": "Under a fixed admissible experiment universe, closed reader families form a binary meet/join structure: closure is itself closed, the intersection of two closed families is closed (binary meet), and the closure of the union of two families is closed (binary join)."
+    },
+    "definitions": {
+      "ClosedFamily(E)": "Cl(E) is extensionally equal to E"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-closed-reader-lattice"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "closure_is_closed"},
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "closed_intersection"},
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "closed_join"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [{"code": "weld/M.??.v1", "derived_via": "PROP-GRD-02 (reader closure)"}],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only. No claim that every domain-specific bridge exists."
+  },
+  {
+    "id": "PROP-GRD-08",
+    "code": "EQ-001/C.??.v1",
+    "name": "Safe finite strict-refinement termination (bounded-block-growth kernel)",
+    "statement": {
+      "latest": "(\\forall P.\\ b(P) \\le N) \\land (\\lnot Closed(P) \\Rightarrow b(P) < b(\\mathrm{refine}(P))) \\Rightarrow \\forall P\\ \\exists k.\\ Closed(\\mathrm{refine}^k(P))",
+      "format": "latex",
+      "note_ascii": "If a partition's block count is bounded by N and every non-closed refinement step strictly increases the block count (with closedness decidable), then repeated refinement reaches a closed partition after finitely many steps. Proved by bounded strict growth / pigeonhole, no termination assumption is smuggled into the premise."
+    },
+    "definitions": {
+      "b(P)": "the block count of partition P",
+      "refine": "one refinement step",
+      "N": "a fixed bound on block count"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "C",
+    "aliases": ["grd-safe-finite-refinement-termination", "c05-repair-kernel"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "finite_strict_refinement_terminates"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [
+      {"code": "EQ-001/C.05.v1", "derived_via": "repairs (C.05.v1's current wrapper quantifies over arbitrary refine_step/is_closed and states unconditional termination, which is not provable as written; this is a strengthened statement with explicit finite-bound and strict-growth hypotheses, proposed as a superseding registration rather than a force-close of C.05.v1 per the founder's own instruction in toledo issue #36)"}
+    ],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only. Does not itself mark EQ-001/C.05.v1 as superseded -- that requires normal registry review per toledo issue #36's own request ('mark current C.05 v1 as imprecise/superseded only through normal registry tooling if the review agrees')."
+  },
+  {
+    "id": "PROP-GRD-09",
+    "code": "weld/M.??.v1",
+    "name": "Stable finite-depth reader equivalence equals all-future reader equivalence",
+    "statement": {
+      "latest": "\\mathrm{DepthStable}(n) \\Rightarrow (\\mathrm{DepthEq}(n,s,t) \\iff s \\sim_Q t)",
+      "format": "latex",
+      "note_ascii": "If depth-n reader equivalence is a fixed point of one more step of refinement (DepthStable(n)), then depth-n equivalence is exactly all-future reader equivalence -- a finite, checkable witness for a claim that is a priori about infinitely many future steps."
+    },
+    "definitions": {
+      "DepthEq(n,s,t)": "s and t agree on every reader after every future word of length <= n",
+      "DepthStable(n)": "DepthEq(n) and DepthEq(n+1) coincide for every pair"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-stable-depth-exact-future"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "stable_depth_exact_future"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [{"code": "weld/M.03.v1", "derived_via": "finite_witness_for"}],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #129)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only."
+  },
+  {
+    "id": "PROP-GRD-10",
+    "code": "weld/M.??.v1",
+    "name": "Constructive firewall: A_con subseteq A_sem and constructive-closure invariance",
+    "statement": {
+      "latest": "\\mathcal A_{\\rm sem} := \\mathcal A_{\\rm ambient},\\ \\mathcal A_{\\rm con} := \\{e \\in \\mathcal A_{\\rm ambient} \\mid \\mathrm{Constructive}(e)\\};\\quad \\mathcal A_{\\rm con} \\subseteq \\mathcal A_{\\rm sem};\\quad (E_1,E_2 \\subseteq \\mathcal A_{\\rm con}) \\land (\\forall e.\\ \\mathrm{Constructive}(e) \\Rightarrow (E_1\\,e \\iff E_2\\,e)) \\Rightarrow \\operatorname{Eq}(E_1) = \\operatorname{Eq}(E_2)",
+      "format": "latex",
+      "note_ascii": "A bookkeeping/closure fact about which sub-family of experiments EqOf is allowed to range over once membership is filtered by an abstract, uninterpreted resource predicate Constructive. No P-vs-NP-shaped claim, no computational-hardness premise or conclusion; domain instantiation of Constructive is a separate obligation. Not to be confused with the unrelated, still-open toledo registry/proposals/semantic_closure_accounting_p_vs_np_v0_1.json (PROP-SCA-PNP-01..06) cluster, which shares vocabulary but no theorem/proof/object."
+    },
+    "definitions": {
+      "Constructive": "a fully abstract, uninterpreted predicate on experiments -- never instantiated, never given intro/elim rules beyond Family/EqOf"
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["grd-constructive-firewall", "grd-a-con-a-sem"],
+    "coq": {
+      "identifiers": [
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "A_con_subseteq_A_sem"},
+        {"file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v", "identifier": "constructive_closure_invariant"}
+      ],
+      "coq_status": "closed",
+      "coq_axioms": []
+    },
+    "parents": [{"code": "weld/M.??.v1", "derived_via": "PROP-GRD-01/PROP-GRD-02 (Eq-Obs correspondence, closure invariance)"}],
+    "origin": {
+      "source": "github.com/morrocwi/information-discrete-math, formal/IDM_ReaderDomainFoundation.v (merged PR #133)",
+      "doi": null
+    },
+    "claim_boundary": "Generic finite/discrete mathematics only. No P-vs-NP-shaped claim, no computational-hardness premise or conclusion. Genuinely new -- no existing Toledo object covers this (confirmed by an ultracode Workflow reuse-pipeline lookup before this was written)."
+  }
+]
