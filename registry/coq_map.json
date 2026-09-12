@@ -37821,5 +37821,351 @@
   "evidence": "UNMAPPED to a Toledo root: Master River ledger label MR.79 (coq/master-river/MR_Ledger.md) is not a genesis_root code; assign at merge via CANONICAL raw_to_canonical.",
   "confidence": "none",
   "evidence_quote": "coq/master-river/MR_Ledger.md, eq. 79 row: identifier named for this equation (Master River v1.3/v1.4 numbering; MR.79 is the ledger's own stable per-equation label, not yet an assigned Toledo root code)."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T1_eq_obs_correspondence",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.61.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.61.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.61.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T2_closure_extensive",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.62.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T2_closure_monotone",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.62.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T2_eq_closure_invariant",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.62.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T2_closure_idempotent",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.62.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.62.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T3_future_equivalence_dynamic_stability",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.63.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.63.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.63.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T4_dynamic_weld_well_defined",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.63.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.63.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.63.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T4b_quotient_commuting_square",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.02.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.02.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.02.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T5_sufficiency_kernel_inclusion",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.64.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.64.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.64.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T6_question_monotonicity",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.65.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.65.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.65.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "T7_joint_question_intersection",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.66.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.66.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.66.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "closure_is_closed",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.67.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.67.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.67.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "closed_intersection",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.67.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.67.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.67.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "closed_join",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.67.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.67.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.67.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "finite_strict_refinement_terminates",
+  "status": "Closed under the global context",
+  "codes": [
+   "EQ-001/C.18.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to EQ-001/C.18.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to EQ-001/C.18.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "stable_depth_exact_future",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.68.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.68.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.68.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "A_con_subseteq_A_sem",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.69.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.69.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.69.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "constructive_closure_invariant",
+  "status": "Closed under the global context",
+  "codes": [
+   "weld/M.69.v1"
+  ],
+  "evidence": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.69.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree.",
+  "confidence": "high",
+  "evidence_quote": "toledo PR #39 (canonical/grd-foundation-v1-promotion) / PR #37 (CAN-006 T4b occurrence): mapped to weld/M.69.v1. Statement is this identifier's own Coq declaration in formal/IDM_ReaderDomainFoundation.v at information-discrete-math commit ca5018925d98f5a710b2ceb561433f814915545b, independently re-verified 'Closed under the global context' via Print Assumptions both by the registering pass and by a separate independent adversarial review that reproduced the coqc build in a clean worktree."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "EqOf_antitone",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "ObsOf_antitone",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "future_eq_refl",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "future_eq_sym",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "future_eq_trans",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "step_class_is_class",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "future_eq_immediate",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "future_eq_implies_depth",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "depth_immediate",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "depth_stable_successor_closed",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "depth_stable_implies_future",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "blocks_growth_under_no_closure",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
+ },
+ {
+  "source": "information-discrete-math",
+  "file": "formal/IDM_ReaderDomainFoundation.v",
+  "identifier": "closed_or_none_upto",
+  "status": "Closed under the global context",
+  "codes": [],
+  "evidence": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation.",
+  "confidence": "none",
+  "evidence_quote": "UNMAPPED. Internal helper lemma used only inside the proofs of T1-T7/T4b/A_con_subseteq_A_sem/constructive_closure_invariant/finite_strict_refinement_terminates/stable_depth_exact_future in this same file (see registry/proposals/grd_foundation_v1_theorem_packet.json and CAN-1297..1306); no Toledo code of its own -- pure proof plumbing, not a standalone equation."
  }
 ]
