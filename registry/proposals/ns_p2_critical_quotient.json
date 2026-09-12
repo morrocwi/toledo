@@ -105,7 +105,13 @@
     "resistance_evidence": {
       "rungs_held": "R0: the registering audit independently re-derived both the inequality (via the triangle inequality) and the balance identity (via direct algebra from the definition of C_k).",
       "empirical_test_status": "not applicable -- exact identity, holds for any finite-dimensional normed space."
-    }
+    },
+    "occurrences": [
+      {
+        "context": "GLS-2026-009 M2 round 1 (T0-02 catalogue, four runs A/B x d2/d3)",
+        "note": "Occurrence: the energy-row cut H_2 in M2 round 1 uses the cancellation-ledger accounting discipline (net response vs source mass) when reading the triad energy identity per vertex; recorded as ACC0 in the round's own §7 Toledo/parents note (rg_m2_round1_REPORT.md). Occurrence: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/rg_m2_round1.py round 1 (rg_m2_round1_REPORT.md) is a new instantiation of this object on the T0-02 catalogue (P_1 alone: SAT/SPURIOUS on all four runs A/B x d2/d3; P_1+H_2, the energy-row cut: UNSAT with a VERIFIED canonical Farkas certificate in all four runs). Quoted as a finite_diagnostic readout of an internal working record, not independently re-run by this occurrence edit."
+      }
+    ]
   },
   {
     "id": "PROP-P2-FAR-GAP-SCALE-01",
@@ -1051,7 +1057,13 @@
     "resistance_evidence": {
       "rungs_held": "R0 self-consistency; round-0 LP executed exactly (fractions)",
       "empirical_test_status": "round 0: PRIMAL_FEASIBLE_SPURIOUS_BY_CONSTRUCTION"
-    }
+    },
+    "occurrences": [
+      {
+        "context": "GLS-2026-009 M2 round 1 (T0-02 catalogue, four runs A/B x d2/d3)",
+        "note": "Occurrence: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/rg_m2_round1.py round 1 (rg_m2_round1_REPORT.md) is a new instantiation of this object on the T0-02 catalogue (P_1 alone: SAT/SPURIOUS on all four runs A/B x d2/d3; P_1+H_2, the energy-row cut: UNSAT with a VERIFIED canonical Farkas certificate in all four runs). Quoted as a finite_diagnostic readout of an internal working record, not independently re-run by this occurrence edit."
+      }
+    ]
   },
   {
     "id": "PROP-RG-FARKAS-DUAL-CERTIFICATE-01",
@@ -1092,7 +1104,13 @@
     "resistance_evidence": {
       "rungs_held": "R0; the m=1 instance already holds as a Nullstellensatz certificate (rg_cert_w3_nullstellensatz.json, checker PASS)",
       "empirical_test_status": "m=1 W3: UNSAT_CERTIFIED"
-    }
+    },
+    "occurrences": [
+      {
+        "context": "GLS-2026-009 M2 round 1 (T0-02 catalogue, four runs A/B x d2/d3)",
+        "note": "Occurrence: P_1+H_2 (energy-row cut) is UNSAT in all four runs with a VERIFIED canonical Farkas certificate (not merely a bounded-degree non-certificate) -- the certified-dual half of the object's own definition, instantiated for the first time on this catalogue. Occurrence: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/rg_m2_round1.py round 1 (rg_m2_round1_REPORT.md) is a new instantiation of this object on the T0-02 catalogue (P_1 alone: SAT/SPURIOUS on all four runs A/B x d2/d3; P_1+H_2, the energy-row cut: UNSAT with a VERIFIED canonical Farkas certificate in all four runs). Quoted as a finite_diagnostic readout of an internal working record, not independently re-run by this occurrence edit."
+      }
+    ]
   },
   {
     "id": "PROP-RG-OCC-SOUND-01",
@@ -2481,6 +2499,281 @@
     "resistance_evidence": {
       "rungs_held": "R0: exact local linear algebra plus reuse of the registered nullity proposal, derived in the source; registering pass read only.",
       "empirical_test_status": "check_ns_p2_rsc_o_alternation_transfer.py PASS in NS CI (exact-rsc-o-alternation-transfer job, PR #63)."
+    }
+  },
+  {
+    "id": "PROP-P3-FORCED-ADDRESS-ACCOUNTING-01",
+    "code": "weld/M.??.v1",
+    "name": "Forced-address accounting completeness (the forgotten-descendant loophole): every registered address receiving nonzero individual forcing must be resolved ACTIVE / EXACT-CANCELLED / NULL-BY-REGISTERED-GEOMETRY / TED, or the closure test is INVALID",
+    "statement": {
+      "latest": "\\text{For a registered address }t\\text{ with amplitude }c_t\\text{ and net forcing }F(t):\\quad (c_t\\ne0)\\ \\vee\\ \\big(F(t)=0\\big);\\quad\\text{checked as three exact systems:}\\ \\text{System A: }c_t\\ne0\\Rightarrow\\mathrm{ACTIVE};\\ \\text{System B: }c_t=0\\wedge F(t)=0\\Rightarrow\\mathrm{EXACT\\text{-}CANCELLED}\\ (\\ge2\\text{ nonzero contributions})\\ \\vee\\ \\mathrm{NULL\\text{-}BY\\text{-}GEOMETRY};\\ \\text{outside the declared cell}\\Rightarrow\\mathrm T;\\ \\text{forgotten: }c_t=0\\wedge F(t)\\ne0\\Rightarrow\\mathrm{UNRESOLVED}\\Rightarrow\\text{INVALID CLOSURE TEST}.\\ \\text{Every symbolic pair sum additionally saturated by }t\\cdot t\\ne0\\text{ when the projection is denominator-cleared.}",
+      "format": "latex",
+      "note_ascii": "DEFINITION, not a theorem: a checker-obligation on any exact closure question posed as a Groebner/Rabinowitsch system. A registered address t receiving nonzero individual forcing must be explicitly represented and resolved with exactly one of four mutually exclusive outcomes (ACTIVE / EXACT-CANCELLED / NULL-BY-GEOMETRY / TED); an address left forced-and-empty (amplitude 0, net forcing F(t)!=0) is UNRESOLVED and the SAT point that produced it is not a real closure point of the dynamics -- it is a 'forgotten descendant'. This is accounting completeness, NOT a claim that every forced address must be populated: the EXACT-CANCELLED and NULL-BY-GEOMETRY branches are honest zero-net outcomes. The rule is the Genesis lineage-preservation / no-silent-loss discipline (weld/E.05.v1's three-valued gate outcome, EQ-001/C.16.v1's lineage sidecar) written as a constraint on a finite exact closure test."
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "NS_P2_FORCED_ADDRESS_ACCOUNTING_RULE.md:Section-2",
+      "check_ns_p2_forced_address_accounting.py",
+      "rg_forced_address_audit.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "weld/E.05.v1",
+        "derived_via": "three_valued_gate_outcome_ADMITTED_OBSTRUCTED_UNRESOLVED"
+      },
+      {
+        "code": "EQ-001/C.16.v1",
+        "derived_via": "lineage_sidecar_no_silent_loss"
+      }
+    ],
+    "honest_caveats": [
+      "This is a DEFINITION / checker-invariant (a governance rule on how a closure test must be posed and read), not a derived theorem -- tier Definition per the pattern of PROP-RG-OCCUPATION-PRIMAL-01's own definitional entries in this registry, and per the internal vault's own kind: rule / status: DEFINITION classification of the same object (RC-FORCED-ADDRESS-ACCOUNTING.yaml).",
+      "The rule is an accounting obligation on exact closure tests, not a dynamical theorem; 'forgotten descendant' names an accounting omission, not a physical process. No cancellation label (EXACT-CANCELLED) is ever promoted to a physical loss.",
+      "Empirical instantiations of the rule catching real violations (finite_diagnostic readouts of internal working records, not independently re-run by this registering pass): the internal per-address audit reports box-1 = 12/12 hits INVALID (0 valid, states {NULL_BY_GEOMETRY:266, FORGOTTEN_REGISTERED:26, ACTIVE:48}) and box-2 = 610/610 hits INVALID (0 valid, states {NULL_BY_GEOMETRY:15186, ACTIVE:2440, FORGOTTEN_REGISTERED:1260}); three additional small skeleton fixtures (W1/W2/W3) also read INVALID CLOSURE TEST under the same obligation. These are the source repository's own internal working-record readouts, quoted here as evidence for the rule's bite, not independently re-executed by this registering pass.",
+      "Does not prove NS regularity; Clay Navier-Stokes regularity remains OPEN and unchanged by this registration. Says nothing about global Witness Soundness, OCSR, RSC-O/RSC-E/RSC-C, or G6/G7.",
+      "Origin: NS repository PR #66 and PR #67 (both merged, CI green), from the founder's 'forgotten descendants' reading of the NPSC partial-support hits; internal vault card RC-FORCED-ADDRESS-ACCOUNTING (kind: rule, status: DEFINITION, tier Dr in the vault's own tier scale) records the same statement and the same 'not yet in Toledo' status prior to this registration.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "Yaoharee Lahtee / registering session, 'NS P2 -- Forced-Address Accounting Completeness (the forgotten-descendant loophole)' (readout-problem-navier-stokes/paper/NS_P2_FORCED_ADDRESS_ACCOUNTING_RULE.md, Sections 1-3), instantiated by readout-problem-navier-stokes-internal/p3_attack_2026-09-11/rg_forced_address_audit.py. Founder rulings 2026-09-13 16:36 (the rule) and merged NS PRs #66/#67. Registered under the Toledo-first and reuse-first-gate rules.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: the checker obligation (System A / System B / forgotten) is exact (sympy rationals/algebraics, no float tolerance); the isotropic-target guard (t.t != 0 saturation) is applied first per address. Internal NS CI check_ns_p2_forced_address_accounting.py reported PASS (F1/F2/F3 fixtures) at merge.",
+      "empirical_test_status": "Internal per-address re-audit of prior NPSC hits: box-1 12/12 INVALID, box-2 610/610 INVALID (finite_diagnostic readouts of an internal working record, not independently re-run here)."
+    }
+  },
+  {
+    "id": "PROP-P3-INTERFACE-NOVELTY-LEMMA-01",
+    "code": "weld/P.??.v1",
+    "name": "One-sided RSC-O interface novelty lemma: a genuine single-O interface event with unequal shell and a_+.p != 0 forces a third-line output; the only escape recurses into a new ALT-1 layer",
+    "statement": {
+      "latest": "\\text{Two-line skeleton }[a_+],[a_-]\\ (a_+=e_1,\\ a_-=(c,1,0));\\ \\text{opposite-core anchor }(p,a_-),\\ a_-\\cdot p=0;\\ \\text{one-sided recruit }(q,b),\\ b\\parallel a_+,\\ a_+\\cdot q=0;\\ \\text{genuine single-O: }a_-\\cdot q\\ne0.\\ \\text{Then }a_+\\cdot p\\ne0\\ \\wedge\\ \\mathcal B_{p,q}(a_-,b)\\ne0\\ \\Longrightarrow\\ \\mathcal B_{p,q}(a_-,b)\\not\\parallel a_+,\\ a_-.\\ \\text{The only escape }a_+\\cdot p=0\\text{ forces }p\\parallel a_+\\times a_-\\text{ and the output }\\mathcal B\\parallel a_+\\text{ with }a_+\\cdot k=0\\text{ (a new ALT-1 single-O recruit); termination of the recursion is OPEN.}",
+      "format": "latex",
+      "note_ascii": "Exact sympy Groebner-basis check (rg_interface_novelty_lemma.py), pair level: under the one-sided RSC-O interface setting, the interaction B_{p,q}(a-,b) between the opposite-core anchor and a one-sided a+-line recruit, when nonzero and off the normal-locked degeneracy, cannot lie on either projective polarization line [a+] or [a-] -- it is a genuinely new (third-line) direction. The normal-locked residue (a+.p=0, i.e. p parallel to a+ x a-) is the only computed escape: there the output B is forced exactly onto [a+] with a+.k=0, i.e. the output is itself a fresh ALT-1-type single-O recruit, so the construction recurses into a new layer rather than terminating in a sixth outcome. Whether that recursion itself terminates (a bounded number of layers, or an infinite regress that must pay E/C/T) is NOT decided by this pair-level check -- OPEN, and explicitly not claimed here."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "rg_interface_novelty_lemma.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "kernel_nullity_locus_reused_for_the_pair_map"
+      },
+      {
+        "code": "PROP-P3-ONE-SIDED-SILENT-LAYER-01",
+        "derived_via": "reuses_the_ALT-1_layer_convention_and_normal-lock_output_recursion"
+      }
+    ],
+    "honest_caveats": [
+      "TWO SEPARATE TIERS, kept explicit per the source script's own discipline: (a) the pair-level symbolic identities themselves (B not parallel to a+/a- under the stated hypotheses; the normal-locked output identically on [a+] with a+.k=0) are exact -- sympy Groebner-basis computation over Q, no float tolerance, independently re-run by the registering pass (rg_interface_novelty_lemma.py, script exits with all assertions passing). (b) Any claim about coverage/termination of the resulting recursion across an entire web is Dr at best and is explicitly NOT proved here -- the source script's own final print statement labels the recurrence conclusion 'PROPOSAL', distinct from the 'EXACT' pair-level identities.",
+      "The real-lane / complex-lane split matters: under single-O the px=0 branch (equal-shell degeneracy) reduces on the real lane to a sum of two squares forcing q_y=0 (a contradiction with genuine single-O), while the complex lane admits only isotropic (k.k=0) artefact-class solutions -- these are excluded from the real physical claim per the isotropic-saturation guard (weld/P proposal PROP-P3-ISOTROPIC-SATURATION-INVARIANT-01, registered alongside this entry).",
+      "This is a pair-level (two-interaction) computation, not a global RSC-O closure statement; RSC-O global, RSC-E, RSC-C, OCSR, Witness Soundness, G6/G7, and Clay Navier-Stokes regularity all remain OPEN and unaffected by this registration.",
+      "No independent Coq mechanization attempted.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "Founder ruling 2026-09-12 21:1x; readout-problem-navier-stokes-internal/p3_attack_2026-09-11/rg_interface_novelty_lemma.py (exact sympy check, independently re-run by the registering pass with all assertions passing).",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: the registering pass independently re-executed rg_interface_novelty_lemma.py; all sympy assertions (Groebner-basis membership, case-split reductions, cross-product vanishing checks) passed exactly as printed in the script's own docstring/output.",
+      "empirical_test_status": "Exact symbolic PASS at the pair level; recurrence/coverage conclusion beyond the pair level not independently tested (Dr, OPEN)."
+    }
+  },
+  {
+    "id": "PROP-P3-EXPOSED-PAIR-NULLITY-01",
+    "code": "weld/P.??.v1",
+    "name": "Exposed-pair nullity lemma (EX): the extremal (argmax, 2nd-argmax) pair of a finite zero-exit support is forced mutually silent when off-shell",
+    "statement": {
+      "latest": "S\\subset\\mathbb Z^3\\ \\text{finite},\\ \\ell\\ \\text{generic linear functional},\\ p=\\operatorname*{argmax}_{S}\\ell,\\ q=\\text{2nd-argmax},\\ \\ell(q)>0.\\ \\text{Then }p+q\\notin S\\text{ and }\\{p,q\\}\\text{ is the UNIQUE decomposition }r+s=p+q,\\ r,s\\in S.\\ \\text{IF }S\\text{ is (hypothetically) zero-exit at }p+q,\\ F(p+q)=0\\text{ is forced, so }\\mathcal B_{p,q}(a_p,a_q)=0\\text{ exactly; applying ACN (}\\ker L_{p,q,a}\\ne\\{0\\}\\iff a\\cdot q=0\\vee|p|=|q|\\text{) to both roles: }|p|\\ne|q|\\Longrightarrow a_p\\cdot q=0\\ \\wedge\\ a_q\\cdot p=0.",
+      "format": "latex",
+      "note_ascii": "Conditional lemma, not an existence claim: IF a finite zero-exit web S has this extremal pair as its only source of the target p+q (elementary combinatorial fact, checked exactly against 2000 random finite integer sets with a generic rational functional -- PASS), THEN unequal shell forces the pair to be mutually silent (both cross terms vanish), by two applications of the already-registered anchor-cross-nullity theorem PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01 (reused, not re-derived: a nonzero kernel vector b of the 2x2 square map L_{p,q,a} forces det L=0, elementary linear algebra / rank-nullity). This is emphatically NOT a claim that any such zero-exit web exists -- the hypothesis is conditional and explicitly flagged as such by the source script."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "rg_exposed_pair_nullity.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "applied_twice_symmetric_roles_a=a_p_and_a=a_q"
+      }
+    ],
+    "honest_caveats": [
+      "SCOPE IS CONDITIONAL on the zero-exit hypothesis being an actual property of the web under study -- this entry does NOT claim such a web exists; it only says what follows IF one does. Do not read this as evidence for or against the existence of a zero-novelty productive web.",
+      "The combinatorial half (extremal-pair uniqueness: target not in S, unique decomposition) is exact and independently re-verified by the registering pass by re-running the source script's random check (2000 trials, sizes 3..8, PASS, and separately spot-checked by hand on 3 small cases).",
+      "The linear-algebra half (nonzero kernel vector forces a singular 2x2 map) is elementary and standard (rank-nullity / Cramer); the registering pass independently confirmed the map is genuinely 2x2 (square, q^perp -> k^perp) for the specific adapted-chart parametrisation used, matching the source script.",
+      "Tier is Dr, not finite_diagnostic, because the overall conditional structure (zero-exit hypothesis -> ACN applied twice) was read and independently spot-checked but not re-derived symbol-by-symbol from first principles by the registering pass, and no Coq mechanization exists.",
+      "Says nothing about global RSC-O, RSC-E, RSC-C, OCSR, Witness Soundness, G6/G7, or Clay Navier-Stokes regularity, all OPEN.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "Founder ruling 2026-09-13; readout-problem-navier-stokes-internal/p3_attack_2026-09-11/rg_exposed_pair_nullity.py (exact sympy + randomized combinatorial check, independently re-run by the registering pass, all assertions PASS).",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: registering pass re-ran the script's combinatorial random check (2000 trials) and the linear-algebra determinant computation; both reproduced PASS.",
+      "empirical_test_status": "Exact PASS on the stated conditional; conditional scope (zero-exit hypothesis) explicitly not tested for existence."
+    }
+  },
+  {
+    "id": "PROP-P3-HULL-EDGE-SILENCE-01",
+    "code": "weld/P.??.v1",
+    "name": "HULL-EDGE: extension of the exposed-pair nullity lemma from the single global extremal pair to every off-shell convex-hull edge of a finite support",
+    "statement": {
+      "latest": "S\\subset\\mathbb Z^3\\ \\text{finite, general position}.\\ \\{p,q\\}\\text{ is the (argmax,2nd-argmax) pair of SOME generic linear functional }\\ell\\iff\\{p,q\\}\\text{ is a 1-face (edge) of }\\mathrm{conv}(S).\\ \\text{Hence: for every off-shell (}|p|\\ne|q|\\text{) convex-hull edge of a hypothetical zero-exit web }S,\\ \\mathrm{EX}\\ \\Rightarrow\\ a_p\\cdot q=0\\ \\wedge\\ a_q\\cdot p=0\\ \\text{(mutual silence), not merely the single global argmax pair.}\\ \\text{Computational check: }858\\text{ hull edges over }60\\text{ random finite sets, }844\\text{ confirmed as a genuine (argmax,2nd) pair for some functional, }817\\text{ of those off-shell (EX applies), }14\\text{ UNRESOLVED (LP/exact-verification could not confirm or refute within the checker's method).}",
+      "format": "latex",
+      "note_ascii": "Extends EX (PROP-P3-EXPOSED-PAIR-NULLITY-01) from the ONE global (argmax,2nd-argmax) pair to EVERY off-shell edge of the convex hull, via the standard fact that a pair is some functional's top-two iff it is a hull edge. This constrains only the BOUNDARY of a hypothetical zero-exit web (every off-shell hull edge is forced mutually silent) -- interior productivity (pair sums or interactions not realized as a hull edge) is completely untouched by this lemma, which is exactly the reason this lemma alone does not close S2/QSC-RIGIDITY (already logged as an open gap in the internal TODO). The 14/858 UNRESOLVED hull edges in the current computational check are genuinely unresolved -- neither proved nor refuted as valid EX pairs -- and must not be rounded up to 'all edges confirmed'."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "rg_hull_edge_silence.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-EXPOSED-PAIR-NULLITY-01",
+        "derived_via": "extended_from_one_global_pair_to_every_convex_hull_edge"
+      }
+    ],
+    "honest_caveats": [
+      "Constrains ONLY the boundary (convex-hull edges) of a hypothetical zero-exit web; interior productivity (pair sums among non-hull-edge pairs, or any interaction not realized as a hull edge) is UNTOUCHED -- this is exactly the reason this lemma does not by itself close S2/QSC-RIGIDITY (an already-logged open gap, not a new admission).",
+      "Computational, not exhaustive: 858 hull edges tested across 60 random finite integer sets (sizes 5-9, general position). Result: 844/858 confirmed as a genuine separating-functional (argmax,2nd-argmax) pair (LP feasibility with exact rational re-verification via sympy), 817 of those off-shell (EX gives mutual silence for free); 14/858 edges are UNRESOLVED under the checker's LP-plus-exact-reverification method -- these are NOT proved either way, and are not silently exempted or rounded into either the confirmed or refuted bucket.",
+      "The 844/817 numbers and the 14 UNRESOLVED count are finite_diagnostic-tier computational readouts (a specific random seed, specific set-size range); no claim is made that they generalize to all finite sets, larger sets, or different general-position conventions.",
+      "This lemma is itself downstream of EX (PROP-P3-EXPOSED-PAIR-NULLITY-01), which is conditional on a zero-exit hypothesis -- this entry inherits that same conditional scope and makes no existence claim about any such web.",
+      "Says nothing about global RSC-O, RSC-E, RSC-C, OCSR, Witness Soundness, G6/G7, or Clay Navier-Stokes regularity, all OPEN.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "Founder ruling 2026-09-13; readout-problem-navier-stokes-internal/p3_attack_2026-09-11/rg_hull_edge_silence.py (scipy ConvexHull + exact rational LP-feasibility re-verification via sympy, independently re-run by the registering pass).",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: registering pass independently re-ran the script; reproduced the reported counts (858 hull edges tested, 844 confirmed, 817 off-shell, 14 unresolved) on the script's fixed random seed (11).",
+      "empirical_test_status": "Computational PASS on 844/858 edges (finite_diagnostic); 14/858 genuinely UNRESOLVED, not silently exempted."
+    }
+  },
+  {
+    "id": "PROP-P3-ONE-SIDED-SILENT-LAYER-01",
+    "code": "weld/P.??.v1",
+    "name": "RSC-O one-sided O_+ persistence gives a mutually silent recruit layer (OS-2): the recruit layer has no recruit-recruit quadratic productivity; all persistent productivity crosses the layer/core interface (OS-3)",
+    "statement": {
+      "latest": "\\text{One-sided }O_+\\text{ persistence: every O-labelled recruit }(q_j,b_j)\\text{ is a genuine nonparallel single-O event against }[a_+]:\\ a_+\\cdot q_j=0,\\ b_j\\cdot q_j=0,\\ p_j\\times q_j\\ne0,\\ \\mathcal B_{p_j,q_j}(a_+,b_j)=0.\\ \\text{By (ALT-1): }q_j\\in a_+^{\\perp},\\ [b_j]=[a_+]\\ \\text{(OS-0)}.\\ \\text{Then }\\forall i,j:\\ b_i\\cdot q_j=b_j\\cdot q_i=0\\ \\text{(OS-1)}\\ \\text{and}\\quad \\mathcal B_{q_i,q_j}(b_i,b_j)=P_{q_i+q_j}\\big[(b_i\\cdot q_j)b_j+(b_j\\cdot q_i)b_i\\big]=0\\ \\text{identically (OS-2)}.\\ \\text{Hence (OS-3): all persistent productivity crosses the layer/core interface.}",
+      "format": "latex",
+      "note_ascii": "Under one-sided O_+ persistence (from some generation on, every O-labelled recruit is a genuine nonparallel single-O event against the fixed anchor line [a_+]), the recruit layer is quadratically silent to ITSELF: every recruit-recruit interaction B_{q_i,q_j}(b_i,b_j) vanishes identically, because each recruit copies the anchor polarization line (ALT-1, already registered) and each recruit wavevector lies in a_+^perp, so both cross terms of the interaction vanish before projection. This is a 2D3C-like passive layer with respect to INTERNAL recruit-recruit interactions only -- NOT a full 2D3C branch: interactions between a recruit and the O_- anchor/core, or core-core interactions, are completely unconstrained by this lemma and may stay active. Consequently all persistent productivity in such a history must cross the layer/core interface; what happens AT that interface (passive O_+ layer + active O_- core => double-O v E v C v novelty/exit) is the explicitly OPEN 'next target box', not answered here."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "NS_P2_RSC_O_ONE_SIDED_SILENT_LAYER.md",
+      "rg_one_sided_layer_core.py",
+      "RC-RSC-O-ONE-SIDED-SILENT-LAYER (internal vault card, tier Dr, status DERIVED)"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "retained_distinction_preserved_across_the_layer_core_interface"
+      },
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "ambient_pair-interaction_convention_reused_unmodified"
+      }
+    ],
+    "honest_caveats": [
+      "Statement taken verbatim (in substance) from the internal genesis-theorem-vault card RC-RSC-O-ONE-SIDED-SILENT-LAYER.yaml (tier Dr, status DERIVED, kind theorem) and from the NS repository's own paper/NS_P2_RSC_O_ONE_SIDED_SILENT_LAYER.md (Sections 1-4) -- both already labelled the underlying proposal id PROP-P3-RSC-O-ONE-SIDED-SILENT-LAYER-01 as 'not yet in Toledo' prior to this registration; this Toledo entry is filed under the id PROP-P3-ONE-SIDED-SILENT-LAYER-01 per this registering session's naming, referring to the identical mathematical object.",
+      "(OS-2) (recruit-recruit silence) is DERIVED exact per the vault card and independently re-verified by the registering pass by re-running the source's symbolic check (two rational fixtures, componentwise B=0; a control moving one recruit polarization off the line [a_+] confirms the interaction becomes nonzero, so the silence is a genuine consequence of the line copy, not an artefact of the parametrisation).",
+      "(OS-3) is a DERIVED reduction, not a closure: it says persistent productivity must cross the interface, not that the interface is bounded, that it forces a scale escape, or that it charges any defect.",
+      "The 'next target box' (passive O_+ layer + active O_- core => double-O v E v C v novelty/exit) is explicitly OPEN and NOT answered by this entry. A prior hand-skeleton reading that claimed the next box 'holds for m<=2' was an R2 RETRACTION in the source repository (System A was refuted at m=0 by the anchor-core exits, i.e. skeleton-level, not layer-level) -- that retraction is carried forward here: this entry registers ONLY (OS-2)/(OS-3), not the retracted skeleton reading.",
+      "'2D3C-like' describes only the layer's internal recruit-recruit interaction algebra; no classical 2D Navier-Stokes regularity theorem is invoked, because the layer/core interface itself is not silenced. RSC-O branch B (one-sided persistence) is reduced only, not closed; RSC-O global, RSC-E, RSC-C, OCSR, Witness Soundness, G6/G7, and Clay Navier-Stokes regularity remain OPEN.",
+      "No cancellation label is promoted to physical loss. No independent Coq mechanization exists.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository paper/NS_P2_RSC_O_ONE_SIDED_SILENT_LAYER.md (merged NS PR #64), and internal genesis-theorem-vault card readout-problem-navier-stokes-internal/genesis-theorem-vault/cards/20_LOCAL_GEOMETRY/RC-RSC-O-ONE-SIDED-SILENT-LAYER.yaml (tier Dr, status DERIVED, dependency_audit_2026_09_13: RETAIN), whose canonical statement is used here verbatim (the vault card exists under this exact object; the R2 retraction of the associated hand-skeleton reading is likewise carried forward per the vault card's own history log).",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: (OS-2) independently re-verified by the registering pass via the source script's two rational fixtures and the off-line control; internal NS CI check_ns_p2_rsc_o_one_sided_silent_layer.py reported PASS at merge (per the paper's own status block).",
+      "empirical_test_status": "Exact symbolic PASS for (OS-2)/(OS-3); the interface 'next target box' is untested and OPEN, not a negative or positive result either way."
+    }
+  },
+  {
+    "id": "PROP-P3-ISOTROPIC-SATURATION-INVARIANT-01",
+    "code": "weld/M.??.v1",
+    "name": "Isotropic-saturation invariant: every denominator-cleared symbolic closure test must saturate every symbolic pair sum t by t.t != 0 (or flag it ISOTROPIC_TARGET), never silently decide zero/nonzero on a degenerate complex projection",
+    "statement": {
+      "latest": "P_k[v]=(k\\cdot k)v-(v\\cdot k)k\\ \\text{(denominator-cleared Leray projection).}\\ \\text{On an isotropic pair sum }k\\cdot k=0,\\ k\\ne0\\ \\text{(no real counterpart), }P_k\\text{ degenerates to the rank-one map }v\\mapsto-(v\\cdot k)k,\\ \\ker=k^{\\perp}\\ni k,\\ \\text{so the outside-zero equation }(v\\cdot k)k=0\\text{ is far weaker than the (undefined) Leray zero set there.}\\ \\text{Invariant: adjoin }u_t\\,(t\\cdot t)-1=0\\text{ (Rabinowitsch) for every symbolic target }t,\\ \\text{or assert }t\\cdot t\\ne0\\text{ numerically; the per-address classifier gives ISOTROPIC\\_TARGET the highest precedence (never counted as zero or nonzero).}",
+      "format": "latex",
+      "note_ascii": "DEFINITION / checker-invariant: a guard against a real mistake already made once in the source repository's own working history (R1 retraction) -- a raw single-O SAT point q0=(0,0,+-i) with k.k=0 was originally misread as a real 'empty-core' witness, when it was in fact a complex isotropic artefact of the denominator-cleared projection with no real counterpart. The invariant requires every exact ('finite Groebner-basis') closure test using the denominator-cleared projection to saturate every symbolic pair-sum target by t.t != 0 (or flag ISOTROPIC_TARGET before any zero/nonzero decision is made on it), so that a complex-only artefact can never masquerade as a real closure point. This is a checker convention / guard, not a physical theorem about the Navier-Stokes system."
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "RG-ISOTROPIC-SATURATION-INVARIANT (internal vault card, kind rule, status DEFINITION, tier Dr in the vault's own scale)",
+      "rg_forced_address_audit.py:ISOTROPIC_TARGET"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-FORCED-ADDRESS-ACCOUNTING-01",
+        "derived_via": "isotropic_guard_runs_as_the_highest-precedence_state_of_the_same_per-address_classifier"
+      }
+    ],
+    "honest_caveats": [
+      "This is a guard / checker convention, not an 'exact' derived theorem in the usual sense -- tier is 'Definition' (a typed rule with a verification example, no proved closure content of its own), matching the internal vault card's own kind: rule classification (RG-ISOTROPIC-SATURATION-INVARIANT.yaml, status DEFINITION). Not overclaimed as 'exact' here even though its single verification example (p=(1,0,0), q=(0,i,0): t=(1,i,0), t.t=0) is itself an exact symbolic computation.",
+      "Origin is an R1 RETRACTION in the source repository's own working history: a previously reported real-looking SAT point was found, on review, to require k.k=0 (isotropic, complex-only), i.e. it had no real counterpart at all -- the invariant exists specifically to prevent that class of misreading from recurring. This registration records the guard, not the retracted claim.",
+      "On the real integer lattice, t.t=0 forces t=0 (a degenerate case that is separately skipped/handled), so this guard's isotropic branch never fires on purely real-integer fixtures -- its role is specifically to protect symbolic/complex-lane Groebner-basis computations (e.g. the NPSC v2 real/complex lane split) from silently accepting a complex-only artefact as a real closure witness.",
+      "A checker rule is not falsified, only violated: the falsifying event is a denominator-cleared closure test reporting SAT on a point whose only pair sums are isotropic without the guard being applied -- exactly the historical R1 incident this rule was written to prevent from recurring.",
+      "Does not prove NS regularity; Clay Navier-Stokes regularity, RSC-O/RSC-E/RSC-C, OCSR, Witness Soundness, and G6/G7 all remain OPEN and unaffected.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "R1 retraction recorded in the NS repository's own working notes (readout-problem-navier-stokes/paper/NS_P2_FORCED_ADDRESS_AUDIT.md, Section 3, PROP-P3-ISOTROPIC-SATURATION-INVARIANT-01, itself already labelled 'not yet in Toledo'); canonical wording taken from the internal genesis-theorem-vault card readout-problem-navier-stokes-internal/genesis-theorem-vault/cards/30_GENESIS_CLOSURE/RG-ISOTROPIC-SATURATION-INVARIANT.yaml (kind rule, status DEFINITION, dependency_audit_2026_09_13: RETAIN). No separate RG-ISOTROPIC-SATURATION-INVARIANT.yaml theorem card with a different statement was found; the vault card above is the canonical source used verbatim.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: the verification example (p=(1,0,0), q=(0,i,0) => t.t=0, ISOTROPIC_TARGET, saturation polynomial -1 for every u, P_dc[t]=0) is exact symbolic algebra, independently checked by the registering pass by hand substitution.",
+      "empirical_test_status": "Guard verified on the one worked example in the source; used operationally (per the vault card) in the internal per-address audit and the frozen NPSC v2 encoding, neither independently re-run in full by this registering pass."
     }
   }
 ]
