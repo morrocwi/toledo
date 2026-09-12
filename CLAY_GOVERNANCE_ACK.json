@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "reviewed_at": "2026-09-12",
-  "scope": "Review fixes to three NS P2 local-rigidity proposal entries registered in #29: lookup-outcome wording corrected on three entries (the source notes do not record a lookup outcome; the registering pass performed it), the hypothesis P≠0 restored in PROP-P3-CROSS-FAMILY-BOUNDARY-CANCEL-01, and the nonalignment-branch qualifier added to PROP-P3-RANK2-SELFCLOSURE-PLANARITY-01. Status/tier unchanged (Dr, unverified); no canonical code assigned; all global claims remain OPEN.",
+  "reviewed_at": "2026-09-13",
+  "scope": "Register the NS P2 A1 two-line reduction, Type-P loop transport, and recursive suppression charging lane from NS PRs #58/#59/#60 as seven NEW DERIVATION / PROPOSAL entries under the reuse-first gate TG-RFG-01: Type-P fixed-line discriminant classification, orthogonal-turn full-closure escape, A1 two-line escape reduction (#58); Type-P transport shell confinement and Type-P identity/nonidentity loop monodromy fixtures (#59, statistics recorded as FINITE_DIAGNOSTIC / EXACT_FIXTURE metadata only); recursive suppression charging as an OPEN THEOREM CANDIDATE (tier Open; NPSC depth-1 results are falsification control, never a premise) and its first RSC-O two-anchor planarity charge certificate (#60). Six entries tier Dr, one tier Open, all status unverified, placeholder codes only; parents cite existing proposal ids or canonical weld codes (the NS-side PROP-P3-PROJECTIVE-THREE-LINE-RIGIDITY-01 is not in Toledo and is recorded as an alias string only); every entry carries its NS paper path, merge SHA and checker name. Global Witness Soundness, cancellation compatibility, OCSR/FNW, G4/G6/G7 and Clay Navier-Stokes regularity remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Wording/hypothesis fidelity only."
+    "evidence": "Proposal entries only; the Toledo TODO is unchanged by this PR."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "registry/proposals/ns_p2_critical_quotient.json: five fields on five entries edited for citation accuracy; no entry added or removed."
+    "evidence": "registry/proposals/ns_p2_critical_quotient.json: 44 proposal entries (37 prior + 7 new), append-only diff, every new entry labelled NEW DERIVATION / PROPOSAL — not yet in Toledo, with claim boundary, the registering pass's own lookup outcome, reuse-first provenance (NS repository paper path + merge commit of PR #58, #59 or #60) and checker PASS status in NS CI recorded."
   },
   "claim_effect": "provenance-change"
 }
