@@ -1142,5 +1142,652 @@
       "rungs_held": "R0 sketch audit only",
       "empirical_test_status": "n/a"
     }
+  },
+  {
+    "id": "PROP-P3-CANCEL-CONSTRAINT-LIVE-W123-01",
+    "code": "weld/M.??.v1",
+    "name": "W1/W2/W3 witness-soundness reuse audit: exact shared-target cancellation is a live registered constraint, not a licensed physical loss and not depth-1 losslessness",
+    "statement": {
+      "latest": "\\text{For each registered witness }W\\in\\{W_1,W_2,W_3\\}\\text{ with }\\sum_\\alpha g_{\\alpha,k}=0\\text{ at the shared target }k:\\quad C_k=G_k>0\\ \\text{and the one-generation full local convolution of the real-closed source set has }N_W\\text{ nonzero net targets beyond }\\pm k,\\ (N_{W_1},N_{W_2},N_{W_3})=(16,42,36),\\ \\text{with }(12,30,30)\\text{ single-source targets; hence }C_k>0\\not\\Rightarrow\\text{physical loss}>0\\text{ and }\\sum_\\alpha g_{\\alpha,k}=0\\text{ must remain a registered constraint.}",
+      "format": "latex",
+      "note_ascii": "Depth-1 audit table from the source: W1: 8 real modes, 18 depth-1 targets, 16 nonzero net, 12 single-source, 0 zero targets beyond +-k. W2: 12 modes, 44 targets, 42 nonzero, 30 single-source, 0 zero beyond +-k. W3: 12 modes, 44 targets, 36 nonzero, 30 single-source, 6 projection-zero targets (reproducing the earlier W3 depth-1 result). All counts are exact SymPy assertions. The reusable conclusion: for a productive family G_k>0, N_k=0 gives C_k=G_k>0 and the exact relation sum g=0 is registered as a constraint (discardable only after a reader-sufficiency proof shows it future-irrelevant); the shortcut C_k>0 => payable defect D_cancel is rejected as unlicensed."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_w123_witness_soundness_reuse_audit:Section-2-4",
+      "check_ns_p2_witness_soundness_w123.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "bifurcation_N_k_zero_vs_nonzero"
+      },
+      {
+        "code": "PROP-P3-MULTI-SOURCE-CANCELLATION-WITNESSES-01",
+        "derived_via": "depth_1_full_convolution_of_W1_W2_W3"
+      },
+      {
+        "code": "PROP-P3-W3-FULLCONV-DEPTH1-01",
+        "derived_via": "independent_reproduction_of_W3_and_extension_to_W1_W2"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "no_early_collapse_constraint_retention"
+      },
+      {
+        "code": "weld/E.06.v1",
+        "derived_via": "sufficiency_gate_on_constraint_discard"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: exact on the three registered witnesses W1/W2/W3 only, one full-convolution generation; global NS-P2-WITNESS-SOUNDNESS for arbitrary cancellation webs, antipodal-source configurations, OCSR beyond the certified finite seeds/generations, UBRR, full recurrent GIR, G7 and Clay regularity remain OPEN.",
+      "The interpretive step (C_k>0 is a live constraint rather than a payable defect) is a governance/sufficiency reading, not a physical-dissipation statement; the source explicitly declines to use C_k>0 => physical loss.",
+      "The registering pass read the merged note and its checker text; it did not independently re-run the exact depth-1 convolution, so tier Dr (exact finite computation as reported by the source and its CI), not finite_diagnostic.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_W123_WITNESS_SOUNDNESS_REUSE_AUDIT.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_W123_WITNESS_SOUNDNESS_REUSE_AUDIT.md",
+          "reproduction/checks/check_ns_p2_witness_soundness_w123.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact depth-1 reconstruction by the source checker (independent of the earlier W3 scripts); registering pass read only.",
+      "empirical_test_status": "check_ns_p2_witness_soundness_w123.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-ANTIPODAL-CANCEL-OUTWARD-01",
+    "code": "weld/P.??.v1",
+    "name": "Antipodal reality-coupled cancellation family: exact shared-target cancellation forces two strictly outward crossed descendants",
+    "statement": {
+      "latest": "k=(K,0,0),\\ p=(0,P,0),\\ p'=-p,\\ q=k-p,\\ q'=k+p,\\ a_p=a_{-p}=e_3,\\ b_q=(Px,Kx,z),\\ d_{q'}=(-Px,Kx,w),\\ K,P\\ne0:\\quad \\mathcal B_{p,q}(a,b)=KPx\\,e_3,\\ \\mathcal B_{-p,q'}(a,d)=-KPx\\,e_3\\ (\\text{sum }0\\text{ at }k),\\quad \\mathcal B_{p,q'}(a,d)=KPx\\,e_3\\ \\text{at }(K,2P,0),\\ \\mathcal B_{-p,q}(a,b)=-KPx\\,e_3\\ \\text{at }(K,-2P,0);\\quad x\\ne0\\Rightarrow\\text{both crossed descendants nonzero and }|s_\\pm|^2=K^2+4P^2>|q|^2,|p|^2,|k|^2.",
+      "format": "latex",
+      "note_ascii": "A genuine reality-active antipodal source pair (unlike W1/W2/W3 where the reality constraint was vacuous). Exact symbolic reduction over real parameters K,P,x,z,w; the nuisance parameters z,w cancel out of the crossed-descendant conclusions. Divergence-free conditions p.a=(-p).a=q.b=q'.d=0 hold exactly. Conclusion: Fourier reality plus an antipodal source pair is not by itself a lossless cancellation mechanism; cancelling the shared target transfers the burden to two strictly outward targets."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_antipodal_cancellation_outward_family:Section-1-5",
+      "check_ns_p2_antipodal_cancellation_outward.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "exact_cancellation_instance_with_reality_partner"
+      },
+      {
+        "code": "PROP-P3-MULTI-SOURCE-CANCELLATION-WITNESSES-01",
+        "derived_via": "antipodal_branch_left_open_by_W1_W2_W3"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: every wavevector of this family has k_z=0 and every generated polarization is e_3, so the family lies in the 2D3C terminal class P (2D3C reduction, where regularity is classical). The result exhibits the exact constraint-propagation / outward mechanism inside that class; it is not evidence about the productive non-planar sector.",
+      "Does not prove global OCSR: a larger web may recruit additional sources to cancel the two outward descendants; the source states this explicitly.",
+      "Exact symbolic PASS in the source checker; the registering pass did not independently re-derive the four bilinear evaluations, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_ANTIPODAL_CANCELLATION_OUTWARD_FAMILY.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_ANTIPODAL_CANCELLATION_OUTWARD_FAMILY.md",
+          "reproduction/checks/check_ns_p2_antipodal_cancellation_outward.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact symbolic derivation in the source checker; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_antipodal_cancellation_outward.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-ANTIPODAL-CANCEL-LADDER-01",
+    "code": "weld/P.??.v1",
+    "name": "Exact antipodal cancellation ladder: interior cancellation forces constant coefficient; finite strips have two boundary descendants; infinite strips escape scale",
+    "statement": {
+      "latest": "p=(0,P,0),\\ -p,\\ a=e_3,\\ q_j=(K,(2j+1)P,0),\\ b_j=\\bigl(-\\tfrac{(2j+1)P}{K}c_j,\\,c_j,\\,z_j\\bigr),\\ K,P\\ne0:\\quad \\mathcal B_{p,q_j}(a,b_j)=Pc_j e_3\\ \\text{at }s_{j+1}=(K,(2j+2)P,0),\\ \\mathcal B_{-p,q_j}(a,b_j)=-Pc_j e_3\\ \\text{at }s_j=(K,2jP,0);\\quad \\text{cancellation at }s_j\\iff c_j=c_{j-1};\\quad \\text{finite strip }q_m..q_n,\\ c\\ne0\\Rightarrow s_m\\text{ receives }-Pc\\,e_3,\\ s_{n+1}\\text{ receives }+Pc\\,e_3;\\quad |q_j|^2=K^2+(2j+1)^2P^2\\to\\infty\\ (|j|\\to\\infty).",
+      "format": "latex",
+      "note_ascii": "Every q_j feeds equal-and-opposite e_3 source strength into its lower and upper neighbouring targets, so a connected cancellation strip forces c_m=...=c_n (Generative Constraint Accumulation in an exact symbolic family). Dichotomy in this family: finite productive strip => two uncancelled boundary descendants; bi-infinite strip that keeps cancelling every boundary => unbounded wavevector magnitude (scale escape). Hence no nonzero compact lossless recurrent cancellation strip exists in this family."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_antipodal_cancellation_ladder:Section-1-6",
+      "check_ns_p2_antipodal_cancellation_ladder.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-ANTIPODAL-CANCEL-OUTWARD-01",
+        "derived_via": "iteration_of_antipodal_pair_along_strip"
+      },
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "exact_cancellation_recurrence_on_c_j"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "no_silent_loss_of_boundary_descendants"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: every wavevector of this family has k_z=0 and every generated polarization is e_3, so the family lies in the 2D3C terminal class P (2D3C reduction, where regularity is classical). The result exhibits the exact constraint-propagation / outward mechanism inside that class; it is not evidence about the productive non-planar sector.",
+      "Restricted-family statement only; does not prove global OCSR because a general web can recruit modes outside this strip geometry (the cross-family question is the next entry).",
+      "Exact symbolic PASS in the source checker at arbitrary finite depth; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_ANTIPODAL_CANCELLATION_LADDER.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_ANTIPODAL_CANCELLATION_LADDER.md",
+          "reproduction/checks/check_ns_p2_antipodal_cancellation_ladder.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact symbolic derivation in the source checker; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_antipodal_cancellation_ladder.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-CROSS-FAMILY-BOUNDARY-CANCEL-01",
+    "code": "weld/P.??.v1",
+    "name": "Cross-family boundary cancellation forces planarity or off-plane novelty (anchor-cross determinant dichotomy)",
+    "statement": {
+      "latest": "p=(0,P,0),\\ a=e_3,\\ s=(K,L,0)\\ne0,\\ r+t=s,\\ u\\perp r,\\ v\\perp t,\\ \\mathcal B_{r,t}(u,v)=\\gamma e_3,\\ \\gamma\\ne0,\\ r=(x,y,z):\\quad \\det L_r=\\frac{z^2(|r|^2-|p|^2)}{|p+r|^2},\\ \\det L_t=\\frac{z^2(|t|^2-|p|^2)}{|p+t|^2}\\ (L_r:u\\mapsto\\mathcal B_{p,r}(e_3,u));\\quad z\\ne0\\Rightarrow\\max\\{\\|\\mathcal B_{p,r}(e_3,u)\\|,\\|\\mathcal B_{p,t}(e_3,v)\\|\\}>0\\ \\text{with the nonzero descendant at }p+r\\text{ or }p+t\\text{ having third coordinate }\\pm z\\ne0;\\quad\\text{hence }r_z=t_z=0\\ \\vee\\ \\text{off-plane novelty}.",
+      "format": "latex",
+      "note_ascii": "Proof route from the source: on the z!=0 branch both anchor-cross kernels nontrivial would force |r|=|t|=|p| by (CF-1)-(CF-2); the equal-shell direction lock then gives B_{r,t}(u,v) parallel to r x t = (-Lz, Kz, -Ky+Lx), whose horizontal squared magnitude z^2(K^2+L^2)>0 contradicts the assumed e_3 direction. Non-vacuity instance: s=(1,2,0), r=(1,0,1), t=(0,2,-1), u=(0,1,0), v=(-1/3,-1/4,-1/2) gives B_{r,t}(u,v)=-e_3 with both anchor-cross descendants nonzero at (1,1,1) and (0,3,-1). Normalisation note recorded in the source: (CF-1) is the determinant in the checker's transverse coordinates; with orthonormal bases the area ratio is z^2(|r|^2-|p|^2)/(|r||p+r|), differing by the positive factor |p+r|/|r|, so the null locus z=0 or |r|=|p| is identical."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_cross_family_boundary_cancellation:Section-2-5",
+      "check_ns_p2_cross_family_boundary_cancellation.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-ANTIPODAL-CANCEL-LADDER-01",
+        "derived_via": "cancellation_of_strip_boundary_descendant"
+      },
+      {
+        "code": "PROP-P3-EQUAL-SHELL-DIRECTION-LOCK-01",
+        "derived_via": "equal_shell_branch_direction_lock_contradiction"
+      },
+      {
+        "code": "PROP-P2-CANCELLATION-LEDGER-01",
+        "derived_via": "exact_cancellation_accounting"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: one-generation, single-anchor local theorem for the declared antipodal-strip anchor geometry; whether a larger 3D web can cancel the newly forced off-plane descendant while remaining compact, productive and zero-defect is OPEN.",
+      "The determinant (CF-1) is chart-dependent up to a positive factor (see note_ascii); only the null locus is used.",
+      "Exact symbolic PASS over the rational function field in the source checker; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_CROSS_FAMILY_BOUNDARY_CANCELLATION.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_CROSS_FAMILY_BOUNDARY_CANCELLATION.md",
+          "reproduction/checks/check_ns_p2_cross_family_boundary_cancellation.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact symbolic derivation in the source checker; the source records an independent re-derivation (2026-09-12) of the orthonormal-basis form of (CF-1) confirming the same null locus.",
+      "empirical_test_status": "check_ns_p2_cross_family_boundary_cancellation.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+    "code": "weld/P.??.v1",
+    "name": "General anchor-cross nullity locus: the cross map from q-polarizations to k-polarizations has nonzero kernel iff a.q=0 or |q|=|p|",
+    "statement": {
+      "latest": "p,q,k=p+q\\ne0,\\ a\\ne0,\\ a\\cdot p=0,\\ L_{p,q,a}:q^\\perp\\to k^\\perp,\\ b\\mapsto\\mathcal B_{p,q}(a,b):\\quad \\ker L_{p,q,a}\\ne\\{0\\}\\iff(a\\cdot q=0)\\vee(|q|=|p|);\\quad \\det L=\\frac{(a\\cdot q)^2(|q|^2-|p|^2)}{|p+q|^2}\\ \\text{(adapted transverse chart)};\\quad |p|=|q|,\\ a\\cdot q\\ne0\\Rightarrow b_*:=k-\\frac{k\\cdot p}{a\\cdot q}a\\in\\ker L.",
+      "format": "latex",
+      "note_ascii": "Coordinate-free proof in the source: with lambda=a.q!=0, a kernel vector forces lambda b+(b.p)a=ck; dotting with p and q gives lambda beta=c(k.p)=c(k.q), and c!=0 (else b=0), so |p|=|q|. Converse via the explicit kernel vector b_*. If a.q=0 then a is orthogonal to k and any nonzero b in p^perp cap q^perp lies in the kernel. Determinant factorization (ACN-7) checked exactly in SymPy. Specialises to the cross-family determinant z^2(|r|^2-|p|^2)/|p+r|^2 for p=(0,P,0), a=e_3. Interpretation: suppressing a cross response against a retained anchor costs one exact constraint (polarization orthogonality or equal-shell locking)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_general_anchor_cross_nullity:Section-2-4",
+      "check_ns_p2_general_anchor_cross_nullity.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-CROSS-FAMILY-BOUNDARY-CANCEL-01",
+        "derived_via": "generalisation_of_special_determinant_CF-1"
+      },
+      {
+        "code": "PROP-P3-EQUAL-SHELL-DIRECTION-LOCK-01",
+        "derived_via": "equal_shell_locus_as_one_of_two_kernel_branches"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "retained_distinction_not_silently_collapsed"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: closes only the local nullity classification for ONE retained anchor; compatibility of repeated exceptional choices across a large web, and whether repeated equal-shell / orthogonality constraints force planarity, degeneracy, scale escape or positive registered defect, remain OPEN.",
+      "The theorem does not say either exceptional locus is impossible; it says suppression is not free.",
+      "Exact algebraic PASS in the source checker (determinant identity in SymPy, no floats); the registering pass followed the coordinate-free proof but did not independently re-run the symbolic check, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_GENERAL_ANCHOR_CROSS_NULLITY.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_GENERAL_ANCHOR_CROSS_NULLITY.md",
+          "reproduction/checks/check_ns_p2_general_anchor_cross_nullity.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: coordinate-free proof plus exact determinant check in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_general_anchor_cross_nullity.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-MULTI-ANCHOR-SUPPRESSION-01",
+    "code": "weld/P.??.v1",
+    "name": "Four-anchor no-silent-recruitment corollary: no nonzero recruited mode is cross-silent to four shell-distinct anchors with triple-wise independent polarizations",
+    "statement": {
+      "latest": "(p_i,a_i)_{i=1}^4,\\ p_i\\ne0,\\ a_i\\ne0,\\ a_i\\cdot p_i=0,\\ |p_i|\\ne|p_j|\\ (i\\ne j),\\ \\operatorname{rank}(a_i,a_j,a_k)=3\\ \\forall\\ \\text{distinct }i,j,k;\\ q\\ne0,\\ b\\in q^\\perp\\setminus\\{0\\},\\ p_i+q\\ne0:\\quad \\max_{1\\le i\\le4}\\|\\mathcal B_{p_i,q}(a_i,b)\\|>0.\\quad\\text{Equivalently: }\\mathcal B_{p_i,q}(a_i,b)=0\\ \\forall i\\Rightarrow(\\exists i\\ne j:|p_i|=|p_j|)\\vee(\\exists i,j,k:\\operatorname{rank}(a_i,a_j,a_k)<3)\\vee q=0.",
+      "format": "latex",
+      "note_ascii": "Proof from the source: each suppressed anchor costs a_i.q=0 or |q|=|p_i| (parent nullity law); pairwise-distinct shells allow at most one equal-shell escape, so at least three anchors impose a_i.q=0; three independent polarizations span R^3, forcing q=0. Non-vacuity family: p_1=(1,0,0),a_1=(0,1,0); p_2=(0,2,0),a_2=(0,0,1); p_3=(0,0,3),a_3=(1,0,0); p_4=(4,4,0),a_4=(1,-1,1); squared radii 1,4,9,32; every polarization triple has nonzero determinant."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_multi_anchor_suppression:Section-2-5",
+      "check_ns_p2_multi_anchor_suppression.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "four_fold_application_plus_pigeonhole_on_shells"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: does not prove OCSR; a recurrent web may avoid the hypotheses by reusing equal shell radii, keeping polarization rank at most two, failing to retain four anchors simultaneously in a reader-sufficient state, or routing activity through another declared boundary/exit. Rigidity of the shell-collision and rank-degenerate branches is OPEN.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_MULTI_ANCHOR_SUPPRESSION.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_MULTI_ANCHOR_SUPPRESSION.md",
+          "reproduction/checks/check_ns_p2_multi_anchor_suppression.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: finite linear-algebra corollary derived in the source with an exact non-vacuity family; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_multi_anchor_suppression.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-SHELL-CONDITIONED-SPAN-01",
+    "code": "weld/P.??.v1",
+    "name": "Shell-conditioned polarization-span obstruction: complete cross-silence forces the off-shell anchor polarizations to have rank at most two",
+    "statement": {
+      "latest": "\\mathcal A=\\{(p_i,a_i)\\}_{i=1}^m,\\ p_i\\ne0,\\ a_i\\ne0,\\ a_i\\cdot p_i=0;\\ q\\ne0,\\ b\\in q^\\perp\\setminus\\{0\\},\\ \\rho:=|q|,\\ \\mathcal B_{p_i,q}(a_i,b)=0\\ \\forall i:\\quad |p_i|\\ne\\rho\\Rightarrow a_i\\cdot q=0;\\quad V_\\rho:=\\operatorname{span}\\{a_i:|p_i|\\ne\\rho\\},\\ q\\in V_\\rho^\\perp,\\ \\dim V_\\rho\\le2.\\quad\\text{Contrapositive: }\\bigl[\\dim\\operatorname{span}\\{a_i:|p_i|\\ne\\rho\\}=3\\ \\forall\\rho>0\\bigr]\\Rightarrow\\text{no nonzero recruited mode is cross-silent to all anchors.}",
+      "format": "latex",
+      "note_ascii": "Strengthens the four-anchor corollary by allowing arbitrary shell collisions: a shell collision is not itself a loophole; a silent recruit at radius rho exists only if, after deleting the anchors on that shell, the remaining polarizations fail to span R^3 (exceptional branch SC-7). Finite gate: it suffices to check every distinct retained shell radius plus one generic non-retained rho (for which the set is all anchor polarizations). The source header lists no checker; the file reproduction/checks/check_ns_p2_shell_conditioned_span.py exists in the same PR and runs in the NS CI job."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_shell_conditioned_span:Section-2-4",
+      "check_ns_p2_shell_conditioned_span.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "off_shell_branch_of_nullity_law_for_each_anchor"
+      },
+      {
+        "code": "PROP-P3-MULTI-ANCHOR-SUPPRESSION-01",
+        "derived_via": "generalisation_dropping_distinct_shell_hypothesis"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: does not prove OCSR; reduces the complete-suppression branch to the explicit exceptional condition rank{a_i:|p_i|!=rho}<=2. Rigidity of webs preserving that rank defect under repeated full convolution is OPEN.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_SHELL_CONDITIONED_SPAN.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_SHELL_CONDITIONED_SPAN.md",
+          "reproduction/checks/check_ns_p2_shell_conditioned_span.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: finite linear-algebra corollary derived in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_shell_conditioned_span.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-RANK2-POLARIZATION-PLANE-RIGIDITY-01",
+    "code": "weld/P.??.v1",
+    "name": "Rank-2 polarization-plane rigidity: projected-direction collision is nonproductive, W-closed productive pairs satisfy n.(p+q)=0, and a three-pair productive W-closed patch is wavevector-planar",
+    "statement": {
+      "latest": "W=n^\\perp,\\ n\\ne0,\\ p,q\\nparallel n,\\ a=\\alpha(n\\times p),\\ b=\\beta(n\\times q),\\ k=p+q,\\ \\Delta:=n\\cdot(p\\times q):\\quad n\\cdot\\mathcal B_{p,q}(a,b)=\\frac{2\\alpha\\beta\\,[n\\cdot(p+q)]\\,\\Delta^2}{|p+q|^2};\\quad \\Delta=0\\Rightarrow\\mathcal B_{p,q}(a,b)=0;\\quad \\text{productive, }\\mathcal B_{p,q}(a,b)\\in W\\Rightarrow n\\cdot(p+q)=0;\\quad \\text{three modes, all pairs productive and }W\\text{-closed}\\Rightarrow n\\cdot p_1=n\\cdot p_2=n\\cdot p_3=0.",
+      "format": "latex",
+      "note_ascii": "In the chart n=e_3 the unprojected source is alpha beta Delta (p_y-q_y, -p_x+q_x, 0), so Delta=0 kills the parent interaction itself (the 'projected-direction collision' escape is nonproductive). Three-mode rigidity: z_1+z_2=z_1+z_3=z_2+z_3=0 with z_i=n.p_i forces all z_i=0. Non-vacuity: p_1=(1,0,1), p_2=(0,1,-1), p_3=(1,1,1), a_i=e_3 x p_i; the productive interactions cannot all remain in W. This is an entrance condition into the Standalone's existing 'Parallel-normal branch -> P' planar branch, not a re-proof of it."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_rank2_polarization_plane_rigidity:Section-2-4",
+      "check_ns_p2_rank2_polarization_plane_rigidity.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-SHELL-CONDITIONED-SPAN-01",
+        "derived_via": "attack_on_rank_le_2_exceptional_branch"
+      },
+      {
+        "code": "PROP-P3-GENERAL-ANCHOR-CROSS-NULLITY-01",
+        "derived_via": "same_projected_interaction_and_full_convolution_semantics"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: alignments p||n or q||n are retained as explicit lower-dimensional degeneracy branches; if the three productive pair interactions are not all present, that absence is a registered nonproductivity / sparsity condition, not silent closure. Whether every compact productive zero-defect recurrent web in the rank-2 branch contains the required three-pair patch is OPEN.",
+      "Exact symbolic PASS in the source checker; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_RANK2_POLARIZATION_PLANE_RIGIDITY.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_RANK2_POLARIZATION_PLANE_RIGIDITY.md",
+          "reproduction/checks/check_ns_p2_rank2_polarization_plane_rigidity.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact symbolic reduction in the source checker; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_rank2_polarization_plane_rigidity.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-RANK2-SELFCLOSURE-PLANARITY-01",
+    "code": "weld/P.??.v1",
+    "name": "Rank-2 self-closure forces planarity or polarization escape: one productive W-closed triad plus its exact self-closure descendant suffices",
+    "statement": {
+      "latest": "W=n^\\perp,\\ p+q=k,\\ a\\in W\\cap p^\\perp,\\ b\\in W\\cap q^\\perp,\\ c:=\\mathcal B_{p,q}(a,b)\\ne0,\\ c\\in W:\\quad n\\cdot k=0;\\quad \\max\\{\\|\\mathcal B_{p,k}(a,c)\\|,\\|\\mathcal B_{q,k}(b,c)\\|\\}>0;\\quad \\text{if the nonzero self-closure descendant also lies in }W\\text{ (nonalignment branch) then }n\\cdot p=n\\cdot q=n\\cdot k=0.\\quad\\text{Dichotomy: descendant leaves }W\\ \\vee\\ p,q,k\\in W\\ \\vee\\ \\text{declared alignment/degeneracy branch.}",
+      "format": "latex",
+      "note_ascii": "The scalar transfer <c, B_{p,q}(a,b)> = |c|^2 > 0 makes the existing productive-triad self-closure lemma applicable without any triangle-completeness assumption on the productive interaction graph (removes the sparse-web concern left by the plane-rigidity result). Non-vacuity: p=(1,0,1), q=(0,2,-1), k=(1,2,0), a=e_3 x p, b=e_3 x q gives B_{p,q}(a,b)=(-12/5, 6/5, 0) in W, nonzero; both exact self-closure descendants have nonzero e_3 component, so the nonplanar branch genuinely produces polarization escape."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "ns_p2_rank2_selfclosure_planarity:Section-2-5",
+      "check_ns_p2_rank2_selfclosure_planarity.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-SELF-CLOSURE-01",
+        "derived_via": "self_closure_edge_supplied_by_lemma"
+      },
+      {
+        "code": "PROP-P3-RANK2-POLARIZATION-PLANE-RIGIDITY-01",
+        "derived_via": "pair_rule_n_dot_sum_zero_applied_twice"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: an entrance lemma into the existing planar branch only; it does not reclassify the global recurrent web. Whether a web can repeatedly emit polarization novelty and recompress it into another rank-2 plane (plane switching) is the next OPEN item.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_RANK2_SELFCLOSURE_PLANARITY.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #55, merge commit fc20689fcf7a40e315ebb49e46e0ee69bf3eba89. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 55,
+        "merge_sha": "fc20689fcf7a40e315ebb49e46e0ee69bf3eba89",
+        "paths": [
+          "paper/NS_P2_RANK2_SELFCLOSURE_PLANARITY.md",
+          "reproduction/checks/check_ns_p2_rank2_selfclosure_planarity.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: finite corollary of the self-closure lemma derived in the source with an exact non-vacuity instance; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_rank2_selfclosure_planarity.py PASS in NS CI (exact-multisource-cancellation job, PR #55)."
+    }
+  },
+  {
+    "id": "PROP-P3-PLANE-SWITCH-CAPACITY-01",
+    "code": "weld/M.??.v1",
+    "name": "Rank-2 plane-switch capacity and two-lineage plane lock: three independent retained novelties cannot be recompressed into a rank-2 plane; two independent lineages fix the next plane",
+    "statement": {
+      "latest": "c_1,c_2,c_3\\in\\mathbb R^3\\ \\text{future-relevant retained polarization novelties, no registered cancellation/terminalization/exit/defect}:\\quad c_1,c_2,c_3\\in W_{j+1}\\ (\\dim W_{j+1}=2)\\Rightarrow\\det[c_1\\ c_2\\ c_3]=c_1\\cdot(c_2\\times c_3)=0;\\quad c_1\\times c_2\\ne0\\Rightarrow W_{j+1}=\\operatorname{span}\\{c_1,c_2\\},\\ [n_{j+1}]=[c_1\\times c_2],\\ \\text{and a third novelty }c\\text{ is absorbable iff }(c_1\\times c_2)\\cdot c=0;\\quad\\text{two independent lineages retained unchanged across }W_0\\to\\cdots\\to W_m\\Rightarrow\\text{every plane is fixed by their span (identity/reanchor branch: }W_m=W_0).",
+      "format": "latex",
+      "note_ascii": "Pure retention/sufficiency consequence: a zero-defect/no-exit rank-2 switch retains at most a two-dimensional span of future-relevant polarization distinctions. If det[c_1 c_2 c_3]!=0, at least one of registered cancellation/resolution, terminalization, exit, named defect, or abandoning rank-2 representation is mandatory. Every genuine plane switch must replace/resolve at least one of the two plane-defining basis lineages, or register exit/defect, or lose rank-2 closure (PS-6). The source stresses this does not reclassify cancellation as physical dissipation."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_plane_switch_capacity:Section-2-4",
+      "check_ns_p2_plane_switch_capacity.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-RANK2-SELFCLOSURE-PLANARITY-01",
+        "derived_via": "polarization_escape_branch_feeds_plane_switch"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "lineage_preservation_no_silent_disappearance"
+      },
+      {
+        "code": "weld/E.06.v1",
+        "derived_via": "sufficiency_gate_on_retained_distinctions"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: does not prove that lineage turnover costs a physical defect; exact cancellation may legitimately resolve a future distinction if Witness Soundness certifies it no longer future-relevant. Whether a recurrent zero-defect web can perform an infinite/closed sequence of basis-lineage replacements compatible with the cancellation ledger and projective-null transport is OPEN.",
+      "Finite linear-algebra statement about retained polarization spans; it carries no NSE-specific interaction content beyond the parent chain.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_PLANE_SWITCH_CAPACITY.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #56, merge commit fe141b02b75418163491f8b578768261e4dd2b68. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 56,
+        "merge_sha": "fe141b02b75418163491f8b578768261e4dd2b68",
+        "paths": [
+          "paper/NS_P2_PLANE_SWITCH_CAPACITY.md",
+          "reproduction/checks/check_ns_p2_plane_switch_capacity.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: finite retained-space corollary derived in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_plane_switch_capacity.py PASS in NS CI (exact-multisource-cancellation job, PR #56)."
+    }
+  },
+  {
+    "id": "PROP-P3-PLANE-SWITCH-NORMAL-LINEAGE-01",
+    "code": "weld/M.??.v1",
+    "name": "Plane-switch normal/lineage reconstruction identity: n_j x n_{j+1} = det[c_j,c_{j+1},c_{j+2}] c_{j+1}, so the shared lineage class is fixed by adjacent plane normals",
+    "statement": {
+      "latest": "W_j=\\operatorname{span}\\{c_j,c_{j+1}\\},\\ W_{j+1}=\\operatorname{span}\\{c_{j+1},c_{j+2}\\},\\ n_j=c_j\\times c_{j+1},\\ n_{j+1}=c_{j+1}\\times c_{j+2},\\ \\Delta_j:=\\det[c_j\\ c_{j+1}\\ c_{j+2}]:\\quad n_j\\times n_{j+1}=\\Delta_j\\,c_{j+1};\\quad \\Delta_j\\ne0\\Rightarrow[c_{j+1}]=[n_j\\times n_{j+1}];\\quad \\Delta_j=0\\Rightarrow n_j\\times n_{j+1}=0\\ (\\text{same-plane / coplanar branch}).",
+      "format": "latex",
+      "note_ascii": "Direct vector algebra (the vector quadruple-product identity), verified symbolically over generic coordinates by the source checker. Consequence: a closed genuine plane-switch loop W_0 -> ... -> W_{m-1} -> W_0 carries only one projective data stream (the normal loop), from which the shared-lineage loop is reconstructed; any declared projective-null / lineage transport around the loop must agree with the reconstructed sequence or register a named compatibility/translation defect. The reconstruction never divides by Delta_j; it classifies the branch. The source presents this as the first exact bridge from the local plane-switch reduction to the Standalone projective-null connection / holonomy language."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "ns_p2_plane_switch_normal_lineage:Section-1-4",
+      "check_ns_p2_plane_switch_normal_lineage.py"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-PLANE-SWITCH-CAPACITY-01",
+        "derived_via": "basis_replacement_chain_normals"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "lineage_transport_must_match_or_register_defect"
+      }
+    ],
+    "honest_caveats": [
+      "Claim boundary from the source: an exact identity plus a compatibility reformulation; classification of normal loops compatible with the existing projective-null transport, whether a nontrivial compatible loop forces planarity/degeneration/registered cancellation, and phase/amplitude compatibility around such a loop are OPEN.",
+      "The identity itself is elementary vector algebra; its content here is the reuse bridge to the lineage/holonomy ledger, not new mathematics.",
+      "Exact finite PASS in the source checker; registering pass read only, hence Dr.",
+      "Registered under the reuse-first gate TG-RFG-01: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. The source note itself records that a Toledo lookup returned no matching object.",
+      "Says nothing that closes global Witness Soundness, multi-source cancellation compatibility, OCSR, FNW, G6/G7, or Clay Navier-Stokes regularity; all remain OPEN in the source.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
+    ],
+    "origin": {
+      "source": "NS repository note 'paper/NS_P2_PLANE_SWITCH_NORMAL_LINEAGE.md' (third-person registration from the merged text; the note labels itself NEW DERIVATION / PROPOSAL). Merged to main of morrocwi/readout-problem-navier-stokes via PR #56, merge commit fe141b02b75418163491f8b578768261e4dd2b68. Registered under the Toledo-first rule and the reuse-first gate TG-RFG-01 on 2026-09-12.",
+      "doi": null,
+      "ns_repo_provenance": {
+        "repo": "morrocwi/readout-problem-navier-stokes",
+        "pr": 56,
+        "merge_sha": "fe141b02b75418163491f8b578768261e4dd2b68",
+        "paths": [
+          "paper/NS_P2_PLANE_SWITCH_NORMAL_LINEAGE.md",
+          "reproduction/checks/check_ns_p2_plane_switch_normal_lineage.py"
+        ]
+      }
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0: exact symbolic identity check in the source; registering pass read only.",
+      "empirical_test_status": "check_ns_p2_plane_switch_normal_lineage.py PASS in NS CI (exact-multisource-cancellation job, PR #56)."
+    }
   }
 ]

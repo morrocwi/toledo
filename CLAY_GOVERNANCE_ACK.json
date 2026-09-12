@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-12",
-  "scope": "Adopt TG-RFG-01 as the central cross-repository reuse-first derivation gate: Toledo lookup -> Genesis compatibility -> reuse existing object -> derive only the missing piece -> mark PROPOSAL. This is a provenance/governance change only. It does not alter any canonical equation, theorem statement, Coq proof, finite bridge result, or Clay status. Combined with the NS P2 proposals PR (#28, already on main): Register NS P2 Standalone vNext-lane proposals (direction lock, multi-source cancellation witnesses, W3 generation-1, CR_0 target, scale-loss audit provenance, H3 shell readout, Duhamel window split, window bilinear constant, retention-gap recurrence, energy-only remainder refutation, Uniform Retention Gap HOLD, tax summability, Finite Recurrence Exclusion occurrence) and three NEW DERIVATION / PROPOSAL entries (occupation primal, Farkas dual certificate, occupation soundness); repair two proposal JSON files that failed to parse (syntax only, no semantic change). All entries unverified; no canonical code assigned; Witness Soundness, OCSR, G4/G6/G7 and Clay Navier-Stokes regularity remain OPEN.",
+  "scope": "Register the NS P2 local-rigidity lane from NS PRs #55/#56 as eleven NEW DERIVATION / PROPOSAL entries under the reuse-first gate TG-RFG-01: W1/W2/W3 witness-soundness reuse audit (cancellation as live constraint), antipodal cancellation outward family, antipodal cancellation ladder (both 2D3C terminal class P), cross-family boundary cancellation, general anchor-cross nullity locus, four-anchor suppression corollary, shell-conditioned polarization-span obstruction, rank-2 polarization-plane rigidity, rank-2 self-closure planarity, plane-switch capacity / two-lineage plane lock, and plane-switch normal/lineage reconstruction identity. All entries tier Dr, status unverified, placeholder codes only; parents cite existing proposal ids or canonical weld codes; every entry carries its NS paper path, merge SHA and checker name. Global Witness Soundness, cancellation compatibility, OCSR/FNW, G6/G7 and Clay Navier-Stokes regularity remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Governance gate TG-RFG-01 (this PR) and proposal registrations (#28) only; the Toledo TODO is unchanged."
+    "evidence": "Proposal entries only; the Toledo TODO is unchanged by this PR."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "EQUATION_SOURCE_POLICY.md now names TG-RFG-01 as the canonical central governance rule, and AGENTS.md requires all mathematical/Clay-sensitive work to follow it. No canonical registry entry is added or promoted. Also on main via #28: registry/proposals/ns_p2_critical_quotient.json: 26 proposal entries (23 prior + 3 new), every entry labelled NEW DERIVATION / PROPOSAL — not yet in Toledo, refuted-in-source items carry status unverified + status_note; registry/proposals/ns_eps18_n1_rowwise_radius.json and discrete_epsilon_completion_observability_bridge.json: parse repairs only."
+    "evidence": "registry/proposals/ns_p2_critical_quotient.json: 37 proposal entries (26 prior + 11 new), append-only diff, every new entry labelled NEW DERIVATION / PROPOSAL — not yet in Toledo, with claim boundary, reuse-first provenance (NS repository paper path + merge commit of PR #55 or #56) and checker PASS status in NS CI recorded."
   },
   "claim_effect": "provenance-change"
 }
