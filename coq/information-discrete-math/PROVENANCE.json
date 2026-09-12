@@ -166,6 +166,13 @@
       "blob": "0e8eb9e84747d35e29a2a547f57441d2243c23c9",
       "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
       "theorem_count": 12
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "blob": "676ad14bab02606966f496de8dfee57dee39fe08",
+      "licence": "MIT License (LICENSE, repo root) -- Copyright (c) 2026 Yaoharee Lahtee",
+      "theorem_count": 31,
+      "upstream_commit_for_this_file": "ca5018925d98f5a710b2ceb561433f814915545b"
     }
   ],
   "copied_at": "2026-09-06T13:08:15Z",

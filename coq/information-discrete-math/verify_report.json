@@ -2,11 +2,11 @@
   "source": "information-discrete-math",
   "upstream_commit": "147fc92671f35eb102405fec913eb361dc41f966",
   "generated_at": "2026-09-06T13:08:15Z",
-  "files_total": 27,
-  "files_build_ok": 27,
+  "files_total": 28,
+  "files_build_ok": 28,
   "files_build_failed": 0,
-  "theorems_total": 274,
-  "theorems_closed": 274,
+  "theorems_total": 305,
+  "theorems_closed": 305,
   "theorems_with_axioms": 0,
   "theorems_build_failed": 0,
   "results": [
@@ -2471,6 +2471,285 @@
       "path": "formal/IDM_Tropical.v",
       "module": "IDM_Tropical",
       "theorem": "bottleneck_distrib",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T1_eq_obs_correspondence",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "EqOf_antitone",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "ObsOf_antitone",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T2_closure_extensive",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T2_closure_monotone",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T2_eq_closure_invariant",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T2_closure_idempotent",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T6_question_monotonicity",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T7_joint_question_intersection",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "closure_is_closed",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "closed_intersection",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "closed_join",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "A_con_subseteq_A_sem",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "constructive_closure_invariant",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "future_eq_refl",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "future_eq_sym",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "future_eq_trans",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T3_future_equivalence_dynamic_stability",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T4_dynamic_weld_well_defined",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "step_class_is_class",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T4b_quotient_commuting_square",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "future_eq_immediate",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "future_eq_implies_depth",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "depth_immediate",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "depth_stable_successor_closed",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "depth_stable_implies_future",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "stable_depth_exact_future",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "T5_sufficiency_kernel_inclusion",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "blocks_growth_under_no_closure",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "closed_or_none_upto",
+      "status": "closed",
+      "axioms": [],
+      "raw_output": "Closed under the global context",
+      "rc": 0
+    },
+    {
+      "path": "formal/IDM_ReaderDomainFoundation.v",
+      "module": "IDM_ReaderDomainFoundation",
+      "theorem": "finite_strict_refinement_terminates",
       "status": "closed",
       "axioms": [],
       "raw_output": "Closed under the global context",
