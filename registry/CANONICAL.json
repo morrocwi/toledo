@@ -1152,7 +1152,13 @@
         "imported_from": null,
         "coq_status": "closed",
         "coq_axioms": [],
-        "coq_source_redistributed": true
+        "coq_source_redistributed": true,
+        "identifiers": [
+          {
+            "file": "information-discrete-math/formal/IDM_ReaderDomainFoundation.v",
+            "identifier": "T4b_quotient_commuting_square"
+          }
+        ]
       },
       "relations": [
         {
