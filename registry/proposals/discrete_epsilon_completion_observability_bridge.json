@@ -227,7 +227,7 @@
     "coq": {"identifiers": [], "coq_status": "open_prop"},
     "parents": [
       {"code":"PROP-EPSC-23","derived_via":"measurement_triangle","evidence":"combine the interval inverse Lipschitz bound with ||H(x)-H(z)||<=sigma_meas+sigma_res"},
-      {"code":"PROP-EPSC-30","derived_via":"chart_input","evidence":"requires an explicit finite square chart"
+      {"code":"PROP-EPSC-30","derived_via":"chart_input","evidence":"requires an explicit finite square chart"}
     ],
     "origin": {"source":"github.com/morrocwi/toledo/docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md","doi":null},
     "claim_boundary": "Branch-conditioned finite result. It does not itself certify that raw measurements select the branch or determine sigma_meas for the declared chart."
