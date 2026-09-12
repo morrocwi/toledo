@@ -167258,7 +167258,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-t1-eq-obs-correspondence"
+      ],
       "name": "Eq-Obs correspondence (reader-family / indistinguishability Galois connection)",
       "statement": {
         "latest": "E \\subseteq \\operatorname{Obs}(R) \\iff R \\subseteq \\operatorname{Eq}(E)",
@@ -167273,7 +167275,12 @@
           "by": "toledo canonical/grd-foundation-v1-promotion"
         }
       ],
-      "parents": [],
+      "parents": [
+        {
+          "code": "weld",
+          "derived_via": "reads"
+        }
+      ],
       "children": [
         "weld/M.62.v1",
         "weld/M.65.v1",
@@ -167303,7 +167310,7 @@
         "file": "coq/canonical/weld__M_61_v1.v",
         "identifier": "CAN_1297_eq_obs_correspondence",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -167362,7 +167369,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-t2-reader-closure"
+      ],
       "name": "Reader closure: extensive, monotone, idempotent, saturation-invariant",
       "statement": {
         "latest": "\\operatorname{Cl}(E) := \\operatorname{Obs}(\\operatorname{Eq}(E));\\ E \\subseteq \\operatorname{Cl}(E);\\ A \\subseteq B \\Rightarrow \\operatorname{Cl}(A) \\subseteq \\operatorname{Cl}(B);\\ \\operatorname{Cl}(\\operatorname{Cl}(E)) = \\operatorname{Cl}(E);\\ \\operatorname{Eq}(\\operatorname{Cl}(E)) = \\operatorname{Eq}(E)",
@@ -167410,7 +167419,7 @@
         "file": "coq/canonical/weld__M_62_v1.v",
         "identifier": "CAN_1298_closure_extensive, CAN_1298_closure_monotone, CAN_1298_eq_closure_invariant, CAN_1298_closure_idempotent",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -167469,7 +167478,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-t3-t4-future-equivalence-congruence"
+      ],
       "name": "Future-reader equivalence is stable under a declared first action (dynamic weld congruence)",
       "statement": {
         "latest": "s \\sim_Q t \\Rightarrow F_u(s) \\sim_Q F_u(t)",
@@ -167518,7 +167529,7 @@
         "file": "coq/canonical/weld__M_63_v1.v",
         "identifier": "CAN_1299_future_equivalence_dynamic_stability, CAN_1299_dynamic_weld_well_defined",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -167577,7 +167588,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-t5-sufficiency-kernel-inclusion"
+      ],
       "name": "Sufficiency kernel inclusion",
       "statement": {
         "latest": "\\forall s\\,t,\\ \\rho(s)=\\rho(t) \\Rightarrow s \\sim_Q t \\quad (\\ker\\rho \\subseteq {\\sim_Q})",
@@ -167626,7 +167639,7 @@
         "file": "coq/canonical/weld__M_64_v1.v",
         "identifier": "CAN_1300_sufficiency_kernel_inclusion",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -167685,7 +167698,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-t6-question-monotonicity"
+      ],
       "name": "Question monotonicity",
       "statement": {
         "latest": "E_A \\subseteq E_B \\Rightarrow \\operatorname{Eq}(E_B) \\subseteq \\operatorname{Eq}(E_A)",
@@ -167730,7 +167745,7 @@
         "file": "coq/canonical/weld__M_65_v1.v",
         "identifier": "CAN_1301_question_monotonicity",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -167789,7 +167804,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-t7-joint-question-intersection"
+      ],
       "name": "Joint-question intersection",
       "statement": {
         "latest": "\\operatorname{Eq}(E_A \\cup E_B) = \\operatorname{Eq}(E_A) \\cap \\operatorname{Eq}(E_B)",
@@ -167834,7 +167851,7 @@
         "file": "coq/canonical/weld__M_66_v1.v",
         "identifier": "CAN_1302_joint_question_intersection",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -167893,7 +167910,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-closed-reader-lattice"
+      ],
       "name": "Closed-reader binary meet/join laws",
       "statement": {
         "latest": "\\operatorname{Cl}(E) \\text{ is closed};\\ A,B \\text{ closed} \\Rightarrow A \\cap B \\text{ closed};\\ \\operatorname{Cl}(A \\cup B) \\text{ is closed}",
@@ -167938,7 +167957,7 @@
         "file": "coq/canonical/weld__M_67_v1.v",
         "identifier": "CAN_1303_closure_is_closed, CAN_1303_closed_intersection, CAN_1303_closed_join",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -167997,7 +168016,10 @@
       "root": "EQ-001",
       "layer": "reading",
       "domain": "C",
-      "aliases": [],
+      "aliases": [
+        "grd-safe-finite-refinement-termination",
+        "c05-repair-kernel"
+      ],
       "name": "Safe finite strict-refinement termination (bounded-block-growth kernel; C.05 repair)",
       "statement": {
         "latest": "(\\forall P.\\ b(P) \\le N) \\land (\\lnot Closed(P) \\Rightarrow b(P) < b(\\mathrm{refine}(P))) \\Rightarrow \\forall P\\ \\exists k.\\ Closed(\\mathrm{refine}^k(P))",
@@ -168042,7 +168064,7 @@
         "file": "coq/canonical/EQ_001__C_18_v1.v",
         "identifier": "CAN_1304_finite_strict_refinement_terminates",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -168101,7 +168123,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-stable-depth-exact-future"
+      ],
       "name": "Stable finite-depth reader equivalence equals all-future reader equivalence",
       "statement": {
         "latest": "\\mathrm{DepthStable}(n) \\Rightarrow (\\mathrm{DepthEq}(n,s,t) \\iff s \\sim_Q t)",
@@ -168146,7 +168170,7 @@
         "file": "coq/canonical/weld__M_68_v1.v",
         "identifier": "CAN_1305_stable_depth_exact_future",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -168205,7 +168229,10 @@
       "root": "weld",
       "layer": "reading",
       "domain": "M",
-      "aliases": [],
+      "aliases": [
+        "grd-constructive-firewall",
+        "grd-a-con-a-sem"
+      ],
       "name": "Constructive firewall: A_con subseteq A_sem and constructive-closure invariance",
       "statement": {
         "latest": "\\mathcal A_{\\rm sem} := \\mathcal A_{\\rm ambient},\\ \\mathcal A_{\\rm con} := \\{e \\in \\mathcal A_{\\rm ambient} \\mid \\mathrm{Constructive}(e)\\};\\ \\mathcal A_{\\rm con} \\subseteq \\mathcal A_{\\rm sem};\\ (E_1,E_2 \\subseteq \\mathcal A_{\\rm con}) \\land (\\forall e.\\ \\mathrm{Constructive}(e) \\Rightarrow (E_1\\,e \\iff E_2\\,e)) \\Rightarrow \\operatorname{Eq}(E_1) = \\operatorname{Eq}(E_2)",
@@ -168254,7 +168281,7 @@
         "file": "coq/canonical/weld__M_69_v1.v",
         "identifier": "CAN_1306_A_con_subseteq_A_sem, CAN_1306_constructive_closure_invariant",
         "assumptions": "Closed under the global context",
-        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "imported_from": "information-discrete-math@ca5018925d98f5a710b2ceb561433f814915545b:formal/IDM_ReaderDomainFoundation.v",
         "coq_status": "closed",
         "coq_axioms": [],
         "coq_source_redistributed": true
@@ -169380,25 +169407,25 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1323,
+    "entries": 1333,
     "by_status": {
-      "current": 1188,
+      "current": 1198,
       "split": 30,
       "not_an_equation": 9,
       "unverified": 96
     },
     "by_domain": {
-      "M": 439,
+      "M": 448,
       "E": 62,
       "H": 126,
       "S": 137,
       "W": 93,
-      "C": 59,
+      "C": 60,
       "P": 331,
       "B": 76
     },
     "by_tier": {
-      "Th_coqc": 434,
+      "Th_coqc": 444,
       "Definition": 442,
       "Dr": 82,
       "Ax": 12,
@@ -169412,13 +169439,13 @@
       "Conjecture": 1
     },
     "by_coq_status": {
-      "closed": 571,
+      "closed": 581,
       "definition": 384,
       "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 84,
       "axioms": 4
     },
-    "computed": "2026-09-08 from canonical[] (scripts/v18_tower_merge.py)"
+    "computed": "2026-09-13 from canonical[] (scripts/v18_tower_merge.py)"
   }
 }

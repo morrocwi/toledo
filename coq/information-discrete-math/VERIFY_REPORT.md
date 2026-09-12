@@ -1,6 +1,6 @@
 # VERIFY_REPORT — information-discrete-math import
 
-Upstream commit: `147fc92671f35eb102405fec913eb361dc41f966` (public, MIT). Verified on this machine 2026-09-06. Readout-not-truth: every count below is read from the actual build/verify run recorded in `verify_report.json`, not copied from upstream's own claims.
+Upstream commit: `147fc92671f35eb102405fec913eb361dc41f966` (public, MIT) for all files below except `formal/IDM_ReaderDomainFoundation.v`, which was vendored separately from a later commit, `ca5018925d98f5a710b2ceb561433f814915545b` (see its own `upstream_commit_for_this_file` entry in `PROVENANCE.json`). Verified on this machine 2026-09-06 (2026-09-13 for the later-vendored file). Readout-not-truth: every count below is read from the actual build/verify run recorded in `verify_report.json`, not copied from upstream's own claims.
 
 ## Build status (per file)
 
@@ -35,7 +35,7 @@ Upstream commit: `147fc92671f35eb102405fec913eb361dc41f966` (public, MIT). Verif
 | `formal/IDM_SetsFunctions.v` | OK (coqc -q, sequential, one at a time) |
 | `formal/IDM_Tropical.v` | OK (coqc -q, sequential, one at a time) |
 
-All **27** files compiled cleanly with `coqc -q`, in dependency order (no `make -j`, one process at a time), matching upstream's own `formal/verify.sh` compile order for the 26 `formal/` files; `case_studies/double_pendulum_readout/ShakeIrrational.v` compiled standalone (no internal Toledo/IDM dependency, only stdlib `ZArith`/`Lia`).
+All **28** files compiled cleanly with `coqc -q`, in dependency order (no `make -j`, one process at a time), matching upstream's own `formal/verify.sh` compile order for the 27 `formal/` files; `case_studies/double_pendulum_readout/ShakeIrrational.v` compiled standalone (no internal Toledo/IDM dependency, only stdlib `ZArith`/`Lia`).
 
 ## Theorem-level verification (`Print Assumptions`)
 
