@@ -6,7 +6,7 @@
     "statement": {
       "latest": "\\text{For }p>2,\\ r_p:=\\frac{2p}{p-2},\\ \\alpha_p:=\\frac{p-2}{2p}=\\frac1{r_p}\\ (\\text{so }\\alpha_pr_p=1):\\ S_N:=\\frac{K_N^2}{\\Lambda_N^{\\alpha_p}},\\ R_N:=\\frac{(K_N^2)^{r_p}}{\\Lambda_N}\\quad\\Longrightarrow\\quad R_N=S_N^{r_p}.",
       "format": "latex",
-      "note_ascii": "A pure algebraic identity: substituting S_N's definition into R_N and using alpha_p*r_p=1 collapses R_N to S_N^{r_p} exactly, no analysis needed beyond exponent bookkeeping. Independently re-verified by this session (direct substitution: R_N = (S_N * Lambda_N^{alpha_p})^{r_p} / Lambda_N = S_N^{r_p} * Lambda_N^{alpha_p*r_p} / Lambda_N = S_N^{r_p} * Lambda_N / Lambda_N = S_N^{r_p})."
+      "note_ascii": "A pure algebraic identity: substituting S_N's definition into R_N and using alpha_p*r_p=1 collapses R_N to S_N^{r_p} exactly, no analysis needed beyond exponent bookkeeping. Independently re-verified by the registering audit (direct substitution: R_N = (S_N * Lambda_N^{alpha_p})^{r_p} / Lambda_N = S_N^{r_p} * Lambda_N^{alpha_p*r_p} / Lambda_N = S_N^{r_p} * Lambda_N / Lambda_N = S_N^{r_p})."
     },
     "tier": "finite_diagnostic",
     "status": "unverified",
@@ -22,15 +22,16 @@
     "parents": [],
     "honest_caveats": [
       "This is a purely algebraic identity given the DEFINITIONS of S_N, R_N, alpha_p, r_p as stated -- it carries no claim about whether S_N actually tends to zero (that is the P2 target itself, explicitly OPEN in the source). Registering the identity does not register or endorse any part of the surrounding open research program.",
-      "Independently re-derived by this session via direct substitution (hence finite_diagnostic, not merely Dr), but NOT yet Coq-mechanized. No honest parent root exists in Toledo for this specific exponent identity -- parents left empty rather than forced.",
-      "Source status label: DERIVED (Section 1 of the source document)."
+      "Independently re-derived by the registering audit via direct substitution (hence finite_diagnostic, not merely Dr), but NOT yet Coq-mechanized. No honest parent root exists in Toledo for this specific exponent identity -- parents left empty rather than forced.",
+      "Source status label: DERIVED (Section 1 of the source document).",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext -- Critical Quotient Closure for 3D Navier-Stokes' (Section 1, 'Critical Finite-Observation Readout'). Registered under this workspace's Toledo-first standing rule, founder instruction 2026-09-11 ('เอาสมการที่เวิร์กต่อเข้ากับ Toledo ก่อน'). Registered in glosa as GLS-2026-008.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext -- Critical Quotient Closure for 3D Navier-Stokes' (Section 1, 'Critical Finite-Observation Readout'). Registered under the Toledo-first rule (author instruction, 2026-09-11). Registered in glosa as GLS-2026-008.",
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0: this session independently re-derived the identity by direct algebraic substitution (not merely re-reading the source's own statement).",
+      "rungs_held": "R0: the registering audit independently re-derived the identity by direct algebraic substitution (not merely re-reading the source's own statement).",
       "empirical_test_status": "not applicable -- exact symbolic identity."
     }
   },
@@ -58,14 +59,15 @@
     "honest_caveats": [
       "This session verified A^TA=25I and det(A)=125 by hand arithmetic (both hold exactly: A^TA = diag(25,25,25) by direct matrix multiplication of the stated integer entries), but has NOT independently re-derived the chain norms |p_j|=5^j, |q_j|=2*sqrt(5)*5^j or the energy-transfer coefficient Gamma^H1_j=4*sqrt(5) from scratch -- tier is Dr, not finite_diagnostic, pending that independent re-derivation or a Coq mechanization.",
       "This is a NEGATIVE/adversarial result (shows a candidate mechanism is insufficient), not a positive contraction theorem -- it is one input into the larger, still-OPEN T2/L rigidity program, not a standalone claim of progress on Navier-Stokes regularity.",
-      "Source status label: DERIVED (Sections 7-8 of the source document)."
+      "Source status label: DERIVED (Sections 7-8 of the source document).",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Sections 7-8, 'Orthogonal-Turn Adversarial Prototype' / 'Full Convolution Forces Side Activity'). Registered under this workspace's Toledo-first standing rule, founder instruction 2026-09-11. Registered in glosa as GLS-2026-008.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Sections 7-8, 'Orthogonal-Turn Adversarial Prototype' / 'Full Convolution Forces Side Activity'). Registered under the Toledo-first rule (author instruction, 2026-09-11). Registered in glosa as GLS-2026-008.",
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0 only: hand-verified A^TA=25I and det(A)=125; chain norms and energy coefficient not independently re-derived by this session.",
+      "rungs_held": "R0 only: hand-verified A^TA=25I and det(A)=125; chain norms and energy coefficient not independently re-derived by the registering audit.",
       "empirical_test_status": "not applicable at this registration stage."
     }
   },
@@ -91,16 +93,17 @@
     },
     "parents": [],
     "honest_caveats": [
-      "Independently re-derived by this session: C_k>=0 is exactly the triangle inequality for a finite sum, and the balance identity is immediate algebra once C_k is defined as source_mass minus net_response -- hence finite_diagnostic tier (the content is elementary and independently confirmed), though NOT yet Coq-mechanized.",
+      "Independently re-derived by the registering audit: C_k>=0 is exactly the triangle inequality for a finite sum, and the balance identity is immediate algebra once C_k is defined as source_mass minus net_response -- hence finite_diagnostic tier (the content is elementary and independently confirmed), though NOT yet Coq-mechanized.",
       "'Source multiplicity is not itself a loophole' (the source's own informal corollary) is a narrative reading of this identity, not a separately registered claim here -- only the exact identity itself is registered.",
-      "Source status label: DERIVED (Section 9 of the source document)."
+      "Source status label: DERIVED (Section 9 of the source document).",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 9, 'Exact Cancellation Ledger'). Registered under this workspace's Toledo-first standing rule, founder instruction 2026-09-11. Registered in glosa as GLS-2026-008.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 9, 'Exact Cancellation Ledger'). Registered under the Toledo-first rule (author instruction, 2026-09-11). Registered in glosa as GLS-2026-008.",
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0: this session independently re-derived both the inequality (via the triangle inequality) and the balance identity (via direct algebra from the definition of C_k).",
+      "rungs_held": "R0: the registering audit independently re-derived both the inequality (via the triangle inequality) and the balance identity (via direct algebra from the definition of C_k).",
       "empirical_test_status": "not applicable -- exact identity, holds for any finite-dimensional normed space."
     }
   },
@@ -126,16 +129,17 @@
     },
     "parents": [],
     "honest_caveats": [
-      "Independently re-derived by this session: |k|<=|q|+|p| is the triangle inequality; the log bound and octave-crossing step count follow by taking logs of both sides and standard monotonicity -- straightforward, hence finite_diagnostic, though not yet Coq-mechanized.",
-      "The document's own worked numeric examples (M=4 => n_M >~ 12, etc.) were not independently recomputed by this session in this pass, though they follow mechanically from the stated formula.",
-      "Source status label: DERIVED (Section 21 of the source document)."
+      "Independently re-derived by the registering audit: |k|<=|q|+|p| is the triangle inequality; the log bound and octave-crossing step count follow by taking logs of both sides and standard monotonicity -- straightforward, hence finite_diagnostic, though not yet Coq-mechanized.",
+      "The document's own worked numeric examples (M=4 => n_M >~ 12, etc.) were not independently recomputed by the registering audit in this pass, though they follow mechanically from the stated formula.",
+      "Source status label: DERIVED (Section 21 of the source document).",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 21, 'Far-Gap Scale Progress'). Registered under this workspace's Toledo-first standing rule, founder instruction 2026-09-11. Registered in glosa as GLS-2026-008.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 21, 'Far-Gap Scale Progress'). Registered under the Toledo-first rule (author instruction, 2026-09-11). Registered in glosa as GLS-2026-008.",
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0: this session independently re-derived the bound via the triangle inequality and log monotonicity.",
+      "rungs_held": "R0: the registering audit independently re-derived the bound via the triangle inequality and log monotonicity.",
       "empirical_test_status": "not applicable -- exact real-number inequality."
     }
   },
@@ -146,7 +150,7 @@
     "statement": {
       "latest": "\\text{For a productive triad }p+q=k\\text{ with divergence-free polarizations }a,b,c\\text{ at }p,q,k:\\quad \\langle c,\\mathcal B_{p,q}(a,b)\\rangle\\ne0\\ \\Longrightarrow\\ \\max\\{\\|\\mathcal B_{p,k}(a,c)\\|,\\|\\mathcal B_{q,k}(b,c)\\|\\}>0.",
       "format": "latex",
-      "note_ascii": "If the parent triad interaction into polarization c is nonzero, the two induced self-closure interactions cannot both vanish. Proved (Section 14) via an adapted orthonormal basis (N = normalized p x q, tangents T_p/T_q/T_k) reducing the claim to a finite system of algebraic equations in the coordinates (x,y,u,v,s,t) of a,b,c in that basis; assuming both self-closure channels vanish forces (by case analysis on t=0 vs t!=0) the parent interaction itself to vanish, a contradiction. This is exact finite algebra/linear-algebra case analysis over a fixed adapted basis, not a continuum PDE claim -- registered as the 'DERIVED EXACT' status the source assigns it, contingent on this session's read of the stated proof, not yet independently re-derived symbol-by-symbol or Coq-checked."
+      "note_ascii": "If the parent triad interaction into polarization c is nonzero, the two induced self-closure interactions cannot both vanish. Proved (Section 14) via an adapted orthonormal basis (N = normalized p x q, tangents T_p/T_q/T_k) reducing the claim to a finite system of algebraic equations in the coordinates (x,y,u,v,s,t) of a,b,c in that basis; assuming both self-closure channels vanish forces (by case analysis on t=0 vs t!=0) the parent interaction itself to vanish, a contradiction. This is exact finite algebra/linear-algebra case analysis over a fixed adapted basis, not a continuum PDE claim -- registered as the 'DERIVED EXACT' status the source assigns it, contingent on the registering audit's read of the stated proof, not yet independently re-derived symbol-by-symbol or Coq-checked."
     },
     "tier": "Dr",
     "status": "unverified",
@@ -163,16 +167,17 @@
     "parents": [],
     "honest_caveats": [
       "This session read but did NOT independently re-derive the adapted-basis case analysis (Section 14's four simultaneous equations and the t=0/t!=0 split) from scratch -- tier is Dr (a sound-looking hand derivation, read carefully, not yet independently re-verified or Coq-checked), not finite_diagnostic.",
-      "The source itself labels this 'DERIVED EXACT', its strongest non-Coq tier; this registration deliberately keeps a more conservative Dr tier until this session or a Coq mechanization independently confirms the algebra.",
+      "The source itself labels this 'DERIVED EXACT', its strongest non-Coq tier; this registration deliberately keeps a more conservative Dr tier until the registering audit or a Coq mechanization independently confirms the algebra.",
       "This lemma is used elsewhere in the source (Section 15's 'uniform self-closure floor') as a building block toward the still-OPEN T2/L rigidity theorem -- registering this lemma alone does not register or endorse that larger open claim.",
-      "Source status label: DERIVED EXACT (Sections 13-14 of the source document)."
+      "Source status label: DERIVED EXACT (Sections 13-14 of the source document).",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 13, 'Exact Productive-Triad Self-Closure Lemma'; Section 14, 'Adapted-Basis Proof'). Registered under this workspace's Toledo-first standing rule, founder instruction 2026-09-11. Registered in glosa as GLS-2026-008.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 13, 'Exact Productive-Triad Self-Closure Lemma'; Section 14, 'Adapted-Basis Proof'). Registered under the Toledo-first rule (author instruction, 2026-09-11). Registered in glosa as GLS-2026-008.",
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0 only: this session read the stated proof structure directly from the source text; did not independently re-derive the case analysis.",
+      "rungs_held": "R0 only: the registering audit read the stated proof structure directly from the source text; did not independently re-derive the case analysis.",
       "empirical_test_status": "not applicable at this registration stage."
     }
   },
@@ -186,7 +191,7 @@
       "note_ascii": "Recorded so this dead end is not silently re-attempted. The source's own status ledger (Section 30, Section 49) marks this REFUTED: a previously proposed T2 formulation restricted to a selected/preselected interaction tree fails to capture the real closure structure; full local convolution saturation (all admissible interactions, not a fixed selected subset) is required instead."
     },
     "tier": "Dr",
-    "status": "refuted",
+    "status": "unverified",
     "domain": "P",
     "aliases": [
       "ns_p2_standalone_vnext:Section-12",
@@ -199,17 +204,19 @@
     },
     "parents": [],
     "honest_caveats": [
-      "This is a SOURCE-REPORTED refutation from the document's own prior research process (an earlier T2 formulation the author tried and found false), not an independent refutation performed by this session -- recorded here so a future reader (human or AI) sees this path was already explored and closed off, rather than re-attempting it.",
-      "No counterexample construction is reproduced in the portion of the source read by this session; only the refutation verdict itself is recorded."
+      "This is a SOURCE-REPORTED refutation from the document's own prior research process (an earlier T2 formulation the author tried and found false), not an independent refutation performed by the registering audit -- recorded here so a future reader (human or AI) sees this path was already explored and closed off, rather than re-attempting it.",
+      "No counterexample construction is reproduced in the portion of the source read by the registering audit; only the refutation verdict itself is recorded.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 12, 'T2 Correction: Two-Channel Closure Theorems Are False'; Section 49). Recorded per founder instruction 2026-09-11 to explicitly tag already-refuted items, not silently omit them.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 12, 'T2 Correction: Two-Channel Closure Theorems Are False'; Section 49). Recorded (author instruction, 2026-09-11) so that already-refuted items are tagged explicitly rather than omitted.",
       "doi": null
     },
     "resistance_evidence": {
       "rungs_held": "Source-reported refutation, recorded not independently re-tested.",
       "empirical_test_status": "REFUTED per the source document's own research process."
-    }
+    },
+    "status_note": "REFUTED in the source document (NS P2 Standalone vNext); recorded here as a proposal so the refutation is not silently omitted."
   },
   {
     "id": "PROP-P2-FIXED-TWO-CHANNEL-T2-REFUTED",
@@ -221,7 +228,7 @@
       "note_ascii": "Recorded so this dead end is not silently re-attempted. The source explicitly refutes the shortcut that productivity forces a FIXED, preselected pair of cross-channel interactions to be nonzero -- nonplanar counterexamples with zero cross channels exist despite productive parent interactions."
     },
     "tier": "Dr",
-    "status": "refuted",
+    "status": "unverified",
     "domain": "P",
     "aliases": [
       "ns_p2_standalone_vnext:Section-12"
@@ -233,16 +240,18 @@
     },
     "parents": [],
     "honest_caveats": [
-      "Source-reported refutation, recorded not independently re-tested by this session -- see PROP-P2-SELECTED-TREE-CLOSURE-REFUTED's honest_caveats for the same disclosure, applying identically here."
+      "Source-reported refutation, recorded not independently re-tested by the registering audit -- see PROP-P2-SELECTED-TREE-CLOSURE-REFUTED's honest_caveats for the same disclosure, applying identically here.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 12). Recorded per founder instruction 2026-09-11 to explicitly tag already-refuted items.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 12). Recorded (author instruction, 2026-09-11) so that already-refuted items are tagged explicitly rather than omitted.",
       "doi": null
     },
     "resistance_evidence": {
       "rungs_held": "Source-reported refutation, recorded not independently re-tested.",
       "empirical_test_status": "REFUTED per the source document's own research process."
-    }
+    },
+    "status_note": "REFUTED in the source document (NS P2 Standalone vNext); recorded here as a proposal so the refutation is not silently omitted."
   },
   {
     "id": "PROP-P2-BRIDGE-PAIR-T2-REFUTED",
@@ -254,7 +263,7 @@
       "note_ascii": "Recorded so this dead end is not silently re-attempted. The source explicitly refutes the claim that checking only a fixed 'bridge pair' of interactions suffices to establish the T2 local-saturation rigidity theorem -- the correct T2 requires full local convolution saturation (Section 16 onward)."
     },
     "tier": "Dr",
-    "status": "refuted",
+    "status": "unverified",
     "domain": "P",
     "aliases": [
       "ns_p2_standalone_vnext:Section-12"
@@ -266,16 +275,18 @@
     },
     "parents": [],
     "honest_caveats": [
-      "Source-reported refutation, recorded not independently re-tested by this session -- see PROP-P2-SELECTED-TREE-CLOSURE-REFUTED's honest_caveats for the same disclosure, applying identically here."
+      "Source-reported refutation, recorded not independently re-tested by the registering audit -- see PROP-P2-SELECTED-TREE-CLOSURE-REFUTED's honest_caveats for the same disclosure, applying identically here.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 12). Recorded per founder instruction 2026-09-11 to explicitly tag already-refuted items.",
+      "source": "Yaoharee Lahtee, 'P2 Standalone vNext' (Section 12). Recorded (author instruction, 2026-09-11) so that already-refuted items are tagged explicitly rather than omitted.",
       "doi": null
     },
     "resistance_evidence": {
       "rungs_held": "Source-reported refutation, recorded not independently re-tested.",
       "empirical_test_status": "REFUTED per the source document's own research process."
-    }
+    },
+    "status_note": "REFUTED in the source document (NS P2 Standalone vNext); recorded here as a proposal so the refutation is not silently omitted."
   },
   {
     "id": "PROP-P3-EQUAL-SHELL-DIRECTION-LOCK-01",
@@ -305,12 +316,13 @@
       }
     ],
     "honest_caveats": [
-      "v2 self-audit 2026-09-11 (after the orchestrating session read both source files in full): this is a COROLLARY of the source's own Section 14 adapted-basis components B_N = A(-xv/Q + yu/P), B_T = A (Q^2-P^2)/(PQK) yv (DERIVED EXACT in source). It is not a new lemma; this entry's value is the CAS verification and the explicit form. With P=Q the tangential component B_T vanishes identically, so B is parallel to N = p x q; for k=(0,0,1) that is the e_theta direction found here.",
+      "v2 self-audit 2026-09-11 (after the registering audit read both source files in full): this is a COROLLARY of the source's own Section 14 adapted-basis components B_N = A(-xv/Q + yu/P), B_T = A (Q^2-P^2)/(PQK) yv (DERIVED EXACT in source). It is not a new lemma; this entry's value is the CAS verification and the explicit form. With P=Q the tangential component B_T vanishes identically, so B is parallel to N = p x q; for k=(0,0,1) that is the e_theta direction found here.",
       "CAS-symbolic identity (sympy, exact in theta over Q(sqrt3)), machine-checked by two independent scripts -- NOT Coq. Tier finite_diagnostic is the honest ceiling; promote to Th_coqc only with a Coq artifact.",
       "Consequence A (N=2): two DISTINCT equal-shell triads (theta1 != theta2 mod pi; theta and theta+pi are the same unordered triad) cannot exactly cancel with both contributions nonzero, since e_theta1, e_theta2 are linearly independent. Consequence B (N=3): theta = 0, 2pi/3, 4pi/3 with (a,b) = (e_theta, -q x e_theta) gives g's = (0,sqrt3/2,0), (-3/4,-sqrt3/4,0), (3/4,-sqrt3/4,0), sum exactly 0, all nonzero, wavevectors rank 3.",
       "Fourier reality constraint u(-p)=conj(u(p)) is VACUOUS for the N=3 witness: all six sources lie on the z=+1/2 cap, pairwise distinct and non-antipodal, and in the 12-mode real-closed set the only pairs summing to +-k are the original triads and their mirrors.",
       "Specific to |k|=1 with k=(0,0,1) and the equal-shell family; not tested for general k or mixed shells (see PROP-P3-SINGLE-SOURCE-SURJECTIVITY-01 for the non-equal-shell contrast).",
-      "Says nothing about Navier-Stokes regularity, P2, or Clay. It is a static single-target algebraic fact."
+      "Says nothing about Navier-Stokes regularity, P2, or Clay. It is a static single-target algebraic fact.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
       "source": "Session 2026-09-11 (AI assistant, counterexample-first attack on the founder's 'P3 -- Multi-Source Cancellation Classification'), three independent attack agents + three independent adversarial verifiers, all exact sympy (rational / Q(sqrt3) / Q(i), no floats). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/. Source program: Yaoharee Lahtee, 'P2 Standalone vNext' sections 9, 112, 116, 118.4.",
@@ -361,10 +373,11 @@
       }
     ],
     "honest_caveats": [
-      "v2 self-audit 2026-09-11 (after the orchestrating session read both source files in full): this is a COROLLARY of the source's own Section 14 adapted-basis components B_N = A(-xv/Q + yu/P), B_T = A (Q^2-P^2)/(PQK) yv (DERIVED EXACT in source). It is not a new lemma; this entry's value is the CAS verification and the explicit form. With P != Q, B_N and B_T are independent bilinear forms in the amplitude coordinates, so the image is the full 2D plane k-perp; the rank-2 instances here are that fact made explicit.",
+      "v2 self-audit 2026-09-11 (after the registering audit read both source files in full): this is a COROLLARY of the source's own Section 14 adapted-basis components B_N = A(-xv/Q + yu/P), B_T = A (Q^2-P^2)/(PQK) yv (DERIVED EXACT in source). It is not a new lemma; this entry's value is the CAS verification and the explicit form. With P != Q, B_N and B_T are independent bilinear forms in the amplitude coordinates, so the image is the full 2D plane k-perp; the rank-2 instances here are that fact made explicit.",
       "The GENERAL statement (rank 2 for every non-equal-shell triad and generic b) is Dr: argued, and consistent with the equal-shell rank-1 lock being the degenerate case, but only INSTANCES were machine-checked (k=(1,1,1) configuration exactly; k=(1,0,0) two-shell configuration exactly). Those instances are finite_diagnostic; the universal claim is not.",
       "Reality constraint vacuous on both checked configurations (no antipodal sources, none equal to +-k). A configuration containing an antipodal source pair (q_j = -p_i) is NOT covered and remains Open.",
-      "Consequence, corrected: the 'exact registered cancellation' branch that the source already carries (Section 112 'null or exactly cancelled'; Section 116 'exact global cancellation obligation') is nonempty and generic, not exceptional. No source claim is refuted by this."
+      "Consequence, corrected: the 'exact registered cancellation' branch that the source already carries (Section 112 'null or exactly cancelled'; Section 116 'exact global cancellation obligation') is nonempty and generic, not exceptional. No source claim is refuted by this.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
       "source": "Session 2026-09-11 (AI assistant, counterexample-first attack on the founder's 'P3 -- Multi-Source Cancellation Classification'), three independent attack agents + three independent adversarial verifiers, all exact sympy (rational / Q(sqrt3) / Q(i), no floats). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/. Source program: Yaoharee Lahtee, 'P2 Standalone vNext' sections 9, 112, 116, 118.4.",
@@ -420,7 +433,8 @@
       "W1's two triads are congruent (90-degree rotation about k); whether N=2 two-shell cancellation exists WITHOUT such a symmetry is Open. W2's non-coplanarity is not the operative mechanism (see PROP-P3-SINGLE-SOURCE-SURJECTIVITY-01).",
       "Reality constraint is satisfied vacuously (no antipodal pairs, no source equals +-k; mirror pairs reproduce conj(sum)=0 at -k). Other targets fed by the same modes were not examined.",
       "Under the discrete lens: all readouts are exact rationals / Q(sqrt3); 'sqrt2 shell' etc. are labels for |p|^2 = 2, not continuum readouts.",
-      "No claim about Navier-Stokes regularity, P2, or Clay follows from these witnesses."
+      "No claim about Navier-Stokes regularity, P2, or Clay follows from these witnesses.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
       "source": "Session 2026-09-11 (AI assistant, counterexample-first attack on the founder's 'P3 -- Multi-Source Cancellation Classification'), three independent attack agents + three independent adversarial verifiers, all exact sympy (rational / Q(sqrt3) / Q(i), no floats). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/. Source program: Yaoharee Lahtee, 'P2 Standalone vNext' sections 9, 112, 116, 118.4.",
@@ -475,7 +489,8 @@
       "Registered so that the program's canonical OPEN target can be CITED by code (Toledo-first rule) -- registration is not endorsement and confers no tier. Status in source: 'CANONICAL TARGET / OPEN'.",
       "Source dependency chain (118.2): Recurrence-to-Saturation + Witness Soundness + (OWR/FNW or OCSR) => IRR => no interior Productive Information Circuit; together with lower/upper boundary rigidity => this inclusion. Every link is OPEN or CONDITIONAL in the source.",
       "The 2026-09-11 witnesses (PROP-P3-MULTI-SOURCE-CANCELLATION-WITNESSES-01) show the static 'no cancellation' route to OCSR is not available; the inclusion, if true, must be reached through constraint accumulation under recurrence.",
-      "Clay Navier-Stokes regularity: OPEN, unchanged."
+      "Clay Navier-Stokes regularity: OPEN, unchanged.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
       "source": "Yaoharee Lahtee, 'P2 Standalone vNext', sections 109 and 118 (NS_P2_STANDALONE(1).md, the later of the two 2026-09-11 source files); founder manifesto to the next AI, 2026-09-11. Registered by the 2026-09-11 session under the Toledo-first rule.",
@@ -533,7 +548,8 @@
       "One fixed configuration (W3). The shared-matrix fact is, by the source's own Section 14 formulas at K=P=Q, general for equal shells (the (K^2-P^2)yt=0 conditions become vacuous and the two remaining conditions share one linear form) -- but that generalization was read off the source, not machine-checked here.",
       "One generation only, through k only (self-closure descendants). Says nothing about generation 2 or about descendants via other parents; see PROP-P3-W3-FULLCONV-DEPTH1-01 for the full pairwise closure.",
       "Sesquilinear/Hermitian conventions not covered (source's B is bilinear).",
-      "Not a theorem about OCSR in general; it is one exact instance of the 'suppress every outward channel => degeneracy' direction, on this seed."
+      "Not a theorem about OCSR in general; it is one exact instance of the 'suppress every outward channel => degeneracy' direction, on this seed.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
       "source": "Session 2026-09-11, W3 generation-1 computations (attack agent + independent adversarial verifier, exact sympy over Q(sqrt3), Groebner certification for the nullity claim). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/{ocsr_gen1*.py, verify_w3_gen1.py, w3_conv.py, w3_family.py}. Source program: 'P2 Standalone vNext' sections 13-16, 35, 111.7, 115-118.",
@@ -587,7 +603,8 @@
     "honest_caveats": [
       "One seed, one generation, exact. It shows THIS cancellation witness is not a zero-defect web at depth 1 (novelty branch), consistent with the source's Section 16 conjecture on one instance. It is not a proof of that conjecture and not a statement about any other seed.",
       "R1 DONE 2026-09-11: independently re-derived with a hand-rolled exact Q(sqrt3) class (no sympy trig), all 44 targets, histogram, feeding map, |F|^2 values, deficit, and the rescaling solve reproduced; ordered-vs-unordered pair sum differs by the uniform factor 2 only. The |t|^2=9/4 zeros are PROJECTION zeros: both dot-product factors are nonzero but the raw vector is exactly parallel to t (e.g. -p1+p3: raw = t/2), so P_t kills each pair individually.",
-      "No claim about P2, GIR, or Clay follows."
+      "No claim about P2, GIR, or Clay follows.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
       "source": "Session 2026-09-11, W3 generation-1 computations (attack agent + independent adversarial verifier, exact sympy over Q(sqrt3), Groebner certification for the nullity claim). Scripts: readout-problem-navier-stokes-internal/p3_attack_2026-09-11/{ocsr_gen1*.py, verify_w3_gen1.py, w3_conv.py, w3_family.py}. Source program: 'P2 Standalone vNext' sections 13-16, 35, 111.7, 115-118.",
@@ -644,7 +661,8 @@
     "honest_caveats": [
       "Exact for j = 0,1,2,3 by CAS over Q(sqrt5, i); all j follows from the similitude A^T A = 25 I (argued, not separately machine-checked). Single agent computation; no independent verifier yet (R1 pending).",
       "Decides the constraint branch of (114.4) for this chain (no zero-novelty web at any j) but does NOT decide any shell-ratio contraction: the leak lands in the same dyadic shell. The window layer (FW-6) and a shell-routing theorem are what would turn it into a loss.",
-      "Not yet in the NS repo; not pushed; no P2/Clay claim."
+      "Not yet in the NS repo; not pushed; no P2/Clay claim.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
       "source": "Session 2026-09-12 design memo for the constructive-generator residue (option 1). Source program: NS_P2_ORTHOGONAL_TURN_ALLSCALE_ESCAPE.md; standalone vNext sections 7, 35, 114.4.",
@@ -695,10 +713,11 @@
       }
     ],
     "honest_caveats": [
-      "Definition only. Sup over time makes it a uniform-in-time quantity; any bound on it is regularity-strength by construction."
+      "Definition only. Sup over time makes it a uniform-in-time quantity; any bound on it is regularity-strength by construction.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "source": "Author sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the author instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
       "doi": null
     },
     "resistance_evidence": {
@@ -728,10 +747,11 @@
     },
     "parents": [],
     "honest_caveats": [
-      "Standard Duhamel + spectral decay; DERIVED by inspection, not machine-checked. The whole difficulty sits in the recent window term N_{j+1}."
+      "Standard Duhamel + spectral decay; DERIVED by inspection, not machine-checked. The whole difficulty sits in the recent window term N_{j+1}.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "source": "Author sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the author instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
       "doi": null
     },
     "resistance_evidence": {
@@ -767,10 +787,11 @@
       }
     ],
     "honest_caveats": [
-      "Definition. First finite data point (not yet under this exact definition): orthogonal-turn chain at critical amplitude hands 7% of seed content to the selected output and the mirror channel is forced at 17/25 of the forward rate."
+      "Definition. First finite data point (not yet under this exact definition): orthogonal-turn chain at critical amplitude hands 7% of seed content to the selected output and the mirror channel is forced at 17/25 of the forward rate.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "source": "Author sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the author instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
       "doi": null
     },
     "resistance_evidence": {
@@ -809,10 +830,11 @@
       }
     ],
     "honest_caveats": [
-      "DERIVED chain given the premise; the premise is the open object (see next entries). Same shape as NS-P2B-SCALE-CONTRACTION but in H^3 coordinates and without the external adapter."
+      "DERIVED chain given the premise; the premise is the open object (see next entries). Same shape as NS-P2B-SCALE-CONTRACTION but in H^3 coordinates and without the external adapter.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "source": "Author sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the author instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
       "doi": null
     },
     "resistance_evidence": {
@@ -847,14 +869,15 @@
       }
     ],
     "honest_caveats": [
-      "Analytic scaling argument (Dr) until the checker exhibits exact full-shell instances at two lambda values with increasing ratio (then finite_diagnostic on instances). With B allowed to depend on the datum (its own H^3 tail, already DERIVED), the statement becomes REGULARITY-EQUIVALENT (regular => holds; holds => regular via the recurrence chain) and is recorded HOLD under FINAL-EQUIV section 8."
+      "Analytic scaling argument (Dr) until the checker exhibits exact full-shell instances at two lambda values with increasing ratio (then finite_diagnostic on instances). With B allowed to depend on the datum (its own H^3 tail, already DERIVED), the statement becomes REGULARITY-EQUIVALENT (regular => holds; holds => regular via the recurrence chain) and is recorded HOLD under FINAL-EQUIV section 8.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "source": "Author sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the author instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0 scaling analysis by orchestrating session",
+      "rungs_held": "R0 scaling analysis by registering audit",
       "empirical_test_status": "checker pending"
     }
   },
@@ -892,10 +915,11 @@
     ],
     "honest_caveats": [
       "Existentially regularity-equivalent (FINAL-EQUIV direction A/B pattern) hence HOLD as a bridge; the only non-vacuous content is CONSTRUCTIVE: constants uniform in N_G, finite ancestry window (no sum over all shells, no sup_t over [0,T] inside the proof), remainder from the datum only. This is exactly what protocol v2 measures via alpha_j.",
-      "Clay Navier-Stokes regularity: OPEN, unchanged."
+      "Clay Navier-Stokes regularity: OPEN, unchanged.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "source": "Author sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the author instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
       "doi": null
     },
     "resistance_evidence": {
@@ -931,10 +955,11 @@
       }
     ],
     "honest_caveats": [
-      "Elementary telescoping; not machine-checked. Requires V >= 0 and summable bridge defect, both declared in the standalone (Sec. 51.2, 62)."
+      "Elementary telescoping; not machine-checked. Requires V >= 0 and summable bridge defect, both declared in the standalone (Sec. 51.2, 62).",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder datum-centred closure sketches 2026-09-12 08:45-08:58, checked by the orchestrating session against NS_P2_STANDALONE_VNEXT sections 17-18, 51-62, 81-82, 108.3, 109-118.",
+      "source": "Author datum-centred closure sketches 2026-09-12 08:45-08:58, checked by the registering audit against NS_P2_STANDALONE_VNEXT sections 17-18, 51-62, 81-82, 108.3, 109-118.",
       "doi": null
     },
     "resistance_evidence": {
@@ -971,14 +996,15 @@
       }
     ],
     "honest_caveats": [
-      "Conditional on compactness/closedness/l.s.c. exactly as the source states; none of those is established. Section 108.3 rule applies: no state definition may encode future contraction or regularity to obtain compactness."
+      "Conditional on compactness/closedness/l.s.c. exactly as the source states; none of those is established. Section 108.3 rule applies: no state definition may encode future contraction or regularity to obtain compactness.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder datum-centred closure sketches 2026-09-12 08:45-08:58, checked by the orchestrating session against NS_P2_STANDALONE_VNEXT sections 17-18, 51-62, 81-82, 108.3, 109-118.",
+      "source": "Author datum-centred closure sketches 2026-09-12 08:45-08:58, checked by the registering audit against NS_P2_STANDALONE_VNEXT sections 17-18, 51-62, 81-82, 108.3, 109-118.",
       "doi": null
     },
     "resistance_evidence": {
-      "rungs_held": "R0 source comparison by orchestrating session",
+      "rungs_held": "R0 source comparison by registering audit",
       "empirical_test_status": "n/a"
     }
   },
@@ -1015,10 +1041,11 @@
     ],
     "honest_caveats": [
       "A feasible occupation is a stationary mixture of events, not a trajectory; realization (Q_{e_n} z_n = P_{e_{n+1}} z_{n+1}) is a separate obligation.",
-      "Rows of C_e enter only with an inclusion certificate (exact events satisfy them); C_e must be closed for the Cesaro step of PROP-RG-OCC-SOUND-01."
+      "Rows of C_e enter only with an inclusion certificate (exact events satisfy them); C_e must be closed for the Cesaro step of PROP-RG-OCC-SOUND-01.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketches 2026-09-12 14:50-15:40 (occupation-flow primal/dual, C0_SCHEMA); orchestrating session GLS-2026-009.",
+      "source": "Author sketches 2026-09-12 14:50-15:40 (occupation-flow primal/dual, C0_SCHEMA); registering audit GLS-2026-009.",
       "doi": null
     },
     "resistance_evidence": {
@@ -1055,10 +1082,11 @@
     ],
     "honest_caveats": [
       "No certificate at a bounded degree/relaxation level is not a counterexample: return UNRESOLVED.",
-      "Per-edge weighted graphs are the wrong primal object below whole-step aggregation (TODO_RC_LANE U18)."
+      "Per-edge weighted graphs are the wrong primal object below whole-step aggregation (TODO_RC_LANE U18).",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketches 2026-09-12 14:20-15:25; orchestrating session GLS-2026-009.",
+      "source": "Author sketches 2026-09-12 14:20-15:25; registering audit GLS-2026-009.",
       "doi": null
     },
     "resistance_evidence": {
@@ -1103,10 +1131,11 @@
     ],
     "honest_caveats": [
       "Conditional on G4 (open), ZPR (definition-level unless the degenerate class is defined independently: rank-1-locked polarizations or collinear addresses), closedness of the outer cone, and COMM for the event lift.",
-      "Does not prove NS regularity; does not replace G4 or G7."
+      "Does not prove NS regularity; does not replace G4 or G7.",
+      "NEW DERIVATION / PROPOSAL — not yet in Toledo (proposal entry; placeholder code assigned at merge)."
     ],
     "origin": {
-      "source": "Founder sketch 2026-09-12 15:25 (RC-OCC-SOUND); orchestrating session GLS-2026-009.",
+      "source": "Author sketch 2026-09-12 15:25 (RC-OCC-SOUND); registering audit GLS-2026-009.",
       "doi": null
     },
     "resistance_evidence": {
