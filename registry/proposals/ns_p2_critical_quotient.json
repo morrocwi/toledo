@@ -667,5 +667,240 @@
       "rungs_held": "R0 exact computation by one agent.",
       "empirical_test_status": "exact"
     }
+  },
+  {
+    "id": "PROP-P3-H3-SHELL-READOUT-01",
+    "code": "weld/P.??.v1",
+    "name": "H^3-weighted dyadic shell readout R_j^N(T)",
+    "statement": {
+      "latest": "S_j:=\\{k:\\lambda_j\\le|k|<\\lambda_{j+1}\\},\\ \\lambda_j=2^j;\\qquad R_j^N(T):=\\sup_{0\\le t\\le T}\\Big(\\sum_{k\\in S_j}|k|^6|\\hat u_k^N(t)|^2\\Big)^{1/2}.",
+      "format": "latex",
+      "note_ascii": "Finite at every stage (no limit used to define it). Replaces the K_N time-window readout: no external finite-observation adapter is needed downstream, since sum_j R_j < infinity gives a uniform H^3 bound directly."
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "founder_sketch_2026-09-12:R_j"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P2-NORM-IDENTITY-01",
+        "derived_via": "alternative_readout_same_target"
+      }
+    ],
+    "honest_caveats": [
+      "Definition only. Sup over time makes it a uniform-in-time quantity; any bound on it is regularity-strength by construction."
+    ],
+    "origin": {
+      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "none (definition)",
+      "empirical_test_status": "n/a"
+    }
+  },
+  {
+    "id": "PROP-P3-DUHAMEL-WINDOW-SPLIT-01",
+    "code": "weld/M.??.v1",
+    "name": "Parabolic-window Duhamel split at scale j+1: old history contracts by e^{-c}",
+    "statement": {
+      "latest": "\\tau_j:=\\frac{c}{\\nu\\lambda_{j+1}^2}:\\qquad P_{j+1}u_N(t)=e^{\\nu\\Delta\\tau_j}P_{j+1}u_N(t-\\tau_j)-\\int_{t-\\tau_j}^{t}e^{\\nu\\Delta(t-s)}P_{j+1}\\mathbb P\\nabla\\!\\cdot(u_N\\otimes u_N)(s)\\,ds,\\qquad \\lambda_{j+1}^3\\|e^{\\nu\\Delta\\tau_j}P_{j+1}u_N(t-\\tau_j)\\|_2\\le e^{-c}R_{j+1}^N.",
+      "format": "latex",
+      "note_ascii": "Exact identity + the viscous factor e^{-nu|k|^2 tau_j} <= e^{-c} for |k| >= lambda_{j+1}. Old history is not the enemy (matches NS-3.1/3.2 positive-lag Stokes / old-Duhamel tails)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "founder_sketch_2026-09-12:Duhamel"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [],
+    "honest_caveats": [
+      "Standard Duhamel + spectral decay; DERIVED by inspection, not machine-checked. The whole difficulty sits in the recent window term N_{j+1}."
+    ],
+    "origin": {
+      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 inspection",
+      "empirical_test_status": "n/a"
+    }
+  },
+  {
+    "id": "PROP-P3-WINDOW-BILINEAR-CONSTANT-01",
+    "code": "weld/P.??.v1",
+    "name": "Window bilinear constant alpha_j (the one open quantity)",
+    "statement": {
+      "latest": "\\mathcal N_{j+1}(t):=\\lambda_{j+1}^3\\Big\\|\\int_{t-\\tau_j}^{t}e^{\\nu\\Delta(t-s)}P_{j+1}\\mathbb P\\nabla\\!\\cdot(u_N\\otimes u_N)(s)\\,ds\\Big\\|_2,\\qquad \\alpha_j^N:=\\sup_t\\frac{\\mathcal N_{j+1}(t)}{R_j^N}.",
+      "format": "latex",
+      "note_ascii": "The recurrence R_{j+1} <= q R_j + C' 2^{-sigma j} B with q = alpha/(1-e^{-c}) follows algebraically once N_{j+1} <= alpha R_j + C 2^{-sigma j} B. alpha_j is a measurable finite quantity on any Galerkin run; its Galerkin-uniform value on full-convolution seeds is what protocol v2 measures. alpha R_j <= ... is equivalent to a per-shell critical-Reynolds smallness ||u_j||_2 <= alpha nu lambda_j^{-1/2} (standalone section 2 critical barrier restated)."
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "founder_sketch_2026-09-12:alpha",
+      "protocol_v2:measured_quantity"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-DUHAMEL-WINDOW-SPLIT-01",
+        "derived_via": "recent_window_term"
+      }
+    ],
+    "honest_caveats": [
+      "Definition. First finite data point (not yet under this exact definition): orthogonal-turn chain at critical amplitude hands 7% of seed content to the selected output and the mirror channel is forced at 17/25 of the forward rate."
+    ],
+    "origin": {
+      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "none (definition)",
+      "empirical_test_status": "protocol v2 pending"
+    }
+  },
+  {
+    "id": "PROP-P3-RETENTION-GAP-RECURRENCE-01",
+    "code": "weld/M.??.v1",
+    "name": "Retention-gap recurrence algebra: alpha < 1-e^{-c} => geometric R_j => uniform H^3 => global smooth (chain, not the premise)",
+    "statement": {
+      "latest": "\\mathcal N_{j+1}\\le\\alpha R_j^N+C2^{-\\sigma j}B,\\ \\alpha<1-e^{-c},\\ \\sigma>0\\ \\Longrightarrow\\ R_{j+1}^N\\le qR_j^N+C'2^{-\\sigma j}B,\\ q=\\tfrac{\\alpha}{1-e^{-c}}<1\\ \\Longrightarrow\\ R_j^N\\le C_T\\theta^j,\\ \\theta=\\max(q,2^{-\\sigma})\\ \\Longrightarrow\\ \\sup_N\\sup_{t\\le T}\\|u_N\\|_{H^3}<\\infty\\ \\Longrightarrow\\ u\\in C([0,\\infty);H^3).",
+      "format": "latex",
+      "note_ascii": "Every arrow is standard: iterate, geometric convolution, sum over shells, Galerkin compactness with passage to the limit in the nonlinear term, continuation over T=1,2,3,... The premise carries all the content."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "founder_sketch_2026-09-12:chain"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-WINDOW-BILINEAR-CONSTANT-01",
+        "derived_via": "premise"
+      },
+      {
+        "code": "PROP-P3-H3-SHELL-READOUT-01",
+        "derived_via": "readout"
+      }
+    ],
+    "honest_caveats": [
+      "DERIVED chain given the premise; the premise is the open object (see next entries). Same shape as NS-P2B-SCALE-CONTRACTION but in H^3 coordinates and without the external adapter."
+    ],
+    "origin": {
+      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 inspection",
+      "empirical_test_status": "n/a"
+    }
+  },
+  {
+    "id": "PROP-P3-RECENT-RETENTION-BOUND-ENERGY-ONLY-REFUTED",
+    "code": "weld/M.??.v1",
+    "name": "Recent full-convolution retention bound with energy-only remainder B(E_0,nu,T): REFUTED as a statement about all solutions",
+    "statement": {
+      "latest": "\\neg\\Big[\\exists\\alpha<1-e^{-c},\\sigma>0,B=B(E_0,\\nu,T)\\ \\forall u_0\\in H^3,\\forall j:\\ \\mathcal N_{j+1}\\le\\alpha R_j+C2^{-\\sigma j}B\\Big].",
+      "format": "latex",
+      "note_ascii": "Witness family (analytic, Bernstein-saturating): a smooth datum concentrated on a full shell j_0 with fixed energy E_0 has first-window input into shell j_0+1 of order lambda^{3.5} E_0 / nu (Bernstein ||u||_inf ~ lambda^{3/2} ||u||_2, times H^3 weight, times window), against alpha R_{j_0} ~ alpha lambda^3 sqrt(E_0): ratio ~ sqrt(lambda) sqrt(E_0)/nu, unbounded in lambda; no C 2^{-sigma j_0} B(E_0) absorbs it. IMPORTANT: few-mode data do NOT refute (ratio ~ sqrt(E_0)/(nu lambda) decays); the witness must saturate Bernstein (many modes / physical-space bump). Exact finite instances to be supplied by the repo checker."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "sl_audit_2026-09-11:same_pattern_as_T_over_D_20"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-WINDOW-BILINEAR-CONSTANT-01",
+        "derived_via": "negation_of_universal_form"
+      }
+    ],
+    "honest_caveats": [
+      "Analytic scaling argument (Dr) until the checker exhibits exact full-shell instances at two lambda values with increasing ratio (then finite_diagnostic on instances). With B allowed to depend on the datum (its own H^3 tail, already DERIVED), the statement becomes REGULARITY-EQUIVALENT (regular => holds; holds => regular via the recurrence chain) and is recorded HOLD under FINAL-EQUIV section 8."
+    ],
+    "origin": {
+      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0 scaling analysis by orchestrating session",
+      "empirical_test_status": "checker pending"
+    }
+  },
+  {
+    "id": "PROP-P3-UNIFORM-RETENTION-GAP-01",
+    "code": "weld/P.??.v1",
+    "name": "Uniform Retention Gap (founder's single open theorem) -- status REGULARITY-EQUIVALENT / HOLD; constructive residue OPEN",
+    "statement": {
+      "latest": "\\exists q<1\\ \\text{uniform in scale and in }N:\\quad R_{j+1}^N\\le qR_j^N+\\varepsilon_j(u_0),\\qquad \\sum_j\\varepsilon_j(u_0)<\\infty,",
+      "format": "latex",
+      "note_ascii": "Readout-lens reading: no retained distinction can enter a self-amplifying all-scale regime under this grammar; attempted perfect retention across a scale hand-off must pay an off-tree / cancellation / dissipation / mismatch cost > 0 (standalone 114.1 Generative Constraint Accumulation; defect vector 51.2; delta = min Delta_m in section 60). 'Singularity' is not a primitive of the universe; it appears only when translating back to NS/Clay (E00.6, Volume 7 Thm 9.1)."
+    },
+    "tier": "Open",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "founder_sketch_2026-09-12:UniformRetentionGap",
+      "NS-P2B-SCALE-CONTRACTION-UNIFORM:H3-form",
+      "CHC(M):H3-form"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": []
+    },
+    "parents": [
+      {
+        "code": "PROP-P3-RETENTION-GAP-RECURRENCE-01",
+        "derived_via": "premise_of"
+      },
+      {
+        "code": "PROP-P2-CR0-CORE-INCLUSION-OPEN-01",
+        "derived_via": "same_program_target"
+      }
+    ],
+    "honest_caveats": [
+      "Existentially regularity-equivalent (FINAL-EQUIV direction A/B pattern) hence HOLD as a bridge; the only non-vacuous content is CONSTRUCTIVE: constants uniform in N_G, finite ancestry window (no sum over all shells, no sup_t over [0,T] inside the proof), remainder from the datum only. This is exactly what protocol v2 measures via alpha_j.",
+      "Clay Navier-Stokes regularity: OPEN, unchanged."
+    ],
+    "origin": {
+      "source": "Founder sketch 'Uniform Retention Gap' 2026-09-12 (H^3 coordinates), analysed the same day against the SL audit (readout-problem-navier-stokes PR #53, merge e702d57) and FINAL-EQUIV section 8. Registered under the founder instruction 'บันทึกเข้าสายธารสมการแล้วเทสเลย'.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "none -- open target",
+      "empirical_test_status": "protocol v2 pending"
+    }
   }
 ]
