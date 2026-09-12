@@ -2775,5 +2775,221 @@
       "rungs_held": "R0: the verification example (p=(1,0,0), q=(0,i,0) => t.t=0, ISOTROPIC_TARGET, saturation polynomial -1 for every u, P_dc[t]=0) is exact symbolic algebra, independently checked by the registering pass by hand substitution.",
       "empirical_test_status": "Guard verified on the one worked example in the source; used operationally (per the vault card) in the internal per-address audit and the frozen NPSC v2 encoding, neither independently re-run in full by this registering pass."
     }
+  },
+  {
+    "id": "PROP-P3-LRS-MINIMIZER-IDENTITY-01",
+    "code": "Theta/P.??.v1",
+    "name": "Clipped Edge-Weight Minimizer Identity: a complete-square vertex-form equality and a single unified constrained-minimizer theorem for the per-edge quadratic cost f(w)=(mu/2)w^2+K s w over the census cone w>=0",
+    "statement": {
+      "latest": "\\text{For }\\mu>0,\\ K>0,\\ f(\\mu,K,s,w):=\\tfrac12\\mu w^2+Ksw:\\quad \\text{(a) }f(\\mu,K,s,w)=\\tfrac12\\mu\\big(w+\\tfrac{K}{\\mu}s\\big)^2-\\tfrac{K^2s^2}{2\\mu}\\ (\\mu\\ne0);\\quad \\text{(b) }w^\\*:=\\max\\!\\big(0,-\\tfrac{K}{\\mu}s\\big)\\ \\Rightarrow\\ \\forall w\\ge0:\\ f(\\mu,K,s,w^\\*)\\le f(\\mu,K,s,w).",
+      "format": "latex",
+      "note_ascii": "f(w) := (1/2)*mu*w^2 + K*s*w. (a) complete_square_identity: f(w) == (mu/2)*(w+(K/mu)*s)^2 - (K^2 s^2)/(2 mu), for any mu<>0 -- a pure algebraic vertex-form rearrangement, provable by `field`. (b) clipped_edge_weight_is_minimizer: for mu>0, K>0, the clipped point wstar := Qmax 0 (-(K/mu)*s) satisfies f(wstar) <= f(w) for ALL w>=0 -- proved by case-split on sign(s), using (a)'s identity to dominate f(w)-f(wstar) by a nonnegative square term in the s<0 case, and direct nonnegativity of both summands of f in the s>=0 case."
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "FiniteEndogenousLaplacian_MinimizerIdentity.v:complete_square_identity",
+      "FiniteEndogenousLaplacian_MinimizerIdentity.v:clipped_edge_weight_is_minimizer",
+      "Clipped Edge-Weight Minimizer Identity"
+    ],
+    "coq": {
+      "file": "readout-problem-navier-stokes-internal/p3_attack_2026-09-11/coq/FiniteEndogenousLaplacian_MinimizerIdentity.v",
+      "identifiers": [
+        {
+          "file": "FiniteEndogenousLaplacian_MinimizerIdentity.v",
+          "identifier": "complete_square_identity"
+        },
+        {
+          "file": "FiniteEndogenousLaplacian_MinimizerIdentity.v",
+          "identifier": "clipped_edge_weight_is_minimizer"
+        }
+      ],
+      "print_assumptions_verbatim": "complete_square_identity: Closed under the global context. clipped_edge_weight_is_minimizer: Closed under the global context.",
+      "coq_status": "closed",
+      "coq_axioms": [],
+      "coq_source_redistributed": false,
+      "imported_from": null
+    },
+    "parents": [
+      {
+        "code": "Theta/P.69.v1",
+        "derived_via": "unifies_case_s_geq_0_absent_boundary_minimum",
+        "evidence": "Theta/P.69.v1 (clipped_stationarity_absent) proves the s>=0 boundary-minimum case for the same doubled cost 2f(w)=mu*w^2+2*K*s*w; this entry's clipped_edge_weight_is_minimizer restates it as one branch of a single unified theorem, not re-derived from a different definition."
+      },
+      {
+        "code": "Theta/P.70.v1",
+        "derived_via": "unifies_case_s_lt_0_interior_minimum",
+        "evidence": "Theta/P.70.v1 (clipped_stationarity_present) proves the s<0 interior-stationary-point case; this entry's clipped_edge_weight_is_minimizer restates it as the other branch of the same unified theorem, additionally exhibited via the complete-square identity (a), which neither P.69.v1 nor P.70.v1 states as its own theorem."
+      }
+    ],
+    "honest_caveats": [
+      "SCOPE (repeated per standing task instruction): this is at most an INSTANTANEOUS Gate-D / state-readout closure of the operator L_R[S] for one frozen per-edge quadratic cost -- it does NOT prove anything about the full inertial transient of Theta (a separate, harder object the source material itself distinguishes as still-open, THETA_ROOT_PROGRAM.md step 5.2b / Genesis's own 'dynamic transient and the (Phi,Psi) co-evolution are explicitly untouched' caveat), does NOT close any Clay Millennium question, and does NOT establish that iterating F* = F(S; L_R[S]) produces any specific long-run behavior -- that is future work, not claimed here.",
+      "Phase 1 GROUND check (p3_attack_2026-09-11/rg_lrs_ground_check.md, re-verified again by this registering pass against the live registry) confirmed weld/M.01.v1, L_R/M.20.v1, L_R/M.21.v1, Theta/P.69.v1, Theta/P.70.v1 and weld/M.41.v1 all exist exactly as cited (current, Th_coqc, coq_status closed). It also confirmed MQ08-stepper/M.01.v1 (the causal-derivative/FTCC/discrete-curl-div package) is NOT a citable parent -- it is an external-sourced, status:'unverified' Toledo row whose attached Coq file is coq_status 'open_prop' (a bare Definition + one tautological conjunct A->A, 'no proof is attempted' per the file's own header) -- and that discrete curl/divergence / 'causal-Navier-Stokes identities' DO NOT EXIST anywhere as an actionable object (a name-drop in the same unverified prose sentence only). Neither is cited as a parent anywhere in this registration.",
+      "Independently re-verified by this registering pass (Phase 3 NAME+REGISTER), a THIRD time after the Minimizer sub-agent's own two compiles: deleted all .vo/.vok/.vos/.glob/.aux artifacts, ran `coqc -q FiniteEndogenousLaplacian_MinimizerIdentity.v` from scratch (Coq 8.20.1) -- exit 0, both `Print Assumptions` lines read verbatim 'Closed under the global context'. Additionally ran `coqchk -silent FiniteEndogenousLaplacian_MinimizerIdentity` (a separate kernel-level re-checker, not just coqc's own elaborator) -- exit 0. Grepped the file for Admitted/Axiom/Classical/excluded_middle: zero hits outside comments.",
+      "The .v file this entry cites lives in the PRIVATE internal repository readout-problem-navier-stokes-internal (p3_attack_2026-09-11/coq/), not in the public morrocwi/toledo repository -- it is NOT copied/redistributed into this repo at this proposal stage (coq_source_redistributed: false), consistent with this workspace's public/private separation discipline. Only the statement, identifiers, and independently re-verified compilation/assumption result are registered here.",
+      "Tier Th_coqc is granted ONLY for the two Coq theorems named above (complete_square_identity, clipped_edge_weight_is_minimizer) -- it does not extend to any narrative claim about w* being 'the' correct closure rule for any specific physical system; w* is a minimizer of one declared quadratic cost under one declared sign convention, matching Theta/P.69.v1/P.70.v1's own convention exactly (mu>0, K>0).",
+      "Over Q (rational), not R -- matches the two Toledo parents (both over Q) and this workspace's IDM computability law (a finite retained edge-weight state carries a rational, not continuum, readout). `field`/`ring`/`lra`/`nra` over Q close every goal with no axioms; this does not by itself say anything about an R-valued extension (a routine Q-into-R ring-embedding argument, not attempted here to keep the file constructive).",
+      "NEW DERIVATION / PROPOSAL -- not yet in Toledo (proposal entry; placeholder code assigned at merge). Must not be cited elsewhere as an existing Toledo equation until registered."
+    ],
+    "origin": {
+      "source": "readout-problem-navier-stokes-internal/p3_attack_2026-09-11/coq/FiniteEndogenousLaplacian_MinimizerIdentity.v (Phase 2a Coq formalization, following the Phase 1 GROUND check rg_lrs_ground_check.md in the same directory). Founder request 2026-09-12 ('ultracode ... ยกระดับทั้งสายให้เป็น coq ให้หมด แล้วจัดตั้งชื่อทฤษฏีให้เรียบร้อย'), registered under the Toledo-first / reuse-first-gate rules (EPIS-REUSE-PIPELINE, EPIS-TOLEDO-FIRST) as Phase 3 NAME+REGISTER.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0/R2: independently re-verified (third compile+coqchk pass, this registering session) axiom-free over the global context; the two Toledo parents (Theta/P.69.v1, Theta/P.70.v1) are themselves Th_coqc/closed and were re-confirmed present in registry/CANONICAL.json at registration time.",
+      "empirical_test_status": "not applicable -- exact algebraic/order-field theorems, no empirical measurement involved."
+    }
+  },
+  {
+    "id": "PROP-P3-LRS-LAPLACIAN-PSD-CLOSURE-01",
+    "code": "L_R/M.??.v1",
+    "name": "State-Dependent Laplacian PSD Closure (general N): the matrix-form endogenous Laplacian's quadratic form equals the edge-list Dirichlet energy, x^T L_R x = Sum_{i<j} w_ij (x_i-x_j)^2, hence L_R is positive semidefinite for any nonnegative symmetric edge weights, any finite N",
+    "statement": {
+      "latest": "\\text{For finite }N,\\ w:\\{0,\\dots,N-1\\}^2\\to\\mathbb Q\\text{ symmetric, }w_{ii}=0,\\ \\deg_i:=\\textstyle\\sum_k w_{ik},\\ L_{ij}:=\\begin{cases}\\deg_i&i=j\\\\-w_{ij}&i\\ne j\\end{cases}:\\quad x^{\\mathsf T}Lx=\\sum_{i<j}w_{ij}(x_i-x_j)^2\\quad\\Longrightarrow\\quad \\big(\\forall i,j:\\ w_{ij}\\ge0\\big)\\Rightarrow x^{\\mathsf T}Lx\\ge0.",
+      "format": "latex",
+      "note_ascii": "Lap i j := if i=j then deg i else -(w i j), over Q, arbitrary finite N (nat-indexed, dimension carried explicitly, not fixed). Two REUSED facts (thin renamed aliases, no new proof content): endogenous_laplacian_symmetric (Lap i j == transpose Lap i j) and endogenous_laplacian_zero_row_sum (row sums vanish) -- these are Toledo L_R/M.20.v1 / L_R/M.21.v1 verbatim, cited not re-derived. NEW: endogenous_laplacian_quadratic_form_full (2 * x^T L x == full double sum of w_ij(x_i-x_j)^2, via a finite-Fubini swap), endogenous_laplacian_quadratic_form (x^T L x == the i<j half-sum, via halving a symmetric zero-diagonal double sum), and endogenous_laplacian_psd (nonneg weights => x^T L x >= 0), proved by induction on N -- general N, not a fixed-N spot check."
+    },
+    "tier": "Th_coqc",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "FiniteEndogenousLaplacian_GeneralN.v:endogenous_laplacian_quadratic_form_full",
+      "FiniteEndogenousLaplacian_GeneralN.v:endogenous_laplacian_quadratic_form",
+      "FiniteEndogenousLaplacian_GeneralN.v:endogenous_laplacian_psd",
+      "State-Dependent Laplacian PSD Closure"
+    ],
+    "coq": {
+      "file": "readout-problem-navier-stokes-internal/p3_attack_2026-09-11/coq/FiniteEndogenousLaplacian_GeneralN.v",
+      "identifiers": [
+        {
+          "file": "FiniteEndogenousLaplacian_GeneralN.v",
+          "identifier": "endogenous_laplacian_quadratic_form_full"
+        },
+        {
+          "file": "FiniteEndogenousLaplacian_GeneralN.v",
+          "identifier": "endogenous_laplacian_quadratic_form"
+        },
+        {
+          "file": "FiniteEndogenousLaplacian_GeneralN.v",
+          "identifier": "endogenous_laplacian_psd"
+        },
+        {
+          "file": "FiniteEndogenousLaplacian_GeneralN.v",
+          "identifier": "endogenous_laplacian_symmetric (thin reuse alias of L_R/M.20.v1 laplacian_symmetric)"
+        },
+        {
+          "file": "FiniteEndogenousLaplacian_GeneralN.v",
+          "identifier": "endogenous_laplacian_zero_row_sum (thin reuse alias of L_R/M.21.v1 laplacian_rowsum_zero)"
+        }
+      ],
+      "print_assumptions_verbatim": "laplacian_symmetric: Closed under the global context. laplacian_rowsum_zero: Closed under the global context. endogenous_laplacian_symmetric: Closed under the global context. endogenous_laplacian_zero_row_sum: Closed under the global context. endogenous_laplacian_quadratic_form_full: Closed under the global context. endogenous_laplacian_quadratic_form: Closed under the global context. endogenous_laplacian_psd: Closed under the global context.",
+      "coq_status": "closed",
+      "coq_axioms": [],
+      "coq_source_redistributed": false,
+      "imported_from": null
+    },
+    "parents": [
+      {
+        "code": "L_R/M.20.v1",
+        "derived_via": "reuses_verbatim_as_endogenous_laplacian_symmetric",
+        "evidence": "endogenous_laplacian_symmetric is a thin renamed alias, no new proof content; diffed the source information-discrete-math commit (147fc92671f35eb102405fec913eb361dc41f966) against current HEAD (c827a917) -- zero code/proof drift, only an added comment block."
+      },
+      {
+        "code": "L_R/M.21.v1",
+        "derived_via": "reuses_verbatim_as_endogenous_laplacian_zero_row_sum",
+        "evidence": "endogenous_laplacian_zero_row_sum is a thin renamed alias, no new proof content, same source commit as above."
+      },
+      {
+        "code": "weld/M.41.v1",
+        "derived_via": "bridges_edge_list_dirichlet_energy_to_matrix_quadratic_form",
+        "evidence": "weld/M.41.v1 (RDL_GammaSpectral.v, energy_nonneg) already proves PSD-ness of the EDGE-LIST sum Sigma_e w_e(x_u-x_v)^2 >= 0, but its own registration note (toledo-v1.8-spectral, 2026-09-08) states explicitly that 'no existing L_R/* reading proves PSD-ness for all x ... via this route' -- i.e. no bridge from that edge-list form to the MATRIX form x^T Lap x existed before this entry. endogenous_laplacian_quadratic_form is exactly that missing bridge identity, and endogenous_laplacian_psd is its immediate corollary matching weld/M.41.v1's conclusion via the matrix route."
+      }
+    ],
+    "honest_caveats": [
+      "SCOPE (repeated per standing task instruction): this is at most an INSTANTANEOUS Gate-D / state-readout closure of the operator L_R[S] for one frozen per-edge quadratic cost -- it does NOT prove anything about the full inertial transient of Theta (a separate, harder object the source material itself distinguishes as still-open, THETA_ROOT_PROGRAM.md step 5.2b / Genesis's own 'dynamic transient and the (Phi,Psi) co-evolution are explicitly untouched' caveat), does NOT close any Clay Millennium question, and does NOT establish that iterating F* = F(S; L_R[S]) produces any specific long-run behavior -- that is future work, not claimed here.",
+      "Phase 1 GROUND check (p3_attack_2026-09-11/rg_lrs_ground_check.md, re-verified again by this registering pass against the live registry) confirmed weld/M.01.v1, L_R/M.20.v1, L_R/M.21.v1, Theta/P.69.v1, Theta/P.70.v1 and weld/M.41.v1 all exist exactly as cited (current, Th_coqc, coq_status closed). It also confirmed MQ08-stepper/M.01.v1 (the causal-derivative/FTCC/discrete-curl-div package) is NOT a citable parent -- it is an external-sourced, status:'unverified' Toledo row whose attached Coq file is coq_status 'open_prop' (a bare Definition + one tautological conjunct A->A, 'no proof is attempted' per the file's own header) -- and that discrete curl/divergence / 'causal-Navier-Stokes identities' DO NOT EXIST anywhere as an actionable object (a name-drop in the same unverified prose sentence only). Neither is cited as a parent anywhere in this registration.",
+      "Independently re-verified by this registering pass (Phase 3 NAME+REGISTER), separately from the GeneralN sub-agent's own two compiles: deleted all .vo/.vok/.vos/.glob/.aux artifacts, ran `coqc -q FiniteEndogenousLaplacian_GeneralN.v` from scratch (Coq 8.20.1) -- exit 0, all seven `Print Assumptions` lines (laplacian_symmetric, laplacian_rowsum_zero, endogenous_laplacian_symmetric, endogenous_laplacian_zero_row_sum, endogenous_laplacian_quadratic_form_full, endogenous_laplacian_quadratic_form, endogenous_laplacian_psd) read verbatim 'Closed under the global context'. Additionally ran `coqchk -silent FiniteEndogenousLaplacian_GeneralN` -- exit 0. Grepped the file for Admitted/Axiom/Classical/excluded_middle: zero hits outside comments.",
+      "The .v file this entry cites lives in the PRIVATE internal repository readout-problem-navier-stokes-internal (p3_attack_2026-09-11/coq/), not in the public morrocwi/toledo repository -- it is NOT copied/redistributed into this repo at this proposal stage (coq_source_redistributed: false), consistent with this workspace's public/private separation discipline. Only the statement, identifiers, and independently re-verified compilation/assumption result are registered here.",
+      "The two REUSED facts (endogenous_laplacian_symmetric, endogenous_laplacian_zero_row_sum) are NOT separately registered as new objects -- they are thin renamed aliases of the already-canonical L_R/M.20.v1 / L_R/M.21.v1 and are cited here only as occurrences/reuse evidence, per the reuse pipeline's 'do not create a local duplicate, renamed equivalent, or stronger restatement merely for convenience' rule (TG-RFG-01 stage 3). The genuinely NEW content registered under this id is exactly the three theorems endogenous_laplacian_quadratic_form_full, endogenous_laplacian_quadratic_form, endogenous_laplacian_psd.",
+      "General N is proved by induction on the finite-sum machinery (Sum_double_swap finite-Fubini, sum_full_eq_2_SumLT halving lemma) -- not a spot-check on any single fixed N (the session's own prior sympy check was N=3 only; this Coq file supersedes that with an actual general-N proof).",
+      "Over Q (rational), not R -- matches the reused L_R/M.20-21.v1 / weld/M.41.v1 convention and this workspace's IDM computability law; PSD-ness is an order-field fact and Q is an ordered field, so the mathematical content is not weakened by staying off the classical continuum R.",
+      "NEW DERIVATION / PROPOSAL -- not yet in Toledo (proposal entry; placeholder code assigned at merge). Must not be cited elsewhere as an existing Toledo equation until registered."
+    ],
+    "origin": {
+      "source": "readout-problem-navier-stokes-internal/p3_attack_2026-09-11/coq/FiniteEndogenousLaplacian_GeneralN.v (Phase 2b Coq formalization, following the Phase 1 GROUND check rg_lrs_ground_check.md in the same directory). Founder request 2026-09-12 ('ultracode ... ยกระดับทั้งสายให้เป็น coq ให้หมด แล้วจัดตั้งชื่อทฤษฏีให้เรียบร้อย'), registered under the Toledo-first / reuse-first-gate rules (EPIS-REUSE-PIPELINE, EPIS-TOLEDO-FIRST) as Phase 3 NAME+REGISTER.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0/R2: independently re-verified (third compile+coqchk pass, this registering session) axiom-free over the global context, all 7 theorems including the 2 reused ones; the three cited parents (L_R/M.20.v1, L_R/M.21.v1, weld/M.41.v1) were re-confirmed present in registry/CANONICAL.json, Th_coqc/closed, at registration time.",
+      "empirical_test_status": "not applicable -- exact finite-linear-algebra theorems, no empirical measurement involved."
+    }
+  },
+  {
+    "id": "PROP-P3-FINITE-ENDOGENOUS-LAPLACIAN-CLOSURE-01",
+    "code": "weld/P.??.v1",
+    "name": "Finite Endogenous Laplacian Closure: the state-dependent topology loop S_n -> G[S_n] -> L_R[S_n] -> F(S_n) -> S_{n+1}, where the graph itself is a per-step readout of state -- edge (i,j) in E[S] iff w_ij[S]>0 iff s_ij(S)<0",
+    "statement": {
+      "latest": "S_n=(G_n,\\Lambda_n,\\mathcal T_n)\\ \\xrightarrow{\\ \\text{Gate D}\\ }\\ s_{ij}(S_n):=(\\Phi_i-\\Phi_j)(\\Psi_i-\\Psi_j)\\ \\xrightarrow{\\ w^\\*=\\max(0,-\\tfrac K\\mu s)\\ }\\ w_{ij}[S_n]\\ \\xrightarrow{\\ (i,j)\\in E[S_n]\\ \\text{iff}\\ w_{ij}[S_n]>0\\ }\\ G[S_n]\\ \\xrightarrow{\\ L_R[S_n]=D_{W[S_n]}-W[S_n]\\ }\\ F(S_n,u_n,c_n,\\mathcal T_n)\\ \\xrightarrow{}\\ S_{n+1}.",
+      "format": "latex",
+      "note_ascii": "The endogenous-closure loop: at each state S_n, Gate D's per-edge source s_ij(S_n)=(Phi_i-Phi_j)(Psi_i-Psi_j) is read (Theta/P.6x.v1 edge census family); the clipped minimizer w_ij[S_n]=max(0,-(K/mu)*s_ij(S_n)) (PROP-P3-LRS-MINIMIZER-IDENTITY-01) sets each edge weight; the graph's own EDGE SET is itself a readout of state -- (i,j) in E[S_n] iff w_ij[S_n]>0 iff s_ij(S_n)<0 -- rather than a fixed a priori topology; the resulting weighted Laplacian L_R[S_n]=D_W-W is symmetric/zero-row-sum/PSD for any such S_n (PROP-P3-LRS-LAPLACIAN-PSD-CLOSURE-01); L_R[S_n] feeds the root stepper F (weld/M.01.v1) to produce S_{n+1}. This is a DEFINITION-tier naming of the overall architecture, not a new theorem in itself -- its two load-bearing facts are proved separately in its two children below."
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "P",
+    "aliases": [
+      "p3_attack_2026-09-11/coq/FiniteEndogenousLaplacian_MinimizerIdentity.v",
+      "p3_attack_2026-09-11/coq/FiniteEndogenousLaplacian_GeneralN.v",
+      "Finite Endogenous Laplacian Closure"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_attempted",
+      "coq_axioms": [],
+      "note": "This entry is the Definition-tier NAME for the overall architecture; it is not itself an independent Coq theorem -- it is witnessed by its two children (PROP-P3-LRS-MINIMIZER-IDENTITY-01, PROP-P3-LRS-LAPLACIAN-PSD-CLOSURE-01), both Th_coqc and independently re-verified this pass, plus the already-canonical weld/M.01.v1 stepper and Theta edge-census family it instances."
+    },
+    "parents": [
+      {
+        "code": "weld/M.01.v1",
+        "derived_via": "instances_root_stepper_with_endogenous_state_dependent_topology",
+        "evidence": "weld/M.01.v1 states the root chain delta_R |- L_R=D_W-W |- F and the stepper S_{n+1}=F(S_n,u_n,c_n,T_n); this entry instances that stepper's L_R argument as a per-step FUNCTION OF STATE (L_R[S_n]) via the Gate-D/clipped-minimizer readout below, rather than leaving L_R exogenous/fixed -- no new root object, no new gate, per Genesis compatibility."
+      },
+      {
+        "code": "Theta/P.69.v1",
+        "derived_via": "reads_gate_d_edge_absent_case",
+        "evidence": "the s>=0 => edge-absent branch of the endogenous topology rule (w_ij[S]=0 => (i,j) not in E[S]) is exactly Theta/P.69.v1's clipped_stationarity_absent case, read as a topology-readout rule."
+      },
+      {
+        "code": "Theta/P.70.v1",
+        "derived_via": "reads_gate_d_edge_present_case",
+        "evidence": "the s<0 => edge-present branch is exactly Theta/P.70.v1's clipped_stationarity_present case, read as a topology-readout rule."
+      },
+      {
+        "code": "PROP-P3-LRS-MINIMIZER-IDENTITY-01",
+        "derived_via": "child_defines_the_per_edge_weight_readout_w_star",
+        "evidence": "supplies the exact closed-form w_ij[S]=max(0,-(K/mu)s_ij(S)) that this construction's edge-existence rule is defined in terms of."
+      },
+      {
+        "code": "PROP-P3-LRS-LAPLACIAN-PSD-CLOSURE-01",
+        "derived_via": "child_proves_the_resulting_laplacian_is_well_posed",
+        "evidence": "supplies the symmetric/zero-row-sum/PSD facts that make L_R[S_n] a well-posed graph Laplacian for any state S_n produced by this construction's topology readout, general N."
+      }
+    ],
+    "honest_caveats": [
+      "SCOPE (repeated per standing task instruction): this is at most an INSTANTANEOUS Gate-D / state-readout closure of the operator L_R[S] for one frozen per-edge quadratic cost -- it does NOT prove anything about the full inertial transient of Theta (a separate, harder object the source material itself distinguishes as still-open, THETA_ROOT_PROGRAM.md step 5.2b / Genesis's own 'dynamic transient and the (Phi,Psi) co-evolution are explicitly untouched' caveat), does NOT close any Clay Millennium question, and does NOT establish that iterating F* = F(S; L_R[S]) produces any specific long-run behavior -- that is future work, not claimed here.",
+      "Phase 1 GROUND check (p3_attack_2026-09-11/rg_lrs_ground_check.md, re-verified again by this registering pass against the live registry) confirmed weld/M.01.v1, L_R/M.20.v1, L_R/M.21.v1, Theta/P.69.v1, Theta/P.70.v1 and weld/M.41.v1 all exist exactly as cited (current, Th_coqc, coq_status closed). It also confirmed MQ08-stepper/M.01.v1 (the causal-derivative/FTCC/discrete-curl-div package) is NOT a citable parent -- it is an external-sourced, status:'unverified' Toledo row whose attached Coq file is coq_status 'open_prop' (a bare Definition + one tautological conjunct A->A, 'no proof is attempted' per the file's own header) -- and that discrete curl/divergence / 'causal-Navier-Stokes identities' DO NOT EXIST anywhere as an actionable object (a name-drop in the same unverified prose sentence only). Neither is cited as a parent anywhere in this registration.",
+      "This entry is a DEFINITION (an architectural naming that packages an already-legal instancing of weld/M.01.v1's root stepper plus Theta/P.69-70.v1's edge-census readout plus this session's two new lemmas), NOT a derived theorem and NOT itself independently machine-checked as a single Coq object. Its two load-bearing mathematical facts (the minimizer identity and the PSD closure) are exactly its two Th_coqc children, both independently re-verified by this registering pass (coqc + coqchk, from-scratch rebuild, third pass overall).",
+      "Does NOT establish that iterating S_n -> S_{n+1} under this endogenous rule converges, is stable, is well-posed for n->infinity, or has any specific long-run spectral/topological behavior -- only that AT EACH FIXED STATE S_n, the instantaneous Gate-D readout of w_ij[S_n] is the correct constrained minimizer and the resulting L_R[S_n] is a legitimate (symmetric, zero-row-sum, PSD) graph Laplacian. The dynamic/inertial question (does the topology itself change stably, could it oscillate/flicker at the s=0 boundary between steps, etc.) is explicitly OPEN and not addressed by either child theorem.",
+      "Per the Phase 1 GROUND check, this construction does NOT rely on and does NOT cite MQ08-stepper/M.01.v1 (causal derivative/FTCC, unverified/open_prop) or any discrete curl/divergence 'causal-Navier-Stokes identities' (found not to exist as an actionable object anywhere) -- the construction is registered here as MORE SELF-CONTAINED than the founder's original framing might have suggested, resting only on the confirmed-real parents (weld/M.01.v1, Theta/P.69-70.v1, L_R/M.20-21.v1, weld/M.41.v1).",
+      "NEW DERIVATION / PROPOSAL -- not yet in Toledo (proposal entry; placeholder code assigned at merge). Must not be cited elsewhere as an existing Toledo equation/definition until registered."
+    ],
+    "origin": {
+      "source": "readout-problem-navier-stokes-internal/p3_attack_2026-09-11/ (rg_lrs_ground_check.md Phase 1, coq/FiniteEndogenousLaplacian_MinimizerIdentity.v Phase 2a, coq/FiniteEndogenousLaplacian_GeneralN.v Phase 2b). Founder request 2026-09-12 naming this construction 'Finite Endogenous Laplacian Closure' and asking it be elevated to Coq and named properly ('ultracode ... ยกระดับทั้งสายให้เป็น coq ให้หมด แล้วจัดตั้งชื่อทฤษฏีให้เรียบร้อย'). Registered under the Toledo-first / reuse-first-gate rules as Phase 3 NAME+REGISTER.",
+      "doi": null
+    },
+    "resistance_evidence": {
+      "rungs_held": "R0/R2 (via its two children, both independently re-verified this pass); this Definition-tier entry itself carries no separate machine-check obligation beyond correctly naming and citing its already-verified parts.",
+      "empirical_test_status": "not applicable."
+    }
   }
 ]
