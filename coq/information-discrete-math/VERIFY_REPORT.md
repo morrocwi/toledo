@@ -28,6 +28,7 @@ Upstream commit: `147fc92671f35eb102405fec913eb361dc41f966` (public, MIT). Verif
 | `formal/IDM_Logic.v` | OK (coqc -q, sequential, one at a time) |
 | `formal/IDM_Matrix.v` | OK (coqc -q, sequential, one at a time) |
 | `formal/IDM_ReadoutMinimality.v` | OK (coqc -q, sequential, one at a time) |
+| `formal/IDM_ReaderDomainFoundation.v` | OK (coqc -q, sequential, one at a time) |
 | `formal/IDM_Reduction.v` | OK (coqc -q, sequential, one at a time) |
 | `formal/IDM_ResolvedCount.v` | OK (coqc -q, sequential, one at a time) |
 | `formal/IDM_Schur.v` | OK (coqc -q, sequential, one at a time) |
@@ -240,6 +241,37 @@ All **27** files compiled cleanly with `coqc -q`, in dependency order (no `make 
 | `formal/IDM_ReadoutMinimality.v` | `bottom_unique` | Closed |  |
 | `formal/IDM_ReadoutMinimality.v` | `neutral_is_not_below_sign` | Closed |  |
 | `formal/IDM_ReadoutMinimality.v` | `neutral_is_not_bottom` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T1_eq_obs_correspondence` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `EqOf_antitone` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `ObsOf_antitone` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T2_closure_extensive` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T2_closure_monotone` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T2_eq_closure_invariant` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T2_closure_idempotent` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T6_question_monotonicity` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T7_joint_question_intersection` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `closure_is_closed` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `closed_intersection` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `closed_join` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `A_con_subseteq_A_sem` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `constructive_closure_invariant` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `future_eq_refl` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `future_eq_sym` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `future_eq_trans` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T3_future_equivalence_dynamic_stability` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T4_dynamic_weld_well_defined` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `step_class_is_class` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T4b_quotient_commuting_square` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `future_eq_immediate` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `future_eq_implies_depth` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `depth_immediate` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `depth_stable_successor_closed` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `depth_stable_implies_future` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `stable_depth_exact_future` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `T5_sufficiency_kernel_inclusion` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `blocks_growth_under_no_closure` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `closed_or_none_upto` | Closed |  |
+| `formal/IDM_ReaderDomainFoundation.v` | `finite_strict_refinement_terminates` | Closed |  |
 | `formal/IDM_Reduction.v` | `op_swap` | Closed |  |
 | `formal/IDM_Reduction.v` | `fold_right_perm` | Closed |  |
 | `formal/IDM_Reduction.v` | `ftcc_Z` | Closed |  |

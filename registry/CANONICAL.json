@@ -1128,7 +1128,8 @@
         "weld/W.03.v1",
         "weld/W.08.v1",
         "weld/H.29.v1",
-        "EQ-002/H.05.v1"
+        "EQ-002/H.05.v1",
+        "weld/M.63.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -1357,7 +1358,9 @@
         "weld/H.16.v1",
         "weld/H.17.v1",
         "weld/M.25.v1",
-        "weld/M.26.v1"
+        "weld/M.26.v1",
+        "weld/M.63.v1",
+        "weld/M.68.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -5440,7 +5443,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "weld/M.64.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -25904,7 +25909,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "weld/M.64.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -60413,7 +60420,9 @@
           "evidence": "CLAIM_BOUNDARY_v0_910.json: \"tier\": \"FORMAL_COMPOSITION_QUOTIENT_ONLY\", \"public_label\": \"[FiniteFormalWitnesses] root-native abstract composition layer\"; ROOT_DAG_MASTER_v0_910.md mermaid: R0[\"R0 retained distinction\"] --> R1[...] (the domain's own derivation chain starts at the retained-distinction root); INFORMATION_CHEMISTRY_CANON_v0_910_STANDALONE.md: \"The package embeds ... the root source snapshot\" (domains/chem/source_root/READOUT_GENESIS_CORE_SNAPSHOT.md) || genesis_root.json code=EQ-001, name=\"Primordial difference\", statement=\"∃ a,b : a ≠ b\", role=\"root-axiom\" -- the object each domain README calls \"the master retained-distinction root\" || DRIFT NOTE: chem/README.md (11 lines) does NOT carry the \"readout of the master retained-distinction root\" sentence the other three domains state verbatim -- confirmed by direct read and grep; the intermediate src_genesis_domains.json q_D_note field mis-attributed that quote to chem's README by pattern-copy from quantum/relativity/biology (flagged here as a drift correction, not repeated as evidence for chem). Chem's own quotient declaration is instead carried by its CLAIM_BOUNDARY tier name itself (\"..._QUOTIENT_ONLY\"), its ROOT_DAG diagram's R0 entry point, and its CANON doc's own statement that it embeds the root source snapshot -- quoted above."
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-001/C.18.v1"
+      ],
       "origin": {
         "source": "domain_registry",
         "repo_anchor": {
@@ -167217,6 +167226,1061 @@
               {
                 "type": "coq",
                 "path": "coq/canonical/weld__M_60_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1297",
+      "code": "weld/M.61.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Eq-Obs correspondence (reader-family / indistinguishability Galois connection)",
+      "statement": {
+        "latest": "E \\subseteq \\operatorname{Obs}(R) \\iff R \\subseteq \\operatorname{Eq}(E)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "E \\subseteq \\operatorname{Obs}(R) \\iff R \\subseteq \\operatorname{Eq}(E)",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_61_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [],
+      "children": [
+        "weld/M.62.v1",
+        "weld/M.65.v1",
+        "weld/M.66.v1",
+        "weld/M.69.v1"
+      ],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_61_v1.v",
+        "identifier": "CAN_1297_eq_obs_correspondence",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_61_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1298",
+      "code": "weld/M.62.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Reader closure: extensive, monotone, idempotent, saturation-invariant",
+      "statement": {
+        "latest": "\\operatorname{Cl}(E) := \\operatorname{Obs}(\\operatorname{Eq}(E));\\ E \\subseteq \\operatorname{Cl}(E);\\ A \\subseteq B \\Rightarrow \\operatorname{Cl}(A) \\subseteq \\operatorname{Cl}(B);\\ \\operatorname{Cl}(\\operatorname{Cl}(E)) = \\operatorname{Cl}(E);\\ \\operatorname{Eq}(\\operatorname{Cl}(E)) = \\operatorname{Eq}(E)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\operatorname{Cl}(E) := \\operatorname{Obs}(\\operatorname{Eq}(E));\\ E \\subseteq \\operatorname{Cl}(E);\\ A \\subseteq B \\Rightarrow \\operatorname{Cl}(A) \\subseteq \\operatorname{Cl}(B);\\ \\operatorname{Cl}(\\operatorname{Cl}(E)) = \\operatorname{Cl}(E);\\ \\operatorname{Eq}(\\operatorname{Cl}(E)) = \\operatorname{Eq}(E)",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_62_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.61.v1",
+          "derived_via": "specializes"
+        }
+      ],
+      "children": [
+        "weld/M.67.v1",
+        "weld/M.69.v1"
+      ],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_62_v1.v",
+        "identifier": "CAN_1298_closure_extensive, CAN_1298_closure_monotone, CAN_1298_eq_closure_invariant, CAN_1298_closure_idempotent",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_62_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1299",
+      "code": "weld/M.63.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Future-reader equivalence is stable under a declared first action (dynamic weld congruence)",
+      "statement": {
+        "latest": "s \\sim_Q t \\Rightarrow F_u(s) \\sim_Q F_u(t)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "s \\sim_Q t \\Rightarrow F_u(s) \\sim_Q F_u(t)",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_63_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.03.v1",
+          "derived_via": "specializes"
+        },
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "precondition_for"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_63_v1.v",
+        "identifier": "CAN_1299_future_equivalence_dynamic_stability, CAN_1299_dynamic_weld_well_defined",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_63_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1300",
+      "code": "weld/M.64.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Sufficiency kernel inclusion",
+      "statement": {
+        "latest": "\\forall s\\,t,\\ \\rho(s)=\\rho(t) \\Rightarrow s \\sim_Q t \\quad (\\ker\\rho \\subseteq {\\sim_Q})",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\forall s\\,t,\\ \\rho(s)=\\rho(t) \\Rightarrow s \\sim_Q t \\quad (\\ker\\rho \\subseteq {\\sim_Q})",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_64_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/E.06.v1",
+          "derived_via": "instance_of"
+        },
+        {
+          "code": "EQ-002/M.01.v1",
+          "derived_via": "companion_to"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_64_v1.v",
+        "identifier": "CAN_1300_sufficiency_kernel_inclusion",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_64_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1301",
+      "code": "weld/M.65.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Question monotonicity",
+      "statement": {
+        "latest": "E_A \\subseteq E_B \\Rightarrow \\operatorname{Eq}(E_B) \\subseteq \\operatorname{Eq}(E_A)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "E_A \\subseteq E_B \\Rightarrow \\operatorname{Eq}(E_B) \\subseteq \\operatorname{Eq}(E_A)",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_65_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.61.v1",
+          "derived_via": "specializes"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_65_v1.v",
+        "identifier": "CAN_1301_question_monotonicity",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_65_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1302",
+      "code": "weld/M.66.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Joint-question intersection",
+      "statement": {
+        "latest": "\\operatorname{Eq}(E_A \\cup E_B) = \\operatorname{Eq}(E_A) \\cap \\operatorname{Eq}(E_B)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\operatorname{Eq}(E_A \\cup E_B) = \\operatorname{Eq}(E_A) \\cap \\operatorname{Eq}(E_B)",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_66_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.61.v1",
+          "derived_via": "specializes"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_66_v1.v",
+        "identifier": "CAN_1302_joint_question_intersection",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_66_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1303",
+      "code": "weld/M.67.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Closed-reader binary meet/join laws",
+      "statement": {
+        "latest": "\\operatorname{Cl}(E) \\text{ is closed};\\ A,B \\text{ closed} \\Rightarrow A \\cap B \\text{ closed};\\ \\operatorname{Cl}(A \\cup B) \\text{ is closed}",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\operatorname{Cl}(E) \\text{ is closed};\\ A,B \\text{ closed} \\Rightarrow A \\cap B \\text{ closed};\\ \\operatorname{Cl}(A \\cup B) \\text{ is closed}",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_67_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.62.v1",
+          "derived_via": "specializes"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_67_v1.v",
+        "identifier": "CAN_1303_closure_is_closed, CAN_1303_closed_intersection, CAN_1303_closed_join",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_67_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1304",
+      "code": "EQ-001/C.18.v1",
+      "root": "EQ-001",
+      "layer": "reading",
+      "domain": "C",
+      "aliases": [],
+      "name": "Safe finite strict-refinement termination (bounded-block-growth kernel; C.05 repair)",
+      "statement": {
+        "latest": "(\\forall P.\\ b(P) \\le N) \\land (\\lnot Closed(P) \\Rightarrow b(P) < b(\\mathrm{refine}(P))) \\Rightarrow \\forall P\\ \\exists k.\\ Closed(\\mathrm{refine}^k(P))",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "(\\forall P.\\ b(P) \\le N) \\land (\\lnot Closed(P) \\Rightarrow b(P) < b(\\mathrm{refine}(P))) \\Rightarrow \\forall P\\ \\exists k.\\ Closed(\\mathrm{refine}^k(P))",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/EQ_001__C_18_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-001/C.05.v1",
+          "derived_via": "repairs"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/EQ_001__C_18_v1.v",
+        "identifier": "CAN_1304_finite_strict_refinement_terminates",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/EQ_001__C_18_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1305",
+      "code": "weld/M.68.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Stable finite-depth reader equivalence equals all-future reader equivalence",
+      "statement": {
+        "latest": "\\mathrm{DepthStable}(n) \\Rightarrow (\\mathrm{DepthEq}(n,s,t) \\iff s \\sim_Q t)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathrm{DepthStable}(n) \\Rightarrow (\\mathrm{DepthEq}(n,s,t) \\iff s \\sim_Q t)",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_68_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.03.v1",
+          "derived_via": "finite_witness_for"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_68_v1.v",
+        "identifier": "CAN_1305_stable_depth_exact_future",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_68_v1.v"
+              }
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1306",
+      "code": "weld/M.69.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [],
+      "name": "Constructive firewall: A_con subseteq A_sem and constructive-closure invariance",
+      "statement": {
+        "latest": "\\mathcal A_{\\rm sem} := \\mathcal A_{\\rm ambient},\\ \\mathcal A_{\\rm con} := \\{e \\in \\mathcal A_{\\rm ambient} \\mid \\mathrm{Constructive}(e)\\};\\ \\mathcal A_{\\rm con} \\subseteq \\mathcal A_{\\rm sem};\\ (E_1,E_2 \\subseteq \\mathcal A_{\\rm con}) \\land (\\forall e.\\ \\mathrm{Constructive}(e) \\Rightarrow (E_1\\,e \\iff E_2\\,e)) \\Rightarrow \\operatorname{Eq}(E_1) = \\operatorname{Eq}(E_2)",
+        "format": "latex"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "\\mathcal A_{\\rm sem} := \\mathcal A_{\\rm ambient},\\ \\mathcal A_{\\rm con} := \\{e \\in \\mathcal A_{\\rm ambient} \\mid \\mathrm{Constructive}(e)\\};\\ \\mathcal A_{\\rm con} \\subseteq \\mathcal A_{\\rm sem};\\ (E_1,E_2 \\subseteq \\mathcal A_{\\rm con}) \\land (\\forall e.\\ \\mathrm{Constructive}(e) \\Rightarrow (E_1\\,e \\iff E_2\\,e)) \\Rightarrow \\operatorname{Eq}(E_1) = \\operatorname{Eq}(E_2)",
+          "date": "2026-09-13",
+          "reason": "Promoted from toledo issue #36 proposal packet (registry/proposals/grd_foundation_v1_theorem_packet.json), following registration through the proposal lane (PR #38) per the issue's own instruction not to hand-edit CANONICAL.json directly for a new theorem; canonicalised here as a native Toledo wrapper (coq/canonical/weld__M_69_v1.v) that imports and restates (does not re-derive) the axiom-free upstream proof.",
+          "by": "toledo canonical/grd-foundation-v1-promotion"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.61.v1",
+          "derived_via": "specializes"
+        },
+        {
+          "code": "weld/M.62.v1",
+          "derived_via": "specializes"
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "information-discrete-math",
+        "repo_anchor": {
+          "repo": "https://github.com/morrocwi/information-discrete-math",
+          "commit": "ca5018925d98f5a710b2ceb561433f814915545b",
+          "path": "formal/IDM_ReaderDomainFoundation.v"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": null,
+        "version": null,
+        "date": "2026-09-13",
+        "label": null
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "",
+      "coq": {
+        "file": "coq/canonical/weld__M_69_v1.v",
+        "identifier": "CAN_1306_A_con_subseteq_A_sem, CAN_1306_constructive_closure_invariant",
+        "assumptions": "Closed under the global context",
+        "imported_from": "information-discrete-math formal/IDM_ReaderDomainFoundation.v (MIT, vendored verbatim under coq/information-discrete-math/, PROVENANCE.json)",
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-13",
+      "resistance": {
+        "computed_at": "2026-09-13",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              {
+                "type": "coq",
+                "path": "coq/canonical/weld__M_69_v1.v"
               }
             ]
           },
