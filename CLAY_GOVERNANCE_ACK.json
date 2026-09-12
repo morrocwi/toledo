@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-13",
-  "scope": "Fast-follow: add 31 rows to registry/coq_map.json for information-discrete-math's formal/IDM_ReaderDomainFoundation.v (commit ca5018925d98f5a710b2ceb561433f814915545b) -- 18 mapped (confidence high: the 17 identifiers backing the already-merged CAN-1297..CAN-1306 canonical promotion, plus T4b_quotient_commuting_square -> weld/M.02.v1, the already-merged CAN-006 occurrence) and 13 unmapped (confidence none: internal helper lemmas with no Toledo code of their own). This was flagged as a durability gap by two separate independent reviews (of toledo PR #37 and PR #39): without a backing coq_map.json row, a future scripts/n4_merge.py regeneration pass could silently drop the hand-inserted coq.identifiers cross-references those PRs added. No new canonical entry, no new theorem, no statement/tier/status change to any existing entry -- pure append of evidence rows for already-registered, already-merged, already-independently-verified content. Registry-bookkeeping durability only, not a new formal claim.",
+  "scope": "Status-honesty fix on CAN-054 (EQ-015/H.06.v1): registry/CANONICAL.json's status field is corrected from 'current' to 'unverified' with a new status_note, per SCHEMA.md's own rule ('where a source tags a reading Th_coqc but no Coq identifier for it is located, tier is kept as the source states and status is unverified with a status_note'). Independently confirmed during Reader-Domain Capacity-Depth Lower Bound (RDLB) reuse-pipeline analysis 2026-09-13: CAN-054's statement.latest carries the source article's own claim 'rank_Q(B_nA_n)<=m_n (proved)', but the backing Coq file (coq/canonical/EQ_015__H_06_v1.v) only proves the finite-bottleneck predicate's satisfiability on a concrete instance, not the general rank inequality for arbitrary A_n,B_n -- the Coq file's own header comment already discloses this honestly, but the registry's status field did not yet reflect it. tier stays Definition (unchanged, already correctly conservative). No statement text, theorem, or Coq proof changed -- this is a status-field correction only, matching an existing, already-documented schema rule.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "No TODO/handoff update needed beyond what PR #39's and #37's own handoff entries already recorded (readout-problem-navier-stokes-internal/HANDOFF_clay_solver_restructure.md) -- this PR only closes a durability gap those entries already flagged as outstanding, it introduces no new claim or milestone of its own."
+    "evidence": "Flagged for a follow-up note in readout-problem-navier-stokes-internal/HANDOFF_clay_solver_restructure.md (the RDLB work that surfaced this) rather than a fresh TODO entry -- this is registry housekeeping, not a new project milestone."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "registry/coq_map.json: 3483 rows (3452 prior + 31 new), pure append (verified: +346/-0 lines, no existing row's content changed), matching the file's own existing UNMAPPED-row convention for the 13 helper-lemma rows and the existing high-confidence mapped-row convention (source/file/identifier/status/codes/evidence/confidence/evidence_quote) for the 18 mapped rows."
+    "evidence": "registry/CANONICAL.json: CAN-054's status current->unverified with a new status_note explaining exactly why; counts.by_status recomputed (current 1198->1197, unverified 96->97) via the exact function scripts/v18_tower_merge.py.recompute_counts uses. No other entry touched."
   },
-  "claim_effect": "provenance-change"
+  "claim_effect": "status-only"
 }
