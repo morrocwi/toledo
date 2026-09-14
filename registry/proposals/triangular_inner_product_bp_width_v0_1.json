@@ -21,7 +21,7 @@
     "aliases": ["TRIP_m-bp-width", "pnp:triangular-inner-product-interleaved-collapse-resistance"],
     "coq": {
       "identifiers": [],
-      "coq_status": "not_attempted",
+      "coq_status": "open_prop",
       "note": "Hand-verified twice independently (the originating investigation and a separate adversarial substance-review, which re-derived the m=4 case by full 16-case brute-force enumeration and independently re-checked the general-m argument, catching and disclosing one non-load-bearing looseness in it). No Coq formalization has been attempted."
     },
     "parents": [
