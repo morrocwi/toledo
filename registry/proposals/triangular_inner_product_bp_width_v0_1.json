@@ -1,0 +1,51 @@
+[
+  {
+    "id": "PROP-TRIP-PNP-01",
+    "code": "weld/M.??.v1",
+    "name": "Triangular inner product resists interleaved-order collapse (branching-program width lower bound)",
+    "statement": {
+      "latest": "TRIP_m(x,y) := \\bigoplus_{i+j\\le m} x_i y_j; under the interleaved variable order x_1,y_1,x_2,y_2,\\dots,x_m,y_m, the branching program computing TRIP_m requires width \\ge 8 at the middle cut for m=4 (exact, exhaustively hand-verified), and width 2^{\\Omega(m)} at the middle cut in general (moderate-high confidence, non-tight).",
+      "format": "latex",
+      "note_ascii": "TRIP_m(x,y) := XOR over all i+j<=m of (x_i AND y_j). Under the interleaved variable order x_1,y_1,x_2,y_2,...,x_m,y_m, the branching program computing TRIP_m needs width >= 8 at the middle cut when m=4 (exact, exhaustively verified by hand over all 16 assignments), and width 2^Omega(m) at the middle cut in general (moderate-high confidence; the general argument has one disclosed, non-load-bearing looseness, not a full tight derivation)."
+    },
+    "definitions": {
+      "x_i, y_j": "Boolean input variables, i,j in {1,...,m}",
+      "TRIP_m": "the triangular inner product: XOR of x_i*y_j over all pairs with i+j<=m",
+      "interleaved order": "the branching-program variable read order x_1,y_1,x_2,y_2,...,x_m,y_m",
+      "middle cut": "the point in the read order after roughly half the variables (x_1..x_t,y_1..y_t for t near m/2) have been read",
+      "width at a cut": "the number of distinct residual functions on the unread variables reachable by prefixes ending at that cut -- a Myhill-Nerode/OBDD-style quantity, an instance of CAN-007's ~_{Q,O,c,L} equivalence with Q = the branching program's eventual output and L = the remaining read length"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": ["TRIP_m-bp-width", "pnp:triangular-inner-product-interleaved-collapse-resistance"],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop",
+      "note": "Hand-verified twice independently (the originating investigation and a separate adversarial substance-review, which re-derived the m=4 case by full 16-case brute-force enumeration and independently re-checked the general-m argument, catching and disclosing one non-load-bearing looseness in it). No Coq formalization has been attempted."
+    },
+    "parents": [
+      {
+        "code": "weld/M.03.v1",
+        "aliases_hint": "CAN-007",
+        "derived_via": "instantiates",
+        "evidence": "CAN-007's registered statement (`z ~_{Q,O,c,L} z' <=> O(F^k z) = O(F^k z') for all k<=L`, name: \"No-early-collapse: two states are equivalent only relative to a declared question/reader/context/horizon\") is instantiated here with Q := the branching program's eventual output, and L := the number of remaining unread variables at a given cut. The `D_v`/`D_t` object used throughout the originating investigation (defined on X_n directly, per this same repo's PNP_MODEL_LADDER_CONTINUATION_2026-09-13.md section 2.1) is this exact instantiation restricted to one cut of one fixed variable order. TRIP_m is a new instance built to test that object against a genuinely different circuit structure (many-to-many reconvergent fan-out, as opposed to every prior single-partner-pairing candidate tried in the same investigation, all of which collapsed to O(1) width under the same order)."
+      }
+    ],
+    "origin": {
+      "source": "New derivation/proposal from PNP Math-Advancing Investigation (Thread 1: General BP vs Circuit reconvergent-fanout width counting), readout-problem-navier-stokes-internal repo, 2026-09-14. Founder-requested registration into Toledo with explicit theory linkage.",
+      "repo_anchor": {
+        "repo": "readout-problem-navier-stokes-internal (private, local-only, no git remote configured)",
+        "commit": "d7c91f179564e623ea8d9a3ae41e7538a1c294d1",
+        "path": "PNP_MATH_ADVANCING_2026-09-14.md"
+      },
+      "doi": null
+    },
+    "theory_connection": {
+      "spine_node": "General Reader-Domain / Model Ladder (readout_genesis/MASTER_SPINE.md): instantiates the spine's Reader Equivalence `~_Q` node for the SAT/branching-program leaf lane, one rung up the Model Ladder from the already-confirmed OBDD width bound (workplan section 8.1) and the Read-once BP fragmentation result (PNP_ATTACK_PLANNING_SYNTHESIS_2026-09-13.md section 2.A). Does NOT instantiate the Finite Bottleneck / RDLB nodes (no CAN-054-style rank/codim machinery is used anywhere in this result -- deliberately, per this session's own finding that rank-based accounting is a category mismatch for this kind of combinatorial width argument, see PNP_P4_CIRCUIT_BOTTLENECK_EVALUATION_v0.1.md section 2.8).",
+      "model_ladder_position": "Sits between the confirmed Read-once BP rung and the still-open General BP rung (PNP_MODEL_LADDER_CONTINUATION_2026-09-13.md). It is the first construction in this repo's whole PNP investigation whose hardness argument does not route through a single-partner-pairing/selector structure -- the two established collapse-under-interleaving cases (Disjointness, Equality) were independently re-checked by hand in the same investigation and shown to collapse to O(1) width under the identical order, confirming the order is a genuine, non-trivial adversary rather than a straw man.",
+      "known_open_joins_this_creates": "Whether TRIP_m resists EVERY variable order (true OBDD hardness, not just the interleaved one) is open and not addressed here. Whether TRIP_m's behavior says anything about Bounded-Read BP or General BP (the actual target of the investigation this proposal originates from) is explicitly gated behind that unresolved all-orders question and is NOT claimed."
+    },
+    "claim_boundary": "A finite branching-program width lower bound for one specific function family (TRIP_m) under one specific fixed variable order (interleaved) only. Does not establish TRIP_m's hardness under any other variable order, does not establish true OBDD hardness (the minimum over all orders), and establishes no consequence whatsoever for Bounded-Read BP, General BP, circuit complexity, or P vs NP. Gives no P != NP result and does not, on its own or combined with anything else in this repo, narrow that Clay-adjacent question in any way that has been independently checked. Per this workspace's Clay-open-status-honesty standing rule: P vs NP remains OPEN; this is reported as a genuine but narrow and precisely-scoped combinatorial finding, not progress toward closing that question."
+  }
+]
