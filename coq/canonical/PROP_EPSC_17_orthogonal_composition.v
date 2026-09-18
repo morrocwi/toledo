@@ -54,3 +54,6 @@ Section OrthogonalComposition.
   Qed.
 
 End OrthogonalComposition.
+
+(* h1 housekeeping (design section 9): axiom readout of the exported statements. *)
+Print Assumptions epsc17_squared_composition_bound.

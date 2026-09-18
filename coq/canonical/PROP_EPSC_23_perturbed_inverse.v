@@ -174,3 +174,8 @@ Section PerturbedInverse.
   Qed.
 
 End PerturbedInverse.
+
+(* h1 housekeeping (design section 9): axiom readout of the exported statements. *)
+Print Assumptions neumann_defect_bound.
+Print Assumptions PROP_EPSC_23_perturbed_inverse_bound.
+Print Assumptions PROP_EPSC_23_division_form.

@@ -70,3 +70,7 @@ Section FailClosedGate.
   Proof. reflexivity. Qed.
 
 End FailClosedGate.
+
+(* h1 housekeeping (design section 9): axiom readout of the exported statements. *)
+Print Assumptions epsc03_fail_closed.
+Print Assumptions epsc03_no_certificate_holds.
