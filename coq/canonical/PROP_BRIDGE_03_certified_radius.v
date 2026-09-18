@@ -130,7 +130,7 @@
     coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v
   (logical names: MRC.PROP_EPSC_* for the canonical files, IDM.formal.IDM_* for IDM).
   Memory floor: `free -g` before each compile, skip if available < 3 G, one coqc at a time
-  via `ANSE_HEAVY_MAX=3G anse-heavy`; no verify.sh, no background jobs.
+  under a memory cap; no verify.sh, no background jobs.
 
   Tier: every theorem below is Th_coqc only after the in-file `Print Assumptions` (end of
   file) and an independent scratch run printed "Closed under the global context".  Section

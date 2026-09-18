@@ -28,7 +28,7 @@
       "domain": "M",
       "aliases": [
         "bridge-s4-round-trip-law",
-        "three-verdict-round-trip"
+        "three-clause (exact / within-radius / never)-round-trip"
       ],
       "coq": {
         "identifiers": [],
@@ -39,7 +39,7 @@
         "coq_status_note": "the file compiles (23/23 Closed, 2026-09-18) but every identifier in it is registered as an occurrence under PROP-BRIDGE-02 / 07 / 09 / 15 / 18, never as this record's own closure",
         "coq_axioms": [],
         "print_assumptions": null,
-        "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v\"",
+        "build_command": "cd <live IDM worktree>/formal && coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v",
         "verified": null
       },
       "parents": [
@@ -65,8 +65,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "Genesis B.3 grade L4 (dynamically commuting quotient for x) plus EXACT on Alg_Q; no L5 is claimed (cross-domain levels only). The +R-Open fence (unrestricted 'every Cauchy sequence has a modulus', LUB, trichotomy / total <=, infinite-dimensional completeness) is never used, never called axiom-free, never a premise: every limit is read off an EXHIBITED modulus (Hreg, rreg', the S1 contracting premise).",
@@ -126,7 +126,7 @@
         "coq_axioms": [],
         "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): PROP_BRIDGE_03_certified_radius.v recompiled after comment-only header edits, in-file 31/31 (fx3_bridge03.log) and scratch chk_bridge03.v 31/31 (fx6_chk_bridge03.log), 0 axiom|classic|Reals hits. Prior same-day readouts: Closed under the global context for every identifier (in-file + scratch chk_bridge03.v, 2026-09-18)",
         "scratch_readout": "in-file 31/31 Closed; chk_bridge03.v (31 Print Assumptions): 31/31 Closed under the global context; grep -ci 'axiom|classic|Reals' = 0",
-        "build_command": "cd <toledo worktree>/coq/canonical && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v\"",
+        "build_command": "cd <toledo worktree>/coq/canonical && coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v",
         "coq_version": "8.20.1",
         "verified": "2026-09-18",
         "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
@@ -154,8 +154,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "Structural fail-closed property only: ACCEPT is type-theoretically impossible without a proof object; None yields HOLD. Says nothing about whether r_K^2 or delta_K is attainable for a real instance. Where r_K^2 has no rational root the squared form is the DEFINITION of the certificate, not a restatement (ruling 11b-9 branch).",
@@ -226,7 +226,7 @@
         "coq_axioms": [],
         "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_BridgeRoundTrip.v recompiled against the fresh chain, in-file 23/23 (fx4_roundtrip.log) and scratch chk_roundtrip.v 24/24 incl. W.R_complete (fx7_chk_roundtrip.log), 0 axiom|classic|Reals hits. Prior same-day readouts: Closed under the global context for every identifier (in-file 23/23 and scratch chk_roundtrip.v 23/23, 2026-09-18); Pi / Pi_certificate / Pi_replateau in formal/IDM_ReadoutTower.v@c54117f: Closed (scratch chk_readout_tower.v)",
         "scratch_readout": "in-file 23/23 Closed; chk_roundtrip.v (23 Print Assumptions): 23/23 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
-        "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v\"",
+        "build_command": "cd <live IDM worktree>/formal && coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v",
         "coq_version": "8.20.1",
         "verified": "2026-09-18",
         "identifiers_readout_tower": [
@@ -282,8 +282,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "Every statement is about Bishop-readout reals RR / RR' over Q, never about Coq.Reals (Genesis XI.1). The return never selects a point in the ball: Pi_k returns the k-th rational readout with its certificate. 'Completeness' is the round trip under an exhibited modulus, not an axiom (Genesis XI.2: the limit IS a readout of the approximants, level2_diagonal).",
@@ -337,7 +337,7 @@
         "coq_axioms": [],
         "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): PROP_BRIDGE_03_certified_radius.v recompiled after comment-only header edits, in-file 31/31 (fx3_bridge03.log) and scratch chk_bridge03.v 31/31 (fx6_chk_bridge03.log), 0 axiom|classic|Reals hits. Prior same-day readouts: Closed under the global context (in-file + scratch chk_roundtrip.v, 2026-09-18); bridge_radius in coq/canonical/PROP_BRIDGE_03_certified_radius.v@b712d0a9: Closed (in-file + scratch chk_bridge03.v)",
         "scratch_readout": "in-file 23/23 Closed; chk_roundtrip.v (23 Print Assumptions): 23/23 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
-        "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v\"",
+        "build_command": "cd <live IDM worktree>/formal && coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v",
         "coq_version": "8.20.1",
         "verified": "2026-09-18",
         "identifiers_toledo_side": [
@@ -373,8 +373,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "Requires an actual Lipschitz bound for the declared reader (PROP-EPSC-08's own boundary, unchanged). The return never selects a point in the ball. The two numbers (beta_K from A, L_P verified) keep their per-instance tier; the bridge never upgrades them.",
@@ -430,9 +430,9 @@
         "imported_from": "information-discrete-math@c54117f:formal/IDM_ReadoutTower.v",
         "coq_status": "compiled_axiom_free",
         "coq_axioms": [],
-        "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context for every identifier (scratch chk_readout_tower.v, 2026-09-18)",
+        "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in research journal (private) PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context for every identifier (scratch chk_readout_tower.v, 2026-09-18)",
         "scratch_readout": "chk_readout_tower.v (39 Print Assumptions): 39/39 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
-        "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_ReadoutTower.v\"",
+        "build_command": "cd <live IDM worktree>/formal && coqc -q -R <live IDM worktree> IDM IDM_ReadoutTower.v",
         "coq_version": "8.20.1",
         "verified": "2026-09-18",
         "identifiers_note": "sigma_readout_plateau is registered under PROP-BRIDGE-02 only; plateau_pair under this entry only (fixer pass 2026-09-18 (after three independent refuters)).",
@@ -471,8 +471,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "A-priori licence route only: the forall-k premise must come from the form (R/M.03.v1 / R/M.08.v1), never from a finite tape (PROP-BRIDGE-13 is the tape route). Harmonic-type gaps 1/(k+1) satisfy no rho < 1 and give HOLD (compiled control).",
@@ -533,9 +533,9 @@
         "imported_from": "information-discrete-math@ac1df59:formal/IDM_SignatureFunctor.v",
         "coq_status": "compiled_axiom_free",
         "coq_axioms": [],
-        "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context for every identifier (scratch chk_signature_functor.v, 2026-09-18; Hsec in the exported types where used); roundtrip_exact / roundtrip_exact_fails_outside_alg / never_seen_in_alg in formal/IDM_BridgeRoundTrip.v@004ab91: Closed (in-file + scratch chk_roundtrip.v)",
+        "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in research journal (private) PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context for every identifier (scratch chk_signature_functor.v, 2026-09-18; Hsec in the exported types where used); roundtrip_exact / roundtrip_exact_fails_outside_alg / never_seen_in_alg in formal/IDM_BridgeRoundTrip.v@004ab91: Closed (in-file + scratch chk_roundtrip.v)",
         "scratch_readout": "chk_signature_functor.v (From IDM.formal Require Import IDM_SignatureFunctor; 18 Print Assumptions): 18/18 Closed under the global context",
-        "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_SignatureFunctor.v\"",
+        "build_command": "cd <live IDM worktree>/formal && coqc -q -R <live IDM worktree> IDM IDM_SignatureFunctor.v",
         "coq_version": "8.20.1",
         "verified": "2026-09-18",
         "identifiers_round_trip": [
@@ -587,8 +587,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "Pointwise iff over abstract types, no functional extensionality, no decidability. EXACT applies to the true record's class q_K x; the reconstructed xhat_K is covered by WITHIN RADIUS (PROP-BRIDGE-15). Genesis B.3 grade L4 + exact on Alg_Q; no L5.",
@@ -637,7 +637,7 @@
         "coq_axioms": [],
         "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): PROP_BRIDGE_03_certified_radius.v recompiled after comment-only header edits, in-file 31/31 (fx3_bridge03.log) and scratch chk_bridge03.v 31/31 (fx6_chk_bridge03.log), 0 axiom|classic|Reals hits. Prior same-day readouts: Closed under the global context (both; in-file + scratch chk_bridge03.v, 2026-09-18; pythagoras_dY and the nonnegativity clauses are disclosed Section hypotheses in the exported type)",
         "scratch_readout": "in-file 31/31 Closed; chk_bridge03.v (31 Print Assumptions): 31/31 Closed under the global context; grep -ci 'axiom|classic|Reals' = 0",
-        "build_command": "cd <toledo worktree>/coq/canonical && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v\"",
+        "build_command": "cd <toledo worktree>/coq/canonical && coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v",
         "coq_version": "8.20.1",
         "verified": "2026-09-18",
         "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
@@ -660,8 +660,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "Applies only where the Pythagorean identity holds in Y (xhat_K in range(P_K), Q-bilinear inner product, Lambda_K o q_K an orthogonal projection); otherwise the triangle form (PROP-BRIDGE-04) is the radius. No square root is formed; r_K^2 is the carried quantity.",
@@ -727,9 +727,9 @@
         "imported_from": "information-discrete-math@ac1df59:formal/IDM_SignatureFunctor.v",
         "coq_status": "compiled_axiom_free",
         "coq_axioms": [],
-        "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context for every identifier (scratch chk_signature_functor.v 18/18, 2026-09-18); DepthStable(L) and record_sufficient are premises in the exported types (About printed for sigma_respects_step and future_readers_in_alg)",
+        "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in research journal (private) PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context for every identifier (scratch chk_signature_functor.v 18/18, 2026-09-18); DepthStable(L) and record_sufficient are premises in the exported types (About printed for sigma_respects_step and future_readers_in_alg)",
         "scratch_readout": "chk_signature_functor.v (From IDM.formal Require Import IDM_SignatureFunctor; 18 Print Assumptions): 18/18 Closed under the global context",
-        "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_SignatureFunctor.v\"",
+        "build_command": "cd <live IDM worktree>/formal && coqc -q -R <live IDM worktree> IDM IDM_SignatureFunctor.v",
         "coq_version": "8.20.1",
         "verified": "2026-09-18",
         "wrapper_transcripts_h2": "SCRATCH READOUT UNDER THE LIVE MAPPING, NOT A verify_all.sh TRANSCRIPT; mirror re-sync + LINEAGE revised events on weld/M.63/64/68 PENDING (ruling 11b-8), so this is quotable as a wrapper transcript only after the registrar re-syncs coq/information-discrete-math from the live worktree -- relabelled in the fixer pass 2026-09-18 (after three independent refuters). The readout itself: weld__M_63_v1.v / weld__M_64_v1.v / weld__M_68_v1.v compiled once each under the LIVE mapping (-R <live IDM worktree> IDM; Locate Library resolved IDM.formal.IDM_ReaderDomainFoundation to the live .vo): CAN_1299_future_equivalence_dynamic_stability, CAN_1299_dynamic_weld_well_defined, CAN_1300_sufficiency_kernel_inclusion, CAN_1305_stable_depth_exact_future = Closed under the global context x4 (chk_h2_wrappers.v, commit 7a3d7a72, 2026-09-18) -- the three wrapper rows now have a transcript instead of a registry-imported flag",
@@ -773,8 +773,8 @@
         }
       ],
       "origin": {
-        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-        "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (research journal, private). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
+        "design_doc": "research journal (private): DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
         "doi": null
       },
       "claim_boundary": "Pure CIC over abstract types (no QArith, no Reals, no classical, no numeral literal); the horizon L is a declared nat (I4 refused); the class is never a point (Z1); an empty class is a Prop, never a state (Z4). The universal commuting claim (Genesis V.20) stays Dr; per domain the commuting square is finite_diagnostic with PASS + one-entry-perturbation FAIL (not Coq).",
