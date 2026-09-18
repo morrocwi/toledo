@@ -14,7 +14,7 @@
       "tailsum": "IDM_Certified.tailsum s N M, the finite sum of s over the window [N, N+M)"
     },
     "tier": "Th_coqc",
-    "status": "verified_by_coq",
+    "status": "unverified",
     "domain": "M",
     "aliases": [
       "bridge-s1-ledger",
@@ -31,17 +31,18 @@
       "imported_from": "information-discrete-math@c54117f:formal/IDM_ReadoutTower.v",
       "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context (both; scratch chk_readout_tower.v, 2026-09-18)",
+      "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context (both; scratch chk_readout_tower.v, 2026-09-18)",
       "scratch_readout": "chk_readout_tower.v (39 Print Assumptions): 39/39 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
       "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_ReadoutTower.v\"",
       "coq_version": "8.20.1",
-      "verified": "2026-09-18"
+      "verified": "2026-09-18",
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
         "code": "Z/M.08.v1",
-        "derived_via": "window shift 0 -> N",
-        "evidence": "PSum_delta_telescope : PSum (fun k => Delta h k) N == h N - h 0 is the N = 0 instance; the only delta is the window shift, proved as tailsum_delta_zero_is_Z_M08"
+        "derived_via": "specializes",
+        "evidence": "PSum_delta_telescope : PSum (fun k => Delta h k) N == h N - h 0 is the N = 0 instance; the only delta is the window shift, proved as tailsum_delta_zero_is_Z_M08 [derived_via normalised from \"window shift 0 -> N\" to \"specializes\"; whether this row is filed as an occurrence of Z/M.08.v1 (constant substitution g o (N + .)) instead of a new code is a registrar decision at merge -- PHASE2_COQ_LEDGER.md open item]"
       },
       {
         "code": "R/M.14.v1",
@@ -63,7 +64,12 @@
     "honest_caveats": [
       "Compiled 2026-09-18 under the LIVE information-discrete-math worktree mapping (-R <live IDM worktree> IDM); coqc exit 0 on the first compile; Print Assumptions Closed for both identifiers in the scratch file, printed in front of the builder.",
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo. Candidate row OR occurrence of Z/M.08.v1: the design's own reading ('may itself be judged an occurrence at merge') is carried unchanged."
-    ]
+    ],
+    "tier_in_genesis_verbatim": "IDM_ReadoutTower.v header: \"Tier: every theorem below is Th_coqc only after a scratch `Print Assumptions` printed \\\"Closed under the global context\\\" in front of the reader; Section hypotheses (Hrho0, Hrho1, Hcontr) are DISCLOSED here and become premises of the exported statements.\"",
+    "relations": [],
+    "root": "R",
+    "layer": "reading",
+    "status_note": "status normalised from lane value \"verified_by_coq\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; the compiled readout (Closed) is recorded in coq.print_assumptions."
   },
   {
     "id": "PROP-BRIDGE-02",
@@ -81,7 +87,7 @@
       "Pi": "Pi k x := rseq' x k, the continuum-side return = evaluation (PROP-BRIDGE-07)"
     },
     "tier": "Th_coqc",
-    "status": "verified_by_coq",
+    "status": "unverified",
     "domain": "M",
     "aliases": [
       "bridge-s1-lemma",
@@ -103,19 +109,16 @@
         "Nidx_from_spec",
         "Nidx_spec",
         "Nidx_zero",
-        "plateau_pair",
         "sigma_readout_exact",
         "sigma_readout_plateau",
         "sigma_of_constant",
         "const_contracts",
         "sigma_const",
         "sigma_const_at",
-        "RR'",
-        "rseq'",
-        "rreg'",
-        "Req'",
         "Qfrac_pos",
-        "Qfrac_nonneg"
+        "Qfrac_nonneg",
+        "roundtrip_exact_tape",
+        "roundtrip_exact_tape_Nidx"
       ],
       "file": "formal/IDM_ReadoutTower.v",
       "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
@@ -123,7 +126,7 @@
       "imported_from": "information-discrete-math@c54117f:formal/IDM_ReadoutTower.v",
       "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for every theorem/definition listed (scratch chk_readout_tower.v, 39/39, 2026-09-18); the Section hypotheses Hrho0 : 0 <= rho, Hrho1 : rho < 1, Hcontr : forall k, ... are DISCLOSED and appear in the exported types (About printed for sigma_of)",
+      "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context for every theorem/definition listed (scratch chk_readout_tower.v, 39/39, 2026-09-18); the Section hypotheses Hrho0 : 0 <= rho, Hrho1 : rho < 1, Hcontr : forall k, ... are DISCLOSED and appear in the exported types (About printed for sigma_of)",
       "scratch_readout": "chk_readout_tower.v (39 Print Assumptions): 39/39 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
       "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_ReadoutTower.v\"",
       "coq_version": "8.20.1",
@@ -131,7 +134,38 @@
       "occurrences_elsewhere": [
         "IDM_BridgeRoundTrip.v roundtrip_exact_tape / roundtrip_exact_tape_Nidx = sigma_readout_exact applied (Closed, chk_roundtrip.v)"
       ],
-      "finite_diagnostic_readout": "Eval on the geometric tape g := geom_sum (1#2), rho := 1#2: Nmax 4 = 17, N_of 4 = 3 (least index, not the ceiling), N_of 100 = 8, Qred (g (N_of 4)) = 7 # 4, Qred (Delta g (N_of 4)) = 1 # 8 (eval_readout_tower.v, one anse-heavy call, 2026-09-18)"
+      "finite_diagnostic_readout": "Eval on the geometric tape g := geom_sum (1#2), rho := 1#2: Nmax 4 = 17, N_of 4 = 3 (least index, not the ceiling), N_of 100 = 8, Qred (g (N_of 4)) = 7 # 4, Qred (Delta g (N_of 4)) = 1 # 8 (eval_readout_tower.v, one anse-heavy call, 2026-09-18)",
+      "identifiers_by_file": {
+        "formal/IDM_ReadoutTower.v": [
+          "sigma_of",
+          "sigma_reg",
+          "N_of",
+          "N_of_tol",
+          "Nmax",
+          "Nmax_accept",
+          "accept",
+          "tol",
+          "Nidx",
+          "Nidx_from",
+          "Nidx_from_spec",
+          "Nidx_spec",
+          "Nidx_zero",
+          "sigma_readout_exact",
+          "sigma_readout_plateau",
+          "sigma_of_constant",
+          "const_contracts",
+          "sigma_const",
+          "sigma_const_at",
+          "Qfrac_pos",
+          "Qfrac_nonneg"
+        ],
+        "formal/IDM_BridgeRoundTrip.v": [
+          "roundtrip_exact_tape",
+          "roundtrip_exact_tape_Nidx"
+        ]
+      },
+      "identifiers_note": "plateau_pair is registered under PROP-BRIDGE-17 only; RR', rseq', rreg', Req' (renamed twin of weld/M.60.v1 RR/rseq/rreg/Req) are registered under PROP-BRIDGE-07 as an occurrence of that parent, never as identifiers of this row (EPIS-REUSE-PIPELINE); the tape forms roundtrip_exact_tape / roundtrip_exact_tape_Nidx moved here from a free-text note (fixer pass 2026-09-18 (after three independent refuters)). Leastness of N_of: N_of n := Nidx (accept n) (Nmax n) is the least accepted index by Nidx_spec, but no exported lemma states it by name (ledger open item).",
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
@@ -141,8 +175,8 @@
       },
       {
         "code": "weld/M.60.v1",
-        "derived_via": "same_object",
-        "evidence": "RR' is URCF17RComplete.RR under renaming (field types identical); the readout real sigma_of lands in RR' = RR; transport to_RR/of_RR in PROP-BRIDGE-07"
+        "derived_via": "reads",
+        "evidence": "RR' is URCF17RComplete.RR under renaming (field types identical); the readout real sigma_of lands in RR' = RR; transport to_RR/of_RR in PROP-BRIDGE-07 [was same_object: sigma_of lands in RR', the renamed twin of weld/M.60.v1's RR; the twin itself is filed under PROP-BRIDGE-07 as the occurrence, so this row only READS the parent -- fixer pass 2026-09-18 (after three independent refuters)]"
       },
       {
         "code": "R/M.36.v1",
@@ -156,13 +190,13 @@
       },
       {
         "code": "PROP-BRIDGE-14",
-        "derived_via": "uses",
-        "evidence": "qpow_bernoulli / gap_geometric / bern_transfer supply the Nmax ceiling"
+        "derived_via": "reads",
+        "evidence": "qpow_bernoulli / gap_geometric / bern_transfer supply the Nmax ceiling [derived_via normalised from lane value \"uses\" to SCHEMA enum \"reads\", fixer pass 2026-09-18 (after three independent refuters)]"
       },
       {
         "code": "PROP-BRIDGE-01",
-        "derived_via": "uses",
-        "evidence": "tailsum_delta_telescopes inside the plateau licence"
+        "derived_via": "reads",
+        "evidence": "tailsum_delta_telescopes inside the plateau licence [derived_via normalised from lane value \"uses\" to SCHEMA enum \"reads\", fixer pass 2026-09-18 (after three independent refuters)]"
       }
     ],
     "origin": {
@@ -177,7 +211,12 @@
       "DESIGN DELTA: the constant case is handled by sigma_of_constant (search stops at 0, readout = g 0 pointwise) and sigma_const (rho := 0), not by a definitional branch inside sigma_of; sigma_const stands in for the design's inj_Q(g 0) under the renaming.",
       "The S4-corollary clause 'sigma_of(Pi_k x) Req x <=> x Req inj_Q(rseq x k)' is NOT written in Req form (it would be Req symmetry applied to a constant); its content is Pi_replateau + sigma_const_at (PROP-BRIDGE-07). Dr, Open ledger.",
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo; candidate row under weld/M.60.v1 / R/M.32.v1."
-    ]
+    ],
+    "tier_in_genesis_verbatim": "IDM_ReadoutTower.v header: \"Tier: every theorem below is Th_coqc only after a scratch `Print Assumptions` printed \\\"Closed under the global context\\\" in front of the reader; Section hypotheses (Hrho0, Hrho1, Hcontr) are DISCLOSED here and become premises of the exported statements.\"",
+    "relations": [],
+    "root": "R",
+    "layer": "reading",
+    "status_note": "status normalised from lane value \"verified_by_coq\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; the compiled readout (Closed) is recorded in coq.print_assumptions."
   },
   {
     "id": "PROP-BRIDGE-03",
@@ -195,7 +234,7 @@
       "res_K": "R_{K+1} -> R_K, restriction between resolutions (used only in PROP-BRIDGE-16)"
     },
     "tier": "Th_coqc",
-    "status": "verified_by_coq",
+    "status": "unverified",
     "domain": "M",
     "aliases": [
       "bridge-s2-typing-split",
@@ -207,7 +246,9 @@
         "PK",
         "q_PK",
         "PK_idempotent",
-        "PK_fixes_image"
+        "PK_fixes_image",
+        "P_K",
+        "P_K_unfold"
       ],
       "file": "formal/IDM_SignatureFunctor.v",
       "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
@@ -215,7 +256,7 @@
       "imported_from": "information-discrete-math@ac1df59:formal/IDM_SignatureFunctor.v",
       "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context (scratch chk_signature_functor.v, 2026-09-18; Hsec discharged into the exported types)",
+      "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context (scratch chk_signature_functor.v, 2026-09-18; Hsec discharged into the exported types)",
       "scratch_readout": "chk_signature_functor.v (From IDM.formal Require Import IDM_SignatureFunctor; 18 Print Assumptions): 18/18 Closed under the global context",
       "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_SignatureFunctor.v\"",
       "coq_version": "8.20.1",
@@ -223,13 +264,26 @@
       "identifiers_toledo_side": [
         "P_K",
         "P_K_unfold (coq/canonical/PROP_BRIDGE_03_certified_radius.v, in-file + scratch Closed)"
-      ]
+      ],
+      "identifiers_by_file": {
+        "formal/IDM_SignatureFunctor.v": [
+          "PK",
+          "q_PK",
+          "PK_idempotent",
+          "PK_fixes_image"
+        ],
+        "coq/canonical/PROP_BRIDGE_03_certified_radius.v": [
+          "P_K",
+          "P_K_unfold"
+        ]
+      },
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
         "code": "A.8",
-        "derived_via": "restates",
-        "evidence": "genesis_root.json root A.8 (tier Definition): Sigma_alpha = (O_alpha, Q_alpha), Lambda_alpha o Sigma_alpha = I -- here the identity holds on the RETAINED states lam(K), which is all A.8 can mean once q merges two states (cf. the S4 NEVER clause)"
+        "derived_via": "specializes",
+        "evidence": "genesis_root.json root A.8 (tier Definition) states Lambda_alpha o Sigma_alpha = I on ALL states (a retraction). This row carries the DUAL section identity q o lam = id (Hsec, disclosed) and PK_fixes_image = Lambda o q o Lambda = Lambda, i.e. the identity only on lam(K); the literal A.8 identity on all states is refuted by roundtrip_never whenever q merges two states. derived_via corrected from 'restates' to 'specializes' (fixer pass 2026-09-18 (after three independent refuters)); which of retraction / section A.8 intends is an open ontology item (PHASE2_COQ_LEDGER.md)."
       },
       {
         "code": "weld/M.02.v1",
@@ -251,7 +305,12 @@
     "honest_caveats": [
       "RE-SCOPED against design section 8: the placeholder object of PROP-BRIDGE-03 there was the lineage-tagged section LamL (parent EQ-001/C.16.v1). Ruling 11b-6 DELETED lineage_survives from the Coq plan and no LamL was written (it would be a renamed twin of Hsec); the placeholder now carries the typing-split object, which the builder's Toledo lookup found unregistered (nearest rows Keystone/P.14.v1 projection_idempotent, Q/M.18.v1 twirl_idempotent, weld/M.62.v1 closure idempotent are matrix / closure-operator objects, not this one).",
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo."
-    ]
+    ],
+    "tier_in_genesis_verbatim": "IDM_SignatureFunctor.v header: \"Tier: every theorem is Th_coqc only where a scratch `Print Assumptions` printed \\\"Closed under the global context\\\" (see the build report); Section Variables / Hypotheses (lam, Hsec, rk, record_sufficient, and the DepthStable premise) are premises of the exported statements, never axioms.\"",
+    "relations": [],
+    "root": "weld",
+    "layer": "reading",
+    "status_note": "status normalised from lane value \"verified_by_coq\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; the compiled readout (Closed) is recorded in coq.print_assumptions."
   },
   {
     "id": "PROP-BRIDGE-04",
@@ -269,7 +328,7 @@
       "dQ": "dQ a b := Qabs (a - b), the Q-metric instance discharging the clause axioms (dQ_nonneg, dQ_sym, dQ_triangle)"
     },
     "tier": "Th_coqc",
-    "status": "verified_by_coq",
+    "status": "unverified",
     "domain": "M",
     "aliases": [
       "bridge-s3-radius",
@@ -294,11 +353,12 @@
       "commit": "b712d0a9",
       "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for every identifier (in-file 31/31 and scratch chk_bridge03.v 31/31, 2026-09-18; d_triangle, Hrho1, Hcontr are disclosed Section hypotheses in the exported types)",
+      "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): PROP_BRIDGE_03_certified_radius.v recompiled after comment-only header edits, in-file 31/31 (fx3_bridge03.log) and scratch chk_bridge03.v 31/31 (fx6_chk_bridge03.log), 0 axiom|classic|Reals hits. Prior same-day readouts: Closed under the global context for every identifier (in-file 31/31 and scratch chk_bridge03.v 31/31, 2026-09-18; d_triangle, Hrho1, Hcontr are disclosed Section hypotheses in the exported types)",
       "scratch_readout": "in-file 31/31 Closed; chk_bridge03.v (31 Print Assumptions): 31/31 Closed under the global context; grep -ci 'axiom|classic|Reals' = 0",
       "build_command": "cd <toledo worktree>/coq/canonical && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v\"",
       "coq_version": "8.20.1",
-      "verified": "2026-09-18"
+      "verified": "2026-09-18",
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
@@ -343,246 +403,12 @@
       "The scalar Pythagorean identity is carried as a disclosed Section hypothesis of squared_orthogonal (PROP-BRIDGE-19); deriving it from geometric orthogonality P_K _|_ (I - P_K) needs xhat_K in range(P_K) and a Q-bilinear inner product on Y, neither a datum of the abstract section -- Dr per domain (Open ledger).",
       "bridge_radius (composition with the Lipschitz lift) is filed as an occurrence of PROP-EPSC-08 under PROP-BRIDGE-15, not here.",
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo (Toledo lookup 2026-09-18: no triangle-composed radius / square-monotone row; the one keyword hit q_formal/M.31.v1 is an unrelated errors-in-variables row)."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-05",
-    "code": null,
-    "code_request": "NONE -- ruling 11b-5: no bundle row; this entry is a relations record so the id is not silently dropped",
-    "name": "S4 ROUND TRIP: the one-law sentence (EXACT / WITHIN RADIUS / NEVER, level-2 closure, +R-Open fence) -- relations record, not a row",
-    "statement": {
-      "latest": "P\\circ\\Lambda_K\\circ q_K=P\\iff P\\in\\mathrm{Alg}_Q\\ \\ [\\text{EXACT}];\\quad P\\ L_P\\text{-Lipschitz}\\Rightarrow d_V(Px,P\\hat x_K)\\le L_P\\,r_K\\ \\ [\\text{WITHIN RADIUS}];\\quad q_Kx=q_Kx',\\,x\\ne x'\\Rightarrow\\nexists D:\\ D(q_Kx)=x\\wedge D(q_Kx')=x'\\ \\ [\\text{NEVER}];\\quad \\text{level 2: } R\\_\\mathrm{complete}\\,X\\,H_{reg}=L,\\ |X_i(k)-L(k)|\\le\\tfrac1i+\\tfrac4k,\\ \\mathrm{rseq}\\,L\\,k=\\mathrm{rseq}\\,(X_{2k})\\,(6k)",
-      "format": "latex",
-      "note_ascii": "one law, three verdicts, one closure, one fence -- each clause is an OCCURRENCE of its parent; the sentence itself carries no statement content beyond the clauses"
-    },
-    "definitions": {
-      "EXACT": "PROP-BRIDGE-18 (occurrence of EQ-002/M.01.v1 CAN-165): roundtrip_exact, roundtrip_exact_fails_outside_alg, never_seen_in_alg; tape form roundtrip_exact_tape (PROP-BRIDGE-02)",
-      "WITHIN RADIUS": "PROP-BRIDGE-15 (occurrence of PROP-EPSC-08): roundtrip_radius_record, roundtrip_radius, roundtrip_radius_S1",
-      "NEVER": "PROP-BRIDGE-09 (no_decoder_recovers_state, local instances roundtrip_never / roundtrip_never_total)",
-      "level 2": "PROP-BRIDGE-07 (occurrence of weld/M.60.v1 CAN-1296): level2_bound, level2_diagonal, level2_tower, level2_tape and their diagonals",
-      "fence": "header text of IDM_BridgeRoundTrip.v only; NO theorem states or uses it (see honest_caveats)"
-    },
-    "tier": "Dr",
-    "status": "unverified",
-    "status_note": "Dr is the tier of the SENTENCE (a design statement). Every clause is Th_coqc by its own Print Assumptions readout, recorded under the entry named in definitions; filing a bundle row would re-tier those parents downward while carrying nothing new (ruling 11b-5).",
-    "domain": "M",
-    "aliases": [
-      "bridge-s4-round-trip-law",
-      "three-verdict-round-trip"
     ],
-    "coq": {
-      "identifiers": [],
-      "file": "formal/IDM_BridgeRoundTrip.v",
-      "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
-      "imported_from": "information-discrete-math@004ab91:formal/IDM_BridgeRoundTrip.v",
-      "coq_status": "occurrences_only",
-      "coq_status_note": "the file compiles (23/23 Closed, 2026-09-18) but every identifier in it is registered as an occurrence under PROP-BRIDGE-02 / 07 / 09 / 15 / 18, never as this record's own closure",
-      "coq_axioms": [],
-      "print_assumptions": null,
-      "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v\"",
-      "verified": null
-    },
-    "parents": [
-      {
-        "code": "EQ-002/M.01.v1",
-        "derived_via": "reads",
-        "evidence": "EXACT clause (via weld/M.64.v1 CAN-1300)"
-      },
-      {
-        "code": "PROP-EPSC-08",
-        "derived_via": "reads",
-        "evidence": "WITHIN RADIUS clause"
-      },
-      {
-        "code": "PROP-BRIDGE-09",
-        "derived_via": "reads",
-        "evidence": "NEVER clause"
-      },
-      {
-        "code": "weld/M.60.v1",
-        "derived_via": "reads",
-        "evidence": "level-2 clause"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "Genesis B.3 grade L4 (dynamically commuting quotient for x) plus EXACT on Alg_Q; no L5 is claimed (cross-domain levels only). The +R-Open fence (unrestricted 'every Cauchy sequence has a modulus', LUB, trichotomy / total <=, infinite-dimensional completeness) is never used, never called axiom-free, never a premise: every limit is read off an EXHIBITED modulus (Hreg, rreg', the S1 contracting premise).",
-    "honest_caveats": [
-      "Fence falsifier (Clay-open-status-honesty ruling 2026-09-13): a term of type forall X : positive -> RR, (Cauchy WITHOUT a modulus given as data) -> { L | ... } whose scratch Print Assumptions prints Closed under the global context; if it ever appears it must be reported and the fence re-tiered, not suppressed. Until then +R-Open permanently: closing it would form the completed continuum as a primitive.",
-      "weld__M_60_v1.v line 6 `Require Coq.Logic.Classical` is handled by `From MRC Require weld__M_60_v1` (never Import) plus a module alias, so no classical name enters short-name scope; the design may claim 'no Coq.Reals' but NOT 'no classical Require in the loaded environment' -- the per-theorem Print Assumptions are the tier evidence.",
-      "Uniqueness of the level-2 limit up to Req from the EXPORTED bound of R_complete is NOT written (Rlimit_unique is stated for Rconv, R_complete exports a pointwise bound): Dr, Open ledger; stance: holds via Qle_lim2-style passage; falsifier: two L, L' satisfying the bound for one X with ~ Req L L'."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-06",
-    "code": "(occurrence on PROP-EPSC-03; ruling 11b-9: no .v2, no separate row)",
-    "name": "S5 GATE squared certificate: fail-closed three-valued gate on cert : delta_K <= eps /\\ (eps - delta_K)^2 >= r_K^2",
-    "statement": {
-      "latest": "\\mathrm{Certificate}'(\\delta_K,\\varepsilon):=\\{r^2\\in\\mathbb Q\\mid \\delta_K\\le\\varepsilon\\wedge(\\varepsilon-\\delta_K)^2\\ge r^2\\};\\quad \\mathrm{gate}'(\\mathrm{None})=\\mathrm{HOLD},\\ \\mathrm{gate}'(\\mathrm{Some}\\,c)=\\mathrm{ACCEPT}\\,r^2;\\quad (0\\le r,\\ r\\cdot r=r^2)\\Rightarrow\\big[\\delta_K\\le\\varepsilon\\wedge(\\varepsilon-\\delta_K)^2\\ge r^2\\iff\\delta_K+r\\le\\varepsilon\\big]",
-      "format": "latex",
-      "note_ascii": "Certificate' delta_K eps := { r2 : Q | delta_K <= eps /\\ (eps - delta_K) * (eps - delta_K) >= r2 } (Q's >= is parsing-only notation for r2 <= ...); gate' reuses PROP_EPSC_03's own Verdict / ACCEPT / HOLD; fail_closed' ; no_certificate_holds' ; equiv_to_sum (rational root as WITNESS, no sqrt); cert_of_epsc03 / epsc03_of_cert / gate_of_epsc03 / gate_of_cert = the occurrence relation as Coq terms; gate'_fail_control (eps < delta_K -> only HOLD constructible), gate'_pass_control (a concrete ACCEPT at delta_K = 1, eps = 2, r2 = 1)"
-    },
-    "definitions": {
-      "delta_K": "observed nested-refinement defect d_Y(Lambda_K(res_K x_{K+1}), Lambda_K(q_K x)) -- PROP-EPSC-01 / weld/E.08.v1",
-      "eps": "tolerance in Q declared before the run (EQ-015/M.17.v1)",
-      "r_K^2": "the squared certified radius carried in Q (PROP-BRIDGE-04 / PROP-BRIDGE-19); no square root is ever formed",
-      "HOLD": "bot = UNRESOLVED (absence of a certificate), distinct from 0 = OBSTRUCTED (a proved failure)"
-    },
-    "tier": "Definition",
-    "tier_note": "matches PROP-EPSC-03's own deliberate tier: the gate object is a Definition; its structural theorems fail_closed', no_certificate_holds', equiv_to_sum, gate'_fail_control, gate'_pass_control are Th_coqc by Print Assumptions (Closed, 2026-09-18). A tier is never raised above the source's own tag (SCHEMA.md tier_evidence rule).",
-    "status": "unverified",
-    "status_note": "same pairing as the PROP-EPSC-03 row it is an occurrence of (tier Definition / status unverified with a compiled, Closed Coq witness); the structural fail-closed property IS compiled -- see coq",
-    "domain": "M",
-    "aliases": [
-      "bridge-s5-squared-gate",
-      "epsc03-squared-occurrence",
-      "Certificate'"
-    ],
-    "coq": {
-      "identifiers": [
-        "Certificate'",
-        "gate'",
-        "fail_closed'",
-        "no_certificate_holds'",
-        "equiv_to_sum",
-        "cert_of_epsc03",
-        "gate_of_epsc03",
-        "epsc03_of_cert",
-        "gate_of_cert",
-        "gate'_fail_control",
-        "gate'_pass_control"
-      ],
-      "file": "coq/canonical/PROP_BRIDGE_03_certified_radius.v",
-      "commit": "b712d0a9",
-      "coq_status": "compiled_axiom_free",
-      "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for every identifier (in-file + scratch chk_bridge03.v, 2026-09-18)",
-      "scratch_readout": "in-file 31/31 Closed; chk_bridge03.v (31 Print Assumptions): 31/31 Closed under the global context; grep -ci 'axiom|classic|Reals' = 0",
-      "build_command": "cd <toledo worktree>/coq/canonical && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v\"",
-      "coq_version": "8.20.1",
-      "verified": "2026-09-18"
-    },
-    "parents": [
-      {
-        "code": "PROP-EPSC-03",
-        "derived_via": "restates",
-        "evidence": "sqrt-free form of delta_K + beta_K <= eps under beta_K -> r_K; the Verdict type and gate pattern are PROP_EPSC_03's own, Required; interconversion exact where a rational root exists (equiv_to_sum)"
-      },
-      {
-        "code": "weld/E.05.v1",
-        "derived_via": "reads",
-        "evidence": "CAN-033 chi_G in {1, 0, bot}: the verdict alphabet"
-      },
-      {
-        "code": "weld/E.08.v1",
-        "derived_via": "reads",
-        "evidence": "delta_K as eps_bridge"
-      },
-      {
-        "code": "EQ-015/M.17.v1",
-        "derived_via": "reads",
-        "evidence": "tolerance declared before the run"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "Structural fail-closed property only: ACCEPT is type-theoretically impossible without a proof object; None yields HOLD. Says nothing about whether r_K^2 or delta_K is attainable for a real instance. Where r_K^2 has no rational root the squared form is the DEFINITION of the certificate, not a restatement (ruling 11b-9 branch).",
-    "honest_caveats": [
-      "Ruling 11b-9 fail-able branch NOT closed: that the squared and sum gates are NOT interderivable in general needs ~ exists r : Q, r * r == 2 (or another root-free r2), which is not in Toledo canonical and was not re-proved here; only the positive half (interconversion exactly when a root exists) is compiled. Falsifier of the 'occurrence' stance: a compiled Closed proof of forall c : Certificate' d e, Certificate d e with no root hypothesis (would collapse the two gates); a compiled ~ exists r, r*r == 2 settles the 'own row' branch instead.",
-      "As EVIDENCE the gate is Type U until a dated Type-P record with executed controls (negative: EPSC-05 witness / RCP perturbed witness / harmonic gaps; positive: geometric gaps / Taylor-Green tape) is filed in readout_universe gate format; gate'_fail_control and gate'_pass_control are STRUCTURAL witnesses over Q, not dated runs (Open ledger).",
-      "The ACCEPT theorem (what a pass ENTAILS about the object x) is PROP-BRIDGE-16, compiled -- Genesis V.14 'a gate whose pass entails nothing is a convention' is discharged for this gate."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-07",
-    "code": "(occurrence on weld/M.60.v1 CAN-1296)",
-    "name": "S4-corollary Pi_k: continuum-side return as EVALUATION with the rreg certificate; level-2 closure under an exhibited modulus; the RR' <-> RR transport",
-    "statement": {
-      "latest": "\\Pi_k(x):=\\mathrm{rseq}\\,x\\,k\\in\\mathbb Q;\\ \\ \\forall m,\\ |\\mathrm{rseq}\\,x\\,m-\\Pi_k x|\\le\\tfrac1m+\\tfrac1k\\ (=\\mathrm{rreg});\\ \\ \\Pi_k(\\sigma(g))=g(N(k));\\ \\ |\\mathrm{rseq}(\\sigma_{\\mathrm{const}}(\\Pi_k x))\\,m-\\mathrm{rseq}\\,x\\,m|\\le\\tfrac1k+\\tfrac1m;\\ \\ \\text{level 2: }|X_i(k)-L(k)|\\le\\tfrac1i+\\tfrac4k,\\ \\ \\mathrm{rseq}\\,L\\,k=\\mathrm{rseq}\\,(X_{2k})\\,(6k)",
-      "format": "latex",
-      "note_ascii": "Pi k x := rseq' x k; Pi_certificate := rreg' under the renaming; Pi_replateau (R -> Q -> R re-plateau within 1/k + 1/m); to_RR / of_RR : RR' <-> W.RR with of_to_RR / to_of_RR by reflexivity and to_RR_Req : Req' x y <-> W.Req (to_RR x) (to_RR y); level2_bound := proj2_sig (W.R_complete X Hreg); level2_diagonal by reflexivity (R_complete ends with `Defined.`, weld__M_60_v1.v L663; h3 scratch confirmed); level2_tower / level2_tape: readout reals / contracting tapes as the approximants, with their diagonals level2_tower_diagonal / level2_tape_diagonal by reflexivity"
-    },
-    "definitions": {
-      "RR / rseq / rreg / Req / R_complete": "weld/M.60.v1 URCF17RComplete (Bishop regular Cauchy readout reals with modulus 1/n + 1/m; R_complete : forall X Hreg, { L : RR | forall i k, |rseq (X i) k - rseq L k| <= 1/i + 4/k })",
-      "Hreg": "the EXHIBITED modulus forall i j k, |rseq (X i) k - rseq (X j) k| <= 1/i + 1/j + 2/k -- a premise in the type, never an axiom",
-      "RR'": "the local renaming of RR in IDM_ReadoutTower.v (PROP-BRIDGE-02); to_RR / of_RR is the transport"
-    },
-    "tier": "Th_coqc",
-    "status": "verified_by_coq",
-    "domain": "M",
-    "aliases": [
-      "bridge-s4-corollary-Pi_k",
-      "return-is-evaluation",
-      "level2_diagonal"
-    ],
-    "coq": {
-      "identifiers": [
-        "to_RR",
-        "of_RR",
-        "to_RR_at",
-        "of_RR_at",
-        "of_to_RR",
-        "to_of_RR",
-        "to_RR_Req",
-        "level2_bound",
-        "level2_diagonal",
-        "level2_tower",
-        "level2_tower_diagonal",
-        "level2_tape",
-        "level2_tape_diagonal"
-      ],
-      "file": "formal/IDM_BridgeRoundTrip.v",
-      "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
-      "file_note": "path relative to the information-discrete-math worktree root, NOT to this repository; Toledo's coq/information-discrete-math mirror is stale and was never used (ruling 11b-8)",
-      "imported_from": "information-discrete-math@004ab91:formal/IDM_BridgeRoundTrip.v",
-      "coq_status": "compiled_axiom_free",
-      "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for every identifier (in-file 23/23 and scratch chk_roundtrip.v 23/23, 2026-09-18); Pi / Pi_certificate / Pi_replateau in formal/IDM_ReadoutTower.v@c54117f: Closed (scratch chk_readout_tower.v)",
-      "scratch_readout": "in-file 23/23 Closed; chk_roundtrip.v (23 Print Assumptions): 23/23 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
-      "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v\"",
-      "coq_version": "8.20.1",
-      "verified": "2026-09-18",
-      "identifiers_readout_tower": [
-        "Pi",
-        "Pi_certificate",
-        "Pi_replateau"
-      ],
-      "h3_readout": "About URCF17RComplete.R_complete printed 'R_complete is transparent'; scratch lemma R_complete_diagonal_transparent (rseq (proj1_sig (R_complete X Hreg)) k = rseq (X (2*k)) (6*k)) proved by reflexivity, Print Assumptions Closed (chk_h3b_R_complete_transparent.v, 2026-09-18)"
-    },
-    "parents": [
-      {
-        "code": "weld/M.60.v1",
-        "derived_via": "same_object",
-        "evidence": "Pi_certificate IS rreg under the renaming; level2_bound IS proj2_sig R_complete; level2_diagonal is the definitional body of R_complete (transparent); nothing re-proved"
-      },
-      {
-        "code": "PROP-BRIDGE-02",
-        "derived_via": "uses",
-        "evidence": "sigma_of supplies the RR' approximants of level2_tower / level2_tape; sigma_const for the re-plateau"
-      },
-      {
-        "code": "R/M.36.v1",
-        "derived_via": "reads",
-        "evidence": "const_gap_zero: the constant readout is sigma_const"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "Every statement is about Bishop-readout reals RR / RR' over Q, never about Coq.Reals (Genesis XI.1). The return never selects a point in the ball: Pi_k returns the k-th rational readout with its certificate. 'Completeness' is the round trip under an exhibited modulus, not an axiom (Genesis XI.2: the limit IS a readout of the approximants, level2_diagonal).",
-    "honest_caveats": [
-      "The design's S4-corollary Req-form line 'sigma_of(Pi_k x) Req x <=> x Req inj_Q(rseq x k)' is NOT written: as stated it is Req symmetry applied to a constant; the substantive content is Pi_replateau + sigma_const_at. Reachable via to_RR_Req plus the pointwise identity to_RR (sigma_const q) = W.inj_Q q; Dr, Open ledger (falsifier: a counterexample x : RR' with Req' (sigma_const (rseq' x k)) x but ~ W.Req (W.inj_Q (rseq' x k)) (to_RR x); none expected).",
-      "Uniqueness of the level-2 limit up to Req from the exported bound is NOT written (Open ledger, see PROP-BRIDGE-05).",
-      "OCCURRENCE, not a row (design section 8 PROP-BRIDGE-07; ruling 11b-5 for the level-2 clause)."
-    ]
+    "tier_in_genesis_verbatim": "PROP_BRIDGE_03_certified_radius.v header: \"Tier: every theorem below is Th_coqc only after the in-file `Print Assumptions` (end of file) and an independent scratch run printed \\\"Closed under the global context\\\".\"",
+    "relations": [],
+    "root": "weld",
+    "layer": "reading",
+    "status_note": "status normalised from lane value \"verified_by_coq\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; the compiled readout (Closed) is recorded in coq.print_assumptions."
   },
   {
     "id": "PROP-BRIDGE-08",
@@ -598,8 +424,8 @@
       "h": "1/n, the declared positive rational spacing (Z2 refused)"
     },
     "tier": "Dr",
-    "status": "open",
-    "status_note": "NOT compiled, NOT written in Phase 2: design section 9 item 5 (optional Bridge_Seam.v) gives the three NAMES and the informal identity only; fixing the Coq statements needs reading and compiling IDM_Keystone.v (keystone_B_eq_I, B_form / I_form), weld__M_41_v1.v (laplacian_stencil, secondDiff_readout_invariant) and weld__M_42_v1.v (lambda(L_R) <= 2 d_max) first -- reuse-pipeline steps 1-2 for three new objects, a separate stage.",
+    "status": "unverified",
+    "status_note": "status normalised from lane value \"open\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; nothing compiled. NOT compiled, NOT written in Phase 2: design section 9 item 5 (optional Bridge_Seam.v) gives the three NAMES and the informal identity only; fixing the Coq statements needs reading and compiling IDM_Keystone.v (keystone_B_eq_I, B_form / I_form), weld__M_41_v1.v (laplacian_stencil, secondDiff_readout_invariant) and weld__M_42_v1.v (lambda(L_R) <= 2 d_max) first -- reuse-pipeline steps 1-2 for three new objects, a separate stage.",
     "domain": "M",
     "aliases": [
       "bridge-seam",
@@ -646,7 +472,10 @@
       "Stance (Dr): Th_coqc-reach as division-free ring identities over Q. Falsifier: a compiled Bridge_Seam.v whose scratch Print Assumptions prints Closed for all three CLOSES the item; a sign mismatch between the (+1,-1) product-graph form and L_R = D_W - W under any declared weight (an identity needing a non-positive scale) REFUTES seam_box as an occurrence and makes it a genuine new row.",
       "DESIGN DELTA (tier lower than planned): design section 8 filed PROP-BRIDGE-08 as 'Th_coqc (after compile)'; no compile happened, so Dr / open.",
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo."
-    ]
+    ],
+    "relations": [],
+    "root": "weld",
+    "layer": "reading"
   },
   {
     "id": "PROP-BRIDGE-09",
@@ -670,7 +499,7 @@
       "note": "tier as the source states; NOT compiled in this stage (task floor: do not compile readout_genesis). A .vo for the file is present in that repo's formal/ directory (directory listing 2026-09-18), which is a readout of a past compile, not a transcript in front of the registrar."
     },
     "status": "unverified",
-    "status_note": "Th_coqc[rec]: recorded by the source's own in-file Print Assumptions request, not re-executed here. The LOCAL instances below carry their own Closed readouts, so the bridge does not depend on this parent's tier.",
+    "status_note": "Th_coqc[rec]: tier as the source states (SCHEMA v1.1 pattern: tier kept, status unverified, note); the source's in-file Print Assumptions were reproduced by a refuter-stage scratch compile on 2026-09-18 (3/3 Closed, parents/p09.log) but not by a Toledo verify_all.sh run. The LOCAL instances carry their own Closed readouts, so the bridge does not depend on this parent's tier.",
     "domain": "M",
     "aliases": [
       "no_decoder_recovers_state",
@@ -687,16 +516,15 @@
       "imported_from": "readout_genesis@eca7ca0:formal/InfoTrueRecordUnreadable_attempt.v",
       "coq_status": "mapped_not_wrapped",
       "coq_axioms": [],
-      "print_assumptions": "in-file requests present (L112-114); expected 'Closed under the global context' per the source header; NOT re-run in this stage",
+      "print_assumptions": "Closed under the global context x3 (no_decoder_recovers_state, true_state_exists_but_no_total_decoder, gauge_redundancy_forces_undecodability) -- REFUTER-STAGE scratch compile of a scratchpad copy of readout_genesis@eca7ca0 formal/InfoTrueRecordUnreadable_attempt.v, Coq 8.20.1, no repo Requires, 0 axiom|classic|Reals hits (scratchpad parents/p09.log, 2026-09-18); the Toledo registrar's own compile at merge is still required before this row's tier counts as more than 'as the source states' (SCHEMA v1.1). Earlier note: in-file requests present (L112-114); expected Closed per the source header.",
       "local_instances": {
         "file": "formal/IDM_BridgeRoundTrip.v",
         "imported_from": "information-discrete-math@004ab91:formal/IDM_BridgeRoundTrip.v",
         "identifiers": [
           "roundtrip_never",
-          "roundtrip_never_total",
-          "never_seen_in_alg"
+          "roundtrip_never_total"
         ],
-        "print_assumptions": "Closed under the global context (in-file + scratch chk_roundtrip.v, 2026-09-18; three-line proof instantiated locally because that repo has no -Q mapping into this arc; parent cited in the file header, never claimed as new)"
+        "print_assumptions": "Closed under the global context (in-file + scratch chk_roundtrip.v, 2026-09-18; re-run in the fixer pass: fx4_roundtrip.log 23/23, fx7_chk_roundtrip.log 24/24; three-line proof instantiated locally because that repo has no -Q mapping into this arc; parent cited in the file header, never claimed as new) never_seen_in_alg is registered under PROP-BRIDGE-18 (EXACT row) only, fixer pass 2026-09-18 (after three independent refuters)."
       },
       "coq_source_redistributed": true,
       "verified": null
@@ -732,7 +560,10 @@
     "honest_caveats": [
       "Registered BEFORE S4 may cite it (design section 8): the bridge's NEVER clause rests on the LOCAL instance roundtrip_never (Closed in front of the builder), so the parent's tier is quoted, not relied on.",
       "The registrar's own compile of the source file printing anything other than Closed for no_decoder_recovers_state re-tiers the PARENT only; roundtrip_never's tier is unaffected."
-    ]
+    ],
+    "relations": [],
+    "root": "weld",
+    "layer": "reading"
   },
   {
     "id": "PROP-BRIDGE-10",
@@ -755,7 +586,7 @@
       "note": "tier as the source states; NOT compiled in this stage; a .vo is present in that repo's formal/ directory (listing 2026-09-18)."
     },
     "status": "unverified",
-    "status_note": "Th_coqc[rec] by the source's own in-file Print Assumptions requests; not re-executed here. Exploratory single-attempt file, 'not part of the build' per its own header.",
+    "status_note": "Th_coqc[rec]: tier as the source states (SCHEMA v1.1 pattern); the source's in-file Print Assumptions were reproduced by a refuter-stage scratch compile on 2026-09-18 (5/5 Closed, parents/p10.log), not by a Toledo verify_all.sh run. Exploratory single-attempt file, 'not part of the build' per its own header.",
     "domain": "P",
     "aliases": [
       "memory_iff_readout",
@@ -774,7 +605,7 @@
       "imported_from": "readout_genesis@ff10fa8:formal/InfoSharedReadoutForcesSharedMemory_attempt.v",
       "coq_status": "mapped_not_wrapped",
       "coq_axioms": [],
-      "print_assumptions": "in-file requests present (L177-181); expected 'Closed under the global context' per the source header; NOT re-run in this stage",
+      "print_assumptions": "Closed under the global context x5 (memory_iff_readout, readout_cannot_split_mass, tau_eq_of_rate_eq, rate_eq_of_ratio_eq, shared_readout_forces_shared_memory) -- REFUTER-STAGE scratch compile of a scratchpad copy of the source file, Coq 8.20.1, no repo Requires, 0 axiom|classic|Reals hits (scratchpad parents/p10.log, 2026-09-18); not a Toledo verify_all.sh run. Earlier note: in-file requests present; expected Closed per the source.",
       "coq_source_redistributed": true,
       "verified": null
     },
@@ -798,7 +629,10 @@
     "claim_boundary": "Discrete structural facts over Q only. OFF tier (the source's own words): any identification of 'ratio' with a physical measurement; the physical constants stay where the forcing ledger puts them.",
     "honest_caveats": [
       "Registered as the Genesis-side round-trip PATTERN (design section 8): what returns exactly (tau_c) and what NEVER returns (M) from one readout -- the same shape as S4's EXACT / NEVER, in a domain leaf."
-    ]
+    ],
+    "relations": [],
+    "root": "weld",
+    "layer": "reading"
   },
   {
     "id": "PROP-BRIDGE-11",
@@ -820,7 +654,7 @@
       "note": "tier as the source states (Q-only, in-file Print Assumptions requests); NOT compiled in this stage (task floor: do not compile the solver). The source header carries no explicit TIER line; the tag is read from its Require list and its in-file Print Assumptions."
     },
     "status": "unverified",
-    "status_note": "Th_coqc[rec] by in-file Print Assumptions requests; not re-executed here; the source is a private repository (coq_source_redistributed false), so CI cannot build it in a public clone.",
+    "status_note": "Th_coqc[rec]: tier as the source states (SCHEMA v1.1 pattern); reproduced by a refuter-stage scratch compile on 2026-09-18 (5/5 Closed, parents/p11.log); the source is a private repository (coq_source_redistributed false), so CI cannot build it in a public clone -- transcript-only, permanently.",
     "domain": "M",
     "aliases": [
       "sqrt2_is_not_a_readout",
@@ -837,11 +671,13 @@
       ],
       "file": null,
       "imported_from": "solver arc (private)@e8a8af4:formal/InfoIrrationalNonReadout_attempt.v",
-      "coq_status": "mapped_not_wrapped",
+      "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "in-file requests present (L118, L141, L155, L183, L198); expected Closed per the source; NOT re-run in this stage",
+      "print_assumptions": "Closed under the global context x5 (no_int_sqrt2, sqrt2_is_not_a_readout, sqrt2_squeezed_tightly, newton2_fixed_point_iff_sqrt2, newton2_has_no_rational_fixed_point) -- REFUTER-STAGE scratch compile of a scratchpad copy of solver arc (private)@e8a8af4 formal/InfoIrrationalNonReadout_attempt.v, Coq 8.20.1, no repo Requires, 0 axiom|classic|Reals hits (scratchpad parents/p11.log, 2026-09-18); the source is private (coq_source_redistributed false) so no public Toledo wrapper can build it: permanent 'private source, transcript-only' status. Earlier note: in-file requests present (L118, L141, L155, L183, L198).",
       "coq_source_redistributed": false,
-      "verified": null
+      "verified": null,
+      "coq_status_note": "was mapped_not_wrapped -- corrected (fixer pass 2026-09-18 (after three independent refuters)): SCHEMA.md forbids mapped_not_wrapped without a coq_map.json evidence row and coq_map.json has 0 rows for these five identifiers (3,483 rows scanned). compiled_axiom_free is the lane vocabulary for 'compiled and Closed, no Toledo wrapper' (as PROP-BRIDGE-01..04 use it); the compile here is the refuter-stage scratch run of a private-source copy. Adding coq_map.json rows for the five identifiers (source 'solver arc (private)', coq_source_redistributed false) so that mapped_not_wrapped becomes assertable is a registrar item (PHASE2_COQ_LEDGER.md).",
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
@@ -863,7 +699,10 @@
     "claim_boundary": "The two notions 'no Q-valued limit POINT' (this entry) and 'no RR element' are distinct and must not be merged (design section 5 row 4): a contracting tower for sqrt 2 IS an RR' element via sigma_of even though no rational equals its square root.",
     "honest_caveats": [
       "DESIGN DELTA (tier lower than planned for one identifier): design section 8 listed contraction_reaches_tolerance (solver arc formal/InfoContractionConvergence_attempt.v L184) under this id at Th_coqc[rec]. That file has NO in-file Print Assumptions for contraction_reaches_tolerance (its neighbours contraction_error_bound L122, Qpow_bernoulli L144, Qpow_recip_bound L176, gradient_descent_converges L277 have one), so it cannot carry Th_coqc[rec]; it is moved to PROP-BRIDGE-14's relations at tier Dr, where the compiled local twin qpow_bernoulli / qpow_below_eps (Closed) is the registered object. Its Require chain (RDL_MetricReadout, RDL_GammaSpectral, four Info*_attempt files) is Q-clean by Require lines (0 Reals / Classical / FunctionalExtensionality hits, read 2026-09-18)."
-    ]
+    ],
+    "relations": [],
+    "root": "R",
+    "layer": "reading"
   },
   {
     "id": "PROP-BRIDGE-12",
@@ -932,7 +771,8 @@
       ],
       "print_assumptions": "+axioms: as listed per identifier (AXIOM_STATUS.md rows for RDL_ContinuumLimit.v, RDL_TaylorLimit.v, RDL_MetricReadoutLimit.v, URCF_RD_All.v); never 'Closed'",
       "coq_source_redistributed": false,
-      "verified": null
+      "verified": null,
+      "coq_axioms_note": "coq_axioms is the UNION over the four identifiers with a recorded footprint (AXIOM_STATUS.md audit 2026-06-26, quoted, not re-run); sig_not_dec and classic belong to the Taylor rung twice_diff_secondDiff_limit only; box_2d_readout has NO recorded footprint (see coq_axioms_by_identifier) -- fixer pass 2026-09-18 (after three independent refuters)."
     },
     "parents": [
       {
@@ -959,7 +799,10 @@
     "claim_boundary": "Disclosed +R-axioms objects, never called axiom-free, never Required by any bridge file; registered so that the +R rungs of this workspace have a code to be cited BY, not as bridge content. Genesis XI.1: a Th_coqc statement about RR is never a statement about Coq.Reals R; these files are the other side of that fence.",
     "honest_caveats": [
       "Any bridge assembly theorem whose scratch Print Assumptions ever shows a Reals or classical axiom is re-tiered here immediately (design section 9); none did on 2026-09-18 (0 axiom / classic / Reals hits in all four scratch logs)."
-    ]
+    ],
+    "relations": [],
+    "root": "R",
+    "layer": "reading"
   },
   {
     "id": "PROP-BRIDGE-13",
@@ -975,7 +818,7 @@
       "rho": "declared ratio, rho <= 1 (rho = 1 gives the vacuous 0 <= |s N| = HOLD)"
     },
     "tier": "Th_coqc",
-    "status": "verified_by_coq",
+    "status": "unverified",
     "domain": "M",
     "aliases": [
       "bridge-s1-windowed-licence",
@@ -994,11 +837,12 @@
       "imported_from": "information-discrete-math@c54117f:formal/IDM_ReadoutTower.v",
       "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context (all three; scratch chk_readout_tower.v, 2026-09-18)",
+      "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context (all three; scratch chk_readout_tower.v, 2026-09-18)",
       "scratch_readout": "chk_readout_tower.v (39 Print Assumptions): 39/39 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
       "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_ReadoutTower.v\"",
       "coq_version": "8.20.1",
-      "verified": "2026-09-18"
+      "verified": "2026-09-18",
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
@@ -1023,8 +867,8 @@
       },
       {
         "code": "PROP-BRIDGE-01",
-        "derived_via": "uses",
-        "evidence": "tailsum_delta_telescopes for the s := Delta g form"
+        "derived_via": "reads",
+        "evidence": "tailsum_delta_telescopes for the s := Delta g form [derived_via normalised from lane value \"uses\" to SCHEMA enum \"reads\", fixer pass 2026-09-18 (after three independent refuters)]"
       }
     ],
     "origin": {
@@ -1036,7 +880,12 @@
     "honest_caveats": [
       "Design section 8 filed plateau_certificate_window as an OCCURRENCE of R/M.32.v1 (windowed premise); the compiled statements have a strictly weaker hypothesis, so they are listed here as candidate rows ('windowed twins', parents R/M.14.v1 and R/M.32.v1). Either ruling by the registrar is consistent with the readouts.",
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo."
-    ]
+    ],
+    "tier_in_genesis_verbatim": "IDM_ReadoutTower.v header: \"Tier: every theorem below is Th_coqc only after a scratch `Print Assumptions` printed \\\"Closed under the global context\\\" in front of the reader; Section hypotheses (Hrho0, Hrho1, Hcontr) are DISCLOSED here and become premises of the exported statements.\"",
+    "relations": [],
+    "root": "R",
+    "layer": "reading",
+    "status_note": "status normalised from lane value \"verified_by_coq\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; the compiled readout (Closed) is recorded in coq.print_assumptions."
   },
   {
     "id": "PROP-BRIDGE-14",
@@ -1051,7 +900,7 @@
       "qpow": "IDM_Certified.qpow, rational power by nat exponent (R/M.12.v1 family)"
     },
     "tier": "Th_coqc",
-    "status": "verified_by_coq",
+    "status": "unverified",
     "domain": "M",
     "aliases": [
       "bridge-bernoulli-Q",
@@ -1076,11 +925,12 @@
       "imported_from": "information-discrete-math@c54117f:formal/IDM_ReadoutTower.v",
       "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context (all eight; scratch chk_readout_tower.v, 2026-09-18)",
+      "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): IDM_SignatureFunctor.v and IDM_ReadoutTower.v recompiled after comment-only header edits (fx1_sigfun.log, fx2_tower.log) and one scratch chk_idm12.v printed 73/73 Closed for EVERY declared object of both files (24 + 49), 0 axiom|classic|Reals hits (scratchpad fx/fx5_chk_idm12.log; reproduced in cpg_research_journal PHASE2_COQ_LEDGER.md). Prior same-day readouts: Closed under the global context (all eight; scratch chk_readout_tower.v, 2026-09-18)",
       "scratch_readout": "chk_readout_tower.v (39 Print Assumptions): 39/39 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
       "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_ReadoutTower.v\"",
       "coq_version": "8.20.1",
-      "verified": "2026-09-18"
+      "verified": "2026-09-18",
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
@@ -1114,76 +964,11 @@
     "claim_boundary": "Elementary Q inequalities; project-specific role is the computable ceiling Nmax (PROP-BRIDGE-02), not a claim of mathematical originality. The Archimedean step is stdlib Qarchimedean (transparent), so N_of computes.",
     "honest_caveats": [
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo (a local re-proof; the registrar may prefer to register the solver's Qpow_bernoulli as the row once that private file carries a public twin, and file this as its occurrence)."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-15",
-    "code": "(occurrence on PROP-EPSC-08)",
-    "name": "S4 WITHIN RADIUS: every L_P-Lipschitz reader inherits the certified radius (record form, general form, and the S1 -> S3 -> S4 chain in (Q, dQ))",
-    "statement": {
-      "latest": "P\\ L_P\\text{-Lipschitz on }(Y,d_Y),\\ 0\\le L_P,\\ d_Y(x,\\Lambda_Kq_Kx)\\le\\beta_K,\\ d_Y(\\Lambda_Kq_Kx,\\hat x_K)\\le\\rho_K\\ \\Longrightarrow\\ d_V(Px,P\\hat x_K)\\le L_P(\\rho_K+\\beta_K);\\quad \\rho_K=0:\\ d_V(Px,P(\\Lambda_Kq_Kx))\\le L_P\\,r_K;\\quad (\\mathbb Q,d_{\\mathbb Q}):\\ d_V(P(g(N{+}M)),P\\hat x)\\le L_P\\big(\\rho_K+\\beta^{S1}_K\\big)",
-      "format": "latex",
-      "note_ascii": "bridge_radius (PROP_BRIDGE_03: epsc08_lipschitz_tail_lift at beta := rho_K + beta_K after triangle_composition); roundtrip_radius_record (rho_K = 0, xhat_K := Lambda_K (q_K x) -- the standing rule of ruling 11b-3, proof term = epsc08); roundtrip_radius (= bridge_radius at Px := Lambda_K (q_K x)); roundtrip_radius_S1 (= contracting_radius o epsc08 in (Q, dQ): beta_K := |Delta g N| / (1 - rho) from the contracting tape)"
-    },
-    "definitions": {
-      "L_P": "a verified Lipschitz constant of the declared reader P : Y -> V w.r.t. d_Y, d_V -- a per-domain obligation",
-      "r_K": "rho_K + beta_K (PROP-BRIDGE-04)"
-    },
-    "tier": "Th_coqc",
-    "status": "verified_by_coq",
-    "domain": "M",
-    "aliases": [
-      "bridge-s4-within-radius",
-      "bridge_radius",
-      "roundtrip_radius"
     ],
-    "coq": {
-      "identifiers": [
-        "roundtrip_radius_record",
-        "roundtrip_radius",
-        "roundtrip_radius_S1"
-      ],
-      "file": "formal/IDM_BridgeRoundTrip.v",
-      "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
-      "file_note": "path relative to the information-discrete-math worktree root, NOT to this repository; Toledo's coq/information-discrete-math mirror is stale and was never used (ruling 11b-8)",
-      "imported_from": "information-discrete-math@004ab91:formal/IDM_BridgeRoundTrip.v",
-      "coq_status": "compiled_axiom_free",
-      "coq_axioms": [],
-      "print_assumptions": "Closed under the global context (in-file + scratch chk_roundtrip.v, 2026-09-18); bridge_radius in coq/canonical/PROP_BRIDGE_03_certified_radius.v@b712d0a9: Closed (in-file + scratch chk_bridge03.v)",
-      "scratch_readout": "in-file 23/23 Closed; chk_roundtrip.v (23 Print Assumptions): 23/23 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
-      "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC IDM_BridgeRoundTrip.v\"",
-      "coq_version": "8.20.1",
-      "verified": "2026-09-18",
-      "identifiers_toledo_side": [
-        "bridge_radius"
-      ]
-    },
-    "parents": [
-      {
-        "code": "PROP-EPSC-08",
-        "derived_via": "specializes",
-        "evidence": "epsc08_lipschitz_tail_lift Required and applied at beta := rho_K + beta_K (and at beta := r_K for the record form); nothing re-proved"
-      },
-      {
-        "code": "PROP-BRIDGE-04",
-        "derived_via": "uses",
-        "evidence": "triangle_composition supplies the radius; contracting_radius the S1 instance"
-      },
-      {
-        "code": "R/M.32.v1",
-        "derived_via": "reads",
-        "evidence": "via contracting_radius -> plateau_radius -> refine_stable"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "Requires an actual Lipschitz bound for the declared reader (PROP-EPSC-08's own boundary, unchanged). The return never selects a point in the ball. The two numbers (beta_K from A, L_P verified) keep their per-instance tier; the bridge never upgrades them.",
-    "honest_caveats": [
-      "OCCURRENCE, not a row (ruling 11b-5, WITHIN RADIUS clause on PROP-EPSC-08)."
-    ]
+    "tier_in_genesis_verbatim": "IDM_ReadoutTower.v header: \"Tier: every theorem below is Th_coqc only after a scratch `Print Assumptions` printed \\\"Closed under the global context\\\" in front of the reader; Section hypotheses (Hrho0, Hrho1, Hcontr) are DISCLOSED here and become premises of the exported statements.\"",
+    "root": "R",
+    "layer": "reading",
+    "status_note": "status normalised from lane value \"verified_by_coq\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; the compiled readout (Closed) is recorded in coq.print_assumptions."
   },
   {
     "id": "PROP-BRIDGE-16",
@@ -1199,7 +984,7 @@
       "target": "the next-resolution record read back through Lambda_K (ruling 11b-4)"
     },
     "tier": "Th_coqc",
-    "status": "verified_by_coq",
+    "status": "unverified",
     "domain": "M",
     "aliases": [
       "bridge-s5-accept-theorem",
@@ -1217,22 +1002,23 @@
       "commit": "b712d0a9",
       "coq_status": "compiled_axiom_free",
       "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for all four (in-file + scratch chk_bridge03.v, 2026-09-18; About printed the exact exported signature of accept_certified_ruling_11b4: d_sym is a premise in the type)",
+      "print_assumptions": "Closed under the global context -- fixer pass 2026-09-18 (after three independent refuters): PROP_BRIDGE_03_certified_radius.v recompiled after comment-only header edits, in-file 31/31 (fx3_bridge03.log) and scratch chk_bridge03.v 31/31 (fx6_chk_bridge03.log), 0 axiom|classic|Reals hits. Prior same-day readouts: Closed under the global context for all four (in-file + scratch chk_bridge03.v, 2026-09-18; About printed the exact exported signature of accept_certified_ruling_11b4: d_sym is a premise in the type)",
       "scratch_readout": "in-file 31/31 Closed; chk_bridge03.v (31 Print Assumptions): 31/31 Closed under the global context; grep -ci 'axiom|classic|Reals' = 0",
       "build_command": "cd <toledo worktree>/coq/canonical && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v\"",
       "coq_version": "8.20.1",
-      "verified": "2026-09-18"
+      "verified": "2026-09-18",
+      "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by scratch/in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f))"
     },
     "parents": [
       {
         "code": "PROP-EPSC-03",
-        "derived_via": "uses",
-        "evidence": "via PROP-BRIDGE-06: the certificate whose pass is the hypothesis"
+        "derived_via": "reads",
+        "evidence": "via PROP-BRIDGE-06: the certificate whose pass is the hypothesis [derived_via normalised from lane value \"uses\" to SCHEMA enum \"reads\", fixer pass 2026-09-18 (after three independent refuters)]"
       },
       {
         "code": "PROP-BRIDGE-04",
-        "derived_via": "uses",
-        "evidence": "equiv_to_sum / sq_le_root turn (eps - delta_K)^2 >= r_K^2 into r_K + delta_K <= eps"
+        "derived_via": "reads",
+        "evidence": "equiv_to_sum / sq_le_root turn (eps - delta_K)^2 >= r_K^2 into r_K + delta_K <= eps [derived_via normalised from lane value \"uses\" to SCHEMA enum \"reads\", fixer pass 2026-09-18 (after three independent refuters)]"
       },
       {
         "code": "weld/E.08.v1",
@@ -1259,342 +1045,11 @@
     "honest_caveats": [
       "DESIGN DELTA, stated rather than hidden: ruling 11b-4's literal defect orientation (pair (Lambda_K (res_K x_{K+1}), Lambda_K x_K)) is unrelated to the triangle inequality's pair without symmetry of d_Y; proved in two forms -- the oriented one (triangle only) and the literal one (plus d_sym). Symmetry is one more per-clause metric axiom (ruling 11b-3 pattern), discharged in (Q, dQ) by dQ_sym. Falsifier of the literal form: an asymmetric (quasi-metric) d_Y with d_Y(y, p) <= delta_K but d_Y(p, y) > eps - r_K.",
       "NEW DERIVATION / PROPOSAL -- not yet in Toledo (the design's 11a-4 open item, closed in Coq)."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-17",
-    "code": "(occurrence on R/M.32.v1 IDM-0057)",
-    "name": "S1 LICENCE, a-priori route: plateau_certificate = refine_stable at s := Delta g, with its division form and its two compiled Type-P controls",
-    "statement": {
-      "latest": "\\rho\\le1,\\ \\forall k\\ |\\Delta g(k+1)|\\le\\rho|\\Delta g(k)|\\ \\Longrightarrow\\ (1-\\rho)\\,|g(N+M)-g(N)|\\le|\\Delta g(N)|;\\qquad \\rho<1:\\ |g(N+M)-g(N)|\\le\\frac{|\\Delta g(N)|}{1-\\rho}",
-      "format": "latex",
-      "note_ascii": "plateau_certificate := IDM_Certified.refine_stable Required and instantiated at s := Delta g, then tailsum_delta_telescopes rewrites the tail sum -- an OCCURRENCE, not re-proved; plateau_radius (division form, stated ONLY under rho < 1); plateau_pair (index-pair form, M := b - a); sigma_readout_plateau (every later tape value within 1/k of the k-th readout); gap_is_abs_Delta (IDM_Continuum.gap g n = Qabs (Delta g n) by reflexivity). Controls: geometric_gaps_certified (rho = 1/2, PASS on every window) and harmonic_refutes_half (harmonic gaps refute rho = 1/2 already at k = 1: HOLD) -- the S1 gate has shown a PASS and a correctly-rejected FAIL"
-    },
-    "definitions": {
-      "verdict": "CERTIFIED(rho, N) when the premise holds; otherwise HOLD (weld/E.05.v1 alphabet); rho = 1 is the vacuous bound = HOLD, and 1/(1 - rho) is never formed in the certificate"
-    },
-    "tier": "Th_coqc",
-    "status": "verified_by_coq",
-    "domain": "M",
-    "aliases": [
-      "plateau_certificate",
-      "bridge-s1-licence-apriori",
-      "geometric_gaps_certified",
-      "harmonic_refutes_half"
     ],
-    "coq": {
-      "identifiers": [
-        "plateau_certificate",
-        "plateau_radius",
-        "plateau_pair",
-        "sigma_readout_plateau",
-        "gap_is_abs_Delta",
-        "Delta_geom_sum",
-        "geom_half_contracts",
-        "geometric_gaps_certified",
-        "harm",
-        "Delta_harm",
-        "harmonic_refutes_half"
-      ],
-      "file": "formal/IDM_ReadoutTower.v",
-      "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
-      "file_note": "path relative to the information-discrete-math worktree root, NOT to this repository; Toledo's coq/information-discrete-math mirror is stale and was never used (ruling 11b-8)",
-      "imported_from": "information-discrete-math@c54117f:formal/IDM_ReadoutTower.v",
-      "coq_status": "compiled_axiom_free",
-      "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for every identifier (scratch chk_readout_tower.v, 2026-09-18)",
-      "scratch_readout": "chk_readout_tower.v (39 Print Assumptions): 39/39 Closed under the global context; grep -ciE 'axiom|classic|Reals' = 0",
-      "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_ReadoutTower.v\"",
-      "coq_version": "8.20.1",
-      "verified": "2026-09-18"
-    },
-    "parents": [
-      {
-        "code": "R/M.32.v1",
-        "derived_via": "instantiate s := Delta g",
-        "evidence": "refine_stable Required and applied (IDM_Certified.v); the composed bound IS this theorem plus the telescoping rewrite (design S1 'Tier now', critic pass)"
-      },
-      {
-        "code": "PROP-BRIDGE-01",
-        "derived_via": "uses",
-        "evidence": "the telescoping rewrite"
-      },
-      {
-        "code": "R/M.37.v1",
-        "derived_via": "reads",
-        "evidence": "IDM_Continuum.gap is |Delta g| definitionally (gap_is_abs_Delta)"
-      },
-      {
-        "code": "R/M.03.v1",
-        "derived_via": "reads",
-        "evidence": "apriori_stable: the a-priori licence route supplies the forall-k premise from the FORM; cited, not Required"
-      },
-      {
-        "code": "R/M.08.v1",
-        "derived_via": "reads",
-        "evidence": "richardson_apriori_stable: order p => rho = 2^-p; cited, not Required"
-      },
-      {
-        "code": "weld/E.05.v1",
-        "derived_via": "reads",
-        "evidence": "verdict alphabet"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "A-priori licence route only: the forall-k premise must come from the form (R/M.03.v1 / R/M.08.v1), never from a finite tape (PROP-BRIDGE-13 is the tape route). Harmonic-type gaps 1/(k+1) satisfy no rho < 1 and give HOLD (compiled control).",
-    "honest_caveats": [
-      "OCCURRENCE, not a row (design section 8 PROP-BRIDGE-01; critic pass withdrew the earlier NEW label on the composed line). The two controls are compiled Examples over Q -- structural evidence for the Fail-Able Gate Law, not dated finite_diagnostic runs on real tapes.",
-      "The design's S1 core line says rho < 1; the compiled plateau_certificate takes rho <= 1 (refine_stable's own premise, rho = 1 vacuous) and plateau_radius carries the rho < 1 division form separately; both readings are covered."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-18",
-    "code": "(occurrence on EQ-002/M.01.v1 CAN-165; weld/M.64.v1 CAN-1300 for the sufficiency reading)",
-    "name": "S2 Alg_Q and S4 EXACT: the retained algebra is CAN-165's factorization set at R := q_K with Lambda_K as the section witness",
-    "statement": {
-      "latest": "\\mathrm{Alg}_Q:=\\{P:S\\to V\\mid \\forall s\\,t,\\ q_Ks=q_Kt\\Rightarrow Ps=Pt\\};\\qquad q_K\\circ\\Lambda_K=\\mathrm{id}\\ \\Longrightarrow\\ \\big[\\forall s,\\ P(\\Lambda_K(q_Ks))=Ps\\big]\\iff P\\in\\mathrm{Alg}_Q\\iff\\exists\\,\\bar g:R_K\\to V,\\ \\forall s,\\ Ps=\\bar g(q_Ks);\\qquad P\\in\\mathrm{Alg}_Q\\iff\\mathrm{SufficientFor}\\,q_K\\,(\\ker P)",
-      "format": "latex",
-      "note_ascii": "InAlg q P := forall s t, q s = q t -> P s = P t; exact_on_alg / alg_is_fixed_points / roundtrip_exact_iff (the pointwise iff, no funext); gbar P := P o lam; alg_factors / factors_in_alg / alg_iff_factors (constructive witness g := gbar P); inalg_is_sufficiency (definitional: both sides unfold to the same Prop); inalg_kernel_inclusion (ker q_K subseteq ker P via T5). Round-trip file: roundtrip_exact (= roundtrip_exact_iff with PK unfolded), roundtrip_exact_fails_outside_alg (a reader separating same-record states never round-trips: the Fail-Able-Gate control), never_seen_in_alg (Genesis A.7: Alg_Q readers never see the collapsed difference)"
-    },
-    "definitions": {
-      "Alg_Q": "the V-valued readouts factoring through the quotient (a Boolean algebra when V = bool; for arbitrary V a set, not an algebra)",
-      "SufficientFor, kernel, KernelR": "IDM_ReaderDomainFoundation (live file, ruling 11b-8)"
-    },
-    "tier": "Th_coqc",
-    "status": "verified_by_coq",
-    "domain": "M",
-    "aliases": [
-      "Alg_Q",
-      "InAlg",
-      "roundtrip_exact_iff",
-      "bridge-s4-exact"
-    ],
-    "coq": {
-      "identifiers": [
-        "InAlg",
-        "exact_on_alg",
-        "alg_is_fixed_points",
-        "roundtrip_exact_iff",
-        "gbar",
-        "alg_factors",
-        "factors_in_alg",
-        "alg_iff_factors",
-        "inalg_is_sufficiency",
-        "inalg_kernel_inclusion"
-      ],
-      "file": "formal/IDM_SignatureFunctor.v",
-      "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
-      "file_note": "path relative to the information-discrete-math worktree root, NOT to this repository; Toledo's coq/information-discrete-math mirror is stale and was never used (ruling 11b-8)",
-      "imported_from": "information-discrete-math@ac1df59:formal/IDM_SignatureFunctor.v",
-      "coq_status": "compiled_axiom_free",
-      "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for every identifier (scratch chk_signature_functor.v, 2026-09-18; Hsec in the exported types where used); roundtrip_exact / roundtrip_exact_fails_outside_alg / never_seen_in_alg in formal/IDM_BridgeRoundTrip.v@004ab91: Closed (in-file + scratch chk_roundtrip.v)",
-      "scratch_readout": "chk_signature_functor.v (From IDM.formal Require Import IDM_SignatureFunctor; 18 Print Assumptions): 18/18 Closed under the global context",
-      "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_SignatureFunctor.v\"",
-      "coq_version": "8.20.1",
-      "verified": "2026-09-18",
-      "identifiers_round_trip": [
-        "roundtrip_exact",
-        "roundtrip_exact_fails_outside_alg",
-        "never_seen_in_alg"
-      ]
-    },
-    "parents": [
-      {
-        "code": "EQ-002/M.01.v1",
-        "derived_via": "instantiate R := q_K, g-bar := P o Lambda_K",
-        "evidence": "CAN-165 Factorization Theorem (coq/canonical/MRC_Prelude.v mr_factorization_thm): its Rinv_dec y is specialised to inl (exist _ (lam y) (Hsec y)) -- the total section replaces the per-y decidable preimage search; no new row (design S2 'Tier now')"
-      },
-      {
-        "code": "weld/M.64.v1",
-        "derived_via": "reads",
-        "evidence": "CAN-1300 T5_sufficiency_kernel_inclusion: Alg_Q membership IS sufficiency of the record for ker P"
-      },
-      {
-        "code": "A.8",
-        "derived_via": "reads",
-        "evidence": "genesis root A.8: Lambda o Sigma = I restricted to Alg_Q is the finite, Coq-targetable reading (design section 6 item 3)"
-      },
-      {
-        "code": "weld/M.03.v1",
-        "derived_via": "reads",
-        "evidence": "the class is the record"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "Pointwise iff over abstract types, no functional extensionality, no decidability. EXACT applies to the true record's class q_K x; the reconstructed xhat_K is covered by WITHIN RADIUS (PROP-BRIDGE-15). Genesis B.3 grade L4 + exact on Alg_Q; no L5.",
-    "honest_caveats": [
-      "OCCURRENCE, not a row (design section 8 PROP-BRIDGE-03 withdrew the 'new row for Alg_Q'; ruling 11b-5 EXACT clause)."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-19",
-    "code": "(occurrence on PROP-EPSC-17)",
-    "name": "S3 RADIUS squared form: r_K^2 = rho_K^2 + beta_K^2 under the scalar Pythagorean identity, as PROP-EPSC-17's theorem applied unchanged",
-    "statement": {
-      "latest": "d_Y(x,\\hat x_K)^2=d_Y(\\Lambda_Kq_Kx,\\hat x_K)^2+d_Y(x,\\Lambda_Kq_Kx)^2,\\ \\ 0\\le d_Y(\\cdot,\\cdot),\\ \\ d_Y(x,\\Lambda_Kq_Kx)\\le\\beta_K,\\ \\ d_Y(\\Lambda_Kq_Kx,\\hat x_K)\\le\\rho_K\\ \\Longrightarrow\\ d_Y(x,\\hat x_K)^2\\le\\rho_K^2+\\beta_K^2",
-      "format": "latex",
-      "note_ascii": "squared_orthogonal: proof term = epsc17_squared_composition_bound applied at the squared distances after sq_monotone; squared_orthogonal_scalar := epsc17_squared_composition_bound (alias Definition, the registered theorem unchanged); the Pythagorean identity is a DISCLOSED Section hypothesis pythagoras_dY, never assumed silently"
-    },
-    "definitions": {
-      "pythagoras_dY": "the scalar identity over five Q numbers (PROP_EPSC_17_orthogonal_composition.v L41-45); discharged by Keystone/P.08.v1 pythagoras_orthogonal when Y is a finite Q inner-product space, Dr per domain otherwise"
-    },
-    "tier": "Th_coqc",
-    "tier_note": "for the SQUARED form only, which is what is Required and applied; PROP-EPSC-17's own row stays Dr because its sqrt form and the infimum over the symmetry group are not mechanised (its honest_caveats). h1 housekeeping (commit 7a3d7a72, 2026-09-18) appended an in-file Print Assumptions to PROP_EPSC_17_orthogonal_composition.v: epsc17_squared_composition_bound = Closed under the global context.",
-    "status": "verified_by_coq",
-    "domain": "M",
-    "aliases": [
-      "squared_orthogonal",
-      "bridge-s3-squared-form",
-      "epsc17-occurrence"
-    ],
-    "coq": {
-      "identifiers": [
-        "squared_orthogonal",
-        "squared_orthogonal_scalar"
-      ],
-      "file": "coq/canonical/PROP_BRIDGE_03_certified_radius.v",
-      "commit": "b712d0a9",
-      "coq_status": "compiled_axiom_free",
-      "coq_axioms": [],
-      "print_assumptions": "Closed under the global context (both; in-file + scratch chk_bridge03.v, 2026-09-18; pythagoras_dY and the nonnegativity clauses are disclosed Section hypotheses in the exported type)",
-      "scratch_readout": "in-file 31/31 Closed; chk_bridge03.v (31 Print Assumptions): 31/31 Closed under the global context; grep -ci 'axiom|classic|Reals' = 0",
-      "build_command": "cd <toledo worktree>/coq/canonical && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -Q . MRC -R <live IDM worktree> IDM PROP_BRIDGE_03_certified_radius.v\"",
-      "coq_version": "8.20.1",
-      "verified": "2026-09-18"
-    },
-    "parents": [
-      {
-        "code": "PROP-EPSC-17",
-        "derived_via": "same_object",
-        "evidence": "epsc17_squared_composition_bound Required and applied at squared d_Y; never re-proved"
-      },
-      {
-        "code": "Keystone/P.08.v1",
-        "derived_via": "reads",
-        "evidence": "pythagoras_orthogonal (IDM-0140, Th_coqc): discharges the identity for finite Q inner-product Y; cited, not Required"
-      },
-      {
-        "code": "PROP-BRIDGE-04",
-        "derived_via": "uses",
-        "evidence": "sq_monotone (d <= rho ==> d^2 <= rho^2)"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "Applies only where the Pythagorean identity holds in Y (xhat_K in range(P_K), Q-bilinear inner product, Lambda_K o q_K an orthogonal projection); otherwise the triangle form (PROP-BRIDGE-04) is the radius. No square root is formed; r_K^2 is the carried quantity.",
-    "honest_caveats": [
-      "REGISTRAR READOUT (About, 2026-09-18): the exported epsc17_squared_composition_bound takes only (pythagoras rho_cert beta_cert) -- its two nonnegativity hypotheses were never used by `rewrite pythagoras; lra` and are not abstracted; PROP_EPSC_17's file comment 'both nonnegative' is stronger than the mechanised object. Nonnegativity re-enters here only through sq_monotone.",
-      "Deriving pythagoras_dY from geometric orthogonality P_K _|_ (I - P_K) is NOT proved (needs data the abstract section lacks): Dr per domain, Open ledger; falsifier: a domain with a declared Q-bilinear inner product whose Lambda_K o q_K is not an orthogonal projection -- the identity fails and rho^2 + beta^2 under-estimates the radius (the triangle radius still holds).",
-      "Design section 8 correction (e) stands: EPSC-17's Coq is abstract Q algebra (domain M), although its registry row says P."
-    ]
-  },
-  {
-    "id": "PROP-BRIDGE-20",
-    "code": "(occurrence on weld/M.03.v1 CAN-007 + weld/M.02.v1 CAN-006, via weld/M.68.v1 CAN-1305 and weld/M.63.v1 CAN-1299)",
-    "name": "S2 RETAIN signature at a fixed horizon: Sigma_Q(z) = (O(z), [z]_Q) is a congruence for every declared action under DepthStable(L), and every reader factors through the record for the whole future",
-    "statement": {
-      "latest": "\\Sigma_Q(z):=(O(z),[z]_Q),\\ [z]_Q:=\\{z':\\ O(F^kz')=O(F^kz),\\ k\\le L\\};\\qquad \\mathrm{DepthStable}(L)\\Rightarrow\\big([s]_Q=[t]_Q\\Rightarrow[F_us]_Q=[F_ut]_Q\\big);\\qquad [s]_Q\\ni t\\Rightarrow\\forall r,\\ O_r(s)=O_r(t);\\qquad \\mathrm{rk}\\,s=\\mathrm{rk}\\,t\\Rightarrow[s]_Q=[t]_Q,\\ \\mathrm{DepthStable}(L)\\ \\Longrightarrow\\ \\forall r\\,w,\\ O_r\\circ F_w\\in\\mathrm{Alg}_{\\mathrm{rk}}",
-      "format": "latex",
-      "note_ascii": "DepthClass step read L s := fun t => DepthEq step read L s t (Prop-valued, no funext); Sigma s := (Obs s, DepthClass s); sigma_class_refl; sigma_respects_step (DepthStable L premise, both directions of stable_depth_exact_future); sigma_readout_factor / sigma_readout_factor_sig (O = O# o q_K, pointwise on readers); sigma_class_well_defined (the record is a class, not a point: A.5 / CAN-008); readers_in_alg / future_readers_in_alg (under record_sufficient and DepthStable(L), every reader after every finite word of actions factors through the record -- weld/M.02.v1 readout half; the state half is T4b in the Foundation file)"
-    },
-    "definitions": {
-      "DepthEq, DepthStable, FutureEq, run_word, SufficientFor, kernel, KernelR": "IDM_ReaderDomainFoundation.v (LIVE file @ 84cdd7b, Section FutureReaderDynamics / SufficiencyKernel; ruling 11b-8)",
-      "record_sufficient": "DISCLOSED Section hypothesis: rk s = rk t -> DepthEq step read L s t (the SOUND half of weld/E.06.v1 CAN-034)"
-    },
-    "tier": "Th_coqc",
-    "status": "verified_by_coq",
-    "domain": "M",
-    "aliases": [
-      "Sigma",
-      "sigma_respects_step",
-      "future_readers_in_alg",
-      "bridge-s2-signature"
-    ],
-    "coq": {
-      "identifiers": [
-        "Obs",
-        "DepthClass",
-        "Sigma",
-        "sigma_class_refl",
-        "sigma_respects_step",
-        "sigma_readout_factor",
-        "sigma_readout_factor_sig",
-        "sigma_class_well_defined",
-        "readers_in_alg",
-        "future_readers_in_alg"
-      ],
-      "file": "formal/IDM_SignatureFunctor.v",
-      "file_repo": "information-discrete-math (worktree branch formal/readout-bridge; the LIVE file is the source of truth, ruling 11b-8)",
-      "file_note": "path relative to the information-discrete-math worktree root, NOT to this repository; Toledo's coq/information-discrete-math mirror is stale and was never used (ruling 11b-8)",
-      "imported_from": "information-discrete-math@ac1df59:formal/IDM_SignatureFunctor.v",
-      "coq_status": "compiled_axiom_free",
-      "coq_axioms": [],
-      "print_assumptions": "Closed under the global context for every identifier (scratch chk_signature_functor.v 18/18, 2026-09-18); DepthStable(L) and record_sufficient are premises in the exported types (About printed for sigma_respects_step and future_readers_in_alg)",
-      "scratch_readout": "chk_signature_functor.v (From IDM.formal Require Import IDM_SignatureFunctor; 18 Print Assumptions): 18/18 Closed under the global context",
-      "build_command": "cd <live IDM worktree>/formal && ANSE_HEAVY_MAX=3G anse-heavy \"coqc -q -R <live IDM worktree> IDM IDM_SignatureFunctor.v\"",
-      "coq_version": "8.20.1",
-      "verified": "2026-09-18",
-      "wrapper_transcripts_h2": "weld__M_63_v1.v / weld__M_64_v1.v / weld__M_68_v1.v compiled once each under the LIVE mapping (-R <live IDM worktree> IDM; Locate Library resolved IDM.formal.IDM_ReaderDomainFoundation to the live .vo): CAN_1299_future_equivalence_dynamic_stability, CAN_1299_dynamic_weld_well_defined, CAN_1300_sufficiency_kernel_inclusion, CAN_1305_stable_depth_exact_future = Closed under the global context x4 (chk_h2_wrappers.v, commit 7a3d7a72, 2026-09-18) -- the three wrapper rows now have a transcript instead of a registry-imported flag"
-    },
-    "parents": [
-      {
-        "code": "weld/M.03.v1",
-        "derived_via": "same_object",
-        "evidence": "CAN-007 reader equivalence: DepthClass at horizon L is its finite-horizon occurrence"
-      },
-      {
-        "code": "weld/M.68.v1",
-        "derived_via": "reads",
-        "evidence": "CAN-1305 stable_depth_exact_future (used in both directions by sigma_respects_step, sigma_class_well_defined, future_readers_in_alg)"
-      },
-      {
-        "code": "weld/M.63.v1",
-        "derived_via": "reads",
-        "evidence": "CAN-1299 T3_future_equivalence_dynamic_stability"
-      },
-      {
-        "code": "weld/M.02.v1",
-        "derived_via": "reads",
-        "evidence": "CAN-006 domain weld, readout half O = O# o q: future_readers_in_alg"
-      },
-      {
-        "code": "weld/E.06.v1",
-        "derived_via": "reads",
-        "evidence": "CAN-034: record_sufficient is its sound half, taken as a hypothesis"
-      },
-      {
-        "code": "A.8",
-        "derived_via": "restates",
-        "evidence": "genesis root A.8 Sigma_alpha = (O_alpha, Q_alpha): instantiated, not a new row"
-      },
-      {
-        "code": "A.5/M.01.v1",
-        "derived_via": "reads",
-        "evidence": "CAN-008 record != state != quotient: sigma_class_well_defined"
-      }
-    ],
-    "origin": {
-      "source": "Discrete-Continuum Readout Bridge v0.1, Phase 2 (2026-09-18): cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md (repo morrocwi/cpg_research_journal, branch bridge/discrete-continuum-v0.1, sections 2, 8, 9, 11b). Registered in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); every code keeps '??' until the merge run assigns it.",
-      "design_doc": "cpg_research_journal/research/discrete_continuum_bridge/DISCRETE_CONTINUUM_BRIDGE_DESIGN_v0.1.md",
-      "doi": null
-    },
-    "claim_boundary": "Pure CIC over abstract types (no QArith, no Reals, no classical, no numeral literal); the horizon L is a declared nat (I4 refused); the class is never a point (Z1); an empty class is a Prop, never a state (Z4). The universal commuting claim (Genesis V.20) stays Dr; per domain the commuting square is finite_diagnostic with PASS + one-entry-perturbation FAIL (not Coq).",
-    "honest_caveats": [
-      "NOT proved (Open ledger, tier LOWER than the design's S2 'Tier reachable', which listed records_equal_iff_same_class as Th_coqc-reach): the identification of the Part-I Prop-valued class DepthClass s with a Part-II/III record rk s : K under Leibniz equality in BOTH directions plus a representative chooser -- pure CIC cannot equate two Prop-valued classes without propositional/functional extensionality, and no representative can be chosen from an abstract State without decidable equality and a finite enumeration; only the sound half record_sufficient is taken. Stance: provable constructively per domain once State is a finite type with decidable equality and the horizon-L signature is a computed finite tuple (EQ-001/C.18.v1 route). Falsifier: a concrete finite domain (e.g. the EQ-001/B.04 count-carrier N^G) with a computed L-signature record map for which record equality does NOT imply DepthEq L.",
-      "NOT written: the state half of weld/M.02 at the record level (an induced F#_u on K with rk (step u s) = F#_u (rk s)) -- with only the sound half, rk s = rk t gives DepthEq L (step u s) (step u t) but NOT rk (step u s) = rk (step u t); needs the completeness half (record_faithful); T4b_quotient_commuting_square already covers the Prop-valued quotient. Falsifier: rk s = rk t but rk (step u s) <> rk (step u t) for some u under record_sufficient + DepthStable(L).",
-      "OCCURRENCE, not a row (design section 8 PROP-BRIDGE-03: 'the quotient half = OCCURRENCE of weld/M.02.v1 + weld/M.03.v1')."
-    ]
+    "tier_in_genesis_verbatim": "PROP_BRIDGE_03_certified_radius.v header: \"Tier: every theorem below is Th_coqc only after the in-file `Print Assumptions` (end of file) and an independent scratch run printed \\\"Closed under the global context\\\".\"",
+    "relations": [],
+    "root": "weld",
+    "layer": "reading",
+    "status_note": "status normalised from lane value \"verified_by_coq\" to SCHEMA enum \"unverified\" (fixer pass 2026-09-18 (after three independent refuters)): no Toledo code is assigned yet and no coq/canonical wrapper has been through verify_all.sh; the compiled readout (Closed) is recorded in coq.print_assumptions."
   }
 ]

@@ -117,8 +117,12 @@
   Infinity audit: I1 refused (r2 = r_K^2 carried in Q, no square root formed anywhere;
   equiv_to_sum takes the root as a WITNESS r with r*r == r2); I2/I4 refused (every bound
   at the declared K / N; no limit); Z2 refused (r_K = 0, delta_K = 0 never assumed);
-  Z4 refused (no certificate ==> HOLD, typed, never 0).  Division appears only in beta_S1
-  as |Delta g N| / (1 - rho) under rho < 1 witnessed (inherited from plateau_radius).
+  Z4 refused (no certificate ==> HOLD, typed, never 0).  Division appears in this file only
+  in beta_S1 := |Delta g N| / (1 - rho), a TOTAL Definition (Coq's Qdiv is total:
+  beta_S1 g 1 N == 0 is provable and beta_S1 evaluates to -1 at rho = 2 -- scratch readout
+  chk_indep3, 2026-09-18); it is meaningful only under the premise rho < 1, which every
+  theorem using it carries (contracting_beta, contracting_radius, accept_certified_dQ).
+  Corrected wording, fixer pass 2026-09-18, independent refuter finding.
 
   Compile mapping (ruling 11b-8 -- the LIVE IDM worktree is the source of truth, never
   Toledo's stale coq/information-discrete-math mirror):
@@ -132,7 +136,7 @@
   file) and an independent scratch run printed "Closed under the global context".  Section
   hypotheses (d_triangle, d_sym, d_nonneg_*, pythagoras_dY, beta_cert, rho_cert, L_P_nonneg,
   P_lipschitz, r_K_nonneg, radius_cert, defect_cert*, Hrho1, Hcontr) are DISCLOSED here and
-  become premises of the exported statements.  Nothing classical, no Reals, no Admitted.
+  become premises of the exported statements.  Nothing classical, no Reals, no unfinished proof.
 *)
 
 Require Import Coq.QArith.QArith.
