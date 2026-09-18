@@ -4,6 +4,7 @@
   "_rows_file": "registry/proposals/discrete_continuum_bridge.json (12 rows, every code <root>/<D>.??.v1)",
   "_tier_note": "each record carries the tier of ITS OWN compiled identifiers (own Print Assumptions readout); the parent rows are not revised by this file -- LINEAGE revised events on PROP-EPSC-03 / PROP-EPSC-17 / CAN-165 / weld M.63/64/68 are registrar work at merge (theory doc Open ledger 16)",
   "_label": "every object here is not yet in Toledo",
+  "_phase3_note": "PROP-BRIDGE-21 added 2026-09-18 (Phase 3): the heat / diffusion leaf as ONE instantiation / occurrence record (nine records in this file from then on; the 'eight records' of _why_separate describes the split of the Phase 2 fixer pass). Same rule: no code, never a CANONICAL row.",
   "records": [
     {
       "id": "PROP-BRIDGE-05",
@@ -794,6 +795,186 @@
       ],
       "code_note": "(occurrence on weld/M.03.v1 CAN-007 + weld/M.02.v1 CAN-006, via weld/M.68.v1 CAN-1305 and weld/M.63.v1 CAN-1299)",
       "merge_instruction": "apply as LINEAGE occurrence_added events on each parent_codes entry plus coq_map.json rows citing the parent code; never a new CANONICAL row"
+    },
+    {
+      "id": "PROP-BRIDGE-21",
+      "code": null,
+      "code_request": "?? -- instantiation / occurrence record: no code is requested by this record. Whether N4 plateau_radius_window (the windowed DIVISION-form radius), the tuple-carrier maps q53 / Lam35 / res32 or dinf5 deserve proposal ROWS of their own is a registrar decision; until then each of them is not yet in Toledo and must not be cited as an equation.",
+      "name": "Heat / diffusion LEAF of the Readout Bridge: S1, S3, S5 instantiated on the scalar ledgers of one executed exact-rational run (unit path, nested grids N_K = 8*2^K, K = 0..4) and S2, S4 on a separate 5-fine / 3-coarse tuple grid -- an instantiation record of the bridge lane, not a new bridge line",
+      "statement": {
+        "latest": "\\kappa<1,\\ \\forall k\\in[N,N+M):\\ |\\Delta g(k+1)|\\le\\kappa\\,|\\Delta g(k)|\\ \\Longrightarrow\\ |g(N+M)-g(N)|\\le\\frac{|\\Delta g(N)|}{1-\\kappa}=:\\beta^{S1}_N;\\qquad \\delta_K:=|g_{K+1}-g_K|,\\ r_K:=\\beta^{S1}_K,\\ \\mathrm{gate}'(\\delta_K,\\varepsilon,\\mathrm{cert})=\\mathrm{ACCEPT}(r_K^2)\\ \\Longrightarrow\\ |g_{top}-g_{K+1}|\\le\\varepsilon",
+        "format": "latex",
+        "note_ascii": "N4 plateau_radius_window: the DIVISION-form radius on a WINDOW [N, N+M) -- a one-step corollary of the compiled multiplicative window lemma plateau_certificate_window (PROP-BRIDGE-13) via Qle_shift_div_l; heldout_miss_refutes_persistence is its contrapositive. leaf_accept_certified: gate_accept_certified (PROP-BRIDGE-16) at Y := Q, d_Y := dQ with the witnesses q_K := the constant map to g_K, Lambda_K := id, res_K := id, x := g_top, x_{K+1} := g_{K+1}; triangle = dQ_triangle, symmetry = dQ_sym, 0 <= r_K from kappa < 1 (beta_S1_nonneg), radius premise from N4 on the window [K, top). rho_K is NOT instantiated (r_K := beta_K). leaf_gate := the compiled gate' applied to a computed certificate (cert_dec); it is WINDOW-LOCAL and parametric in kappa -- the run's full-tape gate (certificate C5, khat_5 = max of the three witnessed ratios) is its instance kappa := khat_5; two disclosure Examples are compiled on purpose: gate_is_window_local (a tape with no full-tape licence at kappa = 1/2 is ACCEPTed at K = 1) and K3_licensed_by_padding_only (at K = top - 1 the only premise is the padded index, so an unstable tape is licensed there: that cell is excluded, its conclusion is vacuous). State layer on tuple carriers X5 = Q^5, R3 = Q^3: q53 (restriction to shared nodes), Lam35 (prolongation copying shared nodes), section law q53 o Lam35 = id as a Leibniz equality, coherence q52 = res32 o q53, EXACT on Alg_Q (exact_on_alg, roundtrip_exact), NEVER (roundtrip_never, roundtrip_never_total on the pair (0,0,0,0,0) / (0,1,0,1,0)), WITHIN RADIUS with L_P = 1 (roundtrip_radius_record), dinf5 (finite max of dQ over 5 nodes) with its triangle inequality and symmetry. Seam tie: for six rows the level-0 readout g_0 of the run is recomputed from Bridge_Seam.Lvec 9 path_w (one heat_step, 9 nodes) and proved == to the run's rational; heat_step is weld/S.22.v1 at Gamma := 0, J := 0."
+      },
+      "definitions": {
+        "tape_of, window_ok, licence_ok, cert_dec, leaf_delta, leaf_r, leaf_cert, leaf_gate, eps_abs, eps_rel, heat_step, heat_step_pinned": "leaf suppliers (scoring machinery of the instantiation, not equations): formal/Leaf_HeatPath.v, Part 0",
+        "q53, Lam35, q52, res32, Lam23, to_fun5, dinf5, P_sh, P_odd": "tuple-carrier objects of the small grid: formal/Leaf_HeatPath.v, Part 3",
+        "rows instantiated": "7 of the run's 40 (tape, reader) rows: TC_near (PASS candidate, matched pair of TD_near), TD_near (unstable step: HOLD at every scored cell K <= 2 for every kappa and tolerance), TA_mid / TB_mid (closed-form reader; the TRAP: khat_3 = 1/4 exactly on the stable and on the unstable tape, both held-out values outside the C3 ball on the unstable one), TC_ssq (non-refining reader, forced by arithmetic), TR_near (a declared FAIL control that the gate ACCEPTs -- compiled on purpose), TR_state (licensed with khat_5 ~ 0.9989, HOLD from the largest tolerance downwards)"
+      },
+      "tier": "Th_coqc",
+      "tier_note": "TIER SPLIT. The THEOREMS are Th_coqc by the file's own in-file Print Assumptions readout (348 lines, 348 'Closed under the global context', one coqc, 2026-09-18). They are theorems ABOUT NUMBERS that are themselves tier finite_diagnostic: the exact rationals of one executed, dated run (2026-09-18) of a protocol frozen before execution, copied into the file by a generator (sha256 of the source JSON is in the file header). A Th_coqc line here certifies arithmetic and instantiation -- never the run, the stepper's fidelity beyond level 0, the physical model, the choice of reader, or anything beyond level 4 of the tape. Every certificate is a WINDOW certificate on witnessed levels; none is a tail or continuum-limit certificate. HOLD is not FALSE. The continuum heat equation is a Dr readout and is not an object of the file.",
+      "status": "verified_by_coq",
+      "status_note": "verified_by_coq refers to the compiled statements only (see tier_note); the run they instantiate is a finite_diagnostic record kept in the programme's research journal (private).",
+      "domain": "M",
+      "aliases": [
+        "bridge-leaf-heat-path",
+        "Leaf_HeatPath",
+        "plateau_radius_window",
+        "leaf_accept_certified",
+        "leaf_gate"
+      ],
+      "coq": {
+        "identifiers": [
+          "plateau_radius_window",
+          "heldout_miss_refutes_persistence",
+          "beta_S1_nonneg",
+          "window_ok_sound",
+          "licence_ok_sound",
+          "cert_dec",
+          "cert_dec_complete",
+          "cert_dec_hold_sound",
+          "hold_downward",
+          "leaf_gate",
+          "leaf_gate_licensed",
+          "leaf_accept_certified",
+          "leaf_accept_premises",
+          "leaf_gate_threshold",
+          "leaf_hold_sound",
+          "no_licence_if_gap_grows",
+          "leaf_gate_holds_if_gap_grows",
+          "heat_step_interior",
+          "trap_same_C3_ratio",
+          "matched_pair_near",
+          "gate_is_window_local",
+          "K3_licensed_by_padding_only",
+          "S2_section_law",
+          "S2_restriction_coherence",
+          "S2_PK_idempotent",
+          "S2_PK_fixes_image",
+          "small_grid_seam",
+          "S4_P_sh_in_alg",
+          "S4_exact_P_sh",
+          "S4_exact_iff_P_sh",
+          "S4_never",
+          "S4_never_total",
+          "S4_P_odd_not_in_alg",
+          "S4_exact_fails_outside_alg",
+          "dinf5_triangle",
+          "dinf5_sym",
+          "small_grid_triangle_composition",
+          "small_grid_accept_certified",
+          "S4_within_radius_P_odd",
+          "S4_within_radius_attained"
+        ],
+        "identifiers_note": "the general and cross-row statements; the seven row modules (TC_near, TD_near, TA_mid, TB_mid, TC_ssq, TR_near, TR_state) add the per-row Examples and Theorems (window_0_3, S1_bound_0_3, radius_K*, gate_K*_{rel,abs}_j*_ACCEPT / _HOLD, ontape_K*, too_tight_*, hold_is_not_false_*, C3_* / C4_* held-out observations, C5_HOLD_scored_cells, seam_tie_level0): 346 theorem-like statements in total, plus the two computing definitions cert_dec and leaf_gate",
+        "file": "formal/Leaf_HeatPath.v",
+        "file_repo": "information-discrete-math (the LIVE file is the source of truth, ruling 11b-8)",
+        "file_note": "path relative to the information-discrete-math repository root, NOT to this repository; Toledo's coq/information-discrete-math mirror is stale and was never used (ruling 11b-8)",
+        "imported_from": "information-discrete-math:formal/Leaf_HeatPath.v (follow-up to pull request 137; commit pending the follow-up merge)",
+        "coq_status": "compiled_axiom_free",
+        "coq_axioms": [],
+        "print_assumptions": "Closed under the global context -- 348/348 in-file lines on the fixer-pass recompile of 2026-09-18 (346 theorem-like statements + cert_dec + leaf_gate); 0 hits for axiom|classic|Reals; no Admitted / admit / Axiom / Parameter. Independent recompiles of the builder's earlier version by two refuters the same day: 346/346 Closed each. Scratch from the compiled object after the fixer pass: 8/8 Closed, four Fail controls on opposite verdicts fail as they should.",
+        "build_command": "cd <live IDM worktree>/formal && coqc -q -R <live IDM worktree> IDM -Q <toledo worktree>/coq/canonical MRC Leaf_HeatPath.v",
+        "coq_version": "8.20.1",
+        "verified": "2026-09-18",
+        "coq_status_schema_note": "lane vocabulary (as the 42 PROP-EPSC rows): compiled + Print Assumptions Closed by in-file readout, no Toledo wrapper through verify_all.sh yet; SCHEMA.md `closed` is reserved for verify.sh-reported wrappers, so normalisation happens at merge (design section 8 (f)). No CI job of either repository compiles this file (it needs both mappings)."
+      },
+      "parents": [
+        {
+          "code": "PROP-BRIDGE-13",
+          "derived_via": "specializes",
+          "evidence": "plateau_certificate_window Required and instantiated on each witnessed window; N4 plateau_radius_window is its division form via Qle_shift_div_l (a corollary, recorded here as an occurrence, not filed as a row)"
+        },
+        {
+          "code": "R/M.32.v1",
+          "derived_via": "reads",
+          "evidence": "refine_stable, through its windowed form (PROP-BRIDGE-13); no every-k lemma is instantiated on a padded tape"
+        },
+        {
+          "code": "PROP-BRIDGE-04",
+          "derived_via": "reads",
+          "evidence": "beta_S1, dQ, dQ_triangle, dQ_sym, triangle_composition (typed on the small grid only; enters no certificate)"
+        },
+        {
+          "code": "PROP-BRIDGE-16",
+          "derived_via": "specializes",
+          "evidence": "gate_accept_certified at Y := Q, d_Y := dQ (leaf_accept_certified); accept_certified_dQ (leaf_accept_premises)"
+        },
+        {
+          "code": "PROP-BRIDGE-06",
+          "derived_via": "reads",
+          "evidence": "Certificate', gate', fail_closed' -- leaf_gate is the compiled gate' applied to a computed certificate; Verdict / ACCEPT / HOLD are PROP-EPSC-03's own (two constructors)"
+        },
+        {
+          "code": "PROP-BRIDGE-02",
+          "derived_via": "reads",
+          "evidence": "Nidx, accept: the bounded search evaluated with bound 4 (reported, not scored); N_of / sigma_of are not used"
+        },
+        {
+          "code": "PROP-BRIDGE-03",
+          "derived_via": "reads",
+          "evidence": "PK, PK_idempotent, PK_fixes_image instantiated on the tuple carriers"
+        },
+        {
+          "code": "PROP-BRIDGE-09",
+          "derived_via": "reads",
+          "evidence": "roundtrip_never, roundtrip_never_total instantiated on the NEVER pair (cited at its source tier)"
+        },
+        {
+          "code": "PROP-BRIDGE-18",
+          "derived_via": "reads",
+          "evidence": "InAlg, exact_on_alg, roundtrip_exact, roundtrip_exact_fails_outside_alg on the small grid"
+        },
+        {
+          "code": "PROP-BRIDGE-15",
+          "derived_via": "reads",
+          "evidence": "roundtrip_radius_record at L_P = 1 (S4_within_radius_P_odd)"
+        },
+        {
+          "code": "PROP-BRIDGE-08",
+          "derived_via": "reads",
+          "evidence": "seam_grid, Lvec, path_w: the level-0 seam tie of six rows and small_grid_seam"
+        },
+        {
+          "code": "weld/S.22.v1",
+          "derived_via": "specializes",
+          "evidence": "s[n+1] = s[n] + dt(-A s[n] + J), A := L_R + Gamma: heat_step is that statement at Gamma := 0, J := 0 (statement read in CANONICAL.json on 2026-09-18)"
+        },
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads",
+          "evidence": "q53 is an occurrence of the reader-domain quotient (with weld/M.03.v1)"
+        },
+        {
+          "code": "EQ-002/M.01.v1",
+          "derived_via": "reads",
+          "evidence": "fiber constancy ker R subseteq ker Phi: the S4 EXACT clause on the small grid, through PROP-BRIDGE-18"
+        }
+      ],
+      "origin": {
+        "source": "Discrete-Continuum Readout Bridge v0.1, Phase 3 (2026-09-18): the heat / diffusion leaf. Protocol and predictions frozen before execution, run record, generator and Coq ledger in the research journal (private). Reuse pipeline recorded: Toledo lookup by statement over CANONICAL.json (1,333 rows) and registry/proposals/*.json on 2026-09-18 -- the only window row is the multiplicative PROP-BRIDGE-13; PROP-BRIDGE-17 (occurrence record) holds the every-k forms including the division-form plateau_radius; no WINDOWED division form, no grid restriction / prolongation pair and no d_inf on tuples is registered. Genesis compatibility: q53 instantiates the reader-domain quotient of the Exact Domain Gate (A.4); Lam35 is a DISCLOSED section (A.8, section reading, Dr, founder ruling pending); HOLD is the gate-level image of the bottom value of A.13 Gate 2; the FAIL rows implement the Fail-Able Gate Law (V.14 / VI.7). Recorded in the proposal lane BEFORE any citation (EPIS-TOLEDO-FIRST); no code until the merge run.",
+        "design_doc": "research journal (private): heat-leaf protocol and prediction freeze (2026-09-18)",
+        "doi": null
+      },
+      "claim_boundary": "An instantiation on ONE graph family (the unit path), ONE scheme (the explicit stepper phi <- phi - dt * L_R phi), one smooth datum family plus one rough datum, a FIVE-level tape (at most 129 nodes, 256 steps). Window certificates only: nothing is stated about a level beyond 4, a tail, a limit or the continuum heat equation (a Dr readout); h -> 0 is never formed; no convergence or continuum-limit theorem is stated or follows. An ACCEPT certifies the ledger it is given, not the model, the datum or the reader: two declared FAIL controls on the rough datum are certified, pass the informative held-out test and are ACCEPTed (TR_near is compiled as exactly that), and a conserved reader certifies the unstable tape. Under the full-tape certificate the conclusion of an ACCEPT concerns two values already on the tape and has no predictive content; the only held-out statements are the C3 / C4 observations.",
+      "honest_caveats": [
+        "INSTANTIATION / OCCURRENCE RECORD, not a row. Every new object of the file (N4 plateau_radius_window and its contrapositive, the tuple-carrier maps, dinf5, the leaf suppliers) is NEW DERIVATION / PROPOSAL -- not yet in Toledo.",
+        "Two layers that are NOT composed in Coq: S1 / S3 / S5 on scalar ledgers (constant q_K, identity maps) and S2 / S4 on a separate small tuple grid whose data are declared vectors, not heat states of the run; the state-layer ledger O_state (a path-length ledger, proposal N3) is not a Coq object. Levels 1-4 of the tapes are not recomputed in Coq (level 0 is, for six rows). Seven of the run's 40 rows.",
+        "leaf_gate is window-local and parametric in kappa: as a definition it can license more than the frozen protocol's full-tape gate, which is its instance kappa := khat_5. On the run's numbers an exact-fraction model of the definition (finite_diagnostic, 2026-09-18, not a Coq readout) reproduces the run's ACCEPT / HOLD staircase on all 40 rows at that instance, and finds five NO-LICENCE rows of the run on which some kappa < 1 is locally licensed at K = 1 or 2 -- on those rows the for-every-kappa HOLD theorem shape is false. A full-tape licence inside leaf_cert, and the exclusion of K = top - 1 inside it, are open design decisions.",
+        "Run record (finite_diagnostic): 4 matched pairs (same reader, ACCEPT at the stable step, HOLD at the unstable step), all from the pinned tapes, every FAIL half a blow-up (kappa_0 >= 2.7e3); held-out MISS of the one-ratio certificate C3 on 5 of 10 tested PASS-candidate rows (C3 is not a regime classifier), of C4 on 0 of 10; open predictions 225 tallied / 42 misses (227 / 44 if two untallied out-of-bracket ratios are counted); hand-derivation, regression and forced-by-arithmetic classes 172 items / 0 misses.",
+        "Three independent refuters (numbers / Coq / prose-vs-formal) ran on 2026-09-18: no theorem was found false; the prose-vs-formal lens refuted the file's description of HOLD ('third value') and of the gate, both corrected in the fixer pass whose recompile is the readout quoted above."
+      ],
+      "relations": [],
+      "entry_kind": "occurrence",
+      "parent_codes": [
+        "R/M.32.v1",
+        "weld/S.22.v1",
+        "weld/M.02.v1",
+        "weld/M.03.v1",
+        "EQ-002/M.01.v1"
+      ],
+      "code_note": "(instantiation of the bridge lane PROP-BRIDGE-13 / -16 / -06 / -18 / -09 / -08, themselves codes pending; occurrence on R/M.32.v1 IDM-0057 through the windowed form, on weld/S.22.v1 CAN-115-SPLIT-13 for heat_step, on weld/M.02.v1 CAN-006 + weld/M.03.v1 CAN-007 for q53, on EQ-002/M.01.v1 CAN-165 for the EXACT clause)",
+      "merge_instruction": "apply as LINEAGE occurrence_added events on each parent_codes entry plus coq_map.json rows citing the parent code; never a new CANONICAL row. If the registrar rules that N4 plateau_radius_window is a row, file it beside PROP-BRIDGE-13 with parent PROP-BRIDGE-13 (specializes) and keep this record as its first occurrence."
     }
   ]
 }
