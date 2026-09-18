@@ -148,3 +148,7 @@ Proof.
   - exact HJ.
   - exact Hx.
 Qed.
+
+(* h1 housekeeping (design section 9): axiom readout of the exported statements. *)
+Print Assumptions affine_inverse_error_bound.
+Print Assumptions epsc20_reduced_triad_error_bound.

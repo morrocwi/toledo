@@ -55,3 +55,6 @@ Section LipschitzTailLift.
   Qed.
 
 End LipschitzTailLift.
+
+(* h1 housekeeping (design section 9): axiom readout of the exported statements. *)
+Print Assumptions epsc08_lipschitz_tail_lift.

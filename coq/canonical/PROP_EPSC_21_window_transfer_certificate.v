@@ -154,3 +154,6 @@ Section WindowTransferCertificate.
   Qed.
 
 End WindowTransferCertificate.
+
+(* h1 housekeeping (design section 9): axiom readout of the exported statements. *)
+Print Assumptions window_transfer_radius_bound.

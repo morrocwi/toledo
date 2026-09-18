@@ -56,3 +56,7 @@ Section SelfMapBudgetGate.
   Qed.
 
 End SelfMapBudgetGate.
+
+(* h1 housekeeping (design section 9): axiom readout of the exported statements. *)
+Print Assumptions epsc39_delta_bound.
+Print Assumptions epsc39_rho_cond.
