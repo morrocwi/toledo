@@ -10,5 +10,5 @@
     "status": "not-required",
     "evidence": "No new Toledo entry, no tier/status/parent change to any existing entry. registry/CANONICAL.json's only diff is its own top-level counts.computed provenance string (the numeric counts are unchanged, confirmed by a real, non-dry-run run of the new script showing zero numeric delta against the prior hand-computed block)."
   },
-  "claim_effect": "no-claim-change"
+  "claim_effect": "provenance-change"
 }
