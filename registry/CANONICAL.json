@@ -4883,6 +4883,129 @@
       }
     },
     {
+      "id": "CAN-1310",
+      "code": "EQ-015/H.54.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [],
+      "name": "Machine-mediated dissonance becomes disciplined revision only under four named conditions",
+      "statement": {
+        "latest": "disciplined_revision(d) := corrigible(d) /\\ route_open(d) /\\ criticizable(d) /\\ domain_validated(d)",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "disciplined_revision(d) := corrigible(d) /\\ route_open(d) /\\ criticizable(d) /\\ domain_validated(d)",
+          "date": "2026-09-19",
+          "reason": "gap identified while assembling a lean human-AI/human-human/AI-AI learning stream: 'Reflective Dissonance' (the title term of 'When AI Expands Human Potential: Reflective Dissonance, Epistemic Agency, and Constraint', Zenodo 10.5281/zenodo.19215748) had zero Toledo presence anywhere (confirmed by full-registry text search). The paper's own abstract (verbatim, per glosa harvest kc-aihp-023.yaml, fetched from the Zenodo API) states: 'AI expands human potential only when machine-mediated dissonance becomes disciplined revision under world-answerable conditions. This requires corrigibility, route-openness, criticizability, and domain-sensitive validation.' This entry formalizes only the FORM of that licensing condition (a conjunction of four already-registered requirements), reusing existing Toledo objects for each of the four rather than inventing new primitives.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/S.09.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/S.09.v1 (Corrigibility / Spectral-Support Readout Condition, Δspec(Ri)>0 ⟺ channel_i=open ∧ Ṙ_i≠0) supplies the 'corrigibility' conjunct."
+        },
+        {
+          "code": "A.5/S.03.v1",
+          "derived_via": "reads",
+          "evidence": "A.5/S.03.v1 (Six-Level Live-Possibility Non-Collapse Chain, Π^live⊆Π^feas⊆Π^phys) supplies the 'route-openness' conjunct."
+        },
+        {
+          "code": "A.5/H.12.v1",
+          "derived_via": "reads",
+          "evidence": "A.5/H.12.v1 (the Verify stage: Source≠AI synthesis≠Human inference≠Unverified candidate) supplies the 'criticizability' conjunct."
+        },
+        {
+          "code": "EQ-015/H.53.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/H.53.v1 (safe_retain guard against incorporating an unvalidated K_like item as validated) supplies the 'domain-sensitive validation' conjunct."
+        },
+        {
+          "code": "EQ-015/E.11.v1",
+          "derived_via": "relates-to",
+          "evidence": "EQ-015/E.11.v1 is this same source paper's (zenodo.19215748) only other Toledo entry (context-indexed knower status) -- recorded as a sibling object from the same source, not a restatement of it."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": 19215748,
+        "doi": "10.5281/zenodo.19215748",
+        "section": "Abstract"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Dr",
+      "tier_in_genesis_verbatim": "source states this as a narrative thesis, not a proved theorem; this entry formalizes only the logical FORM of the four-condition conjunction the source itself asserts",
+      "coq": {
+        "file": "coq/canonical/EQ_015__H_54_v1.v",
+        "identifier": "EQ_015_H_54_v1_any_missing_condition_blocks_licensing",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": 19215748,
+          "doi": "10.5281/zenodo.19215748",
+          "label": "Abstract",
+          "section": "Abstract",
+          "raw_key": "19215748:Abstract"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "Tiered Dr, not Definition and not Th_coqc, even though the accompanying Coq file compiles closed: the source itself frames 'dissonance becomes disciplined revision' as a narrative epistemic thesis (a claim about when AI genuinely helps, tier Dr per this workspace's own harvest card kc-aihp-023.yaml), not a stipulated definition or a proved universal fact. Only a narrow logical corollary (dropping any one of the four conjuncts breaks the licensing) is actually proved, and that corollary alone does not license upgrading the tier above what the source itself claims for the underlying thesis. No claim is made that satisfying the four formal conditions is sufficient in reality for AI to expand human potential -- only that the source's own stated requirement is a well-formed conjunction of four independently-registered readouts.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions EQ_015_H_54_v1_any_missing_condition_blocks_licensing` reports Closed under the global context (axiom-free); the proof is a direct case analysis on the conjunction's negation.",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": ["coq/canonical/EQ_015__H_54_v1.v, Print Assumptions: Closed under the global context"]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
       "id": "CAN-031",
       "code": "weld/E.03.v1",
       "root": "weld",
@@ -169707,9 +169830,9 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1336,
+    "entries": 1337,
     "by_status": {
-      "current": 1201,
+      "current": 1202,
       "unverified": 96,
       "split": 30,
       "not_an_equation": 9
@@ -169717,7 +169840,7 @@
     "by_domain": {
       "M": 448,
       "E": 62,
-      "H": 129,
+      "H": 130,
       "S": 137,
       "W": 93,
       "C": 60,
@@ -169727,7 +169850,7 @@
     "by_tier": {
       "Th_coqc": 445,
       "Definition": 444,
-      "Dr": 82,
+      "Dr": 83,
       "Ax": 12,
       "finite_diagnostic": 46,
       "Open": 41,
@@ -169739,7 +169862,7 @@
       "Conjecture": 1
     },
     "by_coq_status": {
-      "closed": 584,
+      "closed": 585,
       "definition": 384,
       "wrapped_related": 210,
       "not_formalisable": 70,
