@@ -5006,6 +5006,140 @@
       }
     },
     {
+      "id": "CAN-1313",
+      "code": "EQ-015/H.55.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": ["resistant-coherence"],
+      "name": "Resistant coherence: a four-condition AND-gate distinguishing genuine belief-testing from self-confirmation",
+      "statement": {
+        "latest": "ResistantCoherence(b) := D(b) /\\ C(b) /\\ R(b) /\\ I(b)",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "ResistantCoherence(b) := D(b) /\\ C(b) /\\ R(b) /\\ I(b)",
+          "date": "2026-09-19",
+          "reason": "TG-RFG-01 reuse-pipeline pass on \"Human Learning as Epistemic Architecture\" (Zenodo 10.5281/zenodo.22341297). Source, verbatim: \"Self-confirming coherence obtains when a belief is checked only against sources selected because they already agree with it. Resistant coherence obtains when a belief has been exposed to, and has survived, genuine attempts at refutation... it can be enforced by four conditions... 1. Dissent condition... 2. Consequence condition... 3. Refusal condition... 4. Internal-critique condition.\" Toledo lookup found zero hits for \"resistant\", \"self-confirming\", \"dissent condition\", \"refusal condition\", or \"internal-critique\" anywhere in the registry, and no close relates-to object -- the crispest and most directly formalizable candidate found in this paper.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {"code": "EQ-015", "derived_via": "reads"}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Human Learning as Epistemic Architecture",
+        "repo_anchor": null,
+        "record_id": 22341297,
+        "doi": "10.5281/zenodo.22341297",
+        "section": "Constraint Testing, Self-confirming vs. resistant coherence"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; stated in the paper as a named enforceable condition, not a formal equation",
+      "coq": {
+        "file": "coq/canonical/EQ_015__H_55_v1.v",
+        "identifier": "EQ_015_H_55_v1_resistant_coherence",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Constraint Testing, Self-confirming vs. resistant coherence", "raw_key": "22341297:resistant-coherence"}
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "PROPOSAL. This file states the definition ONLY -- deliberately no Theorem: a plain four-way conjunction has no non-trivial corollary (\"implies each conjunct\" would just restate the definiens), so none was invented, matching this workspace's own discipline against manufacturing hollow theorems. coq_status is 'definition', not 'closed', because there is no theorem to be Closed -- this is the same honest pattern as coq_status='open_prop'/'definition' entries elsewhere in this registry (no dishonest/missing-assumptions flag applies, per tests/test_registry.py::test_coq_assumptions_honest's own NO_PROOF_OBLIGATION exemption for 'definition').",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": { "held": true, "evidence": [] },
+          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
+          "R2": { "held": false, "evidence": [], "reason": "coq_status is 'definition' (not 'closed')" },
+          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
+          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
+          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
+          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+        }
+      }
+    },
+    {
+      "id": "CAN-1314",
+      "code": "EQ-015/H.56.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": ["corrigibility-closure-loop-automaton"],
+      "name": "Corrigibility loop vs. closure loop: a two-branch finite automaton for the branching point of learning",
+      "statement": {
+        "latest": "Loop in {CorrigibilityLoop, ClosureLoop}; step: Loop -> Signal -> Loop",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Loop in {CorrigibilityLoop, ClosureLoop}; step: Loop -> Signal -> Loop",
+          "date": "2026-09-19",
+          "reason": "TG-RFG-01 reuse-pipeline pass on \"Human Learning as Epistemic Architecture\" (Zenodo 10.5281/zenodo.22341297). Source, verbatim: \"The learning sequence is: encounter -> friction -> branching -> validation -> integration. The branching point is decisive. The learner may enter a closure loop or a corrigibility loop,\" with the two branches spelled out as \"closure loop: fluency -> reassurance -> pseudo-understanding\" vs. \"corrigibility loop: comparison -> evidence -> revision.\" Toledo lookup found no structural match; the one lexical hit, weld/S.09.v1 (H8: \"corrigibility predicts durable agency\"), is a single empirical hypothesis statement, not a branching state machine -- genuinely new, cited only as a sibling theme.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {"code": "EQ-015", "derived_via": "reads"},
+        {"code": "weld/S.09.v1", "derived_via": "relates-to", "evidence": "sibling empirical-programme hypothesis H8 ('corrigibility predicts durable agency') -- an empirical hypothesis statement, not the same object as this branching state machine"}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Human Learning as Epistemic Architecture",
+        "repo_anchor": null,
+        "record_id": 22341297,
+        "doi": "10.5281/zenodo.22341297",
+        "section": "Reflective Dissonance / Corrigible Agency, the branching point of learning"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; a described pipeline in prose, not a formal equation",
+      "coq": {
+        "file": "coq/canonical/EQ_015__H_56_v1.v",
+        "identifier": "EQ_015_H_56_v1_Loop, EQ_015_H_56_v1_loop_pairwise_distinct, EQ_015_H_56_v1_step_type, EQ_015_H_56_v1_run, EQ_015_H_56_v1_run_nil",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Reflective Dissonance / Corrigible Agency, the branching point of learning", "raw_key": "22341297:corrigibility-closure-loop"}
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "PROPOSAL. Both proved theorems are free-from-closed-Inductive/base-case facts (loop_pairwise_distinct from a closed 2-constructor Inductive; run_nil a trivial fold-base-case fact) -- the transition function 'step' is left an uninterpreted Variable; no claim about which signals move the learner between branches, since the paper does not fix a concrete alphabet or transition table. This entry is also this session's first direct Toledo formalization touching the same 'reflective dissonance' vocabulary as EQ-015/H.54.v1 (a different, earlier-registered object from a different source paper) -- the two are related in theme (both concern the friction/dissonance-to-resolution pipeline) but are NOT restatements of each other and neither cites the other as a parent, since they formalize different papers' different constructions.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions EQ_015_H_56_v1_loop_pairwise_distinct` and `Print Assumptions EQ_015_H_56_v1_run_nil` both report Closed under the global context (axiom-free).",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": { "held": true, "evidence": [] },
+          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
+          "R2": { "held": true, "evidence": ["coq/canonical/EQ_015__H_56_v1.v, Print Assumptions: Closed under the global context (both theorems)"] },
+          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
+          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
+          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
+          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+        }
+      }
+    },
+    {
       "id": "CAN-031",
       "code": "weld/E.03.v1",
       "root": "weld",
@@ -159865,6 +159999,143 @@
       }
     },
     {
+      "id": "CAN-1311",
+      "code": "EQ-015/M.18.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": ["life-concept-graph"],
+      "name": "Life-Concept Graph: a labeled directed graph G=(V,E,l) over life-concepts",
+      "statement": {
+        "latest": "G = (V, E, l), l: E -> R, R a finite relation vocabulary",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "G = (V, E, l), l: E -> R, R a finite relation vocabulary",
+          "date": "2026-09-19",
+          "reason": "TG-RFG-01 reuse-pipeline pass on \"Human Learning as Epistemic Architecture\" (Yaoharee Lahtee, Zenodo 10.5281/zenodo.22341297), a paper confirmed to contain zero pre-existing formal equations (per this repo's own registry/eq_22341297.json audit) and zero Toledo entries of any kind before this pass. Source, verbatim (paper, \"From Semantic Neighborhood to Life-Concept Graph\"): \"A knowledge graph expresses relations among entities... This produces a life-concept graph. The basic form is: subject -> relation -> object,\" with worked instances including the chain friction -> can_enable -> reflective_dissonance -> requires -> validation -> strengthens -> corrigibility -> strengthens -> agency. Toledo lookup found no general multi-relation concept graph over a finite relation vocabulary anywhere in the registry; the closest structural relative, A.5/E.03.v1, is a single labeled provenance PATH, not a general graph -- genuinely new, registered rather than treated as a duplicate.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {"code": "EQ-015", "derived_via": "reads"},
+        {"code": "A.5/E.03.v1", "derived_via": "relates-to", "evidence": "structurally related labeled-graph precedent (a single provenance PATH record, not a general multi-relation concept graph) -- not a duplicate"},
+        {"code": "weld/M.01.v1", "derived_via": "relates-to", "evidence": "root graph-Laplacian object; a life-concept graph is a plausible future input to that root's Laplacian machinery, not itself an instance of it"}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Human Learning as Epistemic Architecture",
+        "repo_anchor": null,
+        "record_id": 22341297,
+        "doi": "10.5281/zenodo.22341297",
+        "section": "From Semantic Neighborhood to Life-Concept Graph"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; the paper states this as a worked method, not a formal equation (confirmed zero formal equations in this paper by this repo's own prior equation-extraction audit)",
+      "coq": {
+        "file": "coq/canonical/EQ_015__M_18_v1.v",
+        "identifier": "EQ_015_M_18_v1_LifeConceptGraph, EQ_015_M_18_v1_well_formed, EQ_015_M_18_v1_close, EQ_015_M_18_v1_close_well_formed",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "From Semantic Neighborhood to Life-Concept Graph", "raw_key": "22341297:life-concept-graph"}
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "PROPOSAL, first Toledo entry for this source paper. This entry states the FORM of the candidate object only -- a finite labeled directed graph over abstract vertex/relation types. The only theorem proved is a soundness fact about the one constructive operation the definition admits (closing a graph's vertex list under its own edge endpoints); no property of the paper's actual worked instances (e.g. the specific friction->...->agency chain quoted) is claimed, and R's contents are left fully abstract.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions EQ_015_M_18_v1_close_well_formed` reports Closed under the global context (axiom-free).",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": { "held": true, "evidence": [] },
+          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
+          "R2": { "held": true, "evidence": ["coq/canonical/EQ_015__M_18_v1.v, Print Assumptions: Closed under the global context"] },
+          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
+          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
+          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
+          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+        }
+      }
+    },
+    {
+      "id": "CAN-1312",
+      "code": "EQ-015/M.19.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": ["constraint-test-status-function"],
+      "name": "Constraint test as a status-transition function tau : (claim, D, Sigma) -> S",
+      "statement": {
+        "latest": "tau : (claim, D, Sigma) -> S, S = {candidate, supported, revised, rejected}",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "tau : (claim, D, Sigma) -> S, S = {candidate, supported, revised, rejected}",
+          "date": "2026-09-19",
+          "reason": "TG-RFG-01 reuse-pipeline pass on \"Human Learning as Epistemic Architecture\" (Zenodo 10.5281/zenodo.22341297). Source, verbatim (paper's constraint-testing worksheet template): \"result: status: 'candidate / supported / revised / rejected'\" fed by named constraint_types (empirical, practical, social, ethical, existential) and a set of validation_routes. Toledo lookup found zero hits for this status vocabulary or a claim/evidence/context -> status transition function of this arity anywhere in the registry; Toledo's own Th_coqc/finite_diagnostic/Dr/Open tier ladder is a related but distinct convention (the registry's own meta-level device, not a claim-level status of an individual learner's belief) -- genuinely new.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {"code": "EQ-015", "derived_via": "reads"},
+        {"code": "EQ-015/H.15.v1", "derived_via": "relates-to", "evidence": "tangential: pre/post confidence-warrant calibration audit -- different vocabulary and arity, not the same object"}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Human Learning as Epistemic Architecture",
+        "repo_anchor": null,
+        "record_id": 22341297,
+        "doi": "10.5281/zenodo.22341297",
+        "section": "Constraint Testing worksheet template"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; a worksheet template field, not a formal equation",
+      "coq": {
+        "file": "coq/canonical/EQ_015__M_19_v1.v",
+        "identifier": "EQ_015_M_19_v1_Status, EQ_015_M_19_v1_status_pairwise_distinct, EQ_015_M_19_v1_tau_type",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Constraint Testing worksheet template", "raw_key": "22341297:constraint-test-status"}
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "PROPOSAL. The closed four-way status type is genuinely new vocabulary distinct from Toledo's own tier ladder. Coq proves only that the four status constructors are pairwise distinct (free from any closed finite Inductive) -- the transition function tau itself is left as an uninterpreted Variable; no claim is made about which (claim,D,Sigma) triples map to which status, since the paper's own decision procedure is not itself formalized in the source.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions EQ_015_M_19_v1_status_pairwise_distinct` reports Closed under the global context (axiom-free).",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": { "held": true, "evidence": [] },
+          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
+          "R2": { "held": true, "evidence": ["coq/canonical/EQ_015__M_19_v1.v, Print Assumptions: Closed under the global context"] },
+          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
+          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
+          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
+          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+        }
+      }
+    },
+    {
       "id": "CAN-1274",
       "code": "weld/H.51.v1",
       "root": "weld",
@@ -161270,6 +161541,74 @@
             "evidence": [],
             "reason": "R4 not held"
           }
+        }
+      }
+    },
+    {
+      "id": "CAN-1315",
+      "code": "weld/S.52.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "S",
+      "aliases": ["yoked-transfer-falsification-condition"],
+      "name": "Falsification condition for a learning method's central claim: no transfer or calibration advantage over a yoked control",
+      "statement": {
+        "latest": "~(E[T_M] > E[T_Y]) /\\ ~(E[C_M] > E[C_Y])",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "~(E[T_M] > E[T_Y]) /\\ ~(E[C_M] > E[C_Y])",
+          "date": "2026-09-19",
+          "reason": "TG-RFG-01 reuse-pipeline pass on \"Human Learning as Epistemic Architecture\" (Zenodo 10.5281/zenodo.22341297). Source, verbatim: \"The method's central claim would be disconfirmed if, in an adequately powered, time-matched design, the method group showed no advantage over the yoked control on protocol-independent transfer and calibration at delay.\" Toledo lookup found zero hits for \"yoked\", \"disconfirm\", or \"transfer task\"; the 'calibration' hits found are unrelated physics/biology bridge-calibration objects, not this psychometric design -- genuinely new. Modelled per this workspace's own readout-first/discrete-math discipline: the expectations E[T_M] etc. are each a finite discrete readout (a sample mean over a finite executed run), so they are typed as rationals (Q), never as a continuum real.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {"code": "weld", "derived_via": "reads"},
+        {"code": "weld/S.09.v1", "derived_via": "relates-to", "evidence": "same 'falsifiable hypotheses' empirical-programme family (eight falsifiable hypotheses H1-H8), cited as sibling not parent"}
+      ],
+      "children": [],
+      "origin": {
+        "source": "Human Learning as Epistemic Architecture",
+        "repo_anchor": null,
+        "record_id": 22341297,
+        "doi": "10.5281/zenodo.22341297",
+        "section": "Methods/validation, falsification condition for the central claim"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; a stated pre-registered falsifier in prose, not a formal equation",
+      "coq": {
+        "file": "coq/canonical/weld__S_52_v1.v",
+        "identifier": "weld_S_52_v1_falsification_condition, weld_S_52_v1_falsification_condition_as_le",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Methods/validation, falsification condition for the central claim", "raw_key": "22341297:falsification-condition"}
+      ],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "PROPOSAL. Modelled expectations as rationals (Q) per this workspace's own readout-first discipline -- no h->0/continuum-completeness injected. The one genuine corollary proved is the double-negation form's restatement as two plain Qle facts, via QArith's own Qnot_lt_le. NOT proved or claimed: nothing about the actual yoked-comparison experimental design, sample sizes, or whether any real executed run satisfies the condition -- E[T_M] etc. are abstract Q-valued Variables, not a computed statistic from an executed protocol.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions weld_S_52_v1_falsification_condition_as_le` reports Closed under the global context (axiom-free).",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": { "held": true, "evidence": [] },
+          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
+          "R2": { "held": true, "evidence": ["coq/canonical/weld__S_52_v1.v, Print Assumptions: Closed under the global context"] },
+          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
+          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
+          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
+          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
         }
       }
     },
@@ -169830,18 +170169,18 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1337,
+    "entries": 1342,
     "by_status": {
-      "current": 1202,
+      "current": 1207,
       "unverified": 96,
       "split": 30,
       "not_an_equation": 9
     },
     "by_domain": {
-      "M": 448,
+      "M": 450,
       "E": 62,
-      "H": 130,
-      "S": 137,
+      "H": 132,
+      "S": 138,
       "W": 93,
       "C": 60,
       "P": 331,
@@ -169849,7 +170188,7 @@
     },
     "by_tier": {
       "Th_coqc": 445,
-      "Definition": 444,
+      "Definition": 449,
       "Dr": 83,
       "Ax": 12,
       "finite_diagnostic": 46,
@@ -169862,8 +170201,8 @@
       "Conjecture": 1
     },
     "by_coq_status": {
-      "closed": 585,
-      "definition": 384,
+      "closed": 589,
+      "definition": 385,
       "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 84,
