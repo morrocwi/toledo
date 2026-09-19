@@ -68,6 +68,6 @@ the ap/ directory except the twelve files named above under PROPRIETARY
 EXCEPTIONS, the docs/ directory, the evidence/ directory, the gates/
 directory, the scripts/ directory, and root-level documents such as
 scope_correction.md, urr_native_system.md, and
-EQUATION_LIBRARY_ROOT_TO_SM_STREAM_research_universal_solver.md. Other than
+EQUATION_LIBRARY_ROOT_TO_SM_STREAM_synced_mirror.md. Other than
 the twelve named exceptions, there is no further carved-out exception; no
 other file in this repository is excluded from the MIT License.

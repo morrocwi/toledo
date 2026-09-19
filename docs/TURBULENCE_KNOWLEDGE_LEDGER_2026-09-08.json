@@ -81,7 +81,7 @@
   },
   {
     "source": "cpg_solver navier_stokes_2d.py -- 2D incompressible Navier-Stokes flagship solver (Taylor-Green vortex)",
-    "location": "ANSE.ASIA/cpg/cpg_solver/cpg_solver/solvers/navier_stokes_2d.py; ANSE.ASIA/cpg/cpg_solver/cpg_solver/registry/solver_cards/navier_stokes_2d.card.yaml; ANSE.ASIA/cpg/cpg_solver/tests/test_navier_stokes_2d.py",
+    "location": "cpg/cpg_solver/cpg_solver/solvers/navier_stokes_2d.py; cpg/cpg_solver/cpg_solver/registry/solver_cards/navier_stokes_2d.card.yaml; cpg/cpg_solver/tests/test_navier_stokes_2d.py",
     "claim_verbatim": "pseudo-spectral (vorticity-streamfunction, RK4) approximation of 2D incompressible Navier-Stokes -- Taylor-Green vortex; n={n}, nt={nt}; vorticity nRMSE={nrmse} vs exact; energy-decay error={energy_decay_error}. NOT a proof, NOT a DNS/CFD replacement, NOT a turbulence claim. (honest_report property, verbatim)",
     "own_stated_tier": "claim_tier: benchmark_candidate (card.yaml); forbidden_use: [proof_of_navier_stokes, proof_of_turbulence, cfd_or_dns_replacement]",
     "verified_tier": "finite_diagnostic",
@@ -90,8 +90,8 @@
     "strengthen_note": "pytest tests/test_navier_stokes_2d.py -v run this pass: 4 passed, 0 failed (test_matches_exact_to_spectral_precision, test_kinetic_energy_decays_as_exp_minus_4_nu_t, test_decay_rate_changes_with_viscosity, test_failcloses_on_bad_inputs). Register the Taylor-Green exact solution and error bound as a Toledo occurrence; extend to a genuinely turbulent (non-laminar-decaying) test case."
   },
   {
-    "source": "research_universal_solver -- test_graph_navier_stokes.py and README 'four turbulence bricks'",
-    "location": "ANSE.ASIA/research_universal_solver/scripts/test_graph_navier_stokes.py (docstring only, not run); ANSE.ASIA/research_universal_solver/README.md",
+    "source": "solver arc (private) -- test_graph_navier_stokes.py and README 'four turbulence bricks'",
+    "location": "scripts/test_graph_navier_stokes.py (solver arc (private)) (docstring only, not run); README.md (solver arc (private))",
     "claim_verbatim": "Worked example: the four turbulence bricks (InfoGlobalLaminarReadout / InfoDiffusionMaxPrinciple / InfoMonotoneMaxPrinciple / InfoSkewNotMonotone) + predictions P1-P3. (README.md, quoted as permitted public-facing text)",
     "own_stated_tier": "Tiers (never collapse): Th_coqc (axiom-free Q, Print Assumptions Closed) / finite_diagnostic (measured) / Dr (stance) / Open/+reals (needs infinity) -- general repo-wide tier discipline stated in README",
     "verified_tier": "not_independently_verified_this_pass",
@@ -101,7 +101,7 @@
   },
   {
     "source": "Zenodo 18164015 -- Causal Calculus: Primitive Aggregation under Finite Causal Access (Causal Navier-Stokes discretization)",
-    "location": "ANSE.ASIA/toledo/ops/causal_sweep/candidates_part2.json (record_id 18164015, eq_label 'Causal Navier-Stokes'); ANSE.ASIA/toledo/ops/causal_sweep/txt/18164015.txt",
+    "location": "toledo/ops/causal_sweep/candidates_part2.json (record_id 18164015, eq_label 'Causal Navier-Stokes'); toledo/ops/causal_sweep/txt/18164015.txt",
     "claim_verbatim": "(u_n - u_{n-1})/eps_t + div_c(u_{n-1} tensor u_{n-1}) = -(1/rho)*grad_c p_n + nu*Laplacian_c u_{n-1} + f_{n-1}, div_c u_n = 0",
     "own_stated_tier": "tier_as_stated: unstated",
     "verified_tier": "Dr",
@@ -111,7 +111,7 @@
   },
   {
     "source": "Zenodo 18105213 -- Note: Causal State History as a Structural Constraint on Three Problems in Mathematical Physics (Discussion Route) -- Theorem 2, history-aware flux closure (Navier-Stokes conditional no-blow-up)",
-    "location": "ANSE.ASIA/toledo/ops/causal_sweep/candidates_part2.json, judged_part2.json (record_id 18105213, eq_label 'Thm 2'); full text ANSE.ASIA/toledo/ops/causal_sweep/txt/18105213.txt",
+    "location": "toledo/ops/causal_sweep/candidates_part2.json, judged_part2.json (record_id 18105213, eq_label 'Thm 2'); full text toledo/ops/causal_sweep/txt/18105213.txt",
     "claim_verbatim": "Theorem 2 (History-aware flux closure with constants (conditional route)). If Integral_0^T Sum_lambda lambda*Phi_lambda(t) dt <= C0 * Integral_0^T Integral_0^t K(t-s)*nu*||grad u(s)||_{L2}^2 ds dt, with kappa=||K||_{L1} and C0*kappa <= theta < 1, then for any critical norm ||u||_{Xcrit}, sup_t ||u(t)||^2_{Xcrit} <= (1/(1-theta))*(||u0||^2_{Xcrit} + C1*nu^{-1}*||u0||^2_{L2}); hence no finite-time blow-up.",
     "own_stated_tier": "Theorem (conditional route); own caveat verbatim: 'the inequality itself is the hard part and is not proved here'; abstract: 'No open problem is claimed to be solved'; closing note: 'not to advance or replace existing proofs'",
     "verified_tier": "Dr",
