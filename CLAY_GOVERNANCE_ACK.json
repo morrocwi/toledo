@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-19",
-  "scope": "Security redaction, text-only: replaces a private sibling repository's real name (and one already-known alias for it) with this workspace's standing sanctioned role-only phrase, in prose/comments/paths across coq/readout_universe/LICENSE.upstream, coq/readout_genesis/formal/InfoSharedReadoutForcesSharedMemory_attempt.v, and registry/root_candidates_report.md, plus one pre-existing mashed-text fix in the same Coq comment. No theorem, tier, equation statement, registry entry, formal proof term, or CANONICAL.json/CANONICAL_REGISTRY.json content is added, removed, re-tiered, or otherwise changed -- only which identifier names the private repository.",
+  "scope": "Registry housekeeping only, weld/H.51.v1 (Religious Attribution Non-Collapse): the entry's origin.doi was already correctly patched from a placeholder to the live Zenodo DOI (10.5281/zenodo.22660591) via a LINEAGE 'revised' event on 2026-09-08, but the entry's top-level status/status_note pair was never synced afterward and still described the DOI as pending. This change syncs status: unverified -> current and clears status_note, per SCHEMA.md's own rule that status_note is required only when status != current, and appends the corresponding LINEAGE.jsonl 'revised' event (append-only, prior lines untouched). No equation statement, tier, parent, coq_status, or resistance-rung field is added, removed, or changed.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "The change renames an identifier only; it opens, closes and re-scopes no research TODO item."
+    "evidence": "This is a registry bookkeeping sync, not a research finding; it opens, closes and re-scopes no research TODO item."
   },
   "toledo": {
-    "status": "issue-open",
-    "evidence": "morrocwi/toledo#47 -- tracking issue opened because the gate treats any .v file as high-impact regardless of content; the change there is a provenance-comment-only redaction (private repo name -> sanctioned phrase, plus a pre-existing typo fix). No Require, Definition, Theorem, Lemma or proof term is touched; the Coq file's own theorem statements and proof terms are byte-identical before and after."
+    "status": "updated",
+    "evidence": "The change is itself a Toledo registry update (registry/CANONICAL.json status/status_note fields, registry/LINEAGE.jsonl append) -- the object's statement, tier, and coq_status are all unchanged from before this PR."
   },
-  "claim_effect": "provenance-change"
+  "claim_effect": "status-only"
 }
