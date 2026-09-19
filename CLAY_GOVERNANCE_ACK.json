@@ -7,7 +7,7 @@
     "evidence": "Tooling/doc change only; opens no research TODO item. The registry's own counts block is now maintained by a checked-in script instead of a hand/manual recompute, closing a latent staleness risk (tests/test_registry.py's own test_counts_match_canonical comment already warned about this class of drift) -- nothing further tracked."
   },
   "toledo": {
-    "status": "no-change",
+    "status": "not-required",
     "evidence": "No new Toledo entry, no tier/status/parent change to any existing entry. registry/CANONICAL.json's only diff is its own top-level counts.computed provenance string (the numeric counts are unchanged, confirmed by a real, non-dry-run run of the new script showing zero numeric delta against the prior hand-computed block)."
   },
   "claim_effect": "no-claim-change"
