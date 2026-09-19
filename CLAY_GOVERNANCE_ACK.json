@@ -7,8 +7,8 @@
     "evidence": "The change renames an identifier only; it opens, closes and re-scopes no research TODO item."
   },
   "toledo": {
-    "status": "not-required",
-    "evidence": "No mathematical object is introduced, renamed, cited or re-tiered by this change -- the Coq file's own theorem statements and proof terms are byte-identical before and after, only a provenance comment's naming of the source repository changed."
+    "status": "issue-open",
+    "evidence": "morrocwi/toledo#47 -- tracking issue opened because the gate treats any .v file as high-impact regardless of content; the change there is a provenance-comment-only redaction (private repo name -> sanctioned phrase, plus a pre-existing typo fix). No Require, Definition, Theorem, Lemma or proof term is touched; the Coq file's own theorem statements and proof terms are byte-identical before and after."
   },
-  "claim_effect": "documentation-only"
+  "claim_effect": "provenance-change"
 }
