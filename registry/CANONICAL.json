@@ -4980,7 +4980,9 @@
           },
           "R2": {
             "held": true,
-            "evidence": ["coq/canonical/EQ_015__H_54_v1.v, Print Assumptions: Closed under the global context"]
+            "evidence": [
+              "coq/canonical/EQ_015__H_54_v1.v, Print Assumptions: Closed under the global context"
+            ]
           },
           "R3": {
             "held": false,
@@ -5011,7 +5013,9 @@
       "root": "EQ-015",
       "layer": "reading",
       "domain": "H",
-      "aliases": ["resistant-coherence"],
+      "aliases": [
+        "resistant-coherence"
+      ],
       "name": "Resistant coherence: a four-condition AND-gate distinguishing genuine belief-testing from self-confirmation",
       "statement": {
         "latest": "ResistantCoherence(b) := D(b) /\\ C(b) /\\ R(b) /\\ I(b)",
@@ -5027,7 +5031,10 @@
         }
       ],
       "parents": [
-        {"code": "EQ-015", "derived_via": "reads"}
+        {
+          "code": "EQ-015",
+          "derived_via": "reads"
+        }
       ],
       "children": [],
       "origin": {
@@ -5053,7 +5060,13 @@
       },
       "relations": [],
       "occurrences": [
-        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Constraint Testing, Self-confirming vs. resistant coherence", "raw_key": "22341297:resistant-coherence"}
+        {
+          "record_id": 22341297,
+          "doi": "10.5281/zenodo.22341297",
+          "label": null,
+          "section": "Constraint Testing, Self-confirming vs. resistant coherence",
+          "raw_key": "22341297:resistant-coherence"
+        }
       ],
       "role": "other",
       "first_assigned": "2026-09-19",
@@ -5061,13 +5074,40 @@
       "resistance": {
         "computed_at": "2026-09-19",
         "rungs": {
-          "R0": { "held": true, "evidence": [] },
-          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
-          "R2": { "held": false, "evidence": [], "reason": "coq_status is 'definition' (not 'closed')" },
-          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
-          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
-          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
-          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'definition' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
         }
       }
     },
@@ -5077,7 +5117,9 @@
       "root": "EQ-015",
       "layer": "reading",
       "domain": "H",
-      "aliases": ["corrigibility-closure-loop-automaton"],
+      "aliases": [
+        "corrigibility-closure-loop-automaton"
+      ],
       "name": "Corrigibility loop vs. closure loop: a two-branch finite automaton for the branching point of learning",
       "statement": {
         "latest": "Loop in {CorrigibilityLoop, ClosureLoop}; step: Loop -> Signal -> Loop",
@@ -5093,8 +5135,15 @@
         }
       ],
       "parents": [
-        {"code": "EQ-015", "derived_via": "reads"},
-        {"code": "weld/S.09.v1", "derived_via": "relates-to", "evidence": "sibling empirical-programme hypothesis H8 ('corrigibility predicts durable agency') -- an empirical hypothesis statement, not the same object as this branching state machine"}
+        {
+          "code": "EQ-015",
+          "derived_via": "reads"
+        },
+        {
+          "code": "weld/S.09.v1",
+          "derived_via": "relates-to",
+          "evidence": "sibling empirical-programme hypothesis H8 ('corrigibility predicts durable agency') -- an empirical hypothesis statement, not the same object as this branching state machine"
+        }
       ],
       "children": [],
       "origin": {
@@ -5120,7 +5169,13 @@
       },
       "relations": [],
       "occurrences": [
-        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Reflective Dissonance / Corrigible Agency, the branching point of learning", "raw_key": "22341297:corrigibility-closure-loop"}
+        {
+          "record_id": 22341297,
+          "doi": "10.5281/zenodo.22341297",
+          "label": null,
+          "section": "Reflective Dissonance / Corrigible Agency, the branching point of learning",
+          "raw_key": "22341297:corrigibility-closure-loop"
+        }
       ],
       "role": "other",
       "first_assigned": "2026-09-19",
@@ -5129,13 +5184,41 @@
       "resistance": {
         "computed_at": "2026-09-19",
         "rungs": {
-          "R0": { "held": true, "evidence": [] },
-          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
-          "R2": { "held": true, "evidence": ["coq/canonical/EQ_015__H_56_v1.v, Print Assumptions: Closed under the global context (both theorems)"] },
-          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
-          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
-          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
-          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              "coq/canonical/EQ_015__H_56_v1.v, Print Assumptions: Closed under the global context (both theorems)"
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
         }
       }
     },
@@ -73819,7 +73902,9 @@
           },
           "R2": {
             "held": true,
-            "evidence": ["coq/canonical/BridgeCommute__H_02_v1.v, Print Assumptions: Closed under the global context"]
+            "evidence": [
+              "coq/canonical/BridgeCommute__H_02_v1.v, Print Assumptions: Closed under the global context"
+            ]
           },
           "R3": {
             "held": false,
@@ -125245,7 +125330,9 @@
           },
           "R2": {
             "held": true,
-            "evidence": ["coq/canonical/EQ_015__H_53_v1.v, Print Assumptions: Closed under the global context"]
+            "evidence": [
+              "coq/canonical/EQ_015__H_53_v1.v, Print Assumptions: Closed under the global context"
+            ]
           },
           "R3": {
             "held": false,
@@ -160004,7 +160091,9 @@
       "root": "EQ-015",
       "layer": "reading",
       "domain": "M",
-      "aliases": ["life-concept-graph"],
+      "aliases": [
+        "life-concept-graph"
+      ],
       "name": "Life-Concept Graph: a labeled directed graph G=(V,E,l) over life-concepts",
       "statement": {
         "latest": "G = (V, E, l), l: E -> R, R a finite relation vocabulary",
@@ -160020,9 +160109,20 @@
         }
       ],
       "parents": [
-        {"code": "EQ-015", "derived_via": "reads"},
-        {"code": "A.5/E.03.v1", "derived_via": "relates-to", "evidence": "structurally related labeled-graph precedent (a single provenance PATH record, not a general multi-relation concept graph) -- not a duplicate"},
-        {"code": "weld/M.01.v1", "derived_via": "relates-to", "evidence": "root graph-Laplacian object; a life-concept graph is a plausible future input to that root's Laplacian machinery, not itself an instance of it"}
+        {
+          "code": "EQ-015",
+          "derived_via": "reads"
+        },
+        {
+          "code": "A.5/E.03.v1",
+          "derived_via": "relates-to",
+          "evidence": "structurally related labeled-graph precedent (a single provenance PATH record, not a general multi-relation concept graph) -- not a duplicate"
+        },
+        {
+          "code": "weld/M.01.v1",
+          "derived_via": "relates-to",
+          "evidence": "root graph-Laplacian object; a life-concept graph is a plausible future input to that root's Laplacian machinery, not itself an instance of it"
+        }
       ],
       "children": [],
       "origin": {
@@ -160048,7 +160148,13 @@
       },
       "relations": [],
       "occurrences": [
-        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "From Semantic Neighborhood to Life-Concept Graph", "raw_key": "22341297:life-concept-graph"}
+        {
+          "record_id": 22341297,
+          "doi": "10.5281/zenodo.22341297",
+          "label": null,
+          "section": "From Semantic Neighborhood to Life-Concept Graph",
+          "raw_key": "22341297:life-concept-graph"
+        }
       ],
       "role": "other",
       "first_assigned": "2026-09-19",
@@ -160057,13 +160163,41 @@
       "resistance": {
         "computed_at": "2026-09-19",
         "rungs": {
-          "R0": { "held": true, "evidence": [] },
-          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
-          "R2": { "held": true, "evidence": ["coq/canonical/EQ_015__M_18_v1.v, Print Assumptions: Closed under the global context"] },
-          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
-          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
-          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
-          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              "coq/canonical/EQ_015__M_18_v1.v, Print Assumptions: Closed under the global context"
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
         }
       }
     },
@@ -160073,7 +160207,9 @@
       "root": "EQ-015",
       "layer": "reading",
       "domain": "M",
-      "aliases": ["constraint-test-status-function"],
+      "aliases": [
+        "constraint-test-status-function"
+      ],
       "name": "Constraint test as a status-transition function tau : (claim, D, Sigma) -> S",
       "statement": {
         "latest": "tau : (claim, D, Sigma) -> S, S = {candidate, supported, revised, rejected}",
@@ -160089,8 +160225,15 @@
         }
       ],
       "parents": [
-        {"code": "EQ-015", "derived_via": "reads"},
-        {"code": "EQ-015/H.15.v1", "derived_via": "relates-to", "evidence": "tangential: pre/post confidence-warrant calibration audit -- different vocabulary and arity, not the same object"}
+        {
+          "code": "EQ-015",
+          "derived_via": "reads"
+        },
+        {
+          "code": "EQ-015/H.15.v1",
+          "derived_via": "relates-to",
+          "evidence": "tangential: pre/post confidence-warrant calibration audit -- different vocabulary and arity, not the same object"
+        }
       ],
       "children": [],
       "origin": {
@@ -160116,7 +160259,13 @@
       },
       "relations": [],
       "occurrences": [
-        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Constraint Testing worksheet template", "raw_key": "22341297:constraint-test-status"}
+        {
+          "record_id": 22341297,
+          "doi": "10.5281/zenodo.22341297",
+          "label": null,
+          "section": "Constraint Testing worksheet template",
+          "raw_key": "22341297:constraint-test-status"
+        }
       ],
       "role": "other",
       "first_assigned": "2026-09-19",
@@ -160125,13 +160274,41 @@
       "resistance": {
         "computed_at": "2026-09-19",
         "rungs": {
-          "R0": { "held": true, "evidence": [] },
-          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
-          "R2": { "held": true, "evidence": ["coq/canonical/EQ_015__M_19_v1.v, Print Assumptions: Closed under the global context"] },
-          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
-          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
-          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
-          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              "coq/canonical/EQ_015__M_19_v1.v, Print Assumptions: Closed under the global context"
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
         }
       }
     },
@@ -160316,7 +160493,9 @@
           },
           "R2": {
             "held": true,
-            "evidence": ["coq/canonical/weld__H_52_v1.v, Print Assumptions: Closed under the global context"]
+            "evidence": [
+              "coq/canonical/weld__H_52_v1.v, Print Assumptions: Closed under the global context"
+            ]
           },
           "R3": {
             "held": false,
@@ -161550,7 +161729,9 @@
       "root": "weld",
       "layer": "reading",
       "domain": "S",
-      "aliases": ["yoked-transfer-falsification-condition"],
+      "aliases": [
+        "yoked-transfer-falsification-condition"
+      ],
       "name": "Falsification condition for a learning method's central claim: no transfer or calibration advantage over a yoked control",
       "statement": {
         "latest": "~(E[T_M] > E[T_Y]) /\\ ~(E[C_M] > E[C_Y])",
@@ -161566,8 +161747,15 @@
         }
       ],
       "parents": [
-        {"code": "weld", "derived_via": "reads"},
-        {"code": "weld/S.09.v1", "derived_via": "relates-to", "evidence": "same 'falsifiable hypotheses' empirical-programme family (eight falsifiable hypotheses H1-H8), cited as sibling not parent"}
+        {
+          "code": "weld",
+          "derived_via": "reads"
+        },
+        {
+          "code": "weld/S.09.v1",
+          "derived_via": "relates-to",
+          "evidence": "same 'falsifiable hypotheses' empirical-programme family (eight falsifiable hypotheses H1-H8), cited as sibling not parent"
+        }
       ],
       "children": [],
       "origin": {
@@ -161593,7 +161781,13 @@
       },
       "relations": [],
       "occurrences": [
-        {"record_id": 22341297, "doi": "10.5281/zenodo.22341297", "label": null, "section": "Methods/validation, falsification condition for the central claim", "raw_key": "22341297:falsification-condition"}
+        {
+          "record_id": 22341297,
+          "doi": "10.5281/zenodo.22341297",
+          "label": null,
+          "section": "Methods/validation, falsification condition for the central claim",
+          "raw_key": "22341297:falsification-condition"
+        }
       ],
       "role": "other",
       "first_assigned": "2026-09-19",
@@ -161602,13 +161796,41 @@
       "resistance": {
         "computed_at": "2026-09-19",
         "rungs": {
-          "R0": { "held": true, "evidence": [] },
-          "R1": { "held": false, "evidence": [], "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier" },
-          "R2": { "held": true, "evidence": ["coq/canonical/weld__S_52_v1.v, Print Assumptions: Closed under the global context"] },
-          "R3": { "held": false, "evidence": [], "reason": "no reproduction_card references this code" },
-          "R4": { "held": false, "evidence": [], "reason": "R3 not held" },
-          "R5": { "held": false, "evidence": [], "reason": "no review_report at independence_class >= I2 references this code" },
-          "R6": { "held": false, "evidence": [], "reason": "R4 not held" }
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": [
+              "coq/canonical/weld__S_52_v1.v, Print Assumptions: Closed under the global context"
+            ]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
         }
       }
     },
@@ -169095,6 +169317,263 @@
           }
         }
       }
+    },
+    {
+      "id": "CAN-1316",
+      "code": "EQ-015/M.20.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "cross-domain-fusion",
+        "keyword-fusion-operator"
+      ],
+      "name": "Cross-domain keyword fusion: a bridge-conditioned operator that produces a genuinely new concept, not a restatement of either input",
+      "statement": {
+        "latest": "phi(v,v') -> v_new (v_new not-in V) :<= D(v) =/= D(v') /\\ (v,v') in E_bridge /\\ delta_min <= delta(v,v') <= delta_max; E(v_new) := |{(D(a),D(b)) : a,b reachable via v_new, unreachable before v_new}|",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "phi(v,v') -> v_new (v_new not-in V) :<= D(v) =/= D(v') /\\ (v,v') in E_bridge /\\ delta_min <= delta(v,v') <= delta_max; E(v_new) := |{(D(a),D(b)) : a,b reachable via v_new, unreachable before v_new}|",
+          "date": "2026-09-19",
+          "reason": "Founder-directed session synthesis (2026-09-19): a method for cross-domain hypothesis generation -- extract keywords from a problem, substitute/bridge a keyword into a different (socially-defined) expertise domain, and treat the result as a FUSION (produces a genuinely new concept v_new outside the original vertex set) rather than a passive clustering/crystallization. TG-RFG-01 pass: Toledo lookup (registry/CANONICAL.json, live, 2026-09-19) found no existing object for 'keyword fusion', 'cross-domain bridge operator producing a new concept', or 'nucleus of word-clusters' -- closest related-but-distinct objects are weld/E.08.v1 (a local-to-global knowledge TRANSPORT commuting square, not a fusion producing a new object) and A.8/M.11.v1 (a reactor-criticality analogy applied to scholarly OUTPUT RATE, not to keyword fusion) -- neither is a duplicate under the renaming/positive-scale/constant-substitution equivalence criterion. Genesis compatibility: D(v) is defined AS an instance of the already-registered root readout gate (EQ-002/M.03.v1), operated by society's own existing classification (not invented by this construct); the fusion-firing guard 'D(v)=/=D(v') and (v,v') in E_bridge' is MODELED ON weld/M.02.v1's domain-admissibility condition rather than inventing an unrelated one, though the Coq mechanization leaves this as a narrative correspondence, not an enforced link; the underlying vertex/edge structure reuses EQ-015/M.18.v1's Life-Concept Graph verbatim. delta(v,v') is specified as a discrete hop-count on that same graph (an integer readout, per this workspace's information-discrete-math floor) with delta_min/delta_max left as an explicit, not-yet-calibrated Variable pair -- calibration protocol: measure delta on a corpus of already-documented real cross-domain analogy successes (e.g. biomimicry cases) and take the observed range as the readout-derived bound, rather than an assumed/guessed constant.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015",
+          "derived_via": "reads"
+        },
+        {
+          "code": "EQ-015/M.18.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/M.18.v1's Life-Concept Graph G=(V,E,l) supplies the vertex/edge structure that v, v', and v_new live in and range over."
+        },
+        {
+          "code": "weld/M.02.v1",
+          "derived_via": "reads",
+          "evidence": "weld/M.02.v1's domain-admissibility condition (a translation must commute with root dynamics/readout) is the MODEL for the requirement a bridge edge (v,v') in E_bridge must satisfy before fusion may fire -- the Coq file leaves E_bridge as a fully abstract Variable with no mechanized link enforced to weld/M.02.v1's own q_D structure, so this is a narrative correspondence at Definition tier, not a proved specialization. Flagged by independent adversarial review 2026-09-19; language corrected from an earlier, overclaiming 'reused directly, not a restatement' framing."
+        },
+        {
+          "code": "EQ-002/M.03.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-002/M.03.v1's root readout gate Readout_{Q,O,c}(S)=z is the MODEL for D(v): the domain of a keyword is intended as society's own readout under society's own existing classification. The Coq file leaves D as a fully abstract Variable with no mechanized instantiation as an actual Readout_{Q,O,c} call, so this is a narrative correspondence at Definition tier, not a proved specialization. Flagged by independent adversarial review 2026-09-19; language corrected from an earlier, overclaiming framing."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "derived from EQ-015/M.18.v1, weld/M.02.v1, and EQ-002/M.03.v1 while formalizing a cross-domain keyword-fusion hypothesis-generation method, founder-directed session 2026-09-19"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; a session-derived construct, not drawn from a Readout Genesis or paper source text",
+      "coq": {
+        "file": "coq/canonical/EQ_015__M_20_v1.v",
+        "identifier": "EQ_015_M_20_v1_fusion_fires",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [
+        {
+          "type": "relates-to",
+          "target": "weld/E.08.v1",
+          "note": "sibling cross-domain-bridge object, different mechanism (transport-preserves vs fusion-produces-new)",
+          "evidence": "weld/E.08.v1 is a local-to-global knowledge TRANSPORT (a commuting-square bridge that PRESERVES an existing object across scope), while this entry's fusion operator PRODUCES a genuinely new concept v_new outside the original vertex set -- not the same object under any renaming/scale/constant-substitution map."
+        },
+        {
+          "type": "relates-to",
+          "target": "A.8/M.11.v1",
+          "note": "sibling precedent for honest structural-analogy borrowing in this registry",
+          "evidence": "A.8/M.11.v1 borrows a reactor-control-criticality structural analogy for a different target (scholarly output/citation rate dynamics); this entry borrows no such analogy directly but is philosophically adjacent -- recorded as a sibling precedent, not a shared object."
+        }
+      ],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "PROPOSAL. Deliberately no Theorem: 'fusion_fires' is a conjunction of three named conditions with no further provable structure beyond what each conjunct already states (an 'implies each conjunct' theorem would just restate the definiens, the same house discipline already applied at EQ-015/H.55.v1). coq_status is 'definition', not 'closed', for the same reason (NO_PROOF_OBLIGATION exemption, tests/test_registry.py::test_coq_assumptions_honest). KNOWN OPEN GAP, disclosed plainly: delta_min and delta_max are NOT yet empirically calibrated -- they are declared as abstract Coq Variables (uninstantiated), and the statement's own reason field names the calibration protocol (measure real cross-domain-analogy cases, take the observed range) as future work, not yet performed. Do not cite this entry as evidence that the fusion method 'works' -- only that its FORM is well-defined and reuses existing Toledo objects rather than inventing parallel ones. CORRECTION (independent adversarial review, 2026-09-19): the parents[].evidence text originally overclaimed 'reused directly, not a restatement' for the weld/M.02.v1 and EQ-002/M.03.v1 citations; corrected to state plainly that D and E_bridge are abstract Coq Variables with no mechanized enforcement of those parents' exact structure -- the correspondence is narrative/intended, not proved.",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'definition' (not 'closed')"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
+      "id": "CAN-1317",
+      "code": "EQ-015/M.21.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "M",
+      "aliases": [
+        "reframe-threshold",
+        "problem-decomposition-trigger"
+      ],
+      "name": "Reframe-threshold decomposition: a problem's original framing dissolves only once cumulative cross-domain fusion output meets its own assumption load",
+      "statement": {
+        "latest": "Anc(P) := ancestor nodes of P reachable via depends-on/assumes edges on the EQ-015/M.18.v1 Life-Concept Graph; theta_break(P) := |Anc(P)|; Ecum(P) := sum_i E(v_new_i) over fusions triggered from P (EQ-015/M.20.v1); decompose(P) :<=> theta_break(P) <= Ecum(P) -- a direct specialization of weld/H.52.v1's locked_in(k):=Nstar<=reinforce_count(k) under Nstar->theta_break(P), reinforce_count(k)->Ecum(P); monotonicity is inherited from weld_H_52_v1_lockin_monotone, not re-proved here",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 2,
+          "statement": "Anc(P) := ancestor nodes of P reachable via depends-on/assumes edges on the EQ-015/M.18.v1 Life-Concept Graph; theta_break(P) := |Anc(P)|; Ecum(P) := sum_i E(v_new_i) over fusions triggered from P (EQ-015/M.20.v1); decompose(P) :<=> theta_break(P) <= Ecum(P) -- a direct specialization of weld/H.52.v1's locked_in(k):=Nstar<=reinforce_count(k) under Nstar->theta_break(P), reinforce_count(k)->Ecum(P); monotonicity is inherited from weld_H_52_v1_lockin_monotone, not re-proved here",
+          "date": "2026-09-19",
+          "reason": "REVISED after independent adversarial review 2026-09-19 found two real defects in v1: (a) the proved monotonicity theorem was a renaming-duplicate of weld/H.52.v1's already-registered weld_H_52_v1_lockin_monotone (Nstar<=reinforce_count(k) vs theta_break<=Ecum, both proved via Nat.le_trans) -- TG-RFG-01's own search had missed this closer structural match by searching only domain-flavored terms; (b) theta_break(P):=|Anc(P)| had claimed Anc(P) 'IS' A.5/H.12.v1's L(c), but L(c) is a closed 7-constructor Inductive enumeration (a fixed stakes-category classification, |L(c)|<=7 always), not an unboundedly-growable per-problem ancestor set -- that claim was false if taken literally and a hand-wave otherwise. FIX: Anc(P) is now defined directly against EQ-015/M.18.v1's own graph structure (ancestor nodes under depends-on/assumes edges) as its own PROPOSAL primitive, not claimed identical to L(c); decompose(P) is now registered as an explicit SPECIALIZATION of weld/H.52.v1's already-proved shape (parent relation: specializes) rather than a second, independently-proved copy of the same fact -- the monotonicity theorem is cited by reference, not re-proved, avoiding exactly the duplication TG-RFG-01 exists to prevent. Tier corrected from Dr to Definition, matching the precedent already set at weld/H.52.v1's own drift_note (a bare <=-transitivity corollary does not license tier elevation).",
+          "by": "toledo-registry-derivation-20260919-adversarial-fix"
+        },
+        {
+          "v": 1,
+          "statement": "decompose(P) :<=> Ecum(P) >= theta_break(P), where Ecum(P) := sum_i E(v_new_i) over fusions triggered from P, and theta_break(P) := |Anc(P)|",
+          "date": "2026-09-19",
+          "reason": "Founder-directed session synthesis (2026-09-19), continuing EQ-015/M.20.v1: a problem's original framing does not dissolve merely because ONE cross-domain fusion occurred -- it dissolves once the ACCUMULATED newly-bridged-domain-pair count (Ecum) reaches or exceeds the number of assumptions the original framing itself depends on (theta_break). TG-RFG-01 pass: Toledo lookup found no existing threshold-trigger object comparing accumulated cross-domain fusion output against a problem's own assumption load; the closest related object, A.8/M.11.v1's criticality analogy (k_t, beta_D), is a different target (citation/output-rate dynamics, not concept reframing) and not a duplicate. Genesis compatibility: theta_break(P) reuses A.5/H.12.v1's load-bearing-claim framing (L(c), the set of claims a decision/claim depends on) directly -- Anc(P) IS that same load-bearing-ancestor set, counted rather than merely named, so no parallel primitive was invented for 'how tightly a claim is held'. Both sides of the inequality are non-negative integers (counts of domain-pairs and counts of ancestor claims respectively), keeping the comparison within this workspace's discrete-readout floor -- no continuum 'energy' unit is claimed or needed.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015",
+          "derived_via": "reads"
+        },
+        {
+          "code": "EQ-015/M.20.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/M.20.v1 supplies E(v_new), the per-fusion domain-pair-bridging count that this entry sums into Ecum(P)."
+        },
+        {
+          "code": "EQ-015/M.18.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/M.18.v1's Life-Concept Graph G=(V,E,l) supplies the graph Anc(P) ranges over: the ancestor nodes of P reachable via depends-on/assumes-labeled edges."
+        },
+        {
+          "code": "weld/H.52.v1",
+          "derived_via": "specializes",
+          "evidence": "weld/H.52.v1's locked_in(k):=Nstar<=reinforce_count(k) and its proved theorem weld_H_52_v1_lockin_monotone are reused DIRECTLY under the substitution Nstar->theta_break(P), reinforce_count(k)->Ecum(P) -- this entry's decompose(P) is that same shape applied to a different pair of counted quantities, not a second independently-proved copy (identified by independent adversarial review, 2026-09-19, after the v1 draft had duplicated the theorem under a new name)."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "derived from EQ-015/M.20.v1 and A.5/H.12.v1 while formalizing a cross-domain keyword-fusion hypothesis-generation method, founder-directed session 2026-09-19"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; a session-derived construct, not drawn from a Readout Genesis or paper source text",
+      "coq": {
+        "file": "coq/canonical/EQ_015__M_21_v1.v",
+        "identifier": "EQ_015_M_21_v1_decompose",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [
+        {
+          "type": "relates-to",
+          "target": "A.5/H.12.v1",
+          "note": "shares only the informal 'load-bearing' intuition, not the same formal object",
+          "evidence": "A.5/H.12.v1's L(c) is a closed 7-constructor Inductive enumeration (a fixed stakes-category classification, |L(c)|<=7 always) -- structurally different from Anc(P), an unboundedly-growable per-problem ancestor set on the M.18 graph. v1 of this entry incorrectly claimed Anc(P) 'IS' L(c); corrected after independent adversarial review, 2026-09-19, to a mere relates-to (shared 'load-bearing' language, different formal shape)."
+        },
+        {
+          "type": "relates-to",
+          "target": "A.8/M.11.v1",
+          "note": "sibling precedent for honest structural-analogy borrowing in this registry",
+          "evidence": "A.8/M.11.v1's reactor-criticality analogy is a sibling precedent for borrowing a physics-shaped threshold structure honestly (as an explicit analogy, not a physical claim) -- different target (scholarly output rate vs. concept-framing decomposition), not the same object."
+        }
+      ],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "PROPOSAL. REVISED after independent adversarial review 2026-09-19 (see statements_history v2 for the full defect list and fix). This entry now DELIBERATELY proves no theorem: the only provable fact about this shape (monotonicity of the threshold trigger under growing accumulated output) is already proved in general form at weld/H.52.v1 (weld_H_52_v1_lockin_monotone) and is cited by specialization, not re-proved -- re-proving it under a new name would itself be the duplicate-object failure TG-RFG-01 exists to prevent. tier is Definition (not Dr), matching weld/H.52.v1's own precedent that a bare <=-transitivity corollary does not license tier elevation. coq_status is 'definition', not 'closed', for the same NO_PROOF_OBLIGATION reason applied elsewhere in this registry (tests/test_registry.py::test_coq_assumptions_honest). This is a STRUCTURAL ANALOGY (borrowed nuclear-fusion/bond-energy language per the founder's own in-session framing), not a physical claim -- Ecum(P) and theta_break(P) are both plain non-negative integer counts. KNOWN OPEN GAPS, disclosed plainly: (1) Anc(P) (ancestor nodes on the M.18 graph via depends-on/assumes edges) is declared but not mechanized in the Coq file -- the actual graph traversal is left abstract, same honesty level as EQ-015/M.20.v1's own abstract D/E_bridge; (2) whether crossing this threshold in practice correlates with a problem being usefully reframed has not been tested against the yoked-control falsification discipline already registered at weld/S.52.v1.",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": false,
+            "evidence": [],
+            "reason": "coq_status is 'definition' (not 'closed'); the applicable monotonicity proof lives at weld/H.52.v1, not this entry"
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
     }
   ],
   "raw_to_canonical": {
@@ -170169,15 +170648,15 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1342,
+    "entries": 1344,
     "by_status": {
-      "current": 1207,
+      "current": 1209,
       "unverified": 96,
       "split": 30,
       "not_an_equation": 9
     },
     "by_domain": {
-      "M": 450,
+      "M": 452,
       "E": 62,
       "H": 132,
       "S": 138,
@@ -170188,7 +170667,7 @@
     },
     "by_tier": {
       "Th_coqc": 445,
-      "Definition": 449,
+      "Definition": 451,
       "Dr": 83,
       "Ax": 12,
       "finite_diagnostic": 46,
@@ -170202,12 +170681,12 @@
     },
     "by_coq_status": {
       "closed": 589,
-      "definition": 385,
+      "definition": 387,
       "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 84,
       "axioms": 4
     },
-    "computed": "2026-09-13 from canonical[] (scripts/v18_tower_merge.py)"
+    "computed": "2026-09-19 from canonical[] (manual jq-equivalent group-by, EQ-015/M.20-21.v1 registration, post-adversarial-review fix)"
   }
 }
