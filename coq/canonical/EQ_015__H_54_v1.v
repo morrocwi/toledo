@@ -1,4 +1,4 @@
-(* EQ-015/H.54.v1 -- Definition -- Machine-mediated dissonance becomes         *)
+(* EQ-015/H.54.v1 -- Dr -- Machine-mediated dissonance becomes                 *)
 (* disciplined revision only under all four named conditions (connects        *)
 (* corrigibility, route-openness, criticizability, and domain-sensitive       *)
 (* validation into the licensing condition 'When AI Expands Human Potential'  *)
