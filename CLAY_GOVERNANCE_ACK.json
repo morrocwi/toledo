@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-09-19",
-  "scope": "Registry housekeeping only, weld/H.51.v1 (Religious Attribution Non-Collapse): the entry's origin.doi was already correctly patched from a placeholder to the live Zenodo DOI (10.5281/zenodo.22660591) via a LINEAGE 'revised' event on 2026-09-08, but the entry's top-level status/status_note pair was never synced afterward and still described the DOI as pending. This change syncs status: unverified -> current and clears status_note, per SCHEMA.md's own rule that status_note is required only when status != current, and appends the corresponding LINEAGE.jsonl 'revised' event (append-only, prior lines untouched). No equation statement, tier, parent, coq_status, or resistance-rung field is added, removed, or changed.",
+  "scope": "weld/H.38.v1 (AI-side semantic momentum reset across sessions, Master Equation River v1.5 Eq. 37): the object was registered 2026-09-08 with coq.file/identifier both null (never given a canonical/ Coq wrapper), even though it was already formalized as MR_Retention.ai_momentum_resets in coq/master-river/MR_Retention.v at registration time. Closes that gap: adds coq/canonical/weld__H_38_v1.v, a thin re-export (no new theorem authored -- the object is a scope condition per the source paper's own framing, not a theorem, so tier correctly stays Definition, not upgraded to Th_coqc). Independently coqc-compiled in this session (not merely asserted): 'Closed under the global context', axiom-free. Registered in _CoqProject, registry/CANONICAL.json's coq block updated (file/identifier only -- statement, tier, parents, aliases, occurrences all byte-identical), and the corresponding LINEAGE.jsonl 'revised' event appended. A related registration proposal (two other candidate codes from the same paper) was independently re-verified and found to be duplicates of already-registered objects (weld/H.38.v1 itself, and an occurrence of weld/M.02.v1) -- retracted in the private working document that drafted it; nothing from that proposal is registered here or anywhere.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "This is a registry bookkeeping sync, not a research finding; it opens, closes and re-scopes no research TODO item."
+    "evidence": "This wires an existing, already-registered object to its existing Coq proof; it opens, closes and re-scopes no research TODO item."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "The change is itself a Toledo registry update (registry/CANONICAL.json status/status_note fields, registry/LINEAGE.jsonl append) -- the object's statement, tier, and coq_status are all unchanged from before this PR."
+    "evidence": "The change is itself the Toledo registry update: registry/CANONICAL.json's coq.file/coq.identifier fields for weld/H.38.v1, plus the new coq/canonical/weld__H_38_v1.v file and its _CoqProject entry. The object's statement, tier, parents, and aliases are all unchanged from before this PR."
   },
-  "claim_effect": "status-only"
+  "claim_effect": "formal-proof-change"
 }
