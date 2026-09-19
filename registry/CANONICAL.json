@@ -73536,7 +73536,7 @@
       "coq": {
         "file": "coq/canonical/BridgeCommute__H_02_v1.v",
         "identifier": "BridgeCommute_H02_v1_composition_preserves_commuting",
-        "assumptions": null,
+        "assumptions": "Closed under the global context",
         "imported_from": null,
         "coq_status": "closed",
         "coq_axioms": [],
@@ -124962,7 +124962,7 @@
       "coq": {
         "file": "coq/canonical/EQ_015__H_53_v1.v",
         "identifier": "EQ_015_H_53_v1_no_silent_incorporation",
-        "assumptions": null,
+        "assumptions": "Closed under the global context",
         "imported_from": null,
         "coq_status": "closed",
         "coq_axioms": [],
@@ -159896,7 +159896,7 @@
       "coq": {
         "file": "coq/canonical/weld__H_52_v1.v",
         "identifier": "weld_H_52_v1_lockin_monotone",
-        "assumptions": null,
+        "assumptions": "Closed under the global context",
         "imported_from": null,
         "coq_status": "closed",
         "coq_axioms": [],
