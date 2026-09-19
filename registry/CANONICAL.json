@@ -159906,7 +159906,7 @@
       "occurrences": [],
       "role": "other",
       "first_assigned": "2026-09-19",
-      "drift_note": "Tiered Definition, not Th_coqc, even though the accompanying Coq file compiles closed: the FORM of the guard (a threshold exists) is a stated modelling convention, not a proved universal fact; only a narrow monotonicity corollary (once locked in, stays locked in as the count grows) is actually proved, and that corollary alone does not license upgrading the whole object's tier. Recorded here rather than silently rounded up.",
+      "drift_note": "Tiered Definition, not Th_coqc, even though the accompanying Coq file compiles closed: the FORM of the guard (a threshold exists) is a stated modelling convention, not a proved universal fact; only a narrow monotonicity corollary (once locked in, stays locked in as the count grows) is actually proved, and that corollary alone does not license upgrading the whole object's tier. Recorded here rather than silently rounded up. Disclosed per independent review 2026-09-19: the specializes-parent weld/M.38.v1 is itself status=unverified, coq_status=open_prop -- this entry's own tier and Coq status stand on their own (this entry's Coq file is independently closed/axiom-free regardless of the parent's status), but the specialization relationship inherits whatever uncertainty weld/M.38.v1 itself carries as a source shape, and that is not separately re-verified here.",
       "tier_evidence": "coqc-verified in this session: `Print Assumptions weld_H_52_v1_lockin_monotone` reports Closed under the global context (axiom-free); the proof is the one-way-ratchet monotonicity corollary only, not the threshold definition itself.",
       "resistance": {
         "computed_at": "2026-09-19",
