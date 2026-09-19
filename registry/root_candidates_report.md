@@ -119,7 +119,7 @@ anchor only)" is answered here by that absence, not by citing the private path.
 **Why no `genesis_root.json` row exists yet.** Same structural reason as Theta, stronger: `CMC` does
 not appear anywhere in `READOUT_GENESIS_CORE.md` or the whitepaper at the anchored commit (confirmed
 by direct grep of both files, as recorded in `registry/genesis_root.json`'s own build notes for other
-similar checks), and it does not appear in any *public* repository at all. It is solver-arc-private,
+similar checks), and it does not appear in any *public* repository at all. It is solver arc (private),
 project-internal vocabulary layered on top of the Genesis root (its `CMC_TargetClass` definitions
 consume a `TransportReadout` record whose fields — `diffusion_positive`, `speed_positive`,
 `speed_finite`, `retained_diffusive`, `intrinsic_finite_speed` — read as a bridge condition connecting

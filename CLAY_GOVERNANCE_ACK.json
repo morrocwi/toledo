@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "reviewed_at": "2026-09-18",
-  "scope": "Documentation-only: one section ('Programme map') appended at the end of AGENTS.md, pointing agents to the public routing hub github.com/morrocwi/main.hub. Existing AGENTS.md text is unchanged. No claim, theorem, status, equation, registry entry, formal source or provenance record is added, removed or modified. The hub itself holds pointers and pinned links only and states that this repository wins on any disagreement.",
+  "reviewed_at": "2026-09-19",
+  "scope": "Security redaction, text-only: replaces a private sibling repository's real name (and one already-known alias for it) with this workspace's standing sanctioned role-only phrase, in prose/comments/paths across coq/readout_universe/LICENSE.upstream, coq/readout_genesis/formal/InfoSharedReadoutForcesSharedMemory_attempt.v, and registry/root_candidates_report.md, plus one pre-existing mashed-text fix in the same Coq comment. No theorem, tier, equation statement, registry entry, formal proof term, or CANONICAL.json/CANONICAL_REGISTRY.json content is added, removed, re-tiered, or otherwise changed -- only which identifier names the private repository.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "The change adds a navigation pointer only; it opens, closes and re-scopes no research TODO item."
+    "evidence": "The change renames an identifier only; it opens, closes and re-scopes no research TODO item."
   },
   "toledo": {
-    "status": "not-required",
-    "evidence": "No mathematical object is introduced, renamed, cited or re-tiered by this change, so there is nothing to look up or register."
+    "status": "issue-open",
+    "evidence": "morrocwi/toledo#47 -- tracking issue opened because the gate treats any .v file as high-impact regardless of content; the change there is a provenance-comment-only redaction (private repo name -> sanctioned phrase, plus a pre-existing typo fix). No Require, Definition, Theorem, Lemma or proof term is touched; the Coq file's own theorem statements and proof terms are byte-identical before and after."
   },
-  "claim_effect": "documentation-only"
+  "claim_effect": "provenance-change"
 }

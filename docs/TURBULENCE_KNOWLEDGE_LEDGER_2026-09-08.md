@@ -257,11 +257,11 @@ candidate and judge relevance.
 
 ---
 
-## 6. `toledo` (this repo) — `ANSE.ASIA/cpg/cpg_solver` Navier-Stokes 2D flagship solver
+## 6. `toledo` (this repo) — `cpg/cpg_solver` Navier-Stokes 2D flagship solver
 
-**Location:** `ANSE.ASIA/cpg/cpg_solver/cpg_solver/solvers/navier_stokes_2d.py`,
-`ANSE.ASIA/cpg/cpg_solver/cpg_solver/registry/solver_cards/navier_stokes_2d.card.yaml`,
-`ANSE.ASIA/cpg/cpg_solver/tests/test_navier_stokes_2d.py`.
+**Location:** `cpg/cpg_solver/cpg_solver/solvers/navier_stokes_2d.py`,
+`cpg/cpg_solver/cpg_solver/registry/solver_cards/navier_stokes_2d.card.yaml`,
+`cpg/cpg_solver/tests/test_navier_stokes_2d.py`.
 
 **What it is:** a pseudo-spectral vorticity-streamfunction 2-D incompressible Navier-Stokes solver
 (periodic `[0,2π)²`, RK4, 2/3-dealiased), verified against the exact closed-form **Taylor-Green
@@ -296,9 +296,9 @@ case if one is ever added.
 
 ---
 
-## 7. `research_universal_solver` — proprietary, LICENSE read first, described only from public README text
+## 7. `solver arc (private)` — proprietary, LICENSE read first, described only from public README text
 
-**LICENSE (`ANSE.ASIA/research_universal_solver/LICENSE`, read in full):** "PROPRIETARY LICENSE — ALL
+**LICENSE (`LICENSE`, solver arc (private), read in full):** "PROPRIETARY LICENSE — ALL
 RIGHTS RESERVED... NO PERMISSION IS GRANTED to any person or entity to use, copy, modify, merge,
 publish, distribute, sublicense, sell, or otherwise exploit the Work." Per the task's own
 instruction, I did **not** run `scripts/test_graph_navier_stokes.py`, and I quote only short excerpts
@@ -493,6 +493,6 @@ not assumed, to be off-topic for this sweep.
 | `unified_spine_blowup_control.py` | finite_diagnostic (self-stated) | finite_diagnostic — confirmed (toy 1-D script, read not needing rerun) |
 | `retained_spectral_credibility_all.zip` | ACCEPT (self-stated, unrelated suite) | not turbulence-relevant |
 | `cpg_solver` `navier_stokes_2d.py` (Taylor-Green) | benchmark_candidate (self-stated) | **finite_diagnostic — confirmed, 4/4 pytest pass, laminar decay only** |
-| `research_universal_solver` turbulence bricks | Th_coqc (repo's own internal index; not quoted at length, license) | not independently verified this pass |
+| `solver arc (private)` turbulence bricks | Th_coqc (repo's own internal index; not quoted at length, license) | not independently verified this pass |
 | Zenodo 18164015 "Causal Navier-Stokes" | unstated | Dr (definitional discretization only) |
 | Zenodo 18105213 Theorem 2 (flux closure, no-blow-up) | "conditional route," explicitly not proved | Dr — confirmed, self-honest |
