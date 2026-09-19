@@ -169409,8 +169409,8 @@
   "counts": {
     "entries": 1333,
     "by_status": {
-      "current": 1197,
-      "unverified": 97,
+      "current": 1198,
+      "unverified": 96,
       "split": 30,
       "not_an_equation": 9
     },
