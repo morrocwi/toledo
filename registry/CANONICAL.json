@@ -73493,6 +73493,101 @@
       }
     },
     {
+      "id": "CAN-1307",
+      "code": "BridgeCommute/H.02.v1",
+      "root": "BridgeCommute",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [],
+      "name": "Iterated/composed cross-agent commutation follows from per-step commutation",
+      "statement": {
+        "latest": "For any chain of agents a1,a2,a3 with T_{a2->a1} commuting with F#_{a1}/F#_{a2} and T_{a3->a2} commuting with F#_{a2}/F#_{a3}, the composed translation T_{a2->a1}\\circ T_{a3->a2} also commutes with F#_{a1}/F#_{a3}",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "For any chain of agents a1,a2,a3 with T_{a2->a1} commuting with F#_{a1}/F#_{a2} and T_{a3->a2} commuting with F#_{a2}/F#_{a3}, the composed translation T_{a2->a1}\\circ T_{a3->a2} also commutes with F#_{a1}/F#_{a3}",
+          "date": "2026-09-19",
+          "reason": "gap identified while assembling a lean human-AI/human-human/AI-AI learning stream from already-registered objects: BridgeCommute/H.01.v1 states single-pair commutation only; nothing stated whether commutation composes across a chain of exchanges (requested framing: AI-AI-AI iterated recursion). Proved directly by substitution for the exact-equality form BridgeCommute/H.01.v1 already states -- no counterexample exists for this exact form, so this specializes rather than contradicts the parent.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {
+          "code": "BridgeCommute/H.01.v1",
+          "derived_via": "specializes",
+          "evidence": "BridgeCommute/H.01.v1's own statement, T_{j->i}.F#_H^j = F#_H^i.T_{j->i}, is the single-step commutation law this entry composes across a 3-agent chain; the composed fact follows from two applications of the parent's own equation, not from any new primitive."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "derived from BridgeCommute/H.01.v1 while assembling a human-AI/human-human/AI-AI learning equation stream, founder instruction 2026-09-19"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Th_coqc",
+      "tier_in_genesis_verbatim": "not source-tagged; a proved specialization of BridgeCommute/H.01.v1, tiered by this entry's own Coq proof rather than a cited source tag",
+      "coq": {
+        "file": "coq/canonical/BridgeCommute__H_02_v1.v",
+        "identifier": "BridgeCommute_H02_v1_composition_preserves_commuting",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "Requested framing was 'AI-AI drift under iterated recursive exchange' (an expectation that error/distance would compound over a chain). Honest finding: the EXACT-equality form BridgeCommute/H.01.v1 states has no error/distance term to compound, and per-step commutation for this exact form provably composes with no drift (proved below by direct substitution). A genuinely approximate version (each step commuting only up to a bounded distance, with the bound accumulating over a chain) would be a different, currently unregistered object -- not derived here, since fabricating an error bound with no principled source would violate this workspace's own discipline. This entry states only what was actually provable: composition of EXACT commutation is itself exact.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions BridgeCommute_H02_v1_composition_preserves_commuting` reports Closed under the global context (axiom-free), a real 3-line proof by two rewrites, independently re-compiled and checked before registration.",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": ["coq/canonical/BridgeCommute__H_02_v1.v, Print Assumptions: Closed under the global context"]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
       "id": "RUS-0009",
       "code": "EQ-015/P.01.v1",
       "root": "EQ-015",
@@ -124814,6 +124909,111 @@
       }
     },
     {
+      "id": "CAN-1309",
+      "code": "EQ-015/H.53.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [],
+      "name": "Retain-must-not-launder-K_like guard (connects retention/operator-update to the candidate-vs-validated-knowledge gate)",
+      "statement": {
+        "latest": "safe_retain(i) := (status(i)=K_like -> validated_by_check(i)=true); i.e. an item may be folded into Retain(E_n,mu_n,r_n) (and hence into H_{n+1}=U_H(...)) as though validated only if it has actually cleared validated_by_check",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "safe_retain(i) := (status(i)=K_like -> validated_by_check(i)=true); i.e. an item may be folded into Retain(E_n,mu_n,r_n) (and hence into H_{n+1}=U_H(...)) as though validated only if it has actually cleared validated_by_check",
+          "date": "2026-09-19",
+          "reason": "gap identified while assembling a lean human-AI/human-human/AI-AI learning stream from already-registered objects: EQ-015/E.08.v1 (H_{n+1}=U_H(H_n,Retain(E_n,mu_n,r_n),delta^world)) states that retained residue updates the reading operator itself -- the mechanism by which something becomes 'one's own' knowledge. EQ-015/H.10.v1 separately states AI(Q)=K_like =/= K_validated. Nothing previously connected the two: nothing stated that Retain() must not incorporate a K_like item into H_{n+1} as though it had already cleared the K_validated gate. This entry states only that guard, built from the two existing objects, no new primitive invented.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/E.08.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/E.08.v1's H_{n+1}=U_H(H_n,Retain(E_n,mu_n,r_n),delta^world_{n:n+1}) is the retention/operator-update law this entry's guard restricts."
+        },
+        {
+          "code": "EQ-015/H.10.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/H.10.v1's AI(Q)=K_like, K_like =/= K_validated supplies the status distinction (K_like vs K_validated) this entry's guard is stated in terms of."
+        },
+        {
+          "code": "weld/H.05.v1",
+          "derived_via": "relates-to",
+          "evidence": "weld/H.05.v1's transport condition T_{H<-AI} o K_AI ~= K_H o T_C names 'authority laundering' among its explicit defect categories for AI-to-human knowledge transport; this entry's guard is a narrower, operationally-specific instance restricted to the Retain() pathway rather than the general transport relation, not a restatement of it (no phi-criterion renaming/scale bijection maps one onto the other -- different mathematical objects, same discipline family)."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "derived from EQ-015/E.08.v1 and EQ-015/H.10.v1 while assembling a human-AI/human-human/AI-AI learning equation stream, founder instruction 2026-09-19"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; a stated guard condition connecting two existing objects, not a proved universal theorem",
+      "coq": {
+        "file": "coq/canonical/EQ_015__H_53_v1.v",
+        "identifier": "EQ_015_H_53_v1_no_silent_incorporation",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "Tiered Definition, not Th_coqc: the proved corollary (no item is ever retained-as-validated while its own validation check reports false) is a direct contrapositive of the guard's own definition, not an independent theorem about the world -- an honest, narrow mechanization, not upgraded beyond what it actually shows. weld/H.05.v1 was found (independently, after this object's first draft) to already name a related failure mode ('authority laundering') at the more general transport-relation level; recorded as a relates-to parent rather than treated as a duplicate, since the two objects are not the same mathematical statement.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions EQ_015_H_53_v1_no_silent_incorporation` reports Closed under the global context (axiom-free); the proof is a direct contrapositive of the guard definition.",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": ["coq/canonical/EQ_015__H_53_v1.v, Print Assumptions: Closed under the global context"]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
       "id": "RET-v2.0-13",
       "code": "EQ-015/H.46.v1",
       "root": "EQ-015",
@@ -159648,6 +159848,106 @@
       }
     },
     {
+      "id": "CAN-1308",
+      "code": "weld/H.52.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [],
+      "name": "Reinforcement-count lock-in threshold for the Collective Epistemic Hallucination chain",
+      "statement": {
+        "latest": "locked_in(k) := N* <= reinforce_count(k), where reinforce_count(k) is the number of independent reinforcing occurrences of claim k observed so far and N* is a declared, finite lock-in threshold (a modelling parameter, not a universal constant)",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "locked_in(k) := N* <= reinforce_count(k), where reinforce_count(k) is the number of independent reinforcing occurrences of claim k observed so far and N* is a declared, finite lock-in threshold (a modelling parameter, not a universal constant)",
+          "date": "2026-09-19",
+          "reason": "gap identified while assembling a lean human-AI/human-human/AI-AI learning stream from already-registered objects: EQ-015/H.45.v1 states an ORDERED sequence K_like -> K_assumed -> K_reinforced -> K_collectively-warranted-looking with no criterion for WHEN the last transition fires. Specializes weld/M.38.v1's already-registered rate/count-crossing-threshold-causes-collapse shape to a single claim's own reinforcement history, rather than inventing an unrelated criterion. States the FORM of the guard only -- no numeric value for N* is asserted.",
+          "by": "toledo-registry-derivation-20260919"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/M.38.v1",
+          "derived_via": "specializes",
+          "evidence": "weld/M.38.v1's Def 7.1: 'collapse triggered when misaligned-record rate r_mis(t) exceeds aligned-record rate r_al(t) by a threshold' is the same rate/count-crossing-threshold-causes-collapse shape this entry specializes to a single claim's reinforcement count."
+        },
+        {
+          "code": "EQ-015/H.45.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/H.45.v1's own chain, K_like -> K_assumed -> K_reinforced -> K_collectively-warranted-looking, is the sequence whose final transition this entry supplies a firing criterion for."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "derived from EQ-015/H.45.v1 and weld/M.38.v1 while assembling a human-AI/human-human/AI-AI learning equation stream, founder instruction 2026-09-19"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "not source-tagged; a stated modelling convention (threshold form only, no asserted numeric value), not a proved universal theorem",
+      "coq": {
+        "file": "coq/canonical/weld__H_52_v1.v",
+        "identifier": "weld_H_52_v1_lockin_monotone",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [],
+      "role": "other",
+      "first_assigned": "2026-09-19",
+      "drift_note": "Tiered Definition, not Th_coqc, even though the accompanying Coq file compiles closed: the FORM of the guard (a threshold exists) is a stated modelling convention, not a proved universal fact; only a narrow monotonicity corollary (once locked in, stays locked in as the count grows) is actually proved, and that corollary alone does not license upgrading the whole object's tier. Recorded here rather than silently rounded up.",
+      "tier_evidence": "coqc-verified in this session: `Print Assumptions weld_H_52_v1_lockin_monotone` reports Closed under the global context (axiom-free); the proof is the one-way-ratchet monotonicity corollary only, not the threshold definition itself.",
+      "resistance": {
+        "computed_at": "2026-09-19",
+        "rungs": {
+          "R0": {
+            "held": true,
+            "evidence": []
+          },
+          "R1": {
+            "held": false,
+            "evidence": [],
+            "reason": "no linked reproduction_card.preregistered_prediction or claim_card falsifier"
+          },
+          "R2": {
+            "held": true,
+            "evidence": ["coq/canonical/weld__H_52_v1.v, Print Assumptions: Closed under the global context"]
+          },
+          "R3": {
+            "held": false,
+            "evidence": [],
+            "reason": "no reproduction_card references this code"
+          },
+          "R4": {
+            "held": false,
+            "evidence": [],
+            "reason": "R3 not held"
+          },
+          "R5": {
+            "held": false,
+            "evidence": [],
+            "reason": "no review_report at independence_class >= I2 references this code"
+          },
+          "R6": {
+            "held": false,
+            "evidence": [],
+            "reason": "R4 not held"
+          }
+        }
+      }
+    },
+    {
       "id": "CAUSAL-2026-09-08-01",
       "code": "EQ-015/H.51.v1",
       "root": "EQ-015",
@@ -169407,9 +169707,9 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1333,
+    "entries": 1336,
     "by_status": {
-      "current": 1198,
+      "current": 1201,
       "unverified": 96,
       "split": 30,
       "not_an_equation": 9
@@ -169417,7 +169717,7 @@
     "by_domain": {
       "M": 448,
       "E": 62,
-      "H": 126,
+      "H": 129,
       "S": 137,
       "W": 93,
       "C": 60,
@@ -169425,8 +169725,8 @@
       "B": 76
     },
     "by_tier": {
-      "Th_coqc": 444,
-      "Definition": 442,
+      "Th_coqc": 445,
+      "Definition": 444,
       "Dr": 82,
       "Ax": 12,
       "finite_diagnostic": 46,
@@ -169439,7 +169739,7 @@
       "Conjecture": 1
     },
     "by_coq_status": {
-      "closed": 581,
+      "closed": 584,
       "definition": 384,
       "wrapped_related": 210,
       "not_formalisable": 70,
