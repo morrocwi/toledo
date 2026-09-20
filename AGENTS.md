@@ -28,6 +28,7 @@ Toledo lookup
 Operationally:
 
 - run the Toledo lookup/check before introducing a formula, theorem object, constraint, bridge, or renamed equivalent — the required first move is `python3 -m toledo_mcp.cli check --formula "<statement text>"` (or `--code <exact code>`), run from `mcp/` (the same command `mcp/BENCHMARKS.md` records and `mcp/toledo_mcp/cli.py`'s own `check` subcommand marks `FOUNDER RULE`); a keyword hit is not a match — read the full statement of any candidate before citing it;
+- confirming phi-criterion equivalence (renaming / positive-scale / constant-substitution) is a judgment call a human registrar and an AI session hold with equal standing — a human registrar's own confirmation is sufficient on its own and needs no AI sign-off before an object is treated as matched or distinct; this is about who may make the final equivalence call, not a shortcut around the "read the full statement" discipline above, which still applies in full to whoever makes that call;
 - inspect `morrocwi/readout_genesis` before assigning ontology/translation meaning;
 - reuse the existing canonical object whenever it covers the need;
 - if something is genuinely missing, derive only the smallest missing piece from declared parents and assumptions;
