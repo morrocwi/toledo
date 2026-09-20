@@ -1,4 +1,4 @@
-.PHONY: coq verify library test build site catalogue mcp resistance executable
+.PHONY: coq verify library test build site catalogue mcp resistance executable counts
 
 coq: ; cd coq/master-river && coq_makefile -f _CoqProject -o Makefile >/dev/null && $(MAKE) -s
 verify: coq ; cd coq/master-river && bash verify.sh | tail -1
@@ -28,12 +28,19 @@ resistance: ; python3 scripts/compute_resistance.py
 # the block itself.
 executable: ; python3 scripts/compute_executable.py
 
+# Registry counts summary (registry/SCHEMA.md's top-level `counts` field):
+# recomputes/writes registry/CANONICAL.json's own `counts` key IN PLACE from
+# a group-by over canonical[]'s status/domain/tier/coq.coq_status fields --
+# same in-place-write discipline as `resistance`/`executable` above, never
+# touches any other field. Runs BEFORE `build` below for the same reason.
+counts: ; python3 scripts/compute_counts.py
+
 # GENERATOR + TOOLING layer (registry/CANONICAL.json + registry/genesis_root.json
 # -> registry/entries, registry/TOLEDO.json, graph/, site/index.json, vault/, latex/catalogue_body.tex)
 # Also (re)builds mcp/state/index.sqlite3 (mcp/scripts/build_index.py, DEBT #48
 # lane E, 2026-09-07) so a release zip ships a prebuilt index instead of every
 # MCP cold start paying an avoidable rebuild — see mcp/BENCHMARKS.md.
-build: resistance executable ; python3 scripts/toledo_build.py && python3 mcp/scripts/build_index.py
+build: resistance executable counts ; python3 scripts/toledo_build.py && python3 mcp/scripts/build_index.py
 
 # Static docs site (reads what `make build` wrote)
 site: build ; python3 site/build_site.py

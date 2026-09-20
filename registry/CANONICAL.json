@@ -170687,6 +170687,6 @@
       "open_prop": 84,
       "axioms": 4
     },
-    "computed": "2026-09-19 from canonical[] (manual jq-equivalent group-by, EQ-015/M.20-21.v1 registration, post-adversarial-review fix)"
+    "computed": "computed by scripts/compute_counts.py from canonical[] (group-by over status/domain/tier/coq.coq_status)"
   }
 }
