@@ -1,0 +1,203 @@
+{
+ "schema_version": "1.0.0-proposal",
+ "generated_from_commit": "ab16c49b13dcc0a58ef0ccdcb2928aa87a5abf5c",
+ "proposal_source": "pgcross engine cards (internal engine, not publicly released): SisThresholdCard, SirWellMixedCard, HerdImmunityCard -- src/pgcross/providers/cards/{sis_threshold,sir_wellmixed,herd_immunity}.py",
+ "extraction_date": "2026-09-21",
+ "extractor_note": "IMPORTANT PROVENANCE NOTE, read before citing any entry below: these three equations are STANDARD, PRE-EXISTING, INDEPENDENTLY-PUBLISHED epidemiology/network-science results (Kermack & McKendrick 1927; Wang, Chakrabarti, Wang & Faloutsos 2003), not ANSE.ASIA-derived mathematics and not part of the Readout Genesis corpus. Toledo lookup (TG-RFG-01 stage 1) against registry/CANONICAL.json (1344 entries) found no existing entry for any of them -- an initial keyword screen for 'R0' produced only false positives (a coincidental 'R0' *tier/rung* key name in unrelated entries, not the epidemiological basic-reproduction-number quantity); a second, word-boundary-refined screen and manual read of the closest-related existing entries (weld/M.01.v1's graph-Laplacian, EQ-015/M.02.v1's root state-transition) confirmed genuinely NOT_REGISTERED. Per founder direction 2026-09-21 (pgcross session), these are registered here WITH an explicit Genesis-lineage parent rather than left parentless, using the SAME 'instance_of'/'derives' idiom this proposal lane already uses elsewhere (e.g. effort_v0_3.json's Toledo-external-paper proposals) for external content that instantiates a general pattern Toledo already registers -- the parent link records a STRUCTURAL relationship (this equation is a concrete instance of the general math family Toledo already has a root for), never a claim of historical priority or that Genesis/Toledo derived these results first. A fourth pgcross card (NetworkCentralityCard) is deliberately NOT proposed here: per pgcross's own code comments it computes no new math at all, only re-reads the same lambda_max (dominant eigenvalue) quantity the network-SIS proposal below already covers under a different domain name -- a TG-RFG-01 REUSE outcome, not a new proposal.",
+ "proposals": [
+  {
+   "id": "PROP-PGCROSS-EPI-01",
+   "code": "weld/M.70.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "network SIS epidemic threshold",
+    "spectral radius epidemic threshold",
+    "pgcross:sis_threshold"
+   ],
+   "name": "Network SIS epidemic threshold: R0 = beta*lambda_max/gamma (eigenvalue viewpoint)",
+   "statement": {
+    "latest": "R_0 = \\frac{\\beta \\cdot \\lambda_{max}}{\\gamma}; \\text{epidemic iff } R_0 > 1",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "R_0 = \\frac{\\beta \\cdot \\lambda_{max}}{\\gamma}; \\text{epidemic iff } R_0 > 1",
+     "date": "2026-09-21",
+     "reason": "pgcross proposal intake: SisThresholdCard.compute() -- R0=b*l/g where b=beta (infection rate), l=lambda_max (largest eigenvalue of the network's adjacency matrix), g=gamma (recovery rate); an epidemic is self-sustaining iff R0>1.",
+     "by": "pgcross-session-2026-09-21"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.01.v1",
+     "derived_via": "instance_of",
+     "evidence": "weld/M.01.v1 registers that retained distinction forces the graph-Laplacian L_R = D_W - W on a network. The network-SIS epidemic threshold is an INSTANCE of the same underlying graph-structure math family: it is governed by lambda_max, the largest eigenvalue of the graph's ADJACENCY matrix -- a distinct but structurally related spectral quantity of the SAME graph (not the Laplacian eigenvalue itself; the two are related but not identical spectral objects of one graph). This parent link records that structural kinship (both are spectral-graph-theory results on the same underlying network object), not that weld/M.01.v1 formally derives this threshold or that Wang et al. 2003 is prior to or dependent on Toledo/Genesis in any way."
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Wang, Y.; Chakrabarti, D.; Wang, C.; Faloutsos, C. (2003). \"Epidemic spreading in real networks: An eigenvalue viewpoint\". 22nd International Symposium on Reliable Distributed Systems (SRDS'03), pp. 25-34.",
+    "repo_anchor": "pgcross/src/pgcross/providers/cards/sis_threshold.py",
+    "record_id": null,
+    "doi": "10.1109/RELDIS.2003.1238052",
+    "section": "Theorem 1 (epidemic threshold)",
+    "page": null,
+    "label": "eigenvalue epidemic threshold theorem"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "EXTERNAL ESTABLISHED SCIENCE -- not a Genesis/Toledo-derived result",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": false
+   },
+   "relations": [],
+   "occurrences": [
+    {"repo": "pgcross (internal, not publicly released)", "path": "src/pgcross/providers/cards/sis_threshold.py", "symbol": "SisThresholdCard.compute"}
+   ],
+   "role": "other",
+   "first_assigned": "2026-09-21",
+   "provenance_note_verbatim": "pgcross engine card SisThresholdCard: 'network-structured SIS: R0 = beta*lambda_max/gamma' -- computes the epidemic threshold from a caller-supplied network spectral radius (lambda_max), never invents the value (I7 discipline: read from grounded/composed slots only).",
+   "drift_note": "Parent chosen as weld/M.01.v1 (the closest existing Toledo object discussing graph-spectral structure on a network) via 'instance_of', NOT because Genesis/Toledo derives or predates this 1927/2003-literature result -- see this file's top-level extractor_note for the full honesty caveat. tier='Dr' because this is a well-established, independently-published external result being cited (not internally derived and not yet machine-checked here), matching this proposal lane's existing convention for not-yet-formalised external content (see effort_v0_3.json)."
+  },
+  {
+   "id": "PROP-PGCROSS-EPI-02",
+   "code": "EQ-015/M.22.v1",
+   "root": "EQ-015",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "well-mixed SIR basic reproduction number",
+    "Kermack-McKendrick R0",
+    "pgcross:sir_wellmixed"
+   ],
+   "name": "Well-mixed (mean-field) SIR basic reproduction number: R0 = beta/gamma",
+   "statement": {
+    "latest": "R_0 = \\frac{\\beta}{\\gamma}; \\text{epidemic iff } R_0 > 1",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "R_0 = \\frac{\\beta}{\\gamma}; \\text{epidemic iff } R_0 > 1",
+     "date": "2026-09-21",
+     "reason": "pgcross proposal intake: SirWellMixedCard.compute() -- R0=b/g, the classical mean-field (homogeneous-mixing) SIR reproduction number, disambiguated from the network-SIS threshold (PROP-PGCROSS-EPI-01) by NOT depending on any network spectral quantity.",
+     "by": "pgcross-session-2026-09-21"
+    }
+   ],
+   "parents": [
+    {
+     "code": "EQ-015/M.02.v1",
+     "derived_via": "instance_of",
+     "evidence": "EQ-015/M.02.v1 registers the general root state-transition pattern S_{n+1}=F(S_n,u_n,c_n,T_n). The well-mixed SIR compartmental model (susceptible/infected/recovered counts evolving under fixed rates beta, gamma) is a concrete INSTANCE of exactly this pattern: the state is the (S,I,R) compartment vector, F is the SIR flow, and R0=beta/gamma is the threshold condition on whether that transition's infected compartment grows or decays. This is a structural-pattern match (a specific dynamical system instantiating a registered general state-transition form), not a claim that Toledo/Genesis derives or predates Kermack & McKendrick's 1927 result."
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Kermack, W. O.; McKendrick, A. G. (1927). \"A Contribution to the Mathematical Theory of Epidemics\". Proceedings of the Royal Society A. 115 (772): 700-721.",
+    "repo_anchor": "pgcross/src/pgcross/providers/cards/sir_wellmixed.py",
+    "record_id": null,
+    "doi": "10.1098/rspa.1927.0118",
+    "section": "threshold theorem",
+    "page": null,
+    "label": "basic reproduction number R0"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "EXTERNAL ESTABLISHED SCIENCE -- not a Genesis/Toledo-derived result",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": false
+   },
+   "relations": [],
+   "occurrences": [
+    {"repo": "pgcross (internal, not publicly released)", "path": "src/pgcross/providers/cards/sir_wellmixed.py", "symbol": "SirWellMixedCard.compute"}
+   ],
+   "role": "other",
+   "first_assigned": "2026-09-21",
+   "provenance_note_verbatim": "pgcross engine card SirWellMixedCard: 'R0 = beta/gamma' -- the well-mixed/homogeneous-mixing case, disambiguated by pgcross's own conformance tests from the network-structured SIS card (which additionally requires lambda_max).",
+   "drift_note": "Parent chosen as EQ-015/M.02.v1 (the general root state-transition pattern) via 'instance_of' -- see this file's top-level extractor_note for the full honesty caveat that this records structural kinship, not historical priority."
+  },
+  {
+   "id": "PROP-PGCROSS-EPI-03",
+   "code": "weld/M.71.v1",
+   "root": "weld",
+   "layer": "reading",
+   "domain": "M",
+   "aliases": [
+    "herd immunity threshold",
+    "vaccination coverage threshold",
+    "pgcross:herd_immunity"
+   ],
+   "name": "Herd immunity threshold: HIT = 1 - 1/R0",
+   "statement": {
+    "latest": "\\text{HIT} = 1 - \\frac{1}{R_0}, \\quad R_0 > 1",
+    "format": "latex"
+   },
+   "statements_history": [
+    {
+     "v": 1,
+     "statement": "\\text{HIT} = 1 - \\frac{1}{R_0}, \\quad R_0 > 1",
+     "date": "2026-09-21",
+     "reason": "pgcross proposal intake: HerdImmunityCard.compute() -- hit=1.0-1.0/r; refuses (CLARIFY, never computes) when R0<=1, since a sub-threshold disease has no herd-immunity requirement.",
+     "by": "pgcross-session-2026-09-21"
+    }
+   ],
+   "parents": [
+    {
+     "code": "weld/M.70.v1",
+     "derived_via": "derives",
+     "evidence": "HIT=1-1/R0 is a direct algebraic consequence of the epidemic-threshold condition R0>1 (the fraction of the population that must be immune so the EFFECTIVE reproduction number R0*(1-HIT) falls to exactly 1) -- a genuine, real mathematical derivation from R0, not merely a reading/instance relation like the two R0 proposals above."
+    },
+    {
+     "code": "EQ-015/M.22.v1",
+     "derived_via": "derives",
+     "evidence": "Same algebraic derivation applies regardless of which R0-producing model (network-SIS or well-mixed-SIR) supplied the R0 value -- pgcross's own pipeline/compose.py composes HerdImmunityCard's required R0 slot from EITHER producing card, so both are listed as real parents here, mirroring pgcross's own real composed_from provenance model."
+    }
+   ],
+   "children": [],
+   "origin": {
+    "source": "Standard result in mathematical epidemiology, commonly reviewed in: Fine, P. E. M. (1993). \"Herd immunity: history, theory, practice\". Epidemiologic Reviews. 15 (2): 265-302. (The formula itself is a direct algebraic consequence of classical SIR threshold theory and predates this specific review; cited here as a commonly-referenced textbook source, not as the formula's origin.)",
+    "repo_anchor": "pgcross/src/pgcross/providers/cards/herd_immunity.py",
+    "record_id": null,
+    "doi": "10.1093/oxfordjournals.epirev.a036121",
+    "section": null,
+    "page": null,
+    "label": "herd immunity threshold"
+   },
+   "status": "current",
+   "tier": "Dr",
+   "tier_in_genesis_verbatim": "EXTERNAL ESTABLISHED SCIENCE -- not a Genesis/Toledo-derived result",
+   "coq": {
+    "file": null,
+    "identifier": null,
+    "assumptions": null,
+    "imported_from": null,
+    "coq_status": "not_yet_formalised",
+    "coq_axioms": [],
+    "coq_source_redistributed": false
+   },
+   "relations": [],
+   "occurrences": [
+    {"repo": "pgcross (internal, not publicly released)", "path": "src/pgcross/providers/cards/herd_immunity.py", "symbol": "HerdImmunityCard.compute"}
+   ],
+   "role": "other",
+   "first_assigned": "2026-09-21",
+   "provenance_note_verbatim": "pgcross engine card HerdImmunityCard: 'HIT=1-1/R0' -- fires only when R0>1 (validate() raises otherwise, per pgcross's own I7/I1 grounding discipline), consuming R0 from EITHER PROP-PGCROSS-EPI-01 (network) or PROP-PGCROSS-EPI-02 (well-mixed) via pgcross's own engine-to-engine composition layer.",
+   "drift_note": "Two parents listed (not one) because pgcross's real architecture genuinely composes this card's R0 input from either producing card -- this is not an artificial dual-parent, it reflects the actual dependency structure in the citing repository."
+  }
+ ]
+}
