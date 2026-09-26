@@ -1,0 +1,100 @@
+[
+  {
+    "id": "PROP-FLOOD-01",
+    "code": "weld/M.??.v1",
+    "name": "Lag-k retained difference with resolution-sign readout",
+    "statement": {
+      "latest": "\\text{Let } h(t) \\text{ be a } \\mathbb{Q}\\text{-valued readout series sampled at finite ticks } t \\in \\mathbb{N}, \\text{ and } k \\ge 1 \\text{ a lag in ticks.}\\quad \\Delta_k(t) := h(t) - h(t-k).\\quad \\text{Given a declared resolution } \\varepsilon > 0 \\text{ (the source's stated sensor resolution):}\\quad \\boxed{\\text{readout}(t) := \\begin{cases} \\text{NO\\_READOUT} & t < k \\text{ or } h(t-k) \\text{ not sampled} \\\\ \\text{RISING} & \\Delta_k(t) > \\varepsilon \\\\ \\text{FALLING} & \\Delta_k(t) < -\\varepsilon \\\\ \\text{FLAT} & \\text{otherwise} \\end{cases}}",
+      "format": "latex",
+      "note_ascii": "Delta_k(t) := h(t) - h(t-k) for a Q-valued readout series h sampled at finite ticks t, lag k>=1 tick. First branch: NO_READOUT if t<k or h(t-k) was not sampled (the undefined case, kept separate so FLAT never silently absorbs it). Otherwise, sign readout against a declared resolution epsilon>0 (the source's stated sensor resolution): RISING if Delta_k > epsilon, FALLING if Delta_k < -epsilon, FLAT otherwise."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "flood-readout-app:lag-k-retained-difference-sign-readout"
+    ],
+    "definitions": {
+      "h": "a Q-valued readout series (e.g. a water-level sensor readout), never treated as a continuum signal -- only its finite sampled values at ticks t are ever used",
+      "t": "a finite tick index, t in N (natural-number tick count, not a continuum time coordinate)",
+      "k": "a lag in ticks, k>=1, predeclared (e.g. k corresponding to 3h or 12h of ticks); mapping a lag in ticks to a lag in clock hours (e.g. 'k ticks ~ 3h') assumes the sampling interval is uniform over that window -- this uniform-sampling assumption must be checked against the actual source series, not assumed silently",
+      "epsilon": "a declared resolution constant > 0; MUST come from the source's own stated sensor resolution; if the source does not declare one, epsilon must be labelled INSTINCT (a narrative/judgment call), never silently treated as VERIFIED/MEASURED"
+    },
+    "parents": [
+      {
+        "code": "delta_R",
+        "derived_via": "instance_of",
+        "evidence": "this is a direct application of the workspace's own root primitive (a retained difference exists, delta_R = (a sharp b), Th_coqc per readout_genesis Part I 'THE ONE-LINE MASTER EQUATION') to a lag-k pair of readouts of a scalar Q-valued series, replacing any implicit continuum derivative (h->0) with a finite retained difference between two actually-sampled ticks."
+      },
+      {
+        "code": "PROP-NATIVE-01",
+        "derived_via": "generalises",
+        "evidence": "PROP-NATIVE-01 is a lag-1 SE(3) retained difference between two consecutive pose readouts (Delta_k := delta_R(That_k, That_{k-1})) replacing a T*-relative non-readout error definition. This proposal generalises the same forced move -- retained difference between readouts, no unobserved 'true' quantity -- from a single-lag SE(3) pose difference to a general lag-k scalar Q-valued series, and adds an explicit epsilon-resolution sign classification that PROP-NATIVE-01 itself does not need (pose refinement has no RISING/FALLING/FLAT question)."
+      }
+    ],
+    "genesis_compatibility": {
+      "gate": "readout_genesis Part I, 'THE ONE-LINE MASTER EQUATION' (delta_R = (a sharp b), tier Th_coqc; the identifier 'InfoRetainedDistinctionForcesLaplacian' is relayed verbatim from that section's own text -- no corresponding .v file was located in this repository during this registration, so the identifier is cited as relayed, not independently verified) and Part V-A A.1 'The root of reality is not a domain' ('Retention comes first: delta_R = (a sharp b) composes two retained differences')",
+      "quote": "\"Retention comes first: `δ_R = (a ♯ b)` composes two retained differences\" (READOUT_GENESIS_CORE.md, Part V-A, section A.1)",
+      "note": "Delta_k(t) is exactly a delta_R composition of the two retained readouts h(t) and h(t-k); it instantiates the retention gate directly, it does not need a new Genesis gate. root-level caution D applies: 'Do not confuse readout with the underlying reality' -- Delta_k is a readout of two sensor readings, never a claim about the physical flood state itself."
+    },
+    "honest_caveats": [
+      "This is a retained difference, not a derivative -- no h->0 limit is taken or implied (information-discrete-math I2 discipline: a finite step / a tau_c floor, never infinite divisibility).",
+      "It is not a forecast: RISING/FALLING/FLAT describes the sign of an already-observed retained difference between two past readouts, not a prediction of a future reading.",
+      "epsilon must be sourced honestly: if the declaring source (e.g. an official agency sensor spec) states a resolution, tag it MEASURED/VERIFIED as appropriate and cite the source; if no source states one, epsilon is INSTINCT (a judgment call) and must be labelled as such, never presented as a checked fact.",
+      "Delta_k(t) is a difference of two separately-resolved readings (h(t) and h(t-k)), each already subject to the source's own +/- epsilon resolution -- worst case, the retained difference itself carries up to 2*epsilon of resolution slack, not epsilon; the sign classification's epsilon threshold should be read with that combined uncertainty in mind, not as if only one reading were uncertain.",
+      "This is now a four-way exhaustive partition by construction: NO_READOUT (undefined input) is a separate, explicit branch, never absorbed into FLAT -- FLAT means 'sampled, retained difference within resolution', not 'no data'."
+    ],
+    "empirical_test_status": "not yet run against real Sammakorn village flood-readout data; this is a design-stage proposal",
+    "origin": {
+      "source": "New derivation/proposal: Sammakorn village (Ramkhamhaeng 112, Bangkok) flood-readout application (private), 2026-09-26",
+      "doi": null
+    }
+  },
+  {
+    "id": "PROP-FLOOD-02",
+    "code": "weld/M.??.v1",
+    "name": "Time-to-threshold by linear extension of the last retained difference, with refusal",
+    "statement": {
+      "latest": "\\text{Given } \\Delta_k(t) \\text{ from PROP-FLOOD-01 and a threshold } \\theta \\in \\mathbb{Q} \\text{ (an official agency threshold, e.g. BMA critical\\_level):}\\quad T_k := \\frac{(\\theta - h(t))\\cdot k}{\\Delta_k(t)} \\text{ ticks}, \\quad \\text{defined ONLY when } \\Delta_k(t) > \\varepsilon \\text{ AND } h(t) < \\theta.\\quad \\boxed{\\text{otherwise (}\\Delta_k(t)\\le\\varepsilon\\text{, or }h(t)\\ge\\theta\\text{, or PROP-FLOOD-01's NO\\_READOUT): readout} := \\text{REFUSED (a non-value, not a number)}}",
+      "format": "latex",
+      "note_ascii": "T_k := (theta - h(t)) * k / Delta_k(t) ticks, defined ONLY when Delta_k(t) > epsilon (strictly rising above resolution) AND h(t) < theta (threshold not yet reached). Otherwise -- Delta_k(t) <= epsilon, or h(t) >= theta, or the input Delta_k(t) was itself NO_READOUT (PROP-FLOOD-01) -- the readout is REFUSED: REFUSED is a non-value, not a number (see honest_caveats for the contrast with a different, already-registered construction's convention). REFUSED carries one of two reason codes: UNRESOLVED when |Delta_k(t)| <= epsilon (the retained difference itself cannot be distinguished from zero at the declared resolution -- a genuine bottom/undefined case), or NOT_APPLICABLE when Delta_k(t) < -epsilon (falling, extension to theta is not meaningful), h(t) >= theta (threshold already crossed), or the input was NO_READOUT (a determinate reason the construction does not apply, not an unresolved one)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "flood-readout-app:time-to-threshold-linear-extension-refusal"
+    ],
+    "recommended_use": "Report T_k for two predeclared lags (e.g. k corresponding to 3h and 12h) as an interval [min, max] of the two T_k values, never as a single point number; T_k is a rational readout of the CURRENT retained difference extended linearly, not a prediction of future behaviour, and it carries no claim that the rate Delta_k(t)/k will hold going forward.",
+    "parents": [
+      {
+        "code": "PROP-FLOOD-01",
+        "derived_via": "linear_extension",
+        "evidence": "T_k linearly extends the already-defined Delta_k(t)/k rate (retained difference per tick) forward to the point where h would cross theta under that same rate held constant; it adds no new primitive beyond PROP-FLOOD-01's Delta_k and reuses its epsilon-resolution gate (and its NO_READOUT branch) as the totality condition for when the extension is licensed at all."
+      },
+      {
+        "code": "delta_R",
+        "derived_via": "instance_of",
+        "evidence": "T_k is built entirely from the retained difference Delta_k(t) (itself an instance_of delta_R) and rational arithmetic on it; no quantity outside the retained readouts h(t), h(t-k) and the declared theta/epsilon constants ever enters."
+      }
+    ],
+    "genesis_compatibility": {
+      "gate": "readout_genesis Part V-A (A.13 seven-gate box), specifically the admissibility certificate '[C in {1,0,⊥}] Adm_n' in the pipeline 'delta_R => S_n ->[E_a] z_a^cand ->[Suff_{a,L}] z_a ->[C in {1,0,⊥}] Adm_n' and the root-level caution list item stating an unresolved readout 'is not obstructed' rather than silently suppressed or fabricated",
+      "quote": "\"δ_R ⇒ 𝔖_n →[E_α] 𝔃_α^cand →[Suff_{α,L}] 𝔃_α →[𝒞∈{1,0,⊥}] Adm_n\" and \"【Unresolved is not obstructed, and neither one is impossible】\" (READOUT_GENESIS_CORE.md, Part V-A, A.13 seven-gate box and boxed verdict)",
+      "note": "The REFUSED branch of T_k is exactly the ternary admissibility certificate's third value (bottom/undefined, distinct from both 1=admissible and 0=inadmissible-but-defined) -- Genesis licenses a total, first-class 'unresolved' outcome here, which is why REFUSED must be a real returned state, not a silently-dropped case and not a fabricated unbounded stand-in value. This proposal further splits REFUSED into UNRESOLVED (the genuine bottom/undefined case, |Delta_k(t)|<=epsilon) and NOT_APPLICABLE (a determinate reason the construction does not apply: falling, threshold already crossed, or NO_READOUT input) -- only UNRESOLVED is the Genesis ⊥ value proper; NOT_APPLICABLE is a 0 (inadmissible-but-defined) case that happens to also return no T_k value."
+    },
+    "claim_boundary": "No hydrological/hydraulic model content of any kind is asserted (no rainfall-runoff, no channel routing, no drainage capacity). Validity is limited strictly to: the arithmetic of T_k is computed on Q (no floating-point continuum shortcuts, no h->0), and the REFUSED branch is total -- every (Delta_k(t), h(t), theta, epsilon) input, including PROP-FLOOD-01's own NO_READOUT case, produces either a well-defined T_k or an explicit REFUSED (tagged UNRESOLVED or NOT_APPLICABLE), with no third silently-undefined case.",
+    "honest_caveats": [
+      "This is a linear extension of the CURRENT retained difference, not a forecast or a model of future flood dynamics -- Delta_k(t) holding constant going forward is an assumption this construction makes visible, never a claim that it will actually hold.",
+      "Recommended use is to report T_k for two lags as an interval, never a single number, precisely because different lags will generally disagree and collapsing them into one number hides that disagreement.",
+      "The REFUSED branch is a deliberate design choice to NOT adopt PROP-CONF-01's unbounded-quantile fail-closed convention (that construction's own boundary value is a symbolic unbounded quantity in its own registration) -- that convention exists for a different, already-registered purpose (a calibrated split-conformal quantile with a formal exchangeability guarantee) and is not reused here, per the zero/unbounded-value non-readout guard: rational arithmetic has no such unbounded value; a 'no value' state must be represented as an explicit refusal, not as a number.",
+      "epsilon is shared with PROP-FLOOD-01 and inherits the same sourcing requirement (MEASURED/VERIFIED only if a source states it, else INSTINCT) and the same combined-resolution caveat (Delta_k(t) carries up to 2*epsilon of resolution slack, not epsilon, since it differences two separately-resolved readings).",
+      "Not yet implemented or tested against real Sammakorn village flood-readout data; this is a design-stage proposal."
+    ],
+    "empirical_test_status": "none",
+    "origin": {
+      "source": "New derivation/proposal: Sammakorn village (Ramkhamhaeng 112, Bangkok) flood-readout application (private), 2026-09-26",
+      "doi": null
+    }
+  }
+]
