@@ -1,10 +1,180 @@
 # PROP-FLOOD-06 — NEW DERIVATION / PROPOSAL (not a Toledo theorem)
 
 **Area-generic outlet-headroom / drainage-coping tier-ladder indicator, with (lat,lon) unit
-resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v5`
-(LEADING upstream/rain/forecast promoters with declared travel time, per-unit calibration
-procedure, and hysteresis/persistence — see "ถึงจะแม่นยำและใช้ได้กับทุกสถานที่ — v5" immediately
-below; v4/v3/v2 amendments retained further down for history).
+resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v6`
+(L5/LR bypass hysteresis, the tau_up boundary case named explicitly, inferred coverage-state
+imported from PROP-FLOOD-07, LAYER 0 IN/OUT/CAPACITY headline simplification, and backtest v2
+findings recorded — see "round-3 review + LAYER 0 — v6" immediately below; v5/v4/v3/v2 amendments
+retained further down for history).
+
+## round-3 review + LAYER 0 — v6, L5/LR bypass hysteresis, inferred inputs, layer-0 headline
+
+**Independent round-3 review** (`REVIEW_PROP_FLOOD_06_r3.md`, maker≠checker, read-only, pinned at
+`ebd34071`) found one MUST-FIX and one SHOULD-FIX against v5, both closed by this v6 bump:
+
+### MUST-FIX — L5/LR bypass hysteresis
+
+r3 found that v5's `persisted` treats `T_L5` ("the system is already exceeded") and `T_LR`
+(REFUSED) as ordinary points on the same nat-encoded scale, so a genuinely already-exceeded
+reading could be delayed by `(p−1)` hours before being *reported* — exactly like any ordinary
+band raise, and in direct tension with this proposal's own "more data must never be suppressed"
+discipline (the v4 promoter-floor fix, `full_tier_v4_promoter_monotone`).
+
+**Fix — `persisted_v6`.** A raise **into** `T_L5` or `T_LR` now bypasses the `p`-consecutive-
+readout gate entirely and is reported immediately, on the very hour it is raw-observed. A
+**lowering** — including a lowering **out of** `T_L5`/`T_LR` — is **unchanged**: it still requires
+`q` consecutive raw readouts at or below the new level, exactly as v5 already declared. `persisted`
+(v5) itself is untouched; `persisted_v6` is a fresh, additive function (same non-destructive-
+extension discipline as every prior version bump in this proposal).
+
+Proved in Coq (`coq/canonical/PROP_FLOOD_06_outlet_coping_tier.v`, v6 section):
+`persisted_v6_L5_immediate` and `persisted_v6_LR_immediate` (a genuine raise into `T_L5`/`T_LR` is
+reported at the same hour it is raw-observed, no `p`-delay), and `persisted_v6_is_some_historical_raw`
+(the v5 falsifier-relevant guarantee, kept: persistence — with the bypass — still never fabricates
+a tier absent from the raw history at some earlier-or-same hour).
+
+### SHOULD-FIX — the t−τ_up "before the first upstream reading" boundary, named explicitly
+
+r3 also asked that the boundary case where `t − τ_up(U)` predates the upstream series' own first
+available reading be named explicitly, rather than left to be implied by inheriting PROP-FLOOD-02's
+own REFUSED conditions. This proposal now declares a dedicated three-way case
+(`upstream_leading_component`, Coq): `ULC_absent_tau_undeclared` (no declared upstream gauge/τ_up
+for `U` at all — the existing, scoped `UPSTREAM_GAUGE_UNDECLARED` refusal code), a **new**, equally
+scoped code `UPSTREAM_TAU_UNDECLARED` folded into the same absent state whenever τ_up itself is the
+missing piece rather than the gauge, `ULC_absent_before_first_reading` (τ_up **is** declared, but
+`t − τ_up` falls before the upstream series' own first observed reading — **absent, never a
+fabricated `0`**), or `ULC_value v` (a genuine reading). Both non-value outcomes are proved to be
+genuinely disjoint from ever reporting a real value
+(`upstream_leading_state_value_iff_in_range_and_declared`): a value is only ever reported when τ_up
+**is** declared **and** the shifted index actually falls within the upstream series' observed
+range — never silently collapsed into a same-looking `Some 0`.
+
+### Inferred inputs — cov6(U), importing PROP-FLOOD-07 as a PARENT
+
+The founder instruction v5 explicitly deferred ("อย่าลืมว่าไม่มีทางมีข้อมูลพอ แต่ใช้การอนุมานจากข้อมูล
+ที่แข็งแรงเป็นหลัก" — there is never enough data; use inference from strong-enough data as the main
+tool) is implemented here **by reusing PROP-FLOOD-07's own primitive**, per this repository's
+Toledo-first reuse gate: `From MRC Require Import PROP_FLOOD_07_flow_state` brings in
+`coverage3` (`Cov_Present`/`Cov_Absent`/`Cov_Inferred`), `strength` (the 5-rung evidence ladder,
+`strength_min` never averaging), and `coverage3_rank` (`Absent=0 < Inferred=1 <= Present=2`)
+**verbatim, not re-derived** — the exact object PROP-FLOOD-07's own header said a future
+PROP-FLOOD-06.v6 should import.
+
+- **cov6(U)** widens every one of v5's 10 `cov5(U)` components from `bool` to `coverage3`: each of
+  the 10 is now `present | inferred | absent`, never a fourth silent state.
+- **Coverage counting.** `readout_v6` reports `readout_coverage_present_v6` (count of `Cov_Present`,
+  0..10) **and** `readout_coverage_inferred_v6` (count of `Cov_Inferred`, 0..10) **separately** — an
+  inferred component is counted, but at the lower rank `coverage3_rank` already assigns it, never
+  conflated with a direct `present` reading.
+- **`confidence` field.** `readout_v6.confidence_v6 : option strength` is the **minimum** (via
+  PROP-FLOOD-07's own `strength_min`, never an average) over every `Cov_Inferred` component's own
+  declared confidence, among the components actually used (`confidence_v6_of`); `None` when nothing
+  is inferred (`confidence_v6_of_none_when_nothing_inferred`, proved).
+- **LR narrowed further.** `cov6_all_absent` — and hence `M_LR` — now fires iff `coverage_available_v6`
+  (the Present-**or**-Inferred count) is `0`, i.e. iff **nothing is present AND nothing is
+  inferable** (`full_tier_v6_LR_iff_nothing_present_or_inferable`, proved as an `iff`). An
+  all-absent-but-inferable unit is, by this construction, never `LR`.
+- **Monotonicity, extended.** `full_tier_v6_promoter_monotone` proves the general form of "more
+  data never lowers the tier": **any** rank-increasing change to `cov6(U)` — in particular
+  `inferred → present` — never lowers the reported tier (non-`LR` case), reusing
+  PROP-FLOOD-07's own `coverage3_rank` ordering as the licensing fact, exactly as that proposal's
+  own header promised. `full_tier_v6_full_ge_partial` (FULL ≥ the PARTIAL tier the same promoters
+  give) is re-proved over the widened, coverage3-aware promoter-availability test
+  (`promoter_applies_v6`/`promoter_applies_v6_leading`: a promoter's input now counts as available
+  whenever its cov6 component is Present **or** Inferred, at whatever rank the inference carries).
+
+`coverage_vector_v5`/`readout_v5`/`full_tier_v5` and every v1–v5 type, definition, and theorem are
+**UNCHANGED** by this section — `coverage_vector_v6`/`readout_v6`/`full_tier_v6` are fresh, additive
+objects, per this proposal's own non-destructive-extension discipline.
+
+### LAYER 0 — the declared headline simplification: น้ำเข้า / น้ำออก / รับมือได้
+
+**Founder instruction (verbatim, 2026-09-27):** "เอาแบบง่ายๆ ก่อน น้ำเข้า น้ำออก ความสามารถในการ
+รับมือ" (start simple: water in, water out, coping capacity) — "ซึ่งค่ารับมือพวกนี้อ่านจากประวัติได้
+เรามีประวัติศาสตร์และงานวิจัยเยอะ" (the coping values can be read from history; we have plenty of
+history and research). This is registered as a **declared simplification of this same object, not
+a new equation** — matching thailand_flood_kg's own read-only reference
+(`docs/LAYER0_IN_OUT_CAPACITY.md`, RELAYED: "ไม่มีสมการใหม่ — โมดูลนี้เป็น PROPOSAL-derived
+simplification of `PROP-FLOOD-06`").
+
+`readout_layer0 : Q → backflow_state → Q → option Q → layer0_cap_band → layer0_readout` is a
+**total function of the same declared inputs** already used elsewhere in this file:
+
+- **`IN_H`** := this proposal's own already-registered `F_H(U)`, **plus an explicit canal-backflow
+  term** (`backflow_state ∈ {active, not_active, unknown, likely}` — mirrors
+  `compute_backflow_state` in thailand_flood_kg's read-only `tools/layer0/in_out_capacity.py`; an
+  `unknown` backflow state contributes `0`, **never** a fabricated m³/s figure, exactly that
+  module's own docstring discipline). Present (counted) when a connected canal/basin's surface
+  measurably exceeds the unit's own surface (`active`), or a band-comparison declares it `likely`
+  (INSTINCT-tagged, per that same source, never converted into a fabricated number here either).
+- **`OUT_H`** := `D_H(U) + R_H(U)` — this proposal's own already-registered drainage/outlet terms,
+  as an `option Q` (absent when neither resolves — REFUSES only the drain-vs-in verdict below,
+  never the whole Layer-0 sentence).
+- **`CAPACITY`** := a declared historical band (`layer0_cap_band`: `coped_max` = the largest `IN_H`
+  ever observed on a non-flood day, MEASURED-history; `flooded_min` = the smallest `IN_H` ever
+  observed on a flood day, MEASURED-history) — the unknown **gap** between them
+  (`layer0_gap`) is **reported, never interpolated**.
+
+**Three verdicts, all total:**
+
+- **IN vs CAPACITY** → `เกิน` (`L0V_Exceeds`, `IN_H ≥ flooded_min`) / `ใกล้` (`L0V_Near`,
+  `IN_H ≥ 0.8·flooded_min`) / `ไม่เกิน` (`L0V_WithinCapacity`, including the declared "no
+  flooded_min evidence yet" convention — a stated convention, not a measured safety claim).
+- **OUT vs IN** → `ระบายทัน` (`L0D_InTime`, `IN_H ≤ OUT_H`) / `ไม่ทัน` (`L0D_NotInTime`) / `ไม่รู้`
+  (`L0D_Unknown`, when `OUT_H` itself does not resolve — REFUSES only this one verdict, "ขาด: OUT"
+  still renders the rest of the sentence, per thailand_flood_kg's own rule).
+
+Proved: `readout_layer0_total` (a plain total function, no partial match arm — same argument as
+every other top-level function in this file).
+
+**Relation to the full-mode ladder — proved, not asserted.** `layer0_exceeds_implies_full_tier_ge_L3`
+proves: **provided** the caller declares this unit's `flooded_min` **as** its own `C_H(U)`/
+`min(D_H,R_H)` clearable volume, and `S_H(U)` under that identification (`s·fm == in_h`, avoiding a
+bare division), **then** Layer 0's `เกิน` verdict implies the full-mode ladder's tier is at least
+`L3` ("ทำตอนนี้ภายในวันนี้") — never silently lower. This is the *exact*, conditional relation Layer 0
+licenses; it does **not** claim to hold for an arbitrary, undeclared `flooded_min`/`IN_H` pairing —
+that identification is a per-unit declaration/calibration act (see `per_unit_calibration`), not an
+automatic consequence of this file. The arithmetic core, `full_tier_ge_L3_when_s_ge_0_9`, holds
+unconditionally of `refused`/L5 (both those branches already rank above `L3` on the same scale).
+
+### Backtest v2 findings recorded verbatim (RELAYED, `thailand_flood_kg/docs/BACKTEST_PROP_FLOOD_06_v2.md`)
+
+This proposal did not itself run this backtest; the findings are recorded honestly, unchanged, as
+`honest_caveats`, and **no threshold is adopted or retuned by this v6 bump**:
+
+- **Lead time achieved on 3 of 4 previously-lagging units**, at raw and persisted granularity:
+  Nan +408h raw / +384h persisted (N.64, a real upstream gauge), Chiang Mai +360h/+336h
+  (degraded self-gauge, no confirmed real upstream station), Hat Yai +432h/+408h (degraded
+  self-gauge, "expected weak" per the backtest's own brief).
+- **But `UPSTREAM_RISE_RATE_EXCEEDS` (the promoter that carries nearly every one of those gains) is
+  also the single largest false-alarm source in the whole run: 77 of 97 total promoter firings
+  across the backtest are false alarms** at the declared 15% rise-rate threshold (Hat Yai 28
+  non-flooded fires vs. 4 hits; Nan 20 vs. 6; Chiang Mai 10 vs. 8, the best ratio of the three).
+  No candidate grid value for Nan reaches a declared FA ≤ 20% ceiling; only Chiang Mai's dry-run
+  calibration would (thr=0.40, FA=9.5%) — and per this proposal's own falsifier discipline, neither
+  may actually be calibrated without a genuinely new observed event.
+- **Persistence (p=2/q=3) RAISED both hit rate and false-alarm rate simultaneously at this
+  backtest's day-level granularity** — the opposite of the registry's stated "trades lead time for
+  FA rate" intent, because promoter firings in this dataset are short sparse spikes and the
+  asymmetric `p`-fast/`q`-slow hold sweeps in more days on both sides of the ground-truth label.
+  This is a real, reportable falsifier of the **p=2/q=3 defaults at day-granularity with this
+  dataset's firing pattern** — it is not evidence against the hysteresis *construction* itself
+  (`persisted_is_some_historical_raw`/`persisted_v6_is_some_historical_raw` still hold
+  unconditionally; they make no claim about net FA effect at any particular granularity).
+- Ayutthaya and Bangkok East (the two units with real v1 lead time already) are **unchanged** —
+  Ayutthaya's own leading promoter fired once, on a false alarm, and is not an independent signal
+  from its existing `F_H(U)` upstream term; Bangkok East has no declared upstream gauge at all.
+
+**No S_H/T_act/promoter threshold VALUE is changed by this v6 bump.** No unit is calibrated by this
+registration.
+
+Registry entry: `registry/proposals/flood_outlet_coping.json` (`version: "v6"`).
+Coq: `coq/canonical/PROP_FLOOD_06_outlet_coping_tier.v` — `coqc -q` clean (same 3 pre-existing
+harmless comment-terminator warnings, now 7 with the added Thai comment text, all in the same
+"quoted Thai punctuation inside a `(* ... *)` comment" category already present since v2/v3);
+`Print Assumptions` "Closed under the global context" (no axioms) on every v6 theorem (spot-checked
+individually via a scratch build directory, created/compiled/discarded, not committed) as well as
+every pre-existing v1–v5 theorem re-checked (unchanged).
 
 ## ถึงจะแม่นยำและใช้ได้กับทุกสถานที่ — v5, leading inputs + per-unit calibration + hysteresis
 
@@ -148,30 +318,25 @@ level the raw rule never produced at all.
 structural addition (leading inputs, a calibration *procedure*, a hysteresis *rule*), not a
 retune. No unit is actually calibrated by this registration.
 
-### v6 TODO — NOT YET IMPLEMENTED (received during this v5 registration)
+### v6 TODO from v5 — IMPLEMENTED (see "round-3 review + LAYER 0 — v6" above)
 
 **Founder instruction (verbatim):** "อย่าลืมว่าไม่มีทางมีข้อมูลพอ แต่ใช้การอนุมานจากข้อมูลที่แข็งแรง
 เป็นหลัก" — there is never enough data; use inference from strong-enough data as the main tool.
 
-This asks for a **third coverage state**, `inferred` (alongside `present`/`absent`), derived from
-declared consistency rules over connected anchors — e.g. *downstream reach at normal level + no
-pumps running + no level drop for N hours ⇒ the inner link is stalled*, an inference, not a
-reading. Requirements: counted in coverage at a **lower rank** than `present`, never conflated
-with it; always listed in `based_on` together with the **anchor ids** that licensed the
-inference; a new `confidence : strength` field on the readout record carrying the **ordinal
-confidence of the weakest anchor** in the chain; `LR` narrowed further to "nothing present **and**
-nothing inferable" (an all-absent-but-inferable unit is no longer `LR`); and a **third
-monotonicity theorem** — `inferred → present` never lowers the tier (an inferred component later
-confirmed present by a real reading must never cause a reported drop).
-
-**Why this is v6, not folded into v5:** an anchor-consistency inference rule is a genuinely new
-primitive — not a retained difference (PROP-FLOOD-01), not a linear-extension threshold
-(PROP-FLOOD-02), not a promoter already in this table — and this repository's own Toledo-first
-reuse gate (`EQUATION_SOURCE_POLICY.md` `TG-RFG-01`) requires a Toledo lookup and Genesis-
-compatibility pass **before** deriving and formalising it, not rushing it into this commit under
-time pressure. Recorded here, in the JSON's `honest_caveats`, and in the Coq file's closing v5
-comment block. v5's existing `present`/`absent` cov5(U) and its coverage/promoter/monotonicity
-apparatus are unchanged and remain valid — this is additive future scope, not a retraction.
+This asked for a **third coverage state**, `inferred` (alongside `present`/`absent`), counted at a
+lower rank than `present`, carrying a `confidence : strength` field (the weakest anchor's own
+strength), narrowing `LR` further, and a third monotonicity theorem (`inferred → present` never
+lowers the tier). **All of this is now implemented** in the v6 section above, by importing
+PROP-FLOOD-07's own `coverage3`/`strength`/`coverage3_rank` primitive as a PARENT
+(`From MRC Require Import PROP_FLOOD_07_flow_state`) rather than re-deriving it — exactly the
+reuse path PROP-FLOOD-07's own registration anticipated. The anchor-consistency INFERENCE RULES
+themselves (`RULE-STALL-01`/`RULE-DIR-01`, which actually PRODUCE an `inferred_value`/`coverage3`
+from measured anchors for a flow-state edge) remain PROP-FLOOD-07's own object, cited here, not
+re-derived — this proposal's cov6(U) consumes the resulting `coverage3` state per component, it
+does not re-implement the rules that decide when a component becomes `Cov_Inferred` in the first
+place (that per-component wiring, e.g. which anchors license inferring `upstream_rise_rate` as
+`Cov_Inferred` for a specific unit, is an application-level/`kb.py`-level decision, out of this
+Coq object's own scope, exactly like every other IO-shaped classification in this file).
 
 Registry entry: `registry/proposals/flood_outlet_coping.json`
 Coq stub (tier functions, total + decidable, Closed under the global context, no axioms):

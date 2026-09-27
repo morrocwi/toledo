@@ -1,8 +1,34 @@
 (* ===================================================================== *)
 (*  PROP_FLOOD_06_outlet_coping_tier.v                                   *)
 (*  Area-generic outlet-headroom / drainage-coping tier-ladder function   *)
-(*  (Toledo proposal PROP-FLOOD-06.v5, code weld/M.??.v1, proposals-lane, *)
+(*  (Toledo proposal PROP-FLOOD-06.v6, code weld/M.??.v1, proposals-lane, *)
 (*  not yet canonicalized -- see registry/LINEAGE.jsonl code PROP-FLOOD-06)*)
+(*                                                                         *)
+(*  v6 AMENDMENT (per round-3 independent review, REVIEW_PROP_FLOOD_06_r3 *)
+(*  .md, MUST-FIX + SHOULD-FIX; founder instruction 2026-09-27 "อย่าลืมว่า *)
+(*  ไม่มีทางมีข้อมูลพอ แต่ใช้การอนุมานจากข้อมูลที่แข็งแรงเป็นหลัก"; and      *)
+(*  founder instruction 2026-09-27 "เอาแบบง่ายๆ ก่อน น้ำเข้า น้ำออก        *)
+(*  ความสามารถในการรับมือ"): (1) `persisted_v6` fixes the r3 MUST-FIX --   *)
+(*  a raise INTO T_L5/T_LR now bypasses the p-consecutive-readout gate     *)
+(*  entirely (reported immediately), while lowering (including out of     *)
+(*  T_L5/T_LR) is unchanged, still gated on q; (2) the t-tau_up "before    *)
+(*  the first upstream reading" boundary is now a named, explicit case     *)
+(*  (`upstream_leading_component`), not merely implied by inheriting       *)
+(*  PROP-FLOOD-02's own REFUSED conditions (r3 SHOULD-FIX); (3) cov6(U)    *)
+(*  widens every one of v5's 10 cov5(U) components from bool to           *)
+(*  `coverage3` (present/absent/inferred), IMPORTING PROP-FLOOD-07's       *)
+(*  `coverage3`/`strength`/`coverage3_rank` as PARENTS via                 *)
+(*  `From MRC Require Import PROP_FLOOD_07_flow_state` (Toledo-first       *)
+(*  reuse, not re-derived) -- LR narrows to "nothing present AND nothing   *)
+(*  inferable", and monotonicity is proved for ANY rank-increasing change  *)
+(*  to cov6, in particular inferred->present; (4) LAYER 0 (IN_H/OUT_H/     *)
+(*  CAPACITY, historical bands) is added as a declared, total, PROVEN      *)
+(*  SIMPLIFICATION of this same object (not a new equation), with an       *)
+(*  explicit, conditional theorem relating its "เกิน" verdict to the       *)
+(*  full-mode ladder's tier (>= L3) under a stated flooded_min/C_H(U)      *)
+(*  correspondence. `coverage_vector_v5`/`readout_v5`/`full_tier_v5` and   *)
+(*  every v1-v5 type/definition/theorem are UNCHANGED by this v6 section   *)
+(*  and still hold exactly as before -- v6 is purely additive.            *)
 (*                                                                         *)
 (*  v5 AMENDMENT (per founder instruction 2026-09-27, "ถึงจะแม่นยำและ      *)
 (*  ใช้ได้กับทุกสถานที่", and thailand_flood_kg's second falsifier         *)
@@ -1651,3 +1677,746 @@ Proof. reflexivity. Qed.
    the explicit next version's scope; v5's existing `present`/`absent`
    two-state cov5(U) and its coverage/promoter/monotonicity apparatus are
    unaffected and remain valid as declared. *)
+
+(* ========================================================================
+   v6 ADDITION -- L5/LR bypass hysteresis (r3 MUST-FIX), the t-tau_up
+   before-first-reading boundary named explicitly (r3 SHOULD-FIX), inferred
+   coverage-state cov6(U) importing PROP-FLOOD-07's `coverage3`/`strength`
+   as PARENTS (Toledo-first reuse, not re-derived), and LAYER 0 -- the
+   declared IN/OUT/CAPACITY headline simplification.  PROP-FLOOD-06.v6.
+   ======================================================================== *)
+
+Require Import Coq.micromega.Lqa.
+From MRC Require Import PROP_FLOOD_07_flow_state.
+
+(* ------------------------------------------------------------------
+   1. r3 MUST-FIX -- L5/LR bypass hysteresis.
+
+   r3 found that v5's `persisted` treats T_L5 ("the system is already
+   exceeded") and T_LR (REFUSED) as ordinary points on the same nat scale,
+   so a genuine already-exceeded reading could be delayed by (p-1) hours
+   before being reported, exactly like any ordinary band raise -- in
+   tension with this proposal's own "more data must never be suppressed"
+   discipline. `persisted_v6` fixes this: a RAISE into T_L5 or T_LR is
+   reported immediately, with no p-delay; a LOWERING (including out of
+   T_L5/T_LR) is unchanged -- it still needs `q` consecutive lower-or-equal
+   raw readouts, exactly as v5 already declared. `persisted` (v5) itself is
+   UNCHANGED; `persisted_v6` is a fresh, additive function, following the
+   same non-destructive-extension discipline this proposal has used at
+   every prior version bump.
+   ------------------------------------------------------------------ *)
+
+Definition is_exigent (l : tier_level6) : bool :=
+  match l with
+  | T_L5 | T_LR => true
+  | _ => false
+  end.
+
+Fixpoint persisted_v6 (raw : nat -> tier_level6) (p q : nat) (n : nat) : tier_level6 :=
+  match n with
+  | 0%nat => raw 0%nat
+  | S n' =>
+    let prev := persisted_v6 raw p q n' in
+    let cand := raw (S n') in
+    if tier_level6_eqb cand prev then prev
+    else if Nat.ltb (level6_to_nat prev) (level6_to_nat cand) then
+      (* raise: L5/LR bypass the p-consecutive-readout gate entirely *)
+      (if is_exigent cand then cand
+       else if recent_raw_ge raw (S n') p cand then cand else prev)
+    else
+      (* lowering (including a lowering OUT OF L5/LR): unchanged from v5,
+         always gated on q consecutive lower-or-equal raw readouts *)
+      (if recent_raw_le raw (S n') q cand then cand else prev)
+  end.
+
+Theorem persisted_v6_total :
+  forall (raw : nat -> tier_level6) (p q n : nat), exists l, persisted_v6 raw p q n = l.
+Proof. intros. eexists. reflexivity. Qed.
+
+(* The MUST-FIX guarantee, proved: whenever the raw reading at hour (S n')
+   is T_L5 and the persisted value going into that hour was genuinely
+   lower (not already T_L5/T_LR), the persisted value at (S n') is T_L5
+   immediately -- no p-delay. *)
+Theorem persisted_v6_L5_immediate :
+  forall (raw : nat -> tier_level6) (p q n' : nat),
+    (level6_to_nat (persisted_v6 raw p q n') < level6_to_nat T_L5)%nat ->
+    raw (S n') = T_L5 ->
+    persisted_v6 raw p q (S n') = T_L5.
+Proof.
+  intros raw p q n' Hlt Hraw.
+  cbn [persisted_v6].
+  destruct (tier_level6_eqb (raw (S n')) (persisted_v6 raw p q n')) eqn:Heq.
+  - exfalso. unfold tier_level6_eqb in Heq. rewrite Hraw in Heq. cbn [level6_to_nat] in Heq.
+    apply Nat.eqb_eq in Heq. cbn [level6_to_nat] in Hlt. lia.
+  - destruct (Nat.ltb (level6_to_nat (persisted_v6 raw p q n')) (level6_to_nat (raw (S n')))) eqn:Hlt2.
+    + rewrite Hraw. simpl. reflexivity.
+    + exfalso. apply Nat.ltb_ge in Hlt2. rewrite Hraw in Hlt2. cbn [level6_to_nat] in Hlt2, Hlt. lia.
+Qed.
+
+(* Same guarantee for T_LR (REFUSED). *)
+Theorem persisted_v6_LR_immediate :
+  forall (raw : nat -> tier_level6) (p q n' : nat),
+    (level6_to_nat (persisted_v6 raw p q n') < level6_to_nat T_LR)%nat ->
+    raw (S n') = T_LR ->
+    persisted_v6 raw p q (S n') = T_LR.
+Proof.
+  intros raw p q n' Hlt Hraw.
+  cbn [persisted_v6].
+  destruct (tier_level6_eqb (raw (S n')) (persisted_v6 raw p q n')) eqn:Heq.
+  - exfalso. unfold tier_level6_eqb in Heq. rewrite Hraw in Heq. cbn [level6_to_nat] in Heq.
+    apply Nat.eqb_eq in Heq. cbn [level6_to_nat] in Hlt. lia.
+  - destruct (Nat.ltb (level6_to_nat (persisted_v6 raw p q n')) (level6_to_nat (raw (S n')))) eqn:Hlt2.
+    + rewrite Hraw. simpl. reflexivity.
+    + exfalso. apply Nat.ltb_ge in Hlt2. rewrite Hraw in Hlt2. cbn [level6_to_nat] in Hlt2, Hlt. lia.
+Qed.
+
+(* `persisted_is_some_historical_raw` analogue, kept for v6: persistence
+   with the L5/LR bypass STILL never fabricates a tier absent from the raw
+   history -- every persisted hour equals the raw reading at some
+   earlier-or-same hour. *)
+Theorem persisted_v6_is_some_historical_raw :
+  forall (raw : nat -> tier_level6) (p q n : nat),
+    exists m : nat, (m <= n)%nat /\ persisted_v6 raw p q n = raw m.
+Proof.
+  intros raw p q n.
+  induction n as [| n' IH].
+  - exists 0%nat. split; [lia | reflexivity].
+  - assert (Hcase : persisted_v6 raw p q (S n') = persisted_v6 raw p q n'
+                    \/ persisted_v6 raw p q (S n') = raw (S n')).
+    { cbn [persisted_v6].
+      destruct (tier_level6_eqb (raw (S n')) (persisted_v6 raw p q n')) eqn:Heq.
+      - left. reflexivity.
+      - destruct (Nat.ltb (level6_to_nat (persisted_v6 raw p q n')) (level6_to_nat (raw (S n')))) eqn:Hlt2.
+        + destruct (is_exigent (raw (S n'))) eqn:Hex.
+          * right. reflexivity.
+          * destruct (recent_raw_ge raw (S n') p (raw (S n'))).
+            -- right. reflexivity.
+            -- left. reflexivity.
+        + destruct (recent_raw_le raw (S n') q (raw (S n'))).
+          * right. reflexivity.
+          * left. reflexivity. }
+    destruct Hcase as [Hprev | Hcand].
+    + destruct IH as [m [Hm Heqm]]. exists m. split; [lia | rewrite Hprev; exact Heqm].
+    + exists (S n'). split; [lia | exact Hcand].
+Qed.
+
+(* ------------------------------------------------------------------
+   1b. r3 SHOULD-FIX -- the t-tau_up "before the first upstream reading"
+   boundary, named explicitly rather than left to be implied by
+   inheriting PROP-FLOOD-02's own REFUSED conditions.
+   ------------------------------------------------------------------ *)
+
+Inductive upstream_leading_component : Set :=
+  | ULC_absent_tau_undeclared        (* UPSTREAM_GAUGE_UNDECLARED/UPSTREAM_TAU_UNDECLARED: no
+                                         declared upstream gauge or no declared tau_up for U --
+                                         scoped to this term only, never the whole readout *)
+  | ULC_absent_before_first_reading  (* t - tau_up predates the upstream series' first
+                                         available reading -- ABSENT, explicitly never 0 *)
+  | ULC_value (v : Q).
+
+Definition upstream_leading_state
+  (tau_declared : bool) (t_minus_tau_in_range : bool) (v : Q) : upstream_leading_component :=
+  if negb tau_declared then ULC_absent_tau_undeclared
+  else if negb t_minus_tau_in_range then ULC_absent_before_first_reading
+  else ULC_value v.
+
+Theorem upstream_leading_state_total :
+  forall tau_declared in_range v, exists c, upstream_leading_state tau_declared in_range v = c.
+Proof. intros. eexists. reflexivity. Qed.
+
+(* The named boundary case, proved never to silently coincide with an
+   actual reading: whenever the leading component reports an actual value,
+   both tau_up was declared AND the shifted index (S n' - tau_up) actually
+   falls within the upstream series' observed range -- so the "before the
+   first reading" case can never be mistaken for, or silently collapsed
+   into, a real Some 0/near-zero reading. *)
+Theorem upstream_leading_state_value_iff_in_range_and_declared :
+  forall tau_declared in_range v,
+    upstream_leading_state tau_declared in_range v = ULC_value v ->
+    tau_declared = true /\ in_range = true.
+Proof.
+  intros tau_declared in_range v H.
+  unfold upstream_leading_state in H.
+  destruct tau_declared, in_range; simpl in H; try discriminate; auto.
+Qed.
+
+(* ========================================================================
+   2. INFERRED INPUTS -- cov6(U), importing PROP-FLOOD-07's `coverage3`
+   and `strength` as PARENTS (Toledo-first reuse gate: the primitive is
+   reused verbatim via `From MRC Require Import PROP_FLOOD_07_flow_state`,
+   not re-derived). Widens every one of v5's 10 cov5(U) components from
+   bool (present/absent) to coverage3 (present/absent/inferred).
+   ======================================================================== *)
+
+Definition cov6_available (c : coverage3) : bool :=
+  negb (Nat.eqb (coverage3_rank c) 0%nat).
+
+Definition avail_to_nat (c : coverage3) : nat :=
+  if Nat.eqb (coverage3_rank c) 0%nat then 0%nat else 1%nat.
+
+Theorem avail_to_nat_le_1 : forall c, (avail_to_nat c <= 1)%nat.
+Proof. intro c. unfold avail_to_nat. destruct (Nat.eqb (coverage3_rank c) 0%nat); lia. Qed.
+
+Theorem avail_to_nat_mono :
+  forall c1 c2, (coverage3_rank c1 <= coverage3_rank c2)%nat ->
+    (avail_to_nat c1 <= avail_to_nat c2)%nat.
+Proof.
+  intros c1 c2 H. unfold avail_to_nat.
+  destruct (Nat.eqb (coverage3_rank c1) 0%nat) eqn:E1, (Nat.eqb (coverage3_rank c2) 0%nat) eqn:E2;
+  try lia.
+  apply Nat.eqb_neq in E1. apply Nat.eqb_eq in E2. lia.
+Qed.
+
+Record coverage_vector_v6 := mkCovV6 {
+  cv6_rain_obs               : coverage3;
+  cv6_rain_fcst              : coverage3;
+  cv6_canal_level_vs_lines   : coverage3;
+  cv6_river_flow_vs_cap      : coverage3;
+  cv6_dam_release            : coverage3;
+  cv6_pumps_state            : coverage3;
+  cv6_upstream_inflow        : coverage3;
+  cv6_upstream_rise_rate     : coverage3;
+  cv6_basin_rain_accum       : coverage3;
+  cv6_forecast_rain_72h      : coverage3
+}.
+
+Definition cov6_get (cv6 : coverage_vector_v6) (k : input_kind_v5) : coverage3 :=
+  match k with
+  | IK5_base IK_rain_obs => cv6_rain_obs cv6
+  | IK5_base IK_rain_fcst => cv6_rain_fcst cv6
+  | IK5_base IK_canal_level_vs_lines => cv6_canal_level_vs_lines cv6
+  | IK5_base IK_river_flow_vs_cap => cv6_river_flow_vs_cap cv6
+  | IK5_base IK_dam_release => cv6_dam_release cv6
+  | IK5_base IK_pumps_state => cv6_pumps_state cv6
+  | IK5_base IK_upstream_inflow => cv6_upstream_inflow cv6
+  | IK5_upstream_rise_rate => cv6_upstream_rise_rate cv6
+  | IK5_basin_rain_accum => cv6_basin_rain_accum cv6
+  | IK5_forecast_rain_72h => cv6_forecast_rain_72h cv6
+  end.
+
+Definition all_input_kinds_v6 : list input_kind_v5 := all_input_kinds_v5.
+
+Theorem coverage_total_v6_eq_all_kinds_v6_length :
+  10%nat = length all_input_kinds_v6.
+Proof. reflexivity. Qed.
+
+Definition coverage_available_v6 (cv6 : coverage_vector_v6) : nat :=
+  ( avail_to_nat (cv6_rain_obs cv6) + avail_to_nat (cv6_rain_fcst cv6)
+  + avail_to_nat (cv6_canal_level_vs_lines cv6) + avail_to_nat (cv6_river_flow_vs_cap cv6)
+  + avail_to_nat (cv6_dam_release cv6) + avail_to_nat (cv6_pumps_state cv6)
+  + avail_to_nat (cv6_upstream_inflow cv6)
+  + avail_to_nat (cv6_upstream_rise_rate cv6) + avail_to_nat (cv6_basin_rain_accum cv6)
+  + avail_to_nat (cv6_forecast_rain_72h cv6) )%nat.
+
+Theorem coverage_available_v6_le_10 :
+  forall cv6, (coverage_available_v6 cv6 <= 10)%nat.
+Proof.
+  intro cv6. unfold coverage_available_v6.
+  pose proof (avail_to_nat_le_1 (cv6_rain_obs cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_rain_fcst cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_canal_level_vs_lines cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_river_flow_vs_cap cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_dam_release cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_pumps_state cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_upstream_inflow cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_upstream_rise_rate cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_basin_rain_accum cv6)).
+  pose proof (avail_to_nat_le_1 (cv6_forecast_rain_72h cv6)).
+  lia.
+Qed.
+
+(* `nothing present AND nothing inferable` -- the v6-narrowed LR condition
+   (strictly narrower than v5's `cov5_all_absent`, which only asked for
+   "entirely absent"; here a component that is merely Inferred, with no
+   Present component anywhere, still keeps the unit out of LR). *)
+Definition cov6_all_absent (cv6 : coverage_vector_v6) : bool :=
+  Nat.eqb (coverage_available_v6 cv6) 0%nat.
+
+Theorem coverage_available_v6_monotone :
+  forall cv1 cv2 : coverage_vector_v6,
+    (forall k, (coverage3_rank (cov6_get cv1 k) <= coverage3_rank (cov6_get cv2 k))%nat) ->
+    (coverage_available_v6 cv1 <= coverage_available_v6 cv2)%nat.
+Proof.
+  intros cv1 cv2 Hmono.
+  assert (H1 := avail_to_nat_mono _ _ (Hmono (IK5_base IK_rain_obs))).
+  assert (H2 := avail_to_nat_mono _ _ (Hmono (IK5_base IK_rain_fcst))).
+  assert (H3 := avail_to_nat_mono _ _ (Hmono (IK5_base IK_canal_level_vs_lines))).
+  assert (H4 := avail_to_nat_mono _ _ (Hmono (IK5_base IK_river_flow_vs_cap))).
+  assert (H5 := avail_to_nat_mono _ _ (Hmono (IK5_base IK_dam_release))).
+  assert (H6 := avail_to_nat_mono _ _ (Hmono (IK5_base IK_pumps_state))).
+  assert (H7 := avail_to_nat_mono _ _ (Hmono (IK5_base IK_upstream_inflow))).
+  assert (H8 := avail_to_nat_mono _ _ (Hmono IK5_upstream_rise_rate)).
+  assert (H9 := avail_to_nat_mono _ _ (Hmono IK5_basin_rain_accum)).
+  assert (H10 := avail_to_nat_mono _ _ (Hmono IK5_forecast_rain_72h)).
+  simpl in H1, H2, H3, H4, H5, H6, H7, H8, H9, H10.
+  unfold coverage_available_v6. lia.
+Qed.
+
+Lemma cov6_all_absent_false_mono :
+  forall cv1 cv2 : coverage_vector_v6, cov6_all_absent cv1 = false ->
+    (forall k, (coverage3_rank (cov6_get cv1 k) <= coverage3_rank (cov6_get cv2 k))%nat) ->
+    cov6_all_absent cv2 = false.
+Proof.
+  intros cv1 cv2 H1 Hmono.
+  unfold cov6_all_absent in *.
+  apply Nat.eqb_neq in H1. apply Nat.eqb_neq.
+  pose proof (coverage_available_v6_monotone cv1 cv2 Hmono).
+  lia.
+Qed.
+
+Lemma cov6_available_mono :
+  forall c1 c2, (coverage3_rank c1 <= coverage3_rank c2)%nat ->
+    cov6_available c1 = true -> cov6_available c2 = true.
+Proof.
+  intros c1 c2 Hle Havail.
+  unfold cov6_available in *.
+  apply Bool.negb_true_iff in Havail. apply Bool.negb_true_iff.
+  apply Nat.eqb_neq in Havail. apply Nat.eqb_neq. lia.
+Qed.
+
+(* Promoters over cov6: a base (v4) promoter or a leading (v5) promoter's
+   input is now "available" whenever its cov6 component is Present OR
+   Inferred (rank >= 1), not only Present -- an inferred component can
+   still license a promoter, at the lower rank the inference carries. *)
+Definition promoter_applies_v6 (cv6 : coverage_vector_v6) (p : promoter) : bool :=
+  andb (cov6_available (cov6_get cv6 (IK5_base (p_requires p)))) (p_fires p).
+
+Definition promoter_applies_v6_leading (cv6 : coverage_vector_v6) (p5 : promoter_v5) : bool :=
+  andb (cov6_available (cov6_get cv6 (p5_requires p5))) (p5_fires p5).
+
+Lemma applies_base_mono_v6 :
+  forall (cv1 cv2 : coverage_vector_v6) (ps : list promoter),
+    (forall k, (coverage3_rank (cov6_get cv1 k) <= coverage3_rank (cov6_get cv2 k))%nat) ->
+    promoters_mono (map (fun p => (promoter_applies_v6 cv1 p, p_level p)) ps)
+                   (map (fun p => (promoter_applies_v6 cv2 p, p_level p)) ps).
+Proof.
+  intros cv1 cv2 ps Hmono.
+  induction ps as [| p ps' IH].
+  - simpl. constructor.
+  - simpl. constructor.
+    + intro Hp1. unfold promoter_applies_v6 in *. apply andb_true_iff in Hp1 as [Hc Hf].
+      apply andb_true_iff. split; [eapply cov6_available_mono; [apply Hmono | exact Hc] | exact Hf].
+    + exact IH.
+Qed.
+
+Lemma applies_leading_mono_v6 :
+  forall (cv1 cv2 : coverage_vector_v6) (ps : list promoter_v5),
+    (forall k, (coverage3_rank (cov6_get cv1 k) <= coverage3_rank (cov6_get cv2 k))%nat) ->
+    promoters_mono (map (fun p => (promoter_applies_v6_leading cv1 p, p5_level p)) ps)
+                   (map (fun p => (promoter_applies_v6_leading cv2 p, p5_level p)) ps).
+Proof.
+  intros cv1 cv2 ps Hmono.
+  induction ps as [| p ps' IH].
+  - simpl. constructor.
+  - simpl. constructor.
+    + intro Hp1. unfold promoter_applies_v6_leading in *. apply andb_true_iff in Hp1 as [Hc Hf].
+      apply andb_true_iff. split; [eapply cov6_available_mono; [apply Hmono | exact Hc] | exact Hf].
+    + exact IH.
+Qed.
+
+(* The `confidence` field: the MINIMUM (never average, reusing PROP-FLOOD-07's
+   own `strength_min`) of every Inferred component's own confidence, among
+   the components actually used. `confs` is a caller-supplied map from
+   component to its declared confidence (opaque/IO-shaped here, exactly
+   like `p_fires`/D/R/F/s/t elsewhere in this file) -- `None` when no
+   component is Inferred at all. *)
+Definition inferred_kinds_v6 (cv6 : coverage_vector_v6) : list input_kind_v5 :=
+  filter (fun k => match cov6_get cv6 k with Cov_Inferred => true | _ => false end) all_input_kinds_v6.
+
+Definition confidence_v6_of
+  (cv6 : coverage_vector_v6) (confs : input_kind_v5 -> option strength) : option strength :=
+  fold_right (fun k acc =>
+                match confs k, acc with
+                | Some s, Some a => Some (strength_min s a)
+                | Some s, None => Some s
+                | None, acc' => acc'
+                end)
+             None (inferred_kinds_v6 cv6).
+
+Theorem confidence_v6_of_none_when_nothing_inferred :
+  forall cv6 confs, inferred_kinds_v6 cv6 = nil -> confidence_v6_of cv6 confs = None.
+Proof. intros cv6 confs H. unfold confidence_v6_of. rewrite H. reflexivity. Qed.
+
+Record readout_v6 := mkReadoutV6 {
+  tier_v6                      : tier_level6;
+  mode_v6                      : mode3;
+  readout_coverage_present_v6  : nat;   (* count of Cov_Present, 0..10 *)
+  readout_coverage_inferred_v6 : nat;   (* count of Cov_Inferred, 0..10, NEW *)
+  readout_coverage_total_v6    : nat;   (* always 10 *)
+  based_on_v6                  : list input_kind_v5;   (* Present or Inferred *)
+  missing_v6                   : list input_kind_v5;   (* Absent *)
+  promoters_fired_v6           : list promoter_id_v5;
+  calibrated_v6                : bool;
+  lead_time_h_v6                : option Q;
+  confidence_v6                 : option strength
+}.
+
+(* full_tier_v6 -- same band-then-promoter-floor-then-vulnerable-then-LR
+   order as v4/v5, over cov6(U) and the coverage3-aware promoter
+   availability above; LR now fires iff `cov6_all_absent`, i.e. iff
+   nothing is Present AND nothing is Inferable (v6's narrowing of v5's
+   "entirely absent"). *)
+Definition full_tier_v6
+  (cv6 : coverage_vector_v6)
+  (ledger_resolves vulnerable_promote : bool)
+  (D R F s : Q) (t : option Q)
+  (promoters_base : list promoter)
+  (promoters_leading : list promoter_v5)
+  (calibrated_flag : bool)
+  (lead_time : option Q)
+  (confs : input_kind_v5 -> option strength)
+  : readout_v6 :=
+  let band := if ledger_resolves then full_tier false D R F s t else T_L0 in
+  let applies_base := map (fun p => (promoter_applies_v6 cv6 p, p_level p)) promoters_base in
+  let applies_leading := map (fun p5 => (promoter_applies_v6_leading cv6 p5, p5_level p5)) promoters_leading in
+  let pm := promoter_max (applies_base ++ applies_leading) in
+  let base_tier := max_level6 band pm in
+  let promoted := if vulnerable_promote then promote_one base_tier else base_tier in
+  let cov_absent := cov6_all_absent cv6 in
+  let final_tier := if cov_absent then T_LR else promoted in
+  let final_mode :=
+    if cov_absent then M_LR
+    else if ledger_resolves then M_FULL else M_PARTIAL in
+  {| tier_v6 := final_tier;
+     mode_v6 := final_mode;
+     readout_coverage_present_v6 :=
+       length (filter (fun k => match cov6_get cv6 k with Cov_Present => true | _ => false end) all_input_kinds_v6);
+     readout_coverage_inferred_v6 :=
+       length (filter (fun k => match cov6_get cv6 k with Cov_Inferred => true | _ => false end) all_input_kinds_v6);
+     readout_coverage_total_v6 := 10%nat;
+     based_on_v6 :=
+       filter (fun k => match cov6_get cv6 k with Cov_Absent => false | _ => true end) all_input_kinds_v6;
+     missing_v6 :=
+       filter (fun k => match cov6_get cv6 k with Cov_Absent => true | _ => false end) all_input_kinds_v6;
+     promoters_fired_v6 :=
+       map (fun p => P5_base (p_id p)) (filter (promoter_applies_v6 cv6) promoters_base)
+       ++ map p5_id (filter (promoter_applies_v6_leading cv6) promoters_leading);
+     calibrated_v6 := calibrated_flag;
+     lead_time_h_v6 := lead_time;
+     confidence_v6 := confidence_v6_of cv6 confs |}.
+
+Theorem full_tier_v6_total :
+  forall (cv6 : coverage_vector_v6) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q) (confs : input_kind_v5 -> option strength),
+    exists r : readout_v6,
+      full_tier_v6 cv6 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs = r.
+Proof. intros. eexists. reflexivity. Qed.
+
+Theorem full_tier_v6_coverage_total_is_10 :
+  forall (cv6 : coverage_vector_v6) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q) (confs : input_kind_v5 -> option strength),
+    readout_coverage_total_v6
+      (full_tier_v6 cv6 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs)
+    = 10%nat.
+Proof. intros. reflexivity. Qed.
+
+(* v6's narrowed LR: mode is M_LR iff nothing is Present and nothing is
+   Inferable -- i.e. iff `coverage_available_v6` (Present+Inferred count)
+   is 0. An all-absent-but-inferable unit is (by construction of
+   `coverage_available_v6`) never in this LR case, since an Inferred
+   component contributes 1 to `coverage_available_v6`, not 0. *)
+Theorem full_tier_v6_LR_iff_nothing_present_or_inferable :
+  forall (cv6 : coverage_vector_v6) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q) (confs : input_kind_v5 -> option strength),
+    mode_v6 (full_tier_v6 cv6 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs) = M_LR
+    <-> coverage_available_v6 cv6 = 0%nat.
+Proof.
+  intros. unfold full_tier_v6, cov6_all_absent. simpl.
+  destruct (Nat.eqb (coverage_available_v6 cv6) 0%nat) eqn:E.
+  - apply Nat.eqb_eq in E. split; intro; [exact E | reflexivity].
+  - apply Nat.eqb_neq in E.
+    destruct ledger_resolves, vulnerable_promote; simpl;
+    split; intro H; try discriminate; try (exfalso; apply E; exact H).
+Qed.
+
+(* MONOTONICITY, extended: `inferred -> present` (and, more generally, any
+   rank-increasing change to cov6, including absent->inferred and
+   absent->present) never lowers the tier -- reusing PROP-FLOOD-07's own
+   `coverage3_rank`/`coverage3_promote_never_lowers_rank` ordering fact as
+   the PARENT this proposal's honest_caveats promised a future v6 would
+   import rather than re-derive. *)
+Theorem full_tier_v6_promoter_monotone :
+  forall (cv1 cv2 : coverage_vector_v6) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q) (confs : input_kind_v5 -> option strength),
+    cov6_all_absent cv1 = false ->
+    (forall k, (coverage3_rank (cov6_get cv1 k) <= coverage3_rank (cov6_get cv2 k))%nat) ->
+    (level6_to_nat (tier_v6 (full_tier_v6 cv1 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs))
+     <= level6_to_nat (tier_v6 (full_tier_v6 cv2 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs)))%nat.
+Proof.
+  intros cv1 cv2 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs Habs1 Hmono.
+  assert (Habs2 : cov6_all_absent cv2 = false) by (eapply cov6_all_absent_false_mono; eauto).
+  unfold full_tier_v6, tier_v6. simpl.
+  rewrite Habs1, Habs2.
+  apply promote_one_mono_if.
+  apply max_level6_mono_r.
+  apply promoter_max_monotone.
+  apply promoters_mono_app.
+  - apply applies_base_mono_v6. exact Hmono.
+  - apply applies_leading_mono_v6. exact Hmono.
+Qed.
+
+Theorem full_tier_v6_full_ge_partial :
+  forall (cv6 : coverage_vector_v6) (vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q) (confs : input_kind_v5 -> option strength),
+    cov6_all_absent cv6 = false ->
+    (level6_to_nat (tier_v6 (full_tier_v6 cv6 false vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs))
+     <= level6_to_nat (tier_v6 (full_tier_v6 cv6 true vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs)))%nat.
+Proof.
+  intros cv6 vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time confs Habs.
+  unfold full_tier_v6, tier_v6. simpl.
+  rewrite Habs.
+  apply promote_one_mono_if.
+  apply max_level6_mono_l.
+  simpl. apply Nat.le_0_l.
+Qed.
+
+(* ========================================================================
+   3. LAYER 0 -- declared headline simplification: IN / OUT / CAPACITY.
+   Founder instruction 2026-09-27 (verbatim): "เอาแบบง่ายๆ ก่อน น้ำเข้า
+   น้ำออก ความสามารถในการรับมือ" (start simple: water in, water out,
+   coping capacity); "ค่ารับมือพวกนี้อ่านจากประวัติได้" (the coping values
+   can be read from history). This is a DECLARED SIMPLIFICATION of the
+   already-registered ladder above -- reusing F_H/D_H/R_H/C_H's shapes,
+   NOT a new equation (per thailand_flood_kg's own LAYER0_IN_OUT_CAPACITY.md
+   sec.3/sec.1, "ไม่มีสมการใหม่ -- โมดูลนี้เป็น PROPOSAL-derived
+   simplification of PROP-FLOOD-06", RELAYED, read-only reference).
+   ======================================================================== *)
+
+Inductive backflow_state : Set := BF_Active | BF_NotActive | BF_Unknown | BF_Likely.
+
+(* Canal backflow is declared present (contributes its stated volume) when
+   BF_Active (community/measured-head evidence) or BF_Likely (declared
+   INSTINCT band-comparison, per thailand_flood_kg sec.2 case 3); BF_Unknown
+   contributes 0 -- an unknown backflow state is NEVER guessed as a
+   fabricated m^3/s figure, exactly the discipline `compute_backflow_state`
+   (thailand_flood_kg tools/layer0/in_out_capacity.py, read-only) already
+   states in its own docstring. *)
+Definition backflow_state_to_Q (b : backflow_state) (canal_backflow_volume : Q) : Q :=
+  match b with
+  | BF_Active => canal_backflow_volume
+  | BF_Likely => canal_backflow_volume
+  | BF_NotActive => 0%Q
+  | BF_Unknown => 0%Q
+  end.
+
+(* IN_H := F_H(U) (this proposal's own already-registered inflow term)
+   PLUS the explicit canal-backflow term above -- present exactly when a
+   connected canal's surface exceeds the unit's own surface, or a
+   band-comparison declares it likely; both are declared, not derived. *)
+Definition layer0_in_h (f_h : Q) (backflow : backflow_state) (canal_backflow_volume : Q) : Q :=
+  (f_h + backflow_state_to_Q backflow canal_backflow_volume)%Q.
+
+Theorem layer0_in_h_total :
+  forall f_h backflow canal_backflow_volume, exists q, layer0_in_h f_h backflow canal_backflow_volume = q.
+Proof. intros. eexists. reflexivity. Qed.
+
+Record layer0_cap_band := mkCapBand {
+  cap_coped_max   : option Q;  (* MEASURED-history: max IN on non-flood days *)
+  cap_flooded_min : option Q   (* MEASURED-history: min IN on flood days *)
+}.
+
+(* the unknown gap between coped_max and flooded_min is REPORTED, never
+   interpolated -- None when either side is missing. *)
+Definition layer0_gap (band : layer0_cap_band) : option Q :=
+  match cap_coped_max band, cap_flooded_min band with
+  | Some cm, Some fm => Some (fm - cm)%Q
+  | _, _ => None
+  end.
+
+Inductive layer0_in_verdict : Set := L0V_Exceeds | L0V_Near | L0V_WithinCapacity.
+Inductive layer0_drain_verdict : Set := L0D_InTime | L0D_NotInTime | L0D_Unknown.
+
+(* IN vs CAPACITY -> เกิน (Exceeds) / ใกล้ (Near, >= 0.8*flooded_min) /
+   ไม่เกิน (WithinCapacity). With no flooded_min evidence at all, this is a
+   declared "nothing to compare against yet" convention (WithinCapacity),
+   NOT a measured safety claim -- see honest_caveats. *)
+Definition layer0_in_vs_capacity (in_h : Q) (band : layer0_cap_band) : layer0_in_verdict :=
+  match cap_flooded_min band with
+  | None => L0V_WithinCapacity
+  | Some fm =>
+      if Qle_bool fm in_h then L0V_Exceeds
+      else if Qle_bool ((8#10) * fm)%Q in_h then L0V_Near
+      else L0V_WithinCapacity
+  end.
+
+Theorem layer0_in_vs_capacity_total :
+  forall in_h band, exists v, layer0_in_vs_capacity in_h band = v.
+Proof. intros. eexists. reflexivity. Qed.
+
+(* OUT vs IN -> ระบายทัน (InTime) / ไม่ทัน (NotInTime) / ไม่รู้ (Unknown,
+   when OUT_H itself does not resolve -- an absent OUT_H term REFUSES only
+   this verdict, never the whole Layer-0 sentence: "ขาด: OUT" still
+   renders, per thailand_flood_kg sec.1's own rule). *)
+Definition layer0_out_vs_in (out_h : option Q) (in_h : Q) : layer0_drain_verdict :=
+  match out_h with
+  | None => L0D_Unknown
+  | Some oh => if Qle_bool in_h oh then L0D_InTime else L0D_NotInTime
+  end.
+
+Theorem layer0_out_vs_in_total :
+  forall out_h in_h, exists v, layer0_out_vs_in out_h in_h = v.
+Proof. intros. eexists. reflexivity. Qed.
+
+Record layer0_readout := mkLayer0Readout {
+  l0_in_h          : Q;
+  l0_out_h         : option Q;
+  l0_cap           : layer0_cap_band;
+  l0_in_verdict    : layer0_in_verdict;
+  l0_drain_verdict : layer0_drain_verdict
+}.
+
+(* readout_layer0 -- a TOTAL function of exactly the same declared inputs
+   (F_H-shaped inflow, the backflow term, OUT_H, and the historical
+   capacity band) as the rest of this file's ladder; no partial match arm,
+   no additional input beyond what is already declared above. *)
+Definition readout_layer0
+  (f_h : Q) (backflow : backflow_state) (canal_backflow_volume : Q)
+  (out_h : option Q) (cap : layer0_cap_band)
+  : layer0_readout :=
+  let in_h := layer0_in_h f_h backflow canal_backflow_volume in
+  {| l0_in_h := in_h;
+     l0_out_h := out_h;
+     l0_cap := cap;
+     l0_in_verdict := layer0_in_vs_capacity in_h cap;
+     l0_drain_verdict := layer0_out_vs_in out_h in_h |}.
+
+Theorem readout_layer0_total :
+  forall f_h backflow canal_backflow_volume out_h cap,
+    exists r, readout_layer0 f_h backflow canal_backflow_volume out_h cap = r.
+Proof. intros. eexists. reflexivity. Qed.
+
+(* ------------------------------------------------------------------
+   Relation to the full-mode tier ladder: Layer 0 "เกิน" (Exceeds)
+   implies full-mode tier >= L3, PROVIDED the caller declares
+   flooded_min for this unit AS this unit's own C_H(U)/min(D_H,R_H)
+   clearable volume, and IN_H as this unit's own F_H(U) -- an explicit,
+   caller-supplied CORRESPONDENCE this theorem does NOT itself verify
+   (that identification is a per-unit calibration/declaration act, see
+   honest_caveats); the theorem is the arithmetic core that correspondence
+   licenses, stated with s := IN_H/flooded_min exactly as S_H(U) :=
+   F_H(U)/C_H(U) is already declared elsewhere in this file.
+   ------------------------------------------------------------------ *)
+
+Lemma level_to_nat_le4 : forall l : tier_level, (level_to_nat l <= 4)%nat.
+Proof. intro l. destruct l; simpl; lia. Qed.
+
+Lemma nat_to_level_spec : forall n : nat, level_to_nat (nat_to_level n) = Nat.min n 4.
+Proof. intros n. destruct n as [|[|[|[|[|n]]]]]; simpl; reflexivity. Qed.
+
+Lemma max_level_ge_l :
+  forall a b : tier_level, (level_to_nat a <= level_to_nat (max_level a b))%nat.
+Proof.
+  intros a b. unfold max_level. rewrite nat_to_level_spec.
+  pose proof (level_to_nat_le4 a). pose proof (level_to_nat_le4 b). lia.
+Qed.
+
+Lemma s_band_ge_L3_of_ge_0_9 :
+  forall s : Q, ((9#10) <= s)%Q -> (level_to_nat L3 <= level_to_nat (s_band s))%nat.
+Proof.
+  intros s Hs. unfold s_band.
+  destruct (Qlt_bool s (3#10)) eqn:E1.
+  - apply Qlt_bool_iff in E1. exfalso. lra.
+  - destruct (Qlt_bool s (6#10)) eqn:E2.
+    + apply Qlt_bool_iff in E2. exfalso. lra.
+    + destruct (Qlt_bool s (9#10)) eqn:E3.
+      * apply Qlt_bool_iff in E3. exfalso. lra.
+      * destruct (Qlt_bool s (12#10)) eqn:E4; simpl; lia.
+Qed.
+
+Lemma combined_tier_ge_L3_of_s_ge_0_9 :
+  forall (s : Q) (t : option Q), ((9#10) <= s)%Q ->
+    (level_to_nat L3 <= level_to_nat (combined_tier s t))%nat.
+Proof.
+  intros s t Hs. unfold combined_tier.
+  pose proof (s_band_ge_L3_of_ge_0_9 s Hs) as H1.
+  pose proof (max_level_ge_l (s_band s) (t_band t)) as H2.
+  lia.
+Qed.
+
+Theorem full_tier_ge_L3_when_s_ge_0_9 :
+  forall (refused : bool) (D R F s : Q) (t : option Q),
+    ((9#10) <= s)%Q ->
+    (3 <= level6_to_nat (full_tier refused D R F s t))%nat.
+Proof.
+  intros refused D R F s t Hs.
+  unfold full_tier.
+  destruct refused.
+  - simpl. lia.
+  - destruct (andb (zero_capacity D R) (Qlt_bool 0%Q F)) eqn:E.
+    + simpl. lia.
+    + pose proof (combined_tier_ge_L3_of_s_ge_0_9 s t Hs) as H.
+      destruct (combined_tier s t); simpl in *; lia.
+Qed.
+
+(* The declared linking theorem: IF flooded_min (Layer 0's own historical
+   capacity band) is identified with this unit's own clearable volume
+   (fm > 0, the same C_H(U)/min(D_H,R_H) this file's `full_tier` already
+   consumes) AND s is declared as IN_H/flooded_min under that identification
+   (s*fm = in_h, the cross-multiplied form, avoiding a bare division),
+   THEN Layer 0's "เกิน" (Exceeds) verdict implies the full-mode ladder's
+   tier is at least L3 ("ทำตอนนี้ภายในวันนี้") -- never silently lower.
+   This is the EXACT relation Layer 0 licenses; it is not claimed to hold
+   for an arbitrary, undeclared flooded_min/IN_H pairing. *)
+Theorem layer0_exceeds_implies_full_tier_ge_L3 :
+  forall (in_h fm s : Q) (cap : layer0_cap_band) (D R F : Q) (t : option Q) (refused : bool),
+    cap_flooded_min cap = Some fm ->
+    (0 < fm)%Q ->
+    (s * fm == in_h)%Q ->
+    layer0_in_vs_capacity in_h cap = L0V_Exceeds ->
+    (3 <= level6_to_nat (full_tier refused D R F s t))%nat.
+Proof.
+  intros in_h fm s cap D R F t refused Hcap Hfmpos Heq Hexceeds.
+  apply full_tier_ge_L3_when_s_ge_0_9.
+  unfold layer0_in_vs_capacity in Hexceeds. rewrite Hcap in Hexceeds.
+  destruct (Qle_bool fm in_h) eqn:Hle.
+  - apply Qle_bool_iff in Hle.
+    destruct (Qlt_le_dec s 1) as [Hs1 | Hs1]; [ | lra].
+    exfalso.
+    assert (Hmul : (s * fm < 1 * fm)%Q) by (apply Qmult_lt_compat_r; assumption).
+    rewrite Qmult_1_l in Hmul.
+    rewrite Heq in Hmul.
+    apply (Qlt_not_le _ _ Hmul). exact Hle.
+  - destruct (Qle_bool ((8#10) * fm)%Q in_h); discriminate.
+Qed.
+
+(* ------------------------------------------------------------------
+   WHAT THIS v6 ADDITION DOES NOT PROVE: that any real unit's actual
+   `cap_flooded_min`/IN_H DOES correspond to that same unit's own C_H(U)/
+   F_H(U) (that identification is a per-unit declaration act, tracked in
+   `per_unit_calibration`, not an automatic consequence of this file);
+   `compute_backflow_state`'s own classification logic (case 1-4, IO-
+   shaped, thailand_flood_kg tools/layer0/in_out_capacity.py, read-only
+   reference, not reimplemented here -- `backflow_state` above is an
+   opaque caller-supplied enum, exactly like `p_fires`/D/R/F/s/t
+   elsewhere in this file); the `coping_thresholds.yaml` historical
+   derivation of `coped_max`/`flooded_min` itself (an external, read-only
+   data pipeline, not Coq arithmetic); and any claim that `upstream_rise_rate`
+   at any declared threshold is a trustworthy discriminator (see
+   BACKTEST_PROP_FLOOD_06_v2.md, RELAYED, recorded verbatim in
+   honest_caveats: 77/97 promoter firings across the backtest were false
+   alarms, and persistence RAISED both hit and false-alarm rate at this
+   backtest's day-level granularity, the opposite of its declared intent
+   at the registry's own hourly granularity). This file's v6 claims are
+   only: (1) `persisted_v6` reports a raise into L5/LR immediately, never
+   fabricates a level absent from the raw history, and still requires `q`
+   consecutive readouts to lower out of L5/LR; (2) `full_tier_v6` is a
+   single total, decidable record value over the widened coverage3-valued
+   cov6(U), monotone under any rank-increasing change to cov6 (in
+   particular inferred->present), never lower in FULL mode than the
+   PARTIAL tier the same promoters would give, with LR narrowed to
+   "nothing present and nothing inferable"; (3) `readout_layer0` is a
+   total function of the same declared inputs as the rest of this file,
+   and its "เกิน" verdict implies a full-mode tier >= L3 exactly under the
+   stated flooded_min/C_H(U) correspondence, never unconditionally.
+   `coqc -q` clean; `Print Assumptions` closed under the global context
+   (no axioms) on every theorem in this v6 section. *)
