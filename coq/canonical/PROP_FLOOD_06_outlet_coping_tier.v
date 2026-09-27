@@ -1,8 +1,17 @@
 (* ===================================================================== *)
 (*  PROP_FLOOD_06_outlet_coping_tier.v                                   *)
 (*  Area-generic outlet-headroom / drainage-coping tier-ladder function   *)
-(*  (Toledo proposal PROP-FLOOD-06.v6, code weld/M.??.v1, proposals-lane, *)
+(*  (Toledo proposal PROP-FLOOD-06.v6.1, code weld/M.??.v1, proposals-lane,*)
 (*  not yet canonicalized -- see registry/LINEAGE.jsonl code PROP-FLOOD-06)*)
+(*                                                                         *)
+(*  v6.1 AMENDMENT (statement-note, no structural change): the 0.8         *)
+(*  constant in layer0_in_vs_capacity below is now explicitly commented    *)
+(*  OPEN-for-founder-tuning (independent review r4 SHOULD-FIX); no value,  *)
+(*  theorem, or computed result changes. See registry JSON honest_caveats  *)
+(*  v6.1 for the forecast-grid-cell-mean / multi-model-no-averaging        *)
+(*  convention folded into the definitions text (JSON/MD only, no Coq      *)
+(*  object required -- those terms are IO-shaped inputs, not yet formalised*)
+(*  here).                                                                 *)
 (*                                                                         *)
 (*  v6 AMENDMENT (per round-3 independent review, REVIEW_PROP_FLOOD_06_r3 *)
 (*  .md, MUST-FIX + SHOULD-FIX; founder instruction 2026-09-27 "อย่าลืมว่า *)
@@ -2239,7 +2248,12 @@ Inductive layer0_drain_verdict : Set := L0D_InTime | L0D_NotInTime | L0D_Unknown
 (* IN vs CAPACITY -> เกิน (Exceeds) / ใกล้ (Near, >= 0.8*flooded_min) /
    ไม่เกิน (WithinCapacity). With no flooded_min evidence at all, this is a
    declared "nothing to compare against yet" convention (WithinCapacity),
-   NOT a measured safety claim -- see honest_caveats. *)
+   NOT a measured safety claim -- see honest_caveats.
+   v6.1: the 0.8 constant below is OPEN-for-founder-tuning, exactly like
+   every other declared threshold in this file (s_band edges, T_act bands,
+   p/q hysteresis, rise-rate thresholds) -- it carried no such tag through
+   v6 by omission, not by an intended exemption (independent review r4
+   SHOULD-FIX). *)
 Definition layer0_in_vs_capacity (in_h : Q) (band : layer0_cap_band) : layer0_in_verdict :=
   match cap_flooded_min band with
   | None => L0V_WithinCapacity

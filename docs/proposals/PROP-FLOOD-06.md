@@ -1,11 +1,77 @@
 # PROP-FLOOD-06 — NEW DERIVATION / PROPOSAL (not a Toledo theorem)
 
 **Area-generic outlet-headroom / drainage-coping tier-ladder indicator, with (lat,lon) unit
-resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v6`
-(L5/LR bypass hysteresis, the tau_up boundary case named explicitly, inferred coverage-state
-imported from PROP-FLOOD-07, LAYER 0 IN/OUT/CAPACITY headline simplification, and backtest v2
-findings recorded — see "round-3 review + LAYER 0 — v6" immediately below; v5/v4/v3/v2 amendments
-retained further down for history).
+resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v6.1`
+(a statement-note revision over v6 — see "round-4 review + forecast-input fold-in — v6.1"
+immediately below; v6's L5/LR bypass hysteresis, tau_up boundary naming, inferred coverage-state,
+LAYER 0 headline simplification, and backtest v2 findings are retained further down, unchanged).
+
+## round-4 review + forecast-input fold-in — v6.1 (statement note, no structural change)
+
+**Independent round-4 review** (`REVIEW_PROP_FLOOD_06_r4.md`, maker≠checker, read-only) verdict:
+**READY FOR PR**, one non-blocking SHOULD-FIX against v6, closed here:
+
+### SHOULD-FIX — Layer 0's "ใกล้" constant now tagged OPEN-for-founder-tuning
+
+r4 found that Layer 0's `เกิน`/`ใกล้`/`ไม่เกิน` verdict's `ใกล้` threshold (`>= 0.8·flooded_min`)
+was a bare constant in JSON/MD/Coq with no `OPEN-for-founder-tuning` tag, unlike every other
+threshold this proposal declares (the `S_H` bands, the `T_act` bands, `p`/`q` hysteresis, the
+rise-rate percentage). **Fixed**: the `0.8` constant is now explicitly tagged
+`OPEN-for-founder-tuning` in `definitions.layer0` (JSON), this file, and a new Coq comment beside
+`layer0_in_vs_capacity`'s `(8#10)` literal — no verdict logic, arithmetic, or proved theorem
+changes.
+
+### Forecast-input definitions — grid-cell mean, per-model scenarios, no averaging
+
+**Founder instruction (verbatim, 2026-09-27):** "ต้องรวมเรื่องนี้เข้าไปด้วย เพราะเดี๋ยวจะสับสน"
+(this must be folded in, or it will cause confusion) — given in response to a real forecast/gauge
+discrepancy observed on 26 Sep 2569. Folded into the forecast-input definitions (`rain_t`'s
+forecast component, `forecast_rain_72h`, and any other forecast term feeding `F_H(U)` or a
+Layer-0 `IN_H` input):
+
+1. **A model forecast value is a grid-cell MEAN, not a point value** (new `definitions.
+   forecast_grid_cell_mean`). The issuing model's own grid cell (approx. 10–25 km per side; the
+   per-model resolution is declared in whichever consuming repo's own model census holds it,
+   tagged `RELAYED`) is what the forecast number actually describes — point-scale rainfall at a
+   specific location may exceed it substantially, and this proposal makes no claim that the two
+   should agree. **The one evidence pair this proposal holds** (`MEASURED`, a single observed
+   pair, not a general ratio or a scaling factor): 26 Sep 2569, the rainfall-forecast models
+   available at that run reported **13–53 mm** for the relevant cell while the nearest gauge
+   measured **203 mm** — recorded as an **OPEN point-vs-cell ratio**; no scaling/correction factor
+   is declared from this one pair, it is an evidenced caution against reading a forecast term as a
+   point prediction, not a derived correction.
+
+2. **Multi-model inputs are NEVER averaged into one number** (new `definitions.
+   multi_model_scenarios`). Whenever more than one model/source reports a value for the same
+   declared term, the readout carries **every named per-source/per-model value** and derives named
+   scenarios: `worst_case` := the source/model whose value drives the term's contribution to
+   `S_H(U)`/`IN_H` **higher** (declared per term which direction is "worse" — the maximum for an
+   inflow-raising term such as rain or upstream inflow, the minimum for a capacity-raising term
+   such as a declared outlet capacity); `best_case` := the opposite extremum; `majority_band` :=
+   the band containing the plurality of named sources by count. **The tier/Layer-0 verdict is
+   evaluated on `worst_case` FIRST**, with `majority_band` always reported alongside it, never
+   substituted for it. Ensemble members already declared under `rain_t`/`forecast_rain_72h`
+   (median, max) are restated under this same discipline as **p10/p90 across members**, not a
+   mean, where per-member values are available.
+
+3. **A disagreement flag.** `disagreement_flag(term)` fires when `max − min` across the named
+   per-source values exceeds a declared band (`OPEN-for-founder-tuning`, no default stated).
+
+**This applies to any multi-source input, not only rainfall** — the same discipline covers dam
+releases reported by EGAT vs. HII, and gauge readings reported by an operating agency such as
+สนน. vs. HII: per-source values are always shown, contradictions are always surfaced, **never
+averaged away**.
+
+**No S_H/T_act/promoter/p/q threshold VALUE is changed by this v6.1 bump. No unit is calibrated by
+this registration. No new Coq theorem is added and no existing Coq definition's computed value
+changes** — this is a statement-level revision (new/amended `definitions.*` prose in the JSON and
+this file, plus one Coq comment tag), not a structural change.
+
+Registry entry: `registry/proposals/flood_outlet_coping.json` (`version: "v6.1"`).
+Coq: `coq/canonical/PROP_FLOOD_06_outlet_coping_tier.v` — re-verified via the same documented
+scratch-build convention (07-before-06 order), `coqc -q` clean (same pre-existing harmless
+comment-terminator warning category), `Print Assumptions` "Closed under the global context" (no
+axioms) on every pre-existing theorem, unchanged.
 
 ## round-3 review + LAYER 0 — v6, L5/LR bypass hysteresis, inferred inputs, layer-0 headline
 
@@ -118,8 +184,10 @@ simplification of `PROP-FLOOD-06`").
 **Three verdicts, all total:**
 
 - **IN vs CAPACITY** → `เกิน` (`L0V_Exceeds`, `IN_H ≥ flooded_min`) / `ใกล้` (`L0V_Near`,
-  `IN_H ≥ 0.8·flooded_min`) / `ไม่เกิน` (`L0V_WithinCapacity`, including the declared "no
-  flooded_min evidence yet" convention — a stated convention, not a measured safety claim).
+  `IN_H ≥ 0.8·flooded_min` — **v6.1: the `0.8` constant is `OPEN-for-founder-tuning`**, matching
+  every other threshold this proposal declares) / `ไม่เกิน` (`L0V_WithinCapacity`, including the
+  declared "no flooded_min evidence yet" convention — a stated convention, not a measured safety
+  claim).
 - **OUT vs IN** → `ระบายทัน` (`L0D_InTime`, `IN_H ≤ OUT_H`) / `ไม่ทัน` (`L0D_NotInTime`) / `ไม่รู้`
   (`L0D_Unknown`, when `OUT_H` itself does not resolve — REFUSES only this one verdict, "ขาด: OUT"
   still renders the rest of the sentence, per thailand_flood_kg's own rule).
