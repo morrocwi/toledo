@@ -1,8 +1,9 @@
 # PROP-FLOOD-06 — NEW DERIVATION / PROPOSAL (not a Toledo theorem)
 
 **Area-generic outlet-headroom / drainage-coping tier-ladder indicator, with (lat,lon) unit
-resolution and refusal.** Version `v2` (amended per independent review — see "v2 amendments"
-below).
+resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v3`
+(amended per founder instruction and a read-only falsifier backtest — see "ใช้ได้แม้ข้อมูลไม่ครบ"
+and "v3 amendments" below; v2 amendments retained further down for history).
 
 Registry entry: `registry/proposals/flood_outlet_coping.json`
 Coq stub (tier functions, total + decidable, Closed under the global context, no axioms):
@@ -23,6 +24,132 @@ PROP-FLOOD-03).
 - **PR #62** (OPEN as of 2026-09-27, branch `proposals/flood-burden-ledger`, commit `1578b354`) —
   PROP-FLOOD-05a/b, `registry/proposals/flood_burden_ledger.json` — merged into this branch for the
   same reason as PR #60.
+
+## ใช้ได้แม้ข้อมูลไม่ครบ — v3, the graceful-partial-readout rule
+
+**Founder instruction (verbatim, 2026-09-27):** "ทำทั้งหมดให้ระดับโลก แต่พอใช้ได้แม้ข้อมูลไม่ครบ
+อย่าลืมว่าระบบนี้ออกมาสำหรับวิกฤต บางอย่างมันอาจไม่สมบูรณ์ ขอแค่ข้อมูลจริงแม้เล็กที่สุดในบางสถานการณ์
+ก็ยังดี" — build it world-class, but make it usable even when data is incomplete; this system exists
+for a crisis, something being imperfect is fine, even the smallest real datum in some situations is
+still worth something.
+
+This came directly out of a read-only falsifier backtest run against this proposal in a sibling repo
+(`thailand_flood_kg/docs/BACKTEST_PROP_FLOOD_06_v0.md`, RELAYED — this proposal did not conduct that
+backtest itself, only records its findings): across 1676 simulated readout rows, **92.5% were
+REFUSED**, and the founder's own flagged priority case (Hat Yai) was refused on almost every day
+because the free global GloFAS grid cannot resolve its local canal. The backtest also found a real
+self-contradiction in this proposal's v1/v2 text (§"the no-pump contradiction" below). v3 fixes both:
+
+1. **The no-pump contradiction is fixed.** v1/v2's literal `min(D_H(U), R_H(U))` forced `D_H=0`
+   (`NO_PUMPS_IN_UNIT`) to always win the `min`, so any river-only town with no pumps (Ayutthaya,
+   and by the same shape Nan, Chiang Mai) was refused or zeroed out even when its outlet headroom
+   `R_H` resolved perfectly well — directly contradicting this proposal's own worked-instantiation
+   table, which said Ayutthaya should reduce to `S_H = F_H/R_H`. **`C_H(U)`** replaces the literal
+   `min` with a total case split (see "Clearable volume `C_H(U)`" below) that resolves this exactly
+   as the proposal's own example already implied.
+2. **A graceful PARTIAL mode is added.** Previously, ANY missing/unknown input (an outlet's
+   capacity, a pump's state, an upstream gauge) refused the WHOLE unit's readout (`LR`), even when
+   other real inputs — a rain gauge, a canal-level reading — were present and informative on their
+   own. Per the founder's rule, refusal (`LR`) is now reserved for when **no real input exists at
+   all**. Whenever at least one input is present, the ladder now returns a **`PARTIAL`** tier built
+   from whichever local/Thai promoters (see the promoter table below) are computable from what IS
+   available — never a silent guess, always tagged with exactly which inputs were used
+   (`based_on`) and which were not (`missing`), plus a plain coverage count.
+
+### Coverage vector `cov(U)`
+
+A 7-component vector, each component independently `present` / `stale` / `absent`:
+`(rain_obs, rain_fcst, canal_level_vs_lines, river_flow_vs_cap, dam_release, pumps_state,
+upstream_inflow)`. `present` = a reading exists within its declared staleness window (3h live /
+24h forecast, unchanged from v2's unit-resolution defaults); `stale` = past that window; `absent` =
+no reading. This is checked independently of whether the full `S_H/T_act` ledger happens to resolve.
+
+### Clearable volume `C_H(U)` (replaces the literal `min(D_H,R_H)`)
+
+- `NO_PUMPS_IN_UNIT` (no pumps declared) **and** `R_H` resolves → `C_H(U) := R_H(U)`,
+  `terms_present := {R}` — the pump term is structurally *absent*, not zero-and-binding.
+- Pumps declared, but every outlet is `OUTLET_CAPACITY_UNKNOWN` → `C_H(U) := D_H(U)`,
+  `terms_present := {D}` — a **partial flag** on the readout, not a whole-unit refusal: `D_H`
+  alone is still a real, usable number.
+- Both resolve → `C_H(U) := min(D_H(U), R_H(U))`, `terms_present := {R, D}` — unchanged from v1/v2.
+- Neither resolves (no pumps AND no known outlet capacity) → `REFUSED (OUTLET_CAPACITY_UNKNOWN)` —
+  genuinely nothing to compute from, unlike the first case above.
+
+Every `S_H(U)` readout now reports `terms_present` alongside the ratio so a reader can see which
+physical constraint (river outlet, pump station, or both) the number actually reflects.
+
+### Mode: `FULL` / `PARTIAL` / `LR`
+
+Precedence, replacing v2's flat LR/L5/band order:
+
+1. **`LR`** iff `cov(U)` is entirely absent or entirely stale-beyond-window across all 7
+   components — genuinely zero usable real input of any kind. (Narrower than v2's refusal-code
+   list: one missing input no longer refuses the whole unit by itself if another `cov(U)` component
+   is present — see `PARTIAL` below.)
+2. **`FULL`** iff the whole ledger resolves (`C_H(U)` resolves, `F_H(U)` resolves) — proceeds
+   exactly as v2's `full_tier` over `(S_H, T_act)`, now reading `C_H(U)` in place of the old literal
+   `min`.
+3. **`PARTIAL`** otherwise, whenever at least one `cov(U)` component is present: `tier(U) := ` the
+   **maximum** tier level over every promoter in the table below whose required `cov(U)` component
+   is present (an absent/stale-input promoter is *excluded* from the max, not treated as
+   non-firing-with-a-value). If no promoter's input is present-and-triggering, `tier(U) := L0` — a
+   genuine "nothing fired on what we do have" readout, not `LR`.
+
+Every `PARTIAL` readout carries: `mode: "PARTIAL"`, `based_on: [...]`, `missing: [...]`, and
+`coverage_score := |present components| / 7` (a plain **MEASURED** count, never a probability).
+
+### Promoter table (Thai/local triggers, adopted `RELAYED-derived-convention` from
+`thailand_flood_kg/docs/knowledge/TIER_THRESHOLDS_RATIONALE.md`)
+
+| id | fires when | min tier | source |
+|---|---|---|---|
+| `RAIN_24H_EXCEEDS_DESIGN` | `rain_24h_mm > 80` | `L3` | BMA as-built drainage design capacity (`docs/CAPACITY.md` §1, VERIFIED there) |
+| `CANAL_AT_WARNING_LINE` | canal level ≥ warning line, < critical line | `L2` | `sources/registry.yaml` canal feed (MEASURED there) |
+| `CANAL_AT_CRITICAL_LINE` | canal level ≥ critical line | `L4` | same feed |
+| `CANAL_AT_BANK_LEVEL` | canal level ≥ bank level | `L5` | same feed — no remaining headroom by definition |
+| `DAM_RELEASE_ABOVE_SPILL_THRESHOLD` | dam release ≥ declared spill threshold | `L3` (downstream units only) | this proposal's own construction, generalising PROP-FLOOD-03's upstream-edge discipline |
+| `PUMPS_ZERO_RUNNING_ABOVE_THRESHOLD` | 0 pumps running AND level ≥ critical line | `L5` | rationale doc §3.6 |
+| `VULNERABLE_UNIT_PROMOTION` | unit declares high vulnerable-population share AND (`T_act ≤ 48h` in FULL, or PARTIAL tier already ≥ `L2`) | promote the already-computed tier by ≥ 1 level (never a standalone trigger) | rationale doc §3.2 / P7, **INSTINCT** — qualitative evidence only, no measured "how much longer" number |
+
+**All threshold VALUES here (80mm, the S_H/T_act bands, etc.) remain exactly what v1/v2 already
+declared, OPEN-for-founder-tuning — this v3 bump adopts the promoter *structure*, it does not
+silently retune any number.**
+
+### Worked example: Hat Yai, PARTIAL, with only a rain gauge and a canal-level reading
+
+Only `rain_obs` (rain_24h = 92mm, present) and `canal_level_vs_lines` (at warning line, present)
+are available — no outlet capacity, no pump state, no upstream inflow (exactly the GloFAS gap the
+backtest found for this unit). The full ledger does not resolve, so mode falls to `PARTIAL`, not
+`LR`:
+
+- `RAIN_24H_EXCEEDS_DESIGN` fires (92 > 80) → `L3`.
+- `CANAL_AT_WARNING_LINE` fires → `L2`.
+- Every other promoter's input is absent → excluded from the max.
+- **Result: `mode: PARTIAL`, `tier: L3`, `based_on: [rain_obs, canal_level_vs_lines]`,
+  `missing: [rain_fcst, river_flow_vs_cap, dam_release, pumps_state, upstream_inflow]`,
+  `coverage_score: 2/7`.**
+
+This is the founder's rule made concrete: two real inputs, honestly labeled, still produce a
+usable `L3` ("ทำตอนนี้ภายในวันนี้") instead of the `LR` that the v2 backtest returned on
+essentially every one of Hat Yai's ~83 unit-days.
+
+### Backtest findings recorded verbatim (RELAYED, `thailand_flood_kg/docs/BACKTEST_PROP_FLOOD_06_v0.md`)
+
+- 92.5% (1550/1676) of simulated rows REFUSED (640 `MISSING_INPUT`, 502
+  `ZERO_CAPACITY_NONZERO_INFLOW` — the same no-pump contradiction `C_H(U)` fixes, 408
+  `OUTLET_CAPACITY_UNKNOWN`).
+- Of the 126 non-REFUSED rows, all were `BANGKOK_EAST`: confusion matrix 0 act&flooded, 0 act&not,
+  **56 time&flooded (miss), 70 time&not** — a **100.0% miss rate, n=126**, at the current v1/v2
+  S_H/T_act bands.
+- **OPEN calibration note, not a silent tune:** the backtest also reports `S_H` on flooded days as
+  `[min=0.00 max=0.00 n=56]` and on non-flooded days as `[min=0.00 max=0.00 n=70]` — `S_H` was
+  degenerate (exactly 0) for *both* classes in this scenario, so the 100% miss rate is **not**
+  evidence that any specific band shift (e.g. lowering the `L3` threshold below `0.9`) would have
+  caught those days — no boundary in `(0, +inf)` separates two classes that are both stuck at
+  `0.00`. The miss is a `C_H(U)`/input-resolution problem (the same contradiction fixed above for
+  Bangkok-East-shaped units with partial pump declarations), not a threshold-placement problem.
+  This is left as an item for re-running the backtest against v3's `C_H(U)` definition — **no S_H
+  or T_act band value is changed by this v3 bump.**
 
 ## v2 amendments (per independent review, `REVIEW_PROP_FLOOD_06.md`)
 
