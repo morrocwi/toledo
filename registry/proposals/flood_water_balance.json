@@ -1,0 +1,77 @@
+[
+  {
+    "id": "PROP-FLOOD-03",
+    "code": "weld/M.??.v1",
+    "name": "Finite water-balance readout for a bounded basin over one tick, with refusal",
+    "statement": {
+      "latest": "\\text{For a basin node } b \\text{ (e.g. a village catchment) and tick } k \\in \\mathbb{N}, \\text{ all quantities on } \\mathbb{Q}, \\text{ given a required declared initial } S_b(0):\\quad \\boxed{S_b(k+1) := S_b(k) + P(k)\\cdot A_b\\cdot c_b + Q_{in}(k)\\cdot\\tau - Q_{out}(k)\\cdot\\tau}\\quad \\text{where } Q_{out}(k) := \\begin{cases} 0 & \\text{gate\\_flag}(k) = \\text{CLOSED} \\\\ \\min(Q_{out,meas}(k),\\, C_{pump,b}) & \\text{gate\\_flag}(k) = \\text{OPEN} \\end{cases}\\quad \\text{gate\\_flag}(k)\\in\\{\\text{OPEN},\\text{CLOSED}\\} \\text{ a declared readout (e.g. BMA gate status or tide-lock condition)}.\\quad \\boxed{\\text{REFUSED (reason} \\in \\{\\text{MISSING\\_INPUT, STALE\\_INPUT, UNDECLARED\\_AREA, UNDECLARED\\_EDGE, NEGATIVE\\_STORAGE}\\}\\text{)}} \\text{ when any required input is missing/stale/undeclared, or when the computed } S_b(k+1) < 0 \\text{ -- never a default value and never a silent clamp.}",
+      "format": "latex",
+      "note_ascii": "S_b(k+1) := S_b(k) + P(k)*A_b*c_b + Q_in(k)*tau - Q_out(k)*tau, all on Q, for a basin node b and tick k in N, given a required declared initial S_b(0). Q_out(k) := 0 if gate_flag(k) = CLOSED else min(Q_out_meas(k), C_pump,b); gate_flag(k) in {OPEN, CLOSED} is itself a declared readout (e.g. BMA gate status or a tide-lock condition), not inferred. REFUSED (reason in {MISSING_INPUT, STALE_INPUT, UNDECLARED_AREA, UNDECLARED_EDGE, NEGATIVE_STORAGE}) whenever a required input is missing, a time-varying input is stale, a static declaration or graph edge is undeclared, or the computed S_b(k+1) would be negative (a bookkeeping inconsistency) -- never silently defaulted or clamped."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "flood-readout-app:finite-water-balance-single-tick-refusal"
+    ],
+    "definitions": {
+      "S": "stored water volume at basin node b (m^3), a Q-valued readout series, never treated as a continuum signal -- only its finite sampled/computed values at ticks k are ever used",
+      "S_b(0)": "the required declared initial storage for node b; without it the chain has no starting value and tick 0 is REFUSED MISSING_INPUT. After any REFUSED tick the chain does not silently resume -- it restarts only from a newly (re)declared S_b value at the next available tick, stated explicitly as a fresh initial condition, never as an extrapolation across the refused gap.",
+      "b": "a basin node, e.g. a declared village catchment; the object is defined per node, not per continuum region",
+      "k": "a finite tick index, k in N (natural-number tick count, not a continuum time coordinate)",
+      "P": "rain depth over the tick (m), measured at a declared gauge with a declared distance from node b -- time-varying input, subject to STALE_INPUT if timestamped older than the tick, MISSING_INPUT if absent",
+      "A_b": "catchment area for node b (m^2); a static declaration, subject only to MISSING_INPUT / UNDECLARED_AREA -- never STALE_INPUT, since a static declaration does not carry a per-tick timestamp to go stale against",
+      "c_b": "runoff fraction for node b, in Q intersect [0,1]; a static declaration, subject only to MISSING_INPUT -- INSTINCT (a judgment call, not a checked fact) until measured against real rainfall-runoff data for that catchment",
+      "Q_in": "inflow to node b from upstream nodes (m^3/s); a sum over declared graph edges into b -- time-varying per edge (STALE_INPUT if a declared edge's reading is stale, MISSING_INPUT if absent); an inflow arriving over an undeclared edge is REFUSED UNDECLARED_EDGE, never folded silently into the sum or treated as zero",
+      "Q_out": "outflow from node b (m^3/s), defined as 0 when gate_flag(k)=CLOSED, else the measured outflow Q_out_meas(k) capped by the declared pump capacity C_pump,b -- Q_out is a derived quantity, not itself an independent declared reading",
+      "Q_out_meas": "measured outflow via pumping or gravity drainage (m^3/s) when the gate/valve is open; time-varying input, subject to STALE_INPUT / MISSING_INPUT",
+      "C_pump,b": "declared pump (or gravity-drainage) capacity for node b (m^3/s); a static declaration, subject only to MISSING_INPUT",
+      "gate_flag": "a declared readout in {OPEN, CLOSED} for node b at tick k (e.g. a BMA gate/valve status or a tide-lock condition) -- time-varying, subject to STALE_INPUT / MISSING_INPUT; never inferred from Q_out_meas or any other quantity",
+      "tau": "tick length (s), the finite step between k and k+1; a static declaration, subject only to MISSING_INPUT -- no h->0 limit is taken or implied anywhere in this object"
+    },
+    "readout_classes": {
+      "trend": "RISING / FLAT / FALLING of S_b by the sign of the increment S_b(k+1) - S_b(k) against a declared resolution epsilon. This is exactly the lag-1 (k=1 tick) instance of PROP-FLOOD-01's general lag-k retained-difference sign readout, applied to this object's own output series S_b rather than a raw sensor reading; PROP-FLOOD-01 is not re-derived here, only cited as the sign-readout consumer of this ledger's output. This object's REFUSED outcome plays exactly the role PROP-FLOOD-01 assigns to NO_READOUT (t<k or h(t-k) not sampled): a determinate 'the construction is not licensed for this tick', never silently absorbed into FLAT.",
+      "refusal": "REFUSED with reason in {MISSING_INPUT, STALE_INPUT, UNDECLARED_AREA, UNDECLARED_EDGE, NEGATIVE_STORAGE} -- MISSING_INPUT for any absent required declaration or reading (including S_b(0), C_pump,b, gate_flag); STALE_INPUT only for a time-varying input (P, Q_in, Q_out_meas, gate_flag) timestamped older than the tick -- never for a static declaration (A_b, c_b, tau, C_pump,b), which cannot go stale, only be missing or undeclared; UNDECLARED_AREA for an undeclared catchment area; UNDECLARED_EDGE for an inflow arriving over an upstream graph edge that was never declared; NEGATIVE_STORAGE when the computed S_b(k+1) < 0, flagging the tick's bookkeeping as inconsistent rather than clamping the value to 0. Every case is a total, first-class outcome, never a defaulted or clamped numeric value."
+    },
+    "claim_boundary": "This is bookkeeping of declared readouts, not a hydraulic model: no routing time between b and its neighbours is modelled, no infiltration/evaporation model beyond the single declared scalar c_b is asserted, and no level<->volume curve is implied. Converting S_b to a water level at a house or road requires a separately declared stage-storage relation for that specific point, which this object does not provide and marks OPEN. The Q_in sum is only as complete as the declared graph edges into b; an inflow over an undeclared edge is REFUSED (UNDECLARED_EDGE), never an implicit zero. Q_out is fully determined by gate_flag, Q_out_meas and C_pump,b -- no independent physical drainage model is asserted beyond that declared cap-and-gate logic. A negative computed S_b(k+1) is reported as a refusal (bookkeeping inconsistency), never silently clamped to 0.",
+    "parents": [
+      {
+        "code": "delta_R",
+        "derived_via": "instance_of",
+        "evidence": "S_b(k+1) - S_b(k) is a retained difference between two successive readouts of the same Q-valued series (the workspace's own root primitive, delta_R = (a sharp b), Th_coqc per readout_genesis Part I 'THE ONE-LINE MASTER EQUATION'), here composed additively from declared in/out/created terms rather than left as a bare difference -- no continuum derivative (tau->0) is taken or implied."
+      },
+      {
+        "code": "PROP-FLOOD-01",
+        "derived_via": "sign readout",
+        "evidence": "PROP-FLOOD-01's lag-k retained-difference RISING/FALLING/FLAT/NO_READOUT sign-readout construction is reused unmodified, at lag k=1 tick, as the trend classifier over this object's own output series S_b -- this proposal supplies a new Q-valued series (a computed water-balance ledger rather than a raw sensor reading) for PROP-FLOOD-01's Delta_1(t) to be applied to, and this object's REFUSED branch plays exactly the role PROP-FLOOD-01 assigns to NO_READOUT (a determinate 'construction not licensed for this tick', never absorbed into FLAT)."
+      },
+      {
+        "code": "EQ-001/C.01.v1",
+        "derived_via": "generalises",
+        "evidence": "RGD-CHEM-001 ('RT-LEDGER-001'): 'If the declared closed boundary preserves ledger L(n)=A n, then A(n1-n0)=0' is the closest existing Toledo conservation/ledger object found in the Step-1 lookup (registry/CANONICAL.json). This proposal generalises that closed-boundary ledger shape to an open node with declared, separately-signed in/out/created/obstructed terms: setting gate_flag(k)=CLOSED for all k and Q_in(k)=P(k)=0 collapses this object exactly to RGD-CHEM-001's closed-boundary case (S_b(k+1)-S_b(k)=0, i.e. A(n1-n0)=0) -- a structural link across domains (chemistry-domain ledger C generalised into this method-domain M readout), the same kind of relation this registry already records as 'generalises' between PROP-FLOOD-01 and PROP-NATIVE-01 (a single-lag SE(3) pose difference generalised to a scalar lag-k series)."
+      }
+    ],
+    "genesis_compatibility": {
+      "gate": "readout_genesis Part VI-A, section B.2a 'Synthesis Bookkeeping -- Normal Forms, Lineage, Conservation, and Complexity', subsection 'A generic conservation ledger' (tier [Dr])",
+      "quote": "\"C(𝔖_{n+1}) − C(𝔖_n) = J_n^in − J_n^out + J_n^created − J_n^obstructed\" and \"This ledger is architecture, not a physics claim: the machinery reports graph, lineage, tape, currents, and operator powers for a semantic card to audit against *its own* declared conserved quantity -- it does not, by itself, assert that any particular physical quantity is conserved.\" (READOUT_GENESIS_CORE.md, Part VI-A, B.2a)",
+      "note": "S_b(k+1) is a single-node instance of Genesis's own generic conservation-ledger identity C(S_{n+1}) - C(S_n) = J_n^in - J_n^out + J_n^created - J_n^obstructed, mapped as: C(S_k):=S_b(k); J_n^in := Q_in(k)*tau + P(k)*A_b (both the declared graph-edge inflow AND the full rainfall volume crossing the catchment boundary, before any runoff split); J_n^out := Q_out(k)*tau (the gated/capped outflow defined above); J_n^created := 0 (no term in this object manufactures water ex nihilo); J_n^obstructed := P(k)*A_b*(1-c_b) (the non-runoff portion of the rainfall that crosses the boundary but is declared lost to the bookkeeping -- infiltration/evaporation/depression storage lumped into one crude scalar, not separately modelled). This recovers the boxed statement exactly, since only the runoff share P(k)*A_b*c_b of the rain actually reaches storage. Per Genesis's own caution in the same section, this identity is bookkeeping architecture for a semantic card's own declared conserved quantity, not by itself a hydraulic-physics claim -- exactly the stance this proposal's claim_boundary states independently."
+    },
+    "honest_caveats": [
+      "This is bookkeeping of declared readouts, not a hydraulic model -- see claim_boundary. No routing time, no infiltration/evaporation model beyond the single crude scalar c_b (folded into J_obstructed above), no level<->volume curve is asserted; a stage-storage relation converting S_b to a water level at a specific point is a separate object this proposal does not provide, and is marked OPEN.",
+      "J_n^obstructed = P(k)*A_b*(1-c_b) lumps every non-runoff fate of rainfall (infiltration, evaporation, depression storage) into one declared scalar; it is not a separate infiltration/evaporation model and inherits c_b's own INSTINCT status until c_b is measured against real data.",
+      "c_b (runoff fraction) is INSTINCT until measured against real rainfall-runoff data for the declared catchment -- it must never be presented as MEASURED/VERIFIED without a cited calibration.",
+      "Q_in(k) is a sum over declared graph edges only; an inflow arriving over an undeclared edge is REFUSED (UNDECLARED_EDGE), never an implicit zero that would silently understate inflow.",
+      "STALE_INPUT applies only to time-varying inputs (P, Q_in, Q_out_meas, gate_flag); static declarations (A_b, c_b, tau, C_pump,b) can only be MISSING_INPUT / UNDECLARED_AREA, never stale, since they carry no per-tick timestamp to compare against.",
+      "NEGATIVE_STORAGE is a deliberate refusal, not a clamp: a computed S_b(k+1) < 0 signals a bookkeeping inconsistency (e.g. a mis-declared c_b, an over-measured Q_out, or a missing inflow edge) and must surface as an explicit refused tick, never be silently floored to 0, which would hide the inconsistency.",
+      "Totality requires a declared S_b(0); after any REFUSED tick the chain restarts only from a newly (re)declared S_b, never by extrapolating across the refused gap.",
+      "REFUSED is a total, first-class outcome (reason in {MISSING_INPUT, STALE_INPUT, UNDECLARED_AREA, UNDECLARED_EDGE, NEGATIVE_STORAGE}), reusing the discipline PROP-FLOOD-01/PROP-FLOOD-02 already register for this workspace: an unresolved, undeclared, or inconsistent input/output must never be defaulted or clamped to a number.",
+      "Not yet implemented or tested against real basin data; this is a design-stage proposal, empirical_test_status 'none'.",
+      "This object composes with, but does not re-derive, PROP-FLOOD-01 (trend sign readout) or PROP-FLOOD-02 (time-to-threshold linear extension) -- both may be applied to this object's own output series S_b once it is populated, but neither is restated here."
+    ],
+    "empirical_test_status": "none",
+    "origin": {
+      "source": "New derivation/proposal: a community flood-readout application (FloodConnect), 2026-09-26",
+      "doi": null
+    }
+  }
+]
