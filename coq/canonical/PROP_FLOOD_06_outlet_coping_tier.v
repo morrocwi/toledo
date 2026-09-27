@@ -1,8 +1,19 @@
 (* ===================================================================== *)
 (*  PROP_FLOOD_06_outlet_coping_tier.v                                   *)
 (*  Area-generic outlet-headroom / drainage-coping tier-ladder function   *)
-(*  (Toledo proposal PROP-FLOOD-06.v3, code weld/M.??.v1, proposals-lane, *)
+(*  (Toledo proposal PROP-FLOOD-06.v4, code weld/M.??.v1, proposals-lane, *)
 (*  not yet canonicalized -- see registry/LINEAGE.jsonl code PROP-FLOOD-06)*)
+(*                                                                         *)
+(*  v4 AMENDMENT (per independent review round 2, REVIEW_PROP_FLOOD_06_r2 *)
+(*  .md, both MUST-FIX findings): (1) promoters are now a FLOOR under      *)
+(*  every mode -- FULL mode no longer ignores the promoter table, so a    *)
+(*  fully-resolved ledger can never report a lower tier than the PARTIAL   *)
+(*  reading the same promoter inputs would give (see `full_tier_v4`,      *)
+(*  `full_tier_v4_promoter_monotone`, `full_tier_v4_full_ge_partial` at    *)
+(*  the bottom of this file); (2) the top-level return type is now a      *)
+(*  single inseparable `readout` record (tier, mode, coverage, based_on,  *)
+(*  missing, promoters_fired), not a bare `tier_level6` a consumer could   *)
+(*  drop everything else from.                                            *)
 (*                                                                         *)
 (*  Source: FloodConnect readout application; founder instructions         *)
 (*  2026-09-27 (coping indicator generalised to any drainage unit U,       *)
@@ -535,4 +546,570 @@ Proof. reflexivity. Qed.
    (applies, level) pairs, and the vulnerable-unit flag, the mode-aware
    tier readout is a total, decidable function of them, and LR still
    dominates every other input exactly as in v2.
+   ---------------------------------------------------------------------- *)
+
+(* ========================================================================
+   v4 ADDITION -- monotonic promoters in every mode, and an inseparable
+   readout record (PROP-FLOOD-06.v4, per independent review round 2,
+   REVIEW_PROP_FLOOD_06_r2.md, both MUST-FIX findings).
+
+   MUST-FIX (round 2) #1 -- "PARTIAL can silently outrank FULL,
+   undocumented": v3's `full_tier_v3` was EXCLUSIVE on mode -- FULL mode
+   consulted only the S_H/T_act bands (`full_tier`) and never the
+   promoter table, so a unit with a fully-resolved ledger but a raw
+   physical promoter fact (rain > design capacity, zero pumps running
+   above the critical line) could report a LOWER tier than an otherwise-
+   identical unit that was merely missing one input (hence PARTIAL) on
+   the very same physical signal. v4 fixes this by making promoters a
+   FLOOR under every mode, never something only PARTIAL consults:
+
+     final tier := promote_one_if(vulnerable_promote,
+                     max_level6 band_tier (promoter_max applicable_promoters))
+   where
+     band_tier := full_tier false D R F s t   if the ledger resolves (FULL)
+                  T_L0                         otherwise (PARTIAL/no ledger)
+   and LR (cov(U) entirely absent/stale) is checked LAST, overriding this
+   result unconditionally -- unchanged from v3's LR-dominates discipline.
+   This is exactly the task's stated order: band_tier (FULL only, else
+   L0), then promoter_max, then the vulnerable +1 rule, then LR iff
+   coverage is all-absent/stale.
+
+   ข้อมูลเพิ่มไม่เคยลดระดับ ("more real data never lowers the reported
+   level") is proved below as two theorems:
+     (a) `full_tier_v4_promoter_monotone` -- for the SAME promoter table
+         and the same ledger inputs, widening the coverage vector (any
+         `cov` component that was present stays present) never lowers
+         the tier, as long as the unit was not already LR (LR is a
+         refusal state, not a severity comparison, and is excluded from
+         this claim by hypothesis -- exactly the "monotonicity in the
+         coverage vector for promoter inputs" scope the task names).
+     (b) `full_tier_v4_full_ge_partial` -- for the SAME promoters and the
+         same non-LR coverage, the FULL-mode tier (ledger_resolves=true)
+         is >= the PARTIAL-mode tier the identical promoter inputs would
+         give (ledger_resolves=false), because FULL only ADDS the band
+         term into the same max, it never substitutes for it.
+
+   MUST-FIX (round 2) #2 -- "coverage_score/mode are not structurally
+   mandatory": v3's `full_tier_v3` returned a bare `tier_level6`, with
+   mode/coverage/based_on/missing left as prose-only JSON conventions a
+   consumer could silently drop, reproducing exactly the false "ปกติ"
+   reassurance the founder's crisis-usability ruling was meant to avoid.
+   v4 fixes this by making the return type itself a `readout` record --
+   tier, mode, coverage_present, coverage_total, based_on, missing,
+   promoters_fired are ONE inseparable value, never independently
+   droppable by a consumer that pattern-matches only on `tier`. Mirrors
+   JSON `readout_schema` (see registry/proposals/flood_outlet_coping.json)
+   and the MD's explicit consumer-contract sentence ("a consumer MUST
+   render tier together with mode and coverage").
+   ======================================================================== *)
+
+Require Import Coq.Arith.PeanoNat.
+Require Import Lia.
+
+(* ------------------------------------------------------------------
+   Finite enumerations for the record's structured fields.
+   ------------------------------------------------------------------ *)
+
+Inductive mode3 : Set := M_FULL | M_PARTIAL | M_LR.
+
+Theorem mode3_eq_dec : forall x y : mode3, {x = y} + {x <> y}.
+Proof. decide equality. Qed.
+
+(* The seven coverage-vector components, JSON definitions.cov, fixed order. *)
+Inductive input_kind : Set :=
+  | IK_rain_obs
+  | IK_rain_fcst
+  | IK_canal_level_vs_lines
+  | IK_river_flow_vs_cap
+  | IK_dam_release
+  | IK_pumps_state
+  | IK_upstream_inflow.
+
+Theorem input_kind_eq_dec : forall x y : input_kind, {x = y} + {x <> y}.
+Proof. decide equality. Qed.
+
+(* The declared promoter_table ids (JSON readout_classes.promoter_table),
+   VULNERABLE_UNIT_PROMOTION excluded -- it is not a max-table entry, it is
+   the separate +1 rule already formalised above as `promote_one`. *)
+Inductive promoter_id : Set :=
+  | P_RAIN_24H_EXCEEDS_DESIGN
+  | P_CANAL_AT_WARNING_LINE
+  | P_CANAL_AT_CRITICAL_LINE
+  | P_CANAL_AT_BANK_LEVEL
+  | P_DAM_RELEASE_ABOVE_SPILL_THRESHOLD
+  | P_PUMPS_ZERO_RUNNING_ABOVE_THRESHOLD.
+
+Theorem promoter_id_eq_dec : forall x y : promoter_id, {x = y} + {x <> y}.
+Proof. decide equality. Qed.
+
+(* ------------------------------------------------------------------
+   Coverage vector cov(U): a 7-field record, one bool per component,
+   `true` = present (within its declared staleness window), `false` =
+   stale-or-absent (this file does not distinguish stale from absent,
+   exactly as the v3 section above already declared for its opaque
+   `cov_all_absent` bool -- see that section's header). Fixed arity by
+   construction, so `coverage_total` below is exactly 7, always, never a
+   runtime-computed list length that could drift.
+   ------------------------------------------------------------------ *)
+
+Record coverage_vector := mkCov {
+  cov_rain_obs               : bool;
+  cov_rain_fcst              : bool;
+  cov_canal_level_vs_lines   : bool;
+  cov_river_flow_vs_cap      : bool;
+  cov_dam_release            : bool;
+  cov_pumps_state            : bool;
+  cov_upstream_inflow        : bool
+}.
+
+Definition cov_get (cv : coverage_vector) (k : input_kind) : bool :=
+  match k with
+  | IK_rain_obs => cov_rain_obs cv
+  | IK_rain_fcst => cov_rain_fcst cv
+  | IK_canal_level_vs_lines => cov_canal_level_vs_lines cv
+  | IK_river_flow_vs_cap => cov_river_flow_vs_cap cv
+  | IK_dam_release => cov_dam_release cv
+  | IK_pumps_state => cov_pumps_state cv
+  | IK_upstream_inflow => cov_upstream_inflow cv
+  end.
+
+Definition all_input_kinds : list input_kind :=
+  IK_rain_obs :: IK_rain_fcst :: IK_canal_level_vs_lines :: IK_river_flow_vs_cap
+  :: IK_dam_release :: IK_pumps_state :: IK_upstream_inflow :: nil.
+
+Definition cov_present_kinds (cv : coverage_vector) : list input_kind :=
+  filter (fun k => cov_get cv k) all_input_kinds.
+
+Definition cov_missing_kinds (cv : coverage_vector) : list input_kind :=
+  filter (fun k => negb (cov_get cv k)) all_input_kinds.
+
+Definition bool_to_nat (b : bool) : nat := if b then 1%nat else 0%nat.
+
+Definition coverage_present (cv : coverage_vector) : nat :=
+  ( bool_to_nat (cov_rain_obs cv) + bool_to_nat (cov_rain_fcst cv)
+  + bool_to_nat (cov_canal_level_vs_lines cv) + bool_to_nat (cov_river_flow_vs_cap cv)
+  + bool_to_nat (cov_dam_release cv) + bool_to_nat (cov_pumps_state cv)
+  + bool_to_nat (cov_upstream_inflow cv) )%nat.
+
+Definition coverage_total : nat := 7%nat.
+
+(* coverage_total is exactly the length of the fixed 7-element component
+   list, tying the constant to the actual enumeration rather than leaving
+   it a bare unchecked literal. *)
+Theorem coverage_total_is_7 : coverage_total = 7%nat.
+Proof. reflexivity. Qed.
+
+Theorem coverage_total_eq_all_kinds_length :
+  coverage_total = length all_input_kinds.
+Proof. reflexivity. Qed.
+
+(* coverage_present is a sum of exactly 7 boolean-to-{0,1} terms, hence
+   never exceeds 7 -- proved directly, not merely by example. *)
+Theorem coverage_present_le_total :
+  forall cv : coverage_vector, (coverage_present cv <= coverage_total)%nat.
+Proof.
+  intro cv. unfold coverage_present, coverage_total, bool_to_nat.
+  destruct (cov_rain_obs cv), (cov_rain_fcst cv), (cov_canal_level_vs_lines cv),
+           (cov_river_flow_vs_cap cv), (cov_dam_release cv), (cov_pumps_state cv),
+           (cov_upstream_inflow cv);
+  simpl; lia.
+Qed.
+
+Definition cov_all_absent (cv : coverage_vector) : bool :=
+  Nat.eqb (coverage_present cv) 0%nat.
+
+Lemma exists_true_component :
+  forall cv : coverage_vector, coverage_present cv <> 0%nat -> exists k, cov_get cv k = true.
+Proof.
+  intros cv Hne.
+  destruct (cov_rain_obs cv) eqn:E1. { exists IK_rain_obs; exact E1. }
+  destruct (cov_rain_fcst cv) eqn:E2. { exists IK_rain_fcst; exact E2. }
+  destruct (cov_canal_level_vs_lines cv) eqn:E3. { exists IK_canal_level_vs_lines; exact E3. }
+  destruct (cov_river_flow_vs_cap cv) eqn:E4. { exists IK_river_flow_vs_cap; exact E4. }
+  destruct (cov_dam_release cv) eqn:E5. { exists IK_dam_release; exact E5. }
+  destruct (cov_pumps_state cv) eqn:E6. { exists IK_pumps_state; exact E6. }
+  destruct (cov_upstream_inflow cv) eqn:E7. { exists IK_upstream_inflow; exact E7. }
+  exfalso. apply Hne. unfold coverage_present, bool_to_nat.
+  rewrite E1, E2, E3, E4, E5, E6, E7. reflexivity.
+Qed.
+
+Lemma coverage_present_pos_of_true :
+  forall cv k, cov_get cv k = true -> coverage_present cv <> 0%nat.
+Proof.
+  intros cv k Hk. unfold coverage_present, bool_to_nat.
+  destruct k; simpl in Hk; rewrite Hk; simpl; lia.
+Qed.
+
+Lemma cov_all_absent_false_mono :
+  forall cv1 cv2, cov_all_absent cv1 = false ->
+    (forall k, cov_get cv1 k = true -> cov_get cv2 k = true) ->
+    cov_all_absent cv2 = false.
+Proof.
+  intros cv1 cv2 H1 Hmono.
+  unfold cov_all_absent in *.
+  apply Nat.eqb_neq. apply Nat.eqb_neq in H1.
+  destruct (exists_true_component cv1 H1) as [k Hk].
+  apply Hmono in Hk.
+  eapply coverage_present_pos_of_true; eauto.
+Qed.
+
+(* ------------------------------------------------------------------
+   A promoter entry: its id, which cov(U) component it requires, and the
+   caller-supplied boolean trigger outcome ("fires") for that component's
+   declared condition (e.g. rain_24h_mm > 80) -- the arithmetic condition
+   itself is IO-shaped/data-dependent, exactly as the v3 section above
+   already left `fires` an opaque caller-supplied bool.  `p_applies` is
+   `avail && fires`: a promoter never contributes unless its own required
+   input is actually present.
+   ------------------------------------------------------------------ *)
+
+Record promoter := mkPromoter {
+  p_id       : promoter_id;
+  p_requires : input_kind;
+  p_fires    : bool;
+  p_level    : tier_level6
+}.
+
+Definition promoter_applies (cv : coverage_vector) (p : promoter) : bool :=
+  andb (cov_get cv (p_requires p)) (p_fires p).
+
+Definition promoters_that_apply (cv : coverage_vector) (ps : list promoter) : list promoter :=
+  filter (promoter_applies cv) ps.
+
+(* ------------------------------------------------------------------
+   The inseparable readout record (MUST-FIX #2): tier is never returned
+   on its own -- mode, coverage, based_on/missing and which promoters
+   fired travel with it as one value.  Mirrors JSON `readout_schema`.
+   ------------------------------------------------------------------ *)
+
+Record readout := mkReadout {
+  tier                     : tier_level6;
+  mode                     : mode3;
+  readout_coverage_present : nat;
+  readout_coverage_total   : nat;
+  based_on                 : list input_kind;
+  missing                  : list input_kind;
+  promoters_fired          : list promoter_id
+}.
+
+(* DECIDABILITY of the record's equality: every field type is a finite
+   enumeration or a list thereof; `list_eq_dec` (Coq.Lists.List) lifts
+   the finite base-type decisions to the two list-valued fields. *)
+Theorem readout_eq_dec : forall x y : readout, {x = y} + {x <> y}.
+Proof.
+  decide equality.
+  - apply (list_eq_dec promoter_id_eq_dec).
+  - apply (list_eq_dec input_kind_eq_dec).
+  - apply (list_eq_dec input_kind_eq_dec).
+  - apply Nat.eq_dec.
+  - apply Nat.eq_dec.
+  - apply mode3_eq_dec.
+  - apply tier_level6_eq_dec.
+Qed.
+
+(* ------------------------------------------------------------------
+   full_tier_v4 -- the single top-level entry point replacing v3's
+   `full_tier_v3`.  Promoters are now a FLOOR under every mode (MUST-FIX
+   #1).
+   ------------------------------------------------------------------ *)
+
+Definition full_tier_v4
+  (cv : coverage_vector)
+  (ledger_resolves vulnerable_promote : bool)
+  (D R F s : Q) (t : option Q)
+  (promoters : list promoter)
+  : readout :=
+  let band := if ledger_resolves then full_tier false D R F s t else T_L0 in
+  let applies_list :=
+    map (fun p => (promoter_applies cv p, p_level p)) promoters in
+  let pm := promoter_max applies_list in
+  let base := max_level6 band pm in
+  let promoted := if vulnerable_promote then promote_one base else base in
+  let cov_absent := cov_all_absent cv in
+  let final_tier := if cov_absent then T_LR else promoted in
+  let final_mode :=
+    if cov_absent then M_LR
+    else if ledger_resolves then M_FULL else M_PARTIAL in
+  {| tier := final_tier;
+     mode := final_mode;
+     readout_coverage_present := coverage_present cv;
+     readout_coverage_total := coverage_total;
+     based_on := cov_present_kinds cv;
+     missing := cov_missing_kinds cv;
+     promoters_fired := map p_id (promoters_that_apply cv promoters) |}.
+
+(* TOTALITY: an ordinary Gallina function building a record literal from
+   already-total sub-computations -- total by construction, same argument
+   as every prior top-level function in this file. *)
+Theorem full_tier_v4_total :
+  forall (cv : coverage_vector) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q) (promoters : list promoter),
+    exists r : readout,
+      full_tier_v4 cv ledger_resolves vulnerable_promote D R F s t promoters = r.
+Proof. intros. eexists. reflexivity. Qed.
+
+(* readout's own coverage fields inherit the two bounds already proved
+   above -- restated on the record's own projections for direct use by a
+   consumer that only has a `readout` value in hand. *)
+Theorem full_tier_v4_coverage_total_is_7 :
+  forall (cv : coverage_vector) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q) (promoters : list promoter),
+    readout_coverage_total (full_tier_v4 cv ledger_resolves vulnerable_promote D R F s t promoters)
+    = 7%nat.
+Proof. intros. reflexivity. Qed.
+
+Theorem full_tier_v4_coverage_present_le_7 :
+  forall (cv : coverage_vector) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q) (promoters : list promoter),
+    (readout_coverage_present (full_tier_v4 cv ledger_resolves vulnerable_promote D R F s t promoters)
+     <= 7)%nat.
+Proof. intros. simpl. apply coverage_present_le_total. Qed.
+
+(* LR iff coverage_present = 0 (the record's own `mode` field, not just
+   the internal `cov_all_absent` helper): restated at the top-level entry
+   point so a consumer can check either the mode tag or the coverage
+   count and get the same answer. *)
+Theorem full_tier_v4_LR_iff_coverage_present_0 :
+  forall (cv : coverage_vector) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q) (promoters : list promoter),
+    mode (full_tier_v4 cv ledger_resolves vulnerable_promote D R F s t promoters) = M_LR
+    <-> readout_coverage_present (full_tier_v4 cv ledger_resolves vulnerable_promote D R F s t promoters) = 0%nat.
+Proof.
+  intros. unfold full_tier_v4, cov_all_absent. simpl.
+  destruct (Nat.eqb (coverage_present cv) 0%nat) eqn:E.
+  - apply Nat.eqb_eq in E. split; intro; [exact E | reflexivity].
+  - apply Nat.eqb_neq in E.
+    destruct ledger_resolves, vulnerable_promote; simpl;
+    split; intro H; try discriminate; try (exfalso; apply E; exact H).
+Qed.
+
+(* ------------------------------------------------------------------
+   Arithmetic monotonicity helpers on tier_level6, all proved by finite
+   case analysis (a 7-constructor enumerated type).
+   ------------------------------------------------------------------ *)
+
+Lemma level6_to_nat_le6 : forall l : tier_level6, (level6_to_nat l <= 6)%nat.
+Proof. intro l. destruct l; simpl; lia. Qed.
+
+Lemma nat_to_level6_spec : forall n : nat, level6_to_nat (nat_to_level6 n) = Nat.min n 6.
+Proof.
+  intros n.
+  destruct n as [|[|[|[|[|[|n]]]]]]; simpl; try reflexivity.
+  lia.
+Qed.
+
+Lemma max_level6_mono_l :
+  forall a a' b : tier_level6,
+    (level6_to_nat a <= level6_to_nat a')%nat ->
+    (level6_to_nat (max_level6 a b) <= level6_to_nat (max_level6 a' b))%nat.
+Proof.
+  intros a a' b H. unfold max_level6.
+  rewrite !nat_to_level6_spec.
+  pose proof (level6_to_nat_le6 a). pose proof (level6_to_nat_le6 a').
+  pose proof (level6_to_nat_le6 b). lia.
+Qed.
+
+Lemma max_level6_mono_r :
+  forall a b b' : tier_level6,
+    (level6_to_nat b <= level6_to_nat b')%nat ->
+    (level6_to_nat (max_level6 a b) <= level6_to_nat (max_level6 a b'))%nat.
+Proof.
+  intros a b b' H. unfold max_level6.
+  rewrite !nat_to_level6_spec.
+  pose proof (level6_to_nat_le6 a). pose proof (level6_to_nat_le6 b). pose proof (level6_to_nat_le6 b').
+  lia.
+Qed.
+
+Lemma max_level6_ge_r :
+  forall a b : tier_level6, (level6_to_nat b <= level6_to_nat (max_level6 a b))%nat.
+Proof.
+  intros a b. unfold max_level6. rewrite nat_to_level6_spec.
+  pose proof (level6_to_nat_le6 a). pose proof (level6_to_nat_le6 b). lia.
+Qed.
+
+Lemma promote_one_mono :
+  forall l1 l2 : tier_level6,
+    (level6_to_nat l1 <= level6_to_nat l2)%nat ->
+    (level6_to_nat (promote_one l1) <= level6_to_nat (promote_one l2))%nat.
+Proof. intros l1 l2 H. destruct l1, l2; simpl in *; lia. Qed.
+
+Lemma promote_one_mono_if :
+  forall (flag : bool) (l1 l2 : tier_level6),
+    (level6_to_nat l1 <= level6_to_nat l2)%nat ->
+    (level6_to_nat (if flag then promote_one l1 else l1)
+     <= level6_to_nat (if flag then promote_one l2 else l2))%nat.
+Proof. intros flag l1 l2 H. destruct flag; [apply promote_one_mono|]; exact H. Qed.
+
+(* ------------------------------------------------------------------
+   promoter_max is monotone under a pointwise relation that only ever
+   flips an `applies` flag from false to true while holding the level
+   fixed ("the same promoter list, but with more inputs now present/
+   firing").
+   ------------------------------------------------------------------ *)
+
+Inductive promoters_mono : list (bool * tier_level6) -> list (bool * tier_level6) -> Prop :=
+  | pm_nil : promoters_mono nil nil
+  | pm_cons :
+      forall b1 b2 l ps1 ps2,
+        (b1 = true -> b2 = true) ->
+        promoters_mono ps1 ps2 ->
+        promoters_mono ((b1, l) :: ps1) ((b2, l) :: ps2).
+
+Lemma promoter_max_monotone :
+  forall ps1 ps2, promoters_mono ps1 ps2 ->
+    (level6_to_nat (promoter_max ps1) <= level6_to_nat (promoter_max ps2))%nat.
+Proof.
+  intros ps1 ps2 H. induction H as [| b1 b2 l ps1 ps2 Himp Hmono IH].
+  - simpl. lia.
+  - simpl.
+    destruct b1 eqn:Eb1, b2 eqn:Eb2.
+    + apply max_level6_mono_r. exact IH.
+    + specialize (Himp eq_refl). discriminate.
+    + apply (Nat.le_trans _ (level6_to_nat (promoter_max ps2)) _).
+      * exact IH.
+      * apply max_level6_ge_r.
+    + exact IH.
+Qed.
+
+(* ------------------------------------------------------------------
+   MONOTONICITY THEOREMS (round-2 MUST-FIX #1) --
+   "ข้อมูลเพิ่มไม่เคยลดระดับ" (more real data never lowers the level).
+   ------------------------------------------------------------------ *)
+
+(* (a) Same promoter table, same ledger inputs: widening the coverage
+   vector (every present component stays present) never lowers the
+   reported tier, provided the unit was not already LR -- LR is a
+   refusal state, not a severity comparison, and is intentionally
+   excluded from this claim (see file-header discussion). *)
+Theorem full_tier_v4_promoter_monotone :
+  forall (cv1 cv2 : coverage_vector) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q) (promoters : list promoter),
+    cov_all_absent cv1 = false ->
+    (forall k, cov_get cv1 k = true -> cov_get cv2 k = true) ->
+    (level6_to_nat (tier (full_tier_v4 cv1 ledger_resolves vulnerable_promote D R F s t promoters))
+     <= level6_to_nat (tier (full_tier_v4 cv2 ledger_resolves vulnerable_promote D R F s t promoters)))%nat.
+Proof.
+  intros cv1 cv2 ledger_resolves vulnerable_promote D R F s t promoters Habs1 Hmono.
+  assert (Habs2 : cov_all_absent cv2 = false) by (eapply cov_all_absent_false_mono; eauto).
+  unfold full_tier_v4, tier. simpl.
+  rewrite Habs1, Habs2.
+  apply promote_one_mono_if.
+  apply max_level6_mono_r.
+  apply promoter_max_monotone.
+  induction promoters as [| p ps IH].
+  - simpl. constructor.
+  - simpl. constructor.
+    + intro Hp1. unfold promoter_applies in *.
+      apply andb_true_iff in Hp1 as [Hc Hf].
+      apply andb_true_iff. split; [apply Hmono; exact Hc | exact Hf].
+    + exact IH.
+Qed.
+
+(* (b) Same promoters, same non-LR coverage: the FULL-mode tier is >= the
+   PARTIAL-mode tier the identical promoter inputs would give -- FULL
+   only ADDS the S_H/T_act band term into the same max, it never
+   substitutes for the promoter floor. *)
+Theorem full_tier_v4_full_ge_partial :
+  forall (cv : coverage_vector) (vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q) (promoters : list promoter),
+    cov_all_absent cv = false ->
+    (level6_to_nat (tier (full_tier_v4 cv false vulnerable_promote D R F s t promoters))
+     <= level6_to_nat (tier (full_tier_v4 cv true vulnerable_promote D R F s t promoters)))%nat.
+Proof.
+  intros cv vulnerable_promote D R F s t promoters Habs.
+  unfold full_tier_v4, tier. simpl.
+  rewrite Habs.
+  apply promote_one_mono_if.
+  apply max_level6_mono_l.
+  simpl. apply Nat.le_0_l.
+Qed.
+
+(* ------------------------------------------------------------------
+   Worked examples, re-cast against the v4 top-level function.
+   ------------------------------------------------------------------ *)
+
+Definition ex_cov_hatyai : coverage_vector :=
+  {| cov_rain_obs := true; cov_rain_fcst := false;
+     cov_canal_level_vs_lines := true; cov_river_flow_vs_cap := false;
+     cov_dam_release := false; cov_pumps_state := false;
+     cov_upstream_inflow := false |}.
+
+Definition ex_promoters_hatyai : list promoter :=
+  {| p_id := P_RAIN_24H_EXCEEDS_DESIGN; p_requires := IK_rain_obs;
+     p_fires := true; p_level := T_L3 |}
+  :: {| p_id := P_CANAL_AT_WARNING_LINE; p_requires := IK_canal_level_vs_lines;
+        p_fires := true; p_level := T_L2 |}
+  :: {| p_id := P_CANAL_AT_CRITICAL_LINE; p_requires := IK_canal_level_vs_lines;
+        p_fires := false; p_level := T_L4 |}
+  :: {| p_id := P_DAM_RELEASE_ABOVE_SPILL_THRESHOLD; p_requires := IK_dam_release;
+        p_fires := false; p_level := T_L3 |}
+  :: nil.
+
+Example hatyai_v4_partial_L3 :
+  tier (full_tier_v4 ex_cov_hatyai false false 0%Q 0%Q 0%Q 0%Q None ex_promoters_hatyai) = T_L3.
+Proof. reflexivity. Qed.
+
+Example hatyai_v4_mode_partial :
+  mode (full_tier_v4 ex_cov_hatyai false false 0%Q 0%Q 0%Q 0%Q None ex_promoters_hatyai) = M_PARTIAL.
+Proof. reflexivity. Qed.
+
+Example hatyai_v4_coverage_2_of_7 :
+  readout_coverage_present (full_tier_v4 ex_cov_hatyai false false 0%Q 0%Q 0%Q 0%Q None ex_promoters_hatyai) = 2%nat.
+Proof. reflexivity. Qed.
+
+(* Round-2 MUST-FIX #1, concretely: a FULLY-resolved ledger with a low
+   S_H band (T_L0) but a firing rain promoter no longer reports L0 --
+   the promoter floor now applies under FULL mode too. *)
+Example full_mode_promoter_floor_not_ignored :
+  tier (full_tier_v4 ex_cov_hatyai true false 0%Q 0%Q 0%Q (1 # 10)%Q None ex_promoters_hatyai) = T_L3.
+Proof. reflexivity. Qed.
+
+(* The former v3 asymmetry directly refuted: the same promoters/coverage,
+   once with the ledger unresolved (PARTIAL) and once resolved (FULL,
+   band T_L0 from a low S_H), now give the SAME tier -- FULL never drops
+   below what PARTIAL already established. *)
+Example full_never_drops_below_partial_hatyai :
+  tier (full_tier_v4 ex_cov_hatyai false false 0%Q 0%Q 0%Q (1 # 10)%Q None ex_promoters_hatyai)
+  = tier (full_tier_v4 ex_cov_hatyai true false 0%Q 0%Q 0%Q (1 # 10)%Q None ex_promoters_hatyai).
+Proof. reflexivity. Qed.
+
+(* Vulnerable-unit promotion still composes on top of the v4 floor. *)
+Example hatyai_v4_vulnerable_promotes_to_L4 :
+  tier (full_tier_v4 ex_cov_hatyai false true 0%Q 0%Q 0%Q 0%Q None ex_promoters_hatyai) = T_L4.
+Proof. reflexivity. Qed.
+
+(* cov entirely absent still overrides everything, per the task's stated
+   order ("then LR only if coverage is all-absent/stale"). *)
+Definition ex_cov_none : coverage_vector :=
+  {| cov_rain_obs := false; cov_rain_fcst := false;
+     cov_canal_level_vs_lines := false; cov_river_flow_vs_cap := false;
+     cov_dam_release := false; cov_pumps_state := false;
+     cov_upstream_inflow := false |}.
+
+Example all_absent_is_LR_even_with_firing_promoters :
+  tier (full_tier_v4 ex_cov_none true true (5 # 1)%Q (5 # 1)%Q (100 # 1)%Q (12 # 10)%Q None ex_promoters_hatyai) = T_LR.
+Proof. reflexivity. Qed.
+
+Example all_absent_mode_is_LR :
+  mode (full_tier_v4 ex_cov_none true true (5 # 1)%Q (5 # 1)%Q (100 # 1)%Q (12 # 10)%Q None ex_promoters_hatyai) = M_LR.
+Proof. reflexivity. Qed.
+
+(* ----------------------------------------------------------------------
+   WHAT THIS v4 ADDITION DOES NOT PROVE: the arithmetic promoter trigger
+   conditions themselves (e.g. `rain_24h_mm > 80`, `canal_water_level_m
+   >= canal_warning_m`) as anything beyond a caller-supplied boolean
+   `p_fires`; which cov(U) component is "present/stale/absent" against a
+   real staleness window (an IO-shaped classification, not arithmetic);
+   the VULNERABLE_UNIT_PROMOTION condition itself (`vulnerable_promote`
+   remains an opaque caller-supplied bool, unchanged from v3); and any
+   claim that a v4 tier correctly predicts real flooding -- see the
+   proposal's own falsifier, unchanged by this addition. This file's v4
+   claim is only: given a 7-component coverage vector, a fixed promoter
+   list already reduced to (id, requires, fires, level), the ledger
+   inputs, and the vulnerable-unit flag, the mode-aware tier readout is
+   a single total, decidable record value, monotone in the coverage
+   vector for promoter inputs (Theorem full_tier_v4_promoter_monotone)
+   and never lower in FULL mode than the PARTIAL tier the same promoter
+   inputs would give (Theorem full_tier_v4_full_ge_partial), with LR
+   still dominating every other input exactly as in v2/v3.
    ---------------------------------------------------------------------- *)

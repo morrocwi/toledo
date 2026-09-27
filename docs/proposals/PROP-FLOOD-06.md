@@ -1,9 +1,10 @@
 # PROP-FLOOD-06 — NEW DERIVATION / PROPOSAL (not a Toledo theorem)
 
 **Area-generic outlet-headroom / drainage-coping tier-ladder indicator, with (lat,lon) unit
-resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v3`
-(amended per founder instruction and a read-only falsifier backtest — see "ใช้ได้แม้ข้อมูลไม่ครบ"
-and "v3 amendments" below; v2 amendments retained further down for history).
+resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v4`
+(amended per independent review round 2 — see "ข้อมูลเพิ่มไม่เคยลดระดับ — v4" and "v4 amendments"
+below; v3 amendments per founder instruction and a read-only falsifier backtest, and v2 amendments
+per independent review round 1, both retained further down for history).
 
 Registry entry: `registry/proposals/flood_outlet_coping.json`
 Coq stub (tier functions, total + decidable, Closed under the global context, no axioms):
@@ -24,6 +25,84 @@ PROP-FLOOD-03).
 - **PR #62** (OPEN as of 2026-09-27, branch `proposals/flood-burden-ledger`, commit `1578b354`) —
   PROP-FLOOD-05a/b, `registry/proposals/flood_burden_ledger.json` — merged into this branch for the
   same reason as PR #60.
+
+## ข้อมูลเพิ่มไม่เคยลดระดับ — v4, promoters as a floor under every mode + one inseparable readout
+
+**Round-2 independent review (`REVIEW_PROP_FLOOD_06_r2.md`) found two MUST-FIX gaps in v3, both now
+closed:**
+
+### MUST-FIX #1 — PARTIAL could silently outrank FULL, undocumented
+
+v3's mode selection was **exclusive**: FULL mode consulted only the `S_H`/`T_act` bands
+(`full_tier`), PARTIAL mode consulted only the promoter table — never both. Two promoters encode
+raw physical facts independent of the `S_H` arithmetic (`RAIN_24H_EXCEEDS_DESIGN`,
+`PUMPS_ZERO_RUNNING_ABOVE_THRESHOLD`). A unit with a **fully resolved** ledger but rain above the
+design threshold could report whatever `combined_tier` gave — possibly `L0`/`L1` — while an
+otherwise-identical unit merely **missing one input** (hence PARTIAL) on the same rain reading got
+`L3` from the promoter. More data could yield a *lower* tier than less data on the same signal.
+
+**Fix — promoters are now a floor under every mode.** The task's own stated order:
+
+1. `band_tier := full_tier`'s `S_H`/`T_act` combined tier **if the ledger resolves** (FULL),
+   **else `L0`** (PARTIAL/no-ledger contributes no band term — not a penalty).
+2. `promoter_max := ` the maximum tier level over every promoter whose required `cov(U)` component
+   is present — **in every mode, not only PARTIAL**.
+3. `base_tier := max(band_tier, promoter_max)` — FULL's ledger tier and the promoter floor are
+   always combined, never mutually exclusive.
+4. The vulnerable-unit `+1` rule applies to `base_tier` identically regardless of mode.
+5. `LR` overrides everything, **checked last**, iff `cov(U)` is entirely absent/stale.
+
+This is the founder's rule made precise as an inequality, not just a policy sentence:
+**"ข้อมูลเพิ่มไม่เคยลดระดับ"** — more real data never lowers the reported level. Proved in Coq:
+
+- `full_tier_v4_promoter_monotone` — for the same promoter table and the same ledger inputs,
+  widening the coverage vector (any `cov` component that was present stays present) never lowers
+  the tier, given the unit was not already `LR` (`LR` is a refusal state, not a severity
+  comparison, and is excluded from this claim by hypothesis — it still dominates unconditionally,
+  just not part of the monotonicity ordering itself).
+- `full_tier_v4_full_ge_partial` — for the same promoters and the same non-`LR` coverage, the
+  FULL-mode tier is always `>=` the PARTIAL-mode tier the identical promoter inputs would give,
+  since FULL only *adds* the band term into the same `max`, it never substitutes for the promoter
+  floor.
+
+Concretely (`full_never_drops_below_partial_hatyai` in the `.v` file): the same Hat Yai coverage
+and promoter inputs, once with the ledger unresolved (PARTIAL, band `L0`) and once resolved (FULL,
+band `L0` from a low `S_H`), now give the **same** `L3` tier — FULL never drops below what PARTIAL
+already established from the same real inputs.
+
+### MUST-FIX #2 — coverage_score/mode were not structurally mandatory
+
+v3's Coq return type was a bare `tier_level6`; `mode`/`coverage_score`/`based_on`/`missing` existed
+only as JSON/MD prose a consumer could silently drop, reproducing exactly the false "ปกติ" (normal)
+reassurance the founder's crisis-usability instruction was meant to prevent.
+
+**Fix — one inseparable `readout` record.** The Coq return type of the top-level function
+(`full_tier_v4`) is now:
+
+```coq
+Record readout := {
+  tier                     : tier_level6;
+  mode                     : mode3;              (* FULL | PARTIAL | LR *)
+  readout_coverage_present : nat;                 (* 0..7 *)
+  readout_coverage_total   : nat;                 (* always 7 *)
+  based_on                 : list input_kind;
+  missing                  : list input_kind;
+  promoters_fired          : list promoter_id
+}.
+```
+
+Proved: `readout_eq_dec` (decidable equality), `full_tier_v4_coverage_total_is_7` (coverage_total
+is 7 by construction — a 7-field `coverage_vector` record, not a runtime list length),
+`full_tier_v4_coverage_present_le_7` (coverage_present never exceeds 7, since it is a sum of 7
+booleans), and `full_tier_v4_LR_iff_coverage_present_0` (the record's own `mode` field is `LR` iff
+`coverage_present = 0`).
+
+**Consumer contract (mandatory, not optional):** any UI or downstream consumer of this object's
+readout **MUST render `tier` together with `mode` and `coverage`** — never `tier` alone. FloodConnect's
+own UI copy already states this: **"ระดับ Lk · ข้อมูล n/7 · อิงจาก …"** (Level Lk · data n/7 · based
+on …). A consumer that surfaces only `tier: L0` at `coverage_present: 1` reproduces the exact false
+`ปกติ` reassurance this whole PARTIAL-mode machinery exists to prevent — that is a protocol
+violation of this schema, not a permitted simplification.
 
 ## ใช้ได้แม้ข้อมูลไม่ครบ — v3, the graceful-partial-readout rule
 
@@ -150,6 +229,22 @@ essentially every one of Hat Yai's ~83 unit-days.
   Bangkok-East-shaped units with partial pump declarations), not a threshold-placement problem.
   This is left as an item for re-running the backtest against v3's `C_H(U)` definition — **no S_H
   or T_act band value is changed by this v3 bump.**
+
+## v4 amendments (per independent review round 2, `REVIEW_PROP_FLOOD_06_r2.md`)
+
+1. **Promoters are now a floor under every mode** — `readout_classes.mode`'s FULL branch is no
+   longer exclusive of the promoter table; `full_tier_v4` computes
+   `max(band_tier, promoter_max)` in both FULL and PARTIAL, then the vulnerable-unit `+1` rule,
+   then `LR` overrides last. See "ข้อมูลเพิ่มไม่เคยลดระดับ — v4" above.
+2. **Monotonicity proved in Coq** — `full_tier_v4_promoter_monotone` (adding a present promoter
+   input never lowers the tier, non-`LR` case) and `full_tier_v4_full_ge_partial` (FULL `>=` the
+   PARTIAL tier the same promoter inputs would give).
+3. **The Coq return type is now the `readout` record** (`tier`, `mode`, `coverage_present`,
+   `coverage_total`, `based_on`, `missing`, `promoters_fired`), replacing v3's bare `tier_level6` —
+   see `readout_classes.readout_schema` in the JSON and the MUST-FIX #2 section above.
+4. **No S_H/T_act band value, promoter threshold, or coverage-vector semantics is changed by this
+   pass** — this is a mode-selection and return-type fix only, exactly as v3 changed only
+   `C_H(U)`/mode without retuning any threshold.
 
 ## v2 amendments (per independent review, `REVIEW_PROP_FLOOD_06.md`)
 
