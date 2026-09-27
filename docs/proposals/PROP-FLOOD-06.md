@@ -1,10 +1,177 @@
 # PROP-FLOOD-06 — NEW DERIVATION / PROPOSAL (not a Toledo theorem)
 
 **Area-generic outlet-headroom / drainage-coping tier-ladder indicator, with (lat,lon) unit
-resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v4`
-(amended per independent review round 2 — see "ข้อมูลเพิ่มไม่เคยลดระดับ — v4" and "v4 amendments"
-below; v3 amendments per founder instruction and a read-only falsifier backtest, and v2 amendments
-per independent review round 1, both retained further down for history).
+resolution, refusal, and a graceful PARTIAL mode for incomplete real-world data.** Version `v5`
+(LEADING upstream/rain/forecast promoters with declared travel time, per-unit calibration
+procedure, and hysteresis/persistence — see "ถึงจะแม่นยำและใช้ได้กับทุกสถานที่ — v5" immediately
+below; v4/v3/v2 amendments retained further down for history).
+
+## ถึงจะแม่นยำและใช้ได้กับทุกสถานที่ — v5, leading inputs + per-unit calibration + hysteresis
+
+**Founder instruction (verbatim, 2026-09-27):** "ถึงจะแม่นยำและใช้ได้กับทุกสถานที่" — accurate AND
+usable everywhere.
+
+**Falsifier that motivated this bump** (`thailand_flood_kg/docs/BACKTEST_PROP_FLOOD_06_v1.md`,
+RELAYED — this proposal did not itself run the backtest, only records its findings): v4's
+`REFUSED` fix worked as intended (92.5% → 0.9% across the two backtests), but the surviving
+readouts still fire **late or not at all** against real ground truth, because every v4 `cov(U)`
+component is **IN-UNIT** — it rises together with the flood, not ahead of it:
+
+- **Hat Yai (X.44)** — a real gauge (not GloFAS) never crossed `L3` across **two full real
+  events** (2553, 2565).
+- **Nan (N.1)** — first warned **−48h** (2 days *after* onset).
+- **Chiang Mai (P.1)** — first warned **0h** (simultaneous with onset, not ahead of it).
+- **Ayutthaya** — the one unit that *did* get real lead time (+264h, GloFAS-relayed) is exactly
+  the unit whose `F_H(U)` is upstream-inflow-dominated by construction — but it also has the
+  worst false-alarm rate (51.6%, n=124) and `S_H` ranges that overlap heavily between flooded
+  and non-flooded days (`[1.745, 2.977]` flooded vs. up to `2.843` non-flooded).
+
+**Reading**: the *system* (`C_H(U)`/PARTIAL mode) is no longer the bottleneck; the *inputs* are —
+every one of them samples the unit itself, so by the time any of them moves, the flood is already
+arriving. Fixing this requires a genuinely **upstream, leading** signal, not another IN-UNIT term.
+
+### 1. Three LEADING inputs, widening `cov(U)` to `cov5(U)` (10 components, ≥9 required)
+
+| new component | construction | reused parent |
+|---|---|---|
+| `upstream_rise_rate` | PROP-FLOOD-01's `Delta_k(t) := h(t) − h(t−k)`, RISING classification, applied to the **declared UPSTREAM gauge's own series**, not `U`'s | **PROP-FLOOD-01** (new parent, added to this proposal's JSON `parents` array — it was previously cited only in MD prose) |
+| `basin_rain_accum` | rain accumulated over `A_U`'s **upstream** sub-basin (DWR polygon, not `A_U` itself), 24h and 72h windows, gauges + ERA5/IMERG gap-fill tagged `RELAYED` | generalises `F_H(U)`'s existing `c_U·A_U·rain` shape to the upstream polygon |
+| `forecast_rain_72h` | ensemble forecast rain (median **and** max, never collapsed) over the next 72h at the upstream sub-basin | reuses v2's "ensemble = whichever multimodel files are present, logged per-run" declaration |
+
+Each new component is `present`/`stale`/`absent` exactly like the existing 7, checked
+independently. `coverage_total` becomes **10** (`coverage_total_v5`, proved `>= 9` and `= 10` in
+Coq). A unit with no declared upstream gauge at all reports `upstream_rise_rate` as structurally
+absent via a new, narrowly-scoped refusal code — see below — never silently zero.
+
+### 2. Declared travel time `tau_up(U)` and the promoters
+
+A unit's **upstream gauge(s)** and `tau_up(U)` (hours, the lag from the upstream point to `U`)
+must be declared per unit — this proposal does **not** invent a national default travel time:
+
+| unit | candidate upstream gauge | status (per `thailand_flood_kg/docs/knowledge/DATA_SWEEP_2026-09-27.md`) |
+|---|---|---|
+| Nan town | **N.64** (Tha Wang Pha) | **CONFIRMED** present, real discharge history (station 3246) |
+| Chiang Mai (P.1) | P.67 / P.75 | **UNCONFIRMED** — no hit anywhere in this repo's own knowledge base; founder's own brief says "if they exist" — this proposal does not assert they do |
+| Hat Yai (X.44) | X.90 / X.173 | X.90 **confirmed present** but used only as a *downstream control* station in the backtest — its suitability as an *upstream* leading gauge is itself OPEN, not assumed; X.173 unconfirmed |
+| Ayutthaya | C.2 → C.13 | C.2 **UNCONFIRMED**; C.13 is the unit's own already-declared outlet reach, not an upstream input |
+
+`tau_up(U)` itself is **OPEN-until-measured** everywhere — this v5 bump only fills the
+*declaration slot* and states which candidate gauge would fill it where one is confirmed to
+exist. An undeclared `tau_up`/upstream gauge REFUSES only the leading term for that unit
+(`UPSTREAM_GAUGE_UNDECLARED`, new refusal code, scoped — see below), never the whole readout.
+
+Three new promoters (`readout_classes.promoter_table` in the JSON):
+
+| id | fires when | min tier |
+|---|---|---|
+| `UPSTREAM_RISE_RATE_EXCEEDS` | upstream gauge RISING above a declared rate | `L3` |
+| `BASIN_RAIN_ACCUM_EXCEEDS` | 24h/72h upstream-basin rain exceeds a declared threshold | `L2` |
+| `FORECAST_RAIN_72H_EXCEEDS` | ensemble forecast (median or max) over 72h exceeds a declared threshold | `L1` (deliberately the lowest — the only genuinely forward, not-yet-observed term, treated as a "watch" signal, not an act-now trigger on its own) |
+
+These compose into the existing `promoter_max` floor exactly like every v3/v4 promoter — no new
+mode-selection logic, no change to the FULL/PARTIAL/LR precedence.
+
+### 3. Projected time-to-threshold `T_act_upstream` / `lead_time_h`
+
+**PROP-FLOOD-02 is reused a second time** (its first reuse, `T_act(U)`, stays on `U`'s own
+in-unit `F_t`/`C_H` series, unchanged): `T_act_upstream(U) := ` PROP-FLOOD-02's
+`T_k := (theta − h(t))·k / Delta_k(t)` construction, with `h(t) := h_up(t − tau_up(U))` (the
+upstream series shifted back by the declared travel time) and `theta :=` the upstream gauge's
+own declared threshold. Because the input is evaluated `tau_up` hours *before* it would arrive
+at `U`, a crossing projected from it is a genuine advance warning — this is the actual mechanism
+that produces lead time, not merely a relabeling of `T_act(U)`. Reported as `lead_time_h : option
+Q` in the readout record — `None` under PROP-FLOOD-02's own REFUSED conditions (falling,
+already-crossed, `NO_READOUT`) or `UPSTREAM_GAUGE_UNDECLARED`, `Some(hours)` otherwise; never a
+fabricated constant.
+
+### 4. Per-unit calibration — a declared falsifier procedure, not a fit that claims truth
+
+For a unit with recorded event history: choose this unit's own band edges (`S_H`, `T_act`) and
+promoter thresholds from a **finite, predeclared candidate grid** (all `ℚ` — e.g. `S_H` edges
+from `{0.1, 0.2, …, 2.0}`, rain thresholds from `{40, 50, …, 150}` mm — the grid is stated *in
+advance*, never chosen after seeing which value "worked"), by **maximising hits subject to a
+declared max false-alarm-rate ceiling** (e.g. `FA ≤ 15%`, itself declared, not silently picked).
+The chosen values plus the **MEASURED-on-backtest** hit/FA/median-lead-time they actually produced
+are recorded as that unit's own `calibration` block — **append-only**, dated, versioned (mirrors
+this proposal's own `.v<k>` lineage discipline, applied per unit).
+
+**Falsifier discipline (the rule that keeps this honest):** a unit may be **re-calibrated only
+when a genuinely NEW observed event** (ground truth not already in the fitting set) becomes
+available. Re-running the same grid against the same already-fitted data twice, with no new
+event, is **prohibited** — this must be refused/flagged, not silently permitted.
+
+Readout field: `calibrated: yes(n_events, hit, FA, median_lead_h) | no ("ยังไม่สอบเทียบที่นี่")`.
+**No unit in this v5 registration has actually been calibrated** — every worked unit (Hat Yai,
+Nan, Chiang Mai, Ayutthaya, Bangkok East) reports `calibrated: no`, using the unchanged v1–v4
+national-default thresholds. See `registry/proposals/flood_outlet_coping.json`'s new
+`per_unit_calibration` block for what is/isn't confirmed per unit and what blocks a real run.
+
+### 5. Hysteresis / persistence — false-alarm control, declared, not free
+
+A promoter/band **raise** takes effect only after it holds for `p` **consecutive** hourly
+readouts of the un-persisted (raw) rule (declared default `p = 2`); a **step-down** takes effect
+only after `q` consecutive readouts at or below the lower level (declared default `q = 3`). Both
+`OPEN-for-founder-tuning`, exactly like the `S_H`/`T_act` band edges.
+
+**This trades lead time for false-alarm rate — explicitly, not silently:** holding `p ≥ 2` delays
+every raise by at least `(p−1)` hours relative to the raw rule, which is a real cost against
+Nan/Chiang Mai's already-thin-or-negative lead time. Any backtest of this rule **must** report
+the lead-time cost and the false-alarm-rate benefit **together**, never one without the other.
+
+Formalised in Coq as `persisted` (a hysteresis state machine over a raw per-hour tier sequence)
+with the falsifier-relevant guarantee proved as `persisted_is_some_historical_raw`:
+**persistence with `p, q ≥ 1` never reports a tier absent from the raw history** — for every hour
+`n`, the persisted tier at `n` equals the *raw* (un-persisted) tier at some hour `m ≤ n`. It can
+only **delay** a raise or lowering the raw rule already produced; it can never **fabricate** a
+level the raw rule never produced at all.
+
+### 6. Coq — what's new, what's kept
+
+- `coverage_vector_v5` **embeds** v4's `coverage_vector` (`cv5_base`) plus the 3 new bool
+  components — v4's own `coverage_vector`/`coverage_present`/`coverage_total`/`cov_all_absent`
+  and every theorem about them are **unchanged**, still typecheck, still hold.
+- `readout_v5` is a fresh record with the same 7 fields as v4's `readout` plus `calibrated : bool`
+  and `lead_time_h : option Q` — v4's `readout` type is likewise **untouched**.
+- `full_tier_v5` re-derives, for the widened vector and the concatenated (base + leading)
+  promoter list: totality (`full_tier_v5_total`), `coverage_total_v5 = 10` (and `>= 9`,
+  `coverage_total_v5_ge_9`), `coverage_present_v5 <= 10`, `LR iff coverage_present_v5 = 0`
+  (`full_tier_v5_LR_iff_coverage_present_0`), and the two v4-style monotonicity theorems
+  (`full_tier_v5_promoter_monotone`, `full_tier_v5_full_ge_partial`) — same proof pattern as v4,
+  extended to the wider list via a generic `promoters_mono_app`/`applies_pairs_mono` helper so the
+  concatenated base+leading promoter list is handled uniformly.
+- `persisted` / `persisted_is_some_historical_raw` — new, the hysteresis discipline above.
+- **All v1–v4 theorems are kept, unmodified, and still hold** — nothing about `full_tier`,
+  `full_tier_v3`, or `full_tier_v4` is touched by this section; `coqc -q` clean, `Print
+  Assumptions` closed under the global context (no axioms) on every theorem in the file.
+
+**No `S_H`/`T_act`/promoter threshold VALUE from v1–v4 is changed by this v5 bump** — this is a
+structural addition (leading inputs, a calibration *procedure*, a hysteresis *rule*), not a
+retune. No unit is actually calibrated by this registration.
+
+### v6 TODO — NOT YET IMPLEMENTED (received during this v5 registration)
+
+**Founder instruction (verbatim):** "อย่าลืมว่าไม่มีทางมีข้อมูลพอ แต่ใช้การอนุมานจากข้อมูลที่แข็งแรง
+เป็นหลัก" — there is never enough data; use inference from strong-enough data as the main tool.
+
+This asks for a **third coverage state**, `inferred` (alongside `present`/`absent`), derived from
+declared consistency rules over connected anchors — e.g. *downstream reach at normal level + no
+pumps running + no level drop for N hours ⇒ the inner link is stalled*, an inference, not a
+reading. Requirements: counted in coverage at a **lower rank** than `present`, never conflated
+with it; always listed in `based_on` together with the **anchor ids** that licensed the
+inference; a new `confidence : strength` field on the readout record carrying the **ordinal
+confidence of the weakest anchor** in the chain; `LR` narrowed further to "nothing present **and**
+nothing inferable" (an all-absent-but-inferable unit is no longer `LR`); and a **third
+monotonicity theorem** — `inferred → present` never lowers the tier (an inferred component later
+confirmed present by a real reading must never cause a reported drop).
+
+**Why this is v6, not folded into v5:** an anchor-consistency inference rule is a genuinely new
+primitive — not a retained difference (PROP-FLOOD-01), not a linear-extension threshold
+(PROP-FLOOD-02), not a promoter already in this table — and this repository's own Toledo-first
+reuse gate (`EQUATION_SOURCE_POLICY.md` `TG-RFG-01`) requires a Toledo lookup and Genesis-
+compatibility pass **before** deriving and formalising it, not rushing it into this commit under
+time pressure. Recorded here, in the JSON's `honest_caveats`, and in the Coq file's closing v5
+comment block. v5's existing `present`/`absent` cov5(U) and its coverage/promoter/monotonicity
+apparatus are unchanged and remain valid — this is additive future scope, not a retraction.
 
 Registry entry: `registry/proposals/flood_outlet_coping.json`
 Coq stub (tier functions, total + decidable, Closed under the global context, no axioms):

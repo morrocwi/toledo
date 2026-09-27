@@ -1,8 +1,20 @@
 (* ===================================================================== *)
 (*  PROP_FLOOD_06_outlet_coping_tier.v                                   *)
 (*  Area-generic outlet-headroom / drainage-coping tier-ladder function   *)
-(*  (Toledo proposal PROP-FLOOD-06.v4, code weld/M.??.v1, proposals-lane, *)
+(*  (Toledo proposal PROP-FLOOD-06.v5, code weld/M.??.v1, proposals-lane, *)
 (*  not yet canonicalized -- see registry/LINEAGE.jsonl code PROP-FLOOD-06)*)
+(*                                                                         *)
+(*  v5 AMENDMENT (per founder instruction 2026-09-27, "ถึงจะแม่นยำและ      *)
+(*  ใช้ได้กับทุกสถานที่", and thailand_flood_kg's second falsifier         *)
+(*  backtest BACKTEST_PROP_FLOOD_06_v1.md): three LEADING coverage        *)
+(*  components (upstream_rise_rate/basin_rain_accum/forecast_rain_72h),   *)
+(*  a lead_time_h field (PROP-FLOOD-02 reused a second time, shifted by a *)
+(*  declared travel time tau_up), a per-unit calibration procedure, and a *)
+(*  hysteresis/persistence rule -- see the v5 section at the bottom of    *)
+(*  this file. `coverage_vector_v5`/`readout_v5` EXTEND (embed) v4's      *)
+(*  `coverage_vector`/`readout` by wrapping, never modifying: every v1-v4 *)
+(*  type, definition and theorem above this file's v5 section is         *)
+(*  UNCHANGED and still holds exactly as before.                         *)
 (*                                                                         *)
 (*  v4 AMENDMENT (per independent review round 2, REVIEW_PROP_FLOOD_06_r2 *)
 (*  .md, both MUST-FIX findings): (1) promoters are now a FLOOR under      *)
@@ -1113,3 +1125,529 @@ Proof. reflexivity. Qed.
    inputs would give (Theorem full_tier_v4_full_ge_partial), with LR
    still dominating every other input exactly as in v2/v3.
    ---------------------------------------------------------------------- *)
+
+(* ========================================================================
+   v5 ADDITION -- LEADING promoters (upstream rise-rate, basin rain
+   accumulation, forecast rain), declared travel time tau_up, per-unit
+   calibration, and hysteresis/persistence.  PROP-FLOOD-06.v5.
+   ======================================================================== *)
+
+(* ------------------------------------------------------------------
+   1. Ten-component coverage vector cov5(U), by EMBEDDING v4's 7-field
+      `coverage_vector` (reused unchanged, per Toledo-first reuse
+      discipline) plus the 3 new leading components.
+   ------------------------------------------------------------------ *)
+
+Inductive input_kind_v5 : Set :=
+  | IK5_base (k : input_kind)
+  | IK5_upstream_rise_rate
+  | IK5_basin_rain_accum
+  | IK5_forecast_rain_72h.
+
+Theorem input_kind_v5_eq_dec : forall x y : input_kind_v5, {x = y} + {x <> y}.
+Proof. decide equality. apply input_kind_eq_dec. Qed.
+
+Record coverage_vector_v5 := mkCovV5 {
+  cv5_base                 : coverage_vector;
+  cv5_upstream_rise_rate    : bool;
+  cv5_basin_rain_accum      : bool;
+  cv5_forecast_rain_72h     : bool
+}.
+
+Definition all_input_kinds_v5 : list input_kind_v5 :=
+  map IK5_base all_input_kinds
+  ++ IK5_upstream_rise_rate :: IK5_basin_rain_accum :: IK5_forecast_rain_72h :: nil.
+
+Definition coverage_total_v5 : nat := 10%nat.
+
+Theorem coverage_total_v5_is_10 : coverage_total_v5 = 10%nat.
+Proof. reflexivity. Qed.
+
+Theorem coverage_total_v5_ge_9 : (coverage_total_v5 >= 9)%nat.
+Proof. unfold coverage_total_v5. lia. Qed.
+
+Theorem coverage_total_v5_eq_all_kinds_v5_length :
+  coverage_total_v5 = length all_input_kinds_v5.
+Proof. reflexivity. Qed.
+
+Definition cov5_get (cv5 : coverage_vector_v5) (k : input_kind_v5) : bool :=
+  match k with
+  | IK5_base k' => cov_get (cv5_base cv5) k'
+  | IK5_upstream_rise_rate => cv5_upstream_rise_rate cv5
+  | IK5_basin_rain_accum => cv5_basin_rain_accum cv5
+  | IK5_forecast_rain_72h => cv5_forecast_rain_72h cv5
+  end.
+
+Definition cov5_present_kinds (cv5 : coverage_vector_v5) : list input_kind_v5 :=
+  filter (fun k => cov5_get cv5 k) all_input_kinds_v5.
+
+Definition cov5_missing_kinds (cv5 : coverage_vector_v5) : list input_kind_v5 :=
+  filter (fun k => negb (cov5_get cv5 k)) all_input_kinds_v5.
+
+Definition coverage_present_v5 (cv5 : coverage_vector_v5) : nat :=
+  ( coverage_present (cv5_base cv5)
+  + bool_to_nat (cv5_upstream_rise_rate cv5)
+  + bool_to_nat (cv5_basin_rain_accum cv5)
+  + bool_to_nat (cv5_forecast_rain_72h cv5) )%nat.
+
+Theorem coverage_present_v5_le_total :
+  forall cv5 : coverage_vector_v5, (coverage_present_v5 cv5 <= coverage_total_v5)%nat.
+Proof.
+  intro cv5. unfold coverage_present_v5, coverage_total_v5.
+  pose proof (coverage_present_le_total (cv5_base cv5)) as Hb.
+  unfold coverage_total in Hb.
+  destruct (cv5_upstream_rise_rate cv5), (cv5_basin_rain_accum cv5), (cv5_forecast_rain_72h cv5);
+  simpl; lia.
+Qed.
+
+Definition cov5_all_absent (cv5 : coverage_vector_v5) : bool :=
+  Nat.eqb (coverage_present_v5 cv5) 0%nat.
+
+Lemma exists_true_component_v5 :
+  forall cv5 : coverage_vector_v5, coverage_present_v5 cv5 <> 0%nat -> exists k, cov5_get cv5 k = true.
+Proof.
+  intros cv5 Hne.
+  destruct (cv5_upstream_rise_rate cv5) eqn:E1. { exists IK5_upstream_rise_rate; exact E1. }
+  destruct (cv5_basin_rain_accum cv5) eqn:E2. { exists IK5_basin_rain_accum; exact E2. }
+  destruct (cv5_forecast_rain_72h cv5) eqn:E3. { exists IK5_forecast_rain_72h; exact E3. }
+  destruct (Nat.eqb (coverage_present (cv5_base cv5)) 0) eqn:E4.
+  - exfalso. apply Hne. unfold coverage_present_v5, bool_to_nat.
+    rewrite E1, E2, E3. apply Nat.eqb_eq in E4. rewrite E4. reflexivity.
+  - apply Nat.eqb_neq in E4.
+    destruct (exists_true_component (cv5_base cv5) E4) as [k Hk].
+    exists (IK5_base k). simpl. exact Hk.
+Qed.
+
+Lemma coverage_present_v5_pos_of_true :
+  forall cv5 k, cov5_get cv5 k = true -> coverage_present_v5 cv5 <> 0%nat.
+Proof.
+  intros cv5 k Hk.
+  destruct k as [k' | | | ]; simpl in Hk; unfold coverage_present_v5, bool_to_nat.
+  - pose proof (coverage_present_pos_of_true (cv5_base cv5) k' Hk) as Hb.
+    lia.
+  - rewrite Hk. simpl. lia.
+  - rewrite Hk. simpl. lia.
+  - rewrite Hk. simpl. lia.
+Qed.
+
+Lemma cov5_all_absent_false_mono :
+  forall cv1 cv2 : coverage_vector_v5, cov5_all_absent cv1 = false ->
+    (forall k, cov5_get cv1 k = true -> cov5_get cv2 k = true) ->
+    cov5_all_absent cv2 = false.
+Proof.
+  intros cv1 cv2 H1 Hmono.
+  unfold cov5_all_absent in *.
+  apply Nat.eqb_neq. apply Nat.eqb_neq in H1.
+  destruct (exists_true_component_v5 cv1 H1) as [k Hk].
+  apply Hmono in Hk.
+  eapply coverage_present_v5_pos_of_true; eauto.
+Qed.
+
+(* ------------------------------------------------------------------
+   2. Leading promoters (new promoter_id_v5 constructors + promoter_v5
+      record over input_kind_v5), reusing `promoter_max`/`max_level6`/
+      `promote_one` UNCHANGED (Toledo-first reuse: no new max/promotion
+      primitive is derived, only the missing piece -- 3 new promoter
+      rows -- is added).
+   ------------------------------------------------------------------ *)
+
+Inductive promoter_id_v5 : Set :=
+  | P5_base (p : promoter_id)
+  | P5_UPSTREAM_RISE_RATE_EXCEEDS
+  | P5_BASIN_RAIN_ACCUM_EXCEEDS
+  | P5_FORECAST_RAIN_72H_EXCEEDS.
+
+Theorem promoter_id_v5_eq_dec : forall x y : promoter_id_v5, {x = y} + {x <> y}.
+Proof. decide equality. apply promoter_id_eq_dec. Qed.
+
+Record promoter_v5 := mkPromoterV5 {
+  p5_id       : promoter_id_v5;
+  p5_requires : input_kind_v5;
+  p5_fires    : bool;
+  p5_level    : tier_level6
+}.
+
+Definition promoter_applies_v5 (cv5 : coverage_vector_v5) (p5 : promoter_v5) : bool :=
+  andb (cov5_get cv5 (p5_requires p5)) (p5_fires p5).
+
+Definition promoters_v5_that_apply (cv5 : coverage_vector_v5) (ps : list promoter_v5) : list promoter_v5 :=
+  filter (promoter_applies_v5 cv5) ps.
+
+(* ------------------------------------------------------------------
+   3. readout_v5 -- SAME shape as v4's `readout` record plus the two
+      new fields (`calibrated`, `lead_time_h`).  v4's `readout` type
+      itself is UNCHANGED; this is a fresh, additive record, not a
+      replacement (Coq has no record subtyping/inheritance, so an
+      "extension" is expressed as a new record with the same field
+      shape plus the delta).
+   ------------------------------------------------------------------ *)
+
+Record readout_v5 := mkReadoutV5 {
+  tier_v5                     : tier_level6;
+  mode_v5                     : mode3;
+  readout_coverage_present_v5 : nat;   (* 0..10 *)
+  readout_coverage_total_v5   : nat;   (* always 10 *)
+  based_on_v5                 : list input_kind_v5;
+  missing_v5                  : list input_kind_v5;
+  promoters_fired_v5          : list promoter_id_v5;
+  calibrated                  : bool;
+  lead_time_h                 : option Q
+}.
+
+Theorem Q_eq_dec : forall x y : Q, {x = y} + {x <> y}.
+Proof.
+  intros x y. decide equality.
+  - apply Pos.eq_dec.
+  - apply Z.eq_dec.
+Qed.
+
+Theorem option_Q_eq_dec : forall x y : option Q, {x = y} + {x <> y}.
+Proof. decide equality. apply Q_eq_dec. Qed.
+
+Theorem readout_v5_eq_dec : forall x y : readout_v5, {x = y} + {x <> y}.
+Proof.
+  decide equality.
+  - apply option_Q_eq_dec.
+  - apply Bool.bool_dec.
+  - apply (list_eq_dec promoter_id_v5_eq_dec).
+  - apply (list_eq_dec input_kind_v5_eq_dec).
+  - apply (list_eq_dec input_kind_v5_eq_dec).
+  - apply Nat.eq_dec.
+  - apply Nat.eq_dec.
+  - apply mode3_eq_dec.
+  - apply tier_level6_eq_dec.
+Qed.
+
+(* ------------------------------------------------------------------
+   4. full_tier_v5 -- the single top-level entry point for v5, same
+      band-then-promoter-floor-then-vulnerable-then-LR order as v4's
+      `full_tier_v4`, over the widened vector and the CONCATENATED
+      base+leading promoter lists.
+   ------------------------------------------------------------------ *)
+
+Definition full_tier_v5
+  (cv5 : coverage_vector_v5)
+  (ledger_resolves vulnerable_promote : bool)
+  (D R F s : Q) (t : option Q)
+  (promoters_base : list promoter)
+  (promoters_leading : list promoter_v5)
+  (calibrated_flag : bool)
+  (lead_time : option Q)
+  : readout_v5 :=
+  let band := if ledger_resolves then full_tier false D R F s t else T_L0 in
+  let applies_base :=
+    map (fun p => (andb (cov_get (cv5_base cv5) (p_requires p)) (p_fires p), p_level p))
+        promoters_base in
+  let applies_leading :=
+    map (fun p5 => (promoter_applies_v5 cv5 p5, p5_level p5)) promoters_leading in
+  let pm := promoter_max (applies_base ++ applies_leading) in
+  let base_tier := max_level6 band pm in
+  let promoted := if vulnerable_promote then promote_one base_tier else base_tier in
+  let cov_absent := cov5_all_absent cv5 in
+  let final_tier := if cov_absent then T_LR else promoted in
+  let final_mode :=
+    if cov_absent then M_LR
+    else if ledger_resolves then M_FULL else M_PARTIAL in
+  {| tier_v5 := final_tier;
+     mode_v5 := final_mode;
+     readout_coverage_present_v5 := coverage_present_v5 cv5;
+     readout_coverage_total_v5 := coverage_total_v5;
+     based_on_v5 := cov5_present_kinds cv5;
+     missing_v5 := cov5_missing_kinds cv5;
+     promoters_fired_v5 :=
+       map (fun p => P5_base (p_id p))
+           (filter (fun p => andb (cov_get (cv5_base cv5) (p_requires p)) (p_fires p)) promoters_base)
+       ++ map p5_id (filter (promoter_applies_v5 cv5) promoters_leading);
+     calibrated := calibrated_flag;
+     lead_time_h := lead_time |}.
+
+Theorem full_tier_v5_total :
+  forall (cv5 : coverage_vector_v5) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q),
+    exists r : readout_v5,
+      full_tier_v5 cv5 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time = r.
+Proof. intros. eexists. reflexivity. Qed.
+
+Theorem full_tier_v5_coverage_total_is_10 :
+  forall (cv5 : coverage_vector_v5) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q),
+    readout_coverage_total_v5
+      (full_tier_v5 cv5 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time)
+    = 10%nat.
+Proof. intros. reflexivity. Qed.
+
+Theorem full_tier_v5_coverage_present_le_10 :
+  forall (cv5 : coverage_vector_v5) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q),
+    (readout_coverage_present_v5
+      (full_tier_v5 cv5 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time)
+     <= 10)%nat.
+Proof. intros. simpl. apply coverage_present_v5_le_total. Qed.
+
+Theorem full_tier_v5_LR_iff_coverage_present_0 :
+  forall (cv5 : coverage_vector_v5) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q),
+    mode_v5 (full_tier_v5 cv5 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time) = M_LR
+    <-> readout_coverage_present_v5 (full_tier_v5 cv5 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time) = 0%nat.
+Proof.
+  intros. unfold full_tier_v5, cov5_all_absent. simpl.
+  destruct (Nat.eqb (coverage_present_v5 cv5) 0%nat) eqn:E.
+  - apply Nat.eqb_eq in E. split; intro; [exact E | reflexivity].
+  - apply Nat.eqb_neq in E.
+    destruct ledger_resolves, vulnerable_promote; simpl;
+    split; intro H; try discriminate; try (exfalso; apply E; exact H).
+Qed.
+
+(* ------------------------------------------------------------------
+   5. MONOTONICITY (v4-style), extended to the widened vector and the
+      concatenated base+leading promoter list.
+   ------------------------------------------------------------------ *)
+
+Lemma promoters_mono_app :
+  forall ps1 ps2 qs1 qs2,
+    promoters_mono ps1 ps2 -> promoters_mono qs1 qs2 ->
+    promoters_mono (ps1 ++ qs1) (ps2 ++ qs2).
+Proof.
+  intros ps1 ps2 qs1 qs2 H1 H2.
+  induction H1 as [| b1 b2 l ps1' ps2' Himp Hmono IH].
+  - simpl. exact H2.
+  - simpl. constructor; [exact Himp | exact IH].
+Qed.
+
+Lemma applies_base_mono_v5 :
+  forall (cv1 cv2 : coverage_vector) (ps : list promoter),
+    (forall k, cov_get cv1 k = true -> cov_get cv2 k = true) ->
+    promoters_mono (map (fun p => (andb (cov_get cv1 (p_requires p)) (p_fires p), p_level p)) ps)
+                   (map (fun p => (andb (cov_get cv2 (p_requires p)) (p_fires p), p_level p)) ps).
+Proof.
+  intros cv1 cv2 ps Hmono.
+  induction ps as [| p ps' IH].
+  - simpl. constructor.
+  - simpl. constructor.
+    + intro Hp1. apply andb_true_iff in Hp1 as [Hc Hf].
+      apply andb_true_iff. split; [apply Hmono; exact Hc | exact Hf].
+    + exact IH.
+Qed.
+
+Lemma applies_leading_mono_v5 :
+  forall (cv1 cv2 : coverage_vector_v5) (ps : list promoter_v5),
+    (forall k, cov5_get cv1 k = true -> cov5_get cv2 k = true) ->
+    promoters_mono (map (fun p => (promoter_applies_v5 cv1 p, p5_level p)) ps)
+                   (map (fun p => (promoter_applies_v5 cv2 p, p5_level p)) ps).
+Proof.
+  intros cv1 cv2 ps Hmono.
+  induction ps as [| p ps' IH].
+  - simpl. constructor.
+  - simpl. constructor.
+    + intro Hp1. unfold promoter_applies_v5 in *. apply andb_true_iff in Hp1 as [Hc Hf].
+      apply andb_true_iff. split; [apply Hmono; exact Hc | exact Hf].
+    + exact IH.
+Qed.
+
+Theorem full_tier_v5_promoter_monotone :
+  forall (cv1 cv2 : coverage_vector_v5) (ledger_resolves vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q),
+    cov5_all_absent cv1 = false ->
+    (forall k, cov5_get cv1 k = true -> cov5_get cv2 k = true) ->
+    (level6_to_nat (tier_v5 (full_tier_v5 cv1 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time))
+     <= level6_to_nat (tier_v5 (full_tier_v5 cv2 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time)))%nat.
+Proof.
+  intros cv1 cv2 ledger_resolves vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time Habs1 Hmono5.
+  assert (Habs2 : cov5_all_absent cv2 = false) by (eapply cov5_all_absent_false_mono; eauto).
+  unfold full_tier_v5, tier_v5. simpl.
+  rewrite Habs1, Habs2.
+  apply promote_one_mono_if.
+  apply max_level6_mono_r.
+  apply promoter_max_monotone.
+  apply promoters_mono_app.
+  - apply applies_base_mono_v5. intros k Hk. specialize (Hmono5 (IK5_base k)). simpl in Hmono5. apply Hmono5. exact Hk.
+  - apply applies_leading_mono_v5. exact Hmono5.
+Qed.
+
+Theorem full_tier_v5_full_ge_partial :
+  forall (cv5 : coverage_vector_v5) (vulnerable_promote : bool)
+         (D R F s : Q) (t : option Q)
+         (promoters_base : list promoter) (promoters_leading : list promoter_v5)
+         (calibrated_flag : bool) (lead_time : option Q),
+    cov5_all_absent cv5 = false ->
+    (level6_to_nat (tier_v5 (full_tier_v5 cv5 false vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time))
+     <= level6_to_nat (tier_v5 (full_tier_v5 cv5 true vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time)))%nat.
+Proof.
+  intros cv5 vulnerable_promote D R F s t promoters_base promoters_leading calibrated_flag lead_time Habs.
+  unfold full_tier_v5, tier_v5. simpl.
+  rewrite Habs.
+  apply promote_one_mono_if.
+  apply max_level6_mono_l.
+  simpl. apply Nat.le_0_l.
+Qed.
+
+(* ------------------------------------------------------------------
+   6. Hysteresis / persistence (false-alarm control): a raise must hold
+      for `p` consecutive raw hourly readouts, a step-down for `q`.
+      FALSIFIER-RELEVANT GUARANTEE: persistence never fabricates a
+      tier absent from the raw history -- `persisted_is_some_historical_raw`.
+   ------------------------------------------------------------------ *)
+
+Fixpoint recent_raw_ge (raw : nat -> tier_level6) (n p : nat) (L : tier_level6) : bool :=
+  match p with
+  | 0%nat => true
+  | S p' =>
+    andb (Nat.leb (level6_to_nat L) (level6_to_nat (raw n)))
+      (match n with
+       | 0%nat => Nat.eqb p' 0%nat
+       | S n' => recent_raw_ge raw n' p' L
+       end)
+  end.
+
+Fixpoint recent_raw_le (raw : nat -> tier_level6) (n q : nat) (L : tier_level6) : bool :=
+  match q with
+  | 0%nat => true
+  | S q' =>
+    andb (Nat.leb (level6_to_nat (raw n)) (level6_to_nat L))
+      (match n with
+       | 0%nat => Nat.eqb q' 0%nat
+       | S n' => recent_raw_le raw n' q' L
+       end)
+  end.
+
+Definition tier_level6_eqb (a b : tier_level6) : bool :=
+  Nat.eqb (level6_to_nat a) (level6_to_nat b).
+
+Fixpoint persisted (raw : nat -> tier_level6) (p q : nat) (n : nat) : tier_level6 :=
+  match n with
+  | 0%nat => raw 0%nat
+  | S n' =>
+    let prev := persisted raw p q n' in
+    let cand := raw (S n') in
+    if tier_level6_eqb cand prev then prev
+    else if Nat.ltb (level6_to_nat prev) (level6_to_nat cand) then
+      (if recent_raw_ge raw (S n') p cand then cand else prev)
+    else
+      (if recent_raw_le raw (S n') q cand then cand else prev)
+  end.
+
+Theorem persisted_total :
+  forall (raw : nat -> tier_level6) (p q n : nat), exists l, persisted raw p q n = l.
+Proof. intros. eexists. reflexivity. Qed.
+
+Theorem persisted_is_some_historical_raw :
+  forall (raw : nat -> tier_level6) (p q n : nat),
+    exists m : nat, (m <= n)%nat /\ persisted raw p q n = raw m.
+Proof.
+  intros raw p q n.
+  induction n as [| n' IH].
+  - exists 0%nat. split; [lia | reflexivity].
+  - assert (Hcase : persisted raw p q (S n') = persisted raw p q n'
+                    \/ persisted raw p q (S n') = raw (S n')).
+    { cbn [persisted].
+      destruct (tier_level6_eqb (raw (S n')) (persisted raw p q n')) eqn:Heq.
+      - left. reflexivity.
+      - destruct (Nat.ltb (level6_to_nat (persisted raw p q n')) (level6_to_nat (raw (S n')))).
+        + destruct (recent_raw_ge raw (S n') p (raw (S n'))).
+          * right. reflexivity.
+          * left. reflexivity.
+        + destruct (recent_raw_le raw (S n') q (raw (S n'))).
+          * right. reflexivity.
+          * left. reflexivity. }
+    destruct Hcase as [Hprev | Hcand].
+    + destruct IH as [m [Hm Heqm]]. exists m. split; [lia | rewrite Hprev; exact Heqm].
+    + exists (S n'). split; [lia | exact Hcand].
+Qed.
+
+(* ---- worked examples: default p=2, q=3 ---- *)
+
+Definition ex_raw_spike (n : nat) : tier_level6 :=
+  match n with
+  | 3%nat => T_L4
+  | _ => T_L0
+  end.
+
+Example spike_not_immediately_raised_p2 :
+  persisted ex_raw_spike 2%nat 3%nat 3%nat = T_L0.
+Proof. reflexivity. Qed.
+
+Definition ex_raw_sustained (n : nat) : tier_level6 :=
+  match n with
+  | 3%nat => T_L4
+  | 4%nat => T_L4
+  | _ => T_L0
+  end.
+
+Example sustained_rise_raised_after_p2 :
+  persisted ex_raw_sustained 2%nat 3%nat 4%nat = T_L4.
+Proof. reflexivity. Qed.
+
+Definition ex_raw_drop (n : nat) : tier_level6 :=
+  match n with
+  | 0%nat => T_L4 | 1%nat => T_L4 | 2%nat => T_L4
+  | 3%nat => T_L0
+  | _ => T_L0
+  end.
+
+(* one low reading alone (n=3, q=3 needed) does not step down yet *)
+Example single_drop_not_immediately_lowered_q3 :
+  persisted ex_raw_drop 2%nat 3%nat 3%nat = T_L4.
+Proof. reflexivity. Qed.
+
+(* ----------------------------------------------------------------------
+   WHAT THIS v5 ADDITION DOES NOT PROVE: the arithmetic promoter
+   conditions themselves (`rain_24h_mm > 80`-shaped, or the new leading
+   promoters' own thresholds) remain opaque caller-supplied booleans,
+   unchanged in kind from v3/v4; which cov5(U) component is
+   present/stale/absent (IO-shaped); tau_up(U)'s actual numeric value for
+   any unit (declared OPEN-until-measured, never asserted here); that a
+   confirmed upstream gauge (N.64) or an unconfirmed one named only
+   conditionally (P.67/P.75, X.90/X.173-as-upstream, C.2) actually
+   produces real lead time against ground truth -- that is exactly the
+   next falsifier step (re-running BACKTEST_PROP_FLOOD_06_v1.md-style
+   against v5), not yet executed; and calibration_procedure's own
+   arithmetic (grid search, FA-rate ceiling) is a declared procedure over
+   caller-supplied data, not itself formalised here. This file's v5 claim
+   is only: given a 10-component coverage vector, a fixed base+leading
+   promoter list, the ledger inputs, and the vulnerable-unit/calibration/
+   lead-time flags, the mode-aware v5 readout is a single total,
+   decidable record value, monotone in the coverage vector for promoter
+   inputs and never lower in FULL mode than the PARTIAL tier the same
+   promoters would give (same two-theorem shape as v4, re-proved over the
+   widened vector), with LR still dominating every other input; and that
+   a hysteresis/persistence layer over any raw tier sequence never
+   reports a level absent from that raw sequence's own history at some
+   earlier-or-same hour (`persisted_is_some_historical_raw`) -- it can
+   only delay a raise/lowering, never fabricate one. `coqc -q` clean,
+   `Print Assumptions` closed under the global context (no axioms) on
+   every theorem in this file, v1 through v5.
+
+   v6 TODO -- NOT YET IMPLEMENTED, per founder instruction received
+   during this v5 registration (verbatim): "อย่าลืมว่าไม่มีทางมีข้อมูล
+   พอ แต่ใช้การอนุมานจากข้อมูลที่แข็งแรงเป็นหลัก" (there is never enough
+   data; use inference from strong-enough data as the main tool). This
+   asks for a THIRD coverage state, `inferred` (besides present/absent),
+   derived from declared consistency rules over connected anchors (e.g.
+   "downstream reach at normal level + no pumps running + no drop for N
+   hours => inner link stalled"), counted in coverage at a LOWER rank
+   than `present`, always listed in `based_on` together with the anchor
+   ids that licensed the inference; a new `confidence : strength` field
+   on the readout carrying the ORDINAL confidence of the weakest anchor
+   used; `LR` narrowed further to "nothing present AND nothing inferable"
+   (not merely "nothing present"); and a THIRD monotonicity theorem,
+   `inferred -> present never lowers the tier` (an inferred component
+   later confirmed present must never cause a drop). This is a genuinely
+   new primitive (an inference/anchor-consistency rule, not a retained
+   difference or a promoter threshold) and, per this repository's own
+   Toledo-first reuse gate (EQUATION_SOURCE_POLICY.md TG-RFG-01), it
+   needs its own Toledo lookup / Genesis-compatibility pass before being
+   derived and formalised -- it is deliberately NOT rushed into this v5
+   commit. Recorded here, in the JSON's honest_caveats, and in the MD as
+   the explicit next version's scope; v5's existing `present`/`absent`
+   two-state cov5(U) and its coverage/promoter/monotonicity apparatus are
+   unaffected and remain valid as declared. *)
