@@ -1,0 +1,41 @@
+[
+  {
+    "id": "PROP-YAO-POT-01",
+    "code": "EQ-015/S.??.v1",
+    "name": "R_g/D_g/X_g/F_g instantiation of p*_{A,g} for the ARAYA-viability task class, under founder functional-capacity constraint",
+    "statement": {
+      "latest": "For task class g = \\text{'ARAYA stays above the Livelihood/HouseholdSecurity viability floor over horizon T'}, agent A = founder: R_g := \\{\\text{OperatingCashFlow}_t \\ge \\text{EssentialExpenseFloor}_t \\ \\forall t \\in T\\}; D_g := \\{\\text{AdmissibilityGate}_g = 1 \\land \\text{Match}(\\text{FounderFunctionalCapacity}_t, \\text{TaskRequirement}_g) \\ge \\theta_g\\}; X_g := \\{\\text{TeamTaskEligibility}_g = 1\\} \\text{ i.e. } \\text{Authority}_g\\ge a_g \\land \\text{Competence}_g\\ge c_g \\land \\text{KnowledgeExecutable}_g \\land \\text{ProcessClear}_g; F_g := \\{\\text{RepairPathOpen} = \\text{TRUE} \\land \\lnot \\text{PseudoPeaceCandidate}\\}. Then p_{A,g}(\\pi) = r\\cdot d\\cdot x\\cdot f \\text{ (per EQ-015/S.55.v1)}, p^*_{A,g} = \\max_\\pi p_{A,g}(\\pi) \\text{ (per EQ-015/S.52.v1)}.",
+      "format": "latex",
+      "note_ascii": "Instantiates the abstract Rg/Dg/Xg/Fg events from EQ-015/S.52.v1 and S.55.v1's r*d*x*f decomposition, using the vocabulary of the founder's own v6.1 life-system pseudo-DAG (FounderFunctionalCapacity, TeamTaskEligibility, RepairPathOpen/PseudoPeaceCandidate). This is a READING/mapping onto that document's own objects, not a new mathematical claim about Rg/Dg/Xg/Fg in general."
+    },
+    "tier": "Definition",
+    "status": "unverified",
+    "domain": "S",
+    "aliases": [
+      "poweryao:scoring/founder_potential"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "open_prop"
+    },
+    "parents": [
+      { "code": "EQ-015/S.52.v1", "derived_via": "instance_of", "evidence": "supplies the max_pi Pr(Rg∩Dg∩Xg∩Fg) definition being instantiated" },
+      { "code": "EQ-015/S.55.v1", "derived_via": "instance_of", "evidence": "supplies the r*d*x*f chain-rule decomposition being instantiated" }
+    ],
+    "origin": {
+      "source": "YAO_HAREE_ARAYA_LIFE_SYSTEM_v6_1_PSEUDO_DAG.md + YAO_HAREE_ARAYA_v6_1_HEAVY_STRESS_TEST_REPORT.md (founder-authored/commissioned local design docs, not yet in a public repo); instantiation written for the poweryao private repo's scoring engine; retroactive Toledo-first registration BEFORE use in code, per this workspace's standing equation-discipline rule",
+      "doi": null
+    },
+    "note": "IMPORTANT LIMITS, do not drop when citing this proposal: (1) This entry defines WHAT Rg/Dg/Xg/Fg mean for this task class -- it does NOT supply a validated method for estimating the probabilities r=Pr(Rg), d=Pr(Dg|Rg), x=Pr(Xg|Rg,Dg), f=Pr(Fg|Rg,Dg,Xg). Any current implementation of r/d/x/f is a proxy heuristic/guess (INSTINCT-tier), not a measured or calibrated probability. (2) The source document's own PATCH-01 (FounderFunctionalCapacity) is explicitly marked 'formula_status = PROPOSAL, causal_status = OPEN' in its origin doc -- this instantiation inherits that OPEN causal status, it does not resolve it. (3) The stress-test report's P1-01 (task-relative capacity), P1-02 (admissibility-vs-execution-reliability split), P1-04 (prefix-closure assumption), P1-06 (CareGap), and P1-07 (PsychosocialLoad) patches are referenced in D_g/X_g's definitions above as NOT YET APPLIED -- this is a first-pass instantiation, pre-patch. (4) tier=Definition/status=unverified means this must NOT be treated as sufficient grounding for an auto_action_allowed=True gate on its own -- an unverified probability estimate driving an irreversible action is exactly the risk this workspace's epistemic floor and live-ops safety rules exist to prevent. A human_pi decision to accept this tier as 'good enough to act on' is a real, explicit risk acceptance, not a technicality, and should be recorded as such if made.",
+    "revision_history": [
+      {
+        "date": "2026-09-22",
+        "event": "semantic_clarification",
+        "by": "poweryao decisions/ADR-006-semantic-layer-repair.md, following an independent Codex (gpt-6-astra) audit",
+        "finding": "The r*d*x*f this proposal defines IS a conditional chain (d=Pr(D|R) etc, per parent EQ-015/S.55.v1) -- that was always correct here. The BUG was downstream: poweryao's scoring/PROTOCOL.md v0.1.0 instructed answerers to estimate r/d/x/f as four INDEPENDENT/unconditional marginals, which is not an application of this proposal's own chain rule. Separately, poweryao's engine never evaluated a maximum over a feasible policy set, so nothing it produced was actually p*_{A,g} in this proposal's/EQ-015/S.52.v1's sense -- every number produced so far is q_{A,g}(pi_used), a CURRENT-POLICY readout under an implicit (usually founder-direct) policy, not potential.",
+        "correction": "This proposal's own statement is UNCHANGED -- it was the consuming code that misapplied it. poweryao's engine (scoring/engine.py::eval_qualified_policy_proxy, renamed from eval_potential_pAg) now asks for r/d/x/f in explicit conditioning order and labels its own output q_{A,g}(pi_used), reserving 'potential'/'p*' for scoring/policy.py::compute_potential, which performs an actual max over an evaluated policy set (or returns cannot_be_confirmed if none was evaluated). This proposal is NOT superseded and does not need a new code -- it is the same object, now correctly consumed.",
+        "still_open": "D_g's founder-availability framing (Match(FounderFunctionalCapacity_t, TaskRequirement_g) >= theta_g) can still conflate 'founder personally available' with 'task requirement met' when the task's actual requirement, under the policy in effect, is satisfiable by delegation instead. Per the founder's order, ARAYA/organizational viability under a delegation policy is now scored separately (scoring/engine.py::eval_organizational_viability) rather than through this D_g term, precisely to avoid that conflation -- but D_g's own wording here has not been rewritten, since doing so would be redefining the canonical instantiation without a full review, which this revision explicitly declines to do unilaterally."
+      }
+    ]
+  }
+]
