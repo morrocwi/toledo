@@ -1,0 +1,418 @@
+[
+  {
+    "id": "PROP-FLOOD-10",
+    "code": "weld/M.??.v1",
+    "name": "Zoom forecast by level (0 screen -> 1 sub-polder/district -> 2 node -> 3 point) with compute gate, single-source guard and per-event verification ledger, with refusal -- NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "statement": {
+      "latest": "\\text{For declared units } u \\text{ at level } \\ell\\in\\{0,1,2,3\\}, \\text{ sources } m\\in M_u, \\text{ threshold } \\theta \\text{ (boundary data)}, \\text{ all on } \\mathbb{Q}: \\; I_u=[\\min_m x_m,\\max_m x_m] \\text{ (worst first, never averaged)}; \\; state_u := cl(I_u;\\theta) \\in\\{ROBUST, AT\\_THRESHOLD, POSSIBLE, BELOW\\} \\text{ (PROP-FLOOD-10a = D/M.71--76 renamed)}; \\; \\textbf{L0: } cl([\\min_m P^m_{24},\\max_m P^m_{24}];\\theta_j),\\ \\theta_j\\in\\{35.1,65.1,80,125.1,250.1\\}\\text{ mm/24 h}; \\; \\textbf{L1: } cl([S_{lo},S_{hi}];S_{safe}) \\text{ with } E_b\\in[\\max(0,S_{lo}-S_{safe}),\\max(0,S_{hi}-S_{safe})] \\text{ reported as the size of the excess (FULL: PROP-FLOOD-03 at box endpoints, 10a; can be BELOW)} \\text{ or } cl([\\min_g P^g_{24},\\max_g P^g_{24}]; D_{design}(U,24)) \\text{ (PARTIAL)}, \\text{ inbound } D_{in} \\text{ (PROP-FLOOD-09) beside, never merged}; \\; \\textbf{L2: } t_{arr}(v)\\ge\\min_p\\sum_{e\\in p}d_e \\text{ over ALL declared paths; REFUSED TAU\\_UNDECLARED if any edge on any path lacks a declared/measured } d_e \\text{ (a path is never dropped)}; \\; \\textbf{L3: } d_p\\in[\\max(0,H_{lo}-z_{hi}),\\max(0,H_{hi}-z_{lo})] \\text{ on one datum (occurrence of 08 } E_k). \\; \\boxed{\\Delta10.1}: \\text{ evaluate children of } u \\text{ iff } state_u\\in\\{ROBUST,AT\\_THRESHOLD,POSSIBLE\\} \\text{ or } (u \\text{ REFUSED for any reason} \\wedge \\text{child has own inputs}); \\text{ BELOW stops; the child readout uses the child's own inputs only; each child carries the strict-refinement check (10a refine\\_check: NOT\\_NESTED / BOUND\\_ORDER / BOUND\\_MISSING); at most } N_{cells}. \\; \\boxed{\\Delta10.2}: \\text{sources are named, a repeated name is REFUSED DUPLICATE\\_SOURCE}; |M_u|=0\\Rightarrow\\text{REFUSED MISSING\\_INPUT}; |M_u|=1\\Rightarrow I=[x-\\varepsilon_{src},x+\\varepsilon_{src}] \\text{ if declared, else POSSIBLE with UNKNOWN\\_SINGLE\\_SOURCE (raw } x \\text{ carried as } hi). \\; \\boxed{\\Delta10.3}: (F,O)\\mapsto\\{HIT,MISS,FALSE\\_ALARM,CORRECT\\_NEG,UNRESOLVED\\}, \\ UNRESOLVED \\iff F=\\text{REFUSED}\\vee O=\\text{UNRESOLVED} \\text{ (never CORRECT\\_NEG)}; \\text{ fires: strict } (ROBUST) \\text{ and worst-first } (hi\\ge\\theta), \\text{ both reported}; \\ lead = t_{onset}-t_{alert} \\in\\mathbb{Z} \\text{ ticks, an upper bound if the onset is left-censored}; \\text{ skill claim REFUSED FEW\\_EVENTS if } N_{min} \\text{ undeclared or } n_{ind}<N_{min}.",
+      "format": "latex",
+      "note_ascii": "NEW DERIVATION / PROPOSAL -- not yet in Toledo. Common rules C1-C7 are REUSE (C1 source interval, worst first: PROP-FLOOD-06 v6.1 multi_model_scenarios + A2/M.12-14 / Z/M.12-17; C2 three-state: PROP-FLOOD-10a cl = D/M.71-76 renamed, four states ROBUST/AT_THRESHOLD/POSSIBLE/BELOW, lo = theta < hi is POSSIBLE; C4 refinement: PROP-FLOOD-10a nested box -- a determinate parent is inherited, never flipped; non-nested partitions such as the 50 Bangkok districts vs the 38 BMA sub-polders are REFUSED NOT_NESTED for strict refinement, cross-partition readout only; opposite determinate states on declared-nested units are kept as a contradiction row; C6 claim ceilings: weld/E.07, EQ-002/M.01, forecast-only cap L1 of 06; C7 upward counts in [certain, certain + unresolved]: D/M.79-80). The three deltas: 10.1 compute gate (children only under ROBUST/AT_THRESHOLD/POSSIBLE, or under a parent REFUSED for any reason when the child has its own inputs (stated once, identical in MD/JSON/Coq); BELOW stops; a child never inherits a verdict or a refusal; bounded by a declared N_cells, termination by EQ-001/C.18); 10.2 single-source guard (one source with undeclared spread is never ROBUST/BELOW -- a degenerate interval is otherwise always determinate); 10.3 verification ledger (5 cells; UNRESOLVED never counted as CORRECT_NEG; every row in exactly one cell; CORRECT_NEG never exceeds resolved NO_EVENT rows; strict firing implies worst-first firing (for every zoom readout, any declared spread); lead in integer ticks, left-censored onset => upper bound; skill claim refused below a declared N_min, and refused when N_min is undeclared). Levels 0-3 are instances. Inbound stacked debt is PROP-FLOOD-09 D_in, reported beside the rain state. Statements are area-generic; the MVP test scope is Bangkok + Sammakorn only (founder ruling), everything else next version. v2 (after independent review): Level-1 FULL is cl([S_lo, S_hi]; S_safe) -- it can be BELOW -- with the exceedance E_b reported as a magnitude beside it (the v1 cl(E_b; 0) could never be BELOW, so it always fired worst-first and always descended); Level-2 arrival bound is REFUSED TAU_UNDECLARED if any edge on any declared path lacks a delay (dropping a path would silently treat it as never arriving -- a non-readout, and the undeclared path may be the fastest); each evaluated child carries the 10a strict-refinement check, and a passed check with unflagged readouts keeps the parent's determinate side (checked_child_keeps_parent_side); sources are named and a repeated name is REFUSED DUPLICATE_SOURCE; refused readouts carry no bounds (no placeholder value); Level-3 reversed endpoints are BOUND_ORDER."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "flood-readout-app:zoom-forecast",
+      "hydrology:nested early-warning screening",
+      "verification:contingency table per event (renaming, with UNRESOLVED kept separate)"
+    ],
+    "scope": {
+      "this_round": "Bangkok only (founder ruling, verbatim: 'เพื่อไม่ให้ขยาย เอาแค่ที่ กทม ก่อน แล้วอันอื่นค่อยๆ ขยับไปเทส'); MVP = Sammakorn (node/point) + Bangkok (districts / 38 BMA sub-polders) (founder ruling, verbatim: 'เขียนโน้ตด้วยว่า เอาสัมมากรและ กทม. เป็นตัววัดพยากรณ์ MVP ก่อน ที่เหลือค่อยว่ากัน เป็นเวอร์ชันถัดไป')",
+      "next_version": "Bangkok vicinity provinces, Hat Yai, Nan/Chiang Mai, 359 DWR sub-basins nationwide, other provinces -- TODO only, no runs, no page claims",
+      "generic": "statements are area-generic (any declared unit / lat-lon); only the tests are Bangkok-only",
+      "mvp_note": "MVP is measured ONLY on Sammakorn (node/point) and Bangkok (50 districts / 38 BMA sub-polders). Any widening must be tagged MVP or next-version before work starts. No 10-day forecast run is licensed by this registration alone: the equation set is now complete as proposals; runs remain plumbing tests below N_min."
+    },
+    "definitions": {
+      "Theta": "unified rain ladder mm/24h {35.1 (TMD-HII map yellow lower edge), 65.1 (orange), 80 (BMA design capacity, strictest for BMA units), 125.1 (red), 250.1 (purple)} -- boundary data copied from the downstream crosswalk's unified_ladder, tags as recorded there (VERIFIED-transcription / VERIFIED / RELAYED)",
+      "horizon": "h := start(W) - t_issue, integer days or hours rounded down; the model's own hindcast of W (h<=0) is not a forecast and is never scored as one",
+      "truth_O": "three-state observed readout EVENT / NO_EVENT / UNRESOLVED; for Bangkok districts the downstream event ledger rule (>=3 road stations >=10 cm within a 6 h chain, INSTINCT); a district with fewer than 3 road stations can never fire the rule and is UNRESOLVED, not NO_EVENT",
+      "fires": "strict := state = ROBUST; worst-first := not REFUSED and hi >= theta, hi taken from the readout's bounds (a refused readout has no bounds); for >= 2 sources this equals ROBUST, AT_THRESHOLD or POSSIBLE; under the single-source guard hi is the raw value",
+      "N_min": "OPEN -- downstream proposes 10 independent events (founder to confirm); undeclared => skill claim REFUSED FEW_EVENTS",
+      "epsilon_src": "OPEN per source class (single model, single gauge)",
+      "N_cells": "OPEN -- declared ceiling on zoom cells per window",
+      "inbound_stacked_debt": "Founder ruling (verbatim): 'โฟกัสที่ กทม. เหมือนเดิม แต่การปล่อยน้ำพวกนี้ ถ้ามันเชื่อมกับลุ่มน้ำ กทม. ควรเป็นหนี้ซ้อนด้วย'. No new object: Delta1 (PROP-FLOOD-09 candidate) booking of one edge value in two node ledgers with a declared integer delay. D_in(b; k_now, H) := sum over edges e=(s->b) of Q_e(k)*tau for released/measured k <= k_now whose arrival k+d_e lies in (k_now, k_now+H]; enters PROP-FLOOD-03 Q_in and PROP-FLOOD-06 Q_in,up/tau_up, reported beside the rain term. d_e declared/measured only, else REFUSED TAU_UNDECLARED. Effects kept separate: (a) river reach raising Chao Phraya stage at the outfalls (03 gate-closed branch, 06 derating g_U; three-state against the BMA +2.00 m MSL line on the MSL datum only); (b) east field water outside the King's dyke pulled west via Saen Saep/Prawet (no feed: REFUSED INPUT_ABSENT). Bangkok-linked sources: C.13 release, C.2/C.29/Sam Khok/Bang Sai discharge, Pasak (Rama VI), Bhumibol/Sirikit, east field water. Excluded as NOT linked (INSTINCT): Mae Klong releases (drain to the Gulf at Samut Songkhram); a link would need a declared Tha Chin/Damnoen Saduak transfer with measured discharge or a lagged rise at west-Bangkok gauges.",
+      "state": "ROBUST (Sp: theta < lo) | AT_THRESHOLD (Sz: lo = hi = theta) | POSSIBLE (Sbot: lo <= theta <= hi, lo <> hi) | BELOW (Sm: hi < theta) | REFUSED(reason)",
+      "D_design(U,24)": "the owner-declared 24 h design depth of PROP-FLOOD-08 (Bangkok 80 mm, VERIFIED downstream); a level-1 PARTIAL readout on any other window uses that window's own declared depth or is REFUSED DESIGN_DEPTH_UNDECLARED",
+      "sources": "named pairs (name, value); |M_u| := number of distinct names; a repeated name is REFUSED DUPLICATE_SOURCE, so two copies of one reading never count as two sources (review A11); v2.1: ladder children (zoom_child, evaluate_children) take named sources and go through zoom_state, so the guard applies at every level (review R2-A11)",
+      "compute_gate_C5": "evaluate a child iff the parent is ROBUST, AT_THRESHOLD or POSSIBLE, or the parent is REFUSED for ANY reason and the child has its own inputs; BELOW stops (review A3: one statement, identical in MD, JSON and Coq descend)",
+      "level1_full": "state := cl([S_lo, S_hi]; S_safe) (ROBUST iff S_safe < S_lo iff certain excess; BELOW iff S_hi < S_safe); E_b in [max(0, S_lo - S_safe), max(0, S_hi - S_safe)] reported as the size of the excess; REFUSED SAFE_STORAGE_UNDECLARED / NEGATIVE_STORAGE / BOUND_ORDER",
+      "level2_arrival": "t_arr(v) >= min over ALL declared paths of the summed declared integer delays; REFUSED TAU_UNDECLARED if any edge of any declared path has no declared/measured delay; no declared path -> REFUSED MISSING_INPUT",
+      "level0_rungs": "rung0_strict := max{j : S0_j = ROBUST}; rung0_wf := max{j : not refused and hi >= theta_j} (review B1)"
+    },
+    "minimal_inputs": {
+      "L0": "per-model 24h forecast rain at the unit grid point(s) for the target day (>=2 models; 1 allowed, flagged by C3) + Theta",
+      "L1_PARTIAL": ">=2 rain readings (gauges or models) inside the unit for one declared window + that window's declared design depth (24 h: 80 mm Bangkok)",
+      "L1_FULL": "adds A_b, c_b bound pair, S_b(0), running pumps x rated capacity, S_safe",
+      "L2": "level series at upstream and downstream station on one datum with their own lines + declared/measured integer delay d_e per edge on the path",
+      "L3": "H at the nearest node and z_p on one declared datum + declared depth threshold"
+    },
+    "readout_classes": {
+      "state": "ROBUST | AT_THRESHOLD | POSSIBLE | BELOW | REFUSED(reason)",
+      "refusal": "reused from PROP-FLOOD-03/06/08 plus NOT_NESTED, UNIT_POLYGON_MISSING, TAU_UNDECLARED, DATUM_UNDECLARED, Z_MISSING, THRESHOLD_TABLE_ABSENT (GloFAS return period), INPUT_ABSENT (pressure series), FEW_EVENTS (skill claim), STAGE_ABSENT (no Chao Phraya stage readout in the window)",
+      "ledger_cell": "HIT | MISS | FALSE_ALARM | CORRECT_NEG | UNRESOLVED",
+      "candidate_promoters_data_only": [
+        "agency rain category/colour for the area (RELAYED issuer readout, scope regional_class)",
+        "PRESSURE_DROP_24H on Delta_24 p (PROP-FLOOD-01 Delta_k; lag 24 h cancels an exact 12 h/24 h periodic part) -- not yet in Toledo, REFUSED INPUT_ABSENT",
+        "GloFAS return-period exceedance -- REFUSED THRESHOLD_TABLE_ABSENT"
+      ]
+    },
+    "refusal_codes": {
+      "reused": [
+        "PROP-FLOOD-03/08 codes (ZR08, incl. MISSING_INPUT, SAFE_STORAGE_UNDECLARED, DATUM_UNDECLARED, DESIGN_DEPTH_UNDECLARED, ZERO_OUTFLOW)",
+        "PROP-FLOOD-09 TAU_UNDECLARED (ZR09)",
+        "PROP-FLOOD-10a BOUND_MISSING / BOUND_ORDER / NOT_NESTED (ZR10a)",
+        "PROP-FLOOD-06 DERATING_UNDECLARED"
+      ],
+      "added": [
+        "FEW_EVENTS"
+      ],
+      "data_availability_codes_downstream": [
+        "UNIT_POLYGON_MISSING",
+        "Z_MISSING (level-3 instance of the reference-undeclared code)",
+        "THRESHOLD_TABLE_ABSENT",
+        "INPUT_ABSENT",
+        "STAGE_ABSENT"
+      ]
+    },
+    "claim_boundary": "Finite readouts over declared units, sources and boundary data: no numerical weather model is run, no routing/Saint-Venant/Manning, no flow magnitude, no hourly intensity from a 24 h total (and no pro-rating of design depths between windows), no point depth without one datum, no skill claim below N_min independent events, no statement outside the declared units.",
+    "non_claims": [
+      "Not a weather model: numerical weather model outputs are read as another agency's stepper outputs (Genesis II.1 MQ.08), never re-run.",
+      "Not a skill score: the ledger lists cells per event and never averages across events; no percentage is reported without its [certain, certain + unresolved] bracket.",
+      "A city/screen readout never licenses a point statement (EQ-002/M.01); a forecast-only readout never lifts a tier above L1 (06).",
+      "UNRESOLVED truth (e.g. a district with fewer than 3 road stations) is not NO_EVENT and is never a correct negative."
+    ],
+    "parents": [
+      {
+        "code": "PROP-FLOOD-10a",
+        "derived_via": "reuses (imported)",
+        "evidence": "enclosure (C1, L1 FULL, L3), nested-box condition and NOT_NESTED refusal (C4), cl = classify renaming (C2), BOUND_MISSING (open-ended category edges, never infinity)"
+      },
+      {
+        "code": "D/M.71.v1..D/M.76.v1",
+        "derived_via": "reuses (imported via PROP-FLOOD-10a cl)",
+        "evidence": "classify floor v with v := (lo+hi)/2 - theta, floor := (hi-lo)/2 -- exact renaming; statements read in full (Th_coqc); the Coq file imports the IDM classify, it does not restate it"
+      },
+      {
+        "code": "D/M.77.v1",
+        "derived_via": "reuses (special case) + PROP-FLOOD-10a nested box",
+        "evidence": "bot_monotone_in_floor covers same-centre coarsening; nested child/parent intervals (moving centre) are covered by PROP-FLOOD-10a nested_preserves_plus/minus, nested_no_flip"
+      },
+      {
+        "code": "D/M.79.v1",
+        "derived_via": "reuses",
+        "evidence": "signed_floor_below = certain_below + unresolved -- upward count bracket (Th_coqc)"
+      },
+      {
+        "code": "D/M.80.v1",
+        "derived_via": "reuses",
+        "evidence": "certain_below <= signed_floor_below (Th_coqc)"
+      },
+      {
+        "code": "Z/M.12.v1..Z/M.17.v1",
+        "derived_via": "reuses",
+        "evidence": "tmin/tmax algebra for intervals over sources (Th_coqc on Z; Q via positive scale to the declared resolution grid)"
+      },
+      {
+        "code": "Z/M.21.v1",
+        "derived_via": "reuses",
+        "evidence": "minplus_distrib -- path arrival lower bound (Th_coqc)"
+      },
+      {
+        "code": "A2/M.07.v1",
+        "derived_via": "reuses",
+        "evidence": "path_is_fold -- path accumulation as a fold of min (Th_coqc)"
+      },
+      {
+        "code": "A2/M.24.v1",
+        "derived_via": "reuses",
+        "evidence": "relax_nonincreasing -- clamp never increases (Th_coqc)"
+      },
+      {
+        "code": "R/M.14.v1",
+        "derived_via": "reuses",
+        "evidence": "geom_majorant_tail -- recession remaining-fall bound (Th_coqc)"
+      },
+      {
+        "code": "weld/M.43.v1",
+        "derived_via": "reuses",
+        "evidence": "connected graph => ker L_R constants; contrapositive gives the cut-edge flag (Th_coqc)"
+      },
+      {
+        "code": "EQ-001/C.07.v1",
+        "derived_via": "reuses",
+        "evidence": "flat readout != no flow (untagged)"
+      },
+      {
+        "code": "EQ-001/P.61.v1",
+        "derived_via": "reuses",
+        "evidence": "front speed declared, not derived -- d_e declared or measured only (untagged)"
+      },
+      {
+        "code": "weld/E.08.v1",
+        "derived_via": "reuses",
+        "evidence": "commuting-square one-way transport between levels (Definition)"
+      },
+      {
+        "code": "EQ-002/M.01.v1",
+        "derived_via": "reuses",
+        "evidence": "readout-admissibility factorization -- no point claim from a city readout (Definition)"
+      },
+      {
+        "code": "weld/E.07.v1",
+        "derived_via": "reuses",
+        "evidence": "weakest-link claim ceiling (Dr)"
+      },
+      {
+        "code": "weld/E.06.v1",
+        "derived_via": "reuses",
+        "evidence": "no quotient merges states with different invariants (datum, outfall, gate) (Definition)"
+      },
+      {
+        "code": "weld/M.13.v1",
+        "derived_via": "reuses",
+        "evidence": "nested ladder index for zoom levels (Definition)"
+      },
+      {
+        "code": "EQ-001/C.18.v1",
+        "derived_via": "reuses",
+        "evidence": "bounded refinement terminates -- compute gate halts (Th_coqc)"
+      },
+      {
+        "code": "PROP-FLOOD-01",
+        "derived_via": "reuses",
+        "evidence": "Delta_k trend sign at L2; Delta_24 on a pressure series for the candidate promoter (proposal, unverified)"
+      },
+      {
+        "code": "PROP-FLOOD-03",
+        "derived_via": "reuses",
+        "evidence": "water balance per tick at L1 FULL (proposal, unverified)"
+      },
+      {
+        "code": "PROP-FLOOD-06",
+        "derived_via": "reuses",
+        "evidence": "v6.1 multi_model_scenarios (never averaged, worst first), promoter floor, forecast-only cap L1, hysteresis p/q, calibration block consumed by the ledger (proposal, unverified)"
+      },
+      {
+        "code": "PROP-FLOOD-07",
+        "derived_via": "reuses",
+        "evidence": "coverage3 for inputs present/absent/inferred (proposal, unverified)"
+      },
+      {
+        "code": "PROP-FLOOD-08",
+        "derived_via": "reuses (occurrence)",
+        "evidence": "L_24 = P_24 / D_design(U, 24) at theta = 80 is case (e) on the declared 24 h window (never pro-rated to another window); level-3 point depth max(0, H - z) is an occurrence of E_k on a length unit and one declared datum (point_depth_enclosure uses exceedance_monotone); refusal codes wrapped as ZR08; `worst` imported"
+      },
+      {
+        "code": "delta_R",
+        "derived_via": "instance_of",
+        "evidence": "lead = t_onset - t_alert is a retained difference of two timestamps"
+      },
+      {
+        "code": "PROP-FLOOD-09",
+        "derived_via": "reuses (cited, imported)",
+        "evidence": "inbound stacked-debt term D_in is PROP-FLOOD-09's d_in_node applied to edges entering the unit; its TAU_UNDECLARED refusal is wrapped as ZR09 and leaves the rain state untouched (inbound_refusal_leaves_rain_state)"
+      }
+    ],
+    "deltas": [
+      {
+        "id": "10.1",
+        "name": "compute gate",
+        "status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+        "coq": "descend, refinement, zoom_child, gate_below_stops, child_independent_of_parent_verdict, child_does_not_inherit_refusal, refused_parent_without_child_inputs_stops, checked_child_keeps_parent_side, evaluated_cells_bounded, ladder_child_is_zoom_state, ladder_child_duplicate_refused (children are named sources through zoom_state)"
+      },
+      {
+        "id": "10.2",
+        "name": "single-source guard",
+        "status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+        "coq": "zoom_vals, zoom_state (named sources), zoom_duplicate_refused, same_reading_twice_refused, zoom_no_source_refused, refused_has_no_bounds, single_source_never_determinate, degenerate_interval_always_determinate, unflagged_state_is_cl, flagged_is_possible, bounds_present_unless_refused, multi_source_robust_sound, multi_source_below_sound"
+      },
+      {
+        "id": "10.3",
+        "name": "verification ledger",
+        "status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+        "coq": "cell, fires, unresolved_never_correct_negative, refused_forecast_never_correct_negative, correct_negative_sound, cell_unresolved_iff, strict_implies_worst_first, ledger_partition, correct_negatives_bounded, lead_of, censored_lead_is_upper_bound, skill_claim, skill_claim_refused_iff (strict_implies_worst_first now for every zoom readout, any eps)"
+      }
+    ],
+    "conversion_rules_decision": {
+      "question": "Is any downstream conversion rule R1-R11 (sources/rain_alert_thresholds_crosswalk.yaml) a genuine equation needing its own Toledo object?",
+      "decision": "NO conversion-rules object is registered.",
+      "per_rule": {
+        "R1 depth = intensity x duration, same window": "unit identity (dimensional), not an equation object; it never bridges windows",
+        "R2 cross-duration via IDF same-T match": "an empirical table lookup (the IDF table is data); table data is never registered as a theorem; its only formal consequence here is PROP-FLOOD-08's per-window declared depth with DESIGN_DEPTH_UNDECLARED refusal (the downstream R2 check found 80 mm/24 h and 58.7 mm/h are not a same-T pair)",
+        "R3 day-boundary shift by re-summation": "a finite re-summation procedure (R/M.09, A2/M.11 sums); refused when only a daily total exists -- a data rule, not an object",
+        "R4 margin = H - line, same station and datum": "a delta_R instance; with max(0, .) it is PROP-FLOOD-08 E_k's same-datum excess; no new object",
+        "R5 / R6 ratio to a same-reach / declared denominator": "instances of the PROP-FLOOD-06 layer-0 / 08 ratio pattern with a declared denominator; refusal when the denominator is undeclared",
+        "R7 category -> declared [lower, upper], open top REFUSED": "the input side of PROP-FLOOD-10a (declared box; BOUND_MISSING instead of infinity)",
+        "R8 per model, worst first, never averaged": "PROP-FLOOD-06 v6.1 multi_model_scenarios (reused verbatim)",
+        "R9 / R11 categorical flag -> rung by name": "categorical lookup tables (founder-adoptable mappings), not equations",
+        "R10 return period -> rung, same reach only": "a same-location lookup; REFUSED THRESHOLD_TABLE_ABSENT today"
+      }
+    },
+    "debt_onset_mapping_bma_plan_2569_s5_1": {
+      "source": "downstream card docs/knowledge/S51_DEBT_ONSET_AND_BMA_COPING_INDICATOR_2026-09-27.md (flood repository) -- mapping only",
+      "levels": "new debt: L_1 and L_24 of PROP-FLOOD-08 per declared window at level 0/1 (three-state vs 1 via 10a); carried debt: E_k at level 1 FULL (REFUSED today); stacked debt: PROP-FLOOD-09 D_in beside the level-1 rain state (period 3; REFUSED INPUT_ABSENT / TAU_UNDECLARED today); repayment slowdown: river stage vs +1.80 / +2.00 m MSL as a derating flag (03 gate-closed, 06 g_U), three-state on the MSL datum only",
+      "scoring": "the downstream replay of G1 (24-27 Sep 2569), G2 (14 Sep 2568) and G3 (Oct-Nov 2554) uses this object's 5-cell ledger; every axis is REFUSED FEW_EVENTS (3 independent groups < proposed N_min 10); gauge L_1 UNRESOLVED (rain_1h not stored), ERA5 L_1 MISS x3 (cell means never reach 58.7 mm/h), gauge L_24 HIT 1 / UNRESOLVED 1, ERA5 L_24 HIT 1 / MISS 2 -- relayed from the downstream card, not re-run here"
+    },
+    "genesis_compatibility": {
+      "gate": "Gate 2 Three-Valued Admissibility; Face 10 Record/Readout; Face 12 Boundary-Data; IV.5 Commuting-Square Bridge Criterion; VI-A B.2a generic conservation ledger [Dr]; II.1 MQ.08 discrete stepper",
+      "note": "A numerical weather model is read as another agency's stepper; only its outputs are used.",
+      "pin": "readout_genesis local HEAD 6f2cb06 (2026-09-13); READOUT_GENESIS_CORE.md lines 2021 (Face 12), 2201 (IV.5), 3768-3776 (A.13 Gate 2), 4029 (VI-A B.2a) -- VERIFIED by grep in this session; hub pin not re-checked against remote (OPEN, no network used)"
+    },
+    "toledo_lookup": {
+      "measured_this_session": [
+        "check --formula \"HIT MISS FALSE_ALARM CORRECT_NEG UNRESOLVED contingency\" -> NOT_REGISTERED []",
+        "check --formula \"skill claim REFUSED FEW_EVENTS when n_ind < N_min\" -> NOT_REGISTERED []",
+        "find \"lead time\" -> 0; find contingency -> 0; find \"false alarm\" -> 0; find verification -> 9 hits, read: EQ-015/M.05.v1 Decorrelated Verification Protocol (DVP = ReduceCorrelatedError + ...; a reviewer protocol, NOT a match), weld/M.34.v1 and others not a match"
+      ],
+      "relayed_from_draft": "the draft's lookup table (cell/lead/P24/80/depth/t_arr queries NOT_REGISTERED; neighbours shown REGISTERED_CURRENT) -- relayed, re-confirmed for every parent code by check --code in this session (all REGISTERED_CURRENT except MQ08-stepper/M.01.v1 REGISTERED_UNVERIFIED, cited only by 09 as a neighbour)",
+      "verdict": "PROPOSAL (three deltas)"
+    },
+    "neighbours_not_parents": [
+      {
+        "code": "weld/S.13.v1",
+        "why": "continuity equation in continuum form (partial_t, nabla) -- non-readout form"
+      },
+      {
+        "code": "ChemDomain_ledger/C.24.v1",
+        "why": "Clausius-Clapeyron in ln form -- continuum/irrational; context only"
+      },
+      {
+        "code": "EQ-015/P.60.v1",
+        "why": "Bernoulli -- name only, no statement to reuse"
+      },
+      {
+        "code": "EQ-015/P.61.v1",
+        "why": "duct continuity A1 v1 = A2 v2 -- not a network ledger"
+      }
+    ],
+    "monotonicity": "Machine-checked: hi (worst) bounds every source and is attained (08 worst_*), lo likewise (best_bounds_every_source); nested child never flips a determinate parent (10a nested_no_flip; in the ladder checked_child_keeps_parent_side); level-3 depth interval encloses the true depth (point_depth_enclosure); level-1 FULL box endpoints (10a wb_step_enclosure). NOT machine-checked (stated only): 'S0 moves up the ladder when a source value rises', 'adding a source never flips Sp<->Sm', and 't_arr lower bound non-increasing when an edge delay decreases' (review A15).",
+    "honest_caveats": [
+      "The 38 BMA sub-polders and the 50 districts are crossing partitions, not a hierarchy: strict refinement between them is REFUSED NOT_NESTED.",
+      "Every BMA canal station datum is OPEN downstream; level 3 is REFUSED everywhere today (DATUM_UNDECLARED / Z_MISSING).",
+      "No pressure series is archived; the pressure promoter is a candidate only (not part of this object).",
+      "The replays available (Bangkok, one meteorological event plus two older groups) exercise the ledger; they calibrate nothing.",
+      "The AT_THRESHOLD state is new relative to the draft's three labels: it is classify's Sz and arises only for a degenerate interval exactly at theta; it fires under worst-first, not under strict."
+    ],
+    "falsifier": "(1) Strict L0/L1 ROBUST repeatedly with NO_EVENT truth, or BELOW repeatedly with EVENT truth, across replayed independent events for a unit class, falsifies that ladder edge for the class. (2) A determinate child opposite to a nested determinate parent without an input error falsifies the nesting declaration. (3) An observed arrival earlier than the min-plus lower bound falsifies a declared d_e. For (3) the candidate causes are: a wrong declared d_e, or an undeclared faster path (an edge missing from the declared graph).",
+    "empirical_test_status": "downstream plumbing replays only: docs/experiments/2026-09-27-zoom-forecast-real-backtest.md and the S5.1 card (flood repository) -- below N_min on every axis",
+    "origin": {
+      "source": "New derivation/proposal: community flood-readout application (FloodConnect), founder request 2026-09-27 to read world forecast principles through the readout lens and build zoom-level forecast equations on Toledo",
+      "doi": null
+    },
+    "version": "v2.1",
+    "version_history": [
+      {
+        "v": 0,
+        "date": "2026-09-27",
+        "statement": "draft (untracked), deltas 10.1-10.3, depends on pending Delta1/Delta2",
+        "reason": "draft only -- not submitted, no Coq, no independent review"
+      },
+      {
+        "v": 1,
+        "date": "2026-09-28",
+        "statement": "Registered with Coq: Delta2 split out as PROP-FLOOD-10a (registered once, cited by 08 and 10), Delta1 as PROP-FLOOD-09; four-state readout (AT_THRESHOLD = Sz made explicit); compute gate includes AT_THRESHOLD; worst-first firing defined on hi >= theta; FEW_EVENTS also when N_min undeclared; conversion-rules decision recorded (no object); S5.1 debt-onset mapping folded in; L1 PARTIAL tied to the declared 24 h depth of 08.",
+        "reason": "Founder instruction (verbatim: \"ทำสมการให้ครบก่อนนะ\") -- finish the equation set before any 10-day forecast run.",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      },
+      {
+        "v": 2,
+        "date": "2026-09-28",
+        "statement": "B1 level-0 worst-first rung = max{j : not refused and hi >= theta_j}; B2 Level-1 FULL = cl([S_lo,S_hi]; S_safe) with E_b as magnitude (can be BELOW); B3 Level-2 arrival REFUSED TAU_UNDECLARED on any undeclared edge of any declared path (never dropped); A2 refinement check in the ladder + BOUND_ORDER for reversed level-3 endpoints; A3 C5 stated once (any refusal); A4 strict_implies_worst_first for every readout; A7 refused readouts carry no bounds; A11 named sources, DUPLICATE_SOURCE; A15 checked vs stated monotonicity separated; A5/A6 left as founder decisions.",
+        "reason": "independent review (maker != checker, cross-vendor pass agreeing): blocking B1-B3, advisories A2, A3, A4, A7, A11, A15",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      },
+      {
+        "v": "2.1",
+        "date": "2026-09-28",
+        "statement": "ladder children use named sources via zoom_state, so a repeated name in a child cell is REFUSED DUPLICATE_SOURCE (ladder_child_duplicate_refused); founder decision list mirrored into `open`.",
+        "reason": "independent review round 2 advisories R2-A11 and R2-OPEN",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      }
+    ],
+    "depends_on": [
+      "PROP-FLOOD-01/03/06/07 (on this branch)",
+      "PROP-FLOOD-08, PROP-FLOOD-09, PROP-FLOOD-10a (this branch)",
+      "PROP-FLOOD-04 (PR #61, not on this branch) -- only via PROP-FLOOD-09 clause (iii) composition"
+    ],
+    "coq_file": "coq/canonical/PROP_FLOOD_10_zoom_forecast.v",
+    "coq_theorems": [
+      "best_bounds_every_source",
+      "best_none_iff",
+      "source_interval_encloses",
+      "best_le_worst",
+      "zoom_duplicate_refused",
+      "same_reading_twice_refused (Example)",
+      "zoom_no_source_refused",
+      "refused_has_no_bounds",
+      "single_source_never_determinate",
+      "degenerate_interval_always_determinate",
+      "unflagged_state_is_cl",
+      "multi_source_robust_sound",
+      "multi_source_below_sound",
+      "gate_below_stops",
+      "child_independent_of_parent_verdict",
+      "child_does_not_inherit_refusal",
+      "refused_parent_without_child_inputs_stops",
+      "checked_child_keeps_parent_side",
+      "evaluated_cells_bounded",
+      "unresolved_never_correct_negative",
+      "refused_forecast_never_correct_negative",
+      "correct_negative_sound",
+      "cell_unresolved_iff",
+      "flagged_is_possible",
+      "bounds_present_unless_refused",
+      "strict_implies_worst_first",
+      "ledger_partition",
+      "correct_negatives_bounded",
+      "censored_lead_is_upper_bound",
+      "skill_claim_refused_iff",
+      "point_depth_enclosure",
+      "point_depth_refused_without_datum",
+      "point_depth_refuses_reversed",
+      "inbound_refusal_leaves_rain_state",
+      "l1_full_below_reachable",
+      "l1_full_below_means_no_excess",
+      "l1_full_robust_iff_certain_excess",
+      "l1_full_refused_without_safe",
+      "path_delay_none_iff",
+      "arrival_refused_iff_undeclared_edge",
+      "arrival_bound_sound",
+      "undeclared_faster_path_refuses (Example)",
+      "zoom_state_nodup (R2-A11)",
+      "ladder_child_is_zoom_state (R2-A11)",
+      "ladder_child_duplicate_refused (R2-A11)",
+      "zoom_vals_nonempty_not_missing (R2-A11)"
+    ],
+    "coq_check": {
+      "command": "cd coq/canonical && coqc -q -Q . MRC -R ../information-discrete-math IDM <file> (IDM_ReadoutMinimality/IDM_ResolvedCount compiled first; scratch build directory, .vo not committed); Print Assumptions via a scratch audit file importing all four PROP_FLOOD_08/09/10 modules",
+      "result": "coqc -q clean; Print Assumptions: Closed under the global context for all 46 items (MEASURED 2026-09-28, v2.1)"
+    },
+    "open": [
+      "OPEN -- founder decision: A5 -- under STRICT, a POSSIBLE (undecided) forecast with NO_EVENT currently counts as CORRECT_NEG (not refused, not fired). Keep, count undecided forecasts separately, or report CORRECT_NEG as a bracket [certain, certain + undecided]?",
+      "OPEN -- founder decision: N_min (downstream proposes 10); epsilon_src per source class; N_cells ceiling; wording \"level of service\".",
+      "Founder confirmation of the interpretation of 'our own equations' (draft OPEN).",
+      "Polygons for the 38 BMA sub-polders; DWR 1302/1507/1510 polygon test.",
+      "Datum of every BMA canal station; ground elevation at Sammakorn on the same datum.",
+      "d_e for Bangkok-linked edges (via PROP-FLOOD-09)."
+    ],
+    "toledo_status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "open_founder_decisions": [
+      "A5: under STRICT, does a POSSIBLE (undecided) forecast with NO_EVENT count as CORRECT_NEG, or should undecided forecasts be counted separately / reported as a bracket [certain, certain + undecided]? Current Coq: counted as CORRECT_NEG under STRICT (not refused, not fired).",
+      "N_min (downstream proposes 10)",
+      "epsilon_src per source class",
+      "N_cells ceiling",
+      "wording 'level of service'"
+    ],
+    "decided_founder_decisions": [
+      {
+        "id": "A6",
+        "date": "2026-09-28",
+        "founder_words": "เอาเลย",
+        "was_open": "A6: agency class edges are closed at the lower edge (35.1, 65.1, 125.1, 250.1 at 0.1 mm resolution) while strict ROBUST needs lo > theta; declare per rung whether theta is a class edge (reached at >=) or a capacity (exceeded at >). 80 mm is a capacity (strict is right).",
+        "decision": "The agency's inclusive lower edge (class edges 35.1 / 65.1 / 125.1 / 250.1, reached at >=) is a ZOOM-FOCUS trigger only: AT_THRESHOLD or POSSIBLE at that edge descends (C5). The public rung stays strict (ROBUST needs lo > theta at every rung, class edge or capacity). The agency class label (inclusive) is shown beside our rung as a reporting field. 80 mm stays a capacity.",
+        "statement_change": "none -- cl, zoom_state, the C5 gate (descend on ROBUST / AT_THRESHOLD / POSSIBLE) and the strict rung are unchanged; no Coq change",
+        "first_use": "downstream flood repository docs/experiments/2026-09-28-bangkok-10day-forward-forecast.md (trial forward run; not a page claim)"
+      }
+    ]
+  }
+]

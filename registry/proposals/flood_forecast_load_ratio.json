@@ -1,0 +1,272 @@
+[
+  {
+    "id": "PROP-FLOOD-08",
+    "code": "weld/M.??.v1",
+    "name": "Owner-declared per-window load-to-capacity ratio (per model, worst first, interval form), storage exceedance, drawdown time (lower bound at rated outflow) and capacity-reduction slot over a declared drainage node, with refusal -- NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "statement": {
+      "latest": "\\text{For a declared drainage node } U \\text{ (PROP-FLOOD-06 unit), window } H \\text{ (hours), all on } \\mathbb{Q}: \\quad \\boxed{C^{des}_H(U) := D_{design}(U,H)\\cdot A_U} \\text{ (design capacity, 08-local, in place of 06's } C_H\\text{; not a case of 06) only when the owner has declared a design depth for exactly window } H \\text{ (e.g. BMA 2569 p.63: } H{=}1\\mapsto 58.7\\text{ mm}, H{=}24\\mapsto 80\\text{ mm), else REFUSED DESIGN\\_DEPTH\\_UNDECLARED; no pro-rating between windows.} \\quad \\boxed{L^m_H(U) := \\dfrac{c_U P^m_H(U) + \\kappa\\,E_k(U)/A_U}{D_{design}(U,H)}}\\ (\\kappa = 1000\\text{ mm/m for } E_k\\text{ in m}^3, A_U \\text{ in m}^2) \\text{ per named model } m, \\text{ reported worst first } (L_H:=\\max_m L^m_H, \\text{ attained}), \\text{ never averaged; interval form } [L(x^{lo*}),L(x^{hi*})] \\text{ by PROP-FLOOD-10a (non-decreasing in } P,c,E; \\text{ non-increasing in } D_{design}). \\quad \\boxed{E_k(U) := \\max(0,\\, S_k(U) - S_{safe}(U))} \\text{ on PROP-FLOOD-03 state, one declared unit/datum; REFUSED SAFE\\_STORAGE\\_UNDECLARED | DATUM\\_UNDECLARED | 03 codes (first).} \\quad \\boxed{T_{dd}(U) := V_{stored}(U)/Q_{out}(U)} \\text{; at } Q_{out}=Q_{max} \\text{ (declared maximum/rated outflow over the horizon) it is a LOWER bound on real drawdown; at an effective (current) } Q_{out} \\text{ it is a readout, NOT a bound; REFUSED MISSING\\_INPUT, NEGATIVE\\_STORAGE, ZERO\\_OUTFLOW (} Q_{out}\\le 0\\text{; a non-value, never } \\infty). \\quad C_{eff}=C_0\\,\\eta,\\ \\eta = g_U(t)\\cdot(\\text{running-pump fraction})\\cdot\\eta_{canal},\\ \\eta_{canal} \\text{ ABSENT until fitted; } L \\text{ at rated capacity is a lower bound for every } \\eta\\in(0,1].",
+      "format": "latex",
+      "note_ascii": "NEW DERIVATION / PROPOSAL -- not yet in Toledo. Four deltas over PROP-FLOOD-03 and PROP-FLOOD-06 v6.1, interval form via PROP-FLOOD-10a. (1) Design capacity C_des_H(U) (08-local; in place of 06's C_H, never a case of 06's case split): C_des_H(U) := D_design(U,H)*A_U, DESIGN_DECLARED PER WINDOW, using the owner's declared design depth D_design(U,H) for exactly the window H (Bangkok, BMA drainage plan 2569 p.63, VERIFIED downstream: 1 h -> 58.7 mm, 24 h -> 80 mm); any other window is REFUSED DESIGN_DEPTH_UNDECLARED -- no pro-rating, no bridging between windows (the v0 draft's (H/24)*D_design gave 3.33 mm at H = 1 h, contradicting the owner's 58.7 mm and violating downstream conversion rule R2). Load-to-capacity ratio L^m_H = (c_U*P^m_H + kappa*E_k/A_U)/D_design(U,H), with kappa = 1000 mm/m when E_k is in m^3 and A_U in m^2 (equivalently E_k[m^3]/A_U[km^2] x 1e-3 mm), so the numerator is in mm like D_design; per named model, worst first (the worst bounds every model and is one of them), never averaged; with E_k REFUSED the rain-only ratio is reported as a MINIMUM (proved lower bound). c_U = 1 (PROP-FLOOD-06 bound-pair upper end) unless measured. (2) Storage exceedance E_k = max(0, S_k - S_safe) on ONE declared unit/datum: REFUSED SAFE_STORAGE_UNDECLARED (reference not declared), DATUM_UNDECLARED (reading and reference not on one unit/datum), 03 codes pass through first (a NEGATIVE_STORAGE ledger is never clipped to 0). Public label 'water debt' only; SIGN WARNING: 'storage deficit' in international usage means AVAILABLE storage (free room), the opposite sign -- E_k is 0 whenever room is available. PROP-FLOOD-10 level-3 point depth max(0, H - z) is an OCCURRENCE of this object (length unit, same-datum rule), not a twin. (3) Drawdown time T_dd = V_stored/Q_out, the closed form of PROP-FLOOD-03 with P = Q_in = 0 and constant Q_out; LOWER bound only when Q_out is the declared maximum (rated) outflow over the horizon: proved that with any non-negative inflow and outflow never above that Q_out, storage cannot reach 0 before tick k with k*tau >= T_dd (drawdown_is_lower_bound, whose hypothesis is outflow j <= Q_out for every tick). T_dd at an effective (current) Q_out is a readout, NOT a bound -- more pumps or a gate opening can raise outflow later; drawdown_rated_le_effective shows T_dd(rated) <= T_dd(effective). (4) Capacity reduction eta: C_eff = C_0*eta, eta = g_U(t) (06) * running-pump fraction (06) * eta_canal, eta_canal ABSENT (no default 1) until fitted via PROP-FLOOD-06 calibration_procedure; L at rated capacity is a proved lower bound for every eta in (0,1]. Not objects: the revolving screen max(0, D + P - 80) (screening heuristic, freezes A*c = 1 and Q_out*tau = 80 mm); the relayed 'multi-day envelope' P_n/(n*80) is WITHDRAWN (it pro-rates across windows; evaluate L_24 day by day and carry storage through E_k instead); no compound-interest factor."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "hydrology: load-to-capacity ratio / utilisation ratio / exceedance ratio (L)",
+      "hydrology: level of service / design rainfall depth per window (D_design(U,H))",
+      "hydrology: drawdown time / time-to-drain / emptying time (T_dd)",
+      "hydrology: storage exceedance / surcharge volume above declared safe storage (E_k; public label 'water debt'; NOT 'storage deficit')",
+      "hydrology: capacity reduction / derating factor (eta)",
+      "flood-readout-app: 'water DSR' (P + D)/C_eff and 'rain-load ratio' P_24/80 (renamings of L)"
+    ],
+    "definitions": {
+      "U": "declared drainage node (sub-polder, pond, district, city) exactly as PROP-FLOOD-06's unit; a city is the sum over its outfalls, per PROP-FLOOD-06 R_H summation over O_U",
+      "D_design(U,H)": "owner-published design rainfall depth for EXACTLY window H (a finite declared table of (window, depth) pairs, each with a source tag). Bangkok: (1 h, 58.7 mm) and (24 h, 80 mm), BMA drainage plan 2569 p.63, VERIFIED downstream; the two numbers are separately declared (downstream R2 check: T=2y gives 1 h 58.7 mm but 24 h 93.6 mm, so 80 is not the same-T 24 h value) and are never converted into each other. A window without an entry (2, 3, 6, 12 h, n days) is REFUSED DESIGN_DEPTH_UNDECLARED. Using a city figure for a smaller node is a scope borrow tagged RELAYED-scope.",
+      "P^m_H(U)": "forecast or observed rainfall depth over the same window H from named source m (model or gauge); a forecast value is a grid-cell MEAN per PROP-FLOOD-06 v6.1 forecast_grid_cell_mean; per source, worst first, never averaged (multi_model_scenarios)",
+      "c_U": "runoff coefficient, PROP-FLOOD-06 bound pair [0.5, 1]; the load ratio uses the upper end 1 unless measured; the interval form carries the pair",
+      "E_k(U)": "storage exceedance max(0, S_k - S_safe) on one declared unit/datum; in L it enters as kappa*E_k/A_U with kappa = 1000 mm/m (E_k in m^3, A_U in m^2), i.e. in mm like D_design; REFUSED -> L reported as the rain-only MINIMUM with missing: storage_state",
+      "S_safe(U)": "owner-declared safe reference on the same unit/datum as S_k (a volume for storage; a bankfull capacity is not a safe storage; a stage is not a volume without a declared stage-storage relation on a declared datum)",
+      "V_stored(U)": "declared or official stored volume at drawdown start (m^3)",
+      "Q_out(U)": "outflow rate (m^3/s) = PROP-FLOOD-03 Q_out rule (0 if gate CLOSED else min(Q_meas, C_pump)); labelled rated|effective",
+      "eta": "capacity reduction factor C_eff/C_0 in (0,1]: g_U(t) * running-pump fraction (both PROP-FLOOD-06) * eta_canal (slot, ABSENT until fitted; no default)",
+      "T_dd(U)": "drawdown time V_stored/Q_out in seconds (report also in h and d); a lower bound only at Q_out = declared maximum (rated) outflow; at an effective Q_out a readout, not a bound"
+    },
+    "readout_classes": {
+      "load_ratio": "Some(L worst-first, per-model list, interval [L_lo, L_hi] when a box is declared, storage_included: bool) | REFUSED(DESIGN_DEPTH_UNDECLARED | MISSING_INPUT(no source))",
+      "load_ratio_verdict": "three-state cl([L_lo, L_hi]; 1) via PROP-FLOOD-10a (ROBUST above 1 / AT_THRESHOLD / POSSIBLE / BELOW); a forecast-only L never lifts a PROP-FLOOD-06 tier above L1 (06 promoter table, unchanged)",
+      "storage_exceedance": "Some(E_k) | REFUSED(<03 code> | SAFE_STORAGE_UNDECLARED | DATUM_UNDECLARED)",
+      "drawdown": "Some(T_dd, basis=rated -> bound=lower | basis=effective -> bound=none (readout)) | REFUSED(MISSING_INPUT | NEGATIVE_STORAGE | ZERO_OUTFLOW)",
+      "eta": "Some(eta in (0,1]) | ABSENT (eta_canal not fitted) | REFUSED(ETA_OUT_OF_RANGE) -- three distinct outcomes (eta_result)"
+    },
+    "refusal_codes": {
+      "reused_first": [
+        "MISSING_INPUT",
+        "STALE_INPUT",
+        "UNDECLARED_AREA",
+        "UNDECLARED_EDGE",
+        "NEGATIVE_STORAGE (PROP-FLOOD-03 verbatim)"
+      ],
+      "added": [
+        "SAFE_STORAGE_UNDECLARED",
+        "DATUM_UNDECLARED",
+        "DESIGN_DEPTH_UNDECLARED",
+        "ZERO_OUTFLOW",
+        "ETA_OUT_OF_RANGE (v1.2: a fitted eta outside (0,1]; distinct from ABSENT = not yet fitted)"
+      ],
+      "precedence": "03 codes first, then 08 codes"
+    },
+    "claim_boundary": "Finite bookkeeping readouts of PROP-FLOOD-03's ledger and PROP-FLOOD-06's ratio: no routing, no Saint-Venant, no rating curve, no rainfall-runoff model beyond c_U. D_design(U,H) is an owner declaration per window, not a derived flood-onset boundary. The ratio is defined only at owner-declared windows.",
+    "non_claims": [
+      "No hourly intensity is inferred from a 24 h total and no 24 h depth from an hourly one: windows are never pro-rated (the only relation between a 24 h total P_24 and any hour is 0 <= P_1h <= P_24, a bound, which almost always gives POSSIBLE).",
+      "E_k is not 'storage deficit' (international usage: available storage, opposite sign), and E_k = 0 means 'no exceedance', not 'safe'.",
+      "T_dd at the declared maximum (rated) outflow is a lower bound, never an estimate of real drawdown time; T_dd at an effective outflow is a readout, not a bound (outflow may rise later) and not an estimate either.",
+      "No point depth without water level H and ground elevation z on one declared datum (PROP-FLOOD-10 level 3 applies the same-datum rule).",
+      "No forecast-skill claim: a forecast-only L (about 0.66 on 26 Sep 2569) missed an observed L_24 of 2.54; one event calibrates nothing.",
+      "The screen max(0, D + P - 80) is a screening heuristic (monotone, but not a readout of storage); the relayed multi-day envelope P_n/(n*80) is withdrawn.",
+      "No compound-interest term: any 'old water lowers future drainage' effect must appear in a measured Q_out or eta."
+    ],
+    "debt_onset_mapping_bma_plan_2569_s5_1": {
+      "source": "downstream card docs/knowledge/S51_DEBT_ONSET_AND_BMA_COPING_INDICATOR_2026-09-27.md (flood repository), reading BMA drainage plan 2569 section 5.1 period table (p.22) as a water ledger -- a MAPPING onto existing objects, no new object",
+      "new_debt (borrowing)": "L_1 = i_1h / 58.7 and, separately, L_24 = P_24 / 80 (this object, two declared windows, never converted into each other); three-state against 1 via PROP-FLOOD-10a",
+      "carried_debt": "E_k on PROP-FLOOD-03 state across consecutive days (multi-day rain) -- REFUSED SAFE_STORAGE_UNDECLARED today (0 of 57 ponds have a stage-storage relation downstream)",
+      "stacked_debt": "inbound D_in of PROP-FLOOD-09 (period 3, north/east field water) -- REFUSED INPUT_ABSENT / TAU_UNDECLARED today",
+      "repayment_slowdown": "high Chao Phraya stage lowers repayment capacity, it does not create debt: PROP-FLOOD-03 gate-closed branch (gravity) + PROP-FLOOD-06 g_U(t) (DERATING_UNDECLARED until declared); +2.00 m MSL is the plan's own 'protection may fail' line (p.47, VERIFIED downstream)",
+      "period_rows": [
+        {
+          "period": "1 early wet season May-Jul",
+          "plan_normal_band_mm_per_h": "10-60",
+          "L_1_interval": "[0.17, 1.02]",
+          "state": "POSSIBLE (straddles 58.7)"
+        },
+        {
+          "period": "2 late wet season Aug-Oct",
+          "plan_normal_band_mm_per_h": "60-90",
+          "L_1_interval": "[1.02, 1.53]",
+          "state": "ROBUST above 1 -- the plan's own 'normal' band already exceeds its declared 1 h depth (Coq Example bma_p2_normal_band_exceeds_1h_capacity)"
+        },
+        {
+          "period": "3 northern runoff + high tide Oct-Dec",
+          "plan_normal_band_mm_per_h": ">90 early Oct",
+          "L_1_interval": "lower end > 1.53, upper edge undeclared",
+          "state": "ROBUST above 1 for the rain term; stacked debt via PROP-FLOOD-09 even with no local rain"
+        }
+      ],
+      "note": "The words debt/borrow/repay are the downstream public vocabulary (PROPOSAL/INSTINCT there); here they label only E_k (carried), L > 1 (new), D_in (stacked). October sits in both periods 2 and 3 of the plan's own table: evaluate both and report the worse first."
+    },
+    "parents": [
+      {
+        "code": "delta_R",
+        "derived_via": "instance_of",
+        "evidence": "S_k - S_safe, H - z and C_H - F_H are retained differences between a declared constant and a readout (readout_genesis Part I root primitive), as already cited by PROP-FLOOD-01/03/06."
+      },
+      {
+        "code": "PROP-FLOOD-03",
+        "derived_via": "reuses",
+        "evidence": "State S_b(k), Q_out(k) rule and the five refusal codes reused verbatim (Coq type r03, precedence first); T_dd is its closed form with P = Q_in = 0 and constant Q_out (the discrete lower-bound theorem iterates exactly 03's step with inflow >= 0); E_k is a positive part on its state."
+      },
+      {
+        "code": "PROP-FLOOD-06",
+        "derived_via": "sibling_of",
+        "evidence": "(fix round 1, not instance_of) L is a SIBLING ratio to 06's S_H(U) = F_H/C_H, not S_H itself and not a new case of 06's case split (a)-(d) -- 06 (flood_outlet_coping.json) is not amended by this registration and stays at v6.1. L's numerator is 06's rain term (c_U*P^m_H) plus the carried storage exceedance E_k (PROP-FLOOD-03/08); Q_in,up(t) is reported separately via PROP-FLOOD-09's D_in, never folded into L's numerator. L's denominator is D_design(U,H) directly (mm, same unit as the numerator). This object also states its own design-capacity term C_des_H(U) := D_design(U,H)*A_U (fix round 2: an 08-local symbol, renamed from the draft's bare C_H to stop colliding with 06's own C_H -- it is not L's denominator and not a case of 06). Reused verbatim from 06 v6.1 as terms, not as the same object: the c_U bound pair, multi_model_scenarios (worst first, never averaged), forecast_grid_cell_mean, g_U(t), running-pump fraction, calibration_procedure, promoters and tier ladder."
+      },
+      {
+        "code": "PROP-FLOOD-10a",
+        "derived_via": "occurrence",
+        "evidence": "E_k monotonicity IS 10a's excess_sigma_monotone (exceedance_monotone applies it); the interval form of L (load_ratio_enclosure) is a direct proof in the same form as the 10a enclosure, not a corollary of it (review A1: 10a's global sigma_monotone does not cover products on the non-negative orthant; 10a v1.1 enclosure_sound_box would, but load_ratio_enclosure is kept as its own direct proof); the verdict on [L_lo, L_hi] against 1 is cl of 10a (= D/M.71-76)."
+      },
+      {
+        "code": "A2/M.12.v1, A2/M.13.v1, A2/M.14.v1",
+        "derived_via": "reuses",
+        "evidence": "fold-max on Z: the worst element bounds every element and is attained; the Q analogues worst_bounds_every_model / worst_is_attained are proved directly here, citing A2/M.12-14 as the same statement on Z"
+      }
+    ],
+    "neighbours_not_parents": [
+      {
+        "code": "PROP-FLOOD-02",
+        "why": "time-to-threshold on a rising series; a falling/drain-down series is REFUSED NOT_APPLICABLE by its own statement -- which is why drawdown needs its own name"
+      },
+      {
+        "code": "PROP-FLOOD-05a / PROP-FLOOD-05b",
+        "why": "burden side / zone burden rank; assert no volume or rate"
+      },
+      {
+        "code": "EQ-015/W.19.v1",
+        "why": "(REGISTERED_SPLIT, usable:false -- cited for context only; split into EQ-015/W.55.v1..W.59.v1) Reversibility Window tau^rec is an input to a domain-W urgency vector, not defined from a volume and a rate (read, not a match)"
+      },
+      {
+        "code": "R/M.14.v1",
+        "why": "geometric recession tail bound -- complementary to T_dd (measured contraction vs constant outflow), not a twin; no new recession object is opened"
+      },
+      {
+        "code": "A.5/S.07.v1",
+        "why": "C_{t+1} = G(x_t, C_t) is a CANDIDATE_MATCH for the screen recursion by text only; structural, NOT a match"
+      },
+      {
+        "code": "EQ-015/H.51.v1",
+        "why": "barrier/forward-invariance certificate for load-capacity dynamics, stated in continuum form dL/dt = f(L,C,u); read, not a parent (continuum; a buffer barrier, not a per-window ratio) -- review A12"
+      }
+    ],
+    "genesis_compatibility": {
+      "gate": "readout_genesis Part VI-A, B.2a 'A generic conservation ledger' [Dr] -- the same gate as PROP-FLOOD-03/06",
+      "note": "All four objects are readouts OF the ledger state/rates (ratio, positive part, quotient, factor); no new conservation law, no J_created term, no continuum limit; ZERO_OUTFLOW is Gate-2 ⊥-style refusal (never 1/0 = infinity). readout_genesis local HEAD 6f2cb06 (2026-09-13); READOUT_GENESIS_CORE.md lines 2021 (Face 12), 2201 (IV.5), 3768-3776 (A.13 Gate 2), 4029 (VI-A B.2a) -- VERIFIED by grep in this session; hub pin not re-checked against remote (OPEN, no network used)"
+    },
+    "toledo_lookup": {
+      "measured": [
+        "check --formula \"L = P / D_design load ratio\" -> NOT_REGISTERED []",
+        "check --formula \"C_H(U) := D_design(U,H) * A_U only at declared window H\" -> NOT_REGISTERED []",
+        "check --formula \"E_k = max(0, S_k - S_safe)\" -> NOT_REGISTERED []",
+        "check --formula \"T_dd = V_stored / Q_out\" -> NOT_REGISTERED []",
+        "find drawdown -> 0 hits"
+      ],
+      "verdict": "PROPOSAL (per-object gaps confirmed; parents read in full)"
+    },
+    "monotonicity": "Proved: load_ratio_enclosure (non-decreasing in P, c, E; non-increasing in D_design on the same window), rain_only_is_lower_bound, rated_ratio_is_lower_bound (eta), exceedance_monotone (non-decreasing in S_k, non-increasing in S_safe), drawdown_rated_le_effective (T_dd non-increasing in Q_out). T_dd non-decreasing in V_stored follows from div_le_num.",
+    "honest_caveats": [
+      "Declared design depths exist only for the Bangkok system (1 h, 24 h); applying them to a village node is a scope borrow (RELAYED-scope) until that node's own figure exists.",
+      "eta_canal has no value anywhere; L at rated capacity and T_dd at rated outflow are lower bounds.",
+      "Every retention-pond stage-storage relation is absent downstream (0/57), so E_k and pond T_dd are REFUSED everywhere at registration time (Sammakorn: SAFE_STORAGE_UNDECLARED + MISSING_INPUT stage_storage, S_k + datum OPEN).",
+      "L_1 needs hourly rain; the downstream collector does not yet store rain_1h (an open downstream data-collection gap), so gauge L_1 is UNRESOLVED for every event held; ERA5 cell means never reach 58.7 mm/h in 21.7 years (downstream MEASURED) -- a limitation of cell means, not evidence of no exceedance.",
+      "v1 corrects the v0 draft's C_H := (H/24)*D_design (see version_history); L_24 = P_24/80 is unchanged by the correction."
+    ],
+    "falsifier": "(1) Systematic tier/outcome mismatch across replayed independent events for a unit class (observed L_H >= 1 repeatedly without flooding, or < 1 repeatedly with flooding, per declared window) falsifies D_design(U,H) as effective capacity for that class and window, not the arithmetic; fix via PROP-FLOOD-06 calibration_procedure, never by a silent constant change or by pro-rating another window. (2) Observed drain-down faster than T_dd at rated outflow falsifies the declared V_stored or outlet set (UNDECLARED_EDGE candidate) -- the Coq lower bound rules it out under its hypotheses. (3) Measured eta = 1 under full canals across >= 3 events retires the eta_canal slot for that node class; measured eta < 1 with running pumps confirms it.",
+    "empirical_test_status": "downstream plumbing replays only (Bangkok 24-27 Sep 2569; 14 Sep 2568; Oct-Nov 2554 via the S5.1 card): every axis REFUSED FEW_EVENTS under the proposed N_min = 10 -- no calibration, no skill claim",
+    "origin": {
+      "source": "New derivation/proposal: community flood-readout application (FloodConnect), from founder-relayed external notes (rain-load ratio method, water-debt analogy and self-correction, urban-event layer, interval zoom), 2026-09-27; downstream maps docs/knowledge/FORECAST_RISK_SHORTEST_EQUATION_2026-09-27.md sections 9-12 and docs/knowledge/S51_DEBT_ONSET_AND_BMA_COPING_INDICATOR_2026-09-27.md (flood repository)",
+      "doi": null
+    },
+    "version": "v1.2",
+    "version_history": [
+      {
+        "v": 0,
+        "date": "2026-09-27",
+        "statement": "draft (untracked): C_H := (H/24)*D_design*A_U; interval form HOLD",
+        "reason": "draft only -- not submitted, no Coq, no independent review"
+      },
+      {
+        "v": 1,
+        "date": "2026-09-28",
+        "statement": "Registered: per-window owner-declared design depth with DESIGN_DEPTH_UNDECLARED refusal (no pro-rating), L per model worst first with interval form via PROP-FLOOD-10a, E_k with DATUM_UNDECLARED and 03-first precedence, T_dd proved lower bound, eta slot; multi-day envelope withdrawn; S5.1 debt-onset mapping folded in.",
+        "reason": "Founder instruction (verbatim: \"ทำสมการให้ครบก่อนนะ\"); correction from the downstream S5.1 card (a downstream tracker item on correcting the window pro-rating): the draft's (H/24)*D_design gave 3.33 mm/h at H = 1 h, contradicting the owner's declared 58.7 mm/h and bridging durations, which conversion rule R2 forbids; HOLD section 4.4 resolved by PROP-FLOOD-10a (enclosure) and D/M.71-76 (three-state).",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      },
+      {
+        "v": "1.1",
+        "date": "2026-09-28",
+        "statement": "B4: T_dd is a lower bound only at the declared maximum (rated) outflow, a readout at effective outflow; A1: load-ratio interval reworded as a direct proof in the same form as 10a; A8: guards for negative S_k, undeclared window / non-positive area in load_ratio_checked, eta outside (0,1]; A9: explicit unit factor kappa; A10: Example scope c_U = 1, rain only; A12: A2/M.12-14 wording, EQ-015/H.51 as neighbour.",
+        "reason": "independent review (maker != checker), blocking B4 and advisories A1, A8, A9, A10, A12",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      },
+      {
+        "v": "1.2",
+        "date": "2026-09-28",
+        "statement": "eta outcome made three-valued: value in (0,1] / ABSENT (not fitted) / REFUSED ETA_OUT_OF_RANGE (fitted but outside (0,1]); new refusal code ETA_OUT_OF_RANGE.",
+        "reason": "independent review round 2 advisory R2-A8 (out-of-range eta was indistinguishable from not-yet-fitted)",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      }
+    ],
+    "depends_on": [
+      "PROP-FLOOD-03 (registry/proposals/flood_water_balance.json, on this branch)",
+      "PROP-FLOOD-06 v6.1 (registry/proposals/flood_outlet_coping.json, on this branch; PR #63 open)",
+      "PROP-FLOOD-10a (registry/proposals/flood_interval_enclosure.json, this branch)"
+    ],
+    "coq_file": "coq/canonical/PROP_FLOOD_08_load_ratio_drawdown_exceedance.v",
+    "coq_theorems": [
+      "exceedance_refused_when_safe_undeclared",
+      "exceedance_inherits_03_refusal",
+      "exceedance_never_clips_negative_ledger",
+      "exceedance_refused_when_datum_differs",
+      "exceedance_ok_iff",
+      "exceedance_nonneg",
+      "exceedance_zero_when_room_available (sign warning)",
+      "exceedance_monotone",
+      "Qltb_iff",
+      "div_le_num",
+      "div_nonneg",
+      "div_le_den",
+      "design_lookup_in",
+      "design_lookup_none",
+      "design_depth_only_at_declared_window",
+      "design_depth_refused_when_window_undeclared",
+      "bma_1h_declared / bma_24h_declared / bma_3h_refused (Examples)",
+      "draft_prorating_contradicts_owner (Example)",
+      "rain_only_is_lower_bound",
+      "load_ratio_enclosure",
+      "bma_p2_normal_band_exceeds_1h_capacity (Example, mapping fact)",
+      "worst_bounds_every_model",
+      "worst_is_attained",
+      "worst_refused_only_when_no_model",
+      "rated_ratio_is_lower_bound",
+      "eta_absent_without_fit",
+      "drawdown_zero_outflow_refused",
+      "drawdown_missing_refused",
+      "drawdown_ok_iff",
+      "drawdown_rated_le_effective",
+      "stored_lower",
+      "drawdown_is_lower_bound",
+      "exceedance_refuses_negative_numeric (A8)",
+      "load_ratio_checked_ok (A8)",
+      "load_ratio_checked_refuses_undeclared_window (A8)",
+      "(exceedance_ok_iff now also returns 0 <= s)",
+      "eta_total_in_range (A8, v1.2 on EtaValue)",
+      "eta_out_of_range_refused (R2-A8)",
+      "eta_absent_is_not_refused (R2-A8)"
+    ],
+    "coq_check": {
+      "command": "cd coq/canonical && coqc -q -Q . MRC -R ../information-discrete-math IDM <file> (IDM_ReadoutMinimality/IDM_ResolvedCount compiled first; scratch build directory, .vo not committed); Print Assumptions via a scratch audit file importing all four PROP_FLOOD_08/09/10 modules",
+      "result": "coqc -q clean; Print Assumptions: Closed under the global context for all 40 items (MEASURED 2026-09-28, v1.2)"
+    },
+    "open": [
+      "Whether 1,200 m^3/s (Bangkok drawdown example) is city-wide or east-bank-only rated outflow.",
+      "Stage-storage relations for every retention pond (0 of 57 downstream).",
+      "Founder confirmation that 'level of service' is the preferred public term for D_design(U,H).",
+      "Declared design depths for other windows (2, 3, 6, 12 h) -- REFUSED until the owner publishes them."
+    ],
+    "toledo_status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "guards_v1_1": "storage_exceedance refuses a numeric negative S_k (NEGATIVE_STORAGE) instead of clipping; load_ratio_checked refuses an undeclared window (DESIGN_DEPTH_UNDECLARED) and A_U <= 0 (UNDECLARED_AREA); eta_total returns EtaValue in (0,1], EtaAbsent when eta_canal is not fitted, and EtaRefused ETA_OUT_OF_RANGE for a fitted product outside (0,1] (v1.2, review R2-A8) (review A8)",
+    "example_scope_note": "bma_p2_normal_band_exceeds_1h_capacity holds for c_U = 1 and rain only (E_k = 0), as written (review A10)",
+    "open_founder_decisions": [
+      "wording 'level of service' for D_design(U,H)",
+      "N_min for any skill statement (downstream proposes 10)"
+    ]
+  }
+]
