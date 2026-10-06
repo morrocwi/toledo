@@ -1,0 +1,163 @@
+[
+  {
+    "id": "PROP-FLOOD-10a",
+    "code": "weld/M.??.v1",
+    "name": "Monotone endpoint enclosure over a declared finite box on Q, its per-tick iterated form, and the nested-box condition, with fail-closed bounds -- NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "statement": {
+      "latest": "\\text{Let } B=\\prod_{i<n}[lo_i,hi_i]\\subset\\mathbb{Q}^n \\text{ be a declared finite box and } \\sigma_i\\in\\{+,-\\} \\text{ a declared sign pattern; } f:\\mathbb{Q}^n\\to\\mathbb{Q} \\text{ non-decreasing in every } i\\in I^+ \\text{ and non-increasing in every } i\\in I^-. \\text{ With } x^{lo*}_i := lo_i \\,(i\\in I^+),\\ hi_i\\,(i\\in I^-) \\text{ and } x^{hi*} \\text{ the reverse: } \\boxed{\\forall x\\in B:\\ f(x^{lo*})\\le f(x)\\le f(x^{hi*})} \\text{ (both corners lie in } B\\text{, so both endpoints are attained). Iterated: if } D_{t+1}=g(D_t,u_t),\\ g \\text{ non-decreasing in } D \\text{ and } \\sigma\\text{-monotone in } u,\\ u_t\\in B_t,\\ D^{lo}_0\\le D_0\\le D^{hi}_0, \\text{ then } \\boxed{D^{lo}_t\\le D_t\\le D^{hi}_t\\ \\forall t\\in\\mathbb{N}} \\text{ with } D^{lo},D^{hi} \\text{ run at the lower/upper corners. Nested box: } B_c\\sqsubseteq B_p :\\Leftrightarrow lo^p_i\\le lo^c_i\\le hi^c_i\\le hi^p_i\\ \\forall i \\Rightarrow [f(x^{lo*}_c),f(x^{hi*}_c)]\\subseteq[f(x^{lo*}_p),f(x^{hi*}_p)]. \\text{ Three-state interval readout } cl(lo,hi;\\theta):=\\mathrm{classify}\\big(\\tfrac{hi-lo}{2},\\tfrac{lo+hi}{2}-\\theta\\big) \\text{ (D/M.71--76, exact renaming): } Sp\\iff\\theta<lo,\\ Sm\\iff hi<\\theta,\\ Sz\\iff lo=hi=\\theta,\\ Sbot\\iff lo\\le\\theta\\le hi,\\ lo\\ne hi; \\text{ for nested intervals a determinate parent state is inherited and never flipped. } \\boxed{\\text{REFUSED (BOUND\\_MISSING | BOUND\\_ORDER | NOT\\_NESTED)}} \\text{ for the layer that lacks a declared endpoint, has } lo>hi, \\text{ or is compared to a non-nested layer -- never } \\pm\\infty.",
+      "format": "latex",
+      "note_ascii": "NEW DERIVATION / PROPOSAL -- not yet in Toledo. Domain-generic (nothing here mentions water). For a declared finite box B on Q^n and a declared sign pattern, a coordinate-wise monotone f is enclosed by its values at the two declared corners (lo* = lower on increasing coordinates, upper on decreasing ones; hi* = reverse), both corners are points of B (tight), a per-tick recursion that is non-decreasing in its state stays enclosed at every tick by the two corner runs, and a child box nested in a parent box has its enclosure nested in the parent's. The interval three-state readout is D/M.71-76 classify with floor := (hi-lo)/2 and v := (lo+hi)/2 - theta (renaming, not a new classifier): ROBUST (Sp) iff theta < lo, BELOW (Sm) iff hi < theta, AT_THRESHOLD (Sz) iff lo = hi = theta, POSSIBLE (Sbot) iff lo <= theta <= hi with lo <> hi; boundary convention: lo = theta < hi is POSSIBLE (conservative). For nested intervals a ROBUST/BELOW parent is inherited by every child and can never be flipped by it; without nesting it can (counterexample recorded). A missing endpoint REFUSES that layer only (BOUND_MISSING), lo > hi is BOUND_ORDER, a non-nested strict refinement is NOT_NESTED. Registered ONCE here; PROP-FLOOD-08 uses it directly for E_k (excess_sigma_monotone); the interval form of L is the same form, proved directly in 08 (load_ratio_enclosure), not a corollary; PROP-FLOOD-10 uses cl, refine_check and excess directly and the level-1 box step wb_step_enclosure. No second enclosure object is registered. v1.1: a BOX-RESTRICTED form is added (monotonicity required only between points of the declared box -- enclosure_sound_box), because products such as P*A*c are monotone only on the non-negative orthant; global monotonicity is its special case (sigma_monotone_box). Strict refinement rejects reversed endpoints of either layer (BOUND_ORDER) before the nesting test, and a passed check licenses the no-flip readout (checked_refinement_no_flip)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "interval arithmetic: monotone inclusion function at corner points (renaming of the general idea; statement here is finite and declared)",
+      "flood-readout-app:Delta2 of the FloodConnect reuse card (enclosure + nested box)",
+      "flood-readout-app:hierarchical zoom interval rule (relayed external code, adopted only through this statement)"
+    ],
+    "definitions": {
+      "box B": "finite list of declared rational endpoint pairs [lo_i, hi_i], i < n; an undeclared endpoint is None (REFUSED BOUND_MISSING), never +/- infinity (Q has none)",
+      "sign pattern sigma": "per coordinate: + (f non-decreasing) or - (f non-increasing); declared with the map, proved for each instance used",
+      "corners": "x^{lo*}, x^{hi*} as in the statement",
+      "nested": "B_c nested in B_p iff, on every shared coordinate, lo^p <= lo^c and hi^c <= hi^p",
+      "cl(lo,hi;theta)": "classify((hi-lo)/2, (lo+hi)/2 - theta), classify imported from the IDM mirror (D/M.71.v1 statement), not restated",
+      "instances proved monotone in the Coq file": "excess(s, r) := max(0, s - r) (PROP-FLOOD-08 E_k and PROP-FLOOD-10 level-3 point depth); screen_step(D; P, C) := max(0, D + P - C) (screening heuristic only -- monotone instance, not endorsed as a readout); PROP-FLOOD-03 step S + P*A*c + Q_in*tau - Q_out*tau on a non-negative box for P, c with A, tau >= 0",
+      "box_monotone": "v1.1: f is monotone in the sign pattern for points OF THE BOX only (enclosure_sound_box needs box_wf); global sigma_monotone implies it"
+    },
+    "readout_classes": {
+      "interval_state": "ROBUST (Sp) | AT_THRESHOLD (Sz) | POSSIBLE (Sbot) | BELOW (Sm) | REFUSED(BOUND_MISSING | BOUND_ORDER | NOT_NESTED)"
+    },
+    "claim_boundary": "A finite order-theoretic statement about declared boxes and monotone maps on Q. It asserts nothing about which maps a physical system obeys: each use must prove (or cite a proof of) the monotonicity of its own map, and the enclosure is only as good as the declared box. No probability, no distribution inside the box, no continuum limit, no infinite endpoint.",
+    "non_claims": [
+      "Not a probabilistic interval: [f(lo*), f(hi*)] is a guaranteed range for inputs inside the declared box, not a confidence interval.",
+      "Not valid for non-monotone maps: a map that is not monotone in some coordinate needs a different enclosure (not supplied).",
+      "The screening recursion max(0, D + P - C) being monotone does not promote it to a readout; it stays a screening heuristic (PROP-FLOOD-08 non-claims).",
+      "D/M.77.v1 (bot_monotone_in_floor) is the same-centre special case; the nested-box theorem is the delta because a nested child moves both centre and half-width."
+    ],
+    "refusal_codes": [
+      "BOUND_MISSING",
+      "BOUND_ORDER",
+      "NOT_NESTED"
+    ],
+    "parents": [
+      {
+        "code": "D/M.71.v1..D/M.76.v1",
+        "derived_via": "reuses (imported, exact renaming)",
+        "evidence": "classify floor v read in full (IDM_ResolvedCount.v): Sp iff floor < v, Sm iff v < -floor, Sz iff floor == 0 and in band, Sbot otherwise; with floor := (hi-lo)/2, v := (lo+hi)/2 - theta the four cases are theta < lo, hi < theta, lo = hi = theta, and the band -- proved as cl_plus_iff / cl_minus_iff / cl_zero_iff / cl_bot_iff. All six REGISTERED_CURRENT (toledo_mcp.cli check --code, this session)."
+      },
+      {
+        "code": "D/M.77.v1",
+        "derived_via": "generalises (special case)",
+        "evidence": "bot_monotone_in_floor: 0 <= f1 <= f2, classify f1 v = Sbot -> classify f2 v = Sbot. Fixes v; the nested-box theorem allows v to move, which D/M.77 does not cover -- hence the delta."
+      },
+      {
+        "code": "R/M.30.v1",
+        "derived_via": "brick",
+        "evidence": "Qmult_le_l_nonneg: 0 <= c -> a <= b -> c*a <= c*b -- the monotone product step used for P*A*c on the non-negative box (the Coq file uses the stdlib Qmult_le_compat_nonneg, same content). (cited as the IDM statement of the same brick; not imported)"
+      },
+      {
+        "code": "A2/M.12.v1, A2/M.13.v1, A2/M.14.v1",
+        "derived_via": "reuses (source interval)",
+        "evidence": "fold-max: every element lies below the fold-max and the fold-max is attained -- the worst-first endpoint of a multi-source interval (PROP-FLOOD-08 worst_bounds_every_model / worst_is_attained are the Q analogues, proved directly). (stated on Z in IDM; the Q analogues are proved directly in PROP-FLOOD-08, not imported)"
+      }
+    ],
+    "genesis_compatibility": {
+      "gate": "readout_genesis Part V-A, A.13 Gate 2 -- Three-Valued Admissibility",
+      "quote": "\"`Adm = 1` => expand; `Adm = 0` => record the obstruction; `Adm = ⊥` => record it as **unresolved and do not guess**\" (READOUT_GENESIS_CORE.md line 3775)",
+      "note": "POSSIBLE is Gate-2 ⊥ of the interval (the instrument cannot decide the side of theta), not 0; a missing bound is REFUSED for that layer only, never replaced by an infinity or a guessed value. readout_genesis local HEAD 6f2cb06 (2026-09-13); READOUT_GENESIS_CORE.md lines 2021 (Face 12), 2201 (IV.5), 3768-3776 (A.13 Gate 2), 4029 (VI-A B.2a) -- VERIFIED by grep in this session; hub pin not re-checked against remote (OPEN, no network used)"
+    },
+    "toledo_lookup": {
+      "measured": [
+        "check --formula \"f(box) subset [f(x_lo), f(x_hi)] monotone endpoint enclosure\" -> NOT_REGISTERED, candidates []",
+        "check --formula \"cl(lo,hi;theta) := classify((hi-lo)/2, (lo+hi)/2 - theta)\" -> NOT_REGISTERED, candidates []",
+        "find enclosure -> 0 hits; find endpoint -> 4 hits, none a match (EQ-015/M.07, EQ-015/H.52, L_R/M.01 handshake, WP.S24.DomainCard); find squeeze -> R/P.02.v1 (s*s < delta_num < (s+1)^2, integer square-root bracket -- NOT a match); find interval -> A.5/S.05.v1 viable-region membership (x(t) in V -- NOT a match)"
+      ],
+      "verdict": "PROPOSAL (gap confirmed by reading statements, not by keyword)"
+    },
+    "monotonicity": "Proved (Th_coqc-in-proposal-lane, see coq_theorems): enclosure_sound, iterated_enclosure, nested_enclosure; instances excess_sigma_monotone, screen_step_mono_D, screen_step_sigma, wb_step_enclosure.",
+    "honest_caveats": [
+      "Tier stays Dr/unverified until the normal Toledo review path; machine-checked lemmas in a proposal-lane file do not by themselves promote a proposal.",
+      "The sign pattern is a declaration; a wrong sign declaration makes the enclosure wrong without any Coq error, because the Coq theorem takes monotonicity as a hypothesis -- each instance must carry its own monotonicity proof (the three used downstream do).",
+      "The boundary convention lo = theta < hi => POSSIBLE is conservative for the strict (ROBUST) claim; the worst-first firing rule of PROP-FLOOD-10 uses hi >= theta, which includes equality."
+    ],
+    "falsifier": "A declared box, a map with a proved sign pattern, and a point inside the box whose value falls outside [f(lo*), f(hi*)] would falsify the enclosure (the Coq proof rules this out for the stated hypotheses, so an observed violation locates a wrong declaration: box, sign pattern, or a non-monotone map used as if monotone). A nested child whose determinate state is opposite to its determinate parent with no input error falsifies the nesting declaration.",
+    "empirical_test_status": "none (a finite mathematical statement; downstream uses carry their own tests)",
+    "origin": {
+      "source": "New derivation/proposal: FloodConnect downstream reuse card (Toledo-first lookup over diffusion / hydraulics / zoom), Delta 2 -- 'register ONCE as a general domain-M object, cited by 08 section 4.4 and the zoom'; relayed external hierarchical-zoom code read only as motivation",
+      "doi": null
+    },
+    "version": "v1.1",
+    "version_history": [
+      {
+        "v": 1,
+        "date": "2026-09-28",
+        "statement": "Initial registration: enclosure_sound + corners_in_box, iterated_enclosure, nested_enclosure, cl = classify renaming with four iff characterisations, member soundness, nested_preserves_plus/minus, nested_no_flip + counterexample not_nested_can_flip, declared_interval / refine_check fail-closed refusals.",
+        "reason": "Founder instruction 2026-09-27 (verbatim: \"ทำสมการให้ครบก่อนนะ\" -- finish the equation set first) before any 10-day forecast run; the FloodConnect reuse card found the enclosure requested twice (PROP-FLOOD-08-DRAFT section 4.4 HOLD and the zoom draft) and asked for a single registration.",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      },
+      {
+        "v": "1.1",
+        "date": "2026-09-28",
+        "statement": "box-restricted enclosure (enclosure_sound_box, sigma_monotone_box); refine_check rejects reversed endpoints (BOUND_ORDER) and a passed check licenses no-flip (checked_refinement_no_flip); decorative parents R/M.25, Z/M.15-17/22 moved to neighbours.",
+        "reason": "independent review (maker != checker) advisories A1, A2, A12",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      }
+    ],
+    "depends_on": [
+      "IDM mirror coq/information-discrete-math/formal/IDM_ReadoutMinimality.v, IDM_ResolvedCount.v (classify, S4) -- already the source of D/M.71-80"
+    ],
+    "cited_by": [
+      "PROP-FLOOD-08 (E_k monotonicity via excess_sigma_monotone; the load-ratio interval is a direct proof in the same form, not a corollary)",
+      "PROP-FLOOD-10 (cl, refine_check in the zoom gate, excess for level 3; the level-1 box step wb_step_enclosure)"
+    ],
+    "coq_file": "coq/canonical/PROP_FLOOD_10_enclosure_nested_box.v",
+    "coq_theorems": [
+      "corner_lo_below",
+      "corner_hi_above",
+      "enclosure_sound",
+      "corners_in_box",
+      "iterated_enclosure",
+      "excess_sigma_monotone",
+      "excess_nonneg",
+      "screen_step_mono_D",
+      "screen_step_sigma",
+      "wb_step_enclosure",
+      "nested_enclosure",
+      "cl_plus_iff",
+      "cl_minus_iff",
+      "cl_zero_iff",
+      "cl_bot_iff",
+      "cl_plus_sound_members",
+      "cl_minus_sound_members",
+      "nested_preserves_plus",
+      "nested_preserves_minus",
+      "nested_no_flip",
+      "not_nested_can_flip (Example, counterexample)",
+      "declared_interval_missing_iff",
+      "declared_interval_ok_wf",
+      "refine_check_ok_nested",
+      "refine_check_refuses_non_nested",
+      "enclosure_sound_box",
+      "sigma_monotone_box",
+      "refine_check_bound_order",
+      "checked_refinement_no_flip",
+      "(refine_check_ok_nested strengthened: also returns loc <= hic and lop <= hip)"
+    ],
+    "coq_check": {
+      "command": "cd coq/canonical && coqc -q -Q . MRC -R ../information-discrete-math IDM <file> (IDM_ReadoutMinimality/IDM_ResolvedCount compiled first; scratch build directory, .vo not committed); Print Assumptions via a scratch audit file importing all four PROP_FLOOD_08/09/10 modules",
+      "result": "coqc -q clean; Print Assumptions: Closed under the global context for all 29 items (MEASURED 2026-09-28, v1.1)"
+    },
+    "toledo_status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "neighbours_not_parents": [
+      {
+        "code": "R/M.25.v1",
+        "why": "mono_step: (2 b1 + e) e <= (2 b2 + e) e -- a specific quadratic step, not a general monotone brick; moved from parents in v1.1 (review A12)"
+      },
+      {
+        "code": "Z/M.15.v1, Z/M.16.v1, Z/M.17.v1, Z/M.22.v1",
+        "why": "tmax algebra / maxplus_distrib on Z: context for max(0, .) as a max-plus positive part; the Coq proofs use the stdlib Qmax lemmas directly, so these are not load-bearing parents (review A12)"
+      }
+    ]
+  }
+]

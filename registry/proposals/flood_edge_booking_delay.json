@@ -1,0 +1,217 @@
+[
+  {
+    "id": "PROP-FLOOD-09",
+    "code": "weld/M.??.v1",
+    "name": "One edge value booked in two node ledgers with a declared integer delay, and the inbound (stacked) debt it induces, with TAU_UNDECLARED refusal -- NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "statement": {
+      "latest": "\\text{Declared finite graph } G=(N,E), \\text{ tick } \\tau, \\text{ all values on } \\mathbb{Q}. \\text{ For a declared edge } e=(u,v) \\text{ with a DECLARED delay } d_e\\in\\mathbb{N} \\text{ (ticks): } \\boxed{Q_e(k)\\cdot\\tau \\text{ is one value, a summand of } Q_{out,u}(k)\\tau \\text{ and of } Q_{in,v}(k+d_e)\\tau} \\text{ (nothing arrives at } v \\text{ before } d_e\\text{). Consequence (proved): } \\sum_{j<t+d_e} in_v(j) = \\sum_{k<t} out_u(k) \\text{ -- booking with delay conserves volume across the two ledgers. Inbound (stacked) debt at } b: \\boxed{D_{in}(b;k_{now},H) := \\sum_{e=(s\\to b)}\\ \\sum_{k\\le k_{now},\\ k_{now}<k+d_e\\le k_{now}+H} Q_e(k)\\,\\tau} \\text{ -- depends only on values released at or before } k_{now}; \\text{ zero for } d_e=0; \\text{ saturates at } H=d_e. \\quad \\boxed{\\text{REFUSED TAU\\_UNDECLARED}} \\text{ when any inbound edge's } d_e \\text{ is undeclared (never read as 0); the refusal applies to the inbound term only.}",
+      "format": "latex",
+      "note_ascii": "NEW DERIVATION / PROPOSAL -- not yet in Toledo. Delta 1 ONLY. For a declared edge e = (u, v) with a declared integer delay d_e (ticks; declared or measured, never derived -- EQ-001/P.61.v1), the SAME per-tick value Q_e(k)*tau is a summand of Q_out,u(k) and of Q_in,v(k + d_e); nothing is booked into v before tick d_e. Proved: total booked into v over ticks 0..t+d_e-1 equals total booked out of u over 0..t-1 (no creation, loss, or double count by the delay). Inbound stacked debt D_in(b; k_now, H) = sum over inbound edges of Q_e(k)*tau with k <= k_now < k + d_e <= k_now + H: water ALREADY released/measured upstream that will arrive within H. Proved: causal (depends only on k <= k_now), non-negative for non-negative flows, zero for d_e = 0, saturates at H = d_e (everything in transit), monotone in H. REFUSED TAU_UNDECLARED iff some inbound edge has no declared delay; the undeclared delay is never silently 0; the refusal touches only the inbound term (the node's rain term is unaffected). D_in enters PROP-FLOOD-03 as Q_in of the receiving node and PROP-FLOOD-06 as Q_in,up / tau_up, reported beside the rain term, never merged. Everything else a network-coupling rule needs is COMPOSITION (see composition table); no flow magnitude is supplied (w_e, cap_e undeclared). v1.1: a declared edge with no flow readout is modelled (flow as an option): the whole inbound term is REFUSED TAU_UNDECLARED if any inbound delay is undeclared (checked first), else REFUSED INPUT_ABSENT if any inbound flow is missing -- never 0 (d_in_node_full). Flows are per-tick volumes in the DECLARED orientation s -> b; d_in_nonneg needs q >= 0, so a reverse flow must be declared as its own edge."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "flood-readout-app:edge coupling identity with integer delay (PROP-FLOOD-09 candidate, shrunk to Delta 1)",
+      "flood-readout-app:inbound / stacked debt (หนี้ซ้อน) D_in",
+      "hydrology: lagged inflow booking / translation (pure delay) routing without attenuation -- a renaming for orientation only; no routing model is asserted"
+    ],
+    "definitions": {
+      "G": "declared finite graph of nodes (PROP-FLOOD-03 nodes, incl. storage-free junctions) and edges (canals, reaches, pumped/gated links)",
+      "d_e": "declared or measured integer delay in ticks (option: None = undeclared -> TAU_UNDECLARED); tau_e = d_e * tau is the per-edge renaming of PROP-FLOOD-06 tau_up",
+      "Q_e(k)": "one Q-valued edge flow per tick (m^3/s; positive u -> v), declared or measured; q(k) := Q_e(k)*tau is the per-tick volume booked",
+      "booked_out(k)": "q(k), a summand of Q_out,u(k)*tau",
+      "booked_in(j)": "q(j - d_e) if j >= d_e else 0, a summand of Q_in,v(j)*tau",
+      "D_in(b; k_now, H)": "as in the statement; H in ticks"
+    },
+    "composition_not_delta": [
+      {
+        "clause": "(ii) capacity bound |Q_e| <= cap_e",
+        "covered_by": "EQ-001/C.04.v1 (admitted coordinates satisfy all declared capacity/boundary inequalities; open_prop) + A2/M.24.v1 / A2/M.25.v1 (clamp min(Q, C) never increases, idempotent) + PROP-FLOOD-03 Q_out rule for pumped/gated edges",
+        "undeclared": "cap_e absent -> CAPACITY_UNDECLARED for that edge (admissibility ⊥), not a new arithmetic rule"
+      },
+      {
+        "clause": "(iii) sign of Q_e agrees with PROP-FLOOD-04 direction",
+        "covered_by": "D/M.71-76.v1 (sign soundness of classify) composed with PROP-FLOOD-04's edge-direction readout; a measured Q_e contradicting 04 is a contradiction row",
+        "undeclared": "04 UNRESOLVED/REFUSED -> edge ABSENT at both ends (PARTIAL, never 0)"
+      },
+      {
+        "clause": "(iv) storage-free junction",
+        "covered_by": "PROP-FLOOD-03 with S_b == 0 (constant substitution); imbalance beyond eps_Q is 03's own bookkeeping refusal",
+        "undeclared": "-"
+      },
+      {
+        "clause": "(v) outfall boundary",
+        "covered_by": "PROP-FLOOD-06 R_H / g_U(t) and PROP-FLOOD-03 gate_flag (tide-lock); river/sea stage is declared boundary data (Genesis Face 12)",
+        "undeclared": "BOUNDARY_STAGE_MISSING / DERATING_UNDECLARED (06)"
+      },
+      {
+        "clause": "interior edges cancel when nodes are summed",
+        "covered_by": "A2/M.11.v1 fold_add_split (Q occurrence qsum_add in the Coq file) + EQ-001/C.01.v1 closed-boundary ledger conservation; with a delay, cancellation holds over the delay-extended window (booking_conserves)",
+        "undeclared": "-"
+      },
+      {
+        "clause": "per-edge flow class",
+        "covered_by": "PROP-FLOOD-07 (F1-F6, reads)",
+        "undeclared": "-"
+      }
+    ],
+    "readout_classes": {
+      "booking": "Ok(booked_in) | REFUSED(TAU_UNDECLARED)",
+      "inbound_debt": "Some(D_in >= 0) | REFUSED(TAU_UNDECLARED) | REFUSED(INPUT_ABSENT) -- d_in_node_full"
+    },
+    "refusal_codes": [
+      "TAU_UNDECLARED (added; precedence first)",
+      "INPUT_ABSENT (added to the Coq refusal type in v1.1 for an edge with no flow readout; same meaning as the PROP-FLOOD-03 MISSING_INPUT family downstream)"
+    ],
+    "claim_boundary": "A bookkeeping identity over declared readouts: no momentum, no Saint-Venant, no attenuation, no rating curve, no continuum limit. It does not supply a flow magnitude (w_e, cap_e are undeclared everywhere downstream; a linear or saturating edge-flow law would be a separate delta, not opened). It does not decompose a river stage into upstream inflow versus tide.",
+    "non_claims": [
+      "Not a routing model: a pure integer delay with no attenuation or storage on the edge; if an edge stores water it must be declared as a node.",
+      "D_in is water already released or measured upstream -- a booked quantity, not a forecast of future releases.",
+      "No link is asserted for undeclared edges: e.g. Mae Klong releases are NOT booked into Bangkok units (downstream: drains to the Gulf at Samut Songkhram, INSTINCT) until a declared transfer with measured discharge exists.",
+      "Zero delay is a declaration (arrives within the tick), never the default for an unknown delay."
+    ],
+    "parents": [
+      {
+        "code": "PROP-FLOOD-03",
+        "derived_via": "reuses",
+        "evidence": "the per-node ledger S_b(k+1) = S_b(k) + P A c + Q_in tau - Q_out tau; Delta 1 only says which summands of Q_out,u and Q_in,v are the same value, shifted by d_e."
+      },
+      {
+        "code": "PROP-FLOOD-04",
+        "derived_via": "composition (clause iii)",
+        "evidence": "edge head-gradient direction; PR #61, NOT on this branch -- cited from the downstream canal_graph docstring and the flood repository method doc; must be re-checked when PR #61 lands."
+      },
+      {
+        "code": "PROP-FLOOD-06",
+        "derived_via": "composition (clause v; tau_up)",
+        "evidence": "R_H, g_U(t), tau_up (the per-edge d_e is its renaming on one edge)."
+      },
+      {
+        "code": "PROP-FLOOD-07",
+        "derived_via": "reads",
+        "evidence": "per-edge flow class F1-F6 carried beside the booked value."
+      },
+      {
+        "code": "EQ-001/C.04.v1",
+        "derived_via": "composition (clause ii)",
+        "evidence": "\"Admitted coordinates satisfy n0+N xi >= 0 and all declared capacity/boundary inequalities.\" (untagged, open_prop)"
+      },
+      {
+        "code": "A2/M.24.v1",
+        "derived_via": "composition (clause ii)",
+        "evidence": "relax_nonincreasing: Z.min d cand <= d (clamp never increases); A2/M.25.v1 idempotence"
+      },
+      {
+        "code": "D/M.71.v1..D/M.76.v1",
+        "derived_via": "composition (clause iii)",
+        "evidence": "sign soundness of classify: Sp -> 0 < v, Sm -> v < 0"
+      },
+      {
+        "code": "A2/M.11.v1",
+        "derived_via": "reuses (re-proved on Q as qsum_add)",
+        "evidence": "fold_add_split: sum of pointwise sums = sum of sums"
+      },
+      {
+        "code": "EQ-001/C.01.v1",
+        "derived_via": "compatibility",
+        "evidence": "\"If the declared closed boundary preserves ledger L(n)=A n, then A(n1-n0)=0.\" -- two_ledger_balance is its delayed two-node form"
+      },
+      {
+        "code": "EQ-001/P.61.v1",
+        "derived_via": "status of d_e",
+        "evidence": "\"The graph front-speed v is declared (not derived) ...\" -- d_e is declared or measured, never derived from channel geometry"
+      }
+    ],
+    "neighbours_not_parents": [
+      {
+        "code": "MQ08-stepper/M.01.v1",
+        "why": "REGISTERED_UNVERIFIED, usable:true (status unverified; disclose caveat on every citation) -- cited for context only, not a parent; causal-delay graph with delay(e) and a path-sum FTC; supports path lags as sums of d_e but does not state the two-ledger booking"
+      }
+    ],
+    "genesis_compatibility": {
+      "gate": "readout_genesis Part VI-A, B.2a 'A generic conservation ledger' [Dr]",
+      "quote": "\"C(S_{n+1}) - C(S_n) = J_n^in - J_n^out + J_n^created - J_n^obstructed\" ... \"This ledger is architecture, not a physics claim\" (as quoted by PROP-FLOOD-03/06)",
+      "note": "Delta 1 identifies J_out of u at tick k with J_in of v at tick k + d_e (J_created = 0 on the edge); TAU_UNDECLARED is Gate-2 ⊥ (record unresolved, do not guess). readout_genesis local HEAD 6f2cb06 (2026-09-13); READOUT_GENESIS_CORE.md lines 2021 (Face 12), 2201 (IV.5), 3768-3776 (A.13 Gate 2), 4029 (VI-A B.2a) -- VERIFIED by grep in this session; hub pin not re-checked against remote (OPEN, no network used)"
+    },
+    "toledo_lookup": {
+      "measured": [
+        "check --formula \"Q_e(k) summand of Q_out,u(k) and Q_in,v(k+d_e)\" -> NOT_REGISTERED []",
+        "check --formula \"booked_in(j) = q(j - d) if d <= j else 0\" -> NOT_REGISTERED []",
+        "check --formula \"D_in := sum Q_e(k) tau for k <= k_now < k + d_e <= k_now + H\" -> NOT_REGISTERED []",
+        "find delay -> B.2.Step5, EQ-001/P.71, MQ08-stepper/M.01, WP.S14.Gate4 (read; none states the two-ledger booking)",
+        "find double-entry -> 0; find conservation -> 15 hits incl. B.2a, EQ-001/C.01 (compatibility, not the booking)"
+      ],
+      "downstream_audit": "FloodConnect reuse card section 5: clauses (ii)-(v) of the 5-clause candidate are composition; only (i) is a delta",
+      "verdict": "PROPOSAL (Delta 1 only)"
+    },
+    "honest_caveats": [
+      "PROP-FLOOD-04 (PR #61) is not on this branch; clause (iii) must be re-checked against its registered form when it lands.",
+      "No d_e is declared for any Bangkok-linked edge yet: the HII basin chart travel-time labels (6 h, 20 h, 1 d, 2 d, 2.5 d, 3 d) are not mapped to node pairs (downstream OPEN), so D_in is REFUSED TAU_UNDECLARED for every Bangkok unit at registration time.",
+      "Integer delay means the tick must be declared small enough that d_e is an integer number of ticks; a non-integer measured lag is rounded only by a declared rule (not supplied here -- OPEN)."
+    ],
+    "falsifier": "With every incident Q_e MEASURED at a declared storage-free junction, a persistent imbalance beyond eps_Q across >= 3 independent events falsifies the declared edge set or delays for that junction (first suspect: an undeclared edge or hidden storage). A measured arrival at v systematically earlier or later than d_e falsifies the declared d_e (re-measure; never adjust silently).",
+    "empirical_test_status": "none (downstream 24-27 Sep 2569 replay: D_in REFUSED TAU_UNDECLARED; upstream magnitudes held -- C.13 690 -> 1,850 m^3/s, Sam Khok 615 -> 1,748 m^3/s over 19-25 Sep -- but not booked without d_e)",
+    "origin": {
+      "source": "New derivation/proposal: FloodConnect system equation-set method (PROP-FLOOD-09 candidate, 5 clauses) shrunk to Delta 1 by the downstream Toledo-first reuse card; inbound stacked-debt term per founder ruling (verbatim: \"โฟกัสที่ กทม. เหมือนเดิม แต่การปล่อยน้ำพวกนี้ ถ้ามันเชื่อมกับลุ่มน้ำ กทม. ควรเป็นหนี้ซ้อนด้วย\" -- keep the Bangkok focus, but releases linked to the Bangkok basin should be stacked debt too)",
+      "doi": null
+    },
+    "version": "v1.1",
+    "version_history": [
+      {
+        "v": 1,
+        "date": "2026-09-28",
+        "statement": "Initial registration: Delta 1 booking identity with declared integer delay, conservation across the two ledgers (booking_conserves, two_ledger_balance), inbound debt D_in (causal, non-negative, zero-delay, saturation, monotone in H), TAU_UNDECLARED refusal (iff; never 0) per edge and per node.",
+        "reason": "Founder instruction (verbatim: \"ทำสมการให้ครบก่อนนะ\"); a downstream reuse-card tracker item on shrinking 09 to Delta 1 plus a composition table.",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      },
+      {
+        "v": "1.1",
+        "date": "2026-09-28",
+        "statement": "per-edge missing flow modelled (d_in_node_full: TAU_UNDECLARED first, then INPUT_ABSENT); orientation note; two_ledger_balance comment says shifted windows t vs t+d.",
+        "reason": "independent review (maker != checker) advisories A13, A14",
+        "by": "toledo-worker-2026-09-28-flood08-set"
+      }
+    ],
+    "depends_on": [
+      "PROP-FLOOD-03 (on this branch)",
+      "PROP-FLOOD-06 v6.1 (on this branch, PR #63 open)",
+      "PROP-FLOOD-07 (on this branch)",
+      "PROP-FLOOD-04 (PR #61, NOT on this branch)"
+    ],
+    "coq_file": "coq/canonical/PROP_FLOOD_09_edge_booking_delay.v",
+    "coq_theorems": [
+      "qsum_S",
+      "qsum_zero",
+      "qsum_ext",
+      "qsum_add (Q occurrence of A2/M.11)",
+      "qsum_nonneg",
+      "booking_same_value",
+      "booked_in_before_delay",
+      "booking_conserves",
+      "two_ledger_balance",
+      "d_in_causal",
+      "d_in_nonneg",
+      "d_in_zero_delay",
+      "d_in_saturates",
+      "d_in_monotone_H",
+      "book_refused_iff",
+      "undeclared_is_not_zero_delay",
+      "d_in_node_refused_iff",
+      "d_in_node_nonneg",
+      "d_in_node_full_tau_iff (A13)",
+      "d_in_node_full_input_absent (A13)"
+    ],
+    "coq_check": {
+      "command": "cd coq/canonical && coqc -q -Q . MRC -R ../information-discrete-math IDM <file> (IDM_ReadoutMinimality/IDM_ResolvedCount compiled first; scratch build directory, .vo not committed); Print Assumptions via a scratch audit file importing all four PROP_FLOOD_08/09/10 modules",
+      "result": "coqc -q clean; Print Assumptions: Closed under the global context for all 20 items (MEASURED 2026-09-28, v1.1)"
+    },
+    "open": [
+      "d_e for C.13 -> C.29 -> Bangkok and for the eastern field-water edges (downstream).",
+      "Declared rounding rule for a measured non-integer lag.",
+      "PROP-FLOOD-04 registered form (PR #61)."
+    ],
+    "toledo_status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo",
+    "orientation_note": "Each edge carries a declared orientation; q >= 0 in that orientation is a hypothesis of d_in_nonneg. A reverse flow is booked on its own declared reverse edge, never as a negative q (review A13)."
+  }
+]
