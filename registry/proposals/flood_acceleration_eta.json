@@ -1,0 +1,173 @@
+[
+  {
+    "id": "PROP-FLOOD-11",
+    "code": "weld/M.??.v1",
+    "name": "Acceleration-aware time-to-bank-level: second difference, quadratic persistence extrapolation, least-n horizon search, with refusal",
+    "statement": {
+      "latest": "\\text{Given } \\Delta_k(t) \\text{ from PROP-FLOOD-01 and its own retained difference one lag back (both requiring the retained samples in } [t-2k,t] \\text{), the second difference } D2_k(t) := \\Delta_k(t) - \\Delta_k(t-k).\\quad \\boxed{\\text{ALREADY\\_AT\\_BANK}} \\text{ when } \\theta \\le h(t) \\text{ -- checked FIRST, a real answer, never a refusal.}\\quad \\text{Otherwise, for } n \\in \\mathbb{N},\\ n \\ge 1,\\ \\text{the quadratic persistence-extrapolation level at } n \\text{ further } k\\text{-tick strides: } L(n) := h(t) + n\\cdot\\Delta_k(t) + \\tfrac{n(n+1)}{2}\\cdot D2_k(t).\\quad \\text{ETA (strides)} := \\text{least } n\\in[1,N_{max}] \\text{ with } L(n) \\ge \\theta; \\text{ETA (ticks)} := n\\cdot k.\\quad \\theta \\text{ an official agency bank/overbank level (min\\_bank, or critical as the alternative)}.\\quad \\boxed{\\text{REFUSED (NO\\_READOUT} \\mid \\text{PUMP\\_STATE\\_CHANGED} \\mid \\text{PUMP\\_STATE\\_UNDECLARED} \\mid \\text{SPARSE\\_SERIES} \\mid \\text{NO\\_RISE} \\mid \\text{NOT\\_WITHIN\\_HORIZON)}} \\text{ -- never a guessed or averaged number. Precedence (checked in this order): ALREADY\\_AT\\_BANK} > \\text{NO\\_READOUT} > \\text{PUMP} > \\text{SPARSE\\_SERIES} > \\text{NO\\_RISE} > \\text{NOT\\_WITHIN\\_HORIZON}.",
+      "format": "latex",
+      "note_ascii": "ALREADY_AT_BANK (checked FIRST, before any retained-difference input is even inspected): when theta <= h(t), the water is already at or over the bank -- a real, positive answer the founder needs, never a refusal and never folded into NOT_WITHIN_HORIZON. Otherwise: D2_k(t) := Delta_k(t) - Delta_k(t-k), the retained second difference (PROP-FLOOD-01's Delta_k applied to its own output one lag back; both Delta_k(t) and Delta_k(t-k) need the retained samples in the window [t-2k, t] -- h(t) itself is a PRECONDITION of this whole construction (without a current retained sample there is no readout at all, not a NO_READOUT case); if h(t-k) or h(t-2k) is missing -- i.e. Delta_k(t) or Delta_k(t-k) is itself undefined -- the construction is NO_READOUT, a determinate refusal, never a silently-assumed zero difference). The quadratic persistence-extrapolation level at n further k-tick strides forward from the current retained tick t: L(n) := h(t) + n*Delta_k(t) + (n(n+1)/2)*D2_k(t), n a nat (n(n+1)/2 always a nonnegative rational). ETA in strides is the least n in [1,N_max] (a declared finite horizon) with L(n) >= theta; ETA in ticks = n*k, n counting strides. theta an official agency bank-level threshold (the agency's own min_bank / overbank word by default; critical as the declared alternative). The pump state is a 3-way declared flag -- CHANGED / UNCHANGED / UNDECLARED, never a bare bool -- over the window that is the retained samples [t-2k, t] used to compute Delta_k(t)/Delta_k(t-k) PLUS any change declared on the operator's own schedule for the forward extrapolation window (t, t+N_max*k]. UNDECLARED is itself an explicit, checked state: it is never silently read as UNCHANGED. Refusals, checked in this fixed precedence order and each a determinate named outcome, never a number: NO_READOUT (a required retained sample is missing) > PUMP_STATE_CHANGED (the declared pump state changed in the window) > PUMP_STATE_UNDECLARED (the pump state was never declared) > SPARSE_SERIES (the declared sample spacing exceeds a declared maximum) > NO_RISE (Delta_k(t) does not exceed PROP-FLOOD-01's resolution epsilon) > NOT_WITHIN_HORIZON (no n in [1,N_max] reaches theta)."
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "flood-readout-app:acceleration-aware-time-to-bank-level",
+      "flood-readout-app:second-difference-eta-with-refusal"
+    ],
+    "definitions": {
+      "h": "PROP-FLOOD-01's Q-valued readout series (e.g. a pond/canal water-level gauge), finite ticks only",
+      "t": "the current retained tick, t in N",
+      "k": "the declared lag in ticks, k>=1, shared with PROP-FLOOD-01/02",
+      "Delta_k(t)": "PROP-FLOOD-01's lag-k retained difference at t: h(t) - h(t-k)",
+      "D2_k(t)": "the retained second difference: Delta_k(t) - Delta_k(t-k) -- the retained difference of PROP-FLOOD-01's own output one lag (k ticks) back; a generalisation of WP.S8.SecondDifference (delta_t^2 X_n = X_{n+1}-2X_n+X_{n-1} over Delta t^2, REGISTERED_CURRENT) from lag 1 to lag k, with the continuum /Delta t^2 normalisation dropped -- D2_k(t) stays a retained difference of retained differences, never divided into a continuum acceleration rate",
+      "n": "a nat, the number of further k-tick strides from t; L is evaluated only at n>=1",
+      "N_max": "a declared finite search horizon (nat); the least n is searched only inside [1, N_max]",
+      "theta": "an official agency threshold: the agency's own bank-level reading (min_bank / overbank word) by default, or the agency's critical level as the declared alternative -- never a value this construction invents",
+      "eps": "PROP-FLOOD-01's own declared resolution constant, reused unmodified as the rising/non-rising gate for Delta_k(t)",
+      "max_gap, gap": "a declared maximum tick spacing and the actual spacing of the most recent samples used; gap > max_gap triggers SPARSE_SERIES",
+      "n (ticks)": "ETA reported in ticks = n*k, where n is the number of k-tick strides counted by the search (see 'n' above); the two are never conflated.",
+      "pump": "a declared 3-way flag -- CHANGED / UNCHANGED / UNDECLARED, never a bare bool -- over the window [t-2k, t] (the retained samples used to compute Delta_k(t)/Delta_k(t-k)) plus any change declared on the operator's own schedule for the forward extrapolation window (t, t+N_max*k]. UNDECLARED is itself an explicit, checked state, refused as PUMP_STATE_UNDECLARED -- it is never silently read as UNCHANGED.",
+      "h(t) precondition": "h(t), the current retained sample, is a PRECONDITION of this whole construction, not a NO_READOUT case: without a current retained sample there is no readout at all (ALREADY_AT_BANK and every other outcome below presuppose h(t) exists). NO_READOUT covers only a MISSING h(t-k) or h(t-2k) -- i.e. Delta_k(t) or Delta_k(t-k) itself undefined -- never a missing h(t)."
+    },
+    "readout_classes": {
+      "eta": "EtaAtBank (theta<=h0, a real answer, not a refusal) | EtaOk n (the least k-tick stride count reaching theta within the horizon; ETA in ticks = n*k) | EtaRefused(NO_READOUT | PUMP_STATE_CHANGED | PUMP_STATE_UNDECLARED | SPARSE_SERIES | NO_RISE | NOT_WITHIN_HORIZON)",
+      "refusal_precedence": "Checked in this fixed order, first match wins: ALREADY_AT_BANK (not a refusal, checked before any retained-difference input) > NO_READOUT > PUMP_STATE_CHANGED/PUMP_STATE_UNDECLARED > SPARSE_SERIES > NO_RISE > NOT_WITHIN_HORIZON."
+    },
+    "claim_boundary": "This is a persistence EXTRAPOLATION readout of the two most recently retained differences of an already-observed series, not a physical forecast and not a hydraulic model: holding Delta_k(t) and D2_k(t) constant forward across every future k-tick stride is an assumption this construction makes visible, never a claim that the pond/canal will actually keep accelerating at that rate. A pump-state change, a new rain pulse, or any other regime change inside the extrapolated window breaks the persistence assumption outright -- this is why PUMP_STATE_CHANGED is a first-class refusal rather than a caveat attached after the fact. No rainfall-runoff, channel-routing, or storage-capacity content is asserted; theta is read from the agency, never derived.",
+    "honest_caveats": [
+      "This is the riverside person's own intuition formalised: whether the water is already over the bank (ALREADY_AT_BANK, checked first, a real answer), how fast the level is rising (Delta_k), whether that rise is itself speeding up (D2_k), and when, if that keeps up, it reaches the bank -- not a claim that it will keep up.",
+      "D2_k(t) carries at least as much combined resolution slack as Delta_k(t) does (PROP-FLOOD-01's own caveat), since it differences two already-slack retained differences; a D2_k(t) too small to distinguish from zero at that combined resolution should be treated as the D2=0 (no-acceleration) case, not asserted as a measured acceleration.",
+      "theta must be an official agency reading (min_bank/overbank by default, critical as the declared alternative); an invented or interpolated threshold is out of scope and must not be substituted silently.",
+      "NOT_WITHIN_HORIZON means exactly what it says: no n in the declared [1,N_max] reaches theta under the persistence assumption -- it is not evidence that the bank will never be reached, only that this construction, at this horizon, does not license a number.",
+      "h(t) is a PRECONDITION, not a NO_READOUT case: without it there is no readout at all. NO_READOUT fires before any admissibility check (rise, spacing, pump) runs, and covers only a missing h(t-k) or h(t-2k) -- i.e. Delta_k(t) or Delta_k(t-k) itself undefined -- never a silently-treated-as-zero gap.",
+      "PUMP_STATE_UNDECLARED is the refusal most likely to be silently skipped by an implementer, precisely because 'undeclared' looks like 'nothing happened' -- the 3-way flag makes not-knowing an explicit, checked state rather than a default. The declared window covers both the retained samples [t-2k,t] used to compute Delta_k(t)/Delta_k(t-k) and the operator's own forward schedule for (t, t+N_max*k].",
+      "This EXTENDS PROP-FLOOD-02 (see parents, derived_via=extended): it does not generalise PROP-FLOOD-03's water-balance bookkeeping, and it does not need PROP-FLOOD-03's initial storage S_b(0) -- it runs entirely off the OBSERVED level series h, which is exactly the gap an earlier backtest of PROP-FLOOD-03 found (S0 undeclared everywhere) a level gauge removes.",
+      "ETA is reported two ways and the two must never be conflated: n (the stride count the search returns) and n*k (the same ETA in ticks, k being the shared lag).",
+      "Not yet implemented or tested against real Sammakorn/Bangkok pond-level gauge data; this is a design-stage proposal.",
+      "eta_readout_D2_zero_matches_T_k holds given gap<=max_gap and pump UNCHANGED -- those two administrative conditions are preconditions of the iff, not separately re-derived by it."
+    ],
+    "empirical_test_status": "none",
+    "parents": [
+      {
+        "code": "PROP-FLOOD-01",
+        "derived_via": "instance_of",
+        "evidence": "D2_k(t) := Delta_k(t) - Delta_k(t-k) applies PROP-FLOOD-01's own lag-k retained-difference construction to PROP-FLOOD-01's own output series one lag back; this proposal supplies no new primitive beyond a second application of Delta_k, and reuses PROP-FLOOD-01's resolution gate eps unmodified as the NO_RISE condition on Delta_k(t)."
+      },
+      {
+        "code": "PROP-FLOOD-02",
+        "derived_via": "extended",
+        "evidence": "At D2_k(t)=0, L(n) = h(t) + n*Delta_k(t) is exactly PROP-FLOOD-02's linear extension, and the least n in [1,N_max] with L(n)>=theta is the k-stride-discretised form of PROP-FLOOD-02's ceiling(T_k) (proved in Coq as eta_D2_zero_matches_linear, and at the eta_readout wrapper level as eta_readout_D2_zero_matches_T_k, given gap<=max_gap and pump UNCHANGED). This EXTENDS PROP-FLOOD-02 rather than only generalising it. Explicit map from PROP-FLOOD-02's own outcomes to this object's: 02 UNRESOLVED -> NO_RISE; 02 NOT_APPLICABLE (falling) -> NO_RISE; 02 NOT_APPLICABLE (h>=theta) -> EtaAtBank; 02 NOT_APPLICABLE (NO_READOUT input) -> NO_READOUT. Added outright, with no PROP-FLOOD-02 counterpart: PUMP_STATE_CHANGED, PUMP_STATE_UNDECLARED, SPARSE_SERIES, NOT_WITHIN_HORIZON."
+      },
+      {
+        "code": "WP.S8.SecondDifference",
+        "derived_via": "generalises",
+        "evidence": "WP.S8.SecondDifference (REGISTERED_CURRENT, statement 'delta_t^2 X_n = (X_{n+1} - 2 X_n + X_{n-1}) / Delta t^2') is the lag-1, continuum-normalised second time-difference. D2_k(t) is its generalisation to a declared lag k, with the /Delta t^2 continuum normalisation dropped: this object keeps D2_k(t) as a retained difference of retained differences on finite ticks, never a divided rate, matching the workspace's own no-derivative discipline (information-discrete-math). Verified REGISTERED_CURRENT via `toledo find \"WP.S8\"` and `toledo show`, ."
+      },
+      {
+        "code": "PROP-FLOOD-10a",
+        "derived_via": "reuses",
+        "evidence": "The interval-enclosure form (eta_interval_enclosure, level_box_enclosure) applies PROP-FLOOD-10a's own enclosure_sound theorem UNCHANGED to the 2-coordinate vector map (Delta_k, D2_k) |-> L(n), proving level_vec is sigma_monotone and invoking enclosure_sound directly -- no second enclosure object is registered. PROP-FLOOD-10a is itself an open proposal (PR #64, branch proposals/flood-forecast-ladder, not yet canonicalized); its Coq file (PROP_FLOOD_10_enclosure_nested_box.v) was imported and compiled directly, not re-derived."
+      }
+    ],
+    "neighbours_not_parents": [
+      {
+        "code": "PROP-FLOOD-03",
+        "why": "No statement of PROP-FLOOD-03 is reused."
+      },
+      {
+        "code": "weld/M.41.v1",
+        "why": "REGISTERED_CURRENT, Th_coqc: Dirichlet energy PSD/gauge invariance for a weighted graph, whose laplacian_stencil theorem ([1,-2,1]*f = discrete negative Laplacian) and secondDiff_readout_invariant are the same [1,-2,1] stencil shape as D2_k(t). It is a sibling by shape, not a parent: its domain is a spatial weighted graph (an energy functional's PSD/gauge properties), not a time-tick series extrapolated forward to a threshold crossing -- the two objects answer different questions with the same underlying second-difference arithmetic."
+      }
+    ],
+    "genesis_compatibility": {
+      "gate": "readout_genesis Part V-A, A.13 seven-gate box, the ternary admissibility certificate '[C in {1,0,⊥}] Adm_n', and Gate 2 Three-Valued Admissibility",
+      "quote": "\"δ_R ⇒ 𝔖_n →[E_α] 𝔃_α^cand →[Suff_{α,L}] 𝔃_α →[𝒞∈{1,0,⊥}] Adm_n\" and \"【Unresolved is not obstructed, and neither one is impossible】\" (READOUT_GENESIS_CORE.md, Part V-A, A.13 seven-gate box and boxed verdict; the same quote PROP-FLOOD-02 cites for its own REFUSED branch, relied on verbatim here, not re-verified )",
+      "note": "EtaAtBank and EtaRefused together make the ternary certificate's three branches (1/0/⊥) explicit and total: EtaAtBank is the positive, resolved 1-branch reached without ever needing the retained differences; EtaRefused is the ⊥/0 branch, now split six ways (NO_READOUT, PUMP_STATE_CHANGED, PUMP_STATE_UNDECLARED, SPARSE_SERIES, NO_RISE, NOT_WITHIN_HORIZON) rather than collapsed into one undifferentiated REFUSED -- each name records a distinct, determinate reason, never a silently dropped case and never a fabricated unbounded stand-in value. PUMP_STATE_CHANGED/PUMP_STATE_UNDECLARED specifically guard the persistence-extrapolation assumption itself: Genesis's own caution against confusing a readout with the underlying reality applies directly -- L(n) extrapolates retained differences, it does not assert the pond will keep accelerating."
+    },
+    "toledo_lookup": {
+      "measured": [
+        "toledo show weld/M.41.v1 -> REGISTERED_CURRENT, Th_coqc, 'Dirichlet energy PSD/gauge invariance ... discrete second-difference IS the discrete negative Laplacian' -- read in full; a sibling (spatial graph), not a parent of a tick-series ETA construction.",
+        "toledo find \"WP.S8\" -> WP.S8.SecondDifference, REGISTERED_CURRENT, untagged, 'delta_t^2 X_n = (X_{n+1} - 2 X_n + X_{n-1}) / Delta t^2' -- read in full; this is the lag-1 continuum-normalised parent D2_k(t) generalises (parent, derived_via generalises).",
+        "toledo find \"acceleration\" -> EQ-015/P.92.v1 (Atwood machine acceleration), EQ-001/P.74.v1 (MOND-like acceleration scale), Gateway.SemanticLanes (Unruh acceleration lane), Guard13 (acceleration semantic-lane type-checker) -- all physics-domain acceleration readouts under a declared ObserverMap/semantic-lane discipline, none a match for a scalar tick-series second difference; read, not reused.",
+        "toledo find \"second difference\" -> XXI (discrete Riemann curvature from second differences) and step32 (mixed second differences in a domain-discovery engine) -- both root-layer, neither a time-series ETA construction; read, not a match.",
+        "No existing Toledo object computes a least-n horizon search over a quadratic persistence extrapolation with a named four-way refusal; the gap is confirmed by reading statements, not by keyword."
+      ],
+      "verdict": "PROPOSAL (gap confirmed by reading statements, not by keyword)"
+    },
+    "monotonicity": "Proved (Th_coqc-in-proposal-lane, see coq_theorems): level_mono_D2, level_mono_joint, eta_search_mono_D2, eta_search_mono_joint, eta_interval_enclosure, and the Some-propagation corollary eta_search_mono_joint_some_propagates (a slower case that already finds Some within the horizon forces a faster case to also find Some, at or before the same stride).",
+    "falsifier": "A declared (h0, Delta_now, Delta_prev, theta, N_max) for which the returned EtaOk n does not satisfy L(n)>=theta, or for which some m<n (m>=1) already satisfies L(m)>=theta, would falsify search_sound (the Coq proof rules this out; an observed violation means the implementation does not match this file). A theta<=h0 case that does NOT return EtaAtBank, or an EtaAtBank return with theta>h0, would falsify eta_readout_at_bank_iff. A D2b>=D2a case whose returned n_b is strictly greater than n_a's would falsify eta_search_mono_joint/eta_search_mono_D2.",
+    "origin": {
+      "source": "New derivation/proposal: Sammakorn village / Bangkok pond-level flood-readout application (private), founder request 2026-10-05 (verbatim, raw, typos included): “ดูความเร่งของบึง ว่าจะล้นตลิ่งเมื่อไหร่ได้ และ สามารถ ไปดูภาพรวมแล้วจำลองการคำนวนว่าจะล้นตลิ่งเมื่อไหร่ได้ จงพัทำให้เป็น ระบบคิดสกิลหลังกของเอไอที่ต่อเข้ากับระบบที่ทำทั้งหมด” (in English: watch the pond's acceleration to tell when it will overflow its bank, and also look at the overview and simulate when it will overflow its bank; make this the core thinking skill for AIs, connected to the whole system this is built with), scoped to this object first per the founder's same-day follow-up (verbatim, raw, typos included): “เพราะในชีวิตจริง คนริมน้ำก็จะดูว่าน้ำขึ้นเร็วแค่ไหนอยู่แล้ว และ น้ำท่วาม คือน้ำล้นตลิ่งเป็นเรื่องแรก” (in English: because in real life, people by the water already watch how fast the water is rising, and flooding -- the water going over the bank -- is the first thing) then (verbatim): “โฟกัสที่มัน” (in English: focus on that) -- PROP-FLOOD-11 made the primary deliverable, finished completely before PROP-FLOOD-12.",
+      "doi": null
+    },
+    "version": 3,
+    "version_history": [
+      {
+        "v": 1,
+        "date": "2026-10-05",
+        "statement": "Initial registration: D2_k(t), the quadratic persistence-extrapolation level L(n), least-n horizon search with soundness/no-smaller-n (search_sound), the D2=0 reduction to PROP-FLOOD-02's linear ceiling (eta_D2_zero_matches_linear), monotonicity in D2 (eta_search_mono_D2/eta_search_mono_joint), the interval-enclosure form reusing PROP-FLOOD-10a's enclosure_sound directly (level_box_enclosure, eta_interval_enclosure), and the total four-way refusal wrapper (eta_readout, NO_RISE/SPARSE_SERIES/NOT_WITHIN_HORIZON/PUMP_STATE_CHANGED).",
+        "reason": "Founder request 2026-10-05: watch the pond's rate of rise and its acceleration to tell when it overflows the bank; made the core thinking skill's primary, complete-first deliverable by the same-day founder follow-up.",
+        "by": "toledo-worker-2026-10-05-flood11"
+      },
+      {
+        "v": 2,
+        "date": "2026-10-05",
+        "statement": "Revision after independent review (1 HIGH, 3 MED, 7 LOW findings; indexing n(n+1)/2, the D2=0 search reduction, Coq, reuse and attribution all held). Added: EtaAtBank, a distinct positive outcome (not a refusal) for theta<=h0, checked first (HIGH); NO_READOUT refusal when a retained sample the construction needs (h(t-k) or h(t-2k)) is itself missing; a 3-way pump flag (CHANGED/UNCHANGED/UNDECLARED) replacing the bare bool, with its own PUMP_STATE_UNDECLARED refusal and a declared window definition; a fixed refusal precedence (ALREADY_AT_BANK > NO_READOUT > PUMP > SPARSE_SERIES > NO_RISE > NOT_WITHIN_HORIZON); the genuine, verbatim founder quotes (replacing an earlier hand-transcribed copy that had introduced spelling errors); PROP-FLOOD-02's parent relation reworded from 'generalises' to 'extended', with what was merged vs added spelled out; PROP-FLOOD-03's neighbour relation reworded ('no statement of 03 is reused'); PROP-FLOOD-10a's evidence reworded ('open proposal, PR #64, Coq imported and compiled'); the Genesis quote's brackets corrected to the source's own 【…】; 'an earlier backtest of PROP-FLOOD-03' replacing an internal project-name reference; ETA now reported in both strides (n) and ticks (n*k), never conflated. New Coq: eta_readout_at_bank_iff, eta_readout_no_readout_iff, eta_readout_D2_zero_matches_T_k (PROP-FLOOD-02's own T_k-defined-ness condition, exactly), per-reason cause lemmas (eta_readout_pump_changed_iff, eta_readout_pump_undeclared_iff, eta_readout_sparse_iff, eta_readout_no_rise_iff, eta_readout_horizon_iff) replacing the earlier tautological eta_readout_refused_no_number, plus the Qeq-congruence and horizon-bound lemmas (level_qeq_D2/search_qeq/eta_search_qeq/search_upper_bound/eta_search_upper_bound) needed to state them, and the slower-Some-forces-faster-Some corollary eta_search_mono_joint_some_propagates. 17 -> 32 theorems/lemmas/corollaries, all still Closed under the global context, no axioms, no Admitted.",
+        "reason": "Revised after independent review.",
+        "by": "toledo-worker-2026-10-05-flood11-v2"
+      },
+      {
+        "v": 3,
+        "date": "2026-10-05",
+        "statement": "Narrow revision after a second independent review of v2 (2 MED, 5 LOW). Removed the scratch directory path string from coq_check.command (replaced with 'a scratch directory outside the repository (nothing committed)'). Made explicit that h(t), the current retained sample, is a PRECONDITION of the whole construction, not a NO_READOUT case -- NO_READOUT now covers only a missing h(t-k) or h(t-2k) (Delta_k(t) or Delta_k(t-k) itself undefined), in the definitions, statement, honest_caveats, the MD and the Coq header. Added an explicit outcome map from PROP-FLOOD-02 to this object (UNRESOLVED -> NO_RISE; NOT_APPLICABLE falling -> NO_RISE; NOT_APPLICABLE h>=theta -> EtaAtBank; NOT_APPLICABLE NO_READOUT input -> NO_READOUT; added outright: PUMP_STATE_CHANGED, PUMP_STATE_UNDECLARED, SPARSE_SERIES, NOT_WITHIN_HORIZON). Completed the eta_readout_D2_zero_matches_T_k description with its two administrative preconditions (gap<=max_gap, pump UNCHANGED). Removed eta_search_mono_joint_some_propagates from the PROP-FLOOD-10a parent evidence (the theorem itself is unchanged). Reduced the PROP-FLOOD-03 neighbour reason to a single line ('no statement of PROP-FLOOD-03 is reused'). Removed review-process wording naming the review round, finding numbers, or session framing from the Coq comments, the MD, the JSON evidence and the governance acknowledgement, keeping one neutral line ('revised after independent review') in LINEAGE and version_history. No Coq theorem statement or proof changed; the same 32 items remain Closed under the global context, no axioms, no Admitted.",
+        "reason": "Revised after independent review.",
+        "by": "toledo-worker-2026-10-05-flood11-v3"
+      }
+    ],
+    "depends_on": [
+      "coq/canonical/PROP_FLOOD_10_enclosure_nested_box.v (enclosure_sound, sigma_monotone, corner_lo, corner_hi, in_box -- imported, not restated)"
+    ],
+    "cited_by": [],
+    "coq_file": "coq/canonical/PROP_FLOOD_11_acceleration_eta.v",
+    "coq_theorems": [
+      "Qnat_nonneg",
+      "Qnat_S",
+      "Qnat_le_mono",
+      "tri_nonneg",
+      "level_D2_zero",
+      "level_mono_D2",
+      "level_mono_joint",
+      "search_sound",
+      "search_none_horizon",
+      "eta_D2_zero_matches_linear",
+      "eta_search_mono_joint",
+      "eta_search_mono_D2",
+      "level_qeq_D2",
+      "search_qeq",
+      "eta_search_qeq",
+      "search_upper_bound",
+      "eta_search_upper_bound",
+      "search_succeeds_by",
+      "eta_search_mono_joint_some_propagates",
+      "level_vec_sigma_monotone",
+      "level_box_enclosure",
+      "eta_interval_enclosure",
+      "eta_readout_at_bank_iff",
+      "eta_readout_no_readout_iff",
+      "eta_readout_ok_sound",
+      "eta_readout_D2_zero_matches_T_k",
+      "eta_readout_pump_changed_iff",
+      "eta_readout_pump_undeclared_iff",
+      "eta_readout_sparse_iff",
+      "eta_readout_no_rise_iff",
+      "eta_readout_horizon_iff",
+      "eta_readout_horizon_none_horizon"
+    ],
+    "coq_check": {
+      "command": "scratch build in a scratch directory outside the repository (nothing committed): coqc -q -R IDM IDM IDM/formal/IDM_ReadoutMinimality.v; coqc -q -R IDM IDM IDM/formal/IDM_ResolvedCount.v; coqc -q -Q . MRC -R IDM IDM PROP_FLOOD_10_enclosure_nested_box.v; coqc -q -Q . MRC -R IDM IDM PROP_FLOOD_11_acceleration_eta.v; then Print Assumptions on all items via a scratch audit file. No .vo committed.",
+      "result": "coqc -q clean on both files; Print Assumptions: Closed under the global context for all items (MEASURED 2026-10-05, narrow  after independent review)."
+    },
+    "toledo_status": "NEW DERIVATION / PROPOSAL -- not yet in Toledo"
+  }
+]
