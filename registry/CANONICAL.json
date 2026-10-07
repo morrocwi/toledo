@@ -15439,7 +15439,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-002/H.07.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -16085,7 +16087,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-002/H.07.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -16235,7 +16239,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-002/H.07.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -16377,7 +16383,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-002/H.07.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -16527,7 +16535,9 @@
           "derived_via": "reads"
         }
       ],
-      "children": [],
+      "children": [
+        "EQ-002/H.07.v1"
+      ],
       "origin": {
         "source": "textbook",
         "repo_anchor": null,
@@ -31586,7 +31596,8 @@
         "EQ-002/W.03.v1",
         "EQ-002/H.05.v1",
         "EQ-002/H.06.v1",
-        "EQ-002/M.04.v1"
+        "EQ-002/M.04.v1",
+        "EQ-002/H.07.v1"
       ],
       "origin": {
         "source": "textbook",
@@ -169574,6 +169585,106 @@
           }
         }
       }
+    },
+    {
+      "id": "CAN-1318",
+      "code": "EQ-002/H.07.v1",
+      "root": "EQ-002",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [
+        "PROP-ZHCA-MASTER-01",
+        "Zoom-HCA-Master-Weld"
+      ],
+      "name": "Synchronous videoconference learning to Human Capability master weld",
+      "statement": {
+        "latest": "Z^Zoom_{i,g,t} --q_B--> B^bar_{i,t} --u*_{diag}--> C^cand_{i,t} --Endorse_i--> C^live_{i,t} --pi*_{scaffold}--> R^return_{H,i,t+1} --Retention--> DeltaH_{i,t+1} --LiveField--> L_{H,i,t+1} --G_O--> Omega^real_{i,t+1} --Record--> A^HCA_{i,t+1}",
+        "format": "ascii-math"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "Z^Zoom_{i,g,t} --q_B--> B^bar_{i,t} --u*_{diag}--> C^cand_{i,t} --Endorse_i--> C^live_{i,t} --pi*_{scaffold}--> R^return_{H,i,t+1} --Retention--> DeltaH_{i,t+1} --LiveField--> L_{H,i,t+1} --G_O--> Omega^real_{i,t+1} --Record--> A^HCA_{i,t+1}",
+          "date": "2026-10-07",
+          "reason": "Human-registrar-approved admission after TG-RFG-01 reuse-first review, phenomenology stress testing, public-dataset-backed stress testing, and correction of a preflight code collision. Registers only the missing synchronous-videoconference domain composition; reuses existing HCA objects for barriers, human-endorsed routes, scaffold fading, realized opportunity, and net advancement.",
+          "by": "human-registrar-approved-2026-10-07"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-002/M.03.v1",
+          "derived_via": "reads",
+          "evidence": "Primary EQ-002 readout lineage for this domain reading."
+        },
+        {
+          "code": "EQ-002/H.03.v1",
+          "derived_via": "specializes",
+          "evidence": "Reuses the registered HCA native river and specializes it to synchronous group videoconference learning."
+        },
+        {
+          "code": "A.5/H.17.v1",
+          "derived_via": "specializes",
+          "evidence": "Reuses candidate-route generation and human endorsement; AI suggestion is not human choice."
+        },
+        {
+          "code": "EQ-015/H.32.v1",
+          "derived_via": "specializes",
+          "evidence": "Reuses scaffold fading and stable unaided-return logic."
+        },
+        {
+          "code": "A.5/H.18.v1",
+          "derived_via": "specializes",
+          "evidence": "Reuses realized opportunity rather than equating capability with opportunity."
+        },
+        {
+          "code": "A.8/H.03.v1",
+          "derived_via": "specializes",
+          "evidence": "Reuses the HCA net-advancement record as terminal record."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": null,
+        "record_id": null,
+        "doi": null,
+        "section": "TOLEDO-ZOOM Global Standalone HCA integration; human-registrar-approved domain specialization, 2026-10-07"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "New Derivation / Proposal; admitted as Definition after registrar review",
+      "coq": {
+        "file": "coq/canonical/EQ_002__H_07_v1.v",
+        "identifier": "EQ_002__H_07_v1_master_weld",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [
+        {
+          "type": "reads",
+          "target": "weld/M.02.v1",
+          "note": "Uses canonical domain-weld compatibility; does not replace or strengthen it."
+        },
+        {
+          "type": "refines",
+          "target": "A.5/H.08.v1",
+          "note": "Makes Assisted performance != Unaided Human Return explicit in the learning-to-HCA path."
+        },
+        {
+          "type": "refines",
+          "target": "A.5/H.09.v1",
+          "note": "Extends Exposure != Retention != Improvement toward capability and realized opportunity without collapsing stages."
+        }
+      ],
+      "occurrences": [],
+      "role": "domain-gate",
+      "first_assigned": "2026-10-07",
+      "drift_note": "Domain specialization only. No scalar human-potential score is defined. Proximal videoconference-learning architecture has phenomenological and public-dataset-backed support; distal HCA stages (stable unaided return, live possibility expansion, realized opportunity) remain end-to-end empirical validation gaps. The chain is registered as a Definition/composition, not as a proved causal law."
     }
   ],
   "raw_to_canonical": {
