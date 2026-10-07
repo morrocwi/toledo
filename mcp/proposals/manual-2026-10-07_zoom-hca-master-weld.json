@@ -1,0 +1,78 @@
+{
+  "proposal": {
+    "name": "Synchronous videoconference learning to Human Capability master weld",
+    "statement": {
+      "latest": "Z^Zoom_{i,g,t} ->[q_B] B^bar_{i,t} ->[u*_diag] C^cand_{i,t} ->[Endorse_i] C^live_{i,t} ->[pi*_scaffold] R^return_{H,i,t+1} ->[Retention] DeltaH_{i,t+1} ->[LiveField] L_{H,i,t+1} ->[G_O] Omega^real_{i,t+1} ->[Record] A^HCA_{i,t+1}",
+      "format": "ascii-math"
+    },
+    "parents": [
+      {
+        "code": "EQ-002/H.03.v1",
+        "derived_via": "specializes"
+      },
+      {
+        "code": "A.5/H.17.v1",
+        "derived_via": "specializes"
+      },
+      {
+        "code": "EQ-015/H.32.v1",
+        "derived_via": "specializes"
+      },
+      {
+        "code": "A.5/H.18.v1",
+        "derived_via": "specializes"
+      },
+      {
+        "code": "A.8/H.03.v1",
+        "derived_via": "specializes"
+      }
+    ],
+    "origin": {
+      "source": "domain_registry",
+      "repo_anchor": null,
+      "record_id": null,
+      "doi": null,
+      "section": "TOLEDO-ZOOM Global Standalone HCA integration; derived after phenomenology and public-dataset stress testing"
+    },
+    "tier": "Dr",
+    "tier_in_genesis_verbatim": "PROPOSAL / derived domain specialization",
+    "relations": [
+      {
+        "type": "reads",
+        "target": "weld/M.02.v1",
+        "note": "Uses the canonical domain-weld compatibility principle; does not replace it."
+      },
+      {
+        "type": "refines",
+        "target": "A.5/H.08.v1",
+        "note": "Preserves Assisted performance != Unaided Human Return by making unaided return an explicit stage."
+      },
+      {
+        "type": "refines",
+        "target": "A.5/H.09.v1",
+        "note": "Preserves Exposure != Retention != Improvement and extends the chain toward capability and realized opportunity."
+      }
+    ],
+    "occurrences": [],
+    "role": "domain-gate",
+    "first_assigned": "2026-10-07",
+    "proposal_status": "PENDING_HUMAN_REGISTRAR_REVIEW",
+    "claim_boundary": [
+      "This is a Zoom/synchronous-videoconference specialization of existing HCA objects, not a new universal Human Capability law.",
+      "No scalar human-potential score is implied.",
+      "Assisted performance is not human return.",
+      "Capability is not realized opportunity.",
+      "Distal HCA stages remain empirically unvalidated end-to-end."
+    ],
+    "evidence_status": {
+      "proximal_zoom_learning_architecture": "SUPPORTED_BY_PHENOMENOLOGY_AND_PUBLIC_DATASET_BACKED_REPLAY",
+      "barrier_layer": "QUALITATIVELY_SUPPORTED",
+      "scaffold_to_immediate_performance": "EMPIRICALLY_TESTABLE",
+      "unaided_human_return": "VALIDATION_GAP",
+      "live_possibility": "VALIDATION_GAP",
+      "realized_opportunity": "VALIDATION_GAP"
+    }
+  },
+  "note": "This is a PROPOSAL, not a registered Toledo entry. A human registrar must review it under TG-RFG-01 and registry/SCHEMA.md, assign the final code if accepted, merge it into the canonical registry, and record lineage. Do not cite this proposal as a registered Toledo equation before acceptance.",
+  "submitted_at": "2026-10-07"
+}
