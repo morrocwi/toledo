@@ -170759,9 +170759,9 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1344,
+    "entries": 1345,
     "by_status": {
-      "current": 1209,
+      "current": 1210,
       "unverified": 96,
       "split": 30,
       "not_an_equation": 9
@@ -170769,7 +170769,7 @@
     "by_domain": {
       "M": 452,
       "E": 62,
-      "H": 132,
+      "H": 133,
       "S": 138,
       "W": 93,
       "C": 60,
@@ -170778,7 +170778,7 @@
     },
     "by_tier": {
       "Th_coqc": 445,
-      "Definition": 451,
+      "Definition": 452,
       "Dr": 83,
       "Ax": 12,
       "finite_diagnostic": 46,
@@ -170792,7 +170792,7 @@
     },
     "by_coq_status": {
       "closed": 589,
-      "definition": 387,
+      "definition": 388,
       "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 84,
