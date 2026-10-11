@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "reviewed_at": "2026-10-07",
-  "scope": "Human-domain Toledo registry admission: EQ-002/H.07.v1, the synchronous videoconference learning -> Human Capability master weld. The object is admitted as a Definition/domain specialization after TG-RFG-01 reuse-first review. It composes already-registered HCA stages (barrier readout, human-endorsed candidate routes, scaffold fading, human return, live possibility, realized opportunity, net advancement) without introducing a scalar human-potential score or a universal causal law. Direct CANONICAL.json inspection corrected an earlier stale-generated-view preflight suggestion: EQ-002/H.05.v1 and H.06.v1 already exist, so H.07 is used. Distal HCA stages remain disclosed empirical validation gaps.",
+  "reviewed_at": "2026-10-11",
+  "scope": "NEW DERIVATION / PROPOSAL FIIT-01: ordered-input two-state composition and typed readout gates, motivated by published postprandial glucose/IL-6 studies. Adds proposal documentation, unregistered proposal-lane record and standalone tests; DOES NOT change CANONICAL.json or assert clinical fitting or universal biological law. Reuse-first CAN-003/CAN-006/CAN-007; biological bridges EQ-001/B.29/B.30 stay OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "This admission does not alter any Clay research TODO item, Navier-Stokes/P-vs-NP/FUB bridge obligation, or Clay claim. It is a Human-domain learning/capability registry specialization only."
+    "evidence": "No Clay research TODO, NS/P-vs-NP open obligation, or Clay theorem changes; this PR is non-Clay mathematical application/proposal only. No Clay TODO modification warranted."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "registry/CANONICAL.json adds CAN-1318 / EQ-002/H.07.v1; registry/LINEAGE.jsonl records the assigned event and the H.05->H.07 collision correction; coq/canonical/EQ_002__H_07_v1.v gives a Definition-only compositional wrapper with no theorem, no axiom, and no empirical/causal proof claim. Parents reuse EQ-002/M.03.v1, EQ-002/H.03.v1, A.5/H.17.v1, EQ-015/H.32.v1, A.5/H.18.v1, and A.8/H.03.v1; relations preserve weld/M.02.v1 and A.5/H.08/A.5/H.09 non-collapse guards."
+    "evidence": "Proposal only: registry/proposals/fiit_ordered_readout_v1.json + docs/proposals/PROP-FIIT-01.md, with scripts/proposals/fiit_ordered_transition.py and tests. This is not canonical registration and remains under human-review HOLD for empirical calibration. Original canonical registry and formal proofs unchanged."
   },
   "claim_effect": "statement-change"
 }
