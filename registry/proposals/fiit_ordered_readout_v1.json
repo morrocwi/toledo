@@ -1,0 +1,79 @@
+[
+  {
+    "id": "PROP-FIIT-01",
+    "code": "weld/M.??.v1",
+    "name": "Typed ordered-input composition for two-state effective transitions",
+    "statement": {
+      "latest": "Phi_j(p)=p_eq,j+(p-p_eq,j)exp[-lambda_j*dt_j], lambda_j=k_plus,j+k_minus,j, p_eq,j=k_plus,j/lambda_j (lambda_j>0); p_AB-p_BA=(1-exp[-lambda_A*dt_A])(1-exp[-lambda_B*dt_B])(p_eq,B-p_eq,A). For zero-rate phases Phi_j(p)=p.",
+      "format": "ascii",
+      "note_ascii": "Exact algebra under declared finite piecewise-constant rates, rates >=0, p in [0,1], same units and matching context. Retain intervention order; the physical readout and biological bridge remain uncalibrated and cannot be inferred from this identity."
+    },
+    "definitions": {
+      "p": "abstract latent model fraction (0..1), NOT glucose/IL-6 concentration or clinical inflammation",
+      "k_plus": "forward transition rate within a declared context and phase, inverse-time",
+      "k_minus": "reverse transition rate within same time unit",
+      "dt": "phase duration; k*dt dimensionless",
+      "p_eq": "constant-rate phase equilibrium, defined when lambda>0",
+      "Phi": "conditional exact finite-time map in declared model",
+      "R": "typed, assay/context/question-specific measurement operator with separate required calibration",
+      "intervention_tape": "retained sequence of input phases; aggregate counts lose temporal order"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "fiit-01",
+      "ordered-food-input-readout",
+      "typed-observation-two-state-proposal"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised"
+    },
+    "parents": [
+      {
+        "code": "weld/M.01.v1",
+        "derived_via": "specializes_root_stepper",
+        "evidence": "CAN-001 contains the root retention -> dynamics statement; no empirical bridge claimed"
+      },
+      {
+        "code": "EQ-015/M.02.v1",
+        "derived_via": "specializes",
+        "evidence": "CAN-003 F stepper takes time- and context-indexed inputs"
+      },
+      {
+        "code": "weld/M.02.v1",
+        "derived_via": "respects",
+        "evidence": "CAN-006 quotient and observation commuting is an admission obligation"
+      },
+      {
+        "code": "weld/M.03.v1",
+        "derived_via": "respects",
+        "evidence": "CAN-007 readout equivalence is question/context/horizon indexed"
+      },
+      {
+        "code": "EQ-001/C.07.v1",
+        "derived_via": "respects_warning",
+        "evidence": "fixed quotient can conceal source cycles"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_bridge_obligation",
+        "evidence": "biology-to-model calibration not established"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_validation_obligation",
+        "evidence": "root-to-real-biology proof not established"
+      }
+    ],
+    "origin": {
+      "source": "Founder 2026-10-11 request to improve Toledo with food-order findings; derivation at docs/proposals/PROP-FIIT-01.md; PubMed PMID 28989726, 30101510, 28298267",
+      "doi": null
+    },
+    "claim_boundary": "Exact identity in declared two-state model. Rates in demonstration are illustrative and not fitted to any meal, molecule, clinical endpoint or patient. No prediction accuracy, protein-target mechanism, anti-inflammatory benefit or universal cross-domain law is claimed. Must not be promoted to canonical without human audit and empirical calibration.",
+    "genesis_review": "Step-2 compatible as proposal with State-Sufficiency and Calibration Firewall unresolved for biology; not a domain law.",
+    "source_document": "docs/proposals/PROP-FIIT-01.md",
+    "tests": "scripts/proposals/test_fiit_ordered_transition.py"
+  }
+]
