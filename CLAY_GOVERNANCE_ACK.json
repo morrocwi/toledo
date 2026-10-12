@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-10-12",
-  "scope": "PROPOSAL correction of clock interpretation: PROP-IMF-STEP-01 introduces no new canonical law. Native information dynamics uses n retained steps, not elapsed hours; laboratory clock C_assay,protocol(n) is a separate partial calibrated observer mapping, not root; prior clock-parameterized toy demonstration remains as legacy. B.29/B.30 OPEN; no clinical proof.",
+  "scope": "NEW NONCANONICAL proposal PROP-IMF-REALITY-01. Native information step vs lab observer clock vs biochemical assay explicitly typed; GEO donor-heldout empirical RNA contrast is NOT Toledo physiological prediction; no new root or clinical result; B.29/B.30 remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "No Clay theorem, formal proof or external biochemical claim. Step-first correction is a noncanonical domain bridge and source-provenance note."
+    "evidence": "No Clay theorem/Coq or universal mathematical completion. Explicit engineering/source gate only."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "Added docs/proposals/PROP-IMF-STEP-01.md and registry/proposals/imf_step_native_observer_clock_v1.json; amended legacy temporal reading in PROP-IMF-MULTI-01.md; CAN-003/006/007/009/034/201 reused; biology B.29/B.30 and step-granularity covariance OPEN."
+    "evidence": "docs/proposals/PROP-IMF-REALITY-01.md and registry/proposals/imf_reality_bridge_step_assay_v1.json; canonical F unchanged; biology B.29/B.30 OPEN; BIRCA PR #21 benchmark will not claim biochemical model admission."
   },
   "claim_effect": "statement-change"
 }
