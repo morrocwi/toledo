@@ -1,5 +1,7 @@
 # PROP-REALITY-01 — Toledo Reality Bridge v1
 
+> **SOURCE POLICY OVERRIDE — 2026-10-13: PubMed ONLY; NO simulations.** This document's older software simulations and GEO evidence are HISTORICAL/EXCLUDED from active biological validation and must not be rerun or promoted. Current source-verified primary human experimental papers and admission gates: [PROP-REALITY-03](PROP-REALITY-03-PUBMED-ONLY.md). Abstract Toledo F unchanged and native assay weld HOLD.
+
 **2026-10-12. NONCANONICAL RESEARCH PROPOSAL / biological observation bridges OPEN.**
 
 Authoritative information ontology: readout_universe RD1–RD9, particularly RD4 append-only retained distinction, Omega_all translator, and Quantity Doctrine. Single mathematics: Toledo CAN-003 F stepper, CAN-006/007/009/034, with biological EQ-001/B.29 and B.30 OPEN. This document registers no new universal law and does not claim that physical clocks are scientifically disproven.
