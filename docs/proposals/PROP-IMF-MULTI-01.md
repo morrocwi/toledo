@@ -84,3 +84,7 @@ A **real biological** falsifier would be a preregistered matched-assay 6-day hum
 ## 7. Governance
 
 Tier: (a) chosen ontology and declared domain readout maps Dr; (b) deterministic finite arithmetic and negative ablations finite_diagnostic; (c) empirical B.29/B.30 OPEN. Full code in [BIRCA PR #20](https://github.com/morrocwi/birca_admin_5.0/pull/20) and tests. Existing canonical Toledo registration and root equations unchanged; v9 and v10 prior errors remain. CI green means reproducible toy code, NOT a biological derivation or certified medical system.
+
+## 8. Mandatory later correction: STEP-FIRST (PROP-IMF-STEP-01)
+
+**Do not interpret dt_h in this legacy 18-scenario demonstration as ontic time.** The actual foundational information state evolves in discrete retention order n (RD2-4); the observer measures a protocol-dependent laboratory clock separately. [PROP-IMF-STEP-01](PROP-IMF-STEP-01.md) supersedes the temporal interpretation of this proposed domain, without rewriting or deleting the original test data. The associated `information_events_v11.py` outputs are frozen clock-parameterized toy examples only, and **20/20 is not transferred** to the new native-step kernel. Critical open issue: externally observed lab duration does not identify number of retained steps, and step-resolution covariance has NOT been proved. Any application to 3h, 6h, 24h or 6d samples requires a registered observer-clock bridge, not a default .5-hour step.
