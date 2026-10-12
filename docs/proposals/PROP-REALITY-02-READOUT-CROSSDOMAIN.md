@@ -54,6 +54,19 @@ The computational witness is EXACT rational (no floating point). This illustrate
 
 The `hidden` recurrence yields the exact convolution `h[n]=r^n*h[0]+SUM_{k<n}r^(n-1-k)*d*u[k]`. This is borrowed from DRL's proven **structure**, not inserted as a second universal law or identified as the root F. Indeed, the kernel coefficients, state dimension, challenge access and output assay remain **candidate observer maps**, not deduced biological numbers.
 
+
+
+### Stronger diagnostic: the UNCHANGED native prototype F also has a readout alias [SimulatedData]
+
+BIRCA `reality_readout_crossdomain_v1.py` now reuses **the actual existing** `step_native_imf.py` F (no new laws, no coefficient changes), not only the illustrative two-state circuit. Replay a single `Event(1.0,"PBMC","train")` versus a single `Event(1.0,"PBMC","tolerize")`, each from the same root initial state. Their `signal_proxy` outputs **after the first event are exactly equal**, because the first exposure updates different retained trace components but the prior trace was initially empty. Append **the identical** `Event(1.0,"PBMC","neutral")` to each history. The next `signal_proxy` values diverge, due to previously acquired `trained` versus `tolerant` trace.
+
+Consequently, even INSIDE the unchanged candidate F, choosing `q(S)=signal_proxy(S)` alone violates the CAN-006 dynamics-preserving quotient condition on this explicit pair:
+```
+q(S_train) = q(S_tolerant)
+but q(F(S_train,u)) != q(F(S_tolerant,u)).
+```
+CAN-007 therefore forbids collapsing these two histories for the future challenge question. This **identifies a concrete representation defect in the previous readout-proxy design**—present-only signal cannot be a sufficient F state. It does **not** establish that actual human PBMC has exactly those traces, that LPS should be coded as the toy `train/tolerize` modes, or that the latent native-step history has been measured. The runnable witness is a **model-internal software simulation**, not biological evidence.
+
 ## 4. Concrete next mathematical architecture — without overwriting Toledo F
 
 ```
