@@ -1,0 +1,99 @@
+[
+  {
+    "id": "PROP-REALITY-02",
+    "code": "proposal/readout-crossdomain-biochemical-identifiability",
+    "name": "Readout-first cross-domain factorization and discriminating assay proposal",
+    "statement": {
+      "latest": "For a present assay reader R0 and declared future challenge target P_u(s)=R1(F_u(s)), a deterministic prediction based solely on present readout is admissible only if ker(R0) subseteq ker(P_u); equivalently P_u = g_u o R0 (CAN-165). Where this fails, the native-step biological inference remains HOLD. A separately proposed intervention design selects among feasible u to distinguish candidate hidden states through future readouts.",
+      "format": "ascii",
+      "note_ascii": "These are instances of existing factorisation and quotient requirements, NOT a newly discovered universal law or an identified biological observer map."
+    },
+    "definitions": {
+      "R0": "typed finite present assay readout, not root state",
+      "P_u": "future readout after explicitly declared intervention u",
+      "ker": "indistinguishability kernel of a declared reader",
+      "F_u": "root CAN-003 or a clearly labeled domain proxy; no hours-per-step conversion",
+      "G": "physical assay-specific encoder; not calibrated here",
+      "hidden_kernel": "exact discrete hidden-state convolution structure from DRL; not a fitted PBMC memory model"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "readout-recovery-v1",
+      "readout-factorisation-assay-gate"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised_as_a_biological_weld"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "unchanged_root_F",
+        "evidence": "existing root finite stepper"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "domain_weld_required_not_established",
+        "evidence": "commuting quotient requirement"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "future_reader_equivalence",
+        "evidence": "cannot merge states that respond differently to declared future questions"
+      },
+      {
+        "code": "CAN-165",
+        "derived_via": "factorisation_kernel_condition",
+        "evidence": "ker(R0) subseteq ker(P_u) is required for a present-only decoder"
+      },
+      {
+        "code": "CAN-170",
+        "derived_via": "discriminating_action_design",
+        "evidence": "future challenge should separate observationally aliased states"
+      },
+      {
+        "code": "CAN-201",
+        "derived_via": "noncollapse_readout_and_state",
+        "evidence": "measured value is not full system state"
+      },
+      {
+        "code": "CAN-205",
+        "derived_via": "typed_windowed_sensor_readout",
+        "evidence": "multi-readout design; native steps not inferred from hours"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_real_biology_encoder",
+        "evidence": "no calibrated root-to-RNA or protein map"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_real_measured_event_weld",
+        "evidence": "no independent native event-stream measurement"
+      }
+    ],
+    "other_Toledo_crossdomain_sources": [
+      "coq/information-discrete-math/formal/IDM_ReaderDomainFoundation.v (T3,T4b,T7)",
+      "coq/readout_universe/evidence/DRL_Hidden_Elimination_Convolution.v (exact rational recurrence and sum)",
+      "docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md (finite structural observability, not biology)",
+      "docs/READOUT_BRIDGE_CLOSURE.md (ACCEPT/HOLD boundary)"
+    ],
+    "exact_toy": {
+      "label": "[SimulatedData]",
+      "scope": "two-dimensional rational finite structural counterexample, not PBMC simulation",
+      "observed_readout_aliasing": "states (visible=0,hidden=0) and (visible=0,hidden=1) have identical present readout",
+      "challenge": "u=1 -> future visible readout 0 versus 1/2; u=0 -> 0 versus 0",
+      "conclusion": "current reader does not factor a challenge-response predictor over the unrestricted toy hidden-state class"
+    },
+    "measured_GEO_boundary": "Real GSE22248 confirms prior fixed event-proxy F model underperformed equal-input zero-contrast baseline; no fresh biochemical predictive metric arises from the exact toy counterexample.",
+    "origin": {
+      "source": "docs/proposals/PROP-REALITY-02-READOUT-CROSSDOMAIN.md and companion BIRCA draft PR #21",
+      "doi": null
+    },
+    "claim_boundary": "No native step count, no real biochemical hidden-state reconstruction, no clinical, no new PROVEN biology result. CAN-003 unchanged.",
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/21",
+    "source_document": "docs/proposals/PROP-REALITY-02-READOUT-CROSSDOMAIN.md"
+  }
+]
