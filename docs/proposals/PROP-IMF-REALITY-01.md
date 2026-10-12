@@ -65,3 +65,12 @@ The companion BIRCA readout engine can fit a candidate affine encoder ONLY on TR
 6. Complete independent Toledo B.29/B.30 validation and biological/clinical expert review before any physiological accuracy claim.
 
 Tier: RD ontology is founder-stated source; algebra in posited F is finite_diagnostic; physical biochemical truth OPEN. This proposal does not claim that primitive time does not exist in physics; it maintains a **step-first modeling commitment** from which physical clock comparisons are downstream readouts.
+
+
+## Empirical audit update, 2026-10-12 — actual GEO reached, native Toledo still HOLD
+
+Companion [BIRCA PR #21](https://github.com/morrocwi/birca_admin_5.0/pull/21) executed [Actions run 38261519903](https://github.com/morrocwi/birca_admin_5.0/actions/runs/38261519903) and downloaded the real GSE22248 processed series matrix, 1,483,357 bytes, SHA256 cb2053d2a7f776cbc654bf2d26d69fad4122d99c0bd41617d42f9090a3e8d268. Verified 12 PBMC samples / 4 donors / 24,526 Illumina array probe signals.
+
+Three training donor means predict the *same endpoint double-LPS minus single-LPS probe-value contrast* on heldout donor 92 with MAE **0.14272869** vs a zero-contrast empirical baseline **0.19362993**, in normalized-array signal units. Training median MAE **0.14542420**. Retrospective donor-rotation mean of 4 MAEs: pooled 0.14474376 vs zero 0.17790865; heldout-donor MAEs vary 0.13312–0.16199. [Full per-probe audit artifact](https://github.com/morrocwi/birca_admin_5.0/actions/runs/38261519903/artifacts/11752686404).
+
+These results show transferable average transcript-contrast information across a small number of donors; they **do not evaluate F_step or its endogenous train/tolerize memory coefficients**. Transcript effect is not a cytokine pg/mL; possible confounds include cumulative LPS, culture time, donor/batch effects; four donors are the independent units; rotation is NOT an independent clinical cohort. The native step index is not identified by the 4-hour assay stamp, so the supposed step-native Toledo clinical MAE remains undefined. **B.29/B.30 and temporal refinement remain OPEN.** It would violate source-honesty governance to call the 26.29% improvement over zero contrast a Toledo predictive advantage.
