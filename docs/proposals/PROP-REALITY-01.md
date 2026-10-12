@@ -42,3 +42,12 @@ Mean training contrast error is 26.29% lower than zero contrast. This is **an em
 All previously reported v9 and v10 failures and legacy v11 synthetic 20/20 remain preserved. None converts to biological validation. Root-to-biochemistry EQ-001/B.29/B.30 remains OPEN.
 
 Promotion requires a justified latent-step identification or equivalence model; independently calibrated, assay-specific mappings; sample/time/assay controls; participant-disjoint TRAIN and locked TEST; residual distribution, uncertainty and out-of-study competitors. Keep PR DRAFT pending CI and review. No drug design, SMILES, synthesis, dosing or medical treatment advice.
+
+
+## Extension 2026-10-13: falsification screen for protocol-event proxy only
+
+Companion [BIRCA #21](https://github.com/morrocwi/birca_admin_5.0/pull/21) now includes an observed-LPS-administration **event-index** stress test built directly on the existing `step_native_imf.replay` implementation. It does not change CAN-003 or claim that the number of biological retained distinctions between assays equals the number of LPS additions. No hour-to-step conversion is assumed.
+
+A frozen candidate `F` signal readout over zero/one/two *observed intervention events* defines `R_F=(r_2-r_1)/(r_1-r_0)`. A probe-specific first-response slope is fitted using only TRAIN donors' untreated and once-LPS RNA; the outcome tested is heldout donor twice-minus-once LPS RNA. Comparators using exactly the same training condition information are memory-trace-ablated F, linear continuation, and zero contrast. Numeric findings are to be reported in the BIRCA CI run, including failures. The prior v1 mean double-minus-single predictor has access to TRAIN double-LPS samples and is **not an equivalent-information competitor**.
+
+This diagnostic is retrospective on public data. The probe-specific slope is a fitted experimental reader rather than a derived native Toledo assay map. Training or evaluation success cannot independently identify unobserved informational step counts, endogenous immune memory, a causal cellular mechanism, or an invariant physical-time translation. All EQ-001/B.29/B.30 admission gates therefore remain **HOLD/OPEN**. Preserve the negative evidence and keep both PRs DRAFT.
