@@ -1,0 +1,78 @@
+[
+  {
+    "id": "PROP-IMF-REALITY-01",
+    "code": "proposal/imf-reality-step-assay-v1",
+    "name": "Native retained-step to observer clock and typed biochemical assay admission",
+    "statement": {
+      "latest": "H[n+1]=Append(H[n],rho[n]); Z[n+1]=F_step(Z[n],rho[n],c[n],Access(H[n])); r[Q,n]=Pi[Q,c](Z[n],H[n]); t_lab(j)=C[assay,protocol](n_j); y_feature,j=Encode[modality,assay,specimen,feature](r[Q,n_j])+eps_j",
+      "format": "ascii",
+      "note_ascii": "Clock and assay projections separate and only empirical conditional readouts; step count and readout encoder unidentifiable from observed hours alone."
+    },
+    "definitions": {
+      "n": "finite retained event successor, NOT laboratory time",
+      "H": "append-only tape of typed events",
+      "Z": "native informational domain state",
+      "F_step": "specialization of Toledo CAN-003 F",
+      "r": "question relative abstract readout",
+      "t_lab": "measured observer clock in hours",
+      "C": "partial externally validated step-to-instrument-clock mapping",
+      "Encode": "assay/specimen/analyte-specific experimental observation reader",
+      "eps": "finite measurement noise"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "reality-bridge-v1",
+      "biochemistry-info-readout-gate"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "reused_root_stepper",
+        "evidence": "native discrete F; no new mother"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "OPEN_quotient_dynamics_admission",
+        "evidence": "biochemical state/readout commutation not proved"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "future_query_relative_readout",
+        "evidence": "same current marker not sufficiency proof"
+      },
+      {
+        "code": "CAN-009",
+        "derived_via": "immutable_history",
+        "evidence": "only typed append of retained events"
+      },
+      {
+        "code": "CAN-034",
+        "derived_via": "UNIDENTIFIED_step_refinement_obligation",
+        "evidence": "lab time cannot determine count of latent transitions"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_biochemical_encoder",
+        "evidence": "no native-to-molecular concentration calibration"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_time_resolved_event_bridge",
+        "evidence": "no independent hidden step count identification"
+      }
+    ],
+    "origin": {
+      "source": "readout_universe RD2/3/4 & Omega_all; Toledo docs/proposals/PROP-IMF-REALITY-01.md; BIRCA research PR #21; GEO GSE22248 PMID 21576504",
+      "doi": null
+    },
+    "claim_boundary": "GEO donor-level contrast from real 12-sample RNA microarray is empirical descriptive benchmark only; Toledo step-native biochemical accuracy remains HOLD B29/B30. Four clinical phenomena untested.",
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/21",
+    "source_document": "docs/proposals/PROP-IMF-REALITY-01.md"
+  }
+]
