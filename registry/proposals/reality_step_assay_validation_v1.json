@@ -67,8 +67,17 @@
       "source": "docs/proposals/PROP-REALITY-01.md and morrocwi/birca_admin_5.0 PR #21; GSE22248 public GEO / PMID 21576504",
       "doi": null
     },
-    "claim_boundary": "Observed four-donor 24526-probe GEO contrast and simple empirical mean baseline 0.14272869 MAE vs no-history 0.19362993 are NOT Toledo native F accuracy. No patient-level, protein or blind independent validation.",
+    "claim_boundary": "SOURCE POLICY OVERRIDE: old numerical simulation and GEO analysis are historical and excluded from current PubMed-only evidential claims. Observed four-donor 24526-probe GEO contrast and simple empirical mean baseline 0.14272869 MAE vs no-history 0.19362993 are NOT Toledo native F accuracy. No patient-level, protein or blind independent validation.",
     "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/21",
-    "source_document": "docs/proposals/PROP-REALITY-01.md"
+    "source_document": "docs/proposals/PROP-REALITY-01.md",
+    "current_evidence_policy": {
+      "effective_date": "2026-10-13",
+      "permitted_origin": "DIRECT_LIVE_PUBMED_ARTICLE_ABSTRACTS_ONLY",
+      "simulations_and_GEO": "LEGACY_EXCLUDED_FROM_CURRENT_CLAIMS",
+      "active_pubmed_proposal": "PROP-REALITY-03",
+      "absolute_ban_on_new_simulations": true,
+      "active_pubmed_pipeline": "admin/research/reality_pubmed_only_v1.py",
+      "Toledo_native_biology": "HOLD"
+    }
   }
 ]
