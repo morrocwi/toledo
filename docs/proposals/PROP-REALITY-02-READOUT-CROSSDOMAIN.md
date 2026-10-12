@@ -107,3 +107,32 @@ Minimal independent future readout panel: under proper consent and relevant prot
 - [NS observability bridge](https://github.com/morrocwi/toledo/blob/main/docs/NS_OBSERVABILITY_TO_EPSC_BRIDGE.md)
 - [BIRCA v1.1 negative RNA audit](https://github.com/morrocwi/birca_admin_5.0/blob/research/reality-bridge-v1-2026-10-12/admin/research/data/reality_gse22248_F_event_proxy_negative_20261013.json)
 - Companion BIRCA exact-arithmetic code: `admin/research/reality_readout_crossdomain_v1.py` and `tests/test_reality_readout_crossdomain_v1.py`.
+
+
+## Addendum 2026-10-13 — measured second-study failure and exploratory two-reader correction
+
+**Independent public source (not a donor-blind evaluation):** human monocyte transcriptomics [GSE15219](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15219), GPL6255, 16 deposited arrays/20,589 probes. Retrieved GEO matrix SHA256 `32de2968f66a741d5b4b3fef3dbec47c082c6e3157c311a6c5099ec4ed8baed4`; [real GitHub Action 38303199976](https://github.com/morrocwi/birca_admin_5.0/actions/runs/38303199976).
+
+The frozen BIRCA **observed-event proxy** F performed worse than simple baselines at every sampled laboratory hour (do NOT reinterpret clock hours as n):
+
+| Observer sample hour | F single-reader MAE | no-history-zero MAE | negative first-response MAE |
+|---:|---:|---:|---:|
+| 3 | 0.519971 | 0.283800 | 0.248992 |
+| 6 | 0.490973 | 0.259342 | 0.242949 |
+| 24 | 0.443748 | 0.220065 | 0.259654 |
+
+Unlike the prior GSE22248, GPL6255 uses different assay normalization; only WITHIN-GSE15219 log2 VALUE contrasts are compared. Sample titles `rep1/rep2` do not establish independently verified donor identities. The failure is for this fixed externally deployed event-index proxy, not a universal refutation of abstract CAN-003.
+
+**After viewing these results**, a second, explicitly **POSTHOC** two-observable exploration admitted an independently deposited history/rest condition `Tol rep1/rep2` (GSM380040/41). Define measured assay contrasts `A=log2(Lh)-log2(Control)`, `B=log2(Tol)-log2(Control)`, and target `D=log2(T+Lh)-log2(Lh)`. An invertible two-reader `(signal_proxy,tolerant_trace)` basis, evaluated solely inside unchanged BIRCA `step_native_imf.py` under coarse observed event sequences, produced an **observer-specified** decoder `Dhat=-0.19945964326875323*A+0.998215879*B`. This is a noncanonical domain reader, not Toledo's mathematical mother or a measured epigenetic quantity.
+
+| Observer sample hour | old 1-input F MAE | augmented 2-input BIRCA F MAE | simple same-input `B-A` MAE |
+|---:|---:|---:|---:|
+| 3 | 0.519971 | 0.217782 | **0.080663** |
+| 6 | 0.490973 | 0.230472 | **0.081539** |
+| 24 | 0.443748 | 0.252894 | **0.134908** |
+
+The new reader appears closer than the former **because it uses additional observed information**; it cannot isolate a contribution from F's informational memory mechanism. Crucially, **B−A wins in every window**, so there is still no outperformance claim. The second reader itself was designed AFTER target results had become visible, hence this is NOT independent prediction validation, even though GSE15219 is independent of GSE22248.
+
+This supports the **research priority** suggested by CAN-006/007/165/170/205: design a reader that preserves distinctions relevant to the *future challenge question* and verify its biological sufficiency in a separate, later-source study. It does **not** supply a native step count or protein assay calibration. Native biological weld EQ-001/B.29/B.30 remains **HOLD/OPEN**; retain negative and posthoc evidence for independent refutation.
+
+[Complete implementation and frozen measured audit](https://github.com/morrocwi/birca_admin_5.0/pull/21) · [Actual action + residual artifacts](https://github.com/morrocwi/birca_admin_5.0/actions/runs/38303933263).
