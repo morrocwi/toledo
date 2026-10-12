@@ -1,0 +1,116 @@
+[
+  {
+    "id": "PROP-REALITY-03",
+    "code": "proposal/pubmed-only-human-biochemical-readout",
+    "name": "PubMed-only real human LPS readout evidence; no simulation",
+    "statement": {
+      "latest": "Only independently published, source-verified PubMed-indexed human biochemical observations may be read out for candidate Toledo biological interpretation. The abstract CAN-003 F and the CAN-006/007/165 observation-factorization requirement remain unchanged. Missing native-step calibration or donor-level assay map => HOLD.",
+      "format": "ascii",
+      "note_ascii": "This is an admissibility and study-level evidence ledger, not a new universal biological equation."
+    },
+    "definitions": {
+      "pubmed_record": "Direct EFetch db=pubmed PMID article record; source identity and quantitative text verified live",
+      "lab_hour": "observer acquisition time, not a retained informational step",
+      "cytokine_percent": "author-reported study/protocol-specific response decrease, not a pooled Toledo model fit",
+      "RNA_protein": "typed-distinct assays; not interchangeable",
+      "current_scope": "PubMed indexed human experimental papers only; no GEO, artificial cohorts or simulation"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "pubmed-only-20261013",
+      "strict-published-human-biochemical-gate"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "none_requested_no_new_formalism"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "root_not_modified",
+        "evidence": "abstract retained-step F; no mapping to laboratory clock"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "domain_weld_open",
+        "evidence": "source does not establish calibrated q∘F=F#∘q"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "future_reader_comparison_open",
+        "evidence": "unmatched published cohort averages cannot establish all-future equivalence"
+      },
+      {
+        "code": "CAN-165",
+        "derived_via": "factorisation_guard",
+        "evidence": "ker(R_present) inclusion not experimentally shown"
+      },
+      {
+        "code": "CAN-201",
+        "derived_via": "readout_not_state",
+        "evidence": "plasma TNF vs CD14+ cytokine vs chromatin represent different observable types"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_assay_encoder",
+        "evidence": "PubMed abstracts do not provide native root-state-to-cytokine calibration"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_event_resolved_biology",
+        "evidence": "publication timepoints do not identify native retained successor count"
+      }
+    ],
+    "source_pubmed_pmids": [
+      "19242351",
+      "21494102",
+      "7687636",
+      "20730374",
+      "20974955",
+      "1284277",
+      "37805492"
+    ],
+    "research_observations": {
+      "7687636": {
+        "TNF_synthesis_less_percent": 47,
+        "IL6_synthesis_less_percent": 56
+      },
+      "19242351": {
+        "TNF_attenuation_percent": 97,
+        "TNF_reported_spread_percent": 3,
+        "IL6_attenuation_percent": 88,
+        "IL6_reported_spread_percent": 8
+      },
+      "20730374": {
+        "IL6_reduction_percent": 40
+      },
+      "21494102": {
+        "TNF_peak_attenuation_percent": 46,
+        "IL6_peak_attenuation_percent": 36
+      },
+      "other_pmids": "Qualitative published biological readouts only; no magnitude invented"
+    },
+    "verification": {
+      "github_action": "https://github.com/morrocwi/birca_admin_5.0/actions/runs/38305842396",
+      "live_pubmed_xml_sha256": "14db828f8a7011bfdeb465a1cc92068e05fcc8215eac7a11648b7f83a1b5829d",
+      "verified_pmids": 7,
+      "active_ingestion": "admin/research/reality_pubmed_only_v1.py using official EFetch db=pubmed",
+      "source_constraint": "LIVE_PUBMED_ONLY",
+      "simulations_performed": false,
+      "previous_geo_and_toy_artifacts": "HISTORICAL_EXCLUDED",
+      "native_step_count_identified": false,
+      "native_biological_predictive_MAE": null,
+      "clinical_accuracy": null,
+      "status": "PUBMED_SOURCE_VERIFIED_BUT_NATIVE_F_BIOLOGY_HOLD"
+    },
+    "origin": {
+      "source": "docs/proposals/PROP-REALITY-03-PUBMED-ONLY.md and PubMed articles with explicit PMID; no outside biomedical evidence sources",
+      "doi": null
+    },
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/21",
+    "source_document": "docs/proposals/PROP-REALITY-03-PUBMED-ONLY.md",
+    "claim_boundary": "Only study-specific published findings. Cross-study numbers not pooled; no simulation, no GEO as current experimental evidence. Q3/Q4 HOLD; Q1/Q2 descriptive literature only; root F not fitted or validated."
+  }
+]
