@@ -63,3 +63,22 @@ The linked [birca_admin_5.0 draft PR #18](https://github.com/morrocwi/birca_admi
 The four lanes are **an IMPLEMENTATION / observation extension of this proposal**, not another root system. The only authoritative Toledo mathematical parents remain the canonical CAN-003/CAN-006/CAN-007 and typed B.07/C.07 where applicable. FIIT-01 (PR #67) remains a separately reviewed proposal. No canonical registration, Coq theorem, universal inflammation law, disease causation or molecule-creation claim is added.
 
 Mandatory upgrade gate: reproduce full GitHub CI, validate sample- and assay-level provenance, compare with independent clinical/laboratory cohorts and competing baselines, and close the B.29/B.30 biology readout joins. **Software PASS never changes those OPEN states.**
+
+
+## Phenomenology falsification audit (2026-10-12) — no clinical promotion
+
+Primary executable record is in [birca_admin PR #18, phenom report](https://github.com/morrocwi/birca_admin_5.0/blob/research/toledo-imf-readout-bridge-2026-10-12/docs/TOLEDO_IMF_PHENOMENOLOGY_AUDIT_2026-10-12.md), accompanied by executable phenomenology_audit.py, a typed eight-PubMed evidence registry, and a machine-readable positive/negative/HOLD result snapshot. ALL numerical states below are uncalibrated synthetic simulations; literature is compared by direction and mechanism only, not numerical fitting.
+
+Frozen unchanged four-state research engine; dimensionless stimulus u=1 at 0–3h, zero after, with optional repeat at 144–147h. Outcomes:
+
+- **R1 structural PASS**: pulse activation decays after withdrawal (p minus sham at 48h = +0.000484); qualitatively consistent with a human fibroblast TNF-withdrawal experiment (PMID 10869349). Persistent post-sepsis markers (PMID 31390038) do not establish all underlying drivers vanished: HOLD for chronic autonomous inflammation.
+- **R2 FAIL**: rechallenge 6 days later produces essentially naive response (absolute peak p difference 9.63e-10), not durable functional memory. Human monocyte restimulation after washout yields trained immunity or LPS tolerance (PMID 24521784). Reserve e retains a numerical offset (-0.125535) but DOES NOT feed back into p or q.
+- **R3 FAIL capability**: no endogenous, site-indexed psoriasis reflare without new input; human resolved psoriasis tissue T-cell memory relates to relapse (PMID 29510191). NOT quantitative patient falsification.
+- **R4 structural PASS**: near-normal activation signal at 12h (abs excess p 0.025723) with tissue deficit (x -0.046193); human exercise IL-6 can return to baseline while CK/myoglobin remain high (PMID 15870626). No calibrated p-to-IL6 or x-to-CK bridge.
+- **R5 FAIL**: unforced resource e drifts upward from 1.289565 at 48h to 3.658262 at 192h, no full-system stationary reserve.
+- **R6 FAIL**: supplied default p=.02 drifts to 0.283215 by 24h with zero input; the default state is not a stimulus-free fixed point. Comparisons instead used explicit stationary p/q/x initial conditions.
+- **R7 FAIL capability**: one tissue-integrity scalar x has no independent macroscopic closure and barrier readouts; human skin wounds appeared closed at day 7 but barrier restored day 11 (PMID 9655416). Wound tissue IL-6 mRNA source PMID 39852206 remains HOLD for modality mismatch.
+
+All seven binary structural outcomes are unchanged for step sizes 0.125, 0.25 and 0.5h: 2 pass and 5 fail. These are NOT blind empirical clinical tests, are NOT a biological success rate, and thresholds were NOT preregistered. The domain simulation is not the trained Talwar->Kullmann cytokine readout. B.29 and B.30 remain OPEN. No canonical equation, Coq theorem, universal inflammation mechanism or clinical safety claims are changed.
+
+Required next work: experimentally identifiable long-lived immune memory and context/dose dependence, bounded resource dynamics, typed independent tissue/function observation maps, true prior-locked held-out experimental assay comparisons with simple baselines, and human review.
