@@ -1,5 +1,7 @@
 # PROP-REALITY-02 — Readout-first cross-domain recovery (2026-10-13)
 
+> **ACTIVE SOURCE POLICY — 2026-10-13: PUBMED ONLY, NO SIMULATION.** This document's older exact-rational toys, BIRCA F software-prototype trajectories, GEO results, and retrospective reader scores are **LEGACY/EXCLUDED** from CURRENT biological evidence. They remain in this draft only to document the superseded research sequence and should NOT be run, fitted, merged into the PubMed evidence lane, or cited as current validation. The live experimental evidence now comes **only from verified PubMed-indexed primary human papers**, acquired with EFetch `db=pubmed`; see [PubMed-only evidence policy and real studies](https://github.com/morrocwi/birca_admin_5.0/blob/research/reality-bridge-v1-2026-10-12/docs/TOLEDO_PUBMED_ONLY_REAL_BIOLOGY_V1.md). All biological F-to-assay and native step-calibration claims remain HOLD. No article-abstract group result can be treated as a donor-wise predictive test.
+
 **Status: NONCANONICAL PROPOSAL, SCIENTIFIC HOLD.** Never call a generic mathematical witness a biological measurement. This extension answers why the frozen observed-event proxy of Toledo F failed GSE22248 (MAE 0.277763 vs zero 0.193630), without changing CAN-003, constructing a new mother law, or fitting the donor-92 holdout again.
 
 ## 1. What exactly failed
