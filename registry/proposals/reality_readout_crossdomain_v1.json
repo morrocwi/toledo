@@ -92,8 +92,28 @@
       "source": "docs/proposals/PROP-REALITY-02-READOUT-CROSSDOMAIN.md and companion BIRCA draft PR #21",
       "doi": null
     },
-    "claim_boundary": "No native step count, no real biochemical hidden-state reconstruction, no clinical, no new PROVEN biology result. CAN-003 unchanged.",
+    "claim_boundary": "No native step count, no real biochemical hidden-state reconstruction, no clinical, no new PROVEN biology result. CAN-003 unchanged. Subsequent real GSE15219 frozen-F event proxy failed simple controls. A posthoc two-reader domain-prototype F improved relative to its one-reader ancestor but lost to simple B-A; not blind generalization. No native step mapping or protein calibration.",
     "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/21",
-    "source_document": "docs/proposals/PROP-REALITY-02-READOUT-CROSSDOMAIN.md"
+    "source_document": "docs/proposals/PROP-REALITY-02-READOUT-CROSSDOMAIN.md",
+    "empirical_status": {
+      "second_study": {
+        "study": "GSE15219",
+        "status": "FAILED_FROZEN_EVENT_PROXY",
+        "n_samples": 16,
+        "n_probes": 20589,
+        "external_proxy_MAE_3h": 0.5199708113490924,
+        "zero_MAE_3h": 0.2838004908459344,
+        "metadata": "GPL6255; independent public study but not certified donor-disjoint or prospectively blind"
+      },
+      "augmented_study": {
+        "status": "POSTHOC_EXPLORATORY_NOT_INDEPENDENT_VALIDATION",
+        "source": "GSE15219",
+        "two_reader_F_MAE_3h": 0.2177822971671908,
+        "B_minus_A_MAE_3h": 0.08066275976341676,
+        "note": "Prechallenge Tol rep1/rep2 were identified in deposited sample titles; a 2-reader model was designed only after target results were viewed. No canonical F change."
+      },
+      "native_biology_weld": "HOLD_EQ-001/B.29_B.30",
+      "clinical_accuracy": null
+    }
   }
 ]
