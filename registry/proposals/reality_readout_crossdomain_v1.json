@@ -92,7 +92,7 @@
       "source": "docs/proposals/PROP-REALITY-02-READOUT-CROSSDOMAIN.md and companion BIRCA draft PR #21",
       "doi": null
     },
-    "claim_boundary": "No native step count, no real biochemical hidden-state reconstruction, no clinical, no new PROVEN biology result. CAN-003 unchanged. Subsequent real GSE15219 frozen-F event proxy failed simple controls. A posthoc two-reader domain-prototype F improved relative to its one-reader ancestor but lost to simple B-A; not blind generalization. No native step mapping or protein calibration.",
+    "claim_boundary": "SOURCE POLICY OVERRIDE: old numerical simulation and GEO analysis are historical and excluded from current PubMed-only evidential claims. No native step count, no real biochemical hidden-state reconstruction, no clinical, no new PROVEN biology result. CAN-003 unchanged. Subsequent real GSE15219 frozen-F event proxy failed simple controls. A posthoc two-reader domain-prototype F improved relative to its one-reader ancestor but lost to simple B-A; not blind generalization. No native step mapping or protein calibration.",
     "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/21",
     "source_document": "docs/proposals/PROP-REALITY-02-READOUT-CROSSDOMAIN.md",
     "empirical_status": {
@@ -114,6 +114,15 @@
       },
       "native_biology_weld": "HOLD_EQ-001/B.29_B.30",
       "clinical_accuracy": null
+    },
+    "current_evidence_policy": {
+      "effective_date": "2026-10-13",
+      "permitted_origin": "DIRECT_LIVE_PUBMED_ARTICLE_ABSTRACTS_ONLY",
+      "simulations_and_GEO": "LEGACY_EXCLUDED_FROM_CURRENT_CLAIMS",
+      "active_pubmed_proposal": "PROP-REALITY-03",
+      "absolute_ban_on_new_simulations": true,
+      "active_pubmed_pipeline": "admin/research/reality_pubmed_only_v1.py",
+      "Toledo_native_biology": "HOLD"
     }
   }
 ]
