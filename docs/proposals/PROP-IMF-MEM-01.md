@@ -115,3 +115,47 @@ Application only: [BIRCA admin draft PR #19](https://github.com/morrocwi/birca_a
 Potentially relevant external qualitative sources from the existing v9 audit: PubMed PMID 24521784 (trained/tolerant monocyte response), PMID 29510191 (psoriasis tissue-local relapse association), PMID 9655416 (closure vs barrier recovery), PMID 15870626 (protein vs muscle injury measures), PMID 10869349 (stimulation withdrawal). None supplies fitted numerical parameters to this toy.
 
 Release gates: maintain root/source pins, test historical injectivity and sufficiency counterexamples, match event/control protocol, test clinical biomarkers individually with verified specimen/assay/units, perform participant-disjoint blind benchmark against simple models, and independently resolve Toledo B.29/B.30. Human review and CI precede any canonical or clinical promotion.
+
+
+## 8. FULL executable finite domain closure (v10 toy): every state coordinate has an update
+
+This section is the *complete parametric illustration already implemented in the companion software*, not a derivation of physical inflammatory laws from nine axioms. Every constant below is a DECLARED TEST VALUE, not estimated from PubMed or immune-cell measurements. Step dt is in illustrative hours; all non-tape states are dimensionless, all events typed.
+
+    State Z_n := (p_n,q_n,C_n,B_n,e_n,m_train[n,c],m_tol[n,c]).
+    Event rho_n := (n,u_n,c_n,kind_n).
+    History H_(n+1) := H_n CONCAT rho_n  [RD4 record candidate].
+    Effective_memory mbar_mu := exp(-dt/tau_mu) m_mu.
+    Learn_mu := (1-exp(-dt*u_n/ell_mu)) iff kind_n matches mu,
+                else 0.
+    m_mu[n+1] := mbar_mu + (1-mbar_mu)*Learn_mu.
+    Recall_c[n] := (1+alpha*m_train[n,c])/(1+beta*m_tol[n,c]).
+    d_n := stimulus_gain*u_n*Recall_c[n].
+    k_n := rate_p + d_n.
+    p_eq,n := p_rest + (1-p_rest)*d_n/k_n.
+    p_(n+1) := p_eq,n + (p_n-p_eq,n)*exp(-k_n*dt).
+    q_target,n := min(1,q_rest + resolution_induction*max(0,p_n-p_rest)).
+    q_(n+1) := q_target,n + (q_n-q_target,n)*exp(-rate_q*dt).
+    D_C := min(C_n,dt*closure_damage*(max(0,p_n-p_rest)+0.2*u_n)*C_n).
+    D_B := min(B_n,dt*barrier_damage*(max(0,p_n-p_rest)+0.2*u_n)*B_n).
+    R_C0 := min(1-C_n+D_C,dt*closure_repair*(1-C_n+D_C)).
+    R_B0 := min(1-B_n+D_B,dt*barrier_repair*(1-B_n+D_B)).
+    J := min(1-e_n,dt*reserve_supply*(1-e_n)).
+    rho := min(1,(e_n+J)/((R_C0+R_B0)/2)) if denominator positive,
+           else 1.
+    C_(n+1) := C_n-D_C+rho*R_C0.
+    B_(n+1) := B_n-D_B+rho*R_B0.
+    e_(n+1) := e_n+J-rho*(R_C0+R_B0)/2.
+    x_n := (C_n+B_n)/2.
+    => x_(n+1)+e_(n+1) = x_n+e_n+J-(D_C+D_B)/2 exactly.
+    O_Q(S_n) := p_n OR q_n OR C_n OR B_n depending on Q.
+    No O_Q above reports actual cytokine concentration or disease severity.
+
+Frozen software parameters for the demonstration: p_rest=0.04, q_rest=0.2, rate_p=0.35, rate_q=0.20, stimulus_gain=0.55, alpha=3, beta=2.4, tau_train=tau_tol=300h, ell_train=ell_tol=8h, resolution_induction=0.3, closure_damage=0.18, barrier_damage=0.23, closure_repair=0.10, barrier_repair=0.015, reserve_supply=0.025. They are TEST FIXTURES only. No SI or clinical inference.
+
+The complete bounded state has a true default quiet fixed point p=p_rest, q=q_rest, C=B=e=1, m=0 under input u=0, but the **tape still grows by recording time steps**: projected state stationarity does NOT mean history stopped existing. A finite capacity guard (MAX_TAPE=4096) reports HOLD instead of silently deleting recorded distinctions; no biological information-storage infinity is claimed.
+
+Information-specific non-collapse requirements:
+- H is historical identity, m is accessible memory, Recall is an effective response coefficient, O_Q is only a readout. Their equality is NEVER assumed.
+- Identical O_Q at time n does not license equivalence at n+k. Match probe and horizon before judging sufficiency (CAN-007/034).
+- The 2-channel training/tolerance architecture is one candidate reversible/irreversible coarse-graining of tape, not forced by nine axioms. Different finite models are admissible and must compete empirically.
+- A full universal new memory/physics equation was NOT derived here; the minimal new domain piece is precisely F_IMF and its observation projection.
