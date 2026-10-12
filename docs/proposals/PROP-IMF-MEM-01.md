@@ -54,7 +54,7 @@ Four translated research questions:
 
 ## 3. New minimal operational specialization: history is in the state
 
-For information state S_n = (Z_n,H_n) and a typed event rho_n (amplitude, context, kind, tick):
+For information state S_n = (Z_n,H_n) and a typed event rho_n (tick, step duration dt, amplitude, context, kind), so effective memory can be replayed from real time intervals, not an invented index:
 
     H_(n+1) = H_n CONCAT rho_n
     Z_(n+1) = F_IMF(Z_n, u_n, c_n, Accessible_(Q,c)(H_n), dt_n)
@@ -159,3 +159,5 @@ Information-specific non-collapse requirements:
 - Identical O_Q at time n does not license equivalence at n+k. Match probe and horizon before judging sufficiency (CAN-007/034).
 - The 2-channel training/tolerance architecture is one candidate reversible/irreversible coarse-graining of tape, not forced by nine axioms. Different finite models are admissible and must compete empirically.
 - A full universal new memory/physics equation was NOT derived here; the minimal new domain piece is precisely F_IMF and its observation projection.
+
+**Reconstruction guard:** BIRCA v10 stores each event's step duration in the tape and reconstructs accessible trained/tolerant memory from the entire recorded prefix. If a supplied state claims active memory inconsistent with the tape, it reports HOLD_MEMORY_NOT_TAPE_DERIVED. A tampered or truncated tape cannot silently turn into an admissible readout. This improves SOFTWARE provenance, not experimental identifiability or physical memory proof.
