@@ -1,0 +1,86 @@
+[
+  {
+    "id": "PROP-IMF-MEM-01",
+    "code": "proposal/imf-retained-history.v1",
+    "name": "RD4 retained-tape and accessible-context-memory inflammation readout specialization",
+    "statement": {
+      "latest": "H[n+1] = H[n] CONCAT rho[n]; Z[n+1] = F_IMF(Z[n],u[n],c[n],Accessible_Q,c(H[n]),dt[n]); y_Q[n]=Pi_Q,c(Z[n],H[n])+eta_Q[n]",
+      "format": "ascii",
+      "note_ascii": "Declared domain specialization of Toledo CAN-003 F, not a new root; append-only history vs lossy accessible memory vs future question readout are separate. Immune decay and recall parameters are POSITED and uncalibrated."
+    },
+    "definitions": {
+      "H": "immutable append-only typed history tape (abstract RD4 witness)",
+      "rho": "retained typed event, context and tick",
+      "Z": "domain candidate activation/resolution/tissue/readout and bounded resource state",
+      "Accessible": "lossy context and question indexed retained signature",
+      "F_IMF": "domain candidate stepper with memory-modulated recall, not canonical F",
+      "Pi": "question-indexed typed observation map",
+      "eta": "measurement/translation noise, not data equality"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "imf-memory-v10",
+      "PROP-IMF-MEM-01"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "strict domain reuse",
+        "evidence": "F remains canonical, F_IMF a posited specialization"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "query-relative future observation",
+        "evidence": "equal present readouts with different tape yield unequal matched future probe"
+      },
+      {
+        "code": "CAN-009",
+        "derived_via": "historical non-rewrite",
+        "evidence": "history is only appended, no overwrite"
+      },
+      {
+        "code": "CAN-024",
+        "derived_via": "accessible memory analogy only",
+        "evidence": "semantic model parent, not a biological derivation"
+      },
+      {
+        "code": "CAN-034",
+        "derived_via": "counterexample to insufficient current readout",
+        "evidence": "current activation alone cannot predict matched trained vs tolerant response"
+      },
+      {
+        "code": "CAN-054",
+        "derived_via": "memory selection distinction",
+        "evidence": "active signature is lossy; not equivalent to full tape"
+      },
+      {
+        "code": "EQ-001/B.07.v1",
+        "derived_via": "resource balance reuse in abstract domain",
+        "evidence": "finite closure/barrier averaged x and capped reserve e; no new physical energy claim"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN biological encoder obligation",
+        "evidence": "no calibrated gene/protein mapping"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN measured event bridge obligation",
+        "evidence": "no blind individual time series"
+      }
+    ],
+    "origin": {
+      "source": "docs/proposals/PROP-IMF-MEM-01.md; readout_universe/v2/INFORMATION_DNA.md and v2/APPEND_ONLY_RECORD.md; companion BIRCA PR #19",
+      "doi": null
+    },
+    "claim_boundary": "Only an information-first, append-only retained-history domain PROPOSAL. Toy structural recall and resource results cannot support patient-level prediction or validate metaphysical ontology.",
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/19",
+    "source_document": "docs/proposals/PROP-IMF-MEM-01.md"
+  }
+]
