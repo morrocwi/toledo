@@ -1,0 +1,71 @@
+[
+  {
+    "id": "PROP-IMF-02",
+    "code": "weld/M.??.v1",
+    "name": "Type-gated positive two-pool cytokine observation tail",
+    "statement": {
+      "latest": "y_hat(t) = b + (a-b)[w exp(-gamma_1 (t-t_a)) + (1-w) exp(-gamma_2 (t-t_a))], t>t_a, a>b>=0, gamma_1,gamma_2>0, 0<=w<=1.",
+      "format": "ascii",
+      "note_ascii": "Exact algebra for a declared mixture of 2 independent linear decays, not a biological mechanism or universal inflammatory root law."
+    },
+    "definitions": {
+      "b": "group mean baseline concentration in matching units",
+      "a": "observed post-stimulus anchor concentration",
+      "t_a": "anchor time in hours",
+      "w": "mixture weight in [0,1]",
+      "gamma_1": "first positive decay rate, per hour",
+      "gamma_2": "second positive decay rate, per hour",
+      "y_hat": "conditional protein readout; no future observed biomarker allowed as input"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "toledo-imf-two-pool",
+      "imf-readout-02"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "specialized_research_readout_of_stepper",
+        "evidence": "root context-dependent stepper; still an abstract declaration"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "respects_admission_obligation",
+        "evidence": "quotient/readout dynamic commutation remains unverified biologically"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "respects_query_indexing",
+        "evidence": "reader equivalence depends on analyte, assay and time"
+      },
+      {
+        "code": "EQ-001/C.07.v1",
+        "derived_via": "honors_warning",
+        "evidence": "observable apparent stationarity may hide internal states"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_calibration_obligation",
+        "evidence": "real biological encoding not established"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_event_bridge_obligation",
+        "evidence": "root-derived observed biology not established"
+      }
+    ],
+    "origin": {
+      "source": "docs/proposals/PROP-IMF-02.md; model implementation in morrocwi/birca_admin_5.0 draft PR #18; training PMID 16403844; testing PMID 23547245",
+      "doi": null
+    },
+    "claim_boundary": "Finite retrospective group-mean post-anchor decay readout only, 21.352459% normalized error on 6 Kullmann protein-time pairs; not blind, not tested on patient-level data, not a universal biological mechanism, no clinical decisions.",
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/18",
+    "source_document": "docs/proposals/PROP-IMF-02.md"
+  }
+]
