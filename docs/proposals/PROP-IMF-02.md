@@ -49,3 +49,17 @@ Overall **PROPOSAL** / **HOLD for empirical root-to-biology promotion**. No chan
 **Version pins (checked 2026-10-12):** Toledo main f718f576bcef3b0d41f58bcd2b02f6b99667ba38; paired birca_admin PR #18.
 
 Sources: https://pubmed.ncbi.nlm.nih.gov/16403844/ ; https://pubmed.ncbi.nlm.nih.gov/23547245/ ; https://github.com/morrocwi/toledo/blob/main/EQUATION_SOURCE_POLICY.md
+
+
+## Companion implementation — four information lanes (2026-10-12)
+
+The linked [birca_admin_5.0 draft PR #18](https://github.com/morrocwi/birca_admin_5.0/pull/18) now implements four **noncanonical, nonclinical** lanes in admin/research:
+
+1. **Information Engine**: 4-state p/q/x/e HYPOTHESIS simulation with a typed discrete Toledo B.07-compatible resource ledger. These states are dimensionless abstract variables, NOT measured cellular IL-6, tissue repair capacity or ATP.
+2. **Disease Specialization**: experimental LPS/endotoxemia, seborrheic dermatitis (earlier H6 dandruff hypothesis), and meal-order/postprandial contexts. Domain-to-measurement bridge is explicitly HOLD under B.29/B.30, not an automatic equation registration.
+3. **Evidence & Calibration**: typed metadata import for PubMed table records, GEO transcriptomics references (GSE3026) and laboratory CSV. The optional live citation metadata check uses existing BIRCA PubMed code. GEO accession records are NOT equated with cytokine concentration measurements.
+4. **Prediction Benchmark**: frozen Talwar->Kullmann retrospective group-mean cytokine tail (6 targets; positive two-pool 21.352459% normalized error; first-order 22.313609%) and a new study-disjoint CSV scorer. Performance was previously inspected and is NOT blind or clinically verified. Earlier Skarke baseline time mislabelling stays HOLD.
+
+The four lanes are **an IMPLEMENTATION / observation extension of this proposal**, not another root system. The only authoritative Toledo mathematical parents remain the canonical CAN-003/CAN-006/CAN-007 and typed B.07/C.07 where applicable. FIIT-01 (PR #67) remains a separately reviewed proposal. No canonical registration, Coq theorem, universal inflammation law, disease causation or molecule-creation claim is added.
+
+Mandatory upgrade gate: reproduce full GitHub CI, validate sample- and assay-level provenance, compare with independent clinical/laboratory cohorts and competing baselines, and close the B.29/B.30 biology readout joins. **Software PASS never changes those OPEN states.**
