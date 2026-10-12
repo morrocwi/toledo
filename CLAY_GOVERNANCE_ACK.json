@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "reviewed_at": "2026-10-07",
-  "scope": "Human-domain Toledo registry admission: EQ-002/H.07.v1, the synchronous videoconference learning -> Human Capability master weld. The object is admitted as a Definition/domain specialization after TG-RFG-01 reuse-first review. It composes already-registered HCA stages (barrier readout, human-endorsed candidate routes, scaffold fading, human return, live possibility, realized opportunity, net advancement) without introducing a scalar human-potential score or a universal causal law. Direct CANONICAL.json inspection corrected an earlier stale-generated-view preflight suggestion: EQ-002/H.05.v1 and H.06.v1 already exist, so H.07 is used. Distal HCA stages remain disclosed empirical validation gaps.",
+  "reviewed_at": "2026-10-12",
+  "scope": "Research-only PROPOSAL PROP-IMF-02: a typed positive two-pool cytokine observation-tail algebra, paired with the nonclinical birca_admin_5.0 adapter PR #18. No canonical registry or formal theorem modified. This is not a universal inflammation law; the Toledo B.29/B.30 domain bridges remain OPEN.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "This admission does not alter any Clay research TODO item, Navier-Stokes/P-vs-NP/FUB bridge obligation, or Clay claim. It is a Human-domain learning/capability registry specialization only."
+    "evidence": "No change to Navier-Stokes, P-versus-NP, Clay research TODO or formal proof claims; proposal introduces no Clay goal or theorem."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "registry/CANONICAL.json adds CAN-1318 / EQ-002/H.07.v1; registry/LINEAGE.jsonl records the assigned event and the H.05->H.07 collision correction; coq/canonical/EQ_002__H_07_v1.v gives a Definition-only compositional wrapper with no theorem, no axiom, and no empirical/causal proof claim. Parents reuse EQ-002/M.03.v1, EQ-002/H.03.v1, A.5/H.17.v1, EQ-015/H.32.v1, A.5/H.18.v1, and A.8/H.03.v1; relations preserve weld/M.02.v1 and A.5/H.08/A.5/H.09 non-collapse guards."
+    "evidence": "Add docs/proposals/PROP-IMF-02.md and registry/proposals/imf_two_pool_readout_v1.json only. Parent codes checked: CAN-003/006/007, C.07; EQ-001/B.29 and B.30 remain OPEN. External birca_admin adapter in draft PR #18 is a non-normative research implementation; no canonical promotion."
   },
   "claim_effect": "statement-change"
 }
