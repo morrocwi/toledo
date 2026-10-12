@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "reviewed_at": "2026-10-12",
-  "scope": "NEW noncanonical information-memory PROP-IMF-MEM-01: RD1-9 append-only tape and separate accessible trained/tolerant memory from Universe; linked BIRCA PR #19. Current Toledo F is reused, biological B.29/B.30 remain OPEN. No Clay problem implication, new universal root, or clinical admission.",
+  "scope": "PROPOSAL correction of clock interpretation: PROP-IMF-STEP-01 introduces no new canonical law. Native information dynamics uses n retained steps, not elapsed hours; laboratory clock C_assay,protocol(n) is a separate partial calibrated observer mapping, not root; prior clock-parameterized toy demonstration remains as legacy. B.29/B.30 OPEN; no clinical proof.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "Reviewed, no change to Clay TODO and no new theorem/Coq claim. Pure disease-domain information-memory research proposal."
+    "evidence": "No Clay theorem, formal proof or external biochemical claim. Step-first correction is a noncanonical domain bridge and source-provenance note."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "New proposal docs/proposals/PROP-IMF-MEM-01.md and registry/proposals/imf_retained_history_memory_v10.json; existing CAN-003/007/009/024/034/054/201, B.07 reused, B.29/B.30 OPEN; no canonical registration."
+    "evidence": "Added docs/proposals/PROP-IMF-STEP-01.md and registry/proposals/imf_step_native_observer_clock_v1.json; amended legacy temporal reading in PROP-IMF-MULTI-01.md; CAN-003/006/007/009/034/201 reused; biology B.29/B.30 and step-granularity covariance OPEN."
   },
   "claim_effect": "statement-change"
 }

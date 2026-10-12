@@ -1,0 +1,87 @@
+[
+  {
+    "id": "PROP-IMF-MULTI-01",
+    "code": "proposal/imf-event-echo-v11",
+    "name": "Question-indexed four-phenomena information-first multi-event F-domain",
+    "statement": {
+      "latest": "H[n+1]=H[n] CONCAT rho[n]; d[n]=k_ext*u[n]*Recall(H[n],site[n])+k_echo*max(0,sum_site max(0,a_slow-a_fast)-theta); Z[n+1]=F_IMF(Z[n],d[n],dt); Y_Q[n]=Pi_Q(Z[n],H[n])",
+      "format": "ascii",
+      "note_ascii": "Preserves CAN-003 root F; all trained/tolerant learning, temporal echo and kinetic rates are POSITED application laws, not RD axioms or molecular equations."
+    },
+    "definitions": {
+      "H": "typed append-only event tape",
+      "rho": "tick, step duration, event amplitude, site, class",
+      "a_fast": "fast accessible retained event trace",
+      "a_slow": "slow accessible retained event trace",
+      "Recall": "site indexed trained/tolerized signature projection",
+      "d": "input + delayed endogenous source used in domain stepper",
+      "Z": "domain candidate state (activation, resolution, closure, barrier, capped reserve, proxy)",
+      "Y_Q": "question-indexed dimensionless toy readout, not a biochemical concentration"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "imf-four-questions-v11",
+      "imf-multi-event-01"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "reused_root_stepper_interface",
+        "evidence": "Toledo F retained; memory and echo posited at domain layer"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "readout_weld_obligation_only",
+        "evidence": "commuting biological quotient NOT proved"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "matched_probe_future_equivalence",
+        "evidence": "identical present readings may diverge under site-matched rechallenge"
+      },
+      {
+        "code": "CAN-009",
+        "derived_via": "historical_record_invariance",
+        "evidence": "event tape append-only; no destructive truncation"
+      },
+      {
+        "code": "CAN-034",
+        "derived_via": "sufficiency_counterexample",
+        "evidence": "unobserved retained signatures affect future matched-site readouts"
+      },
+      {
+        "code": "CAN-054",
+        "derived_via": "selective_accessible_memory",
+        "evidence": "tape, effective memory and question readouts distinct"
+      },
+      {
+        "code": "EQ-001/B.07.v1",
+        "derived_via": "typed_no_free_repair_ledger",
+        "evidence": "x mean of closure+barrier; x'+e'=x+e+j-D exactly under finite toy update"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_real_biology_encoder",
+        "evidence": "no calibrated protein, lipid, epigenetic or skin assay map"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_event_resolved_biology_test",
+        "evidence": "toy event inputs not observed LPS pharmacokinetics"
+      }
+    ],
+    "origin": {
+      "source": "Readout Universe v2 RD1-9/AP7, Genesis F, Toledo PROP-IMF-MEM-01 and docs/proposals/PROP-IMF-MULTI-01.md; BIRCA PR #20",
+      "doi": null
+    },
+    "claim_boundary": "18 synthetic scenarios x 20 proposed directional tests, full 20/20, no-memory 15, no-echo 16, no-both 11: structural software ability only; NO clinical accuracy or PubMed quantitative verification.",
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/20",
+    "source_document": "docs/proposals/PROP-IMF-MULTI-01.md"
+  }
+]
