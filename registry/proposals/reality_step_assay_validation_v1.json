@@ -1,0 +1,74 @@
+[
+  {
+    "id": "PROP-REALITY-01",
+    "code": "proposal/step-assay-reality-v1",
+    "name": "Step-native clock and typed biochemical reader empirical validation bridge",
+    "statement": {
+      "latest": "H[n+1]=Append(H[n],rho[n]); Z[n+1]=F_domain(Z[n],rho[n],Access(H[n])); r_Q[n]=Pi_Q(Z[n],H[n]); t_lab=C_assay,protocol(n); Y_assay=G_assay,specimen(r_Q)+noise",
+      "format": "ascii",
+      "note_ascii": "C and G are PARTIAL empirical observer maps; no calibrated native-step-to-GEO translator yet; current RNA contrast benchmark is empirical baseline ONLY."
+    },
+    "definitions": {
+      "n": "retained-step successor, not laboratory clock",
+      "C": "observer protocol partial step-to-clock map",
+      "G": "assay-specific readout encoder needing independent calibration",
+      "Y": "assay measurement, cannot be identified with state",
+      "H": "immutable typed history"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "reality-bridge-v1",
+      "step-bio-empirical-gate"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "reuse_f_domain",
+        "evidence": "native F root is sole mathematical authority"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "OPEN_commuting_readout_weld",
+        "evidence": "assay domain quotient is not established"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "question_and_horizon_relative_validation",
+        "evidence": "each assay and sample schedule is separately typed"
+      },
+      {
+        "code": "CAN-009",
+        "derived_via": "history_immutable",
+        "evidence": "event order preserved in retained tape"
+      },
+      {
+        "code": "CAN-034",
+        "derived_via": "identifiability_gate",
+        "evidence": "lab timestamps do not identify latent step count"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_biological_encoder",
+        "evidence": "no calibrated mapping to cytokine or RNA"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_measured_event_bridge",
+        "evidence": "no independently evidenced source-to-step mapping"
+      }
+    ],
+    "origin": {
+      "source": "docs/proposals/PROP-REALITY-01.md and morrocwi/birca_admin_5.0 PR #21; GSE22248 public GEO / PMID 21576504",
+      "doi": null
+    },
+    "claim_boundary": "Observed four-donor 24526-probe GEO contrast and simple empirical mean baseline 0.14272869 MAE vs no-history 0.19362993 are NOT Toledo native F accuracy. No patient-level, protein or blind independent validation.",
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/21",
+    "source_document": "docs/proposals/PROP-REALITY-01.md"
+  }
+]
