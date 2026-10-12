@@ -1,0 +1,82 @@
+[
+  {
+    "id": "PROP-IMF-STEP-01",
+    "code": "proposal/imf-step-native-clock-projection.v1",
+    "name": "Step-native retained-event F and explicit laboratory observer clock projection",
+    "statement": {
+      "latest": "H[n+1]=H[n] CONCAT rho[n]; Z[n+1]=F_IMF(Z[n],u[n],c[n],Access(H[n]);theta_step); r[Q,n]=Pi[Q,c](Z[n],H[n]); t_lab=C[assay,protocol](n_sample) [only where externally calibrated]",
+      "format": "ascii",
+      "note_ascii": "No physical seconds/hours in root; laboratory clock is a separate partial observation mapping, with HOLD when mapping unidentifiable."
+    },
+    "definitions": {
+      "n": "finite retained successor step index, never SI clock duration",
+      "H": "append-only retained event history",
+      "rho": "context/typed finite event at native step",
+      "Z": "domain latent candidate step state",
+      "theta_step": "unit-free per-step coefficients",
+      "r": "question-indexed native readout",
+      "C": "partial assay/protocol-specific observer clock bridge; requires externally calibrated anchors",
+      "t_lab": "measurement-only lab-hour reading, not a root state"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "M",
+    "aliases": [
+      "step-first-clock-second",
+      "imf-temporal-translation-firewall"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "not_formalised"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "reuse_registered_discrete_F",
+        "evidence": "keeps root successor step, no second master"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "OPEN_quotient_weld",
+        "evidence": "must prove assay readout/domain dynamics commute before biology admission"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "observer_query_future_equivalence",
+        "evidence": "question-indexed future probe differs from clock label"
+      },
+      {
+        "code": "CAN-009",
+        "derived_via": "history_non_rewrite",
+        "evidence": "append-only event record witness"
+      },
+      {
+        "code": "CAN-034",
+        "derived_via": "OPEN_sufficiency_gate",
+        "evidence": "clock timestamp cannot identify number of native latent steps"
+      },
+      {
+        "code": "CAN-201",
+        "derived_via": "readout_not_state",
+        "evidence": "lab clock and cytokine value are typed observations, not native state"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "OPEN_biological_encoder",
+        "evidence": "no calibrated step-to-physical biomarker mapping"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "OPEN_measured_event_bridge",
+        "evidence": "unobserved step count between assays unidentified"
+      }
+    ],
+    "origin": {
+      "source": "readout_universe/v2/INFORMATION_DNA.md, v2/TRANSLATION_PROTOCOL.md and v2/DOCTRINE_OF_QUANTITY.md; docs/proposals/PROP-IMF-STEP-01.md; BIRCA PR #20 step_native_imf.py / observer_clock_bridge.py",
+      "doi": null
+    },
+    "claim_boundary": "Step-first is a modeling axiom, not proven physical nonexistence of clock time. Two-protocol counterexample and software checks only; no empirical biochemical accuracy or step-resolution covariance established.",
+    "implementation_url": "https://github.com/morrocwi/birca_admin_5.0/pull/20",
+    "source_document": "docs/proposals/PROP-IMF-STEP-01.md"
+  }
+]
