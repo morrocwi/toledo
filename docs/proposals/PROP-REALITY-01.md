@@ -51,3 +51,17 @@ Companion [BIRCA #21](https://github.com/morrocwi/birca_admin_5.0/pull/21) now i
 A frozen candidate `F` signal readout over zero/one/two *observed intervention events* defines `R_F=(r_2-r_1)/(r_1-r_0)`. A probe-specific first-response slope is fitted using only TRAIN donors' untreated and once-LPS RNA; the outcome tested is heldout donor twice-minus-once LPS RNA. Comparators using exactly the same training condition information are memory-trace-ablated F, linear continuation, and zero contrast. Numeric findings are to be reported in the BIRCA CI run, including failures. The prior v1 mean double-minus-single predictor has access to TRAIN double-LPS samples and is **not an equivalent-information competitor**.
 
 This diagnostic is retrospective on public data. The probe-specific slope is a fitted experimental reader rather than a derived native Toledo assay map. Training or evaluation success cannot independently identify unobserved informational step counts, endogenous immune memory, a causal cellular mechanism, or an invariant physical-time translation. All EQ-001/B.29/B.30 admission gates therefore remain **HOLD/OPEN**. Preserve the negative evidence and keep both PRs DRAFT.
+
+
+### Real measured negative audit, 2026-10-13
+
+BIRCA [run 38295056121](https://github.com/morrocwi/birca_admin_5.0/actions/runs/38295056121) fetched the unchanged-source GSE22248 matrix and ran the frozen observed-event F proxy. On 24,526 array probes from primary heldout donor 92, MAE was:
+
+- fixed F observed-event proxy **0.27776306**;
+- same-F trace-learning ablation **0.28646270**;
+- linear repeat of TRAIN first response **0.27032254**;
+- zero double-minus-single contrast **0.19362993**.
+
+**Observed-event F proxy failed the scientific comparator screen** despite successful CI. The four-donor posthoc MAE means likewise favored zero (F 0.26320975 vs zero 0.17790865). The decoder uses only training donors' untreated/single LPS conditions; unlike the earlier empirical 0.14272869 MAE result, it does not use the training donors' double-LPS measurements. The two experiments are not equivalent-information model comparisons.
+
+This falsifies the tested intervention-event-index surrogate/readout choice, **not** Toledo CAN-003 itself, because the mapping between observed LPS additions and all retained information steps is not identified. Keep B.29/B.30 OPEN; no root F retuning or retroactive success claim. Frozen numeric audit in BIRCA `admin/research/data/reality_gse22248_F_event_proxy_negative_20261013.json` and [run artifact](https://github.com/morrocwi/birca_admin_5.0/actions/runs/38295056121/artifacts/11768081349).
