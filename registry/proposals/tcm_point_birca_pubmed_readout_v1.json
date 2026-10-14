@@ -185,6 +185,17 @@
       "individual_prediction": "NOT_IN_SCOPE",
       "clinical_claims": "NOT_IN_SCOPE",
       "new_canonical_equation": false
+    },
+    "cross_repository_installation": {
+      "toledo_source_snapshot": "docs/external_references/TCM_Qi_Acupoint_Information_Equation_v1.0.md",
+      "toledo_reading": "docs/proposals/PROP-TCM-BIRCA-01.md",
+      "birca_reading": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_TOLEDO_KNOWLEDGE_READOUT_BRIDGE_V1.md",
+      "birca_schema": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/tcm_toledo_birca_semantic_bridge_v1.json",
+      "birca_pr": "https://github.com/morrocwi/birca_admin_5.0/pull/22",
+      "dependency_direction": "TCM_SOURCE -> TOLEDO_SEMANTIC_READING -> BIRCA_STUDY_METADATA",
+      "both_prs_draft": true,
+      "runtime_enabled": false,
+      "clinical_use_enabled": false
     }
   }
 ]
