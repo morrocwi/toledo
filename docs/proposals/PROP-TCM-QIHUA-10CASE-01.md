@@ -46,10 +46,11 @@ No unit, magnitude, step->clock or causal clinical coefficient is supplied.
 
 ### The *proposed* separate adaptation question
 
-[
- A_n^{proposal}(V,mathcal U)=mathbb E_{u\sim\mathcal U}
- [V(F(S_n,u,c_n))-V(S_n)] .
-]
+$
+A_n^{\mathrm{proposal}}(V,\mathcal U)
+= \mathbb E_{u\sim\mathcal U}
+\left[V(F(S_n,u,c_n))-V(S_n)\right].
+$
 
 `V` (real, prespecified evaluative functional), input distribution `U`, domain and readout must be externally defined **before** evaluation. `A_n` is **not Qi**, not a diagnosis and is **UNCOMPUTED**. It may be useful as a falsifiable question only after independent measurements and an admissible root-to-assay bridge.
 
