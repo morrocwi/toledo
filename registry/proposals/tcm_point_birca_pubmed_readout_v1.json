@@ -269,6 +269,27 @@
       "human_biology_simulation": false,
       "source_note": "Point and pattern sets transcribed from previous assistant comparison, each case's primary historical/official PubMed verification pending",
       "status": "DESCRIPTIVE_DRAFT; NOT_BLIND_TESTED; BIOLOGICAL_WELD_HOLD; PERSONAL_PREDICTION_NOT_IN_SCOPE"
+    },
+    "full_knowledge_graph_v1_1": {
+      "registration": "registry/proposals/qi_dantian_chakra_full_graph_manifest_v1_1.json",
+      "toledo_description": "docs/proposals/PROP-QI-DANTIAN-CHAKRA-KG-ALL-VIEWS-v1_1.md",
+      "toledo_complete_topology": "docs/proposals/assets/qi_dantian_chakra_full_topology_v1_1.lzma.b64",
+      "birca_admin_description": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_QI_DANTIAN_CHAKRA_ALL_GRAPHS_v1_1.md",
+      "birca_admin_complete_topology": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/qi_dantian_chakra_full_topology_v1_1.lzma.b64",
+      "graph_counts": {
+        "semantic_nodes": 479,
+        "semantic_edges": 894,
+        "causal_nodes": 48,
+        "causal_edges": 109
+      },
+      "sky_earth_palm": "GV20 crown symbolically connects sky; earth symbolically received at KI1 soles; PC8 palms symbolically send outward",
+      "graph_views_count": 8,
+      "topology_complete_in_git": true,
+      "metadata_rich_complete_in_git": false,
+      "rich_local_zip": "Qi_Dantian_Chakra_Toledo_BIRCA_FullGraph_v1.1.zip",
+      "biophysical_energy_transfer_verified": false,
+      "canonical_status": "NONCANONICAL_DRAFT",
+      "bio_weld_status": "HOLD"
     }
   }
 ]
