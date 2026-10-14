@@ -1,0 +1,111 @@
+[
+  {
+    "id": "PROP-TCM-BIRCA-01",
+    "code": "proposal/tcm-point-birca-pubmed-readout",
+    "name": "TCM WHO acupoint to PubMed biochemical readout; noncanonical typed bridge",
+    "statement": {
+      "latest": "A WHO point-label plus intervention protocol, comparator, assay modality/unit and study provenance may be recorded as a typed study-level readout. The records do not establish Toledo CAN-006 biological dynamic commutation or Qi measurement. Quantitative weld and native step identification remain HOLD.",
+      "format": "ascii",
+      "note_ascii": "NEW DERIVATION/PROPOSAL. Information typing and evidence-admission relation, not a validated health or Qi equation."
+    },
+    "definitions": {
+      "native_step": "n in CAN-003; NOT lab time",
+      "point_namespace": "361 point labels in 14 channels (WHO-style code inventory; exact anatomical localization not embedded)",
+      "point_assay_relation": "point_code x intervention x comparator x population x assay x modality x unit x lab_clock x PubMed_id x author_reported_result x provenance",
+      "latent_qi": "UNIDENTIFIABLE; not assayed",
+      "biomarker": "study-specific typed observable, not root state",
+      "life": "external Genesis v5.1.0 annotation only, not new Toledo canonical formula"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "B",
+    "aliases": [
+      "TCM-QI-BIRCA",
+      "acupoint-pubmed-weld-hold"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "none_requested_no_new_formalism"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "native_step_root_reuse",
+        "evidence": "S[n+1]=F(S[n],u[n],c[n],T[n]); no clock conversion"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "domain_weld_obligation_not_proven",
+        "evidence": "no empirical q_BIO/F_BIO calibration"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "reader_equivalence_open",
+        "evidence": "study summaries do not identify all future response equivalence"
+      },
+      {
+        "code": "CAN-165",
+        "derived_via": "sufficiency_required_not_tested",
+        "evidence": "readout-to-future factorization untested"
+      },
+      {
+        "code": "CAN-201",
+        "derived_via": "readout_not_state",
+        "evidence": "cytokine assays and TCM claims are separate from retained state"
+      },
+      {
+        "code": "EQ-001/B.07.v1",
+        "derived_via": "health_accounting_abstract_reuse",
+        "evidence": "integrity reserve no-free-repair ledger not clinically identified"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "real_root_to_assay_encoder_OPEN",
+        "evidence": "no native source-to-assay map"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "real_biological_weld_OPEN",
+        "evidence": "no identified event-resolved biological dynamics"
+      }
+    ],
+    "source_pubmed_pmids": [
+      "21438784",
+      "37542799",
+      "20496732",
+      "36948325"
+    ],
+    "study_provenance": {
+      "primary_source": "PubMed indexed author abstracts; no GEO and no simulation",
+      "PubMed_only": true,
+      "point_protocols_not_collapsed": true,
+      "clinical_accuracy": null,
+      "model_predictive_MAE": null,
+      "step_to_hours": null,
+      "qi_measurement": null
+    },
+    "structural_audit": {
+      "local_audit_executed_on": "2026-10-14",
+      "tests_passed": 17,
+      "tests_total": 17,
+      "points": 361,
+      "channels": 14,
+      "code_chain_edges": 347,
+      "biological_simulation": false,
+      "ci_witness_for_tcm_bridge": false,
+      "scope": "internal code-list invariants, sympy algebra, evidence-gates only; local downloadable script not yet in Toledo CI",
+      "overall": "PASS_STRUCTURAL_HOLD_BIOLOGICAL"
+    },
+    "open_issues": [
+      "Resolve EQ-QI-04 B incidence/control-input notation collision",
+      "Establish exact WHO point coordinate provenance for each anatomical mapping",
+      "Need published assay with admissible point protocol and independently identified biological state/step",
+      "Do not infer point efficacy or endocrine meaning from source associations"
+    ],
+    "origin": {
+      "source": "docs/proposals/PROP-TCM-BIRCA-01.md; TCM_Qi_Acupoint_Information_Equation_v1.0.md local research artifact; PubMed PMIDs"
+    },
+    "source_document": "docs/proposals/PROP-TCM-BIRCA-01.md",
+    "claim_boundary": "study-specific descriptive evidence only; no validated Qi measurement, no biological prediction, no individual clinical treatment; CAN-006 and Biology B.29/B.30 HOLD"
+  }
+]
