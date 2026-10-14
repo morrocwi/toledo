@@ -1,3 +1,8 @@
+## 2026-10-14 — Full Qi China–India KG v1.1 graph registration
+
+**[Full KG + causal DAG manifest](../../registry/knowledge_graph/README_QI_V1_1.md)** and **[Thai guide](../../registry/knowledge_graph/README_TH_QI_V1_1.md)** register 497 semantic nodes, 959 edges and separate 44/93 causal DAG. Six lossless Brotli/Base64 parts + checksum-validated decoder exist **in both Toledo and BIRCA Admin**, not merely summary docs. The payload retains all 457 source nodes/845 edges, the original 361 WHO names, and adds the founder's symbolic `GV20↔HEAVEN`, `EARTH→KI1(L/R)`, `PC8(L/R)→PALM_OUTPUT` mapping. Includes distinct Chinese Ren/Du orbit, Indian Sushumna/chakras, three Dantian centers, movable fountain/reservoir analogy, Toledo `RUS-0108/0109/0164` flow equations, ten retrospective conditions, phenomenology and information-transformation Dr hypothesis. No biological/clinical admission.
+
+
 # PROP-TCM-BIRCA-01 — How Toledo reads Chinese medicine (knowledge translation, not prediction)
 
 **Date:** 2026-10-14  
