@@ -4,8 +4,17 @@
 **Status:** [NEW DERIVATION/PROPOSAL], DRAFT, **BIOLOGICAL WELD HOLD**, no clinical authorization.  
 **Purpose:** Read and connect Chinese-medicine knowledge through information/metadata; **not** to predict any person's health, personality, qi or response.  
 **Evidence policy:** PubMed ONLY for biological evidence; no GEO or synthetic patient data in this trial.  
-**Dependencies:** TCM_Qi_Acupoint_Information_Equation_v1.0.md (external research artifact); Genesis v5.1 Life tuple (external, non-Toledo canonical anchor).
+**Dependencies:** [TCM standalone research reference](../external_references/TCM_Qi_Acupoint_Information_Equation_v1.0.md) (copied as a **noncanonical** document); Genesis v5.1 Life tuple (external, non-Toledo canonical anchor).
 
+
+## Repository installation and downstream adapter (2026-10-14)
+
+This proposal is **uploaded as a DRAFT knowledge-translation crosswalk**, and both repository links are explicitly paired:
+
+- **Toledo upstream:** this proposal, plus the full [TCM 361-point standalone reference snapshot](../external_references/TCM_Qi_Acupoint_Information_Equation_v1.0.md) kept under `docs/external_references/` as **noncanonical research material**, not new registered Toledo equations.
+- **BIRCA Admin downstream:** [non-predictive reading contract](https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_TOLEDO_KNOWLEDGE_READOUT_BRIDGE_V1.md), [typed JSON Schema](https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/tcm_toledo_birca_semantic_bridge_v1.json), and [companion draft PR #22](https://github.com/morrocwi/birca_admin_5.0/pull/22).
+
+**Directed dependency:** `TCM historical/atlas sources → Toledo noncanonical semantic crosswalk → BIRCA contextual reader`. BIRCA does not issue, modify or validate Toledo mathematical claims. No runtime integration has been performed. All biological mechanism or quantitative prediction obligations remain **HOLD**.
 
 ## Primary purpose / จุดประสงค์หลัก: READ TCM, not predict a person
 
