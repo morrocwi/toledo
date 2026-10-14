@@ -30,7 +30,7 @@ Status of these references is the repository's entry/tier status, **not** the st
 
 ### Source anchors
 
-1. `FAQR_IEA_v1_4_STANDALONE.md`, local validated anchor, SHA-256 `2de11032e8a1dbec3f8727befccc98c88578fecd3d02443ffc8e58a15c0035bf`, 2026-10-14. Source exists in working-file context; **not yet a Git-hosted canonical FAQR source**.
+1. `FAQR_IEA_v1_4_STANDALONE.md`, local validated anchor, SHA-256 `2de11032e8a1dbec3f8727befccc98c88578fecd3d02443ffc8e58a15c0035bf`, 2026-10-14. Byte-identical public Git copy verified at [FAQR-IEA v1.4 Standalone](https://github.com/morrocwi/islamic-archive-th/blob/docs/faqr-ce-islamic-mode-20261014/docs/research/FAQR_IEA_v1_4_STANDALONE.md), current branch commit `96a375ae021c4f72e527294eb5ddcbd7b9bb3c32` or later on that branch; Git blob SHA `792391c9e528959a66f33298d746a9e29437bda2`. This is a research-document mirror, **not a canonical Toledo equation**.
 2. Yaoharee Lahtee, *Causal Ethics: The Mathematics of Regime Choice and Survival* (2026), CE-01–CE-34, especially CE-08, CE-09–CE-12, CE-25–CE-28. https://doi.org/10.5281/zenodo.18444260
 3. Lahtee, *The Architecture of Faqr* (July 2026 manuscript, not peer-reviewed): al-Haqq → faqr → taqwa → amana → hikma; nine-node expansion, Amana Audit.
 4. Lahtee, *Faqr, Scholarly Authority, and Non-Transferable Responsibility* (2026): `fiqh != wahy`, qualified consultation and non-transferred moral responsibility.
@@ -141,3 +141,9 @@ Decision owner: user / qualified scholar / competent authority
 ```
 
 This is an equation/provenance intake card. The standalone FAQR application spec belongs in its own repository/document, not in Toledo's canonical generated registry.
+
+## G. Integration review update, 2026-10-14
+
+- [Five topic FAQR v1.4 evaluation](https://github.com/morrocwi/islamic-archive-th/blob/docs/faqr-ce-islamic-mode-20261014/docs/research/FAQR_IEA_v1_4_KHANA_KAO_MAI_5_CASE_EVAL.md): 5/5 schema-structural evaluations PASS using source-based constructed questions [SimulatedData]. No qualified religious scholarly review has occurred.
+- Exposed Thai active-authority-claim gap in frozen v1.4 validator: first-person Thai fatwa, mediation and takfir statements bypassed English-only patterns. A [SHA-pinned supplementary guard](https://github.com/morrocwi/islamic-archive-th/blob/docs/faqr-ce-islamic-mode-20261014/docs/research/FAQR_V14_THAI_AUTHORITY_GUARD_PATCH.py) covers specific known examples; not comprehensive semantic proof.
+- **Causal Ethics remains NOT_ASSESSED** in all cases: no observed calibrated structural regimes, Lyapunov V or spectral margin. Passing fact-ledger schema cannot promote this bridge to canonical and cannot establish any theological/fiqh result.
