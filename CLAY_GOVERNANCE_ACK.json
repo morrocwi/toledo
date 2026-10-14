@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "reviewed_at": "2026-10-07",
-  "scope": "Human-domain Toledo registry admission: EQ-002/H.07.v1, the synchronous videoconference learning -> Human Capability master weld. The object is admitted as a Definition/domain specialization after TG-RFG-01 reuse-first review. It composes already-registered HCA stages (barrier readout, human-endorsed candidate routes, scaffold fading, human return, live possibility, realized opportunity, net advancement) without introducing a scalar human-potential score or a universal causal law. Direct CANONICAL.json inspection corrected an earlier stale-generated-view preflight suggestion: EQ-002/H.05.v1 and H.06.v1 already exist, so H.07 is used. Distal HCA stages remain disclosed empirical validation gaps.",
+  "reviewed_at": "2026-10-14",
+  "scope": "Noncanonical FAQR-IEA v1.4 Islamic facts-and-options readout bridge proposed to already-registered Toledo Causal Ethics objects. Adds only registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md. No canonical, lineage, Coq, or proof-tier changes; not a fatwa, moral verdict, calibrated physical law, or registered equation.",
   "todo": {
     "status": "reviewed-no-change",
-    "evidence": "This admission does not alter any Clay research TODO item, Navier-Stokes/P-vs-NP/FUB bridge obligation, or Clay claim. It is a Human-domain learning/capability registry specialization only."
+    "evidence": "The FAQR/CE proposal is an epistemic/social application and changes no Clay claim, NS/PNP/FUB task, formal theorem or existing Toledo registry status; further domain mapping, Genesis equivalence review and empirical calibration remain open."
   },
   "toledo": {
     "status": "updated",
-    "evidence": "registry/CANONICAL.json adds CAN-1318 / EQ-002/H.07.v1; registry/LINEAGE.jsonl records the assigned event and the H.05->H.07 collision correction; coq/canonical/EQ_002__H_07_v1.v gives a Definition-only compositional wrapper with no theorem, no axiom, and no empirical/causal proof claim. Parents reuse EQ-002/M.03.v1, EQ-002/H.03.v1, A.5/H.17.v1, EQ-015/H.32.v1, A.5/H.18.v1, and A.8/H.03.v1; relations preserve weld/M.02.v1 and A.5/H.08/A.5/H.09 non-collapse guards."
+    "evidence": "Proposal intake only at registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md. Reuses existing weld/M.02.v1, weld/E.03.v1, weld/E.07.v1, weld/E.08.v1, EQ-015/S.01.v1, EQ-015/S.02.v1 and split child EQ-015/S.20.v1; no edit to CANONICAL.json, genesis_root.json, LINEAGE.jsonl, Coq, generated views. New typed co-report is marked PROPOSAL / Dr / OPEN and requires human registrar review; source FAQR standalone identified by SHA-256, not falsely by Git commit."
   },
-  "claim_effect": "statement-change"
+  "claim_effect": "provenance-change"
 }
