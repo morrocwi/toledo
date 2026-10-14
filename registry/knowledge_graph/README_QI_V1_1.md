@@ -1,3 +1,10 @@
+## Agency × Dantian follow-up v0.2 (2026-10-14)
+
+**New overlay, NO mutation of original 497/959 graph:** [Agency–DT-L typed overlay](agency_dantian_bridge_overlay_v0_2.json) adds 15 semantic concept nodes, 25 typed new graph relationships, and a separate acyclic two-step hypothesis DAG with 20 nodes / 24 directed arrows. [Structural audit](agency_dantian_structural_audit_v0_2.json) records original and v1.1 direct degrees (DT-L **6→14**, DT-M **4→5**, DT-U **5→6**) and flags curator-added edges. These are **ontology-only measurements**, not neurological connectivity or Agency superiority.
+
+**Mathematical source of truth:** [18 Dr equation proposals](https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/registry/proposals/agency_dantian_equations_v0_2.json), [Toledo complete report](https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/docs/proposals/PROP-AGENCY-DANTIAN-BRIDGE-02.md), [reproducible source-graph check](https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/registry/knowledge_graph/test_agency_dantian_v0_2.py). If this is the BIRCA Admin copy, equation authority remains Toledo. No actual attention intervention results; all `do(A=v)` clinical/cognitive estimates are `null`.
+
+
 # Qi–Dantian–Chakra–Fountain Knowledge Graph v1.1 — Full registry
 
 **Registered 2026-10-14; tier: Dr / DRAFT; no clinical validation, no human simulation.**
