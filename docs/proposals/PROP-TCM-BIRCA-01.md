@@ -27,6 +27,12 @@ See **[PROP-TCM-ATTENTION-01](PROP-TCM-ATTENTION-01.md)** for traced Chinese tex
 - The modern light-touch Yintang self-care instructions are **separate** from the ancient textual witnesses and from PubMed-indexed clinical evidence.
 - Record observed ratings only if genuinely supplied; do not invent numerical relief. No claimed improvement in anger, hunger, libido or any individual patient.
 
+## Full China–India / crown–earth–palm graph registration (2026-10-14)
+
+The full graph taxonomy now has an explicit downstream-compatible **eight-view** registration: **[PROP-QI-DANTIAN-CHAKRA-KG-ALL-VIEWS-v1_1.md](PROP-QI-DANTIAN-CHAKRA-KG-ALL-VIEWS-v1_1.md)**; [committed complete ID/typed-edge topology](assets/qi_dantian_chakra_full_topology_v1_1.lzma.b64); [manifest + all original source asset hashes](../../registry/proposals/qi_dantian_chakra_full_graph_manifest_v1_1.json). Base 457/845 and 36/82 step-DAG retained without deletion; extended 479/894 and 48/109. Bilateral **GV20↔SKY**, **EARTH→KI1 sole receipt**, **PC8 palm→OUTWARD emission** are founder-requested **symbolic roles, not measured transfer**. Chinese loop and Indian axis are distinct traditional practice maps. The ZIP supplied in the conversation carries the complete rich JSON/GraphML/CSV and original offline HTML; the Git payload contains the full structural topology, **not** all rich attributes.
+
+**BIRCA ADMIN** [complete-graph reader](https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_QI_DANTIAN_CHAKRA_ALL_GRAPHS_v1_1.md) and [typed manifest](https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/qi_dantian_chakra_manifest_v1_1.json). Reuse CAN-003/201/023 and fluid-equation reference codes; biological CAN-006 remains HOLD.
+
 ## 2026-10-14 — QiHua information TRANSFORMATION and ten-condition comparison
 
 **[PROP-TCM-QIHUA-10CASE-01.md](PROP-TCM-QIHUA-10CASE-01.md)** archives the user's corrected definition **ชี่ = การแปรเปลี่ยนสารสนเทศ, ไม่ใช่การเคลื่อนไหว**, while preserving the classical polysemy of 氣 and the distinct term 氣化. The proposed operator is a **noncanonical, observer/source-indexed interpretation of CAN-003 informational state change**, not a literal transport of Qi or a new proven biological equation.
