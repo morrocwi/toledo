@@ -1,3 +1,7 @@
+## Cycle and identifiability follow-up v0.3 (2026-10-14)
+
+[Mathematical follow-up: what the Qi-cycle equations actually prove](https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/docs/proposals/PROP-AGENCY-DANTIAN-CYCLE-03.md) · [nine Dr/PROPOSAL registrations AGDT-C19..C27](https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/registry/proposals/agency_dantian_cycle_equations_v0_3.json) · [reproducible KG/SymPy test](https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/registry/knowledge_graph/test_agency_cycle_v0_3.py). Original 457/845 semantic graph has 389 independent *cultural* cycles; expanded 497/959 relation rows have only 955 undirected unique connections and 459 semantic cycles. A source-attributed ten-edge directed practice loop exists, but physical Qi current is **not identified**. In the original graph DT-U exceeds DT-L in closeness and betweenness even though DT-L has more directly curated links. In graph incidence dynamics, nonzero loop current may have zero nodal divergence; a passive pure gradient flow cannot independently sustain a loop. No clinical validation, no newly minted CAN ID.
+
 # Toledo × Agency × Dantian — Bridge v0.2: structural audit, agency gates and cyclic-flow hypothesis
 
 **Date:** 2026-10-14  
