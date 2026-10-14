@@ -1,0 +1,123 @@
+{
+  "id": "PROP-QI-DANTIAN-CHAKRA-KG-ALL-VIEWS-v1_1",
+  "version": "1.1.0",
+  "date": "2026-10-14",
+  "status": "NONCANONICAL_DRAFT_SEMANTIC_REGISTRATION",
+  "upstream": "morrocwi/toledo",
+  "downstream": "morrocwi/birca_admin_5.0",
+  "original_source_zip": "qi_dantian_kg_v1(1).zip",
+  "original_zip_sha256": "c8f8df398ae49c1b27de4348366e49629d310fbab59681aee034f1521533e39e",
+  "local_complete_archive": "Qi_Dantian_Chakra_Toledo_BIRCA_FullGraph_v1.1.zip",
+  "local_complete_archive_sha256": "3b055249bc943c5d8f85566d68039ce7d1f16929138b64da2042f6f5dbf3ebef",
+  "enriched_graph_json_sha256": "ce0badaa9e99c0ad5f839570a06d8b7ac0773c6e3c56ce4a3469dc6152cbfbf2",
+  "graph_topology_lzma_base64_sha256": "c338d70e58cbde60f05247b379773a87e0ce618175980fbd66be7214f0aab864",
+  "uploaded_scope": "Topology-only LZMA compressed text in both GitHub PR branches. Full rich node/edge properties and all 33 archive entries exist in separately provided local ZIP, not committed to Git.",
+  "node_and_edge_counts": {
+    "user_original_semantic": {
+      "nodes": 457,
+      "edges": 845
+    },
+    "registered_semantic": {
+      "nodes": 479,
+      "edges": 894
+    },
+    "user_original_causal_dag": {
+      "nodes": 36,
+      "edges": 82
+    },
+    "registered_causal_dag": {
+      "nodes": 48,
+      "edges": 109
+    },
+    "standard_acupoint_names": 361,
+    "extra_point_labels": [
+      "EX-HN3"
+    ],
+    "channels": 14,
+    "additional_extraordinary_vessels": 6,
+    "dantians": 3,
+    "chakras": 7
+  },
+  "retained_original_node_edge_arrays": true,
+  "semantic_graph_has_training_circuits_cycles": true,
+  "causal_dag_acyclic": true,
+  "graphs": [
+    "full_semantic_graph",
+    "causal_step_unrolled_dag",
+    "chinese_small_heavenly_orbit",
+    "indian_seven_chakra_axis",
+    "flow_analogy",
+    "cosmic_symbolic_roles",
+    "cross_tradition_seven_levels",
+    "attention_sequence"
+  ],
+  "key_symbolic_edges": [
+    {
+      "from": "GV20",
+      "to": "SYMBOL:SKY",
+      "via": "ROLE:HEAVEN_LINK",
+      "meaning": "symbolic connection crown/heaven"
+    },
+    {
+      "from": "SYMBOL:EARTH",
+      "to": "KI1",
+      "via": "ROLE:EARTH_RECEIVE",
+      "meaning": "symbolic earth reception via sole"
+    },
+    {
+      "from": "PC8",
+      "to": "SYMBOL:OUTWARD",
+      "via": "ROLE:PALM_SEND",
+      "meaning": "symbolic palm outward emission"
+    },
+    {
+      "from": "DT-L",
+      "to": "MODEL:LOWER_RESERVOIR",
+      "meaning": "symbolic storage/readout"
+    },
+    {
+      "from": "MODEL:MOVABLE_FOUNTAIN",
+      "to": "EX-HN3",
+      "meaning": "example movable source label only"
+    }
+  ],
+  "claim_gates": {
+    "physical_qi_flow": "UNPROVEN",
+    "crown_sky_exchange": "SYMBOLIC_NOT_MEASURED",
+    "sole_earth_energy": "SYMBOLIC_NOT_MEASURED",
+    "palm_energy_output": "SYMBOLIC_NOT_MEASURED",
+    "india_china_physical_identity": "UNPROVEN",
+    "bio_weld_CAN_006": "HOLD",
+    "BIRCA_admin_clinical_readout": "NOT_ENABLED",
+    "numeric_point_effect": "NOT_IDENTIFIED",
+    "simulation": false
+  },
+  "physics_analogy_reuse": [
+    "RUS-0108 Bernoulli",
+    "RUS-0109 continuity",
+    "RUS-0164 Hagen-Poiseuille"
+  ],
+  "toledo_canonical_reuse": [
+    "CAN-003",
+    "CAN-201",
+    "CAN-023",
+    "CAN-006 HOLD",
+    "CAN-165 HOLD"
+  ],
+  "source_14_sha256": {
+    "edges.csv": "42a37e2a045412afe9e1367a230144b599aad481a736b67c93ac7327623c9a38",
+    "kg.ttl": "657fd25ce44a1c39a0d5d72e77a9fde72f995d183a511b5fd33d97aa75849f74",
+    "acupoints_361.csv": "5cbc779fa90b5ea6b4949d6d3c6533ec28975ff7e05ec8f0bc739480dc5563fd",
+    "nodes.csv": "383f33659902c0c9633c4629010ac0be077ee0c5dd9718edc195c0c4198b1d97",
+    "validation.json": "a13dbb0dcc2edb949c8407e9a3dc5dc398a0bd8c49ec652c68c66077392f1c68",
+    "causal_dag.json": "35e2a21a0f3d22ae55b08be591f15417933f181b1055f551c7c447cb19f82fb5",
+    "causal_dag.graphml": "8f4b9c9007a1c998ae5f6fdbae3232eefacc3575e46b0ed89dcb0299555d5d8a",
+    "interactive_graph.html": "17e2c1ce25431c756ef41a965c60381bacc1ad600532ec7343b4cf2ef47c59ec",
+    "make_views.py": "005d4f9ad78f39ec62c392d9a011cde76a05a71ffbfb6567a36652444d3745e0",
+    "kg.graphml": "4033340156b01762a84799d26b0eaebaf413258844532d422dc8d08ff31d488e",
+    "README_TH.md": "7f1e8161beab709a2d54e507a6613bcaae6a741e36ae7a23d3b7e1dd44594db1",
+    "acupuncture_dantian_chakra_kg.json": "5f02f479ad7092ecfcbc1b194e4df471065654930b1ba11cfcaf55786d4bedaa",
+    "build_kg.py": "8329c22c5a5a472b39c547cd3c4e87fa76dab46c06ea0f7ab66067fb10862ced",
+    "example_attention_sequence.csv": "6a9749e34b4ccaa4faff6d0aabd0b3319a09df2d2356198370d9142410c4e6db"
+  }
+}
