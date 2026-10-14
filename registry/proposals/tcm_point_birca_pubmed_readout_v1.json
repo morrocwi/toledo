@@ -2,11 +2,11 @@
   {
     "id": "PROP-TCM-BIRCA-01",
     "code": "proposal/tcm-point-birca-pubmed-readout",
-    "name": "TCM WHO acupoint to PubMed biochemical readout; noncanonical typed bridge",
+    "name": "TCM knowledge semantic crosswalk to Toledo/Genesis/BIRCA (not predictive)",
     "statement": {
-      "latest": "A WHO point-label plus intervention protocol, comparator, assay modality/unit and study provenance may be recorded as a typed study-level readout. The records do not establish Toledo CAN-006 biological dynamic commutation or Qi measurement. Quantitative weld and native step identification remain HOLD.",
+      "latest": "Traditional Chinese medical terms, patterns, channel and point identifiers may be preserved as sourced, typed knowledge records and mapped to Toledo readout concepts and separately to PubMed study metadata. The mapping describes HOW Toledo/BIRCA reads TCM, not WHAT will happen to a person's health. No Qi diagnosis, biomarker forecast, acupuncture efficacy, step-to-clock correspondence or CAN-006 weld is asserted.",
       "format": "ascii",
-      "note_ascii": "NEW DERIVATION/PROPOSAL. Information typing and evidence-admission relation, not a validated health or Qi equation."
+      "note_ascii": "NEW NONCANONICAL RESEARCH PROPOSAL: semantic translation/indexing only; point–protocol–assay associations are optional metadata, not a biological dynamical equation."
     },
     "definitions": {
       "native_step": "n in CAN-003; NOT lab time",
@@ -100,12 +100,91 @@
       "Resolve EQ-QI-04 B incidence/control-input notation collision",
       "Establish exact WHO point coordinate provenance for each anatomical mapping",
       "Need published assay with admissible point protocol and independently identified biological state/step",
-      "Do not infer point efficacy or endocrine meaning from source associations"
+      "Do not infer point efficacy or endocrine meaning from source associations",
+      "Validate Chinese original quotations against traceable editions before claiming source-verified status",
+      "Disambiguate translations and traditional zang-fu from biomedical anatomy in every reader",
+      "Do not let study metadata or user symptoms silently promote semantic mapping into personalized prediction"
     ],
     "origin": {
-      "source": "docs/proposals/PROP-TCM-BIRCA-01.md; TCM_Qi_Acupoint_Information_Equation_v1.0.md local research artifact; PubMed PMIDs"
+      "source": "docs/proposals/PROP-TCM-BIRCA-01.md TCM semantic crosswalk; prior local TCM_Qi_Acupoint_Information_Equation_v1.0.md proposal; PubMed records only for empirical biology"
     },
     "source_document": "docs/proposals/PROP-TCM-BIRCA-01.md",
-    "claim_boundary": "study-specific descriptive evidence only; no validated Qi measurement, no biological prediction, no individual clinical treatment; CAN-006 and Biology B.29/B.30 HOLD"
+    "claim_boundary": "Purpose is semantic readout of Chinese-medicine knowledge and cross-links to existing Toledo and BIRCA schemas. No self-prediction or other-person prediction, no qi blockage diagnosis, no proven causal mapping, no health/sexual personality forecast and no treatment inference; only explicitly sourced PubMed studies as contextual evidence. CAN-006 and B.29/B.30 HOLD.",
+    "purpose": "KNOWLEDGE_READING_AND_INFORMATION_TRANSLATION_ONLY",
+    "readout_scope": {
+      "tcm_internal": [
+        "yin_yang",
+        "qi",
+        "jing",
+        "shen",
+        "zang_fu",
+        "patterns",
+        "meridians",
+        "points",
+        "source_quotes",
+        "edition_dependent_interpretations"
+      ],
+      "toledo": [
+        "CAN-003 native step index only",
+        "CAN-201 readout distinct from state",
+        "CAN-006 empirical weld obligation HOLD",
+        "CAN-165 factorization HOLD"
+      ],
+      "birca": [
+        "separate typed published-study metadata",
+        "assay modality and units",
+        "study protocol context and comparator",
+        "PubMed-only evidence if included"
+      ],
+      "genesis_life": "external conceptual annotation, not canonical Toledo equation",
+      "result": "SEMANTIC_MAP_READY / BIOLOGICAL_WELD_HOLD / PERSONAL_PREDICTION_NOT_IN_SCOPE"
+    },
+    "translation_rules": {
+      "zang_fu_vs_anatomy": "Traditional Liver/Kidney/Spleen are source-specific functional zang-fu concepts; do not collapse with anatomical organs",
+      "qi_vs_biophysics": "Qi or meridian label has no licensed conversion into energy, nerve, vascular or biochemical signal",
+      "point_code_vs_position": "361 point-code inventory does not certify precise anatomical atlas positions",
+      "point_vs_effect": "point mention in a multi-point intervention does not isolate an individual point effect",
+      "graph_edge": "semantic attributed edge is not a demonstrated causal or anatomic pathway",
+      "clock_vs_step": "clinical observation time not native Toledo step",
+      "missing_data": "unmeasured/uncertain information remains null or HOLD, never predicted or zero-filled"
+    },
+    "examples": [
+      {
+        "traditional": "思則氣結",
+        "reading": "classical theory links excessive thought and Qi-binding; attribution needs edition check",
+        "toledo": "source-tagged symbolic relation",
+        "birca": "no quantitative outcome or individual inference",
+        "status": "SEMANTIC_ONLY"
+      },
+      {
+        "traditional": "肝氣鬱結",
+        "reading": "traditional pattern (Liver Qi constraint)",
+        "toledo": "concept/pattern taxonomy",
+        "birca": "not anatomical liver pathology",
+        "status": "SEMANTIC_ONLY"
+      },
+      {
+        "traditional": "LR3 太衝",
+        "reading": "traditional point label on Liver channel",
+        "toledo": "point code and source-specific membership",
+        "birca": "point code not an effect or measured physiological link",
+        "status": "SEMANTIC_ONLY"
+      },
+      {
+        "traditional": "BL23 腎俞",
+        "reading": "traditional point label",
+        "toledo": "point code may join exact protocol reference",
+        "birca": "published study record if comparator/population/assay also tracked",
+        "status": "PUBLICATION_METADATA_ONLY"
+      }
+    ],
+    "acceptance": {
+      "semantic_readability": "SOURCE_ATTRIBUTED_PENDING_REVIEW",
+      "biological_weld": "HOLD",
+      "native_step_calibration": "HOLD",
+      "individual_prediction": "NOT_IN_SCOPE",
+      "clinical_claims": "NOT_IN_SCOPE",
+      "new_canonical_equation": false
+    }
   }
 ]
