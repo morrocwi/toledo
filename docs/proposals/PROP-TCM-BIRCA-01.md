@@ -27,6 +27,14 @@ See **[PROP-TCM-ATTENTION-01](PROP-TCM-ATTENTION-01.md)** for traced Chinese tex
 - The modern light-touch Yintang self-care instructions are **separate** from the ancient textual witnesses and from PubMed-indexed clinical evidence.
 - Record observed ratings only if genuinely supplied; do not invent numerical relief. No claimed improvement in anger, hunger, libido or any individual patient.
 
+## 2026-10-14 — QiHua information TRANSFORMATION and ten-condition comparison
+
+**[PROP-TCM-QIHUA-10CASE-01.md](PROP-TCM-QIHUA-10CASE-01.md)** archives the user's corrected definition **ชี่ = การแปรเปลี่ยนสารสนเทศ, ไม่ใช่การเคลื่อนไหว**, while preserving the classical polysemy of 氣 and the distinct term 氣化. The proposed operator is a **noncanonical, observer/source-indexed interpretation of CAN-003 informational state change**, not a literal transport of Qi or a new proven biological equation.
+
+Ten disease categories and candidate point-code sets were retrospectively aligned by hand (10/10 *listed*), with no blinded predictions, no primary-source check for each case, no validated point effects, no human numerical assay and **no clinical accuracy**. The status is **DESCRIPTIVE_DRAFT / BLIND_TEST_NOT_RUN / BIOLOGICAL_WELD_HOLD**.
+
+**BIRCA ADMIN (not `morrocwi/birca`) companion**: [ten-condition research handoff](https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_QIHUA_10_CONDITION_READOUT_AUDIT_V1.md) and [machine-readable 10-case register](https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/tcm_qihua_10_conditions_v1.json). Do not interpret the five analogy classes as TCM diagnoses or prescriptions.
+
 ## Primary purpose / จุดประสงค์หลัก: READ TCM, not predict a person
 
 **ภาษาไทย:** เอกสารนี้ลงทะเบียนวิธีที่ Toledo **อ่าน/แปล/เชื่อมองค์ความรู้แพทย์แผนจีน** กับสมการชีวิตและกรอบสุขภาพของ BIRCA Admin อย่างมีขอบเขต ไม่ได้พยากรณ์อาการของผู้เขียน ไม่ได้วินิจฉัยภาวะชี่ติดขัด และไม่ได้อ้างประสิทธิผลของการฝังเข็ม
