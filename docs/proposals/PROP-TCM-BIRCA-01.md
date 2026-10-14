@@ -16,6 +16,17 @@ This proposal is **uploaded as a DRAFT knowledge-translation crosswalk**, and bo
 
 **Directed dependency:** `TCM historical/atlas sources → Toledo noncanonical semantic crosswalk → BIRCA contextual reader`. BIRCA does not issue, modify or validate Toledo mathematical claims. No runtime integration has been performed. All biological mechanism or quantitative prediction obligations remain **HOLD**.
 
+## Follow-up: Yintang → lower dantian, specifically an **attention** path (2026-10-14)
+
+See **[PROP-TCM-ATTENTION-01](PROP-TCM-ATTENTION-01.md)** for traced Chinese text and a modern gentle, non-forced self-acupressure/awareness sequence. **This is NOT a physical Qi-transport equation and NOT a personal prediction.**
+
+- `印堂 EX-HN3` is an **extra point, outside WHO 361**: retain `361_standard_points` separately from `extra_points`.
+- `下丹田` is a traditional lower-abdomen attention region, not one invariant point: `CV6 氣海` is 1.5 cun below navel; `CV5 石門` is 2 cun and has classical alias `丹田` in 《針灸大成》; `CV4 關元` is 3 cun below.
+- A reported sensation `"brow swirling"` is a *subjective self-report*, not measured upper-dantian excess or trapped Qi.
+- A route `Yintang → relaxed torso → lower abdomen` is encoded as `attention_sequence` only: it cannot silently become an anatomical channel edge, biological coupling or CAN-006 weld.
+- The modern light-touch Yintang self-care instructions are **separate** from the ancient textual witnesses and from PubMed-indexed clinical evidence.
+- Record observed ratings only if genuinely supplied; do not invent numerical relief. No claimed improvement in anger, hunger, libido or any individual patient.
+
 ## Primary purpose / จุดประสงค์หลัก: READ TCM, not predict a person
 
 **ภาษาไทย:** เอกสารนี้ลงทะเบียนวิธีที่ Toledo **อ่าน/แปล/เชื่อมองค์ความรู้แพทย์แผนจีน** กับสมการชีวิตและกรอบสุขภาพของ BIRCA Admin อย่างมีขอบเขต ไม่ได้พยากรณ์อาการของผู้เขียน ไม่ได้วินิจฉัยภาวะชี่ติดขัด และไม่ได้อ้างประสิทธิผลของการฝังเข็ม
