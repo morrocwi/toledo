@@ -73,7 +73,9 @@
       "21438784",
       "37542799",
       "20496732",
-      "36948325"
+      "36948325",
+      "29682147",
+      "26002571"
     ],
     "study_provenance": {
       "primary_source": "PubMed indexed author abstracts; no GEO and no simulation",
@@ -103,7 +105,10 @@
       "Do not infer point efficacy or endocrine meaning from source associations",
       "Validate Chinese original quotations against traceable editions before claiming source-verified status",
       "Disambiguate translations and traditional zang-fu from biomedical anatomy in every reader",
-      "Do not let study metadata or user symptoms silently promote semantic mapping into personalized prediction"
+      "Do not let study metadata or user symptoms silently promote semantic mapping into personalized prediction",
+      "EX-HN3 is an extra point and must not change 361-point counts",
+      "Preserve CV5 classical dantian alias distinct from generic lower dantian conceptual region",
+      "No research source shows literal EX-HN3 to dantian biological Qi transport"
     ],
     "origin": {
       "source": "docs/proposals/PROP-TCM-BIRCA-01.md TCM semantic crosswalk; prior local TCM_Qi_Acupoint_Information_Equation_v1.0.md proposal; PubMed records only for empirical biology"
@@ -195,7 +200,56 @@
       "dependency_direction": "TCM_SOURCE -> TOLEDO_SEMANTIC_READING -> BIRCA_STUDY_METADATA",
       "both_prs_draft": true,
       "runtime_enabled": false,
-      "clinical_use_enabled": false
+      "clinical_use_enabled": false,
+      "toledo_attention_path": "docs/proposals/PROP-TCM-ATTENTION-01.md"
+    },
+    "attention_route_mapping": {
+      "new_source_document": "docs/proposals/PROP-TCM-ATTENTION-01.md",
+      "kind": "NONCANONICAL_SEMANTIC_ATTENTION_SEQUENCE",
+      "start": {
+        "code": "EX-HN3",
+        "chinese": "印堂",
+        "classification": "EXTRA_POINT_NOT_IN_STANDARD_361"
+      },
+      "via": [
+        "jaw_relaxation",
+        "upper_chest_awareness",
+        "natural_breathing"
+      ],
+      "destination": {
+        "concept": "下丹田",
+        "kind": "TRADITIONAL_LOWER_ABDOMEN_REGION_NOT_A_SINGLE_POINT",
+        "landmarks": [
+          {
+            "code": "CV6",
+            "cun_below_navel": 1.5
+          },
+          {
+            "code": "CV5",
+            "cun_below_navel": 2,
+            "traditional_alias_in_Dacheng": "丹田"
+          },
+          {
+            "code": "CV4",
+            "cun_below_navel": 3
+          }
+        ]
+      },
+      "reported_experience": "OPTIONAL_REAL_SUBJECTIVE_SELF_REPORT_ONLY",
+      "literal_qi_transit_measurement": null,
+      "native_step_biological_calibration": null,
+      "clinical_prediction": null,
+      "statement": "This is an ordering of attention/relaxation cues with separate primary source attributions; never a meridian, vascular or neurotransmitter path or a physical energy transport claim.",
+      "evidence_classical": [
+        "https://ctext.org/huangdi-neijing/ju-tong-lun/ens",
+        "https://ctext.org/wiki.pl?chapter=133202&if=gb",
+        "https://ctext.org/wiki.pl?chapter=374152&if=gb"
+      ],
+      "evidence_pubmed_context_only": [
+        "29682147",
+        "26002571"
+      ],
+      "evidence_status": "SOURCE_ATTRIBUTED; BIOLOGICAL_WELD_HOLD"
     }
   }
 ]
