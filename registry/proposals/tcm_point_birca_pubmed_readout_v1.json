@@ -6,7 +6,7 @@
     "statement": {
       "latest": "Traditional Chinese medical terms, patterns, channel and point identifiers may be preserved as sourced, typed knowledge records and mapped to Toledo readout concepts and separately to PubMed study metadata. The mapping describes HOW Toledo/BIRCA reads TCM, not WHAT will happen to a person's health. No Qi diagnosis, biomarker forecast, acupuncture efficacy, step-to-clock correspondence or CAN-006 weld is asserted.",
       "format": "ascii",
-      "note_ascii": "NEW NONCANONICAL RESEARCH PROPOSAL: semantic translation/indexing only; point–protocol–assay associations are optional metadata, not a biological dynamical equation."
+      "note_ascii": "NEW NONCANONICAL RESEARCH PROPOSAL: semantic translation/indexing only; point–protocol–assay associations are optional metadata, not a biological dynamical equation. Follow-up qihua_transformation_10_case_followup is noncanonical, no new root dynamics, no predictive performance."
     },
     "definitions": {
       "native_step": "n in CAN-003; NOT lab time",
@@ -108,7 +108,10 @@
       "Do not let study metadata or user symptoms silently promote semantic mapping into personalized prediction",
       "EX-HN3 is an extra point and must not change 361-point counts",
       "Preserve CV5 classical dantian alias distinct from generic lower dantian conceptual region",
-      "No research source shows literal EX-HN3 to dantian biological Qi transport"
+      "No research source shows literal EX-HN3 to dantian biological Qi transport",
+      "Freeze an independent 10+ condition blind source corpus and measure added value over pure traditional text lookup",
+      "Verify every disease–point and disease–pattern relation separately with attributed Chinese text or textbook reference; PubMed-only for biomedical evidence",
+      "Do not present manually assigned 10/10 labels as predictive clinical accuracy"
     ],
     "origin": {
       "source": "docs/proposals/PROP-TCM-BIRCA-01.md TCM semantic crosswalk; prior local TCM_Qi_Acupoint_Information_Equation_v1.0.md proposal; PubMed records only for empirical biology"
@@ -250,6 +253,22 @@
         "26002571"
       ],
       "evidence_status": "SOURCE_ATTRIBUTED; BIOLOGICAL_WELD_HOLD"
+    },
+    "qihua_transformation_10_case_followup": {
+      "recorded_on": "2026-10-14",
+      "source_document": "docs/proposals/PROP-TCM-QIHUA-10CASE-01.md",
+      "birca_admin_document": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_QIHUA_10_CONDITION_READOUT_AUDIT_V1.md",
+      "birca_admin_typed_cases": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/tcm_qihua_10_conditions_v1.json",
+      "interpretive_claim": "Qi in user's information universe is information TRANSFORMATION rather than spatial movement; qi_hua interpretation of CAN-003 transitions is Dr proposal, not historical universal Qi sense",
+      "prior_manual_retrospective_conditions": 10,
+      "prior_manual_labels_assigned": 10,
+      "clinical_accuracy": null,
+      "blind_predicted_cases": 0,
+      "biomedical_source_case_level_verified": false,
+      "native_step_biology_equated": false,
+      "human_biology_simulation": false,
+      "source_note": "Point and pattern sets transcribed from previous assistant comparison, each case's primary historical/official PubMed verification pending",
+      "status": "DESCRIPTIVE_DRAFT; NOT_BLIND_TESTED; BIOLOGICAL_WELD_HOLD; PERSONAL_PREDICTION_NOT_IN_SCOPE"
     }
   }
 ]
