@@ -1,0 +1,336 @@
+{
+  "title": "Agency–Dantian–Movable Qi Fountain Equation Proposal Register v0.2",
+  "registered_on": "2026-10-14",
+  "registry_kind": "PROPOSALS_NOT_CANONICAL",
+  "toledo_authority": "morrocwi/toledo",
+  "basis": [
+    "actual user-uploaded qi_dantian_kg_v1(1).zip (457/845)",
+    "qi_unified_kg_v1_1.zip (497/959)",
+    "toledo_agency_dantian_bridge_sketch_v0.1(1).md",
+    "Pasted text(20261014-142328).txt"
+  ],
+  "source_policy": "TG-RFG-01; all newly defined formulas are Dr PROPOSAL; no new canonical number or Coq proof",
+  "canonical_reuse": [
+    {
+      "code": "EQ-015/M.02.v1",
+      "canonical_id": "CAN-003",
+      "statement": "S_{n+1}=F(S_n,u_n,c_n,T_n)",
+      "role": "REUSED_CANONICAL_DEFINITION"
+    },
+    {
+      "code": "A.5/S.11.v1",
+      "canonical_id": "CAN-121-SPLIT-08",
+      "statement": "C_{n+1}=G(x_n,C_n,H_n)",
+      "role": "REUSED_AGENCY_DEFINITION"
+    },
+    {
+      "code": "A.5/S.09.v1",
+      "canonical_id": "CAN-121-SPLIT-06",
+      "statement": "(partial T_p/partial C)(partial C/partial x)>0",
+      "role": "REUSED_AGENCY_CRITERION_UNESTIMATED"
+    },
+    {
+      "code": "weld/H.02.v1",
+      "canonical_id": "CAN-051",
+      "statement": "Delta_A(lambda)=D_A^2-4M_AK_A lambda and information/phenomenal horizon triad",
+      "role": "REUSED_HORIZON_TRIAD_NOT_BIOLOGICAL"
+    },
+    {
+      "code": "EQ-002/M.03.v1",
+      "canonical_id": "CAN-201",
+      "statement": "Readout(S)=z, z != S",
+      "role": "REUSED_NONCOLLAPSE"
+    },
+    {
+      "code": "weld/M.02.v1",
+      "canonical_id": "CAN-006",
+      "statement": "q_D circ F = F_D circ q_D",
+      "role": "REUSED_DOMAIN_WELD_HOLD"
+    },
+    {
+      "code": "EQ-015/P.60.v1",
+      "canonical_id": "RUS-0108",
+      "statement": "Bernoulli steady incompressible flow",
+      "role": "PHYSICS_ANALOGY_ONLY"
+    },
+    {
+      "code": "EQ-015/P.61.v1",
+      "canonical_id": "RUS-0109",
+      "statement": "A_1 v_1=A_2 v_2",
+      "role": "PHYSICS_ANALOGY_ONLY"
+    },
+    {
+      "code": "EQ-015/P.116.v1",
+      "canonical_id": "RUS-0164",
+      "statement": "Q=pi r^4 DeltaP/(8 mu L)",
+      "role": "PHYSICS_ANALOGY_ONLY"
+    }
+  ],
+  "equations": [
+    {
+      "id": "AGDT-P01",
+      "name": "Body readout",
+      "equation": "z_n=q_B(S_n)",
+      "parents": [
+        "CAN-003",
+        "CAN-201"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "BIOLOGICAL_READOUT_UNIDENTIFIED",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P02",
+      "name": "Attention-indexed subjective readout",
+      "equation": "r_{v,n}=O_v(z_n,A_n=v,c_n)",
+      "parents": [
+        "AGDT-P01"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "FUNCTIONAL_DATA_REQUIRED",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P03",
+      "name": "Agency input pairing",
+      "equation": "x_n^{(v)}=(z_n,r_{v,n})",
+      "parents": [
+        "AGDT-P01",
+        "AGDT-P02"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "READOUT_SPECIFICATION_REQUIRED",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P04",
+      "name": "History-sensitive constraint adapter",
+      "equation": "C_{n+1}=G(x_n^{(v)},C_n,H_n)",
+      "parents": [
+        "A.5/S.11.v1",
+        "AGDT-P03"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "SPECIALIZATION_OF_REGISTERED_G",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P05",
+      "name": "Response policy",
+      "equation": "u_n=pi(C_{n+1},H_n,r_{v,n})",
+      "parents": [
+        "AGDT-P04",
+        "AGDT-P02"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "POLICY_NOT_IDENTIFIED",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P06",
+      "name": "Root-state closure",
+      "equation": "S_{n+1}=F(S_n,u_n,c_n,T_n)",
+      "parents": [
+        "EQ-015/M.02.v1",
+        "AGDT-P05"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "SAME_REGISTERED_ROOT_WITH_PROPOSED_U",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P07",
+      "name": "Causal focus contrast",
+      "equation": "Delta_v=E[Y\\mid do(A=v)]-E[Y\\mid do(A=neutral)]",
+      "parents": [
+        "AGDT-P02",
+        "AGDT-P06"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "ESTIMAND_ONLY_NO_OBSERVATIONS",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P08",
+      "name": "Unique DT-L superiority",
+      "equation": "Theta_L=Delta_{DT-L}-max_{v\\in C}Delta_v",
+      "parents": [
+        "AGDT-P07"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "UNESTIMATED_NEARBY_CONTROL_OVERLAP",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P09",
+      "name": "Balanced graph-flow source-sink",
+      "equation": "J_n=j_n(e_{source(n)}-e_{sink(n)}); 1^T J_n=0",
+      "parents": [
+        "RUS-0109"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "ALGEBRAIC_IDENTITY; PHYSICAL_QI_UNPROVEN",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P10",
+      "name": "Split-port reservoir ledger",
+      "equation": "h_{n+1}=h_n+J_n^{in}-J_n^{out}-J_n^{loss}-J_n^{reject}",
+      "parents": [
+        "AGDT-P09"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "REQUIRES_SHARED_UNITS_AND_NONNEGATIVE_CAPACITY",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P11",
+      "name": "Information transform memory adapter",
+      "equation": "h'_{n+1}=Rot(Enc(J_n^{in}),h_n)",
+      "parents": [
+        "AGDT-P10",
+        "weld/H.02.v1"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "BLACK_HOLE_ANALOGY_NOT_PHYSICAL",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P12",
+      "name": "Decoded policy, not storage",
+      "equation": "u_{n+1}=Dec(h'_{n+1},Select(x_n,C_{n+1},h'_{n+1}))",
+      "parents": [
+        "AGDT-P04",
+        "AGDT-P11"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "INFORMATION_STORAGE_NE_AGENCY",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P13",
+      "name": "Discrete modal recurrence",
+      "equation": "M(y_{n+1}-2y_n+y_{n-1})+D(y_n-y_{n-1})+K\\lambda y_n=J_{\\lambda,n}",
+      "parents": [
+        "weld/H.02.v1"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "ALGEBRAIC_DYNAMICS_ONLY",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P14",
+      "name": "Discrete characteristic and discriminant",
+      "equation": "p(r)=Mr^2+(-2M+D+K\\lambda)r+(M-D); Disc=(D+K\\lambda)^2-4MK\\lambda",
+      "parents": [
+        "AGDT-P13"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "SYMpy_SYMBOLICALLY_VERIFIED",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P15",
+      "name": "Strict scalar mode Jury domain",
+      "equation": "M>0;\\lambda>0;D>0;K\\lambda>0;2D+K\\lambda<4M",
+      "parents": [
+        "AGDT-P14"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "ANALYTIC_CONDITION_ONLY_ZERO_MODE_NEUTRAL",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P16",
+      "name": "Agency viability directional criterion",
+      "equation": "Gamma_v=(partial T_p/partial C)(partial C/partial x^{(v)})>0",
+      "parents": [
+        "A.5/S.09.v1",
+        "AGDT-P03"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "CANNOT_BE_ESTIMATED_FROM_GRAPH_DEGREE",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P17",
+      "name": "Source-coincident cancellation",
+      "equation": "J_n=j_n(e_{DT-L}-e_{DT-L})=0",
+      "parents": [
+        "AGDT-P09"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "TRIVIAL_IDENTITY_REQUIRES_SPLIT_INPUT_OUTPUT_PORTS",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    },
+    {
+      "id": "AGDT-P18",
+      "name": "Cross-domain sufficiency/weld guard",
+      "equation": "q_B(F(S,u,c,T))=?F_B(q_B(S),u,c,T)",
+      "parents": [
+        "weld/M.02.v1",
+        "CAN-201"
+      ],
+      "tier": "Dr_PROPOSAL",
+      "status": "CAN_006_BIOLOGICAL_WELD_HOLD",
+      "estimated": false,
+      "is_existing_canonical": false,
+      "clinical_use": false
+    }
+  ],
+  "data_admission": {
+    "structural_audit": "MEASURED_FROM_CULTURAL_KG_ONLY",
+    "experimental_effects_available": false,
+    "causal_estimates": null,
+    "blind_trials": false,
+    "simulated_patients": false,
+    "physical_qi_flux": false,
+    "personal_diagnosis": false
+  },
+  "guardrails": [
+    "n denotes Toledo ordered native events, not seconds; local measurement indices must be calibrated separately",
+    "no instantaneous causality cycles; expand by n to n+1",
+    "Chinese semantic edge cannot become physiological pipe",
+    "Indian chakra and Chinese dantian approximate source-level comparison only",
+    "SKY->GV20, EARTH->KI1, PC8->world are symbolic, not measured physical flow",
+    "CV6 overlaps DT-L region, therefore not a fully independent nearby control",
+    "no math implication from larger ontological degree to causal/clinical agency",
+    "lambda=0 neutral r=1 in unforced graph, unless external constraint fixes the gauge mode",
+    "the information horizon metaphor is not an astrophysical horizon"
+  ],
+  "companion_birca_admin": "morrocwi/birca_admin_5.0/docs/agency_dantian/AGENCY_DANTIAN_STRUCTURAL_AUDIT_V02.md"
+}
