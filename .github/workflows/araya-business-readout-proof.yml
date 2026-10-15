@@ -1,0 +1,26 @@
+name: ARAYA business readout Coq proof (research)
+on:
+  pull_request:
+    paths:
+      - 'coq/candidates/ARAYA_Business_Readout_Candidate.v'
+      - 'registry/proposals/ARAYA_Business_Readout_Registration_Proposal_v0.2.md'
+      - '.github/workflows/araya-business-readout-proof.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coq:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Coq
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y coq
+      - name: Compiler version
+        run: coqc --version
+      - name: Check explicit business adapter lemmas
+        run: coqc -q coq/candidates/ARAYA_Business_Readout_Candidate.v
+      - name: Reject admitted proofs
+        run: |
+          ! grep -En '\b(Admitted|admit|Axiom)\b' coq/candidates/ARAYA_Business_Readout_Candidate.v
