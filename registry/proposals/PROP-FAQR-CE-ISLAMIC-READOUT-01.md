@@ -147,3 +147,26 @@ This is an equation/provenance intake card. The standalone FAQR application spec
 - [Five topic FAQR v1.4 evaluation](https://github.com/morrocwi/islamic-archive-th/blob/docs/faqr-ce-islamic-mode-20261014/docs/research/FAQR_IEA_v1_4_KHANA_KAO_MAI_5_CASE_EVAL.md): 5/5 schema-structural evaluations PASS using source-based constructed questions [SimulatedData]. No qualified religious scholarly review has occurred.
 - Exposed Thai active-authority-claim gap in frozen v1.4 validator: first-person Thai fatwa, mediation and takfir statements bypassed English-only patterns. A [SHA-pinned supplementary guard](https://github.com/morrocwi/islamic-archive-th/blob/docs/faqr-ce-islamic-mode-20261014/docs/research/FAQR_V14_THAI_AUTHORITY_GUARD_PATCH.py) covers specific known examples; not comprehensive semantic proof.
 - **Causal Ethics remains NOT_ASSESSED** in all cases: no observed calibrated structural regimes, Lyapunov V or spectral margin. Passing fact-ledger schema cannot promote this bridge to canonical and cannot establish any theological/fiqh result.
+
+## H. Registration outcome, 2026-10-17 (appended; sections A-G above are unchanged)
+
+Claim boundary for every item below: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only. All new objects are tier `Definition` and carry the label `NEW DERIVATION / PROPOSAL`; none is a Toledo theorem, none is calibrated, and none is evidence for any religious or legal conclusion.
+
+Source pin (cited, not copied): `morrocwi/islamic-archive-th` commit `96a375ae021c4f72e527294eb5ddcbd7b9bb3c32`, path `docs/research/FAQR_IEA_v1_4_STANDALONE.md`, blob `792391c9e528959a66f33298d746a9e29437bda2` (SHA-256 `2de11032e8a1dbec3f8727befccc98c88578fecd3d02443ffc8e58a15c0035bf`, matching the anchor in section A).
+
+| Proposal item | Outcome | Toledo code | Note |
+|---|---|---|---|
+| Section B, CE-12 Causal Ethics Inequality | REUSE | `EQ-015/S.20.v1` | Identical up to renaming a_CE to A. S.20 is cited, not the split parent `EQ-015/S.02.v1`. Occurrence added. |
+| Section D "AIProjection != Fatwa"; output does not entail a person-specific classification | REUSE | `weld/H.51.v1` (RANC) | An existing object this proposal did not list in section A. "!= CourtDecision / != Mediation" are not attribution levels and enter the non-selection invariant of `weld/E.12.v1`. Occurrence added. |
+| Claim ceiling, evidence status, unresolved, translation error | REUSE as parents | `weld/E.07.v1`, `weld/E.03.v1`, `weld/E.05.v1`, `weld/E.08.v1` | Not re-derived. |
+| Cultural-translation operator (qualitative notation) | NO CODE | occurrence on `weld/E.08.v1` | The "+" is not arithmetic; registering it would be imprecise as stated. |
+| v1.2 EPISTEMIC_STATE vector (historical) | NO CODE | relation to `weld/E.03.v1` | Same form, different theory. |
+| v1.2 ADMISSIBLE_x / RECOMMENDABLE_x | EXCLUDED | none | Superseded by the v1.4 non-recommendation behaviour. |
+| Five-node and nine-node Faqr chain, six amana questions | EXCLUDED | none | A normative coherence sequence, not an equation; referenced only as the constraint set A. |
+| Responsibility non-implications (v1.2) | OPEN, out of this registration | candidates `weld/S.34.v1`, `A.5/M.32.v1` | Needs a separate phi-check. |
+| Source-layer typed non-collapse (W, R, J, G, C) | PROPOSAL, registered as Definition | `weld/H.53.v1` | Parents `weld/H.51.v1`, `A.5/M.06.v1`. |
+| Facts/options/unknowns projection with non-selection invariant | PROPOSAL, registered as Definition | `weld/E.12.v1` | Weld commutation stays an unproved obligation. |
+| CE diagnostic gate (section C, D_CE) | PROPOSAL, registered as Definition | `EQ-015/S.66.v1` | NOT_ASSESSED unless CE inputs are independently specified. |
+| Applicability gate (v1.2 sec.2.6.1, kept by v1.4 sec.3) | PROPOSAL, registered as Definition | `weld/E.13.v1` | `toledo_mcp.cli check` returned NOT_REGISTERED and the phi-check against `weld/E.08.v1` shows a distinct object, so it was not held. |
+
+Open items carried forward for the founder, not edited here: sections E.5 and E.6 as written in this file are listed as OPEN; under the workspace horizontal-validation rule an outside reviewer's say-so is not a promotion lever for any code above. Constraints still open: real CE calibration, sourced Qur'an/hadith/scholar corpus, and applicability checks against actual current law for any concrete case. The `main.hub` pin for this repository is stale relative to the repository head and should be refreshed after merge.
