@@ -5434,6 +5434,13 @@
           "label": "Tunnel-v2.0:eq.8",
           "section": "sec.9, prose reference ('CAN-031 -- knowledge-admission')",
           "raw_key": "The Recursive Epistemic Tunnel v2.0:Tunnel-v2.0:eq.8"
+        },
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "FAQR-IEA v1.2 (App.1) sec.2.2: EPISTEMIC_STATE vector (same form, different theory; historical anchor)",
+          "section": "FAQR-IEA v1.4 STANDALONE App.1 sec.2.2",
+          "raw_key": "FAQR_IEA_v1_4_STANDALONE:app1-2.2-epistemic-state"
         }
       ],
       "role": "other",
@@ -6133,6 +6140,13 @@
           "label": "(14)",
           "section": null,
           "raw_key": "22307148:(14)"
+        },
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "FAQR-IEA v1.4 sec.3: PerceivedMeaning = SourceSpeakerMeaning + TranslationAndContextUncertainty (qualitative notation, not a measurement; no code assigned)",
+          "section": "FAQR-IEA v1.4 STANDALONE sec.3",
+          "raw_key": "FAQR_IEA_v1_4_STANDALONE:sec3-cultural-translation"
         }
       ],
       "role": "other",
@@ -42700,6 +42714,13 @@
           "label": "CE-12",
           "section": null,
           "raw_key": "18444260:CE-12"
+        },
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.B (CE-12, identical up to renaming a_CE <-> A)",
+          "section": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.B",
+          "raw_key": "PROP-FAQR-CE-ISLAMIC-READOUT-01:secB-CE-12"
         }
       ],
       "role": "other",
@@ -160383,6 +160404,13 @@
           "label": "sec.8.1 Religious Attribution Non-Collapse (RANC)",
           "section": "8. Religious Attribution Non-Collapse (RANC)",
           "raw_key": "plural_interfaces_singular_commitments_v1_0:RANC"
+        },
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "FAQR-IEA v1.4 App.A sec.D: AIProjection != Fatwa (output does not entail a person-specific classification)",
+          "section": "FAQR-IEA v1.4 STANDALONE App.A sec.D",
+          "raw_key": "FAQR_IEA_v1_4_STANDALONE:appA-D-AIProjection"
         }
       ],
       "role": "other",
@@ -169685,6 +169713,377 @@
       "role": "domain-gate",
       "first_assigned": "2026-10-07",
       "drift_note": "Domain specialization only. No scalar human-potential score is defined. Proximal videoconference-learning architecture has phenomenological and public-dataset-backed support; distal HCA stages (stable unaided return, live possibility expansion, realized opportunity) remain end-to-end empirical validation gaps. The chain is registered as a Definition/composition, not as a proved causal law."
+    },
+    {
+      "id": "CAN-1319",
+      "code": "weld/H.53.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "H",
+      "aliases": [],
+      "name": "FAQR source-layer typed non-collapse (W, R, J, G, C stay distinct): facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only",
+      "statement": {
+        "latest": "W != R != J != G != C as typed source layers (W revealed-source, R assessed-report/transmission, J qualified scholarly interpretation, G jurisdiction/forum/law, C lived language/culture/origin); J_j := ScholarlyDerivation_j(W,R,E,interpretive_method_j,historical_setting) with J_j != W; Institution != Revelation; CountryOfOrigin != ApplicableLaw; Ethnicity != Creed; ObservedPractice != RevealedPrescription; QuranTranslation != QuranText; no layer is identified with or taken to entail another unless each transition is independently evidenced",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "W != R != J != G != C as typed source layers (W revealed-source, R assessed-report/transmission, J qualified scholarly interpretation, G jurisdiction/forum/law, C lived language/culture/origin); J_j := ScholarlyDerivation_j(W,R,E,interpretive_method_j,historical_setting) with J_j != W; Institution != Revelation; CountryOfOrigin != ApplicableLaw; Ethnicity != Creed; ObservedPractice != RevealedPrescription; QuranTranslation != QuranText; no layer is identified with or taken to entail another unless each transition is independently evidenced",
+          "date": "2026-10-17",
+          "reason": "New object for the FAQR source-layer typed non-collapse; TG-RFG-01 check --formula returned NOT_REGISTERED and the nearest neighbour weld/H.51.v1 is not a renaming, positive scale or constant substitution of it. Minimal delta only: the five source-layer separation and J_j != W.",
+          "by": "registrar-role-pending-founder-approval-2026-10-17"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/H.51.v1",
+          "derived_via": "reads",
+          "evidence": "weld/H.51.v1 (RANC) states: 'O \\not\\equiv P \\not\\equiv N \\not\\equiv B_i \\not\\equiv J_i ... unless each transition is independently evidenced'; this entry is the same typed non-collapse discipline applied to the five FAQR source layers."
+        },
+        {
+          "code": "A.5/M.06.v1",
+          "derived_via": "reads",
+          "evidence": "A.5/M.06.v1 states: 'StatusOfSpeaker!=StatusOfClaim, Auth(p)!=Val_E(p), Pow(p)!=Val_E(p)'; the root-level typed non-collapse chain that source-layer separation instantiates."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": {
+          "repo": "morrocwi/islamic-archive-th",
+          "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32",
+          "path": "docs/research/FAQR_IEA_v1_4_STANDALONE.md"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": "FAQR-IEA v1.4 STANDALONE sec.4 'Core equations' and Appendix A sec.D 'Invariants, formal relations, and projection equations'"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "NEW DERIVATION / PROPOSAL -- source tag: 'AI engineering; NOT religious or physical laws' (FAQR-IEA v1.4 sec.4)",
+      "coq": {
+        "file": "coq/canonical/weld__H_53_v1.v",
+        "identifier": "weld__H_53_v1_derivation",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [
+        {
+          "type": "reads",
+          "target": "weld/H.51.v1",
+          "note": "RANC's five levels (output/policy/institution/belief/person-specific classification) are not these five source layers; RANC already covers AIProjection != person-specific classification, so no RANC twin is registered."
+        }
+      ],
+      "occurrences": [
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "FAQR-IEA v1.4 sec.4 + App.A sec.D (typed source layers)",
+          "section": "FAQR-IEA v1.4 STANDALONE sec.4; App.A sec.D",
+          "raw_key": "FAQR_IEA_v1_4_STANDALONE:sec4-source-layers"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-10-17",
+      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement under weld/H.51.v1 and A.5/M.06.v1 is a disclosed convention (same typed non-collapse discipline family), not a demonstrated restatement: RANC's 5 levels differ from these 5 source layers and no phi-criterion renaming/scale/substitution bijection maps one onto the other. The Coq wrapper fixes the type signature only (separate types W R J G C; ScholarlyDerivation as a declared function); it proves no theorem. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "Core equations (AI engineering; NOT religious or physical laws)",
+        "source": "morrocwi/islamic-archive-th:docs/research/FAQR_IEA_v1_4_STANDALONE.md",
+        "line": 78,
+        "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32"
+      }
+    },
+    {
+      "id": "CAN-1320",
+      "code": "weld/E.12.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "E",
+      "aliases": [],
+      "name": "FAQR facts/options/unknowns projection with non-selection invariant: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only",
+      "statement": {
+        "latest": "F := SourceBoundClaims(W,R,J,X,G,C,E); O := FindDocumentedPositionsWithConditions(J,G,C,E); B_n := (F_n, {<o,N_o,Jur_o,C_o,D_o> : o in O_n}, U_n); P_n := Project(B_n | A) with A the declared integrity constraints; non-selection invariant: no argmax, best_option or winner over O_n; P is not a fatwa, court decision or mediation; humans in their proper roles choose",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "F := SourceBoundClaims(W,R,J,X,G,C,E); O := FindDocumentedPositionsWithConditions(J,G,C,E); B_n := (F_n, {<o,N_o,Jur_o,C_o,D_o> : o in O_n}, U_n); P_n := Project(B_n | A) with A the declared integrity constraints; non-selection invariant: no argmax, best_option or winner over O_n; P is not a fatwa, court decision or mediation; humans in their proper roles choose",
+          "date": "2026-10-17",
+          "reason": "New object for the FAQR facts/options/unknowns projection; TG-RFG-01 check --formula returned NOT_REGISTERED; nearest neighbours weld/E.03.v1, A.8/M.02.v1, weld/M.02.v1 are not renaming, positive scale or constant substitution of it. Minimal delta: the ledger tuple, the Project operator and the non-selection invariant.",
+          "by": "registrar-role-pending-founder-approval-2026-10-17"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/E.03.v1",
+          "derived_via": "reads",
+          "evidence": "weld/E.03.v1 status space sigma_K(p) in {ADMITTED, LOCAL, TRANSPORTABLE, UNRESOLVED, OBSTRUCTED, RETRACTED, SUPERSEDED}: F_n holds only source-bound, admitted-status claims."
+        },
+        {
+          "code": "weld/E.05.v1",
+          "derived_via": "reads",
+          "evidence": "weld/E.05.v1: chi_G in {1,0,bottom}, bottom=UNRESOLVED, never silently converting absence-of-evidence into pass or fail: U_n is the unresolved slot."
+        },
+        {
+          "code": "A.8/M.02.v1",
+          "derived_via": "reads",
+          "evidence": "A.8/M.02.v1: Lambda(e_i) = <Prov_i, Tier_i, Def_i, Reader_i, Falsifier_i>: each option entry carries its own provenance ledger."
+        },
+        {
+          "code": "weld/E.07.v1",
+          "derived_via": "reads",
+          "evidence": "weld/E.07.v1: tau_public(p) <= inf over g in G_p of tau(g): the claim ceiling bounds what P may state."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": {
+          "repo": "morrocwi/islamic-archive-th",
+          "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32",
+          "path": "docs/research/FAQR_IEA_v1_4_STANDALONE.md"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": "FAQR-IEA v1.4 STANDALONE sec.4 'Core equations' (F, O, P, INVARIANT(P)) and App.A sec.D (no argmax, no best_option, no winner); B_n tuple and P_n := Project(B_n|A) from PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C lines 68-72 (morrocwi/toledo@9079da36, registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md)"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "NEW DERIVATION / PROPOSAL -- source tag: 'AI engineering; NOT religious or physical laws' (FAQR-IEA v1.4 sec.4)",
+      "coq": {
+        "file": "coq/canonical/weld__E_12_v1.v",
+        "identifier": "weld__E_12_v1_projection",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [
+        {
+          "type": "reads",
+          "target": "weld/M.02.v1",
+          "note": "Weld commutation of the projection with a specified update is an UNPROVED obligation, not claimed here."
+        },
+        {
+          "type": "reads",
+          "target": "EQ-015/S.40.v1",
+          "note": "Option count != effective agency: the option list O_n is not a choice set of the AI."
+        },
+        {
+          "type": "reads",
+          "target": "weld/H.51.v1",
+          "note": "AIProjection is not a person-specific religious classification (RANC); covered there, not restated."
+        },
+        {
+          "type": "same_form_different_theory",
+          "target": "weld/E.03.v1",
+          "note": "FAQR v1.2 historical EPISTEMIC_STATE vector has the same shape as the K_p tuple; recorded as lineage, no code assigned."
+        }
+      ],
+      "occurrences": [
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "FAQR-IEA v1.4 sec.4 + App.A sec.D (facts/options projection)",
+          "section": "FAQR-IEA v1.4 STANDALONE sec.4; App.A sec.D",
+          "raw_key": "FAQR_IEA_v1_4_STANDALONE:sec4-projection"
+        },
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C (B_n ledger tuple and P_n projection)",
+          "section": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C lines 68-72 (morrocwi/toledo@9079da36)",
+          "raw_key": "PROP-FAQR-CE-ISLAMIC-READOUT-01:secC-Bn-Pn"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-10-17",
+      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement is a disclosed convention (reads); the commutation of the projection with any update (weld/M.02.v1) is an unproved obligation and is not claimed. The Coq wrapper fixes the ledger and Project signature only; it proves no theorem. FAQR v1.2 ADMISSIBLE_x/RECOMMENDABLE_x was superseded by v1.4 non-recommendation behaviour and is deliberately NOT registered. The six amana questions and the five/nine-node Faqr chain are a normative coherence sequence, not an equation, and are referenced only as the constraint set A. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "Core equations (AI engineering; NOT religious or physical laws)",
+        "source": "morrocwi/islamic-archive-th:docs/research/FAQR_IEA_v1_4_STANDALONE.md",
+        "line": 78,
+        "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32"
+      }
+    },
+    {
+      "id": "CAN-1321",
+      "code": "EQ-015/S.66.v1",
+      "root": "EQ-015",
+      "layer": "reading",
+      "domain": "S",
+      "aliases": [],
+      "name": "CE diagnostic gate on a documented option: NOT_ASSESSED unless CE inputs are independently specified: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only",
+      "statement": {
+        "latest": "D_CE(o) := NOT_ASSESSED unless the CE agency, regime, record M(t'), causal memory, V, tau'_c and Delta_spec are independently specified with disclosed calibration; no CE input => NOT_ASSESSED (never PASS, never numeric 0); CE_StructuralAdmissibility(o) does not imply ShariahPermissibility(o) and ShariahPermissibility(o) does not imply CE_StructuralAdmissibility(o)",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "D_CE(o) := NOT_ASSESSED unless the CE agency, regime, record M(t'), causal memory, V, tau'_c and Delta_spec are independently specified with disclosed calibration; no CE input => NOT_ASSESSED (never PASS, never numeric 0); CE_StructuralAdmissibility(o) does not imply ShariahPermissibility(o) and ShariahPermissibility(o) does not imply CE_StructuralAdmissibility(o)",
+          "date": "2026-10-17",
+          "reason": "New object for the CE diagnostic gate on a documented option; TG-RFG-01 check --formula returned NOT_REGISTERED; the nearest neighbour EQ-015/S.20.v1 is reused as parent and D_CE is not a renaming, positive scale or constant substitution of it. Minimal delta: the NOT_ASSESSED default and the non-implication boundary.",
+          "by": "registrar-role-pending-founder-approval-2026-10-17"
+        }
+      ],
+      "parents": [
+        {
+          "code": "EQ-015/S.20.v1",
+          "derived_via": "reads",
+          "evidence": "EQ-015/S.20.v1: 'Ethical(A) <=> exists Choice(A -> R_A) : d/dt' V_{A,R_A}(M(t')) <= 0 and tau_c'(R_A) > 0 and Delta_spec(R_A) > 0'; D_CE only annotates this registered condition and never restates or modifies it."
+        },
+        {
+          "code": "weld/S.40.v1",
+          "derived_via": "reads",
+          "evidence": "weld/S.40.v1: 'no exists Choice(A -> R_A) => no ethics attribution, no responsibility attribution, and no moral cost attribution'."
+        },
+        {
+          "code": "weld/E.05.v1",
+          "derived_via": "reads",
+          "evidence": "weld/E.05.v1: bottom=UNRESOLVED, absence of evidence is never silently converted to pass or fail."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": {
+          "repo": "morrocwi/toledo",
+          "commit": "9079da36546136800c092d4cd5ef3ff18b4bb6bb",
+          "path": "registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C lines 53-86 'Smallest missing bridge' (statement and bridge invariants; toledo@9079da36); FAQR-IEA v1.4 sec.4 is cited only for the 'AI engineering' tier tag and does not contain the CE gate"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "NEW DERIVATION / PROPOSAL -- source tag: '[NEW PROPOSAL / AI_ENGINEERING; NOT A TOLEDO CANONICAL EQUATION]' (PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C); FAQR-IEA v1.4 sec.4: 'AI engineering; NOT religious or physical laws'",
+      "coq": {
+        "file": "coq/canonical/EQ_015__S_66_v1.v",
+        "identifier": "EQ_015__S_66_v1_unspecified_never_pass",
+        "assumptions": "Closed under the global context",
+        "imported_from": null,
+        "coq_status": "closed",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [],
+      "occurrences": [
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C (CE diagnostic gate)",
+          "section": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C; FAQR-IEA v1.4 sec.4",
+          "raw_key": "PROP-FAQR-CE-ISLAMIC-READOUT-01:secC-D_CE"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-10-17",
+      "drift_note": "Tiered Definition, not Th_coqc, even though the accompanying Coq file compiles closed: only the narrow gate-closure lemma (an unspecified CE input yields NotAssessed, never Assessed) is proved; the gate form itself and the stated non-implication between CE structural admissibility and any religious classification are modelling boundaries, not proved theorems. The parent EQ-015/S.20.v1 is reused unchanged, not restated; no CE calibration exists and none is claimed. The 5/5 schema-structural FAQR evaluation uses [SimulatedData] and is not evidence for this entry. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "[NEW PROPOSAL / AI_ENGINEERING; NOT A TOLEDO CANONICAL EQUATION]",
+        "source": "morrocwi/toledo:registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md",
+        "line": 53,
+        "commit": "9079da36546136800c092d4cd5ef3ff18b4bb6bb"
+      }
+    },
+    {
+      "id": "CAN-1322",
+      "code": "weld/E.13.v1",
+      "root": "weld",
+      "layer": "reading",
+      "domain": "E",
+      "aliases": [],
+      "name": "FAQR applicability gate: law resolution may be UNDETERMINED and an answer needs all four readiness checks: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only",
+      "statement": {
+        "latest": "L*_{i,f,t} := ResolveLaw(ConflictRules(f,t),P,K_i,{L(c,s,t)},X_f) in CandidateSet or UNDETERMINED; CaseAnswerReady(i) := VerifiedLaw(i) and VerifiedConnectingFactors(i) and VerifiedForumAndExceptions(i) and CompetentReviewIfNeeded(i); not CaseAnswerReady(i) => LAW_COMPARISON_ONLY or APPLICABILITY_UNDETERMINED",
+        "format": "ascii"
+      },
+      "statements_history": [
+        {
+          "v": 1,
+          "statement": "L*_{i,f,t} := ResolveLaw(ConflictRules(f,t),P,K_i,{L(c,s,t)},X_f) in CandidateSet or UNDETERMINED; CaseAnswerReady(i) := VerifiedLaw(i) and VerifiedConnectingFactors(i) and VerifiedForumAndExceptions(i) and CompetentReviewIfNeeded(i); not CaseAnswerReady(i) => LAW_COMPARISON_ONLY or APPLICABILITY_UNDETERMINED",
+          "date": "2026-10-17",
+          "reason": "New object for the FAQR applicability gate; TG-RFG-01 check --formula returned NOT_REGISTERED and the phi-check against weld/E.08.v1 shows a distinct object (no renaming, positive scale or constant substitution). Minimal delta: ResolveLaw candidate-or-UNDETERMINED and the four-way CaseAnswerReady gate.",
+          "by": "registrar-role-pending-founder-approval-2026-10-17"
+        }
+      ],
+      "parents": [
+        {
+          "code": "weld/E.08.v1",
+          "derived_via": "reads",
+          "evidence": "weld/E.08.v1: 'Local knowledge may only be presented as global through a declared, tolerance-bounded commuting-square transport': law of one forum/time is not presented as applicable elsewhere without the declared resolver."
+        },
+        {
+          "code": "weld/E.07.v1",
+          "derived_via": "reads",
+          "evidence": "weld/E.07.v1: tau_public(p) <= inf over g in G_p of tau(g): an unready gate caps the answer at comparison-only."
+        }
+      ],
+      "children": [],
+      "origin": {
+        "source": "domain_registry",
+        "repo_anchor": {
+          "repo": "morrocwi/islamic-archive-th",
+          "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32",
+          "path": "docs/research/FAQR_IEA_v1_4_STANDALONE.md"
+        },
+        "record_id": null,
+        "doi": null,
+        "section": "FAQR-IEA v1.4 STANDALONE Appendix 1 (v1.2) sec.2.6.1 'Upgraded typed equations', kept active by v1.4 sec.3 'National-law scope operator'"
+      },
+      "status": "current",
+      "status_note": "",
+      "superseded_by": null,
+      "tier": "Definition",
+      "tier_in_genesis_verbatim": "NEW DERIVATION / PROPOSAL -- source tag: 'AI engineering; NOT religious or physical laws' (FAQR-IEA v1.4 sec.4; v1.2 sec.2.6.1 retained by v1.4 sec.3)",
+      "coq": {
+        "file": "coq/canonical/weld__E_13_v1.v",
+        "identifier": "weld__E_13_v1_outcome",
+        "assumptions": null,
+        "imported_from": null,
+        "coq_status": "definition",
+        "coq_axioms": [],
+        "coq_source_redistributed": true
+      },
+      "relations": [
+        {
+          "type": "reads",
+          "target": "weld/E.05.v1",
+          "note": "UNDETERMINED plays the role of bottom=UNRESOLVED; absence of evidence is not converted to a case answer."
+        }
+      ],
+      "occurrences": [
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "FAQR-IEA v1.4 App.1 (v1.2) sec.2.6.1 + v1.4 sec.3 (applicability gate)",
+          "section": "FAQR-IEA v1.4 STANDALONE App.1 sec.2.6.1; sec.3",
+          "raw_key": "FAQR_IEA_v1_4_STANDALONE:sec2.6.1-applicability"
+        }
+      ],
+      "role": "other",
+      "first_assigned": "2026-10-17",
+      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement under weld/E.08.v1 and weld/E.07.v1 is a disclosed convention (reads): E.08 is local-to-global transport accounting, this entry is a legal-applicability readiness gate; no phi-criterion renaming/scale/substitution bijection maps one onto the other. The Coq wrapper fixes the Resolution/Outcome signature and the gate wiring only: a CaseAnswer is returned only for a non-empty candidate set together with a sumbool decision of CaseAnswerReady, and an empty or undetermined candidate set maps to ApplicabilityUndetermined. ConflictRules(f,t) and the law set are explicit parameters of ResolveLaw; the subscripts i, f, t are carried by the arguments and not modelled as separate indexed objects. It proves no theorem and is not a legal-decision algorithm. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "Core equations (AI engineering; NOT religious or physical laws)",
+        "source": "morrocwi/islamic-archive-th:docs/research/FAQR_IEA_v1_4_STANDALONE.md",
+        "line": 78,
+        "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32"
+      }
     }
   ],
   "raw_to_canonical": {
@@ -170759,18 +171158,18 @@
     "biology:B-X8": "EQ-001/B.36.v1"
   },
   "counts": {
-    "entries": 1345,
+    "entries": 1349,
     "by_status": {
-      "current": 1210,
+      "current": 1214,
       "unverified": 96,
       "split": 30,
       "not_an_equation": 9
     },
     "by_domain": {
       "M": 452,
-      "E": 62,
-      "H": 133,
-      "S": 138,
+      "E": 64,
+      "H": 134,
+      "S": 139,
       "W": 93,
       "C": 60,
       "P": 331,
@@ -170778,7 +171177,7 @@
     },
     "by_tier": {
       "Th_coqc": 445,
-      "Definition": 452,
+      "Definition": 456,
       "Dr": 83,
       "Ax": 12,
       "finite_diagnostic": 46,
@@ -170791,8 +171190,8 @@
       "Conjecture": 1
     },
     "by_coq_status": {
-      "closed": 589,
-      "definition": 388,
+      "closed": 590,
+      "definition": 391,
       "wrapped_related": 210,
       "not_formalisable": 70,
       "open_prop": 84,

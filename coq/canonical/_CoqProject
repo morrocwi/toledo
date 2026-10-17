@@ -756,6 +756,7 @@ EQ_015__S_62_v1.v
 EQ_015__S_63_v1.v
 EQ_015__S_64_v1.v
 EQ_015__S_65_v1.v
+EQ_015__S_66_v1.v
 EQ_015__W_01_v1.v
 EQ_015__W_02_v1.v
 EQ_015__W_20_v1.v
@@ -1099,6 +1100,8 @@ weld__E_08_v1.v
 weld__E_09_v1.v
 weld__E_10_v1.v
 weld__E_11_v1.v
+weld__E_12_v1.v
+weld__E_13_v1.v
 weld__H_01_v1.v
 weld__H_02_v1.v
 weld__H_03_v1.v
@@ -1138,6 +1141,7 @@ weld__H_36_v1.v
 weld__H_37_v1.v
 weld__H_38_v1.v
 weld__H_52_v1.v
+weld__H_53_v1.v
 weld__M_01_v1.v
 weld__M_02_v1.v
 weld__M_03_v1.v
