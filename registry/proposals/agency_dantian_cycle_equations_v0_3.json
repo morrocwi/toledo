@@ -1,0 +1,217 @@
+{
+  "document_id": "TOLEDO-AGDT-CYCLE-03",
+  "date": "2026-10-14",
+  "version": "0.3.0",
+  "equation_authority": "morrocwi/toledo",
+  "canonical_ids_minted": 0,
+  "prior": "registry/proposals/agency_dantian_equations_v0_2.json",
+  "mathematical_source": [
+    "Toledo CAN-003; CAN-006; CAN-201; CAN-115; RUS-0109",
+    "Original Qi KG 457/845 and authored extension 497/959"
+  ],
+  "new_domain_equation_proposal_count": 9,
+  "equations": [
+    {
+      "id": "AGDT-C19",
+      "title": "Cycle-space dimension",
+      "equation": "dim ker(B^T)=|E|-|V|+components",
+      "kind": "TOPOLOGICAL_THEOREM",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "Counts loops of actual edges in a chosen typed graph; does not measure Qi or actual pipes.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C20",
+      "title": "Stepwise node balance",
+      "equation": "s[n+1]=s[n]+B^T j[n]+u[n]; 1^T(s[n+1]-s[n])=1^T u[n]",
+      "kind": "ALGEBRAIC_IDENTITY",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "Only if quantities are in shared conserved units; information meaning does not automatically conserve.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C21",
+      "title": "Weighted graph Hodge split",
+      "equation": "j=-W B phi+c; c in ker(B^T); W=diag(w_e)>0",
+      "kind": "GRAPH_DECOMPOSITION",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "Requires independently measured, typed edges, orientation and weights for real-world use.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C22",
+      "title": "Pure gradient cannot sustain independent cycle flux",
+      "equation": "For c in ker(B^T): c^T W^-1 (-W B phi)=0",
+      "kind": "ALGEBRAIC_IDENTITY",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "Weighted orthogonality, not claiming all networks lack cycle flow.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C23",
+      "title": "No identification of hidden cycle from nodal differences",
+      "equation": "B^T(j+c)=B^T j for all c in ker(B^T)",
+      "kind": "IDENTIFIABILITY_NO_GO",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "Even perfect node-step records cannot determine unseen circulation without measured edge flow or stronger assumptions.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C24",
+      "title": "Passive cycle-current relaxation vs active drive",
+      "equation": "c[n+1]=rho c[n]+a[n], 0<=rho<1; if a=0 then c[n] -> 0; if a constant then c*=a/(1-rho)",
+      "kind": "MODEL_ADAPTER_PROPOSAL",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "A driven cycle is conditional on active input/feedback; not proof of infinite or clinical Qi energy.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C25",
+      "title": "Location-dependent modal forcing",
+      "equation": "f_k[n]=J[n] phi_k^T(e_source[n]-e_return); L phi_k=lambda_k phi_k",
+      "kind": "MATHEMATICAL_DOMAIN_ADAPTER",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "If L unchanged, moving source changes modal excitation but not intrinsic L eigenvalues.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C26",
+      "title": "Homogeneous ring has no privileged vertex",
+      "equation": "For cycle-rotation P: P^T L P=L; identical rotated inputs give rotated outputs under equivariant dynamics",
+      "kind": "SYMMETRY_THEOREM",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "DT-L cannot acquire unique physiological status from a symmetric ring alone; would require independent symmetry-breaking evidence.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    },
+    {
+      "id": "AGDT-C27",
+      "title": "Split-port/collocated source-sink guard",
+      "equation": "J=j(e_input-e_output); if input==output at one vertex J=0; nonzero c in ker(B^T) remains possible on cycles",
+      "kind": "MODELLING_BOUNDARY",
+      "status": "REGISTERED_AS_PROPOSAL_IN_TOLEDO_ONLY",
+      "claim_tier": "Dr/STRUCTURAL_THEOREM_FOR_SPECIFIED_GRAPH",
+      "limit": "Zero net injection does NOT imply zero internal loop current. Separate physical pressure from information-model ports.",
+      "clinical_use": false,
+      "empirical_qi_validation": false
+    }
+  ],
+  "exact_graph_audit": {
+    "original_nodes": 457,
+    "original_edge_rows": 845,
+    "original_unique_undirected_edges": 845,
+    "original_components": 1,
+    "original_cycle_rank": 389,
+    "expanded_nodes": 497,
+    "expanded_edge_rows": 959,
+    "expanded_unique_undirected_edges": 955,
+    "expanded_components": 1,
+    "expanded_cycle_rank": 459,
+    "meaning": "cycle rank refers to semantic ontology edges, NOT meridian fluids"
+  },
+  "comparison": {
+    "original": {
+      "DT-L": {
+        "degree": 6,
+        "closeness": 0.108159393,
+        "betweenness": 0.00013
+      },
+      "DT-M": {
+        "degree": 4,
+        "closeness": 0.107877928,
+        "betweenness": 0.00002
+      },
+      "DT-U": {
+        "degree": 5,
+        "closeness": 0.113772455,
+        "betweenness": 0.01314
+      }
+    },
+    "expanded": {
+      "DT-L": {
+        "incident_edge_rows": 14,
+        "unique_neighbors": 13,
+        "closeness": 0.201954397,
+        "betweenness": 0.0421
+      },
+      "GV20": {
+        "incident_edge_rows": 15,
+        "unique_neighbors": 15,
+        "closeness": 0.211694409,
+        "betweenness": 0.10753
+      }
+    }
+  },
+  "practice_orbit": {
+    "source_tag": "PRACTICE_MODEL_VARIANT",
+    "typed_edges": 10,
+    "directed_cycles": 1,
+    "cycle_length": 10,
+    "nodes": [
+      "DT-L",
+      "CV1",
+      "GV1",
+      "GV4",
+      "GV14",
+      "GV20",
+      "CV22",
+      "CV17",
+      "CV12",
+      "CV6"
+    ],
+    "physical_flux_observed": false
+  },
+  "algebra_check": {
+    "four_node_cycle_rank": 1,
+    "nonzero_current": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "node_divergence": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "symmetric_gradient_cycle_weighted_orthogonality": true,
+    "lambda_zero_mode": "r=1",
+    "clinical_Qi_identified": false
+  },
+  "falsification": {
+    "dt_l_superiority_from_degree": "REJECT_UNIVERSAL_CLAIM",
+    "dt_l_specialness_from_original_closeness": "REJECT",
+    "directed_orbit_implies_measured_flow": "REJECT",
+    "node_sensation_implies_localized_energy": "REJECT",
+    "real_DT_L_agency_gain": "NOT_TESTED",
+    "active_cycle_information_model": "PROPOSAL_NOT_CALIBRATED"
+  },
+  "references": {
+    "report": "docs/proposals/PROP-AGENCY-DANTIAN-CYCLE-03.md",
+    "birca_admin": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/agency_dantian/AGENCY_DANTIAN_CYCLE_READOUT_V03.md",
+    "classical": "https://ctext.org/huangdi-neijing/liu-wei-zhi-da-lun"
+  },
+  "guardrails": [
+    "retain user definition 氣 as information transformation in worldview, not literal fluid velocity",
+    "a cycle is not a measured current",
+    "semantic edge labels are not verified anatomical connections",
+    "CAN-006 biological weld HOLD",
+    "all Qi and Agency clinical outputs null"
+  ]
+}

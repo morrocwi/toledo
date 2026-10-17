@@ -1,0 +1,577 @@
+{
+  "name": "Agency Dantian step bridge overlay",
+  "version": "0.2.0-proposal",
+  "recorded_date": "2026-10-14",
+  "attaches_to": "qi_kg_v1.1_497nodes_959edges",
+  "original_graph_mutation": false,
+  "tier": "Dr_PROPOSAL_SEMANTIC_OVERLAY_ONLY",
+  "type_guards": [
+    "proposed functional port is not organ",
+    "ontology location edge is not an empirical causal link",
+    "feedback Y_n -> H_n+1 only",
+    "no artificial subject data",
+    "attention effect and agency gain unknown",
+    "DT-L source and sink require distinct internal ports, not extra WHO points"
+  ],
+  "new_nodes": [
+    {
+      "id": "AGDT:DTL_INPUT",
+      "type": "FunctionalInputPort",
+      "name": "DT-L integration input boundary",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:DTL_STORE",
+      "type": "MemoryState",
+      "name": "DT-L retained informational state (analogy)",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:DTL_OUTPUT",
+      "type": "FunctionalOutputPort",
+      "name": "DT-L agency output boundary",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:STATE",
+      "type": "HiddenState",
+      "name": "S_n retained state not direct observation",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:BODY_READOUT",
+      "type": "Readout",
+      "name": "z_n=q_B(S_n) candidate",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:FOCUS",
+      "type": "InterventionVariable",
+      "name": "do(A_n=v) focus assignment",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:PERCEPT",
+      "type": "InteroceptionReadout",
+      "name": "r_v,n from attention and body",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:AGENCY_INPUT",
+      "type": "CompositeAgencyInput",
+      "name": "x_n=(z_n,r_v,n)",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:HISTORY",
+      "type": "RetainedHistory",
+      "name": "H_n context and earlier experience",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:CONTROL",
+      "type": "ConstraintRegulator",
+      "name": "C_{n+1} = G(...)",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:POLICY",
+      "type": "AgencyPolicy",
+      "name": "u_n from pi(...), not efficacy",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:OUTCOME",
+      "type": "ObservedOutcome",
+      "name": "Y_n prespecified outcome; no observations",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:NEUTRAL",
+      "type": "NeutralAttentionControl",
+      "name": "Neutral or feet/surroundings focus control",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:NEARBY",
+      "type": "NearbyAttentionControl",
+      "name": "Nearby lower abdomen control distinct from CV6 candidate",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    },
+    {
+      "id": "AGDT:HORIZON",
+      "type": "InformationAccessibilityHypothesis",
+      "name": "Not literal astrophysical horizon",
+      "evidence_class": "TOLEDO_AGENCY_DANTIAN_V0_2_PROPOSAL",
+      "not_physical_qi_flux": true
+    }
+  ],
+  "new_edges": [
+    {
+      "source": "DT-L",
+      "target": "AGDT:DTL_INPUT",
+      "relation": "proposed_functional_input_port",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "DT-L",
+      "target": "AGDT:DTL_OUTPUT",
+      "relation": "proposed_functional_output_port",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:DTL_INPUT",
+      "target": "AGDT:DTL_STORE",
+      "relation": "encodes_to_retained_memory",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:DTL_STORE",
+      "target": "AGDT:DTL_OUTPUT",
+      "relation": "proposed_transformation_to_output",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:STATE",
+      "target": "AGDT:BODY_READOUT",
+      "relation": "can_be_observed_as_lossy_readout",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "DT-L",
+      "relation": "candidate_focus_choice",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "DT-M",
+      "relation": "candidate_focus_choice",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "DT-U",
+      "relation": "candidate_focus_choice",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "EX-HN3",
+      "relation": "candidate_focus_choice",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "CV6",
+      "relation": "candidate_focus_choice_overlaps_DT-L",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "AGDT:NEARBY",
+      "relation": "alternative_matched_attention_control",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "AGDT:NEUTRAL",
+      "relation": "control_attention",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:BODY_READOUT",
+      "target": "AGDT:PERCEPT",
+      "relation": "input_to_attention_dependent_readout",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:FOCUS",
+      "target": "AGDT:PERCEPT",
+      "relation": "attention_changes_subjective_readout_possible",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:BODY_READOUT",
+      "target": "AGDT:AGENCY_INPUT",
+      "relation": "composite_agency_input",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:PERCEPT",
+      "target": "AGDT:AGENCY_INPUT",
+      "relation": "composite_agency_input",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:HISTORY",
+      "target": "AGDT:CONTROL",
+      "relation": "historical_modulation",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:AGENCY_INPUT",
+      "target": "AGDT:CONTROL",
+      "relation": "proposed_constraint_update",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:CONTROL",
+      "target": "AGDT:POLICY",
+      "relation": "proposed_policy_selection",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:POLICY",
+      "target": "AGDT:OUTCOME",
+      "relation": "requires_test_to_estimate_effect",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:DTL_STORE",
+      "target": "AGDT:HORIZON",
+      "relation": "source_for_information_accessibility_hypothesis",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:HORIZON",
+      "target": "AGDT:PERCEPT",
+      "relation": "not_equivalent_to_physical_horizon",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:DTL_OUTPUT",
+      "target": "AGDT:POLICY",
+      "relation": "proposed_decode_to_response",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:DTL_INPUT",
+      "target": "AGDT:BODY_READOUT",
+      "relation": "not_assumed_physiological_channel",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    },
+    {
+      "source": "AGDT:OUTCOME",
+      "target": "AGDT:HISTORY",
+      "relation": "feedback_across_steps_only",
+      "evidence_class": "PROPOSED_INFORMATION_MODEL_ONLY",
+      "readout_not_biology": true,
+      "instantaneous_physical_transport": false
+    }
+  ],
+  "causal_dag": {
+    "new_nodes": [
+      {
+        "id": "S@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "A@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Z@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "R@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "X@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Cplus@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "U@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Snext@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Y@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "H@0",
+        "step": 0,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "S@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "A@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Z@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "R@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "X@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Cplus@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "U@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Snext@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "Y@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      },
+      {
+        "id": "H@1",
+        "step": 1,
+        "kind": "PROPOSED_AGENCY_DANTIAN_STEP_NODE"
+      }
+    ],
+    "new_edges": [
+      {
+        "source": "S@0",
+        "target": "Z@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "A@0",
+        "target": "R@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Z@0",
+        "target": "R@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Z@0",
+        "target": "X@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "R@0",
+        "target": "X@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "H@0",
+        "target": "Cplus@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "X@0",
+        "target": "Cplus@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Cplus@0",
+        "target": "U@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "R@0",
+        "target": "U@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "U@0",
+        "target": "Snext@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "S@0",
+        "target": "Snext@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Snext@0",
+        "target": "Y@0",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Snext@0",
+        "target": "S@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Y@0",
+        "target": "H@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "S@1",
+        "target": "Z@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "A@1",
+        "target": "R@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Z@1",
+        "target": "R@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Z@1",
+        "target": "X@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "R@1",
+        "target": "X@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "H@1",
+        "target": "Cplus@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "X@1",
+        "target": "Cplus@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Cplus@1",
+        "target": "U@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "U@1",
+        "target": "Snext@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      },
+      {
+        "source": "Snext@1",
+        "target": "Y@1",
+        "relation": "PROPOSED_CAUSAL_NEXT_OPERATION",
+        "is_observed_causal_edge": false
+      }
+    ]
+  },
+  "registry_ref": "registry/proposals/agency_dantian_equations_v0_2.json",
+  "evidence_scope": "DESCRIPTIVE_GRAPH_STRUCTURE_ONLY"
+}

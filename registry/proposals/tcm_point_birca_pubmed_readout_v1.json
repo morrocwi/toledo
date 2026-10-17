@@ -1,0 +1,295 @@
+[
+  {
+    "id": "PROP-TCM-BIRCA-01",
+    "code": "proposal/tcm-point-birca-pubmed-readout",
+    "name": "TCM knowledge semantic crosswalk to Toledo/Genesis/BIRCA (not predictive)",
+    "statement": {
+      "latest": "Traditional Chinese medical terms, patterns, channel and point identifiers may be preserved as sourced, typed knowledge records and mapped to Toledo readout concepts and separately to PubMed study metadata. The mapping describes HOW Toledo/BIRCA reads TCM, not WHAT will happen to a person's health. No Qi diagnosis, biomarker forecast, acupuncture efficacy, step-to-clock correspondence or CAN-006 weld is asserted.",
+      "format": "ascii",
+      "note_ascii": "NEW NONCANONICAL RESEARCH PROPOSAL: semantic translation/indexing only; point–protocol–assay associations are optional metadata, not a biological dynamical equation. Follow-up qihua_transformation_10_case_followup is noncanonical, no new root dynamics, no predictive performance."
+    },
+    "definitions": {
+      "native_step": "n in CAN-003; NOT lab time",
+      "point_namespace": "361 point labels in 14 channels (WHO-style code inventory; exact anatomical localization not embedded)",
+      "point_assay_relation": "point_code x intervention x comparator x population x assay x modality x unit x lab_clock x PubMed_id x author_reported_result x provenance",
+      "latent_qi": "UNIDENTIFIABLE; not assayed",
+      "biomarker": "study-specific typed observable, not root state",
+      "life": "external Genesis v5.1.0 annotation only, not new Toledo canonical formula"
+    },
+    "tier": "Dr",
+    "status": "unverified",
+    "domain": "B",
+    "aliases": [
+      "TCM-QI-BIRCA",
+      "acupoint-pubmed-weld-hold"
+    ],
+    "coq": {
+      "identifiers": [],
+      "coq_status": "none_requested_no_new_formalism"
+    },
+    "parents": [
+      {
+        "code": "CAN-003",
+        "derived_via": "native_step_root_reuse",
+        "evidence": "S[n+1]=F(S[n],u[n],c[n],T[n]); no clock conversion"
+      },
+      {
+        "code": "CAN-006",
+        "derived_via": "domain_weld_obligation_not_proven",
+        "evidence": "no empirical q_BIO/F_BIO calibration"
+      },
+      {
+        "code": "CAN-007",
+        "derived_via": "reader_equivalence_open",
+        "evidence": "study summaries do not identify all future response equivalence"
+      },
+      {
+        "code": "CAN-165",
+        "derived_via": "sufficiency_required_not_tested",
+        "evidence": "readout-to-future factorization untested"
+      },
+      {
+        "code": "CAN-201",
+        "derived_via": "readout_not_state",
+        "evidence": "cytokine assays and TCM claims are separate from retained state"
+      },
+      {
+        "code": "EQ-001/B.07.v1",
+        "derived_via": "health_accounting_abstract_reuse",
+        "evidence": "integrity reserve no-free-repair ledger not clinically identified"
+      },
+      {
+        "code": "EQ-001/B.29.v1",
+        "derived_via": "real_root_to_assay_encoder_OPEN",
+        "evidence": "no native source-to-assay map"
+      },
+      {
+        "code": "EQ-001/B.30.v1",
+        "derived_via": "real_biological_weld_OPEN",
+        "evidence": "no identified event-resolved biological dynamics"
+      }
+    ],
+    "source_pubmed_pmids": [
+      "21438784",
+      "37542799",
+      "20496732",
+      "36948325",
+      "29682147",
+      "26002571"
+    ],
+    "study_provenance": {
+      "primary_source": "PubMed indexed author abstracts; no GEO and no simulation",
+      "PubMed_only": true,
+      "point_protocols_not_collapsed": true,
+      "clinical_accuracy": null,
+      "model_predictive_MAE": null,
+      "step_to_hours": null,
+      "qi_measurement": null
+    },
+    "structural_audit": {
+      "local_audit_executed_on": "2026-10-14",
+      "tests_passed": 17,
+      "tests_total": 17,
+      "points": 361,
+      "channels": 14,
+      "code_chain_edges": 347,
+      "biological_simulation": false,
+      "ci_witness_for_tcm_bridge": false,
+      "scope": "internal code-list invariants, sympy algebra, evidence-gates only; local downloadable script not yet in Toledo CI",
+      "overall": "PASS_STRUCTURAL_HOLD_BIOLOGICAL"
+    },
+    "open_issues": [
+      "Resolve EQ-QI-04 B incidence/control-input notation collision",
+      "Establish exact WHO point coordinate provenance for each anatomical mapping",
+      "Need published assay with admissible point protocol and independently identified biological state/step",
+      "Do not infer point efficacy or endocrine meaning from source associations",
+      "Validate Chinese original quotations against traceable editions before claiming source-verified status",
+      "Disambiguate translations and traditional zang-fu from biomedical anatomy in every reader",
+      "Do not let study metadata or user symptoms silently promote semantic mapping into personalized prediction",
+      "EX-HN3 is an extra point and must not change 361-point counts",
+      "Preserve CV5 classical dantian alias distinct from generic lower dantian conceptual region",
+      "No research source shows literal EX-HN3 to dantian biological Qi transport",
+      "Freeze an independent 10+ condition blind source corpus and measure added value over pure traditional text lookup",
+      "Verify every disease–point and disease–pattern relation separately with attributed Chinese text or textbook reference; PubMed-only for biomedical evidence",
+      "Do not present manually assigned 10/10 labels as predictive clinical accuracy"
+    ],
+    "origin": {
+      "source": "docs/proposals/PROP-TCM-BIRCA-01.md TCM semantic crosswalk; prior local TCM_Qi_Acupoint_Information_Equation_v1.0.md proposal; PubMed records only for empirical biology"
+    },
+    "source_document": "docs/proposals/PROP-TCM-BIRCA-01.md",
+    "claim_boundary": "Purpose is semantic readout of Chinese-medicine knowledge and cross-links to existing Toledo and BIRCA schemas. No self-prediction or other-person prediction, no qi blockage diagnosis, no proven causal mapping, no health/sexual personality forecast and no treatment inference; only explicitly sourced PubMed studies as contextual evidence. CAN-006 and B.29/B.30 HOLD.",
+    "purpose": "KNOWLEDGE_READING_AND_INFORMATION_TRANSLATION_ONLY",
+    "readout_scope": {
+      "tcm_internal": [
+        "yin_yang",
+        "qi",
+        "jing",
+        "shen",
+        "zang_fu",
+        "patterns",
+        "meridians",
+        "points",
+        "source_quotes",
+        "edition_dependent_interpretations"
+      ],
+      "toledo": [
+        "CAN-003 native step index only",
+        "CAN-201 readout distinct from state",
+        "CAN-006 empirical weld obligation HOLD",
+        "CAN-165 factorization HOLD"
+      ],
+      "birca": [
+        "separate typed published-study metadata",
+        "assay modality and units",
+        "study protocol context and comparator",
+        "PubMed-only evidence if included"
+      ],
+      "genesis_life": "external conceptual annotation, not canonical Toledo equation",
+      "result": "SEMANTIC_MAP_READY / BIOLOGICAL_WELD_HOLD / PERSONAL_PREDICTION_NOT_IN_SCOPE"
+    },
+    "translation_rules": {
+      "zang_fu_vs_anatomy": "Traditional Liver/Kidney/Spleen are source-specific functional zang-fu concepts; do not collapse with anatomical organs",
+      "qi_vs_biophysics": "Qi or meridian label has no licensed conversion into energy, nerve, vascular or biochemical signal",
+      "point_code_vs_position": "361 point-code inventory does not certify precise anatomical atlas positions",
+      "point_vs_effect": "point mention in a multi-point intervention does not isolate an individual point effect",
+      "graph_edge": "semantic attributed edge is not a demonstrated causal or anatomic pathway",
+      "clock_vs_step": "clinical observation time not native Toledo step",
+      "missing_data": "unmeasured/uncertain information remains null or HOLD, never predicted or zero-filled"
+    },
+    "examples": [
+      {
+        "traditional": "思則氣結",
+        "reading": "classical theory links excessive thought and Qi-binding; attribution needs edition check",
+        "toledo": "source-tagged symbolic relation",
+        "birca": "no quantitative outcome or individual inference",
+        "status": "SEMANTIC_ONLY"
+      },
+      {
+        "traditional": "肝氣鬱結",
+        "reading": "traditional pattern (Liver Qi constraint)",
+        "toledo": "concept/pattern taxonomy",
+        "birca": "not anatomical liver pathology",
+        "status": "SEMANTIC_ONLY"
+      },
+      {
+        "traditional": "LR3 太衝",
+        "reading": "traditional point label on Liver channel",
+        "toledo": "point code and source-specific membership",
+        "birca": "point code not an effect or measured physiological link",
+        "status": "SEMANTIC_ONLY"
+      },
+      {
+        "traditional": "BL23 腎俞",
+        "reading": "traditional point label",
+        "toledo": "point code may join exact protocol reference",
+        "birca": "published study record if comparator/population/assay also tracked",
+        "status": "PUBLICATION_METADATA_ONLY"
+      }
+    ],
+    "acceptance": {
+      "semantic_readability": "SOURCE_ATTRIBUTED_PENDING_REVIEW",
+      "biological_weld": "HOLD",
+      "native_step_calibration": "HOLD",
+      "individual_prediction": "NOT_IN_SCOPE",
+      "clinical_claims": "NOT_IN_SCOPE",
+      "new_canonical_equation": false
+    },
+    "cross_repository_installation": {
+      "toledo_source_snapshot": "docs/external_references/TCM_Qi_Acupoint_Information_Equation_v1.0.md",
+      "toledo_reading": "docs/proposals/PROP-TCM-BIRCA-01.md",
+      "birca_reading": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_TOLEDO_KNOWLEDGE_READOUT_BRIDGE_V1.md",
+      "birca_schema": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/tcm_toledo_birca_semantic_bridge_v1.json",
+      "birca_pr": "https://github.com/morrocwi/birca_admin_5.0/pull/22",
+      "dependency_direction": "TCM_SOURCE -> TOLEDO_SEMANTIC_READING -> BIRCA_STUDY_METADATA",
+      "both_prs_draft": true,
+      "runtime_enabled": false,
+      "clinical_use_enabled": false,
+      "toledo_attention_path": "docs/proposals/PROP-TCM-ATTENTION-01.md"
+    },
+    "attention_route_mapping": {
+      "new_source_document": "docs/proposals/PROP-TCM-ATTENTION-01.md",
+      "kind": "NONCANONICAL_SEMANTIC_ATTENTION_SEQUENCE",
+      "start": {
+        "code": "EX-HN3",
+        "chinese": "印堂",
+        "classification": "EXTRA_POINT_NOT_IN_STANDARD_361"
+      },
+      "via": [
+        "jaw_relaxation",
+        "upper_chest_awareness",
+        "natural_breathing"
+      ],
+      "destination": {
+        "concept": "下丹田",
+        "kind": "TRADITIONAL_LOWER_ABDOMEN_REGION_NOT_A_SINGLE_POINT",
+        "landmarks": [
+          {
+            "code": "CV6",
+            "cun_below_navel": 1.5
+          },
+          {
+            "code": "CV5",
+            "cun_below_navel": 2,
+            "traditional_alias_in_Dacheng": "丹田"
+          },
+          {
+            "code": "CV4",
+            "cun_below_navel": 3
+          }
+        ]
+      },
+      "reported_experience": "OPTIONAL_REAL_SUBJECTIVE_SELF_REPORT_ONLY",
+      "literal_qi_transit_measurement": null,
+      "native_step_biological_calibration": null,
+      "clinical_prediction": null,
+      "statement": "This is an ordering of attention/relaxation cues with separate primary source attributions; never a meridian, vascular or neurotransmitter path or a physical energy transport claim.",
+      "evidence_classical": [
+        "https://ctext.org/huangdi-neijing/ju-tong-lun/ens",
+        "https://ctext.org/wiki.pl?chapter=133202&if=gb",
+        "https://ctext.org/wiki.pl?chapter=374152&if=gb"
+      ],
+      "evidence_pubmed_context_only": [
+        "29682147",
+        "26002571"
+      ],
+      "evidence_status": "SOURCE_ATTRIBUTED; BIOLOGICAL_WELD_HOLD"
+    },
+    "qihua_transformation_10_case_followup": {
+      "recorded_on": "2026-10-14",
+      "source_document": "docs/proposals/PROP-TCM-QIHUA-10CASE-01.md",
+      "birca_admin_document": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_QIHUA_10_CONDITION_READOUT_AUDIT_V1.md",
+      "birca_admin_typed_cases": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/tcm_qihua_10_conditions_v1.json",
+      "interpretive_claim": "Qi in user's information universe is information TRANSFORMATION rather than spatial movement; qi_hua interpretation of CAN-003 transitions is Dr proposal, not historical universal Qi sense",
+      "prior_manual_retrospective_conditions": 10,
+      "prior_manual_labels_assigned": 10,
+      "clinical_accuracy": null,
+      "blind_predicted_cases": 0,
+      "biomedical_source_case_level_verified": false,
+      "native_step_biology_equated": false,
+      "human_biology_simulation": false,
+      "source_note": "Point and pattern sets transcribed from previous assistant comparison, each case's primary historical/official PubMed verification pending",
+      "status": "DESCRIPTIVE_DRAFT; NOT_BLIND_TESTED; BIOLOGICAL_WELD_HOLD; PERSONAL_PREDICTION_NOT_IN_SCOPE"
+    },
+    "full_knowledge_graph_v1_1": {
+      "registration": "registry/proposals/qi_dantian_chakra_full_graph_manifest_v1_1.json",
+      "toledo_description": "docs/proposals/PROP-QI-DANTIAN-CHAKRA-KG-ALL-VIEWS-v1_1.md",
+      "toledo_complete_topology": "docs/proposals/assets/qi_dantian_chakra_full_topology_v1_1.lzma.b64",
+      "birca_admin_description": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/TCM_QI_DANTIAN_CHAKRA_ALL_GRAPHS_v1_1.md",
+      "birca_admin_complete_topology": "https://github.com/morrocwi/birca_admin_5.0/blob/research/tcm-knowledge-readout-20261014/docs/contracts/qi_dantian_chakra_full_topology_v1_1.lzma.b64",
+      "graph_counts": {
+        "semantic_nodes": 479,
+        "semantic_edges": 894,
+        "causal_nodes": 48,
+        "causal_edges": 109
+      },
+      "sky_earth_palm": "GV20 crown symbolically connects sky; earth symbolically received at KI1 soles; PC8 palms symbolically send outward",
+      "graph_views_count": 8,
+      "topology_complete_in_git": true,
+      "metadata_rich_complete_in_git": false,
+      "rich_local_zip": "Qi_Dantian_Chakra_Toledo_BIRCA_FullGraph_v1.1.zip",
+      "biophysical_energy_transfer_verified": false,
+      "canonical_status": "NONCANONICAL_DRAFT",
+      "bio_weld_status": "HOLD"
+    }
+  }
+]

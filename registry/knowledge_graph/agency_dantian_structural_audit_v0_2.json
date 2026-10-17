@@ -1,0 +1,103 @@
+{
+  "version": "0.2.0",
+  "as_of": "2026-10-14",
+  "evidence": "ACTUAL_UPLOADED_CULTURAL_KG_STRUCTURE_ONLY",
+  "clinical_data_simulated": false,
+  "source": {
+    "original": {
+      "file": "qi_dantian_kg_v1(1).zip/qi_dantian_kg_v1/acupuncture_dantian_chakra_kg.json",
+      "sha256": "5f02f479ad7092ecfcbc1b194e4df471065654930b1ba11cfcaf55786d4bedaa",
+      "nodes": 457,
+      "edges": 845
+    },
+    "expanded": {
+      "file": "qi_unified_kg_v1_1.zip/kg_v1_1.json",
+      "sha256": "6aaf42b23b4dc0b503498877b33eef79337dcdbdedf14d51fd16608525c0080d",
+      "nodes": 497,
+      "edges": 959
+    }
+  },
+  "structural": [
+    {
+      "id": "DT-L",
+      "original_degree": 6,
+      "expanded_degree": 14,
+      "old_region_links": 6,
+      "new_region_links": 6
+    },
+    {
+      "id": "DT-M",
+      "original_degree": 4,
+      "expanded_degree": 5,
+      "old_region_links": 4,
+      "new_region_links": 4
+    },
+    {
+      "id": "DT-U",
+      "original_degree": 5,
+      "expanded_degree": 6,
+      "old_region_links": 5,
+      "new_region_links": 5
+    },
+    {
+      "id": "EX-HN3",
+      "original_degree": 5,
+      "expanded_degree": 10,
+      "old_region_links": 1,
+      "new_region_links": 1
+    },
+    {
+      "id": "CV6",
+      "original_degree": 5,
+      "expanded_degree": 7,
+      "old_region_links": 1,
+      "new_region_links": 1
+    },
+    {
+      "id": "CV17",
+      "original_degree": 7,
+      "expanded_degree": 12,
+      "old_region_links": 1,
+      "new_region_links": 1
+    },
+    {
+      "id": "GV20",
+      "original_degree": 8,
+      "expanded_degree": 15,
+      "old_region_links": 1,
+      "new_region_links": 1
+    }
+  ],
+  "label_as_graph_fact_only": true,
+  "curator_effects": "8 of DT-L's expanded incident relations were introduced in later practice/model/observation ontology layers; no physiological connectivity measurement.",
+  "analytical": {
+    "coincident_source_sink_forcing_zero": true,
+    "discrete_modal_characteristic": "M*r^2+(-2M+D+K*lambda)*r+(M-D)",
+    "discriminant": "(D+K*lambda)^2-4*M*K*lambda",
+    "mode_schur_stability": "M>0 && lambda>0 && D>0 && K*lambda>0 && 2*D+K*lambda<4*M",
+    "lambda_zero_root": "r=1, neutral and cannot be strictly Schur stable without gauge fixing",
+    "symbolic_check": "Sympy expanded recurrence/discriminant and lambda=0 factorization, not dynamics simulated"
+  },
+  "estimates": {
+    "theta_DT_L": null,
+    "delta_DT_L": null,
+    "delta_DT_M": null,
+    "delta_DT_U": null,
+    "delta_EX_HN3": null,
+    "delta_CV6": null,
+    "agency_Gamma_v": null,
+    "physical_qi_flow": null
+  },
+  "outputs": {
+    "H1_structural": "TOLEDO_ONTOLOGY_DISTINCT_NOT_BIOLOGICAL",
+    "H2_functional": "NOT_TESTED",
+    "H3_agency": "NOT_TESTED",
+    "H4_horizon_added_value": "NOT_TESTED",
+    "CAN_006_biological_weld": "HOLD"
+  },
+  "references": {
+    "equation_registry": "https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/registry/proposals/agency_dantian_equations_v0_2.json",
+    "full_toledo_report": "https://github.com/morrocwi/toledo/blob/research/tcm-toledo-birca-bridge-20261014/docs/proposals/PROP-AGENCY-DANTIAN-BRIDGE-02.md"
+  },
+  "note": "These facts cannot be converted into individual Qi circulation, psychological, or medical inference."
+}

@@ -1,0 +1,60 @@
+{
+  "name": "qi_knowledge_graph",
+  "version": "1.2.0-draft",
+  "date": "2026-10-15",
+  "base": "v1.1 payload qi_v1_1.brotli_base64.part01-06.txt (unchanged)",
+  "payload": {
+    "parts": 9,
+    "part_chars": 4000,
+    "encoded_chars": 33196,
+    "brotli_sha256": "f8c01dd1c64b8c0edc3991d42daf45c04a8601712859a88b79f03a3c7b936e1a",
+    "raw_sha256": "baa0fc67dbd8ea872b71099c62220cb7ccad603ea0fc66b56fdb77a87da1279f",
+    "raw_bytes": 593615,
+    "brotli_bytes": 24897
+  },
+  "v1_1_reference": {
+    "raw_sha256": "20f3218a85720efb292cd4a36fe63962e86878a452251ba75c41382efe35cd14",
+    "brotli_sha256": "adeff813a36b1525989ae1a26251ce63f37f90c2fbea9b4217753789cd054763",
+    "semantic_nodes": 497,
+    "semantic_edges": 959,
+    "causal_nodes": 44,
+    "causal_edges": 93
+  },
+  "counts": {
+    "semantic_nodes": 550,
+    "semantic_edges": 1218,
+    "causal_nodes": 44,
+    "causal_edges": 93,
+    "new_nodes": 53,
+    "new_edges": 259,
+    "new_nodes_by_type": {
+      "ExtraPointRegion": 5,
+      "ExtraAcupoint": 47,
+      "GreatLuoSite": 1
+    },
+    "new_edges_by_relation": {
+      "member_of_extra_point_region": 48,
+      "flows_to": 12,
+      "channel_connection_point": 17,
+      "luo_connecting": 16,
+      "luo_connecting_to_coupled_channel": 13,
+      "member_of_extraordinary_vessel": 55,
+      "confluent_point_of": 8,
+      "crossing_point_of": 90
+    },
+    "who_standard_acupoints": 361,
+    "extra_points_total": 48,
+    "luo_points_who_coded": 15,
+    "disagreements": 19,
+    "contested_new_edges": 28
+  },
+  "coverage_limits": [
+    "Extra points: code/pinyin/hanzi transcribed from Wikibooks tables because the WHO 1991 PDF returned HTTP 403; flagged verification=SECONDARY_RELAYED_WHO1991_PRIMARY_UNREADABLE_HTTP403. No Thai names added.",
+    "Crossing points (jiaohui): parsed from Wikisource transcription of Zhenjiu jiayi jing vol.3 (revid 2327541). 90 crossing edges over 66 points. Entries whose wording the parser could not resolve are NOT stored (examples: GV14 三陽, CV7 氣沖 wording, CV1 corrupted, GV28 蹺脈, LU1, LI9) and the transcription omits some chapters. This is a well-attested subset, not the full 交會穴 inventory.",
+    "Extraordinary-vessel membership: union of Li Shizhen (Qijing bamai kao) and Jiayijing readings; Yang Qiao section of the Li transcription missing; Deadman, A Manual of Acupuncture (ISBN 0951054651) was NOT consulted, so the modern-compilation list is absent.",
+    "Channel connection points: the Lingshu ch.10 branches were read; the surface-point assignment is a maker reading flagged contested:true; modern textbook variants are recorded but their text was not consulted.",
+    "Confluent points: confirmed from a secondary page; Zhenjiu dacheng primary not read."
+  ],
+  "gates_unchanged": true,
+  "toledo_mirror": "Dr/proposal data, not canonical; no new equation; v1.1 files unchanged"
+}

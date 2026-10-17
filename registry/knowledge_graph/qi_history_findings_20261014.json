@@ -1,0 +1,103 @@
+{
+  "id": "BIRCA_TOLEDO_QIHUA_FULL_HISTORY_LEDGER_20261014",
+  "status": "Dr; RESEARCH_ONLY; BIOLOGICAL_WELD_HOLD",
+  "date": "2026-10-14",
+  "architecture": {
+    "root": "CAN-003 (S[n+1]=F(S[n],u[n],c[n],T[n]))",
+    "qi_definition": "information TRANSFORMATION, not physical motion",
+    "qi_traditional_term": "Qi (氣) must not be flattened to QiHua (氣化) in all Chinese sources",
+    "domain_noncollapse": "CAN-201 readout != true source state; CAN-006 domain biological equivalence HOLD",
+    "memory": "state/history retained, response context dependent",
+    "time": "native causal steps, not arbitrary clock intervals",
+    "law_links": [
+      "RUS-0108 Bernoulli",
+      "RUS-0109 continuity",
+      "RUS-0164 Hagen-Poiseuille"
+    ],
+    "analogies_not_material": [
+      "dantian lower as reservoir",
+      "movable fountain source",
+      "viscosity and pressure drop",
+      "non-synchronous oscillators"
+    ],
+    "permission": "documentation only; no clinical runtime or models trained"
+  },
+  "indexed_findings": [
+    {
+      "key": "F-01",
+      "topic": "Cross-cultural knowledge graph",
+      "result": "14 standard meridians plus six extra-vessel concept nodes, dantian three, chakra seven, separate Indian and Chinese practice lineages",
+      "status": "CROSSWALK_ONLY"
+    },
+    {
+      "key": "F-02",
+      "topic": "Brow → lower abdomen",
+      "result": "EX-HN3 → CV17 → CV12 → DT-L is voluntary gentle attention order, not an anatomical Qi conduit",
+      "status": "SELF_REPORT_RESEARCH_ONLY"
+    },
+    {
+      "key": "F-03",
+      "topic": "Heaven earth and palm symbolism",
+      "result": "GV20 ↔ sky, KI1 from Earth intake (L/R), PC8 palm outgoing (L/R)",
+      "status": "FOUNDER_DECLARED_SYMBOLISM"
+    },
+    {
+      "key": "F-04",
+      "topic": "Fluid analogy",
+      "result": "Bernoulli, continuity and Hagen-Poiseuille permit source-position and resistance comparison under explicit fluid assumptions",
+      "status": "MATHEMATICAL_ANALOGY_ONLY"
+    },
+    {
+      "key": "F-05",
+      "topic": "Mobile fountain and synchronization",
+      "result": "moving forcing location can change modal projections while not necessarily changing fixed network eigenfrequencies; viscosity may damp rather than destabilize",
+      "status": "DR_THEORY_NOT_TESTED_WITH_BIOLOGY"
+    },
+    {
+      "key": "F-06",
+      "topic": "Ten disorders",
+      "result": "migraine, insomnia, depression, nausea, constipation, IBS, knee OA, low-back pain, allergic rhinitis, dysmenorrhea; 10/10 manual retrospective point mentions not blinded",
+      "status": "SOURCE_CASE_LEVEL_VERIFICATION_HOLD"
+    },
+    {
+      "key": "F-07",
+      "topic": "Obesity exertional dyspnea",
+      "result": "western mechanisms include raised metabolic cost, respiratory mechanics and cardiorespiratory fitness; BIRCA represents context/adaptation, TCM lung-spleen-kidney only conceptual parallel",
+      "status": "WESTERN_PHYSIOLOGY_BACKGROUND; NO_QI_CAUSAL_INFERENCE"
+    },
+    {
+      "key": "F-08",
+      "topic": "Anger/hunger/sexual expression",
+      "result": "No inference that desire-expression mismatch, anger or hunger proves a specific meridian blockage. Preserve competing physiological/behavioral explanations",
+      "status": "NO_PERSON_DIAGNOSIS"
+    },
+    {
+      "key": "F-09",
+      "topic": "Phenomenological readout",
+      "result": "Brow swirl and bodily sensations recorded as subjective observation distinct from latent state; interoception and observer history relevant",
+      "status": "READOUT_NOT_TRUTH"
+    },
+    {
+      "key": "F-10",
+      "topic": "Validation",
+      "result": "497 nodes, 959 semantic edges; 44 causal DAG nodes, 93 DAG edges; graph stores only literature/semantic/source claims; new empirical tests require locked real data",
+      "status": "STRUCTURAL_CHECK_ONLY"
+    }
+  ],
+  "research_gates": {
+    "pubmed_for_empirical_biology": true,
+    "traditional_primary_text_for_historical_claims": true,
+    "no_synthetic_patients": true,
+    "clinical_efficacy": "HOLD",
+    "QI_BIOPHYSICS": "HOLD",
+    "new_molecule": "NOT_IN_SCOPE",
+    "diagnosis": "NOT_IN_SCOPE"
+  },
+  "graph_reference": "registry/knowledge_graph/README_QI_V1_1.md",
+  "statuses_no_fabricated_numerics": [
+    "No biology numeric coefficients",
+    "No invented qi velocities",
+    "No clinical 10/10 accuracy",
+    "No false equivalence between TCM ZangFu and Western organs"
+  ]
+}
