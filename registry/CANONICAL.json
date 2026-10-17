@@ -169791,7 +169791,13 @@
       ],
       "role": "other",
       "first_assigned": "2026-10-17",
-      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement under weld/H.51.v1 and A.5/M.06.v1 is a disclosed convention (same typed non-collapse discipline family), not a demonstrated restatement: RANC's 5 levels differ from these 5 source layers and no phi-criterion renaming/scale/substitution bijection maps one onto the other. The Coq wrapper fixes the type signature only (separate types W R J G C; ScholarlyDerivation as a declared function); it proves no theorem. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only."
+      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement under weld/H.51.v1 and A.5/M.06.v1 is a disclosed convention (same typed non-collapse discipline family), not a demonstrated restatement: RANC's 5 levels differ from these 5 source layers and no phi-criterion renaming/scale/substitution bijection maps one onto the other. The Coq wrapper fixes the type signature only (separate types W R J G C; ScholarlyDerivation as a declared function); it proves no theorem. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "Core equations (AI engineering; NOT religious or physical laws)",
+        "source": "morrocwi/islamic-archive-th:docs/research/FAQR_IEA_v1_4_STANDALONE.md",
+        "line": 78,
+        "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32"
+      }
     },
     {
       "id": "CAN-1320",
@@ -169846,7 +169852,7 @@
         },
         "record_id": null,
         "doi": null,
-        "section": "FAQR-IEA v1.4 STANDALONE sec.4 'Core equations' (F, O, P, INVARIANT(P)) and App.A sec.D (no argmax, no best_option, no winner)"
+        "section": "FAQR-IEA v1.4 STANDALONE sec.4 'Core equations' (F, O, P, INVARIANT(P)) and App.A sec.D (no argmax, no best_option, no winner); B_n tuple and P_n := Project(B_n|A) from PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C lines 68-72 (morrocwi/toledo@9079da36, registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md)"
       },
       "status": "current",
       "status_note": "",
@@ -169891,11 +169897,24 @@
           "label": "FAQR-IEA v1.4 sec.4 + App.A sec.D (facts/options projection)",
           "section": "FAQR-IEA v1.4 STANDALONE sec.4; App.A sec.D",
           "raw_key": "FAQR_IEA_v1_4_STANDALONE:sec4-projection"
+        },
+        {
+          "record_id": null,
+          "doi": null,
+          "label": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C (B_n ledger tuple and P_n projection)",
+          "section": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C lines 68-72 (morrocwi/toledo@9079da36)",
+          "raw_key": "PROP-FAQR-CE-ISLAMIC-READOUT-01:secC-Bn-Pn"
         }
       ],
       "role": "other",
       "first_assigned": "2026-10-17",
-      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement is a disclosed convention (reads); the commutation of the projection with any update (weld/M.02.v1) is an unproved obligation and is not claimed. The Coq wrapper fixes the ledger and Project signature only; it proves no theorem. FAQR v1.2 ADMISSIBLE_x/RECOMMENDABLE_x was superseded by v1.4 non-recommendation behaviour and is deliberately NOT registered. The six amana questions and the five/nine-node Faqr chain are a normative coherence sequence, not an equation, and are referenced only as the constraint set A. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only."
+      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement is a disclosed convention (reads); the commutation of the projection with any update (weld/M.02.v1) is an unproved obligation and is not claimed. The Coq wrapper fixes the ledger and Project signature only; it proves no theorem. FAQR v1.2 ADMISSIBLE_x/RECOMMENDABLE_x was superseded by v1.4 non-recommendation behaviour and is deliberately NOT registered. The six amana questions and the five/nine-node Faqr chain are a normative coherence sequence, not an equation, and are referenced only as the constraint set A. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "Core equations (AI engineering; NOT religious or physical laws)",
+        "source": "morrocwi/islamic-archive-th:docs/research/FAQR_IEA_v1_4_STANDALONE.md",
+        "line": 78,
+        "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32"
+      }
     },
     {
       "id": "CAN-1321",
@@ -169939,13 +169958,13 @@
       "origin": {
         "source": "domain_registry",
         "repo_anchor": {
-          "repo": "morrocwi/islamic-archive-th",
-          "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32",
-          "path": "docs/research/FAQR_IEA_v1_4_STANDALONE.md"
+          "repo": "morrocwi/toledo",
+          "commit": "9079da36546136800c092d4cd5ef3ff18b4bb6bb",
+          "path": "registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md"
         },
         "record_id": null,
         "doi": null,
-        "section": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C 'Smallest missing bridge' (bridge invariants) and FAQR-IEA v1.4 sec.4"
+        "section": "PROP-FAQR-CE-ISLAMIC-READOUT-01 sec.C lines 53-86 'Smallest missing bridge' (statement and bridge invariants; toledo@9079da36); FAQR-IEA v1.4 sec.4 is cited only for the 'AI engineering' tier tag and does not contain the CE gate"
       },
       "status": "current",
       "status_note": "",
@@ -169973,7 +169992,13 @@
       ],
       "role": "other",
       "first_assigned": "2026-10-17",
-      "drift_note": "Tiered Definition, not Th_coqc, even though the accompanying Coq file compiles closed: only the narrow gate-closure lemma (an unspecified CE input yields NotAssessed, never Assessed) is proved; the gate form itself and the stated non-implication between CE structural admissibility and any religious classification are modelling boundaries, not proved theorems. The parent EQ-015/S.20.v1 is reused unchanged, not restated; no CE calibration exists and none is claimed. The 5/5 schema-structural FAQR evaluation uses [SimulatedData] and is not evidence for this entry. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only."
+      "drift_note": "Tiered Definition, not Th_coqc, even though the accompanying Coq file compiles closed: only the narrow gate-closure lemma (an unspecified CE input yields NotAssessed, never Assessed) is proved; the gate form itself and the stated non-implication between CE structural admissibility and any religious classification are modelling boundaries, not proved theorems. The parent EQ-015/S.20.v1 is reused unchanged, not restated; no CE calibration exists and none is claimed. The 5/5 schema-structural FAQR evaluation uses [SimulatedData] and is not evidence for this entry. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "[NEW PROPOSAL / AI_ENGINEERING; NOT A TOLEDO CANONICAL EQUATION]",
+        "source": "morrocwi/toledo:registry/proposals/PROP-FAQR-CE-ISLAMIC-READOUT-01.md",
+        "line": 53,
+        "commit": "9079da36546136800c092d4cd5ef3ff18b4bb6bb"
+      }
     },
     {
       "id": "CAN-1322",
@@ -170052,7 +170077,13 @@
       ],
       "role": "other",
       "first_assigned": "2026-10-17",
-      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement under weld/E.08.v1 and weld/E.07.v1 is a disclosed convention (reads): E.08 is local-to-global transport accounting, this entry is a legal-applicability readiness gate; no phi-criterion renaming/scale/substitution bijection maps one onto the other. The Coq wrapper fixes the Resolution/Outcome signature only; it proves no theorem and is not a legal-decision algorithm. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only."
+      "drift_note": "Tiered Definition, not Dr/Th_coqc: the source itself labels these equations 'AI engineering; NOT religious or physical laws'. Parent placement under weld/E.08.v1 and weld/E.07.v1 is a disclosed convention (reads): E.08 is local-to-global transport accounting, this entry is a legal-applicability readiness gate; no phi-criterion renaming/scale/substitution bijection maps one onto the other. The Coq wrapper fixes the Resolution/Outcome signature and the gate wiring only: a CaseAnswer is returned only for a non-empty candidate set together with a sumbool decision of CaseAnswerReady, and an empty or undetermined candidate set maps to ApplicabilityUndetermined. ConflictRules(f,t) and the law set are explicit parameters of ResolveLaw; the subscripts i, f, t are carried by the arguments and not modelled as separate indexed objects. It proves no theorem and is not a legal-decision algorithm. Claim boundary: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only.",
+      "tier_evidence": {
+        "quote": "Core equations (AI engineering; NOT religious or physical laws)",
+        "source": "morrocwi/islamic-archive-th:docs/research/FAQR_IEA_v1_4_STANDALONE.md",
+        "line": 78,
+        "commit": "96a375ae021c4f72e527294eb5ddcbd7b9bb3c32"
+      }
     }
   ],
   "raw_to_canonical": {

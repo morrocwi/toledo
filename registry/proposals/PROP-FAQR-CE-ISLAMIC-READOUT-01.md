@@ -152,7 +152,7 @@ This is an equation/provenance intake card. The standalone FAQR application spec
 
 Claim boundary for every item below: facts/options projection; not a fatwa, ruling, mediation, or religious verdict; EQ-015 CE structural only. All new objects are tier `Definition` and carry the label `NEW DERIVATION / PROPOSAL`; none is a Toledo theorem, none is calibrated, and none is evidence for any religious or legal conclusion.
 
-Source pin (cited, not copied): `morrocwi/islamic-archive-th` commit `96a375ae021c4f72e527294eb5ddcbd7b9bb3c32`, path `docs/research/FAQR_IEA_v1_4_STANDALONE.md`, blob `792391c9e528959a66f33298d746a9e29437bda2` (SHA-256 `2de11032e8a1dbec3f8727befccc98c88578fecd3d02443ffc8e58a15c0035bf`, matching the anchor in section A).
+Source pin (cited, not copied): `morrocwi/islamic-archive-th` commit `96a375ae021c4f72e527294eb5ddcbd7b9bb3c32`, path `docs/research/FAQR_IEA_v1_4_STANDALONE.md`, blob `792391c9e528959a66f33298d746a9e29437bda2` (SHA-256 `2de11032e8a1dbec3f8727befccc98c88578fecd3d02443ffc8e58a15c0035bf`, matching the anchor in section A). This pin covers `weld/H.53.v1`, `weld/E.13.v1` and the F, O and invariant parts of `weld/E.12.v1`. The CE gate `EQ-015/S.66.v1` and the B_n / P_n tuple of `weld/E.12.v1` originate in section C of this proposal (`morrocwi/toledo` commit `9079da36546136800c092d4cd5ef3ff18b4bb6bb`, lines 53-86), because the FAQR standalone does not contain them.
 
 | Proposal item | Outcome | Toledo code | Note |
 |---|---|---|---|
